@@ -8,139 +8,114 @@ country_event = {
 	picture = GFX_report_event_generic_battle
 	is_triggered_only = yes
 
-	# The civil war starts first, so siblings who left with a faction are hidden from the options below.
 	immediate = {
-		TU_YAN_age_of_dragons_start = yes
 		every_country = {
 			limit = { NOT = { tag = YAN } }
 			news_event = { id = tu_yan_dragon.2 days = 1 }
 		}
 	}
 
-	# The chosen option sets TU_YAN_chosen_<sibling>; only that "<sibling> takes power" focus branch becomes visible.
+	# Choose the sibling Yan rallies around. Yan becomes that sibling's realm; the other siblings break away.
 	option = {
 		name = tu_yan_dragon.1.chongyue
-		trigger = {
-			NOT = { has_country_flag = TU_YAN_sib_chongyue_defected }
-		}
-		set_country_flag = TU_YAN_chosen_chongyue
+		TU_YAN_become_chongyue = yes
+		TU_YAN_split_realms = yes
 		ai_chance = {
 			base = 20
 		}
 	}
 	option = {
 		name = tu_yan_dragon.1.ling
-		trigger = {
-			NOT = { has_country_flag = TU_YAN_sib_ling_defected }
-		}
-		set_country_flag = TU_YAN_chosen_ling
+		TU_YAN_become_ling = yes
+		TU_YAN_split_realms = yes
 		ai_chance = {
 			base = 10
 		}
 	}
 	option = {
 		name = tu_yan_dragon.1.wang
-		trigger = {
-			NOT = { has_country_flag = TU_YAN_sib_wang_defected }
-		}
-		set_country_flag = TU_YAN_chosen_wang
+		TU_YAN_become_wang = yes
+		TU_YAN_split_realms = yes
 		ai_chance = {
 			base = 10
 		}
 	}
 	option = {
 		name = tu_yan_dragon.1.dusk
-		trigger = {
-			NOT = { has_country_flag = TU_YAN_sib_dusk_defected }
-		}
-		set_country_flag = TU_YAN_chosen_dusk
+		TU_YAN_become_dusk = yes
+		TU_YAN_split_realms = yes
 		ai_chance = {
 			base = 10
 		}
 	}
 	option = {
 		name = tu_yan_dragon.1.shu
-		trigger = {
-			NOT = { has_country_flag = TU_YAN_sib_shu_defected }
-		}
-		set_country_flag = TU_YAN_chosen_shu
+		TU_YAN_become_shu = yes
+		TU_YAN_split_realms = yes
 		ai_chance = {
 			base = 10
 		}
 	}
 	option = {
 		name = tu_yan_dragon.1.nian
-		trigger = {
-			NOT = { has_country_flag = TU_YAN_sib_nian_defected }
-		}
-		set_country_flag = TU_YAN_chosen_nian
+		TU_YAN_become_nian = yes
+		TU_YAN_split_realms = yes
 		ai_chance = {
 			base = 10
 		}
 	}
 	option = {
 		name = tu_yan_dragon.1.jun
-		trigger = {
-			NOT = { has_country_flag = TU_YAN_sib_jun_defected }
-		}
-		set_country_flag = TU_YAN_chosen_jun
+		TU_YAN_become_jun = yes
+		TU_YAN_split_realms = yes
 		ai_chance = {
 			base = 10
 		}
 	}
 	option = {
 		name = tu_yan_dragon.1.jie
-		trigger = {
-			NOT = { has_country_flag = TU_YAN_sib_jie_defected }
-		}
-		set_country_flag = TU_YAN_chosen_jie
+		TU_YAN_become_jie = yes
+		TU_YAN_split_realms = yes
 		ai_chance = {
 			base = 10
 		}
 	}
 	option = {
 		name = tu_yan_dragon.1.ji
-		trigger = {
-			NOT = { has_country_flag = TU_YAN_sib_ji_defected }
-		}
-		set_country_flag = TU_YAN_chosen_ji
+		TU_YAN_become_ji = yes
+		TU_YAN_split_realms = yes
 		ai_chance = {
 			base = 10
 		}
 	}
 	option = {
 		name = tu_yan_dragon.1.yi
-		trigger = {
-			NOT = { has_country_flag = TU_YAN_sib_yi_defected }
-		}
-		set_country_flag = TU_YAN_chosen_yi
+		TU_YAN_become_yi = yes
+		TU_YAN_split_realms = yes
 		ai_chance = {
 			base = 10
 		}
 	}
 	option = {
 		name = tu_yan_dragon.1.fang
-		trigger = {
-			NOT = { has_country_flag = TU_YAN_sib_fang_defected }
-		}
-		set_country_flag = TU_YAN_chosen_fang
+		TU_YAN_become_fang = yes
+		TU_YAN_split_realms = yes
 		ai_chance = {
 			base = 10
 		}
 	}
 	option = {
 		name = tu_yan_dragon.1.yu
-		trigger = {
-			NOT = { has_country_flag = TU_YAN_sib_yu_defected }
-		}
-		set_country_flag = TU_YAN_chosen_yu
+		TU_YAN_become_yu = yes
+		TU_YAN_split_realms = yes
 		ai_chance = {
 			base = 10
 		}
 	}
 	option = {
 		name = tu_yan_dragon.1.ruin
-		set_country_flag = TU_YAN_chosen_ruin
+		TU_YAN_become_ruin = yes
+		TU_YAN_split_realms = yes
 		ai_chance = {
 			base = 0
 		}
