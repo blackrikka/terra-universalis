@@ -1,0 +1,482 @@
+TU_SIR_families_category = {
+	TU_SIR_deal_bellone = {
+		icon = GFX_decision_generic_fundraising
+
+		allowed = {
+			original_tag = SIR
+		}
+
+		cost = 25
+		days_re_enable = 120
+
+		complete_effect = {
+			TU_build_civ_factory = yes
+			TU_SIR_bellone_10 = yes
+			TU_SIR_law_m5 = yes
+		}
+
+		ai_will_do = {
+			base = 1
+		}
+	}
+
+	TU_SIR_crack_bellone = {
+		icon = GFX_decision_generic_protection
+
+		allowed = {
+			original_tag = SIR
+		}
+
+		cost = 50
+		days_re_enable = 120
+
+		complete_effect = {
+			TU_SIR_bellone_m15 = yes
+			TU_SIR_law_5 = yes
+			add_stability = -0.02
+			if = { limit = { has_country_flag = TU_SIR_witness } TU_SIR_bellone_m10 = yes }
+		}
+
+		ai_will_do = {
+			base = 1
+		}
+	}
+
+	TU_SIR_deal_gambino = {
+		icon = GFX_decision_generic_fundraising
+
+		allowed = {
+			original_tag = SIR
+		}
+
+		cost = 25
+		days_re_enable = 120
+
+		complete_effect = {
+			add_manpower = 10000
+			TU_SIR_gambino_10 = yes
+			TU_SIR_law_m5 = yes
+		}
+
+		ai_will_do = {
+			base = 1
+		}
+	}
+
+	TU_SIR_crack_gambino = {
+		icon = GFX_decision_generic_protection
+
+		allowed = {
+			original_tag = SIR
+		}
+
+		cost = 50
+		days_re_enable = 120
+
+		complete_effect = {
+			TU_SIR_gambino_m15 = yes
+			TU_SIR_law_5 = yes
+			add_stability = -0.02
+			if = { limit = { has_country_flag = TU_SIR_witness } TU_SIR_gambino_m10 = yes }
+		}
+
+		ai_will_do = {
+			base = 1
+		}
+	}
+
+	TU_SIR_deal_saluzzo = {
+		icon = GFX_decision_generic_fundraising
+
+		allowed = {
+			original_tag = SIR
+		}
+
+		cost = 25
+		days_re_enable = 120
+
+		complete_effect = {
+			add_political_power = 75
+			TU_SIR_saluzzo_10 = yes
+			TU_SIR_law_m5 = yes
+		}
+
+		ai_will_do = {
+			base = 1
+		}
+	}
+
+	TU_SIR_crack_saluzzo = {
+		icon = GFX_decision_generic_protection
+
+		allowed = {
+			original_tag = SIR
+		}
+
+		cost = 50
+		days_re_enable = 120
+
+		complete_effect = {
+			TU_SIR_saluzzo_m15 = yes
+			TU_SIR_law_5 = yes
+			add_stability = -0.02
+			if = { limit = { has_country_flag = TU_SIR_witness } TU_SIR_saluzzo_m10 = yes }
+		}
+
+		ai_will_do = {
+			base = 1
+		}
+	}
+
+	TU_SIR_arbitrate = {
+		icon = GFX_decision_generic_political_discourse
+
+		allowed = {
+			original_tag = SIR
+		}
+
+		cost = 50
+		days_re_enable = 180
+
+		complete_effect = {
+			add_stability = 0.05
+			add_political_power = 25
+		}
+
+		ai_will_do = {
+			base = 1
+		}
+	}
+
+	TU_SIR_hire_soldiers = {
+		icon = GFX_decision_generic_military
+
+		allowed = {
+			original_tag = SIR
+		}
+
+		cost = 50
+		days_re_enable = 180
+
+		complete_effect = {
+			add_manpower = 8000
+			army_experience = 10
+			TU_SIR_gambino_5 = yes
+		}
+
+		ai_will_do = {
+			base = 1
+		}
+	}
+
+	TU_SIR_bring_down_don = {
+		icon = GFX_decision_generic_protection
+
+		allowed = {
+			original_tag = SIR
+		}
+
+		available = {
+			check_variable = { TU_SIR_law > 49 }
+		}
+
+		cost = 100
+		days_re_enable = 365
+
+		complete_effect = {
+			random_list = {
+				1 = { TU_SIR_bellone_m20 = yes }
+				1 = { TU_SIR_gambino_m20 = yes }
+				1 = { TU_SIR_saluzzo_m20 = yes }
+			}
+			TU_SIR_law_15 = yes
+			country_event = { id = tu_sir_ev.24 }
+		}
+
+		ai_will_do = {
+			base = 1
+		}
+	}
+
+	TU_SIR_family_feast = {
+		icon = GFX_decision_generic_political_discourse
+
+		allowed = {
+			original_tag = SIR
+		}
+
+		cost = 25
+		days_re_enable = 180
+
+		complete_effect = {
+			add_stability = 0.03
+			TU_SIR_bellone_3 = yes
+			TU_SIR_gambino_3 = yes
+			TU_SIR_saluzzo_3 = yes
+		}
+
+		ai_will_do = {
+			base = 1
+		}
+	}
+
+	TU_SIR_witness_campaign = {
+		icon = GFX_decision_generic_political_discourse
+
+		allowed = {
+			original_tag = SIR
+		}
+
+		visible = {
+			has_country_flag = TU_SIR_witness
+		}
+
+		cost = 50
+		days_re_enable = 180
+
+		complete_effect = {
+			TU_SIR_law_10 = yes
+			add_stability = -0.02
+		}
+
+		ai_will_do = {
+			base = 1
+		}
+	}
+
+}
+
+TU_SIR_street_category = {
+	TU_SIR_smuggling_tax = {
+		icon = GFX_decision_generic_political_discourse
+
+		allowed = {
+			original_tag = SIR
+		}
+
+		visible = {
+			has_country_flag = TU_SIR_smuggling
+		}
+
+		cost = 0
+		days_re_enable = 120
+
+		complete_effect = {
+			add_political_power = 60
+			TU_SIR_saluzzo_5 = yes
+		}
+
+		ai_will_do = {
+			base = 1
+		}
+	}
+
+	TU_SIR_casino_license = {
+		icon = GFX_decision_generic_political_discourse
+
+		allowed = {
+			original_tag = SIR
+		}
+
+		visible = {
+			has_country_flag = TU_SIR_casinos
+		}
+
+		cost = 0
+		days_re_enable = 180
+
+		complete_effect = {
+			add_political_power = 75
+			TU_SIR_law_m5 = yes
+		}
+
+		ai_will_do = {
+			base = 1
+		}
+	}
+
+	TU_SIR_protection_racket = {
+		icon = GFX_decision_generic_political_discourse
+
+		allowed = {
+			original_tag = SIR
+		}
+
+		visible = {
+			has_country_flag = TU_SIR_smuggling
+		}
+
+		cost = 50
+		days_re_enable = 240
+
+		complete_effect = {
+			add_stability = 0.04
+			TU_SIR_law_5 = yes
+			TU_SIR_bellone_m5 = yes
+		}
+
+		ai_will_do = {
+			base = 1
+		}
+	}
+
+	TU_SIR_wolf_rite = {
+		icon = GFX_decision_generic_political_discourse
+
+		allowed = {
+			original_tag = SIR
+		}
+
+		visible = {
+			has_country_flag = TU_SIR_rites
+		}
+
+		cost = 50
+		days_re_enable = 240
+
+		complete_effect = {
+			add_war_support = 0.05
+			army_experience = 15
+		}
+
+		ai_will_do = {
+			base = 1
+		}
+	}
+
+	TU_SIR_wolf_search = {
+		icon = GFX_decision_generic_political_discourse
+
+		allowed = {
+			original_tag = SIR
+		}
+
+		visible = {
+			has_country_flag = TU_SIR_rites
+		}
+
+		available = {
+			NOT = { has_country_flag = TU_SIR_wolf_sign }
+		}
+
+		cost = 75
+		fire_only_once = yes
+
+		complete_effect = {
+			country_event = { id = tu_sir_ev.25 }
+		}
+
+		ai_will_do = {
+			base = 1
+		}
+	}
+
+	TU_SIR_found_league = {
+		icon = GFX_decision_generic_political_discourse
+
+		allowed = {
+			original_tag = SIR
+		}
+
+		visible = {
+			has_country_flag = TU_SIR_league
+		}
+
+		available = {
+			is_in_faction = no
+		}
+
+		cost = 50
+		fire_only_once = yes
+
+		complete_effect = {
+			create_faction = TU_SIR_league
+		}
+
+		ai_will_do = {
+			base = 1
+		}
+	}
+
+	TU_SIR_invite_league = {
+		icon = GFX_decision_generic_political_discourse
+
+		allowed = {
+			original_tag = SIR
+		}
+
+		target_trigger = {
+			FROM = {
+				NOT = { tag = ROOT }
+				is_in_faction = no
+				NOT = { has_war_with = ROOT }
+				OR = { tag = LAT tag = RIM tag = IBE tag = LEI }
+			}
+		}
+
+		visible = {
+			has_country_flag = TU_SIR_league
+			is_faction_leader = yes
+		}
+
+		cost = 50
+		days_re_enable = 90
+
+		complete_effect = {
+			add_to_faction = FROM
+		}
+
+		ai_will_do = {
+			base = 1
+		}
+	}
+
+	TU_SIR_olive_harvest = {
+		icon = GFX_decision_generic_political_discourse
+
+		allowed = {
+			original_tag = SIR
+		}
+
+		visible = {
+			has_idea = TU_SIR_wine_and_olive
+		}
+
+		cost = 25
+		days_re_enable = 365
+
+		complete_effect = {
+			add_stability = 0.03
+			add_political_power = 25
+		}
+
+		ai_will_do = {
+			base = 1
+		}
+	}
+
+	TU_SIR_naval_patrol = {
+		icon = GFX_decision_generic_political_discourse
+
+		allowed = {
+			original_tag = SIR
+		}
+
+		visible = {
+			has_country_flag = TU_SIR_smuggling
+		}
+
+		cost = 50
+		days_re_enable = 180
+
+		complete_effect = {
+			TU_SIR_law_5 = yes
+			navy_experience = 15
+		}
+
+		ai_will_do = {
+			base = 1
+		}
+	}
+
+}

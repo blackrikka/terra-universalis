@@ -1,0 +1,32 @@
+TU_SIR_families_category = {
+	icon = GFX_decision_category_generic_political_actions
+
+	allowed = {
+		original_tag = SIR
+	}
+
+	visible = {
+		has_country_flag = TU_SIR_families
+	}
+
+	priority = 100
+}
+
+TU_SIR_street_category = {
+	icon = GFX_decision_category_generic_industry
+
+	allowed = {
+		original_tag = SIR
+	}
+
+	visible = {
+		OR = {
+			has_country_flag = TU_SIR_smuggling
+			has_country_flag = TU_SIR_casinos
+			has_country_flag = TU_SIR_rites
+			has_country_flag = TU_SIR_league
+		}
+	}
+
+	priority = 100
+}

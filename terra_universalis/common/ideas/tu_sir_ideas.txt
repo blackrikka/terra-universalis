@@ -1,0 +1,151 @@
+ideas = {
+
+	country = {
+
+		TU_SIR_omerta = {
+			picture = generic_secret_police
+
+			allowed = {
+				original_tag = SIR
+			}
+
+			modifier = {
+				stability_factor = 0.05
+				political_power_gain = -0.1
+				war_support_factor = -0.05
+			}
+		}
+
+		TU_SIR_family_cities = {
+			picture = generic_foreign_capital
+
+			allowed = {
+				original_tag = SIR
+			}
+
+			modifier = {
+				production_speed_buildings_factor = -0.05
+				consumer_goods_factor = 0.03
+			}
+		}
+
+		TU_SIR_bellone_ties = {
+			picture = generic_industrial_concern_1
+
+			allowed = {
+				original_tag = SIR
+			}
+
+			modifier = {
+				production_speed_buildings_factor = 0.1
+				political_power_gain = 0.05
+			}
+		}
+
+		TU_SIR_gambino_ties = {
+			picture = generic_manpower_bonus
+
+			allowed = {
+				original_tag = SIR
+			}
+
+			modifier = {
+				army_attack_factor = 0.05
+				conscription_factor = 0.05
+			}
+		}
+
+		TU_SIR_saluzzo_ties = {
+			picture = generic_economic_increase
+
+			allowed = {
+				original_tag = SIR
+			}
+
+			modifier = {
+				consumer_goods_factor = -0.03
+				political_power_gain = 0.1
+			}
+		}
+
+		TU_SIR_family_council = {
+			picture = generic_foreign_capital
+
+			allowed = {
+				original_tag = SIR
+			}
+
+			modifier = {
+				political_power_gain = 0.15
+				production_speed_buildings_factor = 0.1
+				stability_factor = -0.03
+			}
+		}
+
+		TU_SIR_rule_of_law = {
+			picture = constitutional_guarantees
+
+			allowed = {
+				original_tag = SIR
+			}
+
+			modifier = {
+				stability_factor = 0.15
+				production_speed_buildings_factor = 0.1
+			}
+		}
+
+		TU_SIR_wolf_lord = {
+			picture = generic_war_preparation
+
+			allowed = {
+				original_tag = SIR
+			}
+
+			modifier = {
+				army_attack_factor = 0.1
+				war_support_factor = 0.15
+				army_morale_factor = 0.1
+			}
+		}
+
+		TU_SIR_harbour_cities = {
+			picture = generic_navy_bonus
+
+			allowed = {
+				original_tag = SIR
+			}
+
+			modifier = {
+				naval_speed_factor = 0.05
+				consumer_goods_factor = -0.02
+			}
+		}
+
+		TU_SIR_urban_warfare = {
+			picture = generic_fortify_the_borders
+
+			allowed = {
+				original_tag = SIR
+			}
+
+			modifier = {
+				army_defence_factor = 0.08
+				army_org_factor = 0.03
+			}
+		}
+
+		TU_SIR_wine_and_olive = {
+			picture = generic_agrarian_society
+
+			allowed = {
+				original_tag = SIR
+			}
+
+			modifier = {
+				consumer_goods_factor = -0.03
+				stability_factor = 0.03
+			}
+		}
+	}
+}
