@@ -6,16 +6,19 @@ state={
 	state_category = town
 
 	history={
-		owner = VIC
-		victory_points = { 667 1 }
+		owner = IBE
+		victory_points = { 728 1 }
 		buildings = {
 			infrastructure = 2
+			industrial_complex = 2
+			arms_factory = 1
+			air_base = 1
 		}
-		add_core_of = VIC
+		add_core_of = IBE
 	}
 
 	provinces={
-		666 667 668 670
+		719 721 722 727 728 729 733 734
 	}
 	local_supplies=0.0
 }

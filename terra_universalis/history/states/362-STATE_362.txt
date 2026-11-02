@@ -1,21 +1,21 @@
 state={
 	id=362
 	name="STATE_362"
-	manpower = 50000
+	impassable = yes
+	manpower = 1000
 
-	state_category = town
+	state_category = wasteland
 
 	history={
-		owner = SAR
-		victory_points = { 1085 1 }
+		owner = WLD
 		buildings = {
-			infrastructure = 2
+			infrastructure = 0
 		}
-		add_core_of = SAR
+		add_core_of = WLD
 	}
 
 	provinces={
-		1079 1085 1087 1090 1092 1095
+		1903
 	}
 	local_supplies=0.0
 }

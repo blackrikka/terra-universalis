@@ -1,70 +1,70 @@
 TU_anchor_rho_start_available = {
-	NOT = { 119 = { is_owned_by = RHO } }
+	NOT = { 61 = { is_owned_by = RHO } }
 	YAN = { exists = yes }
 	YAN = { NOT = { has_war_with = RHO } }
-	119 = { is_owned_by = YAN }
+	61 = { is_owned_by = YAN }
 }
 
 TU_anchor_victoria_available = {
-	NOT = { 208 = { is_owned_by = RHO } }
+	NOT = { 111 = { is_owned_by = RHO } }
 	VIC = { exists = yes }
 	VIC = { NOT = { has_war_with = RHO } }
-	208 = { is_owned_by = VIC }
+	111 = { is_owned_by = VIC }
 }
 
 TU_anchor_columbia_available = {
-	NOT = { 146 = { is_owned_by = RHO } }
+	NOT = { 95 = { is_owned_by = RHO } }
 	COL = { exists = yes }
 	COL = { NOT = { has_war_with = RHO } }
-	146 = { is_owned_by = COL }
+	95 = { is_owned_by = COL }
 }
 
 TU_anchor_yan_available = {
-	NOT = { 100 = { is_owned_by = RHO } }
+	NOT = { 67 = { is_owned_by = RHO } }
 	YAN = { exists = yes }
 	YAN = { NOT = { has_war_with = RHO } }
-	100 = { is_owned_by = YAN }
+	67 = { is_owned_by = YAN }
 }
 
 TU_anchor_kazimierz_available = {
-	NOT = { 58 = { is_owned_by = RHO } }
+	NOT = { 43 = { is_owned_by = RHO } }
 	KAZ = { exists = yes }
 	KAZ = { NOT = { has_war_with = RHO } }
-	58 = { is_owned_by = KAZ }
+	43 = { is_owned_by = KAZ }
 }
 
 TU_anchor_sargon_available = {
-	NOT = { 325 = { is_owned_by = RHO } }
+	NOT = { 167 = { is_owned_by = RHO } }
 	SAR = { exists = yes }
 	SAR = { NOT = { has_war_with = RHO } }
-	325 = { is_owned_by = SAR }
+	167 = { is_owned_by = SAR }
 }
 
 TU_anchor_iberia_available = {
-	NOT = { 385 = { is_owned_by = RHO } }
+	NOT = { 197 = { is_owned_by = RHO } }
 	IBE = { exists = yes }
 	IBE = { NOT = { has_war_with = RHO } }
-	385 = { is_owned_by = IBE }
+	197 = { is_owned_by = IBE }
 }
 
 TU_anchor_rim_available = {
-	NOT = { 294 = { is_owned_by = RHO } }
+	NOT = { 154 = { is_owned_by = RHO } }
 	RIM = { exists = yes }
 	RIM = { NOT = { has_war_with = RHO } }
-	294 = { is_owned_by = RIM }
+	154 = { is_owned_by = RIM }
 }
 
 TU_anchor_kazdel_available = {
-	NOT = { 280 = { is_owned_by = RHO } }
+	NOT = { 143 = { is_owned_by = RHO } }
 	KZD = { exists = yes }
 	KZD = { NOT = { has_war_with = RHO } }
-	280 = { is_owned_by = KZD }
+	143 = { is_owned_by = KZD }
 }
 
 TU_anchor_ursus_available = {
-	NOT = { 40 = { is_owned_by = RHO } }
+	NOT = { 28 = { is_owned_by = RHO } }
 	URS = { exists = yes }
 	URS = { NOT = { has_war_with = RHO } }
-	40 = { is_owned_by = URS }
+	28 = { is_owned_by = URS }
 }
 

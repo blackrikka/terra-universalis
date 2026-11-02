@@ -1,21 +1,23 @@
 state={
 	id=385
 	name="STATE_385"
+	impassable = yes
 	manpower = 1000
 
-	state_category = tiny_island
+	state_category = wasteland
 
 	history={
-		owner = IBE
-		victory_points = { 1170 1 }
+		owner = WLD
 		buildings = {
-			infrastructure = 3
+			infrastructure = 0
 		}
-		add_core_of = IBE
+		add_core_of = WLD
 	}
 
 	provinces={
-		1170
+		1993 1994 1995 2009 2010 2011 2012 2026 2027 2028 2029 2030 2039 2040 2041 2042 2043 2044 2045 2046
+		2047 2053 2054 2055 2056 2057 2058 2059 2060 2064 2065 2066 2070 2071 2072 2073 2074 2075 2079 2080
+		2081 2082 2084 2085 2086 2095 2097 2098
 	}
 	local_supplies=0.0
 }

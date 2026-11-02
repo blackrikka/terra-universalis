@@ -546,8 +546,56 @@ def merge_all_small(lab, label_region, regions, next_label, limit_w, limit_h):
     return merged
 
 
-def split_provinces(region, regions, rng):
+def split_by_cells(region, regions, cells):
+    """프로빈스 = (지역 성분 ∩ 헥스 칸)의 연결 성분. 반환: lab, label_region, label_comp, next_label."""
     H, W = region.shape
+    comp = np.zeros((H, W), np.int64)
+    comp_region = [0]
+    for r, reg in enumerate(regions):
+        mask_r = region == r
+        if not mask_r.any():
+            print("WARN: region %s has no pixels" % reg["id"])
+            continue
+        cl, n = ndimage.label(mask_r)
+        comp[mask_r] = cl[mask_r] + len(comp_region) - 1
+        comp_region.extend([r] * n)
+    key = comp * (1 << 24) + cells.astype(np.int64)
+    _, inv = np.unique(key, return_inverse=True)
+    lab = (inv.reshape(H, W) + 1).astype(np.int32)
+    # 같은 (성분, 칸)이 해안선 때문에 두 조각 이상이면 나눈다
+    flat_lab = lab.ravel()
+    flat_comp = comp.ravel()
+    idx = np.unique(flat_lab, return_index=True)
+    lab_comp = np.zeros(int(lab.max()) + 1, np.int64)
+    lab_comp[idx[0]] = flat_comp[idx[1]]
+    next_label = int(lab.max()) + 1
+    extra_comp = []
+    split = 0
+    for l, sl in enumerate(ndimage.find_objects(lab), start=1):
+        if sl is None:
+            continue
+        sub = lab[sl] == l
+        pieces, n = ndimage.label(sub)
+        if n > 1:
+            view = lab[sl]
+            for k in range(2, n + 1):
+                view[pieces == k] = next_label
+                extra_comp.append(lab_comp[l])
+                next_label += 1
+                split += 1
+    lab_comp = np.concatenate([lab_comp, np.array(extra_comp, np.int64)])
+    label_comp = lab_comp.tolist()
+    label_region = [comp_region[c] for c in label_comp]
+    label_region[0] = 0
+    print("hex provinces: %d (split pieces %d)" % (next_label - 1, split))
+    return lab, label_region, label_comp, next_label
+
+
+def split_provinces(region, regions, rng, cells=None):
+    H, W = region.shape
+    if cells is not None:
+        lab, label_region, label_comp, next_label = split_by_cells(region, regions, cells)
+        return finish_provinces(lab, label_region, label_comp, regions, rng, W, H, next_label)
     lab = np.zeros((H, W), np.int32)
     label_region = [0]
     label_comp = [0]
@@ -575,6 +623,10 @@ def split_provinces(region, regions, rng):
             view = lab[sl]
             view[sub] = owner[sub] + next_label
             next_label += k
+    return finish_provinces(lab, label_region, label_comp, regions, rng, W, H, next_label)
+
+
+def finish_provinces(lab, label_region, label_comp, regions, rng, W, H, next_label):
     # 경계 상자 제한 (폭 < W/9, 높이 < H/9): 소형 합병과 X-교차 처리보다 먼저.
     # 소형 합병은 합친 상자가 제한 안일 때만 허용 (합병 뒤에도 제한이 유지된다).
     limit_w = W / 9.0
@@ -1044,7 +1096,14 @@ def main(argv=None):
         fixed_small += clean_small_components(region, len(regions))
     print("small components reassigned: %d (region X-cross pixels: %d)" % (fixed_small, region_x))
 
-    lab, label_region, label_comp = split_provinces(region, regions, rng)
+    cells = None
+    if cfg.get("cells"):
+        cpath = resolve_input(args.config).parent / cfg["cells"]
+        ca = np.asarray(Image.open(cpath).convert("RGB")).astype(np.int64)
+        if ca.shape[:2] != (H, W):
+            raise MapgenError("cells 그림 크기가 지도와 다름: %s" % cpath.name)
+        cells = ca[..., 0] * 65536 + ca[..., 1] * 256 + ca[..., 2]
+    lab, label_region, label_comp = split_provinces(region, regions, rng, cells)
     id_map, provs = renumber(lab, label_region, label_comp, regions)
     N = len(provs) - 1
     province_attributes(provs, id_map, regions)

@@ -2,7 +2,7 @@ add_namespace = tu_crisis
 
 # Chernobog incident chain. Fired from common/on_actions/tu_crisis_on_actions.txt (on_startup, once).
 # Flags: TU_chernobog_incident_started / _resolved, TU_lungmen_border_conflict, TU_lungmen_survived.
-# Numeric state scopes only (36 = Chernobog, 965 = Lungmen capital). Nothing here polls.
+# Numeric state scopes only (24 = Chernobog, 965 = Lungmen capital). Nothing here polls.
 
 # 1. URS: "Flames over Chernobog". REU does not exist yet, so the transfer creates it.
 country_event = {
@@ -20,11 +20,11 @@ country_event = {
 			set_global_flag = TU_chernobog_incident_started
 
 			# Dynamic REU: it exists only after it owns a state. Order matters below.
-			36 = { transfer_state_to = REU }
+			24 = { transfer_state_to = REU }
 
 			REU = {
 				set_capital = {
-					state = 36
+					state = 24
 					remember_old_capital = no
 				}
 
@@ -40,7 +40,7 @@ country_event = {
 					}
 				}
 
-				36 = {
+				24 = {
 					create_unit = {
 						division = "division_template = \"TU_REU_militia\" start_experience_factor = 0.2 start_equipment_factor = 0.7"
 						owner = REU
@@ -204,7 +204,7 @@ country_event = {
 			limit = {
 				country_exists = LGM
 			}
-			923 = {
+			612 = {
 				create_unit = {
 					division = "division_template = \"TU_LGM_guard\" start_experience_factor = 0.5"
 					owner = LGM

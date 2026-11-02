@@ -185,7 +185,7 @@ TU_REU_expansion_category = {
 
 TU_REU_construction_category = {
 
-	# Chernobog (state 36) construction. Numeric state scope.
+	# Chernobog (state 24) construction. Numeric state scope.
 	TU_REU_chernobog_industry = {
 		icon = GFX_decision_generic_construction
 
@@ -199,7 +199,7 @@ TU_REU_construction_category = {
 
 		available = {
 			has_completed_focus = TU_REU_chernobog_reactor
-			36 = {
+			24 = {
 				is_owned_by = REU
 			}
 		}
@@ -208,7 +208,7 @@ TU_REU_construction_category = {
 		fire_only_once = yes
 
 		complete_effect = {
-			36 = {
+			24 = {
 				add_building_construction = {
 					type = industrial_complex
 					level = 1
@@ -235,7 +235,7 @@ TU_REU_construction_category = {
 
 		available = {
 			has_completed_focus = TU_REU_chernobog_workshop
-			36 = {
+			24 = {
 				is_owned_by = REU
 			}
 		}
@@ -244,7 +244,7 @@ TU_REU_construction_category = {
 		fire_only_once = yes
 
 		complete_effect = {
-			36 = {
+			24 = {
 				add_building_construction = {
 					type = arms_factory
 					level = 1
@@ -271,7 +271,7 @@ TU_REU_construction_category = {
 
 		available = {
 			has_completed_focus = TU_REU_chernobog_rail_link
-			36 = {
+			24 = {
 				is_owned_by = REU
 			}
 		}
@@ -280,7 +280,7 @@ TU_REU_construction_category = {
 		fire_only_once = yes
 
 		complete_effect = {
-			36 = {
+			24 = {
 				add_building_construction = {
 					type = infrastructure
 					level = 1
@@ -307,7 +307,7 @@ TU_REU_construction_category = {
 
 		available = {
 			has_completed_focus = TU_REU_chernobog_bunkers
-			36 = {
+			24 = {
 				is_owned_by = REU
 			}
 		}
@@ -316,7 +316,7 @@ TU_REU_construction_category = {
 		fire_only_once = yes
 
 		complete_effect = {
-			36 = {
+			24 = {
 				add_building_construction = {
 					type = bunker
 					level = 1
@@ -343,7 +343,7 @@ TU_REU_construction_category = {
 
 		available = {
 			has_completed_focus = TU_REU_chernobog_defences
-			36 = {
+			24 = {
 				is_owned_by = REU
 			}
 		}
@@ -352,7 +352,7 @@ TU_REU_construction_category = {
 		fire_only_once = yes
 
 		complete_effect = {
-			36 = {
+			24 = {
 				add_building_construction = {
 					type = anti_air_building
 					level = 1
@@ -379,7 +379,7 @@ TU_REU_construction_category = {
 
 		available = {
 			has_completed_focus = TU_REU_chernobog_hangar
-			36 = {
+			24 = {
 				is_owned_by = REU
 			}
 		}
@@ -388,7 +388,7 @@ TU_REU_construction_category = {
 		fire_only_once = yes
 
 		complete_effect = {
-			36 = {
+			24 = {
 				add_building_construction = {
 					type = air_base
 					level = 1
@@ -406,7 +406,7 @@ TU_REU_construction_category = {
 TU_REU_mobilize_category = {
 
 	# Infected militia. TU_REU_militia is defined by the Chernobog incident (events/tu_crisis_chernobog.txt).
-	# Units are created in the capital (state 36 at the start), guarded by has_template.
+	# Units are created in the capital (state 24 at the start), guarded by has_template.
 	TU_REU_militia_batch = {
 		icon = GFX_decision_generic_civil_support
 

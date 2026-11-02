@@ -1,21 +1,21 @@
 state={
 	id=143
 	name="STATE_143"
-	manpower = 50000
+	manpower = 1000
 
-	state_category = town
+	state_category = tiny_island
 
 	history={
-		owner = COL
-		victory_points = { 543 1 }
+		owner = KZD
+		victory_points = { 510 1 }
 		buildings = {
-			infrastructure = 2
+			infrastructure = 3
 		}
-		add_core_of = COL
+		add_core_of = KZD
 	}
 
 	provinces={
-		543
+		510
 	}
 	local_supplies=0.0
 }

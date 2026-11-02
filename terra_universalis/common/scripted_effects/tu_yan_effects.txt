@@ -3,8 +3,8 @@
 #####################################
 
 # Called from common/on_actions/tu_yan_on_actions.txt (on_startup).
-# Yan: six infantry divisions in the capital state (97) and two each in the
-# adjacent Yan states 122 and 92 (ten in total).
+# Yan: six infantry divisions in the capital state (63) and two each in the
+# adjacent Yan states 70 and 60 (ten in total).
 TU_YAN_startup = {
 	capital_scope = {
 		create_unit = {
@@ -15,9 +15,9 @@ TU_YAN_startup = {
 	}
 	if = {
 		limit = {
-			122 = { is_owned_by = ROOT }
+			70 = { is_owned_by = ROOT }
 		}
-		122 = {
+		70 = {
 			create_unit = {
 				division = "division_template = \"TU_YAN_infantry\" start_experience_factor = 0.2 start_equipment_factor = 0.7"
 				owner = YAN
@@ -27,9 +27,9 @@ TU_YAN_startup = {
 	}
 	if = {
 		limit = {
-			92 = { is_owned_by = ROOT }
+			60 = { is_owned_by = ROOT }
 		}
-		92 = {
+		60 = {
 			create_unit = {
 				division = "division_template = \"TU_YAN_infantry\" start_experience_factor = 0.2 start_equipment_factor = 0.7"
 				owner = YAN
@@ -40,7 +40,7 @@ TU_YAN_startup = {
 }
 
 # Lungmen startup (country scope, called as LGM = { TU_LGM_startup = yes }).
-# Three guard divisions in the capital state (923).
+# Three guard divisions in the capital state (612).
 TU_LGM_startup = {
 	capital_scope = {
 		create_unit = {

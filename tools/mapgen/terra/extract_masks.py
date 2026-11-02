@@ -34,16 +34,19 @@ PAD = 21                     # 위아래 바다 패딩 (게임 px)
 REF_PER_SMALL = 2.756        # 소좌표 -> 참고 px
 GAME_ROWS = GAME_H - 2 * PAD  # 참고 지도가 차지하는 게임 행 수 (4054)
 
-# 크기와 속성 (A.6)
+# 크기와 속성 (A.6). 프로빈스 = 헥스 1칸이므로 prov_size는 헥스 면적(실행 중 계산)으로 덮어쓴다. 두 번째 값 = 주 하나의 프로빈스 수
 SIZES = {
     "land": (900, 6),
     "wasteland": (2500, 6),
-    "impassable": (12000, 8),
+    "impassable": (12000, 30),
     "lake": (6000, None),
     "sea": (20000, None),
 }
 STRATEGIC_LAND_STATES = 8
-STRATEGIC_SEA_PROVINCES = 10
+STRATEGIC_SEA_PROVINCES = 120
+# 헥스 프로빈스 격자: 헥스 지도의 헥스 격자 (위가 뾰족한 육각형, 짝수 행 기준, 홀수 행은 가로 반 칸 밀림).
+# (가로 간격, 행 간격, 0행 0열 중심 x, y) — 헥스 지도 좌표. 헥스 사이 밝은 틈을 기준으로 맞춘 값.
+HEX_LATTICE = (9.846, 8.525, 2.3, 6.5)
 
 LAKE_SEEDS = [(430, 780), (395, 465), (520, 435), (250, 320), (380, 345), (450, 315), (540, 295),
               (480, 355), (570, 175), (145, 865), (265, 985)]
@@ -369,6 +372,32 @@ def hex_maps(im):
     return out, cls
 
 
+def hex_cells(ref_h, ref_w):
+    """게임 픽셀 (GAME_H x GAME_W) -> 헥스 칸 번호. 게임 -> 참고 -> 헥스 지도 좌표로 옮긴 뒤 가장 가까운 격자점."""
+    w, rh, ox, oy = HEX_LATTICE
+    A, C, D, E = HEX_AFFINE
+    gx = np.arange(GAME_W, dtype=np.float64)
+    gy = np.arange(GAME_H, dtype=np.float64)
+    hx = A * (((gx + 0.5) * ref_w / GAME_W - 0.5) / 4.0) + C
+    hy = D * (((gy - PAD + 0.5) * ref_h / GAME_ROWS - 0.5) / 4.0) + E
+    HX = np.broadcast_to(hx[None, :], (GAME_H, GAME_W))
+    HY = np.broadcast_to(hy[:, None], (GAME_H, GAME_W))
+    r0 = np.floor((HY - oy) / rh).astype(np.int64)
+    best_d = np.full((GAME_H, GAME_W), np.inf)
+    best_r = np.zeros((GAME_H, GAME_W), np.int64)
+    best_c = np.zeros((GAME_H, GAME_W), np.int64)
+    for dr in (0, 1):
+        r = r0 + dr
+        off = (r % 2) * (w / 2.0)
+        c = np.round((HX - ox - off) / w).astype(np.int64)
+        d = (HX - (ox + off + c * w)) ** 2 + (HY - (oy + r * rh)) ** 2
+        better = d < best_d
+        best_d[better] = d[better]
+        best_r[better] = r[better]
+        best_c[better] = c[better]
+    return ((best_r + 50) * 1000 + (best_c + 50)).astype(np.int64)
+
+
 def resolve_owned(small, owner, idx, kind):
     """점을 참고 px로 바꾸고, 소유국 idx의 통행 가능 육지가 아니면 그 국가의 가장 가까운 육지로 옮긴다."""
     rx, ry = small_to_ref(small)
@@ -457,6 +486,25 @@ def main(argv=None):
     cut = int(((code_game != 4000) & margin).sum())
     code_game[margin] = 4000
     log["margin_land_cut_px"] = cut
+    # 헥스 프로빈스: 게임 픽셀마다 헥스 칸을 정하고, 칸 안의 육지는 다수결로 지역 하나 (나라·지형이 칸 단위가 된다).
+    # 해안선·호수는 픽셀 단위 그대로 (해안 칸은 해안선에 잘린 육각형).
+    cells = hex_cells(ref_h, ref_w)
+    landpx = (code_game != 4000) & (code_game != 3000)
+    cu, cinv = np.unique(cells[landpx], return_inverse=True)
+    ku, kinv = np.unique(code_game[landpx], return_inverse=True)
+    cnt = np.zeros((len(cu), len(ku)), np.int32)
+    np.add.at(cnt, (cinv, kinv), 1)
+    maj = ku[np.argmax(cnt, axis=1)]
+    before = code_game[landpx]
+    code_game[landpx] = maj[cinv]
+    log["hex_cells_land"] = int(len(cu))
+    log["hex_majority_changed_px"] = int((before != code_game[landpx]).sum())
+    cell_area = int(np.median(np.bincount(np.unique(cells, return_inverse=True)[1].ravel())))
+    log["hex_cell_area_px"] = cell_area
+    cid = cells.astype(np.uint32)
+    Image.fromarray(np.stack([(cid >> 16) & 255, (cid >> 8) & 255, cid & 255], -1).astype(np.uint8)).save(
+        out_dir / "hexcells.png")
+
     # 대각선으로만 닿는 같은 지역 (2x2에서 a==d, b!=a, c!=a, b!=c) 을 없앤다: b를 a로. 프로빈스 X-교차가 풀리지 않는 원인.
     diag_fixes = 0
     for _ in range(50):
@@ -471,6 +519,45 @@ def main(argv=None):
         code_game[ys, xs] = code_game[ys, xs + 1]
         diag_fixes += int(m1.sum() + (m2 & ~m1).sum())
     log["diagonal_region_fixes"] = diag_fixes
+
+    # 이름 있는 주·정박지 점을 칸 판정 뒤에 다시 놓는다: 소유국 육지 칸 안, 서로 다른 칸, 칸 중심에 가까운 픽셀
+    taken = set()
+    for d in named_out + anchors_out:
+        if d.get("append_id"):
+            tag = "YAN"
+        elif "host" in d:
+            tag = d["host"] if d["host"] in COUNTRY_TAGS else d["return"]
+        else:
+            tag = d["owner"]
+        oi = OWNER_TAGS.index(tag)
+        ok = (code_game // 1000 == K_LAND) & ((code_game % 1000) // 10 - 1 == oi) & (code_game < 3000)
+        cand_cells = np.unique(cells[ok])
+        cand_cells = [c for c in cand_cells.tolist() if c not in taken]
+        if not cand_cells:
+            raise SystemExit("%s: 국가 %s에 빈 육지 칸이 없음" % (d.get("name", d.get("key")), tag))
+        ys, xs = np.nonzero(ok & np.isin(cells, cand_cells))
+        cc = cells[ys, xs]
+        order = np.argsort(cc, kind="stable")
+        ys, xs, cc = ys[order], xs[order], cc[order]
+        starts = np.r_[0, np.nonzero(np.diff(cc))[0] + 1]
+        ends = np.r_[starts[1:], len(cc)]
+        best = None
+        for a0, a1 in zip(starts.tolist(), ends.tolist()):
+            if a1 - a0 < 200:      # 해안에 잘린 작은 조각 칸은 피한다
+                continue
+            my, mx = ys[a0:a1].mean(), xs[a0:a1].mean()
+            dist2 = (mx - d["x"]) ** 2 + (my - d["y"]) ** 2
+            if best is None or dist2 < best[0]:
+                k = int(np.argmin((xs[a0:a1] - mx) ** 2 + (ys[a0:a1] - my) ** 2)) + a0
+                best = (dist2, int(cc[a0]), int(xs[k]), int(ys[k]))
+        if best is None:
+            raise SystemExit("%s: 국가 %s에 충분히 큰 칸이 없음" % (d.get("name", d.get("key")), tag))
+        _, cell, nx, ny = best
+        if (nx, ny) != (d["x"], d["y"]):
+            d["moved"] = True
+        d["x"], d["y"] = nx, ny
+        taken.add(cell)
+    log["moved_points"] = [d["name"] if "name" in d else d["key"] for d in named_out + anchors_out if d["moved"]]
     uniq, inv = np.unique(code_game, return_inverse=True)
     inv = inv.reshape(GAME_H, GAME_W)
 
@@ -509,13 +596,13 @@ def main(argv=None):
         per_kind[kname] = per_kind.get(kname, 0) + 1
         entry = {"color": list(colors[i]), "id": rid, "kind": kname}
         if kname in ("sea", "lake"):
-            entry["prov_size"] = SIZES[kname][0]
+            entry["prov_size"] = cell_area
         else:
             if owner_tag is None or owner_tag == "NONE":
                 raise SystemExit("owner missing for region %s" % rid)
             entry["owner"] = owner_tag
             entry["terrain"] = terr
-            entry["prov_size"], entry["state_size"] = SIZES[kname]
+            entry["prov_size"], entry["state_size"] = cell_area, SIZES[kname][1]
         regions.append(entry)
 
     config = {
@@ -525,6 +612,7 @@ def main(argv=None):
         "anchors": anchors_out,
         "strategic_land_states": STRATEGIC_LAND_STATES,
         "strategic_sea_provinces": STRATEGIC_SEA_PROVINCES,
+        "cells": "hexcells.png",
         "source": {"reference": str(Path(args.reference).name), "hex_map": str(Path(args.hex_map).name), "pad": PAD},
     }
     (out_dir / "regions.json").write_text(json.dumps(config, indent=1, ensure_ascii=True) + "\n", encoding="ascii")

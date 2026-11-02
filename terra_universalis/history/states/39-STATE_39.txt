@@ -7,15 +7,18 @@ state={
 
 	history={
 		owner = URS
-		victory_points = { 160 1 }
+		victory_points = { 165 1 }
 		buildings = {
 			infrastructure = 2
+			industrial_complex = 2
+			arms_factory = 1
+			air_base = 1
 		}
 		add_core_of = URS
 	}
 
 	provinces={
-		158 160 167 168 169 173
+		165
 	}
 	local_supplies=0.0
 }
