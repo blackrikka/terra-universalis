@@ -29,20 +29,20 @@ tutorial = {
     window = "tutorial_screen_2"
 
     text = "tut_2_text_1"
-    state = 215
+    state = 119
 
-    highlight_states_trigger = { 215 }
+    highlight_states_trigger = { 119 }
 
-    direction_pointer = 1053
+    direction_pointer = 459
 
     move_camera_to = {
         textbox = "obj_1"
-        state = 215
+        state = 119
     }
 
     select_all_divs_in = {
         textbox = "obj_2"
-        state = 215
+        state = 119
     }
 
 }
@@ -52,7 +52,7 @@ tutorial = {
 
     command_group = {
         textbox = "obj_1"
-        state = 215
+        state = 119
     }
 }
 
@@ -64,7 +64,7 @@ tutorial = {
 
     frontline = {
         textbox = "obj_1"
-        state = 215
+        state = 119
     }
 }
 
@@ -75,11 +75,11 @@ tutorial = {
     show_objects_in_window = { "draw_offense_tutorial_glow" }
     offensive_order = {
         textbox = "obj_1"
-        target = 1053
+        target = 459
     }
 
-    highlight_provinces = { 1053 1053 }
-    direction_pointer = 1053
+    highlight_provinces = { 459 459 }
+    direction_pointer = 459
 }
 
 tutorial = {
@@ -88,11 +88,11 @@ tutorial = {
 
     airbase = {
         textbox = "obj_1"
-        state = 215
+        state = 119
     }
 
-    highlight_provinces = { 1053 }
-    direction_pointer = 1053
+    highlight_provinces = { 459 }
+    direction_pointer = 459
 }
 
 tutorial = {
@@ -101,7 +101,7 @@ tutorial = {
 
     airwings_assigned = {
         textbox = "obj_1"
-        state = 215
+        state = 119
     }
     open_hint = {
             hint = "tutorial_hint_air_base"
@@ -115,7 +115,7 @@ tutorial = {
 
     airwings_missions = {
         textbox = "obj_1"
-        state = 215
+        state = 119
     }
 
 }
@@ -133,7 +133,7 @@ tutorial = {
 
     command_group_selected = {
         textbox = "obj_2"
-        state = 215
+        state = 119
     }
 }
 
@@ -149,7 +149,7 @@ tutorial = {
 
     commander = {
         textbox = "obj_1"
-        state = 215
+        state = 119
     }
 
     battleplan_executed = {
@@ -198,11 +198,11 @@ tutorial = {
 
     troops_in_port = {
         textbox = "obj_1"
-        state = 215
+        state = 119
         units = 4
     }
-    highlight_provinces = { 1053 }
-    direction_pointer = 1053
+    highlight_provinces = { 459 }
+    direction_pointer = 459
 }
 
 tutorial = {
@@ -214,7 +214,7 @@ tutorial = {
         units = 4
     }
 
-    highlight_provinces = { 1053 1053 1053 1053 1053 1053 }
+    highlight_provinces = { 459 459 459 459 459 459 }
 
 }
 

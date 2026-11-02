@@ -1,0 +1,21 @@
+state={
+	id=918
+	name="STATE_918"
+	impassable = yes
+	manpower = 1000
+
+	state_category = wasteland
+
+	history={
+		owner = WLD
+		buildings = {
+			infrastructure = 0
+		}
+		add_core_of = WLD
+	}
+
+	provinces={
+		2047
+	}
+	local_supplies=0.0
+}

@@ -16,6 +16,7 @@ TU_dip_relations_category = {
 
 		target_trigger = {
 			FROM = {
+				NOT = { original_tag = WLD }   # 무주지(중립 태그)는 외교 대상 아님
 				NOT = {
 					original_tag = ROOT
 				}
@@ -79,6 +80,7 @@ TU_dip_relations_category = {
 
 		target_trigger = {
 			FROM = {
+				NOT = { original_tag = WLD }   # 무주지(중립 태그)는 외교 대상 아님
 				NOT = {
 					original_tag = ROOT
 				}
@@ -156,6 +158,7 @@ TU_dip_relations_category = {
 
 		target_trigger = {
 			FROM = {
+				NOT = { original_tag = WLD }   # 무주지(중립 태그)는 외교 대상 아님
 				NOT = {
 					original_tag = ROOT
 				}
@@ -216,6 +219,7 @@ TU_dip_treaty_category = {
 
 		target_trigger = {
 			FROM = {
+				NOT = { original_tag = WLD }   # 무주지(중립 태그)는 외교 대상 아님
 				NOT = {
 					original_tag = ROOT
 				}
@@ -303,6 +307,7 @@ TU_dip_pressure_category = {
 
 		target_trigger = {
 			FROM = {
+				NOT = { original_tag = WLD }   # 무주지(중립 태그)는 외교 대상 아님
 				NOT = {
 					original_tag = ROOT
 				}
@@ -362,6 +367,7 @@ TU_dip_intrigue_category = {
 
 		target_trigger = {
 			FROM = {
+				NOT = { original_tag = WLD }   # 무주지(중립 태그)는 외교 대상 아님
 				NOT = {
 					original_tag = ROOT
 				}
@@ -454,6 +460,7 @@ TU_dip_intrigue_category = {
 
 		target_trigger = {
 			FROM = {
+				NOT = { original_tag = WLD }   # 무주지(중립 태그)는 외교 대상 아님
 				NOT = {
 					original_tag = ROOT
 				}
@@ -514,6 +521,7 @@ TU_dip_intrigue_category = {
 
 		target_trigger = {
 			FROM = {
+				NOT = { original_tag = WLD }   # 무주지(중립 태그)는 외교 대상 아님
 				NOT = {
 					original_tag = ROOT
 				}

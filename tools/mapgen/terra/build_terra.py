@@ -36,21 +36,24 @@ def run(label, cmd):
 def main(argv=None):
     ap = argparse.ArgumentParser(description="테라 지도 한 번에 빌드")
     ap.add_argument("--mod", default="terra_universalis")
+    ap.add_argument("--vanilla", default=None, help="바닐라 설치 경로 (없으면 각 도구의 기본값). 대체 폴더는 make_vanilla_shim.py")
+    ap.add_argument("--skip-check-refs", action="store_true", help="check_refs 생략 (바닐라 documentation 폴더가 없을 때)")
     ap.add_argument("--skip-extract", action="store_true", help="regions.png/json이 이미 있으면 마스크 추출을 건너뜀")
     args = ap.parse_args(argv)
 
+    van = ["--vanilla", args.vanilla] if args.vanilla else []
     steps = []
     t_all = time.time()
     if not args.skip_extract:
         steps.append(("extract_masks", [HERE / "extract_masks.py"]))
     steps.append(("mapgen", [MAPGEN / "mapgen.py", "--regions", TERRA_REGIONS, "--config", TERRA_CONFIG,
-                             "--mod", args.mod]))
+                             "--mod", args.mod] + van))
     steps.append(("build_countries", [MAPGEN / "build_countries.py", "--countries", TERRA_COUNTRIES,
-                                      "--mod", args.mod]))
+                                      "--mod", args.mod] + van))
     steps.append(("validate_map", [MAPGEN / "validate_map.py", "--mod", args.mod,
-                                   "--countries", TERRA_COUNTRIES]))
+                                   "--countries", TERRA_COUNTRIES] + van))
     steps.append(("tu_lint", [LINT]))
-    if CHECK_REFS.is_file():
+    if CHECK_REFS.is_file() and not args.skip_check_refs:
         steps.append(("check_refs", [CHECK_REFS]))
 
     results = []

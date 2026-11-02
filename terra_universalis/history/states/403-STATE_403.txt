@@ -1,20 +1,21 @@
 state={
 	id=403
 	name="STATE_403"
-	manpower = 5000
+	manpower = 50000
 
-	state_category = pastoral
+	state_category = town
 
 	history={
-		owner = KZD
+		owner = IBE
+		victory_points = { 1231 1 }
 		buildings = {
-			infrastructure = 1
+			infrastructure = 2
 		}
-		add_core_of = KZD
+		add_core_of = IBE
 	}
 
 	provinces={
-		1914
+		1231
 	}
 	local_supplies=0.0
 }

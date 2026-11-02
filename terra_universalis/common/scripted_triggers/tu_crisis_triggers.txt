@@ -1,9 +1,9 @@
 # Chernobog incident triggers (used by events/tu_crisis_chernobog.txt). Scope: any country.
 
-# Lungmen exists and still controls its capital state (916, lungmen).
+# Lungmen exists and still controls its capital state (923, lungmen).
 TU_crisis_lungmen_holds = {
 	country_exists = LGM
-	916 = {
+	923 = {
 		is_owned_and_controlled_by = LGM
 	}
 }

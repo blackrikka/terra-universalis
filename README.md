@@ -6,7 +6,9 @@
 - 언어: 한국어 · 영어
 
 ## 내용
-- **테라 커스텀 지도**: 3072×4096, 프로빈스 약 3,150개, 주 916개, 국가 20개 (참고 지도에서 자동 생성)
+- **테라 커스텀 지도**: 3072×4096, 프로빈스 약 2,500개, 주 923개, 국가 20개 + 무주지 중립 태그 (참고 지도에서 자동 생성)
+  - 해안선·지형: `reference/Terra_world_map_redrawn_v.3.png`, 국가 영토: `reference/Terra_hex_map_fandom.png`(헥스 지도)
+  - 어느 나라에도 속하지 않은 회색 땅은 통행 불가, 중립 태그 `WLD`(무주지) 소유
 - **7개국 상세 구현**: 로도스 아일랜드, 우르수스, 빅토리아, 염국, 카즈델, 용문, 리유니온 — 국가당 100~400개 중점, 국가 디시전, 국가 이벤트
 - **디시전 중심 외교**: 공통 외교 디시전(사절단·무역·문화 교류·방위 동맹·공작·국정 운영), 중점으로 해금
 - **체르노보그 사태**: 리유니온 등장 → 용문 국지전 이벤트 체인
@@ -31,6 +33,12 @@ python -I tools/vanilla_cleanup.py               # 바닐라 정리(튜토리얼
 python -I tools/focusgen/merge_focus.py --tag VIC   # 중점 트리 조각 합치기 + 자동 배치 (태그별)
 python -I tools/portraits/build_portraits.py     # 초상화
 python -I tools/lint/tu_lint.py                  # 정적 검사
+```
+
+바닐라 HOI4가 설치되지 않은 환경(클라우드 세션 등)에서는 지도를 다시 만들기 전에 대체 폴더를 만들어 씁니다.
+```
+python -I tools/mapgen/make_vanilla_shim.py --out <임시 폴더>
+python -I tools/mapgen/terra/build_terra.py --vanilla <임시 폴더> --skip-check-refs
 ```
 
 ## 저작권

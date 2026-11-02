@@ -13,7 +13,7 @@
      분류: (a) 파일명 앞부분이 바닐라 국가 태그인 경우, (b) 파일 안의 아이디어 id 대부분이 바닐라 태그 접두사(XXX_)인 경우.
      법률·정신 파일(_로 시작, zzz_, 일반 이름)은 남긴다. 목록과 분류 이유를 출력한다.
   4. common/units/names_divisions/tu_names_divisions.txt에 모든 태그가 쓸 수 있는 기본 사단 이름 그룹(TU_DIVNAMES_FALLBACK)을 만든다.
-  5. 바닐라 tutorial/tutorial.txt의 province/state id를 모드 맵의 id(1053 / 215)로 바꿔 terra_universalis/tutorial/tutorial.txt에 쓴다.
+  5. 바닐라 tutorial/tutorial.txt의 province/state id를 모드 맵의 id(459 / 119)로 바꿔 terra_universalis/tutorial/tutorial.txt에 쓴다.
 
 바닐라 폴더는 읽기만 한다. Documents 쪽에서는 terra_universalis.mod 한 파일만 건드린다.
 """
@@ -64,8 +64,8 @@ BLANK_RAID_FILES = [
 RAID_ID_RE = re.compile(r"^\s*(province|state)\s*=\s*\{?\s*\d", re.M)
 
 TUTORIAL_FILE = "tutorial/tutorial.txt"
-TUTORIAL_PROVINCE = 1053
-TUTORIAL_STATE = 215
+TUTORIAL_PROVINCE = 459
+TUTORIAL_STATE = 119
 TUTORIAL_PROVINCE_KEYS = ("target", "direction_pointer")
 TUTORIAL_STATE_KEYS = ("state",)
 TUTORIAL_LIST_RE = re.compile(r"^(\s*)(highlight_provinces|highlight_states_trigger)(\s*=\s*\{)([^}]*)(\})")

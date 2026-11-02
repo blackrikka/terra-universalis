@@ -1,21 +1,21 @@
 state={
 	id=325
 	name="STATE_325"
-	manpower = 50000
+	manpower = 1000
 
-	state_category = town
+	state_category = tiny_island
 
 	history={
 		owner = SAR
-		victory_points = { 1603 1 }
+		victory_points = { 975 1 }
 		buildings = {
-			infrastructure = 2
+			infrastructure = 3
 		}
 		add_core_of = SAR
 	}
 
 	provinces={
-		1584 1587 1589 1603 1607 1620 1625
+		975
 	}
 	local_supplies=0.0
 }

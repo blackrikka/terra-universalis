@@ -1,10 +1,12 @@
 #!/usr/bin/env python3
-"""참고 지도(reference/Terra_world_map_redrawn_v.3.png)에서 테라 지역 마스크를 뽑는다.
+"""참고 지도 두 장에서 테라 지역 마스크를 뽑는다.
+  - reference/Terra_world_map_redrawn_v.3.png: 해안선·호수·지형 (원본 해상도가 높음)
+  - reference/Terra_hex_map_fandom.png: 국가 영역 (색칠된 헥스). 회색 땅은 통행 불가 + 중립 태그 WLD 소유
 
 사용법 (python -I):
     python -I tools/mapgen/terra/extract_masks.py [--reference <png>] [--out-dir tools/mapgen/terra]
 
-처리: 참고 지도 원본 해상도(2756x3637)에서 바다·호수·국가 영역·황무지·지형을 나눈 뒤,
+처리: 참고 지도 원본 해상도(2756x3637)에서 바다·호수·지형을 나누고, 헥스 지도를 HEX_AFFINE으로 겹쳐 국가 영역을 정한 뒤,
 게임 해상도 3072x4096으로 최근접 리샘플한다 (위아래 21px 바다 패딩).
 출력: regions.png (지역 색 마스크, RGB), regions.json (1a 형식 + named_states + anchors).
   - 지역 하나 = (종류, 소유국, 지형) 조합 하나. 1a 생성기가 그대로 쓴다.
@@ -24,6 +26,7 @@ from scipy import ndimage
 HERE = Path(__file__).resolve().parent
 PROJECT = HERE.parent.parent.parent
 DEFAULT_REF = PROJECT / "reference" / "Terra_world_map_redrawn_v.3.png"
+DEFAULT_HEX = PROJECT / "reference" / "Terra_hex_map_fandom.png"
 SEED = 1097
 
 GAME_W, GAME_H = 3072, 4096
@@ -41,7 +44,6 @@ SIZES = {
 }
 STRATEGIC_LAND_STATES = 8
 STRATEGIC_SEA_PROVINCES = 10
-WASTE_DIST_SMALL = 20.0      # 황무지 최대 거리 (소좌표)
 
 LAKE_SEEDS = [(430, 780), (395, 465), (520, 435), (250, 320), (380, 345), (450, 315), (540, 295),
               (480, 355), (570, 175), (145, 865), (265, 985)]
@@ -50,32 +52,49 @@ FORCED_SEA = [((550, 1075), (595, 1125)), ((605, 1200), (955, 1275)),
 FORCED_SEA_MARGIN = 30       # 강제 바다 상자를 이 참고 px만큼 넓힌 범위 (belt-and-braces 규칙)
 SMALL_LAND_MAX = 2000        # 이 참고 px 미만 육지 성분만 대상
 
-# 국가 영역 (소좌표 다각형). 겹치면 목록에서 먼저 나온 국가가 가진다.
-COUNTRY_POLYS = [
-    ("URS", [(350, 488), (400, 470), (470, 462), (560, 445), (620, 432), (690, 440), (705, 470), (700, 520),
-             (660, 545), (630, 575), (590, 580), (560, 590), (520, 580), (470, 560), (450, 535), (400, 525),
-             (355, 505)]),
-    ("KZD", [(575, 592), (635, 585), (668, 595), (672, 630), (640, 650), (600, 645), (585, 620)]),
-    ("KAZ", [(380, 530), (460, 530), (462, 595), (380, 595)]),
-    ("LEI", [(470, 605), (575, 605), (578, 652), (470, 660)]),
-    ("VIC", [(370, 605), (468, 605), (470, 660), (510, 665), (510, 700), (370, 700)]),
-    ("SIR", [(520, 625), (584, 625), (584, 670), (520, 670)]),
-    ("LAT", [(512, 703), (548, 703), (548, 742), (512, 742)]),
-    ("IBE", [(480, 760), (600, 765), (600, 880), (480, 880)]),
-    ("RIM", [(605, 680), (700, 680), (700, 790), (605, 790)]),
-    ("YAN", [(670, 510), (760, 505), (800, 520), (870, 540), (870, 600), (820, 650), (720, 655), (680, 640),
-             (675, 600)]),
-    ("HIG", [(755, 462), (808, 462), (808, 520), (755, 520)]),
-    ("COL", [(245, 535), (350, 535), (350, 680), (245, 680)]),
-    ("BOL", [(140, 540), (245, 540), (245, 645), (140, 645)]),
-    ("SAM", [(322, 468), (392, 468), (392, 502), (322, 502)]),
-    ("KJE", [(340, 615), (372, 615), (372, 650), (340, 650)]),
-    ("MIN", [(296, 715), (326, 715), (326, 745), (296, 745)]),
-    ("SAR", [(90, 700), (380, 700), (380, 870), (90, 870)]),
+# 국가 영역: 헥스 지도(reference/Terra_hex_map_fandom.png, 821x1024, Arknights Fandom Wiki 재작도)의 색칠된 헥스.
+# (태그, 기준색, 허용 상자 x0,y0,x1,y1 — 헥스 지도 좌표). 같은 태그가 여러 줄이면 합친다. 겹치면 먼저 나온 줄 우선.
+HEX_COUNTRIES = [
+    ("URS", (208, 56, 56), (290, 330, 620, 475)),
+    ("KAZ", (85, 180, 115), (320, 420, 420, 495)),
+    ("SAM", (177, 126, 205), (285, 365, 345, 405)),
+    ("HIG", (100, 85, 170), (615, 370, 675, 425)),
+    ("YAN", (210, 194, 80), (530, 395, 725, 535)),
+    ("COL", (55, 65, 140), (160, 415, 325, 565)),
+    ("BOL", (60, 195, 195), (125, 415, 235, 535)),
+    ("KJE", (186, 182, 183), (305, 488, 330, 515)),
+    ("VIC", (110, 106, 235), (315, 478, 452, 625)),
+    ("VIC", (104, 114, 167), (322, 585, 345, 608)),   # 시에스타 헥스 -> 빅토리아
+    ("LEI", (82, 116, 107), (375, 478, 485, 565)),
+    ("SIR", (193, 172, 120), (448, 498, 512, 565)),
+    ("KZD", (128, 151, 190), (533, 493, 553, 513)),
+    ("LAT", (239, 227, 152), (432, 568, 472, 608)),
+    ("MIN", (252, 187, 86), (258, 568, 292, 602)),
+    ("RIM", (150, 45, 100), (495, 535, 605, 645)),
+    ("SAR", (200, 178, 92), (100, 545, 365, 705)),
+    ("IBE", (158, 174, 100), (378, 605, 492, 712)),
 ]
-FOEHN = [(90, 860), (470, 860), (480, 960), (90, 960)]
-CRAYAK = [(330, 590), (375, 590), (372, 700), (335, 700)]
-NORTH_Y_SMALL = 455          # 이 소좌표 y 미만 비국가 육지 -> 통행 불가 (인피 빙원 북부 / 미지 영역)
+# 국가가 아닌 색 (회색 땅, 빙원 흰색·회색 테두리, 미지 영역, 푀엔, 바다, 배경, 글자)
+HEX_OTHER = [(179, 199, 211), (176, 192, 208), (250, 250, 250), (225, 225, 225), (120, 120, 120), (30, 45, 60),
+             (118, 106, 96), (40, 120, 184), (64, 136, 192), (24, 80, 120), (64, 88, 88), (255, 255, 255),
+             (200, 200, 200)]
+HEX_MAX_DIST = 60
+# 참고 지도 -> 헥스 지도 정렬 (육지 마스크 IoU 최대화로 맞춘 값, IoU 0.80): hx = A*(rx/4) + C, hy = D*(ry/4) + E
+HEX_AFFINE = (1.17865311, 29.84403986, 1.12073822, 22.01772409)
+HEX_COAST_GROW_REF = 26      # 헥스 지도에서는 바다인데 참고 지도에서는 육지인 곳: 이 거리(참고 px, 약 헥스 1칸) 안이면 가까운 국가
+KZD_GROW_REF = 34            # 카즈델은 헥스 1칸뿐이라 수도·정박지 두 주가 들어가도록 이만큼 넓힌다 (참고 px)
+SMALL_GAP_REF = 1200         # 국가에 닿은 회색 조각이 이보다 작으면(참고 px, 헥스 약 2칸) 그 국가 땅으로
+IMP_TERRAIN_OPEN = 4         # 통행 불가 지역 지형 조각 정리 (참고 px, 이보다 가는 띠는 이웃 지형으로)
+FILLER_TAG = "WLD"           # 회색 땅(어느 나라도 아닌 땅) = 통행 불가, 이 중립 태그 소유
+FILLER_CAPITAL_ISLAND = (513, 959)   # 무주지 수도: 어느 나라와도 붙지 않은 남쪽 외딴 섬 (소좌표). 이 섬만 통행 가능
+COUNTRY_TAGS = []
+for _t, _c, _b in HEX_COUNTRIES:
+    if _t not in COUNTRY_TAGS:
+        COUNTRY_TAGS.append(_t)
+OWNER_TAGS = COUNTRY_TAGS + [FILLER_TAG]
+CRAYAK = [(330, 590), (375, 590), (372, 700), (335, 700)]   # 크제라그 산맥 지형 (소좌표)
+HEX_ICE_MAX_Y = 385          # 헥스 지도에서 이 y 미만의 흰색·회색 헥스만 빙원/미지 영역 (그 아래 흰색은 글자·문장)
+HEX_LABEL_ABSORB = 4         # 국가 헥스 위의 흰 글자·문장: 이 거리(헥스 지도 px) 안이면 가까운 국가로 채운다
 
 # 정박지·이름 있는 주 (소좌표). host = 정박지 소유국. return = 돌려줄 국가 (rho_start는 가장 가까운 국가로 계산)
 NAMED = [
@@ -128,7 +147,7 @@ def ref_to_game(rx, ry, ref_h, ref_w):
     return min(max(gx, 0), GAME_W - 1), min(max(gy, 0), GAME_H - 1)
 
 
-def classify(ref_rgb, ref_h, ref_w, log):
+def classify(ref_rgb, hex_rgb, ref_h, ref_w, log):
     r = ref_rgb[..., 0].astype(np.int32)
     g = ref_rgb[..., 1].astype(np.int32)
     b = ref_rgb[..., 2].astype(np.int32)
@@ -199,35 +218,67 @@ def classify(ref_rgb, ref_h, ref_w, log):
 
     # 5. 64px 미만 육지·호수 조각 정리는 mapgen(게임 해상도)에서 한다 (1a 마스크 정리와 같음)
 
-    # 국가 영역 (육지와 교집합, 먼저 나온 국가 우선)
-    owner = np.full((ref_h, ref_w), -1, np.int16)
+    # 국가 영역: 헥스 지도를 참고 지도 좌표로 옮긴다 (육지와 교집합)
     land = kind == K_LAND
-    for idx, (tag, poly) in enumerate(COUNTRY_POLYS):
-        m = polygon_mask((ref_h, ref_w), poly) & land & (owner < 0)
-        owner[m] = idx
+    hex_own, hex_cls = hex_maps(hex_rgb)
+    hh, hw = hex_own.shape
+    A, C, D, E = HEX_AFFINE
+    hx = np.clip(np.round(A * (np.arange(ref_w) / 4.0) + C).astype(np.int64), 0, hw - 1)
+    hy = np.clip(np.round(D * (np.arange(ref_h) / 4.0) + E).astype(np.int64), 0, hh - 1)
+    owner = hex_own[np.ix_(hy, hx)].astype(np.int16)
+    cls = hex_cls[np.ix_(hy, hx)]
+    owner[~land] = -1
+    # 카즈델 넓히기 (헥스 1칸 -> 수도·정박지)
+    kzd = COUNTRY_TAGS.index("KZD")
+    kzd_d = ndimage.distance_transform_edt(owner != kzd)
+    owner[land & (kzd_d <= KZD_GROW_REF) & (owner < 0)] = kzd
+    # 해안선 차이: 헥스 지도에선 바다인 육지가 국가 가까이 있으면 그 국가
     country = owner >= 0
+    dist, (iy, ix) = ndimage.distance_transform_edt(~country, return_indices=True)
+    near_owner = owner[iy, ix]
+    grow = land & ~country & (cls == HC_SEA) & (dist <= HEX_COAST_GROW_REF)
+    owner[grow] = near_owner[grow]
+    log["coast_grow_ref_px"] = int(grow.sum())
+    # 작은 회색 조각 (헥스 사이 틈·구멍): 국가에 붙어 있으면 가장 가까운 국가로 (작은 통행 불가 주 방지)
+    country = owner >= 0
+    dist, (iy, ix) = ndimage.distance_transform_edt(~country, return_indices=True)
+    near_owner = owner[iy, ix]
+    rest_lab, n_rest = ndimage.label(land & ~country)
+    if n_rest:
+        rsz = np.bincount(rest_lab.ravel())
+        rsz[0] = 0
+        rmin = ndimage.minimum(dist, rest_lab, np.arange(n_rest + 1))
+        small_ids = np.nonzero((rsz < SMALL_GAP_REF) & (np.asarray(rmin) <= 1.5))[0]
+        small_ids = small_ids[small_ids > 0]
+        gap = np.isin(rest_lab, small_ids)
+        owner[gap] = near_owner[gap]
+        log["small_gaps_filled"] = [int(len(small_ids)), int(gap.sum())]
+    country = owner >= 0
+    dist, (iy, ix) = ndimage.distance_transform_edt(~country, return_indices=True)
+    near_owner = owner[iy, ix]               # 가장 가까운 국가 (모든 픽셀)
 
     yy, xx = np.mgrid[0:ref_h, 0:ref_w]
     y_small = yy / REF_PER_SMALL
 
-    # 통행 불가 고정 구역 (국가 영역이 아닌 육지)
-    north = land & ~country & (y_small < NORTH_Y_SMALL)
-    foehn = polygon_mask((ref_h, ref_w), FOEHN) & land & ~country & ~north
-    fixed_zone = north | foehn
-
-    # 나머지 육지: 가장 가까운 국가 영역까지 거리로 황무지 / 통행 불가
-    dist, (iy, ix) = ndimage.distance_transform_edt(~country, return_indices=True)
-    near_owner = owner[iy, ix]               # 가장 가까운 국가 (모든 픽셀)
-    leftover = land & ~country & ~fixed_zone
-    waste_limit = WASTE_DIST_SMALL * REF_PER_SMALL
-    kind[leftover & (dist <= waste_limit)] = K_WASTE
-    kind[leftover & (dist > waste_limit)] = K_IMP
-    kind[fixed_zone] = K_IMP
-    log["waste_dist_limit_ref_px"] = round(waste_limit, 2)
-
-    # 소유국: 국가 영역은 자기 국가, 나머지 육지는 가장 가까운 국가
-    final_owner = np.where(country, owner, near_owner).astype(np.int16)
+    # 나머지 육지(회색 땅·빙원·미지 영역·푀엔) = 통행 불가, 중립 태그 소유
+    rest = land & ~country
+    kind[rest] = K_IMP
+    north = rest & ((cls == HC_ICE) | ((cls == HC_SEA) & (hy[:, None] < HEX_ICE_MAX_Y)))   # 미지 영역 테두리 포함
+    foehn = rest & (cls == HC_FOEHN) & ~north
+    # 무주지 수도 섬: 통행 가능 육지로 (HOI4는 수도가 통행 불가 주면 곤란)
+    island_lab, _ = ndimage.label(land)
+    fx, fy = small_to_ref(FILLER_CAPITAL_ISLAND)
+    island_id = island_lab[int(round(fy)), int(round(fx))]
+    if island_id == 0:
+        raise SystemExit("FILLER_CAPITAL_ISLAND가 육지가 아님")
+    island = (island_lab == island_id) & rest
+    if island.sum() > 20000:
+        raise SystemExit("FILLER_CAPITAL_ISLAND가 본대륙에 붙어 있음")
+    kind[island] = K_LAND
+    log["filler_island_ref_px"] = int(island.sum())
+    final_owner = np.where(country, owner, OWNER_TAGS.index(FILLER_TAG)).astype(np.int16)
     final_owner[~land] = -1
+    log["owner_ref_px"] = {t: int((final_owner == i).sum()) for i, t in enumerate(OWNER_TAGS)}
 
     # 지형 (A.5): 흐린 뒤 분류
     blur = ndimage.gaussian_filter(ref_rgb.astype(np.float64), sigma=(12, 12, 0))
@@ -246,12 +297,89 @@ def classify(ref_rgb, ref_h, ref_w, log):
     dc = desert_c & ~snow_c & ~forest_c
     terrain[dc] = 3
     terrain[polygon_mask((ref_h, ref_w), CRAYAK) & land] = 5    # 크제라그 산맥
-    terrain[north] = 4                                          # 통행 불가 고정 구역 terrain 우선
+    terrain[north] = 4                                          # 빙원·미지 영역 = 눈
     terrain[foehn] = 3
+
+    # 통행 불가 지역의 가는 지형 띠 정리: 폭이 좁은 지형 조각은 가장 가까운 넓은 지형으로 (X-교차 방지)
+    imp = kind == K_IMP
+    t_open = np.full(terrain.shape, -1, np.int8)
+    for t in range(len(TERRAIN_NAMES)):
+        m = ndimage.binary_opening((terrain == t) & imp, iterations=IMP_TERRAIN_OPEN)
+        t_open[m] = t
+    if (t_open >= 0).any():
+        _, (iy, ix) = ndimage.distance_transform_edt(t_open < 0, return_indices=True)
+        fix = imp & (t_open < 0)
+        terrain[fix] = t_open[iy, ix][fix]
+        log["imp_terrain_smoothed_ref_px"] = int(fix.sum())
 
     # 호수·바다는 지형 값 무관 (0)
     terrain[~land] = 0
     return kind, final_owner, terrain, near_owner, dist
+
+
+HC_LAND, HC_SEA, HC_ICE, HC_FOEHN = 0, 1, 2, 3
+
+
+def hex_maps(im):
+    """헥스 지도 (HxWx3) -> (국가 인덱스 배열 [-1 = 없음], 종류 배열 HC_*)."""
+    im = im.astype(np.int32)
+    H, W, _ = im.shape
+    r, g, b = im[..., 0], im[..., 1], im[..., 2]
+    cls = np.full((H, W), HC_LAND, np.int8)
+    bg = ((np.abs(r - 64) < 14) & (np.abs(g - 86) < 14) & (np.abs(b - 86) < 14)) | \
+         ((np.abs(r - 56) < 10) & (np.abs(g - 72) < 10) & (np.abs(b - 80) < 10))
+    sea = (b - r > 45) & (g - r > 30) & (r < 150)
+    cls[ndimage.binary_opening(bg | sea, iterations=1)] = HC_SEA
+    lum = im.sum(2) / 3.0
+    ice = (lum > 235) | ((np.abs(r - g) < 10) & (np.abs(g - b) < 12) & (lum > 95) & (lum < 135)) | (lum < 60)
+    ice = ndimage.binary_closing(ice, iterations=2) & (cls != HC_SEA)
+    ice[HEX_ICE_MAX_Y:, :] = False
+    cls[ice] = HC_ICE
+    foehn = (np.abs(r - 118) < 22) & (np.abs(g - 106) < 22) & (np.abs(b - 96) < 22) & (r > b + 8)
+    cls[ndimage.binary_closing(foehn, iterations=2) & (cls != HC_SEA)] = HC_FOEHN
+
+    best = np.full((H, W), 1e9)
+    own = np.full((H, W), -1, np.int16)
+    oth = np.min([np.sqrt(((im - np.array(c)) ** 2).sum(2)) for c in HEX_OTHER], axis=0)
+    for tag, col, (x0, y0, x1, y1) in HEX_COUNTRIES:
+        d = np.full((H, W), 1e9)
+        d[y0:y1, x0:x1] = np.sqrt(((im[y0:y1, x0:x1] - np.array(col)) ** 2).sum(2))
+        ok = (d < best) & (d < oth) & (d < HEX_MAX_DIST)
+        best[ok] = d[ok]
+        own[ok] = COUNTRY_TAGS.index(tag)
+    out = np.full((H, W), -1, np.int16)
+    for i in range(len(COUNTRY_TAGS)):
+        m = ndimage.binary_closing(own == i, structure=np.ones((3, 3)), iterations=2)
+        m = ndimage.binary_fill_holes(m)
+        if m.sum() > 200:
+            m = ndimage.binary_opening(m, iterations=1)
+        out[m & (out < 0)] = i
+    # 흰 글자·문장 (빙원 밖) 이 국가에 붙어 있으면 그 국가
+    mx, mn = im.max(2), im.min(2)
+    label = (lum > 200) & (mx - mn < 40) & (cls != HC_SEA)
+    label[:HEX_ICE_MAX_Y, :] = False
+    label = ndimage.binary_dilation(label, iterations=1)
+    d, (iy, ix) = ndimage.distance_transform_edt(out < 0, return_indices=True)
+    take = label & (out < 0) & (d <= HEX_LABEL_ABSORB)
+    out[take] = out[iy, ix][take]
+    for i in range(len(COUNTRY_TAGS)):
+        m = ndimage.binary_fill_holes(out == i)
+        out[m & (out < 0)] = i
+    cls[out >= 0] = HC_LAND
+    return out, cls
+
+
+def resolve_owned(small, owner, idx, kind):
+    """점을 참고 px로 바꾸고, 소유국 idx의 통행 가능 육지가 아니면 그 국가의 가장 가까운 육지로 옮긴다."""
+    rx, ry = small_to_ref(small)
+    rx, ry = int(round(rx)), int(round(ry))
+    ok = (owner == idx) & ((kind == K_LAND) | (kind == K_WASTE))
+    if not ok.any():
+        raise SystemExit("국가 %s에 통행 가능한 육지가 없음" % OWNER_TAGS[idx])
+    if ok[ry, rx]:
+        return rx, ry, False
+    _, (iy, ix) = ndimage.distance_transform_edt(~ok, return_indices=True)
+    return int(ix[ry, rx]), int(iy[ry, rx]), True
 
 
 def resolve_point(small, kind, ref_h, ref_w, log_name):
@@ -269,6 +397,7 @@ def main(argv=None):
     sys.stdout.reconfigure(encoding="utf-8", errors="replace")
     ap = argparse.ArgumentParser(description="참고 지도 -> 테라 지역 마스크")
     ap.add_argument("--reference", default=str(DEFAULT_REF))
+    ap.add_argument("--hex-map", default=str(DEFAULT_HEX))
     ap.add_argument("--out-dir", default=str(HERE))
     args = ap.parse_args(argv)
     out_dir = Path(args.out_dir)
@@ -278,24 +407,29 @@ def main(argv=None):
     ref_h, ref_w = ref.shape[:2]
     log = {"reference_size": [ref_w, ref_h]}
     print("reference %dx%d" % (ref_w, ref_h))
-    kind, owner, terrain, near_owner, dist = classify(ref, ref_h, ref_w, log)
+    hex_rgb = np.asarray(Image.open(args.hex_map).convert("RGB"))
+    kind, owner, terrain, near_owner, dist = classify(ref, hex_rgb, ref_h, ref_w, log)
 
     # 이름 있는 주·정박지 점 해석 (통행 가능으로 옮김)
     named_out = []
     for item in NAMED:
-        rx, ry, moved = resolve_point(item["small"], kind, ref_h, ref_w, item["name"])
+        host = "YAN" if item.get("append_id") else item["owner"]   # 용문은 염국 주에서 떼어 낸다
+        rx, ry, moved = resolve_owned(item["small"], owner, OWNER_TAGS.index(host), kind)
         gx, gy = ref_to_game(rx, ry, ref_h, ref_w)
         d = {k: v for k, v in item.items() if k != "small"}
         d.update({"x": gx, "y": gy, "moved": moved, "ref": [rx, ry]})
         named_out.append(d)
     anchors_out = []
     for item in ANCHORS:
-        rx, ry, moved = resolve_point(item["small"], kind, ref_h, ref_w, item["key"])
+        if item["host"] in COUNTRY_TAGS:
+            rx, ry, moved = resolve_owned(item["small"], owner, OWNER_TAGS.index(item["host"]), kind)
+        else:
+            rx, ry, moved = resolve_point(item["small"], kind, ref_h, ref_w, item["key"])
         gx, gy = ref_to_game(rx, ry, ref_h, ref_w)
         d = {k: v for k, v in item.items() if k != "small"}
         # 반환 대상: rho_start는 가장 가까운 국가 영역의 태그, 나머지는 원주인(host)
         if item["key"] == "rho_start":
-            d["return"] = COUNTRY_POLYS[int(near_owner[ry, rx])][0]
+            d["return"] = OWNER_TAGS[int(near_owner[ry, rx])]
         else:
             d["return"] = item["host"]
         d.update({"x": gx, "y": gy, "moved": moved, "ref": [rx, ry]})
@@ -323,6 +457,20 @@ def main(argv=None):
     cut = int(((code_game != 4000) & margin).sum())
     code_game[margin] = 4000
     log["margin_land_cut_px"] = cut
+    # 대각선으로만 닿는 같은 지역 (2x2에서 a==d, b!=a, c!=a, b!=c) 을 없앤다: b를 a로. 프로빈스 X-교차가 풀리지 않는 원인.
+    diag_fixes = 0
+    for _ in range(50):
+        a, b, c, d = code_game[:-1, :-1], code_game[:-1, 1:], code_game[1:, :-1], code_game[1:, 1:]
+        m1 = (a == d) & (b != a) & (c != a) & (b != c)
+        m2 = (b == c) & (a != b) & (d != b) & (a != d)
+        if not (m1.any() or m2.any()):
+            break
+        ys, xs = np.nonzero(m1)
+        code_game[ys, xs + 1] = code_game[ys, xs]
+        ys, xs = np.nonzero(m2 & ~m1)
+        code_game[ys, xs] = code_game[ys, xs + 1]
+        diag_fixes += int(m1.sum() + (m2 & ~m1).sum())
+    log["diagonal_region_fixes"] = diag_fixes
     uniq, inv = np.unique(code_game, return_inverse=True)
     inv = inv.reshape(GAME_H, GAME_W)
 
@@ -355,7 +503,7 @@ def main(argv=None):
             o = (code % 1000) // 10 - 1
             t = code % 10
             kname = KIND_NAMES[k]
-            owner_tag = COUNTRY_POLYS[o][0] if o >= 0 else "NONE"
+            owner_tag = OWNER_TAGS[o] if o >= 0 else "NONE"
             terr = TERRAIN_NAMES[t]
             rid = "%s_%s_%s" % (kname, owner_tag, terr)
         per_kind[kname] = per_kind.get(kname, 0) + 1
@@ -377,7 +525,7 @@ def main(argv=None):
         "anchors": anchors_out,
         "strategic_land_states": STRATEGIC_LAND_STATES,
         "strategic_sea_provinces": STRATEGIC_SEA_PROVINCES,
-        "source": {"reference": str(Path(args.reference).name), "pad": PAD},
+        "source": {"reference": str(Path(args.reference).name), "hex_map": str(Path(args.hex_map).name), "pad": PAD},
     }
     (out_dir / "regions.json").write_text(json.dumps(config, indent=1, ensure_ascii=True) + "\n", encoding="ascii")
 

@@ -361,7 +361,7 @@ def block_is_cross(lab, y, x):
     return len(vals) == 4
 
 
-def remove_x_crosses(lab, label_region, max_rounds=200):
+def remove_x_crosses(lab, label_region, max_rounds=1000):
     """2x2 블록에 서로 다른 프로빈스 4개가 있으면 픽셀 하나를 같은 지역의 이웃 프로빈스로 바꾼다.
     바꾼 뒤 원래 프로빈스의 연결성이 유지되는 경우만 허용한다."""
     H, W = lab.shape
@@ -425,6 +425,10 @@ def remove_x_crosses(lab, label_region, max_rounds=200):
                         py, px, pid, sizes[pid], label_region[pid], " ".join(nb)))
                 raise MapgenError("X-교차 해결 실패: 블록 (%d,%d): %s" % (y, x, " | ".join(detail)))
             total_fixes += 1
+    a, b, c, d = lab[:-1, :-1], lab[:-1, 1:], lab[1:, :-1], lab[1:, 1:]
+    if not ((a != b) & (a != c) & (a != d) & (b != c) & (b != d) & (c != d)).any():   # 마지막 라운드에서 다 고쳐진 경우
+        print("X-cross fallback (other-region neighbour) fixes: %d" % fallback_fixes)
+        return total_fixes
     raise MapgenError("X-교차 제거가 수렴하지 않음")
 
 

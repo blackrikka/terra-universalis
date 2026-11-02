@@ -1,20 +1,21 @@
 state={
 	id=502
 	name="STATE_502"
-	manpower = 5000
+	impassable = yes
+	manpower = 1000
 
-	state_category = pastoral
+	state_category = wasteland
 
 	history={
-		owner = HIG
+		owner = WLD
 		buildings = {
-			infrastructure = 1
+			infrastructure = 0
 		}
-		add_core_of = HIG
+		add_core_of = WLD
 	}
 
 	provinces={
-		2113
+		1346
 	}
 	local_supplies=0.0
 }

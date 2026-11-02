@@ -542,8 +542,8 @@ def main(argv=None):
           "\t\tdefault = yes",
           ""]
     for c in countries:
-        if c.get("dynamic"):
-            continue    # 시작 주가 없는 동적 국가는 국가 선택 화면에 넣지 않는다
+        if c.get("dynamic") or c.get("filler"):
+            continue    # 시작 주가 없는 동적 국가, 무주지(filler) 태그는 국가 선택 화면에 넣지 않는다
         bm.append('\t\t%s = { history = "OVERVIEW_%s" ideology = neutrality }' % (c["tag"], c["tag"]))
     bm += ["\t}", "}"]
     write_ascii(mod / "common" / "bookmarks" / "tu_bookmarks.txt", "\n".join(bm) + "\n")
