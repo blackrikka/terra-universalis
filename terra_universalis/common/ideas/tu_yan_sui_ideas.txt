@@ -1,0 +1,341 @@
+ideas = {
+
+	country = {
+
+		TU_YAN_idea_imperial_protection = {
+			picture = generic_central_management
+
+			allowed = {
+				original_tag = YAN
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			modifier = {
+				imperial_house_drift = 0.014
+				neutrality_drift = -0.071
+				sui_drift = -0.071
+				fascism_drift = -0.071
+				communism_drift = -0.071
+				democratic_drift = -0.071
+			}
+		}
+
+		TU_YAN_idea_depose = {
+			picture = generic_democratic_opposition
+
+			allowed = {
+				original_tag = YAN
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			modifier = {
+				imperial_house_drift = -0.071
+				sui_drift = 0.071
+			}
+		}
+
+		TU_YAN_idea_power_struggle = {
+			picture = generic_purge
+
+			allowed = {
+				original_tag = YAN
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			modifier = {
+				stability_factor = -0.1
+				political_power_gain = -0.2
+			}
+		}
+
+		TU_YAN_idea_age_of_dragons = {
+			picture = generic_war_preparation
+
+			allowed = {
+				original_tag = YAN
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			modifier = {
+				stability_factor = -0.05
+				war_support_factor = 0.1
+				army_org_factor = 0.05
+			}
+		}
+
+		TU_YAN_idea_rule_chongyue = {
+			picture = generic_army_war_college
+
+			allowed = {
+				original_tag = YAN
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			modifier = {
+				army_attack_factor = 0.08
+				army_org_factor = 0.05
+			}
+		}
+
+		TU_YAN_idea_rule_ling = {
+			picture = generic_political_support
+
+			allowed = {
+				original_tag = YAN
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			modifier = {
+				political_power_gain = 0.15
+				stability_factor = 0.05
+			}
+		}
+
+		TU_YAN_idea_rule_wang = {
+			picture = generic_research_bonus
+
+			allowed = {
+				original_tag = YAN
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			modifier = {
+				research_speed_factor = 0.05
+				planning_speed = 0.1
+			}
+		}
+
+		TU_YAN_idea_rule_dusk = {
+			picture = generic_morale_bonus
+
+			allowed = {
+				original_tag = YAN
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			modifier = {
+				research_speed_factor = 0.03
+				stability_factor = 0.05
+				army_defence_factor = 0.05
+			}
+		}
+
+		TU_YAN_idea_rule_shu = {
+			picture = generic_agrarian_society
+
+			allowed = {
+				original_tag = YAN
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			modifier = {
+				monthly_population = 0.15
+				stability_factor = 0.05
+			}
+		}
+
+		TU_YAN_idea_rule_nian = {
+			picture = generic_production_bonus
+
+			allowed = {
+				original_tag = YAN
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			modifier = {
+				production_factory_max_efficiency_factor = 0.1
+				industrial_capacity_factory = 0.05
+			}
+		}
+
+		TU_YAN_idea_rule_jun = {
+			picture = generic_economic_increase
+
+			allowed = {
+				original_tag = YAN
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			modifier = {
+				production_speed_buildings_factor = 0.1
+				consumer_goods_factor = -0.03
+			}
+		}
+
+		TU_YAN_idea_rule_jie = {
+			picture = generic_navy_bonus
+
+			allowed = {
+				original_tag = YAN
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			modifier = {
+				navy_org_factor = 0.1
+				naval_speed_factor = 0.05
+			}
+		}
+
+		TU_YAN_idea_rule_ji = {
+			picture = generic_air_bonus
+
+			allowed = {
+				original_tag = YAN
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			modifier = {
+				air_attack_factor = 0.08
+				air_defence_factor = 0.05
+			}
+		}
+
+		TU_YAN_idea_rule_yi = {
+			picture = generic_flexible_foreign_policy
+
+			allowed = {
+				original_tag = YAN
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			modifier = {
+				opinion_gain_monthly_factor = 0.25
+				justify_war_goal_time = -0.1
+			}
+		}
+
+		TU_YAN_idea_rule_fang = {
+			picture = generic_fortify_the_borders
+
+			allowed = {
+				original_tag = YAN
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			modifier = {
+				army_defence_factor = 0.1
+				max_dig_in = 2
+			}
+		}
+
+		TU_YAN_idea_rule_yu = {
+			picture = generic_logistics
+
+			allowed = {
+				original_tag = YAN
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			modifier = {
+				supply_consumption_factor = -0.1
+				attrition = -0.1
+			}
+		}
+
+		TU_YAN_idea_sui_awakening = {
+			picture = generic_fascism_rising
+
+			allowed = {
+				original_tag = YAN
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			modifier = {
+				army_attack_factor = 0.15
+				army_defence_factor = 0.1
+				stability_factor = -0.2
+				war_support_factor = 0.2
+			}
+		}
+
+		TU_YAN_idea_sui_devour = {
+			picture = generic_deal_with_the_devil
+
+			allowed = {
+				original_tag = YAN
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			modifier = {
+				army_attack_factor = 0.25
+				army_defence_factor = 0.15
+				stability_factor = -0.3
+				war_support_factor = 0.3
+				political_power_gain = -0.2
+			}
+		}
+
+		TU_YAN_idea_hand_in_hand = {
+			picture = generic_pp_unity_bonus
+
+			allowed = {
+				original_tag = YAN
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			modifier = {
+				stability_factor = 0.15
+				political_power_gain = 0.2
+				production_factory_max_efficiency_factor = 0.05
+				army_org_factor = 0.05
+			}
+		}
+	}
+}

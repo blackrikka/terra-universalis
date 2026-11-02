@@ -1,0 +1,46 @@
+add_namespace = tu_yan_dragon
+
+# Age of Dragons (fired by focus TU_YAN_p1_age_of_dragons). Territory, war and units happen here, not in the focus.
+country_event = {
+	id = tu_yan_dragon.1
+	title = tu_yan_dragon.1.t
+	desc = tu_yan_dragon.1.d
+	picture = GFX_report_event_generic_battle
+	is_triggered_only = yes
+
+	option = {
+		name = tu_yan_dragon.1.a
+		TU_YAN_age_of_dragons_start = yes
+		every_country = {
+			limit = { NOT = { tag = YAN } }
+			news_event = { id = tu_yan_dragon.2 days = 1 }
+		}
+	}
+}
+
+# World news: civil war in Yan
+news_event = {
+	id = tu_yan_dragon.2
+	title = tu_yan_dragon.2.t
+	desc = tu_yan_dragon.2.d
+	picture = GFX_news_event_generic_battle
+	is_triggered_only = yes
+	major = yes
+
+	option = {
+		name = tu_yan_dragon.2.a
+	}
+}
+
+# After the Hand in Hand decision
+country_event = {
+	id = tu_yan_dragon.3
+	title = tu_yan_dragon.3.t
+	desc = tu_yan_dragon.3.d
+	picture = GFX_report_event_generic_sign_treaty1
+	is_triggered_only = yes
+
+	option = {
+		name = tu_yan_dragon.3.a
+	}
+}

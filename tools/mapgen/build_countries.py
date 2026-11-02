@@ -515,12 +515,17 @@ def main(argv=None):
     # history/countries: 기본 줄 + (custom_characters가 아니면 지도자) + tools/mapgen/country_history/<TAG>.txt 내용 그대로
     for c in countries:
         tag = c["tag"]
+        # countries.json의 ruling_party / popularities (없으면 비동맹 100)
+        party = c.get("ruling_party", "neutrality")
+        pops = c.get("popularities", {party: 100})
+        if sum(pops.values()) != 100 or pops.get(party, 0) <= 0:
+            raise BuildError("%s: popularities 합이 100이 아니거나 집권당 지지도가 0" % tag)
         lines = [
             "capital = %d" % capital_of[tag],
             "set_research_slots = 3",
-            'set_politics = { ruling_party = neutrality last_election = "1096.1.1" '
-            'election_frequency = 48 elections_allowed = no }',
-            "set_popularities = { neutrality = 100 }",
+            'set_politics = { ruling_party = %s last_election = "1096.1.1" '
+            'election_frequency = 48 elections_allowed = no }' % party,
+            "set_popularities = { %s }" % " ".join("%s = %d" % kv for kv in pops.items()),
         ]
         if not c.get("custom_characters"):
             lines.append("recruit_character = %s_leader" % tag)
@@ -544,7 +549,8 @@ def main(argv=None):
     for c in countries:
         if c.get("dynamic") or c.get("filler"):
             continue    # 시작 주가 없는 동적 국가, 무주지(filler) 태그는 국가 선택 화면에 넣지 않는다
-        bm.append('\t\t%s = { history = "OVERVIEW_%s" ideology = neutrality }' % (c["tag"], c["tag"]))
+        bm.append('\t\t%s = { history = "OVERVIEW_%s" ideology = %s }'
+                  % (c["tag"], c["tag"], c.get("ruling_party", "neutrality")))
     bm += ["\t}", "}"]
     write_ascii(mod / "common" / "bookmarks" / "tu_bookmarks.txt", "\n".join(bm) + "\n")
 

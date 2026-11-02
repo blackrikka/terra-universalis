@@ -7,7 +7,7 @@
   {"tag": "IBE", "name_ko": "이베리아", "name_en": "Iberia", "adj_ko": "이베리아의", "adj_en": "Iberian", "color": [120, 180, 230]},
   {"tag": "LAT", "name_ko": "라테라노", "name_en": "Laterano", "adj_ko": "라테라노의", "adj_en": "Laterani", "color": [240, 230, 110]},
   {"tag": "KAZ", "name_ko": "카시미어", "name_en": "Kazimierz", "adj_ko": "카시미어의", "adj_en": "Kazimierzian", "color": [150, 190, 70]},
-  {"tag": "YAN", "name_ko": "염국", "name_en": "Yan", "adj_ko": "염국의", "adj_en": "Yan", "color": [250, 210, 40], "custom_characters": true},
+  {"tag": "YAN", "name_ko": "염국", "name_en": "Yan", "adj_ko": "염국의", "adj_en": "Yan", "color": [250, 210, 40], "custom_characters": true, "ruling_party": "imperial_house", "popularities": {"imperial_house": 75, "neutrality": 15, "sui": 10}},
   {"tag": "HIG", "name_ko": "히가시", "name_en": "Higashi", "adj_ko": "히가시의", "adj_en": "Higashi", "color": [150, 80, 50]},
   {"tag": "COL", "name_ko": "컬럼비아", "name_en": "Columbia", "adj_ko": "컬럼비아의", "adj_en": "Columbian", "color": [40, 160, 160]},
   {"tag": "SAR", "name_ko": "사르곤", "name_en": "Sargon", "adj_ko": "사르곤의", "adj_en": "Sargonian", "color": [220, 130, 40]},
@@ -19,5 +19,8 @@
   {"tag": "RIM", "name_ko": "림 빌리튼", "name_en": "Rim Billiton", "adj_ko": "림 빌리튼의", "adj_en": "Rim Billitonian", "color": [70, 110, 220]},
   {"tag": "LGM", "name_ko": "용문", "name_en": "Lungmen", "adj_ko": "용문의", "adj_en": "Lungmenite", "color": [90, 140, 200], "custom_characters": true},
   {"tag": "REU", "name_ko": "리유니온", "name_en": "Reunion", "adj_ko": "리유니온의", "adj_en": "Reunion", "color": [110, 20, 30], "custom_characters": true, "dynamic": true},
-  {"tag": "WLD", "name_ko": "무주지", "name_en": "Terra Wilds", "adj_ko": "무주지의", "adj_en": "Wilds", "color": [168, 178, 186], "filler": true}
+  {"tag": "WLD", "name_ko": "무주지", "name_en": "Terra Wilds", "adj_ko": "무주지의", "adj_en": "Wilds", "color": [168, 178, 186], "filler": true},
+  {"tag": "YSA", "name_ko": "쉐이 분파 갑", "name_en": "Sui Faction A", "adj_ko": "쉐이 분파의", "adj_en": "Sui Faction", "color": [200, 120, 40], "dynamic": true, "ruling_party": "sui", "popularities": {"sui": 80, "imperial_house": 10, "neutrality": 10}},
+  {"tag": "YSB", "name_ko": "쉐이 분파 을", "name_en": "Sui Faction B", "adj_ko": "쉐이 분파의", "adj_en": "Sui Faction", "color": [170, 70, 50], "dynamic": true, "ruling_party": "sui", "popularities": {"sui": 80, "imperial_house": 10, "neutrality": 10}},
+  {"tag": "YSC", "name_ko": "쉐이 분파 병", "name_en": "Sui Faction C", "adj_ko": "쉐이 분파의", "adj_en": "Sui Faction", "color": [120, 150, 60], "dynamic": true, "ruling_party": "sui", "popularities": {"sui": 80, "imperial_house": 10, "neutrality": 10}}
 ]

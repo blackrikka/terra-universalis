@@ -8,7 +8,7 @@ characters = {
 			}
 		}
 		country_leader = {
-			ideology = despotism
+			ideology = tu_imperial_rule
 			expire = "1200.1.1.1"
 			id = -1
 		}
@@ -17,6 +17,10 @@ characters = {
 	TU_YAN_chongyue = {
 		name = TU_YAN_chongyue
 		portraits = {
+			civilian = {
+				large = "GFX_TU_portrait_chongyue"
+				small = "GFX_TU_portrait_chongyue_small"
+			}
 			army = {
 				large = "GFX_TU_portrait_chongyue"
 				small = "GFX_TU_portrait_chongyue_small"
@@ -31,12 +35,18 @@ characters = {
 			logistics_skill = 3
 			legacy_id = 0
 		}
+		country_leader = {
+			ideology = tu_sui_rule
+			expire = "1200.1.1.1"
+			id = -1
+		}
 	}
 
 	TU_YAN_nian = {
 		name = TU_YAN_nian
 		portraits = {
 			civilian = {
+				large = "GFX_TU_portrait_nian"
 				small = "GFX_TU_portrait_nian_small"
 			}
 		}
@@ -54,12 +64,18 @@ characters = {
 				factor = 1
 			}
 		}
+		country_leader = {
+			ideology = tu_sui_rule
+			expire = "1200.1.1.1"
+			id = -1
+		}
 	}
 
 	TU_YAN_dusk = {
 		name = TU_YAN_dusk
 		portraits = {
 			civilian = {
+				large = "GFX_TU_portrait_dusk"
 				small = "GFX_TU_portrait_dusk_small"
 			}
 		}
@@ -77,12 +93,18 @@ characters = {
 				factor = 1
 			}
 		}
+		country_leader = {
+			ideology = tu_sui_rule
+			expire = "1200.1.1.1"
+			id = -1
+		}
 	}
 
 	TU_YAN_ling = {
 		name = TU_YAN_ling
 		portraits = {
 			civilian = {
+				large = "GFX_TU_portrait_ling"
 				small = "GFX_TU_portrait_ling_small"
 			}
 		}
@@ -99,6 +121,11 @@ characters = {
 			ai_will_do = {
 				factor = 1
 			}
+		}
+		country_leader = {
+			ideology = tu_sui_rule
+			expire = "1200.1.1.1"
+			id = -1
 		}
 	}
 }

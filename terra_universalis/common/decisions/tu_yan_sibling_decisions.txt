@@ -1,0 +1,94 @@
+# Hidden route "Hand in Hand": only visible while Chongyue rules.
+# 1) puppet the sibling factions in the peace conference, 2) set them free again with TU_YAN_free_sibling,
+# 3) once every faction is free, TU_YAN_hand_in_hand_decision annexes them all and cores their states.
+TU_YAN_sibling_category = {
+
+	TU_YAN_free_sibling = {
+		icon = generic_independence
+
+		allowed = {
+			original_tag = YAN
+		}
+
+		visible = {
+			has_country_flag = TU_YAN_ruler_chongyue
+			has_country_flag = TU_YAN_age_of_dragons
+		}
+
+		target_trigger = {
+			FROM = {
+				has_country_flag = TU_YAN_sibling_faction
+				is_subject_of = ROOT
+			}
+		}
+
+		cost = 25
+		fire_only_once = no
+
+		complete_effect = {
+			FROM = { set_country_flag = TU_YAN_fac_freed }
+			set_autonomy = {
+				target = FROM
+				autonomy_state = autonomy_free
+			}
+		}
+
+		ai_will_do = {
+			base = 0
+		}
+	}
+
+	TU_YAN_hand_in_hand_decision = {
+		icon = generic_political_discourse
+
+		allowed = {
+			original_tag = YAN
+		}
+
+		visible = {
+			has_country_flag = TU_YAN_ruler_chongyue
+			any_country = {
+				has_country_flag = TU_YAN_fac_freed
+			}
+		}
+
+		available = {
+			has_country_flag = TU_YAN_ruler_chongyue
+			all_country = {
+				limit = {
+					has_country_flag = TU_YAN_sibling_faction
+				}
+				has_country_flag = TU_YAN_fac_freed
+				NOT = { is_subject_of = ROOT }
+				NOT = { has_war_with = ROOT }
+			}
+		}
+
+		cost = 50
+		fire_only_once = yes
+
+		complete_effect = {
+			every_country = {
+				limit = {
+					has_country_flag = TU_YAN_sibling_faction
+					has_country_flag = TU_YAN_fac_freed
+				}
+				every_owned_state = {
+					add_core_of = ROOT
+				}
+				ROOT = {
+					annex_country = {
+						target = PREV
+						transfer_troops = yes
+					}
+				}
+			}
+			set_country_flag = TU_YAN_hand_in_hand_unlocked
+			country_event = { id = tu_yan_dragon.3 }
+		}
+
+		ai_will_do = {
+			base = 1
+		}
+	}
+}

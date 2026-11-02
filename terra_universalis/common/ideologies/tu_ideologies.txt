@@ -1,0 +1,76 @@
+# Terra Universalis: Yan-specific ideologies (added next to the vanilla four, not replacing them).
+# imperial_house = the Yan imperial family (emperor's rule), sui = rule by the Sui siblings.
+# Drift modifiers created by the game: imperial_house_drift, sui_drift (daily change).
+ideologies = {
+
+	imperial_house = {
+		types = {
+			tu_imperial_rule = { }
+			tu_imperial_regency = { }
+		}
+		dynamic_faction_names = {
+			"FACTION_NAME_TU_IMPERIAL_1"
+			"FACTION_NAME_TU_IMPERIAL_2"
+		}
+		color = { 214 168 52 }
+		rules = {
+			can_force_government = yes
+			can_send_volunteers = yes
+			can_puppet = yes
+			can_lower_tension = no
+			can_only_justify_war_on_threat_country = no
+			can_guarantee_other_ideologies = yes
+		}
+		can_host_government_in_exile = yes
+		war_impact_on_world_tension = 0.5
+		faction_impact_on_world_tension = 0.3
+		modifiers = {
+			generate_wargoal_tension = 0.6
+			join_faction_tension = 0.5
+			lend_lease_tension = 0.5
+			send_volunteers_tension = 0.5
+			guarantee_tension = 0.4
+			take_states_cost_factor = 1.0
+		}
+		faction_modifiers = { }
+		ai_neutral = yes
+		can_be_boosted = no
+		can_collaborate = yes
+	}
+
+	sui = {
+		types = {
+			tu_sui_council = { }
+			tu_sui_rule = { }
+			tu_sui_awakening = { }
+		}
+		dynamic_faction_names = {
+			"FACTION_NAME_TU_SUI_1"
+			"FACTION_NAME_TU_SUI_2"
+		}
+		color = { 46 140 120 }
+		rules = {
+			can_force_government = yes
+			can_send_volunteers = yes
+			can_puppet = yes
+			can_lower_tension = no
+			can_only_justify_war_on_threat_country = no
+			can_guarantee_other_ideologies = no
+		}
+		can_host_government_in_exile = yes
+		war_impact_on_world_tension = 0.75
+		faction_impact_on_world_tension = 0.5
+		modifiers = {
+			generate_wargoal_tension = 0.5
+			join_faction_tension = 0.5
+			lend_lease_tension = 0.5
+			send_volunteers_tension = 0.5
+			guarantee_tension = 0.5
+			take_states_cost_factor = 1.0
+		}
+		faction_modifiers = { }
+		ai_fascist = yes
+		can_be_boosted = no
+		can_collaborate = yes
+	}
+}

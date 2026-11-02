@@ -1,0 +1,693 @@
+# Age of Dragons: three Sui siblings leave Yan with part of its land as factions (YSA/YSB/YSC) and declare war on Yan.
+# Siblings are drawn at random from the 11 other than Chongyue. A defected sibling gets TU_YAN_sib_<key>_defected and cannot be chosen as ruler.
+# States: one Yan state that is not the capital or next to it, plus its Yan-owned neighbours.
+TU_YAN_age_of_dragons_start = {
+	set_country_flag = TU_YAN_age_of_dragons
+	if = {
+		limit = { NOT = { country_exists = YSA } }
+		random_list = {
+			10 = {
+				modifier = { factor = 0 has_country_flag = TU_YAN_sib_ling_defected }
+				set_country_flag = TU_YAN_sib_ling_defected
+				set_country_flag = TU_YAN_YSA_is_ling
+			}
+			10 = {
+				modifier = { factor = 0 has_country_flag = TU_YAN_sib_wang_defected }
+				set_country_flag = TU_YAN_sib_wang_defected
+				set_country_flag = TU_YAN_YSA_is_wang
+			}
+			10 = {
+				modifier = { factor = 0 has_country_flag = TU_YAN_sib_dusk_defected }
+				set_country_flag = TU_YAN_sib_dusk_defected
+				set_country_flag = TU_YAN_YSA_is_dusk
+			}
+			10 = {
+				modifier = { factor = 0 has_country_flag = TU_YAN_sib_shu_defected }
+				set_country_flag = TU_YAN_sib_shu_defected
+				set_country_flag = TU_YAN_YSA_is_shu
+			}
+			10 = {
+				modifier = { factor = 0 has_country_flag = TU_YAN_sib_nian_defected }
+				set_country_flag = TU_YAN_sib_nian_defected
+				set_country_flag = TU_YAN_YSA_is_nian
+			}
+			10 = {
+				modifier = { factor = 0 has_country_flag = TU_YAN_sib_jun_defected }
+				set_country_flag = TU_YAN_sib_jun_defected
+				set_country_flag = TU_YAN_YSA_is_jun
+			}
+			10 = {
+				modifier = { factor = 0 has_country_flag = TU_YAN_sib_jie_defected }
+				set_country_flag = TU_YAN_sib_jie_defected
+				set_country_flag = TU_YAN_YSA_is_jie
+			}
+			10 = {
+				modifier = { factor = 0 has_country_flag = TU_YAN_sib_ji_defected }
+				set_country_flag = TU_YAN_sib_ji_defected
+				set_country_flag = TU_YAN_YSA_is_ji
+			}
+			10 = {
+				modifier = { factor = 0 has_country_flag = TU_YAN_sib_yi_defected }
+				set_country_flag = TU_YAN_sib_yi_defected
+				set_country_flag = TU_YAN_YSA_is_yi
+			}
+			10 = {
+				modifier = { factor = 0 has_country_flag = TU_YAN_sib_fang_defected }
+				set_country_flag = TU_YAN_sib_fang_defected
+				set_country_flag = TU_YAN_YSA_is_fang
+			}
+			10 = {
+				modifier = { factor = 0 has_country_flag = TU_YAN_sib_yu_defected }
+				set_country_flag = TU_YAN_sib_yu_defected
+				set_country_flag = TU_YAN_YSA_is_yu
+			}
+		}
+		random_owned_controlled_state = {
+			limit = {
+				is_capital = no
+				NOT = { has_state_flag = TU_YAN_faction_state }
+				NOT = { any_neighbor_state = { is_capital = yes } }
+			}
+			set_state_flag = TU_YAN_faction_state
+			set_state_flag = TU_YAN_fs_YSA
+			every_neighbor_state = {
+				limit = {
+					is_owned_by = ROOT
+					is_capital = no
+					NOT = { has_state_flag = TU_YAN_faction_state }
+				}
+				set_state_flag = TU_YAN_faction_state
+				set_state_flag = TU_YAN_fs_YSA
+			}
+		}
+		every_owned_state = {
+			limit = { has_state_flag = TU_YAN_fs_YSA }
+			add_core_of = YSA
+			transfer_state_to = YSA
+		}
+		if = {
+			limit = { country_exists = YSA }
+			YSA = { TU_YAN_faction_setup = yes }
+		}
+	}
+	if = {
+		limit = { NOT = { country_exists = YSB } }
+		random_list = {
+			10 = {
+				modifier = { factor = 0 has_country_flag = TU_YAN_sib_ling_defected }
+				set_country_flag = TU_YAN_sib_ling_defected
+				set_country_flag = TU_YAN_YSB_is_ling
+			}
+			10 = {
+				modifier = { factor = 0 has_country_flag = TU_YAN_sib_wang_defected }
+				set_country_flag = TU_YAN_sib_wang_defected
+				set_country_flag = TU_YAN_YSB_is_wang
+			}
+			10 = {
+				modifier = { factor = 0 has_country_flag = TU_YAN_sib_dusk_defected }
+				set_country_flag = TU_YAN_sib_dusk_defected
+				set_country_flag = TU_YAN_YSB_is_dusk
+			}
+			10 = {
+				modifier = { factor = 0 has_country_flag = TU_YAN_sib_shu_defected }
+				set_country_flag = TU_YAN_sib_shu_defected
+				set_country_flag = TU_YAN_YSB_is_shu
+			}
+			10 = {
+				modifier = { factor = 0 has_country_flag = TU_YAN_sib_nian_defected }
+				set_country_flag = TU_YAN_sib_nian_defected
+				set_country_flag = TU_YAN_YSB_is_nian
+			}
+			10 = {
+				modifier = { factor = 0 has_country_flag = TU_YAN_sib_jun_defected }
+				set_country_flag = TU_YAN_sib_jun_defected
+				set_country_flag = TU_YAN_YSB_is_jun
+			}
+			10 = {
+				modifier = { factor = 0 has_country_flag = TU_YAN_sib_jie_defected }
+				set_country_flag = TU_YAN_sib_jie_defected
+				set_country_flag = TU_YAN_YSB_is_jie
+			}
+			10 = {
+				modifier = { factor = 0 has_country_flag = TU_YAN_sib_ji_defected }
+				set_country_flag = TU_YAN_sib_ji_defected
+				set_country_flag = TU_YAN_YSB_is_ji
+			}
+			10 = {
+				modifier = { factor = 0 has_country_flag = TU_YAN_sib_yi_defected }
+				set_country_flag = TU_YAN_sib_yi_defected
+				set_country_flag = TU_YAN_YSB_is_yi
+			}
+			10 = {
+				modifier = { factor = 0 has_country_flag = TU_YAN_sib_fang_defected }
+				set_country_flag = TU_YAN_sib_fang_defected
+				set_country_flag = TU_YAN_YSB_is_fang
+			}
+			10 = {
+				modifier = { factor = 0 has_country_flag = TU_YAN_sib_yu_defected }
+				set_country_flag = TU_YAN_sib_yu_defected
+				set_country_flag = TU_YAN_YSB_is_yu
+			}
+		}
+		random_owned_controlled_state = {
+			limit = {
+				is_capital = no
+				NOT = { has_state_flag = TU_YAN_faction_state }
+				NOT = { any_neighbor_state = { is_capital = yes } }
+			}
+			set_state_flag = TU_YAN_faction_state
+			set_state_flag = TU_YAN_fs_YSB
+			every_neighbor_state = {
+				limit = {
+					is_owned_by = ROOT
+					is_capital = no
+					NOT = { has_state_flag = TU_YAN_faction_state }
+				}
+				set_state_flag = TU_YAN_faction_state
+				set_state_flag = TU_YAN_fs_YSB
+			}
+		}
+		every_owned_state = {
+			limit = { has_state_flag = TU_YAN_fs_YSB }
+			add_core_of = YSB
+			transfer_state_to = YSB
+		}
+		if = {
+			limit = { country_exists = YSB }
+			YSB = { TU_YAN_faction_setup = yes }
+		}
+	}
+	if = {
+		limit = { NOT = { country_exists = YSC } }
+		random_list = {
+			10 = {
+				modifier = { factor = 0 has_country_flag = TU_YAN_sib_ling_defected }
+				set_country_flag = TU_YAN_sib_ling_defected
+				set_country_flag = TU_YAN_YSC_is_ling
+			}
+			10 = {
+				modifier = { factor = 0 has_country_flag = TU_YAN_sib_wang_defected }
+				set_country_flag = TU_YAN_sib_wang_defected
+				set_country_flag = TU_YAN_YSC_is_wang
+			}
+			10 = {
+				modifier = { factor = 0 has_country_flag = TU_YAN_sib_dusk_defected }
+				set_country_flag = TU_YAN_sib_dusk_defected
+				set_country_flag = TU_YAN_YSC_is_dusk
+			}
+			10 = {
+				modifier = { factor = 0 has_country_flag = TU_YAN_sib_shu_defected }
+				set_country_flag = TU_YAN_sib_shu_defected
+				set_country_flag = TU_YAN_YSC_is_shu
+			}
+			10 = {
+				modifier = { factor = 0 has_country_flag = TU_YAN_sib_nian_defected }
+				set_country_flag = TU_YAN_sib_nian_defected
+				set_country_flag = TU_YAN_YSC_is_nian
+			}
+			10 = {
+				modifier = { factor = 0 has_country_flag = TU_YAN_sib_jun_defected }
+				set_country_flag = TU_YAN_sib_jun_defected
+				set_country_flag = TU_YAN_YSC_is_jun
+			}
+			10 = {
+				modifier = { factor = 0 has_country_flag = TU_YAN_sib_jie_defected }
+				set_country_flag = TU_YAN_sib_jie_defected
+				set_country_flag = TU_YAN_YSC_is_jie
+			}
+			10 = {
+				modifier = { factor = 0 has_country_flag = TU_YAN_sib_ji_defected }
+				set_country_flag = TU_YAN_sib_ji_defected
+				set_country_flag = TU_YAN_YSC_is_ji
+			}
+			10 = {
+				modifier = { factor = 0 has_country_flag = TU_YAN_sib_yi_defected }
+				set_country_flag = TU_YAN_sib_yi_defected
+				set_country_flag = TU_YAN_YSC_is_yi
+			}
+			10 = {
+				modifier = { factor = 0 has_country_flag = TU_YAN_sib_fang_defected }
+				set_country_flag = TU_YAN_sib_fang_defected
+				set_country_flag = TU_YAN_YSC_is_fang
+			}
+			10 = {
+				modifier = { factor = 0 has_country_flag = TU_YAN_sib_yu_defected }
+				set_country_flag = TU_YAN_sib_yu_defected
+				set_country_flag = TU_YAN_YSC_is_yu
+			}
+		}
+		random_owned_controlled_state = {
+			limit = {
+				is_capital = no
+				NOT = { has_state_flag = TU_YAN_faction_state }
+				NOT = { any_neighbor_state = { is_capital = yes } }
+			}
+			set_state_flag = TU_YAN_faction_state
+			set_state_flag = TU_YAN_fs_YSC
+			every_neighbor_state = {
+				limit = {
+					is_owned_by = ROOT
+					is_capital = no
+					NOT = { has_state_flag = TU_YAN_faction_state }
+				}
+				set_state_flag = TU_YAN_faction_state
+				set_state_flag = TU_YAN_fs_YSC
+			}
+		}
+		every_owned_state = {
+			limit = { has_state_flag = TU_YAN_fs_YSC }
+			add_core_of = YSC
+			transfer_state_to = YSC
+		}
+		if = {
+			limit = { country_exists = YSC }
+			YSC = { TU_YAN_faction_setup = yes }
+		}
+	}
+}
+
+# Faction-side setup (faction country scope). Reads the chosen sibling from flags set on YAN.
+TU_YAN_faction_setup = {
+	set_country_flag = TU_YAN_sibling_faction
+	set_politics = { ruling_party = sui elections_allowed = no }
+	set_popularities = { sui = 80 imperial_house = 10 neutrality = 10 }
+	if = {
+		limit = { tag = YSA YAN = { has_country_flag = TU_YAN_YSA_is_ling } }
+		set_country_flag = TU_YAN_fac_ling
+		set_cosmetic_tag = TU_YAN_FAC_LING
+		create_country_leader = {
+			name = "TU_YAN_FAC_LING_leader"
+			picture = "GFX_TU_portrait_ling"
+			expire = "1200.1.1.1"
+			ideology = tu_sui_rule
+			traits = { }
+		}
+	}
+	if = {
+		limit = { tag = YSA YAN = { has_country_flag = TU_YAN_YSA_is_wang } }
+		set_country_flag = TU_YAN_fac_wang
+		set_cosmetic_tag = TU_YAN_FAC_WANG
+		create_country_leader = {
+			name = "TU_YAN_FAC_WANG_leader"
+			picture = "GFX_Portrait_Europe_Generic_1"
+			expire = "1200.1.1.1"
+			ideology = tu_sui_rule
+			traits = { }
+		}
+	}
+	if = {
+		limit = { tag = YSA YAN = { has_country_flag = TU_YAN_YSA_is_dusk } }
+		set_country_flag = TU_YAN_fac_dusk
+		set_cosmetic_tag = TU_YAN_FAC_DUSK
+		create_country_leader = {
+			name = "TU_YAN_FAC_DUSK_leader"
+			picture = "GFX_TU_portrait_dusk"
+			expire = "1200.1.1.1"
+			ideology = tu_sui_rule
+			traits = { }
+		}
+	}
+	if = {
+		limit = { tag = YSA YAN = { has_country_flag = TU_YAN_YSA_is_shu } }
+		set_country_flag = TU_YAN_fac_shu
+		set_cosmetic_tag = TU_YAN_FAC_SHU
+		create_country_leader = {
+			name = "TU_YAN_FAC_SHU_leader"
+			picture = "GFX_Portrait_Europe_Generic_4"
+			expire = "1200.1.1.1"
+			ideology = tu_sui_rule
+			traits = { }
+		}
+	}
+	if = {
+		limit = { tag = YSA YAN = { has_country_flag = TU_YAN_YSA_is_nian } }
+		set_country_flag = TU_YAN_fac_nian
+		set_cosmetic_tag = TU_YAN_FAC_NIAN
+		create_country_leader = {
+			name = "TU_YAN_FAC_NIAN_leader"
+			picture = "GFX_TU_portrait_nian"
+			expire = "1200.1.1.1"
+			ideology = tu_sui_rule
+			traits = { }
+		}
+	}
+	if = {
+		limit = { tag = YSA YAN = { has_country_flag = TU_YAN_YSA_is_jun } }
+		set_country_flag = TU_YAN_fac_jun
+		set_cosmetic_tag = TU_YAN_FAC_JUN
+		create_country_leader = {
+			name = "TU_YAN_FAC_JUN_leader"
+			picture = "GFX_Portrait_Europe_Generic_1"
+			expire = "1200.1.1.1"
+			ideology = tu_sui_rule
+			traits = { }
+		}
+	}
+	if = {
+		limit = { tag = YSA YAN = { has_country_flag = TU_YAN_YSA_is_jie } }
+		set_country_flag = TU_YAN_fac_jie
+		set_cosmetic_tag = TU_YAN_FAC_JIE
+		create_country_leader = {
+			name = "TU_YAN_FAC_JIE_leader"
+			picture = "GFX_Portrait_Europe_Generic_4"
+			expire = "1200.1.1.1"
+			ideology = tu_sui_rule
+			traits = { }
+		}
+	}
+	if = {
+		limit = { tag = YSA YAN = { has_country_flag = TU_YAN_YSA_is_ji } }
+		set_country_flag = TU_YAN_fac_ji
+		set_cosmetic_tag = TU_YAN_FAC_JI
+		create_country_leader = {
+			name = "TU_YAN_FAC_JI_leader"
+			picture = "GFX_Portrait_Europe_Generic_1"
+			expire = "1200.1.1.1"
+			ideology = tu_sui_rule
+			traits = { }
+		}
+	}
+	if = {
+		limit = { tag = YSA YAN = { has_country_flag = TU_YAN_YSA_is_yi } }
+		set_country_flag = TU_YAN_fac_yi
+		set_cosmetic_tag = TU_YAN_FAC_YI
+		create_country_leader = {
+			name = "TU_YAN_FAC_YI_leader"
+			picture = "GFX_Portrait_Europe_Generic_4"
+			expire = "1200.1.1.1"
+			ideology = tu_sui_rule
+			traits = { }
+		}
+	}
+	if = {
+		limit = { tag = YSA YAN = { has_country_flag = TU_YAN_YSA_is_fang } }
+		set_country_flag = TU_YAN_fac_fang
+		set_cosmetic_tag = TU_YAN_FAC_FANG
+		create_country_leader = {
+			name = "TU_YAN_FAC_FANG_leader"
+			picture = "GFX_Portrait_Europe_Generic_1"
+			expire = "1200.1.1.1"
+			ideology = tu_sui_rule
+			traits = { }
+		}
+	}
+	if = {
+		limit = { tag = YSA YAN = { has_country_flag = TU_YAN_YSA_is_yu } }
+		set_country_flag = TU_YAN_fac_yu
+		set_cosmetic_tag = TU_YAN_FAC_YU
+		create_country_leader = {
+			name = "TU_YAN_FAC_YU_leader"
+			picture = "GFX_Portrait_Europe_Generic_4"
+			expire = "1200.1.1.1"
+			ideology = tu_sui_rule
+			traits = { }
+		}
+	}
+	if = {
+		limit = { tag = YSB YAN = { has_country_flag = TU_YAN_YSB_is_ling } }
+		set_country_flag = TU_YAN_fac_ling
+		set_cosmetic_tag = TU_YAN_FAC_LING
+		create_country_leader = {
+			name = "TU_YAN_FAC_LING_leader"
+			picture = "GFX_TU_portrait_ling"
+			expire = "1200.1.1.1"
+			ideology = tu_sui_rule
+			traits = { }
+		}
+	}
+	if = {
+		limit = { tag = YSB YAN = { has_country_flag = TU_YAN_YSB_is_wang } }
+		set_country_flag = TU_YAN_fac_wang
+		set_cosmetic_tag = TU_YAN_FAC_WANG
+		create_country_leader = {
+			name = "TU_YAN_FAC_WANG_leader"
+			picture = "GFX_Portrait_Europe_Generic_1"
+			expire = "1200.1.1.1"
+			ideology = tu_sui_rule
+			traits = { }
+		}
+	}
+	if = {
+		limit = { tag = YSB YAN = { has_country_flag = TU_YAN_YSB_is_dusk } }
+		set_country_flag = TU_YAN_fac_dusk
+		set_cosmetic_tag = TU_YAN_FAC_DUSK
+		create_country_leader = {
+			name = "TU_YAN_FAC_DUSK_leader"
+			picture = "GFX_TU_portrait_dusk"
+			expire = "1200.1.1.1"
+			ideology = tu_sui_rule
+			traits = { }
+		}
+	}
+	if = {
+		limit = { tag = YSB YAN = { has_country_flag = TU_YAN_YSB_is_shu } }
+		set_country_flag = TU_YAN_fac_shu
+		set_cosmetic_tag = TU_YAN_FAC_SHU
+		create_country_leader = {
+			name = "TU_YAN_FAC_SHU_leader"
+			picture = "GFX_Portrait_Europe_Generic_4"
+			expire = "1200.1.1.1"
+			ideology = tu_sui_rule
+			traits = { }
+		}
+	}
+	if = {
+		limit = { tag = YSB YAN = { has_country_flag = TU_YAN_YSB_is_nian } }
+		set_country_flag = TU_YAN_fac_nian
+		set_cosmetic_tag = TU_YAN_FAC_NIAN
+		create_country_leader = {
+			name = "TU_YAN_FAC_NIAN_leader"
+			picture = "GFX_TU_portrait_nian"
+			expire = "1200.1.1.1"
+			ideology = tu_sui_rule
+			traits = { }
+		}
+	}
+	if = {
+		limit = { tag = YSB YAN = { has_country_flag = TU_YAN_YSB_is_jun } }
+		set_country_flag = TU_YAN_fac_jun
+		set_cosmetic_tag = TU_YAN_FAC_JUN
+		create_country_leader = {
+			name = "TU_YAN_FAC_JUN_leader"
+			picture = "GFX_Portrait_Europe_Generic_1"
+			expire = "1200.1.1.1"
+			ideology = tu_sui_rule
+			traits = { }
+		}
+	}
+	if = {
+		limit = { tag = YSB YAN = { has_country_flag = TU_YAN_YSB_is_jie } }
+		set_country_flag = TU_YAN_fac_jie
+		set_cosmetic_tag = TU_YAN_FAC_JIE
+		create_country_leader = {
+			name = "TU_YAN_FAC_JIE_leader"
+			picture = "GFX_Portrait_Europe_Generic_4"
+			expire = "1200.1.1.1"
+			ideology = tu_sui_rule
+			traits = { }
+		}
+	}
+	if = {
+		limit = { tag = YSB YAN = { has_country_flag = TU_YAN_YSB_is_ji } }
+		set_country_flag = TU_YAN_fac_ji
+		set_cosmetic_tag = TU_YAN_FAC_JI
+		create_country_leader = {
+			name = "TU_YAN_FAC_JI_leader"
+			picture = "GFX_Portrait_Europe_Generic_1"
+			expire = "1200.1.1.1"
+			ideology = tu_sui_rule
+			traits = { }
+		}
+	}
+	if = {
+		limit = { tag = YSB YAN = { has_country_flag = TU_YAN_YSB_is_yi } }
+		set_country_flag = TU_YAN_fac_yi
+		set_cosmetic_tag = TU_YAN_FAC_YI
+		create_country_leader = {
+			name = "TU_YAN_FAC_YI_leader"
+			picture = "GFX_Portrait_Europe_Generic_4"
+			expire = "1200.1.1.1"
+			ideology = tu_sui_rule
+			traits = { }
+		}
+	}
+	if = {
+		limit = { tag = YSB YAN = { has_country_flag = TU_YAN_YSB_is_fang } }
+		set_country_flag = TU_YAN_fac_fang
+		set_cosmetic_tag = TU_YAN_FAC_FANG
+		create_country_leader = {
+			name = "TU_YAN_FAC_FANG_leader"
+			picture = "GFX_Portrait_Europe_Generic_1"
+			expire = "1200.1.1.1"
+			ideology = tu_sui_rule
+			traits = { }
+		}
+	}
+	if = {
+		limit = { tag = YSB YAN = { has_country_flag = TU_YAN_YSB_is_yu } }
+		set_country_flag = TU_YAN_fac_yu
+		set_cosmetic_tag = TU_YAN_FAC_YU
+		create_country_leader = {
+			name = "TU_YAN_FAC_YU_leader"
+			picture = "GFX_Portrait_Europe_Generic_4"
+			expire = "1200.1.1.1"
+			ideology = tu_sui_rule
+			traits = { }
+		}
+	}
+	if = {
+		limit = { tag = YSC YAN = { has_country_flag = TU_YAN_YSC_is_ling } }
+		set_country_flag = TU_YAN_fac_ling
+		set_cosmetic_tag = TU_YAN_FAC_LING
+		create_country_leader = {
+			name = "TU_YAN_FAC_LING_leader"
+			picture = "GFX_TU_portrait_ling"
+			expire = "1200.1.1.1"
+			ideology = tu_sui_rule
+			traits = { }
+		}
+	}
+	if = {
+		limit = { tag = YSC YAN = { has_country_flag = TU_YAN_YSC_is_wang } }
+		set_country_flag = TU_YAN_fac_wang
+		set_cosmetic_tag = TU_YAN_FAC_WANG
+		create_country_leader = {
+			name = "TU_YAN_FAC_WANG_leader"
+			picture = "GFX_Portrait_Europe_Generic_1"
+			expire = "1200.1.1.1"
+			ideology = tu_sui_rule
+			traits = { }
+		}
+	}
+	if = {
+		limit = { tag = YSC YAN = { has_country_flag = TU_YAN_YSC_is_dusk } }
+		set_country_flag = TU_YAN_fac_dusk
+		set_cosmetic_tag = TU_YAN_FAC_DUSK
+		create_country_leader = {
+			name = "TU_YAN_FAC_DUSK_leader"
+			picture = "GFX_TU_portrait_dusk"
+			expire = "1200.1.1.1"
+			ideology = tu_sui_rule
+			traits = { }
+		}
+	}
+	if = {
+		limit = { tag = YSC YAN = { has_country_flag = TU_YAN_YSC_is_shu } }
+		set_country_flag = TU_YAN_fac_shu
+		set_cosmetic_tag = TU_YAN_FAC_SHU
+		create_country_leader = {
+			name = "TU_YAN_FAC_SHU_leader"
+			picture = "GFX_Portrait_Europe_Generic_4"
+			expire = "1200.1.1.1"
+			ideology = tu_sui_rule
+			traits = { }
+		}
+	}
+	if = {
+		limit = { tag = YSC YAN = { has_country_flag = TU_YAN_YSC_is_nian } }
+		set_country_flag = TU_YAN_fac_nian
+		set_cosmetic_tag = TU_YAN_FAC_NIAN
+		create_country_leader = {
+			name = "TU_YAN_FAC_NIAN_leader"
+			picture = "GFX_TU_portrait_nian"
+			expire = "1200.1.1.1"
+			ideology = tu_sui_rule
+			traits = { }
+		}
+	}
+	if = {
+		limit = { tag = YSC YAN = { has_country_flag = TU_YAN_YSC_is_jun } }
+		set_country_flag = TU_YAN_fac_jun
+		set_cosmetic_tag = TU_YAN_FAC_JUN
+		create_country_leader = {
+			name = "TU_YAN_FAC_JUN_leader"
+			picture = "GFX_Portrait_Europe_Generic_1"
+			expire = "1200.1.1.1"
+			ideology = tu_sui_rule
+			traits = { }
+		}
+	}
+	if = {
+		limit = { tag = YSC YAN = { has_country_flag = TU_YAN_YSC_is_jie } }
+		set_country_flag = TU_YAN_fac_jie
+		set_cosmetic_tag = TU_YAN_FAC_JIE
+		create_country_leader = {
+			name = "TU_YAN_FAC_JIE_leader"
+			picture = "GFX_Portrait_Europe_Generic_4"
+			expire = "1200.1.1.1"
+			ideology = tu_sui_rule
+			traits = { }
+		}
+	}
+	if = {
+		limit = { tag = YSC YAN = { has_country_flag = TU_YAN_YSC_is_ji } }
+		set_country_flag = TU_YAN_fac_ji
+		set_cosmetic_tag = TU_YAN_FAC_JI
+		create_country_leader = {
+			name = "TU_YAN_FAC_JI_leader"
+			picture = "GFX_Portrait_Europe_Generic_1"
+			expire = "1200.1.1.1"
+			ideology = tu_sui_rule
+			traits = { }
+		}
+	}
+	if = {
+		limit = { tag = YSC YAN = { has_country_flag = TU_YAN_YSC_is_yi } }
+		set_country_flag = TU_YAN_fac_yi
+		set_cosmetic_tag = TU_YAN_FAC_YI
+		create_country_leader = {
+			name = "TU_YAN_FAC_YI_leader"
+			picture = "GFX_Portrait_Europe_Generic_4"
+			expire = "1200.1.1.1"
+			ideology = tu_sui_rule
+			traits = { }
+		}
+	}
+	if = {
+		limit = { tag = YSC YAN = { has_country_flag = TU_YAN_YSC_is_fang } }
+		set_country_flag = TU_YAN_fac_fang
+		set_cosmetic_tag = TU_YAN_FAC_FANG
+		create_country_leader = {
+			name = "TU_YAN_FAC_FANG_leader"
+			picture = "GFX_Portrait_Europe_Generic_1"
+			expire = "1200.1.1.1"
+			ideology = tu_sui_rule
+			traits = { }
+		}
+	}
+	if = {
+		limit = { tag = YSC YAN = { has_country_flag = TU_YAN_YSC_is_yu } }
+		set_country_flag = TU_YAN_fac_yu
+		set_cosmetic_tag = TU_YAN_FAC_YU
+		create_country_leader = {
+			name = "TU_YAN_FAC_YU_leader"
+			picture = "GFX_Portrait_Europe_Generic_4"
+			expire = "1200.1.1.1"
+			ideology = tu_sui_rule
+			traits = { }
+		}
+	}
+	division_template = {
+		name = "TU_YAN_faction_guard"
+		is_locked = no
+		priority = 1
+		regiments = {
+			infantry = { x = 0 y = 0 }
+			infantry = { x = 0 y = 1 }
+			infantry = { x = 1 y = 0 }
+			infantry = { x = 1 y = 1 }
+		}
+	}
+	every_owned_state = {
+		create_unit = {
+			division = "division_template = \"TU_YAN_faction_guard\" start_experience_factor = 0.2 start_equipment_factor = 0.7"
+			owner = PREV
+			count = 2
+		}
+	}
+	add_ideas = TU_YAN_idea_age_of_dragons
+	declare_war_on = {
+		target = YAN
+		type = annex_everything
+	}
+}

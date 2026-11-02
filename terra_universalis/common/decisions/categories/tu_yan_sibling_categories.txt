@@ -1,0 +1,14 @@
+TU_YAN_sibling_category = {
+	icon = GFX_decision_category_generic_political_actions
+
+	allowed = {
+		original_tag = YAN
+	}
+
+	visible = {
+		has_country_flag = TU_YAN_ruler_chongyue
+		has_country_flag = TU_YAN_age_of_dragons
+	}
+
+	priority = 100
+}
