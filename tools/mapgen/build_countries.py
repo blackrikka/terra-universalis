@@ -546,10 +546,18 @@ def main(argv=None):
           '\t\tdefault_country = "%s"' % ("RHO" if any(c["tag"] == "RHO" for c in countries) else countries[0]["tag"]),
           "\t\tdefault = yes",
           ""]
-    for c in countries:
-        if c.get("dynamic") or c.get("filler"):
-            continue    # 시작 주가 없는 동적 국가, 무주지(filler) 태그는 국가 선택 화면에 넣지 않는다
+    # 국가 선택 화면: 상세 구현 국가(custom_characters)만 위쪽 큰 아이콘(주요국). 나머지는 "---" 뒤 minor 목록.
+    # 전부 주요국으로 넣으면 아이콘 줄이 화면 옆으로 넘친다.
+    shown = [c for c in countries if not (c.get("dynamic") or c.get("filler"))]
+    majors = [c for c in shown if c.get("custom_characters")]
+    minors = [c for c in shown if not c.get("custom_characters")]
+    for c in majors:
         bm.append('\t\t%s = { history = "OVERVIEW_%s" ideology = %s }'
+                  % (c["tag"], c["tag"], c.get("ruling_party", "neutrality")))
+    if minors:
+        bm.append('\t\t"---" = { history = "OTHER_GAMEPLAY" }')
+    for c in minors:
+        bm.append('\t\t%s = { minor = yes history = "OVERVIEW_%s" ideology = %s }'
                   % (c["tag"], c["tag"], c.get("ruling_party", "neutrality")))
     bm += ["\t}", "}"]
     write_ascii(mod / "common" / "bookmarks" / "tu_bookmarks.txt", "\n".join(bm) + "\n")

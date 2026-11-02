@@ -8,14 +8,46 @@ country_event = {
 	picture = GFX_report_event_generic_battle
 	is_triggered_only = yes
 
-	immediate = {
-		every_country = {
-			limit = { NOT = { tag = YAN } }
-			news_event = { id = tu_yan_dragon.2 days = 1 }
+	# Step 1 of the leader choice. Options are split over events .4/.5/.6 (four siblings each) so the window fits the screen.
+
+	option = {
+		name = tu_yan_dragon.1.g1
+		country_event = { id = tu_yan_dragon.4 }
+		ai_chance = {
+			base = 10
 		}
 	}
+	option = {
+		name = tu_yan_dragon.1.g2
+		country_event = { id = tu_yan_dragon.5 }
+		ai_chance = {
+			base = 10
+		}
+	}
+	option = {
+		name = tu_yan_dragon.1.g3
+		country_event = { id = tu_yan_dragon.6 }
+		ai_chance = {
+			base = 10
+		}
+	}
+	option = {
+		name = tu_yan_dragon.1.ruin
+		TU_YAN_become_ruin = yes
+		TU_YAN_split_realms = yes
+		ai_chance = {
+			base = 0
+		}
+	}
+}
 
-	# Choose the sibling Yan rallies around. Yan becomes that sibling's realm; the other siblings break away.
+country_event = {
+	id = tu_yan_dragon.4
+	title = tu_yan_dragon.1.t
+	desc = tu_yan_dragon.4.d
+	picture = GFX_report_event_generic_battle
+	is_triggered_only = yes
+
 	option = {
 		name = tu_yan_dragon.1.chongyue
 		TU_YAN_become_chongyue = yes
@@ -49,6 +81,22 @@ country_event = {
 		}
 	}
 	option = {
+		name = tu_yan_dragon.back
+		country_event = { id = tu_yan_dragon.1 }
+		ai_chance = {
+			base = 0
+		}
+	}
+}
+
+country_event = {
+	id = tu_yan_dragon.5
+	title = tu_yan_dragon.1.t
+	desc = tu_yan_dragon.5.d
+	picture = GFX_report_event_generic_battle
+	is_triggered_only = yes
+
+	option = {
 		name = tu_yan_dragon.1.shu
 		TU_YAN_become_shu = yes
 		TU_YAN_split_realms = yes
@@ -80,6 +128,22 @@ country_event = {
 			base = 10
 		}
 	}
+	option = {
+		name = tu_yan_dragon.back
+		country_event = { id = tu_yan_dragon.1 }
+		ai_chance = {
+			base = 0
+		}
+	}
+}
+
+country_event = {
+	id = tu_yan_dragon.6
+	title = tu_yan_dragon.1.t
+	desc = tu_yan_dragon.6.d
+	picture = GFX_report_event_generic_battle
+	is_triggered_only = yes
+
 	option = {
 		name = tu_yan_dragon.1.ji
 		TU_YAN_become_ji = yes
@@ -113,9 +177,8 @@ country_event = {
 		}
 	}
 	option = {
-		name = tu_yan_dragon.1.ruin
-		TU_YAN_become_ruin = yes
-		TU_YAN_split_realms = yes
+		name = tu_yan_dragon.back
+		country_event = { id = tu_yan_dragon.1 }
 		ai_chance = {
 			base = 0
 		}
