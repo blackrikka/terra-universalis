@@ -1,0 +1,501 @@
+TU_LAT_pilgrims_category = {
+	TU_LAT_donations = {
+		icon = GFX_decision_generic_fundraising
+
+		allowed = {
+			original_tag = LAT
+		}
+
+		available = {
+			check_variable = { TU_LAT_pilgrims > 19 }
+		}
+
+		cost = 0
+		days_re_enable = 90
+
+		complete_effect = {
+			add_political_power = 75
+			TU_LAT_pilgrims_m20 = yes
+		}
+
+		ai_will_do = {
+			base = 1
+		}
+	}
+
+	TU_LAT_pilgrim_levy = {
+		icon = GFX_decision_generic_military
+
+		allowed = {
+			original_tag = LAT
+		}
+
+		visible = {
+			has_country_flag = TU_LAT_volunteers
+		}
+
+		available = {
+			check_variable = { TU_LAT_pilgrims > 29 }
+		}
+
+		cost = 25
+		days_re_enable = 120
+
+		complete_effect = {
+			add_manpower = 8000
+			TU_LAT_pilgrims_m30 = yes
+		}
+
+		ai_will_do = {
+			base = 1
+		}
+	}
+
+	TU_LAT_saint_festival = {
+		icon = GFX_decision_generic_political_discourse
+
+		allowed = {
+			original_tag = LAT
+		}
+
+		available = {
+			check_variable = { TU_LAT_pilgrims > 9 }
+		}
+
+		cost = 25
+		days_re_enable = 180
+
+		complete_effect = {
+			add_war_support = 0.05
+			add_stability = 0.03
+			TU_LAT_pilgrims_m10 = yes
+		}
+
+		ai_will_do = {
+			base = 1
+		}
+	}
+
+	TU_LAT_jubilee = {
+		icon = GFX_decision_generic_political_address
+
+		allowed = {
+			original_tag = LAT
+		}
+
+		available = {
+			has_war = no
+		}
+
+		cost = 100
+		days_re_enable = 730
+
+		complete_effect = {
+			TU_LAT_pilgrims_20 = yes
+			TU_LAT_influence_10 = yes
+			add_stability = 0.05
+		}
+
+		ai_will_do = {
+			base = 1
+		}
+	}
+
+	TU_LAT_relic_exhibition = {
+		icon = GFX_decision_generic_political_discourse
+
+		allowed = {
+			original_tag = LAT
+		}
+
+		visible = {
+			has_completed_focus = TU_LAT_relic_trade
+		}
+
+		cost = 25
+		days_re_enable = 240
+
+		complete_effect = {
+			add_political_power = 40
+			TU_LAT_pilgrims_10 = yes
+		}
+
+		ai_will_do = {
+			base = 1
+		}
+	}
+
+	TU_LAT_pilgrim_clinics = {
+		icon = GFX_decision_generic_civil_support
+
+		allowed = {
+			original_tag = LAT
+		}
+
+		cost = 50
+		days_re_enable = 240
+
+		complete_effect = {
+			add_stability = 0.04
+			TU_LAT_pilgrims_5 = yes
+		}
+
+		ai_will_do = {
+			base = 1
+		}
+	}
+
+}
+
+TU_LAT_arms_category = {
+	TU_LAT_export_arms = {
+		icon = GFX_decision_generic_political_discourse
+
+		allowed = {
+			original_tag = LAT
+		}
+
+		target_trigger = {
+			FROM = {
+				NOT = { tag = ROOT }
+				exists = yes
+				NOT = { has_war_with = ROOT }
+				NOT = { tag = WLD }
+			}
+		}
+
+		cost = 0
+		days_re_enable = 60
+
+		complete_effect = {
+			FROM = { add_equipment_to_stockpile = { type = infantry_equipment amount = 300 producer = LAT } }
+			add_political_power = 40
+			TU_LAT_influence_5 = yes
+		}
+
+		ai_will_do = {
+			base = 1
+		}
+	}
+
+	TU_LAT_arms_contract = {
+		icon = GFX_decision_generic_factory
+
+		allowed = {
+			original_tag = LAT
+		}
+
+		visible = {
+			has_completed_focus = TU_LAT_firearm_exports
+		}
+
+		cost = 100
+		days_re_enable = 365
+
+		complete_effect = {
+			TU_build_mil_factory = yes
+			TU_LAT_influence_5 = yes
+		}
+
+		ai_will_do = {
+			base = 1
+		}
+	}
+
+	TU_LAT_arms_fair = {
+		icon = GFX_decision_generic_fundraising
+
+		allowed = {
+			original_tag = LAT
+		}
+
+		cost = 50
+		days_re_enable = 365
+
+		complete_effect = {
+			TU_LAT_influence_10 = yes
+			add_political_power = 25
+		}
+
+		ai_will_do = {
+			base = 1
+		}
+	}
+
+}
+
+TU_LAT_covenant_category = {
+	TU_LAT_found_covenant = {
+		icon = GFX_decision_generic_political_discourse
+
+		allowed = {
+			original_tag = LAT
+		}
+
+		available = {
+			is_in_faction = no
+			check_variable = { TU_LAT_influence > 29 }
+		}
+
+		cost = 50
+		fire_only_once = yes
+
+		complete_effect = {
+			create_faction = TU_LAT_covenant
+		}
+
+		ai_will_do = {
+			base = 1
+		}
+	}
+
+	TU_LAT_invite_covenant = {
+		icon = GFX_decision_generic_political_discourse
+
+		allowed = {
+			original_tag = LAT
+		}
+
+		target_trigger = {
+			FROM = {
+				NOT = { tag = ROOT }
+				is_in_faction = no
+				NOT = { has_war_with = ROOT }
+				NOT = { tag = WLD }
+				is_major = no
+			}
+		}
+
+		visible = {
+			is_faction_leader = yes
+		}
+
+		available = {
+			check_variable = { TU_LAT_influence > 19 }
+		}
+
+		cost = 50
+		days_re_enable = 60
+
+		complete_effect = {
+			add_to_faction = FROM
+			TU_LAT_influence_m20 = yes
+		}
+
+		ai_will_do = {
+			base = 1
+		}
+	}
+
+	TU_LAT_papal_mediation = {
+		icon = GFX_decision_generic_political_discourse
+
+		allowed = {
+			original_tag = LAT
+		}
+
+		cost = 25
+		days_re_enable = 180
+
+		complete_effect = {
+			add_political_power = 50
+			TU_LAT_influence_5 = yes
+			add_stability = 0.02
+		}
+
+		ai_will_do = {
+			base = 1
+		}
+	}
+
+	TU_LAT_send_legates = {
+		icon = GFX_decision_generic_political_discourse
+
+		allowed = {
+			original_tag = LAT
+		}
+
+		cost = 50
+		days_re_enable = 120
+
+		complete_effect = {
+			TU_LAT_influence_10 = yes
+		}
+
+		ai_will_do = {
+			base = 1
+		}
+	}
+
+}
+
+TU_LAT_hall_category = {
+	TU_LAT_papal_bull = {
+		icon = GFX_decision_generic_political_discourse
+
+		allowed = {
+			original_tag = LAT
+		}
+
+		visible = {
+			has_country_flag = TU_LAT_papal
+		}
+
+		cost = 0
+		days_re_enable = 180
+
+		complete_effect = {
+			add_political_power = 60
+			add_stability = 0.02
+		}
+
+		ai_will_do = {
+			base = 1
+		}
+	}
+
+	TU_LAT_canonize = {
+		icon = GFX_decision_generic_political_discourse
+
+		allowed = {
+			original_tag = LAT
+		}
+
+		visible = {
+			has_country_flag = TU_LAT_papal
+		}
+
+		cost = 50
+		days_re_enable = 365
+
+		complete_effect = {
+			add_war_support = 0.05
+			TU_LAT_pilgrims_10 = yes
+		}
+
+		ai_will_do = {
+			base = 1
+		}
+	}
+
+	TU_LAT_notarize_treaty = {
+		icon = GFX_decision_generic_political_discourse
+
+		allowed = {
+			original_tag = LAT
+		}
+
+		visible = {
+			has_country_flag = TU_LAT_notary
+		}
+
+		cost = 25
+		days_re_enable = 120
+
+		complete_effect = {
+			TU_LAT_influence_5 = yes
+			add_stability = 0.03
+		}
+
+		ai_will_do = {
+			base = 1
+		}
+	}
+
+	TU_LAT_hunt_fallen = {
+		icon = GFX_decision_generic_political_discourse
+
+		allowed = {
+			original_tag = LAT
+		}
+
+		visible = {
+			has_country_flag = TU_LAT_fallen_registry
+			has_idea = TU_LAT_fallen_problem
+		}
+
+		cost = 25
+		days_re_enable = 180
+
+		complete_effect = {
+			add_stability = 0.04
+			add_political_power = -10
+		}
+
+		ai_will_do = {
+			base = 1
+		}
+	}
+
+	TU_LAT_sankta_mercs = {
+		icon = GFX_decision_generic_military
+
+		allowed = {
+			original_tag = LAT
+		}
+
+		visible = {
+			has_completed_focus = TU_LAT_laterano_guard
+		}
+
+		cost = 75
+		days_re_enable = 240
+
+		complete_effect = {
+			TU_LAT_guard_template = yes
+			capital_scope = { create_unit = { division = "division_template = \"TU_LAT_guard\" start_experience_factor = 0.5 start_equipment_factor = 1" owner = LAT count = 2 } }
+		}
+
+		ai_will_do = {
+			base = 1
+		}
+	}
+
+	TU_LAT_guard_review = {
+		icon = GFX_decision_generic_political_discourse
+
+		allowed = {
+			original_tag = LAT
+		}
+
+		visible = {
+			has_completed_focus = TU_LAT_laterano_guard
+		}
+
+		cost = 25
+		days_re_enable = 180
+
+		complete_effect = {
+			add_war_support = 0.04
+			army_experience = 10
+		}
+
+		ai_will_do = {
+			base = 1
+		}
+	}
+
+	TU_LAT_halo_grant = {
+		icon = GFX_decision_generic_political_discourse
+
+		allowed = {
+			original_tag = LAT
+		}
+
+		visible = {
+			has_completed_focus = TU_LAT_halo_studies
+		}
+
+		cost = 50
+		days_re_enable = 365
+
+		complete_effect = {
+			add_tech_bonus = { name = TU_LAT_halo_grant bonus = 0.5 uses = 1 category = electronics }
+		}
+
+		ai_will_do = {
+			base = 1
+		}
+	}
+
+}

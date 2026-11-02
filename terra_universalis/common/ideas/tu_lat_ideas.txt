@@ -1,0 +1,150 @@
+ideas = {
+
+	country = {
+
+		TU_LAT_holy_city = {
+			picture = generic_political_support
+
+			allowed = {
+				original_tag = LAT
+			}
+
+			modifier = {
+				stability_factor = 0.1
+				political_power_gain = 0.1
+				conscription_factor = -0.2
+			}
+		}
+
+		TU_LAT_fallen_problem = {
+			picture = generic_army_problems
+
+			allowed = {
+				original_tag = LAT
+			}
+
+			modifier = {
+				stability_factor = -0.05
+			}
+		}
+
+		TU_LAT_blessed_arms = {
+			picture = generic_infantry_bonus
+
+			allowed = {
+				original_tag = LAT
+			}
+
+			modifier = {
+				army_attack_factor = 0.05
+				production_factory_efficiency_gain_factor = 0.05
+			}
+		}
+
+		TU_LAT_sankta_marksmen = {
+			picture = generic_infantry_bonus
+
+			allowed = {
+				original_tag = LAT
+			}
+
+			modifier = {
+				army_attack_factor = 0.08
+				army_defence_factor = 0.03
+			}
+		}
+
+		TU_LAT_pilgrim_economy = {
+			picture = generic_economic_increase
+
+			allowed = {
+				original_tag = LAT
+			}
+
+			modifier = {
+				consumer_goods_factor = -0.03
+				political_power_gain = 0.05
+			}
+		}
+
+		TU_LAT_papal_theocracy = {
+			picture = generic_political_support
+
+			allowed = {
+				original_tag = LAT
+			}
+
+			modifier = {
+				political_power_gain = 0.15
+				stability_factor = 0.1
+				war_support_factor = 0.05
+			}
+		}
+
+		TU_LAT_notarial_republic = {
+			picture = constitutional_guarantees
+
+			allowed = {
+				original_tag = LAT
+			}
+
+			modifier = {
+				stability_factor = 0.15
+				political_power_gain = 0.05
+			}
+		}
+
+		TU_LAT_open_city = {
+			picture = generic_pp_unity_bonus
+
+			allowed = {
+				original_tag = LAT
+			}
+
+			modifier = {
+				monthly_population = 0.2
+				conscription_factor = 0.1
+				stability_factor = -0.03
+			}
+		}
+
+		TU_LAT_covenant_spirit = {
+			picture = generic_flexible_foreign_policy
+
+			allowed = {
+				original_tag = LAT
+			}
+
+			modifier = {
+				political_power_gain = 0.1
+				war_support_factor = 0.05
+			}
+		}
+
+		TU_LAT_laterano_guard = {
+			picture = professional_officer_corps_spirit
+
+			allowed = {
+				original_tag = LAT
+			}
+
+			modifier = {
+				army_org_factor = 0.08
+				army_morale_factor = 0.05
+			}
+		}
+
+		TU_LAT_reconciled_fallen = {
+			picture = generic_morale_bonus
+
+			allowed = {
+				original_tag = LAT
+			}
+
+			modifier = {
+				stability_factor = 0.05
+				monthly_population = 0.1
+			}
+		}
+	}
+}
