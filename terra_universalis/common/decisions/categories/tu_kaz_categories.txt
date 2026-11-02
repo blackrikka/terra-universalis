@@ -1,0 +1,59 @@
+TU_KAZ_major_category = {
+	icon = GFX_decision_category_generic_political_actions
+
+	allowed = {
+		original_tag = KAZ
+	}
+
+	visible = {
+		has_country_flag = TU_KAZ_major_unlocked
+	}
+
+	priority = 100
+}
+
+TU_KAZ_contracts_category = {
+	icon = GFX_decision_category_military_operation
+
+	allowed = {
+		original_tag = KAZ
+	}
+
+	visible = {
+		OR = {
+			has_country_flag = TU_KAZ_corp_knights
+			has_country_flag = TU_KAZ_nomads
+			has_country_flag = TU_KAZ_mercs
+		}
+	}
+
+	priority = 100
+}
+
+TU_KAZ_politics_category = {
+	icon = GFX_decision_category_generic_political_actions
+
+	allowed = {
+		original_tag = KAZ
+	}
+
+	priority = 100
+}
+
+TU_KAZ_foreign_category = {
+	icon = GFX_decision_category_generic_foreign_policy
+
+	allowed = {
+		original_tag = KAZ
+	}
+
+	visible = {
+		OR = {
+			has_country_flag = TU_KAZ_ursus_plan
+			has_country_flag = TU_KAZ_league
+			has_country_flag = TU_KAZ_leithanien
+		}
+	}
+
+	priority = 100
+}

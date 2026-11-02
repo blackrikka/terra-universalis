@@ -411,6 +411,9 @@ def build_tag(tag, spec):
 def main():
     total = 0
     for tag, spec in TREES.items():
+        if (HERE / "content" / ("%s.py" % tag.lower())).exists():
+            print("%s skipped (tools/focusgen/content/%s.py owns this tree)" % (tag, tag.lower()))
+            continue
         n = build_tag(tag, spec)
         total += n
         print("%s focuses=%d" % (tag, n))

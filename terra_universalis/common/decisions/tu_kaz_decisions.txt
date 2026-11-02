@@ -1,0 +1,514 @@
+TU_KAZ_major_category = {
+	TU_KAZ_host_major = {
+		icon = GFX_decision_generic_political_address
+
+		allowed = {
+			original_tag = KAZ
+		}
+
+		visible = {
+			has_country_flag = TU_KAZ_major_unlocked
+		}
+
+		available = {
+			NOT = { has_country_flag = TU_KAZ_major_running }
+		}
+
+		cost = 50
+		days_re_enable = 365
+
+		complete_effect = {
+			set_country_flag = TU_KAZ_major_running
+			country_event = { id = tu_kaz_ev.10 }
+		}
+
+		ai_will_do = {
+			base = 1
+		}
+	}
+
+	TU_KAZ_sponsor_knight = {
+		icon = GFX_decision_generic_political_discourse
+
+		allowed = {
+			original_tag = KAZ
+		}
+
+		visible = {
+			has_country_flag = TU_KAZ_major_unlocked
+		}
+
+		cost = 25
+		days_re_enable = 90
+
+		complete_effect = {
+			TU_KAZ_fame_5 = yes
+			add_power_balance_value = { id = TU_KAZ_bop value = -0.02 }
+		}
+
+		ai_will_do = {
+			base = 1
+		}
+	}
+
+	TU_KAZ_broadcast_rights = {
+		icon = GFX_decision_generic_fundraising
+
+		allowed = {
+			original_tag = KAZ
+		}
+
+		visible = {
+			has_country_flag = TU_KAZ_broadcast
+		}
+
+		cost = 0
+		days_re_enable = 180
+
+		complete_effect = {
+			add_political_power = 60
+			add_power_balance_value = { id = TU_KAZ_bop value = -0.05 }
+		}
+
+		ai_will_do = {
+			base = 1
+		}
+	}
+
+	TU_KAZ_crack_down_betting = {
+		icon = GFX_decision_generic_political_discourse
+
+		allowed = {
+			original_tag = KAZ
+		}
+
+		visible = {
+			has_country_flag = TU_KAZ_major_unlocked
+		}
+
+		cost = 25
+		days_re_enable = 180
+
+		complete_effect = {
+			add_stability = 0.03
+			add_power_balance_value = { id = TU_KAZ_bop value = 0.03 }
+		}
+
+		ai_will_do = {
+			base = 1
+		}
+	}
+
+	TU_KAZ_summon_champions = {
+		icon = GFX_decision_generic_military
+
+		allowed = {
+			original_tag = KAZ
+		}
+
+		visible = {
+			has_country_flag = TU_KAZ_champions
+		}
+
+		available = {
+			check_variable = { TU_KAZ_fame > 49 }
+		}
+
+		cost = 75
+		days_re_enable = 365
+
+		complete_effect = {
+			TU_KAZ_knight_template = yes
+			capital_scope = { create_unit = { division = "division_template = \"TU_KAZ_knights\" start_experience_factor = 0.6 start_equipment_factor = 1" owner = KAZ count = 2 } }
+		}
+
+		ai_will_do = {
+			base = 1
+		}
+	}
+
+}
+
+TU_KAZ_contracts_category = {
+	TU_KAZ_hire_nomads = {
+		icon = GFX_decision_generic_military
+
+		allowed = {
+			original_tag = KAZ
+		}
+
+		visible = {
+			has_country_flag = TU_KAZ_nomads
+		}
+
+		available = {
+			check_variable = { TU_KAZ_fame > 19 }
+		}
+
+		cost = 50
+		days_re_enable = 180
+
+		complete_effect = {
+			TU_KAZ_knight_template = yes
+			capital_scope = { create_unit = { division = "division_template = \"TU_KAZ_knights\" start_experience_factor = 0.4 start_equipment_factor = 0.8" owner = KAZ count = 2 } }
+			TU_KAZ_fame_5 = yes
+		}
+
+		ai_will_do = {
+			base = 1
+		}
+	}
+
+	TU_KAZ_hire_corp_knights = {
+		icon = GFX_decision_generic_military
+
+		allowed = {
+			original_tag = KAZ
+		}
+
+		visible = {
+			has_country_flag = TU_KAZ_corp_knights
+		}
+
+		cost = 75
+		days_re_enable = 180
+
+		complete_effect = {
+			TU_KAZ_knight_template = yes
+			capital_scope = { create_unit = { division = "division_template = \"TU_KAZ_knights\" start_experience_factor = 0.3 start_equipment_factor = 0.8" owner = KAZ count = 3 } }
+			add_power_balance_value = { id = TU_KAZ_bop value = -0.05 }
+		}
+
+		ai_will_do = {
+			base = 1
+		}
+	}
+
+	TU_KAZ_hire_mercs = {
+		icon = GFX_decision_generic_political_discourse
+
+		allowed = {
+			original_tag = KAZ
+		}
+
+		visible = {
+			has_country_flag = TU_KAZ_mercs
+		}
+
+		cost = 50
+		days_re_enable = 120
+
+		complete_effect = {
+			add_manpower = 15000
+			army_experience = 10
+		}
+
+		ai_will_do = {
+			base = 1
+		}
+	}
+
+	TU_KAZ_lease_knights = {
+		icon = GFX_decision_generic_political_discourse
+
+		allowed = {
+			original_tag = KAZ
+		}
+
+		visible = {
+			OR = {
+				has_country_flag = TU_KAZ_corp_knights
+				has_country_flag = TU_KAZ_nomads
+			}
+		}
+
+		cost = 0
+		days_re_enable = 180
+
+		complete_effect = {
+			add_political_power = 75
+			add_manpower = -5000
+			TU_KAZ_fame_5 = yes
+		}
+
+		ai_will_do = {
+			base = 1
+		}
+	}
+
+	TU_KAZ_merc_arsenal = {
+		icon = GFX_decision_generic_political_discourse
+
+		allowed = {
+			original_tag = KAZ
+		}
+
+		visible = {
+			has_country_flag = TU_KAZ_mercs
+		}
+
+		cost = 50
+		days_re_enable = 180
+
+		complete_effect = {
+			add_equipment_to_stockpile = { type = infantry_equipment amount = 1000 }
+		}
+
+		ai_will_do = {
+			base = 1
+		}
+	}
+
+}
+
+TU_KAZ_politics_category = {
+	TU_KAZ_union_lobby = {
+		icon = GFX_decision_generic_political_discourse
+
+		allowed = {
+			original_tag = KAZ
+		}
+
+		cost = 25
+		days_re_enable = 120
+
+		complete_effect = {
+			add_power_balance_value = { id = TU_KAZ_bop value = -0.1 }
+			add_political_power = 25
+		}
+
+		ai_will_do = {
+			base = 1
+		}
+	}
+
+	TU_KAZ_knight_rally = {
+		icon = GFX_decision_generic_political_discourse
+
+		allowed = {
+			original_tag = KAZ
+		}
+
+		cost = 50
+		days_re_enable = 120
+
+		complete_effect = {
+			add_power_balance_value = { id = TU_KAZ_bop value = 0.1 }
+			TU_KAZ_fame_5 = yes
+		}
+
+		ai_will_do = {
+			base = 1
+		}
+	}
+
+	TU_KAZ_corporate_tax = {
+		icon = GFX_decision_generic_political_discourse
+
+		allowed = {
+			original_tag = KAZ
+		}
+
+		cost = 0
+		days_re_enable = 240
+
+		complete_effect = {
+			add_political_power = 100
+			add_power_balance_value = { id = TU_KAZ_bop value = -0.08 }
+			add_stability = -0.03
+		}
+
+		ai_will_do = {
+			base = 1
+		}
+	}
+
+	TU_KAZ_knight_tribunal = {
+		icon = GFX_decision_generic_political_discourse
+
+		allowed = {
+			original_tag = KAZ
+		}
+
+		cost = 50
+		days_re_enable = 240
+
+		complete_effect = {
+			add_stability = 0.05
+			add_power_balance_value = { id = TU_KAZ_bop value = 0.05 }
+		}
+
+		ai_will_do = {
+			base = 1
+		}
+	}
+
+	TU_KAZ_infected_campaign = {
+		icon = GFX_decision_generic_political_discourse
+
+		allowed = {
+			original_tag = KAZ
+		}
+
+		visible = {
+			has_country_flag = TU_KAZ_infected_entry
+		}
+
+		cost = 50
+		days_re_enable = 180
+
+		complete_effect = {
+			TU_KAZ_fame_10 = yes
+			add_stability = -0.03
+		}
+
+		ai_will_do = {
+			base = 1
+		}
+	}
+
+	TU_KAZ_oripathy_relief = {
+		icon = GFX_decision_generic_political_discourse
+
+		allowed = {
+			original_tag = KAZ
+		}
+
+		visible = {
+			has_completed_focus = TU_KAZ_infected_question
+		}
+
+		cost = 50
+		days_re_enable = 180
+
+		complete_effect = {
+			add_stability = 0.04
+			add_manpower = 5000
+		}
+
+		ai_will_do = {
+			base = 1
+		}
+	}
+
+}
+
+TU_KAZ_foreign_category = {
+	TU_KAZ_justify_ursus = {
+		icon = GFX_decision_generic_military
+
+		allowed = {
+			original_tag = KAZ
+		}
+
+		visible = {
+			has_country_flag = TU_KAZ_ursus_plan
+			country_exists = URS
+		}
+
+		available = {
+			NOT = { has_war_with = URS }
+			has_war_support > 0.3
+		}
+
+		cost = 75
+		fire_only_once = yes
+
+		complete_effect = {
+			create_wargoal = { type = take_state_focus target = URS }
+		}
+
+		ai_will_do = {
+			base = 1
+		}
+	}
+
+	TU_KAZ_found_league = {
+		icon = GFX_decision_generic_political_discourse
+
+		allowed = {
+			original_tag = KAZ
+		}
+
+		visible = {
+			has_country_flag = TU_KAZ_league
+		}
+
+		available = {
+			is_in_faction = no
+		}
+
+		cost = 50
+		fire_only_once = yes
+
+		complete_effect = {
+			create_faction = TU_KAZ_league
+		}
+
+		ai_will_do = {
+			base = 1
+		}
+	}
+
+	TU_KAZ_invite_league = {
+		icon = GFX_decision_generic_political_discourse
+
+		allowed = {
+			original_tag = KAZ
+		}
+
+		target_trigger = {
+			FROM = {
+				NOT = { tag = ROOT }
+				is_in_faction = no
+				NOT = { has_war_with = ROOT }
+				OR = { tag = LEI tag = SIR tag = LAT tag = VIC tag = COL }
+			}
+		}
+
+		visible = {
+			has_country_flag = TU_KAZ_league
+			is_faction_leader = yes
+		}
+
+		cost = 50
+		days_re_enable = 90
+
+		complete_effect = {
+			add_to_faction = FROM
+		}
+
+		ai_will_do = {
+			base = 1
+		}
+	}
+
+	TU_KAZ_leithanien_exchange = {
+		icon = GFX_decision_generic_political_discourse
+
+		allowed = {
+			original_tag = KAZ
+		}
+
+		visible = {
+			has_country_flag = TU_KAZ_leithanien
+			country_exists = LEI
+		}
+
+		available = {
+			NOT = { has_war_with = LEI }
+		}
+
+		cost = 50
+		fire_only_once = yes
+
+		complete_effect = {
+			add_tech_bonus = { name = TU_KAZ_leithanien_exchange bonus = 0.5 uses = 2 category = electronics category = industry }
+		}
+
+		ai_will_do = {
+			base = 1
+		}
+	}
+
+}

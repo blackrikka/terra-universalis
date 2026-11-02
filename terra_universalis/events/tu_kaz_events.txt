@@ -1,0 +1,451 @@
+add_namespace = tu_kaz_ev
+
+country_event = {
+	id = tu_kaz_ev.1
+	title = tu_kaz_ev.1.t
+	desc = tu_kaz_ev.1.d
+	picture = GFX_report_event_generic_read_write
+	is_triggered_only = yes
+
+	option = {
+		name = tu_kaz_ev.1.a
+		ai_chance = {
+			factor = 50
+		}
+		add_power_balance_value = { id = TU_KAZ_bop value = -0.05 }
+	}
+
+	option = {
+		name = tu_kaz_ev.1.b
+		ai_chance = {
+			factor = 50
+		}
+		add_power_balance_value = { id = TU_KAZ_bop value = 0.05 }
+	}
+}
+
+country_event = {
+	id = tu_kaz_ev.10
+	title = tu_kaz_ev.10.t
+	desc = tu_kaz_ev.10.d
+	picture = GFX_report_event_generic_rally
+	is_triggered_only = yes
+
+	option = {
+		name = tu_kaz_ev.10.a
+		ai_chance = {
+			factor = 50
+		}
+		add_power_balance_value = { id = TU_KAZ_bop value = -0.05 }
+		add_political_power = 40
+		country_event = { id = tu_kaz_ev.11 days = 20 }
+	}
+
+	option = {
+		name = tu_kaz_ev.10.b
+		ai_chance = {
+			factor = 50
+		}
+		add_power_balance_value = { id = TU_KAZ_bop value = 0.05 }
+		TU_KAZ_fame_5 = yes
+		country_event = { id = tu_kaz_ev.11 days = 20 }
+	}
+}
+
+country_event = {
+	id = tu_kaz_ev.11
+	title = tu_kaz_ev.11.t
+	desc = tu_kaz_ev.11.d
+	picture = GFX_report_event_generic_rally
+	is_triggered_only = yes
+
+	option = {
+		name = tu_kaz_ev.11.a
+		ai_chance = {
+			factor = 30
+		}
+		TU_KAZ_fame_5 = yes
+		add_stability = -0.02
+		set_country_flag = TU_KAZ_infected_entry_this_year
+		country_event = { id = tu_kaz_ev.12 days = 10 }
+	}
+
+	option = {
+		name = tu_kaz_ev.11.b
+		ai_chance = {
+			factor = 40
+		}
+		add_power_balance_value = { id = TU_KAZ_bop value = -0.03 }
+		add_stability = 0.02
+		country_event = { id = tu_kaz_ev.12 days = 10 }
+	}
+
+	option = {
+		name = tu_kaz_ev.11.c
+		ai_chance = {
+			factor = 30
+		}
+		add_political_power = -25
+		add_power_balance_value = { id = TU_KAZ_bop value = 0.05 }
+		country_event = { id = tu_kaz_ev.12 days = 10 }
+	}
+}
+
+country_event = {
+	id = tu_kaz_ev.12
+	title = tu_kaz_ev.12.t
+	desc = tu_kaz_ev.12.d
+	picture = GFX_report_event_generic_rally
+	is_triggered_only = yes
+
+	immediate = {
+		random_list = {
+			35 = { set_country_flag = TU_KAZ_winner_corp }
+			30 = { set_country_flag = TU_KAZ_winner_knight }
+			20 = { set_country_flag = TU_KAZ_winner_noble }
+			15 = {
+				modifier = { factor = 0 NOT = { has_country_flag = TU_KAZ_infected_entry } NOT = { has_country_flag = TU_KAZ_infected_entry_this_year } }
+				set_country_flag = TU_KAZ_winner_infected
+			}
+		}
+		if = { limit = { has_country_flag = TU_KAZ_major_annual } TU_KAZ_fame_5 = yes }
+		clr_country_flag = TU_KAZ_major_running
+		clr_country_flag = TU_KAZ_infected_entry_this_year
+		hidden_effect = { country_event = { id = tu_kaz_ev.13 days = 1 } }
+	}
+
+	option = {
+		name = tu_kaz_ev.12.a
+		ai_chance = {
+			factor = 1
+		}
+		trigger = { has_country_flag = TU_KAZ_winner_corp }
+		add_power_balance_value = { id = TU_KAZ_bop value = -0.05 }
+		add_political_power = 50
+		TU_KAZ_fame_5 = yes
+	}
+
+	option = {
+		name = tu_kaz_ev.12.b
+		ai_chance = {
+			factor = 1
+		}
+		trigger = { has_country_flag = TU_KAZ_winner_knight }
+		add_power_balance_value = { id = TU_KAZ_bop value = 0.05 }
+		TU_KAZ_fame_10 = yes
+		army_experience = 20
+	}
+
+	option = {
+		name = tu_kaz_ev.12.c
+		ai_chance = {
+			factor = 1
+		}
+		trigger = { has_country_flag = TU_KAZ_winner_noble }
+		add_power_balance_value = { id = TU_KAZ_bop value = 0.08 }
+		add_war_support = 0.05
+		TU_KAZ_fame_5 = yes
+	}
+
+	option = {
+		name = tu_kaz_ev.12.d
+		ai_chance = {
+			factor = 1
+		}
+		trigger = { has_country_flag = TU_KAZ_winner_infected }
+		set_country_flag = TU_KAZ_infected_champion
+		TU_KAZ_fame_15 = yes
+		add_stability = -0.03
+	}
+}
+
+country_event = {
+	id = tu_kaz_ev.13
+	title = tu_kaz_ev.13.t
+	desc = tu_kaz_ev.13.d
+	picture = GFX_report_event_generic_read_write
+	is_triggered_only = yes
+
+	option = {
+		name = tu_kaz_ev.13.a
+		ai_chance = {
+			factor = 1
+		}
+		clr_country_flag = TU_KAZ_winner_corp
+		clr_country_flag = TU_KAZ_winner_knight
+		clr_country_flag = TU_KAZ_winner_noble
+		clr_country_flag = TU_KAZ_winner_infected
+	}
+}
+
+country_event = {
+	id = tu_kaz_ev.20
+	title = tu_kaz_ev.20.t
+	desc = tu_kaz_ev.20.d
+	picture = GFX_report_event_generic_read_write
+	is_triggered_only = yes
+
+	option = {
+		name = tu_kaz_ev.20.a
+		ai_chance = {
+			factor = 50
+		}
+		TU_KAZ_fame_5 = yes
+		add_stability = -0.02
+	}
+
+	option = {
+		name = tu_kaz_ev.20.b
+		ai_chance = {
+			factor = 50
+		}
+		add_stability = 0.02
+		add_power_balance_value = { id = TU_KAZ_bop value = -0.03 }
+	}
+}
+
+country_event = {
+	id = tu_kaz_ev.21
+	title = tu_kaz_ev.21.t
+	desc = tu_kaz_ev.21.d
+	picture = GFX_report_event_generic_read_write
+	is_triggered_only = yes
+
+	option = {
+		name = tu_kaz_ev.21.a
+		ai_chance = {
+			factor = 50
+		}
+		TU_KAZ_fame_10 = yes
+		add_power_balance_value = { id = TU_KAZ_bop value = 0.05 }
+	}
+
+	option = {
+		name = tu_kaz_ev.21.b
+		ai_chance = {
+			factor = 50
+		}
+		add_political_power = 30
+	}
+}
+
+country_event = {
+	id = tu_kaz_ev.22
+	title = tu_kaz_ev.22.t
+	desc = tu_kaz_ev.22.d
+	picture = GFX_report_event_generic_battle
+	is_triggered_only = yes
+
+	option = {
+		name = tu_kaz_ev.22.a
+		ai_chance = {
+			factor = 60
+		}
+		add_war_support = 0.05
+		army_experience = 10
+	}
+
+	option = {
+		name = tu_kaz_ev.22.b
+		ai_chance = {
+			factor = 40
+		}
+		add_stability = 0.02
+	}
+}
+
+country_event = {
+	id = tu_kaz_ev.23
+	title = tu_kaz_ev.23.t
+	desc = tu_kaz_ev.23.d
+	picture = GFX_report_event_generic_read_write
+	is_triggered_only = yes
+
+	option = {
+		name = tu_kaz_ev.23.a
+		ai_chance = {
+			factor = 50
+		}
+		add_power_balance_value = { id = TU_KAZ_bop value = -0.03 }
+		add_stability = -0.02
+	}
+
+	option = {
+		name = tu_kaz_ev.23.b
+		ai_chance = {
+			factor = 50
+		}
+		add_power_balance_value = { id = TU_KAZ_bop value = 0.03 }
+		add_political_power = -20
+	}
+}
+
+country_event = {
+	id = tu_kaz_ev.24
+	title = tu_kaz_ev.24.t
+	desc = tu_kaz_ev.24.d
+	picture = GFX_report_event_generic_read_write
+	is_triggered_only = yes
+
+	option = {
+		name = tu_kaz_ev.24.a
+		ai_chance = {
+			factor = 50
+		}
+		TU_KAZ_fame_5 = yes
+		add_stability = -0.03
+	}
+
+	option = {
+		name = tu_kaz_ev.24.b
+		ai_chance = {
+			factor = 50
+		}
+		add_stability = 0.02
+	}
+}
+
+country_event = {
+	id = tu_kaz_ev.25
+	title = tu_kaz_ev.25.t
+	desc = tu_kaz_ev.25.d
+	picture = GFX_report_event_generic_read_write
+
+	trigger = {
+		original_tag = KAZ
+		has_country_flag = TU_KAZ_major_unlocked
+	}
+	fire_only_once = yes
+
+	mean_time_to_happen = {
+		days = 240
+	}
+
+	option = {
+		name = tu_kaz_ev.25.a
+		ai_chance = {
+			factor = 50
+		}
+		add_power_balance_value = { id = TU_KAZ_bop value = 0.05 }
+		add_political_power = -25
+	}
+
+	option = {
+		name = tu_kaz_ev.25.b
+		ai_chance = {
+			factor = 50
+		}
+		add_power_balance_value = { id = TU_KAZ_bop value = -0.05 }
+		add_stability = -0.02
+	}
+}
+
+country_event = {
+	id = tu_kaz_ev.26
+	title = tu_kaz_ev.26.t
+	desc = tu_kaz_ev.26.d
+	picture = GFX_report_event_generic_read_write
+
+	trigger = {
+		original_tag = KAZ
+		has_completed_focus = TU_KAZ_knight_academy
+	}
+	fire_only_once = yes
+
+	mean_time_to_happen = {
+		days = 300
+	}
+
+	option = {
+		name = tu_kaz_ev.26.a
+		ai_chance = {
+			factor = 50
+		}
+		add_manpower = 5000
+		TU_KAZ_fame_5 = yes
+		add_political_power = -25
+	}
+
+	option = {
+		name = tu_kaz_ev.26.b
+		ai_chance = {
+			factor = 50
+		}
+		add_political_power = 15
+	}
+}
+
+country_event = {
+	id = tu_kaz_ev.27
+	title = tu_kaz_ev.27.t
+	desc = tu_kaz_ev.27.d
+	picture = GFX_report_event_generic_read_write
+
+	trigger = {
+		original_tag = KAZ
+		check_variable = { TU_KAZ_fame > 29 }
+	}
+	fire_only_once = yes
+
+	mean_time_to_happen = {
+		days = 360
+	}
+
+	option = {
+		name = tu_kaz_ev.27.a
+		ai_chance = {
+			factor = 1
+		}
+		TU_KAZ_fame_10 = yes
+		add_war_support = 0.03
+	}
+}
+
+country_event = {
+	id = tu_kaz_ev.28
+	title = tu_kaz_ev.28.t
+	desc = tu_kaz_ev.28.d
+	picture = GFX_report_event_generic_read_write
+	is_triggered_only = yes
+
+	option = {
+		name = tu_kaz_ev.28.a
+		ai_chance = {
+			factor = 1
+		}
+		add_political_power = 50
+	}
+}
+
+country_event = {
+	id = tu_kaz_ev.29
+	title = tu_kaz_ev.29.t
+	desc = tu_kaz_ev.29.d
+	picture = GFX_report_event_generic_read_write
+	is_triggered_only = yes
+
+	option = {
+		name = tu_kaz_ev.29.a
+		ai_chance = {
+			factor = 1
+		}
+		TU_KAZ_fame_10 = yes
+	}
+}
+
+country_event = {
+	id = tu_kaz_ev.30
+	title = tu_kaz_ev.30.t
+	desc = tu_kaz_ev.30.d
+	picture = GFX_report_event_generic_read_write
+	is_triggered_only = yes
+
+	option = {
+		name = tu_kaz_ev.30.a
+		ai_chance = {
+			factor = 1
+		}
+		add_stability = 0.05
+		TU_KAZ_fame_10 = yes
+	}
+}

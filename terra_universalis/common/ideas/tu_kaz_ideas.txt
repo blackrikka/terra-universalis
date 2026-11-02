@@ -1,0 +1,262 @@
+ideas = {
+
+	country = {
+
+		TU_KAZ_union_grip = {
+			picture = generic_foreign_capital
+
+			allowed = {
+				original_tag = KAZ
+			}
+
+			modifier = {
+				political_power_gain = -0.1
+				production_speed_buildings_factor = 0.05
+				stability_factor = -0.03
+			}
+		}
+
+		TU_KAZ_fading_knighthood = {
+			picture = generic_army_problems
+
+			allowed = {
+				original_tag = KAZ
+			}
+
+			modifier = {
+				army_org_factor = -0.05
+				war_support_factor = -0.05
+			}
+		}
+
+		TU_KAZ_major_spirit = {
+			picture = generic_morale_bonus
+
+			allowed = {
+				original_tag = KAZ
+			}
+
+			modifier = {
+				war_support_factor = 0.05
+				experience_gain_army_factor = 0.05
+			}
+		}
+
+		TU_KAZ_legendary_knights = {
+			picture = generic_army_war_college
+
+			allowed = {
+				original_tag = KAZ
+			}
+
+			modifier = {
+				war_support_factor = 0.08
+				experience_gain_army_factor = 0.1
+				army_morale_factor = 0.05
+			}
+		}
+
+		TU_KAZ_union_monopoly = {
+			picture = generic_foreign_capital
+
+			allowed = {
+				original_tag = KAZ
+			}
+
+			modifier = {
+				production_speed_buildings_factor = 0.1
+				political_power_gain = 0.05
+				stability_factor = -0.05
+			}
+		}
+
+		TU_KAZ_fair_market = {
+			picture = generic_economic_increase
+
+			allowed = {
+				original_tag = KAZ
+			}
+
+			modifier = {
+				consumer_goods_factor = -0.03
+				stability_factor = 0.05
+			}
+		}
+
+		TU_KAZ_shareholder_state = {
+			picture = generic_economic_increase
+
+			allowed = {
+				original_tag = KAZ
+			}
+
+			modifier = {
+				production_factory_max_efficiency_factor = 0.1
+				political_power_gain = 0.15
+				war_support_factor = -0.05
+			}
+		}
+
+		TU_KAZ_commercial_empire = {
+			picture = generic_industrial_concern_1
+
+			allowed = {
+				original_tag = KAZ
+			}
+
+			modifier = {
+				production_factory_max_efficiency_factor = 0.1
+				consumer_goods_factor = -0.05
+				political_power_gain = 0.1
+			}
+		}
+
+		TU_KAZ_knightly_code = {
+			picture = professional_officer_corps_spirit
+
+			allowed = {
+				original_tag = KAZ
+			}
+
+			modifier = {
+				army_org_factor = 0.05
+				war_support_factor = 0.05
+			}
+		}
+
+		TU_KAZ_knight_kingdom = {
+			picture = generic_army_war_college
+
+			allowed = {
+				original_tag = KAZ
+			}
+
+			modifier = {
+				army_attack_factor = 0.08
+				army_org_factor = 0.05
+				war_support_factor = 0.1
+			}
+		}
+
+		TU_KAZ_royal_knights = {
+			picture = generic_army_europe_1
+
+			allowed = {
+				original_tag = KAZ
+			}
+
+			modifier = {
+				army_attack_factor = 0.05
+				army_defence_factor = 0.05
+				experience_gain_army_factor = 0.1
+			}
+		}
+
+		TU_KAZ_knights_for_all = {
+			picture = generic_pp_unity_bonus
+
+			allowed = {
+				original_tag = KAZ
+			}
+
+			modifier = {
+				stability_factor = 0.1
+				conscription_factor = 0.05
+				army_morale_factor = 0.05
+			}
+		}
+
+		TU_KAZ_shining_knights = {
+			picture = generic_morale_bonus
+
+			allowed = {
+				original_tag = KAZ
+			}
+
+			modifier = {
+				army_morale_factor = 0.08
+				stability_factor = 0.05
+				monthly_population = 0.1
+			}
+		}
+
+		TU_KAZ_oripathy_care = {
+			picture = generic_morale_bonus
+
+			allowed = {
+				original_tag = KAZ
+			}
+
+			modifier = {
+				stability_factor = 0.05
+				monthly_population = 0.1
+			}
+		}
+
+		TU_KAZ_kazimierz_lancers = {
+			picture = generic_armor
+
+			allowed = {
+				original_tag = KAZ
+			}
+
+			modifier = {
+				army_speed_factor = 0.05
+				army_armor_attack_factor = 0.05
+				army_org_factor = 0.05
+			}
+		}
+
+		TU_KAZ_defenders = {
+			picture = generic_fortify_the_borders
+
+			allowed = {
+				original_tag = KAZ
+			}
+
+			modifier = {
+				army_defence_factor = 0.08
+				max_dig_in = 1
+			}
+		}
+
+		TU_KAZ_economic_miracle = {
+			picture = generic_production_bonus
+
+			allowed = {
+				original_tag = KAZ
+			}
+
+			modifier = {
+				production_factory_max_efficiency_factor = 0.08
+				production_speed_buildings_factor = 0.1
+			}
+		}
+
+		TU_KAZ_neutral = {
+			picture = generic_flexible_foreign_policy
+
+			allowed = {
+				original_tag = KAZ
+			}
+
+			modifier = {
+				stability_factor = 0.05
+				political_power_gain = 0.05
+			}
+		}
+
+		TU_KAZ_anti_ursus = {
+			picture = generic_war_preparation
+
+			allowed = {
+				original_tag = KAZ
+			}
+
+			modifier = {
+				war_support_factor = 0.08
+				army_defence_factor = 0.05
+			}
+		}
+	}
+}

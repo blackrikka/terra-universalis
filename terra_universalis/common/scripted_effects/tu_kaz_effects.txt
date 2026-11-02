@@ -1,0 +1,50 @@
+TU_KAZ_fame_5 = {
+	custom_effect_tooltip = TU_KAZ_fame_tt_5
+	hidden_effect = {
+		add_to_variable = { TU_KAZ_fame = 5 }
+		clamp_variable = { var = TU_KAZ_fame min = 0 max = 100 }
+	}
+}
+
+TU_KAZ_fame_10 = {
+	custom_effect_tooltip = TU_KAZ_fame_tt_10
+	hidden_effect = {
+		add_to_variable = { TU_KAZ_fame = 10 }
+		clamp_variable = { var = TU_KAZ_fame min = 0 max = 100 }
+	}
+}
+
+TU_KAZ_fame_15 = {
+	custom_effect_tooltip = TU_KAZ_fame_tt_15
+	hidden_effect = {
+		add_to_variable = { TU_KAZ_fame = 15 }
+		clamp_variable = { var = TU_KAZ_fame min = 0 max = 100 }
+	}
+}
+
+TU_KAZ_fame_20 = {
+	custom_effect_tooltip = TU_KAZ_fame_tt_20
+	hidden_effect = {
+		add_to_variable = { TU_KAZ_fame = 20 }
+		clamp_variable = { var = TU_KAZ_fame min = 0 max = 100 }
+	}
+}
+
+TU_KAZ_knight_template = {
+	if = {
+		limit = { NOT = { has_country_flag = TU_KAZ_knight_template_done } }
+		set_country_flag = TU_KAZ_knight_template_done
+		division_template = {
+			name = "TU_KAZ_knights"
+			is_locked = no
+			priority = 2
+			regiments = {
+				cavalry = { x = 0 y = 0 }
+				cavalry = { x = 0 y = 1 }
+				cavalry = { x = 1 y = 0 }
+				cavalry = { x = 1 y = 1 }
+				infantry = { x = 2 y = 0 }
+			}
+		}
+	}
+}
