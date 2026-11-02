@@ -1,29 +1,29 @@
 TU_anchor_rho_start_available = {
-	NOT = { 61 = { is_owned_by = RHO } }
+	NOT = { 62 = { is_owned_by = RHO } }
 	YAN = { exists = yes }
 	YAN = { NOT = { has_war_with = RHO } }
-	61 = { is_owned_by = YAN }
+	62 = { is_owned_by = YAN }
 }
 
 TU_anchor_victoria_available = {
-	NOT = { 111 = { is_owned_by = RHO } }
+	NOT = { 114 = { is_owned_by = RHO } }
 	VIC = { exists = yes }
 	VIC = { NOT = { has_war_with = RHO } }
-	111 = { is_owned_by = VIC }
+	114 = { is_owned_by = VIC }
 }
 
 TU_anchor_columbia_available = {
-	NOT = { 95 = { is_owned_by = RHO } }
+	NOT = { 96 = { is_owned_by = RHO } }
 	COL = { exists = yes }
 	COL = { NOT = { has_war_with = RHO } }
-	95 = { is_owned_by = COL }
+	96 = { is_owned_by = COL }
 }
 
 TU_anchor_yan_available = {
-	NOT = { 67 = { is_owned_by = RHO } }
+	NOT = { 68 = { is_owned_by = RHO } }
 	YAN = { exists = yes }
 	YAN = { NOT = { has_war_with = RHO } }
-	67 = { is_owned_by = YAN }
+	68 = { is_owned_by = YAN }
 }
 
 TU_anchor_kazimierz_available = {
@@ -34,31 +34,31 @@ TU_anchor_kazimierz_available = {
 }
 
 TU_anchor_sargon_available = {
-	NOT = { 167 = { is_owned_by = RHO } }
+	NOT = { 171 = { is_owned_by = RHO } }
 	SAR = { exists = yes }
 	SAR = { NOT = { has_war_with = RHO } }
-	167 = { is_owned_by = SAR }
+	171 = { is_owned_by = SAR }
 }
 
 TU_anchor_iberia_available = {
-	NOT = { 197 = { is_owned_by = RHO } }
+	NOT = { 201 = { is_owned_by = RHO } }
 	IBE = { exists = yes }
 	IBE = { NOT = { has_war_with = RHO } }
-	197 = { is_owned_by = IBE }
+	201 = { is_owned_by = IBE }
 }
 
 TU_anchor_rim_available = {
-	NOT = { 154 = { is_owned_by = RHO } }
+	NOT = { 158 = { is_owned_by = RHO } }
 	RIM = { exists = yes }
 	RIM = { NOT = { has_war_with = RHO } }
-	154 = { is_owned_by = RIM }
+	158 = { is_owned_by = RIM }
 }
 
 TU_anchor_kazdel_available = {
-	NOT = { 143 = { is_owned_by = RHO } }
+	NOT = { 146 = { is_owned_by = RHO } }
 	KZD = { exists = yes }
 	KZD = { NOT = { has_war_with = RHO } }
-	143 = { is_owned_by = KZD }
+	146 = { is_owned_by = KZD }
 }
 
 TU_anchor_ursus_available = {

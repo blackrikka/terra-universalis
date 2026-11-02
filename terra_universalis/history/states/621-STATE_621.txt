@@ -1,0 +1,24 @@
+state={
+	id=621
+	name="STATE_621"
+	manpower = 60000
+
+	state_category = city
+
+	history={
+		owner = LGM
+		victory_points = { 262 15 }
+		buildings = {
+			infrastructure = 4
+			industrial_complex = 2
+			arms_factory = 1
+			air_base = 1
+		}
+		add_core_of = LGM
+	}
+
+	provinces={
+		262
+	}
+	local_supplies=0.0
+}

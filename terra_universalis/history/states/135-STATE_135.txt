@@ -6,19 +6,16 @@ state={
 	state_category = town
 
 	history={
-		owner = LEI
-		victory_points = { 486 1 }
+		owner = VIC
+		victory_points = { 484 1 }
 		buildings = {
 			infrastructure = 2
-			industrial_complex = 2
-			arms_factory = 1
-			air_base = 1
 		}
-		add_core_of = LEI
+		add_core_of = VIC
 	}
 
 	provinces={
-		477 478 479 485 486 487 492
+		484
 	}
 	local_supplies=0.0
 }

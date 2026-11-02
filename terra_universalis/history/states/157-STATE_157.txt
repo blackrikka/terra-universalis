@@ -7,15 +7,18 @@ state={
 
 	history={
 		owner = RIM
-		victory_points = { 563 1 }
+		victory_points = { 565 1 }
 		buildings = {
 			infrastructure = 2
+			industrial_complex = 2
+			arms_factory = 1
+			air_base = 1
 		}
 		add_core_of = RIM
 	}
 
 	provinces={
-		561 563 564 566
+		557 558 561 564 565 566 570 572 575
 	}
 	local_supplies=0.0
 }

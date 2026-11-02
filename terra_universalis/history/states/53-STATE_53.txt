@@ -10,12 +10,15 @@ state={
 		victory_points = { 211 1 }
 		buildings = {
 			infrastructure = 2
+			industrial_complex = 2
+			arms_factory = 1
+			air_base = 1
 		}
 		add_core_of = HIG
 	}
 
 	provinces={
-		210 211
+		209 210 211 212
 	}
 	local_supplies=0.0
 }

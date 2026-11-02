@@ -7,15 +7,18 @@ state={
 
 	history={
 		owner = COL
-		victory_points = { 348 1 }
+		victory_points = { 345 1 }
 		buildings = {
 			infrastructure = 2
+			industrial_complex = 2
+			arms_factory = 1
+			air_base = 1
 		}
 		add_core_of = COL
 	}
 
 	provinces={
-		337 338 339 347 348 349 353
+		333 344 345 346 354 355 356
 	}
 	local_supplies=0.0
 }

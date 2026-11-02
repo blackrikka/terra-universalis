@@ -7,15 +7,18 @@ state={
 
 	history={
 		owner = VIC
-		victory_points = { 447 1 }
+		victory_points = { 442 1 }
 		buildings = {
 			infrastructure = 2
+			industrial_complex = 2
+			arms_factory = 1
+			air_base = 1
 		}
 		add_core_of = VIC
 	}
 
 	provinces={
-		441 442 447 449 451
+		432 437 438 441 442 443 444 445
 	}
 	local_supplies=0.0
 }

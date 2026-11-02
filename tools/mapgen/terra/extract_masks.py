@@ -87,6 +87,7 @@ HEX_AFFINE = (1.17865311, 29.84403986, 1.12073822, 22.01772409)
 HEX_COAST_GROW_REF = 26      # 헥스 지도에서는 바다인데 참고 지도에서는 육지인 곳: 이 거리(참고 px, 약 헥스 1칸) 안이면 가까운 국가
 KZD_GROW_REF = 34            # 카즈델은 헥스 1칸뿐이라 수도·정박지 두 주가 들어가도록 이만큼 넓힌다 (참고 px)
 SMALL_GAP_REF = 1200         # 국가에 닿은 회색 조각이 이보다 작으면(참고 px, 헥스 약 2칸) 그 국가 땅으로
+CORRIDOR_MIN_LAND = 0.6      # 통로로 쓸 칸은 육지가 칸 면적의 이 비율 이상
 IMP_TERRAIN_OPEN = 4         # 통행 불가 지역 지형 조각 정리 (참고 px, 이보다 가는 띠는 이웃 지형으로)
 FILLER_TAG = "WLD"           # 회색 땅(어느 나라도 아닌 땅) = 통행 불가, 이 중립 태그 소유
 FILLER_CAPITAL_ISLAND = (513, 959)   # 무주지 수도: 어느 나라와도 붙지 않은 남쪽 외딴 섬 (소좌표). 이 섬만 통행 가능
@@ -398,6 +399,113 @@ def hex_cells(ref_h, ref_w):
     return ((best_r + 50) * 1000 + (best_c + 50)).astype(np.int64)
 
 
+def hex_neighbors(cell):
+    """헥스 칸 번호 -> 이웃 6칸 번호 (홀수 행이 가로 반 칸 오른쪽으로 밀린 격자)."""
+    r, c = divmod(cell, 1000)
+    if (r - 50) % 2 == 0:
+        d = ((0, -1), (0, 1), (-1, -1), (-1, 0), (1, -1), (1, 0))
+    else:
+        d = ((0, -1), (0, 1), (-1, 0), (-1, 1), (1, 0), (1, 1))
+    return [(r + dr) * 1000 + (c + dc) for dr, dc in d]
+
+
+def connect_countries(cells, code_game, cu, maj, solid):
+    """국가끼리 육지로 다 이어지게 한다 (국가 인접 그래프가 하나의 덩어리가 될 때까지).
+    덩어리 사이 가장 짧은 무주지(통행 불가) 칸 길을 국가 땅으로 바꾸고, 길의 앞 절반은 출발 국가, 뒤 절반은 도착 국가가 갖는다.
+    무주지 수도 섬(통행 가능 무주지)은 건드리지 않는다. 길과 양 끝 국가 칸은 육지가 넉넉한 칸(solid)만 쓴다
+    (해안에 걸친 칸은 육지 조각이 끊어져 실제로 이어지지 않을 수 있음). 반환: 연 통로 목록."""
+    from collections import deque
+    filler = OWNER_TAGS.index(FILLER_TAG)
+    code_of = dict(zip(cu.tolist(), maj.tolist()))
+
+    def owner_of(code):
+        return (code % 1000) // 10 - 1
+
+    def is_country(cell):
+        code = code_of.get(cell)
+        return code is not None and code // 1000 == K_LAND and owner_of(code) != filler
+
+    def is_waste(cell):
+        code = code_of.get(cell)
+        return code is not None and code // 1000 == K_IMP and owner_of(code) == filler
+
+    tags_present = sorted({owner_of(c) for c in code_of.values() if c // 1000 == K_LAND and owner_of(c) != filler})
+    corridors = []
+    while True:
+        # 국가 인접 그래프의 덩어리
+        adj = {t: set() for t in tags_present}
+        for cell, code in code_of.items():
+            if not is_country(cell):
+                continue
+            a = owner_of(code)
+            for nb in hex_neighbors(cell):
+                if is_country(nb) and owner_of(code_of[nb]) != a:
+                    adj[a].add(owner_of(code_of[nb]))
+        group = {}
+        for t in tags_present:
+            if t in group:
+                continue
+            stack = [t]
+            group[t] = t
+            while stack:
+                u = stack.pop()
+                for v in adj[u]:
+                    if v not in group:
+                        group[v] = t
+                        stack.append(v)
+        roots = sorted(set(group.values()))
+        if len(roots) == 1:
+            return corridors
+        # 가장 짧은 다리: 각 덩어리에서 무주지 칸으로 BFS, 다른 덩어리의 국가 칸에 닿으면 후보. 전체에서 가장 짧은 것 하나를 연다.
+        best = None
+        for root in roots:
+            src = [cell for cell, code in code_of.items()
+                   if is_country(cell) and group[owner_of(code)] == root and cell in solid]
+            prev = {cell: None for cell in src}
+            q = deque((cell, 0) for cell in src)
+            found = None
+            while q:
+                u, du = q.popleft()
+                if best is not None and du >= best[0]:
+                    break
+                for v in hex_neighbors(u):
+                    if v in prev:
+                        continue
+                    if v not in solid:
+                        continue
+                    if is_country(v) and group[owner_of(code_of[v])] != root:
+                        prev[v] = u
+                        found = (du, v)
+                        break
+                    if is_waste(v):
+                        prev[v] = u
+                        q.append((v, du + 1))
+                if found:
+                    break
+            if found and (best is None or found[0] < best[0]):
+                path = []
+                u = prev[found[1]]
+                while prev[u] is not None:
+                    path.append(u)
+                    u = prev[u]
+                path.reverse()                  # 출발 국가 쪽 -> 도착 국가 쪽 (무주지 칸만)
+                best = (found[0], u, found[1], path)
+        if best is None:
+            raise SystemExit("국가 덩어리를 잇는 무주지 길이 없음: %s" % [OWNER_TAGS[r] for r in roots])
+        _, a_cell, b_cell, path = best
+        a, b = owner_of(code_of[a_cell]), owner_of(code_of[b_cell])
+        half = (len(path) + 1) // 2
+        for i, cell in enumerate(path):
+            t = a if i < half else b
+            terr = code_of[cell] % 10
+            new = K_LAND * 1000 + (t + 1) * 10 + terr
+            m = (cells == cell) & (code_game == code_of[cell])
+            code_game[m] = new
+            code_of[cell] = new
+        corridors.append([OWNER_TAGS[a], OWNER_TAGS[b], len(path)])
+        print("corridor %s - %s: %d cells" % (OWNER_TAGS[a], OWNER_TAGS[b], len(path)))
+
+
 def resolve_owned(small, owner, idx, kind):
     """점을 참고 px로 바꾸고, 소유국 idx의 통행 가능 육지가 아니면 그 국가의 가장 가까운 육지로 옮긴다."""
     rx, ry = small_to_ref(small)
@@ -499,6 +607,10 @@ def main(argv=None):
     code_game[landpx] = maj[cinv]
     log["hex_cells_land"] = int(len(cu))
     log["hex_majority_changed_px"] = int((before != code_game[landpx]).sum())
+    full_area = float(np.median(np.bincount(np.unique(cells, return_inverse=True)[1].ravel())))
+    land_px = dict(zip(cu.tolist(), cnt.sum(axis=1).tolist()))
+    solid = {c for c, n in land_px.items() if n >= CORRIDOR_MIN_LAND * full_area}
+    log["land_corridors"] = connect_countries(cells, code_game, cu, maj, solid)
     cell_area = int(np.median(np.bincount(np.unique(cells, return_inverse=True)[1].ravel())))
     log["hex_cell_area_px"] = cell_area
     cid = cells.astype(np.uint32)

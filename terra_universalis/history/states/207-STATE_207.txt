@@ -7,15 +7,18 @@ state={
 
 	history={
 		owner = IBE
-		victory_points = { 742 1 }
+		victory_points = { 745 1 }
 		buildings = {
 			infrastructure = 2
+			industrial_complex = 2
+			arms_factory = 1
+			air_base = 1
 		}
 		add_core_of = IBE
 	}
 
 	provinces={
-		736 737 739 740 742 743 745 746
+		736 738 739 744 745 746 751 752
 	}
 	local_supplies=0.0
 }

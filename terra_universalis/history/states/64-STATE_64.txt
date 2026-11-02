@@ -7,15 +7,18 @@ state={
 
 	history={
 		owner = YAN
-		victory_points = { 263 1 }
+		victory_points = { 249 1 }
 		buildings = {
 			infrastructure = 2
+			industrial_complex = 2
+			arms_factory = 1
+			air_base = 1
 		}
 		add_core_of = YAN
 	}
 
 	provinces={
-		256 258 263 264 266 267 272
+		239 240 248 249 250 251 256 257
 	}
 	local_supplies=0.0
 }

@@ -7,15 +7,18 @@ state={
 
 	history={
 		owner = LEI
-		victory_points = { 496 1 }
+		victory_points = { 497 1 }
 		buildings = {
 			infrastructure = 2
+			industrial_complex = 2
+			arms_factory = 1
+			air_base = 1
 		}
 		add_core_of = LEI
 	}
 
 	provinces={
-		496 497
+		488 489 490 496 497 498 503
 	}
 	local_supplies=0.0
 }

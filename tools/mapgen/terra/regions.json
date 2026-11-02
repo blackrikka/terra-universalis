@@ -88,10 +88,10 @@
     173,
     182
    ],
-   "id": "land_SAM_plains",
+   "id": "land_KAZ_mountain",
    "kind": "land",
-   "owner": "SAM",
-   "terrain": "plains",
+   "owner": "KAZ",
+   "terrain": "mountain",
    "prov_size": 1258,
    "state_size": 6
   },
@@ -101,9 +101,9 @@
     201,
     1
    ],
-   "id": "land_HIG_plains",
+   "id": "land_SAM_plains",
    "kind": "land",
-   "owner": "HIG",
+   "owner": "SAM",
    "terrain": "plains",
    "prov_size": 1258,
    "state_size": 6
@@ -114,6 +114,19 @@
     119,
     113
    ],
+   "id": "land_HIG_plains",
+   "kind": "land",
+   "owner": "HIG",
+   "terrain": "plains",
+   "prov_size": 1258,
+   "state_size": 6
+  },
+  {
+   "color": [
+    13,
+    198,
+    106
+   ],
    "id": "land_HIG_desert",
    "kind": "land",
    "owner": "HIG",
@@ -123,9 +136,9 @@
   },
   {
    "color": [
-    13,
-    198,
-    106
+    210,
+    140,
+    232
    ],
    "id": "land_HIG_snow_plains",
    "kind": "land",
@@ -136,9 +149,9 @@
   },
   {
    "color": [
-    210,
-    140,
-    232
+    203,
+    28,
+    116
    ],
    "id": "land_YAN_plains",
    "kind": "land",
@@ -149,9 +162,9 @@
   },
   {
    "color": [
-    203,
-    28,
-    116
+    123,
+    113,
+    48
    ],
    "id": "land_YAN_forest",
    "kind": "land",
@@ -162,9 +175,9 @@
   },
   {
    "color": [
-    123,
-    113,
-    48
+    158,
+    87,
+    63
    ],
    "id": "land_YAN_desert",
    "kind": "land",
@@ -175,9 +188,9 @@
   },
   {
    "color": [
-    158,
-    87,
-    63
+    211,
+    192,
+    21
    ],
    "id": "land_COL_plains",
    "kind": "land",
@@ -188,9 +201,9 @@
   },
   {
    "color": [
-    211,
-    192,
-    21
+    122,
+    218,
+    80
    ],
    "id": "land_COL_forest",
    "kind": "land",
@@ -201,9 +214,9 @@
   },
   {
    "color": [
-    122,
-    218,
-    80
+    232,
+    225,
+    226
    ],
    "id": "land_COL_desert",
    "kind": "land",
@@ -214,9 +227,9 @@
   },
   {
    "color": [
-    232,
-    225,
-    226
+    83,
+    221,
+    5
    ],
    "id": "land_BOL_plains",
    "kind": "land",
@@ -227,9 +240,9 @@
   },
   {
    "color": [
-    83,
-    221,
-    5
+    61,
+    148,
+    114
    ],
    "id": "land_BOL_forest",
    "kind": "land",
@@ -240,26 +253,13 @@
   },
   {
    "color": [
-    61,
-    148,
-    114
-   ],
-   "id": "land_KJE_mountain",
-   "kind": "land",
-   "owner": "KJE",
-   "terrain": "mountain",
-   "prov_size": 1258,
-   "state_size": 6
-  },
-  {
-   "color": [
     51,
     225,
     220
    ],
-   "id": "land_VIC_plains",
+   "id": "land_KJE_plains",
    "kind": "land",
-   "owner": "VIC",
+   "owner": "KJE",
    "terrain": "plains",
    "prov_size": 1258,
    "state_size": 6
@@ -270,6 +270,32 @@
     24,
     120
    ],
+   "id": "land_KJE_mountain",
+   "kind": "land",
+   "owner": "KJE",
+   "terrain": "mountain",
+   "prov_size": 1258,
+   "state_size": 6
+  },
+  {
+   "color": [
+    97,
+    144,
+    137
+   ],
+   "id": "land_VIC_plains",
+   "kind": "land",
+   "owner": "VIC",
+   "terrain": "plains",
+   "prov_size": 1258,
+   "state_size": 6
+  },
+  {
+   "color": [
+    118,
+    188,
+    48
+   ],
    "id": "land_VIC_forest",
    "kind": "land",
    "owner": "VIC",
@@ -279,9 +305,9 @@
   },
   {
    "color": [
-    97,
-    144,
-    137
+    110,
+    141,
+    201
    ],
    "id": "land_VIC_jungle",
    "kind": "land",
@@ -292,9 +318,9 @@
   },
   {
    "color": [
-    118,
-    188,
-    48
+    6,
+    241,
+    72
    ],
    "id": "land_VIC_mountain",
    "kind": "land",
@@ -305,9 +331,9 @@
   },
   {
    "color": [
-    110,
-    141,
-    201
+    124,
+    95,
+    46
    ],
    "id": "land_LEI_plains",
    "kind": "land",
@@ -318,9 +344,9 @@
   },
   {
    "color": [
-    6,
-    241,
-    72
+    165,
+    249,
+    112
    ],
    "id": "land_LEI_forest",
    "kind": "land",
@@ -331,9 +357,9 @@
   },
   {
    "color": [
-    124,
-    95,
-    46
+    242,
+    197,
+    38
    ],
    "id": "land_SIR_plains",
    "kind": "land",
@@ -344,9 +370,9 @@
   },
   {
    "color": [
-    165,
-    249,
-    112
+    178,
+    217,
+    235
    ],
    "id": "land_SIR_forest",
    "kind": "land",
@@ -357,9 +383,9 @@
   },
   {
    "color": [
-    242,
-    197,
-    38
+    12,
+    117,
+    68
    ],
    "id": "land_KZD_plains",
    "kind": "land",
@@ -370,9 +396,9 @@
   },
   {
    "color": [
-    178,
-    217,
-    235
+    176,
+    2,
+    135
    ],
    "id": "land_KZD_forest",
    "kind": "land",
@@ -383,9 +409,9 @@
   },
   {
    "color": [
-    12,
-    117,
-    68
+    255,
+    164,
+    134
    ],
    "id": "land_LAT_plains",
    "kind": "land",
@@ -396,9 +422,9 @@
   },
   {
    "color": [
-    176,
-    2,
-    135
+    108,
+    180,
+    240
    ],
    "id": "land_LAT_jungle",
    "kind": "land",
@@ -409,9 +435,9 @@
   },
   {
    "color": [
-    255,
-    164,
-    134
+    168,
+    134,
+    200
    ],
    "id": "land_MIN_plains",
    "kind": "land",
@@ -422,9 +448,9 @@
   },
   {
    "color": [
-    108,
-    180,
-    240
+    242,
+    167,
+    244
    ],
    "id": "land_MIN_desert",
    "kind": "land",
@@ -435,9 +461,9 @@
   },
   {
    "color": [
-    168,
-    134,
-    200
+    181,
+    206,
+    27
    ],
    "id": "land_RIM_plains",
    "kind": "land",
@@ -448,9 +474,9 @@
   },
   {
    "color": [
-    242,
-    167,
-    244
+    203,
+    255,
+    182
    ],
    "id": "land_RIM_desert",
    "kind": "land",
@@ -461,9 +487,9 @@
   },
   {
    "color": [
-    181,
-    206,
-    27
+    135,
+    69,
+    172
    ],
    "id": "land_SAR_plains",
    "kind": "land",
@@ -474,9 +500,9 @@
   },
   {
    "color": [
-    203,
-    255,
-    182
+    216,
+    100,
+    138
    ],
    "id": "land_SAR_jungle",
    "kind": "land",
@@ -487,9 +513,9 @@
   },
   {
    "color": [
-    135,
-    69,
-    172
+    115,
+    152,
+    132
    ],
    "id": "land_SAR_desert",
    "kind": "land",
@@ -500,9 +526,9 @@
   },
   {
    "color": [
+    31,
     216,
-    100,
-    138
+    113
    ],
    "id": "land_IBE_plains",
    "kind": "land",
@@ -513,9 +539,9 @@
   },
   {
    "color": [
-    115,
-    152,
-    132
+    198,
+    68,
+    110
    ],
    "id": "land_IBE_jungle",
    "kind": "land",
@@ -526,9 +552,9 @@
   },
   {
    "color": [
-    31,
-    216,
-    113
+    128,
+    125,
+    47
    ],
    "id": "land_WLD_plains",
    "kind": "land",
@@ -539,9 +565,9 @@
   },
   {
    "color": [
-    198,
-    68,
-    110
+    106,
+    178,
+    62
    ],
    "id": "land_WLD_jungle",
    "kind": "land",
@@ -552,9 +578,9 @@
   },
   {
    "color": [
-    128,
-    125,
-    47
+    84,
+    143,
+    211
    ],
    "id": "impassable_WLD_plains",
    "kind": "impassable",
@@ -565,9 +591,9 @@
   },
   {
    "color": [
-    106,
-    178,
-    62
+    169,
+    19,
+    33
    ],
    "id": "impassable_WLD_forest",
    "kind": "impassable",
@@ -578,9 +604,9 @@
   },
   {
    "color": [
-    84,
-    143,
-    211
+    96,
+    90,
+    119
    ],
    "id": "impassable_WLD_jungle",
    "kind": "impassable",
@@ -591,9 +617,9 @@
   },
   {
    "color": [
-    169,
-    19,
-    33
+    6,
+    166,
+    163
    ],
    "id": "impassable_WLD_desert",
    "kind": "impassable",
@@ -604,9 +630,9 @@
   },
   {
    "color": [
-    96,
-    90,
-    119
+    115,
+    250,
+    38
    ],
    "id": "impassable_WLD_snow_plains",
    "kind": "impassable",
@@ -617,9 +643,9 @@
   },
   {
    "color": [
+    34,
     6,
-    166,
-    163
+    9
    ],
    "id": "impassable_WLD_mountain",
    "kind": "impassable",
@@ -630,9 +656,9 @@
   },
   {
    "color": [
-    115,
-    250,
-    38
+    208,
+    164,
+    232
    ],
    "id": "lake",
    "kind": "lake",
@@ -640,9 +666,9 @@
   },
   {
    "color": [
-    34,
-    6,
-    9
+    205,
+    78,
+    220
    ],
    "id": "sea",
    "kind": "sea",
