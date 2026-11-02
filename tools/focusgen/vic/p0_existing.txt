@@ -24,7 +24,8 @@
 		search_filters = { FOCUS_FILTER_POLITICAL }
 
 		completion_reward = {
-			add_political_power = 25
+			add_political_power = 35
+			add_stability = 0.02
 		}
 	}
 
@@ -45,7 +46,8 @@
 				id = TU_VIC_bop
 				value = 0.1
 			}
-			add_political_power = 25
+			add_political_power = 60
+			add_stability = 0.03
 		}
 	}
 
@@ -61,7 +63,8 @@
 		search_filters = { FOCUS_FILTER_ARMY_XP }
 
 		completion_reward = {
-			army_experience = 10
+			add_tech_bonus = { name = TU_VIC_ducal_arsenal bonus = 0.75 uses = 1 category = infantry_weapons }
+			army_experience = 25
 		}
 	}
 
@@ -81,7 +84,8 @@
 		}
 
 		completion_reward = {
-			add_stability = 0.01
+			add_political_power = 60
+			add_stability = 0.03
 		}
 	}
 
@@ -100,9 +104,9 @@
 		}
 
 		completion_reward = {
-			add_stability = 0.02
-			add_political_power = 25
 			TU_build_infrastructure = yes
+			add_tech_bonus = { name = TU_VIC_london_fortress bonus = 0.75 uses = 1 category = construction_tech }
+			army_experience = 25
 		}
 	}
 
@@ -122,7 +126,8 @@
 				id = TU_VIC_bop
 				value = 0.25
 			}
-			add_political_power = 50
+			add_political_power = 60
+			add_stability = 0.03
 		}
 	}
 
@@ -143,8 +148,9 @@
 				id = TU_VIC_bop
 				value = -0.05
 			}
-			add_political_power = 25
 			country_event = { id = tu_vic_ev.8 }
+			add_political_power = 60
+			add_stability = 0.03
 		}
 	}
 
@@ -160,7 +166,8 @@
 		search_filters = { FOCUS_FILTER_ARMY_XP }
 
 		completion_reward = {
-			army_experience = 15
+			add_manpower = 10000
+			army_experience = 25
 		}
 	}
 
@@ -180,7 +187,8 @@
 		}
 
 		completion_reward = {
-			add_war_support = 0.03
+			add_political_power = 60
+			add_stability = 0.03
 		}
 	}
 
@@ -199,7 +207,8 @@
 				id = TU_VIC_bop
 				value = -0.1
 			}
-			add_political_power = 25
+			add_war_support = 0.03
+			add_stability = 0.03
 		}
 	}
 
@@ -225,6 +234,8 @@
 				value = -0.25
 			}
 			every_country = { news_event = { id = tu_vic_ev.16 days = 0 } }
+			add_tech_bonus = { name = TU_VIC_siege_crowned bonus = 0.75 uses = 1 category = artillery }
+			army_experience = 25
 		}
 	}
 
@@ -240,8 +251,8 @@
 		search_filters = { FOCUS_FILTER_POLITICAL }
 
 		completion_reward = {
+			add_political_power = 60
 			add_stability = 0.03
-			add_political_power = 50
 		}
 	}
 
@@ -258,8 +269,9 @@
 		search_filters = { FOCUS_FILTER_POLITICAL }
 
 		completion_reward = {
-			add_stability = -0.03
 			country_event = { id = tu_vic_ev.6 }
+			add_political_power = 35
+			add_stability = 0.02
 		}
 	}
 
@@ -275,8 +287,8 @@
 		search_filters = { FOCUS_FILTER_POLITICAL }
 
 		completion_reward = {
-			add_stability = 0.02
-			army_experience = 5
+			add_political_power = 60
+			add_stability = 0.03
 		}
 	}
 
@@ -291,8 +303,8 @@
 		search_filters = { FOCUS_FILTER_ARMY_XP }
 
 		completion_reward = {
-			add_stability = 0.02
-			add_political_power = 25
+			add_tech_bonus = { name = TU_VIC_suppression_garrison bonus = 0.75 uses = 1 category = construction_tech }
+			army_experience = 25
 		}
 	}
 
@@ -307,7 +319,8 @@
 		search_filters = { FOCUS_FILTER_POLITICAL }
 
 		completion_reward = {
-			add_stability = 0.05
+			add_political_power = 60
+			add_stability = 0.03
 		}
 	}
 
@@ -324,7 +337,8 @@
 
 		completion_reward = {
 			recruit_character = TU_VIC_dublinn_leader
-			add_political_power = 25
+			add_political_power = 60
+			add_stability = 0.03
 		}
 	}
 
@@ -339,7 +353,8 @@
 		search_filters = { FOCUS_FILTER_POLITICAL }
 
 		completion_reward = {
-			add_stability = 0.02
+			add_political_power = 60
+			add_stability = 0.03
 		}
 	}
 
@@ -363,6 +378,8 @@
 				}
 			}
 			country_event = { id = tu_vic_ev.7 }
+			add_doctrine_cost_reduction = { name = TU_VIC_steam_knight_formation cost_reduction = 0.4 uses = 1 category = land_doctrine }
+			army_experience = 25
 		}
 	}
 
@@ -377,6 +394,7 @@
 		search_filters = { FOCUS_FILTER_ARMY_XP }
 
 		completion_reward = {
+			add_doctrine_cost_reduction = { name = TU_VIC_steam_knight_training cost_reduction = 0.4 uses = 1 category = land_doctrine }
 			army_experience = 25
 		}
 	}

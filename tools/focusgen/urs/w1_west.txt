@@ -19,8 +19,9 @@
 		}
 
 		completion_reward = {
-			add_manpower = 20000
 			add_ideas = TU_URS_w1_border_readiness
+			add_tech_bonus = { name = TU_URS_w1_kzd_border_buildup bonus = 0.75 uses = 1 category = construction_tech }
+			army_experience = 25
 		}
 	}
 
@@ -43,7 +44,9 @@
 		}
 
 		completion_reward = {
-			army_experience = 15
+			army_experience = 25
+			add_war_support = 0.03
+			add_doctrine_cost_reduction = { name = TU_URS_w1_kzd_mobilization cost_reduction = 0.4 uses = 1 category = land_doctrine }
 		}
 	}
 
@@ -62,8 +65,9 @@
 		}
 
 		completion_reward = {
-			army_experience = 25
 			add_ideas = TU_URS_w1_war_footing
+			add_doctrine_cost_reduction = { name = TU_URS_w1_kzd_war_doctrine cost_reduction = 0.4 uses = 1 category = land_doctrine }
+			army_experience = 25
 		}
 	}
 
@@ -87,9 +91,9 @@
 		}
 
 		completion_reward = {
-			add_manpower = 30000
 			add_ideas = TU_URS_w1_mercenary_levy
-			add_political_power = 25
+			add_manpower = 10000
+			army_experience = 25
 		}
 	}
 
@@ -112,8 +116,10 @@
 		}
 
 		completion_reward = {
-			army_experience = 25
 			add_ideas = TU_URS_w1_occupation_strain
+			army_experience = 25
+			add_war_support = 0.03
+			add_doctrine_cost_reduction = { name = TU_URS_w1_kzd_occupation cost_reduction = 0.4 uses = 1 category = land_doctrine }
 		}
 	}
 
@@ -132,7 +138,6 @@
 		}
 
 		completion_reward = {
-			add_political_power = 50
 			add_ideas = TU_URS_w1_cultural_absorption
 			every_owned_state = {
 				limit = {
@@ -143,6 +148,8 @@
 				add_compliance = 10
 				set_state_flag = TU_URS_w1_kzd_integrated
 			}
+			add_political_power = 60
+			add_stability = 0.03
 		}
 	}
 
@@ -167,8 +174,9 @@
 		}
 
 		completion_reward = {
-			add_manpower = 20000
 			add_ideas = TU_URS_w1_border_readiness
+			add_tech_bonus = { name = TU_URS_w1_vic_border_buildup bonus = 0.75 uses = 1 category = construction_tech }
+			army_experience = 25
 		}
 	}
 
@@ -191,7 +199,9 @@
 		}
 
 		completion_reward = {
-			army_experience = 15
+			army_experience = 25
+			add_war_support = 0.03
+			add_doctrine_cost_reduction = { name = TU_URS_w1_vic_mobilization cost_reduction = 0.4 uses = 1 category = land_doctrine }
 		}
 	}
 
@@ -210,8 +220,9 @@
 		}
 
 		completion_reward = {
-			army_experience = 25
 			add_ideas = TU_URS_w1_war_footing
+			add_doctrine_cost_reduction = { name = TU_URS_w1_vic_war_doctrine cost_reduction = 0.4 uses = 1 category = land_doctrine }
+			army_experience = 25
 		}
 	}
 
@@ -235,9 +246,8 @@
 		}
 
 		completion_reward = {
-			add_political_power = 50
-			army_experience = 20
-			add_war_support = 0.05
+			add_political_power = 60
+			add_stability = 0.03
 		}
 	}
 
@@ -260,8 +270,10 @@
 		}
 
 		completion_reward = {
-			army_experience = 25
 			add_ideas = TU_URS_w1_occupation_strain
+			army_experience = 25
+			add_war_support = 0.03
+			add_doctrine_cost_reduction = { name = TU_URS_w1_vic_occupation cost_reduction = 0.4 uses = 1 category = land_doctrine }
 		}
 	}
 
@@ -280,7 +292,6 @@
 		}
 
 		completion_reward = {
-			add_political_power = 50
 			add_ideas = TU_URS_w1_cultural_absorption
 			every_owned_state = {
 				limit = {
@@ -291,6 +302,8 @@
 				add_compliance = 10
 				set_state_flag = TU_URS_w1_vic_integrated
 			}
+			add_political_power = 60
+			add_stability = 0.03
 		}
 	}
 
@@ -315,8 +328,8 @@
 		}
 
 		completion_reward = {
-			add_manpower = 20000
 			add_ideas = TU_URS_w1_border_readiness
+			add_tech_bonus = { name = TU_URS_w1_lei_border_buildup bonus = 0.75 uses = 1 category = electronics category = industry }
 		}
 	}
 
@@ -339,8 +352,9 @@
 		}
 
 		completion_reward = {
-			army_experience = 15
-			add_manpower = 10000
+			army_experience = 25
+			add_war_support = 0.03
+			add_doctrine_cost_reduction = { name = TU_URS_w1_lei_mobilization cost_reduction = 0.4 uses = 1 category = land_doctrine }
 		}
 	}
 
@@ -359,8 +373,9 @@
 		}
 
 		completion_reward = {
-			army_experience = 25
 			add_ideas = TU_URS_w1_war_footing
+			add_tech_bonus = { name = TU_URS_w1_lei_war_doctrine bonus = 0.75 uses = 1 category = artillery }
+			army_experience = 25
 		}
 	}
 
@@ -383,8 +398,10 @@
 		}
 
 		completion_reward = {
-			army_experience = 25
 			add_ideas = TU_URS_w1_occupation_strain
+			army_experience = 25
+			add_war_support = 0.03
+			add_doctrine_cost_reduction = { name = TU_URS_w1_lei_occupation cost_reduction = 0.4 uses = 1 category = land_doctrine }
 		}
 	}
 
@@ -403,7 +420,6 @@
 		}
 
 		completion_reward = {
-			add_political_power = 50
 			add_ideas = TU_URS_w1_cultural_absorption
 			every_owned_state = {
 				limit = {
@@ -414,5 +430,7 @@
 				add_compliance = 10
 				set_state_flag = TU_URS_w1_lei_integrated
 			}
+			add_political_power = 60
+			add_stability = 0.03
 		}
 	}

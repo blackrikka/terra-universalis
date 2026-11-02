@@ -17,7 +17,8 @@
 		}
 
 		completion_reward = {
-			add_political_power = 25
+			add_political_power = 35
+			add_stability = 0.02
 		}
 	}
 
@@ -36,8 +37,10 @@
 		}
 
 		completion_reward = {
-			add_political_power = 50
 			set_country_flag = TU_dip_alliance_unlocked
+			add_tech_bonus = { name = TU_URS_alliance_search bonus = 0.75 uses = 1 category = dd_tech category = ca_tech }
+			add_doctrine_cost_reduction = { name = TU_URS_alliance_search cost_reduction = 0.4 uses = 1 category = naval_doctrine }
+			navy_experience = 25
 		}
 	}
 
@@ -83,7 +86,8 @@
 				}
 				add_to_faction = SAM
 			}
-			add_political_power = 50
+			add_political_power = 100
+			add_stability = 0.05
 		}
 	}
 
@@ -103,7 +107,8 @@
 
 		completion_reward = {
 			add_ideas = TU_URS_w4_idea_pact_unity
-			add_political_power = 25
+			add_tech_bonus = { name = TU_URS_w4_pact_defence bonus = 0.75 uses = 1 category = construction_tech }
+			army_experience = 25
 		}
 	}
 
@@ -122,8 +127,8 @@
 		}
 
 		completion_reward = {
-			army_experience = 25
-			add_manpower = 15000
+			add_political_power = 60
+			add_stability = 0.03
 		}
 	}
 
@@ -142,8 +147,8 @@
 		}
 
 		completion_reward = {
-			add_political_power = 75
-			add_stability = 0.02
+			add_political_power = 60
+			add_stability = 0.03
 		}
 	}
 
@@ -162,9 +167,9 @@
 		}
 
 		completion_reward = {
-			add_political_power = 50
-			add_stability = 0.02
 			TU_build_civ_factory = yes
+			add_political_power = 60
+			add_tech_bonus = { name = TU_URS_w4_pact_trade bonus = 0.75 uses = 1 category = industry }
 		}
 	}
 
@@ -184,8 +189,8 @@
 		}
 
 		completion_reward = {
+			add_manpower = 10000
 			army_experience = 25
-			add_war_support = 0.05
 		}
 	}
 
@@ -205,8 +210,8 @@
 		}
 
 		completion_reward = {
-			add_political_power = 50
-			add_stability = 0.02
+			add_tech_bonus = { name = TU_URS_w4_pact_secretariat bonus = 0.75 uses = 1 category = radar_tech category = electronics }
+			add_stability = 0.03
 		}
 	}
 
@@ -227,7 +232,8 @@
 		}
 
 		completion_reward = {
-			add_political_power = 25
+			add_political_power = 35
+			add_stability = 0.02
 		}
 	}
 
@@ -248,8 +254,8 @@
 		}
 
 		completion_reward = {
-			add_war_support = 0.05
-			army_experience = 15
+			add_doctrine_cost_reduction = { name = TU_URS_w4_order_doctrine cost_reduction = 0.4 uses = 1 category = land_doctrine }
+			army_experience = 25
 		}
 	}
 
@@ -269,7 +275,7 @@
 		}
 
 		completion_reward = {
-			add_political_power = 50
+			add_political_power = 60
 			add_stability = 0.03
 		}
 	}
@@ -290,7 +296,8 @@
 
 		completion_reward = {
 			add_ideas = TU_URS_w4_idea_order_mandate
-			add_political_power = 25
+			add_political_power = 60
+			add_stability = 0.03
 		}
 	}
 
@@ -309,7 +316,8 @@
 		}
 
 		completion_reward = {
-			add_political_power = 75
+			add_political_power = 60
+			add_stability = 0.03
 		}
 	}
 
@@ -328,8 +336,9 @@
 		}
 
 		completion_reward = {
-			add_manpower = 20000
-			add_war_support = 0.05
+			army_experience = 25
+			add_war_support = 0.03
+			add_doctrine_cost_reduction = { name = TU_URS_w4_order_mobilization cost_reduction = 0.4 uses = 1 category = land_doctrine }
 		}
 	}
 
@@ -350,7 +359,9 @@
 		}
 
 		completion_reward = {
-			add_political_power = 25
+			add_tech_bonus = { name = TU_URS_w4_rho_entry bonus = 0.5 uses = 1 category = dd_tech category = ca_tech }
+			add_doctrine_cost_reduction = { name = TU_URS_w4_rho_entry cost_reduction = 0.25 uses = 1 category = naval_doctrine }
+			navy_experience = 15
 		}
 	}
 
@@ -374,7 +385,8 @@
 
 		completion_reward = {
 			add_ideas = TU_URS_w4_idea_rho_partner
-			add_political_power = 25
+			add_political_power = 60
+			add_tech_bonus = { name = TU_URS_w4_rho_trade_pact bonus = 0.75 uses = 1 category = industry }
 		}
 	}
 
@@ -397,8 +409,9 @@
 		}
 
 		completion_reward = {
-			army_experience = 20
-			add_war_support = 0.03
+			add_tech_bonus = { name = TU_URS_w4_rho_blockade bonus = 0.75 uses = 1 category = dd_tech category = ca_tech }
+			add_doctrine_cost_reduction = { name = TU_URS_w4_rho_blockade cost_reduction = 0.4 uses = 1 category = naval_doctrine }
+			navy_experience = 25
 		}
 	}
 
@@ -420,7 +433,8 @@
 		}
 
 		completion_reward = {
-			add_political_power = 25
+			add_political_power = 35
+			add_stability = 0.02
 		}
 	}
 
@@ -443,8 +457,8 @@
 		}
 
 		completion_reward = {
+			add_manpower = 10000
 			army_experience = 25
-			add_manpower = 15000
 		}
 	}
 
@@ -468,7 +482,8 @@
 
 		completion_reward = {
 			add_ideas = TU_URS_w4_idea_reu_autonomy
-			add_political_power = 50
+			add_political_power = 60
+			add_stability = 0.03
 		}
 	}
 
@@ -488,8 +503,7 @@
 		}
 
 		completion_reward = {
-			add_stability = 0.03
-			add_political_power = 25
 			TU_build_civ_factory = yes
+			add_tech_bonus = { name = TU_URS_w4_reu_rebuild bonus = 0.75 uses = 1 category = industry category = construction_tech }
 		}
 	}

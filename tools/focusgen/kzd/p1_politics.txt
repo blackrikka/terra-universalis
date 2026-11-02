@@ -15,7 +15,8 @@
 		}
 
 		completion_reward = {
-			add_political_power = 50
+			add_political_power = 60
+			add_stability = 0.03
 		}
 	}
 
@@ -34,8 +35,8 @@
 		}
 
 		completion_reward = {
-			add_political_power = 25
-			add_stability = 0.01
+			add_manpower = 10000
+			army_experience = 25
 		}
 	}
 
@@ -54,7 +55,8 @@
 		}
 
 		completion_reward = {
-			add_political_power = 50
+			add_political_power = 60
+			add_stability = 0.03
 		}
 	}
 
@@ -73,8 +75,8 @@
 		}
 
 		completion_reward = {
-			add_political_power = 75
-			add_stability = 0.02
+			add_political_power = 60
+			add_stability = 0.03
 		}
 	}
 
@@ -94,8 +96,8 @@
 		}
 
 		completion_reward = {
-			add_political_power = 50
-			add_war_support = 0.05
+			add_tech_bonus = { name = TU_KZD_iron_mandate bonus = 0.75 uses = 1 category = infantry_weapons }
+			army_experience = 25
 		}
 	}
 
@@ -115,7 +117,7 @@
 		}
 
 		completion_reward = {
-			add_political_power = 50
+			add_political_power = 60
 			add_stability = 0.03
 		}
 	}
@@ -135,8 +137,8 @@
 		}
 
 		completion_reward = {
-			army_experience = 20
-			add_war_support = 0.02
+			add_manpower = 10000
+			army_experience = 25
 		}
 	}
 
@@ -155,8 +157,8 @@
 		}
 
 		completion_reward = {
-			add_political_power = 50
-			add_stability = 0.02
+			add_political_power = 60
+			add_stability = 0.03
 		}
 	}
 
@@ -175,7 +177,8 @@
 		}
 
 		completion_reward = {
-			add_political_power = 75
+			add_political_power = 60
+			add_tech_bonus = { name = TU_KZD_empire_treasury bonus = 0.75 uses = 1 category = industry }
 		}
 	}
 
@@ -194,10 +197,11 @@
 		}
 
 		completion_reward = {
-			add_political_power = 100
 			add_ideas = TU_KZD_theresis_crown
 			set_country_flag = TU_KZD_theresis_throne_taken
 			country_event = { id = tu_kzd_ev.4 }
+			add_political_power = 100
+			add_stability = 0.05
 		}
 	}
 
@@ -216,8 +220,9 @@
 		}
 
 		completion_reward = {
-			add_political_power = 25
-			army_experience = 20
+			army_experience = 25
+			add_war_support = 0.03
+			add_doctrine_cost_reduction = { name = TU_KZD_grand_army_plan cost_reduction = 0.4 uses = 1 category = land_doctrine }
 		}
 	}
 
@@ -237,7 +242,8 @@
 		}
 
 		completion_reward = {
-			army_experience = 30
+			add_tech_bonus = { name = TU_KZD_armored_corps bonus = 0.75 uses = 1 category = armor }
+			add_doctrine_cost_reduction = { name = TU_KZD_armored_corps cost_reduction = 0.4 uses = 1 category = land_doctrine }
 		}
 	}
 
@@ -256,8 +262,9 @@
 		}
 
 		completion_reward = {
-			army_experience = 25
 			add_ideas = TU_KZD_grand_army_doctrine
+			add_tech_bonus = { name = TU_KZD_iron_drill bonus = 0.75 uses = 1 category = infantry_weapons }
+			army_experience = 25
 		}
 	}
 
@@ -276,7 +283,7 @@
 		}
 
 		completion_reward = {
-			add_political_power = 50
+			add_tech_bonus = { name = TU_KZD_field_marshal_office bonus = 0.75 uses = 1 category = industry category = construction_tech }
 		}
 	}
 
@@ -295,8 +302,8 @@
 		}
 
 		completion_reward = {
+			add_doctrine_cost_reduction = { name = TU_KZD_breakthrough_tactics cost_reduction = 0.4 uses = 1 category = land_doctrine }
 			army_experience = 25
-			add_war_support = 0.03
 		}
 	}
 
@@ -316,8 +323,7 @@
 		}
 
 		completion_reward = {
-			add_political_power = 25
-			army_experience = 15
+			add_tech_bonus = { name = TU_KZD_supply_wagons bonus = 0.75 uses = 1 category = industry category = construction_tech }
 		}
 	}
 
@@ -336,7 +342,9 @@
 		}
 
 		completion_reward = {
-			add_political_power = 50
+			add_tech_bonus = { name = TU_KZD_logistic_convoy bonus = 0.75 uses = 1 category = dd_tech category = ca_tech }
+			add_doctrine_cost_reduction = { name = TU_KZD_logistic_convoy cost_reduction = 0.4 uses = 1 category = naval_doctrine }
+			navy_experience = 25
 		}
 	}
 
@@ -355,9 +363,8 @@
 		}
 
 		completion_reward = {
-			add_political_power = 50
-			add_war_support = 0.05
-			add_stability = -0.02
+			add_political_power = 60
+			add_tech_bonus = { name = TU_KZD_war_economy_draft bonus = 0.75 uses = 1 category = industry }
 		}
 	}
 
@@ -376,8 +383,8 @@
 		}
 
 		completion_reward = {
-			army_experience = 15
-			add_political_power = 25
+			add_tech_bonus = { name = TU_KZD_steel_standards bonus = 0.75 uses = 1 category = infantry_weapons }
+			army_experience = 25
 		}
 	}
 
@@ -396,7 +403,8 @@
 		}
 
 		completion_reward = {
-			add_political_power = 50
+			add_political_power = 60
+			add_tech_bonus = { name = TU_KZD_imperial_bank bonus = 0.75 uses = 1 category = industry }
 		}
 	}
 
@@ -416,8 +424,9 @@
 		}
 
 		completion_reward = {
-			add_political_power = 25
+			army_experience = 25
 			add_war_support = 0.03
+			add_doctrine_cost_reduction = { name = TU_KZD_conquest_charter cost_reduction = 0.4 uses = 1 category = land_doctrine }
 		}
 	}
 
@@ -437,8 +446,8 @@
 		}
 
 		completion_reward = {
-			add_political_power = 25
-			army_experience = 20
+			add_tech_bonus = { name = TU_KZD_conquest_charter_alt bonus = 0.75 uses = 1 category = construction_tech }
+			army_experience = 25
 		}
 	}
 
@@ -457,8 +466,8 @@
 		}
 
 		completion_reward = {
-			add_political_power = 50
-			add_stability = 0.01
+			add_political_power = 60
+			add_stability = 0.03
 		}
 	}
 
@@ -478,8 +487,8 @@
 		}
 
 		completion_reward = {
-			army_experience = 20
-			add_political_power = 25
+			add_manpower = 10000
+			army_experience = 25
 		}
 	}
 
@@ -499,8 +508,8 @@
 		}
 
 		completion_reward = {
-			add_political_power = 25
-			add_war_support = 0.03
+			add_tech_bonus = { name = TU_KZD_imperial_guard_corps_alt bonus = 0.75 uses = 1 category = construction_tech }
+			army_experience = 25
 		}
 	}
 
@@ -519,8 +528,8 @@
 		}
 
 		completion_reward = {
-			army_experience = 15
-			add_political_power = 25
+			add_doctrine_cost_reduction = { name = TU_KZD_veteran_cadres cost_reduction = 0.4 uses = 1 category = land_doctrine }
+			army_experience = 25
 		}
 	}
 
@@ -540,9 +549,9 @@
 		}
 
 		completion_reward = {
-			add_political_power = 100
-			add_war_support = 0.05
 			every_country = { news_event = { id = tu_kzd_ev.11 hours = 6 } }
+			add_political_power = 100
+			add_stability = 0.05
 		}
 	}
 
@@ -561,8 +570,8 @@
 		}
 
 		completion_reward = {
-			add_political_power = 50
-			add_stability = 0.02
+			add_war_support = 0.03
+			add_stability = 0.03
 		}
 	}
 
@@ -581,8 +590,8 @@
 		}
 
 		completion_reward = {
-			add_political_power = 75
-			add_stability = 0.02
+			add_political_power = 60
+			add_stability = 0.03
 		}
 	}
 
@@ -604,8 +613,8 @@
 		}
 
 		completion_reward = {
-			add_political_power = 50
-			add_stability = 0.02
+			add_war_support = 0.03
+			add_stability = 0.03
 		}
 	}
 
@@ -625,8 +634,8 @@
 		}
 
 		completion_reward = {
-			army_experience = 15
-			add_stability = 0.01
+			add_tech_bonus = { name = TU_KZD_mountain_watch bonus = 0.75 uses = 1 category = construction_tech }
+			army_experience = 25
 		}
 	}
 
@@ -646,8 +655,8 @@
 		}
 
 		completion_reward = {
-			army_experience = 20
-			add_war_support = 0.02
+			add_tech_bonus = { name = TU_KZD_plains_mobility bonus = 0.75 uses = 1 category = motorized_equipment }
+			add_doctrine_cost_reduction = { name = TU_KZD_plains_mobility cost_reduction = 0.4 uses = 1 category = land_doctrine }
 		}
 	}
 
@@ -666,8 +675,8 @@
 		}
 
 		completion_reward = {
-			add_political_power = 25
-			add_stability = 0.02
+			add_tech_bonus = { name = TU_KZD_frontier_walls bonus = 0.75 uses = 1 category = construction_tech }
+			army_experience = 25
 		}
 	}
 
@@ -687,7 +696,8 @@
 		}
 
 		completion_reward = {
-			add_political_power = 50
+			add_political_power = 60
+			add_tech_bonus = { name = TU_KZD_royal_treasure bonus = 0.75 uses = 1 category = industry }
 		}
 	}
 
@@ -707,7 +717,8 @@
 		}
 
 		completion_reward = {
-			army_experience = 20
+			add_manpower = 10000
+			army_experience = 25
 		}
 	}
 
@@ -726,7 +737,8 @@
 		}
 
 		completion_reward = {
-			add_political_power = 50
+			add_political_power = 60
+			add_stability = 0.03
 		}
 	}
 
@@ -745,6 +757,7 @@
 		}
 
 		completion_reward = {
+			add_doctrine_cost_reduction = { name = TU_KZD_shield_wall cost_reduction = 0.4 uses = 1 category = land_doctrine }
 			army_experience = 25
 		}
 	}
@@ -764,8 +777,8 @@
 		}
 
 		completion_reward = {
-			add_political_power = 50
-			add_stability = 0.02
+			add_political_power = 60
+			add_stability = 0.03
 		}
 	}
 
@@ -784,8 +797,8 @@
 		}
 
 		completion_reward = {
-			add_political_power = 50
-			add_stability = 0.03
+			add_tech_bonus = { name = TU_KZD_sacred_bastion bonus = 0.75 uses = 1 category = construction_tech }
+			army_experience = 25
 		}
 	}
 
@@ -805,9 +818,9 @@
 		}
 
 		completion_reward = {
-			add_political_power = 100
-			add_stability = 0.02
 			every_country = { news_event = { id = tu_kzd_ev.12 hours = 6 } }
+			add_political_power = 100
+			add_stability = 0.05
 		}
 	}
 
@@ -826,8 +839,8 @@
 		}
 
 		completion_reward = {
-			army_experience = 20
-			add_political_power = 25
+			add_doctrine_cost_reduction = { name = TU_KZD_elite_expansion cost_reduction = 0.4 uses = 1 category = land_doctrine }
+			army_experience = 25
 		}
 	}
 
@@ -846,8 +859,8 @@
 		}
 
 		completion_reward = {
+			add_doctrine_cost_reduction = { name = TU_KZD_elite_command cost_reduction = 0.4 uses = 1 category = land_doctrine }
 			army_experience = 25
-			add_political_power = 25
 		}
 	}
 
@@ -866,7 +879,8 @@
 		}
 
 		completion_reward = {
-			army_experience = 30
+			add_tech_bonus = { name = TU_KZD_elite_siege_drill bonus = 0.75 uses = 1 category = artillery }
+			army_experience = 25
 		}
 	}
 
@@ -885,8 +899,8 @@
 		}
 
 		completion_reward = {
-			add_political_power = 25
-			add_stability = 0.01
+			add_tech_bonus = { name = TU_KZD_quartermaster_corps bonus = 0.75 uses = 1 category = construction_tech }
+			army_experience = 25
 		}
 	}
 
@@ -906,8 +920,9 @@
 		}
 
 		completion_reward = {
-			add_political_power = 25
-			add_war_support = 0.05
+			army_experience = 25
+			add_war_support = 0.03
+			add_doctrine_cost_reduction = { name = TU_KZD_war_drums cost_reduction = 0.4 uses = 1 category = land_doctrine }
 		}
 	}
 
@@ -926,8 +941,8 @@
 		}
 
 		completion_reward = {
-			add_political_power = 50
-			add_stability = 0.02
+			add_tech_bonus = { name = TU_KZD_sworn_shields bonus = 0.75 uses = 1 category = construction_tech }
+			army_experience = 25
 		}
 	}
 
@@ -946,8 +961,8 @@
 		}
 
 		completion_reward = {
-			add_political_power = 50
-			add_stability = 0.01
+			add_tech_bonus = { name = TU_KZD_mountain_citadel bonus = 0.75 uses = 1 category = construction_tech }
+			army_experience = 25
 		}
 	}
 
@@ -966,7 +981,9 @@
 		}
 
 		completion_reward = {
-			army_experience = 30
+			army_experience = 25
+			add_war_support = 0.03
+			add_doctrine_cost_reduction = { name = TU_KZD_plains_charge cost_reduction = 0.4 uses = 1 category = land_doctrine }
 		}
 	}
 
@@ -985,7 +1002,8 @@
 		}
 
 		completion_reward = {
-			add_political_power = 50
+			add_political_power = 60
+			add_stability = 0.03
 		}
 	}
 
@@ -1005,6 +1023,7 @@
 
 		completion_reward = {
 			add_political_power = 100
+			add_stability = 0.05
 		}
 	}
 
@@ -1023,8 +1042,8 @@
 		}
 
 		completion_reward = {
-			army_experience = 15
-			add_political_power = 25
+			add_tech_bonus = { name = TU_KZD_pass_garrison bonus = 0.75 uses = 1 category = construction_tech }
+			army_experience = 25
 		}
 	}
 
@@ -1043,8 +1062,8 @@
 		}
 
 		completion_reward = {
-			add_political_power = 50
-			add_stability = 0.02
+			add_war_support = 0.03
+			add_stability = 0.03
 		}
 	}
 
@@ -1063,8 +1082,8 @@
 		}
 
 		completion_reward = {
-			add_political_power = 25
-			add_stability = 0.01
+			add_manpower = 10000
+			army_experience = 25
 		}
 	}
 
@@ -1083,6 +1102,7 @@
 		}
 
 		completion_reward = {
+			add_doctrine_cost_reduction = { name = TU_KZD_plains_drill cost_reduction = 0.4 uses = 1 category = land_doctrine }
 			army_experience = 25
 		}
 	}
@@ -1102,7 +1122,8 @@
 		}
 
 		completion_reward = {
-			add_political_power = 25
+			add_tech_bonus = { name = TU_KZD_gate_warden bonus = 0.75 uses = 1 category = construction_tech }
+			army_experience = 25
 		}
 	}
 
@@ -1123,8 +1144,10 @@
 		}
 
 		completion_reward = {
-			add_political_power = 25
 			add_ideas = TU_KZD_babel_archives
+			add_tech_bonus = { name = TU_KZD_babel_archive_search bonus = 0.75 uses = 1 category = dd_tech category = ca_tech }
+			add_doctrine_cost_reduction = { name = TU_KZD_babel_archive_search cost_reduction = 0.4 uses = 1 category = naval_doctrine }
+			navy_experience = 25
 		}
 	}
 
@@ -1143,7 +1166,7 @@
 		}
 
 		completion_reward = {
-			add_political_power = 25
+			add_tech_bonus = { name = TU_KZD_babel_scribes bonus = 0.75 uses = 1 category = electronics category = industry }
 		}
 	}
 
@@ -1163,9 +1186,8 @@
 		}
 
 		completion_reward = {
-			add_political_power = 50
-			add_stability = 0.02
 			TU_build_mil_factory = yes
+			add_tech_bonus = { name = TU_KZD_ancient_engineering bonus = 0.75 uses = 1 category = electronics category = industry }
 		}
 	}
 
@@ -1185,8 +1207,7 @@
 		}
 
 		completion_reward = {
-			add_political_power = 50
-			army_experience = 10
+			add_tech_bonus = { name = TU_KZD_arcane_survey bonus = 0.75 uses = 1 category = industry category = construction_tech }
 		}
 	}
 
@@ -1205,8 +1226,7 @@
 		}
 
 		completion_reward = {
-			add_political_power = 50
-			add_stability = 0.02
+			add_tech_bonus = { name = TU_KZD_babel_council bonus = 0.75 uses = 1 category = electronics category = industry }
 		}
 	}
 
@@ -1226,8 +1246,8 @@
 		}
 
 		completion_reward = {
-			add_political_power = 25
-			add_stability = 0.02
+			add_political_power = 60
+			add_stability = 0.03
 		}
 	}
 
@@ -1247,8 +1267,8 @@
 		}
 
 		completion_reward = {
-			add_political_power = 50
-			add_war_support = 0.03
+			add_political_power = 60
+			add_stability = 0.03
 		}
 	}
 
@@ -1267,9 +1287,9 @@
 		}
 
 		completion_reward = {
-			add_political_power = 25
 			add_ideas = TU_KZD_babel_workshops
 			TU_build_civ_factory = yes
+			add_tech_bonus = { name = TU_KZD_babel_workshops_restore bonus = 0.75 uses = 1 category = industry category = construction_tech }
 		}
 	}
 
@@ -1289,8 +1309,9 @@
 		}
 
 		completion_reward = {
-			add_political_power = 50
 			TU_build_civ_factory = yes
+			add_tech_bonus = { name = TU_KZD_babel_forge bonus = 0.75 uses = 1 category = infantry_weapons }
+			army_experience = 25
 		}
 	}
 
@@ -1310,9 +1331,8 @@
 		}
 
 		completion_reward = {
-			add_political_power = 25
-			army_experience = 20
 			TU_build_civ_factory = yes
+			add_tech_bonus = { name = TU_KZD_babel_forge_alt bonus = 0.75 uses = 1 category = electronics category = industry }
 		}
 	}
 
@@ -1332,7 +1352,8 @@
 		}
 
 		completion_reward = {
-			add_political_power = 25
+			add_political_power = 60
+			add_tech_bonus = { name = TU_KZD_export_license bonus = 0.75 uses = 1 category = industry }
 		}
 	}
 
@@ -1352,8 +1373,8 @@
 		}
 
 		completion_reward = {
-			add_political_power = 50
-			add_stability = 0.02
+			add_political_power = 60
+			add_tech_bonus = { name = TU_KZD_export_ban bonus = 0.75 uses = 1 category = industry }
 		}
 	}
 
@@ -1372,7 +1393,7 @@
 		}
 
 		completion_reward = {
-			army_experience = 25
+			add_tech_bonus = { name = TU_KZD_babel_cadets bonus = 0.75 uses = 1 category = electronics category = industry }
 		}
 	}
 
@@ -1391,8 +1412,8 @@
 		}
 
 		completion_reward = {
-			army_experience = 20
-			add_political_power = 25
+			add_doctrine_cost_reduction = { name = TU_KZD_babel_war_college cost_reduction = 0.4 uses = 1 category = land_doctrine }
+			army_experience = 25
 		}
 	}
 
@@ -1411,7 +1432,8 @@
 		}
 
 		completion_reward = {
-			add_political_power = 50
+			add_political_power = 60
+			add_tech_bonus = { name = TU_KZD_rhodes_trade_fair bonus = 0.75 uses = 1 category = industry }
 		}
 	}
 
@@ -1430,7 +1452,7 @@
 		}
 
 		completion_reward = {
-			add_political_power = 50
+			add_tech_bonus = { name = TU_KZD_babel_bank bonus = 0.75 uses = 1 category = electronics category = industry }
 		}
 	}
 
@@ -1450,9 +1472,8 @@
 		}
 
 		completion_reward = {
-			add_political_power = 100
-			add_stability = 0.02
 			every_country = { news_event = { id = tu_kzd_ev.13 hours = 6 } }
+			add_tech_bonus = { name = TU_KZD_babel_reborn bonus = 1.0 uses = 1 category = electronics category = industry }
 		}
 	}
 
@@ -1471,8 +1492,8 @@
 		}
 
 		completion_reward = {
-			army_experience = 15
-			add_political_power = 25
+			add_tech_bonus = { name = TU_KZD_ancient_gate bonus = 0.75 uses = 1 category = construction_tech }
+			army_experience = 25
 		}
 	}
 
@@ -1491,8 +1512,7 @@
 		}
 
 		completion_reward = {
-			add_political_power = 50
-			add_stability = 0.02
+			add_tech_bonus = { name = TU_KZD_babel_sanctum bonus = 0.75 uses = 1 category = electronics category = industry }
 		}
 	}
 
@@ -1511,7 +1531,7 @@
 		}
 
 		completion_reward = {
-			add_political_power = 50
+			add_tech_bonus = { name = TU_KZD_babel_mint bonus = 0.75 uses = 1 category = electronics category = industry }
 		}
 	}
 
@@ -1530,7 +1550,9 @@
 		}
 
 		completion_reward = {
-			add_political_power = 50
+			add_tech_bonus = { name = TU_KZD_sealed_vault bonus = 0.75 uses = 1 category = dd_tech category = ca_tech }
+			add_doctrine_cost_reduction = { name = TU_KZD_sealed_vault cost_reduction = 0.4 uses = 1 category = naval_doctrine }
+			navy_experience = 25
 		}
 	}
 
@@ -1549,8 +1571,7 @@
 		}
 
 		completion_reward = {
-			add_political_power = 25
-			add_stability = 0.02
+			add_tech_bonus = { name = TU_KZD_babel_hymn bonus = 0.75 uses = 1 category = electronics category = industry }
 		}
 	}
 
@@ -1569,8 +1590,8 @@
 		}
 
 		completion_reward = {
-			add_political_power = 50
 			TU_build_infrastructure = yes
+			add_tech_bonus = { name = TU_KZD_trade_roads bonus = 0.75 uses = 1 category = industry category = construction_tech }
 		}
 	}
 
@@ -1590,7 +1611,7 @@
 		}
 
 		completion_reward = {
-			add_political_power = 25
+			add_tech_bonus = { name = TU_KZD_records_vault bonus = 0.75 uses = 1 category = electronics category = industry }
 		}
 	}
 
@@ -1610,7 +1631,7 @@
 		}
 
 		completion_reward = {
-			army_experience = 20
+			add_tech_bonus = { name = TU_KZD_records_vault_alt bonus = 0.75 uses = 1 category = electronics category = industry }
 		}
 	}
 
@@ -1629,8 +1650,7 @@
 		}
 
 		completion_reward = {
-			add_political_power = 25
-			add_stability = 0.01
+			add_tech_bonus = { name = TU_KZD_cultural_relic bonus = 0.75 uses = 1 category = electronics category = industry }
 		}
 	}
 
@@ -1649,7 +1669,7 @@
 		}
 
 		completion_reward = {
-			add_political_power = 50
+			add_tech_bonus = { name = TU_KZD_babel_legend bonus = 0.75 uses = 1 category = electronics category = industry }
 		}
 	}
 
@@ -1668,7 +1688,7 @@
 		}
 
 		completion_reward = {
-			add_political_power = 25
+			add_tech_bonus = { name = TU_KZD_babel_festival bonus = 0.75 uses = 1 category = electronics category = industry }
 		}
 	}
 
@@ -1689,8 +1709,9 @@
 		}
 
 		completion_reward = {
-			add_political_power = 50
 			set_country_flag = TU_KZD_merc_kingdom
+			add_manpower = 5000
+			army_experience = 15
 		}
 	}
 
@@ -1709,7 +1730,8 @@
 		}
 
 		completion_reward = {
-			add_political_power = 25
+			add_political_power = 60
+			add_tech_bonus = { name = TU_KZD_contract_registry bonus = 0.75 uses = 1 category = industry }
 		}
 	}
 
@@ -1729,8 +1751,9 @@
 		}
 
 		completion_reward = {
-			add_political_power = 50
 			set_country_flag = TU_KZD_broker_system
+			add_political_power = 60
+			add_tech_bonus = { name = TU_KZD_broker_offices bonus = 0.75 uses = 1 category = industry }
 		}
 	}
 
@@ -1750,9 +1773,9 @@
 		}
 
 		completion_reward = {
-			add_political_power = 25
-			add_stability = 0.02
 			set_country_flag = TU_KZD_direct_hire_system
+			add_political_power = 60
+			add_tech_bonus = { name = TU_KZD_direct_hire bonus = 0.75 uses = 1 category = industry }
 		}
 	}
 
@@ -1771,7 +1794,8 @@
 		}
 
 		completion_reward = {
-			add_political_power = 50
+			add_manpower = 10000
+			army_experience = 25
 		}
 	}
 
@@ -1790,9 +1814,9 @@
 		}
 
 		completion_reward = {
-			add_political_power = 50
-			add_stability = 0.02
 			set_country_flag = TU_KZD_clan_council_called
+			add_manpower = 10000
+			army_experience = 25
 		}
 	}
 
@@ -1811,7 +1835,8 @@
 		}
 
 		completion_reward = {
-			add_political_power = 50
+			add_manpower = 10000
+			army_experience = 25
 		}
 	}
 
@@ -1831,8 +1856,8 @@
 		}
 
 		completion_reward = {
-			add_political_power = 50
-			add_stability = 0.03
+			add_manpower = 10000
+			army_experience = 25
 		}
 	}
 
@@ -1852,8 +1877,8 @@
 		}
 
 		completion_reward = {
-			add_political_power = 50
-			add_war_support = 0.05
+			add_manpower = 10000
+			army_experience = 25
 		}
 	}
 
@@ -1872,8 +1897,7 @@
 		}
 
 		completion_reward = {
-			add_political_power = 50
-			add_stability = 0.01
+			add_tech_bonus = { name = TU_KZD_merc_insurance_focus bonus = 0.75 uses = 1 category = electronics category = industry }
 		}
 	}
 
@@ -1893,9 +1917,8 @@
 		}
 
 		completion_reward = {
-			add_political_power = 25
-			add_stability = 0.02
-			army_experience = 15
+			add_doctrine_cost_reduction = { name = TU_KZD_veterans_fund cost_reduction = 0.4 uses = 1 category = land_doctrine }
+			army_experience = 25
 		}
 	}
 
@@ -1915,8 +1938,8 @@
 		}
 
 		completion_reward = {
-			add_political_power = 50
-			add_war_support = 0.03
+			add_political_power = 60
+			add_tech_bonus = { name = TU_KZD_war_bonds bonus = 0.75 uses = 1 category = industry }
 		}
 	}
 
@@ -1935,7 +1958,8 @@
 		}
 
 		completion_reward = {
-			add_political_power = 75
+			add_political_power = 60
+			add_stability = 0.03
 		}
 	}
 
@@ -1954,8 +1978,8 @@
 		}
 
 		completion_reward = {
-			add_political_power = 50
-			army_experience = 20
+			add_war_support = 0.03
+			add_stability = 0.03
 		}
 	}
 
@@ -1974,7 +1998,8 @@
 		}
 
 		completion_reward = {
-			add_political_power = 50
+			add_manpower = 10000
+			army_experience = 25
 		}
 	}
 
@@ -1993,7 +2018,8 @@
 		}
 
 		completion_reward = {
-			add_political_power = 25
+			add_political_power = 60
+			add_tech_bonus = { name = TU_KZD_wartime_tariff bonus = 0.75 uses = 1 category = industry }
 		}
 	}
 
@@ -2013,7 +2039,8 @@
 		}
 
 		completion_reward = {
-			add_political_power = 50
+			add_manpower = 10000
+			army_experience = 25
 		}
 	}
 
@@ -2033,8 +2060,8 @@
 		}
 
 		completion_reward = {
-			add_political_power = 25
-			add_stability = 0.01
+			add_political_power = 60
+			add_tech_bonus = { name = TU_KZD_private_vaults bonus = 0.75 uses = 1 category = industry }
 		}
 	}
 
@@ -2054,7 +2081,9 @@
 		}
 
 		completion_reward = {
-			add_political_power = 50
+			add_tech_bonus = { name = TU_KZD_contract_fleets bonus = 0.75 uses = 1 category = dd_tech category = ca_tech }
+			add_doctrine_cost_reduction = { name = TU_KZD_contract_fleets cost_reduction = 0.4 uses = 1 category = naval_doctrine }
+			navy_experience = 25
 		}
 	}
 
@@ -2074,8 +2103,8 @@
 		}
 
 		completion_reward = {
-			add_political_power = 25
-			add_war_support = 0.03
+			add_political_power = 60
+			add_tech_bonus = { name = TU_KZD_contract_fleets_alt bonus = 0.75 uses = 1 category = industry }
 		}
 	}
 
@@ -2094,8 +2123,8 @@
 		}
 
 		completion_reward = {
-			add_political_power = 50
-			add_stability = 0.02
+			add_manpower = 10000
+			army_experience = 25
 		}
 	}
 
@@ -2114,8 +2143,8 @@
 		}
 
 		completion_reward = {
-			army_experience = 20
-			add_political_power = 25
+			add_doctrine_cost_reduction = { name = TU_KZD_merc_academy cost_reduction = 0.4 uses = 1 category = land_doctrine }
+			army_experience = 25
 		}
 	}
 
@@ -2134,6 +2163,7 @@
 		}
 
 		completion_reward = {
+			add_tech_bonus = { name = TU_KZD_sellsword_doctrine bonus = 0.75 uses = 1 category = infantry_weapons }
 			army_experience = 25
 		}
 	}
@@ -2153,9 +2183,10 @@
 		}
 
 		completion_reward = {
-			add_political_power = 100
 			add_ideas = TU_KZD_merc_kingdom_charter
 			country_event = { id = tu_kzd_ev.5 }
+			add_manpower = 20000
+			army_experience = 40
 		}
 	}
 
@@ -2174,7 +2205,9 @@
 		}
 
 		completion_reward = {
-			add_political_power = 25
+			add_tech_bonus = { name = TU_KZD_harbor_levy bonus = 0.75 uses = 1 category = dd_tech category = ca_tech }
+			add_doctrine_cost_reduction = { name = TU_KZD_harbor_levy cost_reduction = 0.4 uses = 1 category = naval_doctrine }
+			navy_experience = 25
 		}
 	}
 
@@ -2193,7 +2226,8 @@
 		}
 
 		completion_reward = {
-			add_political_power = 50
+			add_manpower = 10000
+			army_experience = 25
 		}
 	}
 
@@ -2213,8 +2247,8 @@
 		}
 
 		completion_reward = {
-			add_political_power = 50
-			add_stability = 0.02
+			add_political_power = 60
+			add_tech_bonus = { name = TU_KZD_neutral_charters bonus = 0.75 uses = 1 category = industry }
 		}
 	}
 
@@ -2234,9 +2268,8 @@
 		}
 
 		completion_reward = {
-			add_political_power = 50
-			army_experience = 15
-			add_war_support = 0.03
+			add_political_power = 60
+			add_tech_bonus = { name = TU_KZD_war_contracts bonus = 0.75 uses = 1 category = industry }
 		}
 	}
 
@@ -2255,7 +2288,8 @@
 		}
 
 		completion_reward = {
-			add_political_power = 50
+			add_political_power = 60
+			add_tech_bonus = { name = TU_KZD_contract_dividend bonus = 0.75 uses = 1 category = industry }
 		}
 	}
 
@@ -2274,8 +2308,8 @@
 		}
 
 		completion_reward = {
-			add_political_power = 75
-			add_stability = 0.02
+			add_manpower = 10000
+			army_experience = 25
 		}
 	}
 
@@ -2294,6 +2328,8 @@
 		}
 
 		completion_reward = {
-			add_political_power = 25
+			add_tech_bonus = { name = TU_KZD_merc_seal bonus = 0.75 uses = 1 category = dd_tech category = ca_tech }
+			add_doctrine_cost_reduction = { name = TU_KZD_merc_seal cost_reduction = 0.4 uses = 1 category = naval_doctrine }
+			navy_experience = 25
 		}
 	}

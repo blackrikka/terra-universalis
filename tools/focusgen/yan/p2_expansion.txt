@@ -33,8 +33,9 @@
 		}
 
 		completion_reward = {
-			add_political_power = 50
 			set_country_flag = TU_dip_relations_unlocked
+			add_political_power = 60
+			add_stability = 0.03
 		}
 	}
 
@@ -53,9 +54,8 @@
 		}
 
 		completion_reward = {
-			add_political_power = 25
-			add_stability = 0.02
 			add_ideas = TU_YAN_envoy_network
+			add_tech_bonus = { name = TU_YAN_ex_envoy_routes bonus = 0.75 uses = 1 category = industry category = construction_tech }
 		}
 	}
 
@@ -74,7 +74,8 @@
 		}
 
 		completion_reward = {
-			add_political_power = 25
+			add_tech_bonus = { name = TU_YAN_ex_frontier_survey bonus = 0.75 uses = 1 category = construction_tech }
+			army_experience = 25
 		}
 	}
 
@@ -93,8 +94,9 @@
 		}
 
 		completion_reward = {
-			army_experience = 15
 			add_ideas = TU_YAN_expansion_doctrine
+			add_doctrine_cost_reduction = { name = TU_YAN_ex_expansion_doctrine cost_reduction = 0.4 uses = 1 category = land_doctrine }
+			army_experience = 25
 		}
 	}
 
@@ -113,7 +115,8 @@
 		}
 
 		completion_reward = {
-			add_manpower = 20000
+			add_tech_bonus = { name = TU_YAN_ex_frontier_army bonus = 0.75 uses = 1 category = construction_tech }
+			army_experience = 25
 		}
 	}
 
@@ -132,8 +135,8 @@
 		}
 
 		completion_reward = {
-			add_political_power = 50
-			add_war_support = 0.05
+			add_political_power = 60
+			add_stability = 0.03
 		}
 	}
 
@@ -152,8 +155,10 @@
 		}
 
 		completion_reward = {
-			add_political_power = 50
 			set_country_flag = TU_dip_alliance_unlocked
+			add_tech_bonus = { name = TU_YAN_ex_alliance_search bonus = 0.75 uses = 1 category = dd_tech category = ca_tech }
+			add_doctrine_cost_reduction = { name = TU_YAN_ex_alliance_search cost_reduction = 0.4 uses = 1 category = naval_doctrine }
+			navy_experience = 25
 		}
 	}
 
@@ -172,8 +177,9 @@
 		}
 
 		completion_reward = {
-			add_war_support = 0.05
-			army_experience = 10
+			army_experience = 25
+			add_war_support = 0.03
+			add_doctrine_cost_reduction = { name = TU_YAN_ex_war_council cost_reduction = 0.4 uses = 1 category = land_doctrine }
 		}
 	}
 
@@ -194,6 +200,8 @@
 		completion_reward = {
 			add_ideas = TU_YAN_frontier_logistics
 			TU_build_infrastructure = yes
+			add_manpower = 10000
+			army_experience = 25
 		}
 	}
 
@@ -213,8 +221,9 @@
 		}
 
 		completion_reward = {
-			add_political_power = 100
-			army_experience = 20
+			army_experience = 40
+			add_war_support = 0.05
+			add_doctrine_cost_reduction = { name = TU_YAN_ex_grand_campaign cost_reduction = 0.5 uses = 1 category = land_doctrine }
 		}
 	}
 
@@ -238,9 +247,9 @@
 		}
 
 		completion_reward = {
-			add_political_power = 50
-			add_stability = 0.02
 			country_event = { id = tu_yan_ev.12 }
+			add_political_power = 60
+			add_stability = 0.03
 		}
 	}
 
@@ -259,8 +268,8 @@
 		}
 
 		completion_reward = {
-			add_political_power = 25
-			add_war_support = 0.05
+			add_political_power = 60
+			add_stability = 0.03
 		}
 	}
 
@@ -281,6 +290,9 @@
 		completion_reward = {
 			add_ideas = TU_YAN_lgm_free_trade
 			TU_build_civ_factory = yes
+			add_tech_bonus = { name = TU_YAN_lgm_free_port bonus = 0.75 uses = 1 category = dd_tech category = ca_tech }
+			add_doctrine_cost_reduction = { name = TU_YAN_lgm_free_port cost_reduction = 0.4 uses = 1 category = naval_doctrine }
+			navy_experience = 25
 		}
 	}
 
@@ -299,7 +311,8 @@
 		}
 
 		completion_reward = {
-			add_manpower = 15000
+			add_tech_bonus = { name = TU_YAN_lgm_shared_defense bonus = 0.75 uses = 1 category = construction_tech }
+			army_experience = 25
 		}
 	}
 
@@ -319,7 +332,7 @@
 
 		completion_reward = {
 			add_political_power = 100
-			add_stability = 0.03
+			add_stability = 0.05
 		}
 	}
 
@@ -343,7 +356,7 @@
 		}
 
 		completion_reward = {
-			add_political_power = 25
+			add_tech_bonus = { name = TU_YAN_lgm_direct_survey bonus = 0.75 uses = 1 category = industry category = construction_tech }
 		}
 	}
 
@@ -362,8 +375,8 @@
 		}
 
 		completion_reward = {
-			add_political_power = 25
-			add_stability = 0.02
+			add_political_power = 60
+			add_stability = 0.03
 		}
 	}
 
@@ -382,9 +395,10 @@
 		}
 
 		completion_reward = {
-			add_political_power = 25
-			add_manpower = 10000
 			TU_build_civ_factory = yes
+			add_tech_bonus = { name = TU_YAN_lgm_port_integration bonus = 0.75 uses = 1 category = dd_tech category = ca_tech }
+			add_doctrine_cost_reduction = { name = TU_YAN_lgm_port_integration cost_reduction = 0.4 uses = 1 category = naval_doctrine }
+			navy_experience = 25
 		}
 	}
 
@@ -403,8 +417,8 @@
 		}
 
 		completion_reward = {
-			add_manpower = 20000
-			army_experience = 10
+			add_tech_bonus = { name = TU_YAN_lgm_garrison_levy bonus = 0.75 uses = 1 category = construction_tech }
+			army_experience = 25
 		}
 	}
 
@@ -423,8 +437,8 @@
 		}
 
 		completion_reward = {
-			add_political_power = 25
-			add_stability = 0.02
+			add_political_power = 60
+			add_tech_bonus = { name = TU_YAN_lgm_tax_ledger bonus = 0.75 uses = 1 category = industry }
 		}
 	}
 
@@ -445,7 +459,7 @@
 
 		completion_reward = {
 			add_political_power = 100
-			add_stability = 0.03
+			add_stability = 0.05
 		}
 	}
 
@@ -464,7 +478,8 @@
 		}
 
 		completion_reward = {
-			add_political_power = 25
+			add_political_power = 60
+			add_stability = 0.03
 		}
 	}
 
@@ -483,7 +498,9 @@
 		}
 
 		completion_reward = {
-			add_political_power = 25
+			add_tech_bonus = { name = TU_YAN_hig_strait_survey bonus = 0.5 uses = 1 category = dd_tech category = ca_tech }
+			add_doctrine_cost_reduction = { name = TU_YAN_hig_strait_survey cost_reduction = 0.25 uses = 1 category = naval_doctrine }
+			navy_experience = 15
 		}
 	}
 
@@ -502,7 +519,8 @@
 		}
 
 		completion_reward = {
-			add_political_power = 25
+			add_political_power = 60
+			add_stability = 0.03
 		}
 	}
 
@@ -521,7 +539,8 @@
 		}
 
 		completion_reward = {
-			add_political_power = 25
+			add_tech_bonus = { name = TU_YAN_hig_claim_focus bonus = 0.75 uses = 1 category = construction_tech }
+			army_experience = 25
 		}
 	}
 
@@ -541,8 +560,10 @@
 		}
 
 		completion_reward = {
-			add_political_power = 25
 			TU_build_civ_factory = yes
+			add_tech_bonus = { name = TU_YAN_hig_trade_treaty bonus = 0.75 uses = 1 category = dd_tech category = ca_tech }
+			add_doctrine_cost_reduction = { name = TU_YAN_hig_trade_treaty cost_reduction = 0.4 uses = 1 category = naval_doctrine }
+			navy_experience = 25
 		}
 	}
 
@@ -561,7 +582,8 @@
 		}
 
 		completion_reward = {
-			add_political_power = 25
+			add_political_power = 60
+			add_stability = 0.03
 		}
 	}
 
@@ -581,9 +603,10 @@
 		}
 
 		completion_reward = {
-			add_political_power = 25
-			add_war_support = 0.03
 			TU_build_dockyard = yes
+			add_tech_bonus = { name = TU_YAN_hig_naval_pressure bonus = 0.75 uses = 1 category = dd_tech category = ca_tech }
+			add_doctrine_cost_reduction = { name = TU_YAN_hig_naval_pressure cost_reduction = 0.4 uses = 1 category = naval_doctrine }
+			navy_experience = 25
 		}
 	}
 
@@ -602,7 +625,9 @@
 		}
 
 		completion_reward = {
-			add_political_power = 25
+			army_experience = 25
+			add_war_support = 0.03
+			add_doctrine_cost_reduction = { name = TU_YAN_hig_war_plan cost_reduction = 0.4 uses = 1 category = land_doctrine }
 		}
 	}
 
@@ -621,9 +646,9 @@
 		}
 
 		completion_reward = {
-			add_political_power = 100
-			army_experience = 15
-			add_manpower = 10000
+			add_tech_bonus = { name = TU_YAN_hig_strait_seize bonus = 1.0 uses = 1 category = dd_tech category = ca_tech }
+			add_doctrine_cost_reduction = { name = TU_YAN_hig_strait_seize cost_reduction = 0.5 uses = 1 category = naval_doctrine }
+			navy_experience = 40
 		}
 	}
 
@@ -643,8 +668,9 @@
 		}
 
 		completion_reward = {
-			add_political_power = 25
-			add_stability = 0.02
+			add_tech_bonus = { name = TU_YAN_hig_harbour_levy bonus = 0.75 uses = 1 category = dd_tech category = ca_tech }
+			add_doctrine_cost_reduction = { name = TU_YAN_hig_harbour_levy cost_reduction = 0.4 uses = 1 category = naval_doctrine }
+			navy_experience = 25
 		}
 	}
 
@@ -664,8 +690,9 @@
 		}
 
 		completion_reward = {
-			add_political_power = 25
-			add_war_support = 0.02
+			add_tech_bonus = { name = TU_YAN_hig_harbour_levy_alt bonus = 0.75 uses = 1 category = dd_tech category = ca_tech }
+			add_doctrine_cost_reduction = { name = TU_YAN_hig_harbour_levy_alt cost_reduction = 0.4 uses = 1 category = naval_doctrine }
+			navy_experience = 25
 		}
 	}
 
@@ -684,9 +711,10 @@
 		}
 
 		completion_reward = {
-			add_political_power = 25
-			add_war_support = 0.02
 			TU_build_dockyard = yes
+			add_tech_bonus = { name = TU_YAN_hig_fleet_base bonus = 0.75 uses = 1 category = dd_tech category = ca_tech }
+			add_doctrine_cost_reduction = { name = TU_YAN_hig_fleet_base cost_reduction = 0.4 uses = 1 category = naval_doctrine }
+			navy_experience = 25
 		}
 	}
 
@@ -705,7 +733,9 @@
 		}
 
 		completion_reward = {
-			add_manpower = 10000
+			add_tech_bonus = { name = TU_YAN_hig_coastal_guard bonus = 0.75 uses = 1 category = dd_tech category = ca_tech }
+			add_doctrine_cost_reduction = { name = TU_YAN_hig_coastal_guard cost_reduction = 0.4 uses = 1 category = naval_doctrine }
+			navy_experience = 25
 		}
 	}
 
@@ -724,7 +754,8 @@
 		}
 
 		completion_reward = {
-			add_political_power = 50
+			add_political_power = 60
+			add_stability = 0.03
 		}
 	}
 
@@ -743,8 +774,10 @@
 		}
 
 		completion_reward = {
-			add_political_power = 25
 			TU_build_dockyard = yes
+			add_tech_bonus = { name = TU_YAN_hig_shipyards bonus = 0.75 uses = 1 category = dd_tech category = ca_tech }
+			add_doctrine_cost_reduction = { name = TU_YAN_hig_shipyards cost_reduction = 0.4 uses = 1 category = naval_doctrine }
+			navy_experience = 25
 		}
 	}
 
@@ -763,7 +796,8 @@
 		}
 
 		completion_reward = {
-			add_political_power = 25
+			add_tech_bonus = { name = TU_YAN_urs_border_survey bonus = 0.5 uses = 1 category = construction_tech }
+			army_experience = 15
 		}
 	}
 
@@ -782,7 +816,8 @@
 		}
 
 		completion_reward = {
-			add_political_power = 25
+			add_political_power = 60
+			add_stability = 0.03
 		}
 	}
 
@@ -801,7 +836,8 @@
 		}
 
 		completion_reward = {
-			add_political_power = 25
+			add_political_power = 60
+			add_stability = 0.03
 		}
 	}
 
@@ -820,7 +856,7 @@
 		}
 
 		completion_reward = {
-			add_political_power = 25
+			add_tech_bonus = { name = TU_YAN_urs_military_access bonus = 0.75 uses = 1 category = industry category = construction_tech }
 		}
 	}
 
@@ -839,7 +875,8 @@
 		}
 
 		completion_reward = {
-			add_political_power = 25
+			add_tech_bonus = { name = TU_YAN_urs_claim_focus bonus = 0.75 uses = 1 category = construction_tech }
+			army_experience = 25
 		}
 	}
 
@@ -859,8 +896,8 @@
 		}
 
 		completion_reward = {
-			add_political_power = 25
 			TU_build_civ_factory = yes
+			add_tech_bonus = { name = TU_YAN_urs_trade_route bonus = 0.75 uses = 1 category = industry category = construction_tech }
 		}
 	}
 
@@ -880,8 +917,8 @@
 		}
 
 		completion_reward = {
-			add_political_power = 25
-			add_war_support = 0.03
+			add_tech_bonus = { name = TU_YAN_urs_pressure bonus = 0.75 uses = 1 category = construction_tech }
+			army_experience = 25
 		}
 	}
 
@@ -900,8 +937,8 @@
 		}
 
 		completion_reward = {
-			add_manpower = 15000
-			army_experience = 10
+			add_doctrine_cost_reduction = { name = TU_YAN_urs_frontier_drill cost_reduction = 0.4 uses = 1 category = land_doctrine }
+			army_experience = 25
 		}
 	}
 
@@ -920,8 +957,9 @@
 		}
 
 		completion_reward = {
-			army_experience = 15
 			add_ideas = TU_YAN_frontier_drive
+			add_tech_bonus = { name = TU_YAN_urs_steppe_cavalry bonus = 0.75 uses = 1 category = motorized_equipment }
+			add_doctrine_cost_reduction = { name = TU_YAN_urs_steppe_cavalry cost_reduction = 0.4 uses = 1 category = land_doctrine }
 		}
 	}
 
@@ -940,7 +978,9 @@
 		}
 
 		completion_reward = {
-			add_political_power = 25
+			army_experience = 25
+			add_war_support = 0.03
+			add_doctrine_cost_reduction = { name = TU_YAN_urs_war_plan cost_reduction = 0.4 uses = 1 category = land_doctrine }
 		}
 	}
 
@@ -959,8 +999,9 @@
 		}
 
 		completion_reward = {
-			add_political_power = 100
-			army_experience = 20
+			army_experience = 40
+			add_war_support = 0.05
+			add_doctrine_cost_reduction = { name = TU_YAN_urs_grand_march cost_reduction = 0.5 uses = 1 category = land_doctrine }
 		}
 	}
 
@@ -979,7 +1020,8 @@
 		}
 
 		completion_reward = {
-			add_political_power = 50
+			add_political_power = 60
+			add_stability = 0.03
 		}
 	}
 
@@ -999,7 +1041,8 @@
 		}
 
 		completion_reward = {
-			add_manpower = 10000
+			add_tech_bonus = { name = TU_YAN_urs_eastern_guard bonus = 0.75 uses = 1 category = construction_tech }
+			army_experience = 25
 		}
 	}
 
@@ -1019,8 +1062,8 @@
 		}
 
 		completion_reward = {
-			add_political_power = 25
-			add_stability = 0.01
+			add_political_power = 60
+			add_stability = 0.03
 		}
 	}
 
@@ -1039,9 +1082,8 @@
 		}
 
 		completion_reward = {
-			add_political_power = 25
-			add_stability = 0.02
 			TU_build_infrastructure = yes
+			add_tech_bonus = { name = TU_YAN_urs_supply_route bonus = 0.75 uses = 1 category = industry category = construction_tech }
 		}
 	}
 
@@ -1060,9 +1102,9 @@
 		}
 
 		completion_reward = {
-			add_political_power = 25
-			add_war_support = 0.02
 			TU_build_infrastructure = yes
+			add_tech_bonus = { name = TU_YAN_urs_border_fort bonus = 0.75 uses = 1 category = construction_tech }
+			army_experience = 25
 		}
 	}
 
@@ -1082,8 +1124,8 @@
 		}
 
 		completion_reward = {
-			add_political_power = 25
-			add_stability = 0.02
+			add_political_power = 60
+			add_tech_bonus = { name = TU_YAN_urs_debt_ledger bonus = 0.75 uses = 1 category = industry }
 		}
 	}
 
@@ -1103,8 +1145,8 @@
 		}
 
 		completion_reward = {
-			add_political_power = 25
-			add_war_support = 0.02
+			add_political_power = 60
+			add_tech_bonus = { name = TU_YAN_urs_debt_ledger_alt bonus = 0.75 uses = 1 category = industry }
 		}
 	}
 
@@ -1123,7 +1165,8 @@
 		}
 
 		completion_reward = {
-			add_political_power = 50
+			add_political_power = 60
+			add_stability = 0.03
 		}
 	}
 
@@ -1143,8 +1186,9 @@
 		}
 
 		completion_reward = {
-			add_political_power = 100
-			army_experience = 15
+			army_experience = 40
+			add_war_support = 0.05
+			add_doctrine_cost_reduction = { name = TU_YAN_urs_occupation_plan cost_reduction = 0.5 uses = 1 category = land_doctrine }
 		}
 	}
 
@@ -1163,7 +1207,7 @@
 		}
 
 		completion_reward = {
-			add_political_power = 25
+			add_tech_bonus = { name = TU_YAN_sar_desert_survey bonus = 0.5 uses = 1 category = industry category = construction_tech }
 		}
 	}
 
@@ -1182,7 +1226,8 @@
 		}
 
 		completion_reward = {
-			add_political_power = 25
+			add_political_power = 60
+			add_stability = 0.03
 		}
 	}
 
@@ -1202,8 +1247,9 @@
 		}
 
 		completion_reward = {
-			add_political_power = 25
 			TU_build_civ_factory = yes
+			add_political_power = 60
+			add_tech_bonus = { name = TU_YAN_sar_trade_pact bonus = 0.75 uses = 1 category = industry }
 		}
 	}
 
@@ -1222,7 +1268,7 @@
 		}
 
 		completion_reward = {
-			add_political_power = 25
+			add_tech_bonus = { name = TU_YAN_sar_scholars bonus = 0.75 uses = 1 category = electronics category = industry }
 		}
 	}
 
@@ -1241,7 +1287,8 @@
 		}
 
 		completion_reward = {
-			add_political_power = 25
+			add_political_power = 60
+			add_stability = 0.03
 		}
 	}
 
@@ -1261,8 +1308,8 @@
 		}
 
 		completion_reward = {
-			add_war_support = 0.03
-			add_political_power = 25
+			add_political_power = 60
+			add_stability = 0.03
 		}
 	}
 
@@ -1281,7 +1328,8 @@
 		}
 
 		completion_reward = {
-			add_manpower = 15000
+			add_political_power = 60
+			add_tech_bonus = { name = TU_YAN_sar_caravan_guard bonus = 0.75 uses = 1 category = industry }
 		}
 	}
 
@@ -1300,8 +1348,9 @@
 		}
 
 		completion_reward = {
-			add_political_power = 25
-			army_experience = 10
+			army_experience = 25
+			add_war_support = 0.03
+			add_doctrine_cost_reduction = { name = TU_YAN_sar_war_plan cost_reduction = 0.4 uses = 1 category = land_doctrine }
 		}
 	}
 
@@ -1321,7 +1370,8 @@
 		}
 
 		completion_reward = {
-			army_experience = 15
+			add_doctrine_cost_reduction = { name = TU_YAN_sar_desert_drill cost_reduction = 0.4 uses = 1 category = land_doctrine }
+			army_experience = 25
 		}
 	}
 
@@ -1341,8 +1391,7 @@
 		}
 
 		completion_reward = {
-			add_political_power = 25
-			add_stability = 0.01
+			add_tech_bonus = { name = TU_YAN_sar_desert_drill_alt bonus = 0.75 uses = 1 category = industry category = construction_tech }
 		}
 	}
 
@@ -1361,8 +1410,9 @@
 		}
 
 		completion_reward = {
-			add_political_power = 25
 			TU_build_infrastructure = yes
+			add_political_power = 60
+			add_stability = 0.03
 		}
 	}
 
@@ -1381,7 +1431,8 @@
 		}
 
 		completion_reward = {
-			add_political_power = 25
+			add_political_power = 60
+			add_stability = 0.03
 		}
 	}
 
@@ -1401,6 +1452,7 @@
 
 		completion_reward = {
 			add_manpower = 10000
+			army_experience = 25
 		}
 	}
 
@@ -1420,7 +1472,8 @@
 		}
 
 		completion_reward = {
-			add_political_power = 25
+			add_political_power = 60
+			add_stability = 0.03
 		}
 	}
 
@@ -1440,8 +1493,8 @@
 		}
 
 		completion_reward = {
-			add_political_power = 25
-			add_war_support = 0.02
+			add_political_power = 60
+			add_tech_bonus = { name = TU_YAN_sar_envoy_gifts_alt bonus = 0.75 uses = 1 category = industry }
 		}
 	}
 
@@ -1460,7 +1513,8 @@
 		}
 
 		completion_reward = {
-			add_political_power = 50
+			add_political_power = 60
+			add_stability = 0.03
 		}
 	}
 
@@ -1479,8 +1533,9 @@
 		}
 
 		completion_reward = {
-			add_political_power = 25
 			TU_build_mil_factory = yes
+			add_tech_bonus = { name = TU_YAN_sar_desert_sieges bonus = 0.75 uses = 1 category = artillery }
+			army_experience = 25
 		}
 	}
 
@@ -1500,8 +1555,7 @@
 		}
 
 		completion_reward = {
-			add_political_power = 100
-			add_stability = 0.02
+			add_tech_bonus = { name = TU_YAN_sar_grand_caravan bonus = 1.0 uses = 1 category = industry category = construction_tech }
 		}
 	}
 
@@ -1520,7 +1574,9 @@
 		}
 
 		completion_reward = {
-			add_political_power = 25
+			add_tech_bonus = { name = TU_YAN_rim_survey bonus = 0.5 uses = 1 category = dd_tech category = ca_tech }
+			add_doctrine_cost_reduction = { name = TU_YAN_rim_survey cost_reduction = 0.25 uses = 1 category = naval_doctrine }
+			navy_experience = 15
 		}
 	}
 
@@ -1539,7 +1595,8 @@
 		}
 
 		completion_reward = {
-			add_political_power = 25
+			add_political_power = 60
+			add_stability = 0.03
 		}
 	}
 
@@ -1559,8 +1616,8 @@
 		}
 
 		completion_reward = {
-			add_political_power = 25
 			TU_build_civ_factory = yes
+			add_tech_bonus = { name = TU_YAN_rim_mining_deal bonus = 0.75 uses = 1 category = industry category = construction_tech }
 		}
 	}
 
@@ -1579,7 +1636,8 @@
 		}
 
 		completion_reward = {
-			add_political_power = 25
+			add_political_power = 60
+			add_stability = 0.03
 		}
 	}
 
@@ -1598,7 +1656,8 @@
 		}
 
 		completion_reward = {
-			add_political_power = 25
+			add_political_power = 60
+			add_stability = 0.03
 		}
 	}
 
@@ -1618,9 +1677,9 @@
 		}
 
 		completion_reward = {
-			add_war_support = 0.03
-			add_political_power = 25
 			TU_build_dockyard = yes
+			add_political_power = 60
+			add_stability = 0.03
 		}
 	}
 
@@ -1639,8 +1698,10 @@
 		}
 
 		completion_reward = {
-			add_political_power = 25
 			TU_build_dockyard = yes
+			add_tech_bonus = { name = TU_YAN_rim_blockade_fleet bonus = 0.75 uses = 1 category = dd_tech category = ca_tech }
+			add_doctrine_cost_reduction = { name = TU_YAN_rim_blockade_fleet cost_reduction = 0.4 uses = 1 category = naval_doctrine }
+			navy_experience = 25
 		}
 	}
 
@@ -1659,8 +1720,9 @@
 		}
 
 		completion_reward = {
-			add_manpower = 15000
-			army_experience = 10
+			add_tech_bonus = { name = TU_YAN_rim_marine_corps bonus = 0.75 uses = 1 category = dd_tech category = ca_tech }
+			add_doctrine_cost_reduction = { name = TU_YAN_rim_marine_corps cost_reduction = 0.4 uses = 1 category = naval_doctrine }
+			navy_experience = 25
 		}
 	}
 
@@ -1679,7 +1741,9 @@
 		}
 
 		completion_reward = {
-			add_political_power = 25
+			army_experience = 25
+			add_war_support = 0.03
+			add_doctrine_cost_reduction = { name = TU_YAN_rim_war_plan cost_reduction = 0.4 uses = 1 category = land_doctrine }
 		}
 	}
 
@@ -1698,8 +1762,9 @@
 		}
 
 		completion_reward = {
-			add_political_power = 100
-			army_experience = 15
+			add_tech_bonus = { name = TU_YAN_rim_island_seize bonus = 1.0 uses = 1 category = dd_tech category = ca_tech }
+			add_doctrine_cost_reduction = { name = TU_YAN_rim_island_seize cost_reduction = 0.5 uses = 1 category = naval_doctrine }
+			navy_experience = 40
 		}
 	}
 
@@ -1718,8 +1783,8 @@
 		}
 
 		completion_reward = {
-			add_political_power = 25
-			add_stability = 0.02
+			add_manpower = 10000
+			army_experience = 25
 		}
 	}
 
@@ -1738,7 +1803,9 @@
 		}
 
 		completion_reward = {
-			add_political_power = 50
+			add_tech_bonus = { name = TU_YAN_rim_pact bonus = 0.75 uses = 1 category = dd_tech category = ca_tech }
+			add_doctrine_cost_reduction = { name = TU_YAN_rim_pact cost_reduction = 0.4 uses = 1 category = naval_doctrine }
+			navy_experience = 25
 		}
 	}
 
@@ -1757,8 +1824,10 @@
 		}
 
 		completion_reward = {
-			add_political_power = 25
 			TU_build_infrastructure = yes
+			add_tech_bonus = { name = TU_YAN_rim_port_fort bonus = 0.75 uses = 1 category = dd_tech category = ca_tech }
+			add_doctrine_cost_reduction = { name = TU_YAN_rim_port_fort cost_reduction = 0.4 uses = 1 category = naval_doctrine }
+			navy_experience = 25
 		}
 	}
 
@@ -1778,7 +1847,8 @@
 		}
 
 		completion_reward = {
-			add_manpower = 10000
+			add_political_power = 60
+			add_stability = 0.03
 		}
 	}
 
@@ -1798,8 +1868,9 @@
 		}
 
 		completion_reward = {
-			add_political_power = 25
-			add_war_support = 0.02
+			add_tech_bonus = { name = TU_YAN_rim_local_sailors_alt bonus = 0.75 uses = 1 category = dd_tech category = ca_tech }
+			add_doctrine_cost_reduction = { name = TU_YAN_rim_local_sailors_alt cost_reduction = 0.4 uses = 1 category = naval_doctrine }
+			navy_experience = 25
 		}
 	}
 
@@ -1819,7 +1890,8 @@
 		}
 
 		completion_reward = {
-			add_political_power = 25
+			add_doctrine_cost_reduction = { name = TU_YAN_rim_storm_drill cost_reduction = 0.4 uses = 1 category = land_doctrine }
+			army_experience = 25
 		}
 	}
 
@@ -1839,8 +1911,8 @@
 		}
 
 		completion_reward = {
-			add_political_power = 25
-			army_experience = 10
+			add_tech_bonus = { name = TU_YAN_rim_storm_drill_alt bonus = 0.75 uses = 1 category = motorized_equipment }
+			add_doctrine_cost_reduction = { name = TU_YAN_rim_storm_drill_alt cost_reduction = 0.4 uses = 1 category = land_doctrine }
 		}
 	}
 
@@ -1860,8 +1932,9 @@
 		}
 
 		completion_reward = {
-			add_political_power = 100
-			add_war_support = 0.03
+			add_tech_bonus = { name = TU_YAN_rim_grand_blockade bonus = 1.0 uses = 1 category = dd_tech category = ca_tech }
+			add_doctrine_cost_reduction = { name = TU_YAN_rim_grand_blockade cost_reduction = 0.5 uses = 1 category = naval_doctrine }
+			navy_experience = 40
 		}
 	}
 
@@ -1880,7 +1953,8 @@
 		}
 
 		completion_reward = {
-			add_political_power = 25
+			add_political_power = 35
+			add_stability = 0.02
 		}
 	}
 
@@ -1899,7 +1973,8 @@
 		}
 
 		completion_reward = {
-			add_political_power = 25
+			add_manpower = 10000
+			army_experience = 25
 		}
 	}
 
@@ -1919,8 +1994,8 @@
 		}
 
 		completion_reward = {
-			add_political_power = 25
 			TU_build_civ_factory = yes
+			add_tech_bonus = { name = TU_YAN_kzd_trade_route bonus = 0.75 uses = 1 category = industry category = construction_tech }
 		}
 	}
 
@@ -1940,7 +2015,8 @@
 		}
 
 		completion_reward = {
-			add_political_power = 25
+			add_political_power = 60
+			add_stability = 0.03
 		}
 	}
 
@@ -1959,8 +2035,8 @@
 		}
 
 		completion_reward = {
-			add_war_support = 0.03
-			add_political_power = 25
+			add_tech_bonus = { name = TU_YAN_kzd_pressure bonus = 0.75 uses = 1 category = construction_tech }
+			army_experience = 25
 		}
 	}
 
@@ -1979,7 +2055,8 @@
 		}
 
 		completion_reward = {
-			add_manpower = 15000
+			add_doctrine_cost_reduction = { name = TU_YAN_kzd_mercenary_drill cost_reduction = 0.4 uses = 1 category = land_doctrine }
+			army_experience = 25
 		}
 	}
 
@@ -1998,8 +2075,8 @@
 		}
 
 		completion_reward = {
-			add_political_power = 25
 			TU_build_civ_factory = yes
+			add_tech_bonus = { name = TU_YAN_kzd_supply_contract bonus = 0.75 uses = 1 category = industry category = construction_tech }
 		}
 	}
 
@@ -2018,8 +2095,9 @@
 		}
 
 		completion_reward = {
-			add_political_power = 25
-			army_experience = 10
+			army_experience = 25
+			add_war_support = 0.03
+			add_doctrine_cost_reduction = { name = TU_YAN_kzd_war_plan cost_reduction = 0.4 uses = 1 category = land_doctrine }
 		}
 	}
 
@@ -2038,7 +2116,8 @@
 		}
 
 		completion_reward = {
-			add_manpower = 10000
+			add_tech_bonus = { name = TU_YAN_kzd_hired_guns bonus = 0.75 uses = 1 category = artillery }
+			army_experience = 25
 		}
 	}
 
@@ -2057,8 +2136,9 @@
 		}
 
 		completion_reward = {
-			add_political_power = 25
 			TU_build_infrastructure = yes
+			add_tech_bonus = { name = TU_YAN_kzd_wasteland_fort bonus = 0.75 uses = 1 category = construction_tech }
+			army_experience = 25
 		}
 	}
 
@@ -2077,7 +2157,9 @@
 		}
 
 		completion_reward = {
-			add_political_power = 50
+			add_tech_bonus = { name = TU_YAN_kzd_envoy_pact bonus = 0.75 uses = 1 category = dd_tech category = ca_tech }
+			add_doctrine_cost_reduction = { name = TU_YAN_kzd_envoy_pact cost_reduction = 0.4 uses = 1 category = naval_doctrine }
+			navy_experience = 25
 		}
 	}
 
@@ -2096,7 +2178,7 @@
 		}
 
 		completion_reward = {
-			add_political_power = 25
+			add_tech_bonus = { name = TU_YAN_kzd_access_talks bonus = 0.75 uses = 1 category = industry category = construction_tech }
 		}
 	}
 
@@ -2116,8 +2198,8 @@
 		}
 
 		completion_reward = {
-			add_political_power = 25
-			add_stability = 0.02
+			add_political_power = 60
+			add_tech_bonus = { name = TU_YAN_kzd_debt_bond bonus = 0.75 uses = 1 category = industry }
 		}
 	}
 
@@ -2137,8 +2219,8 @@
 		}
 
 		completion_reward = {
-			add_political_power = 25
-			add_war_support = 0.02
+			add_political_power = 60
+			add_tech_bonus = { name = TU_YAN_kzd_debt_bond_alt bonus = 0.75 uses = 1 category = industry }
 		}
 	}
 
@@ -2157,7 +2239,8 @@
 		}
 
 		completion_reward = {
-			add_political_power = 50
+			add_political_power = 60
+			add_stability = 0.03
 		}
 	}
 
@@ -2177,7 +2260,8 @@
 		}
 
 		completion_reward = {
-			army_experience = 15
+			add_doctrine_cost_reduction = { name = TU_YAN_kzd_drill_grounds cost_reduction = 0.4 uses = 1 category = land_doctrine }
+			army_experience = 25
 		}
 	}
 
@@ -2197,8 +2281,8 @@
 		}
 
 		completion_reward = {
-			add_political_power = 25
-			add_stability = 0.01
+			add_political_power = 60
+			add_stability = 0.03
 		}
 	}
 
@@ -2218,7 +2302,8 @@
 		}
 
 		completion_reward = {
-			add_manpower = 15000
+			add_tech_bonus = { name = TU_YAN_kzd_frontier_levy bonus = 0.75 uses = 1 category = construction_tech }
+			army_experience = 25
 		}
 	}
 
@@ -2238,8 +2323,8 @@
 		}
 
 		completion_reward = {
-			add_political_power = 25
-			add_stability = 0.02
+			add_tech_bonus = { name = TU_YAN_kzd_frontier_levy_alt bonus = 0.75 uses = 1 category = construction_tech }
+			army_experience = 25
 		}
 	}
 
@@ -2258,8 +2343,9 @@
 		}
 
 		completion_reward = {
-			add_political_power = 25
 			TU_build_mil_factory = yes
+			add_tech_bonus = { name = TU_YAN_kzd_armour_wing bonus = 0.75 uses = 1 category = armor }
+			add_doctrine_cost_reduction = { name = TU_YAN_kzd_armour_wing cost_reduction = 0.4 uses = 1 category = land_doctrine }
 		}
 	}
 
@@ -2278,8 +2364,9 @@
 		}
 
 		completion_reward = {
-			add_political_power = 25
+			army_experience = 25
 			add_war_support = 0.03
+			add_doctrine_cost_reduction = { name = TU_YAN_kzd_war_council cost_reduction = 0.4 uses = 1 category = land_doctrine }
 		}
 	}
 
@@ -2299,7 +2386,7 @@
 		}
 
 		completion_reward = {
-			add_political_power = 100
+			add_tech_bonus = { name = TU_YAN_kzd_coalition bonus = 1.0 uses = 1 category = industry category = construction_tech }
 		}
 	}
 
@@ -2319,7 +2406,8 @@
 		}
 
 		completion_reward = {
-			add_political_power = 100
-			army_experience = 20
+			army_experience = 40
+			add_war_support = 0.05
+			add_doctrine_cost_reduction = { name = TU_YAN_kzd_grand_campaign cost_reduction = 0.5 uses = 1 category = land_doctrine }
 		}
 	}

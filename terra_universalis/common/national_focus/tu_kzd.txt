@@ -49,9 +49,9 @@ focus_tree = {
 		search_filters = { FOCUS_FILTER_POLITICAL }
 
 		completion_reward = {
-			add_political_power = 25
-			add_war_support = 0.05
 			country_event = { id = tu_kzd_ev.1 }
+			add_political_power = 60
+			add_stability = 0.03
 		}
 	}
 
@@ -66,7 +66,8 @@ focus_tree = {
 		search_filters = { FOCUS_FILTER_RESEARCH }
 
 		completion_reward = {
-			add_manpower = 50000
+			add_manpower = 10000
+			army_experience = 25
 		}
 	}
 
@@ -81,7 +82,8 @@ focus_tree = {
 		search_filters = { FOCUS_FILTER_ARMY_XP }
 
 		completion_reward = {
-			army_experience = 25
+			add_tech_bonus = { name = TU_KZD_mobile_army bonus = 0.75 uses = 1 category = motorized_equipment }
+			add_doctrine_cost_reduction = { name = TU_KZD_mobile_army cost_reduction = 0.4 uses = 1 category = land_doctrine }
 		}
 	}
 
@@ -96,7 +98,9 @@ focus_tree = {
 		search_filters = { FOCUS_FILTER_POLITICAL }
 
 		completion_reward = {
-			add_political_power = 75
+			army_experience = 25
+			add_war_support = 0.03
+			add_doctrine_cost_reduction = { name = TU_KZD_war_council cost_reduction = 0.4 uses = 1 category = land_doctrine }
 		}
 	}
 
@@ -111,7 +115,8 @@ focus_tree = {
 		search_filters = { FOCUS_FILTER_ARMY_XP }
 
 		completion_reward = {
-			army_experience = 20
+			add_tech_bonus = { name = TU_KZD_steel_doctrine bonus = 0.75 uses = 1 category = infantry_weapons }
+			army_experience = 25
 		}
 	}
 
@@ -126,8 +131,9 @@ focus_tree = {
 		search_filters = { FOCUS_FILTER_POLITICAL }
 
 		completion_reward = {
-			add_political_power = 50
-			add_war_support = 0.05
+			army_experience = 25
+			add_war_support = 0.03
+			add_doctrine_cost_reduction = { name = TU_KZD_expansion_plan cost_reduction = 0.4 uses = 1 category = land_doctrine }
 		}
 	}
 
@@ -142,8 +148,8 @@ focus_tree = {
 		search_filters = { FOCUS_FILTER_ARMY_XP }
 
 		completion_reward = {
-			add_war_support = 0.05
-			army_experience = 15
+			add_tech_bonus = { name = TU_KZD_frontier_push bonus = 0.75 uses = 1 category = construction_tech }
+			army_experience = 25
 		}
 	}
 
@@ -161,9 +167,9 @@ focus_tree = {
 		search_filters = { FOCUS_FILTER_POLITICAL }
 
 		completion_reward = {
-			add_political_power = 25
-			add_stability = 0.03
 			country_event = { id = tu_kzd_ev.2 }
+			add_political_power = 60
+			add_stability = 0.03
 		}
 	}
 
@@ -178,7 +184,8 @@ focus_tree = {
 		search_filters = { FOCUS_FILTER_POLITICAL }
 
 		completion_reward = {
-			add_stability = 0.03
+			add_manpower = 10000
+			army_experience = 25
 		}
 	}
 
@@ -197,7 +204,8 @@ focus_tree = {
 				division_template = "TU_KZD_elite_guard"
 				is_locked = no
 			}
-			army_experience = 10
+			add_doctrine_cost_reduction = { name = TU_KZD_elite_template cost_reduction = 0.4 uses = 1 category = land_doctrine }
+			army_experience = 25
 		}
 	}
 
@@ -212,7 +220,8 @@ focus_tree = {
 		search_filters = { FOCUS_FILTER_ARMY_XP }
 
 		completion_reward = {
-			army_experience = 15
+			add_tech_bonus = { name = TU_KZD_mountain_defence bonus = 0.75 uses = 1 category = construction_tech }
+			army_experience = 25
 		}
 	}
 
@@ -227,7 +236,8 @@ focus_tree = {
 		search_filters = { FOCUS_FILTER_POLITICAL }
 
 		completion_reward = {
-			add_stability = 0.02
+			add_tech_bonus = { name = TU_KZD_fortified_frontier bonus = 0.75 uses = 1 category = construction_tech }
+			army_experience = 25
 		}
 	}
 
@@ -242,7 +252,8 @@ focus_tree = {
 		search_filters = { FOCUS_FILTER_POLITICAL }
 
 		completion_reward = {
-			add_political_power = 50
+			add_political_power = 60
+			add_stability = 0.03
 		}
 	}
 
@@ -257,7 +268,8 @@ focus_tree = {
 		search_filters = { FOCUS_FILTER_ARMY_XP }
 
 		completion_reward = {
-			army_experience = 30
+			add_doctrine_cost_reduction = { name = TU_KZD_elite_training cost_reduction = 0.4 uses = 1 category = land_doctrine }
+			army_experience = 25
 		}
 	}
 
@@ -275,8 +287,8 @@ focus_tree = {
 		search_filters = { FOCUS_FILTER_POLITICAL }
 
 		completion_reward = {
-			add_political_power = 25
 			country_event = { id = tu_kzd_ev.3 }
+			add_tech_bonus = { name = TU_KZD_babel_restoration bonus = 0.75 uses = 1 category = electronics category = industry }
 		}
 	}
 
@@ -303,6 +315,7 @@ focus_tree = {
 			else = {
 				add_political_power = 25
 			}
+			add_tech_bonus = { name = TU_KZD_babel_envoy bonus = 0.75 uses = 1 category = electronics category = industry }
 		}
 	}
 
@@ -321,7 +334,8 @@ focus_tree = {
 		}
 
 		completion_reward = {
-			add_political_power = 50
+			add_tech_bonus = { name = TU_KZD_arms_export bonus = 0.75 uses = 1 category = infantry_weapons }
+			army_experience = 25
 		}
 	}
 
@@ -340,7 +354,8 @@ focus_tree = {
 		}
 
 		completion_reward = {
-			army_experience = 20
+			add_doctrine_cost_reduction = { name = TU_KZD_babel_school cost_reduction = 0.4 uses = 1 category = land_doctrine }
+			army_experience = 25
 		}
 	}
 
@@ -359,8 +374,7 @@ focus_tree = {
 		}
 
 		completion_reward = {
-			add_political_power = 75
-			add_stability = 0.02
+			add_tech_bonus = { name = TU_KZD_babel_ascension bonus = 0.75 uses = 1 category = electronics category = industry }
 		}
 	}
 
@@ -381,7 +395,8 @@ focus_tree = {
 		}
 
 		completion_reward = {
-			add_political_power = 50
+			add_political_power = 60
+			add_stability = 0.03
 		}
 	}
 
@@ -400,8 +415,8 @@ focus_tree = {
 		}
 
 		completion_reward = {
-			add_political_power = 25
-			add_stability = 0.01
+			add_manpower = 10000
+			army_experience = 25
 		}
 	}
 
@@ -420,7 +435,8 @@ focus_tree = {
 		}
 
 		completion_reward = {
-			add_political_power = 50
+			add_political_power = 60
+			add_stability = 0.03
 		}
 	}
 
@@ -439,8 +455,8 @@ focus_tree = {
 		}
 
 		completion_reward = {
-			add_political_power = 75
-			add_stability = 0.02
+			add_political_power = 60
+			add_stability = 0.03
 		}
 	}
 
@@ -460,8 +476,8 @@ focus_tree = {
 		}
 
 		completion_reward = {
-			add_political_power = 50
-			add_war_support = 0.05
+			add_tech_bonus = { name = TU_KZD_iron_mandate bonus = 0.75 uses = 1 category = infantry_weapons }
+			army_experience = 25
 		}
 	}
 
@@ -481,7 +497,7 @@ focus_tree = {
 		}
 
 		completion_reward = {
-			add_political_power = 50
+			add_political_power = 60
 			add_stability = 0.03
 		}
 	}
@@ -501,8 +517,8 @@ focus_tree = {
 		}
 
 		completion_reward = {
-			army_experience = 20
-			add_war_support = 0.02
+			add_manpower = 10000
+			army_experience = 25
 		}
 	}
 
@@ -521,8 +537,8 @@ focus_tree = {
 		}
 
 		completion_reward = {
-			add_political_power = 50
-			add_stability = 0.02
+			add_political_power = 60
+			add_stability = 0.03
 		}
 	}
 
@@ -541,7 +557,8 @@ focus_tree = {
 		}
 
 		completion_reward = {
-			add_political_power = 75
+			add_political_power = 60
+			add_tech_bonus = { name = TU_KZD_empire_treasury bonus = 0.75 uses = 1 category = industry }
 		}
 	}
 
@@ -560,10 +577,11 @@ focus_tree = {
 		}
 
 		completion_reward = {
-			add_political_power = 100
 			add_ideas = TU_KZD_theresis_crown
 			set_country_flag = TU_KZD_theresis_throne_taken
 			country_event = { id = tu_kzd_ev.4 }
+			add_political_power = 100
+			add_stability = 0.05
 		}
 	}
 
@@ -582,8 +600,9 @@ focus_tree = {
 		}
 
 		completion_reward = {
-			add_political_power = 25
-			army_experience = 20
+			army_experience = 25
+			add_war_support = 0.03
+			add_doctrine_cost_reduction = { name = TU_KZD_grand_army_plan cost_reduction = 0.4 uses = 1 category = land_doctrine }
 		}
 	}
 
@@ -603,7 +622,8 @@ focus_tree = {
 		}
 
 		completion_reward = {
-			army_experience = 30
+			add_tech_bonus = { name = TU_KZD_armored_corps bonus = 0.75 uses = 1 category = armor }
+			add_doctrine_cost_reduction = { name = TU_KZD_armored_corps cost_reduction = 0.4 uses = 1 category = land_doctrine }
 		}
 	}
 
@@ -622,8 +642,9 @@ focus_tree = {
 		}
 
 		completion_reward = {
-			army_experience = 25
 			add_ideas = TU_KZD_grand_army_doctrine
+			add_tech_bonus = { name = TU_KZD_iron_drill bonus = 0.75 uses = 1 category = infantry_weapons }
+			army_experience = 25
 		}
 	}
 
@@ -642,7 +663,7 @@ focus_tree = {
 		}
 
 		completion_reward = {
-			add_political_power = 50
+			add_tech_bonus = { name = TU_KZD_field_marshal_office bonus = 0.75 uses = 1 category = industry category = construction_tech }
 		}
 	}
 
@@ -661,8 +682,8 @@ focus_tree = {
 		}
 
 		completion_reward = {
+			add_doctrine_cost_reduction = { name = TU_KZD_breakthrough_tactics cost_reduction = 0.4 uses = 1 category = land_doctrine }
 			army_experience = 25
-			add_war_support = 0.03
 		}
 	}
 
@@ -682,8 +703,7 @@ focus_tree = {
 		}
 
 		completion_reward = {
-			add_political_power = 25
-			army_experience = 15
+			add_tech_bonus = { name = TU_KZD_supply_wagons bonus = 0.75 uses = 1 category = industry category = construction_tech }
 		}
 	}
 
@@ -702,7 +722,9 @@ focus_tree = {
 		}
 
 		completion_reward = {
-			add_political_power = 50
+			add_tech_bonus = { name = TU_KZD_logistic_convoy bonus = 0.75 uses = 1 category = dd_tech category = ca_tech }
+			add_doctrine_cost_reduction = { name = TU_KZD_logistic_convoy cost_reduction = 0.4 uses = 1 category = naval_doctrine }
+			navy_experience = 25
 		}
 	}
 
@@ -721,9 +743,8 @@ focus_tree = {
 		}
 
 		completion_reward = {
-			add_political_power = 50
-			add_war_support = 0.05
-			add_stability = -0.02
+			add_political_power = 60
+			add_tech_bonus = { name = TU_KZD_war_economy_draft bonus = 0.75 uses = 1 category = industry }
 		}
 	}
 
@@ -742,8 +763,8 @@ focus_tree = {
 		}
 
 		completion_reward = {
-			army_experience = 15
-			add_political_power = 25
+			add_tech_bonus = { name = TU_KZD_steel_standards bonus = 0.75 uses = 1 category = infantry_weapons }
+			army_experience = 25
 		}
 	}
 
@@ -762,7 +783,8 @@ focus_tree = {
 		}
 
 		completion_reward = {
-			add_political_power = 50
+			add_political_power = 60
+			add_tech_bonus = { name = TU_KZD_imperial_bank bonus = 0.75 uses = 1 category = industry }
 		}
 	}
 
@@ -782,8 +804,9 @@ focus_tree = {
 		}
 
 		completion_reward = {
-			add_political_power = 25
+			army_experience = 25
 			add_war_support = 0.03
+			add_doctrine_cost_reduction = { name = TU_KZD_conquest_charter cost_reduction = 0.4 uses = 1 category = land_doctrine }
 		}
 	}
 
@@ -803,8 +826,8 @@ focus_tree = {
 		}
 
 		completion_reward = {
-			add_political_power = 25
-			army_experience = 20
+			add_tech_bonus = { name = TU_KZD_conquest_charter_alt bonus = 0.75 uses = 1 category = construction_tech }
+			army_experience = 25
 		}
 	}
 
@@ -823,8 +846,8 @@ focus_tree = {
 		}
 
 		completion_reward = {
-			add_political_power = 50
-			add_stability = 0.01
+			add_political_power = 60
+			add_stability = 0.03
 		}
 	}
 
@@ -844,8 +867,8 @@ focus_tree = {
 		}
 
 		completion_reward = {
-			army_experience = 20
-			add_political_power = 25
+			add_manpower = 10000
+			army_experience = 25
 		}
 	}
 
@@ -865,8 +888,8 @@ focus_tree = {
 		}
 
 		completion_reward = {
-			add_political_power = 25
-			add_war_support = 0.03
+			add_tech_bonus = { name = TU_KZD_imperial_guard_corps_alt bonus = 0.75 uses = 1 category = construction_tech }
+			army_experience = 25
 		}
 	}
 
@@ -885,8 +908,8 @@ focus_tree = {
 		}
 
 		completion_reward = {
-			army_experience = 15
-			add_political_power = 25
+			add_doctrine_cost_reduction = { name = TU_KZD_veteran_cadres cost_reduction = 0.4 uses = 1 category = land_doctrine }
+			army_experience = 25
 		}
 	}
 
@@ -906,9 +929,9 @@ focus_tree = {
 		}
 
 		completion_reward = {
-			add_political_power = 100
-			add_war_support = 0.05
 			every_country = { news_event = { id = tu_kzd_ev.11 hours = 6 } }
+			add_political_power = 100
+			add_stability = 0.05
 		}
 	}
 
@@ -927,8 +950,8 @@ focus_tree = {
 		}
 
 		completion_reward = {
-			add_political_power = 50
-			add_stability = 0.02
+			add_war_support = 0.03
+			add_stability = 0.03
 		}
 	}
 
@@ -947,8 +970,8 @@ focus_tree = {
 		}
 
 		completion_reward = {
-			add_political_power = 75
-			add_stability = 0.02
+			add_political_power = 60
+			add_stability = 0.03
 		}
 	}
 
@@ -970,8 +993,8 @@ focus_tree = {
 		}
 
 		completion_reward = {
-			add_political_power = 50
-			add_stability = 0.02
+			add_war_support = 0.03
+			add_stability = 0.03
 		}
 	}
 
@@ -991,8 +1014,8 @@ focus_tree = {
 		}
 
 		completion_reward = {
-			army_experience = 15
-			add_stability = 0.01
+			add_tech_bonus = { name = TU_KZD_mountain_watch bonus = 0.75 uses = 1 category = construction_tech }
+			army_experience = 25
 		}
 	}
 
@@ -1012,8 +1035,8 @@ focus_tree = {
 		}
 
 		completion_reward = {
-			army_experience = 20
-			add_war_support = 0.02
+			add_tech_bonus = { name = TU_KZD_plains_mobility bonus = 0.75 uses = 1 category = motorized_equipment }
+			add_doctrine_cost_reduction = { name = TU_KZD_plains_mobility cost_reduction = 0.4 uses = 1 category = land_doctrine }
 		}
 	}
 
@@ -1032,8 +1055,8 @@ focus_tree = {
 		}
 
 		completion_reward = {
-			add_political_power = 25
-			add_stability = 0.02
+			add_tech_bonus = { name = TU_KZD_frontier_walls bonus = 0.75 uses = 1 category = construction_tech }
+			army_experience = 25
 		}
 	}
 
@@ -1053,7 +1076,8 @@ focus_tree = {
 		}
 
 		completion_reward = {
-			add_political_power = 50
+			add_political_power = 60
+			add_tech_bonus = { name = TU_KZD_royal_treasure bonus = 0.75 uses = 1 category = industry }
 		}
 	}
 
@@ -1073,7 +1097,8 @@ focus_tree = {
 		}
 
 		completion_reward = {
-			army_experience = 20
+			add_manpower = 10000
+			army_experience = 25
 		}
 	}
 
@@ -1092,7 +1117,8 @@ focus_tree = {
 		}
 
 		completion_reward = {
-			add_political_power = 50
+			add_political_power = 60
+			add_stability = 0.03
 		}
 	}
 
@@ -1111,6 +1137,7 @@ focus_tree = {
 		}
 
 		completion_reward = {
+			add_doctrine_cost_reduction = { name = TU_KZD_shield_wall cost_reduction = 0.4 uses = 1 category = land_doctrine }
 			army_experience = 25
 		}
 	}
@@ -1130,8 +1157,8 @@ focus_tree = {
 		}
 
 		completion_reward = {
-			add_political_power = 50
-			add_stability = 0.02
+			add_political_power = 60
+			add_stability = 0.03
 		}
 	}
 
@@ -1150,8 +1177,8 @@ focus_tree = {
 		}
 
 		completion_reward = {
-			add_political_power = 50
-			add_stability = 0.03
+			add_tech_bonus = { name = TU_KZD_sacred_bastion bonus = 0.75 uses = 1 category = construction_tech }
+			army_experience = 25
 		}
 	}
 
@@ -1171,9 +1198,9 @@ focus_tree = {
 		}
 
 		completion_reward = {
-			add_political_power = 100
-			add_stability = 0.02
 			every_country = { news_event = { id = tu_kzd_ev.12 hours = 6 } }
+			add_political_power = 100
+			add_stability = 0.05
 		}
 	}
 
@@ -1192,8 +1219,8 @@ focus_tree = {
 		}
 
 		completion_reward = {
-			army_experience = 20
-			add_political_power = 25
+			add_doctrine_cost_reduction = { name = TU_KZD_elite_expansion cost_reduction = 0.4 uses = 1 category = land_doctrine }
+			army_experience = 25
 		}
 	}
 
@@ -1212,8 +1239,8 @@ focus_tree = {
 		}
 
 		completion_reward = {
+			add_doctrine_cost_reduction = { name = TU_KZD_elite_command cost_reduction = 0.4 uses = 1 category = land_doctrine }
 			army_experience = 25
-			add_political_power = 25
 		}
 	}
 
@@ -1232,7 +1259,8 @@ focus_tree = {
 		}
 
 		completion_reward = {
-			army_experience = 30
+			add_tech_bonus = { name = TU_KZD_elite_siege_drill bonus = 0.75 uses = 1 category = artillery }
+			army_experience = 25
 		}
 	}
 
@@ -1251,8 +1279,8 @@ focus_tree = {
 		}
 
 		completion_reward = {
-			add_political_power = 25
-			add_stability = 0.01
+			add_tech_bonus = { name = TU_KZD_quartermaster_corps bonus = 0.75 uses = 1 category = construction_tech }
+			army_experience = 25
 		}
 	}
 
@@ -1272,8 +1300,9 @@ focus_tree = {
 		}
 
 		completion_reward = {
-			add_political_power = 25
-			add_war_support = 0.05
+			army_experience = 25
+			add_war_support = 0.03
+			add_doctrine_cost_reduction = { name = TU_KZD_war_drums cost_reduction = 0.4 uses = 1 category = land_doctrine }
 		}
 	}
 
@@ -1292,8 +1321,8 @@ focus_tree = {
 		}
 
 		completion_reward = {
-			add_political_power = 50
-			add_stability = 0.02
+			add_tech_bonus = { name = TU_KZD_sworn_shields bonus = 0.75 uses = 1 category = construction_tech }
+			army_experience = 25
 		}
 	}
 
@@ -1312,8 +1341,8 @@ focus_tree = {
 		}
 
 		completion_reward = {
-			add_political_power = 50
-			add_stability = 0.01
+			add_tech_bonus = { name = TU_KZD_mountain_citadel bonus = 0.75 uses = 1 category = construction_tech }
+			army_experience = 25
 		}
 	}
 
@@ -1332,7 +1361,9 @@ focus_tree = {
 		}
 
 		completion_reward = {
-			army_experience = 30
+			army_experience = 25
+			add_war_support = 0.03
+			add_doctrine_cost_reduction = { name = TU_KZD_plains_charge cost_reduction = 0.4 uses = 1 category = land_doctrine }
 		}
 	}
 
@@ -1351,7 +1382,8 @@ focus_tree = {
 		}
 
 		completion_reward = {
-			add_political_power = 50
+			add_political_power = 60
+			add_stability = 0.03
 		}
 	}
 
@@ -1371,6 +1403,7 @@ focus_tree = {
 
 		completion_reward = {
 			add_political_power = 100
+			add_stability = 0.05
 		}
 	}
 
@@ -1389,8 +1422,8 @@ focus_tree = {
 		}
 
 		completion_reward = {
-			army_experience = 15
-			add_political_power = 25
+			add_tech_bonus = { name = TU_KZD_pass_garrison bonus = 0.75 uses = 1 category = construction_tech }
+			army_experience = 25
 		}
 	}
 
@@ -1409,8 +1442,8 @@ focus_tree = {
 		}
 
 		completion_reward = {
-			add_political_power = 50
-			add_stability = 0.02
+			add_war_support = 0.03
+			add_stability = 0.03
 		}
 	}
 
@@ -1429,8 +1462,8 @@ focus_tree = {
 		}
 
 		completion_reward = {
-			add_political_power = 25
-			add_stability = 0.01
+			add_manpower = 10000
+			army_experience = 25
 		}
 	}
 
@@ -1449,6 +1482,7 @@ focus_tree = {
 		}
 
 		completion_reward = {
+			add_doctrine_cost_reduction = { name = TU_KZD_plains_drill cost_reduction = 0.4 uses = 1 category = land_doctrine }
 			army_experience = 25
 		}
 	}
@@ -1468,7 +1502,8 @@ focus_tree = {
 		}
 
 		completion_reward = {
-			add_political_power = 25
+			add_tech_bonus = { name = TU_KZD_gate_warden bonus = 0.75 uses = 1 category = construction_tech }
+			army_experience = 25
 		}
 	}
 
@@ -1489,8 +1524,10 @@ focus_tree = {
 		}
 
 		completion_reward = {
-			add_political_power = 25
 			add_ideas = TU_KZD_babel_archives
+			add_tech_bonus = { name = TU_KZD_babel_archive_search bonus = 0.75 uses = 1 category = dd_tech category = ca_tech }
+			add_doctrine_cost_reduction = { name = TU_KZD_babel_archive_search cost_reduction = 0.4 uses = 1 category = naval_doctrine }
+			navy_experience = 25
 		}
 	}
 
@@ -1509,7 +1546,7 @@ focus_tree = {
 		}
 
 		completion_reward = {
-			add_political_power = 25
+			add_tech_bonus = { name = TU_KZD_babel_scribes bonus = 0.75 uses = 1 category = electronics category = industry }
 		}
 	}
 
@@ -1529,9 +1566,8 @@ focus_tree = {
 		}
 
 		completion_reward = {
-			add_political_power = 50
-			add_stability = 0.02
 			TU_build_mil_factory = yes
+			add_tech_bonus = { name = TU_KZD_ancient_engineering bonus = 0.75 uses = 1 category = electronics category = industry }
 		}
 	}
 
@@ -1551,8 +1587,7 @@ focus_tree = {
 		}
 
 		completion_reward = {
-			add_political_power = 50
-			army_experience = 10
+			add_tech_bonus = { name = TU_KZD_arcane_survey bonus = 0.75 uses = 1 category = industry category = construction_tech }
 		}
 	}
 
@@ -1571,8 +1606,7 @@ focus_tree = {
 		}
 
 		completion_reward = {
-			add_political_power = 50
-			add_stability = 0.02
+			add_tech_bonus = { name = TU_KZD_babel_council bonus = 0.75 uses = 1 category = electronics category = industry }
 		}
 	}
 
@@ -1592,8 +1626,8 @@ focus_tree = {
 		}
 
 		completion_reward = {
-			add_political_power = 25
-			add_stability = 0.02
+			add_political_power = 60
+			add_stability = 0.03
 		}
 	}
 
@@ -1613,8 +1647,8 @@ focus_tree = {
 		}
 
 		completion_reward = {
-			add_political_power = 50
-			add_war_support = 0.03
+			add_political_power = 60
+			add_stability = 0.03
 		}
 	}
 
@@ -1633,9 +1667,9 @@ focus_tree = {
 		}
 
 		completion_reward = {
-			add_political_power = 25
 			add_ideas = TU_KZD_babel_workshops
 			TU_build_civ_factory = yes
+			add_tech_bonus = { name = TU_KZD_babel_workshops_restore bonus = 0.75 uses = 1 category = industry category = construction_tech }
 		}
 	}
 
@@ -1655,8 +1689,9 @@ focus_tree = {
 		}
 
 		completion_reward = {
-			add_political_power = 50
 			TU_build_civ_factory = yes
+			add_tech_bonus = { name = TU_KZD_babel_forge bonus = 0.75 uses = 1 category = infantry_weapons }
+			army_experience = 25
 		}
 	}
 
@@ -1676,9 +1711,8 @@ focus_tree = {
 		}
 
 		completion_reward = {
-			add_political_power = 25
-			army_experience = 20
 			TU_build_civ_factory = yes
+			add_tech_bonus = { name = TU_KZD_babel_forge_alt bonus = 0.75 uses = 1 category = electronics category = industry }
 		}
 	}
 
@@ -1698,7 +1732,8 @@ focus_tree = {
 		}
 
 		completion_reward = {
-			add_political_power = 25
+			add_political_power = 60
+			add_tech_bonus = { name = TU_KZD_export_license bonus = 0.75 uses = 1 category = industry }
 		}
 	}
 
@@ -1718,8 +1753,8 @@ focus_tree = {
 		}
 
 		completion_reward = {
-			add_political_power = 50
-			add_stability = 0.02
+			add_political_power = 60
+			add_tech_bonus = { name = TU_KZD_export_ban bonus = 0.75 uses = 1 category = industry }
 		}
 	}
 
@@ -1738,7 +1773,7 @@ focus_tree = {
 		}
 
 		completion_reward = {
-			army_experience = 25
+			add_tech_bonus = { name = TU_KZD_babel_cadets bonus = 0.75 uses = 1 category = electronics category = industry }
 		}
 	}
 
@@ -1757,8 +1792,8 @@ focus_tree = {
 		}
 
 		completion_reward = {
-			army_experience = 20
-			add_political_power = 25
+			add_doctrine_cost_reduction = { name = TU_KZD_babel_war_college cost_reduction = 0.4 uses = 1 category = land_doctrine }
+			army_experience = 25
 		}
 	}
 
@@ -1777,7 +1812,8 @@ focus_tree = {
 		}
 
 		completion_reward = {
-			add_political_power = 50
+			add_political_power = 60
+			add_tech_bonus = { name = TU_KZD_rhodes_trade_fair bonus = 0.75 uses = 1 category = industry }
 		}
 	}
 
@@ -1796,7 +1832,7 @@ focus_tree = {
 		}
 
 		completion_reward = {
-			add_political_power = 50
+			add_tech_bonus = { name = TU_KZD_babel_bank bonus = 0.75 uses = 1 category = electronics category = industry }
 		}
 	}
 
@@ -1816,9 +1852,8 @@ focus_tree = {
 		}
 
 		completion_reward = {
-			add_political_power = 100
-			add_stability = 0.02
 			every_country = { news_event = { id = tu_kzd_ev.13 hours = 6 } }
+			add_tech_bonus = { name = TU_KZD_babel_reborn bonus = 1.0 uses = 1 category = electronics category = industry }
 		}
 	}
 
@@ -1837,8 +1872,8 @@ focus_tree = {
 		}
 
 		completion_reward = {
-			army_experience = 15
-			add_political_power = 25
+			add_tech_bonus = { name = TU_KZD_ancient_gate bonus = 0.75 uses = 1 category = construction_tech }
+			army_experience = 25
 		}
 	}
 
@@ -1857,8 +1892,7 @@ focus_tree = {
 		}
 
 		completion_reward = {
-			add_political_power = 50
-			add_stability = 0.02
+			add_tech_bonus = { name = TU_KZD_babel_sanctum bonus = 0.75 uses = 1 category = electronics category = industry }
 		}
 	}
 
@@ -1877,7 +1911,7 @@ focus_tree = {
 		}
 
 		completion_reward = {
-			add_political_power = 50
+			add_tech_bonus = { name = TU_KZD_babel_mint bonus = 0.75 uses = 1 category = electronics category = industry }
 		}
 	}
 
@@ -1896,7 +1930,9 @@ focus_tree = {
 		}
 
 		completion_reward = {
-			add_political_power = 50
+			add_tech_bonus = { name = TU_KZD_sealed_vault bonus = 0.75 uses = 1 category = dd_tech category = ca_tech }
+			add_doctrine_cost_reduction = { name = TU_KZD_sealed_vault cost_reduction = 0.4 uses = 1 category = naval_doctrine }
+			navy_experience = 25
 		}
 	}
 
@@ -1915,8 +1951,7 @@ focus_tree = {
 		}
 
 		completion_reward = {
-			add_political_power = 25
-			add_stability = 0.02
+			add_tech_bonus = { name = TU_KZD_babel_hymn bonus = 0.75 uses = 1 category = electronics category = industry }
 		}
 	}
 
@@ -1935,8 +1970,8 @@ focus_tree = {
 		}
 
 		completion_reward = {
-			add_political_power = 50
 			TU_build_infrastructure = yes
+			add_tech_bonus = { name = TU_KZD_trade_roads bonus = 0.75 uses = 1 category = industry category = construction_tech }
 		}
 	}
 
@@ -1956,7 +1991,7 @@ focus_tree = {
 		}
 
 		completion_reward = {
-			add_political_power = 25
+			add_tech_bonus = { name = TU_KZD_records_vault bonus = 0.75 uses = 1 category = electronics category = industry }
 		}
 	}
 
@@ -1976,7 +2011,7 @@ focus_tree = {
 		}
 
 		completion_reward = {
-			army_experience = 20
+			add_tech_bonus = { name = TU_KZD_records_vault_alt bonus = 0.75 uses = 1 category = electronics category = industry }
 		}
 	}
 
@@ -1995,8 +2030,7 @@ focus_tree = {
 		}
 
 		completion_reward = {
-			add_political_power = 25
-			add_stability = 0.01
+			add_tech_bonus = { name = TU_KZD_cultural_relic bonus = 0.75 uses = 1 category = electronics category = industry }
 		}
 	}
 
@@ -2015,7 +2049,7 @@ focus_tree = {
 		}
 
 		completion_reward = {
-			add_political_power = 50
+			add_tech_bonus = { name = TU_KZD_babel_legend bonus = 0.75 uses = 1 category = electronics category = industry }
 		}
 	}
 
@@ -2034,7 +2068,7 @@ focus_tree = {
 		}
 
 		completion_reward = {
-			add_political_power = 25
+			add_tech_bonus = { name = TU_KZD_babel_festival bonus = 0.75 uses = 1 category = electronics category = industry }
 		}
 	}
 
@@ -2055,8 +2089,9 @@ focus_tree = {
 		}
 
 		completion_reward = {
-			add_political_power = 50
 			set_country_flag = TU_KZD_merc_kingdom
+			add_manpower = 5000
+			army_experience = 15
 		}
 	}
 
@@ -2075,7 +2110,8 @@ focus_tree = {
 		}
 
 		completion_reward = {
-			add_political_power = 25
+			add_political_power = 60
+			add_tech_bonus = { name = TU_KZD_contract_registry bonus = 0.75 uses = 1 category = industry }
 		}
 	}
 
@@ -2095,8 +2131,9 @@ focus_tree = {
 		}
 
 		completion_reward = {
-			add_political_power = 50
 			set_country_flag = TU_KZD_broker_system
+			add_political_power = 60
+			add_tech_bonus = { name = TU_KZD_broker_offices bonus = 0.75 uses = 1 category = industry }
 		}
 	}
 
@@ -2116,9 +2153,9 @@ focus_tree = {
 		}
 
 		completion_reward = {
-			add_political_power = 25
-			add_stability = 0.02
 			set_country_flag = TU_KZD_direct_hire_system
+			add_political_power = 60
+			add_tech_bonus = { name = TU_KZD_direct_hire bonus = 0.75 uses = 1 category = industry }
 		}
 	}
 
@@ -2137,7 +2174,8 @@ focus_tree = {
 		}
 
 		completion_reward = {
-			add_political_power = 50
+			add_manpower = 10000
+			army_experience = 25
 		}
 	}
 
@@ -2156,9 +2194,9 @@ focus_tree = {
 		}
 
 		completion_reward = {
-			add_political_power = 50
-			add_stability = 0.02
 			set_country_flag = TU_KZD_clan_council_called
+			add_manpower = 10000
+			army_experience = 25
 		}
 	}
 
@@ -2177,7 +2215,8 @@ focus_tree = {
 		}
 
 		completion_reward = {
-			add_political_power = 50
+			add_manpower = 10000
+			army_experience = 25
 		}
 	}
 
@@ -2197,8 +2236,8 @@ focus_tree = {
 		}
 
 		completion_reward = {
-			add_political_power = 50
-			add_stability = 0.03
+			add_manpower = 10000
+			army_experience = 25
 		}
 	}
 
@@ -2218,8 +2257,8 @@ focus_tree = {
 		}
 
 		completion_reward = {
-			add_political_power = 50
-			add_war_support = 0.05
+			add_manpower = 10000
+			army_experience = 25
 		}
 	}
 
@@ -2238,8 +2277,7 @@ focus_tree = {
 		}
 
 		completion_reward = {
-			add_political_power = 50
-			add_stability = 0.01
+			add_tech_bonus = { name = TU_KZD_merc_insurance_focus bonus = 0.75 uses = 1 category = electronics category = industry }
 		}
 	}
 
@@ -2259,9 +2297,8 @@ focus_tree = {
 		}
 
 		completion_reward = {
-			add_political_power = 25
-			add_stability = 0.02
-			army_experience = 15
+			add_doctrine_cost_reduction = { name = TU_KZD_veterans_fund cost_reduction = 0.4 uses = 1 category = land_doctrine }
+			army_experience = 25
 		}
 	}
 
@@ -2281,8 +2318,8 @@ focus_tree = {
 		}
 
 		completion_reward = {
-			add_political_power = 50
-			add_war_support = 0.03
+			add_political_power = 60
+			add_tech_bonus = { name = TU_KZD_war_bonds bonus = 0.75 uses = 1 category = industry }
 		}
 	}
 
@@ -2301,7 +2338,8 @@ focus_tree = {
 		}
 
 		completion_reward = {
-			add_political_power = 75
+			add_political_power = 60
+			add_stability = 0.03
 		}
 	}
 
@@ -2320,8 +2358,8 @@ focus_tree = {
 		}
 
 		completion_reward = {
-			add_political_power = 50
-			army_experience = 20
+			add_war_support = 0.03
+			add_stability = 0.03
 		}
 	}
 
@@ -2340,7 +2378,8 @@ focus_tree = {
 		}
 
 		completion_reward = {
-			add_political_power = 50
+			add_manpower = 10000
+			army_experience = 25
 		}
 	}
 
@@ -2359,7 +2398,8 @@ focus_tree = {
 		}
 
 		completion_reward = {
-			add_political_power = 25
+			add_political_power = 60
+			add_tech_bonus = { name = TU_KZD_wartime_tariff bonus = 0.75 uses = 1 category = industry }
 		}
 	}
 
@@ -2379,7 +2419,8 @@ focus_tree = {
 		}
 
 		completion_reward = {
-			add_political_power = 50
+			add_manpower = 10000
+			army_experience = 25
 		}
 	}
 
@@ -2399,8 +2440,8 @@ focus_tree = {
 		}
 
 		completion_reward = {
-			add_political_power = 25
-			add_stability = 0.01
+			add_political_power = 60
+			add_tech_bonus = { name = TU_KZD_private_vaults bonus = 0.75 uses = 1 category = industry }
 		}
 	}
 
@@ -2420,7 +2461,9 @@ focus_tree = {
 		}
 
 		completion_reward = {
-			add_political_power = 50
+			add_tech_bonus = { name = TU_KZD_contract_fleets bonus = 0.75 uses = 1 category = dd_tech category = ca_tech }
+			add_doctrine_cost_reduction = { name = TU_KZD_contract_fleets cost_reduction = 0.4 uses = 1 category = naval_doctrine }
+			navy_experience = 25
 		}
 	}
 
@@ -2440,8 +2483,8 @@ focus_tree = {
 		}
 
 		completion_reward = {
-			add_political_power = 25
-			add_war_support = 0.03
+			add_political_power = 60
+			add_tech_bonus = { name = TU_KZD_contract_fleets_alt bonus = 0.75 uses = 1 category = industry }
 		}
 	}
 
@@ -2460,8 +2503,8 @@ focus_tree = {
 		}
 
 		completion_reward = {
-			add_political_power = 50
-			add_stability = 0.02
+			add_manpower = 10000
+			army_experience = 25
 		}
 	}
 
@@ -2480,8 +2523,8 @@ focus_tree = {
 		}
 
 		completion_reward = {
-			army_experience = 20
-			add_political_power = 25
+			add_doctrine_cost_reduction = { name = TU_KZD_merc_academy cost_reduction = 0.4 uses = 1 category = land_doctrine }
+			army_experience = 25
 		}
 	}
 
@@ -2500,6 +2543,7 @@ focus_tree = {
 		}
 
 		completion_reward = {
+			add_tech_bonus = { name = TU_KZD_sellsword_doctrine bonus = 0.75 uses = 1 category = infantry_weapons }
 			army_experience = 25
 		}
 	}
@@ -2519,9 +2563,10 @@ focus_tree = {
 		}
 
 		completion_reward = {
-			add_political_power = 100
 			add_ideas = TU_KZD_merc_kingdom_charter
 			country_event = { id = tu_kzd_ev.5 }
+			add_manpower = 20000
+			army_experience = 40
 		}
 	}
 
@@ -2540,7 +2585,9 @@ focus_tree = {
 		}
 
 		completion_reward = {
-			add_political_power = 25
+			add_tech_bonus = { name = TU_KZD_harbor_levy bonus = 0.75 uses = 1 category = dd_tech category = ca_tech }
+			add_doctrine_cost_reduction = { name = TU_KZD_harbor_levy cost_reduction = 0.4 uses = 1 category = naval_doctrine }
+			navy_experience = 25
 		}
 	}
 
@@ -2559,7 +2606,8 @@ focus_tree = {
 		}
 
 		completion_reward = {
-			add_political_power = 50
+			add_manpower = 10000
+			army_experience = 25
 		}
 	}
 
@@ -2579,8 +2627,8 @@ focus_tree = {
 		}
 
 		completion_reward = {
-			add_political_power = 50
-			add_stability = 0.02
+			add_political_power = 60
+			add_tech_bonus = { name = TU_KZD_neutral_charters bonus = 0.75 uses = 1 category = industry }
 		}
 	}
 
@@ -2600,9 +2648,8 @@ focus_tree = {
 		}
 
 		completion_reward = {
-			add_political_power = 50
-			army_experience = 15
-			add_war_support = 0.03
+			add_political_power = 60
+			add_tech_bonus = { name = TU_KZD_war_contracts bonus = 0.75 uses = 1 category = industry }
 		}
 	}
 
@@ -2621,7 +2668,8 @@ focus_tree = {
 		}
 
 		completion_reward = {
-			add_political_power = 50
+			add_political_power = 60
+			add_tech_bonus = { name = TU_KZD_contract_dividend bonus = 0.75 uses = 1 category = industry }
 		}
 	}
 
@@ -2640,8 +2688,8 @@ focus_tree = {
 		}
 
 		completion_reward = {
-			add_political_power = 75
-			add_stability = 0.02
+			add_manpower = 10000
+			army_experience = 25
 		}
 	}
 
@@ -2660,7 +2708,9 @@ focus_tree = {
 		}
 
 		completion_reward = {
-			add_political_power = 25
+			add_tech_bonus = { name = TU_KZD_merc_seal bonus = 0.75 uses = 1 category = dd_tech category = ca_tech }
+			add_doctrine_cost_reduction = { name = TU_KZD_merc_seal cost_reduction = 0.4 uses = 1 category = naval_doctrine }
+			navy_experience = 25
 		}
 	}
 
@@ -2677,8 +2727,8 @@ focus_tree = {
 		search_filters = { FOCUS_FILTER_POLITICAL }
 
 		completion_reward = {
-			add_political_power = 25
-			army_experience = 10
+			add_doctrine_cost_reduction = { name = TU_KZD_exp_doctrine cost_reduction = 0.25 uses = 1 category = land_doctrine }
+			army_experience = 15
 		}
 
 		ai_will_do = {
@@ -2698,7 +2748,8 @@ focus_tree = {
 
 		completion_reward = {
 			set_country_flag = TU_dip_relations_unlocked
-			add_political_power = 50
+			add_political_power = 60
+			add_stability = 0.03
 		}
 
 		ai_will_do = {
@@ -2717,7 +2768,8 @@ focus_tree = {
 		search_filters = { FOCUS_FILTER_POLITICAL }
 
 		completion_reward = {
-			add_political_power = 50
+			add_doctrine_cost_reduction = { name = TU_KZD_exp_hub cost_reduction = 0.4 uses = 1 category = land_doctrine }
+			army_experience = 25
 		}
 
 		ai_will_do = {
@@ -2737,7 +2789,9 @@ focus_tree = {
 
 		completion_reward = {
 			set_country_flag = TU_dip_alliance_unlocked
-			add_political_power = 100
+			add_tech_bonus = { name = TU_KZD_alliance_search bonus = 1.0 uses = 1 category = dd_tech category = ca_tech }
+			add_doctrine_cost_reduction = { name = TU_KZD_alliance_search cost_reduction = 0.5 uses = 1 category = naval_doctrine }
+			navy_experience = 40
 		}
 
 		ai_will_do = {
@@ -2756,8 +2810,8 @@ focus_tree = {
 		search_filters = { FOCUS_FILTER_POLITICAL }
 
 		completion_reward = {
-			add_political_power = 50
-			add_war_support = 0.02
+			add_political_power = 60
+			add_stability = 0.03
 		}
 
 		ai_will_do = {
@@ -2778,7 +2832,7 @@ focus_tree = {
 		search_filters = { FOCUS_FILTER_POLITICAL }
 
 		completion_reward = {
-			add_political_power = 50
+			add_tech_bonus = { name = TU_KZD_envoy_network bonus = 0.75 uses = 1 category = industry category = construction_tech }
 		}
 
 		ai_will_do = {
@@ -2797,8 +2851,7 @@ focus_tree = {
 		search_filters = { FOCUS_FILTER_POLITICAL }
 
 		completion_reward = {
-			add_political_power = 25
-			add_stability = 0.02
+			add_tech_bonus = { name = TU_KZD_trade_routes bonus = 0.75 uses = 1 category = industry category = construction_tech }
 		}
 
 		ai_will_do = {
@@ -2817,7 +2870,8 @@ focus_tree = {
 		search_filters = { FOCUS_FILTER_POLITICAL }
 
 		completion_reward = {
-			add_political_power = 75
+			add_manpower = 10000
+			army_experience = 25
 		}
 
 		ai_will_do = {
@@ -2836,7 +2890,8 @@ focus_tree = {
 		search_filters = { FOCUS_FILTER_POLITICAL }
 
 		completion_reward = {
-			add_political_power = 50
+			add_political_power = 60
+			add_stability = 0.03
 		}
 
 		ai_will_do = {
@@ -2857,7 +2912,8 @@ focus_tree = {
 		search_filters = { FOCUS_FILTER_ARMY_XP }
 
 		completion_reward = {
-			army_experience = 20
+			add_doctrine_cost_reduction = { name = TU_KZD_mil_staff cost_reduction = 0.4 uses = 1 category = land_doctrine }
+			army_experience = 25
 		}
 
 		ai_will_do = {
@@ -2876,7 +2932,8 @@ focus_tree = {
 		search_filters = { FOCUS_FILTER_POLITICAL }
 
 		completion_reward = {
-			add_political_power = 50
+			add_political_power = 60
+			add_stability = 0.03
 		}
 
 		ai_will_do = {
@@ -2895,7 +2952,8 @@ focus_tree = {
 		search_filters = { FOCUS_FILTER_POLITICAL }
 
 		completion_reward = {
-			add_manpower = 30000
+			add_manpower = 10000
+			army_experience = 25
 		}
 
 		ai_will_do = {
@@ -2914,7 +2972,8 @@ focus_tree = {
 		search_filters = { FOCUS_FILTER_ARMY_XP }
 
 		completion_reward = {
-			army_experience = 20
+			add_doctrine_cost_reduction = { name = TU_KZD_mil_training cost_reduction = 0.4 uses = 1 category = land_doctrine }
+			army_experience = 25
 		}
 
 		ai_will_do = {
@@ -2934,8 +2993,8 @@ focus_tree = {
 		search_filters = { FOCUS_FILTER_ARMY_XP }
 
 		completion_reward = {
-			army_experience = 15
-			add_stability = 0.02
+			add_doctrine_cost_reduction = { name = TU_KZD_mil_guard_camp cost_reduction = 0.4 uses = 1 category = land_doctrine }
+			army_experience = 25
 		}
 
 		ai_will_do = {
@@ -2955,7 +3014,8 @@ focus_tree = {
 		search_filters = { FOCUS_FILTER_ARMY_XP }
 
 		completion_reward = {
-			add_political_power = 25
+			add_doctrine_cost_reduction = { name = TU_KZD_mil_guard_camp_alt cost_reduction = 0.4 uses = 1 category = land_doctrine }
+			army_experience = 25
 		}
 
 		ai_will_do = {
@@ -2974,12 +3034,8 @@ focus_tree = {
 		search_filters = { FOCUS_FILTER_RESEARCH }
 
 		completion_reward = {
-			add_tech_bonus = {
-				name = TU_KZD_armor_doctrine_bonus
-				bonus = 1.0
-				uses = 1
-				technology = motorised_infantry
-			}
+			add_tech_bonus = { name = TU_KZD_mil_armor_doctrine bonus = 0.75 uses = 1 category = motorized_equipment }
+			add_doctrine_cost_reduction = { name = TU_KZD_mil_armor_doctrine cost_reduction = 0.4 uses = 1 category = land_doctrine }
 		}
 
 		ai_will_do = {
@@ -2998,8 +3054,8 @@ focus_tree = {
 		search_filters = { FOCUS_FILTER_INDUSTRY }
 
 		completion_reward = {
-			add_political_power = 50
 			TU_build_infrastructure = yes
+			add_tech_bonus = { name = TU_KZD_mil_supply bonus = 0.75 uses = 1 category = industry category = construction_tech }
 		}
 
 		ai_will_do = {
@@ -3018,9 +3074,8 @@ focus_tree = {
 		search_filters = { FOCUS_FILTER_INDUSTRY }
 
 		completion_reward = {
-			add_stability = 0.02
-			add_political_power = 25
 			TU_build_civ_factory = yes
+			add_tech_bonus = { name = TU_KZD_mil_logistics_net bonus = 0.75 uses = 1 category = industry category = construction_tech }
 		}
 
 		ai_will_do = {
@@ -3039,13 +3094,8 @@ focus_tree = {
 		search_filters = { FOCUS_FILTER_ARMY_XP }
 
 		completion_reward = {
-			army_experience = 15
-			add_tech_bonus = {
-				name = TU_KZD_mil_artillery_bonus
-				bonus = 1.0
-				uses = 2
-				category = artillery
-			}
+			add_tech_bonus = { name = TU_KZD_mil_artillery bonus = 0.75 uses = 1 category = artillery }
+			army_experience = 25
 		}
 
 		ai_will_do = {
@@ -3066,7 +3116,8 @@ focus_tree = {
 		search_filters = { FOCUS_FILTER_POLITICAL }
 
 		completion_reward = {
-			add_political_power = 25
+			add_tech_bonus = { name = TU_KZD_vic_intel bonus = 0.75 uses = 1 category = radar_tech category = electronics }
+			add_stability = 0.03
 		}
 
 		ai_will_do = {
@@ -3085,8 +3136,8 @@ focus_tree = {
 		search_filters = { FOCUS_FILTER_POLITICAL }
 
 		completion_reward = {
-			add_political_power = 50
-			add_war_support = 0.02
+			add_political_power = 60
+			add_stability = 0.03
 		}
 
 		ai_will_do = {
@@ -3105,12 +3156,8 @@ focus_tree = {
 		search_filters = { FOCUS_FILTER_RESEARCH }
 
 		completion_reward = {
-			add_tech_bonus = {
-				name = TU_KZD_border_survey_bonus
-				bonus = 0.5
-				uses = 2
-				category = infantry_weapons
-			}
+			add_tech_bonus = { name = TU_KZD_vic_border_survey bonus = 0.75 uses = 1 category = construction_tech }
+			army_experience = 25
 		}
 
 		ai_will_do = {
@@ -3129,7 +3176,8 @@ focus_tree = {
 		search_filters = { FOCUS_FILTER_ARMY_XP }
 
 		completion_reward = {
-			army_experience = 15
+			add_tech_bonus = { name = TU_KZD_vic_mobile_column bonus = 0.75 uses = 1 category = motorized_equipment }
+			add_doctrine_cost_reduction = { name = TU_KZD_vic_mobile_column cost_reduction = 0.4 uses = 1 category = land_doctrine }
 		}
 
 		ai_will_do = {
@@ -3149,8 +3197,9 @@ focus_tree = {
 		search_filters = { FOCUS_FILTER_POLITICAL }
 
 		completion_reward = {
-			add_political_power = 50
+			army_experience = 25
 			add_war_support = 0.03
+			add_doctrine_cost_reduction = { name = TU_KZD_vic_war_plan cost_reduction = 0.4 uses = 1 category = land_doctrine }
 		}
 
 		ai_will_do = {
@@ -3169,8 +3218,9 @@ focus_tree = {
 		search_filters = { FOCUS_FILTER_ARMY_XP }
 
 		completion_reward = {
-			army_experience = 20
 			add_ideas = TU_KZD_p2_steam_counter
+			add_doctrine_cost_reduction = { name = TU_KZD_vic_steam_counter cost_reduction = 0.4 uses = 1 category = land_doctrine }
+			army_experience = 25
 		}
 
 		ai_will_do = {
@@ -3189,7 +3239,8 @@ focus_tree = {
 		search_filters = { FOCUS_FILTER_ARMY_XP }
 
 		completion_reward = {
-			army_experience = 15
+			add_tech_bonus = { name = TU_KZD_vic_siege_drill bonus = 0.75 uses = 1 category = artillery }
+			army_experience = 25
 		}
 
 		ai_will_do = {
@@ -3209,9 +3260,8 @@ focus_tree = {
 		search_filters = { FOCUS_FILTER_POLITICAL }
 
 		completion_reward = {
-			add_political_power = 50
-			add_stability = 0.02
-			add_stability = 0.02
+			add_political_power = 60
+			add_stability = 0.03
 		}
 
 		ai_will_do = {
@@ -3230,7 +3280,8 @@ focus_tree = {
 		search_filters = { FOCUS_FILTER_POLITICAL }
 
 		completion_reward = {
-			add_political_power = 75
+			add_political_power = 60
+			add_stability = 0.03
 		}
 
 		ai_will_do = {
@@ -3249,7 +3300,9 @@ focus_tree = {
 		search_filters = { FOCUS_FILTER_POLITICAL }
 
 		completion_reward = {
-			add_political_power = 50
+			army_experience = 25
+			add_war_support = 0.03
+			add_doctrine_cost_reduction = { name = TU_KZD_vic_london_admin cost_reduction = 0.4 uses = 1 category = land_doctrine }
 		}
 
 		ai_will_do = {
@@ -3268,7 +3321,9 @@ focus_tree = {
 		search_filters = { FOCUS_FILTER_ARMY_XP }
 
 		completion_reward = {
-			army_experience = 25
+			add_tech_bonus = { name = TU_KZD_vic_landing bonus = 1.0 uses = 1 category = dd_tech category = ca_tech }
+			add_doctrine_cost_reduction = { name = TU_KZD_vic_landing cost_reduction = 0.5 uses = 1 category = naval_doctrine }
+			navy_experience = 40
 		}
 
 		ai_will_do = {
@@ -3287,7 +3342,9 @@ focus_tree = {
 		search_filters = { FOCUS_FILTER_POLITICAL }
 
 		completion_reward = {
-			add_political_power = 75
+			army_experience = 25
+			add_war_support = 0.03
+			add_doctrine_cost_reduction = { name = TU_KZD_vic_occupation cost_reduction = 0.4 uses = 1 category = land_doctrine }
 		}
 
 		ai_will_do = {
@@ -3306,8 +3363,8 @@ focus_tree = {
 		search_filters = { FOCUS_FILTER_POLITICAL }
 
 		completion_reward = {
-			add_political_power = 50
-			add_stability = 0.02
+			add_political_power = 60
+			add_stability = 0.03
 		}
 
 		ai_will_do = {
@@ -3326,8 +3383,10 @@ focus_tree = {
 		search_filters = { FOCUS_FILTER_ARMY_XP }
 
 		completion_reward = {
-			army_experience = 20
 			country_event = { id = tu_kzd_ev.6 }
+			army_experience = 25
+			add_war_support = 0.03
+			add_doctrine_cost_reduction = { name = TU_KZD_vic_march_on_london cost_reduction = 0.4 uses = 1 category = land_doctrine }
 		}
 
 		ai_will_do = {
@@ -3348,7 +3407,8 @@ focus_tree = {
 		search_filters = { FOCUS_FILTER_POLITICAL }
 
 		completion_reward = {
-			add_political_power = 25
+			add_political_power = 60
+			add_stability = 0.03
 		}
 
 		ai_will_do = {
@@ -3367,8 +3427,8 @@ focus_tree = {
 		search_filters = { FOCUS_FILTER_POLITICAL }
 
 		completion_reward = {
-			add_political_power = 50
-			add_war_support = 0.02
+			add_political_power = 60
+			add_stability = 0.03
 		}
 
 		ai_will_do = {
@@ -3387,8 +3447,8 @@ focus_tree = {
 		search_filters = { FOCUS_FILTER_ARMY_XP }
 
 		completion_reward = {
-			army_experience = 15
-			add_manpower = 20000
+			add_manpower = 10000
+			army_experience = 25
 		}
 
 		ai_will_do = {
@@ -3408,7 +3468,9 @@ focus_tree = {
 		search_filters = { FOCUS_FILTER_POLITICAL }
 
 		completion_reward = {
-			add_political_power = 50
+			army_experience = 25
+			add_war_support = 0.03
+			add_doctrine_cost_reduction = { name = TU_KZD_ursus_war cost_reduction = 0.4 uses = 1 category = land_doctrine }
 		}
 
 		ai_will_do = {
@@ -3427,7 +3489,8 @@ focus_tree = {
 		search_filters = { FOCUS_FILTER_ARMY_XP }
 
 		completion_reward = {
-			army_experience = 20
+			add_doctrine_cost_reduction = { name = TU_KZD_ursus_winter cost_reduction = 0.4 uses = 1 category = land_doctrine }
+			army_experience = 25
 		}
 
 		ai_will_do = {
@@ -3446,8 +3509,8 @@ focus_tree = {
 		search_filters = { FOCUS_FILTER_POLITICAL }
 
 		completion_reward = {
-			add_political_power = 50
-			add_stability = 0.03
+			add_tech_bonus = { name = TU_KZD_ursus_frontier_pact bonus = 0.75 uses = 1 category = construction_tech }
+			army_experience = 25
 		}
 
 		ai_will_do = {
@@ -3467,7 +3530,8 @@ focus_tree = {
 		search_filters = { FOCUS_FILTER_POLITICAL }
 
 		completion_reward = {
-			add_political_power = 50
+			add_tech_bonus = { name = TU_KZD_ursus_border_treaty bonus = 0.75 uses = 1 category = construction_tech }
+			army_experience = 25
 		}
 
 		ai_will_do = {
@@ -3486,12 +3550,8 @@ focus_tree = {
 		search_filters = { FOCUS_FILTER_RESEARCH }
 
 		completion_reward = {
-			add_tech_bonus = {
-				name = TU_KZD_ursus_exchange_bonus
-				bonus = 1.0
-				uses = 2
-				category = artillery
-			}
+			add_political_power = 60
+			add_stability = 0.03
 		}
 
 		ai_will_do = {
@@ -3510,8 +3570,9 @@ focus_tree = {
 		search_filters = { FOCUS_FILTER_INDUSTRY }
 
 		completion_reward = {
-			add_political_power = 50
 			TU_build_mil_factory = yes
+			add_tech_bonus = { name = TU_KZD_ursus_arms_coop bonus = 0.75 uses = 1 category = infantry_weapons }
+			army_experience = 25
 		}
 
 		ai_will_do = {
@@ -3530,7 +3591,8 @@ focus_tree = {
 		search_filters = { FOCUS_FILTER_ARMY_XP }
 
 		completion_reward = {
-			army_experience = 20
+			add_tech_bonus = { name = TU_KZD_ursus_joint_drill bonus = 0.75 uses = 1 category = motorized_equipment }
+			add_doctrine_cost_reduction = { name = TU_KZD_ursus_joint_drill cost_reduction = 0.4 uses = 1 category = land_doctrine }
 		}
 
 		ai_will_do = {
@@ -3550,6 +3612,8 @@ focus_tree = {
 
 		completion_reward = {
 			army_experience = 25
+			add_war_support = 0.03
+			add_doctrine_cost_reduction = { name = TU_KZD_ursus_expedition cost_reduction = 0.4 uses = 1 category = land_doctrine }
 		}
 
 		ai_will_do = {
@@ -3568,7 +3632,8 @@ focus_tree = {
 		search_filters = { FOCUS_FILTER_POLITICAL }
 
 		completion_reward = {
-			add_political_power = 50
+			add_political_power = 60
+			add_stability = 0.03
 		}
 
 		ai_will_do = {
@@ -3589,7 +3654,8 @@ focus_tree = {
 		search_filters = { FOCUS_FILTER_POLITICAL }
 
 		completion_reward = {
-			add_political_power = 25
+			add_political_power = 60
+			add_stability = 0.03
 		}
 
 		ai_will_do = {
@@ -3608,7 +3674,8 @@ focus_tree = {
 		search_filters = { FOCUS_FILTER_POLITICAL }
 
 		completion_reward = {
-			add_political_power = 50
+			add_tech_bonus = { name = TU_KZD_lei_claims bonus = 0.75 uses = 1 category = construction_tech }
+			army_experience = 25
 		}
 
 		ai_will_do = {
@@ -3627,7 +3694,8 @@ focus_tree = {
 		search_filters = { FOCUS_FILTER_ARMY_XP }
 
 		completion_reward = {
-			army_experience = 15
+			add_manpower = 10000
+			army_experience = 25
 		}
 
 		ai_will_do = {
@@ -3647,7 +3715,8 @@ focus_tree = {
 		search_filters = { FOCUS_FILTER_POLITICAL }
 
 		completion_reward = {
-			add_political_power = 50
+			add_political_power = 60
+			add_stability = 0.03
 		}
 
 		ai_will_do = {
@@ -3667,8 +3736,8 @@ focus_tree = {
 		search_filters = { FOCUS_FILTER_POLITICAL }
 
 		completion_reward = {
-			add_political_power = 50
-			add_stability = 0.02
+			add_political_power = 60
+			add_stability = 0.03
 		}
 
 		ai_will_do = {
@@ -3687,7 +3756,8 @@ focus_tree = {
 		search_filters = { FOCUS_FILTER_POLITICAL }
 
 		completion_reward = {
-			add_political_power = 50
+			add_stability = 0.03
+			add_manpower = 10000
 		}
 
 		ai_will_do = {
@@ -3706,8 +3776,10 @@ focus_tree = {
 		search_filters = { FOCUS_FILTER_INDUSTRY }
 
 		completion_reward = {
-			add_political_power = 25
 			TU_build_dockyard = yes
+			add_tech_bonus = { name = TU_KZD_lei_harbor bonus = 0.75 uses = 1 category = dd_tech category = ca_tech }
+			add_doctrine_cost_reduction = { name = TU_KZD_lei_harbor cost_reduction = 0.4 uses = 1 category = naval_doctrine }
+			navy_experience = 25
 		}
 
 		ai_will_do = {
@@ -3726,7 +3798,8 @@ focus_tree = {
 		search_filters = { FOCUS_FILTER_ARMY_XP }
 
 		completion_reward = {
-			army_experience = 25
+			add_tech_bonus = { name = TU_KZD_lei_armor_raid bonus = 0.75 uses = 1 category = armor }
+			add_doctrine_cost_reduction = { name = TU_KZD_lei_armor_raid cost_reduction = 0.4 uses = 1 category = land_doctrine }
 		}
 
 		ai_will_do = {
@@ -3745,7 +3818,9 @@ focus_tree = {
 		search_filters = { FOCUS_FILTER_POLITICAL }
 
 		completion_reward = {
-			add_political_power = 75
+			army_experience = 25
+			add_war_support = 0.03
+			add_doctrine_cost_reduction = { name = TU_KZD_lei_occupation cost_reduction = 0.4 uses = 1 category = land_doctrine }
 		}
 
 		ai_will_do = {
@@ -3766,7 +3841,8 @@ focus_tree = {
 		search_filters = { FOCUS_FILTER_RESEARCH }
 
 		completion_reward = {
-			add_political_power = 25
+			add_tech_bonus = { name = TU_KZD_reu_survey bonus = 0.75 uses = 1 category = radar_tech category = electronics }
+			add_stability = 0.03
 		}
 
 		ai_will_do = {
@@ -3785,7 +3861,8 @@ focus_tree = {
 		search_filters = { FOCUS_FILTER_POLITICAL }
 
 		completion_reward = {
-			add_political_power = 50
+			add_political_power = 60
+			add_stability = 0.03
 		}
 
 		ai_will_do = {
@@ -3804,7 +3881,9 @@ focus_tree = {
 		search_filters = { FOCUS_FILTER_POLITICAL }
 
 		completion_reward = {
-			add_political_power = 50
+			army_experience = 25
+			add_war_support = 0.03
+			add_doctrine_cost_reduction = { name = TU_KZD_reu_war cost_reduction = 0.4 uses = 1 category = land_doctrine }
 		}
 
 		ai_will_do = {
@@ -3823,8 +3902,8 @@ focus_tree = {
 		search_filters = { FOCUS_FILTER_POLITICAL }
 
 		completion_reward = {
-			add_political_power = 25
-			add_stability = 0.02
+			add_stability = 0.03
+			add_manpower = 10000
 		}
 
 		ai_will_do = {
@@ -3843,8 +3922,8 @@ focus_tree = {
 		search_filters = { FOCUS_FILTER_INDUSTRY }
 
 		completion_reward = {
-			add_political_power = 50
 			TU_build_civ_factory = yes
+			add_tech_bonus = { name = TU_KZD_reu_supply_hub bonus = 0.75 uses = 1 category = industry category = construction_tech }
 		}
 
 		ai_will_do = {
@@ -3863,7 +3942,8 @@ focus_tree = {
 		search_filters = { FOCUS_FILTER_RESEARCH }
 
 		completion_reward = {
-			add_stability = 0.02
+			add_stability = 0.03
+			add_manpower = 10000
 		}
 
 		ai_will_do = {
@@ -3882,7 +3962,9 @@ focus_tree = {
 		search_filters = { FOCUS_FILTER_ARMY_XP }
 
 		completion_reward = {
-			army_experience = 20
+			army_experience = 25
+			add_war_support = 0.03
+			add_doctrine_cost_reduction = { name = TU_KZD_reu_occupation cost_reduction = 0.4 uses = 1 category = land_doctrine }
 		}
 
 		ai_will_do = {
@@ -3901,7 +3983,8 @@ focus_tree = {
 		search_filters = { FOCUS_FILTER_POLITICAL }
 
 		completion_reward = {
-			add_political_power = 75
+			add_political_power = 60
+			add_stability = 0.03
 		}
 
 		ai_will_do = {
@@ -3922,9 +4005,9 @@ focus_tree = {
 		search_filters = { FOCUS_FILTER_ARMY_XP }
 
 		completion_reward = {
-			add_political_power = 25
-			army_experience = 10
 			country_event = { id = tu_kzd_ev.7 }
+			add_manpower = 5000
+			army_experience = 15
 		}
 
 		ai_will_do = {
@@ -3944,9 +4027,10 @@ focus_tree = {
 		search_filters = { FOCUS_FILTER_ARMY_XP }
 
 		completion_reward = {
-			army_experience = 20
 			add_ideas = TU_KZD_p2_vampire_blood
 			country_event = { id = tu_kzd_ev.8 }
+			add_war_support = 0.03
+			add_stability = 0.03
 		}
 
 		ai_will_do = {
@@ -3965,7 +4049,8 @@ focus_tree = {
 		search_filters = { FOCUS_FILTER_ARMY_XP }
 
 		completion_reward = {
-			army_experience = 20
+			add_tech_bonus = { name = TU_KZD_vampire_night_raid bonus = 0.75 uses = 1 category = motorized_equipment }
+			add_doctrine_cost_reduction = { name = TU_KZD_vampire_night_raid cost_reduction = 0.4 uses = 1 category = land_doctrine }
 		}
 
 		ai_will_do = {
@@ -3984,12 +4069,12 @@ focus_tree = {
 		search_filters = { FOCUS_FILTER_ARMY_XP }
 
 		completion_reward = {
-			army_experience = 25
-			add_political_power = 100
 			set_division_template_lock = {
 				division_template = "TU_KZD_elite_guard"
 				is_locked = no
 			}
+			add_manpower = 20000
+			army_experience = 40
 		}
 
 		ai_will_do = {
@@ -4008,8 +4093,8 @@ focus_tree = {
 		search_filters = { FOCUS_FILTER_POLITICAL }
 
 		completion_reward = {
-			add_political_power = 50
-			add_manpower = 15000
+			add_manpower = 10000
+			army_experience = 25
 		}
 
 		ai_will_do = {
@@ -4029,8 +4114,9 @@ focus_tree = {
 		search_filters = { FOCUS_FILTER_ARMY_XP }
 
 		completion_reward = {
-			army_experience = 20
 			country_event = { id = tu_kzd_ev.9 }
+			add_war_support = 0.03
+			add_stability = 0.03
 		}
 
 		ai_will_do = {
@@ -4049,12 +4135,8 @@ focus_tree = {
 		search_filters = { FOCUS_FILTER_RESEARCH }
 
 		completion_reward = {
-			add_tech_bonus = {
-				name = TU_KZD_snow_tactics_bonus
-				bonus = 1.0
-				uses = 2
-				category = infantry_weapons
-			}
+			add_doctrine_cost_reduction = { name = TU_KZD_wendigo_snow_tactics cost_reduction = 0.4 uses = 1 category = land_doctrine }
+			army_experience = 25
 		}
 
 		ai_will_do = {
@@ -4073,8 +4155,9 @@ focus_tree = {
 		search_filters = { FOCUS_FILTER_ARMY_XP }
 
 		completion_reward = {
-			army_experience = 25
 			add_ideas = TU_KZD_p2_wendigo_pack
+			add_manpower = 10000
+			army_experience = 25
 		}
 
 		ai_will_do = {
@@ -4093,8 +4176,9 @@ focus_tree = {
 		search_filters = { FOCUS_FILTER_POLITICAL }
 
 		completion_reward = {
-			add_political_power = 100
-			add_manpower = 20000
+			army_experience = 40
+			add_war_support = 0.05
+			add_doctrine_cost_reduction = { name = TU_KZD_wendigo_hunters cost_reduction = 0.5 uses = 1 category = land_doctrine }
 		}
 
 		ai_will_do = {
@@ -4114,9 +4198,9 @@ focus_tree = {
 		search_filters = { FOCUS_FILTER_RESEARCH }
 
 		completion_reward = {
-			army_experience = 15
-			add_political_power = 25
 			country_event = { id = tu_kzd_ev.10 }
+			add_war_support = 0.03
+			add_stability = 0.03
 		}
 
 		ai_will_do = {
@@ -4135,12 +4219,8 @@ focus_tree = {
 		search_filters = { FOCUS_FILTER_RESEARCH }
 
 		completion_reward = {
-			add_tech_bonus = {
-				name = TU_KZD_banshee_signal_bonus
-				bonus = 1.0
-				uses = 2
-				category = artillery
-			}
+			add_tech_bonus = { name = TU_KZD_banshee_signal bonus = 0.75 uses = 1 category = radar_tech category = electronics }
+			add_stability = 0.03
 		}
 
 		ai_will_do = {
@@ -4159,8 +4239,9 @@ focus_tree = {
 		search_filters = { FOCUS_FILTER_ARMY_XP }
 
 		completion_reward = {
-			army_experience = 20
 			add_ideas = TU_KZD_p2_banshee_chorus
+			add_war_support = 0.03
+			add_stability = 0.03
 		}
 
 		ai_will_do = {
@@ -4180,6 +4261,7 @@ focus_tree = {
 
 		completion_reward = {
 			add_political_power = 100
+			add_stability = 0.05
 		}
 
 		ai_will_do = {
@@ -4198,8 +4280,8 @@ focus_tree = {
 		search_filters = { FOCUS_FILTER_POLITICAL }
 
 		completion_reward = {
-			add_political_power = 100
-			add_stability = 0.03
+			add_doctrine_cost_reduction = { name = TU_KZD_sarkaz_unity cost_reduction = 0.5 uses = 1 category = land_doctrine }
+			army_experience = 40
 		}
 
 		ai_will_do = {
@@ -4218,7 +4300,8 @@ focus_tree = {
 		search_filters = { FOCUS_FILTER_POLITICAL }
 
 		completion_reward = {
-			add_political_power = 50
+			add_war_support = 0.03
+			add_stability = 0.03
 		}
 
 		ai_will_do = {
@@ -4239,7 +4322,8 @@ focus_tree = {
 		search_filters = { FOCUS_FILTER_POLITICAL }
 
 		completion_reward = {
-			add_political_power = 25
+			add_tech_bonus = { name = TU_KZD_fort_design bonus = 0.75 uses = 1 category = construction_tech }
+			army_experience = 25
 		}
 
 		ai_will_do = {
@@ -4258,12 +4342,7 @@ focus_tree = {
 		search_filters = { FOCUS_FILTER_RESEARCH }
 
 		completion_reward = {
-			add_tech_bonus = {
-				name = TU_KZD_fort_survey_bonus
-				bonus = 0.5
-				uses = 2
-				category = infantry_weapons
-			}
+			add_tech_bonus = { name = TU_KZD_fort_survey bonus = 0.75 uses = 1 category = industry category = construction_tech }
 		}
 
 		ai_will_do = {
@@ -4282,8 +4361,9 @@ focus_tree = {
 		search_filters = { FOCUS_FILTER_POLITICAL }
 
 		completion_reward = {
-			add_political_power = 50
 			add_ideas = TU_KZD_p2_wasteland_fortress
+			add_tech_bonus = { name = TU_KZD_fort_wasteland_bunker bonus = 0.75 uses = 1 category = construction_tech }
+			army_experience = 25
 		}
 
 		ai_will_do = {
@@ -4302,8 +4382,8 @@ focus_tree = {
 		search_filters = { FOCUS_FILTER_INDUSTRY }
 
 		completion_reward = {
-			add_political_power = 25
 			TU_build_mil_factory = yes
+			add_tech_bonus = { name = TU_KZD_fort_factory_camps bonus = 0.75 uses = 1 category = industry category = construction_tech }
 		}
 
 		ai_will_do = {
@@ -4322,7 +4402,8 @@ focus_tree = {
 		search_filters = { FOCUS_FILTER_ARMY_XP }
 
 		completion_reward = {
-			army_experience = 15
+			add_tech_bonus = { name = TU_KZD_fort_mountain_defence bonus = 0.75 uses = 1 category = construction_tech }
+			army_experience = 25
 		}
 
 		ai_will_do = {
@@ -4341,9 +4422,9 @@ focus_tree = {
 		search_filters = { FOCUS_FILTER_INDUSTRY }
 
 		completion_reward = {
-			add_political_power = 25
-			add_stability = 0.02
 			TU_build_infrastructure = yes
+			add_tech_bonus = { name = TU_KZD_fort_supply bonus = 0.75 uses = 1 category = construction_tech }
+			army_experience = 25
 		}
 
 		ai_will_do = {
@@ -4362,7 +4443,8 @@ focus_tree = {
 		search_filters = { FOCUS_FILTER_POLITICAL }
 
 		completion_reward = {
-			add_political_power = 50
+			add_tech_bonus = { name = TU_KZD_fort_garrison bonus = 0.75 uses = 1 category = construction_tech }
+			army_experience = 25
 		}
 
 		ai_will_do = {
@@ -4381,7 +4463,8 @@ focus_tree = {
 		search_filters = { FOCUS_FILTER_ARMY_XP }
 
 		completion_reward = {
-			army_experience = 20
+			add_doctrine_cost_reduction = { name = TU_KZD_fort_ambush cost_reduction = 0.4 uses = 1 category = land_doctrine }
+			army_experience = 25
 		}
 
 		ai_will_do = {
@@ -4400,8 +4483,9 @@ focus_tree = {
 		search_filters = { FOCUS_FILTER_ARMY_XP }
 
 		completion_reward = {
-			army_experience = 20
 			add_ideas = TU_KZD_p2_wasteland_guerilla
+			add_doctrine_cost_reduction = { name = TU_KZD_fort_guerilla cost_reduction = 0.4 uses = 1 category = land_doctrine }
+			army_experience = 25
 		}
 
 		ai_will_do = {
@@ -4420,8 +4504,8 @@ focus_tree = {
 		search_filters = { FOCUS_FILTER_POLITICAL }
 
 		completion_reward = {
-			add_political_power = 75
-			add_stability = 0.02
+			add_tech_bonus = { name = TU_KZD_fort_frontier_wall bonus = 1.0 uses = 1 category = construction_tech }
+			army_experience = 40
 		}
 
 		ai_will_do = {
@@ -4440,8 +4524,9 @@ focus_tree = {
 		search_filters = { FOCUS_FILTER_INDUSTRY }
 
 		completion_reward = {
-			add_political_power = 50
 			TU_build_mil_factory = yes
+			add_political_power = 60
+			add_stability = 0.03
 		}
 
 		ai_will_do = {
@@ -4460,7 +4545,8 @@ focus_tree = {
 		search_filters = { FOCUS_FILTER_POLITICAL }
 
 		completion_reward = {
-			add_political_power = 25
+			add_tech_bonus = { name = TU_KZD_fort_watchtower bonus = 0.75 uses = 1 category = construction_tech }
+			army_experience = 25
 		}
 
 		ai_will_do = {
@@ -4480,8 +4566,8 @@ focus_tree = {
 		search_filters = { FOCUS_FILTER_INDUSTRY }
 
 		completion_reward = {
-			add_political_power = 50
 			TU_build_civ_factory = yes
+			add_tech_bonus = { name = TU_KZD_fort_resource_dig bonus = 0.75 uses = 1 category = industry category = construction_tech }
 		}
 
 		ai_will_do = {
@@ -4501,9 +4587,9 @@ focus_tree = {
 		search_filters = { FOCUS_FILTER_INDUSTRY }
 
 		completion_reward = {
-			add_political_power = 25
-			army_experience = 20
 			TU_build_infrastructure = yes
+			add_tech_bonus = { name = TU_KZD_fort_resource_dig_alt bonus = 0.75 uses = 1 category = construction_tech }
+			army_experience = 25
 		}
 
 		ai_will_do = {

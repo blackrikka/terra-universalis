@@ -1,0 +1,56 @@
+ideas = {
+
+	country = {
+
+		TU_BOL_idea_politics = {
+			picture = generic_flexible_foreign_policy
+
+			allowed = {
+				original_tag = BOL
+			}
+
+			modifier = {
+				political_power_gain = 0.1
+				stability_factor = 0.03
+			}
+		}
+
+		TU_BOL_idea_military = {
+			picture = generic_manpower_bonus
+
+			allowed = {
+				original_tag = BOL
+			}
+
+			modifier = {
+				conscription_factor = 0.05
+			}
+		}
+
+		TU_BOL_idea_recovery = {
+			picture = generic_morale_bonus
+
+			allowed = {
+				original_tag = BOL
+			}
+
+			modifier = {
+				stability_factor = 0.05
+				monthly_population = 0.1
+			}
+		}
+
+		TU_BOL_idea_economy = {
+			picture = generic_production_bonus
+
+			allowed = {
+				original_tag = BOL
+			}
+
+			modifier = {
+				production_factory_max_efficiency_factor = 0.05
+				production_speed_buildings_factor = 0.05
+			}
+		}
+	}
+}

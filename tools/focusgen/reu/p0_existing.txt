@@ -24,7 +24,8 @@
 		search_filters = { FOCUS_FILTER_RESEARCH }
 
 		completion_reward = {
-			add_manpower = 30000
+			add_manpower = 5000
+			army_experience = 15
 		}
 	}
 
@@ -42,7 +43,8 @@
 
 		completion_reward = {
 			country_event = { id = tu_reu_ev.1 }
-			add_political_power = 25
+			add_political_power = 35
+			add_stability = 0.02
 		}
 	}
 
@@ -57,6 +59,7 @@
 		search_filters = { FOCUS_FILTER_ARMY_XP }
 
 		completion_reward = {
+			add_manpower = 10000
 			army_experience = 25
 		}
 	}
@@ -73,6 +76,8 @@
 
 		completion_reward = {
 			army_experience = 25
+			add_war_support = 0.03
+			add_doctrine_cost_reduction = { name = TU_REU_serpent_march cost_reduction = 0.4 uses = 1 category = land_doctrine }
 		}
 	}
 
@@ -95,7 +100,9 @@
 		completion_reward = {
 			country_event = { id = tu_reu_ev.2 }
 			add_ideas = TU_REU_serpent_doctrine
-			add_political_power = 25
+			army_experience = 25
+			add_war_support = 0.03
+			add_doctrine_cost_reduction = { name = TU_REU_serpent_conquest cost_reduction = 0.4 uses = 1 category = land_doctrine }
 		}
 	}
 
@@ -112,7 +119,8 @@
 		search_filters = { FOCUS_FILTER_POLITICAL }
 
 		completion_reward = {
-			add_political_power = 25
+			add_political_power = 35
+			add_stability = 0.02
 		}
 	}
 
@@ -127,9 +135,9 @@
 		search_filters = { FOCUS_FILTER_INDUSTRY }
 
 		completion_reward = {
-			add_manpower = 20000
-			add_stability = 0.03
 			TU_build_civ_factory = yes
+			add_stability = 0.03
+			add_manpower = 10000
 		}
 	}
 
@@ -147,6 +155,8 @@
 			every_country = { news_event = { id = tu_reu_ev.8 days = 0 } }
 			recruit_character = TU_REU_patriot_leader
 			promote_character = TU_REU_patriot_leader
+			add_war_support = 0.03
+			add_stability = 0.03
 		}
 	}
 
@@ -169,6 +179,7 @@
 		completion_reward = {
 			country_event = { id = tu_reu_ev.3 }
 			add_ideas = TU_REU_frost_bastion
-			add_stability = 0.03
+			add_tech_bonus = { name = TU_REU_frost_fortress bonus = 0.75 uses = 1 category = construction_tech }
+			army_experience = 25
 		}
 	}

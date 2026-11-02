@@ -13,8 +13,9 @@
 		prerequisite = { focus = TU_RHO_chernobog_rescue }
 
 		completion_reward = {
-			add_political_power = 50
 			set_country_flag = TU_RHO_med_started
+			add_stability = 0.02
+			add_manpower = 5000
 		}
 
 		ai_will_do = {
@@ -32,8 +33,8 @@
 		prerequisite = { focus = TU_RHO_med_start }
 
 		completion_reward = {
-			add_political_power = 40
-			add_stability = 0.02
+			add_stability = 0.03
+			add_manpower = 10000
 		}
 
 		ai_will_do = {
@@ -51,8 +52,8 @@
 		prerequisite = { focus = TU_RHO_med_sample }
 
 		completion_reward = {
-			add_political_power = 50
 			add_ideas = TU_RHO_med_research_bonus
+			add_tech_bonus = { name = TU_RHO_med_crystal bonus = 0.75 uses = 1 category = electronics category = industry }
 		}
 
 		ai_will_do = {
@@ -71,8 +72,9 @@
 		mutually_exclusive = { focus = TU_RHO_enh_track }
 
 		completion_reward = {
-			add_political_power = 50
 			set_country_flag = TU_RHO_cure_track
+			add_stability = 0.03
+			add_manpower = 10000
 		}
 
 		ai_will_do = {
@@ -91,8 +93,9 @@
 		mutually_exclusive = { focus = TU_RHO_cure_track }
 
 		completion_reward = {
-			add_political_power = 50
 			set_country_flag = TU_RHO_enh_track
+			add_political_power = 60
+			add_stability = 0.03
 		}
 
 		ai_will_do = {
@@ -110,7 +113,8 @@
 		prerequisite = { focus = TU_RHO_cure_track }
 
 		completion_reward = {
-			add_political_power = 50
+			add_stability = 0.03
+			add_manpower = 10000
 		}
 
 		ai_will_do = {
@@ -128,8 +132,8 @@
 		prerequisite = { focus = TU_RHO_cure_prototype }
 
 		completion_reward = {
-			add_political_power = 50
-			add_stability = 0.02
+			add_stability = 0.03
+			add_manpower = 10000
 		}
 
 		ai_will_do = {
@@ -147,8 +151,9 @@
 		prerequisite = { focus = TU_RHO_cure_trial }
 
 		completion_reward = {
-			add_political_power = 75
 			add_ideas = TU_RHO_med_mass_production
+			add_stability = 0.03
+			add_manpower = 10000
 		}
 
 		ai_will_do = {
@@ -166,9 +171,10 @@
 		prerequisite = { focus = TU_RHO_cure_mass }
 
 		completion_reward = {
-			add_political_power = 100
 			add_ideas = TU_RHO_clinic_network
 			TU_build_civ_factory = yes
+			add_stability = 0.05
+			add_manpower = 20000
 		}
 
 		ai_will_do = {
@@ -186,7 +192,7 @@
 		prerequisite = { focus = TU_RHO_enh_track }
 
 		completion_reward = {
-			add_political_power = 50
+			add_tech_bonus = { name = TU_RHO_enh_lab bonus = 0.75 uses = 1 category = electronics category = industry }
 		}
 
 		ai_will_do = {
@@ -204,8 +210,7 @@
 		prerequisite = { focus = TU_RHO_enh_lab }
 
 		completion_reward = {
-			add_political_power = 50
-			army_experience = 20
+			add_tech_bonus = { name = TU_RHO_enh_serum bonus = 0.75 uses = 1 category = electronics category = industry }
 		}
 
 		ai_will_do = {
@@ -223,8 +228,9 @@
 		prerequisite = { focus = TU_RHO_enh_serum }
 
 		completion_reward = {
-			add_political_power = 75
 			add_ideas = TU_RHO_enhanced_squad
+			add_manpower = 10000
+			army_experience = 25
 		}
 
 		ai_will_do = {
@@ -242,9 +248,9 @@
 		prerequisite = { focus = TU_RHO_enh_squad }
 
 		completion_reward = {
-			add_political_power = 100
 			add_ideas = TU_RHO_ethics_breach
 			country_event = { id = tu_rho_ev.6 }
+			add_tech_bonus = { name = TU_RHO_enh_ethics bonus = 1.0 uses = 1 category = electronics category = industry }
 		}
 
 		ai_will_do = {
@@ -262,7 +268,8 @@
 		prerequisite = { focus = TU_RHO_cure_clinic focus = TU_RHO_enh_ethics }
 
 		completion_reward = {
-			add_political_power = 60
+			add_stability = 0.03
+			add_manpower = 10000
 		}
 
 		ai_will_do = {
@@ -280,8 +287,8 @@
 		prerequisite = { focus = TU_RHO_med_research_hall }
 
 		completion_reward = {
-			add_political_power = 50
-			add_stability = 0.02
+			add_war_support = 0.03
+			add_stability = 0.03
 		}
 
 		ai_will_do = {
@@ -299,8 +306,8 @@
 		prerequisite = { focus = TU_RHO_med_peer_review }
 
 		completion_reward = {
-			add_political_power = 75
 			add_to_variable = { TU_lmd = 500 }
+			add_tech_bonus = { name = TU_RHO_med_patent bonus = 0.75 uses = 1 category = electronics category = industry }
 		}
 
 		ai_will_do = {
@@ -318,9 +325,9 @@
 		prerequisite = { focus = TU_RHO_med_patent }
 
 		completion_reward = {
-			add_political_power = 100
-			add_stability = 0.05
 			country_event = { id = tu_rho_ev.7 }
+			add_stability = 0.05
+			add_manpower = 20000
 		}
 
 		ai_will_do = {
@@ -340,8 +347,9 @@
 		prerequisite = { focus = TU_RHO_chernobog_rescue }
 
 		completion_reward = {
-			add_political_power = 50
 			set_country_flag = TU_RHO_elite_track
+			add_doctrine_cost_reduction = { name = TU_RHO_elite_selection cost_reduction = 0.25 uses = 1 category = land_doctrine }
+			army_experience = 15
 		}
 
 		ai_will_do = {
@@ -359,8 +367,8 @@
 		prerequisite = { focus = TU_RHO_elite_selection }
 
 		completion_reward = {
-			add_political_power = 50
-			army_experience = 30
+			add_doctrine_cost_reduction = { name = TU_RHO_elite_training cost_reduction = 0.4 uses = 1 category = land_doctrine }
+			army_experience = 25
 		}
 
 		ai_will_do = {
@@ -378,8 +386,9 @@
 		prerequisite = { focus = TU_RHO_elite_training }
 
 		completion_reward = {
-			add_political_power = 50
 			add_ideas = TU_RHO_elite_gear
+			add_tech_bonus = { name = TU_RHO_elite_equip bonus = 0.75 uses = 1 category = infantry_weapons }
+			army_experience = 25
 		}
 
 		ai_will_do = {
@@ -397,8 +406,9 @@
 		prerequisite = { focus = TU_RHO_elite_equip }
 
 		completion_reward = {
-			add_political_power = 75
 			set_country_flag = TU_RHO_elite_squads
+			add_doctrine_cost_reduction = { name = TU_RHO_elite_squads cost_reduction = 0.4 uses = 1 category = land_doctrine }
+			army_experience = 25
 		}
 
 		ai_will_do = {
@@ -416,8 +426,8 @@
 		prerequisite = { focus = TU_RHO_elite_squads }
 
 		completion_reward = {
-			add_political_power = 75
-			army_experience = 50
+			add_doctrine_cost_reduction = { name = TU_RHO_elite_command cost_reduction = 0.4 uses = 1 category = land_doctrine }
+			army_experience = 25
 		}
 
 		ai_will_do = {
@@ -435,9 +445,10 @@
 		prerequisite = { focus = TU_RHO_elite_command }
 
 		completion_reward = {
-			add_political_power = 100
 			add_ideas = TU_RHO_elite_legacy
 			country_event = { id = tu_rho_ev.8 }
+			add_doctrine_cost_reduction = { name = TU_RHO_elite_legend cost_reduction = 0.5 uses = 1 category = land_doctrine }
+			army_experience = 40
 		}
 
 		ai_will_do = {
@@ -457,8 +468,9 @@
 		prerequisite = { focus = TU_RHO_ark_relief_office }
 
 		completion_reward = {
-			add_political_power = 40
 			TU_build_civ_factory = yes
+			add_stability = 0.02
+			add_manpower = 5000
 		}
 
 		ai_will_do = {
@@ -476,9 +488,9 @@
 		prerequisite = { focus = TU_RHO_camp_survey }
 
 		completion_reward = {
-			add_political_power = 50
-			add_stability = 0.02
 			TU_build_infrastructure = yes
+			add_stability = 0.03
+			add_manpower = 10000
 		}
 
 		ai_will_do = {
@@ -496,8 +508,8 @@
 		prerequisite = { focus = TU_RHO_camp_build }
 
 		completion_reward = {
-			add_political_power = 50
-			add_manpower = 3000
+			add_stability = 0.03
+			add_manpower = 10000
 		}
 
 		ai_will_do = {
@@ -536,8 +548,8 @@
 		mutually_exclusive = { focus = TU_RHO_camp_autonomy }
 
 		completion_reward = {
-			add_political_power = 60
-			army_experience = 15
+			add_manpower = 10000
+			army_experience = 25
 		}
 
 		ai_will_do = {
@@ -555,8 +567,8 @@
 		prerequisite = { focus = TU_RHO_camp_autonomy focus = TU_RHO_camp_guard }
 
 		completion_reward = {
-			add_political_power = 100
-			add_war_support = 0.03
+			add_tech_bonus = { name = TU_RHO_camp_gate bonus = 1.0 uses = 1 category = construction_tech }
+			army_experience = 40
 		}
 
 		ai_will_do = {
@@ -574,8 +586,8 @@
 		prerequisite = { focus = TU_RHO_ark_speech }
 
 		completion_reward = {
-			add_political_power = 50
 			add_war_support = 0.02
+			add_stability = 0.02
 		}
 
 		ai_will_do = {
@@ -593,8 +605,8 @@
 		prerequisite = { focus = TU_RHO_speech_tour }
 
 		completion_reward = {
-			add_political_power = 50
-			add_stability = 0.02
+			add_stability = 0.03
+			add_manpower = 10000
 		}
 
 		ai_will_do = {
@@ -612,8 +624,9 @@
 		prerequisite = { focus = TU_RHO_petition }
 
 		completion_reward = {
-			add_political_power = 60
 			add_ideas = TU_RHO_ark_sympathy
+			add_war_support = 0.03
+			add_stability = 0.03
 		}
 
 		ai_will_do = {
@@ -631,7 +644,7 @@
 		prerequisite = { focus = TU_RHO_public_rally }
 
 		completion_reward = {
-			add_political_power = 100
+			add_tech_bonus = { name = TU_RHO_ark_broadcast bonus = 1.0 uses = 1 category = industry category = construction_tech }
 		}
 
 		ai_will_do = {
@@ -649,8 +662,9 @@
 		prerequisite = { focus = TU_RHO_ark_final }
 
 		completion_reward = {
-			add_political_power = 60
 			add_power_balance_value = { id = TU_RHO_bop value = -0.1 }
+			add_political_power = 35
+			add_stability = 0.02
 		}
 
 		ai_will_do = {
@@ -668,9 +682,9 @@
 		prerequisite = { focus = TU_RHO_ark_council }
 
 		completion_reward = {
-			add_political_power = 60
-			add_stability = 0.02
 			add_power_balance_value = { id = TU_RHO_bop value = -0.1 }
+			add_political_power = 60
+			add_stability = 0.03
 		}
 
 		ai_will_do = {
@@ -688,10 +702,10 @@
 		prerequisite = { focus = TU_RHO_ark_accord }
 
 		completion_reward = {
-			add_political_power = 100
-			add_war_support = 0.05
 			add_power_balance_value = { id = TU_RHO_bop value = -0.15 }
 			country_event = { id = tu_rho_ev.2 }
+			add_political_power = 100
+			add_stability = 0.05
 		}
 
 		ai_will_do = {
@@ -709,7 +723,8 @@
 		prerequisite = { focus = TU_RHO_terra_charter }
 
 		completion_reward = {
-			add_political_power = 50
+			add_political_power = 60
+			add_stability = 0.03
 		}
 
 		ai_will_do = {
@@ -727,9 +742,10 @@
 		prerequisite = { focus = TU_RHO_ark_envoy }
 
 		completion_reward = {
-			add_political_power = 100
 			add_power_balance_value = { id = TU_RHO_bop value = -0.05 }
 			every_country = { news_event = { id = tu_rho_ev.11 hours = 6 } }
+			add_political_power = 100
+			add_stability = 0.05
 		}
 
 		ai_will_do = {
@@ -747,9 +763,9 @@
 		prerequisite = { focus = TU_RHO_unlimited_volunteers }
 
 		completion_reward = {
-			add_political_power = 40
-			add_manpower = 3000
 			TU_build_mil_factory = yes
+			add_doctrine_cost_reduction = { name = TU_RHO_volunteer_camp cost_reduction = 0.25 uses = 1 category = land_doctrine }
+			army_experience = 15
 		}
 
 		ai_will_do = {
@@ -767,8 +783,8 @@
 		prerequisite = { focus = TU_RHO_volunteer_camp }
 
 		completion_reward = {
-			add_political_power = 50
-			army_experience = 20
+			add_doctrine_cost_reduction = { name = TU_RHO_volunteer_drill cost_reduction = 0.4 uses = 1 category = land_doctrine }
+			army_experience = 25
 		}
 
 		ai_will_do = {
@@ -786,8 +802,9 @@
 		prerequisite = { focus = TU_RHO_volunteer_drill }
 
 		completion_reward = {
-			add_political_power = 60
+			army_experience = 25
 			add_war_support = 0.03
+			add_doctrine_cost_reduction = { name = TU_RHO_volunteer_front cost_reduction = 0.4 uses = 1 category = land_doctrine }
 		}
 
 		ai_will_do = {
@@ -805,9 +822,9 @@
 		prerequisite = { focus = TU_RHO_volunteer_front }
 
 		completion_reward = {
-			add_political_power = 100
-			add_manpower = 5000
 			TU_build_mil_factory = yes
+			add_manpower = 20000
+			army_experience = 40
 		}
 
 		ai_will_do = {
@@ -825,7 +842,8 @@
 		prerequisite = { focus = TU_RHO_ark_charter }
 
 		completion_reward = {
-			add_political_power = 40
+			add_manpower = 5000
+			army_experience = 15
 		}
 
 		ai_will_do = {
@@ -843,8 +861,8 @@
 		prerequisite = { focus = TU_RHO_ark_guard_pick }
 
 		completion_reward = {
-			add_political_power = 50
-			army_experience = 20
+			add_doctrine_cost_reduction = { name = TU_RHO_ark_guard_train cost_reduction = 0.4 uses = 1 category = land_doctrine }
+			army_experience = 25
 		}
 
 		ai_will_do = {
@@ -862,8 +880,8 @@
 		prerequisite = { focus = TU_RHO_ark_guard_train }
 
 		completion_reward = {
-			add_political_power = 60
-			add_stability = 0.02
+			add_manpower = 10000
+			army_experience = 25
 		}
 
 		ai_will_do = {
@@ -881,8 +899,8 @@
 		prerequisite = { focus = TU_RHO_ark_guard_post }
 
 		completion_reward = {
-			add_political_power = 100
-			army_experience = 30
+			add_manpower = 20000
+			army_experience = 40
 		}
 
 		ai_will_do = {
@@ -900,8 +918,9 @@
 		prerequisite = { focus = TU_RHO_ark_refugees }
 
 		completion_reward = {
-			add_political_power = 50
 			TU_build_civ_factory = yes
+			add_stability = 0.02
+			add_manpower = 5000
 		}
 
 		ai_will_do = {
@@ -919,8 +938,7 @@
 		prerequisite = { focus = TU_RHO_ark_school }
 
 		completion_reward = {
-			add_political_power = 50
-			add_stability = 0.02
+			add_tech_bonus = { name = TU_RHO_ark_teachers bonus = 0.75 uses = 1 category = electronics category = industry }
 		}
 
 		ai_will_do = {
@@ -938,7 +956,8 @@
 		prerequisite = { focus = TU_RHO_ark_teachers }
 
 		completion_reward = {
-			add_political_power = 75
+			add_doctrine_cost_reduction = { name = TU_RHO_ark_academy cost_reduction = 0.4 uses = 1 category = land_doctrine }
+			army_experience = 25
 		}
 
 		ai_will_do = {
@@ -956,7 +975,7 @@
 		prerequisite = { focus = TU_RHO_ark_academy }
 
 		completion_reward = {
-			add_political_power = 100
+			add_tech_bonus = { name = TU_RHO_ark_scholars bonus = 1.0 uses = 1 category = electronics category = industry }
 		}
 
 		ai_will_do = {
@@ -974,8 +993,10 @@
 		prerequisite = { focus = TU_RHO_ark_accord }
 
 		completion_reward = {
-			add_political_power = 50
 			add_to_variable = { TU_lmd = 200 }
+			add_tech_bonus = { name = TU_RHO_ark_convoy bonus = 0.75 uses = 1 category = dd_tech category = ca_tech }
+			add_doctrine_cost_reduction = { name = TU_RHO_ark_convoy cost_reduction = 0.4 uses = 1 category = naval_doctrine }
+			navy_experience = 25
 		}
 
 		ai_will_do = {
@@ -993,8 +1014,7 @@
 		prerequisite = { focus = TU_RHO_ark_convoy }
 
 		completion_reward = {
-			add_political_power = 50
-			add_stability = 0.01
+			add_tech_bonus = { name = TU_RHO_ark_depot bonus = 0.75 uses = 1 category = industry category = construction_tech }
 		}
 
 		ai_will_do = {
@@ -1013,6 +1033,7 @@
 
 		completion_reward = {
 			add_political_power = 100
+			add_stability = 0.05
 		}
 
 		ai_will_do = {
@@ -1032,8 +1053,9 @@
 		prerequisite = { focus = TU_RHO_mercenary_market }
 
 		completion_reward = {
-			add_political_power = 50
 			add_to_variable = { TU_lmd = 300 }
+			add_political_power = 35
+			add_tech_bonus = { name = TU_RHO_broker_office bonus = 0.5 uses = 1 category = industry }
 		}
 
 		ai_will_do = {
@@ -1051,7 +1073,8 @@
 		prerequisite = { focus = TU_RHO_broker_office }
 
 		completion_reward = {
-			add_political_power = 50
+			add_tech_bonus = { name = TU_RHO_broker_network bonus = 0.75 uses = 1 category = radar_tech category = electronics }
+			add_stability = 0.03
 		}
 
 		ai_will_do = {
@@ -1070,8 +1093,9 @@
 		mutually_exclusive = { focus = TU_RHO_broker_discount }
 
 		completion_reward = {
-			add_political_power = 60
 			add_to_variable = { TU_lmd = 400 }
+			add_political_power = 60
+			add_tech_bonus = { name = TU_RHO_broker_fees bonus = 0.75 uses = 1 category = industry }
 		}
 
 		ai_will_do = {
@@ -1090,8 +1114,8 @@
 		mutually_exclusive = { focus = TU_RHO_broker_fees }
 
 		completion_reward = {
-			add_political_power = 60
-			add_stability = 0.02
+			add_war_support = 0.03
+			add_stability = 0.03
 		}
 
 		ai_will_do = {
@@ -1109,8 +1133,9 @@
 		prerequisite = { focus = TU_RHO_broker_fees focus = TU_RHO_broker_discount }
 
 		completion_reward = {
-			add_political_power = 100
 			add_to_variable = { TU_lmd = 500 }
+			add_political_power = 100
+			add_tech_bonus = { name = TU_RHO_broker_guild bonus = 1.0 uses = 1 category = industry }
 		}
 
 		ai_will_do = {
@@ -1128,8 +1153,9 @@
 		prerequisite = { focus = TU_RHO_arms_dealing }
 
 		completion_reward = {
-			add_political_power = 50
 			add_to_variable = { TU_lmd = 300 }
+			add_political_power = 35
+			add_tech_bonus = { name = TU_RHO_gold_vault bonus = 0.5 uses = 1 category = industry }
 		}
 
 		ai_will_do = {
@@ -1147,7 +1173,8 @@
 		prerequisite = { focus = TU_RHO_gold_vault }
 
 		completion_reward = {
-			add_political_power = 50
+			add_political_power = 60
+			add_tech_bonus = { name = TU_RHO_gold_hedge bonus = 0.75 uses = 1 category = industry }
 		}
 
 		ai_will_do = {
@@ -1166,7 +1193,7 @@
 
 		completion_reward = {
 			add_political_power = 60
-			add_stability = 0.03
+			add_tech_bonus = { name = TU_RHO_gold_insurance bonus = 0.75 uses = 1 category = industry }
 		}
 
 		ai_will_do = {
@@ -1184,8 +1211,9 @@
 		prerequisite = { focus = TU_RHO_gold_insurance }
 
 		completion_reward = {
-			add_political_power = 100
 			add_to_variable = { TU_lmd = 500 }
+			add_political_power = 100
+			add_tech_bonus = { name = TU_RHO_gold_fund bonus = 1.0 uses = 1 category = industry }
 		}
 
 		ai_will_do = {
@@ -1203,7 +1231,8 @@
 		prerequisite = { focus = TU_RHO_contractors }
 
 		completion_reward = {
-			add_political_power = 40
+			add_doctrine_cost_reduction = { name = TU_RHO_contract_pick cost_reduction = 0.25 uses = 1 category = land_doctrine }
+			army_experience = 15
 		}
 
 		ai_will_do = {
@@ -1221,8 +1250,8 @@
 		prerequisite = { focus = TU_RHO_contract_pick }
 
 		completion_reward = {
-			add_political_power = 50
-			army_experience = 20
+			add_doctrine_cost_reduction = { name = TU_RHO_contract_train cost_reduction = 0.4 uses = 1 category = land_doctrine }
+			army_experience = 25
 		}
 
 		ai_will_do = {
@@ -1241,7 +1270,7 @@
 
 		completion_reward = {
 			add_political_power = 60
-			add_war_support = 0.02
+			add_stability = 0.03
 		}
 
 		ai_will_do = {
@@ -1259,8 +1288,8 @@
 		prerequisite = { focus = TU_RHO_contract_escort }
 
 		completion_reward = {
-			add_political_power = 60
-			army_experience = 30
+			add_doctrine_cost_reduction = { name = TU_RHO_contract_elite cost_reduction = 0.4 uses = 1 category = land_doctrine }
+			army_experience = 25
 		}
 
 		ai_will_do = {
@@ -1278,8 +1307,9 @@
 		prerequisite = { focus = TU_RHO_contract_elite }
 
 		completion_reward = {
-			add_political_power = 100
 			set_country_flag = TU_RHO_contract_legion
+			add_manpower = 20000
+			army_experience = 40
 		}
 
 		ai_will_do = {
@@ -1297,7 +1327,8 @@
 		prerequisite = { focus = TU_RHO_neutral_pact }
 
 		completion_reward = {
-			add_political_power = 40
+			add_manpower = 5000
+			army_experience = 15
 		}
 
 		ai_will_do = {
@@ -1315,8 +1346,9 @@
 		prerequisite = { focus = TU_RHO_market_stall }
 
 		completion_reward = {
-			add_political_power = 60
 			add_to_variable = { TU_lmd = 400 }
+			add_manpower = 10000
+			army_experience = 25
 		}
 
 		ai_will_do = {
@@ -1335,7 +1367,7 @@
 
 		completion_reward = {
 			add_political_power = 60
-			add_stability = 0.02
+			add_tech_bonus = { name = TU_RHO_market_open bonus = 0.75 uses = 1 category = industry }
 		}
 
 		ai_will_do = {
@@ -1353,8 +1385,9 @@
 		prerequisite = { focus = TU_RHO_market_open }
 
 		completion_reward = {
-			add_political_power = 100
 			TU_build_infrastructure = yes
+			add_political_power = 100
+			add_tech_bonus = { name = TU_RHO_market_union bonus = 1.0 uses = 1 category = industry }
 		}
 
 		ai_will_do = {
@@ -1372,7 +1405,8 @@
 		prerequisite = { focus = TU_RHO_lmd_reward }
 
 		completion_reward = {
-			add_political_power = 40
+			add_political_power = 35
+			add_tech_bonus = { name = TU_RHO_lmd_audit bonus = 0.5 uses = 1 category = industry }
 		}
 
 		ai_will_do = {
@@ -1390,8 +1424,9 @@
 		prerequisite = { focus = TU_RHO_lmd_audit }
 
 		completion_reward = {
-			add_political_power = 60
 			add_to_variable = { TU_lmd = 600 }
+			add_political_power = 60
+			add_tech_bonus = { name = TU_RHO_lmd_bank bonus = 0.75 uses = 1 category = industry }
 		}
 
 		ai_will_do = {
@@ -1409,8 +1444,8 @@
 		prerequisite = { focus = TU_RHO_lmd_bank }
 
 		completion_reward = {
-			add_political_power = 100
-			add_stability = 0.02
+			add_tech_bonus = { name = TU_RHO_lmd_shield bonus = 1.0 uses = 1 category = construction_tech }
+			army_experience = 40
 		}
 
 		ai_will_do = {
@@ -1428,7 +1463,8 @@
 		prerequisite = { focus = TU_RHO_pmc_bonus }
 
 		completion_reward = {
-			add_political_power = 50
+			add_political_power = 35
+			add_stability = 0.02
 		}
 
 		ai_will_do = {
@@ -1446,8 +1482,8 @@
 		prerequisite = { focus = TU_RHO_pmc_escort }
 
 		completion_reward = {
-			add_political_power = 60
-			add_stability = 0.02
+			add_tech_bonus = { name = TU_RHO_pmc_guard bonus = 0.75 uses = 1 category = construction_tech }
+			army_experience = 25
 		}
 
 		ai_will_do = {
@@ -1465,8 +1501,9 @@
 		prerequisite = { focus = TU_RHO_pmc_guard }
 
 		completion_reward = {
-			add_political_power = 60
 			add_to_variable = { TU_lmd = 300 }
+			add_political_power = 60
+			add_stability = 0.03
 		}
 
 		ai_will_do = {
@@ -1485,7 +1522,7 @@
 
 		completion_reward = {
 			add_political_power = 100
-			add_war_support = 0.02
+			add_stability = 0.05
 		}
 
 		ai_will_do = {
@@ -1503,7 +1540,8 @@
 		prerequisite = { focus = TU_RHO_gold_fund }
 
 		completion_reward = {
-			add_political_power = 50
+			add_political_power = 35
+			add_stability = 0.02
 		}
 
 		ai_will_do = {
@@ -1522,7 +1560,7 @@
 
 		completion_reward = {
 			add_political_power = 60
-			add_stability = 0.02
+			add_stability = 0.03
 		}
 
 		ai_will_do = {
@@ -1540,9 +1578,10 @@
 		prerequisite = { focus = TU_RHO_accord_seal }
 
 		completion_reward = {
-			add_political_power = 100
 			add_to_variable = { TU_lmd = 800 }
 			every_country = { news_event = { id = tu_rho_ev.12 hours = 6 } }
+			add_political_power = 100
+			add_stability = 0.05
 		}
 
 		ai_will_do = {
@@ -1562,8 +1601,8 @@
 		prerequisite = { focus = TU_RHO_tactical_doctrine }
 
 		completion_reward = {
-			add_political_power = 50
-			army_experience = 20
+			add_doctrine_cost_reduction = { name = TU_RHO_doctrine_draft cost_reduction = 0.25 uses = 1 category = land_doctrine }
+			army_experience = 15
 		}
 
 		ai_will_do = {
@@ -1581,8 +1620,8 @@
 		prerequisite = { focus = TU_RHO_doctrine_draft }
 
 		completion_reward = {
-			add_political_power = 60
-			army_experience = 30
+			add_doctrine_cost_reduction = { name = TU_RHO_doctrine_drill cost_reduction = 0.4 uses = 1 category = land_doctrine }
+			army_experience = 25
 		}
 
 		ai_will_do = {
@@ -1601,8 +1640,9 @@
 		mutually_exclusive = { focus = TU_RHO_doctrine_siege }
 
 		completion_reward = {
-			add_political_power = 60
+			army_experience = 25
 			add_war_support = 0.03
+			add_doctrine_cost_reduction = { name = TU_RHO_doctrine_strike cost_reduction = 0.4 uses = 1 category = land_doctrine }
 		}
 
 		ai_will_do = {
@@ -1621,9 +1661,8 @@
 		mutually_exclusive = { focus = TU_RHO_doctrine_strike }
 
 		completion_reward = {
-			add_political_power = 60
-			add_stability = 0.01
-			add_stability = 0.02
+			add_tech_bonus = { name = TU_RHO_doctrine_siege bonus = 0.75 uses = 1 category = artillery }
+			army_experience = 25
 		}
 
 		ai_will_do = {
@@ -1641,9 +1680,9 @@
 		prerequisite = { focus = TU_RHO_doctrine_strike focus = TU_RHO_doctrine_siege }
 
 		completion_reward = {
-			add_political_power = 100
-			army_experience = 40
 			add_ideas = TU_RHO_doctor_doctrine
+			add_political_power = 100
+			add_stability = 0.05
 		}
 
 		ai_will_do = {
@@ -1661,7 +1700,7 @@
 		prerequisite = { focus = TU_RHO_doctrine_codex }
 
 		completion_reward = {
-			add_political_power = 75
+			add_tech_bonus = { name = TU_RHO_doctrine_archive bonus = 0.75 uses = 1 category = electronics category = industry }
 		}
 
 		ai_will_do = {
@@ -1679,9 +1718,10 @@
 		prerequisite = { focus = TU_RHO_doctor_war }
 
 		completion_reward = {
-			add_political_power = 60
-			add_manpower = 4000
 			TU_build_mil_factory = yes
+			army_experience = 15
+			add_war_support = 0.02
+			add_doctrine_cost_reduction = { name = TU_RHO_front_mobilize cost_reduction = 0.25 uses = 1 category = land_doctrine }
 		}
 
 		ai_will_do = {
@@ -1699,9 +1739,10 @@
 		prerequisite = { focus = TU_RHO_front_mobilize }
 
 		completion_reward = {
-			add_political_power = 60
-			add_war_support = 0.03
 			add_power_balance_value = { id = TU_RHO_bop value = 0.05 }
+			army_experience = 25
+			add_war_support = 0.03
+			add_doctrine_cost_reduction = { name = TU_RHO_front_assault cost_reduction = 0.4 uses = 1 category = land_doctrine }
 		}
 
 		ai_will_do = {
@@ -1719,8 +1760,8 @@
 		prerequisite = { focus = TU_RHO_front_assault }
 
 		completion_reward = {
-			add_political_power = 60
-			army_experience = 20
+			add_tech_bonus = { name = TU_RHO_front_siege bonus = 0.75 uses = 1 category = artillery }
+			army_experience = 25
 		}
 
 		ai_will_do = {
@@ -1738,8 +1779,10 @@
 		prerequisite = { focus = TU_RHO_front_siege }
 
 		completion_reward = {
-			add_political_power = 100
 			add_power_balance_value = { id = TU_RHO_bop value = 0.1 }
+			army_experience = 40
+			add_war_support = 0.05
+			add_doctrine_cost_reduction = { name = TU_RHO_front_victory cost_reduction = 0.5 uses = 1 category = land_doctrine }
 		}
 
 		ai_will_do = {
@@ -1757,9 +1800,9 @@
 		prerequisite = { focus = TU_RHO_regular_army }
 
 		completion_reward = {
-			add_political_power = 50
-			add_manpower = 2000
 			TU_build_mil_factory = yes
+			add_manpower = 5000
+			army_experience = 15
 		}
 
 		ai_will_do = {
@@ -1777,8 +1820,8 @@
 		prerequisite = { focus = TU_RHO_regular_barracks }
 
 		completion_reward = {
-			add_political_power = 50
-			army_experience = 15
+			add_doctrine_cost_reduction = { name = TU_RHO_regular_academy cost_reduction = 0.4 uses = 1 category = land_doctrine }
+			army_experience = 25
 		}
 
 		ai_will_do = {
@@ -1796,8 +1839,8 @@
 		prerequisite = { focus = TU_RHO_regular_academy }
 
 		completion_reward = {
-			add_political_power = 60
-			add_stability = 0.02
+			add_manpower = 10000
+			army_experience = 25
 		}
 
 		ai_will_do = {
@@ -1815,8 +1858,8 @@
 		prerequisite = { focus = TU_RHO_regular_pay }
 
 		completion_reward = {
-			add_political_power = 100
-			army_experience = 30
+			add_doctrine_cost_reduction = { name = TU_RHO_regular_command cost_reduction = 0.5 uses = 1 category = land_doctrine }
+			army_experience = 40
 		}
 
 		ai_will_do = {
@@ -1834,7 +1877,8 @@
 		prerequisite = { focus = TU_RHO_kazdel_prep }
 
 		completion_reward = {
-			add_political_power = 50
+			add_tech_bonus = { name = TU_RHO_kazdel_scouts bonus = 0.5 uses = 1 category = radar_tech category = electronics }
+			add_stability = 0.02
 		}
 
 		ai_will_do = {
@@ -1852,8 +1896,9 @@
 		prerequisite = { focus = TU_RHO_kazdel_scouts }
 
 		completion_reward = {
-			add_political_power = 60
-			add_stability = 0.02
+			army_experience = 25
+			add_war_support = 0.03
+			add_doctrine_cost_reduction = { name = TU_RHO_kazdel_plans cost_reduction = 0.4 uses = 1 category = land_doctrine }
 		}
 
 		ai_will_do = {
@@ -1871,8 +1916,9 @@
 		prerequisite = { focus = TU_RHO_kazdel_plans }
 
 		completion_reward = {
-			add_political_power = 100
 			every_country = { news_event = { id = tu_rho_ev.13 hours = 6 } }
+			add_political_power = 100
+			add_stability = 0.05
 		}
 
 		ai_will_do = {
@@ -1890,7 +1936,7 @@
 		prerequisite = { focus = TU_RHO_babel_restoration }
 
 		completion_reward = {
-			add_political_power = 50
+			add_tech_bonus = { name = TU_RHO_babel_archive bonus = 0.5 uses = 1 category = electronics category = industry }
 		}
 
 		ai_will_do = {
@@ -1908,7 +1954,7 @@
 		prerequisite = { focus = TU_RHO_babel_archive }
 
 		completion_reward = {
-			add_political_power = 60
+			add_tech_bonus = { name = TU_RHO_babel_library bonus = 0.75 uses = 1 category = electronics category = industry }
 		}
 
 		ai_will_do = {
@@ -1926,8 +1972,8 @@
 		prerequisite = { focus = TU_RHO_babel_library }
 
 		completion_reward = {
-			add_political_power = 75
 			add_power_balance_value = { id = TU_RHO_bop value = 0.05 }
+			add_tech_bonus = { name = TU_RHO_babel_council bonus = 1.0 uses = 1 category = electronics category = industry }
 		}
 
 		ai_will_do = {
@@ -1945,7 +1991,8 @@
 		prerequisite = { focus = TU_RHO_demon_return }
 
 		completion_reward = {
-			add_political_power = 40
+			add_tech_bonus = { name = TU_RHO_shadow_cell bonus = 0.5 uses = 1 category = radar_tech category = electronics }
+			add_stability = 0.02
 		}
 
 		ai_will_do = {
@@ -1963,8 +2010,10 @@
 		prerequisite = { focus = TU_RHO_shadow_cell }
 
 		completion_reward = {
-			add_political_power = 60
 			add_power_balance_value = { id = TU_RHO_bop value = 0.05 }
+			army_experience = 25
+			add_war_support = 0.03
+			add_doctrine_cost_reduction = { name = TU_RHO_shadow_ops cost_reduction = 0.4 uses = 1 category = land_doctrine }
 		}
 
 		ai_will_do = {
@@ -1982,8 +2031,8 @@
 		prerequisite = { focus = TU_RHO_shadow_ops }
 
 		completion_reward = {
-			add_political_power = 75
-			add_stability = -0.02
+			add_tech_bonus = { name = TU_RHO_shadow_pact bonus = 0.75 uses = 1 category = radar_tech category = electronics }
+			add_stability = 0.03
 		}
 
 		ai_will_do = {
@@ -2001,8 +2050,9 @@
 		prerequisite = { focus = TU_RHO_shadow_pact }
 
 		completion_reward = {
-			add_political_power = 100
 			add_power_balance_value = { id = TU_RHO_bop value = 0.1 }
+			add_tech_bonus = { name = TU_RHO_shadow_crown bonus = 1.0 uses = 1 category = radar_tech category = electronics }
+			add_stability = 0.05
 		}
 
 		ai_will_do = {
@@ -2022,7 +2072,7 @@
 		prerequisite = { focus = TU_RHO_prts_online }
 
 		completion_reward = {
-			add_political_power = 40
+			add_tech_bonus = { name = TU_RHO_prts_link bonus = 0.5 uses = 1 category = electronics category = industry }
 		}
 
 		ai_will_do = {
@@ -2040,8 +2090,7 @@
 		prerequisite = { focus = TU_RHO_prts_link }
 
 		completion_reward = {
-			add_political_power = 50
-			add_stability = 0.01
+			add_tech_bonus = { name = TU_RHO_prts_archive bonus = 0.75 uses = 1 category = electronics category = industry }
 		}
 
 		ai_will_do = {
@@ -2059,8 +2108,8 @@
 		prerequisite = { focus = TU_RHO_prts_archive }
 
 		completion_reward = {
-			add_political_power = 60
 			add_to_variable = { TU_lmd = 200 }
+			add_tech_bonus = { name = TU_RHO_prts_analysis bonus = 0.75 uses = 1 category = electronics category = industry }
 		}
 
 		ai_will_do = {
@@ -2078,7 +2127,7 @@
 		prerequisite = { focus = TU_RHO_prts_analysis }
 
 		completion_reward = {
-			add_political_power = 100
+			add_tech_bonus = { name = TU_RHO_prts_global bonus = 1.0 uses = 1 category = electronics category = industry }
 		}
 
 		ai_will_do = {

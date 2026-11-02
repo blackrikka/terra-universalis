@@ -21,8 +21,10 @@
 		prerequisite = { focus = TU_RHO_prts_online }
 
 		completion_reward = {
-			add_political_power = 25
 			set_country_flag = TU_RHO_op_unlocked
+			army_experience = 25
+			add_war_support = 0.03
+			add_doctrine_cost_reduction = { name = TU_RHO_chernobog_rescue cost_reduction = 0.4 uses = 1 category = land_doctrine }
 		}
 	}
 
@@ -39,8 +41,9 @@
 
 		completion_reward = {
 			add_power_balance_value = { id = TU_RHO_bop value = -0.25 }
-			add_stability = 0.05
 			country_event = { id = tu_rho_ev.1 }
+			add_political_power = 35
+			add_stability = 0.02
 		}
 	}
 
@@ -54,8 +57,8 @@
 		prerequisite = { focus = TU_RHO_ark_mission }
 
 		completion_reward = {
-			add_stability = 0.05
-			add_political_power = 50
+			add_stability = 0.03
+			add_manpower = 10000
 		}
 	}
 
@@ -72,6 +75,8 @@
 			remove_ideas = TU_RHO_landship
 			add_ideas = TU_RHO_landship_unlimited
 			TU_build_mil_factory = yes
+			add_manpower = 10000
+			army_experience = 25
 		}
 	}
 
@@ -87,6 +92,8 @@
 		completion_reward = {
 			set_country_flag = TU_RHO_safehouse_discount
 			TU_build_civ_factory = yes
+			add_stability = 0.03
+			add_manpower = 10000
 		}
 	}
 
@@ -100,7 +107,8 @@
 		prerequisite = { focus = TU_RHO_ark_relief_office }
 
 		completion_reward = {
-			add_manpower = 5000
+			add_stability = 0.03
+			add_manpower = 10000
 		}
 	}
 
@@ -114,7 +122,7 @@
 		prerequisite = { focus = TU_RHO_ark_refugees }
 
 		completion_reward = {
-			add_war_support = 0.05
+			add_war_support = 0.03
 			add_stability = 0.03
 		}
 	}
@@ -129,8 +137,9 @@
 		prerequisite = { focus = TU_RHO_ark_speech }
 
 		completion_reward = {
-			add_political_power = 100
 			add_power_balance_value = { id = TU_RHO_bop value = -0.25 }
+			add_political_power = 60
+			add_stability = 0.03
 		}
 	}
 
@@ -146,9 +155,10 @@
 		mutually_exclusive = { focus = TU_RHO_ark_mission focus = TU_RHO_demon_return }
 
 		completion_reward = {
-			add_political_power = 25
 			set_country_flag = TU_RHO_contractor_stance
 			country_event = { id = tu_rho_ev.3 }
+			add_political_power = 35
+			add_tech_bonus = { name = TU_RHO_contractors bonus = 0.5 uses = 1 category = industry }
 		}
 	}
 
@@ -163,6 +173,8 @@
 
 		completion_reward = {
 			add_to_variable = { TU_lmd = 500 }
+			add_political_power = 60
+			add_tech_bonus = { name = TU_RHO_lmd_reward bonus = 0.75 uses = 1 category = industry }
 		}
 	}
 
@@ -181,6 +193,8 @@
 
 		completion_reward = {
 			set_country_flag = TU_RHO_pmc_bonus
+			add_political_power = 60
+			add_tech_bonus = { name = TU_RHO_pmc_bonus bonus = 0.75 uses = 1 category = industry }
 		}
 	}
 
@@ -195,6 +209,8 @@
 
 		completion_reward = {
 			add_to_variable = { TU_lmd = 1000 }
+			add_tech_bonus = { name = TU_RHO_arms_dealing bonus = 0.75 uses = 1 category = infantry_weapons }
+			army_experience = 25
 		}
 	}
 
@@ -208,8 +224,8 @@
 		prerequisite = { focus = TU_RHO_arms_dealing }
 
 		completion_reward = {
-			add_political_power = 50
-			add_stability = 0.02
+			add_political_power = 60
+			add_stability = 0.03
 		}
 	}
 
@@ -223,8 +239,9 @@
 		prerequisite = { focus = TU_RHO_neutral_pact }
 
 		completion_reward = {
-			add_political_power = 75
 			set_country_flag = TU_RHO_pmc_market
+			add_manpower = 10000
+			army_experience = 25
 		}
 	}
 
@@ -242,6 +259,8 @@
 		completion_reward = {
 			add_power_balance_value = { id = TU_RHO_bop value = 0.25 }
 			country_event = { id = tu_rho_ev.4 }
+			add_political_power = 35
+			add_stability = 0.02
 		}
 	}
 
@@ -256,6 +275,8 @@
 
 		completion_reward = {
 			add_ideas = TU_RHO_regular_manpower
+			add_political_power = 60
+			add_stability = 0.03
 		}
 	}
 
@@ -273,8 +294,10 @@
 		}
 
 		completion_reward = {
-			add_political_power = 50
 			set_country_flag = TU_RHO_kazdel_prep
+			army_experience = 25
+			add_war_support = 0.03
+			add_doctrine_cost_reduction = { name = TU_RHO_kazdel_prep cost_reduction = 0.4 uses = 1 category = land_doctrine }
 		}
 	}
 
@@ -288,7 +311,8 @@
 		prerequisite = { focus = TU_RHO_kazdel_prep }
 
 		completion_reward = {
-			army_experience = 10
+			add_doctrine_cost_reduction = { name = TU_RHO_tactical_doctrine cost_reduction = 0.4 uses = 1 category = land_doctrine }
+			army_experience = 25
 		}
 	}
 
@@ -302,9 +326,10 @@
 		prerequisite = { focus = TU_RHO_tactical_doctrine }
 
 		completion_reward = {
-			add_war_support = 0.05
 			add_power_balance_value = { id = TU_RHO_bop value = 0.2 }
 			country_event = { id = tu_rho_ev.5 }
+			add_stability = 0.03
+			add_manpower = 10000
 		}
 	}
 
@@ -318,8 +343,8 @@
 		prerequisite = { focus = TU_RHO_doctor_war }
 
 		completion_reward = {
-			add_political_power = 100
 			set_country_flag = TU_RHO_babel_restored
 			TU_build_infrastructure = yes
+			add_tech_bonus = { name = TU_RHO_babel_restoration bonus = 0.75 uses = 1 category = electronics category = industry }
 		}
 	}

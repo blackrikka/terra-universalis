@@ -21,7 +21,8 @@
 				id = TU_URS_bop
 				value = 0.1
 			}
-			add_political_power = 50
+			add_political_power = 35
+			add_stability = 0.02
 		}
 	}
 
@@ -41,7 +42,8 @@
 
 		completion_reward = {
 			add_ideas = TU_URS_p4_student_council
-			add_political_power = 50
+			add_political_power = 60
+			add_stability = 0.03
 		}
 	}
 
@@ -61,7 +63,8 @@
 
 		completion_reward = {
 			add_ideas = TU_URS_p4_constitution
-			add_political_power = 25
+			add_manpower = 10000
+			army_experience = 25
 		}
 	}
 
@@ -85,7 +88,8 @@
 				id = TU_URS_bop
 				value = 0.1
 			}
-			add_stability = 0.02
+			add_political_power = 60
+			add_stability = 0.03
 		}
 	}
 
@@ -104,7 +108,8 @@
 		}
 
 		completion_reward = {
-			add_political_power = 50
+			add_political_power = 60
+			add_stability = 0.03
 		}
 	}
 
@@ -123,13 +128,8 @@
 		}
 
 		completion_reward = {
-			add_tech_bonus = {
-				name = TU_URS_p4_tech_crown
-				bonus = 0.5
-				uses = 1
-				category = industry
-			}
-			add_stability = 0.01
+			add_political_power = 60
+			add_stability = 0.03
 		}
 	}
 
@@ -153,8 +153,8 @@
 		}
 
 		completion_reward = {
-			add_political_power = 75
-			add_stability = 0.02
+			add_political_power = 60
+			add_stability = 0.03
 		}
 	}
 
@@ -178,11 +178,12 @@
 		}
 
 		completion_reward = {
-			add_political_power = 50
 			add_popularity = {
 				ideology = democratic
 				popularity = 0.1
 			}
+			add_war_support = 0.03
+			add_stability = 0.03
 		}
 	}
 
@@ -206,7 +207,8 @@
 				id = TU_URS_bop
 				value = 0.15
 			}
-			add_political_power = 25
+			add_political_power = 60
+			add_stability = 0.03
 		}
 	}
 
@@ -225,7 +227,8 @@
 		}
 
 		completion_reward = {
-			add_political_power = 50
+			add_political_power = 60
+			add_stability = 0.03
 		}
 	}
 
@@ -244,8 +247,8 @@
 		}
 
 		completion_reward = {
-			add_political_power = 50
-			add_stability = -0.01
+			add_political_power = 60
+			add_stability = 0.03
 		}
 	}
 
@@ -264,12 +267,8 @@
 		}
 
 		completion_reward = {
-			add_tech_bonus = {
-				name = TU_URS_p4_tech_civil
-				bonus = 0.5
-				uses = 1
-				category = electronics
-			}
+			add_political_power = 60
+			add_stability = 0.03
 		}
 	}
 
@@ -292,7 +291,8 @@
 				id = TU_URS_bop
 				value = 0.1
 			}
-			add_stability = 0.01
+			add_political_power = 60
+			add_stability = 0.03
 		}
 	}
 
@@ -319,8 +319,8 @@
 				ideology = democratic
 				popularity = 0.1
 			}
-			add_political_power = 50
-			add_stability = -0.01
+			add_political_power = 60
+			add_stability = 0.03
 		}
 	}
 
@@ -339,8 +339,8 @@
 		}
 
 		completion_reward = {
-			add_political_power = 50
-			add_stability = 0.02
+			add_political_power = 60
+			add_stability = 0.03
 		}
 	}
 
@@ -359,8 +359,7 @@
 		}
 
 		completion_reward = {
-			add_political_power = 25
-			add_stability = 0.01
+			add_tech_bonus = { name = TU_URS_reform_coalition_rule bonus = 0.75 uses = 1 category = industry category = construction_tech }
 		}
 	}
 
@@ -379,11 +378,12 @@
 		}
 
 		completion_reward = {
-			add_stability = 0.02
 			add_power_balance_value = {
 				id = TU_URS_bop
 				value = 0.05
 			}
+			add_political_power = 60
+			add_stability = 0.03
 		}
 	}
 
@@ -402,8 +402,7 @@
 		}
 
 		completion_reward = {
-			add_manpower = 20000
-			add_stability = 0.01
+			add_tech_bonus = { name = TU_URS_reform_labour_law bonus = 0.75 uses = 1 category = industry category = construction_tech }
 		}
 	}
 
@@ -423,7 +422,7 @@
 
 		completion_reward = {
 			add_stability = 0.03
-			add_political_power = 25
+			add_manpower = 10000
 		}
 	}
 
@@ -442,11 +441,12 @@
 		}
 
 		completion_reward = {
-			add_political_power = 50
 			add_power_balance_value = {
 				id = TU_URS_bop
 				value = 0.05
 			}
+			add_war_support = 0.03
+			add_stability = 0.03
 		}
 	}
 
@@ -465,8 +465,8 @@
 		}
 
 		completion_reward = {
-			add_political_power = 50
-			add_stability = 0.02
+			add_political_power = 60
+			add_stability = 0.03
 		}
 	}
 
@@ -485,8 +485,8 @@
 		}
 
 		completion_reward = {
-			add_political_power = 50
-			add_stability = 0.02
+			add_political_power = 60
+			add_stability = 0.03
 		}
 	}
 
@@ -505,11 +505,12 @@
 		}
 
 		completion_reward = {
-			add_political_power = 25
 			add_power_balance_value = {
 				id = TU_URS_bop
 				value = 0.05
 			}
+			add_political_power = 60
+			add_stability = 0.03
 		}
 	}
 
@@ -528,7 +529,8 @@
 		}
 
 		completion_reward = {
-			add_stability = 0.02
+			add_political_power = 60
+			add_stability = 0.03
 		}
 	}
 
@@ -548,12 +550,12 @@
 
 		completion_reward = {
 			every_country = { news_event = { id = tu_urs_ev.17 } }
-			add_political_power = 100
-			add_stability = 0.03
 			add_power_balance_value = {
 				id = TU_URS_bop
 				value = 0.1
 			}
+			add_political_power = 100
+			add_stability = 0.05
 		}
 	}
 
@@ -578,7 +580,8 @@
 
 		completion_reward = {
 			add_ideas = TU_URS_p4_reconciliation
-			add_stability = 0.02
+			add_political_power = 60
+			add_stability = 0.03
 		}
 	}
 
@@ -604,8 +607,8 @@
 		}
 
 		completion_reward = {
-			add_stability = 0.02
-			add_political_power = 25
+			add_stability = 0.03
+			add_manpower = 10000
 		}
 	}
 
@@ -625,8 +628,9 @@
 
 		completion_reward = {
 			remove_ideas = TU_URS_infected_discrimination
-			add_political_power = 25
-			add_stability = 0.02
+			add_tech_bonus = { name = TU_URS_reform_infected_citizenship bonus = 0.75 uses = 1 category = dd_tech category = ca_tech }
+			add_doctrine_cost_reduction = { name = TU_URS_reform_infected_citizenship cost_reduction = 0.4 uses = 1 category = naval_doctrine }
+			navy_experience = 25
 		}
 	}
 
@@ -646,8 +650,8 @@
 		}
 
 		completion_reward = {
-			add_manpower = 30000
-			add_stability = 0.01
+			add_stability = 0.03
+			add_manpower = 10000
 		}
 	}
 
@@ -667,11 +671,12 @@
 		}
 
 		completion_reward = {
-			add_political_power = 25
 			add_power_balance_value = {
 				id = TU_URS_bop
 				value = 0.05
 			}
+			add_stability = 0.03
+			add_manpower = 10000
 		}
 	}
 
@@ -698,7 +703,8 @@
 				id = TU_URS_bop
 				value = 0.05
 			}
-			add_political_power = 50
+			add_stability = 0.03
+			add_manpower = 10000
 		}
 	}
 
@@ -718,7 +724,9 @@
 
 		completion_reward = {
 			add_ideas = TU_URS_p4_citizenship
-			add_stability = 0.02
+			add_tech_bonus = { name = TU_URS_reform_citizenship_law bonus = 0.75 uses = 1 category = dd_tech category = ca_tech }
+			add_doctrine_cost_reduction = { name = TU_URS_reform_citizenship_law cost_reduction = 0.4 uses = 1 category = naval_doctrine }
+			navy_experience = 25
 		}
 	}
 
@@ -738,7 +746,7 @@
 
 		completion_reward = {
 			add_ideas = TU_URS_p4_modern_education
-			add_political_power = 25
+			add_tech_bonus = { name = TU_URS_reform_modern_schools bonus = 0.75 uses = 1 category = electronics category = industry }
 		}
 	}
 
@@ -757,12 +765,8 @@
 		}
 
 		completion_reward = {
-			add_tech_bonus = {
-				name = TU_URS_p4_tech_curriculum
-				bonus = 0.5
-				uses = 2
-				category = electronics
-			}
+			add_political_power = 60
+			add_stability = 0.03
 		}
 	}
 
@@ -781,8 +785,7 @@
 		}
 
 		completion_reward = {
-			add_political_power = 50
-			add_stability = 0.01
+			add_tech_bonus = { name = TU_URS_reform_university bonus = 0.75 uses = 1 category = electronics category = industry }
 		}
 	}
 
@@ -802,7 +805,8 @@
 
 		completion_reward = {
 			add_ideas = TU_URS_p4_free_press
-			add_political_power = 25
+			add_political_power = 60
+			add_stability = 0.03
 		}
 	}
 
@@ -825,7 +829,8 @@
 				id = TU_URS_bop
 				value = 0.05
 			}
-			add_political_power = 25
+			add_political_power = 60
+			add_stability = 0.03
 		}
 	}
 
@@ -844,7 +849,7 @@
 		}
 
 		completion_reward = {
-			add_stability = 0.01
-			add_political_power = 50
+			add_political_power = 60
+			add_stability = 0.03
 		}
 	}

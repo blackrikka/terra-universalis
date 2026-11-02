@@ -19,8 +19,9 @@
 		}
 
 		completion_reward = {
-			add_manpower = 30000
 			add_ideas = TU_URS_e2_mass_conscription
+			add_manpower = 10000
+			army_experience = 25
 		}
 	}
 
@@ -44,8 +45,8 @@
 		}
 
 		completion_reward = {
-			army_experience = 15
-			add_political_power = 25
+			add_doctrine_cost_reduction = { name = TU_URS_army_elite_draft cost_reduction = 0.4 uses = 1 category = land_doctrine }
+			army_experience = 25
 		}
 	}
 
@@ -65,7 +66,8 @@
 		}
 
 		completion_reward = {
-			army_experience = 10
+			add_doctrine_cost_reduction = { name = TU_URS_army_frost_drill cost_reduction = 0.4 uses = 1 category = land_doctrine }
+			army_experience = 25
 		}
 	}
 
@@ -85,8 +87,8 @@
 		}
 
 		completion_reward = {
-			army_experience = 10
 			add_ideas = TU_URS_e2_arts_units
+			add_tech_bonus = { name = TU_URS_army_arts_trials bonus = 0.75 uses = 1 category = electronics category = industry }
 		}
 	}
 
@@ -105,8 +107,8 @@
 		}
 
 		completion_reward = {
-			add_manpower = 30000
-			add_stability = -0.02
+			add_manpower = 10000
+			army_experience = 25
 		}
 	}
 
@@ -125,8 +127,8 @@
 		}
 
 		completion_reward = {
-			army_experience = 20
-			add_stability = 0.02
+			add_manpower = 10000
+			army_experience = 25
 		}
 	}
 
@@ -145,8 +147,9 @@
 		}
 
 		completion_reward = {
-			army_experience = 10
 			add_ideas = TU_URS_e2_frozen_warfare
+			add_doctrine_cost_reduction = { name = TU_URS_army_winter_doctrine cost_reduction = 0.4 uses = 1 category = land_doctrine }
+			army_experience = 25
 		}
 	}
 
@@ -165,12 +168,9 @@
 		}
 
 		completion_reward = {
-			add_tech_bonus = {
-				name = TU_URS_e2_arts_bonus
-				bonus = 1.0
-				uses = 2
-				category = infantry_weapons
-			}
+			army_experience = 25
+			add_war_support = 0.03
+			add_doctrine_cost_reduction = { name = TU_URS_army_arts_assault cost_reduction = 0.4 uses = 1 category = land_doctrine }
 		}
 	}
 
@@ -190,8 +190,8 @@
 		}
 
 		completion_reward = {
-			army_experience = 10
-			add_political_power = 25
+			add_tech_bonus = { name = TU_URS_army_artillery_school bonus = 0.75 uses = 1 category = artillery }
+			army_experience = 25
 		}
 	}
 
@@ -210,7 +210,8 @@
 		}
 
 		completion_reward = {
-			add_manpower = 40000
+			add_manpower = 10000
+			army_experience = 25
 		}
 	}
 
@@ -230,12 +231,8 @@
 		}
 
 		completion_reward = {
-			add_tech_bonus = {
-				name = TU_URS_e2_armour_bonus
-				bonus = 1.0
-				uses = 2
-				category = armor
-			}
+			add_tech_bonus = { name = TU_URS_army_armour_school bonus = 0.75 uses = 1 category = armor }
+			add_doctrine_cost_reduction = { name = TU_URS_army_armour_school cost_reduction = 0.4 uses = 1 category = land_doctrine }
 		}
 	}
 
@@ -256,8 +253,8 @@
 		}
 
 		completion_reward = {
-			army_experience = 10
-			add_manpower = 10000
+			add_tech_bonus = { name = TU_URS_army_frost_entrench bonus = 0.75 uses = 1 category = construction_tech }
+			army_experience = 25
 		}
 	}
 
@@ -277,7 +274,8 @@
 		}
 
 		completion_reward = {
-			army_experience = 15
+			add_tech_bonus = { name = TU_URS_army_frost_mobile bonus = 0.75 uses = 1 category = motorized_equipment }
+			add_doctrine_cost_reduction = { name = TU_URS_army_frost_mobile cost_reduction = 0.4 uses = 1 category = land_doctrine }
 		}
 	}
 
@@ -296,8 +294,7 @@
 		}
 
 		completion_reward = {
-			army_experience = 15
-			add_political_power = 25
+			add_tech_bonus = { name = TU_URS_army_arts_legion bonus = 0.75 uses = 1 category = electronics category = industry }
 		}
 	}
 
@@ -317,6 +314,8 @@
 
 		completion_reward = {
 			add_ideas = TU_URS_e2_artillery_doctrine
+			add_tech_bonus = { name = TU_URS_army_artillery_doctrine bonus = 0.75 uses = 1 category = artillery }
+			army_experience = 25
 		}
 	}
 
@@ -337,8 +336,9 @@
 		}
 
 		completion_reward = {
-			add_war_support = 5
-			add_stability = -0.01
+			army_experience = 25
+			add_war_support = 0.03
+			add_doctrine_cost_reduction = { name = TU_URS_army_mass_mobilisation cost_reduction = 0.4 uses = 1 category = land_doctrine }
 		}
 	}
 
@@ -358,7 +358,8 @@
 		}
 
 		completion_reward = {
-			army_experience = 20
+			add_manpower = 10000
+			army_experience = 25
 		}
 	}
 
@@ -377,7 +378,8 @@
 		}
 
 		completion_reward = {
-			army_experience = 15
+			add_tech_bonus = { name = TU_URS_army_artillery_barrage bonus = 0.75 uses = 1 category = artillery }
+			army_experience = 25
 		}
 	}
 
@@ -396,7 +398,8 @@
 		}
 
 		completion_reward = {
-			army_experience = 25
+			add_tech_bonus = { name = TU_URS_army_frost_raid bonus = 0.75 uses = 1 category = motorized_equipment }
+			add_doctrine_cost_reduction = { name = TU_URS_army_frost_raid cost_reduction = 0.4 uses = 1 category = land_doctrine }
 		}
 	}
 
@@ -415,12 +418,8 @@
 		}
 
 		completion_reward = {
-			add_tech_bonus = {
-				name = TU_URS_e2_armour_division_bonus
-				bonus = 1.5
-				uses = 2
-				category = armor
-			}
+			add_tech_bonus = { name = TU_URS_army_armour_division bonus = 1.0 uses = 1 category = armor }
+			add_doctrine_cost_reduction = { name = TU_URS_army_armour_division cost_reduction = 0.5 uses = 1 category = land_doctrine }
 		}
 	}
 
@@ -439,8 +438,8 @@
 		}
 
 		completion_reward = {
-			army_experience = 15
-			add_manpower = 20000
+			add_manpower = 10000
+			army_experience = 25
 		}
 	}
 
@@ -459,12 +458,8 @@
 		}
 
 		completion_reward = {
-			add_tech_bonus = {
-				name = TU_URS_e2_artillery_corps_bonus
-				bonus = 1.5
-				uses = 2
-				category = artillery
-			}
+			add_tech_bonus = { name = TU_URS_army_artillery_corps bonus = 1.0 uses = 1 category = artillery }
+			army_experience = 40
 		}
 	}
 
@@ -484,13 +479,8 @@
 		}
 
 		completion_reward = {
-			add_tech_bonus = {
-				name = TU_URS_e2_combined_bonus
-				bonus = 1.0
-				uses = 1
-				category = land_doctrine
-			}
-			army_experience = 15
+			add_tech_bonus = { name = TU_URS_army_combined_arms bonus = 1.0 uses = 1 category = infantry_weapons }
+			army_experience = 40
 		}
 	}
 
@@ -509,8 +499,9 @@
 		}
 
 		completion_reward = {
-			army_experience = 15
 			add_ideas = TU_URS_e2_armour_doctrine
+			add_tech_bonus = { name = TU_URS_army_armour_doctrine bonus = 0.75 uses = 1 category = armor }
+			add_doctrine_cost_reduction = { name = TU_URS_army_armour_doctrine cost_reduction = 0.4 uses = 1 category = land_doctrine }
 		}
 	}
 
@@ -533,9 +524,9 @@
 		}
 
 		completion_reward = {
-			army_experience = 20
-			add_political_power = 50
 			add_ideas = TU_URS_e2_general_staff
+			add_doctrine_cost_reduction = { name = TU_URS_army_general_staff cost_reduction = 0.4 uses = 1 category = land_doctrine }
+			army_experience = 25
 		}
 	}
 
@@ -554,8 +545,10 @@
 		}
 
 		completion_reward = {
-			add_manpower = 50000
 			add_ideas = TU_URS_e2_total_war
+			army_experience = 40
+			add_war_support = 0.05
+			add_doctrine_cost_reduction = { name = TU_URS_army_total_war cost_reduction = 0.5 uses = 1 category = land_doctrine }
 		}
 	}
 
@@ -574,8 +567,8 @@
 		}
 
 		completion_reward = {
-			army_experience = 25
-			add_political_power = 50
+			add_manpower = 20000
+			army_experience = 40
 		}
 	}
 
@@ -594,9 +587,9 @@
 		}
 
 		completion_reward = {
-			army_experience = 25
-			add_stability = 0.02
-			add_war_support = 5
+			army_experience = 40
+			add_war_support = 0.05
+			add_doctrine_cost_reduction = { name = TU_URS_army_final cost_reduction = 0.5 uses = 1 category = land_doctrine }
 		}
 	}
 
@@ -615,8 +608,8 @@
 		}
 
 		completion_reward = {
-			army_experience = 25
-			add_political_power = 75
+			add_doctrine_cost_reduction = { name = TU_URS_army_supreme cost_reduction = 0.5 uses = 1 category = land_doctrine }
+			army_experience = 40
 		}
 	}
 
@@ -637,6 +630,6 @@
 
 		completion_reward = {
 			add_political_power = 100
-			add_stability = 0.03
+			add_stability = 0.05
 		}
 	}

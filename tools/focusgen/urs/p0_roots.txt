@@ -31,8 +31,8 @@
 		}
 
 		completion_reward = {
-			add_political_power = 50
-			add_stability = 0.03
+			add_political_power = 35
+			add_stability = 0.02
 		}
 	}
 
@@ -51,8 +51,8 @@
 
 		completion_reward = {
 			remove_ideas = TU_URS_backward_infrastructure
-			add_political_power = 25
 			TU_build_infrastructure = yes
+			add_tech_bonus = { name = TU_URS_railway_reform bonus = 0.5 uses = 1 category = industry category = construction_tech }
 		}
 	}
 
@@ -70,7 +70,8 @@
 		}
 
 		completion_reward = {
-			army_experience = 10
+			add_manpower = 5000
+			army_experience = 15
 		}
 	}
 
@@ -88,12 +89,7 @@
 		}
 
 		completion_reward = {
-			add_tech_bonus = {
-				name = TU_URS_arts_research_bonus
-				bonus = 0.5
-				uses = 1
-				category = electronics
-			}
+			add_tech_bonus = { name = TU_URS_arts_research_root bonus = 0.5 uses = 1 category = electronics category = industry }
 		}
 	}
 
@@ -111,7 +107,8 @@
 		}
 
 		completion_reward = {
-			add_political_power = 25
+			add_stability = 0.02
+			add_manpower = 5000
 		}
 	}
 
@@ -129,7 +126,8 @@
 		}
 
 		completion_reward = {
-			add_political_power = 25
+			add_political_power = 35
+			add_stability = 0.02
 		}
 	}
 
@@ -148,7 +146,8 @@
 		}
 
 		completion_reward = {
-			add_political_power = 50
 			set_country_flag = TU_dip_relations_unlocked
+			add_political_power = 60
+			add_stability = 0.03
 		}
 	}

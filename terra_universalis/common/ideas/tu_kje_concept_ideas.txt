@@ -1,0 +1,57 @@
+ideas = {
+
+	country = {
+
+		TU_KJE_idea_politics = {
+			picture = generic_morale_bonus
+
+			allowed = {
+				original_tag = KJE
+			}
+
+			modifier = {
+				war_support_factor = 0.05
+				stability_factor = 0.03
+			}
+		}
+
+		TU_KJE_idea_military = {
+			picture = generic_fortify_the_borders
+
+			allowed = {
+				original_tag = KJE
+			}
+
+			modifier = {
+				army_defence_factor = 0.05
+				max_dig_in = 1
+			}
+		}
+
+		TU_KJE_idea_karlan = {
+			picture = generic_economic_increase
+
+			allowed = {
+				original_tag = KJE
+			}
+
+			modifier = {
+				political_power_gain = 0.1
+				consumer_goods_factor = -0.02
+			}
+		}
+
+		TU_KJE_idea_economy = {
+			picture = generic_production_bonus
+
+			allowed = {
+				original_tag = KJE
+			}
+
+			modifier = {
+				production_factory_max_efficiency_factor = 0.05
+				production_speed_buildings_factor = 0.05
+			}
+		}
+	}
+}

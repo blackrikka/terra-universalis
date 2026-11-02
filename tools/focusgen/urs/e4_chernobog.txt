@@ -16,9 +16,8 @@
 		}
 
 		completion_reward = {
-			add_manpower = 50000
-			add_stability = -0.05
 			TU_build_civ_factory = yes
+			add_tech_bonus = { name = TU_URS_forced_labour bonus = 0.75 uses = 1 category = industry category = construction_tech }
 		}
 	}
 
@@ -37,9 +36,8 @@
 		}
 
 		completion_reward = {
-			add_manpower = 30000
-			add_stability = -0.02
 			TU_build_civ_factory = yes
+			add_tech_bonus = { name = TU_URS_labour_camps bonus = 0.75 uses = 1 category = industry category = construction_tech }
 		}
 	}
 
@@ -59,8 +57,9 @@
 		}
 
 		completion_reward = {
-			add_stability = 0.05
 			remove_ideas = TU_URS_infected_discrimination
+			add_stability = 0.03
+			add_manpower = 10000
 		}
 	}
 
@@ -79,8 +78,8 @@
 		}
 
 		completion_reward = {
-			add_stability = 0.03
-			add_political_power = 25
+			add_tech_bonus = { name = TU_URS_quarantine_wall bonus = 0.75 uses = 1 category = construction_tech }
+			army_experience = 25
 		}
 	}
 
@@ -105,8 +104,8 @@
 		}
 
 		completion_reward = {
-			army_experience = 10
-			add_political_power = 25
+			add_tech_bonus = { name = TU_URS_chernobog_garrison bonus = 0.75 uses = 1 category = construction_tech }
+			army_experience = 25
 		}
 	}
 
@@ -141,7 +140,8 @@
 					add_war_support = -0.05
 				}
 			}
-			add_political_power = 25
+			add_political_power = 60
+			add_stability = 0.03
 		}
 	}
 
@@ -174,7 +174,8 @@
 					add_stability = 0.02
 				}
 			}
-			add_political_power = 25
+			add_political_power = 60
+			add_stability = 0.03
 		}
 	}
 
@@ -193,8 +194,9 @@
 		}
 
 		completion_reward = {
-			army_experience = 15
-			add_manpower = 20000
+			army_experience = 25
+			add_war_support = 0.03
+			add_doctrine_cost_reduction = { name = TU_URS_reu_front cost_reduction = 0.4 uses = 1 category = land_doctrine }
 		}
 	}
 
@@ -213,8 +215,8 @@
 		}
 
 		completion_reward = {
-			add_political_power = 50
-			add_stability = 0.02
+			add_political_power = 60
+			add_stability = 0.03
 		}
 	}
 
@@ -233,8 +235,6 @@
 		}
 
 		completion_reward = {
-			army_experience = 20
-			add_war_support = 5
 			if = {
 				limit = {
 					country_exists = REU
@@ -243,6 +243,9 @@
 					add_war_support = -0.05
 				}
 			}
+			army_experience = 40
+			add_war_support = 0.05
+			add_doctrine_cost_reduction = { name = TU_URS_reu_occupation cost_reduction = 0.5 uses = 1 category = land_doctrine }
 		}
 	}
 
@@ -265,7 +268,7 @@
 		}
 
 		completion_reward = {
-			add_political_power = 50
+			add_political_power = 60
 			add_stability = 0.03
 		}
 	}
@@ -297,7 +300,8 @@
 					add_stability = 0.03
 				}
 			}
-			add_political_power = 25
+			add_stability = 0.03
+			add_manpower = 10000
 		}
 	}
 
@@ -320,7 +324,6 @@
 		}
 
 		completion_reward = {
-			army_experience = 25
 			if = {
 				limit = {
 					country_exists = REU
@@ -329,6 +332,8 @@
 					add_war_support = -0.1
 				}
 			}
+			add_tech_bonus = { name = TU_URS_reu_siege bonus = 0.75 uses = 1 category = artillery }
+			army_experience = 25
 		}
 	}
 
@@ -347,8 +352,9 @@
 		}
 
 		completion_reward = {
-			army_experience = 25
-			add_political_power = 50
+			army_experience = 40
+			add_war_support = 0.05
+			add_doctrine_cost_reduction = { name = TU_URS_reu_final cost_reduction = 0.5 uses = 1 category = land_doctrine }
 		}
 	}
 
@@ -371,10 +377,9 @@
 		}
 
 		completion_reward = {
-			add_manpower = 30000
-			add_stability = -0.03
 			add_ideas = TU_URS_e4_labour_quota
 			TU_build_civ_factory = yes
+			add_tech_bonus = { name = TU_URS_labour_expansion bonus = 0.75 uses = 1 category = industry category = construction_tech }
 		}
 	}
 
@@ -394,7 +399,7 @@
 
 		completion_reward = {
 			add_stability = 0.03
-			add_political_power = 25
+			add_manpower = 10000
 		}
 	}
 
@@ -417,7 +422,6 @@
 		}
 
 		completion_reward = {
-			add_stability = 0.03
 			if = {
 				limit = {
 					country_exists = RHO
@@ -427,6 +431,9 @@
 				}
 			}
 			add_ideas = TU_URS_e4_rho_medical
+			add_tech_bonus = { name = TU_URS_rho_cooperation bonus = 0.75 uses = 1 category = dd_tech category = ca_tech }
+			add_doctrine_cost_reduction = { name = TU_URS_rho_cooperation cost_reduction = 0.4 uses = 1 category = naval_doctrine }
+			navy_experience = 25
 		}
 	}
 
@@ -449,8 +456,8 @@
 		}
 
 		completion_reward = {
-			army_experience = 15
-			add_political_power = 25
+			add_tech_bonus = { name = TU_URS_chernobog_defence bonus = 0.75 uses = 1 category = construction_tech }
+			army_experience = 25
 		}
 	}
 
@@ -469,9 +476,8 @@
 		}
 
 		completion_reward = {
-			army_experience = 15
-			add_stability = 0.02
-			add_manpower = 10000
+			add_tech_bonus = { name = TU_URS_chernobog_fortress bonus = 0.75 uses = 1 category = construction_tech }
+			army_experience = 25
 		}
 	}
 
@@ -494,8 +500,9 @@
 		}
 
 		completion_reward = {
-			add_political_power = 50
-			army_experience = 15
+			add_tech_bonus = { name = TU_URS_chernobog_seal bonus = 1.0 uses = 1 category = dd_tech category = ca_tech }
+			add_doctrine_cost_reduction = { name = TU_URS_chernobog_seal cost_reduction = 0.5 uses = 1 category = naval_doctrine }
+			navy_experience = 40
 		}
 	}
 
@@ -515,8 +522,8 @@
 		}
 
 		completion_reward = {
-			add_political_power = 75
-			add_stability = 0.03
+			add_political_power = 100
+			add_stability = 0.05
 		}
 	}
 
@@ -535,8 +542,8 @@
 		}
 
 		completion_reward = {
-			add_manpower = 40000
-			add_stability = -0.04
 			TU_build_infrastructure = yes
+			add_stability = 0.03
+			add_manpower = 10000
 		}
 	}

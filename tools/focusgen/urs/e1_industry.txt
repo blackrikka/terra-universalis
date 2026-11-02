@@ -34,9 +34,8 @@
 		}
 
 		completion_reward = {
-			add_political_power = 25
-			add_stability = 0.01
 			TU_build_infrastructure = yes
+			add_tech_bonus = { name = TU_URS_rail_standard bonus = 0.75 uses = 1 category = industry category = construction_tech }
 		}
 	}
 
@@ -56,8 +55,8 @@
 		}
 
 		completion_reward = {
-			add_political_power = 25
 			TU_build_civ_factory = yes
+			add_tech_bonus = { name = TU_URS_originium_survey bonus = 0.5 uses = 1 category = electronics category = industry }
 		}
 	}
 
@@ -77,9 +76,8 @@
 		}
 
 		completion_reward = {
-			add_manpower = 10000
-			add_stability = 0.01
 			TU_build_infrastructure = yes
+			add_tech_bonus = { name = TU_URS_frozen_road bonus = 0.75 uses = 1 category = industry category = construction_tech }
 		}
 	}
 
@@ -111,6 +109,7 @@
 			}
 			add_ideas = TU_URS_e1_state_planning
 			TU_build_civ_factory = yes
+			add_tech_bonus = { name = TU_URS_state_planning bonus = 0.75 uses = 1 category = industry category = construction_tech }
 		}
 	}
 
@@ -141,6 +140,8 @@
 			}
 			add_ideas = TU_URS_e1_market_economy
 			TU_build_civ_factory = yes
+			add_political_power = 60
+			add_tech_bonus = { name = TU_URS_market_reform bonus = 0.75 uses = 1 category = industry }
 		}
 	}
 
@@ -163,8 +164,9 @@
 		}
 
 		completion_reward = {
-			add_political_power = 25
 			TU_build_civ_factory = yes
+			add_tech_bonus = { name = TU_URS_mobile_plan bonus = 0.75 uses = 1 category = construction_tech }
+			add_tech_bonus = { name = TU_URS_mobile_plan bonus = 0.75 uses = 1 category = motorized_equipment }
 		}
 	}
 
@@ -187,9 +189,9 @@
 		}
 
 		completion_reward = {
-			add_manpower = 20000
-			add_stability = 0.01
 			TU_build_civ_factory = yes
+			add_tech_bonus = { name = TU_URS_northern_frontier bonus = 0.75 uses = 1 category = construction_tech }
+			army_experience = 25
 		}
 	}
 
@@ -210,6 +212,7 @@
 		completion_reward = {
 			add_ideas = TU_URS_e1_frost_supply
 			TU_build_mil_factory = yes
+			add_tech_bonus = { name = TU_URS_frost_supply bonus = 0.75 uses = 1 category = industry category = construction_tech }
 		}
 	}
 
@@ -233,9 +236,10 @@
 		}
 
 		completion_reward = {
-			add_stability = 0.03
 			add_ideas = TU_URS_e1_consumer_goods
 			TU_build_civ_factory = yes
+			add_political_power = 60
+			add_tech_bonus = { name = TU_URS_consumer_goods bonus = 0.75 uses = 1 category = industry }
 		}
 	}
 
@@ -263,9 +267,10 @@
 				id = TU_URS_bop
 				value = -0.05
 			}
-			add_war_support = 5
 			add_ideas = TU_URS_e1_war_economy
 			TU_build_mil_factory = yes
+			add_political_power = 60
+			add_tech_bonus = { name = TU_URS_war_economy bonus = 0.75 uses = 1 category = industry }
 		}
 	}
 
@@ -288,9 +293,8 @@
 		}
 
 		completion_reward = {
-			add_political_power = 25
-			add_stability = -0.01
 			TU_build_civ_factory = yes
+			add_tech_bonus = { name = TU_URS_originium_refine bonus = 0.75 uses = 1 category = electronics category = industry }
 		}
 	}
 
@@ -315,9 +319,10 @@
 		}
 
 		completion_reward = {
-			add_stability = 0.03
 			add_ideas = TU_URS_e1_mobile_civil
 			TU_build_civ_factory = yes
+			add_stability = 0.03
+			add_manpower = 10000
 		}
 	}
 
@@ -341,8 +346,9 @@
 		}
 
 		completion_reward = {
-			army_experience = 10
 			add_ideas = TU_URS_e1_mobile_fort
+			add_tech_bonus = { name = TU_URS_mobile_fort bonus = 0.75 uses = 1 category = motorized_equipment }
+			add_doctrine_cost_reduction = { name = TU_URS_mobile_fort cost_reduction = 0.4 uses = 1 category = land_doctrine }
 		}
 	}
 
@@ -367,8 +373,8 @@
 		}
 
 		completion_reward = {
-			army_experience = 10
-			add_manpower = 15000
+			add_tech_bonus = { name = TU_URS_northern_garrison bonus = 0.75 uses = 1 category = construction_tech }
+			army_experience = 25
 		}
 	}
 
@@ -387,8 +393,7 @@
 		}
 
 		completion_reward = {
-			add_political_power = 50
-			add_stability = 0.02
+			add_tech_bonus = { name = TU_URS_originium_export bonus = 0.75 uses = 1 category = electronics category = industry }
 		}
 	}
 
@@ -407,8 +412,8 @@
 		}
 
 		completion_reward = {
-			add_political_power = 25
 			TU_build_infrastructure = yes
+			add_tech_bonus = { name = TU_URS_frost_road2 bonus = 0.75 uses = 1 category = industry category = construction_tech }
 		}
 	}
 
@@ -431,9 +436,9 @@
 		}
 
 		completion_reward = {
-			add_stability = 0.02
-			add_political_power = 25
 			TU_build_civ_factory = yes
+			add_tech_bonus = { name = TU_URS_mobile_market bonus = 0.75 uses = 1 category = motorized_equipment }
+			add_doctrine_cost_reduction = { name = TU_URS_mobile_market cost_reduction = 0.4 uses = 1 category = land_doctrine }
 		}
 	}
 
@@ -456,13 +461,8 @@
 		}
 
 		completion_reward = {
-			add_tech_bonus = {
-				name = TU_URS_e1_mobile_rail_bonus
-				bonus = 1.0
-				uses = 2
-				category = construction_tech
-			}
-			army_experience = 10
+			add_tech_bonus = { name = TU_URS_mobile_siege_rail bonus = 0.75 uses = 1 category = artillery }
+			army_experience = 25
 		}
 	}
 
@@ -486,9 +486,8 @@
 		}
 
 		completion_reward = {
-			add_manpower = 10000
-			add_stability = 0.01
 			TU_build_infrastructure = yes
+			add_tech_bonus = { name = TU_URS_permafrost_rail bonus = 0.75 uses = 1 category = industry category = construction_tech }
 		}
 	}
 
@@ -512,9 +511,8 @@
 		}
 
 		completion_reward = {
-			add_political_power = 30
-			add_stability = 0.01
 			TU_build_civ_factory = yes
+			add_tech_bonus = { name = TU_URS_permafrost_rail_alt bonus = 0.75 uses = 1 category = industry category = construction_tech }
 		}
 	}
 
@@ -537,9 +535,8 @@
 		}
 
 		completion_reward = {
-			add_political_power = 25
-			add_stability = 0.02
 			TU_build_civ_factory = yes
+			add_tech_bonus = { name = TU_URS_originium_grid bonus = 0.75 uses = 1 category = electronics category = industry }
 		}
 	}
 
@@ -564,9 +561,9 @@
 		}
 
 		completion_reward = {
-			add_political_power = 25
-			add_manpower = 15000
 			TU_build_infrastructure = yes
+			add_tech_bonus = { name = TU_URS_mobile_terminal bonus = 0.75 uses = 1 category = construction_tech }
+			add_tech_bonus = { name = TU_URS_mobile_terminal bonus = 0.75 uses = 1 category = motorized_equipment }
 		}
 	}
 
@@ -589,9 +586,8 @@
 		}
 
 		completion_reward = {
-			add_political_power = 50
-			add_stability = -0.02
 			TU_build_civ_factory = yes
+			add_tech_bonus = { name = TU_URS_originium_core bonus = 1.0 uses = 1 category = electronics category = industry }
 		}
 	}
 
@@ -614,10 +610,10 @@
 		}
 
 		completion_reward = {
-			add_political_power = 75
-			add_stability = 0.02
 			add_ideas = TU_URS_e1_mobile_core
 			TU_build_civ_factory = yes
+			add_tech_bonus = { name = TU_URS_mobile_core bonus = 1.0 uses = 1 category = construction_tech }
+			add_tech_bonus = { name = TU_URS_mobile_core bonus = 1.0 uses = 1 category = motorized_equipment }
 		}
 	}
 
@@ -636,8 +632,8 @@
 		}
 
 		completion_reward = {
-			add_political_power = 50
 			add_ideas = TU_URS_e1_originium_monopoly
+			add_tech_bonus = { name = TU_URS_originium_secure bonus = 0.75 uses = 1 category = electronics category = industry }
 		}
 	}
 
@@ -656,9 +652,9 @@
 		}
 
 		completion_reward = {
-			add_political_power = 75
-			add_stability = 0.03
 			TU_build_infrastructure = yes
+			add_tech_bonus = { name = TU_URS_mobile_final bonus = 1.0 uses = 1 category = construction_tech }
+			add_tech_bonus = { name = TU_URS_mobile_final bonus = 1.0 uses = 1 category = motorized_equipment }
 		}
 	}
 
@@ -678,8 +674,7 @@
 		}
 
 		completion_reward = {
-			add_political_power = 100
-			add_stability = 0.03
 			TU_build_civ_factory = yes
+			add_tech_bonus = { name = TU_URS_final_grid bonus = 1.0 uses = 1 category = industry category = construction_tech }
 		}
 	}

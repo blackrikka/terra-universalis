@@ -29,9 +29,9 @@
 		search_filters = { FOCUS_FILTER_POLITICAL }
 
 		completion_reward = {
-			add_political_power = 25
-			add_war_support = 0.05
 			country_event = { id = tu_kzd_ev.1 }
+			add_political_power = 60
+			add_stability = 0.03
 		}
 	}
 
@@ -46,7 +46,8 @@
 		search_filters = { FOCUS_FILTER_RESEARCH }
 
 		completion_reward = {
-			add_manpower = 50000
+			add_manpower = 10000
+			army_experience = 25
 		}
 	}
 
@@ -61,7 +62,8 @@
 		search_filters = { FOCUS_FILTER_ARMY_XP }
 
 		completion_reward = {
-			army_experience = 25
+			add_tech_bonus = { name = TU_KZD_mobile_army bonus = 0.75 uses = 1 category = motorized_equipment }
+			add_doctrine_cost_reduction = { name = TU_KZD_mobile_army cost_reduction = 0.4 uses = 1 category = land_doctrine }
 		}
 	}
 
@@ -76,7 +78,9 @@
 		search_filters = { FOCUS_FILTER_POLITICAL }
 
 		completion_reward = {
-			add_political_power = 75
+			army_experience = 25
+			add_war_support = 0.03
+			add_doctrine_cost_reduction = { name = TU_KZD_war_council cost_reduction = 0.4 uses = 1 category = land_doctrine }
 		}
 	}
 
@@ -91,7 +95,8 @@
 		search_filters = { FOCUS_FILTER_ARMY_XP }
 
 		completion_reward = {
-			army_experience = 20
+			add_tech_bonus = { name = TU_KZD_steel_doctrine bonus = 0.75 uses = 1 category = infantry_weapons }
+			army_experience = 25
 		}
 	}
 
@@ -106,8 +111,9 @@
 		search_filters = { FOCUS_FILTER_POLITICAL }
 
 		completion_reward = {
-			add_political_power = 50
-			add_war_support = 0.05
+			army_experience = 25
+			add_war_support = 0.03
+			add_doctrine_cost_reduction = { name = TU_KZD_expansion_plan cost_reduction = 0.4 uses = 1 category = land_doctrine }
 		}
 	}
 
@@ -122,8 +128,8 @@
 		search_filters = { FOCUS_FILTER_ARMY_XP }
 
 		completion_reward = {
-			add_war_support = 0.05
-			army_experience = 15
+			add_tech_bonus = { name = TU_KZD_frontier_push bonus = 0.75 uses = 1 category = construction_tech }
+			army_experience = 25
 		}
 	}
 
@@ -141,9 +147,9 @@
 		search_filters = { FOCUS_FILTER_POLITICAL }
 
 		completion_reward = {
-			add_political_power = 25
-			add_stability = 0.03
 			country_event = { id = tu_kzd_ev.2 }
+			add_political_power = 60
+			add_stability = 0.03
 		}
 	}
 
@@ -158,7 +164,8 @@
 		search_filters = { FOCUS_FILTER_POLITICAL }
 
 		completion_reward = {
-			add_stability = 0.03
+			add_manpower = 10000
+			army_experience = 25
 		}
 	}
 
@@ -177,7 +184,8 @@
 				division_template = "TU_KZD_elite_guard"
 				is_locked = no
 			}
-			army_experience = 10
+			add_doctrine_cost_reduction = { name = TU_KZD_elite_template cost_reduction = 0.4 uses = 1 category = land_doctrine }
+			army_experience = 25
 		}
 	}
 
@@ -192,7 +200,8 @@
 		search_filters = { FOCUS_FILTER_ARMY_XP }
 
 		completion_reward = {
-			army_experience = 15
+			add_tech_bonus = { name = TU_KZD_mountain_defence bonus = 0.75 uses = 1 category = construction_tech }
+			army_experience = 25
 		}
 	}
 
@@ -207,7 +216,8 @@
 		search_filters = { FOCUS_FILTER_POLITICAL }
 
 		completion_reward = {
-			add_stability = 0.02
+			add_tech_bonus = { name = TU_KZD_fortified_frontier bonus = 0.75 uses = 1 category = construction_tech }
+			army_experience = 25
 		}
 	}
 
@@ -222,7 +232,8 @@
 		search_filters = { FOCUS_FILTER_POLITICAL }
 
 		completion_reward = {
-			add_political_power = 50
+			add_political_power = 60
+			add_stability = 0.03
 		}
 	}
 
@@ -237,7 +248,8 @@
 		search_filters = { FOCUS_FILTER_ARMY_XP }
 
 		completion_reward = {
-			army_experience = 30
+			add_doctrine_cost_reduction = { name = TU_KZD_elite_training cost_reduction = 0.4 uses = 1 category = land_doctrine }
+			army_experience = 25
 		}
 	}
 
@@ -255,8 +267,8 @@
 		search_filters = { FOCUS_FILTER_POLITICAL }
 
 		completion_reward = {
-			add_political_power = 25
 			country_event = { id = tu_kzd_ev.3 }
+			add_tech_bonus = { name = TU_KZD_babel_restoration bonus = 0.75 uses = 1 category = electronics category = industry }
 		}
 	}
 
@@ -283,6 +295,7 @@
 			else = {
 				add_political_power = 25
 			}
+			add_tech_bonus = { name = TU_KZD_babel_envoy bonus = 0.75 uses = 1 category = electronics category = industry }
 		}
 	}
 
@@ -301,7 +314,8 @@
 		}
 
 		completion_reward = {
-			add_political_power = 50
+			add_tech_bonus = { name = TU_KZD_arms_export bonus = 0.75 uses = 1 category = infantry_weapons }
+			army_experience = 25
 		}
 	}
 
@@ -320,7 +334,8 @@
 		}
 
 		completion_reward = {
-			army_experience = 20
+			add_doctrine_cost_reduction = { name = TU_KZD_babel_school cost_reduction = 0.4 uses = 1 category = land_doctrine }
+			army_experience = 25
 		}
 	}
 
@@ -339,7 +354,6 @@
 		}
 
 		completion_reward = {
-			add_political_power = 75
-			add_stability = 0.02
+			add_tech_bonus = { name = TU_KZD_babel_ascension bonus = 0.75 uses = 1 category = electronics category = industry }
 		}
 	}

@@ -15,13 +15,7 @@
 		}
 
 		completion_reward = {
-			add_tech_bonus = {
-				name = TU_URS_e3_arts_engineering_bonus
-				bonus = 1.0
-				uses = 1
-				category = electronics
-			}
-			add_political_power = 25
+			add_tech_bonus = { name = TU_URS_arts_engineering bonus = 0.75 uses = 1 category = electronics category = industry }
 		}
 	}
 
@@ -41,12 +35,9 @@
 		}
 
 		completion_reward = {
-			add_tech_bonus = {
-				name = TU_URS_e3_conventional_bonus
-				bonus = 0.5
-				uses = 1
-				category = air_doctrine
-			}
+			add_tech_bonus = { name = TU_URS_arts_conventional bonus = 0.75 uses = 1 category = light_fighter category = tactical_bomber }
+			add_doctrine_cost_reduction = { name = TU_URS_arts_conventional cost_reduction = 0.4 uses = 1 category = air_doctrine }
+			air_experience = 25
 		}
 	}
 
@@ -69,13 +60,8 @@
 		}
 
 		completion_reward = {
-			add_tech_bonus = {
-				name = TU_URS_e3_arts_lab_bonus
-				bonus = 0.5
-				uses = 1
-				category = radar_tech
-			}
 			add_ideas = TU_URS_e3_arts_research
+			add_tech_bonus = { name = TU_URS_arts_lab bonus = 0.75 uses = 1 category = electronics category = industry }
 		}
 	}
 
@@ -95,8 +81,9 @@
 		}
 
 		completion_reward = {
+			add_tech_bonus = { name = TU_URS_frozen_airfield bonus = 0.75 uses = 1 category = light_fighter category = tactical_bomber }
+			add_doctrine_cost_reduction = { name = TU_URS_frozen_airfield cost_reduction = 0.4 uses = 1 category = air_doctrine }
 			air_experience = 25
-			add_political_power = 25
 		}
 	}
 
@@ -120,8 +107,9 @@
 		}
 
 		completion_reward = {
-			air_experience = 30
 			add_ideas = TU_URS_e3_frozen_air
+			add_doctrine_cost_reduction = { name = TU_URS_frozen_pilots cost_reduction = 0.4 uses = 1 category = land_doctrine }
+			army_experience = 25
 		}
 	}
 
@@ -140,12 +128,9 @@
 		}
 
 		completion_reward = {
-			add_tech_bonus = {
-				name = TU_URS_e3_frozen_doctrine_bonus
-				bonus = 1.0
-				uses = 1
-				category = air_doctrine
-			}
+			add_tech_bonus = { name = TU_URS_frozen_air_doctrine bonus = 0.75 uses = 1 category = light_fighter category = tactical_bomber }
+			add_doctrine_cost_reduction = { name = TU_URS_frozen_air_doctrine cost_reduction = 0.4 uses = 1 category = air_doctrine }
+			air_experience = 25
 		}
 	}
 
@@ -164,7 +149,8 @@
 		}
 
 		completion_reward = {
-			air_experience = 20
+			add_tech_bonus = { name = TU_URS_frost_interceptors bonus = 0.75 uses = 1 category = construction_tech }
+			army_experience = 25
 		}
 	}
 
@@ -183,8 +169,10 @@
 		}
 
 		completion_reward = {
-			air_experience = 25
 			add_ideas = TU_URS_e3_frost_supremacy
+			add_tech_bonus = { name = TU_URS_frost_supremacy bonus = 1.0 uses = 1 category = light_fighter category = tactical_bomber }
+			add_doctrine_cost_reduction = { name = TU_URS_frost_supremacy cost_reduction = 0.5 uses = 1 category = air_doctrine }
+			air_experience = 40
 		}
 	}
 
@@ -203,8 +191,9 @@
 		}
 
 		completion_reward = {
-			air_experience = 20
-			add_political_power = 50
+			add_tech_bonus = { name = TU_URS_frost_legacy bonus = 1.0 uses = 1 category = light_fighter category = tactical_bomber }
+			add_doctrine_cost_reduction = { name = TU_URS_frost_legacy cost_reduction = 0.5 uses = 1 category = air_doctrine }
+			air_experience = 40
 		}
 	}
 
@@ -224,9 +213,9 @@
 		}
 
 		completion_reward = {
-			air_experience = 30
-			add_political_power = 75
-			add_stability = 0.02
+			add_tech_bonus = { name = TU_URS_frost_end bonus = 1.0 uses = 1 category = light_fighter category = tactical_bomber }
+			add_doctrine_cost_reduction = { name = TU_URS_frost_end cost_reduction = 0.5 uses = 1 category = air_doctrine }
+			air_experience = 40
 		}
 	}
 
@@ -250,13 +239,9 @@
 		}
 
 		completion_reward = {
-			add_tech_bonus = {
-				name = TU_URS_e3_expedition_bonus
-				bonus = 1.0
-				uses = 1
-				category = air_equipment
-			}
-			add_political_power = 25
+			army_experience = 25
+			add_war_support = 0.03
+			add_doctrine_cost_reduction = { name = TU_URS_northern_expedition cost_reduction = 0.4 uses = 1 category = land_doctrine }
 		}
 	}
 
@@ -275,12 +260,8 @@
 		}
 
 		completion_reward = {
-			add_tech_bonus = {
-				name = TU_URS_e3_recon_bonus
-				bonus = 0.5
-				uses = 1
-				category = light_air
-			}
+			add_tech_bonus = { name = TU_URS_northern_recon bonus = 0.75 uses = 1 category = radar_tech category = electronics }
+			add_stability = 0.03
 		}
 	}
 
@@ -300,12 +281,9 @@
 		}
 
 		completion_reward = {
-			add_tech_bonus = {
-				name = TU_URS_e3_bomber_bonus
-				bonus = 1.0
-				uses = 1
-				category = tactical_bomber
-			}
+			add_tech_bonus = { name = TU_URS_northern_bomber bonus = 0.75 uses = 1 category = light_fighter category = tactical_bomber }
+			add_doctrine_cost_reduction = { name = TU_URS_northern_bomber cost_reduction = 0.4 uses = 1 category = air_doctrine }
+			air_experience = 25
 		}
 	}
 
@@ -325,12 +303,9 @@
 		}
 
 		completion_reward = {
-			add_tech_bonus = {
-				name = TU_URS_e3_fighter_bonus
-				bonus = 1.0
-				uses = 1
-				category = air_equipment
-			}
 			add_ideas = TU_URS_e3_northern_range
+			add_tech_bonus = { name = TU_URS_northern_fighter bonus = 0.75 uses = 1 category = light_fighter category = tactical_bomber }
+			add_doctrine_cost_reduction = { name = TU_URS_northern_fighter cost_reduction = 0.4 uses = 1 category = air_doctrine }
+			air_experience = 25
 		}
 	}

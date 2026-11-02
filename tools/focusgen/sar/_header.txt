@@ -1,0 +1,17 @@
+focus_tree = {
+	id = TU_SAR_focus
+	continuous_focus_position = { x = 50 y = 1200 }
+
+	country = {
+		factor = 0
+		modifier = {
+			add = 10
+			original_tag = SAR
+		}
+	}
+
+	reset_on_civilwar = no
+
+	initial_show_position = {
+		focus = TU_SAR_root
+	}

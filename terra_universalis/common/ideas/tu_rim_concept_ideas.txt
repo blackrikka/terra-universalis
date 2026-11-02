@@ -1,0 +1,57 @@
+ideas = {
+
+	country = {
+
+		TU_RIM_idea_politics = {
+			picture = generic_central_management
+
+			allowed = {
+				original_tag = RIM
+			}
+
+			modifier = {
+				political_power_gain = 0.1
+				stability_factor = 0.03
+			}
+		}
+
+		TU_RIM_idea_mining = {
+			picture = generic_production_bonus
+
+			allowed = {
+				original_tag = RIM
+			}
+
+			modifier = {
+				production_factory_max_efficiency_factor = 0.05
+				production_speed_buildings_factor = 0.05
+			}
+		}
+
+		TU_RIM_idea_security = {
+			picture = generic_fortify_the_borders
+
+			allowed = {
+				original_tag = RIM
+			}
+
+			modifier = {
+				army_defence_factor = 0.05
+				max_dig_in = 1
+			}
+		}
+
+		TU_RIM_idea_medical = {
+			picture = generic_morale_bonus
+
+			allowed = {
+				original_tag = RIM
+			}
+
+			modifier = {
+				stability_factor = 0.05
+				monthly_population = 0.1
+			}
+		}
+	}
+}

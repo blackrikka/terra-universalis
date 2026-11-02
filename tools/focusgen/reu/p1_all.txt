@@ -18,8 +18,9 @@
 		}
 
 		completion_reward = {
-			add_political_power = 50
 			set_country_flag = TU_dip_relations_unlocked
+			add_political_power = 60
+			add_stability = 0.03
 		}
 	}
 
@@ -41,8 +42,8 @@
 		}
 
 		completion_reward = {
-			army_experience = 20
-			add_political_power = 25
+			add_tech_bonus = { name = TU_REU_serpent_scouts bonus = 0.75 uses = 1 category = radar_tech category = electronics }
+			add_stability = 0.03
 		}
 	}
 
@@ -62,8 +63,7 @@
 		}
 
 		completion_reward = {
-			add_political_power = 25
-			add_war_support = 0.05
+			add_tech_bonus = { name = TU_REU_serpent_supply bonus = 0.75 uses = 1 category = industry category = construction_tech }
 		}
 	}
 
@@ -82,8 +82,8 @@
 		}
 
 		completion_reward = {
-			add_manpower = 15000
-			add_political_power = 25
+			add_manpower = 10000
+			army_experience = 25
 		}
 	}
 
@@ -103,8 +103,8 @@
 		}
 
 		completion_reward = {
-			add_political_power = 50
-			add_stability = 0.02
+			add_war_support = 0.03
+			add_stability = 0.03
 		}
 	}
 
@@ -124,8 +124,7 @@
 		}
 
 		completion_reward = {
-			add_war_support = 0.03
-			add_political_power = 50
+			add_tech_bonus = { name = TU_REU_talulah_speech_alt bonus = 0.75 uses = 1 category = industry category = construction_tech }
 		}
 	}
 
@@ -145,8 +144,8 @@
 		}
 
 		completion_reward = {
-			army_experience = 15
-			add_political_power = 25
+			add_tech_bonus = { name = TU_REU_serpent_rail bonus = 0.75 uses = 1 category = construction_tech }
+			army_experience = 25
 		}
 	}
 
@@ -167,7 +166,7 @@
 
 		completion_reward = {
 			add_ideas = TU_REU_choice_serpent_rail
-			add_political_power = 25
+			add_tech_bonus = { name = TU_REU_serpent_rail_alt bonus = 0.75 uses = 1 category = industry category = construction_tech }
 		}
 	}
 
@@ -186,8 +185,8 @@
 		}
 
 		completion_reward = {
-			add_political_power = 25
 			add_war_support = 0.03
+			add_stability = 0.03
 		}
 	}
 
@@ -209,7 +208,8 @@
 
 		completion_reward = {
 			army_experience = 25
-			add_political_power = 50
+			add_war_support = 0.03
+			add_doctrine_cost_reduction = { name = TU_REU_conquest_north cost_reduction = 0.4 uses = 1 category = land_doctrine }
 		}
 	}
 
@@ -229,7 +229,8 @@
 
 		completion_reward = {
 			army_experience = 25
-			add_political_power = 50
+			add_war_support = 0.03
+			add_doctrine_cost_reduction = { name = TU_REU_conquest_south cost_reduction = 0.4 uses = 1 category = land_doctrine }
 		}
 	}
 
@@ -248,8 +249,9 @@
 		}
 
 		completion_reward = {
-			add_political_power = 50
-			add_stability = 0.02
+			army_experience = 25
+			add_war_support = 0.03
+			add_doctrine_cost_reduction = { name = TU_REU_conquest_occupation cost_reduction = 0.4 uses = 1 category = land_doctrine }
 		}
 	}
 
@@ -268,7 +270,8 @@
 		}
 
 		completion_reward = {
-			add_political_power = 75
+			add_political_power = 60
+			add_tech_bonus = { name = TU_REU_conquest_blood_tax bonus = 0.75 uses = 1 category = industry }
 		}
 	}
 
@@ -287,7 +290,8 @@
 		}
 
 		completion_reward = {
-			add_political_power = 50
+			add_political_power = 60
+			add_tech_bonus = { name = TU_REU_serpent_ledger bonus = 0.75 uses = 1 category = industry }
 		}
 	}
 
@@ -306,7 +310,8 @@
 		}
 
 		completion_reward = {
-			add_political_power = 25
+			add_political_power = 60
+			add_stability = 0.03
 		}
 	}
 
@@ -325,7 +330,8 @@
 		}
 
 		completion_reward = {
-			add_political_power = 25
+			add_political_power = 60
+			add_stability = 0.03
 		}
 	}
 
@@ -345,9 +351,10 @@
 		}
 
 		completion_reward = {
-			army_experience = 50
-			add_political_power = 50
 			add_ideas = TU_REU_serpent_legion
+			army_experience = 25
+			add_war_support = 0.03
+			add_doctrine_cost_reduction = { name = TU_REU_conquest_breakthrough cost_reduction = 0.4 uses = 1 category = land_doctrine }
 		}
 	}
 
@@ -366,8 +373,8 @@
 		}
 
 		completion_reward = {
+			add_tech_bonus = { name = TU_REU_conquest_hunters bonus = 0.75 uses = 1 category = infantry_weapons }
 			army_experience = 25
-			add_political_power = 50
 		}
 	}
 
@@ -387,8 +394,9 @@
 		}
 
 		completion_reward = {
-			army_experience = 50
-			add_political_power = 100
+			army_experience = 40
+			add_war_support = 0.05
+			add_doctrine_cost_reduction = { name = TU_REU_conquest_capital_assault cost_reduction = 0.5 uses = 1 category = land_doctrine }
 		}
 	}
 
@@ -407,7 +415,8 @@
 		}
 
 		completion_reward = {
-			add_political_power = 25
+			add_political_power = 60
+			add_stability = 0.03
 		}
 	}
 
@@ -426,8 +435,9 @@
 		}
 
 		completion_reward = {
-			add_political_power = 75
-			add_stability = 0.05
+			army_experience = 25
+			add_war_support = 0.03
+			add_doctrine_cost_reduction = { name = TU_REU_conquest_order cost_reduction = 0.4 uses = 1 category = land_doctrine }
 		}
 	}
 
@@ -446,8 +456,9 @@
 		}
 
 		completion_reward = {
-			add_political_power = 50
-			add_war_support = 0.05
+			army_experience = 25
+			add_war_support = 0.03
+			add_doctrine_cost_reduction = { name = TU_REU_conquest_war_council cost_reduction = 0.4 uses = 1 category = land_doctrine }
 		}
 	}
 
@@ -468,7 +479,8 @@
 		}
 
 		completion_reward = {
-			add_political_power = 25
+			add_tech_bonus = { name = TU_REU_frost_scouts bonus = 0.75 uses = 1 category = radar_tech category = electronics }
+			add_stability = 0.03
 		}
 	}
 
@@ -487,8 +499,7 @@
 		}
 
 		completion_reward = {
-			add_manpower = 5000
-			add_political_power = 25
+			add_tech_bonus = { name = TU_REU_frost_ice_roads bonus = 0.75 uses = 1 category = industry category = construction_tech }
 		}
 	}
 
@@ -507,8 +518,8 @@
 		}
 
 		completion_reward = {
-			add_political_power = 25
-			add_stability = 0.01
+			add_tech_bonus = { name = TU_REU_frost_signals bonus = 0.75 uses = 1 category = radar_tech category = electronics }
+			add_stability = 0.03
 		}
 	}
 
@@ -527,8 +538,7 @@
 		}
 
 		completion_reward = {
-			add_manpower = 5000
-			add_stability = 0.01
+			add_tech_bonus = { name = TU_REU_frost_harvest bonus = 0.75 uses = 1 category = industry category = construction_tech }
 		}
 	}
 
@@ -548,8 +558,7 @@
 		}
 
 		completion_reward = {
-			add_political_power = 25
-			add_stability = 0.02
+			add_tech_bonus = { name = TU_REU_zone_schools bonus = 0.75 uses = 1 category = electronics category = industry }
 		}
 	}
 
@@ -569,8 +578,8 @@
 		}
 
 		completion_reward = {
-			add_political_power = 50
 			add_stability = 0.03
+			add_manpower = 10000
 		}
 	}
 
@@ -589,7 +598,8 @@
 		}
 
 		completion_reward = {
-			add_political_power = 50
+			add_political_power = 60
+			add_stability = 0.03
 		}
 	}
 
@@ -608,8 +618,8 @@
 		}
 
 		completion_reward = {
-			add_political_power = 50
-			add_war_support = 0.03
+			add_political_power = 60
+			add_stability = 0.03
 		}
 	}
 
@@ -628,7 +638,7 @@
 		}
 
 		completion_reward = {
-			add_political_power = 50
+			add_tech_bonus = { name = TU_REU_frost_trade bonus = 0.75 uses = 1 category = industry category = construction_tech }
 		}
 	}
 
@@ -648,8 +658,8 @@
 		}
 
 		completion_reward = {
-			add_political_power = 50
-			add_war_support = 0.05
+			add_war_support = 0.03
+			add_stability = 0.03
 		}
 	}
 
@@ -668,7 +678,8 @@
 		}
 
 		completion_reward = {
-			add_political_power = 50
+			add_political_power = 60
+			add_stability = 0.03
 		}
 	}
 
@@ -688,8 +699,8 @@
 		}
 
 		completion_reward = {
+			add_manpower = 10000
 			army_experience = 25
-			add_political_power = 25
 		}
 	}
 
@@ -709,8 +720,8 @@
 		}
 
 		completion_reward = {
-			add_political_power = 75
-			add_stability = 0.02
+			add_political_power = 60
+			add_stability = 0.03
 		}
 	}
 
@@ -729,8 +740,8 @@
 		}
 
 		completion_reward = {
-			add_political_power = 50
-			add_stability = 0.02
+			add_stability = 0.03
+			add_manpower = 10000
 		}
 	}
 
@@ -749,7 +760,8 @@
 		}
 
 		completion_reward = {
-			add_political_power = 75
+			add_tech_bonus = { name = TU_REU_frost_walls bonus = 0.75 uses = 1 category = construction_tech }
+			army_experience = 25
 		}
 	}
 
@@ -768,8 +780,8 @@
 		}
 
 		completion_reward = {
-			add_political_power = 50
-			add_manpower = 10000
+			add_tech_bonus = { name = TU_REU_fortress_supply bonus = 0.75 uses = 1 category = construction_tech }
+			army_experience = 25
 		}
 	}
 
@@ -789,8 +801,8 @@
 		}
 
 		completion_reward = {
-			add_stability = 0.03
-			add_political_power = 50
+			add_tech_bonus = { name = TU_REU_fortress_watch bonus = 0.75 uses = 1 category = construction_tech }
+			army_experience = 25
 		}
 	}
 
@@ -810,8 +822,8 @@
 		}
 
 		completion_reward = {
-			army_experience = 15
-			add_political_power = 50
+			add_tech_bonus = { name = TU_REU_fortress_watch_alt bonus = 0.75 uses = 1 category = construction_tech }
+			army_experience = 25
 		}
 	}
 
@@ -831,8 +843,8 @@
 		}
 
 		completion_reward = {
+			add_tech_bonus = { name = TU_REU_bastion_line bonus = 0.75 uses = 1 category = construction_tech }
 			army_experience = 25
-			add_political_power = 75
 		}
 	}
 
@@ -852,7 +864,7 @@
 
 		completion_reward = {
 			add_manpower = 20000
-			add_political_power = 100
+			army_experience = 40
 		}
 	}
 
@@ -872,7 +884,7 @@
 		}
 
 		completion_reward = {
-			add_political_power = 100
+			add_war_support = 0.05
 			add_stability = 0.05
 		}
 	}
@@ -894,8 +906,10 @@
 		}
 
 		completion_reward = {
-			add_political_power = 50
 			add_ideas = TU_REU_guerrilla_doctrine
+			army_experience = 15
+			add_war_support = 0.02
+			add_doctrine_cost_reduction = { name = TU_REU_guerrilla_root cost_reduction = 0.25 uses = 1 category = land_doctrine }
 		}
 	}
 
@@ -914,8 +928,8 @@
 		}
 
 		completion_reward = {
-			army_experience = 20
-			add_political_power = 25
+			add_doctrine_cost_reduction = { name = TU_REU_guerrilla_training cost_reduction = 0.4 uses = 1 category = land_doctrine }
+			army_experience = 25
 		}
 	}
 
@@ -934,7 +948,8 @@
 		}
 
 		completion_reward = {
-			add_political_power = 25
+			add_tech_bonus = { name = TU_REU_guerrilla_cells bonus = 0.75 uses = 1 category = radar_tech category = electronics }
+			add_stability = 0.03
 		}
 	}
 
@@ -953,7 +968,8 @@
 		}
 
 		completion_reward = {
-			add_political_power = 50
+			add_tech_bonus = { name = TU_REU_guerrilla_intel bonus = 0.75 uses = 1 category = radar_tech category = electronics }
+			add_stability = 0.03
 		}
 	}
 
@@ -972,8 +988,8 @@
 		}
 
 		completion_reward = {
-			add_political_power = 25
-			add_manpower = 10000
+			add_tech_bonus = { name = TU_REU_guerrilla_caches bonus = 0.75 uses = 1 category = radar_tech category = electronics }
+			add_stability = 0.03
 		}
 	}
 
@@ -992,8 +1008,8 @@
 		}
 
 		completion_reward = {
-			army_experience = 40
-			add_political_power = 25
+			add_doctrine_cost_reduction = { name = TU_REU_guerrilla_ambush cost_reduction = 0.4 uses = 1 category = land_doctrine }
+			army_experience = 25
 		}
 	}
 
@@ -1013,8 +1029,8 @@
 		}
 
 		completion_reward = {
-			add_war_support = 0.03
-			add_political_power = 25
+			add_tech_bonus = { name = TU_REU_guerrilla_scouting bonus = 0.75 uses = 1 category = radar_tech category = electronics }
+			add_stability = 0.03
 		}
 	}
 
@@ -1034,8 +1050,8 @@
 		}
 
 		completion_reward = {
-			army_experience = 15
-			add_political_power = 25
+			add_tech_bonus = { name = TU_REU_guerrilla_scouting_alt bonus = 0.75 uses = 1 category = construction_tech }
+			army_experience = 25
 		}
 	}
 
@@ -1054,8 +1070,8 @@
 		}
 
 		completion_reward = {
-			add_political_power = 25
-			add_stability = 0.02
+			add_tech_bonus = { name = TU_REU_guerrilla_hideout bonus = 0.75 uses = 1 category = radar_tech category = electronics }
+			add_stability = 0.03
 		}
 	}
 
@@ -1074,8 +1090,8 @@
 		}
 
 		completion_reward = {
-			add_political_power = 25
-			add_stability = 0.02
+			add_stability = 0.03
+			add_manpower = 10000
 		}
 	}
 
@@ -1095,7 +1111,8 @@
 		}
 
 		completion_reward = {
-			add_political_power = 50
+			add_tech_bonus = { name = TU_REU_guerrilla_raid_plan bonus = 0.75 uses = 1 category = motorized_equipment }
+			add_doctrine_cost_reduction = { name = TU_REU_guerrilla_raid_plan cost_reduction = 0.4 uses = 1 category = land_doctrine }
 		}
 	}
 
@@ -1114,7 +1131,7 @@
 		}
 
 		completion_reward = {
-			add_political_power = 50
+			add_tech_bonus = { name = TU_REU_guerrilla_rails bonus = 0.75 uses = 1 category = industry category = construction_tech }
 		}
 	}
 
@@ -1133,8 +1150,8 @@
 		}
 
 		completion_reward = {
-			add_political_power = 50
-			add_war_support = 0.05
+			add_war_support = 0.03
+			add_stability = 0.03
 		}
 	}
 
@@ -1153,7 +1170,8 @@
 		}
 
 		completion_reward = {
-			add_political_power = 75
+			add_political_power = 60
+			add_stability = 0.03
 		}
 	}
 
@@ -1173,7 +1191,8 @@
 		}
 
 		completion_reward = {
-			add_political_power = 75
+			add_doctrine_cost_reduction = { name = TU_REU_guerrilla_council cost_reduction = 0.4 uses = 1 category = land_doctrine }
+			army_experience = 25
 		}
 	}
 
@@ -1194,8 +1213,9 @@
 
 		completion_reward = {
 			country_event = { id = tu_reu_ev.5 }
-			add_political_power = 100
+			army_experience = 40
 			add_war_support = 0.05
+			add_doctrine_cost_reduction = { name = TU_REU_guerrilla_endless cost_reduction = 0.5 uses = 1 category = land_doctrine }
 		}
 	}
 
@@ -1216,9 +1236,10 @@
 		}
 
 		completion_reward = {
-			add_political_power = 50
 			add_ideas = TU_REU_chernobog_engine_idea
 			TU_build_civ_factory = yes
+			add_political_power = 35
+			add_stability = 0.02
 		}
 	}
 
@@ -1237,7 +1258,7 @@
 		}
 
 		completion_reward = {
-			add_political_power = 25
+			add_tech_bonus = { name = TU_REU_chernobog_survey bonus = 0.75 uses = 1 category = industry category = construction_tech }
 		}
 	}
 
@@ -1256,8 +1277,8 @@
 		}
 
 		completion_reward = {
-			add_political_power = 25
-			add_manpower = 10000
+			add_political_power = 60
+			add_stability = 0.03
 		}
 	}
 
@@ -1276,7 +1297,7 @@
 		}
 
 		completion_reward = {
-			add_political_power = 25
+			add_tech_bonus = { name = TU_REU_chernobog_engine bonus = 0.75 uses = 1 category = industry category = construction_tech }
 		}
 	}
 
@@ -1295,8 +1316,8 @@
 		}
 
 		completion_reward = {
-			add_political_power = 50
 			TU_build_civ_factory = yes
+			add_tech_bonus = { name = TU_REU_chernobog_reactor bonus = 0.75 uses = 1 category = industry category = construction_tech }
 		}
 	}
 
@@ -1315,7 +1336,7 @@
 		}
 
 		completion_reward = {
-			add_political_power = 25
+			add_tech_bonus = { name = TU_REU_chernobog_tracks bonus = 0.75 uses = 1 category = industry category = construction_tech }
 		}
 	}
 
@@ -1335,8 +1356,8 @@
 		}
 
 		completion_reward = {
-			add_political_power = 50
-			add_stability = 0.02
+			add_tech_bonus = { name = TU_REU_chernobog_defences bonus = 0.75 uses = 1 category = construction_tech }
+			army_experience = 25
 		}
 	}
 
@@ -1355,8 +1376,8 @@
 		}
 
 		completion_reward = {
-			add_political_power = 50
 			TU_build_civ_factory = yes
+			add_tech_bonus = { name = TU_REU_chernobog_workshop bonus = 0.75 uses = 1 category = industry category = construction_tech }
 		}
 	}
 
@@ -1376,7 +1397,9 @@
 		}
 
 		completion_reward = {
-			add_political_power = 50
+			army_experience = 25
+			add_war_support = 0.03
+			add_doctrine_cost_reduction = { name = TU_REU_chernobog_movement cost_reduction = 0.4 uses = 1 category = land_doctrine }
 		}
 	}
 
@@ -1395,8 +1418,8 @@
 		}
 
 		completion_reward = {
-			add_political_power = 50
 			TU_build_infrastructure = yes
+			add_tech_bonus = { name = TU_REU_chernobog_rail_link bonus = 0.75 uses = 1 category = industry category = construction_tech }
 		}
 	}
 
@@ -1415,7 +1438,8 @@
 		}
 
 		completion_reward = {
-			add_political_power = 25
+			add_tech_bonus = { name = TU_REU_chernobog_bridge bonus = 0.75 uses = 1 category = motorized_equipment }
+			add_doctrine_cost_reduction = { name = TU_REU_chernobog_bridge cost_reduction = 0.4 uses = 1 category = land_doctrine }
 		}
 	}
 
@@ -1434,8 +1458,8 @@
 		}
 
 		completion_reward = {
-			add_political_power = 25
-			add_manpower = 15000
+			add_stability = 0.03
+			add_manpower = 10000
 		}
 	}
 
@@ -1454,8 +1478,9 @@
 		}
 
 		completion_reward = {
-			army_experience = 25
-			add_political_power = 25
+			add_tech_bonus = { name = TU_REU_chernobog_convoy bonus = 0.75 uses = 1 category = dd_tech category = ca_tech }
+			add_doctrine_cost_reduction = { name = TU_REU_chernobog_convoy cost_reduction = 0.4 uses = 1 category = naval_doctrine }
+			navy_experience = 25
 		}
 	}
 
@@ -1475,7 +1500,8 @@
 		}
 
 		completion_reward = {
-			add_political_power = 75
+			add_stability = 0.03
+			add_manpower = 10000
 		}
 	}
 
@@ -1494,7 +1520,7 @@
 		}
 
 		completion_reward = {
-			add_political_power = 50
+			add_tech_bonus = { name = TU_REU_chernobog_hangar bonus = 0.75 uses = 1 category = industry category = construction_tech }
 		}
 	}
 
@@ -1514,8 +1540,8 @@
 		}
 
 		completion_reward = {
+			add_tech_bonus = { name = TU_REU_chernobog_sensors bonus = 0.75 uses = 1 category = radar_tech category = electronics }
 			add_stability = 0.03
-			add_political_power = 25
 		}
 	}
 
@@ -1535,8 +1561,8 @@
 		}
 
 		completion_reward = {
-			add_war_support = 0.03
-			add_political_power = 25
+			add_tech_bonus = { name = TU_REU_chernobog_sensors_alt bonus = 0.75 uses = 1 category = construction_tech }
+			army_experience = 25
 		}
 	}
 
@@ -1556,8 +1582,8 @@
 		}
 
 		completion_reward = {
-			add_political_power = 75
 			TU_build_mil_factory = yes
+			add_tech_bonus = { name = TU_REU_chernobog_power bonus = 0.75 uses = 1 category = industry category = construction_tech }
 		}
 	}
 
@@ -1579,6 +1605,7 @@
 		completion_reward = {
 			country_event = { id = tu_reu_ev.4 }
 			add_political_power = 100
+			add_stability = 0.05
 		}
 	}
 
@@ -1599,8 +1626,10 @@
 		}
 
 		completion_reward = {
-			add_political_power = 50
 			add_ideas = TU_REU_mobilize_spirit
+			army_experience = 15
+			add_war_support = 0.02
+			add_doctrine_cost_reduction = { name = TU_REU_mobilize_root cost_reduction = 0.25 uses = 1 category = land_doctrine }
 		}
 	}
 
@@ -1619,7 +1648,8 @@
 		}
 
 		completion_reward = {
-			add_political_power = 25
+			add_stability = 0.03
+			add_manpower = 10000
 		}
 	}
 
@@ -1638,8 +1668,8 @@
 		}
 
 		completion_reward = {
-			add_political_power = 25
-			add_manpower = 20000
+			add_tech_bonus = { name = TU_REU_mobilize_volunteers bonus = 0.75 uses = 1 category = construction_tech }
+			army_experience = 25
 		}
 	}
 
@@ -1658,8 +1688,8 @@
 		}
 
 		completion_reward = {
-			add_political_power = 25
-			add_manpower = 5000
+			add_manpower = 10000
+			army_experience = 25
 		}
 	}
 
@@ -1678,8 +1708,8 @@
 		}
 
 		completion_reward = {
-			army_experience = 20
-			add_political_power = 25
+			add_doctrine_cost_reduction = { name = TU_REU_mobilize_training cost_reduction = 0.4 uses = 1 category = land_doctrine }
+			army_experience = 25
 		}
 	}
 
@@ -1698,7 +1728,7 @@
 		}
 
 		completion_reward = {
-			add_political_power = 25
+			add_political_power = 60
 			add_stability = 0.03
 		}
 	}
@@ -1719,8 +1749,8 @@
 		}
 
 		completion_reward = {
-			army_experience = 15
-			add_political_power = 25
+			add_stability = 0.03
+			add_manpower = 10000
 		}
 	}
 
@@ -1740,8 +1770,8 @@
 		}
 
 		completion_reward = {
-			add_stability = 0.03
-			add_political_power = 25
+			add_doctrine_cost_reduction = { name = TU_REU_mobilize_schools_alt cost_reduction = 0.4 uses = 1 category = land_doctrine }
+			army_experience = 25
 		}
 	}
 
@@ -1760,7 +1790,9 @@
 		}
 
 		completion_reward = {
-			add_political_power = 25
+			army_experience = 25
+			add_war_support = 0.03
+			add_doctrine_cost_reduction = { name = TU_REU_mobilize_camps cost_reduction = 0.4 uses = 1 category = land_doctrine }
 		}
 	}
 
@@ -1780,7 +1812,8 @@
 		}
 
 		completion_reward = {
-			add_political_power = 50
+			add_stability = 0.03
+			add_manpower = 10000
 		}
 	}
 
@@ -1799,7 +1832,8 @@
 		}
 
 		completion_reward = {
-			add_political_power = 50
+			add_tech_bonus = { name = TU_REU_mobilize_guards bonus = 0.75 uses = 1 category = construction_tech }
+			army_experience = 25
 		}
 	}
 
@@ -1820,7 +1854,9 @@
 
 		completion_reward = {
 			add_ideas = TU_REU_choice_mobilize_quota
-			add_political_power = 50
+			army_experience = 25
+			add_war_support = 0.03
+			add_doctrine_cost_reduction = { name = TU_REU_mobilize_quota cost_reduction = 0.4 uses = 1 category = land_doctrine }
 		}
 	}
 
@@ -1840,8 +1876,8 @@
 		}
 
 		completion_reward = {
-			army_experience = 15
-			add_political_power = 50
+			add_doctrine_cost_reduction = { name = TU_REU_mobilize_quota_alt cost_reduction = 0.4 uses = 1 category = land_doctrine }
+			army_experience = 25
 		}
 	}
 
@@ -1861,8 +1897,9 @@
 		}
 
 		completion_reward = {
-			add_political_power = 50
 			TU_build_civ_factory = yes
+			add_stability = 0.03
+			add_manpower = 10000
 		}
 	}
 
@@ -1881,8 +1918,9 @@
 		}
 
 		completion_reward = {
-			add_political_power = 50
-			add_manpower = 30000
+			army_experience = 25
+			add_war_support = 0.03
+			add_doctrine_cost_reduction = { name = TU_REU_mobilize_wave2 cost_reduction = 0.4 uses = 1 category = land_doctrine }
 		}
 	}
 
@@ -1901,8 +1939,9 @@
 		}
 
 		completion_reward = {
-			army_experience = 50
-			add_political_power = 25
+			army_experience = 25
+			add_war_support = 0.03
+			add_doctrine_cost_reduction = { name = TU_REU_mobilize_frontline cost_reduction = 0.4 uses = 1 category = land_doctrine }
 		}
 	}
 
@@ -1922,7 +1961,9 @@
 		}
 
 		completion_reward = {
-			add_political_power = 75
+			army_experience = 25
+			add_war_support = 0.03
+			add_doctrine_cost_reduction = { name = TU_REU_mobilize_wartime cost_reduction = 0.4 uses = 1 category = land_doctrine }
 		}
 	}
 
@@ -1943,8 +1984,10 @@
 
 		completion_reward = {
 			country_event = { id = tu_reu_ev.6 }
-			add_political_power = 100
 			add_ideas = TU_REU_total_war_spirit
+			army_experience = 40
+			add_war_support = 0.05
+			add_doctrine_cost_reduction = { name = TU_REU_mobilize_total cost_reduction = 0.5 uses = 1 category = land_doctrine }
 		}
 	}
 
@@ -1965,7 +2008,9 @@
 		}
 
 		completion_reward = {
-			add_political_power = 50
 			set_country_flag = TU_dip_alliance_unlocked
+			add_tech_bonus = { name = TU_REU_dip_alliance bonus = 0.75 uses = 1 category = dd_tech category = ca_tech }
+			add_doctrine_cost_reduction = { name = TU_REU_dip_alliance cost_reduction = 0.4 uses = 1 category = naval_doctrine }
+			navy_experience = 25
 		}
 	}

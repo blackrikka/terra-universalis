@@ -14,8 +14,9 @@
 		}
 
 		completion_reward = {
-			add_political_power = 25
 			set_country_flag = TU_RHO_ops_ls_started
+			add_tech_bonus = { name = TU_RHO_ops_ls_start bonus = 0.5 uses = 1 category = construction_tech }
+			add_tech_bonus = { name = TU_RHO_ops_ls_start bonus = 0.5 uses = 1 category = motorized_equipment }
 		}
 	}
 
@@ -33,9 +34,9 @@
 		}
 
 		completion_reward = {
-			add_political_power = 25
 			add_fuel = 200
 			TU_build_mil_factory = yes
+			add_tech_bonus = { name = TU_RHO_ops_ls_engine bonus = 0.75 uses = 1 category = industry category = construction_tech }
 		}
 	}
 
@@ -53,8 +54,8 @@
 		}
 
 		completion_reward = {
-			add_political_power = 25
 			set_country_flag = TU_RHO_ops_ls_survey
+			add_tech_bonus = { name = TU_RHO_ops_ls_survey bonus = 0.75 uses = 1 category = industry category = construction_tech }
 		}
 	}
 
@@ -73,6 +74,8 @@
 
 		completion_reward = {
 			add_fuel = 500
+			add_manpower = 10000
+			army_experience = 25
 		}
 	}
 
@@ -90,8 +93,8 @@
 		}
 
 		completion_reward = {
-			army_experience = 10
-			add_political_power = 25
+			add_doctrine_cost_reduction = { name = TU_RHO_ops_ls_crew cost_reduction = 0.4 uses = 1 category = land_doctrine }
+			army_experience = 25
 		}
 	}
 
@@ -110,8 +113,10 @@
 		}
 
 		completion_reward = {
-			add_political_power = 25
 			set_country_flag = TU_RHO_ops_ls_sprint
+			army_experience = 25
+			add_war_support = 0.03
+			add_doctrine_cost_reduction = { name = TU_RHO_ops_ls_sprint cost_reduction = 0.4 uses = 1 category = land_doctrine }
 		}
 	}
 
@@ -130,8 +135,10 @@
 		}
 
 		completion_reward = {
-			add_political_power = 25
 			set_country_flag = TU_RHO_ops_ls_stable
+			army_experience = 25
+			add_war_support = 0.03
+			add_doctrine_cost_reduction = { name = TU_RHO_ops_ls_stable cost_reduction = 0.4 uses = 1 category = land_doctrine }
 		}
 	}
 
@@ -150,6 +157,8 @@
 
 		completion_reward = {
 			add_ideas = TU_RHO_idea_jump_training
+			add_doctrine_cost_reduction = { name = TU_RHO_ops_ls_sprint_drill cost_reduction = 0.4 uses = 1 category = land_doctrine }
+			army_experience = 25
 		}
 	}
 
@@ -167,9 +176,11 @@
 		}
 
 		completion_reward = {
-			add_political_power = 40
 			set_country_flag = TU_RHO_ops_jump_route
 			TU_build_infrastructure = yes
+			army_experience = 25
+			add_war_support = 0.03
+			add_doctrine_cost_reduction = { name = TU_RHO_ops_ls_jump_route cost_reduction = 0.4 uses = 1 category = land_doctrine }
 		}
 	}
 
@@ -187,9 +198,11 @@
 		}
 
 		completion_reward = {
-			add_political_power = 30
 			set_country_flag = TU_RHO_ops_dock_plan
 			TU_build_dockyard = yes
+			add_tech_bonus = { name = TU_RHO_ops_ls_dock_plan bonus = 0.75 uses = 1 category = dd_tech category = ca_tech }
+			add_doctrine_cost_reduction = { name = TU_RHO_ops_ls_dock_plan cost_reduction = 0.4 uses = 1 category = naval_doctrine }
+			navy_experience = 25
 		}
 	}
 
@@ -207,8 +220,9 @@
 		}
 
 		completion_reward = {
-			add_manpower = 3000
 			TU_build_civ_factory = yes
+			add_manpower = 10000
+			army_experience = 25
 		}
 	}
 
@@ -226,8 +240,10 @@
 		}
 
 		completion_reward = {
-			add_political_power = 40
 			set_country_flag = TU_RHO_ops_jump_fleet
+			army_experience = 25
+			add_war_support = 0.03
+			add_doctrine_cost_reduction = { name = TU_RHO_ops_ls_fleet cost_reduction = 0.4 uses = 1 category = land_doctrine }
 		}
 	}
 
@@ -245,8 +261,10 @@
 		}
 
 		completion_reward = {
-			add_political_power = 50
 			set_country_flag = TU_RHO_ops_relocate_ready
+			army_experience = 25
+			add_war_support = 0.03
+			add_doctrine_cost_reduction = { name = TU_RHO_ops_ls_ready cost_reduction = 0.4 uses = 1 category = land_doctrine }
 		}
 	}
 
@@ -264,9 +282,10 @@
 		}
 
 		completion_reward = {
-			add_political_power = 30
 			set_country_flag = TU_RHO_ops_mobile_bay
 			TU_build_mil_factory = yes
+			add_tech_bonus = { name = TU_RHO_ops_ls_mobile_bay bonus = 0.75 uses = 1 category = motorized_equipment }
+			add_doctrine_cost_reduction = { name = TU_RHO_ops_ls_mobile_bay cost_reduction = 0.4 uses = 1 category = land_doctrine }
 		}
 	}
 
@@ -284,8 +303,10 @@
 		}
 
 		completion_reward = {
-			add_political_power = 30
 			set_country_flag = TU_RHO_ops_sortie_plan
+			army_experience = 25
+			add_war_support = 0.03
+			add_doctrine_cost_reduction = { name = TU_RHO_ops_ls_sortie_plan cost_reduction = 0.4 uses = 1 category = land_doctrine }
 		}
 	}
 
@@ -304,6 +325,8 @@
 
 		completion_reward = {
 			add_command_power = 20
+			add_tech_bonus = { name = TU_RHO_ops_ls_command bonus = 0.75 uses = 1 category = construction_tech }
+			add_tech_bonus = { name = TU_RHO_ops_ls_command bonus = 0.75 uses = 1 category = motorized_equipment }
 		}
 	}
 
@@ -321,10 +344,11 @@
 		}
 
 		completion_reward = {
-			add_political_power = 100
 			add_ideas = TU_RHO_idea_landship_ops
 			set_country_flag = TU_RHO_ops_ls_done
 			country_event = { id = tu_rho_ev.9 }
+			add_tech_bonus = { name = TU_RHO_ops_ls_finale bonus = 1.0 uses = 1 category = construction_tech }
+			add_tech_bonus = { name = TU_RHO_ops_ls_finale bonus = 1.0 uses = 1 category = motorized_equipment }
 		}
 	}
 
@@ -342,9 +366,10 @@
 		}
 
 		completion_reward = {
-			add_political_power = 25
 			set_country_flag = TU_RHO_ops_jump_shield
 			TU_build_infrastructure = yes
+			add_tech_bonus = { name = TU_RHO_ops_ls_jump_shield bonus = 0.75 uses = 1 category = construction_tech }
+			army_experience = 25
 		}
 	}
 
@@ -362,7 +387,8 @@
 		}
 
 		completion_reward = {
-			add_political_power = 30
+			add_tech_bonus = { name = TU_RHO_ops_ls_shield_test bonus = 0.75 uses = 1 category = construction_tech }
+			army_experience = 25
 		}
 	}
 
@@ -380,7 +406,8 @@
 		}
 
 		completion_reward = {
-			add_manpower = 1000
+			add_stability = 0.03
+			add_manpower = 10000
 		}
 	}
 
@@ -398,7 +425,8 @@
 		}
 
 		completion_reward = {
-			add_political_power = 25
+			add_political_power = 60
+			add_tech_bonus = { name = TU_RHO_ops_ls_repair_contract bonus = 0.75 uses = 1 category = industry }
 		}
 	}
 
@@ -418,6 +446,7 @@
 		completion_reward = {
 			add_timed_idea = { idea = TU_RHO_idea_hangar days = 60 }
 			TU_build_civ_factory = yes
+			add_tech_bonus = { name = TU_RHO_ops_ls_hangar bonus = 0.75 uses = 1 category = industry category = construction_tech }
 		}
 	}
 
@@ -437,9 +466,9 @@
 		}
 
 		completion_reward = {
-			add_political_power = 25
 			set_country_flag = TU_RHO_ops_riic_started
 			TU_build_civ_factory = yes
+			add_tech_bonus = { name = TU_RHO_ops_riic_start bonus = 0.5 uses = 1 category = electronics category = industry }
 		}
 	}
 
@@ -457,8 +486,8 @@
 		}
 
 		completion_reward = {
-			add_political_power = 25
 			TU_build_infrastructure = yes
+			add_tech_bonus = { name = TU_RHO_ops_riic_survey bonus = 0.75 uses = 1 category = industry category = construction_tech }
 		}
 	}
 
@@ -476,9 +505,10 @@
 		}
 
 		completion_reward = {
-			add_political_power = 25
 			set_country_flag = TU_RHO_ops_riic_arms
 			TU_build_mil_factory = yes
+			add_tech_bonus = { name = TU_RHO_ops_riic_arms_line bonus = 0.75 uses = 1 category = infantry_weapons }
+			army_experience = 25
 		}
 	}
 
@@ -496,8 +526,9 @@
 		}
 
 		completion_reward = {
-			add_political_power = 25
 			set_country_flag = TU_RHO_ops_riic_industry
+			add_tech_bonus = { name = TU_RHO_ops_riic_industry_line bonus = 0.75 uses = 1 category = construction_tech }
+			army_experience = 25
 		}
 	}
 
@@ -515,9 +546,9 @@
 		}
 
 		completion_reward = {
-			add_political_power = 25
 			set_country_flag = TU_RHO_ops_riic_power
 			TU_build_infrastructure = yes
+			add_tech_bonus = { name = TU_RHO_ops_riic_power bonus = 0.75 uses = 1 category = industry category = construction_tech }
 		}
 	}
 
@@ -535,7 +566,8 @@
 		}
 
 		completion_reward = {
-			add_stability = 0.02
+			add_stability = 0.03
+			add_manpower = 10000
 		}
 	}
 
@@ -553,8 +585,9 @@
 		}
 
 		completion_reward = {
-			add_political_power = 30
 			set_country_flag = TU_RHO_ops_plan_arms
+			add_tech_bonus = { name = TU_RHO_ops_riic_arms_plan bonus = 0.75 uses = 1 category = infantry_weapons }
+			army_experience = 25
 		}
 	}
 
@@ -572,8 +605,10 @@
 		}
 
 		completion_reward = {
-			add_political_power = 30
 			set_country_flag = TU_RHO_ops_plan_industry
+			army_experience = 25
+			add_war_support = 0.03
+			add_doctrine_cost_reduction = { name = TU_RHO_ops_riic_industry_plan cost_reduction = 0.4 uses = 1 category = land_doctrine }
 		}
 	}
 
@@ -591,9 +626,10 @@
 		}
 
 		completion_reward = {
-			add_political_power = 30
 			set_country_flag = TU_RHO_ops_plan_dock
 			TU_build_dockyard = yes
+			add_tech_bonus = { name = TU_RHO_ops_riic_dock_plan bonus = 0.75 uses = 1 category = construction_tech }
+			add_tech_bonus = { name = TU_RHO_ops_riic_dock_plan bonus = 0.75 uses = 1 category = motorized_equipment }
 		}
 	}
 
@@ -611,9 +647,11 @@
 		}
 
 		completion_reward = {
-			add_political_power = 25
 			set_country_flag = TU_RHO_ops_plan_dorm
 			TU_build_civ_factory = yes
+			army_experience = 25
+			add_war_support = 0.03
+			add_doctrine_cost_reduction = { name = TU_RHO_ops_riic_dorm_plan cost_reduction = 0.4 uses = 1 category = land_doctrine }
 		}
 	}
 
@@ -633,6 +671,7 @@
 		completion_reward = {
 			add_ideas = TU_RHO_idea_riic_logistics
 			TU_build_civ_factory = yes
+			add_tech_bonus = { name = TU_RHO_ops_riic_logistics bonus = 0.75 uses = 1 category = electronics category = industry }
 		}
 	}
 
@@ -650,9 +689,11 @@
 		}
 
 		completion_reward = {
-			add_political_power = 30
 			set_country_flag = TU_RHO_ops_plan_power
 			TU_build_infrastructure = yes
+			army_experience = 25
+			add_war_support = 0.03
+			add_doctrine_cost_reduction = { name = TU_RHO_ops_riic_power_plan cost_reduction = 0.4 uses = 1 category = land_doctrine }
 		}
 	}
 
@@ -670,9 +711,10 @@
 		}
 
 		completion_reward = {
-			add_political_power = 30
 			set_country_flag = TU_RHO_ops_arms_started
 			TU_build_civ_factory = yes
+			add_tech_bonus = { name = TU_RHO_ops_riic_arms_build bonus = 0.75 uses = 1 category = infantry_weapons }
+			army_experience = 25
 		}
 	}
 
@@ -690,9 +732,9 @@
 		}
 
 		completion_reward = {
-			add_political_power = 30
 			set_country_flag = TU_RHO_ops_industry_started
 			TU_build_civ_factory = yes
+			add_tech_bonus = { name = TU_RHO_ops_riic_industry_build bonus = 0.75 uses = 1 category = industry category = construction_tech }
 		}
 	}
 
@@ -710,9 +752,11 @@
 		}
 
 		completion_reward = {
-			add_political_power = 40
 			set_country_flag = TU_RHO_ops_dock_started
 			TU_build_dockyard = yes
+			add_tech_bonus = { name = TU_RHO_ops_riic_dock_build bonus = 0.75 uses = 1 category = dd_tech category = ca_tech }
+			add_doctrine_cost_reduction = { name = TU_RHO_ops_riic_dock_build cost_reduction = 0.4 uses = 1 category = naval_doctrine }
+			navy_experience = 25
 		}
 	}
 
@@ -730,8 +774,9 @@
 		}
 
 		completion_reward = {
-			add_manpower = 1000
 			TU_build_civ_factory = yes
+			add_stability = 0.03
+			add_manpower = 10000
 		}
 	}
 
@@ -749,8 +794,8 @@
 		}
 
 		completion_reward = {
-			add_political_power = 40
 			TU_build_infrastructure = yes
+			add_tech_bonus = { name = TU_RHO_ops_riic_power_build bonus = 0.75 uses = 1 category = industry category = construction_tech }
 		}
 	}
 
@@ -768,8 +813,8 @@
 		}
 
 		completion_reward = {
-			add_political_power = 30
 			set_country_flag = TU_RHO_ops_logistics_build
+			add_tech_bonus = { name = TU_RHO_ops_riic_logistics_build bonus = 0.75 uses = 1 category = industry category = construction_tech }
 		}
 	}
 
@@ -787,7 +832,8 @@
 		}
 
 		completion_reward = {
-			add_political_power = 30
+			add_political_power = 60
+			add_stability = 0.03
 		}
 	}
 
@@ -805,7 +851,8 @@
 		}
 
 		completion_reward = {
-			add_political_power = 40
+			add_political_power = 60
+			add_tech_bonus = { name = TU_RHO_ops_riic_export bonus = 0.75 uses = 1 category = industry }
 		}
 	}
 
@@ -823,8 +870,9 @@
 		}
 
 		completion_reward = {
-			add_political_power = 40
 			TU_build_infrastructure = yes
+			add_political_power = 60
+			add_stability = 0.03
 		}
 	}
 
@@ -842,10 +890,11 @@
 		}
 
 		completion_reward = {
-			add_political_power = 100
 			set_country_flag = TU_RHO_ops_riic_done
 			country_event = { id = tu_rho_ev.10 }
 			TU_build_civ_factory = yes
+			add_political_power = 100
+			add_stability = 0.05
 		}
 	}
 
@@ -865,9 +914,11 @@
 		}
 
 		completion_reward = {
-			add_political_power = 25
 			set_country_flag = TU_RHO_ops_relief_started
 			TU_build_civ_factory = yes
+			army_experience = 15
+			add_war_support = 0.02
+			add_doctrine_cost_reduction = { name = TU_RHO_ops_relief_start cost_reduction = 0.25 uses = 1 category = land_doctrine }
 		}
 	}
 
@@ -885,7 +936,8 @@
 		}
 
 		completion_reward = {
-			add_political_power = 25
+			add_political_power = 60
+			add_stability = 0.03
 		}
 	}
 
@@ -903,8 +955,9 @@
 		}
 
 		completion_reward = {
-			add_manpower = 1000
 			TU_build_civ_factory = yes
+			add_doctrine_cost_reduction = { name = TU_RHO_ops_relief_staff cost_reduction = 0.4 uses = 1 category = land_doctrine }
+			army_experience = 25
 		}
 	}
 
@@ -922,7 +975,8 @@
 		}
 
 		completion_reward = {
-			add_stability = 0.02
+			add_stability = 0.03
+			add_manpower = 10000
 		}
 	}
 
@@ -940,8 +994,10 @@
 		}
 
 		completion_reward = {
-			add_political_power = 25
 			set_country_flag = TU_RHO_ops_relief_URS
+			army_experience = 25
+			add_war_support = 0.03
+			add_doctrine_cost_reduction = { name = TU_RHO_ops_relief_urs cost_reduction = 0.4 uses = 1 category = land_doctrine }
 		}
 	}
 
@@ -959,8 +1015,10 @@
 		}
 
 		completion_reward = {
-			add_political_power = 25
 			set_country_flag = TU_RHO_ops_relief_KZD
+			army_experience = 25
+			add_war_support = 0.03
+			add_doctrine_cost_reduction = { name = TU_RHO_ops_relief_kzd cost_reduction = 0.4 uses = 1 category = land_doctrine }
 		}
 	}
 
@@ -978,8 +1036,10 @@
 		}
 
 		completion_reward = {
-			add_political_power = 25
 			set_country_flag = TU_RHO_ops_relief_YAN
+			army_experience = 25
+			add_war_support = 0.03
+			add_doctrine_cost_reduction = { name = TU_RHO_ops_relief_yan cost_reduction = 0.4 uses = 1 category = land_doctrine }
 		}
 	}
 
@@ -997,8 +1057,10 @@
 		}
 
 		completion_reward = {
-			add_political_power = 25
 			set_country_flag = TU_RHO_ops_relief_VIC
+			army_experience = 25
+			add_war_support = 0.03
+			add_doctrine_cost_reduction = { name = TU_RHO_ops_relief_vic cost_reduction = 0.4 uses = 1 category = land_doctrine }
 		}
 	}
 
@@ -1016,8 +1078,10 @@
 		}
 
 		completion_reward = {
-			add_political_power = 25
 			set_country_flag = TU_RHO_ops_relief_COL
+			army_experience = 25
+			add_war_support = 0.03
+			add_doctrine_cost_reduction = { name = TU_RHO_ops_relief_col cost_reduction = 0.4 uses = 1 category = land_doctrine }
 		}
 	}
 
@@ -1035,8 +1099,10 @@
 		}
 
 		completion_reward = {
-			add_political_power = 25
 			set_country_flag = TU_RHO_ops_relief_LAT
+			army_experience = 25
+			add_war_support = 0.03
+			add_doctrine_cost_reduction = { name = TU_RHO_ops_relief_lat cost_reduction = 0.4 uses = 1 category = land_doctrine }
 		}
 	}
 
@@ -1054,8 +1120,10 @@
 		}
 
 		completion_reward = {
-			add_political_power = 25
 			set_country_flag = TU_RHO_ops_relief_KAZ
+			army_experience = 25
+			add_war_support = 0.03
+			add_doctrine_cost_reduction = { name = TU_RHO_ops_relief_kaz cost_reduction = 0.4 uses = 1 category = land_doctrine }
 		}
 	}
 
@@ -1073,8 +1141,9 @@
 		}
 
 		completion_reward = {
-			add_manpower = 2000
 			TU_build_infrastructure = yes
+			add_stability = 0.03
+			add_manpower = 10000
 		}
 	}
 
@@ -1092,7 +1161,8 @@
 		}
 
 		completion_reward = {
-			add_political_power = 40
+			add_stability = 0.03
+			add_manpower = 10000
 		}
 	}
 
@@ -1110,7 +1180,8 @@
 		}
 
 		completion_reward = {
-			add_stability = 0.02
+			add_doctrine_cost_reduction = { name = TU_RHO_ops_relief_nurse cost_reduction = 0.4 uses = 1 category = land_doctrine }
+			army_experience = 25
 		}
 	}
 
@@ -1128,7 +1199,8 @@
 		}
 
 		completion_reward = {
-			add_war_support = 0.02
+			add_stability = 0.03
+			add_manpower = 10000
 		}
 	}
 
@@ -1146,8 +1218,9 @@
 		}
 
 		completion_reward = {
-			add_political_power = 50
 			set_country_flag = TU_RHO_ops_relief_network
+			add_stability = 0.03
+			add_manpower = 10000
 		}
 	}
 
@@ -1165,8 +1238,9 @@
 		}
 
 		completion_reward = {
-			add_political_power = 40
 			TU_build_infrastructure = yes
+			add_political_power = 60
+			add_tech_bonus = { name = TU_RHO_ops_relief_sustain bonus = 0.75 uses = 1 category = industry }
 		}
 	}
 
@@ -1184,9 +1258,9 @@
 		}
 
 		completion_reward = {
-			add_political_power = 100
-			add_manpower = 3000
 			set_country_flag = TU_RHO_ops_relief_done
+			add_stability = 0.05
+			add_manpower = 20000
 		}
 	}
 
@@ -1206,8 +1280,10 @@
 		}
 
 		completion_reward = {
-			add_political_power = 25
 			set_country_flag = TU_RHO_ops_proj_started
+			army_experience = 15
+			add_war_support = 0.02
+			add_doctrine_cost_reduction = { name = TU_RHO_ops_proj_start cost_reduction = 0.25 uses = 1 category = land_doctrine }
 		}
 	}
 
@@ -1225,8 +1301,9 @@
 		}
 
 		completion_reward = {
-			add_political_power = 25
 			set_country_flag = TU_RHO_ops_proj_intel
+			add_tech_bonus = { name = TU_RHO_ops_proj_intel bonus = 0.75 uses = 1 category = radar_tech category = electronics }
+			add_stability = 0.03
 		}
 	}
 
@@ -1246,6 +1323,9 @@
 		completion_reward = {
 			add_command_power = 10
 			set_country_flag = TU_RHO_ops_proj_rescue
+			army_experience = 25
+			add_war_support = 0.03
+			add_doctrine_cost_reduction = { name = TU_RHO_ops_proj_rescue_plan cost_reduction = 0.4 uses = 1 category = land_doctrine }
 		}
 	}
 
@@ -1265,6 +1345,9 @@
 		completion_reward = {
 			add_fuel = 300
 			set_country_flag = TU_RHO_ops_proj_supply
+			army_experience = 25
+			add_war_support = 0.03
+			add_doctrine_cost_reduction = { name = TU_RHO_ops_proj_supply_plan cost_reduction = 0.4 uses = 1 category = land_doctrine }
 		}
 	}
 
@@ -1282,8 +1365,10 @@
 		}
 
 		completion_reward = {
-			add_political_power = 25
 			set_country_flag = TU_RHO_ops_proj_strike
+			army_experience = 25
+			add_war_support = 0.03
+			add_doctrine_cost_reduction = { name = TU_RHO_ops_proj_strike_plan cost_reduction = 0.4 uses = 1 category = land_doctrine }
 		}
 	}
 
@@ -1301,8 +1386,10 @@
 		}
 
 		completion_reward = {
-			add_manpower = 1000
 			set_country_flag = TU_RHO_ops_proj_evac
+			army_experience = 25
+			add_war_support = 0.03
+			add_doctrine_cost_reduction = { name = TU_RHO_ops_proj_evac_plan cost_reduction = 0.4 uses = 1 category = land_doctrine }
 		}
 	}
 
@@ -1320,7 +1407,9 @@
 		}
 
 		completion_reward = {
-			add_political_power = 50
+			army_experience = 25
+			add_war_support = 0.03
+			add_doctrine_cost_reduction = { name = TU_RHO_ops_proj_budget cost_reduction = 0.4 uses = 1 category = land_doctrine }
 		}
 	}
 
@@ -1338,7 +1427,8 @@
 		}
 
 		completion_reward = {
-			army_experience = 15
+			add_doctrine_cost_reduction = { name = TU_RHO_ops_proj_training cost_reduction = 0.4 uses = 1 category = land_doctrine }
+			army_experience = 25
 		}
 	}
 
@@ -1356,8 +1446,10 @@
 		}
 
 		completion_reward = {
-			add_political_power = 25
 			set_country_flag = TU_RHO_ops_proj_chernobog
+			army_experience = 25
+			add_war_support = 0.03
+			add_doctrine_cost_reduction = { name = TU_RHO_ops_proj_chernobog_aid cost_reduction = 0.4 uses = 1 category = land_doctrine }
 		}
 	}
 
@@ -1375,7 +1467,9 @@
 		}
 
 		completion_reward = {
-			add_political_power = 25
+			army_experience = 25
+			add_war_support = 0.03
+			add_doctrine_cost_reduction = { name = TU_RHO_ops_proj_dossier cost_reduction = 0.4 uses = 1 category = land_doctrine }
 		}
 	}
 
@@ -1393,7 +1487,9 @@
 		}
 
 		completion_reward = {
-			add_manpower = 1000
+			army_experience = 25
+			add_war_support = 0.03
+			add_doctrine_cost_reduction = { name = TU_RHO_ops_proj_medical_op cost_reduction = 0.4 uses = 1 category = land_doctrine }
 		}
 	}
 
@@ -1412,6 +1508,8 @@
 
 		completion_reward = {
 			add_command_power = 20
+			add_doctrine_cost_reduction = { name = TU_RHO_ops_proj_command_hub cost_reduction = 0.4 uses = 1 category = land_doctrine }
+			army_experience = 25
 		}
 	}
 
@@ -1430,6 +1528,9 @@
 
 		completion_reward = {
 			add_timed_idea = { idea = TU_RHO_idea_jump_drill days = 60 }
+			army_experience = 25
+			add_war_support = 0.03
+			add_doctrine_cost_reduction = { name = TU_RHO_ops_proj_double_ops cost_reduction = 0.4 uses = 1 category = land_doctrine }
 		}
 	}
 
@@ -1447,7 +1548,9 @@
 		}
 
 		completion_reward = {
-			add_political_power = 40
+			army_experience = 25
+			add_war_support = 0.03
+			add_doctrine_cost_reduction = { name = TU_RHO_ops_proj_joint cost_reduction = 0.4 uses = 1 category = land_doctrine }
 		}
 	}
 
@@ -1465,7 +1568,9 @@
 		}
 
 		completion_reward = {
-			add_political_power = 40
+			army_experience = 25
+			add_war_support = 0.03
+			add_doctrine_cost_reduction = { name = TU_RHO_ops_proj_review cost_reduction = 0.4 uses = 1 category = land_doctrine }
 		}
 	}
 
@@ -1483,9 +1588,11 @@
 		}
 
 		completion_reward = {
-			add_political_power = 100
 			add_command_power = 30
 			set_country_flag = TU_RHO_ops_proj_done
+			army_experience = 40
+			add_war_support = 0.05
+			add_doctrine_cost_reduction = { name = TU_RHO_ops_proj_finale cost_reduction = 0.5 uses = 1 category = land_doctrine }
 		}
 	}
 
@@ -1505,8 +1612,9 @@
 		}
 
 		completion_reward = {
-			add_political_power = 25
 			set_country_flag = TU_RHO_ops_dip_started
+			add_political_power = 35
+			add_stability = 0.02
 		}
 	}
 
@@ -1524,8 +1632,9 @@
 		}
 
 		completion_reward = {
-			add_political_power = 50
 			set_country_flag = TU_dip_relations_unlocked
+			add_political_power = 60
+			add_stability = 0.03
 		}
 	}
 
@@ -1543,8 +1652,9 @@
 		}
 
 		completion_reward = {
-			add_political_power = 25
 			set_country_flag = TU_RHO_ops_dip_kzd
+			add_political_power = 60
+			add_stability = 0.03
 		}
 	}
 
@@ -1562,8 +1672,9 @@
 		}
 
 		completion_reward = {
-			add_political_power = 25
 			set_country_flag = TU_RHO_ops_dip_yan
+			add_political_power = 60
+			add_tech_bonus = { name = TU_RHO_ops_dip_yan bonus = 0.75 uses = 1 category = industry }
 		}
 	}
 
@@ -1581,8 +1692,9 @@
 		}
 
 		completion_reward = {
-			add_political_power = 25
 			set_country_flag = TU_RHO_ops_dip_urs
+			add_political_power = 60
+			add_stability = 0.03
 		}
 	}
 
@@ -1600,8 +1712,9 @@
 		}
 
 		completion_reward = {
-			add_political_power = 25
 			set_country_flag = TU_RHO_ops_dip_vic
+			add_stability = 0.03
+			add_manpower = 10000
 		}
 	}
 
@@ -1619,8 +1732,9 @@
 		}
 
 		completion_reward = {
-			add_political_power = 25
 			set_country_flag = TU_RHO_ops_dip_col
+			add_stability = 0.03
+			add_manpower = 10000
 		}
 	}
 
@@ -1638,8 +1752,9 @@
 		}
 
 		completion_reward = {
-			add_political_power = 25
 			set_country_flag = TU_RHO_ops_dip_kaz
+			add_political_power = 60
+			add_stability = 0.03
 		}
 	}
 
@@ -1657,8 +1772,9 @@
 		}
 
 		completion_reward = {
-			add_political_power = 50
 			set_country_flag = TU_dip_alliance_unlocked
+			add_political_power = 60
+			add_stability = 0.03
 		}
 	}
 
@@ -1676,8 +1792,9 @@
 		}
 
 		completion_reward = {
-			add_political_power = 50
 			set_country_flag = TU_RHO_ops_guarantee_plan
+			add_manpower = 10000
+			army_experience = 25
 		}
 	}
 
@@ -1695,8 +1812,8 @@
 		}
 
 		completion_reward = {
-			add_political_power = 75
 			set_country_flag = TU_RHO_ops_neutral_ring
+			add_tech_bonus = { name = TU_RHO_ops_dip_neutral bonus = 0.75 uses = 1 category = industry category = construction_tech }
 		}
 	}
 
@@ -1714,7 +1831,8 @@
 		}
 
 		completion_reward = {
-			add_political_power = 100
 			set_country_flag = TU_RHO_ops_dip_done
+			add_stability = 0.05
+			add_manpower = 20000
 		}
 	}

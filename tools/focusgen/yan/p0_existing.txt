@@ -28,9 +28,9 @@
 		}
 
 		completion_reward = {
-			add_political_power = 50
-			add_stability = 0.03
 			country_event = { id = tu_yan_ev.2 }
+			add_political_power = 60
+			add_stability = 0.03
 		}
 	}
 
@@ -49,8 +49,8 @@
 		}
 
 		completion_reward = {
-			add_political_power = 25
-			add_stability = 0.02
+			add_political_power = 60
+			add_stability = 0.03
 		}
 	}
 
@@ -65,7 +65,8 @@
 		search_filters = { FOCUS_FILTER_ARMY_XP }
 
 		completion_reward = {
-			add_manpower = 30000
+			add_manpower = 10000
+			army_experience = 25
 		}
 	}
 
@@ -87,6 +88,7 @@
 			}
 			country_event = { id = tu_yan_ev.14 }
 			TU_build_civ_factory = yes
+			add_tech_bonus = { name = TU_YAN_industrial_awakening bonus = 0.75 uses = 1 category = industry category = construction_tech }
 		}
 	}
 
@@ -102,7 +104,8 @@
 
 		completion_reward = {
 			army_experience = 25
-			add_manpower = 20000
+			add_war_support = 0.03
+			add_doctrine_cost_reduction = { name = TU_YAN_grand_mobilization cost_reduction = 0.4 uses = 1 category = land_doctrine }
 		}
 	}
 
@@ -119,8 +122,9 @@
 		search_filters = { FOCUS_FILTER_POLITICAL }
 
 		completion_reward = {
-			add_political_power = 25
 			country_event = { id = tu_yan_ev.9 }
+			add_political_power = 35
+			add_stability = 0.02
 		}
 	}
 
@@ -152,6 +156,8 @@
 				}
 			}
 			country_event = { id = tu_yan_ev.10 }
+			add_political_power = 100
+			add_stability = 0.05
 		}
 	}
 
@@ -170,7 +176,8 @@
 		}
 
 		completion_reward = {
-			add_political_power = 25
 			country_event = { id = tu_yan_ev.11 }
+			add_political_power = 60
+			add_tech_bonus = { name = TU_YAN_lungmen_trade_pact bonus = 0.75 uses = 1 category = industry }
 		}
 	}

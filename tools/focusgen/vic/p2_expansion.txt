@@ -11,8 +11,9 @@
 		search_filters = { FOCUS_FILTER_POLITICAL }
 
 		completion_reward = {
-			add_political_power = 25
 			country_event = { id = tu_vic_ev.13 }
+			add_political_power = 35
+			add_stability = 0.02
 		}
 	}
 
@@ -27,7 +28,8 @@
 		search_filters = { FOCUS_FILTER_POLITICAL }
 
 		completion_reward = {
-			add_political_power = 25
+			add_tech_bonus = { name = TU_VIC_exp_survey bonus = 0.75 uses = 1 category = construction_tech }
+			army_experience = 25
 		}
 	}
 
@@ -43,7 +45,8 @@
 
 		completion_reward = {
 			set_country_flag = TU_dip_relations_unlocked
-			add_political_power = 50
+			add_political_power = 60
+			add_stability = 0.03
 		}
 	}
 
@@ -58,7 +61,8 @@
 		search_filters = { FOCUS_FILTER_POLITICAL }
 
 		completion_reward = {
-			add_political_power = 25
+			add_political_power = 60
+			add_stability = 0.03
 		}
 	}
 
@@ -73,8 +77,8 @@
 		search_filters = { FOCUS_FILTER_POLITICAL }
 
 		completion_reward = {
-			add_stability = 0.01
-			add_political_power = 25
+			add_tech_bonus = { name = TU_VIC_exp_intel bonus = 0.75 uses = 1 category = radar_tech category = electronics }
+			add_stability = 0.03
 		}
 	}
 
@@ -89,8 +93,9 @@
 		search_filters = { FOCUS_FILTER_ARMY_XP }
 
 		completion_reward = {
-			army_experience = 15
-			add_political_power = 25
+			army_experience = 25
+			add_war_support = 0.03
+			add_doctrine_cost_reduction = { name = TU_VIC_exp_war_council cost_reduction = 0.4 uses = 1 category = land_doctrine }
 		}
 	}
 
@@ -106,7 +111,8 @@
 
 		completion_reward = {
 			set_country_flag = TU_dip_alliance_unlocked
-			add_political_power = 50
+			add_political_power = 60
+			add_stability = 0.03
 		}
 	}
 
@@ -121,7 +127,8 @@
 		search_filters = { FOCUS_FILTER_POLITICAL }
 
 		completion_reward = {
-			add_political_power = 25
+			add_doctrine_cost_reduction = { name = TU_VIC_exp_frontier_hub cost_reduction = 0.4 uses = 1 category = land_doctrine }
+			army_experience = 25
 		}
 	}
 
@@ -138,7 +145,8 @@
 		search_filters = { FOCUS_FILTER_POLITICAL }
 
 		completion_reward = {
-			add_political_power = 25
+			add_tech_bonus = { name = TU_VIC_kzd_border_scouts bonus = 0.5 uses = 1 category = construction_tech }
+			army_experience = 15
 		}
 	}
 
@@ -153,8 +161,8 @@
 		search_filters = { FOCUS_FILTER_ARMY_XP }
 
 		completion_reward = {
-			army_experience = 10
-			add_political_power = 25
+			add_doctrine_cost_reduction = { name = TU_VIC_kzd_thames_drills cost_reduction = 0.4 uses = 1 category = land_doctrine }
+			army_experience = 25
 		}
 	}
 
@@ -169,7 +177,8 @@
 		search_filters = { FOCUS_FILTER_POLITICAL }
 
 		completion_reward = {
-			add_political_power = 25
+			add_political_power = 60
+			add_stability = 0.03
 		}
 	}
 
@@ -184,8 +193,10 @@
 		search_filters = { FOCUS_FILTER_POLITICAL }
 
 		completion_reward = {
-			add_political_power = 100
 			country_event = { id = tu_vic_ev.9 }
+			army_experience = 40
+			add_war_support = 0.05
+			add_doctrine_cost_reduction = { name = TU_VIC_kzd_claim_londinium cost_reduction = 0.5 uses = 1 category = land_doctrine }
 		}
 	}
 
@@ -200,8 +211,8 @@
 		search_filters = { FOCUS_FILTER_POLITICAL }
 
 		completion_reward = {
-			add_stability = 0.01
-			add_political_power = 25
+			add_tech_bonus = { name = TU_VIC_kzd_border_forts bonus = 0.75 uses = 1 category = construction_tech }
+			army_experience = 25
 		}
 	}
 
@@ -216,8 +227,8 @@
 		search_filters = { FOCUS_FILTER_INDUSTRY }
 
 		completion_reward = {
-			add_political_power = 25
 			TU_build_infrastructure = yes
+			add_tech_bonus = { name = TU_VIC_kzd_steam_rail bonus = 0.75 uses = 1 category = industry category = construction_tech }
 		}
 	}
 
@@ -233,8 +244,9 @@
 		search_filters = { FOCUS_FILTER_ARMY_XP }
 
 		completion_reward = {
-			army_experience = 10
-			add_political_power = 50
+			army_experience = 25
+			add_war_support = 0.03
+			add_doctrine_cost_reduction = { name = TU_VIC_kzd_war_plans cost_reduction = 0.4 uses = 1 category = land_doctrine }
 		}
 	}
 
@@ -249,8 +261,8 @@
 		search_filters = { FOCUS_FILTER_ARMY_XP }
 
 		completion_reward = {
-			army_experience = 20
-			add_political_power = 50
+			add_tech_bonus = { name = TU_VIC_kzd_siege_prep bonus = 0.75 uses = 1 category = artillery }
+			army_experience = 25
 		}
 	}
 
@@ -266,7 +278,8 @@
 		search_filters = { FOCUS_FILTER_POLITICAL }
 
 		completion_reward = {
-			add_political_power = 25
+			add_political_power = 60
+			add_stability = 0.03
 		}
 	}
 
@@ -281,7 +294,7 @@
 		search_filters = { FOCUS_FILTER_POLITICAL }
 
 		completion_reward = {
-			add_political_power = 25
+			add_tech_bonus = { name = TU_VIC_kzd_trade_route bonus = 0.75 uses = 1 category = industry category = construction_tech }
 		}
 	}
 
@@ -296,7 +309,8 @@
 		search_filters = { FOCUS_FILTER_POLITICAL }
 
 		completion_reward = {
-			add_political_power = 25
+			add_tech_bonus = { name = TU_VIC_kzd_intel_exchange bonus = 0.75 uses = 1 category = radar_tech category = electronics }
+			add_stability = 0.03
 		}
 	}
 
@@ -311,7 +325,8 @@
 		search_filters = { FOCUS_FILTER_POLITICAL }
 
 		completion_reward = {
-			add_political_power = 50
+			add_tech_bonus = { name = TU_VIC_kzd_security_pledge bonus = 0.75 uses = 1 category = radar_tech category = electronics }
+			add_stability = 0.03
 		}
 	}
 
@@ -326,7 +341,8 @@
 		search_filters = { FOCUS_FILTER_POLITICAL }
 
 		completion_reward = {
-			add_political_power = 50
+			add_political_power = 60
+			add_stability = 0.03
 		}
 	}
 
@@ -341,8 +357,8 @@
 		search_filters = { FOCUS_FILTER_ARMY_XP }
 
 		completion_reward = {
-			army_experience = 10
-			add_political_power = 25
+			add_tech_bonus = { name = TU_VIC_kzd_garrison bonus = 0.75 uses = 1 category = construction_tech }
+			army_experience = 25
 		}
 	}
 
@@ -357,8 +373,9 @@
 		search_filters = { FOCUS_FILTER_POLITICAL }
 
 		completion_reward = {
-			add_stability = 0.01
-			add_political_power = 25
+			army_experience = 25
+			add_war_support = 0.03
+			add_doctrine_cost_reduction = { name = TU_VIC_kzd_occupation_admin cost_reduction = 0.4 uses = 1 category = land_doctrine }
 		}
 	}
 
@@ -373,9 +390,10 @@
 		search_filters = { FOCUS_FILTER_POLITICAL }
 
 		completion_reward = {
-			add_stability = 0.02
-			add_political_power = 75
 			country_event = { id = tu_vic_ev.10 }
+			army_experience = 25
+			add_war_support = 0.03
+			add_doctrine_cost_reduction = { name = TU_VIC_kzd_victory_parade cost_reduction = 0.4 uses = 1 category = land_doctrine }
 		}
 	}
 
@@ -391,8 +409,8 @@
 		search_filters = { FOCUS_FILTER_ARMY_XP }
 
 		completion_reward = {
-			army_experience = 10
-			add_political_power = 25
+			add_manpower = 10000
+			army_experience = 25
 		}
 	}
 
@@ -412,8 +430,8 @@
 		}
 
 		completion_reward = {
-			add_political_power = 25
-			add_stability = 0.01
+			add_tech_bonus = { name = TU_VIC_kzd_mercenaries_alt bonus = 0.75 uses = 1 category = construction_tech }
+			army_experience = 25
 		}
 	}
 
@@ -429,8 +447,9 @@
 
 		completion_reward = {
 			add_ideas = TU_VIC_exp_londinium_vow
-			add_political_power = 50
 			TU_build_civ_factory = yes
+			add_political_power = 60
+			add_stability = 0.03
 		}
 	}
 
@@ -447,7 +466,7 @@
 		search_filters = { FOCUS_FILTER_POLITICAL }
 
 		completion_reward = {
-			add_political_power = 25
+			add_tech_bonus = { name = TU_VIC_lei_envoy_road bonus = 0.5 uses = 1 category = industry category = construction_tech }
 		}
 	}
 
@@ -462,7 +481,8 @@
 		search_filters = { FOCUS_FILTER_POLITICAL }
 
 		completion_reward = {
-			add_political_power = 25
+			add_tech_bonus = { name = TU_VIC_lei_border_watch bonus = 0.75 uses = 1 category = construction_tech }
+			army_experience = 25
 		}
 	}
 
@@ -477,8 +497,8 @@
 		search_filters = { FOCUS_FILTER_POLITICAL }
 
 		completion_reward = {
-			add_stability = 0.01
-			add_political_power = 25
+			add_political_power = 60
+			add_stability = 0.03
 		}
 	}
 
@@ -494,6 +514,7 @@
 
 		completion_reward = {
 			add_political_power = 100
+			add_stability = 0.05
 		}
 	}
 
@@ -508,7 +529,8 @@
 		search_filters = { FOCUS_FILTER_POLITICAL }
 
 		completion_reward = {
-			add_political_power = 25
+			add_tech_bonus = { name = TU_VIC_lei_mountain_fort bonus = 0.75 uses = 1 category = construction_tech }
+			army_experience = 25
 		}
 	}
 
@@ -523,8 +545,8 @@
 		search_filters = { FOCUS_FILTER_ARMY_XP }
 
 		completion_reward = {
-			army_experience = 15
-			add_political_power = 25
+			add_doctrine_cost_reduction = { name = TU_VIC_lei_grand_drill cost_reduction = 0.4 uses = 1 category = land_doctrine }
+			army_experience = 25
 		}
 	}
 
@@ -540,7 +562,9 @@
 		search_filters = { FOCUS_FILTER_POLITICAL }
 
 		completion_reward = {
-			add_political_power = 50
+			army_experience = 25
+			add_war_support = 0.03
+			add_doctrine_cost_reduction = { name = TU_VIC_lei_war_plans cost_reduction = 0.4 uses = 1 category = land_doctrine }
 		}
 	}
 
@@ -556,7 +580,8 @@
 		search_filters = { FOCUS_FILTER_POLITICAL }
 
 		completion_reward = {
-			add_political_power = 25
+			add_political_power = 60
+			add_stability = 0.03
 		}
 	}
 
@@ -571,7 +596,8 @@
 		search_filters = { FOCUS_FILTER_POLITICAL }
 
 		completion_reward = {
-			add_political_power = 50
+			add_tech_bonus = { name = TU_VIC_lei_security_pledge bonus = 0.75 uses = 1 category = radar_tech category = electronics }
+			add_stability = 0.03
 		}
 	}
 
@@ -586,7 +612,8 @@
 		search_filters = { FOCUS_FILTER_POLITICAL }
 
 		completion_reward = {
-			add_political_power = 50
+			add_political_power = 60
+			add_stability = 0.03
 		}
 	}
 
@@ -601,8 +628,8 @@
 		search_filters = { FOCUS_FILTER_INDUSTRY }
 
 		completion_reward = {
-			add_political_power = 25
 			TU_build_infrastructure = yes
+			add_tech_bonus = { name = TU_VIC_lei_supply_hub bonus = 0.75 uses = 1 category = industry category = construction_tech }
 		}
 	}
 
@@ -617,8 +644,9 @@
 		search_filters = { FOCUS_FILTER_ARMY_XP }
 
 		completion_reward = {
-			army_experience = 10
-			add_political_power = 50
+			army_experience = 25
+			add_war_support = 0.03
+			add_doctrine_cost_reduction = { name = TU_VIC_lei_march_route cost_reduction = 0.4 uses = 1 category = land_doctrine }
 		}
 	}
 
@@ -633,8 +661,8 @@
 		search_filters = { FOCUS_FILTER_INDUSTRY }
 
 		completion_reward = {
-			add_political_power = 25
 			TU_build_civ_factory = yes
+			add_tech_bonus = { name = TU_VIC_lei_iron_roads bonus = 0.75 uses = 1 category = industry category = construction_tech }
 		}
 	}
 
@@ -649,7 +677,8 @@
 		search_filters = { FOCUS_FILTER_POLITICAL }
 
 		completion_reward = {
-			add_political_power = 50
+			add_war_support = 0.03
+			add_stability = 0.03
 		}
 	}
 
@@ -664,7 +693,8 @@
 		search_filters = { FOCUS_FILTER_POLITICAL }
 
 		completion_reward = {
-			add_political_power = 75
+			add_political_power = 60
+			add_stability = 0.03
 		}
 	}
 
@@ -679,7 +709,9 @@
 		search_filters = { FOCUS_FILTER_POLITICAL }
 
 		completion_reward = {
-			add_political_power = 25
+			add_tech_bonus = { name = TU_VIC_lei_summit bonus = 0.75 uses = 1 category = dd_tech category = ca_tech }
+			add_doctrine_cost_reduction = { name = TU_VIC_lei_summit cost_reduction = 0.4 uses = 1 category = naval_doctrine }
+			navy_experience = 25
 		}
 	}
 
@@ -696,7 +728,9 @@
 		search_filters = { FOCUS_FILTER_POLITICAL }
 
 		completion_reward = {
-			add_political_power = 25
+			add_tech_bonus = { name = TU_VIC_col_port_survey bonus = 0.5 uses = 1 category = dd_tech category = ca_tech }
+			add_doctrine_cost_reduction = { name = TU_VIC_col_port_survey cost_reduction = 0.25 uses = 1 category = naval_doctrine }
+			navy_experience = 15
 		}
 	}
 
@@ -711,7 +745,9 @@
 		search_filters = { FOCUS_FILTER_POLITICAL }
 
 		completion_reward = {
-			add_political_power = 25
+			add_tech_bonus = { name = TU_VIC_col_shipping_lanes bonus = 0.75 uses = 1 category = dd_tech category = ca_tech }
+			add_doctrine_cost_reduction = { name = TU_VIC_col_shipping_lanes cost_reduction = 0.4 uses = 1 category = naval_doctrine }
+			navy_experience = 25
 		}
 	}
 
@@ -726,7 +762,8 @@
 		search_filters = { FOCUS_FILTER_POLITICAL }
 
 		completion_reward = {
-			add_political_power = 25
+			add_political_power = 60
+			add_tech_bonus = { name = TU_VIC_col_merchant_guilds bonus = 0.75 uses = 1 category = industry }
 		}
 	}
 
@@ -741,7 +778,9 @@
 		search_filters = { FOCUS_FILTER_POLITICAL }
 
 		completion_reward = {
-			add_political_power = 100
+			add_tech_bonus = { name = TU_VIC_col_claim bonus = 1.0 uses = 1 category = dd_tech category = ca_tech }
+			add_doctrine_cost_reduction = { name = TU_VIC_col_claim cost_reduction = 0.5 uses = 1 category = naval_doctrine }
+			navy_experience = 40
 		}
 	}
 
@@ -756,8 +795,10 @@
 		search_filters = { FOCUS_FILTER_INDUSTRY }
 
 		completion_reward = {
-			add_political_power = 50
 			TU_build_dockyard = yes
+			add_tech_bonus = { name = TU_VIC_col_naval_base bonus = 0.75 uses = 1 category = dd_tech category = ca_tech }
+			add_doctrine_cost_reduction = { name = TU_VIC_col_naval_base cost_reduction = 0.4 uses = 1 category = naval_doctrine }
+			navy_experience = 25
 		}
 	}
 
@@ -773,7 +814,8 @@
 
 		completion_reward = {
 			add_ideas = TU_VIC_exp_colonial_charter
-			add_political_power = 25
+			add_political_power = 60
+			add_stability = 0.03
 		}
 	}
 
@@ -789,7 +831,9 @@
 		search_filters = { FOCUS_FILTER_POLITICAL }
 
 		completion_reward = {
-			add_political_power = 50
+			add_tech_bonus = { name = TU_VIC_col_war_fleet bonus = 0.75 uses = 1 category = dd_tech category = ca_tech }
+			add_doctrine_cost_reduction = { name = TU_VIC_col_war_fleet cost_reduction = 0.4 uses = 1 category = naval_doctrine }
+			navy_experience = 25
 		}
 	}
 
@@ -805,7 +849,8 @@
 		search_filters = { FOCUS_FILTER_POLITICAL }
 
 		completion_reward = {
-			add_political_power = 25
+			add_political_power = 60
+			add_tech_bonus = { name = TU_VIC_col_trade_talks bonus = 0.75 uses = 1 category = industry }
 		}
 	}
 
@@ -820,7 +865,8 @@
 		search_filters = { FOCUS_FILTER_POLITICAL }
 
 		completion_reward = {
-			add_political_power = 50
+			add_political_power = 60
+			add_stability = 0.03
 		}
 	}
 
@@ -835,7 +881,8 @@
 		search_filters = { FOCUS_FILTER_POLITICAL }
 
 		completion_reward = {
-			add_political_power = 50
+			add_tech_bonus = { name = TU_VIC_col_security_pledge bonus = 0.75 uses = 1 category = radar_tech category = electronics }
+			add_stability = 0.03
 		}
 	}
 
@@ -850,8 +897,9 @@
 		search_filters = { FOCUS_FILTER_POLITICAL }
 
 		completion_reward = {
-			add_stability = 0.01
-			add_political_power = 25
+			add_tech_bonus = { name = TU_VIC_col_fleet_review bonus = 0.75 uses = 1 category = dd_tech category = ca_tech }
+			add_doctrine_cost_reduction = { name = TU_VIC_col_fleet_review cost_reduction = 0.4 uses = 1 category = naval_doctrine }
+			navy_experience = 25
 		}
 	}
 
@@ -866,7 +914,8 @@
 		search_filters = { FOCUS_FILTER_POLITICAL }
 
 		completion_reward = {
-			add_political_power = 25
+			add_political_power = 60
+			add_tech_bonus = { name = TU_VIC_col_tariff_reform bonus = 0.75 uses = 1 category = industry }
 		}
 	}
 
@@ -881,7 +930,8 @@
 		search_filters = { FOCUS_FILTER_POLITICAL }
 
 		completion_reward = {
-			add_political_power = 25
+			add_political_power = 60
+			add_tech_bonus = { name = TU_VIC_col_trade_fair bonus = 0.75 uses = 1 category = industry }
 		}
 	}
 
@@ -896,7 +946,9 @@
 		search_filters = { FOCUS_FILTER_POLITICAL }
 
 		completion_reward = {
-			add_political_power = 50
+			army_experience = 25
+			add_war_support = 0.03
+			add_doctrine_cost_reduction = { name = TU_VIC_col_expedition_fund cost_reduction = 0.4 uses = 1 category = land_doctrine }
 		}
 	}
 
@@ -911,8 +963,8 @@
 		search_filters = { FOCUS_FILTER_ARMY_XP }
 
 		completion_reward = {
-			army_experience = 10
-			add_political_power = 25
+			add_political_power = 60
+			add_stability = 0.03
 		}
 	}
 
@@ -927,8 +979,9 @@
 		search_filters = { FOCUS_FILTER_POLITICAL }
 
 		completion_reward = {
-			add_stability = 0.02
-			add_political_power = 75
+			add_tech_bonus = { name = TU_VIC_col_harbour_legacy bonus = 0.75 uses = 1 category = dd_tech category = ca_tech }
+			add_doctrine_cost_reduction = { name = TU_VIC_col_harbour_legacy cost_reduction = 0.4 uses = 1 category = naval_doctrine }
+			navy_experience = 25
 		}
 	}
 
@@ -945,7 +998,7 @@
 		search_filters = { FOCUS_FILTER_POLITICAL }
 
 		completion_reward = {
-			add_political_power = 25
+			add_tech_bonus = { name = TU_VIC_bol_highland_survey bonus = 0.5 uses = 1 category = industry category = construction_tech }
 		}
 	}
 
@@ -960,8 +1013,8 @@
 		search_filters = { FOCUS_FILTER_INDUSTRY }
 
 		completion_reward = {
-			add_political_power = 25
 			TU_build_civ_factory = yes
+			add_tech_bonus = { name = TU_VIC_bol_mining_deal bonus = 0.75 uses = 1 category = industry category = construction_tech }
 		}
 	}
 
@@ -976,7 +1029,7 @@
 		search_filters = { FOCUS_FILTER_POLITICAL }
 
 		completion_reward = {
-			add_political_power = 100
+			add_tech_bonus = { name = TU_VIC_bol_claim bonus = 1.0 uses = 1 category = industry category = construction_tech }
 		}
 	}
 
@@ -991,8 +1044,8 @@
 		search_filters = { FOCUS_FILTER_ARMY_XP }
 
 		completion_reward = {
-			army_experience = 15
-			add_political_power = 25
+			add_doctrine_cost_reduction = { name = TU_VIC_bol_mountain_training cost_reduction = 0.4 uses = 1 category = land_doctrine }
+			army_experience = 25
 		}
 	}
 
@@ -1007,8 +1060,8 @@
 		search_filters = { FOCUS_FILTER_INDUSTRY }
 
 		completion_reward = {
-			add_political_power = 25
 			TU_build_infrastructure = yes
+			add_tech_bonus = { name = TU_VIC_bol_highway bonus = 0.75 uses = 1 category = industry category = construction_tech }
 		}
 	}
 
@@ -1024,7 +1077,9 @@
 		search_filters = { FOCUS_FILTER_POLITICAL }
 
 		completion_reward = {
-			add_political_power = 50
+			army_experience = 25
+			add_war_support = 0.03
+			add_doctrine_cost_reduction = { name = TU_VIC_bol_war_plans cost_reduction = 0.4 uses = 1 category = land_doctrine }
 		}
 	}
 
@@ -1039,8 +1094,8 @@
 		search_filters = { FOCUS_FILTER_INDUSTRY }
 
 		completion_reward = {
-			add_political_power = 25
 			TU_build_mil_factory = yes
+			add_tech_bonus = { name = TU_VIC_bol_supply_depot bonus = 0.75 uses = 1 category = industry category = construction_tech }
 		}
 	}
 
@@ -1056,7 +1111,8 @@
 		search_filters = { FOCUS_FILTER_POLITICAL }
 
 		completion_reward = {
-			add_political_power = 25
+			add_political_power = 60
+			add_stability = 0.03
 		}
 	}
 
@@ -1071,7 +1127,9 @@
 		search_filters = { FOCUS_FILTER_POLITICAL }
 
 		completion_reward = {
-			add_political_power = 25
+			army_experience = 25
+			add_war_support = 0.03
+			add_doctrine_cost_reduction = { name = TU_VIC_bol_opinion_campaign cost_reduction = 0.4 uses = 1 category = land_doctrine }
 		}
 	}
 
@@ -1086,7 +1144,8 @@
 		search_filters = { FOCUS_FILTER_POLITICAL }
 
 		completion_reward = {
-			add_political_power = 50
+			add_tech_bonus = { name = TU_VIC_bol_security_pledge bonus = 0.75 uses = 1 category = radar_tech category = electronics }
+			add_stability = 0.03
 		}
 	}
 
@@ -1101,7 +1160,8 @@
 		search_filters = { FOCUS_FILTER_POLITICAL }
 
 		completion_reward = {
-			add_political_power = 50
+			add_political_power = 60
+			add_stability = 0.03
 		}
 	}
 
@@ -1116,7 +1176,8 @@
 		search_filters = { FOCUS_FILTER_POLITICAL }
 
 		completion_reward = {
-			add_political_power = 25
+			add_political_power = 60
+			add_tech_bonus = { name = TU_VIC_bol_southern_fair bonus = 0.75 uses = 1 category = industry }
 		}
 	}
 
@@ -1131,8 +1192,9 @@
 		search_filters = { FOCUS_FILTER_POLITICAL }
 
 		completion_reward = {
-			add_stability = 0.01
-			add_political_power = 50
+			army_experience = 25
+			add_war_support = 0.03
+			add_doctrine_cost_reduction = { name = TU_VIC_bol_highland_parade cost_reduction = 0.4 uses = 1 category = land_doctrine }
 		}
 	}
 
@@ -1147,7 +1209,8 @@
 		search_filters = { FOCUS_FILTER_POLITICAL }
 
 		completion_reward = {
-			add_political_power = 75
+			add_political_power = 60
+			add_stability = 0.03
 		}
 	}
 
@@ -1162,8 +1225,8 @@
 		search_filters = { FOCUS_FILTER_INDUSTRY }
 
 		completion_reward = {
-			add_political_power = 25
 			TU_build_civ_factory = yes
+			add_tech_bonus = { name = TU_VIC_bol_farm_development bonus = 0.75 uses = 1 category = industry category = construction_tech }
 		}
 	}
 
@@ -1178,7 +1241,8 @@
 		search_filters = { FOCUS_FILTER_POLITICAL }
 
 		completion_reward = {
-			add_political_power = 50
+			add_political_power = 60
+			add_stability = 0.03
 		}
 	}
 
@@ -1195,7 +1259,8 @@
 		search_filters = { FOCUS_FILTER_POLITICAL }
 
 		completion_reward = {
-			add_political_power = 25
+			add_tech_bonus = { name = TU_VIC_urs_border_summit bonus = 0.5 uses = 1 category = construction_tech }
+			army_experience = 15
 		}
 	}
 
@@ -1210,7 +1275,7 @@
 		search_filters = { FOCUS_FILTER_POLITICAL }
 
 		completion_reward = {
-			add_political_power = 25
+			add_tech_bonus = { name = TU_VIC_urs_winter_trade bonus = 0.75 uses = 1 category = industry category = construction_tech }
 		}
 	}
 
@@ -1225,8 +1290,8 @@
 		search_filters = { FOCUS_FILTER_ARMY_XP }
 
 		completion_reward = {
-			army_experience = 15
-			add_political_power = 25
+			add_manpower = 10000
+			army_experience = 25
 		}
 	}
 
@@ -1242,6 +1307,7 @@
 
 		completion_reward = {
 			add_political_power = 100
+			add_stability = 0.05
 		}
 	}
 
@@ -1256,7 +1322,8 @@
 		search_filters = { FOCUS_FILTER_POLITICAL }
 
 		completion_reward = {
-			add_political_power = 25
+			add_tech_bonus = { name = TU_VIC_urs_northern_wall bonus = 0.75 uses = 1 category = construction_tech }
+			army_experience = 25
 		}
 	}
 
@@ -1271,8 +1338,8 @@
 		search_filters = { FOCUS_FILTER_INDUSTRY }
 
 		completion_reward = {
-			add_political_power = 25
 			TU_build_infrastructure = yes
+			add_tech_bonus = { name = TU_VIC_urs_north_rail bonus = 0.75 uses = 1 category = industry category = construction_tech }
 		}
 	}
 
@@ -1288,7 +1355,9 @@
 		search_filters = { FOCUS_FILTER_POLITICAL }
 
 		completion_reward = {
-			add_political_power = 50
+			army_experience = 25
+			add_war_support = 0.03
+			add_doctrine_cost_reduction = { name = TU_VIC_urs_offensive_plans cost_reduction = 0.4 uses = 1 category = land_doctrine }
 		}
 	}
 
@@ -1303,8 +1372,9 @@
 		search_filters = { FOCUS_FILTER_ARMY_XP }
 
 		completion_reward = {
-			army_experience = 20
-			add_political_power = 50
+			army_experience = 25
+			add_war_support = 0.03
+			add_doctrine_cost_reduction = { name = TU_VIC_urs_frozen_march cost_reduction = 0.4 uses = 1 category = land_doctrine }
 		}
 	}
 
@@ -1319,8 +1389,8 @@
 		search_filters = { FOCUS_FILTER_ARMY_XP }
 
 		completion_reward = {
-			army_experience = 5
-			add_political_power = 25
+			add_tech_bonus = { name = TU_VIC_urs_siege_manual bonus = 0.75 uses = 1 category = artillery }
+			army_experience = 25
 		}
 	}
 
@@ -1336,7 +1406,8 @@
 		search_filters = { FOCUS_FILTER_POLITICAL }
 
 		completion_reward = {
-			add_political_power = 25
+			add_political_power = 60
+			add_stability = 0.03
 		}
 	}
 
@@ -1351,7 +1422,8 @@
 		search_filters = { FOCUS_FILTER_POLITICAL }
 
 		completion_reward = {
-			add_political_power = 50
+			add_political_power = 60
+			add_stability = 0.03
 		}
 	}
 
@@ -1366,7 +1438,8 @@
 		search_filters = { FOCUS_FILTER_POLITICAL }
 
 		completion_reward = {
-			add_political_power = 50
+			add_tech_bonus = { name = TU_VIC_urs_security_pledge bonus = 0.75 uses = 1 category = radar_tech category = electronics }
+			add_stability = 0.03
 		}
 	}
 
@@ -1381,8 +1454,8 @@
 		search_filters = { FOCUS_FILTER_POLITICAL }
 
 		completion_reward = {
-			add_stability = 0.01
-			add_political_power = 25
+			add_political_power = 60
+			add_stability = 0.03
 		}
 	}
 
@@ -1397,7 +1470,7 @@
 		search_filters = { FOCUS_FILTER_POLITICAL }
 
 		completion_reward = {
-			add_political_power = 25
+			add_tech_bonus = { name = TU_VIC_urs_scholars bonus = 0.75 uses = 1 category = electronics category = industry }
 		}
 	}
 
@@ -1412,7 +1485,8 @@
 		search_filters = { FOCUS_FILTER_POLITICAL }
 
 		completion_reward = {
-			add_political_power = 50
+			add_political_power = 60
+			add_stability = 0.03
 		}
 	}
 
@@ -1427,7 +1501,8 @@
 		search_filters = { FOCUS_FILTER_POLITICAL }
 
 		completion_reward = {
-			add_political_power = 50
+			add_political_power = 60
+			add_stability = 0.03
 		}
 	}
 
@@ -1443,7 +1518,8 @@
 
 		completion_reward = {
 			add_ideas = TU_VIC_exp_northern_bloc
-			add_political_power = 75
+			add_political_power = 60
+			add_stability = 0.03
 		}
 	}
 
@@ -1458,7 +1534,8 @@
 		search_filters = { FOCUS_FILTER_POLITICAL }
 
 		completion_reward = {
-			add_political_power = 25
+			add_political_power = 60
+			add_stability = 0.03
 		}
 	}
 
@@ -1475,7 +1552,9 @@
 		search_filters = { FOCUS_FILTER_POLITICAL }
 
 		completion_reward = {
-			add_political_power = 25
+			army_experience = 15
+			add_war_support = 0.02
+			add_doctrine_cost_reduction = { name = TU_VIC_kaz_frontier_survey cost_reduction = 0.25 uses = 1 category = land_doctrine }
 		}
 	}
 
@@ -1490,7 +1569,8 @@
 		search_filters = { FOCUS_FILTER_POLITICAL }
 
 		completion_reward = {
-			add_political_power = 25
+			add_tech_bonus = { name = TU_VIC_kaz_river_forts bonus = 0.75 uses = 1 category = construction_tech }
+			army_experience = 25
 		}
 	}
 
@@ -1505,7 +1585,7 @@
 		search_filters = { FOCUS_FILTER_POLITICAL }
 
 		completion_reward = {
-			add_political_power = 25
+			add_tech_bonus = { name = TU_VIC_kaz_archive bonus = 0.75 uses = 1 category = electronics category = industry }
 		}
 	}
 
@@ -1521,6 +1601,7 @@
 
 		completion_reward = {
 			add_political_power = 100
+			add_stability = 0.05
 		}
 	}
 
@@ -1535,8 +1616,9 @@
 		search_filters = { FOCUS_FILTER_ARMY_XP }
 
 		completion_reward = {
-			army_experience = 15
-			add_political_power = 25
+			army_experience = 25
+			add_war_support = 0.03
+			add_doctrine_cost_reduction = { name = TU_VIC_kaz_levies cost_reduction = 0.4 uses = 1 category = land_doctrine }
 		}
 	}
 
@@ -1552,7 +1634,9 @@
 		search_filters = { FOCUS_FILTER_POLITICAL }
 
 		completion_reward = {
-			add_political_power = 50
+			army_experience = 25
+			add_war_support = 0.03
+			add_doctrine_cost_reduction = { name = TU_VIC_kaz_war_plans cost_reduction = 0.4 uses = 1 category = land_doctrine }
 		}
 	}
 
@@ -1567,8 +1651,9 @@
 		search_filters = { FOCUS_FILTER_INDUSTRY }
 
 		completion_reward = {
-			add_political_power = 25
 			TU_build_infrastructure = yes
+			add_tech_bonus = { name = TU_VIC_kaz_eastern_supply bonus = 0.75 uses = 1 category = construction_tech }
+			army_experience = 25
 		}
 	}
 
@@ -1583,9 +1668,10 @@
 		search_filters = { FOCUS_FILTER_POLITICAL }
 
 		completion_reward = {
-			add_war_support = 0.05
 			add_ideas = TU_VIC_exp_frontier_legion
-			add_political_power = 50
+			army_experience = 25
+			add_war_support = 0.03
+			add_doctrine_cost_reduction = { name = TU_VIC_kaz_eastern_crusade cost_reduction = 0.4 uses = 1 category = land_doctrine }
 		}
 	}
 
@@ -1601,7 +1687,8 @@
 		search_filters = { FOCUS_FILTER_POLITICAL }
 
 		completion_reward = {
-			add_political_power = 25
+			add_political_power = 60
+			add_stability = 0.03
 		}
 	}
 
@@ -1616,7 +1703,9 @@
 		search_filters = { FOCUS_FILTER_POLITICAL }
 
 		completion_reward = {
-			add_political_power = 25
+			army_experience = 25
+			add_war_support = 0.03
+			add_doctrine_cost_reduction = { name = TU_VIC_kaz_opinion cost_reduction = 0.4 uses = 1 category = land_doctrine }
 		}
 	}
 
@@ -1631,7 +1720,8 @@
 		search_filters = { FOCUS_FILTER_POLITICAL }
 
 		completion_reward = {
-			add_political_power = 50
+			add_political_power = 60
+			add_stability = 0.03
 		}
 	}
 
@@ -1646,7 +1736,8 @@
 		search_filters = { FOCUS_FILTER_POLITICAL }
 
 		completion_reward = {
-			add_political_power = 50
+			add_tech_bonus = { name = TU_VIC_kaz_security_pledge bonus = 0.75 uses = 1 category = radar_tech category = electronics }
+			add_stability = 0.03
 		}
 	}
 
@@ -1661,7 +1752,8 @@
 		search_filters = { FOCUS_FILTER_POLITICAL }
 
 		completion_reward = {
-			add_political_power = 25
+			add_political_power = 60
+			add_tech_bonus = { name = TU_VIC_kaz_eastern_trade bonus = 0.75 uses = 1 category = industry }
 		}
 	}
 
@@ -1676,8 +1768,7 @@
 		search_filters = { FOCUS_FILTER_POLITICAL }
 
 		completion_reward = {
-			add_stability = 0.01
-			add_political_power = 25
+			add_tech_bonus = { name = TU_VIC_kaz_harvest_festival bonus = 0.75 uses = 1 category = industry category = construction_tech }
 		}
 	}
 
@@ -1692,7 +1783,8 @@
 		search_filters = { FOCUS_FILTER_POLITICAL }
 
 		completion_reward = {
-			add_political_power = 75
+			add_political_power = 60
+			add_stability = 0.03
 		}
 	}
 
@@ -1707,8 +1799,8 @@
 		search_filters = { FOCUS_FILTER_POLITICAL }
 
 		completion_reward = {
-			add_stability = 0.01
-			add_political_power = 25
+			add_political_power = 60
+			add_stability = 0.03
 		}
 	}
 
@@ -1723,7 +1815,8 @@
 		search_filters = { FOCUS_FILTER_POLITICAL }
 
 		completion_reward = {
-			add_political_power = 50
+			add_political_power = 60
+			add_stability = 0.03
 		}
 	}
 
@@ -1738,6 +1831,7 @@
 		search_filters = { FOCUS_FILTER_POLITICAL }
 
 		completion_reward = {
-			add_political_power = 75
+			add_political_power = 60
+			add_stability = 0.03
 		}
 	}

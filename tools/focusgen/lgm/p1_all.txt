@@ -17,7 +17,8 @@
 
 		completion_reward = {
 			set_country_flag = TU_dip_relations_unlocked
-			add_political_power = 50
+			add_political_power = 60
+			add_stability = 0.03
 		}
 	}
 
@@ -38,7 +39,8 @@
 		}
 
 		completion_reward = {
-			add_political_power = 25
+			add_political_power = 60
+			add_stability = 0.03
 		}
 	}
 
@@ -57,7 +59,8 @@
 		}
 
 		completion_reward = {
-			add_political_power = 25
+			add_political_power = 60
+			add_tech_bonus = { name = TU_LGM_merchant_guilds bonus = 0.75 uses = 1 category = industry }
 		}
 	}
 
@@ -76,7 +79,8 @@
 		}
 
 		completion_reward = {
-			add_political_power = 50
+			add_political_power = 60
+			add_tech_bonus = { name = TU_LGM_banking_house bonus = 0.75 uses = 1 category = industry }
 		}
 	}
 
@@ -95,7 +99,9 @@
 		}
 
 		completion_reward = {
-			add_political_power = 50
+			add_tech_bonus = { name = TU_LGM_free_port_zone bonus = 0.75 uses = 1 category = dd_tech category = ca_tech }
+			add_doctrine_cost_reduction = { name = TU_LGM_free_port_zone cost_reduction = 0.4 uses = 1 category = naval_doctrine }
+			navy_experience = 25
 		}
 	}
 
@@ -114,9 +120,8 @@
 		}
 
 		completion_reward = {
-			add_stability = 0.02
-			add_political_power = 25
 			TU_build_civ_factory = yes
+			add_tech_bonus = { name = TU_LGM_warehouse_district bonus = 0.75 uses = 1 category = industry category = construction_tech }
 		}
 	}
 
@@ -137,7 +142,8 @@
 
 		completion_reward = {
 			add_ideas = TU_LGM_choice_free_grain
-			add_political_power = 25
+			add_stability = 0.02
+			add_manpower = 5000
 		}
 	}
 
@@ -156,8 +162,8 @@
 		}
 
 		completion_reward = {
-			add_political_power = 50
 			TU_build_mil_factory = yes
+			add_tech_bonus = { name = TU_LGM_industrial_loans bonus = 0.75 uses = 1 category = industry category = construction_tech }
 		}
 	}
 
@@ -176,7 +182,8 @@
 		}
 
 		completion_reward = {
-			add_political_power = 50
+			add_political_power = 60
+			add_tech_bonus = { name = TU_LGM_tax_reform bonus = 0.75 uses = 1 category = industry }
 		}
 	}
 
@@ -196,8 +203,9 @@
 
 		completion_reward = {
 			add_ideas = TU_LGM_exchange_capital
-			add_political_power = 75
 			TU_build_civ_factory = yes
+			add_political_power = 100
+			add_stability = 0.05
 		}
 	}
 
@@ -216,7 +224,8 @@
 		}
 
 		completion_reward = {
-			add_political_power = 50
+			add_political_power = 60
+			add_tech_bonus = { name = TU_LGM_trade_fair bonus = 0.75 uses = 1 category = industry }
 		}
 	}
 
@@ -235,8 +244,9 @@
 		}
 
 		completion_reward = {
-			add_political_power = 50
 			TU_build_civ_factory = yes
+			add_political_power = 60
+			add_tech_bonus = { name = TU_LGM_consumer_boom bonus = 0.75 uses = 1 category = industry }
 		}
 	}
 
@@ -255,7 +265,9 @@
 		}
 
 		completion_reward = {
-			add_political_power = 50
+			add_tech_bonus = { name = TU_LGM_port_taxes bonus = 0.75 uses = 1 category = dd_tech category = ca_tech }
+			add_doctrine_cost_reduction = { name = TU_LGM_port_taxes cost_reduction = 0.4 uses = 1 category = naval_doctrine }
+			navy_experience = 25
 		}
 	}
 
@@ -274,7 +286,8 @@
 		}
 
 		completion_reward = {
-			add_political_power = 75
+			add_political_power = 60
+			add_tech_bonus = { name = TU_LGM_free_trade_treaty bonus = 0.75 uses = 1 category = industry }
 		}
 	}
 
@@ -294,6 +307,7 @@
 
 		completion_reward = {
 			add_political_power = 100
+			add_tech_bonus = { name = TU_LGM_trade_monopoly bonus = 1.0 uses = 1 category = industry }
 		}
 	}
 
@@ -312,8 +326,8 @@
 		}
 
 		completion_reward = {
-			add_stability = 0.02
-			add_political_power = 50
+			add_political_power = 60
+			add_tech_bonus = { name = TU_LGM_city_treasury bonus = 0.75 uses = 1 category = industry }
 		}
 	}
 
@@ -334,7 +348,8 @@
 
 		completion_reward = {
 			add_ideas = TU_LGM_choice_bank_reserve
-			add_political_power = 50
+			add_political_power = 60
+			add_tech_bonus = { name = TU_LGM_central_bank bonus = 0.75 uses = 1 category = industry }
 		}
 	}
 
@@ -354,8 +369,8 @@
 		}
 
 		completion_reward = {
-			add_war_support = 0.03
-			add_political_power = 50
+			add_political_power = 60
+			add_tech_bonus = { name = TU_LGM_central_bank_alt bonus = 0.75 uses = 1 category = industry }
 		}
 	}
 
@@ -374,7 +389,9 @@
 		}
 
 		completion_reward = {
-			add_political_power = 50
+			add_tech_bonus = { name = TU_LGM_harbor_toll bonus = 0.75 uses = 1 category = dd_tech category = ca_tech }
+			add_doctrine_cost_reduction = { name = TU_LGM_harbor_toll cost_reduction = 0.4 uses = 1 category = naval_doctrine }
+			navy_experience = 25
 		}
 	}
 
@@ -393,8 +410,8 @@
 		}
 
 		completion_reward = {
-			add_stability = 0.03
-			add_political_power = 50
+			add_political_power = 60
+			add_tech_bonus = { name = TU_LGM_debt_restructuring bonus = 0.75 uses = 1 category = industry }
 		}
 	}
 
@@ -414,8 +431,8 @@
 		}
 
 		completion_reward = {
+			add_tech_bonus = { name = TU_LGM_smuggler_crackdown bonus = 0.5 uses = 1 category = radar_tech category = electronics }
 			add_stability = 0.02
-			add_political_power = 25
 		}
 	}
 
@@ -434,8 +451,10 @@
 		}
 
 		completion_reward = {
-			add_political_power = 50
 			TU_build_dockyard = yes
+			add_tech_bonus = { name = TU_LGM_port_expansion_bid bonus = 0.75 uses = 1 category = dd_tech category = ca_tech }
+			add_doctrine_cost_reduction = { name = TU_LGM_port_expansion_bid cost_reduction = 0.4 uses = 1 category = naval_doctrine }
+			navy_experience = 25
 		}
 	}
 
@@ -454,8 +473,10 @@
 		}
 
 		completion_reward = {
-			add_political_power = 50
 			TU_build_dockyard = yes
+			add_tech_bonus = { name = TU_LGM_shipyard_guild bonus = 0.75 uses = 1 category = dd_tech category = ca_tech }
+			add_doctrine_cost_reduction = { name = TU_LGM_shipyard_guild cost_reduction = 0.4 uses = 1 category = naval_doctrine }
+			navy_experience = 25
 		}
 	}
 
@@ -476,8 +497,8 @@
 		}
 
 		completion_reward = {
-			add_political_power = 25
 			TU_build_infrastructure = yes
+			add_tech_bonus = { name = TU_LGM_urban_planning bonus = 0.75 uses = 1 category = industry category = construction_tech }
 		}
 	}
 
@@ -496,8 +517,10 @@
 		}
 
 		completion_reward = {
-			add_political_power = 50
 			TU_build_dockyard = yes
+			add_tech_bonus = { name = TU_LGM_harbor_works bonus = 0.75 uses = 1 category = dd_tech category = ca_tech }
+			add_doctrine_cost_reduction = { name = TU_LGM_harbor_works cost_reduction = 0.4 uses = 1 category = naval_doctrine }
+			navy_experience = 25
 		}
 	}
 
@@ -516,8 +539,8 @@
 		}
 
 		completion_reward = {
-			add_political_power = 50
 			TU_build_civ_factory = yes
+			add_tech_bonus = { name = TU_LGM_factory_zone bonus = 0.75 uses = 1 category = industry category = construction_tech }
 		}
 	}
 
@@ -536,7 +559,8 @@
 		}
 
 		completion_reward = {
-			add_political_power = 25
+			add_tech_bonus = { name = TU_LGM_fortified_districts bonus = 0.75 uses = 1 category = construction_tech }
+			army_experience = 25
 		}
 	}
 
@@ -555,8 +579,8 @@
 		}
 
 		completion_reward = {
-			add_stability = 0.02
-			add_political_power = 25
+			add_stability = 0.03
+			add_manpower = 10000
 		}
 	}
 
@@ -575,8 +599,8 @@
 		}
 
 		completion_reward = {
-			add_political_power = 50
 			TU_build_infrastructure = yes
+			add_tech_bonus = { name = TU_LGM_transit_network bonus = 0.75 uses = 1 category = industry category = construction_tech }
 		}
 	}
 
@@ -595,7 +619,7 @@
 		}
 
 		completion_reward = {
-			add_political_power = 50
+			add_tech_bonus = { name = TU_LGM_radar_grid bonus = 0.75 uses = 1 category = industry category = construction_tech }
 		}
 	}
 
@@ -614,7 +638,8 @@
 		}
 
 		completion_reward = {
-			add_political_power = 50
+			add_tech_bonus = { name = TU_LGM_city_wall bonus = 0.75 uses = 1 category = construction_tech }
+			army_experience = 25
 		}
 	}
 
@@ -633,8 +658,8 @@
 		}
 
 		completion_reward = {
-			add_political_power = 75
 			TU_build_mil_factory = yes
+			add_tech_bonus = { name = TU_LGM_industrial_park bonus = 1.0 uses = 1 category = industry category = construction_tech }
 		}
 	}
 
@@ -653,8 +678,8 @@
 		}
 
 		completion_reward = {
-			add_political_power = 50
 			TU_build_civ_factory = yes
+			add_tech_bonus = { name = TU_LGM_power_plant bonus = 0.75 uses = 1 category = industry category = construction_tech }
 		}
 	}
 
@@ -673,7 +698,9 @@
 		}
 
 		completion_reward = {
-			add_political_power = 25
+			add_tech_bonus = { name = TU_LGM_airfield_survey bonus = 0.75 uses = 1 category = light_fighter category = tactical_bomber }
+			add_doctrine_cost_reduction = { name = TU_LGM_airfield_survey cost_reduction = 0.4 uses = 1 category = air_doctrine }
+			air_experience = 25
 		}
 	}
 
@@ -692,8 +719,9 @@
 		}
 
 		completion_reward = {
-			add_political_power = 25
 			TU_build_civ_factory = yes
+			add_tech_bonus = { name = TU_LGM_border_engineers bonus = 0.75 uses = 1 category = construction_tech }
+			army_experience = 25
 		}
 	}
 
@@ -714,8 +742,8 @@
 		}
 
 		completion_reward = {
-			add_manpower = 10000
-			add_political_power = 25
+			add_political_power = 35
+			add_stability = 0.02
 		}
 	}
 
@@ -735,7 +763,7 @@
 
 		completion_reward = {
 			add_stability = 0.03
-			add_political_power = 25
+			add_manpower = 10000
 		}
 	}
 
@@ -754,8 +782,8 @@
 		}
 
 		completion_reward = {
-			add_stability = 0.02
-			add_political_power = 50
+			add_stability = 0.03
+			add_manpower = 10000
 		}
 	}
 
@@ -776,7 +804,7 @@
 
 		completion_reward = {
 			add_ideas = TU_LGM_choice_civic_schools
-			add_political_power = 50
+			add_tech_bonus = { name = TU_LGM_education_reform bonus = 0.75 uses = 1 category = electronics category = industry }
 		}
 	}
 
@@ -796,8 +824,7 @@
 		}
 
 		completion_reward = {
-			army_experience = 15
-			add_political_power = 50
+			add_tech_bonus = { name = TU_LGM_education_reform_alt bonus = 0.75 uses = 1 category = electronics category = industry }
 		}
 	}
 
@@ -816,8 +843,8 @@
 		}
 
 		completion_reward = {
-			add_stability = 0.02
-			add_political_power = 50
+			add_tech_bonus = { name = TU_LGM_police_reform bonus = 0.75 uses = 1 category = radar_tech category = electronics }
+			add_stability = 0.03
 		}
 	}
 
@@ -837,8 +864,8 @@
 		}
 
 		completion_reward = {
+			add_stability = 0.03
 			add_manpower = 10000
-			add_political_power = 25
 		}
 	}
 
@@ -858,8 +885,8 @@
 		}
 
 		completion_reward = {
-			add_war_support = 0.03
-			add_political_power = 25
+			add_tech_bonus = { name = TU_LGM_refugee_census_alt bonus = 0.75 uses = 1 category = construction_tech }
+			army_experience = 25
 		}
 	}
 
@@ -878,7 +905,8 @@
 		}
 
 		completion_reward = {
-			add_political_power = 50
+			add_political_power = 60
+			add_stability = 0.03
 		}
 	}
 
@@ -900,7 +928,8 @@
 
 		completion_reward = {
 			country_event = { id = tu_lgm_ev.4 }
-			add_political_power = 25
+			add_manpower = 10000
+			army_experience = 25
 		}
 	}
 
@@ -919,8 +948,8 @@
 		}
 
 		completion_reward = {
-			army_experience = 15
-			add_political_power = 25
+			add_manpower = 10000
+			army_experience = 25
 		}
 	}
 
@@ -939,7 +968,8 @@
 		}
 
 		completion_reward = {
-			add_political_power = 50
+			add_doctrine_cost_reduction = { name = TU_LGM_guard_academy cost_reduction = 0.4 uses = 1 category = land_doctrine }
+			army_experience = 25
 		}
 	}
 
@@ -958,7 +988,8 @@
 		}
 
 		completion_reward = {
-			add_political_power = 25
+			add_manpower = 10000
+			army_experience = 25
 		}
 	}
 
@@ -977,7 +1008,8 @@
 		}
 
 		completion_reward = {
-			add_political_power = 50
+			add_tech_bonus = { name = TU_LGM_guard_armour bonus = 0.75 uses = 1 category = armor }
+			add_doctrine_cost_reduction = { name = TU_LGM_guard_armour cost_reduction = 0.4 uses = 1 category = land_doctrine }
 		}
 	}
 
@@ -996,7 +1028,8 @@
 		}
 
 		completion_reward = {
-			add_political_power = 25
+			add_manpower = 10000
+			army_experience = 25
 		}
 	}
 
@@ -1016,7 +1049,8 @@
 
 		completion_reward = {
 			add_ideas = TU_LGM_guard_tactics
-			add_political_power = 50
+			add_doctrine_cost_reduction = { name = TU_LGM_guard_doctrine cost_reduction = 0.4 uses = 1 category = land_doctrine }
+			army_experience = 25
 		}
 	}
 
@@ -1035,7 +1069,8 @@
 		}
 
 		completion_reward = {
-			add_political_power = 75
+			add_manpower = 20000
+			army_experience = 40
 		}
 	}
 
@@ -1055,8 +1090,9 @@
 		}
 
 		completion_reward = {
-			army_experience = 15
-			add_political_power = 50
+			add_tech_bonus = { name = TU_LGM_guard_air_cover bonus = 0.75 uses = 1 category = light_fighter category = tactical_bomber }
+			add_doctrine_cost_reduction = { name = TU_LGM_guard_air_cover cost_reduction = 0.4 uses = 1 category = air_doctrine }
+			air_experience = 25
 		}
 	}
 
@@ -1076,8 +1112,8 @@
 		}
 
 		completion_reward = {
-			add_stability = 0.03
-			add_political_power = 50
+			add_manpower = 10000
+			army_experience = 25
 		}
 	}
 
@@ -1096,7 +1132,8 @@
 		}
 
 		completion_reward = {
-			add_political_power = 100
+			add_tech_bonus = { name = TU_LGM_guard_mobile_corps bonus = 1.0 uses = 1 category = motorized_equipment }
+			add_doctrine_cost_reduction = { name = TU_LGM_guard_mobile_corps cost_reduction = 0.5 uses = 1 category = land_doctrine }
 		}
 	}
 
@@ -1115,8 +1152,8 @@
 		}
 
 		completion_reward = {
-			add_stability = 0.02
-			add_political_power = 25
+			add_manpower = 5000
+			army_experience = 15
 		}
 	}
 
@@ -1135,8 +1172,8 @@
 		}
 
 		completion_reward = {
-			add_war_support = 0.05
-			add_political_power = 50
+			add_manpower = 10000
+			army_experience = 25
 		}
 	}
 
@@ -1155,8 +1192,8 @@
 		}
 
 		completion_reward = {
+			add_doctrine_cost_reduction = { name = TU_LGM_guard_general_staff cost_reduction = 0.4 uses = 1 category = land_doctrine }
 			army_experience = 25
-			add_political_power = 50
 		}
 	}
 
@@ -1176,9 +1213,9 @@
 		}
 
 		completion_reward = {
-			add_war_support = 0.03
-			add_political_power = 25
 			TU_build_mil_factory = yes
+			add_manpower = 10000
+			army_experience = 25
 		}
 	}
 
@@ -1198,9 +1235,9 @@
 		}
 
 		completion_reward = {
-			army_experience = 15
-			add_political_power = 25
 			TU_build_mil_factory = yes
+			add_doctrine_cost_reduction = { name = TU_LGM_guard_supply_depot_alt cost_reduction = 0.4 uses = 1 category = land_doctrine }
+			army_experience = 25
 		}
 	}
 
@@ -1221,7 +1258,8 @@
 		}
 
 		completion_reward = {
-			add_political_power = 25
+			add_tech_bonus = { name = TU_LGM_border_survey bonus = 0.5 uses = 1 category = construction_tech }
+			army_experience = 15
 		}
 	}
 
@@ -1244,8 +1282,8 @@
 		}
 
 		completion_reward = {
-			army_experience = 10
-			add_political_power = 25
+			add_tech_bonus = { name = TU_LGM_border_patrols bonus = 0.75 uses = 1 category = construction_tech }
+			army_experience = 25
 		}
 	}
 
@@ -1268,7 +1306,8 @@
 		}
 
 		completion_reward = {
-			add_political_power = 50
+			add_political_power = 60
+			add_stability = 0.03
 		}
 	}
 
@@ -1287,7 +1326,8 @@
 		}
 
 		completion_reward = {
-			add_political_power = 50
+			add_tech_bonus = { name = TU_LGM_fortify_border bonus = 0.75 uses = 1 category = construction_tech }
+			army_experience = 25
 		}
 	}
 
@@ -1307,8 +1347,8 @@
 		}
 
 		completion_reward = {
+			add_tech_bonus = { name = TU_LGM_reunion_intel bonus = 0.75 uses = 1 category = radar_tech category = electronics }
 			add_stability = 0.03
-			add_political_power = 50
 		}
 	}
 
@@ -1328,8 +1368,9 @@
 		}
 
 		completion_reward = {
+			army_experience = 25
 			add_war_support = 0.03
-			add_political_power = 50
+			add_doctrine_cost_reduction = { name = TU_LGM_reunion_intel_alt cost_reduction = 0.4 uses = 1 category = land_doctrine }
 		}
 	}
 
@@ -1354,7 +1395,8 @@
 		completion_reward = {
 			country_event = { id = tu_lgm_ev.5 }
 			add_ideas = TU_LGM_fortified_line
-			add_political_power = 75
+			add_tech_bonus = { name = TU_LGM_defence_line bonus = 0.75 uses = 1 category = construction_tech }
+			army_experience = 25
 		}
 	}
 
@@ -1377,7 +1419,8 @@
 		}
 
 		completion_reward = {
-			add_political_power = 50
+			add_tech_bonus = { name = TU_LGM_border_conflict_plan bonus = 0.75 uses = 1 category = construction_tech }
+			army_experience = 25
 		}
 	}
 
@@ -1396,8 +1439,8 @@
 		}
 
 		completion_reward = {
+			add_tech_bonus = { name = TU_LGM_siege_drill bonus = 0.75 uses = 1 category = artillery }
 			army_experience = 25
-			add_political_power = 50
 		}
 	}
 
@@ -1422,8 +1465,8 @@
 		completion_reward = {
 			country_event = { id = tu_lgm_ev.6 }
 			add_ideas = TU_LGM_survival_spirit
-			add_stability = 0.03
 			add_political_power = 100
+			add_stability = 0.05
 		}
 	}
 
@@ -1442,8 +1485,8 @@
 		}
 
 		completion_reward = {
-			add_manpower = 15000
-			add_political_power = 50
+			add_stability = 0.03
+			add_manpower = 10000
 		}
 	}
 
@@ -1467,7 +1510,8 @@
 
 		completion_reward = {
 			every_country = { news_event = { id = tu_lgm_ev.8 days = 0 } }
-			add_political_power = 50
+			add_political_power = 60
+			add_stability = 0.03
 		}
 	}
 
@@ -1487,8 +1531,8 @@
 		}
 
 		completion_reward = {
-			army_experience = 15
-			add_political_power = 25
+			add_tech_bonus = { name = TU_LGM_mobile_city_drills bonus = 0.5 uses = 1 category = construction_tech }
+			add_tech_bonus = { name = TU_LGM_mobile_city_drills bonus = 0.5 uses = 1 category = motorized_equipment }
 		}
 	}
 
@@ -1508,8 +1552,8 @@
 		}
 
 		completion_reward = {
-			add_stability = 0.02
-			add_political_power = 25
+			add_tech_bonus = { name = TU_LGM_mobile_city_drills_alt bonus = 0.5 uses = 1 category = construction_tech }
+			add_tech_bonus = { name = TU_LGM_mobile_city_drills_alt bonus = 0.5 uses = 1 category = motorized_equipment }
 		}
 	}
 
@@ -1533,8 +1577,8 @@
 		}
 
 		completion_reward = {
-			add_stability = 0.02
-			add_political_power = 75
+			add_political_power = 60
+			add_stability = 0.03
 		}
 	}
 
@@ -1558,8 +1602,8 @@
 		}
 
 		completion_reward = {
-			add_war_support = 0.03
-			add_political_power = 75
+			add_political_power = 60
+			add_stability = 0.03
 		}
 	}
 
@@ -1578,8 +1622,9 @@
 		}
 
 		completion_reward = {
-			add_political_power = 50
 			TU_build_infrastructure = yes
+			add_tech_bonus = { name = TU_LGM_frontier_roads bonus = 0.75 uses = 1 category = construction_tech }
+			army_experience = 25
 		}
 	}
 
@@ -1611,7 +1656,8 @@
 					}
 				}
 			}
-			add_political_power = 25
+			add_political_power = 60
+			add_stability = 0.03
 		}
 	}
 
@@ -1641,7 +1687,8 @@
 					}
 				}
 			}
-			add_political_power = 25
+			add_political_power = 60
+			add_stability = 0.03
 		}
 	}
 
@@ -1671,7 +1718,8 @@
 					}
 				}
 			}
-			add_political_power = 25
+			add_political_power = 60
+			add_stability = 0.03
 		}
 	}
 
@@ -1696,7 +1744,8 @@
 				}
 				add_stability = 0.01
 			}
-			add_political_power = 50
+			add_political_power = 60
+			add_tech_bonus = { name = TU_LGM_yan_tribute bonus = 0.75 uses = 1 category = industry }
 		}
 	}
 
@@ -1716,7 +1765,8 @@
 
 		completion_reward = {
 			add_ideas = TU_LGM_autonomy_charter
-			add_political_power = 50
+			add_political_power = 60
+			add_stability = 0.03
 		}
 	}
 
@@ -1735,8 +1785,8 @@
 		}
 
 		completion_reward = {
-			add_stability = 0.02
-			add_political_power = 50
+			add_political_power = 60
+			add_tech_bonus = { name = TU_LGM_autonomy_budget bonus = 0.75 uses = 1 category = industry }
 		}
 	}
 
@@ -1756,8 +1806,8 @@
 		}
 
 		completion_reward = {
-			army_experience = 15
-			add_political_power = 50
+			add_tech_bonus = { name = TU_LGM_autonomy_police bonus = 0.75 uses = 1 category = radar_tech category = electronics }
+			add_stability = 0.03
 		}
 	}
 
@@ -1777,8 +1827,8 @@
 		}
 
 		completion_reward = {
+			add_political_power = 60
 			add_stability = 0.03
-			add_political_power = 50
 		}
 	}
 
@@ -1801,8 +1851,8 @@
 		}
 
 		completion_reward = {
-			add_war_support = 0.02
-			add_political_power = 50
+			add_war_support = 0.03
+			add_stability = 0.03
 		}
 	}
 
@@ -1821,7 +1871,8 @@
 		}
 
 		completion_reward = {
-			add_political_power = 50
+			add_political_power = 60
+			add_stability = 0.03
 		}
 	}
 
@@ -1840,7 +1891,8 @@
 		}
 
 		completion_reward = {
-			add_political_power = 50
+			add_tech_bonus = { name = TU_LGM_yan_border_talks bonus = 0.75 uses = 1 category = construction_tech }
+			army_experience = 25
 		}
 	}
 
@@ -1859,7 +1911,8 @@
 		}
 
 		completion_reward = {
-			add_political_power = 75
+			add_political_power = 60
+			add_stability = 0.03
 		}
 	}
 
@@ -1879,7 +1932,8 @@
 
 		completion_reward = {
 			army_experience = 25
-			add_political_power = 75
+			add_war_support = 0.03
+			add_doctrine_cost_reduction = { name = TU_LGM_independence_war_plan cost_reduction = 0.4 uses = 1 category = land_doctrine }
 		}
 	}
 
@@ -1899,9 +1953,8 @@
 
 		completion_reward = {
 			every_country = { news_event = { id = tu_lgm_ev.7 days = 0 } }
-			add_stability = 0.03
-			add_war_support = 0.05
 			add_political_power = 100
+			add_stability = 0.05
 		}
 	}
 
@@ -1922,8 +1975,8 @@
 		}
 
 		completion_reward = {
-			add_stability = 0.03
-			add_political_power = 50
+			add_manpower = 10000
+			army_experience = 25
 		}
 	}
 
@@ -1942,8 +1995,8 @@
 		}
 
 		completion_reward = {
-			add_war_support = 0.03
-			add_political_power = 50
+			add_manpower = 10000
+			army_experience = 25
 		}
 	}
 
@@ -1966,7 +2019,8 @@
 
 		completion_reward = {
 			set_country_flag = TU_dip_alliance_unlocked
-			add_political_power = 75
+			add_political_power = 60
+			add_stability = 0.03
 		}
 	}
 
@@ -1986,8 +2040,8 @@
 		}
 
 		completion_reward = {
-			add_war_support = 0.03
 			set_country_flag = TU_dip_alliance_unlocked
-			add_political_power = 75
+			add_tech_bonus = { name = TU_LGM_dip_alliance_alt bonus = 0.75 uses = 1 category = construction_tech }
+			army_experience = 25
 		}
 	}

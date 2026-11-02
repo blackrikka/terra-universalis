@@ -39,9 +39,9 @@
 		}
 
 		completion_reward = {
-			add_political_power = 25
-			add_stability = 0.01
 			TU_build_civ_factory = yes
+			add_political_power = 60
+			add_stability = 0.03
 		}
 	}
 
@@ -60,15 +60,9 @@
 		}
 
 		completion_reward = {
-			add_political_power = 50
-			add_tech_bonus = {
-				name = TU_VIC_duk_estate_industry
-				bonus = 0.5
-				uses = 1
-				category = industry
-			}
 			add_ideas = TU_VIC_estate_industry
 			TU_build_civ_factory = yes
+			add_tech_bonus = { name = TU_VIC_duk_estate_industry bonus = 0.75 uses = 1 category = industry category = construction_tech }
 		}
 	}
 
@@ -87,14 +81,8 @@
 		}
 
 		completion_reward = {
-			add_political_power = 50
-			add_tech_bonus = {
-				name = TU_VIC_duk_ducal_foundry
-				bonus = 0.5
-				uses = 1
-				category = infantry_weapons
-			}
 			TU_build_mil_factory = yes
+			add_tech_bonus = { name = TU_VIC_duk_ducal_foundry bonus = 0.75 uses = 1 category = industry category = construction_tech }
 		}
 	}
 
@@ -113,14 +101,8 @@
 		}
 
 		completion_reward = {
-			add_political_power = 25
-			army_experience = 10
-			add_tech_bonus = {
-				name = TU_VIC_duk_arsenal_expand
-				bonus = 0.5
-				uses = 1
-				category = artillery
-			}
+			add_tech_bonus = { name = TU_VIC_duk_arsenal_expand bonus = 0.75 uses = 1 category = infantry_weapons }
+			army_experience = 25
 		}
 	}
 
@@ -139,14 +121,9 @@
 		}
 
 		completion_reward = {
-			add_political_power = 50
-			add_tech_bonus = {
-				name = TU_VIC_duk_grand_arsenal
-				bonus = 0.5
-				uses = 1
-				category = armor
-			}
 			TU_build_mil_factory = yes
+			add_tech_bonus = { name = TU_VIC_duk_grand_arsenal bonus = 0.75 uses = 1 category = infantry_weapons }
+			army_experience = 25
 		}
 	}
 
@@ -165,8 +142,8 @@
 		}
 
 		completion_reward = {
-			add_political_power = 50
 			TU_build_infrastructure = yes
+			add_tech_bonus = { name = TU_VIC_duk_estate_grid bonus = 0.75 uses = 1 category = industry category = construction_tech }
 		}
 	}
 
@@ -185,8 +162,8 @@
 		}
 
 		completion_reward = {
-			add_political_power = 50
 			TU_build_infrastructure = yes
+			add_tech_bonus = { name = TU_VIC_duk_capital_works bonus = 0.75 uses = 1 category = industry category = construction_tech }
 		}
 	}
 
@@ -205,8 +182,10 @@
 		}
 
 		completion_reward = {
-			add_political_power = 50
 			TU_build_dockyard = yes
+			add_tech_bonus = { name = TU_VIC_duk_fleet_charter bonus = 0.75 uses = 1 category = dd_tech category = ca_tech }
+			add_doctrine_cost_reduction = { name = TU_VIC_duk_fleet_charter cost_reduction = 0.4 uses = 1 category = naval_doctrine }
+			navy_experience = 25
 		}
 	}
 
@@ -225,8 +204,10 @@
 		}
 
 		completion_reward = {
-			add_political_power = 50
 			TU_build_dockyard = yes
+			add_tech_bonus = { name = TU_VIC_duk_shipyards bonus = 0.75 uses = 1 category = dd_tech category = ca_tech }
+			add_doctrine_cost_reduction = { name = TU_VIC_duk_shipyards cost_reduction = 0.4 uses = 1 category = naval_doctrine }
+			navy_experience = 25
 		}
 	}
 
@@ -245,7 +226,7 @@
 		}
 
 		completion_reward = {
-			add_political_power = 25
+			add_manpower = 10000
 			army_experience = 25
 		}
 	}
@@ -265,8 +246,8 @@
 		}
 
 		completion_reward = {
-			add_political_power = 50
-			add_stability = 0.02
+			add_manpower = 10000
+			army_experience = 25
 		}
 	}
 
@@ -285,12 +266,11 @@
 		}
 
 		completion_reward = {
-			add_political_power = 50
-			add_stability = -0.02
 			add_power_balance_value = {
 				id = TU_VIC_bop
 				value = 0.05
 			}
+			add_tech_bonus = { name = TU_VIC_duk_tax_farming bonus = 0.75 uses = 1 category = industry category = construction_tech }
 		}
 	}
 
@@ -309,7 +289,7 @@
 		}
 
 		completion_reward = {
-			add_political_power = 50
+			add_political_power = 60
 			add_stability = 0.03
 		}
 	}
@@ -329,7 +309,8 @@
 		}
 
 		completion_reward = {
-			add_political_power = 75
+			add_political_power = 60
+			add_stability = 0.03
 		}
 	}
 
@@ -348,13 +329,12 @@
 		}
 
 		completion_reward = {
-			add_political_power = 100
-			add_stability = 0.05
-			add_war_support = 0.05
 			add_power_balance_value = {
 				id = TU_VIC_bop
 				value = 0.1
 			}
+			add_political_power = 100
+			add_stability = 0.05
 		}
 	}
 
@@ -373,7 +353,9 @@
 		}
 
 		completion_reward = {
-			add_political_power = 25
+			add_tech_bonus = { name = TU_VIC_duk_council_seats bonus = 0.75 uses = 1 category = dd_tech category = ca_tech }
+			add_doctrine_cost_reduction = { name = TU_VIC_duk_council_seats cost_reduction = 0.4 uses = 1 category = naval_doctrine }
+			navy_experience = 25
 		}
 	}
 
@@ -393,11 +375,12 @@
 		}
 
 		completion_reward = {
-			add_political_power = 25
 			add_power_balance_value = {
 				id = TU_VIC_bop
 				value = 0.05
 			}
+			add_political_power = 60
+			add_stability = 0.03
 		}
 	}
 
@@ -417,12 +400,12 @@
 		}
 
 		completion_reward = {
-			add_political_power = 25
-			add_stability = 0.02
 			add_power_balance_value = {
 				id = TU_VIC_bop
 				value = -0.03
 			}
+			add_political_power = 60
+			add_stability = 0.03
 		}
 	}
 
@@ -442,12 +425,12 @@
 		}
 
 		completion_reward = {
-			add_political_power = 25
-			add_stability = 0.03
 			add_power_balance_value = {
 				id = TU_VIC_bop
 				value = 0.03
 			}
+			add_political_power = 60
+			add_stability = 0.03
 		}
 	}
 
@@ -467,10 +450,8 @@
 		}
 
 		completion_reward = {
-			add_political_power = 50
-			add_tech_bonus = { name = TU_VIC_duk_free_labour bonus = 0.5 uses = 1 category = industry }
-			add_stability = -0.02
 			TU_build_civ_factory = yes
+			add_tech_bonus = { name = TU_VIC_duk_free_labour bonus = 0.75 uses = 1 category = industry category = construction_tech }
 		}
 	}
 
@@ -490,8 +471,8 @@
 		}
 
 		completion_reward = {
-			add_political_power = 25
-			add_stability = 0.03
+			add_political_power = 60
+			add_tech_bonus = { name = TU_VIC_duk_guild_pact bonus = 0.75 uses = 1 category = industry }
 		}
 	}
 
@@ -511,9 +492,9 @@
 		}
 
 		completion_reward = {
-			add_political_power = 50
-			add_stability = -0.02
 			TU_build_civ_factory = yes
+			add_political_power = 60
+			add_tech_bonus = { name = TU_VIC_duk_guild_break bonus = 0.75 uses = 1 category = industry }
 		}
 	}
 
@@ -533,8 +514,8 @@
 		}
 
 		completion_reward = {
-			add_political_power = 50
-			add_stability = 0.02
+			add_political_power = 60
+			add_tech_bonus = { name = TU_VIC_duk_treasury_loans bonus = 0.75 uses = 1 category = industry }
 		}
 	}
 
@@ -554,7 +535,8 @@
 		}
 
 		completion_reward = {
-			add_political_power = 50
+			add_political_power = 60
+			add_tech_bonus = { name = TU_VIC_duk_banking_house bonus = 0.75 uses = 1 category = industry }
 		}
 	}
 
@@ -573,9 +555,9 @@
 		}
 
 		completion_reward = {
-			add_political_power = 25
-			army_experience = 15
 			add_ideas = TU_VIC_private_guard
+			add_manpower = 10000
+			army_experience = 25
 		}
 	}
 
@@ -594,8 +576,8 @@
 		}
 
 		completion_reward = {
-			add_political_power = 25
-			army_experience = 20
+			add_doctrine_cost_reduction = { name = TU_VIC_duk_militia_drill cost_reduction = 0.4 uses = 1 category = land_doctrine }
+			army_experience = 25
 		}
 	}
 
@@ -614,8 +596,8 @@
 		}
 
 		completion_reward = {
-			add_political_power = 50
-			add_stability = 0.02
+			add_political_power = 60
+			add_stability = 0.03
 		}
 	}
 
@@ -635,11 +617,12 @@
 		}
 
 		completion_reward = {
-			add_political_power = 50
 			add_power_balance_value = {
 				id = TU_VIC_bop
 				value = 0.05
 			}
+			add_political_power = 60
+			add_stability = 0.03
 		}
 	}
 
@@ -659,7 +642,7 @@
 		}
 
 		completion_reward = {
-			add_political_power = 25
+			add_political_power = 60
 			add_stability = 0.03
 		}
 	}
@@ -680,14 +663,8 @@
 		}
 
 		completion_reward = {
-			add_political_power = 50
-			add_tech_bonus = {
-				name = TU_VIC_duk_rail_concession
-				bonus = 0.5
-				uses = 1
-				category = motorized_equipment
-			}
 			TU_build_infrastructure = yes
+			add_tech_bonus = { name = TU_VIC_duk_rail_concession bonus = 0.75 uses = 1 category = industry category = construction_tech }
 		}
 	}
 
@@ -707,9 +684,9 @@
 		}
 
 		completion_reward = {
-			add_political_power = 25
 			add_ideas = TU_VIC_choice_rail_works
 			TU_build_infrastructure = yes
+			add_tech_bonus = { name = TU_VIC_duk_rail_concession_alt bonus = 0.75 uses = 1 category = industry category = construction_tech }
 		}
 	}
 
@@ -729,8 +706,8 @@
 		}
 
 		completion_reward = {
-			add_political_power = 50
-			add_war_support = 0.05
+			add_political_power = 60
+			add_stability = 0.03
 		}
 	}
 
@@ -750,9 +727,8 @@
 		}
 
 		completion_reward = {
-			add_political_power = 25
+			add_doctrine_cost_reduction = { name = TU_VIC_duk_war_cabinet_alt cost_reduction = 0.4 uses = 1 category = land_doctrine }
 			army_experience = 25
-			add_stability = 0.02
 		}
 	}
 
@@ -772,8 +748,8 @@
 		}
 
 		completion_reward = {
-			add_political_power = 25
-			army_experience = 10
+			add_tech_bonus = { name = TU_VIC_duk_fortified_estates bonus = 0.75 uses = 1 category = construction_tech }
+			army_experience = 25
 		}
 	}
 
@@ -793,8 +769,9 @@
 		}
 
 		completion_reward = {
-			add_political_power = 25
+			army_experience = 25
 			add_war_support = 0.03
+			add_doctrine_cost_reduction = { name = TU_VIC_duk_fortified_estates_alt cost_reduction = 0.4 uses = 1 category = land_doctrine }
 		}
 	}
 
@@ -814,13 +791,14 @@
 		}
 
 		completion_reward = {
-			add_political_power = 50
 			add_power_balance_value = {
 				id = TU_VIC_bop
 				value = -0.05
 			}
 			add_ideas = TU_VIC_aslan_heir
 			country_event = { id = tu_vic_ev.3 }
+			add_political_power = 35
+			add_stability = 0.02
 		}
 	}
 
@@ -839,9 +817,9 @@
 		}
 
 		completion_reward = {
-			add_political_power = 25
-			army_experience = 15
 			add_ideas = TU_VIC_glasgow_gangs
+			add_war_support = 0.03
+			add_stability = 0.03
 		}
 	}
 
@@ -860,8 +838,8 @@
 		}
 
 		completion_reward = {
-			add_political_power = 25
-			army_experience = 10
+			add_manpower = 10000
+			army_experience = 25
 		}
 	}
 
@@ -880,14 +858,9 @@
 		}
 
 		completion_reward = {
-			add_political_power = 50
-			add_tech_bonus = {
-				name = TU_VIC_asl_glasgow_armoury
-				bonus = 0.5
-				uses = 1
-				category = infantry_weapons
-			}
 			TU_build_mil_factory = yes
+			add_tech_bonus = { name = TU_VIC_asl_glasgow_armoury bonus = 0.75 uses = 1 category = armor }
+			add_doctrine_cost_reduction = { name = TU_VIC_asl_glasgow_armoury cost_reduction = 0.4 uses = 1 category = land_doctrine }
 		}
 	}
 
@@ -906,9 +879,9 @@
 		}
 
 		completion_reward = {
-			add_political_power = 25
-			add_stability = 0.02
 			TU_build_infrastructure = yes
+			add_political_power = 60
+			add_stability = 0.03
 		}
 	}
 
@@ -927,8 +900,8 @@
 		}
 
 		completion_reward = {
-			add_political_power = 25
-			army_experience = 20
+			add_doctrine_cost_reduction = { name = TU_VIC_asl_street_war cost_reduction = 0.4 uses = 1 category = land_doctrine }
+			army_experience = 25
 		}
 	}
 
@@ -947,8 +920,8 @@
 		}
 
 		completion_reward = {
-			add_political_power = 25
-			add_stability = 0.02
+			add_war_support = 0.03
+			add_stability = 0.03
 		}
 	}
 
@@ -967,8 +940,8 @@
 		}
 
 		completion_reward = {
-			add_political_power = 25
-			army_experience = 15
+			add_manpower = 10000
+			army_experience = 25
 		}
 	}
 
@@ -987,8 +960,8 @@
 		}
 
 		completion_reward = {
-			add_political_power = 50
-			add_war_support = 0.05
+			add_war_support = 0.03
+			add_stability = 0.03
 		}
 	}
 
@@ -1007,7 +980,7 @@
 		}
 
 		completion_reward = {
-			add_political_power = 50
+			add_war_support = 0.03
 			add_stability = 0.03
 		}
 	}
@@ -1027,8 +1000,8 @@
 		}
 
 		completion_reward = {
-			add_political_power = 50
-			army_experience = 25
+			add_tech_bonus = { name = TU_VIC_asl_royal_army bonus = 0.75 uses = 1 category = motorized_equipment }
+			add_doctrine_cost_reduction = { name = TU_VIC_asl_royal_army cost_reduction = 0.4 uses = 1 category = land_doctrine }
 		}
 	}
 
@@ -1047,11 +1020,12 @@
 		}
 
 		completion_reward = {
-			add_political_power = 50
 			add_power_balance_value = {
 				id = TU_VIC_bop
 				value = -0.05
 			}
+			add_political_power = 60
+			add_stability = 0.03
 		}
 	}
 
@@ -1070,12 +1044,12 @@
 		}
 
 		completion_reward = {
-			add_political_power = 50
-			add_stability = 0.02
 			add_power_balance_value = {
 				id = TU_VIC_bop
 				value = -0.05
 			}
+			add_political_power = 60
+			add_stability = 0.03
 		}
 	}
 
@@ -1094,7 +1068,8 @@
 		}
 
 		completion_reward = {
-			add_political_power = 50
+			add_political_power = 60
+			add_stability = 0.03
 		}
 	}
 
@@ -1113,7 +1088,7 @@
 		}
 
 		completion_reward = {
-			add_political_power = 75
+			add_political_power = 60
 			add_stability = 0.03
 		}
 	}
@@ -1134,14 +1109,13 @@
 		}
 
 		completion_reward = {
-			add_political_power = 100
-			add_stability = 0.03
-			add_war_support = 0.03
 			add_power_balance_value = {
 				id = TU_VIC_bop
 				value = -0.1
 			}
 			every_country = { news_event = { id = tu_vic_ev.17 days = 0 } }
+			add_war_support = 0.05
+			add_stability = 0.05
 		}
 	}
 
@@ -1160,11 +1134,12 @@
 		}
 
 		completion_reward = {
-			add_political_power = 25
 			add_power_balance_value = {
 				id = TU_VIC_bop
 				value = -0.03
 			}
+			add_political_power = 60
+			add_stability = 0.03
 		}
 	}
 
@@ -1184,8 +1159,8 @@
 		}
 
 		completion_reward = {
-			add_political_power = 25
-			add_stability = 0.02
+			add_war_support = 0.03
+			add_stability = 0.03
 		}
 	}
 
@@ -1205,12 +1180,12 @@
 		}
 
 		completion_reward = {
-			add_political_power = 50
-			add_stability = -0.02
 			add_power_balance_value = {
 				id = TU_VIC_bop
 				value = -0.05
 			}
+			add_political_power = 60
+			add_stability = 0.03
 		}
 	}
 
@@ -1229,7 +1204,9 @@
 		}
 
 		completion_reward = {
-			add_political_power = 25
+			add_tech_bonus = { name = TU_VIC_asl_docks_protection bonus = 0.75 uses = 1 category = dd_tech category = ca_tech }
+			add_doctrine_cost_reduction = { name = TU_VIC_asl_docks_protection cost_reduction = 0.4 uses = 1 category = naval_doctrine }
+			navy_experience = 25
 		}
 	}
 
@@ -1249,14 +1226,10 @@
 		}
 
 		completion_reward = {
-			add_political_power = 50
-			add_tech_bonus = {
-				name = TU_VIC_asl_docks_industry
-				bonus = 0.5
-				uses = 1
-				category = industry
-			}
 			TU_build_civ_factory = yes
+			add_tech_bonus = { name = TU_VIC_asl_docks_industry bonus = 0.75 uses = 1 category = dd_tech category = ca_tech }
+			add_doctrine_cost_reduction = { name = TU_VIC_asl_docks_industry cost_reduction = 0.4 uses = 1 category = naval_doctrine }
+			navy_experience = 25
 		}
 	}
 
@@ -1276,8 +1249,9 @@
 		}
 
 		completion_reward = {
-			add_political_power = 50
-			add_stability = 0.02
+			add_tech_bonus = { name = TU_VIC_asl_docks_industry_alt bonus = 0.75 uses = 1 category = dd_tech category = ca_tech }
+			add_doctrine_cost_reduction = { name = TU_VIC_asl_docks_industry_alt cost_reduction = 0.4 uses = 1 category = naval_doctrine }
+			navy_experience = 25
 		}
 	}
 
@@ -1297,7 +1271,8 @@
 		}
 
 		completion_reward = {
-			add_political_power = 50
+			add_tech_bonus = { name = TU_VIC_asl_smuggling bonus = 0.75 uses = 1 category = radar_tech category = electronics }
+			add_stability = 0.03
 		}
 	}
 
@@ -1317,11 +1292,12 @@
 		}
 
 		completion_reward = {
-			add_political_power = 50
 			add_power_balance_value = {
 				id = TU_VIC_bop
 				value = -0.03
 			}
+			add_political_power = 60
+			add_stability = 0.03
 		}
 	}
 
@@ -1340,9 +1316,9 @@
 		}
 
 		completion_reward = {
-			add_political_power = 25
-			add_stability = 0.03
 			country_event = { id = tu_vic_ev.14 }
+			add_political_power = 60
+			add_stability = 0.03
 		}
 	}
 
@@ -1362,8 +1338,8 @@
 		}
 
 		completion_reward = {
-			add_political_power = 25
-			army_experience = 10
+			add_political_power = 60
+			add_stability = 0.03
 		}
 	}
 
@@ -1383,8 +1359,8 @@
 		}
 
 		completion_reward = {
-			add_political_power = 25
-			add_stability = 0.01
+			add_political_power = 60
+			add_stability = 0.03
 		}
 	}
 
@@ -1404,8 +1380,8 @@
 		}
 
 		completion_reward = {
-			add_political_power = 25
-			add_stability = 0.02
+			add_political_power = 60
+			add_stability = 0.03
 		}
 	}
 
@@ -1425,11 +1401,12 @@
 		}
 
 		completion_reward = {
-			add_political_power = 25
 			add_power_balance_value = {
 				id = TU_VIC_bop
 				value = -0.03
 			}
+			add_political_power = 60
+			add_stability = 0.03
 		}
 	}
 
@@ -1448,8 +1425,8 @@
 		}
 
 		completion_reward = {
-			add_political_power = 25
-			army_experience = 15
+			add_manpower = 10000
+			army_experience = 25
 		}
 	}
 
@@ -1468,7 +1445,8 @@
 		}
 
 		completion_reward = {
-			add_political_power = 50
+			add_political_power = 60
+			add_stability = 0.03
 		}
 	}
 
@@ -1488,14 +1466,8 @@
 		}
 
 		completion_reward = {
-			add_political_power = 25
-			army_experience = 15
-			add_tech_bonus = {
-				name = TU_VIC_asl_loyal_regiment
-				bonus = 0.5
-				uses = 1
-				category = artillery
-			}
+			add_manpower = 10000
+			army_experience = 25
 		}
 	}
 
@@ -1515,9 +1487,8 @@
 		}
 
 		completion_reward = {
-			add_political_power = 25
-			add_war_support = 0.05
-			add_stability = 0.01
+			add_manpower = 10000
+			army_experience = 25
 		}
 	}
 
@@ -1537,9 +1508,8 @@
 		}
 
 		completion_reward = {
-			add_political_power = 50
-			add_stability = 0.02
 			add_war_support = 0.03
+			add_stability = 0.03
 		}
 	}
 
@@ -1559,9 +1529,8 @@
 		}
 
 		completion_reward = {
-			add_political_power = 25
-			add_stability = 0.02
-			add_war_support = 0.05
+			add_political_power = 60
+			add_stability = 0.03
 		}
 	}
 
@@ -1580,7 +1549,8 @@
 		}
 
 		completion_reward = {
-			add_political_power = 50
+			add_political_power = 60
+			add_tech_bonus = { name = TU_VIC_asl_gang_loans bonus = 0.75 uses = 1 category = industry }
 		}
 	}
 
@@ -1600,13 +1570,14 @@
 		}
 
 		completion_reward = {
-			add_political_power = 50
 			add_power_balance_value = {
 				id = TU_VIC_bop
 				value = 0.05
 			}
 			add_ideas = TU_VIC_tara_flame
 			country_event = { id = tu_vic_ev.4 }
+			add_political_power = 35
+			add_stability = 0.02
 		}
 	}
 
@@ -1625,8 +1596,8 @@
 		}
 
 		completion_reward = {
-			add_political_power = 25
-			army_experience = 15
+			add_political_power = 60
+			add_stability = 0.03
 		}
 	}
 
@@ -1645,8 +1616,8 @@
 		}
 
 		completion_reward = {
-			add_political_power = 50
 			add_ideas = TU_VIC_flame_arts
+			add_tech_bonus = { name = TU_VIC_drc_flame_arts bonus = 0.75 uses = 1 category = electronics category = industry }
 		}
 	}
 
@@ -1665,14 +1636,9 @@
 		}
 
 		completion_reward = {
-			add_political_power = 50
-			add_tech_bonus = {
-				name = TU_VIC_drc_blazing_mills
-				bonus = 0.5
-				uses = 1
-				category = industry
-			}
 			TU_build_civ_factory = yes
+			add_political_power = 60
+			add_stability = 0.03
 		}
 	}
 
@@ -1691,8 +1657,9 @@
 		}
 
 		completion_reward = {
-			add_political_power = 25
-			army_experience = 15
+			army_experience = 25
+			add_war_support = 0.03
+			add_doctrine_cost_reduction = { name = TU_VIC_drc_youth_corps cost_reduction = 0.4 uses = 1 category = land_doctrine }
 		}
 	}
 
@@ -1711,7 +1678,7 @@
 		}
 
 		completion_reward = {
-			add_political_power = 25
+			add_political_power = 60
 			add_stability = 0.03
 		}
 	}
@@ -1731,8 +1698,8 @@
 		}
 
 		completion_reward = {
-			add_political_power = 50
-			add_stability = 0.02
+			add_tech_bonus = { name = TU_VIC_drc_secret_police bonus = 0.75 uses = 1 category = radar_tech category = electronics }
+			add_stability = 0.03
 		}
 	}
 
@@ -1751,14 +1718,8 @@
 		}
 
 		completion_reward = {
-			add_political_power = 50
-			add_tech_bonus = {
-				name = TU_VIC_drc_factory_quota
-				bonus = 0.5
-				uses = 1
-				category = armor
-			}
 			TU_build_mil_factory = yes
+			add_tech_bonus = { name = TU_VIC_drc_factory_quota bonus = 0.75 uses = 1 category = industry category = construction_tech }
 		}
 	}
 
@@ -1777,14 +1738,8 @@
 		}
 
 		completion_reward = {
-			add_political_power = 25
-			army_experience = 20
-			add_tech_bonus = {
-				name = TU_VIC_drc_tara_arsenal
-				bonus = 0.5
-				uses = 1
-				category = artillery
-			}
+			add_tech_bonus = { name = TU_VIC_drc_tara_arsenal bonus = 0.75 uses = 1 category = infantry_weapons }
+			army_experience = 25
 		}
 	}
 
@@ -1803,10 +1758,9 @@
 		}
 
 		completion_reward = {
-			add_political_power = 50
-			add_stability = -0.02
-			add_war_support = 0.03
 			country_event = { id = tu_vic_ev.11 }
+			add_political_power = 60
+			add_stability = 0.03
 		}
 	}
 
@@ -1825,12 +1779,13 @@
 		}
 
 		completion_reward = {
-			add_political_power = 50
 			add_power_balance_value = {
 				id = TU_VIC_bop
 				value = 0.05
 			}
 			TU_build_civ_factory = yes
+			add_political_power = 60
+			add_tech_bonus = { name = TU_VIC_drc_war_economy bonus = 0.75 uses = 1 category = industry }
 		}
 	}
 
@@ -1849,7 +1804,9 @@
 		}
 
 		completion_reward = {
-			add_political_power = 25
+			army_experience = 25
+			add_war_support = 0.03
+			add_doctrine_cost_reduction = { name = TU_VIC_drc_mobilised_youth cost_reduction = 0.4 uses = 1 category = land_doctrine }
 		}
 	}
 
@@ -1868,9 +1825,8 @@
 		}
 
 		completion_reward = {
-			add_political_power = 50
+			add_war_support = 0.03
 			add_stability = 0.03
-			add_war_support = 0.05
 		}
 	}
 
@@ -1889,12 +1845,13 @@
 		}
 
 		completion_reward = {
-			add_political_power = 75
 			add_power_balance_value = {
 				id = TU_VIC_bop
 				value = 0.05
 			}
 			country_event = { id = tu_vic_ev.15 }
+			add_political_power = 60
+			add_stability = 0.03
 		}
 	}
 
@@ -1913,7 +1870,7 @@
 		}
 
 		completion_reward = {
-			add_political_power = 50
+			add_doctrine_cost_reduction = { name = TU_VIC_drc_fire_doctrine cost_reduction = 0.4 uses = 1 category = land_doctrine }
 			army_experience = 25
 		}
 	}
@@ -1933,9 +1890,9 @@
 		}
 
 		completion_reward = {
-			add_political_power = 75
-			add_stability = 0.03
-			add_war_support = 0.03
+			add_tech_bonus = { name = TU_VIC_drc_regime_seal bonus = 0.75 uses = 1 category = dd_tech category = ca_tech }
+			add_doctrine_cost_reduction = { name = TU_VIC_drc_regime_seal cost_reduction = 0.4 uses = 1 category = naval_doctrine }
+			navy_experience = 25
 		}
 	}
 
@@ -1954,9 +1911,6 @@
 		}
 
 		completion_reward = {
-			add_political_power = 100
-			add_stability = 0.03
-			add_war_support = 0.05
 			recruit_character = TU_VIC_draco_leader
 			promote_character = {
 				character = TU_VIC_draco_leader
@@ -1967,6 +1921,8 @@
 				elections_allowed = no
 			}
 			every_country = { news_event = { id = tu_vic_ev.18 days = 0 } }
+			add_political_power = 100
+			add_stability = 0.05
 		}
 	}
 
@@ -1985,8 +1941,8 @@
 		}
 
 		completion_reward = {
-			add_political_power = 25
-			add_stability = 0.02
+			add_political_power = 60
+			add_stability = 0.03
 		}
 	}
 
@@ -2006,8 +1962,8 @@
 		}
 
 		completion_reward = {
-			add_political_power = 25
-			add_stability = 0.02
+			add_political_power = 60
+			add_stability = 0.03
 		}
 	}
 
@@ -2027,9 +1983,8 @@
 		}
 
 		completion_reward = {
-			add_political_power = 50
-			add_stability = -0.02
-			add_war_support = 0.03
+			add_political_power = 60
+			add_stability = 0.03
 		}
 	}
 
@@ -2049,7 +2004,8 @@
 		}
 
 		completion_reward = {
-			add_political_power = 50
+			add_political_power = 60
+			add_stability = 0.03
 		}
 	}
 
@@ -2069,8 +2025,8 @@
 		}
 
 		completion_reward = {
-			add_political_power = 25
 			add_ideas = TU_VIC_choice_research_drive
+			add_tech_bonus = { name = TU_VIC_drc_flame_academies_alt bonus = 0.75 uses = 1 category = electronics category = industry }
 		}
 	}
 
@@ -2090,8 +2046,8 @@
 		}
 
 		completion_reward = {
-			add_political_power = 25
-			army_experience = 15
+			add_doctrine_cost_reduction = { name = TU_VIC_drc_flame_drill cost_reduction = 0.4 uses = 1 category = land_doctrine }
+			army_experience = 25
 		}
 	}
 
@@ -2111,9 +2067,9 @@
 		}
 
 		completion_reward = {
-			add_political_power = 25
-			add_stability = 0.02
 			TU_build_infrastructure = yes
+			add_tech_bonus = { name = TU_VIC_drc_flame_bastion bonus = 0.75 uses = 1 category = construction_tech }
+			army_experience = 25
 		}
 	}
 
@@ -2133,9 +2089,9 @@
 		}
 
 		completion_reward = {
-			add_political_power = 50
-			add_stability = -0.02
 			TU_build_infrastructure = yes
+			add_manpower = 10000
+			army_experience = 25
 		}
 	}
 
@@ -2155,9 +2111,9 @@
 		}
 
 		completion_reward = {
-			add_political_power = 25
-			army_experience = 10
 			TU_build_civ_factory = yes
+			add_manpower = 10000
+			army_experience = 25
 		}
 	}
 
@@ -2177,9 +2133,11 @@
 		}
 
 		completion_reward = {
-			add_political_power = 25
 			add_ideas = TU_VIC_choice_dock_drive
 			TU_build_dockyard = yes
+			add_tech_bonus = { name = TU_VIC_drc_dublinn_docks bonus = 0.75 uses = 1 category = dd_tech category = ca_tech }
+			add_doctrine_cost_reduction = { name = TU_VIC_drc_dublinn_docks cost_reduction = 0.4 uses = 1 category = naval_doctrine }
+			navy_experience = 25
 		}
 	}
 
@@ -2199,14 +2157,9 @@
 		}
 
 		completion_reward = {
-			add_political_power = 25
-			add_tech_bonus = {
-				name = TU_VIC_drc_iron_rail
-				bonus = 0.5
-				uses = 1
-				category = motorized_equipment
-			}
 			TU_build_infrastructure = yes
+			add_tech_bonus = { name = TU_VIC_drc_iron_rail bonus = 0.75 uses = 1 category = infantry_weapons }
+			army_experience = 25
 		}
 	}
 
@@ -2226,8 +2179,8 @@
 		}
 
 		completion_reward = {
-			add_political_power = 25
-			add_stability = 0.02
+			add_tech_bonus = { name = TU_VIC_drc_secret_radio bonus = 0.75 uses = 1 category = radar_tech category = electronics }
+			add_stability = 0.03
 		}
 	}
 
@@ -2247,8 +2200,7 @@
 		}
 
 		completion_reward = {
-			add_political_power = 25
-			add_war_support = 0.05
+			add_tech_bonus = { name = TU_VIC_drc_secret_radio_alt bonus = 0.75 uses = 1 category = industry category = construction_tech }
 		}
 	}
 
@@ -2268,8 +2220,8 @@
 		}
 
 		completion_reward = {
-			add_political_power = 25
-			add_stability = 0.02
+			add_war_support = 0.03
+			add_stability = 0.03
 		}
 	}
 
@@ -2289,9 +2241,8 @@
 		}
 
 		completion_reward = {
-			add_political_power = 50
-			add_stability = -0.03
-			add_war_support = 0.03
+			add_political_power = 60
+			add_stability = 0.03
 		}
 	}
 
@@ -2311,7 +2262,8 @@
 		}
 
 		completion_reward = {
-			add_political_power = 50
+			add_political_power = 60
+			add_tech_bonus = { name = TU_VIC_drc_war_fund bonus = 0.75 uses = 1 category = industry }
 		}
 	}
 
@@ -2331,8 +2283,8 @@
 		}
 
 		completion_reward = {
-			add_political_power = 25
-			army_experience = 25
+			add_political_power = 60
+			add_stability = 0.03
 		}
 	}
 
@@ -2352,8 +2304,10 @@
 		}
 
 		completion_reward = {
-			add_political_power = 50
 			TU_build_civ_factory = yes
+			add_tech_bonus = { name = TU_VIC_drc_sky_flames bonus = 0.75 uses = 1 category = light_fighter category = tactical_bomber }
+			add_doctrine_cost_reduction = { name = TU_VIC_drc_sky_flames cost_reduction = 0.4 uses = 1 category = air_doctrine }
+			air_experience = 25
 		}
 	}
 
@@ -2373,9 +2327,10 @@
 		}
 
 		completion_reward = {
-			add_political_power = 25
-			air_experience = 20
 			TU_build_mil_factory = yes
+			add_tech_bonus = { name = TU_VIC_drc_sky_flames_alt bonus = 0.75 uses = 1 category = light_fighter category = tactical_bomber }
+			add_doctrine_cost_reduction = { name = TU_VIC_drc_sky_flames_alt cost_reduction = 0.4 uses = 1 category = air_doctrine }
+			air_experience = 25
 		}
 	}
 
@@ -2395,8 +2350,8 @@
 		}
 
 		completion_reward = {
-			add_political_power = 50
-			add_stability = -0.02
+			add_doctrine_cost_reduction = { name = TU_VIC_drc_martial_courts cost_reduction = 0.4 uses = 1 category = land_doctrine }
+			army_experience = 25
 		}
 	}
 
@@ -2416,8 +2371,7 @@
 		}
 
 		completion_reward = {
-			add_political_power = 25
-			add_war_support = 0.02
+			add_tech_bonus = { name = TU_VIC_drc_martial_courts_alt bonus = 0.75 uses = 1 category = industry category = construction_tech }
 		}
 	}
 
@@ -2437,7 +2391,7 @@
 		}
 
 		completion_reward = {
-			add_political_power = 25
+			add_doctrine_cost_reduction = { name = TU_VIC_drc_veteran_cadre cost_reduction = 0.4 uses = 1 category = land_doctrine }
 			army_experience = 25
 		}
 	}
@@ -2458,8 +2412,8 @@
 		}
 
 		completion_reward = {
-			add_political_power = 25
-			add_war_support = 0.05
+			add_manpower = 10000
+			army_experience = 25
 		}
 	}
 
@@ -2479,9 +2433,10 @@
 		}
 
 		completion_reward = {
-			add_political_power = 50
 			add_ideas = TU_VIC_parliament
 			country_event = { id = tu_vic_ev.5 }
+			add_political_power = 35
+			add_stability = 0.02
 		}
 	}
 
@@ -2500,7 +2455,8 @@
 		}
 
 		completion_reward = {
-			add_political_power = 25
+			add_political_power = 60
+			add_stability = 0.03
 		}
 	}
 
@@ -2519,10 +2475,10 @@
 		}
 
 		completion_reward = {
-			add_political_power = 25
-			add_stability = 0.02
 			add_ideas = TU_VIC_free_press
 			country_event = { id = tu_vic_ev.12 }
+			add_political_power = 60
+			add_stability = 0.03
 		}
 	}
 
@@ -2541,8 +2497,8 @@
 		}
 
 		completion_reward = {
-			add_political_power = 50
-			add_stability = 0.02
+			add_political_power = 60
+			add_stability = 0.03
 		}
 	}
 
@@ -2561,9 +2517,9 @@
 		}
 
 		completion_reward = {
-			add_political_power = 50
 			add_ideas = TU_VIC_public_works
 			TU_build_infrastructure = yes
+			add_tech_bonus = { name = TU_VIC_par_public_works bonus = 0.75 uses = 1 category = industry category = construction_tech }
 		}
 	}
 
@@ -2582,7 +2538,8 @@
 		}
 
 		completion_reward = {
-			add_political_power = 50
+			add_political_power = 60
+			add_tech_bonus = { name = TU_VIC_par_trade_act bonus = 0.75 uses = 1 category = industry }
 		}
 	}
 
@@ -2601,8 +2558,7 @@
 		}
 
 		completion_reward = {
-			add_political_power = 25
-			add_stability = 0.03
+			add_tech_bonus = { name = TU_VIC_par_factory_acts bonus = 0.75 uses = 1 category = industry category = construction_tech }
 		}
 	}
 
@@ -2621,11 +2577,12 @@
 		}
 
 		completion_reward = {
-			add_political_power = 50
 			set_politics = {
 				ruling_party = democratic
 				elections_allowed = yes
 			}
+			add_doctrine_cost_reduction = { name = TU_VIC_par_elections cost_reduction = 0.4 uses = 1 category = land_doctrine }
+			army_experience = 25
 		}
 	}
 
@@ -2644,8 +2601,8 @@
 		}
 
 		completion_reward = {
-			add_political_power = 50
-			add_stability = 0.02
+			add_political_power = 60
+			add_stability = 0.03
 		}
 	}
 
@@ -2664,12 +2621,13 @@
 		}
 
 		completion_reward = {
-			add_political_power = 50
 			add_power_balance_value = {
 				id = TU_VIC_bop
 				value = 0.05
 			}
 			add_ideas = TU_VIC_london_exchange
+			add_political_power = 60
+			add_stability = 0.03
 		}
 	}
 
@@ -2688,11 +2646,12 @@
 		}
 
 		completion_reward = {
-			add_political_power = 25
 			add_power_balance_value = {
 				id = TU_VIC_bop
 				value = -0.05
 			}
+			add_political_power = 60
+			add_stability = 0.03
 		}
 	}
 
@@ -2711,8 +2670,8 @@
 		}
 
 		completion_reward = {
-			add_political_power = 25
-			army_experience = 15
+			add_manpower = 10000
+			army_experience = 25
 		}
 	}
 
@@ -2731,7 +2690,8 @@
 		}
 
 		completion_reward = {
-			add_political_power = 50
+			add_political_power = 60
+			add_stability = 0.03
 		}
 	}
 
@@ -2750,7 +2710,7 @@
 		}
 
 		completion_reward = {
-			add_political_power = 50
+			add_political_power = 60
 			add_stability = 0.03
 		}
 	}
@@ -2770,7 +2730,7 @@
 		}
 
 		completion_reward = {
-			add_political_power = 75
+			add_war_support = 0.03
 			add_stability = 0.03
 		}
 	}
@@ -2790,8 +2750,8 @@
 		}
 
 		completion_reward = {
-			add_political_power = 75
-			add_stability = 0.02
+			add_political_power = 60
+			add_stability = 0.03
 		}
 	}
 
@@ -2810,14 +2770,14 @@
 		}
 
 		completion_reward = {
-			add_political_power = 100
-			add_stability = 0.03
 			recruit_character = TU_VIC_parliament_leader
 			promote_character = {
 				character = TU_VIC_parliament_leader
 				ideology = liberalism
 			}
 			every_country = { news_event = { id = tu_vic_ev.19 days = 0 } }
+			add_political_power = 100
+			add_stability = 0.05
 		}
 	}
 
@@ -2837,8 +2797,8 @@
 		}
 
 		completion_reward = {
-			add_political_power = 25
-			add_stability = 0.01
+			add_political_power = 60
+			add_stability = 0.03
 		}
 	}
 
@@ -2858,8 +2818,8 @@
 		}
 
 		completion_reward = {
-			add_political_power = 25
-			add_war_support = 0.02
+			add_political_power = 60
+			add_stability = 0.03
 		}
 	}
 
@@ -2879,8 +2839,8 @@
 		}
 
 		completion_reward = {
-			add_political_power = 25
-			add_stability = 0.02
+			add_political_power = 60
+			add_stability = 0.03
 		}
 	}
 
@@ -2900,12 +2860,13 @@
 		}
 
 		completion_reward = {
-			add_political_power = 50
 			add_power_balance_value = {
 				id = TU_VIC_bop
 				value = 0.05
 			}
 			TU_build_civ_factory = yes
+			add_political_power = 60
+			add_tech_bonus = { name = TU_VIC_par_guild_charter bonus = 0.75 uses = 1 category = industry }
 		}
 	}
 
@@ -2925,7 +2886,7 @@
 		}
 
 		completion_reward = {
-			add_political_power = 50
+			add_tech_bonus = { name = TU_VIC_par_tech_schools bonus = 0.75 uses = 1 category = electronics category = industry }
 		}
 	}
 
@@ -2945,8 +2906,7 @@
 		}
 
 		completion_reward = {
-			add_political_power = 25
-			add_stability = 0.03
+			add_tech_bonus = { name = TU_VIC_par_public_schools bonus = 0.75 uses = 1 category = electronics category = industry }
 		}
 	}
 
@@ -2966,11 +2926,12 @@
 		}
 
 		completion_reward = {
-			add_political_power = 50
 			add_power_balance_value = {
 				id = TU_VIC_bop
 				value = -0.03
 			}
+			add_political_power = 60
+			add_tech_bonus = { name = TU_VIC_par_free_trade bonus = 0.75 uses = 1 category = industry }
 		}
 	}
 
@@ -2990,12 +2951,12 @@
 		}
 
 		completion_reward = {
-			add_political_power = 25
-			add_stability = 0.02
 			add_power_balance_value = {
 				id = TU_VIC_bop
 				value = 0.03
 			}
+			add_political_power = 60
+			add_tech_bonus = { name = TU_VIC_par_tariffs bonus = 0.75 uses = 1 category = industry }
 		}
 	}
 
@@ -3015,14 +2976,9 @@
 		}
 
 		completion_reward = {
-			add_political_power = 50
-			add_tech_bonus = {
-				name = TU_VIC_par_steel_rail
-				bonus = 0.5
-				uses = 1
-				category = industry
-			}
 			TU_build_civ_factory = yes
+			add_tech_bonus = { name = TU_VIC_par_steel_rail bonus = 0.75 uses = 1 category = infantry_weapons }
+			army_experience = 25
 		}
 	}
 
@@ -3042,9 +2998,9 @@
 		}
 
 		completion_reward = {
-			add_political_power = 50
-			add_stability = 0.02
 			TU_build_infrastructure = yes
+			add_stability = 0.03
+			add_manpower = 10000
 		}
 	}
 
@@ -3064,8 +3020,8 @@
 		}
 
 		completion_reward = {
-			add_political_power = 25
-			add_stability = 0.02
+			add_tech_bonus = { name = TU_VIC_par_police_reform bonus = 0.75 uses = 1 category = radar_tech category = electronics }
+			add_stability = 0.03
 		}
 	}
 
@@ -3085,8 +3041,8 @@
 		}
 
 		completion_reward = {
-			add_political_power = 25
-			army_experience = 20
+			add_doctrine_cost_reduction = { name = TU_VIC_par_police_reform_alt cost_reduction = 0.4 uses = 1 category = land_doctrine }
+			army_experience = 25
 		}
 	}
 
@@ -3106,8 +3062,8 @@
 		}
 
 		completion_reward = {
-			add_political_power = 50
-			add_war_support = 0.03
+			add_political_power = 60
+			add_stability = 0.03
 		}
 	}
 
@@ -3127,8 +3083,8 @@
 		}
 
 		completion_reward = {
-			add_political_power = 50
-			add_stability = 0.02
+			add_political_power = 60
+			add_stability = 0.03
 		}
 	}
 
@@ -3148,8 +3104,8 @@
 		}
 
 		completion_reward = {
-			add_political_power = 25
-			army_experience = 20
+			add_doctrine_cost_reduction = { name = TU_VIC_par_veterans_bill cost_reduction = 0.4 uses = 1 category = land_doctrine }
+			army_experience = 25
 		}
 	}
 
@@ -3169,8 +3125,9 @@
 		}
 
 		completion_reward = {
-			add_political_power = 25
 			add_ideas = TU_VIC_choice_conscript_law
+			add_manpower = 10000
+			army_experience = 25
 		}
 	}
 
@@ -3190,9 +3147,10 @@
 		}
 
 		completion_reward = {
-			add_political_power = 25
-			navy_experience = 15
 			TU_build_dockyard = yes
+			add_tech_bonus = { name = TU_VIC_par_navy_board bonus = 0.75 uses = 1 category = dd_tech category = ca_tech }
+			add_doctrine_cost_reduction = { name = TU_VIC_par_navy_board cost_reduction = 0.4 uses = 1 category = naval_doctrine }
+			navy_experience = 25
 		}
 	}
 
@@ -3212,9 +3170,10 @@
 		}
 
 		completion_reward = {
-			add_political_power = 25
-			air_experience = 15
 			TU_build_civ_factory = yes
+			add_tech_bonus = { name = TU_VIC_par_airship_mail bonus = 0.75 uses = 1 category = light_fighter category = tactical_bomber }
+			add_doctrine_cost_reduction = { name = TU_VIC_par_airship_mail cost_reduction = 0.4 uses = 1 category = air_doctrine }
+			air_experience = 25
 		}
 	}
 
@@ -3234,12 +3193,12 @@
 		}
 
 		completion_reward = {
-			add_political_power = 50
-			add_stability = 0.03
 			add_power_balance_value = {
 				id = TU_VIC_bop
 				value = -0.05
 			}
+			add_political_power = 60
+			add_stability = 0.03
 		}
 	}
 
@@ -3259,8 +3218,8 @@
 		}
 
 		completion_reward = {
-			add_political_power = 50
-			add_war_support = 0.05
+			add_political_power = 60
+			add_stability = 0.03
 		}
 	}
 
@@ -3280,8 +3239,8 @@
 		}
 
 		completion_reward = {
-			add_political_power = 50
-			add_stability = 0.02
+			add_political_power = 60
+			add_stability = 0.03
 		}
 	}
 
@@ -3301,7 +3260,7 @@
 		}
 
 		completion_reward = {
-			add_political_power = 50
+			add_doctrine_cost_reduction = { name = TU_VIC_par_monarch_pension_alt cost_reduction = 0.4 uses = 1 category = land_doctrine }
 			army_experience = 25
 		}
 	}
@@ -3322,7 +3281,8 @@
 		}
 
 		completion_reward = {
-			add_political_power = 50
+			add_political_power = 60
+			add_stability = 0.03
 		}
 	}
 
@@ -3342,7 +3302,7 @@
 		}
 
 		completion_reward = {
-			add_political_power = 25
-			add_stability = 0.02
+			add_political_power = 60
+			add_stability = 0.03
 		}
 	}

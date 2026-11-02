@@ -23,7 +23,8 @@
 				id = TU_URS_bop
 				value = -0.25
 			}
-			add_political_power = 50
+			add_political_power = 60
+			add_stability = 0.03
 		}
 	}
 
@@ -46,7 +47,8 @@
 				id = TU_URS_bop
 				value = -0.1
 			}
-			add_political_power = 75
+			add_political_power = 60
+			add_stability = 0.03
 		}
 	}
 
@@ -65,8 +67,8 @@
 		}
 
 		completion_reward = {
-			add_political_power = 25
-			add_stability = -0.02
+			add_tech_bonus = { name = TU_URS_secret_police bonus = 0.75 uses = 1 category = radar_tech category = electronics }
+			add_stability = 0.03
 		}
 	}
 
@@ -89,7 +91,8 @@
 				id = TU_URS_bop
 				value = -0.05
 			}
-			add_political_power = 40
+			add_political_power = 60
+			add_stability = 0.03
 		}
 	}
 
@@ -108,8 +111,8 @@
 		}
 
 		completion_reward = {
-			add_political_power = 40
-			add_stability = 0.02
+			add_political_power = 60
+			add_stability = 0.03
 		}
 	}
 
@@ -129,7 +132,7 @@
 		}
 
 		completion_reward = {
-			add_political_power = 50
+			add_political_power = 60
 			add_stability = 0.03
 		}
 	}
@@ -149,8 +152,8 @@
 		}
 
 		completion_reward = {
-			add_political_power = 40
-			add_stability = 0.01
+			add_political_power = 60
+			add_stability = 0.03
 		}
 	}
 
@@ -173,7 +176,8 @@
 				id = TU_URS_bop
 				value = -0.05
 			}
-			add_political_power = 40
+			add_war_support = 0.03
+			add_stability = 0.03
 		}
 	}
 
@@ -192,8 +196,9 @@
 		}
 
 		completion_reward = {
-			add_political_power = 50
-			add_stability = 0.03
+			add_tech_bonus = { name = TU_URS_sovereign_seal bonus = 0.75 uses = 1 category = dd_tech category = ca_tech }
+			add_doctrine_cost_reduction = { name = TU_URS_sovereign_seal cost_reduction = 0.4 uses = 1 category = naval_doctrine }
+			navy_experience = 25
 		}
 	}
 
@@ -222,7 +227,8 @@
 				id = TU_URS_bop
 				value = -0.15
 			}
-			add_political_power = 75
+			add_political_power = 100
+			add_stability = 0.05
 		}
 	}
 
@@ -241,8 +247,8 @@
 		}
 
 		completion_reward = {
-			add_political_power = 40
-			add_stability = 0.02
+			add_political_power = 60
+			add_tech_bonus = { name = TU_URS_court_treasury bonus = 0.75 uses = 1 category = industry }
 		}
 	}
 
@@ -261,13 +267,8 @@
 		}
 
 		completion_reward = {
-			army_experience = 30
-			add_tech_bonus = {
-				name = TU_URS_p1_war_office_tech
-				bonus = 0.5
-				uses = 1
-				category = infantry_weapons
-			}
+			add_political_power = 60
+			add_stability = 0.03
 		}
 	}
 
@@ -286,13 +287,8 @@
 		}
 
 		completion_reward = {
-			add_tech_bonus = {
-				name = TU_URS_p1_academy_tech
-				bonus = 0.5
-				uses = 1
-				category = electronics
-			}
-			add_political_power = 20
+			add_doctrine_cost_reduction = { name = TU_URS_imperial_academy cost_reduction = 0.4 uses = 1 category = land_doctrine }
+			army_experience = 25
 		}
 	}
 
@@ -311,8 +307,8 @@
 		}
 
 		completion_reward = {
-			add_political_power = 40
-			add_stability = 0.02
+			add_political_power = 60
+			add_stability = 0.03
 		}
 	}
 
@@ -331,7 +327,7 @@
 		}
 
 		completion_reward = {
-			add_political_power = 30
+			add_political_power = 60
 			add_stability = 0.03
 		}
 	}
@@ -351,9 +347,8 @@
 		}
 
 		completion_reward = {
-			add_political_power = 50
+			add_political_power = 60
 			add_stability = 0.03
-			add_war_support = 0.02
 		}
 	}
 
@@ -378,7 +373,8 @@
 				id = TU_URS_bop
 				value = -0.1
 			}
-			add_political_power = 80
+			add_political_power = 100
+			add_stability = 0.05
 		}
 	}
 
@@ -397,8 +393,7 @@
 		}
 
 		completion_reward = {
-			add_political_power = 30
-			add_stability = 0.01
+			add_tech_bonus = { name = TU_URS_throne_archive bonus = 0.75 uses = 1 category = electronics category = industry }
 		}
 	}
 
@@ -425,6 +420,8 @@
 				is_locked = no
 			}
 			add_ideas = TU_URS_imperial_guard_idea
+			add_manpower = 10000
+			army_experience = 25
 		}
 	}
 
@@ -443,6 +440,7 @@
 		}
 
 		completion_reward = {
+			add_doctrine_cost_reduction = { name = TU_URS_guard_drill cost_reduction = 0.4 uses = 1 category = land_doctrine }
 			army_experience = 25
 		}
 	}
@@ -462,7 +460,8 @@
 		}
 
 		completion_reward = {
-			add_manpower = 20000
+			add_manpower = 10000
+			army_experience = 25
 		}
 	}
 
@@ -481,6 +480,7 @@
 		}
 
 		completion_reward = {
+			add_doctrine_cost_reduction = { name = TU_URS_guard_doctrine cost_reduction = 0.4 uses = 1 category = land_doctrine }
 			army_experience = 25
 		}
 	}
@@ -500,8 +500,8 @@
 		}
 
 		completion_reward = {
-			army_experience = 20
-			add_stability = 0.02
+			add_tech_bonus = { name = TU_URS_guard_palace_watch bonus = 0.75 uses = 1 category = construction_tech }
+			army_experience = 25
 		}
 	}
 
@@ -523,7 +523,8 @@
 			country_event = { id = tu_urs_ev.10 }
 			add_ideas = TU_URS_p1_imperial_blades
 			recruit_character = TU_URS_p1_guard_marshal
-			army_experience = 30
+			add_tech_bonus = { name = TU_URS_imperial_blades bonus = 1.0 uses = 1 category = infantry_weapons }
+			army_experience = 40
 		}
 	}
 
@@ -543,13 +544,8 @@
 		}
 
 		completion_reward = {
+			add_doctrine_cost_reduction = { name = TU_URS_guard_elite_corps cost_reduction = 0.4 uses = 1 category = land_doctrine }
 			army_experience = 25
-			add_tech_bonus = {
-				name = TU_URS_p1_guard_tech
-				bonus = 0.5
-				uses = 1
-				category = infantry_weapons
-			}
 		}
 	}
 
@@ -569,8 +565,8 @@
 		}
 
 		completion_reward = {
-			army_experience = 20
-			add_manpower = 15000
+			add_tech_bonus = { name = TU_URS_guard_imperial_cavalry bonus = 0.75 uses = 1 category = motorized_equipment }
+			add_doctrine_cost_reduction = { name = TU_URS_guard_imperial_cavalry cost_reduction = 0.4 uses = 1 category = land_doctrine }
 		}
 	}
 
@@ -589,8 +585,8 @@
 		}
 
 		completion_reward = {
-			army_experience = 20
-			add_stability = 0.02
+			add_tech_bonus = { name = TU_URS_guard_bastion bonus = 0.75 uses = 1 category = construction_tech }
+			army_experience = 25
 		}
 	}
 
@@ -609,8 +605,8 @@
 		}
 
 		completion_reward = {
-			add_political_power = 25
-			army_experience = 20
+			add_tech_bonus = { name = TU_URS_guard_last_bastion bonus = 0.75 uses = 1 category = construction_tech }
+			army_experience = 25
 		}
 	}
 
@@ -629,13 +625,8 @@
 		}
 
 		completion_reward = {
-			add_tech_bonus = {
-				name = TU_URS_p1_royal_tech
-				bonus = 0.5
-				uses = 1
-				category = motorized_equipment
-			}
-			army_experience = 20
+			add_manpower = 10000
+			army_experience = 25
 		}
 	}
 
@@ -654,7 +645,7 @@
 		}
 
 		completion_reward = {
-			add_war_support = 0.05
+			add_manpower = 20000
 			army_experience = 40
 		}
 	}
@@ -678,8 +669,8 @@
 
 		completion_reward = {
 			add_ideas = TU_URS_p1_surveillance_state
-			add_political_power = 40
-			add_stability = -0.01
+			add_tech_bonus = { name = TU_URS_surveillance_bureau bonus = 0.75 uses = 1 category = radar_tech category = electronics }
+			add_stability = 0.03
 		}
 	}
 
@@ -698,8 +689,8 @@
 		}
 
 		completion_reward = {
-			add_political_power = 30
-			add_stability = -0.02
+			add_tech_bonus = { name = TU_URS_informant_network bonus = 0.75 uses = 1 category = radar_tech category = electronics }
+			add_stability = 0.03
 		}
 	}
 
@@ -719,8 +710,9 @@
 		}
 
 		completion_reward = {
-			add_political_power = 30
-			add_stability = -0.02
+			add_tech_bonus = { name = TU_URS_censorship_regime bonus = 0.75 uses = 1 category = dd_tech category = ca_tech }
+			add_doctrine_cost_reduction = { name = TU_URS_censorship_regime cost_reduction = 0.4 uses = 1 category = naval_doctrine }
+			navy_experience = 25
 		}
 	}
 
@@ -740,11 +732,12 @@
 		}
 
 		completion_reward = {
-			add_political_power = 25
 			add_power_balance_value = {
 				id = TU_URS_bop
 				value = -0.05
 			}
+			add_political_power = 60
+			add_stability = 0.03
 		}
 	}
 
@@ -763,8 +756,8 @@
 		}
 
 		completion_reward = {
-			add_political_power = 30
-			add_stability = -0.03
+			add_manpower = 10000
+			army_experience = 25
 		}
 	}
 
@@ -783,8 +776,8 @@
 		}
 
 		completion_reward = {
-			add_political_power = 20
-			add_stability = -0.02
+			add_political_power = 60
+			add_stability = 0.03
 		}
 	}
 
@@ -803,7 +796,8 @@
 		}
 
 		completion_reward = {
-			add_political_power = 50
+			add_tech_bonus = { name = TU_URS_intel_network bonus = 0.75 uses = 1 category = radar_tech category = electronics }
+			add_stability = 0.03
 		}
 	}
 
@@ -822,11 +816,11 @@
 		}
 
 		completion_reward = {
-			add_political_power = 25
 			add_power_balance_value = {
 				id = TU_URS_bop
 				value = -0.05
 			}
+			add_tech_bonus = { name = TU_URS_secret_archive bonus = 0.75 uses = 1 category = electronics category = industry }
 		}
 	}
 
@@ -845,9 +839,8 @@
 		}
 
 		completion_reward = {
-			add_political_power = 30
-			add_stability = -0.03
-			add_manpower = 10000
+			add_political_power = 60
+			add_stability = 0.03
 		}
 	}
 
@@ -869,11 +862,12 @@
 		}
 
 		completion_reward = {
-			add_political_power = 40
 			add_power_balance_value = {
 				id = TU_URS_bop
 				value = -0.05
 			}
+			add_political_power = 60
+			add_stability = 0.03
 		}
 	}
 
@@ -892,8 +886,8 @@
 		}
 
 		completion_reward = {
-			add_political_power = 30
-			add_stability = -0.01
+			add_political_power = 60
+			add_stability = 0.03
 		}
 	}
 
@@ -914,12 +908,12 @@
 
 		completion_reward = {
 			add_ideas = TU_URS_p1_grand_duke_fear
-			add_political_power = 40
-			add_stability = -0.03
 			add_power_balance_value = {
 				id = TU_URS_bop
 				value = -0.1
 			}
+			add_political_power = 60
+			add_stability = 0.03
 		}
 	}
 
@@ -939,12 +933,12 @@
 		}
 
 		completion_reward = {
-			add_stability = 0.03
 			add_power_balance_value = {
 				id = TU_URS_bop
 				value = 0.05
 			}
-			add_political_power = 20
+			add_political_power = 60
+			add_stability = 0.03
 		}
 	}
 
@@ -963,8 +957,8 @@
 		}
 
 		completion_reward = {
-			add_political_power = 30
-			add_stability = 0.01
+			add_political_power = 60
+			add_stability = 0.03
 		}
 	}
 
@@ -984,7 +978,7 @@
 		}
 
 		completion_reward = {
-			add_political_power = 25
+			add_political_power = 60
 			add_stability = 0.03
 		}
 	}
@@ -1004,8 +998,8 @@
 		}
 
 		completion_reward = {
-			add_manpower = 15000
-			army_experience = 10
+			add_manpower = 10000
+			army_experience = 25
 		}
 	}
 
@@ -1024,8 +1018,8 @@
 		}
 
 		completion_reward = {
-			add_political_power = 30
-			add_stability = -0.01
+			add_political_power = 60
+			add_tech_bonus = { name = TU_URS_noble_estate_tax bonus = 0.75 uses = 1 category = industry }
 		}
 	}
 
@@ -1044,11 +1038,12 @@
 		}
 
 		completion_reward = {
-			add_political_power = 40
 			add_power_balance_value = {
 				id = TU_URS_bop
 				value = -0.05
 			}
+			add_political_power = 60
+			add_stability = 0.03
 		}
 	}
 
@@ -1072,7 +1067,8 @@
 				id = TU_URS_bop
 				value = -0.1
 			}
-			add_political_power = 40
+			add_political_power = 60
+			add_stability = 0.03
 		}
 	}
 
@@ -1095,8 +1091,8 @@
 
 		completion_reward = {
 			add_ideas = TU_URS_p1_unification_mandate
-			add_political_power = 50
-			army_experience = 20
+			add_political_power = 60
+			add_stability = 0.03
 		}
 	}
 
@@ -1120,12 +1116,12 @@
 		}
 
 		completion_reward = {
-			add_political_power = 30
 			add_power_balance_value = {
 				id = TU_URS_bop
 				value = 0.05
 			}
-			add_stability = 0.02
+			add_political_power = 60
+			add_tech_bonus = { name = TU_URS_kazimir_diplomacy bonus = 0.75 uses = 1 category = industry }
 		}
 	}
 
@@ -1149,13 +1145,12 @@
 
 		completion_reward = {
 			every_country = { news_event = { id = tu_urs_ev.16 } }
-			add_political_power = 100
-			add_stability = 0.05
-			add_war_support = 0.05
 			add_power_balance_value = {
 				id = TU_URS_bop
 				value = -0.1
 			}
+			add_political_power = 100
+			add_stability = 0.05
 		}
 	}
 
@@ -1177,8 +1172,10 @@
 		}
 
 		completion_reward = {
-			add_political_power = 20
 			TU_build_infrastructure = yes
+			army_experience = 25
+			add_war_support = 0.03
+			add_doctrine_cost_reduction = { name = TU_URS_capital_railway_plan cost_reduction = 0.4 uses = 1 category = land_doctrine }
 		}
 	}
 
@@ -1202,9 +1199,8 @@
 		}
 
 		completion_reward = {
-			add_political_power = 25
-			add_stability = 0.02
 			TU_build_civ_factory = yes
+			add_tech_bonus = { name = TU_URS_rail_gauge bonus = 0.75 uses = 1 category = industry category = construction_tech }
 		}
 	}
 
@@ -1228,14 +1224,8 @@
 		}
 
 		completion_reward = {
-			add_tech_bonus = {
-				name = TU_URS_p1_rail_tech
-				bonus = 0.5
-				uses = 1
-				category = industry
-			}
-			add_political_power = 10
 			TU_build_mil_factory = yes
+			add_tech_bonus = { name = TU_URS_rail_heavy_industry bonus = 0.75 uses = 1 category = industry category = construction_tech }
 		}
 	}
 
@@ -1254,9 +1244,9 @@
 		}
 
 		completion_reward = {
-			add_political_power = 30
-			add_stability = 0.03
 			TU_build_infrastructure = yes
+			add_tech_bonus = { name = TU_URS_imperial_express bonus = 0.75 uses = 1 category = motorized_equipment }
+			add_doctrine_cost_reduction = { name = TU_URS_imperial_express cost_reduction = 0.4 uses = 1 category = land_doctrine }
 		}
 	}
 
@@ -1275,8 +1265,7 @@
 		}
 
 		completion_reward = {
-			army_experience = 25
-			add_manpower = 10000
+			add_tech_bonus = { name = TU_URS_supply_trains bonus = 0.75 uses = 1 category = industry category = construction_tech }
 		}
 	}
 
@@ -1295,9 +1284,9 @@
 		}
 
 		completion_reward = {
-			add_war_support = 0.03
-			add_political_power = 25
 			TU_build_infrastructure = yes
+			add_tech_bonus = { name = TU_URS_frozen_supply_line bonus = 0.75 uses = 1 category = construction_tech }
+			army_experience = 25
 		}
 	}
 
@@ -1320,14 +1309,9 @@
 		}
 
 		completion_reward = {
-			add_tech_bonus = {
-				name = TU_URS_p1_steel_tech
-				bonus = 0.5
-				uses = 1
-				category = industry
-			}
-			add_political_power = 20
 			TU_build_civ_factory = yes
+			add_tech_bonus = { name = TU_URS_steel_network bonus = 0.75 uses = 1 category = infantry_weapons }
+			army_experience = 25
 		}
 	}
 
@@ -1346,9 +1330,9 @@
 		}
 
 		completion_reward = {
-			add_stability = 0.02
-			add_political_power = 30
 			TU_build_civ_factory = yes
+			add_political_power = 60
+			add_stability = 0.03
 		}
 	}
 
@@ -1369,7 +1353,8 @@
 		completion_reward = {
 			country_event = { id = tu_urs_ev.14 }
 			add_ideas = TU_URS_p1_capital_rail
-			add_political_power = 40
 			TU_build_civ_factory = yes
+			add_political_power = 100
+			add_stability = 0.05
 		}
 	}

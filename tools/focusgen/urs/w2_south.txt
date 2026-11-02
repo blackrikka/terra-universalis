@@ -19,8 +19,8 @@
 		}
 
 		completion_reward = {
-			add_manpower = 20000
-			add_political_power = 25
+			add_tech_bonus = { name = TU_URS_w2_yan_border_buildup bonus = 0.75 uses = 1 category = construction_tech }
+			army_experience = 25
 		}
 	}
 
@@ -43,8 +43,9 @@
 		}
 
 		completion_reward = {
-			army_experience = 15
-			add_manpower = 10000
+			army_experience = 25
+			add_war_support = 0.03
+			add_doctrine_cost_reduction = { name = TU_URS_w2_yan_mobilization cost_reduction = 0.4 uses = 1 category = land_doctrine }
 		}
 	}
 
@@ -63,6 +64,7 @@
 		}
 
 		completion_reward = {
+			add_doctrine_cost_reduction = { name = TU_URS_w2_yan_war_doctrine cost_reduction = 0.4 uses = 1 category = land_doctrine }
 			army_experience = 25
 		}
 	}
@@ -87,9 +89,9 @@
 		}
 
 		completion_reward = {
-			add_manpower = 40000
-			add_political_power = 50
 			add_ideas = TU_URS_w2_sleeping_giant
+			add_war_support = 0.03
+			add_stability = 0.03
 		}
 	}
 
@@ -112,8 +114,10 @@
 		}
 
 		completion_reward = {
-			army_experience = 25
 			add_ideas = TU_URS_w2_occupation_strain
+			army_experience = 25
+			add_war_support = 0.03
+			add_doctrine_cost_reduction = { name = TU_URS_w2_yan_occupation cost_reduction = 0.4 uses = 1 category = land_doctrine }
 		}
 	}
 
@@ -132,7 +136,6 @@
 		}
 
 		completion_reward = {
-			add_political_power = 50
 			every_owned_state = {
 				limit = {
 					is_owned_and_controlled_by = ROOT
@@ -142,6 +145,8 @@
 				add_compliance = 10
 				set_state_flag = TU_URS_w2_yan_integrated
 			}
+			add_political_power = 60
+			add_stability = 0.03
 		}
 	}
 
@@ -166,8 +171,10 @@
 		}
 
 		completion_reward = {
-			add_manpower = 20000
 			add_ideas = TU_URS_w2_reunion_front
+			army_experience = 25
+			add_war_support = 0.03
+			add_doctrine_cost_reduction = { name = TU_URS_w2_lgm_reunion_pressure cost_reduction = 0.4 uses = 1 category = land_doctrine }
 		}
 	}
 
@@ -190,7 +197,9 @@
 		}
 
 		completion_reward = {
-			army_experience = 15
+			army_experience = 25
+			add_war_support = 0.03
+			add_doctrine_cost_reduction = { name = TU_URS_w2_lgm_mobilization cost_reduction = 0.4 uses = 1 category = land_doctrine }
 		}
 	}
 
@@ -209,6 +218,7 @@
 		}
 
 		completion_reward = {
+			add_doctrine_cost_reduction = { name = TU_URS_w2_lgm_war_doctrine cost_reduction = 0.4 uses = 1 category = land_doctrine }
 			army_experience = 25
 		}
 	}
@@ -233,13 +243,13 @@
 		}
 
 		completion_reward = {
-			add_political_power = 50
 			add_offsite_building = {
 				type = industrial_complex
 				level = 1
 			}
 			add_ideas = TU_URS_w2_merchant_fleet
 			TU_build_civ_factory = yes
+			add_tech_bonus = { name = TU_URS_w2_lgm_noble_gate bonus = 0.75 uses = 1 category = industry category = construction_tech }
 		}
 	}
 
@@ -262,7 +272,6 @@
 		}
 
 		completion_reward = {
-			add_political_power = 50
 			every_owned_state = {
 				limit = {
 					is_owned_and_controlled_by = ROOT
@@ -272,6 +281,8 @@
 				add_compliance = 10
 				set_state_flag = TU_URS_w2_lgm_integrated
 			}
+			add_political_power = 60
+			add_stability = 0.03
 		}
 	}
 
@@ -296,8 +307,9 @@
 		}
 
 		completion_reward = {
-			add_manpower = 15000
-			add_political_power = 25
+			add_tech_bonus = { name = TU_URS_w2_hig_naval_buildup bonus = 0.75 uses = 1 category = dd_tech category = ca_tech }
+			add_doctrine_cost_reduction = { name = TU_URS_w2_hig_naval_buildup cost_reduction = 0.4 uses = 1 category = naval_doctrine }
+			navy_experience = 25
 		}
 	}
 
@@ -320,7 +332,9 @@
 		}
 
 		completion_reward = {
-			army_experience = 15
+			add_tech_bonus = { name = TU_URS_w2_hig_mobilization bonus = 0.75 uses = 1 category = dd_tech category = ca_tech }
+			add_doctrine_cost_reduction = { name = TU_URS_w2_hig_mobilization cost_reduction = 0.4 uses = 1 category = naval_doctrine }
+			navy_experience = 25
 		}
 	}
 
@@ -339,7 +353,9 @@
 		}
 
 		completion_reward = {
-			army_experience = 25
+			add_tech_bonus = { name = TU_URS_w2_hig_war_doctrine bonus = 0.75 uses = 1 category = dd_tech category = ca_tech }
+			add_doctrine_cost_reduction = { name = TU_URS_w2_hig_war_doctrine cost_reduction = 0.4 uses = 1 category = naval_doctrine }
+			navy_experience = 25
 		}
 	}
 
@@ -363,9 +379,10 @@
 		}
 
 		completion_reward = {
-			add_political_power = 50
-			add_war_support = 0.05
 			add_ideas = TU_URS_w2_naval_blockade
+			add_tech_bonus = { name = TU_URS_w2_hig_junta_landing bonus = 0.75 uses = 1 category = dd_tech category = ca_tech }
+			add_doctrine_cost_reduction = { name = TU_URS_w2_hig_junta_landing cost_reduction = 0.4 uses = 1 category = naval_doctrine }
+			navy_experience = 25
 		}
 	}
 
@@ -388,7 +405,6 @@
 		}
 
 		completion_reward = {
-			add_political_power = 50
 			every_owned_state = {
 				limit = {
 					is_owned_and_controlled_by = ROOT
@@ -398,5 +414,7 @@
 				add_compliance = 10
 				set_state_flag = TU_URS_w2_hig_integrated
 			}
+			add_political_power = 60
+			add_stability = 0.03
 		}
 	}

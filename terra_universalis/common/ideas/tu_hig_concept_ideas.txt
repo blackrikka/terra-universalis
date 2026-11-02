@@ -1,0 +1,57 @@
+ideas = {
+
+	country = {
+
+		TU_HIG_idea_politics = {
+			picture = generic_morale_bonus
+
+			allowed = {
+				original_tag = HIG
+			}
+
+			modifier = {
+				war_support_factor = 0.05
+				stability_factor = 0.03
+			}
+		}
+
+		TU_HIG_idea_navy = {
+			picture = generic_navy_bonus
+
+			allowed = {
+				original_tag = HIG
+			}
+
+			modifier = {
+				navy_org_factor = 0.05
+				naval_speed_factor = 0.05
+			}
+		}
+
+		TU_HIG_idea_military = {
+			picture = generic_army_war_college
+
+			allowed = {
+				original_tag = HIG
+			}
+
+			modifier = {
+				experience_gain_army_factor = 0.1
+				army_org_factor = 0.03
+			}
+		}
+
+		TU_HIG_idea_economy = {
+			picture = generic_production_bonus
+
+			allowed = {
+				original_tag = HIG
+			}
+
+			modifier = {
+				production_factory_max_efficiency_factor = 0.05
+				production_speed_buildings_factor = 0.05
+			}
+		}
+	}
+}

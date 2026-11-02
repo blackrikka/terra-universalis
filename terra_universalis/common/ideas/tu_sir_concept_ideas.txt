@@ -1,0 +1,57 @@
+ideas = {
+
+	country = {
+
+		TU_SIR_idea_politics = {
+			picture = generic_central_management
+
+			allowed = {
+				original_tag = SIR
+			}
+
+			modifier = {
+				political_power_gain = 0.1
+				stability_factor = 0.03
+			}
+		}
+
+		TU_SIR_idea_families = {
+			picture = generic_economic_increase
+
+			allowed = {
+				original_tag = SIR
+			}
+
+			modifier = {
+				political_power_gain = 0.1
+				consumer_goods_factor = -0.02
+			}
+		}
+
+		TU_SIR_idea_military = {
+			picture = generic_army_war_college
+
+			allowed = {
+				original_tag = SIR
+			}
+
+			modifier = {
+				experience_gain_army_factor = 0.1
+				army_org_factor = 0.03
+			}
+		}
+
+		TU_SIR_idea_economy = {
+			picture = generic_production_bonus
+
+			allowed = {
+				original_tag = SIR
+			}
+
+			modifier = {
+				production_factory_max_efficiency_factor = 0.05
+				production_speed_buildings_factor = 0.05
+			}
+		}
+	}
+}

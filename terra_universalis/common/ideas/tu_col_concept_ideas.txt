@@ -1,0 +1,56 @@
+ideas = {
+
+	country = {
+
+		TU_COL_idea_politics = {
+			picture = generic_central_management
+
+			allowed = {
+				original_tag = COL
+			}
+
+			modifier = {
+				political_power_gain = 0.1
+				stability_factor = 0.03
+			}
+		}
+
+		TU_COL_idea_research = {
+			picture = generic_research_bonus
+
+			allowed = {
+				original_tag = COL
+			}
+
+			modifier = {
+				research_speed_factor = 0.05
+			}
+		}
+
+		TU_COL_idea_military = {
+			picture = generic_air_bonus
+
+			allowed = {
+				original_tag = COL
+			}
+
+			modifier = {
+				air_superiority_efficiency = 0.05
+				air_attack_factor = 0.05
+			}
+		}
+
+		TU_COL_idea_economy = {
+			picture = generic_production_bonus
+
+			allowed = {
+				original_tag = COL
+			}
+
+			modifier = {
+				production_factory_max_efficiency_factor = 0.05
+				production_speed_buildings_factor = 0.05
+			}
+		}
+	}
+}
