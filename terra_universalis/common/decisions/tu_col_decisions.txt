@@ -1,0 +1,559 @@
+TU_COL_rhine_category = {
+	TU_COL_proj_originium = {
+		icon = GFX_decision_generic_industry
+
+		allowed = {
+			original_tag = COL
+		}
+
+		visible = {
+			NOT = { has_country_flag = TU_COL_proj_originium_done }
+		}
+
+		available = {
+			NOT = { has_country_flag = TU_COL_proj_originium_running }
+		}
+
+		cost = 50
+		fire_only_once = yes
+		days_remove = 120
+
+		complete_effect = {
+			custom_effect_tooltip = TU_COL_proj_originium_tt
+			set_country_flag = TU_COL_proj_originium_running
+		}
+
+		remove_effect = {
+			add_ideas = TU_COL_originium_power
+			TU_COL_science_10 = yes
+			clr_country_flag = TU_COL_proj_originium_running
+			set_country_flag = TU_COL_proj_originium_done
+		}
+
+		ai_will_do = {
+			base = 1
+		}
+	}
+
+	TU_COL_proj_bio = {
+		icon = GFX_decision_generic_industry
+
+		allowed = {
+			original_tag = COL
+		}
+
+		visible = {
+			NOT = { has_country_flag = TU_COL_proj_bio_done }
+		}
+
+		available = {
+			NOT = { has_country_flag = TU_COL_proj_bio_running }
+		}
+
+		cost = 50
+		fire_only_once = yes
+		days_remove = 120
+
+		complete_effect = {
+			custom_effect_tooltip = TU_COL_proj_bio_tt
+			set_country_flag = TU_COL_proj_bio_running
+		}
+
+		remove_effect = {
+			add_ideas = TU_COL_bioengineering
+			TU_COL_science_10 = yes
+			clr_country_flag = TU_COL_proj_bio_running
+			set_country_flag = TU_COL_proj_bio_done
+		}
+
+		ai_will_do = {
+			base = 1
+		}
+	}
+
+	TU_COL_proj_radar = {
+		icon = GFX_decision_generic_industry
+
+		allowed = {
+			original_tag = COL
+		}
+
+		visible = {
+			NOT = { has_country_flag = TU_COL_proj_radar_done }
+		}
+
+		available = {
+			NOT = { has_country_flag = TU_COL_proj_radar_running }
+		}
+
+		cost = 50
+		fire_only_once = yes
+		days_remove = 90
+
+		complete_effect = {
+			custom_effect_tooltip = TU_COL_proj_radar_tt
+			set_country_flag = TU_COL_proj_radar_running
+		}
+
+		remove_effect = {
+			add_tech_bonus = { name = TU_COL_proj_radar bonus = 1.0 uses = 2 category = radar_tech category = electronics }
+			TU_COL_science_10 = yes
+			clr_country_flag = TU_COL_proj_radar_running
+			set_country_flag = TU_COL_proj_radar_done
+		}
+
+		ai_will_do = {
+			base = 1
+		}
+	}
+
+	TU_COL_proj_armour = {
+		icon = GFX_decision_generic_industry
+
+		allowed = {
+			original_tag = COL
+		}
+
+		visible = {
+			NOT = { has_country_flag = TU_COL_proj_armour_done }
+		}
+
+		available = {
+			NOT = { has_country_flag = TU_COL_proj_armour_running }
+		}
+
+		cost = 50
+		fire_only_once = yes
+		days_remove = 90
+
+		complete_effect = {
+			custom_effect_tooltip = TU_COL_proj_armour_tt
+			set_country_flag = TU_COL_proj_armour_running
+		}
+
+		remove_effect = {
+			add_tech_bonus = { name = TU_COL_proj_armour bonus = 1.0 uses = 2 category = armor }
+			TU_COL_science_10 = yes
+			clr_country_flag = TU_COL_proj_armour_running
+			set_country_flag = TU_COL_proj_armour_done
+		}
+
+		ai_will_do = {
+			base = 1
+		}
+	}
+
+	TU_COL_proj_weather = {
+		icon = GFX_decision_generic_industry
+
+		allowed = {
+			original_tag = COL
+		}
+
+		visible = {
+			NOT = { has_country_flag = TU_COL_proj_weather_done }
+		}
+
+		available = {
+			check_variable = { TU_COL_science > 39 }
+			NOT = { has_country_flag = TU_COL_proj_weather_running }
+		}
+
+		cost = 75
+		fire_only_once = yes
+		days_remove = 150
+
+		complete_effect = {
+			custom_effect_tooltip = TU_COL_proj_weather_tt
+			set_country_flag = TU_COL_proj_weather_running
+		}
+
+		remove_effect = {
+			add_stability = 0.05
+			add_tech_bonus = { name = TU_COL_proj_weather bonus = 1.0 uses = 1 category = industry }
+			TU_COL_science_20 = yes
+			clr_country_flag = TU_COL_proj_weather_running
+			set_country_flag = TU_COL_proj_weather_done
+		}
+
+		ai_will_do = {
+			base = 1
+		}
+	}
+
+	TU_COL_proj_aero = {
+		icon = GFX_decision_generic_industry
+
+		allowed = {
+			original_tag = COL
+		}
+
+		visible = {
+			NOT = { has_country_flag = TU_COL_proj_aero_done }
+		}
+
+		available = {
+			check_variable = { TU_COL_science > 39 }
+			NOT = { has_country_flag = TU_COL_proj_aero_running }
+		}
+
+		cost = 75
+		fire_only_once = yes
+		days_remove = 150
+
+		complete_effect = {
+			custom_effect_tooltip = TU_COL_proj_aero_tt
+			set_country_flag = TU_COL_proj_aero_running
+		}
+
+		remove_effect = {
+			add_tech_bonus = { name = TU_COL_proj_aero bonus = 1.0 uses = 2 category = light_fighter category = tactical_bomber }
+			air_experience = 50
+			TU_COL_science_20 = yes
+			clr_country_flag = TU_COL_proj_aero_running
+			set_country_flag = TU_COL_proj_aero_done
+		}
+
+		ai_will_do = {
+			base = 1
+		}
+	}
+
+	TU_COL_proj_sky = {
+		icon = GFX_decision_generic_industry
+
+		allowed = {
+			original_tag = COL
+		}
+
+		visible = {
+			NOT = { has_country_flag = TU_COL_proj_sky_done }
+		}
+
+		available = {
+			check_variable = { TU_COL_science > 99 }
+			has_country_flag = TU_COL_sky_prep
+			NOT = { has_country_flag = TU_COL_proj_sky_running }
+		}
+
+		cost = 150
+		fire_only_once = yes
+		days_remove = 240
+
+		complete_effect = {
+			custom_effect_tooltip = TU_COL_proj_sky_tt
+			set_country_flag = TU_COL_proj_sky_running
+		}
+
+		remove_effect = {
+			add_ideas = TU_COL_beyond_the_sky
+			TU_COL_science_30 = yes
+			country_event = { id = tu_col_ev.23 }
+			clr_country_flag = TU_COL_proj_sky_running
+			set_country_flag = TU_COL_proj_sky_done
+		}
+
+		ai_will_do = {
+			base = 1
+		}
+	}
+
+	TU_COL_lab_accident_relief = {
+		icon = GFX_decision_generic_civil_support
+
+		allowed = {
+			original_tag = COL
+		}
+
+		visible = {
+			has_country_flag = TU_COL_lab_accident
+		}
+
+		cost = 25
+		days_re_enable = 180
+
+		complete_effect = {
+			add_stability = 0.03
+			TU_COL_science_5 = yes
+		}
+
+		ai_will_do = {
+			base = 1
+		}
+	}
+
+}
+
+TU_COL_politics_category = {
+	TU_COL_campaign_rally = {
+		icon = GFX_decision_generic_political_address
+
+		allowed = {
+			original_tag = COL
+		}
+
+		visible = {
+			has_country_flag = TU_COL_campaigns
+		}
+
+		cost = 25
+		days_re_enable = 180
+
+		complete_effect = {
+			add_stability = 0.03
+			add_political_power = 25
+		}
+
+		ai_will_do = {
+			base = 1
+		}
+	}
+
+	TU_COL_lobby_congress = {
+		icon = GFX_decision_generic_political_discourse
+
+		allowed = {
+			original_tag = COL
+		}
+
+		visible = {
+			has_country_flag = TU_COL_campaigns
+		}
+
+		cost = 0
+		days_re_enable = 240
+
+		complete_effect = {
+			add_political_power = 75
+			add_stability = -0.02
+		}
+
+		ai_will_do = {
+			base = 1
+		}
+	}
+
+	TU_COL_outlaw_hunt = {
+		icon = GFX_decision_generic_military
+
+		allowed = {
+			original_tag = COL
+		}
+
+		visible = {
+			has_country_flag = TU_COL_sheriffs
+		}
+
+		cost = 50
+		days_re_enable = 180
+
+		complete_effect = {
+			add_stability = 0.04
+			army_experience = 10
+		}
+
+		ai_will_do = {
+			base = 1
+		}
+	}
+
+	TU_COL_frontier_roads = {
+		icon = GFX_decision_generic_construction
+
+		allowed = {
+			original_tag = COL
+		}
+
+		visible = {
+			has_country_flag = TU_COL_sheriffs
+		}
+
+		cost = 75
+		days_re_enable = 365
+
+		complete_effect = {
+			TU_build_infrastructure = yes
+			TU_build_infrastructure = yes
+		}
+
+		ai_will_do = {
+			base = 1
+		}
+	}
+
+	TU_COL_blacksteel = {
+		icon = GFX_decision_generic_military
+
+		allowed = {
+			original_tag = COL
+		}
+
+		visible = {
+			has_country_flag = TU_COL_blacksteel
+		}
+
+		cost = 75
+		days_re_enable = 240
+
+		complete_effect = {
+			TU_COL_blacksteel_template = yes
+			capital_scope = { create_unit = { division = "division_template = \"TU_COL_blacksteel\" start_experience_factor = 0.5 start_equipment_factor = 1" owner = COL count = 2 } }
+		}
+
+		ai_will_do = {
+			base = 1
+		}
+	}
+
+}
+
+TU_COL_foreign_category = {
+	TU_COL_bolivar_arms = {
+		icon = GFX_decision_generic_political_discourse
+
+		allowed = {
+			original_tag = COL
+		}
+
+		visible = {
+			has_country_flag = TU_COL_bolivar
+			country_exists = BOL
+		}
+
+		available = {
+			NOT = { has_war_with = BOL }
+		}
+
+		cost = 0
+		days_re_enable = 180
+
+		complete_effect = {
+			add_political_power = 50
+			BOL = { add_equipment_to_stockpile = { type = infantry_equipment amount = 500 producer = COL } }
+		}
+
+		ai_will_do = {
+			base = 1
+		}
+	}
+
+	TU_COL_bolivar_faction = {
+		icon = GFX_decision_generic_political_discourse
+
+		allowed = {
+			original_tag = COL
+		}
+
+		visible = {
+			has_country_flag = TU_COL_bolivar
+			country_exists = BOL
+		}
+
+		available = {
+			NOT = { has_war_with = BOL }
+		}
+
+		cost = 50
+		fire_only_once = yes
+
+		complete_effect = {
+			set_country_flag = TU_COL_bolivar_backed
+			add_political_power = -25
+			country_event = { id = tu_col_ev.27 days = 30 }
+		}
+
+		ai_will_do = {
+			base = 1
+		}
+	}
+
+	TU_COL_bolivar_intervene = {
+		icon = GFX_decision_generic_military
+
+		allowed = {
+			original_tag = COL
+		}
+
+		visible = {
+			has_country_flag = TU_COL_bolivar_backed
+			country_exists = BOL
+		}
+
+		available = {
+			NOT = { has_war_with = BOL }
+			has_war_support > 0.3
+		}
+
+		cost = 75
+		fire_only_once = yes
+
+		complete_effect = {
+			create_wargoal = { type = puppet_wargoal_focus target = BOL }
+		}
+
+		ai_will_do = {
+			base = 1
+		}
+	}
+
+	TU_COL_freedom_alliance = {
+		icon = GFX_decision_generic_political_discourse
+
+		allowed = {
+			original_tag = COL
+		}
+
+		visible = {
+			has_country_flag = TU_COL_faction
+		}
+
+		available = {
+			is_in_faction = no
+		}
+
+		cost = 50
+		fire_only_once = yes
+
+		complete_effect = {
+			create_faction = TU_COL_alliance
+		}
+
+		ai_will_do = {
+			base = 1
+		}
+	}
+
+	TU_COL_invite_alliance = {
+		icon = GFX_decision_generic_political_discourse
+
+		allowed = {
+			original_tag = COL
+		}
+
+		target_trigger = {
+			FROM = {
+				NOT = { tag = ROOT }
+				is_in_faction = no
+				NOT = { has_war_with = ROOT }
+				OR = { tag = BOL tag = SAR tag = KAZ tag = MIN tag = KJE }
+			}
+		}
+
+		visible = {
+			has_country_flag = TU_COL_faction
+			is_faction_leader = yes
+		}
+
+		cost = 50
+		days_re_enable = 90
+
+		complete_effect = {
+			add_to_faction = FROM
+		}
+
+		ai_will_do = {
+			base = 1
+		}
+	}
+
+}

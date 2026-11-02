@@ -1,0 +1,214 @@
+ideas = {
+
+	country = {
+
+		TU_COL_admin_industry = {
+			picture = generic_production_bonus
+
+			allowed = {
+				original_tag = COL
+			}
+
+			modifier = {
+				production_speed_buildings_factor = 0.1
+				consumer_goods_factor = -0.02
+			}
+		}
+
+		TU_COL_admin_defence = {
+			picture = generic_war_preparation
+
+			allowed = {
+				original_tag = COL
+			}
+
+			modifier = {
+				army_org_factor = 0.05
+				air_superiority_efficiency = 0.05
+				war_support_factor = 0.05
+			}
+		}
+
+		TU_COL_admin_science = {
+			picture = generic_research_bonus
+
+			allowed = {
+				original_tag = COL
+			}
+
+			modifier = {
+				research_speed_factor = 0.05
+			}
+		}
+
+		TU_COL_frontier_unrest = {
+			picture = generic_army_problems
+
+			allowed = {
+				original_tag = COL
+			}
+
+			modifier = {
+				stability_factor = -0.05
+				production_speed_infrastructure_factor = -0.1
+			}
+		}
+
+		TU_COL_frontier_order = {
+			picture = generic_railroads
+
+			allowed = {
+				original_tag = COL
+			}
+
+			modifier = {
+				stability_factor = 0.03
+				production_speed_infrastructure_factor = 0.1
+			}
+		}
+
+		TU_COL_rhine_partnership = {
+			picture = generic_research_bonus
+
+			allowed = {
+				original_tag = COL
+			}
+
+			modifier = {
+				research_speed_factor = 0.03
+			}
+		}
+
+		TU_COL_originium_power = {
+			picture = generic_improved_industries
+
+			allowed = {
+				original_tag = COL
+			}
+
+			modifier = {
+				production_factory_max_efficiency_factor = 0.05
+				industrial_capacity_factory = 0.05
+			}
+		}
+
+		TU_COL_bioengineering = {
+			picture = generic_morale_bonus
+
+			allowed = {
+				original_tag = COL
+			}
+
+			modifier = {
+				monthly_population = 0.15
+				stability_factor = 0.03
+			}
+		}
+
+		TU_COL_beyond_the_sky = {
+			picture = generic_air_research
+
+			allowed = {
+				original_tag = COL
+			}
+
+			modifier = {
+				research_speed_factor = 0.1
+				air_superiority_efficiency = 0.05
+			}
+		}
+
+		TU_COL_republic_guard = {
+			picture = constitutional_guarantees
+
+			allowed = {
+				original_tag = COL
+			}
+
+			modifier = {
+				stability_factor = 0.1
+				political_power_gain = 0.1
+			}
+		}
+
+		TU_COL_corporate_republic = {
+			picture = generic_foreign_capital
+
+			allowed = {
+				original_tag = COL
+			}
+
+			modifier = {
+				production_factory_max_efficiency_factor = 0.1
+				research_speed_factor = 0.03
+				stability_factor = -0.05
+			}
+		}
+
+		TU_COL_frontier_federation = {
+			picture = generic_army_europe_2
+
+			allowed = {
+				original_tag = COL
+			}
+
+			modifier = {
+				army_org_factor = 0.05
+				war_support_factor = 0.1
+				conscription_factor = 0.05
+			}
+		}
+
+		TU_COL_air_supremacy = {
+			picture = generic_air_bonus
+
+			allowed = {
+				original_tag = COL
+			}
+
+			modifier = {
+				air_superiority_efficiency = 0.1
+				air_attack_factor = 0.05
+			}
+		}
+
+		TU_COL_mechanised_army = {
+			picture = generic_army_europe_1
+
+			allowed = {
+				original_tag = COL
+			}
+
+			modifier = {
+				army_speed_factor = 0.05
+				army_org_factor = 0.03
+			}
+		}
+
+		TU_COL_two_ocean_navy = {
+			picture = generic_navy_bonus
+
+			allowed = {
+				original_tag = COL
+			}
+
+			modifier = {
+				navy_org_factor = 0.05
+				naval_speed_factor = 0.05
+			}
+		}
+
+		TU_COL_industrial_superpower = {
+			picture = generic_industrial_concern_1
+
+			allowed = {
+				original_tag = COL
+			}
+
+			modifier = {
+				production_factory_max_efficiency_factor = 0.1
+				production_speed_buildings_factor = 0.1
+			}
+		}
+	}
+}

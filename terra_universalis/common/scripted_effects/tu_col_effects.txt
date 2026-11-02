@@ -1,0 +1,56 @@
+TU_COL_science_5 = {
+	custom_effect_tooltip = TU_COL_science_tt_5
+	hidden_effect = {
+		add_to_variable = { TU_COL_science = 5 }
+		clamp_variable = { var = TU_COL_science min = 0 max = 200 }
+	}
+}
+
+TU_COL_science_10 = {
+	custom_effect_tooltip = TU_COL_science_tt_10
+	hidden_effect = {
+		add_to_variable = { TU_COL_science = 10 }
+		clamp_variable = { var = TU_COL_science min = 0 max = 200 }
+	}
+}
+
+TU_COL_science_20 = {
+	custom_effect_tooltip = TU_COL_science_tt_20
+	hidden_effect = {
+		add_to_variable = { TU_COL_science = 20 }
+		clamp_variable = { var = TU_COL_science min = 0 max = 200 }
+	}
+}
+
+TU_COL_science_30 = {
+	custom_effect_tooltip = TU_COL_science_tt_30
+	hidden_effect = {
+		add_to_variable = { TU_COL_science = 30 }
+		clamp_variable = { var = TU_COL_science min = 0 max = 200 }
+	}
+}
+
+TU_COL_clear_admin = {
+	if = { limit = { has_idea = TU_COL_admin_industry } remove_ideas = TU_COL_admin_industry }
+	if = { limit = { has_idea = TU_COL_admin_defence } remove_ideas = TU_COL_admin_defence }
+	if = { limit = { has_idea = TU_COL_admin_science } remove_ideas = TU_COL_admin_science }
+}
+
+TU_COL_blacksteel_template = {
+	if = {
+		limit = { NOT = { has_country_flag = TU_COL_blacksteel_template_done } }
+		set_country_flag = TU_COL_blacksteel_template_done
+		division_template = {
+			name = "TU_COL_blacksteel"
+			is_locked = no
+			priority = 2
+			regiments = {
+				infantry = { x = 0 y = 0 }
+				infantry = { x = 0 y = 1 }
+				infantry = { x = 1 y = 0 }
+				infantry = { x = 1 y = 1 }
+				infantry = { x = 2 y = 0 }
+			}
+		}
+	}
+}

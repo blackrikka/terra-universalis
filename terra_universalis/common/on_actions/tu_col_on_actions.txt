@@ -1,0 +1,10 @@
+on_actions = {
+	on_startup = {
+		effect = {
+			if = {
+				limit = { country_exists = COL }
+				COL = { country_event = { id = tu_col_ev.10 days = 365 } }
+			}
+		}
+	}
+}

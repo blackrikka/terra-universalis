@@ -1,0 +1,47 @@
+TU_COL_rhine_category = {
+	icon = GFX_decision_category_generic_industry
+
+	allowed = {
+		original_tag = COL
+	}
+
+	visible = {
+		has_country_flag = TU_COL_projects
+	}
+
+	priority = 100
+}
+
+TU_COL_politics_category = {
+	icon = GFX_decision_category_generic_political_actions
+
+	allowed = {
+		original_tag = COL
+	}
+
+	visible = {
+		OR = {
+			has_country_flag = TU_COL_campaigns
+			has_country_flag = TU_COL_sheriffs
+		}
+	}
+
+	priority = 100
+}
+
+TU_COL_foreign_category = {
+	icon = GFX_decision_category_generic_foreign_policy
+
+	allowed = {
+		original_tag = COL
+	}
+
+	visible = {
+		OR = {
+			has_country_flag = TU_COL_bolivar
+			has_country_flag = TU_COL_faction
+		}
+	}
+
+	priority = 100
+}
