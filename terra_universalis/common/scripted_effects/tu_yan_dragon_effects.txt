@@ -929,6 +929,7 @@ TU_YAN_faction_army = {
 # Yan takes on the chosen sibling's identity (name, flag, leader). The tag stays YAN, so the focus tree carries on.
 TU_YAN_become_chongyue = {
 	set_country_flag = TU_YAN_chosen_chongyue
+	mark_focus_tree_layout_dirty = yes   # allow_branch is only re-checked when the layout is marked dirty
 	set_cosmetic_tag = TU_YAN_FAC_CHONGYUE
 	set_politics = { ruling_party = sui elections_allowed = no }
 	if = { limit = { NOT = { has_character = TU_YAN_chongyue } } recruit_character = TU_YAN_chongyue }
@@ -937,6 +938,7 @@ TU_YAN_become_chongyue = {
 
 TU_YAN_become_ling = {
 	set_country_flag = TU_YAN_chosen_ling
+	mark_focus_tree_layout_dirty = yes   # allow_branch is only re-checked when the layout is marked dirty
 	set_cosmetic_tag = TU_YAN_FAC_LING
 	set_politics = { ruling_party = sui elections_allowed = no }
 	if = { limit = { NOT = { has_character = TU_YAN_ling } } recruit_character = TU_YAN_ling }
@@ -945,6 +947,7 @@ TU_YAN_become_ling = {
 
 TU_YAN_become_wang = {
 	set_country_flag = TU_YAN_chosen_wang
+	mark_focus_tree_layout_dirty = yes   # allow_branch is only re-checked when the layout is marked dirty
 	set_cosmetic_tag = TU_YAN_FAC_WANG
 	set_politics = { ruling_party = sui elections_allowed = no }
 	if = { limit = { NOT = { has_character = TU_YAN_wang } } recruit_character = TU_YAN_wang }
@@ -953,6 +956,7 @@ TU_YAN_become_wang = {
 
 TU_YAN_become_dusk = {
 	set_country_flag = TU_YAN_chosen_dusk
+	mark_focus_tree_layout_dirty = yes   # allow_branch is only re-checked when the layout is marked dirty
 	set_cosmetic_tag = TU_YAN_FAC_DUSK
 	set_politics = { ruling_party = sui elections_allowed = no }
 	if = { limit = { NOT = { has_character = TU_YAN_dusk } } recruit_character = TU_YAN_dusk }
@@ -961,6 +965,7 @@ TU_YAN_become_dusk = {
 
 TU_YAN_become_shu = {
 	set_country_flag = TU_YAN_chosen_shu
+	mark_focus_tree_layout_dirty = yes   # allow_branch is only re-checked when the layout is marked dirty
 	set_cosmetic_tag = TU_YAN_FAC_SHU
 	set_politics = { ruling_party = sui elections_allowed = no }
 	if = { limit = { NOT = { has_character = TU_YAN_shu } } recruit_character = TU_YAN_shu }
@@ -969,6 +974,7 @@ TU_YAN_become_shu = {
 
 TU_YAN_become_nian = {
 	set_country_flag = TU_YAN_chosen_nian
+	mark_focus_tree_layout_dirty = yes   # allow_branch is only re-checked when the layout is marked dirty
 	set_cosmetic_tag = TU_YAN_FAC_NIAN
 	set_politics = { ruling_party = sui elections_allowed = no }
 	if = { limit = { NOT = { has_character = TU_YAN_nian } } recruit_character = TU_YAN_nian }
@@ -977,6 +983,7 @@ TU_YAN_become_nian = {
 
 TU_YAN_become_jun = {
 	set_country_flag = TU_YAN_chosen_jun
+	mark_focus_tree_layout_dirty = yes   # allow_branch is only re-checked when the layout is marked dirty
 	set_cosmetic_tag = TU_YAN_FAC_JUN
 	set_politics = { ruling_party = sui elections_allowed = no }
 	if = { limit = { NOT = { has_character = TU_YAN_jun } } recruit_character = TU_YAN_jun }
@@ -985,6 +992,7 @@ TU_YAN_become_jun = {
 
 TU_YAN_become_jie = {
 	set_country_flag = TU_YAN_chosen_jie
+	mark_focus_tree_layout_dirty = yes   # allow_branch is only re-checked when the layout is marked dirty
 	set_cosmetic_tag = TU_YAN_FAC_JIE
 	set_politics = { ruling_party = sui elections_allowed = no }
 	if = { limit = { NOT = { has_character = TU_YAN_jie } } recruit_character = TU_YAN_jie }
@@ -993,6 +1001,7 @@ TU_YAN_become_jie = {
 
 TU_YAN_become_ji = {
 	set_country_flag = TU_YAN_chosen_ji
+	mark_focus_tree_layout_dirty = yes   # allow_branch is only re-checked when the layout is marked dirty
 	set_cosmetic_tag = TU_YAN_FAC_JI
 	set_politics = { ruling_party = sui elections_allowed = no }
 	if = { limit = { NOT = { has_character = TU_YAN_ji } } recruit_character = TU_YAN_ji }
@@ -1001,6 +1010,7 @@ TU_YAN_become_ji = {
 
 TU_YAN_become_yi = {
 	set_country_flag = TU_YAN_chosen_yi
+	mark_focus_tree_layout_dirty = yes   # allow_branch is only re-checked when the layout is marked dirty
 	set_cosmetic_tag = TU_YAN_FAC_YI
 	set_politics = { ruling_party = sui elections_allowed = no }
 	if = { limit = { NOT = { has_character = TU_YAN_yi } } recruit_character = TU_YAN_yi }
@@ -1009,6 +1019,7 @@ TU_YAN_become_yi = {
 
 TU_YAN_become_fang = {
 	set_country_flag = TU_YAN_chosen_fang
+	mark_focus_tree_layout_dirty = yes   # allow_branch is only re-checked when the layout is marked dirty
 	set_cosmetic_tag = TU_YAN_FAC_FANG
 	set_politics = { ruling_party = sui elections_allowed = no }
 	if = { limit = { NOT = { has_character = TU_YAN_fang } } recruit_character = TU_YAN_fang }
@@ -1017,6 +1028,7 @@ TU_YAN_become_fang = {
 
 TU_YAN_become_yu = {
 	set_country_flag = TU_YAN_chosen_yu
+	mark_focus_tree_layout_dirty = yes   # allow_branch is only re-checked when the layout is marked dirty
 	set_cosmetic_tag = TU_YAN_FAC_YU
 	set_politics = { ruling_party = sui elections_allowed = no }
 	if = { limit = { NOT = { has_character = TU_YAN_yu } } recruit_character = TU_YAN_yu }
@@ -1025,6 +1037,7 @@ TU_YAN_become_yu = {
 
 TU_YAN_become_ruin = {
 	set_country_flag = TU_YAN_chosen_ruin
+	mark_focus_tree_layout_dirty = yes   # allow_branch is only re-checked when the layout is marked dirty
 	set_cosmetic_tag = TU_YAN_FAC_SUI
 	set_politics = { ruling_party = sui elections_allowed = no }
 	recruit_character = TU_YAN_sui_true
