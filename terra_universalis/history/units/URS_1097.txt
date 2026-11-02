@@ -1,0 +1,37 @@
+division_template = {
+	name = "TU_URS_infantry"
+	division_names_group = TU_DIVNAMES_FALLBACK
+
+	regiments = {
+		infantry = { x = 0 y = 0 }
+		infantry = { x = 0 y = 1 }
+		infantry = { x = 0 y = 2 }
+		infantry = { x = 1 y = 0 }
+		infantry = { x = 1 y = 1 }
+		infantry = { x = 1 y = 2 }
+	}
+	support = {
+		engineer = { x = 0 y = 0 }
+		artillery = { x = 0 y = 1 }
+	}
+}
+
+division_template = {
+	name = "TU_URS_guard_division"
+	division_names_group = TU_DIVNAMES_FALLBACK
+
+	regiments = {
+		infantry = { x = 0 y = 0 }
+		infantry = { x = 0 y = 1 }
+		infantry = { x = 0 y = 2 }
+		cavalry = { x = 1 y = 0 }
+		cavalry = { x = 1 y = 1 }
+		artillery_brigade = { x = 2 y = 0 }
+		light_armor = { x = 3 y = 0 }
+	}
+	priority = 2
+	is_locked = yes
+}
+
+units = {
+}

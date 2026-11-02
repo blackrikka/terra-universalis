@@ -1,0 +1,2273 @@
+	#### INDUSTRY ####
+
+	focus = {
+		id = TU_VIC_eco_industry_charter
+		icon = GFX_goal_generic_construction2
+		prerequisite = { focus = TU_VIC_crown_focus }
+		x = 0
+		y = 0
+		cost = 5
+
+		search_filters = { FOCUS_FILTER_INDUSTRY }
+
+		ai_will_do = {
+			base = 1
+		}
+
+		completion_reward = {
+			add_political_power = 50
+			add_stability = 0.01
+		}
+	}
+
+	focus = {
+		id = TU_VIC_eco_london_foundries
+		icon = GFX_goal_generic_construct_civ_factory
+		prerequisite = { focus = TU_VIC_eco_industry_charter }
+		x = 0
+		y = 0
+		cost = 10
+
+		search_filters = { FOCUS_FILTER_INDUSTRY }
+
+		ai_will_do = {
+			base = 1
+		}
+
+		completion_reward = {
+			add_political_power = 25
+		}
+	}
+
+	focus = {
+		id = TU_VIC_eco_coal_fields
+		icon = GFX_goal_generic_production
+		prerequisite = { focus = TU_VIC_eco_industry_charter }
+		x = 0
+		y = 0
+		cost = 10
+
+		search_filters = { FOCUS_FILTER_INDUSTRY }
+
+		ai_will_do = {
+			base = 1
+		}
+
+		completion_reward = {
+			add_political_power = 25
+			add_tech_bonus = {
+				name = TU_VIC_eco_coal_fields_tech
+				bonus = 1.0
+				uses = 2
+				category = industry
+			}
+		}
+	}
+
+	focus = {
+		id = TU_VIC_eco_rail_network
+		icon = GFX_goal_generic_construct_infrastructure
+		prerequisite = { focus = TU_VIC_eco_london_foundries }
+		x = 0
+		y = 0
+		cost = 10
+
+		search_filters = { FOCUS_FILTER_INDUSTRY }
+
+		ai_will_do = {
+			base = 1
+		}
+
+		completion_reward = {
+			add_political_power = 25
+			add_tech_bonus = {
+				name = TU_VIC_eco_rail_network_tech
+				bonus = 1.0
+				uses = 2
+				category = construction_tech
+			}
+		}
+	}
+
+	focus = {
+		id = TU_VIC_eco_steel_mills
+		icon = GFX_goal_generic_production2
+		prerequisite = { focus = TU_VIC_eco_coal_fields }
+		x = 0
+		y = 0
+		cost = 10
+
+		search_filters = { FOCUS_FILTER_INDUSTRY }
+
+		ai_will_do = {
+			base = 1
+		}
+
+		completion_reward = {
+			add_political_power = 25
+		}
+	}
+
+	focus = {
+		id = TU_VIC_eco_dock_city
+		icon = GFX_goal_generic_construct_naval_dockyard
+		prerequisite = { focus = TU_VIC_eco_steel_mills }
+		x = 0
+		y = 0
+		cost = 10
+
+		search_filters = { FOCUS_FILTER_INDUSTRY }
+
+		ai_will_do = {
+			base = 1
+		}
+
+		completion_reward = {
+			add_political_power = 25
+			add_ideas = TU_VIC_eco_dock_guild
+		}
+	}
+
+	focus = {
+		id = TU_VIC_eco_arms_contracts
+		icon = GFX_goal_generic_construct_mil_factory
+		prerequisite = { focus = TU_VIC_eco_london_foundries }
+		x = 0
+		y = 0
+		cost = 10
+
+		search_filters = { FOCUS_FILTER_INDUSTRY }
+
+		ai_will_do = {
+			base = 1
+		}
+
+		completion_reward = {
+			add_political_power = 50
+		}
+	}
+
+	focus = {
+		id = TU_VIC_eco_mass_production
+		icon = GFX_goal_generic_construct_civ_factory
+		prerequisite = { focus = TU_VIC_eco_rail_network }
+		x = 0
+		y = 0
+		cost = 10
+
+		search_filters = { FOCUS_FILTER_INDUSTRY }
+
+		ai_will_do = {
+			base = 1
+		}
+
+		completion_reward = {
+			add_political_power = 50
+		}
+	}
+
+	focus = {
+		id = TU_VIC_eco_factory_retool
+		icon = GFX_goal_generic_production2
+		prerequisite = { focus = TU_VIC_eco_mass_production }
+		x = 0
+		y = 0
+		cost = 10
+
+		search_filters = { FOCUS_FILTER_INDUSTRY }
+
+		ai_will_do = {
+			base = 1
+		}
+
+		completion_reward = {
+			add_political_power = 25
+			add_tech_bonus = {
+				name = TU_VIC_eco_factory_retool_tech
+				bonus = 1.0
+				uses = 2
+				category = industry
+			}
+		}
+	}
+
+	focus = {
+		id = TU_VIC_eco_industrial_summit
+		icon = GFX_goal_generic_construction2
+		prerequisite = { focus = TU_VIC_eco_mass_production }
+		x = 0
+		y = 0
+		cost = 15
+
+		search_filters = { FOCUS_FILTER_INDUSTRY }
+
+		ai_will_do = {
+			base = 1
+		}
+
+		completion_reward = {
+			add_political_power = 100
+			add_ideas = TU_VIC_eco_titan_ascent
+		}
+	}
+
+	focus = {
+		id = TU_VIC_eco_resource_survey
+		icon = GFX_goal_generic_radar
+		prerequisite = { focus = TU_VIC_eco_steel_mills }
+		x = 0
+		y = 0
+		cost = 10
+
+		search_filters = { FOCUS_FILTER_INDUSTRY }
+
+		ai_will_do = {
+			base = 1
+		}
+
+		completion_reward = {
+			add_political_power = 25
+		}
+	}
+
+	focus = {
+		id = TU_VIC_eco_oil_refineries
+		icon = GFX_goal_generic_oil_refinery
+		prerequisite = { focus = TU_VIC_eco_resource_survey }
+		x = 0
+		y = 0
+		cost = 10
+
+		search_filters = { FOCUS_FILTER_INDUSTRY }
+
+		ai_will_do = {
+			base = 1
+		}
+
+		completion_reward = {
+			add_political_power = 25
+		}
+	}
+
+	focus = {
+		id = TU_VIC_eco_rubber_import
+		icon = GFX_goal_generic_trade
+		prerequisite = { focus = TU_VIC_eco_resource_survey }
+		x = 0
+		y = 0
+		cost = 10
+
+		search_filters = { FOCUS_FILTER_INDUSTRY }
+
+		ai_will_do = {
+			base = 1
+		}
+
+		completion_reward = {
+			add_political_power = 50
+		}
+	}
+
+	focus = {
+		id = TU_VIC_eco_steel_export
+		icon = GFX_goal_generic_trade
+		prerequisite = { focus = TU_VIC_eco_dock_city }
+		x = 0
+		y = 0
+		cost = 10
+
+		search_filters = { FOCUS_FILTER_INDUSTRY }
+
+		ai_will_do = {
+			base = 1
+		}
+
+		completion_reward = {
+			add_political_power = 50
+		}
+	}
+
+	focus = {
+		id = TU_VIC_eco_power_grid
+		icon = GFX_goal_generic_construct_civilian
+		prerequisite = { focus = TU_VIC_eco_factory_retool }
+		x = 0
+		y = 0
+		cost = 10
+
+		search_filters = { FOCUS_FILTER_INDUSTRY }
+
+		ai_will_do = {
+			base = 1
+		}
+
+		completion_reward = {
+			add_political_power = 25
+		}
+	}
+
+	focus = {
+		id = TU_VIC_eco_consumer_markets
+		icon = GFX_goal_generic_consumer_goods
+		prerequisite = { focus = TU_VIC_eco_factory_retool }
+		mutually_exclusive = { focus = TU_VIC_eco_war_factories }
+		x = 0
+		y = 0
+		cost = 10
+
+		search_filters = { FOCUS_FILTER_INDUSTRY }
+
+		ai_will_do = {
+			base = 1
+		}
+
+		completion_reward = {
+			add_political_power = 25
+			add_stability = 0.02
+		}
+	}
+
+	focus = {
+		id = TU_VIC_eco_workers_guild
+		icon = GFX_goal_generic_improve_relations
+		prerequisite = { focus = TU_VIC_eco_consumer_markets }
+		x = 0
+		y = 0
+		cost = 10
+
+		search_filters = { FOCUS_FILTER_INDUSTRY }
+
+		ai_will_do = {
+			base = 1
+		}
+
+		completion_reward = {
+			add_political_power = 25
+			add_stability = 0.02
+		}
+	}
+
+	focus = {
+		id = TU_VIC_eco_urban_housing
+		icon = GFX_goal_generic_construct_civilian
+		prerequisite = { focus = TU_VIC_eco_consumer_markets }
+		x = 0
+		y = 0
+		cost = 10
+
+		search_filters = { FOCUS_FILTER_INDUSTRY }
+
+		ai_will_do = {
+			base = 1
+		}
+
+		completion_reward = {
+			add_political_power = 25
+			add_stability = 0.03
+		}
+	}
+
+	focus = {
+		id = TU_VIC_eco_grand_bridge
+		icon = GFX_goal_generic_construct_infrastructure
+		prerequisite = { focus = TU_VIC_eco_steel_export }
+		x = 0
+		y = 0
+		cost = 10
+
+		search_filters = { FOCUS_FILTER_INDUSTRY }
+
+		ai_will_do = {
+			base = 1
+		}
+
+		completion_reward = {
+			add_political_power = 50
+		}
+	}
+
+	focus = {
+		id = TU_VIC_eco_thames_canal
+		icon = GFX_goal_generic_construct_infrastructure
+		prerequisite = { focus = TU_VIC_eco_grand_bridge }
+		x = 0
+		y = 0
+		cost = 15
+
+		search_filters = { FOCUS_FILTER_INDUSTRY }
+
+		ai_will_do = {
+			base = 1
+		}
+
+		completion_reward = {
+			add_political_power = 75
+		}
+	}
+
+	focus = {
+		id = TU_VIC_eco_foreign_capital
+		icon = GFX_goal_generic_trade
+		prerequisite = { focus = TU_VIC_eco_steel_export }
+		x = 0
+		y = 0
+		cost = 10
+
+		search_filters = { FOCUS_FILTER_INDUSTRY }
+
+		ai_will_do = {
+			base = 1
+		}
+
+		completion_reward = {
+			add_political_power = 50
+		}
+	}
+
+	focus = {
+		id = TU_VIC_eco_central_bank
+		icon = GFX_goal_generic_production
+		prerequisite = { focus = TU_VIC_eco_foreign_capital }
+		x = 0
+		y = 0
+		cost = 10
+
+		search_filters = { FOCUS_FILTER_INDUSTRY }
+
+		ai_will_do = {
+			base = 1
+		}
+
+		completion_reward = {
+			add_political_power = 50
+		}
+	}
+
+	focus = {
+		id = TU_VIC_eco_dockyard_expansion
+		icon = GFX_goal_generic_construct_naval_dockyard
+		prerequisite = { focus = TU_VIC_eco_dock_city }
+		x = 0
+		y = 0
+		cost = 10
+
+		search_filters = { FOCUS_FILTER_INDUSTRY }
+
+		ai_will_do = {
+			base = 1
+		}
+
+		completion_reward = {
+			add_political_power = 25
+		}
+	}
+
+	focus = {
+		id = TU_VIC_eco_war_factories
+		icon = GFX_goal_generic_construct_mil_factory
+		prerequisite = { focus = TU_VIC_eco_industrial_summit }
+		mutually_exclusive = { focus = TU_VIC_eco_consumer_markets }
+		x = 0
+		y = 0
+		cost = 10
+
+		search_filters = { FOCUS_FILTER_INDUSTRY }
+
+		ai_will_do = {
+			base = 1
+		}
+
+		completion_reward = {
+			add_political_power = 50
+			add_war_support = 5
+		}
+	}
+
+	focus = {
+		id = TU_VIC_eco_london_plant
+		icon = GFX_goal_generic_construct_mil_factory
+		prerequisite = { focus = TU_VIC_eco_war_factories }
+		x = 0
+		y = 0
+		cost = 15
+
+		search_filters = { FOCUS_FILTER_INDUSTRY }
+
+		ai_will_do = {
+			base = 1
+		}
+
+		completion_reward = {
+			add_political_power = 75
+		}
+	}
+
+	focus = {
+		id = TU_VIC_eco_engine_works
+		icon = GFX_goal_generic_production
+		prerequisite = { focus = TU_VIC_eco_london_plant }
+		x = 0
+		y = 0
+		cost = 10
+
+		search_filters = { FOCUS_FILTER_INDUSTRY }
+
+		ai_will_do = {
+			base = 1
+		}
+
+		completion_reward = {
+			add_political_power = 50
+			add_tech_bonus = {
+				name = TU_VIC_eco_engine_works_tech
+				bonus = 1.0
+				uses = 2
+				category = armor
+			}
+		}
+	}
+
+	focus = {
+		id = TU_VIC_eco_skilled_labour
+		icon = GFX_goal_generic_improve_relations
+		prerequisite = { focus = TU_VIC_eco_workers_guild }
+		x = 0
+		y = 0
+		cost = 10
+
+		search_filters = { FOCUS_FILTER_INDUSTRY }
+
+		ai_will_do = {
+			base = 1
+		}
+
+		completion_reward = {
+			add_political_power = 25
+			add_manpower = 10000
+		}
+	}
+
+	focus = {
+		id = TU_VIC_eco_industrial_fair
+		icon = GFX_goal_generic_trade
+		prerequisite = { focus = TU_VIC_eco_urban_housing }
+		x = 0
+		y = 0
+		cost = 10
+
+		search_filters = { FOCUS_FILTER_INDUSTRY }
+
+		ai_will_do = {
+			base = 1
+		}
+
+		completion_reward = {
+			add_political_power = 25
+			add_stability = 0.01
+		}
+	}
+
+	focus = {
+		id = TU_VIC_eco_electrification
+		icon = GFX_goal_generic_production2
+		prerequisite = { focus = TU_VIC_eco_power_grid }
+		x = 0
+		y = 0
+		cost = 10
+
+		search_filters = { FOCUS_FILTER_INDUSTRY }
+
+		ai_will_do = {
+			base = 1
+		}
+
+		completion_reward = {
+			add_political_power = 50
+		}
+	}
+
+	focus = {
+		id = TU_VIC_eco_strategic_stock
+		icon = GFX_goal_generic_construction
+		prerequisite = { focus = TU_VIC_eco_rubber_import }
+		x = 0
+		y = 0
+		cost = 10
+
+		search_filters = { FOCUS_FILTER_INDUSTRY }
+
+		ai_will_do = {
+			base = 1
+		}
+
+		completion_reward = {
+			add_political_power = 50
+		}
+	}
+
+	#### STEAM KNIGHT ARMY ####
+
+	focus = {
+		id = TU_VIC_eco_knight_recruit
+		icon = GFX_goal_generic_army_doctrines
+		prerequisite = { focus = TU_VIC_crown_focus }
+		x = 0
+		y = 0
+		cost = 5
+
+		search_filters = { FOCUS_FILTER_ARMY_XP }
+
+		ai_will_do = {
+			base = 1
+		}
+
+		completion_reward = {
+			army_experience = 10
+			add_political_power = 25
+		}
+	}
+
+	focus = {
+		id = TU_VIC_eco_knight_armory
+		icon = GFX_goal_generic_army_tanks
+		prerequisite = { focus = TU_VIC_eco_knight_recruit }
+		x = 0
+		y = 0
+		cost = 10
+
+		search_filters = { FOCUS_FILTER_ARMY_XP }
+
+		ai_will_do = {
+			base = 1
+		}
+
+		completion_reward = {
+			army_experience = 15
+			add_tech_bonus = {
+				name = TU_VIC_eco_knight_armory_tech
+				bonus = 1.0
+				uses = 2
+				category = armor
+			}
+		}
+	}
+
+	focus = {
+		id = TU_VIC_eco_steam_boilers
+		icon = GFX_goal_generic_construct_mil_factory
+		prerequisite = { focus = TU_VIC_eco_knight_armory }
+		x = 0
+		y = 0
+		cost = 10
+
+		search_filters = { FOCUS_FILTER_INDUSTRY }
+
+		ai_will_do = {
+			base = 1
+		}
+
+		completion_reward = {
+			add_political_power = 25
+		}
+	}
+
+	focus = {
+		id = TU_VIC_eco_knight_oath
+		icon = GFX_goal_generic_army_doctrines
+		prerequisite = { focus = TU_VIC_eco_knight_recruit }
+		x = 0
+		y = 0
+		cost = 10
+
+		search_filters = { FOCUS_FILTER_ARMY_XP }
+
+		ai_will_do = {
+			base = 1
+		}
+
+		completion_reward = {
+			army_experience = 15
+			add_political_power = 25
+		}
+	}
+
+	focus = {
+		id = TU_VIC_eco_training_yard
+		icon = GFX_goal_generic_army_motorized
+		prerequisite = { focus = TU_VIC_eco_knight_oath }
+		x = 0
+		y = 0
+		cost = 10
+
+		search_filters = { FOCUS_FILTER_ARMY_XP }
+
+		ai_will_do = {
+			base = 1
+		}
+
+		completion_reward = {
+			army_experience = 20
+		}
+	}
+
+	focus = {
+		id = TU_VIC_eco_armour_doctrine
+		icon = GFX_goal_generic_army_tanks
+		prerequisite = { focus = TU_VIC_eco_knight_armory }
+		x = 0
+		y = 0
+		cost = 10
+
+		search_filters = { FOCUS_FILTER_ARMY_XP }
+
+		ai_will_do = {
+			base = 1
+		}
+
+		completion_reward = {
+			army_experience = 15
+			add_ideas = TU_VIC_eco_knight_doctrine
+		}
+	}
+
+	focus = {
+		id = TU_VIC_eco_heavy_plate
+		icon = GFX_goal_generic_construct_mil_factory
+		prerequisite = { focus = TU_VIC_eco_steam_boilers }
+		x = 0
+		y = 0
+		cost = 10
+
+		search_filters = { FOCUS_FILTER_INDUSTRY }
+
+		ai_will_do = {
+			base = 1
+		}
+
+		completion_reward = {
+			add_political_power = 50
+			add_tech_bonus = {
+				name = TU_VIC_eco_heavy_plate_tech
+				bonus = 1.5
+				uses = 2
+				category = armor
+			}
+		}
+	}
+
+	focus = {
+		id = TU_VIC_eco_knight_companies
+		icon = GFX_goal_generic_army_tanks
+		prerequisite = { focus = TU_VIC_eco_armour_doctrine }
+		x = 0
+		y = 0
+		cost = 10
+
+		search_filters = { FOCUS_FILTER_ARMY_XP }
+
+		ai_will_do = {
+			base = 1
+		}
+
+		completion_reward = {
+			army_experience = 15
+			add_political_power = 25
+		}
+	}
+
+	focus = {
+		id = TU_VIC_eco_steam_cavalry
+		icon = GFX_goal_generic_army_motorized
+		prerequisite = { focus = TU_VIC_eco_training_yard }
+		x = 0
+		y = 0
+		cost = 10
+
+		search_filters = { FOCUS_FILTER_ARMY_XP }
+
+		ai_will_do = {
+			base = 1
+		}
+
+		completion_reward = {
+			army_experience = 15
+		}
+	}
+
+	focus = {
+		id = TU_VIC_eco_knight_engineers
+		icon = GFX_goal_generic_construct_military
+		prerequisite = { focus = TU_VIC_eco_knight_companies }
+		x = 0
+		y = 0
+		cost = 10
+
+		search_filters = { FOCUS_FILTER_ARMY_XP }
+
+		ai_will_do = {
+			base = 1
+		}
+
+		completion_reward = {
+			army_experience = 10
+			add_political_power = 25
+		}
+	}
+
+	focus = {
+		id = TU_VIC_eco_division_order
+		icon = GFX_goal_generic_army_doctrines
+		prerequisite = { focus = TU_VIC_eco_knight_engineers }
+		x = 0
+		y = 0
+		cost = 15
+
+		search_filters = { FOCUS_FILTER_ARMY_XP }
+
+		ai_will_do = {
+			base = 1
+		}
+
+		completion_reward = {
+			army_experience = 15
+			add_political_power = 75
+		}
+	}
+
+	focus = {
+		id = TU_VIC_eco_steam_heart
+		icon = GFX_goal_generic_army_tanks
+		prerequisite = { focus = TU_VIC_eco_heavy_plate }
+		x = 0
+		y = 0
+		cost = 15
+
+		search_filters = { FOCUS_FILTER_ARMY_XP }
+
+		ai_will_do = {
+			base = 1
+		}
+
+		completion_reward = {
+			add_political_power = 100
+			army_experience = 20
+			add_ideas = TU_VIC_eco_steam_core
+		}
+	}
+
+	focus = {
+		id = TU_VIC_eco_knight_artillery
+		icon = GFX_goal_generic_army_artillery
+		prerequisite = { focus = TU_VIC_eco_steam_cavalry }
+		x = 0
+		y = 0
+		cost = 10
+
+		search_filters = { FOCUS_FILTER_ARMY_XP }
+
+		ai_will_do = {
+			base = 1
+		}
+
+		completion_reward = {
+			army_experience = 15
+			add_tech_bonus = {
+				name = TU_VIC_eco_knight_artillery_tech
+				bonus = 1.0
+				uses = 2
+				category = artillery
+			}
+		}
+	}
+
+	focus = {
+		id = TU_VIC_eco_anti_tank_steam
+		icon = GFX_goal_generic_army_artillery2
+		prerequisite = { focus = TU_VIC_eco_steam_heart }
+		x = 0
+		y = 0
+		cost = 10
+
+		search_filters = { FOCUS_FILTER_INDUSTRY }
+
+		ai_will_do = {
+			base = 1
+		}
+
+		completion_reward = {
+			add_political_power = 25
+		}
+	}
+
+	focus = {
+		id = TU_VIC_eco_rotation
+		icon = GFX_goal_generic_army_motorized
+		prerequisite = { focus = TU_VIC_eco_knight_artillery }
+		x = 0
+		y = 0
+		cost = 10
+
+		search_filters = { FOCUS_FILTER_ARMY_XP }
+
+		ai_will_do = {
+			base = 1
+		}
+
+		completion_reward = {
+			army_experience = 25
+		}
+	}
+
+	focus = {
+		id = TU_VIC_eco_vanguard
+		icon = GFX_goal_generic_army_tanks
+		prerequisite = { focus = TU_VIC_eco_steam_heart }
+		x = 0
+		y = 0
+		cost = 10
+
+		search_filters = { FOCUS_FILTER_ARMY_XP }
+
+		ai_will_do = {
+			base = 1
+		}
+
+		completion_reward = {
+			army_experience = 20
+			add_political_power = 25
+		}
+	}
+
+	focus = {
+		id = TU_VIC_eco_siege_tactics
+		icon = GFX_goal_generic_fortify_city
+		prerequisite = { focus = TU_VIC_eco_vanguard }
+		x = 0
+		y = 0
+		cost = 10
+
+		search_filters = { FOCUS_FILTER_ARMY_XP }
+
+		ai_will_do = {
+			base = 1
+		}
+
+		completion_reward = {
+			army_experience = 20
+			add_political_power = 25
+		}
+	}
+
+	focus = {
+		id = TU_VIC_eco_elite_selection
+		icon = GFX_goal_generic_army_doctrines
+		prerequisite = { focus = TU_VIC_eco_division_order }
+		x = 0
+		y = 0
+		cost = 10
+
+		search_filters = { FOCUS_FILTER_ARMY_XP }
+
+		ai_will_do = {
+			base = 1
+		}
+
+		completion_reward = {
+			army_experience = 25
+			add_political_power = 50
+		}
+	}
+
+	focus = {
+		id = TU_VIC_eco_champions
+		icon = GFX_goal_generic_army_tanks
+		prerequisite = { focus = TU_VIC_eco_elite_selection }
+		x = 0
+		y = 0
+		cost = 15
+
+		search_filters = { FOCUS_FILTER_ARMY_XP }
+
+		ai_will_do = {
+			base = 1
+		}
+
+		completion_reward = {
+			add_political_power = 75
+			add_ideas = TU_VIC_eco_steam_champions
+		}
+	}
+
+	focus = {
+		id = TU_VIC_eco_training_program
+		icon = GFX_goal_generic_army_doctrines
+		prerequisite = { focus = TU_VIC_eco_champions }
+		x = 0
+		y = 0
+		cost = 10
+
+		search_filters = { FOCUS_FILTER_ARMY_XP }
+
+		ai_will_do = {
+			base = 1
+		}
+
+		completion_reward = {
+			army_experience = 30
+		}
+	}
+
+	focus = {
+		id = TU_VIC_eco_knight_legion
+		icon = GFX_goal_generic_army_tanks
+		prerequisite = { focus = TU_VIC_eco_training_program }
+		x = 0
+		y = 0
+		cost = 15
+
+		search_filters = { FOCUS_FILTER_ARMY_XP }
+
+		ai_will_do = {
+			base = 1
+		}
+
+		completion_reward = {
+			army_experience = 20
+			add_political_power = 75
+		}
+	}
+
+	focus = {
+		id = TU_VIC_eco_rearm
+		icon = GFX_goal_generic_construct_mil_factory
+		prerequisite = { focus = TU_VIC_eco_anti_tank_steam }
+		x = 0
+		y = 0
+		cost = 10
+
+		search_filters = { FOCUS_FILTER_INDUSTRY }
+
+		ai_will_do = {
+			base = 1
+		}
+
+		completion_reward = {
+			add_political_power = 50
+		}
+	}
+
+	focus = {
+		id = TU_VIC_eco_mobile_knights
+		icon = GFX_goal_generic_army_motorized
+		prerequisite = { focus = TU_VIC_eco_rotation }
+		x = 0
+		y = 0
+		cost = 10
+
+		search_filters = { FOCUS_FILTER_ARMY_XP }
+
+		ai_will_do = {
+			base = 1
+		}
+
+		completion_reward = {
+			army_experience = 15
+			add_political_power = 25
+		}
+	}
+
+	focus = {
+		id = TU_VIC_eco_reserves
+		icon = GFX_goal_generic_defence
+		prerequisite = { focus = TU_VIC_eco_rearm }
+		x = 0
+		y = 0
+		cost = 10
+
+		search_filters = { FOCUS_FILTER_MANPOWER }
+
+		ai_will_do = {
+			base = 1
+		}
+
+		completion_reward = {
+			add_manpower = 15000
+			add_political_power = 25
+		}
+	}
+
+	focus = {
+		id = TU_VIC_eco_steam_supply
+		icon = GFX_goal_generic_construct_infrastructure
+		prerequisite = { focus = TU_VIC_eco_reserves }
+		x = 0
+		y = 0
+		cost = 10
+
+		search_filters = { FOCUS_FILTER_INDUSTRY }
+
+		ai_will_do = {
+			base = 1
+		}
+
+		completion_reward = {
+			add_political_power = 25
+		}
+	}
+
+	focus = {
+		id = TU_VIC_eco_knight_legacy
+		icon = GFX_goal_generic_national_unity
+		prerequisite = { focus = TU_VIC_eco_knight_legion }
+		x = 0
+		y = 0
+		cost = 10
+
+		search_filters = { FOCUS_FILTER_POLITICAL }
+
+		ai_will_do = {
+			base = 1
+		}
+
+		completion_reward = {
+			add_political_power = 50
+			add_stability = 0.02
+		}
+	}
+
+	focus = {
+		id = TU_VIC_eco_capital_guard
+		icon = GFX_goal_generic_defence
+		prerequisite = { focus = TU_VIC_eco_siege_tactics }
+		x = 0
+		y = 0
+		cost = 10
+
+		search_filters = { FOCUS_FILTER_ARMY_XP }
+
+		ai_will_do = {
+			base = 1
+		}
+
+		completion_reward = {
+			army_experience = 15
+			add_political_power = 25
+		}
+	}
+
+	#### NAVY ####
+
+	focus = {
+		id = TU_VIC_eco_fleet_charter
+		icon = GFX_goal_generic_build_navy
+		prerequisite = { focus = TU_VIC_crown_focus }
+		x = 0
+		y = 0
+		cost = 5
+
+		search_filters = { FOCUS_FILTER_NAVY_XP }
+
+		ai_will_do = {
+			base = 1
+		}
+
+		completion_reward = {
+			navy_experience = 10
+			add_political_power = 25
+		}
+	}
+
+	focus = {
+		id = TU_VIC_eco_coastal_yards
+		icon = GFX_goal_generic_construct_naval_dockyard
+		prerequisite = { focus = TU_VIC_eco_fleet_charter }
+		x = 0
+		y = 0
+		cost = 10
+
+		search_filters = { FOCUS_FILTER_INDUSTRY }
+
+		ai_will_do = {
+			base = 1
+		}
+
+		completion_reward = {
+			add_political_power = 25
+		}
+	}
+
+	focus = {
+		id = TU_VIC_eco_ironclad_lines
+		icon = GFX_goal_generic_navy_battleship
+		prerequisite = { focus = TU_VIC_eco_coastal_yards }
+		x = 0
+		y = 0
+		cost = 10
+
+		search_filters = { FOCUS_FILTER_NAVY_XP }
+
+		ai_will_do = {
+			base = 1
+		}
+
+		completion_reward = {
+			navy_experience = 15
+			add_political_power = 25
+			add_tech_bonus = {
+				name = TU_VIC_eco_ironclad_lines_tech
+				bonus = 1.0
+				uses = 2
+				category = naval_equipment
+			}
+		}
+	}
+
+	focus = {
+		id = TU_VIC_eco_destroyer_flotilla
+		icon = GFX_goal_generic_navy_cruiser
+		prerequisite = { focus = TU_VIC_eco_ironclad_lines }
+		x = 0
+		y = 0
+		cost = 10
+
+		search_filters = { FOCUS_FILTER_NAVY_XP }
+
+		ai_will_do = {
+			base = 1
+		}
+
+		completion_reward = {
+			navy_experience = 20
+			add_political_power = 25
+			add_tech_bonus = {
+				name = TU_VIC_eco_destroyer_flotilla_tech
+				bonus = 1.0
+				uses = 2
+				category = dd_tech
+			}
+		}
+	}
+
+	focus = {
+		id = TU_VIC_eco_cruiser_program
+		icon = GFX_goal_generic_navy_cruiser
+		prerequisite = { focus = TU_VIC_eco_destroyer_flotilla }
+		x = 0
+		y = 0
+		cost = 10
+
+		search_filters = { FOCUS_FILTER_NAVY_XP }
+
+		ai_will_do = {
+			base = 1
+		}
+
+		completion_reward = {
+			navy_experience = 20
+			add_political_power = 50
+			add_tech_bonus = {
+				name = TU_VIC_eco_cruiser_program_tech
+				bonus = 1.0
+				uses = 2
+				category = ca_tech
+			}
+		}
+	}
+
+	focus = {
+		id = TU_VIC_eco_battleship_program
+		icon = GFX_goal_generic_navy_battleship
+		prerequisite = { focus = TU_VIC_eco_cruiser_program }
+		x = 0
+		y = 0
+		cost = 15
+
+		search_filters = { FOCUS_FILTER_NAVY_XP }
+
+		ai_will_do = {
+			base = 1
+		}
+
+		completion_reward = {
+			navy_experience = 30
+			add_political_power = 75
+			add_tech_bonus = {
+				name = TU_VIC_eco_battleship_program_tech
+				bonus = 1.0
+				uses = 2
+				category = bb_tech
+			}
+		}
+	}
+
+	focus = {
+		id = TU_VIC_eco_submarine_pens
+		icon = GFX_goal_generic_navy_submarine
+		prerequisite = { focus = TU_VIC_eco_coastal_yards }
+		x = 0
+		y = 0
+		cost = 10
+
+		search_filters = { FOCUS_FILTER_NAVY_XP }
+
+		ai_will_do = {
+			base = 1
+		}
+
+		completion_reward = {
+			navy_experience = 15
+			add_political_power = 25
+		}
+	}
+
+	focus = {
+		id = TU_VIC_eco_wolfpack
+		icon = GFX_goal_generic_navy_doctrines_tactics
+		prerequisite = { focus = TU_VIC_eco_submarine_pens }
+		mutually_exclusive = { focus = TU_VIC_eco_wolfpack_alt }
+		x = 0
+		y = 0
+		cost = 10
+
+		search_filters = { FOCUS_FILTER_NAVY_XP }
+
+		ai_will_do = {
+			base = 1
+		}
+
+		completion_reward = {
+			navy_experience = 25
+			add_political_power = 50
+			add_ideas = TU_VIC_eco_coastal_fleet
+		}
+	}
+
+	focus = {
+		id = TU_VIC_eco_wolfpack_alt
+		icon = GFX_goal_generic_build_navy
+		prerequisite = { focus = TU_VIC_eco_submarine_pens }
+		mutually_exclusive = { focus = TU_VIC_eco_wolfpack }
+		x = 0
+		y = 0
+		cost = 10
+
+		search_filters = { FOCUS_FILTER_INDUSTRY }
+
+		ai_will_do = {
+			base = 1
+		}
+
+		completion_reward = {
+			add_political_power = 50
+			add_stability = 0.02
+			add_war_support = 0.03
+		}
+	}
+
+	focus = {
+		id = TU_VIC_eco_naval_mines
+		icon = GFX_goal_generic_navy_anti_submarine
+		prerequisite = { focus = TU_VIC_eco_submarine_pens }
+		x = 0
+		y = 0
+		cost = 10
+
+		search_filters = { FOCUS_FILTER_INDUSTRY }
+
+		ai_will_do = {
+			base = 1
+		}
+
+		completion_reward = {
+			add_political_power = 25
+			add_tech_bonus = {
+				name = TU_VIC_eco_naval_mines_tech
+				bonus = 1.0
+				uses = 2
+				category = naval_mines
+			}
+		}
+	}
+
+	focus = {
+		id = TU_VIC_eco_harbour_grid
+		icon = GFX_goal_generic_construction
+		prerequisite = { focus = TU_VIC_eco_coastal_yards }
+		x = 0
+		y = 0
+		cost = 10
+
+		search_filters = { FOCUS_FILTER_INDUSTRY }
+
+		ai_will_do = {
+			base = 1
+		}
+
+		completion_reward = {
+			add_political_power = 25
+		}
+	}
+
+	focus = {
+		id = TU_VIC_eco_carrier_plan
+		icon = GFX_goal_generic_navy_carrier
+		prerequisite = { focus = TU_VIC_eco_battleship_program }
+		x = 0
+		y = 0
+		cost = 15
+
+		search_filters = { FOCUS_FILTER_NAVY_XP }
+
+		ai_will_do = {
+			base = 1
+		}
+
+		completion_reward = {
+			navy_experience = 30
+			add_political_power = 75
+			add_tech_bonus = {
+				name = TU_VIC_eco_carrier_plan_tech
+				bonus = 1.0
+				uses = 2
+				category = cv_tech
+			}
+		}
+	}
+
+	focus = {
+		id = TU_VIC_eco_carrier_air
+		icon = GFX_goal_generic_air_naval_bomber
+		prerequisite = { focus = TU_VIC_eco_carrier_plan }
+		x = 0
+		y = 0
+		cost = 10
+
+		search_filters = { FOCUS_FILTER_NAVY_XP }
+
+		ai_will_do = {
+			base = 1
+		}
+
+		completion_reward = {
+			navy_experience = 20
+			air_experience = 15
+			add_political_power = 50
+		}
+	}
+
+	focus = {
+		id = TU_VIC_eco_anti_sub_screen
+		icon = GFX_goal_generic_navy_anti_submarine
+		prerequisite = { focus = TU_VIC_eco_naval_mines }
+		x = 0
+		y = 0
+		cost = 10
+
+		search_filters = { FOCUS_FILTER_NAVY_XP }
+
+		ai_will_do = {
+			base = 1
+		}
+
+		completion_reward = {
+			navy_experience = 20
+			add_political_power = 25
+		}
+	}
+
+	focus = {
+		id = TU_VIC_eco_convoy_lanes
+		icon = GFX_goal_generic_trade
+		prerequisite = { focus = TU_VIC_eco_anti_sub_screen }
+		x = 0
+		y = 0
+		cost = 10
+
+		search_filters = { FOCUS_FILTER_INDUSTRY }
+
+		ai_will_do = {
+			base = 1
+		}
+
+		completion_reward = {
+			add_political_power = 50
+			add_stability = 0.01
+		}
+	}
+
+	focus = {
+		id = TU_VIC_eco_naval_academy
+		icon = GFX_goal_generic_navy_doctrines_tactics
+		prerequisite = { focus = TU_VIC_eco_cruiser_program }
+		x = 0
+		y = 0
+		cost = 10
+
+		search_filters = { FOCUS_FILTER_NAVY_XP }
+
+		ai_will_do = {
+			base = 1
+		}
+
+		completion_reward = {
+			navy_experience = 25
+			add_political_power = 25
+		}
+	}
+
+	focus = {
+		id = TU_VIC_eco_fleet_in_being
+		icon = GFX_goal_generic_navy_battleship
+		prerequisite = { focus = TU_VIC_eco_naval_academy }
+		x = 0
+		y = 0
+		cost = 10
+
+		search_filters = { FOCUS_FILTER_NAVY_XP }
+
+		ai_will_do = {
+			base = 1
+		}
+
+		completion_reward = {
+			navy_experience = 20
+			add_political_power = 50
+		}
+	}
+
+	focus = {
+		id = TU_VIC_eco_thames_naval_base
+		icon = GFX_goal_generic_construct_naval_dockyard
+		prerequisite = { focus = TU_VIC_eco_carrier_air }
+		x = 0
+		y = 0
+		cost = 10
+
+		search_filters = { FOCUS_FILTER_INDUSTRY }
+
+		ai_will_do = {
+			base = 1
+		}
+
+		completion_reward = {
+			add_political_power = 50
+		}
+	}
+
+	focus = {
+		id = TU_VIC_eco_navy_expansion
+		icon = GFX_goal_generic_build_navy
+		prerequisite = { focus = TU_VIC_eco_thames_naval_base }
+		x = 0
+		y = 0
+		cost = 15
+
+		search_filters = { FOCUS_FILTER_NAVY_XP }
+
+		ai_will_do = {
+			base = 1
+		}
+
+		completion_reward = {
+			navy_experience = 30
+			add_political_power = 100
+		}
+	}
+
+	focus = {
+		id = TU_VIC_eco_island_fortress
+		icon = GFX_goal_generic_fortify_city
+		prerequisite = { focus = TU_VIC_eco_convoy_lanes }
+		x = 0
+		y = 0
+		cost = 10
+
+		search_filters = { FOCUS_FILTER_INDUSTRY }
+
+		ai_will_do = {
+			base = 1
+		}
+
+		completion_reward = {
+			add_political_power = 25
+		}
+	}
+
+	#### AIR FORCE ####
+
+	focus = {
+		id = TU_VIC_eco_air_ministry
+		icon = GFX_goal_generic_air_doctrine
+		prerequisite = { focus = TU_VIC_crown_focus }
+		x = 0
+		y = 0
+		cost = 5
+
+		search_filters = { FOCUS_FILTER_AIR_XP }
+
+		ai_will_do = {
+			base = 1
+		}
+
+		completion_reward = {
+			air_experience = 10
+			add_political_power = 25
+			add_ideas = TU_VIC_eco_skyward_ministry
+		}
+	}
+
+	focus = {
+		id = TU_VIC_eco_airfield_survey
+		icon = GFX_goal_generic_construct_civilian
+		prerequisite = { focus = TU_VIC_eco_air_ministry }
+		x = 0
+		y = 0
+		cost = 10
+
+		search_filters = { FOCUS_FILTER_INDUSTRY }
+
+		ai_will_do = {
+			base = 1
+		}
+
+		completion_reward = {
+			add_political_power = 25
+		}
+	}
+
+	focus = {
+		id = TU_VIC_eco_fighter_squadron
+		icon = GFX_goal_generic_air_fighter
+		prerequisite = { focus = TU_VIC_eco_air_ministry }
+		x = 0
+		y = 0
+		cost = 10
+
+		search_filters = { FOCUS_FILTER_AIR_XP }
+
+		ai_will_do = {
+			base = 1
+		}
+
+		completion_reward = {
+			air_experience = 15
+			add_political_power = 25
+			add_tech_bonus = {
+				name = TU_VIC_eco_fighter_squadron_tech
+				bonus = 1.0
+				uses = 2
+				category = air_equipment
+			}
+		}
+	}
+
+	focus = {
+		id = TU_VIC_eco_aero_engines
+		icon = GFX_goal_generic_air_production
+		prerequisite = { focus = TU_VIC_eco_fighter_squadron }
+		x = 0
+		y = 0
+		cost = 10
+
+		search_filters = { FOCUS_FILTER_INDUSTRY }
+
+		ai_will_do = {
+			base = 1
+		}
+
+		completion_reward = {
+			add_political_power = 50
+		}
+	}
+
+	focus = {
+		id = TU_VIC_eco_bomber_wing
+		icon = GFX_goal_generic_air_bomber
+		prerequisite = { focus = TU_VIC_eco_aero_engines }
+		x = 0
+		y = 0
+		cost = 10
+
+		search_filters = { FOCUS_FILTER_AIR_XP }
+
+		ai_will_do = {
+			base = 1
+		}
+
+		completion_reward = {
+			air_experience = 20
+			add_political_power = 50
+		}
+	}
+
+	focus = {
+		id = TU_VIC_eco_airship_fleet
+		icon = GFX_goal_generic_air_production
+		prerequisite = { focus = TU_VIC_eco_airfield_survey }
+		mutually_exclusive = { focus = TU_VIC_eco_airship_fleet_alt }
+		x = 0
+		y = 0
+		cost = 10
+
+		search_filters = { FOCUS_FILTER_INDUSTRY }
+
+		ai_will_do = {
+			base = 1
+		}
+
+		completion_reward = {
+			add_political_power = 25
+		}
+	}
+
+	focus = {
+		id = TU_VIC_eco_airship_fleet_alt
+		icon = GFX_goal_generic_air_fighter
+		prerequisite = { focus = TU_VIC_eco_airfield_survey }
+		mutually_exclusive = { focus = TU_VIC_eco_airship_fleet }
+		x = 0
+		y = 0
+		cost = 10
+
+		search_filters = { FOCUS_FILTER_INDUSTRY }
+
+		ai_will_do = {
+			base = 1
+		}
+
+		completion_reward = {
+			add_political_power = 25
+			air_experience = 15
+		}
+	}
+
+	focus = {
+		id = TU_VIC_eco_fighter_tactics
+		icon = GFX_goal_generic_air_doctrine
+		prerequisite = { focus = TU_VIC_eco_fighter_squadron }
+		x = 0
+		y = 0
+		cost = 10
+
+		search_filters = { FOCUS_FILTER_AIR_XP }
+
+		ai_will_do = {
+			base = 1
+		}
+
+		completion_reward = {
+			air_experience = 20
+			add_political_power = 25
+		}
+	}
+
+	focus = {
+		id = TU_VIC_eco_air_control
+		icon = GFX_goal_generic_air_fighter2
+		prerequisite = { focus = TU_VIC_eco_fighter_tactics }
+		x = 0
+		y = 0
+		cost = 10
+
+		search_filters = { FOCUS_FILTER_AIR_XP }
+
+		ai_will_do = {
+			base = 1
+		}
+
+		completion_reward = {
+			air_experience = 25
+			add_political_power = 50
+		}
+	}
+
+	focus = {
+		id = TU_VIC_eco_radar_chain
+		icon = GFX_goal_generic_radar
+		prerequisite = { focus = TU_VIC_eco_airfield_survey }
+		x = 0
+		y = 0
+		cost = 10
+
+		search_filters = { FOCUS_FILTER_RESEARCH }
+
+		ai_will_do = {
+			base = 1
+		}
+
+		completion_reward = {
+			add_political_power = 25
+		}
+	}
+
+	focus = {
+		id = TU_VIC_eco_air_base_network
+		icon = GFX_goal_generic_construct_military
+		prerequisite = { focus = TU_VIC_eco_radar_chain }
+		x = 0
+		y = 0
+		cost = 10
+
+		search_filters = { FOCUS_FILTER_INDUSTRY }
+
+		ai_will_do = {
+			base = 1
+		}
+
+		completion_reward = {
+			add_political_power = 25
+		}
+	}
+
+	focus = {
+		id = TU_VIC_eco_air_production_lines
+		icon = GFX_goal_generic_air_production
+		prerequisite = { focus = TU_VIC_eco_aero_engines }
+		x = 0
+		y = 0
+		cost = 10
+
+		search_filters = { FOCUS_FILTER_INDUSTRY }
+
+		ai_will_do = {
+			base = 1
+		}
+
+		completion_reward = {
+			add_political_power = 50
+		}
+	}
+
+	focus = {
+		id = TU_VIC_eco_jet_program
+		icon = GFX_goal_generic_air_fighter2
+		prerequisite = { focus = TU_VIC_eco_air_production_lines }
+		x = 0
+		y = 0
+		cost = 15
+
+		search_filters = { FOCUS_FILTER_AIR_XP }
+
+		ai_will_do = {
+			base = 1
+		}
+
+		completion_reward = {
+			air_experience = 30
+			add_political_power = 75
+			add_tech_bonus = {
+				name = TU_VIC_eco_jet_program_tech
+				bonus = 1.5
+				uses = 2
+				category = air_equipment
+			}
+			add_ideas = TU_VIC_eco_jet_age
+		}
+	}
+
+	focus = {
+		id = TU_VIC_eco_strategic_bomber
+		icon = GFX_goal_generic_air_bomber
+		prerequisite = { focus = TU_VIC_eco_jet_program }
+		x = 0
+		y = 0
+		cost = 15
+
+		search_filters = { FOCUS_FILTER_AIR_XP }
+
+		ai_will_do = {
+			base = 1
+		}
+
+		completion_reward = {
+			air_experience = 30
+			add_political_power = 100
+		}
+	}
+
+	focus = {
+		id = TU_VIC_eco_naval_air_wing
+		icon = GFX_goal_generic_air_naval_bomber
+		prerequisite = { focus = TU_VIC_eco_bomber_wing }
+		x = 0
+		y = 0
+		cost = 10
+
+		search_filters = { FOCUS_FILTER_AIR_XP }
+
+		ai_will_do = {
+			base = 1
+		}
+
+		completion_reward = {
+			air_experience = 25
+			add_political_power = 50
+		}
+	}
+
+	focus = {
+		id = TU_VIC_eco_anti_air_belt
+		icon = GFX_goal_generic_fortify_city
+		prerequisite = { focus = TU_VIC_eco_air_base_network }
+		x = 0
+		y = 0
+		cost = 10
+
+		search_filters = { FOCUS_FILTER_INDUSTRY }
+
+		ai_will_do = {
+			base = 1
+		}
+
+		completion_reward = {
+			add_political_power = 25
+		}
+	}
+
+	focus = {
+		id = TU_VIC_eco_air_supremacy
+		icon = GFX_goal_generic_air_doctrine
+		prerequisite = { focus = TU_VIC_eco_strategic_bomber }
+		x = 0
+		y = 0
+		cost = 15
+
+		search_filters = { FOCUS_FILTER_AIR_XP }
+
+		ai_will_do = {
+			base = 1
+		}
+
+		completion_reward = {
+			air_experience = 25
+			add_political_power = 100
+		}
+	}
+
+	#### RESEARCH ####
+
+	focus = {
+		id = TU_VIC_eco_royal_academy
+		icon = GFX_goal_generic_scientific_exchange
+		prerequisite = { focus = TU_VIC_crown_focus }
+		x = 0
+		y = 0
+		cost = 5
+
+		search_filters = { FOCUS_FILTER_RESEARCH }
+
+		ai_will_do = {
+			base = 1
+		}
+
+		completion_reward = {
+			add_political_power = 25
+		}
+	}
+
+	focus = {
+		id = TU_VIC_eco_industrial_science
+		icon = GFX_goal_generic_production
+		prerequisite = { focus = TU_VIC_eco_royal_academy }
+		x = 0
+		y = 0
+		cost = 10
+
+		search_filters = { FOCUS_FILTER_RESEARCH }
+
+		ai_will_do = {
+			base = 1
+		}
+
+		completion_reward = {
+			add_political_power = 25
+			add_tech_bonus = {
+				name = TU_VIC_eco_industrial_science_tech
+				bonus = 1.0
+				uses = 2
+				category = construction_tech
+			}
+		}
+	}
+
+	focus = {
+		id = TU_VIC_eco_metallurgy
+		icon = GFX_goal_generic_production2
+		prerequisite = { focus = TU_VIC_eco_industrial_science }
+		x = 0
+		y = 0
+		cost = 10
+
+		search_filters = { FOCUS_FILTER_RESEARCH }
+
+		ai_will_do = {
+			base = 1
+		}
+
+		completion_reward = {
+			add_political_power = 25
+			add_stability = 0.01
+		}
+	}
+
+	focus = {
+		id = TU_VIC_eco_electric_lab
+		icon = GFX_goal_generic_radar
+		prerequisite = { focus = TU_VIC_eco_industrial_science }
+		x = 0
+		y = 0
+		cost = 10
+
+		search_filters = { FOCUS_FILTER_RESEARCH }
+
+		ai_will_do = {
+			base = 1
+		}
+
+		completion_reward = {
+			add_political_power = 50
+		}
+	}
+
+	focus = {
+		id = TU_VIC_eco_steam_engineering
+		icon = GFX_goal_generic_construction2
+		prerequisite = { focus = TU_VIC_eco_metallurgy }
+		x = 0
+		y = 0
+		cost = 10
+
+		search_filters = { FOCUS_FILTER_RESEARCH }
+
+		ai_will_do = {
+			base = 1
+		}
+
+		completion_reward = {
+			add_political_power = 50
+			add_ideas = TU_VIC_eco_research_lab
+		}
+	}
+
+	focus = {
+		id = TU_VIC_eco_research_grants
+		icon = GFX_goal_generic_scientific_exchange
+		prerequisite = { focus = TU_VIC_eco_electric_lab }
+		x = 0
+		y = 0
+		cost = 10
+
+		search_filters = { FOCUS_FILTER_RESEARCH }
+
+		ai_will_do = {
+			base = 1
+		}
+
+		completion_reward = {
+			add_political_power = 50
+		}
+	}
+
+	focus = {
+		id = TU_VIC_eco_university_expansion
+		icon = GFX_goal_generic_scientific_exchange
+		prerequisite = { focus = TU_VIC_eco_research_grants }
+		x = 0
+		y = 0
+		cost = 10
+
+		search_filters = { FOCUS_FILTER_RESEARCH }
+
+		ai_will_do = {
+			base = 1
+		}
+
+		completion_reward = {
+			add_political_power = 50
+		}
+	}
+
+	focus = {
+		id = TU_VIC_eco_applied_research
+		icon = GFX_goal_generic_production2
+		prerequisite = { focus = TU_VIC_eco_steam_engineering }
+		x = 0
+		y = 0
+		cost = 10
+
+		search_filters = { FOCUS_FILTER_RESEARCH }
+
+		ai_will_do = {
+			base = 1
+		}
+
+		completion_reward = {
+			add_political_power = 50
+			add_tech_bonus = {
+				name = TU_VIC_eco_applied_research_tech
+				bonus = 1.0
+				uses = 2
+				category = armor
+			}
+		}
+	}
+
+	focus = {
+		id = TU_VIC_eco_secret_projects
+		icon = GFX_goal_generic_secret_weapon
+		prerequisite = { focus = TU_VIC_eco_applied_research }
+		x = 0
+		y = 0
+		cost = 15
+
+		search_filters = { FOCUS_FILTER_RESEARCH }
+
+		ai_will_do = {
+			base = 1
+		}
+
+		completion_reward = {
+			add_political_power = 75
+		}
+	}
+
+	focus = {
+		id = TU_VIC_eco_cross_discipline
+		icon = GFX_goal_generic_scientific_exchange
+		prerequisite = { focus = TU_VIC_eco_university_expansion }
+		x = 0
+		y = 0
+		cost = 10
+
+		search_filters = { FOCUS_FILTER_RESEARCH }
+
+		ai_will_do = {
+			base = 1
+		}
+
+		completion_reward = {
+			add_political_power = 50
+		}
+	}
+
+	focus = {
+		id = TU_VIC_eco_research_hall
+		icon = GFX_goal_generic_scientific_exchange
+		prerequisite = { focus = TU_VIC_eco_cross_discipline }
+		x = 0
+		y = 0
+		cost = 15
+
+		search_filters = { FOCUS_FILTER_RESEARCH }
+
+		ai_will_do = {
+			base = 1
+		}
+
+		completion_reward = {
+			add_political_power = 100
+			add_ideas = TU_VIC_eco_knowledge_hall
+		}
+	}
+
+	focus = {
+		id = TU_VIC_eco_patent_office
+		icon = GFX_goal_generic_construction
+		prerequisite = { focus = TU_VIC_eco_research_grants }
+		x = 0
+		y = 0
+		cost = 10
+
+		search_filters = { FOCUS_FILTER_RESEARCH }
+
+		ai_will_do = {
+			base = 1
+		}
+
+		completion_reward = {
+			add_political_power = 25
+			add_stability = 0.01
+		}
+	}
+
+	focus = {
+		id = TU_VIC_eco_engineering_schools
+		icon = GFX_goal_generic_construction2
+		prerequisite = { focus = TU_VIC_eco_patent_office }
+		x = 0
+		y = 0
+		cost = 10
+
+		search_filters = { FOCUS_FILTER_RESEARCH }
+
+		ai_will_do = {
+			base = 1
+		}
+
+		completion_reward = {
+			add_political_power = 25
+		}
+	}
+
+	focus = {
+		id = TU_VIC_eco_weapon_standards
+		icon = GFX_goal_generic_small_arms
+		prerequisite = { focus = TU_VIC_eco_secret_projects }
+		x = 0
+		y = 0
+		cost = 10
+
+		search_filters = { FOCUS_FILTER_RESEARCH }
+
+		ai_will_do = {
+			base = 1
+		}
+
+		completion_reward = {
+			add_political_power = 50
+			add_tech_bonus = {
+				name = TU_VIC_eco_weapon_standards_tech
+				bonus = 1.0
+				uses = 2
+				category = infantry_weapons
+			}
+		}
+	}
+
+	focus = {
+		id = TU_VIC_eco_research_exchange
+		icon = GFX_goal_generic_scientific_exchange
+		prerequisite = { focus = TU_VIC_eco_research_hall }
+		x = 0
+		y = 0
+		cost = 10
+
+		search_filters = { FOCUS_FILTER_RESEARCH }
+
+		ai_will_do = {
+			base = 1
+		}
+
+		completion_reward = {
+			add_political_power = 50
+		}
+	}
+
+	focus = {
+		id = TU_VIC_eco_knowledge_city
+		icon = GFX_goal_generic_scientific_exchange
+		prerequisite = { focus = TU_VIC_eco_research_exchange }
+		x = 0
+		y = 0
+		cost = 15
+
+		search_filters = { FOCUS_FILTER_RESEARCH }
+
+		ai_will_do = {
+			base = 1
+		}
+
+		completion_reward = {
+			add_political_power = 75
+		}
+	}

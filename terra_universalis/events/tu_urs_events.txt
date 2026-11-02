@@ -1,0 +1,954 @@
+add_namespace = tu_urs_ev
+
+# Ursus (URS) events. Spec 사양서_10. Every event is is_triggered_only.
+# 1-15: country_event hooks in focus completion_reward (tools/focusgen/urs/p1-p4).
+# 16-19: every_country news_event hooks in focus completion_reward (big moments).
+# 20-27: monthly random events, fired from common/on_actions/tu_urs_ev_on_actions.txt.
+# 28-29: chain follow-ups, scheduled from options of 22 and 23.
+# Flags: TU_URS_ev_<N>_seen (one-time monthly events). Chernobog state is read from the global flags
+# TU_chernobog_incident_started (set in tu_crisis_chernobog.txt). Foreign effects are guarded by country_exists.
+
+# 1. Focus TU_URS_emperor_rule (political choice: imperial direct rule).
+country_event = {
+	id = tu_urs_ev.1
+	title = tu_urs_ev.1.t
+	desc = tu_urs_ev.1.d
+	picture = GFX_report_event_royal_parade
+	is_triggered_only = yes
+
+	option = {
+		name = tu_urs_ev.1.a
+		ai_chance = {
+			factor = 60
+		}
+		add_political_power = 30
+		add_stability = 0.02
+		add_power_balance_value = {
+			id = TU_URS_bop
+			value = -0.05
+		}
+	}
+
+	option = {
+		name = tu_urs_ev.1.b
+		ai_chance = {
+			factor = 30
+		}
+		add_political_power = 15
+		add_power_balance_value = {
+			id = TU_URS_bop
+			value = 0.05
+		}
+	}
+
+	option = {
+		name = tu_urs_ev.1.c
+		ai_chance = {
+			factor = 10
+		}
+		add_political_power = 10
+		add_stability = -0.01
+	}
+}
+
+# 2. Focus TU_URS_military_junta (political choice: military junta).
+country_event = {
+	id = tu_urs_ev.2
+	title = tu_urs_ev.2.t
+	desc = tu_urs_ev.2.d
+	picture = GFX_report_event_generic_military_parade
+	is_triggered_only = yes
+
+	option = {
+		name = tu_urs_ev.2.a
+		ai_chance = {
+			factor = 60
+		}
+		add_war_support = 0.03
+		add_political_power = 20
+		add_power_balance_value = {
+			id = TU_URS_bop
+			value = -0.05
+		}
+	}
+
+	option = {
+		name = tu_urs_ev.2.b
+		ai_chance = {
+			factor = 30
+		}
+		add_stability = 0.02
+		add_political_power = 10
+	}
+
+	option = {
+		name = tu_urs_ev.2.c
+		ai_chance = {
+			factor = 10
+		}
+		add_manpower = 10000
+		add_stability = -0.02
+	}
+}
+
+# 3. Focus TU_URS_noble_compromise (political choice: noble compromise).
+country_event = {
+	id = tu_urs_ev.3
+	title = tu_urs_ev.3.t
+	desc = tu_urs_ev.3.d
+	picture = GFX_report_event_generic_parliament
+	is_triggered_only = yes
+
+	option = {
+		name = tu_urs_ev.3.a
+		ai_chance = {
+			factor = 50
+		}
+		add_political_power = 25
+	}
+
+	option = {
+		name = tu_urs_ev.3.b
+		ai_chance = {
+			factor = 40
+		}
+		add_power_balance_value = {
+			id = TU_URS_bop
+			value = 0.05
+		}
+		add_stability = 0.02
+	}
+
+	option = {
+		name = tu_urs_ev.3.c
+		ai_chance = {
+			factor = 10
+		}
+		add_political_power = 10
+	}
+}
+
+# 4. Focus TU_URS_reform_path (political choice: reform).
+country_event = {
+	id = tu_urs_ev.4
+	title = tu_urs_ev.4.t
+	desc = tu_urs_ev.4.d
+	picture = GFX_report_event_generic_conference
+	is_triggered_only = yes
+
+	option = {
+		name = tu_urs_ev.4.a
+		ai_chance = {
+			factor = 60
+		}
+		add_political_power = 30
+		add_stability = 0.02
+		add_power_balance_value = {
+			id = TU_URS_bop
+			value = 0.05
+		}
+	}
+
+	option = {
+		name = tu_urs_ev.4.b
+		ai_chance = {
+			factor = 30
+		}
+		add_political_power = 20
+		add_stability = -0.01
+	}
+
+	option = {
+		name = tu_urs_ev.4.c
+		ai_chance = {
+			factor = 10
+		}
+		add_political_power = 10
+	}
+}
+
+# 5. Focus TU_URS_hardline_generals (leader: recruits TU_URS_p2_hardline_general).
+country_event = {
+	id = tu_urs_ev.5
+	title = tu_urs_ev.5.t
+	desc = tu_urs_ev.5.d
+	picture = GFX_report_event_generic_rifles
+	is_triggered_only = yes
+
+	option = {
+		name = tu_urs_ev.5.a
+		ai_chance = {
+			factor = 60
+		}
+		add_war_support = 0.02
+		army_experience = 20
+	}
+
+	option = {
+		name = tu_urs_ev.5.b
+		ai_chance = {
+			factor = 30
+		}
+		add_political_power = 25
+		add_stability = -0.01
+	}
+}
+
+# 6. Focus TU_URS_chernobog_response (Chernobog aftermath: cordon or shelter).
+country_event = {
+	id = tu_urs_ev.6
+	title = tu_urs_ev.6.t
+	desc = tu_urs_ev.6.d
+	picture = GFX_report_event_generic_battle
+	is_triggered_only = yes
+
+	option = {
+		name = tu_urs_ev.6.a
+		ai_chance = {
+			factor = 50
+		}
+		add_war_support = 0.03
+	}
+
+	option = {
+		name = tu_urs_ev.6.b
+		ai_chance = {
+			factor = 30
+		}
+		add_stability = 0.02
+		add_manpower = 10000
+	}
+}
+
+# 7. Focus TU_URS_mobile_divisions (leader: recruits TU_URS_p2_mobilisation_marshal).
+country_event = {
+	id = tu_urs_ev.7
+	title = tu_urs_ev.7.t
+	desc = tu_urs_ev.7.d
+	picture = GFX_report_event_generic_truck
+	is_triggered_only = yes
+
+	option = {
+		name = tu_urs_ev.7.a
+		ai_chance = {
+			factor = 60
+		}
+		army_experience = 25
+	}
+
+	option = {
+		name = tu_urs_ev.7.b
+		ai_chance = {
+			factor = 30
+		}
+		add_political_power = 20
+		add_stability = 0.01
+	}
+}
+
+# 8. Focus TU_URS_absolute_crown (branch core, cost 15).
+country_event = {
+	id = tu_urs_ev.8
+	title = tu_urs_ev.8.t
+	desc = tu_urs_ev.8.d
+	picture = GFX_report_event_royal_visit
+	is_triggered_only = yes
+
+	option = {
+		name = tu_urs_ev.8.a
+		ai_chance = {
+			factor = 50
+		}
+		add_political_power = 30
+	}
+
+	option = {
+		name = tu_urs_ev.8.b
+		ai_chance = {
+			factor = 40
+		}
+		add_stability = 0.03
+	}
+}
+
+# 9. Focus TU_URS_eternal_throne (branch core, cost 15).
+country_event = {
+	id = tu_urs_ev.9
+	title = tu_urs_ev.9.t
+	desc = tu_urs_ev.9.d
+	picture = GFX_report_event_king_speech
+	is_triggered_only = yes
+
+	option = {
+		name = tu_urs_ev.9.a
+		ai_chance = {
+			factor = 50
+		}
+		add_political_power = 40
+	}
+
+	option = {
+		name = tu_urs_ev.9.b
+		ai_chance = {
+			factor = 40
+		}
+		add_stability = 0.02
+		add_power_balance_value = {
+			id = TU_URS_bop
+			value = 0.05
+		}
+	}
+
+	option = {
+		name = tu_urs_ev.9.c
+		ai_chance = {
+			factor = 10
+		}
+		add_political_power = 10
+	}
+}
+
+# 10. Focus TU_URS_imperial_blades (branch core, cost 15; leader: recruits TU_URS_p1_guard_marshal).
+country_event = {
+	id = tu_urs_ev.10
+	title = tu_urs_ev.10.t
+	desc = tu_urs_ev.10.d
+	picture = GFX_report_event_generic_army
+	is_triggered_only = yes
+
+	option = {
+		name = tu_urs_ev.10.a
+		ai_chance = {
+			factor = 60
+		}
+		army_experience = 30
+	}
+
+	option = {
+		name = tu_urs_ev.10.b
+		ai_chance = {
+			factor = 40
+		}
+		add_manpower = 10000
+	}
+}
+
+# 11. Focus TU_URS_endless_junta (branch core, cost 15).
+country_event = {
+	id = tu_urs_ev.11
+	title = tu_urs_ev.11.t
+	desc = tu_urs_ev.11.d
+	picture = GFX_report_event_generic_rally2
+	is_triggered_only = yes
+
+	option = {
+		name = tu_urs_ev.11.a
+		ai_chance = {
+			factor = 50
+		}
+		add_war_support = 0.02
+		add_political_power = 30
+	}
+
+	option = {
+		name = tu_urs_ev.11.b
+		ai_chance = {
+			factor = 30
+		}
+		add_stability = 0.03
+		add_political_power = 10
+	}
+}
+
+# 12. Focus TU_URS_noble_estate_militia (leader: recruits TU_URS_p3_estate_warden).
+country_event = {
+	id = tu_urs_ev.12
+	title = tu_urs_ev.12.t
+	desc = tu_urs_ev.12.d
+	picture = GFX_report_event_generic_rally
+	is_triggered_only = yes
+
+	option = {
+		name = tu_urs_ev.12.a
+		ai_chance = {
+			factor = 60
+		}
+		add_manpower = 15000
+	}
+
+	option = {
+		name = tu_urs_ev.12.b
+		ai_chance = {
+			factor = 30
+		}
+		add_stability = 0.02
+		add_political_power = 15
+	}
+}
+
+# 13. Focus TU_URS_noble_mobile_capital (branch core, cost 15).
+country_event = {
+	id = tu_urs_ev.13
+	title = tu_urs_ev.13.t
+	desc = tu_urs_ev.13.d
+	picture = GFX_report_event_generic_train
+	is_triggered_only = yes
+
+	option = {
+		name = tu_urs_ev.13.a
+		ai_chance = {
+			factor = 50
+		}
+		add_political_power = 40
+	}
+
+	option = {
+		name = tu_urs_ev.13.b
+		ai_chance = {
+			factor = 30
+		}
+		add_power_balance_value = {
+			id = TU_URS_bop
+			value = 0.05
+		}
+	}
+}
+
+# 14. Focus TU_URS_capital_terminal (branch core, cost 15).
+country_event = {
+	id = tu_urs_ev.14
+	title = tu_urs_ev.14.t
+	desc = tu_urs_ev.14.d
+	picture = GFX_report_event_generic_factory
+	is_triggered_only = yes
+
+	option = {
+		name = tu_urs_ev.14.a
+		ai_chance = {
+			factor = 50
+		}
+		add_political_power = 30
+	}
+
+	option = {
+		name = tu_urs_ev.14.b
+		ai_chance = {
+			factor = 30
+		}
+		add_stability = 0.02
+	}
+}
+
+# 15. Focus TU_URS_noble_cartel_legacy (branch core, cost 15).
+country_event = {
+	id = tu_urs_ev.15
+	title = tu_urs_ev.15.t
+	desc = tu_urs_ev.15.d
+	picture = GFX_report_event_generic_sign_treaty2
+	is_triggered_only = yes
+
+	option = {
+		name = tu_urs_ev.15.a
+		ai_chance = {
+			factor = 50
+		}
+		add_political_power = 30
+	}
+
+	option = {
+		name = tu_urs_ev.15.b
+		ai_chance = {
+			factor = 30
+		}
+		add_stability = -0.01
+		add_power_balance_value = {
+			id = TU_URS_bop
+			value = 0.05
+		}
+	}
+}
+
+# 16. News (focus TU_URS_unification_complete): Ursus is one.
+news_event = {
+	id = tu_urs_ev.16
+	title = tu_urs_ev.16.t
+	desc = tu_urs_ev.16.d
+	picture = GFX_news_event_generic_rally
+	is_triggered_only = yes
+
+	option = {
+		name = tu_urs_ev.16.a
+		ai_chance = {
+			factor = 100
+		}
+	}
+}
+
+# 17. News (focus TU_URS_reform_completion): the charter is complete.
+news_event = {
+	id = tu_urs_ev.17
+	title = tu_urs_ev.17.t
+	desc = tu_urs_ev.17.d
+	picture = GFX_news_event_generic_read_write
+	is_triggered_only = yes
+
+	option = {
+		name = tu_urs_ev.17.a
+		ai_chance = {
+			factor = 100
+		}
+	}
+}
+
+# 18. News (focus TU_URS_noble_cartel_peak, leader: cartel marshal): the cartels raise a marshal.
+news_event = {
+	id = tu_urs_ev.18
+	title = tu_urs_ev.18.t
+	desc = tu_urs_ev.18.d
+	picture = GFX_news_event_generic_factory
+	is_triggered_only = yes
+
+	option = {
+		name = tu_urs_ev.18.a
+		ai_chance = {
+			factor = 100
+		}
+	}
+}
+
+# 19. News (focus TU_URS_iron_regime): the Iron Regime.
+news_event = {
+	id = tu_urs_ev.19
+	title = tu_urs_ev.19.t
+	desc = tu_urs_ev.19.d
+	picture = GFX_news_event_generic_army
+	is_triggered_only = yes
+
+	option = {
+		name = tu_urs_ev.19.a
+		ai_chance = {
+			factor = 100
+		}
+	}
+}
+
+# 20. Monthly: grand dukes quarrel (after TU_URS_grand_dukes_summons). One time.
+country_event = {
+	id = tu_urs_ev.20
+	title = tu_urs_ev.20.t
+	desc = tu_urs_ev.20.d
+	picture = GFX_report_event_generic_handshake
+	is_triggered_only = yes
+
+	trigger = {
+		tag = URS
+		has_completed_focus = TU_URS_grand_dukes_summons
+		NOT = { has_country_flag = TU_URS_ev_20_seen }
+	}
+
+	immediate = {
+		set_country_flag = TU_URS_ev_20_seen
+	}
+
+	option = {
+		name = tu_urs_ev.20.a
+		ai_chance = {
+			factor = 40
+		}
+		add_political_power = -25
+		add_stability = 0.02
+	}
+
+	option = {
+		name = tu_urs_ev.20.b
+		ai_chance = {
+			factor = 40
+		}
+		add_political_power = 40
+		add_stability = -0.02
+		add_power_balance_value = {
+			id = TU_URS_bop
+			value = -0.05
+		}
+	}
+
+	option = {
+		name = tu_urs_ev.20.c
+		ai_chance = {
+			factor = 20
+		}
+		add_stability = -0.01
+	}
+}
+
+# 21. Monthly: guard pay is late (after TU_URS_imperial_guard). One time.
+country_event = {
+	id = tu_urs_ev.21
+	title = tu_urs_ev.21.t
+	desc = tu_urs_ev.21.d
+	picture = GFX_report_event_generic_riot
+	is_triggered_only = yes
+
+	trigger = {
+		tag = URS
+		has_completed_focus = TU_URS_imperial_guard
+		NOT = { has_country_flag = TU_URS_ev_21_seen }
+	}
+
+	immediate = {
+		set_country_flag = TU_URS_ev_21_seen
+	}
+
+	option = {
+		name = tu_urs_ev.21.a
+		ai_chance = {
+			factor = 50
+		}
+		army_experience = 20
+		add_political_power = -20
+	}
+
+	option = {
+		name = tu_urs_ev.21.b
+		ai_chance = {
+			factor = 30
+		}
+		add_stability = -0.02
+		add_political_power = 20
+	}
+}
+
+# 22. Monthly: refugees from the Chernobog zone. One time. Chain head: option a schedules 28.
+country_event = {
+	id = tu_urs_ev.22
+	title = tu_urs_ev.22.t
+	desc = tu_urs_ev.22.d
+	picture = GFX_report_event_generic_ruins
+	is_triggered_only = yes
+
+	trigger = {
+		tag = URS
+		has_global_flag = TU_chernobog_incident_started
+		NOT = { has_country_flag = TU_URS_ev_22_seen }
+	}
+
+	immediate = {
+		set_country_flag = TU_URS_ev_22_seen
+	}
+
+	option = {
+		name = tu_urs_ev.22.a
+		ai_chance = {
+			factor = 40
+		}
+		add_manpower = 10000
+		add_timed_idea = {
+			idea = TU_URS_ev_chernobog_shadow
+			days = 180
+		}
+		country_event = {
+			id = tu_urs_ev.28
+			days = 45
+			random_days = 15
+		}
+	}
+
+	option = {
+		name = tu_urs_ev.22.b
+		ai_chance = {
+			factor = 40
+		}
+		add_stability = 0.02
+		add_political_power = 10
+	}
+
+	option = {
+		name = tu_urs_ev.22.c
+		ai_chance = {
+			factor = 20
+		}
+		add_political_power = 15
+		add_stability = -0.02
+	}
+}
+
+# 23. Monthly: student council marches (after TU_URS_reform_student_council). One time. Chain head: option a schedules 29.
+country_event = {
+	id = tu_urs_ev.23
+	title = tu_urs_ev.23.t
+	desc = tu_urs_ev.23.d
+	picture = GFX_report_event_gathering_protest
+	is_triggered_only = yes
+
+	trigger = {
+		tag = URS
+		has_completed_focus = TU_URS_reform_student_council
+		NOT = { has_country_flag = TU_URS_ev_23_seen }
+	}
+
+	immediate = {
+		set_country_flag = TU_URS_ev_23_seen
+	}
+
+	option = {
+		name = tu_urs_ev.23.a
+		ai_chance = {
+			factor = 40
+		}
+		add_political_power = 25
+		add_timed_idea = {
+			idea = TU_URS_ev_student_charter
+			days = 120
+		}
+		country_event = {
+			id = tu_urs_ev.29
+			days = 60
+			random_days = 20
+		}
+	}
+
+	option = {
+		name = tu_urs_ev.23.b
+		ai_chance = {
+			factor = 30
+		}
+		add_stability = -0.03
+		add_political_power = 20
+	}
+
+	option = {
+		name = tu_urs_ev.23.c
+		ai_chance = {
+			factor = 20
+		}
+		add_stability = -0.01
+	}
+}
+
+# 24. Monthly: northern expedition plans (after TU_URS_frost_conscription). One time.
+country_event = {
+	id = tu_urs_ev.24
+	title = tu_urs_ev.24.t
+	desc = tu_urs_ev.24.d
+	picture = GFX_report_event_soldiers_marching
+	is_triggered_only = yes
+
+	trigger = {
+		tag = URS
+		has_completed_focus = TU_URS_frost_conscription
+		NOT = { has_country_flag = TU_URS_ev_24_seen }
+	}
+
+	immediate = {
+		set_country_flag = TU_URS_ev_24_seen
+	}
+
+	option = {
+		name = tu_urs_ev.24.a
+		ai_chance = {
+			factor = 50
+		}
+		army_experience = 25
+		add_war_support = 0.02
+	}
+
+	option = {
+		name = tu_urs_ev.24.b
+		ai_chance = {
+			factor = 40
+		}
+		add_political_power = 20
+		add_power_balance_value = {
+			id = TU_URS_bop
+			value = 0.05
+		}
+	}
+}
+
+# 25. Monthly: REU envoys ask for a truce (after the Chernobog incident, while REU exists). One time.
+country_event = {
+	id = tu_urs_ev.25
+	title = tu_urs_ev.25.t
+	desc = tu_urs_ev.25.d
+	picture = GFX_report_event_generic_conference
+	is_triggered_only = yes
+
+	trigger = {
+		tag = URS
+		has_global_flag = TU_chernobog_incident_started
+		country_exists = REU
+		NOT = { has_country_flag = TU_URS_ev_25_seen }
+	}
+
+	immediate = {
+		set_country_flag = TU_URS_ev_25_seen
+	}
+
+	option = {
+		name = tu_urs_ev.25.a
+		ai_chance = {
+			factor = 40
+		}
+		add_political_power = -10
+		add_power_balance_value = {
+			id = TU_URS_bop
+			value = 0.05
+		}
+	}
+
+	option = {
+		name = tu_urs_ev.25.b
+		ai_chance = {
+			factor = 40
+		}
+		add_war_support = 0.02
+		add_stability = -0.01
+		if = {
+			limit = {
+				country_exists = REU
+			}
+			REU = {
+				add_stability = -0.02
+			}
+		}
+	}
+
+	option = {
+		name = tu_urs_ev.25.c
+		ai_chance = {
+			factor = 20
+		}
+	}
+}
+
+# 26. Monthly: court scandal (after TU_URS_imperial_court). One time.
+country_event = {
+	id = tu_urs_ev.26
+	title = tu_urs_ev.26.t
+	desc = tu_urs_ev.26.d
+	picture = GFX_report_event_imperial_conference
+	is_triggered_only = yes
+
+	trigger = {
+		tag = URS
+		has_completed_focus = TU_URS_imperial_court
+		NOT = { has_country_flag = TU_URS_ev_26_seen }
+	}
+
+	immediate = {
+		set_country_flag = TU_URS_ev_26_seen
+	}
+
+	option = {
+		name = tu_urs_ev.26.a
+		ai_chance = {
+			factor = 40
+		}
+		add_political_power = -15
+		add_stability = 0.01
+	}
+
+	option = {
+		name = tu_urs_ev.26.b
+		ai_chance = {
+			factor = 40
+		}
+		add_stability = -0.02
+		add_political_power = 30
+	}
+}
+
+# 27. Monthly: infected citizenship petition (after TU_URS_reform_infected_citizenship). One time.
+country_event = {
+	id = tu_urs_ev.27
+	title = tu_urs_ev.27.t
+	desc = tu_urs_ev.27.d
+	picture = GFX_report_event_generic_strike
+	is_triggered_only = yes
+
+	trigger = {
+		tag = URS
+		has_completed_focus = TU_URS_reform_infected_citizenship
+		NOT = { has_country_flag = TU_URS_ev_27_seen }
+	}
+
+	immediate = {
+		set_country_flag = TU_URS_ev_27_seen
+	}
+
+	option = {
+		name = tu_urs_ev.27.a
+		ai_chance = {
+			factor = 40
+		}
+		add_manpower = 20000
+		add_stability = 0.01
+	}
+
+	option = {
+		name = tu_urs_ev.27.b
+		ai_chance = {
+			factor = 40
+		}
+		add_stability = -0.02
+		add_political_power = 15
+	}
+}
+
+# 28. Chain (from 22.a, Chernobog camps): rumours of infection inside a camp.
+country_event = {
+	id = tu_urs_ev.28
+	title = tu_urs_ev.28.t
+	desc = tu_urs_ev.28.d
+	picture = GFX_report_event_dead_soldiers
+	is_triggered_only = yes
+
+	option = {
+		name = tu_urs_ev.28.a
+		ai_chance = {
+			factor = 40
+		}
+		add_stability = 0.02
+		add_political_power = 10
+	}
+
+	option = {
+		name = tu_urs_ev.28.b
+		ai_chance = {
+			factor = 40
+		}
+		add_political_power = 20
+		add_stability = -0.01
+	}
+}
+
+# 29. Chain (from 23.a, student charter): enforce or tear up the charter.
+country_event = {
+	id = tu_urs_ev.29
+	title = tu_urs_ev.29.t
+	desc = tu_urs_ev.29.d
+	picture = GFX_report_event_generic_read_write
+	is_triggered_only = yes
+
+	option = {
+		name = tu_urs_ev.29.a
+		ai_chance = {
+			factor = 40
+		}
+		add_political_power = 20
+		add_stability = 0.02
+		add_power_balance_value = {
+			id = TU_URS_bop
+			value = 0.05
+		}
+	}
+
+	option = {
+		name = tu_urs_ev.29.b
+		ai_chance = {
+			factor = 30
+		}
+		add_stability = -0.03
+		add_political_power = 10
+	}
+}

@@ -1,0 +1,850 @@
+	#### REFORM (BoP RIGHT): MONARCHY / REPUBLIC / DEMOCRACY / INFECTED CITIZENSHIP / EDUCATION ####
+
+	focus = {
+		id = TU_URS_reform_path
+		icon = GFX_goal_generic_national_unity
+		prerequisite = { focus = TU_URS_imperial_decree }
+		mutually_exclusive = { focus = TU_URS_emperor_rule focus = TU_URS_military_junta focus = TU_URS_noble_compromise }
+		x = 122
+		y = 2
+		cost = 5
+
+		search_filters = { FOCUS_FILTER_BALANCE_OF_POWER }
+
+		ai_will_do = {
+			base = 1
+		}
+
+		completion_reward = {
+			country_event = { id = tu_urs_ev.4 }
+			add_power_balance_value = {
+				id = TU_URS_bop
+				value = 0.1
+			}
+			add_political_power = 50
+		}
+	}
+
+	focus = {
+		id = TU_URS_reform_student_council
+		icon = GFX_goal_generic_propaganda
+		prerequisite = { focus = TU_URS_reform_path }
+		x = 122
+		y = 3
+		cost = 10
+
+		search_filters = { FOCUS_FILTER_POLITICAL }
+
+		ai_will_do = {
+			base = 1
+		}
+
+		completion_reward = {
+			add_ideas = TU_URS_p4_student_council
+			add_political_power = 50
+		}
+	}
+
+	focus = {
+		id = TU_URS_reform_constitution_draft
+		icon = GFX_goal_generic_political_pressure
+		prerequisite = { focus = TU_URS_reform_student_council }
+		x = 122
+		y = 4
+		cost = 10
+
+		search_filters = { FOCUS_FILTER_POLITICAL }
+
+		ai_will_do = {
+			base = 1
+		}
+
+		completion_reward = {
+			add_ideas = TU_URS_p4_constitution
+			add_political_power = 25
+		}
+	}
+
+	focus = {
+		id = TU_URS_reform_constitutional_monarchy
+		icon = GFX_goal_generic_national_unity
+		prerequisite = { focus = TU_URS_reform_constitution_draft }
+		mutually_exclusive = { focus = TU_URS_reform_republic_path }
+		x = 120
+		y = 5
+		cost = 10
+
+		search_filters = { FOCUS_FILTER_BALANCE_OF_POWER }
+
+		ai_will_do = {
+			base = 1
+		}
+
+		completion_reward = {
+			add_power_balance_value = {
+				id = TU_URS_bop
+				value = 0.1
+			}
+			add_stability = 0.02
+		}
+	}
+
+	focus = {
+		id = TU_URS_reform_royal_charter
+		icon = GFX_goal_generic_political_pressure
+		prerequisite = { focus = TU_URS_reform_constitutional_monarchy focus = TU_URS_reform_republic_path }
+		x = 120
+		y = 6
+		cost = 10
+
+		search_filters = { FOCUS_FILTER_POLITICAL }
+
+		ai_will_do = {
+			base = 1
+		}
+
+		completion_reward = {
+			add_political_power = 50
+		}
+	}
+
+	focus = {
+		id = TU_URS_reform_crown_councils
+		icon = GFX_goal_generic_construction
+		prerequisite = { focus = TU_URS_reform_royal_charter }
+		x = 120
+		y = 7
+		cost = 10
+
+		search_filters = { FOCUS_FILTER_RESEARCH }
+
+		ai_will_do = {
+			base = 1
+		}
+
+		completion_reward = {
+			add_tech_bonus = {
+				name = TU_URS_p4_tech_crown
+				bonus = 0.5
+				uses = 1
+				category = industry
+			}
+			add_stability = 0.01
+		}
+	}
+
+	focus = {
+		id = TU_URS_reform_monarch_legacy
+		icon = GFX_goal_generic_national_unity
+		prerequisite = { focus = TU_URS_reform_crown_councils }
+		mutually_exclusive = { focus = TU_URS_reform_monarch_legacy_alt }
+		x = 120
+		y = 9
+		cost = 10
+
+		search_filters = { FOCUS_FILTER_POLITICAL }
+
+		ai_will_do = {
+			base = 1
+		}
+
+		available = {
+			has_country_flag = TU_DEC_TU_URS_reform_monarch_assembly
+		}
+
+		completion_reward = {
+			add_political_power = 75
+			add_stability = 0.02
+		}
+	}
+
+	focus = {
+		id = TU_URS_reform_monarch_legacy_alt
+		icon = GFX_goal_generic_propaganda
+		prerequisite = { focus = TU_URS_reform_crown_councils }
+		mutually_exclusive = { focus = TU_URS_reform_monarch_legacy }
+		x = 122
+		y = 9
+		cost = 10
+
+		search_filters = { FOCUS_FILTER_POLITICAL }
+
+		ai_will_do = {
+			base = 1
+		}
+
+		available = {
+			has_country_flag = TU_DEC_TU_URS_reform_monarch_assembly
+		}
+
+		completion_reward = {
+			add_political_power = 50
+			add_popularity = {
+				ideology = democratic
+				popularity = 0.1
+			}
+		}
+	}
+
+	focus = {
+		id = TU_URS_reform_republic_path
+		icon = GFX_goal_generic_neutrality_focus
+		prerequisite = { focus = TU_URS_reform_constitution_draft }
+		mutually_exclusive = { focus = TU_URS_reform_constitutional_monarchy }
+		x = 124
+		y = 5
+		cost = 10
+
+		search_filters = { FOCUS_FILTER_BALANCE_OF_POWER }
+
+		ai_will_do = {
+			base = 1
+		}
+
+		completion_reward = {
+			add_power_balance_value = {
+				id = TU_URS_bop
+				value = 0.15
+			}
+			add_political_power = 25
+		}
+	}
+
+	focus = {
+		id = TU_URS_reform_republic_assembly
+		icon = GFX_goal_generic_improve_relations
+		prerequisite = { focus = TU_URS_reform_republic_path }
+		x = 124
+		y = 6
+		cost = 10
+
+		search_filters = { FOCUS_FILTER_POLITICAL }
+
+		ai_will_do = {
+			base = 1
+		}
+
+		completion_reward = {
+			add_political_power = 50
+		}
+	}
+
+	focus = {
+		id = TU_URS_reform_republic_vote
+		icon = GFX_goal_generic_propaganda
+		prerequisite = { focus = TU_URS_reform_republic_assembly }
+		x = 124
+		y = 7
+		cost = 10
+
+		search_filters = { FOCUS_FILTER_STABILITY }
+
+		ai_will_do = {
+			base = 1
+		}
+
+		completion_reward = {
+			add_political_power = 50
+			add_stability = -0.01
+		}
+	}
+
+	focus = {
+		id = TU_URS_reform_republic_civil_service
+		icon = GFX_goal_generic_construction2
+		prerequisite = { focus = TU_URS_reform_republic_vote }
+		x = 124
+		y = 8
+		cost = 10
+
+		search_filters = { FOCUS_FILTER_RESEARCH }
+
+		ai_will_do = {
+			base = 1
+		}
+
+		completion_reward = {
+			add_tech_bonus = {
+				name = TU_URS_p4_tech_civil
+				bonus = 0.5
+				uses = 1
+				category = electronics
+			}
+		}
+	}
+
+	focus = {
+		id = TU_URS_reform_republic_legacy
+		icon = GFX_goal_generic_neutrality_focus
+		prerequisite = { focus = TU_URS_reform_republic_civil_service }
+		x = 124
+		y = 9
+		cost = 10
+
+		search_filters = { FOCUS_FILTER_BALANCE_OF_POWER }
+
+		ai_will_do = {
+			base = 1
+		}
+
+		completion_reward = {
+			add_power_balance_value = {
+				id = TU_URS_bop
+				value = 0.1
+			}
+			add_stability = 0.01
+		}
+	}
+
+	focus = {
+		id = TU_URS_reform_democratic_party
+		icon = GFX_goal_generic_political_pressure
+		prerequisite = { focus = TU_URS_reform_crown_councils focus = TU_URS_reform_republic_vote }
+		x = 118
+		y = 7
+		cost = 10
+
+		search_filters = { FOCUS_FILTER_POLITICAL }
+
+		ai_will_do = {
+			base = 1
+		}
+
+		completion_reward = {
+			set_politics = {
+				ruling_party = democratic
+				elections_allowed = yes
+			}
+			add_popularity = {
+				ideology = democratic
+				popularity = 0.1
+			}
+			add_political_power = 50
+			add_stability = -0.01
+		}
+	}
+
+	focus = {
+		id = TU_URS_reform_elections
+		icon = GFX_goal_generic_propaganda
+		prerequisite = { focus = TU_URS_reform_democratic_party }
+		x = 118
+		y = 8
+		cost = 10
+
+		search_filters = { FOCUS_FILTER_POLITICAL }
+
+		ai_will_do = {
+			base = 1
+		}
+
+		completion_reward = {
+			add_political_power = 50
+			add_stability = 0.02
+		}
+	}
+
+	focus = {
+		id = TU_URS_reform_coalition_rule
+		icon = GFX_goal_generic_improve_relations
+		prerequisite = { focus = TU_URS_reform_elections }
+		x = 118
+		y = 9
+		cost = 10
+
+		search_filters = { FOCUS_FILTER_POLITICAL }
+
+		ai_will_do = {
+			base = 1
+		}
+
+		completion_reward = {
+			add_political_power = 25
+			add_stability = 0.01
+		}
+	}
+
+	focus = {
+		id = TU_URS_reform_civil_rights
+		icon = GFX_goal_generic_improve_relations
+		prerequisite = { focus = TU_URS_reform_coalition_rule }
+		x = 118
+		y = 10
+		cost = 10
+
+		search_filters = { FOCUS_FILTER_STABILITY }
+
+		ai_will_do = {
+			base = 1
+		}
+
+		completion_reward = {
+			add_stability = 0.02
+			add_power_balance_value = {
+				id = TU_URS_bop
+				value = 0.05
+			}
+		}
+	}
+
+	focus = {
+		id = TU_URS_reform_labour_law
+		icon = GFX_goal_generic_construct_civilian
+		prerequisite = { focus = TU_URS_reform_civil_rights }
+		x = 118
+		y = 11
+		cost = 10
+
+		search_filters = { FOCUS_FILTER_MANPOWER }
+
+		ai_will_do = {
+			base = 1
+		}
+
+		completion_reward = {
+			add_manpower = 20000
+			add_stability = 0.01
+		}
+	}
+
+	focus = {
+		id = TU_URS_reform_welfare_state
+		icon = GFX_goal_generic_consumer_goods
+		prerequisite = { focus = TU_URS_reform_labour_law }
+		x = 118
+		y = 12
+		cost = 10
+
+		search_filters = { FOCUS_FILTER_STABILITY }
+
+		ai_will_do = {
+			base = 1
+		}
+
+		completion_reward = {
+			add_stability = 0.03
+			add_political_power = 25
+		}
+	}
+
+	focus = {
+		id = TU_URS_reform_national_dialogue
+		icon = GFX_goal_generic_intelligence_exchange
+		prerequisite = { focus = TU_URS_reform_welfare_state }
+		x = 118
+		y = 13
+		cost = 10
+
+		search_filters = { FOCUS_FILTER_POLITICAL }
+
+		ai_will_do = {
+			base = 1
+		}
+
+		completion_reward = {
+			add_political_power = 50
+			add_power_balance_value = {
+				id = TU_URS_bop
+				value = 0.05
+			}
+		}
+	}
+
+	focus = {
+		id = TU_URS_reform_constitutional_court
+		icon = GFX_goal_generic_defence
+		prerequisite = { focus = TU_URS_reform_national_dialogue }
+		x = 118
+		y = 14
+		cost = 10
+
+		search_filters = { FOCUS_FILTER_POLITICAL }
+
+		ai_will_do = {
+			base = 1
+		}
+
+		completion_reward = {
+			add_political_power = 50
+			add_stability = 0.02
+		}
+	}
+
+	focus = {
+		id = TU_URS_reform_anti_corruption
+		icon = GFX_goal_generic_political_pressure
+		prerequisite = { focus = TU_URS_reform_constitutional_court }
+		x = 118
+		y = 15
+		cost = 10
+
+		search_filters = { FOCUS_FILTER_POLITICAL }
+
+		ai_will_do = {
+			base = 1
+		}
+
+		completion_reward = {
+			add_political_power = 50
+			add_stability = 0.02
+		}
+	}
+
+	focus = {
+		id = TU_URS_reform_open_government
+		icon = GFX_goal_generic_scientific_exchange
+		prerequisite = { focus = TU_URS_reform_anti_corruption }
+		x = 118
+		y = 16
+		cost = 10
+
+		search_filters = { FOCUS_FILTER_POLITICAL }
+
+		ai_will_do = {
+			base = 1
+		}
+
+		completion_reward = {
+			add_political_power = 25
+			add_power_balance_value = {
+				id = TU_URS_bop
+				value = 0.05
+			}
+		}
+	}
+
+	focus = {
+		id = TU_URS_reform_civil_society
+		icon = GFX_goal_generic_positive_trade_relations
+		prerequisite = { focus = TU_URS_reform_open_government }
+		x = 118
+		y = 17
+		cost = 10
+
+		search_filters = { FOCUS_FILTER_STABILITY }
+
+		ai_will_do = {
+			base = 1
+		}
+
+		completion_reward = {
+			add_stability = 0.02
+		}
+	}
+
+	focus = {
+		id = TU_URS_reform_completion
+		icon = GFX_goal_generic_national_unity
+		prerequisite = { focus = TU_URS_reform_civil_society }
+		x = 118
+		y = 18
+		cost = 15
+
+		search_filters = { FOCUS_FILTER_POLITICAL }
+
+		ai_will_do = {
+			base = 1
+		}
+
+		completion_reward = {
+			every_country = { news_event = { id = tu_urs_ev.17 } }
+			add_political_power = 100
+			add_stability = 0.03
+			add_power_balance_value = {
+				id = TU_URS_bop
+				value = 0.1
+			}
+		}
+	}
+
+	focus = {
+		id = TU_URS_reform_reunion_treaty
+		icon = GFX_goal_generic_alliance
+		prerequisite = { focus = TU_URS_reform_student_council }
+		x = 114
+		y = 6
+		cost = 10
+
+		search_filters = { FOCUS_FILTER_POLITICAL }
+
+		ai_will_do = {
+			base = 1
+		}
+
+		available = {
+			has_country_flag = TU_DEC_TU_URS_reform_reunion_talks
+			NOT = { has_country_flag = TU_DEC_TU_URS_reform_rhodes_pact }
+		}
+
+		completion_reward = {
+			add_ideas = TU_URS_p4_reconciliation
+			add_stability = 0.02
+		}
+	}
+
+	focus = {
+		id = TU_URS_reform_medical_aid
+		icon = GFX_goal_generic_construct_civilian
+		prerequisite = { focus = TU_URS_reform_reunion_treaty focus = TU_URS_reform_student_council }
+		x = 114
+		y = 7
+		cost = 10
+
+		search_filters = { FOCUS_FILTER_STABILITY }
+
+		ai_will_do = {
+			base = 1
+		}
+
+		available = {
+			OR = {
+				has_completed_focus = TU_URS_reform_reunion_treaty
+				has_country_flag = TU_DEC_TU_URS_reform_rhodes_pact
+			}
+		}
+
+		completion_reward = {
+			add_stability = 0.02
+			add_political_power = 25
+		}
+	}
+
+	focus = {
+		id = TU_URS_reform_infected_citizenship
+		icon = GFX_goal_generic_propaganda
+		prerequisite = { focus = TU_URS_reform_student_council }
+		x = 126
+		y = 5
+		cost = 10
+
+		search_filters = { FOCUS_FILTER_POLITICAL }
+
+		ai_will_do = {
+			base = 1
+		}
+
+		completion_reward = {
+			remove_ideas = TU_URS_infected_discrimination
+			add_political_power = 25
+			add_stability = 0.02
+		}
+	}
+
+	focus = {
+		id = TU_URS_reform_infected_labour_rights
+		icon = GFX_goal_generic_construction
+		prerequisite = { focus = TU_URS_reform_infected_citizenship }
+		mutually_exclusive = { focus = TU_URS_reform_infected_guild }
+		x = 126
+		y = 6
+		cost = 10
+
+		search_filters = { FOCUS_FILTER_MANPOWER }
+
+		ai_will_do = {
+			base = 1
+		}
+
+		completion_reward = {
+			add_manpower = 30000
+			add_stability = 0.01
+		}
+	}
+
+	focus = {
+		id = TU_URS_reform_infected_guild
+		icon = GFX_goal_generic_trade
+		prerequisite = { focus = TU_URS_reform_infected_citizenship }
+		mutually_exclusive = { focus = TU_URS_reform_infected_labour_rights }
+		x = 128
+		y = 6
+		cost = 10
+
+		search_filters = { FOCUS_FILTER_POLITICAL }
+
+		ai_will_do = {
+			base = 1
+		}
+
+		completion_reward = {
+			add_political_power = 25
+			add_power_balance_value = {
+				id = TU_URS_bop
+				value = 0.05
+			}
+		}
+	}
+
+	focus = {
+		id = TU_URS_reform_infected_representation
+		icon = GFX_goal_generic_political_pressure
+		prerequisite = { focus = TU_URS_reform_infected_guild focus = TU_URS_reform_infected_labour_rights }
+		x = 126
+		y = 8
+		cost = 10
+
+		search_filters = { FOCUS_FILTER_POLITICAL }
+
+		ai_will_do = {
+			base = 1
+		}
+
+		available = {
+			has_country_flag = TU_DEC_TU_URS_reform_infected_hospitals
+		}
+
+		completion_reward = {
+			add_power_balance_value = {
+				id = TU_URS_bop
+				value = 0.05
+			}
+			add_political_power = 50
+		}
+	}
+
+	focus = {
+		id = TU_URS_reform_citizenship_law
+		icon = GFX_goal_generic_national_unity
+		prerequisite = { focus = TU_URS_reform_infected_representation }
+		x = 126
+		y = 9
+		cost = 10
+
+		search_filters = { FOCUS_FILTER_POLITICAL }
+
+		ai_will_do = {
+			base = 1
+		}
+
+		completion_reward = {
+			add_ideas = TU_URS_p4_citizenship
+			add_stability = 0.02
+		}
+	}
+
+	focus = {
+		id = TU_URS_reform_modern_schools
+		icon = GFX_goal_generic_scientific_exchange
+		prerequisite = { focus = TU_URS_reform_student_council }
+		x = 130
+		y = 5
+		cost = 10
+
+		search_filters = { FOCUS_FILTER_RESEARCH }
+
+		ai_will_do = {
+			base = 1
+		}
+
+		completion_reward = {
+			add_ideas = TU_URS_p4_modern_education
+			add_political_power = 25
+		}
+	}
+
+	focus = {
+		id = TU_URS_reform_school_curriculum
+		icon = GFX_goal_generic_scientific_exchange
+		prerequisite = { focus = TU_URS_reform_modern_schools }
+		x = 130
+		y = 6
+		cost = 10
+
+		search_filters = { FOCUS_FILTER_RESEARCH }
+
+		ai_will_do = {
+			base = 1
+		}
+
+		completion_reward = {
+			add_tech_bonus = {
+				name = TU_URS_p4_tech_curriculum
+				bonus = 0.5
+				uses = 2
+				category = electronics
+			}
+		}
+	}
+
+	focus = {
+		id = TU_URS_reform_university
+		icon = GFX_goal_generic_scientific_exchange
+		prerequisite = { focus = TU_URS_reform_school_curriculum }
+		x = 130
+		y = 7
+		cost = 10
+
+		search_filters = { FOCUS_FILTER_POLITICAL }
+
+		ai_will_do = {
+			base = 1
+		}
+
+		completion_reward = {
+			add_political_power = 50
+			add_stability = 0.01
+		}
+	}
+
+	focus = {
+		id = TU_URS_reform_press_freedom
+		icon = GFX_goal_generic_propaganda
+		prerequisite = { focus = TU_URS_reform_university }
+		x = 130
+		y = 8
+		cost = 10
+
+		search_filters = { FOCUS_FILTER_POLITICAL }
+
+		ai_will_do = {
+			base = 1
+		}
+
+		completion_reward = {
+			add_ideas = TU_URS_p4_free_press
+			add_political_power = 25
+		}
+	}
+
+	focus = {
+		id = TU_URS_reform_journalists
+		icon = GFX_goal_generic_intelligence_exchange
+		prerequisite = { focus = TU_URS_reform_press_freedom }
+		x = 130
+		y = 9
+		cost = 10
+
+		search_filters = { FOCUS_FILTER_POLITICAL }
+
+		ai_will_do = {
+			base = 1
+		}
+
+		completion_reward = {
+			add_power_balance_value = {
+				id = TU_URS_bop
+				value = 0.05
+			}
+			add_political_power = 25
+		}
+	}
+
+	focus = {
+		id = TU_URS_reform_media_law
+		icon = GFX_goal_generic_political_pressure
+		prerequisite = { focus = TU_URS_reform_journalists }
+		x = 130
+		y = 10
+		cost = 10
+
+		search_filters = { FOCUS_FILTER_POLITICAL }
+
+		ai_will_do = {
+			base = 1
+		}
+
+		completion_reward = {
+			add_stability = 0.01
+			add_political_power = 50
+		}
+	}

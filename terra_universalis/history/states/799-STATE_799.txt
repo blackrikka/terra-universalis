@@ -1,0 +1,21 @@
+state={
+	id=799
+	name="STATE_799"
+	impassable = yes
+	manpower = 1000
+
+	state_category = wasteland
+
+	history={
+		owner = SAM
+		buildings = {
+			infrastructure = 0
+		}
+		add_core_of = SAM
+	}
+
+	provinces={
+		2611 2613 2614 2615 2618 2619 2623 2625 2631
+	}
+	local_supplies=0.0
+}

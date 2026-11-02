@@ -1,0 +1,21 @@
+state={
+	id=93
+	name="STATE_93"
+	manpower = 50000
+
+	state_category = town
+
+	history={
+		owner = LEI
+		victory_points = { 470 1 }
+		buildings = {
+			infrastructure = 2
+		}
+		add_core_of = LEI
+	}
+
+	provinces={
+		470
+	}
+	local_supplies=0.0
+}

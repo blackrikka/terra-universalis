@@ -1,0 +1,21 @@
+on_actions = {
+	on_startup = {
+		effect = {
+			# Schedules the Chernobog incident once per save (flag prevents a second schedule).
+			if = {
+				limit = {
+					country_exists = URS
+					NOT = { has_global_flag = TU_chernobog_incident_scheduled }
+				}
+				set_global_flag = TU_chernobog_incident_scheduled
+				URS = {
+					country_event = {
+						id = tu_crisis.1
+						days = 60
+						random_days = 30
+					}
+				}
+			}
+		}
+	}
+}

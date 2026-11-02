@@ -1,0 +1,223 @@
+ideas = {
+
+	country = {
+
+		TU_URS_p3_senate_mandate = {
+			picture = generic_political_support
+
+			allowed = {
+				original_tag = URS
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			modifier = {
+				political_power_gain = 0.05
+				stability_factor = 0.02
+			}
+		}
+
+		TU_URS_p3_regency = {
+			picture = generic_conference
+
+			allowed = {
+				original_tag = URS
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			modifier = {
+				stability_factor = 0.03
+				war_support_factor = -0.02
+			}
+		}
+
+		TU_URS_p3_feudal_charter = {
+			picture = generic_agrarian_reform
+
+			allowed = {
+				original_tag = URS
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			modifier = {
+				production_speed_buildings_factor = 0.05
+				stability_factor = -0.02
+			}
+		}
+
+		TU_URS_p3_cartel_bonds = {
+			picture = generic_industrial_concern_1
+
+			allowed = {
+				original_tag = URS
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			modifier = {
+				production_speed_industrial_complex_factor = 0.05
+				political_power_gain = 0.05
+			}
+		}
+
+		TU_URS_p3_private_armies = {
+			picture = generic_reserve_divisions
+
+			allowed = {
+				original_tag = URS
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			modifier = {
+				conscription_factor = 0.05
+				army_attack_factor = 0.03
+			}
+		}
+
+		TU_URS_p3_mobile_estates = {
+			picture = generic_logistics
+
+			allowed = {
+				original_tag = URS
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			modifier = {
+				supply_consumption_factor = -0.1
+				political_power_gain = 0.03
+			}
+		}
+
+		TU_URS_p3_envoy_network = {
+			picture = generic_flexible_foreign_policy
+
+			allowed = {
+				original_tag = URS
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			modifier = {
+				political_power_gain = 0.05
+			}
+		}
+
+		TU_URS_p4_student_council = {
+			picture = generic_local_self_management
+
+			allowed = {
+				original_tag = URS
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			modifier = {
+				stability_factor = 0.02
+				political_power_gain = 0.03
+			}
+		}
+
+		TU_URS_p4_constitution = {
+			picture = generic_constitutional_guarantees
+
+			allowed = {
+				original_tag = URS
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			modifier = {
+				stability_factor = 0.03
+			}
+		}
+
+		TU_URS_p4_free_press = {
+			picture = generic_democratic_opposition
+
+			allowed = {
+				original_tag = URS
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			modifier = {
+				political_power_gain = 0.05
+				stability_factor = -0.02
+			}
+		}
+
+		TU_URS_p4_citizenship = {
+			picture = generic_immigration
+
+			allowed = {
+				original_tag = URS
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			modifier = {
+				monthly_population = 0.1
+				stability_factor = 0.02
+			}
+		}
+
+		TU_URS_p4_modern_education = {
+			picture = generic_research_bonus
+
+			allowed = {
+				original_tag = URS
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			modifier = {
+				research_speed_factor = 0.05
+			}
+		}
+
+		TU_URS_p4_reconciliation = {
+			picture = generic_flexible_foreign_policy2
+
+			allowed = {
+				original_tag = URS
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			modifier = {
+				stability_factor = 0.02
+				war_support_factor = -0.02
+			}
+		}
+	}
+}

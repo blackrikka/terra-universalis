@@ -1,0 +1,1965 @@
+	#### REU P1 ALL: TALULAH CONQUEST, FROSTNOVA / PATRIOT, GUERRILLA, CHERNOBOG, INFECTED MOBILISATION ####
+	#### Existing p0 focuses are prerequisites only (ids kept, not edited).
+
+	#### DIPLOMACY: EARLY RELATIONS UNLOCK (2 steps from the root) ####
+
+	focus = {
+		id = TU_REU_dip_envoys
+		icon = GFX_goal_generic_improve_relations
+		prerequisite = { focus = TU_REU_uprising }
+		x = 1
+		y = 0
+		cost = 10
+
+		search_filters = { FOCUS_FILTER_POLITICAL }
+
+		ai_will_do = {
+			base = 1
+		}
+
+		completion_reward = {
+			add_political_power = 50
+			set_country_flag = TU_dip_relations_unlocked
+		}
+	}
+
+	#### FORK A EXPANSION: BLACK SERPENT SIDE PATHS (prerequisites from p0) ####
+
+	focus = {
+		id = TU_REU_serpent_scouts
+		icon = GFX_goal_generic_special_forces
+		prerequisite = { focus = TU_REU_serpent_army }
+		mutually_exclusive = { focus = TU_REU_serpent_supply }
+		x = 2
+		y = 0
+		cost = 10
+
+		search_filters = { FOCUS_FILTER_ARMY_XP }
+
+		ai_will_do = {
+			base = 1
+		}
+
+		completion_reward = {
+			army_experience = 20
+			add_political_power = 25
+		}
+	}
+
+	focus = {
+		id = TU_REU_serpent_supply
+		icon = GFX_goal_generic_construct_infrastructure
+		prerequisite = { focus = TU_REU_serpent_army }
+		mutually_exclusive = { focus = TU_REU_serpent_scouts }
+		x = 3
+		y = 0
+		cost = 10
+
+		search_filters = { FOCUS_FILTER_POLITICAL }
+
+		ai_will_do = {
+			base = 1
+		}
+
+		completion_reward = {
+			add_political_power = 25
+			add_war_support = 0.05
+		}
+	}
+
+	focus = {
+		id = TU_REU_serpent_recruits
+		icon = GFX_goal_generic_allies_build_infantry
+		prerequisite = { focus = TU_REU_black_serpent }
+		x = 4
+		y = 0
+		cost = 10
+
+		search_filters = { FOCUS_FILTER_POLITICAL }
+
+		ai_will_do = {
+			base = 1
+		}
+
+		completion_reward = {
+			add_manpower = 15000
+			add_political_power = 25
+		}
+	}
+
+	focus = {
+		id = TU_REU_talulah_speech
+		icon = GFX_goal_generic_propaganda
+		prerequisite = { focus = TU_REU_black_serpent }
+		mutually_exclusive = { focus = TU_REU_talulah_speech_alt }
+		x = 5
+		y = 0
+		cost = 10
+
+		search_filters = { FOCUS_FILTER_POLITICAL }
+
+		ai_will_do = {
+			base = 1
+		}
+
+		completion_reward = {
+			add_political_power = 50
+			add_stability = 0.02
+		}
+	}
+
+	focus = {
+		id = TU_REU_talulah_speech_alt
+		icon = GFX_goal_generic_propaganda
+		prerequisite = { focus = TU_REU_black_serpent }
+		mutually_exclusive = { focus = TU_REU_talulah_speech }
+		x = 7
+		y = 0
+		cost = 10
+
+		search_filters = { FOCUS_FILTER_POLITICAL }
+
+		ai_will_do = {
+			base = 1
+		}
+
+		completion_reward = {
+			add_war_support = 0.03
+			add_political_power = 50
+		}
+	}
+
+	focus = {
+		id = TU_REU_serpent_rail
+		icon = GFX_goal_generic_army_motorized
+		prerequisite = { focus = TU_REU_serpent_march }
+		mutually_exclusive = { focus = TU_REU_serpent_rail_alt }
+		x = 6
+		y = 0
+		cost = 10
+
+		search_filters = { FOCUS_FILTER_ARMY_XP }
+
+		ai_will_do = {
+			base = 1
+		}
+
+		completion_reward = {
+			army_experience = 15
+			add_political_power = 25
+		}
+	}
+
+	focus = {
+		id = TU_REU_serpent_rail_alt
+		icon = GFX_goal_generic_army_motorized
+		prerequisite = { focus = TU_REU_serpent_march }
+		mutually_exclusive = { focus = TU_REU_serpent_rail }
+		x = 8
+		y = 0
+		cost = 10
+
+		search_filters = { FOCUS_FILTER_ARMY_XP }
+
+		ai_will_do = {
+			base = 1
+		}
+
+		completion_reward = {
+			add_ideas = TU_REU_choice_serpent_rail
+			add_political_power = 25
+		}
+	}
+
+	focus = {
+		id = TU_REU_serpent_banners
+		icon = GFX_goal_generic_national_unity
+		prerequisite = { focus = TU_REU_serpent_recruits }
+		x = 7
+		y = 0
+		cost = 10
+
+		search_filters = { FOCUS_FILTER_POLITICAL }
+
+		ai_will_do = {
+			base = 1
+		}
+
+		completion_reward = {
+			add_political_power = 25
+			add_war_support = 0.03
+		}
+	}
+
+	#### FORK A EXPANSION: CONQUEST OF URSUS (after the p0 conquest focus) ####
+
+	focus = {
+		id = TU_REU_conquest_north
+		icon = GFX_goal_generic_army_tanks
+		prerequisite = { focus = TU_REU_serpent_conquest }
+		x = 8
+		y = 0
+		cost = 10
+
+		search_filters = { FOCUS_FILTER_ARMY_XP }
+
+		ai_will_do = {
+			base = 1
+		}
+
+		completion_reward = {
+			army_experience = 25
+			add_political_power = 50
+		}
+	}
+
+	focus = {
+		id = TU_REU_conquest_south
+		icon = GFX_goal_generic_occupy_states_ongoing_war
+		prerequisite = { focus = TU_REU_serpent_conquest }
+		x = 9
+		y = 0
+		cost = 10
+
+		search_filters = { FOCUS_FILTER_ARMY_XP }
+
+		ai_will_do = {
+			base = 1
+		}
+
+		completion_reward = {
+			army_experience = 25
+			add_political_power = 50
+		}
+	}
+
+	focus = {
+		id = TU_REU_conquest_occupation
+		icon = GFX_goal_generic_political_pressure
+		prerequisite = { focus = TU_REU_serpent_conquest }
+		x = 10
+		y = 0
+		cost = 10
+
+		search_filters = { FOCUS_FILTER_POLITICAL }
+
+		ai_will_do = {
+			base = 1
+		}
+
+		completion_reward = {
+			add_political_power = 50
+			add_stability = 0.02
+		}
+	}
+
+	focus = {
+		id = TU_REU_conquest_blood_tax
+		icon = GFX_goal_generic_production
+		prerequisite = { focus = TU_REU_serpent_conquest }
+		x = 11
+		y = 0
+		cost = 10
+
+		search_filters = { FOCUS_FILTER_POLITICAL }
+
+		ai_will_do = {
+			base = 1
+		}
+
+		completion_reward = {
+			add_political_power = 75
+		}
+	}
+
+	focus = {
+		id = TU_REU_serpent_ledger
+		icon = GFX_goal_generic_trade
+		prerequisite = { focus = TU_REU_conquest_blood_tax }
+		x = 12
+		y = 0
+		cost = 10
+
+		search_filters = { FOCUS_FILTER_POLITICAL }
+
+		ai_will_do = {
+			base = 1
+		}
+
+		completion_reward = {
+			add_political_power = 50
+		}
+	}
+
+	focus = {
+		id = TU_REU_conquest_claim_north
+		icon = GFX_goal_generic_demand_territory
+		prerequisite = { focus = TU_REU_conquest_north }
+		x = 13
+		y = 0
+		cost = 10
+
+		search_filters = { FOCUS_FILTER_POLITICAL }
+
+		ai_will_do = {
+			base = 1
+		}
+
+		completion_reward = {
+			add_political_power = 25
+		}
+	}
+
+	focus = {
+		id = TU_REU_conquest_claim_south
+		icon = GFX_goal_generic_more_territorial_claims
+		prerequisite = { focus = TU_REU_conquest_south }
+		x = 14
+		y = 0
+		cost = 10
+
+		search_filters = { FOCUS_FILTER_POLITICAL }
+
+		ai_will_do = {
+			base = 1
+		}
+
+		completion_reward = {
+			add_political_power = 25
+		}
+	}
+
+	focus = {
+		id = TU_REU_conquest_breakthrough
+		icon = GFX_goal_generic_army_artillery
+		prerequisite = { focus = TU_REU_conquest_north }
+		prerequisite = { focus = TU_REU_conquest_south }
+		x = 15
+		y = 0
+		cost = 10
+
+		search_filters = { FOCUS_FILTER_ARMY_XP }
+
+		ai_will_do = {
+			base = 1
+		}
+
+		completion_reward = {
+			army_experience = 50
+			add_political_power = 50
+			add_ideas = TU_REU_serpent_legion
+		}
+	}
+
+	focus = {
+		id = TU_REU_conquest_hunters
+		icon = GFX_goal_generic_special_forces
+		prerequisite = { focus = TU_REU_conquest_breakthrough }
+		x = 16
+		y = 0
+		cost = 10
+
+		search_filters = { FOCUS_FILTER_ARMY_XP }
+
+		ai_will_do = {
+			base = 1
+		}
+
+		completion_reward = {
+			army_experience = 25
+			add_political_power = 50
+		}
+	}
+
+	focus = {
+		id = TU_REU_conquest_capital_assault
+		icon = GFX_goal_generic_major_war
+		prerequisite = { focus = TU_REU_conquest_breakthrough }
+		prerequisite = { focus = TU_REU_conquest_occupation }
+		x = 17
+		y = 0
+		cost = 15
+
+		search_filters = { FOCUS_FILTER_ARMY_XP }
+
+		ai_will_do = {
+			base = 1
+		}
+
+		completion_reward = {
+			army_experience = 50
+			add_political_power = 100
+		}
+	}
+
+	focus = {
+		id = TU_REU_conquest_claim_east
+		icon = GFX_goal_generic_demand_territory
+		prerequisite = { focus = TU_REU_conquest_blood_tax }
+		x = 18
+		y = 0
+		cost = 10
+
+		search_filters = { FOCUS_FILTER_POLITICAL }
+
+		ai_will_do = {
+			base = 1
+		}
+
+		completion_reward = {
+			add_political_power = 25
+		}
+	}
+
+	focus = {
+		id = TU_REU_conquest_order
+		icon = GFX_goal_generic_national_unity
+		prerequisite = { focus = TU_REU_conquest_capital_assault }
+		x = 19
+		y = 0
+		cost = 10
+
+		search_filters = { FOCUS_FILTER_POLITICAL }
+
+		ai_will_do = {
+			base = 1
+		}
+
+		completion_reward = {
+			add_political_power = 75
+			add_stability = 0.05
+		}
+	}
+
+	focus = {
+		id = TU_REU_conquest_war_council
+		icon = GFX_goal_generic_army_doctrines
+		prerequisite = { focus = TU_REU_conquest_hunters }
+		x = 20
+		y = 0
+		cost = 10
+
+		search_filters = { FOCUS_FILTER_POLITICAL }
+
+		ai_will_do = {
+			base = 1
+		}
+
+		completion_reward = {
+			add_political_power = 50
+			add_war_support = 0.05
+		}
+	}
+
+	#### FORK B EXPANSION: FROSTNOVA / PATRIOT SIDE PATHS (prerequisites from p0) ####
+
+	focus = {
+		id = TU_REU_frost_scouts
+		icon = GFX_goal_generic_special_forces
+		prerequisite = { focus = TU_REU_frost_nova }
+		x = 21
+		y = 0
+		cost = 10
+
+		search_filters = { FOCUS_FILTER_POLITICAL }
+
+		ai_will_do = {
+			base = 1
+		}
+
+		completion_reward = {
+			add_political_power = 25
+		}
+	}
+
+	focus = {
+		id = TU_REU_frost_ice_roads
+		icon = GFX_goal_generic_construct_infrastructure
+		prerequisite = { focus = TU_REU_frost_nova }
+		x = 22
+		y = 0
+		cost = 10
+
+		search_filters = { FOCUS_FILTER_POLITICAL }
+
+		ai_will_do = {
+			base = 1
+		}
+
+		completion_reward = {
+			add_manpower = 5000
+			add_political_power = 25
+		}
+	}
+
+	focus = {
+		id = TU_REU_frost_signals
+		icon = GFX_goal_generic_radar
+		prerequisite = { focus = TU_REU_frost_scouts }
+		x = 23
+		y = 0
+		cost = 10
+
+		search_filters = { FOCUS_FILTER_POLITICAL }
+
+		ai_will_do = {
+			base = 1
+		}
+
+		completion_reward = {
+			add_political_power = 25
+			add_stability = 0.01
+		}
+	}
+
+	focus = {
+		id = TU_REU_frost_harvest
+		icon = GFX_goal_generic_consumer_goods
+		prerequisite = { focus = TU_REU_frost_ice_roads }
+		x = 24
+		y = 0
+		cost = 10
+
+		search_filters = { FOCUS_FILTER_POLITICAL }
+
+		ai_will_do = {
+			base = 1
+		}
+
+		completion_reward = {
+			add_manpower = 5000
+			add_stability = 0.01
+		}
+	}
+
+	focus = {
+		id = TU_REU_zone_schools
+		icon = GFX_goal_generic_scientific_exchange
+		prerequisite = { focus = TU_REU_infected_zones }
+		mutually_exclusive = { focus = TU_REU_zone_clinics }
+		x = 25
+		y = 0
+		cost = 10
+
+		search_filters = { FOCUS_FILTER_POLITICAL }
+
+		ai_will_do = {
+			base = 1
+		}
+
+		completion_reward = {
+			add_political_power = 25
+			add_stability = 0.02
+		}
+	}
+
+	focus = {
+		id = TU_REU_zone_clinics
+		icon = GFX_goal_generic_construct_civilian
+		prerequisite = { focus = TU_REU_infected_zones }
+		mutually_exclusive = { focus = TU_REU_zone_schools }
+		x = 26
+		y = 0
+		cost = 10
+
+		search_filters = { FOCUS_FILTER_POLITICAL }
+
+		ai_will_do = {
+			base = 1
+		}
+
+		completion_reward = {
+			add_political_power = 50
+			add_stability = 0.03
+		}
+	}
+
+	focus = {
+		id = TU_REU_zone_council
+		icon = GFX_goal_generic_political_pressure
+		prerequisite = { focus = TU_REU_infected_zones }
+		x = 27
+		y = 0
+		cost = 10
+
+		search_filters = { FOCUS_FILTER_POLITICAL }
+
+		ai_will_do = {
+			base = 1
+		}
+
+		completion_reward = {
+			add_political_power = 50
+		}
+	}
+
+	focus = {
+		id = TU_REU_zone_treaty
+		icon = GFX_goal_generic_positive_trade_relations
+		prerequisite = { focus = TU_REU_zone_council }
+		x = 28
+		y = 0
+		cost = 10
+
+		search_filters = { FOCUS_FILTER_POLITICAL }
+
+		ai_will_do = {
+			base = 1
+		}
+
+		completion_reward = {
+			add_political_power = 50
+			add_war_support = 0.03
+		}
+	}
+
+	focus = {
+		id = TU_REU_frost_trade
+		icon = GFX_goal_generic_trade
+		prerequisite = { focus = TU_REU_zone_council }
+		x = 29
+		y = 0
+		cost = 10
+
+		search_filters = { FOCUS_FILTER_POLITICAL }
+
+		ai_will_do = {
+			base = 1
+		}
+
+		completion_reward = {
+			add_political_power = 50
+		}
+	}
+
+	focus = {
+		id = TU_REU_patriot_speech
+		icon = GFX_goal_generic_propaganda
+		prerequisite = { focus = TU_REU_patriot_call }
+		mutually_exclusive = { focus = TU_REU_patriot_guard }
+		x = 30
+		y = 0
+		cost = 10
+
+		search_filters = { FOCUS_FILTER_POLITICAL }
+
+		ai_will_do = {
+			base = 1
+		}
+
+		completion_reward = {
+			add_political_power = 50
+			add_war_support = 0.05
+		}
+	}
+
+	focus = {
+		id = TU_REU_patriot_council
+		icon = GFX_goal_generic_political_pressure
+		prerequisite = { focus = TU_REU_patriot_call }
+		x = 31
+		y = 0
+		cost = 10
+
+		search_filters = { FOCUS_FILTER_POLITICAL }
+
+		ai_will_do = {
+			base = 1
+		}
+
+		completion_reward = {
+			add_political_power = 50
+		}
+	}
+
+	focus = {
+		id = TU_REU_patriot_guard
+		icon = GFX_goal_generic_special_forces
+		prerequisite = { focus = TU_REU_patriot_call }
+		mutually_exclusive = { focus = TU_REU_patriot_speech }
+		x = 32
+		y = 0
+		cost = 10
+
+		search_filters = { FOCUS_FILTER_ARMY_XP }
+
+		ai_will_do = {
+			base = 1
+		}
+
+		completion_reward = {
+			army_experience = 25
+			add_political_power = 25
+		}
+	}
+
+	focus = {
+		id = TU_REU_patriot_reforms
+		icon = GFX_goal_generic_construct_civilian
+		prerequisite = { focus = TU_REU_patriot_call }
+		prerequisite = { focus = TU_REU_zone_council }
+		x = 33
+		y = 0
+		cost = 10
+
+		search_filters = { FOCUS_FILTER_POLITICAL }
+
+		ai_will_do = {
+			base = 1
+		}
+
+		completion_reward = {
+			add_political_power = 75
+			add_stability = 0.02
+		}
+	}
+
+	focus = {
+		id = TU_REU_patriot_rhodes_aid
+		icon = GFX_goal_generic_positive_trade_relations
+		prerequisite = { focus = TU_REU_patriot_council }
+		x = 34
+		y = 0
+		cost = 10
+
+		search_filters = { FOCUS_FILTER_POLITICAL }
+
+		ai_will_do = {
+			base = 1
+		}
+
+		completion_reward = {
+			add_political_power = 50
+			add_stability = 0.02
+		}
+	}
+
+	focus = {
+		id = TU_REU_frost_walls
+		icon = GFX_goal_generic_fortify_city
+		prerequisite = { focus = TU_REU_frost_fortress }
+		x = 35
+		y = 0
+		cost = 10
+
+		search_filters = { FOCUS_FILTER_POLITICAL }
+
+		ai_will_do = {
+			base = 1
+		}
+
+		completion_reward = {
+			add_political_power = 75
+		}
+	}
+
+	focus = {
+		id = TU_REU_fortress_supply
+		icon = GFX_goal_generic_construct_military
+		prerequisite = { focus = TU_REU_frost_fortress }
+		x = 36
+		y = 0
+		cost = 10
+
+		search_filters = { FOCUS_FILTER_POLITICAL }
+
+		ai_will_do = {
+			base = 1
+		}
+
+		completion_reward = {
+			add_political_power = 50
+			add_manpower = 10000
+		}
+	}
+
+	focus = {
+		id = TU_REU_fortress_watch
+		icon = GFX_goal_generic_radar
+		prerequisite = { focus = TU_REU_frost_fortress }
+		mutually_exclusive = { focus = TU_REU_fortress_watch_alt }
+		x = 37
+		y = 0
+		cost = 10
+
+		search_filters = { FOCUS_FILTER_POLITICAL }
+
+		ai_will_do = {
+			base = 1
+		}
+
+		completion_reward = {
+			add_stability = 0.03
+			add_political_power = 50
+		}
+	}
+
+	focus = {
+		id = TU_REU_fortress_watch_alt
+		icon = GFX_goal_generic_radar
+		prerequisite = { focus = TU_REU_frost_fortress }
+		mutually_exclusive = { focus = TU_REU_fortress_watch }
+		x = 39
+		y = 0
+		cost = 10
+
+		search_filters = { FOCUS_FILTER_POLITICAL }
+
+		ai_will_do = {
+			base = 1
+		}
+
+		completion_reward = {
+			army_experience = 15
+			add_political_power = 50
+		}
+	}
+
+	focus = {
+		id = TU_REU_bastion_line
+		icon = GFX_goal_generic_defence
+		prerequisite = { focus = TU_REU_frost_walls }
+		prerequisite = { focus = TU_REU_fortress_supply }
+		x = 38
+		y = 0
+		cost = 10
+
+		search_filters = { FOCUS_FILTER_ARMY_XP }
+
+		ai_will_do = {
+			base = 1
+		}
+
+		completion_reward = {
+			army_experience = 25
+			add_political_power = 75
+		}
+	}
+
+	focus = {
+		id = TU_REU_frost_guardians
+		icon = GFX_goal_generic_fortify_city
+		prerequisite = { focus = TU_REU_bastion_line }
+		x = 39
+		y = 0
+		cost = 15
+
+		search_filters = { FOCUS_FILTER_POLITICAL }
+
+		ai_will_do = {
+			base = 1
+		}
+
+		completion_reward = {
+			add_manpower = 20000
+			add_political_power = 100
+		}
+	}
+
+	focus = {
+		id = TU_REU_patriot_legacy
+		icon = GFX_goal_generic_national_unity
+		prerequisite = { focus = TU_REU_patriot_reforms }
+		prerequisite = { focus = TU_REU_frost_guardians }
+		x = 40
+		y = 0
+		cost = 15
+
+		search_filters = { FOCUS_FILTER_POLITICAL }
+
+		ai_will_do = {
+			base = 1
+		}
+
+		completion_reward = {
+			add_political_power = 100
+			add_stability = 0.05
+		}
+	}
+
+	#### FORK C: GUERRILLA WARFARE (after the militia call, p0) ####
+
+	focus = {
+		id = TU_REU_guerrilla_root
+		icon = GFX_goal_generic_small_arms
+		prerequisite = { focus = TU_REU_militia_call }
+		x = 41
+		y = 0
+		cost = 5
+
+		search_filters = { FOCUS_FILTER_POLITICAL }
+
+		ai_will_do = {
+			base = 1
+		}
+
+		completion_reward = {
+			add_political_power = 50
+			add_ideas = TU_REU_guerrilla_doctrine
+		}
+	}
+
+	focus = {
+		id = TU_REU_guerrilla_training
+		icon = GFX_goal_generic_army_doctrines
+		prerequisite = { focus = TU_REU_guerrilla_root }
+		x = 42
+		y = 0
+		cost = 10
+
+		search_filters = { FOCUS_FILTER_ARMY_XP }
+
+		ai_will_do = {
+			base = 1
+		}
+
+		completion_reward = {
+			army_experience = 20
+			add_political_power = 25
+		}
+	}
+
+	focus = {
+		id = TU_REU_guerrilla_cells
+		icon = GFX_goal_generic_intelligence_exchange
+		prerequisite = { focus = TU_REU_guerrilla_root }
+		x = 43
+		y = 0
+		cost = 10
+
+		search_filters = { FOCUS_FILTER_POLITICAL }
+
+		ai_will_do = {
+			base = 1
+		}
+
+		completion_reward = {
+			add_political_power = 25
+		}
+	}
+
+	focus = {
+		id = TU_REU_guerrilla_intel
+		icon = GFX_goal_generic_radar
+		prerequisite = { focus = TU_REU_guerrilla_cells }
+		x = 44
+		y = 0
+		cost = 10
+
+		search_filters = { FOCUS_FILTER_POLITICAL }
+
+		ai_will_do = {
+			base = 1
+		}
+
+		completion_reward = {
+			add_political_power = 50
+		}
+	}
+
+	focus = {
+		id = TU_REU_guerrilla_caches
+		icon = GFX_goal_generic_construct_civilian
+		prerequisite = { focus = TU_REU_guerrilla_training }
+		x = 45
+		y = 0
+		cost = 10
+
+		search_filters = { FOCUS_FILTER_POLITICAL }
+
+		ai_will_do = {
+			base = 1
+		}
+
+		completion_reward = {
+			add_political_power = 25
+			add_manpower = 10000
+		}
+	}
+
+	focus = {
+		id = TU_REU_guerrilla_ambush
+		icon = GFX_goal_generic_army_artillery
+		prerequisite = { focus = TU_REU_guerrilla_training }
+		x = 46
+		y = 0
+		cost = 10
+
+		search_filters = { FOCUS_FILTER_ARMY_XP }
+
+		ai_will_do = {
+			base = 1
+		}
+
+		completion_reward = {
+			army_experience = 40
+			add_political_power = 25
+		}
+	}
+
+	focus = {
+		id = TU_REU_guerrilla_scouting
+		icon = GFX_goal_generic_intelligence_exchange
+		prerequisite = { focus = TU_REU_guerrilla_cells }
+		mutually_exclusive = { focus = TU_REU_guerrilla_scouting_alt }
+		x = 47
+		y = 0
+		cost = 10
+
+		search_filters = { FOCUS_FILTER_POLITICAL }
+
+		ai_will_do = {
+			base = 1
+		}
+
+		completion_reward = {
+			add_war_support = 0.03
+			add_political_power = 25
+		}
+	}
+
+	focus = {
+		id = TU_REU_guerrilla_scouting_alt
+		icon = GFX_goal_generic_intelligence_exchange
+		prerequisite = { focus = TU_REU_guerrilla_cells }
+		mutually_exclusive = { focus = TU_REU_guerrilla_scouting }
+		x = 49
+		y = 0
+		cost = 10
+
+		search_filters = { FOCUS_FILTER_POLITICAL }
+
+		ai_will_do = {
+			base = 1
+		}
+
+		completion_reward = {
+			army_experience = 15
+			add_political_power = 25
+		}
+	}
+
+	focus = {
+		id = TU_REU_guerrilla_hideout
+		icon = GFX_goal_generic_fortify_city
+		prerequisite = { focus = TU_REU_guerrilla_cells }
+		x = 48
+		y = 0
+		cost = 10
+
+		search_filters = { FOCUS_FILTER_POLITICAL }
+
+		ai_will_do = {
+			base = 1
+		}
+
+		completion_reward = {
+			add_political_power = 25
+			add_stability = 0.02
+		}
+	}
+
+	focus = {
+		id = TU_REU_guerrilla_medic
+		icon = GFX_goal_generic_construct_civilian
+		prerequisite = { focus = TU_REU_guerrilla_caches }
+		x = 49
+		y = 0
+		cost = 10
+
+		search_filters = { FOCUS_FILTER_POLITICAL }
+
+		ai_will_do = {
+			base = 1
+		}
+
+		completion_reward = {
+			add_political_power = 25
+			add_stability = 0.02
+		}
+	}
+
+	focus = {
+		id = TU_REU_guerrilla_raid_plan
+		icon = GFX_goal_generic_occupy_states_ongoing_war
+		prerequisite = { focus = TU_REU_guerrilla_intel }
+		prerequisite = { focus = TU_REU_guerrilla_ambush }
+		x = 50
+		y = 0
+		cost = 10
+
+		search_filters = { FOCUS_FILTER_POLITICAL }
+
+		ai_will_do = {
+			base = 1
+		}
+
+		completion_reward = {
+			add_political_power = 50
+		}
+	}
+
+	focus = {
+		id = TU_REU_guerrilla_rails
+		icon = GFX_goal_generic_construct_infrastructure
+		prerequisite = { focus = TU_REU_guerrilla_raid_plan }
+		x = 51
+		y = 0
+		cost = 10
+
+		search_filters = { FOCUS_FILTER_POLITICAL }
+
+		ai_will_do = {
+			base = 1
+		}
+
+		completion_reward = {
+			add_political_power = 50
+		}
+	}
+
+	focus = {
+		id = TU_REU_guerrilla_voice
+		icon = GFX_goal_generic_propaganda
+		prerequisite = { focus = TU_REU_guerrilla_hideout }
+		x = 52
+		y = 0
+		cost = 10
+
+		search_filters = { FOCUS_FILTER_POLITICAL }
+
+		ai_will_do = {
+			base = 1
+		}
+
+		completion_reward = {
+			add_political_power = 50
+			add_war_support = 0.05
+		}
+	}
+
+	focus = {
+		id = TU_REU_guerrilla_night
+		icon = GFX_goal_generic_occupy_start_war
+		prerequisite = { focus = TU_REU_guerrilla_raid_plan }
+		x = 53
+		y = 0
+		cost = 10
+
+		search_filters = { FOCUS_FILTER_POLITICAL }
+
+		ai_will_do = {
+			base = 1
+		}
+
+		completion_reward = {
+			add_political_power = 75
+		}
+	}
+
+	focus = {
+		id = TU_REU_guerrilla_council
+		icon = GFX_goal_generic_army_doctrines
+		prerequisite = { focus = TU_REU_guerrilla_rails }
+		prerequisite = { focus = TU_REU_guerrilla_night }
+		x = 54
+		y = 0
+		cost = 10
+
+		search_filters = { FOCUS_FILTER_POLITICAL }
+
+		ai_will_do = {
+			base = 1
+		}
+
+		completion_reward = {
+			add_political_power = 75
+		}
+	}
+
+	focus = {
+		id = TU_REU_guerrilla_endless
+		icon = GFX_goal_generic_defence
+		prerequisite = { focus = TU_REU_guerrilla_council }
+		prerequisite = { focus = TU_REU_guerrilla_voice }
+		x = 55
+		y = 0
+		cost = 15
+
+		search_filters = { FOCUS_FILTER_POLITICAL }
+
+		ai_will_do = {
+			base = 1
+		}
+
+		completion_reward = {
+			country_event = { id = tu_reu_ev.5 }
+			add_political_power = 100
+			add_war_support = 0.05
+		}
+	}
+
+	#### FORK D: CHERNOBOG MOBILE CITY (after the uprising, p0) ####
+
+	focus = {
+		id = TU_REU_chernobog_root
+		icon = GFX_goal_generic_construct_civ_factory
+		prerequisite = { focus = TU_REU_uprising }
+		x = 56
+		y = 0
+		cost = 5
+
+		search_filters = { FOCUS_FILTER_INDUSTRY }
+
+		ai_will_do = {
+			base = 1
+		}
+
+		completion_reward = {
+			add_political_power = 50
+			add_ideas = TU_REU_chernobog_engine_idea
+		}
+	}
+
+	focus = {
+		id = TU_REU_chernobog_survey
+		icon = GFX_goal_generic_construction
+		prerequisite = { focus = TU_REU_chernobog_root }
+		x = 57
+		y = 0
+		cost = 10
+
+		search_filters = { FOCUS_FILTER_POLITICAL }
+
+		ai_will_do = {
+			base = 1
+		}
+
+		completion_reward = {
+			add_political_power = 25
+		}
+	}
+
+	focus = {
+		id = TU_REU_chernobog_crew
+		icon = GFX_goal_generic_construct_military
+		prerequisite = { focus = TU_REU_chernobog_root }
+		x = 58
+		y = 0
+		cost = 10
+
+		search_filters = { FOCUS_FILTER_POLITICAL }
+
+		ai_will_do = {
+			base = 1
+		}
+
+		completion_reward = {
+			add_political_power = 25
+			add_manpower = 10000
+		}
+	}
+
+	focus = {
+		id = TU_REU_chernobog_engine
+		icon = GFX_goal_generic_construct_mil_factory
+		prerequisite = { focus = TU_REU_chernobog_root }
+		x = 59
+		y = 0
+		cost = 10
+
+		search_filters = { FOCUS_FILTER_POLITICAL }
+
+		ai_will_do = {
+			base = 1
+		}
+
+		completion_reward = {
+			add_political_power = 25
+		}
+	}
+
+	focus = {
+		id = TU_REU_chernobog_reactor
+		icon = GFX_goal_generic_production
+		prerequisite = { focus = TU_REU_chernobog_engine }
+		x = 60
+		y = 0
+		cost = 10
+
+		search_filters = { FOCUS_FILTER_INDUSTRY }
+
+		ai_will_do = {
+			base = 1
+		}
+
+		completion_reward = {
+			add_political_power = 50
+		}
+	}
+
+	focus = {
+		id = TU_REU_chernobog_tracks
+		icon = GFX_goal_generic_army_motorized
+		prerequisite = { focus = TU_REU_chernobog_engine }
+		x = 61
+		y = 0
+		cost = 10
+
+		search_filters = { FOCUS_FILTER_POLITICAL }
+
+		ai_will_do = {
+			base = 1
+		}
+
+		completion_reward = {
+			add_political_power = 25
+		}
+	}
+
+	focus = {
+		id = TU_REU_chernobog_defences
+		icon = GFX_goal_generic_defence
+		prerequisite = { focus = TU_REU_chernobog_crew }
+		prerequisite = { focus = TU_REU_chernobog_survey }
+		x = 62
+		y = 0
+		cost = 10
+
+		search_filters = { FOCUS_FILTER_POLITICAL }
+
+		ai_will_do = {
+			base = 1
+		}
+
+		completion_reward = {
+			add_political_power = 50
+			add_stability = 0.02
+		}
+	}
+
+	focus = {
+		id = TU_REU_chernobog_workshop
+		icon = GFX_goal_generic_construct_civ_factory
+		prerequisite = { focus = TU_REU_chernobog_reactor }
+		x = 63
+		y = 0
+		cost = 10
+
+		search_filters = { FOCUS_FILTER_INDUSTRY }
+
+		ai_will_do = {
+			base = 1
+		}
+
+		completion_reward = {
+			add_political_power = 50
+		}
+	}
+
+	focus = {
+		id = TU_REU_chernobog_movement
+		icon = GFX_goal_generic_army_tanks
+		prerequisite = { focus = TU_REU_chernobog_reactor }
+		prerequisite = { focus = TU_REU_chernobog_tracks }
+		x = 64
+		y = 0
+		cost = 10
+
+		search_filters = { FOCUS_FILTER_POLITICAL }
+
+		ai_will_do = {
+			base = 1
+		}
+
+		completion_reward = {
+			add_political_power = 50
+		}
+	}
+
+	focus = {
+		id = TU_REU_chernobog_rail_link
+		icon = GFX_goal_generic_construct_infrastructure
+		prerequisite = { focus = TU_REU_chernobog_movement }
+		x = 65
+		y = 0
+		cost = 10
+
+		search_filters = { FOCUS_FILTER_INDUSTRY }
+
+		ai_will_do = {
+			base = 1
+		}
+
+		completion_reward = {
+			add_political_power = 50
+		}
+	}
+
+	focus = {
+		id = TU_REU_chernobog_bridge
+		icon = GFX_goal_generic_construct_infrastructure
+		prerequisite = { focus = TU_REU_chernobog_movement }
+		x = 66
+		y = 0
+		cost = 10
+
+		search_filters = { FOCUS_FILTER_POLITICAL }
+
+		ai_will_do = {
+			base = 1
+		}
+
+		completion_reward = {
+			add_political_power = 25
+		}
+	}
+
+	focus = {
+		id = TU_REU_chernobog_refugees
+		icon = GFX_goal_generic_construct_civilian
+		prerequisite = { focus = TU_REU_chernobog_defences }
+		x = 67
+		y = 0
+		cost = 10
+
+		search_filters = { FOCUS_FILTER_POLITICAL }
+
+		ai_will_do = {
+			base = 1
+		}
+
+		completion_reward = {
+			add_political_power = 25
+			add_manpower = 15000
+		}
+	}
+
+	focus = {
+		id = TU_REU_chernobog_convoy
+		icon = GFX_goal_generic_army_artillery
+		prerequisite = { focus = TU_REU_chernobog_movement }
+		x = 68
+		y = 0
+		cost = 10
+
+		search_filters = { FOCUS_FILTER_ARMY_XP }
+
+		ai_will_do = {
+			base = 1
+		}
+
+		completion_reward = {
+			army_experience = 25
+			add_political_power = 25
+		}
+	}
+
+	focus = {
+		id = TU_REU_chernobog_bunkers
+		icon = GFX_goal_generic_fortify_city
+		prerequisite = { focus = TU_REU_chernobog_defences }
+		prerequisite = { focus = TU_REU_chernobog_workshop }
+		x = 69
+		y = 0
+		cost = 10
+
+		search_filters = { FOCUS_FILTER_POLITICAL }
+
+		ai_will_do = {
+			base = 1
+		}
+
+		completion_reward = {
+			add_political_power = 75
+		}
+	}
+
+	focus = {
+		id = TU_REU_chernobog_hangar
+		icon = GFX_goal_generic_air_fighter
+		prerequisite = { focus = TU_REU_chernobog_workshop }
+		x = 70
+		y = 0
+		cost = 10
+
+		search_filters = { FOCUS_FILTER_POLITICAL }
+
+		ai_will_do = {
+			base = 1
+		}
+
+		completion_reward = {
+			add_political_power = 50
+		}
+	}
+
+	focus = {
+		id = TU_REU_chernobog_sensors
+		icon = GFX_goal_generic_radar
+		prerequisite = { focus = TU_REU_chernobog_survey }
+		mutually_exclusive = { focus = TU_REU_chernobog_sensors_alt }
+		x = 71
+		y = 0
+		cost = 10
+
+		search_filters = { FOCUS_FILTER_POLITICAL }
+
+		ai_will_do = {
+			base = 1
+		}
+
+		completion_reward = {
+			add_stability = 0.03
+			add_political_power = 25
+		}
+	}
+
+	focus = {
+		id = TU_REU_chernobog_sensors_alt
+		icon = GFX_goal_generic_radar
+		prerequisite = { focus = TU_REU_chernobog_survey }
+		mutually_exclusive = { focus = TU_REU_chernobog_sensors }
+		x = 73
+		y = 0
+		cost = 10
+
+		search_filters = { FOCUS_FILTER_POLITICAL }
+
+		ai_will_do = {
+			base = 1
+		}
+
+		completion_reward = {
+			add_war_support = 0.03
+			add_political_power = 25
+		}
+	}
+
+	focus = {
+		id = TU_REU_chernobog_power
+		icon = GFX_goal_generic_secret_weapon
+		prerequisite = { focus = TU_REU_chernobog_movement }
+		prerequisite = { focus = TU_REU_chernobog_workshop }
+		x = 72
+		y = 0
+		cost = 10
+
+		search_filters = { FOCUS_FILTER_INDUSTRY }
+
+		ai_will_do = {
+			base = 1
+		}
+
+		completion_reward = {
+			add_political_power = 75
+		}
+	}
+
+	focus = {
+		id = TU_REU_chernobog_heart
+		icon = GFX_goal_generic_major_war
+		prerequisite = { focus = TU_REU_chernobog_power }
+		prerequisite = { focus = TU_REU_chernobog_bunkers }
+		x = 73
+		y = 0
+		cost = 15
+
+		search_filters = { FOCUS_FILTER_POLITICAL }
+
+		ai_will_do = {
+			base = 1
+		}
+
+		completion_reward = {
+			country_event = { id = tu_reu_ev.4 }
+			add_political_power = 100
+		}
+	}
+
+	#### FORK E: INFECTED MOBILISATION (after the militia call, p0) ####
+
+	focus = {
+		id = TU_REU_mobilize_root
+		icon = GFX_goal_generic_allies_build_infantry
+		prerequisite = { focus = TU_REU_militia_call }
+		x = 74
+		y = 0
+		cost = 5
+
+		search_filters = { FOCUS_FILTER_POLITICAL }
+
+		ai_will_do = {
+			base = 1
+		}
+
+		completion_reward = {
+			add_political_power = 50
+			add_ideas = TU_REU_mobilize_spirit
+		}
+	}
+
+	focus = {
+		id = TU_REU_mobilize_registry
+		icon = GFX_goal_generic_construct_civilian
+		prerequisite = { focus = TU_REU_mobilize_root }
+		x = 75
+		y = 0
+		cost = 10
+
+		search_filters = { FOCUS_FILTER_POLITICAL }
+
+		ai_will_do = {
+			base = 1
+		}
+
+		completion_reward = {
+			add_political_power = 25
+		}
+	}
+
+	focus = {
+		id = TU_REU_mobilize_volunteers
+		icon = GFX_goal_generic_national_unity
+		prerequisite = { focus = TU_REU_mobilize_root }
+		x = 76
+		y = 0
+		cost = 10
+
+		search_filters = { FOCUS_FILTER_POLITICAL }
+
+		ai_will_do = {
+			base = 1
+		}
+
+		completion_reward = {
+			add_political_power = 25
+			add_manpower = 20000
+		}
+	}
+
+	focus = {
+		id = TU_REU_mobilize_pledge
+		icon = GFX_goal_generic_national_unity
+		prerequisite = { focus = TU_REU_mobilize_volunteers }
+		x = 77
+		y = 0
+		cost = 10
+
+		search_filters = { FOCUS_FILTER_POLITICAL }
+
+		ai_will_do = {
+			base = 1
+		}
+
+		completion_reward = {
+			add_political_power = 25
+			add_manpower = 5000
+		}
+	}
+
+	focus = {
+		id = TU_REU_mobilize_training
+		icon = GFX_goal_generic_army_doctrines
+		prerequisite = { focus = TU_REU_mobilize_registry }
+		x = 78
+		y = 0
+		cost = 10
+
+		search_filters = { FOCUS_FILTER_ARMY_XP }
+
+		ai_will_do = {
+			base = 1
+		}
+
+		completion_reward = {
+			army_experience = 20
+			add_political_power = 25
+		}
+	}
+
+	focus = {
+		id = TU_REU_mobilize_medics
+		icon = GFX_goal_generic_scientific_exchange
+		prerequisite = { focus = TU_REU_mobilize_registry }
+		x = 79
+		y = 0
+		cost = 10
+
+		search_filters = { FOCUS_FILTER_POLITICAL }
+
+		ai_will_do = {
+			base = 1
+		}
+
+		completion_reward = {
+			add_political_power = 25
+			add_stability = 0.03
+		}
+	}
+
+	focus = {
+		id = TU_REU_mobilize_schools
+		icon = GFX_goal_generic_construction
+		prerequisite = { focus = TU_REU_mobilize_registry }
+		mutually_exclusive = { focus = TU_REU_mobilize_schools_alt }
+		x = 80
+		y = 0
+		cost = 10
+
+		search_filters = { FOCUS_FILTER_POLITICAL }
+
+		ai_will_do = {
+			base = 1
+		}
+
+		completion_reward = {
+			army_experience = 15
+			add_political_power = 25
+		}
+	}
+
+	focus = {
+		id = TU_REU_mobilize_schools_alt
+		icon = GFX_goal_generic_construction
+		prerequisite = { focus = TU_REU_mobilize_registry }
+		mutually_exclusive = { focus = TU_REU_mobilize_schools }
+		x = 82
+		y = 0
+		cost = 10
+
+		search_filters = { FOCUS_FILTER_POLITICAL }
+
+		ai_will_do = {
+			base = 1
+		}
+
+		completion_reward = {
+			add_stability = 0.03
+			add_political_power = 25
+		}
+	}
+
+	focus = {
+		id = TU_REU_mobilize_camps
+		icon = GFX_goal_generic_construct_civilian
+		prerequisite = { focus = TU_REU_mobilize_volunteers }
+		x = 81
+		y = 0
+		cost = 10
+
+		search_filters = { FOCUS_FILTER_POLITICAL }
+
+		ai_will_do = {
+			base = 1
+		}
+
+		completion_reward = {
+			add_political_power = 25
+		}
+	}
+
+	focus = {
+		id = TU_REU_mobilize_units
+		icon = GFX_goal_generic_allies_build_infantry
+		prerequisite = { focus = TU_REU_mobilize_training }
+		prerequisite = { focus = TU_REU_mobilize_volunteers }
+		x = 82
+		y = 0
+		cost = 10
+
+		search_filters = { FOCUS_FILTER_POLITICAL }
+
+		ai_will_do = {
+			base = 1
+		}
+
+		completion_reward = {
+			add_political_power = 50
+		}
+	}
+
+	focus = {
+		id = TU_REU_mobilize_guards
+		icon = GFX_goal_generic_defence
+		prerequisite = { focus = TU_REU_mobilize_units }
+		x = 83
+		y = 0
+		cost = 10
+
+		search_filters = { FOCUS_FILTER_POLITICAL }
+
+		ai_will_do = {
+			base = 1
+		}
+
+		completion_reward = {
+			add_political_power = 50
+		}
+	}
+
+	focus = {
+		id = TU_REU_mobilize_quota
+		icon = GFX_goal_generic_construct_military
+		prerequisite = { focus = TU_REU_mobilize_guards }
+		mutually_exclusive = { focus = TU_REU_mobilize_quota_alt }
+		x = 84
+		y = 0
+		cost = 10
+
+		search_filters = { FOCUS_FILTER_POLITICAL }
+
+		ai_will_do = {
+			base = 1
+		}
+
+		completion_reward = {
+			add_ideas = TU_REU_choice_mobilize_quota
+			add_political_power = 50
+		}
+	}
+
+	focus = {
+		id = TU_REU_mobilize_quota_alt
+		icon = GFX_goal_generic_construct_military
+		prerequisite = { focus = TU_REU_mobilize_guards }
+		mutually_exclusive = { focus = TU_REU_mobilize_quota }
+		x = 86
+		y = 0
+		cost = 10
+
+		search_filters = { FOCUS_FILTER_POLITICAL }
+
+		ai_will_do = {
+			base = 1
+		}
+
+		completion_reward = {
+			army_experience = 15
+			add_political_power = 50
+		}
+	}
+
+	focus = {
+		id = TU_REU_mobilize_industry
+		icon = GFX_goal_generic_construct_civ_factory
+		prerequisite = { focus = TU_REU_mobilize_medics }
+		prerequisite = { focus = TU_REU_mobilize_camps }
+		x = 85
+		y = 0
+		cost = 10
+
+		search_filters = { FOCUS_FILTER_INDUSTRY }
+
+		ai_will_do = {
+			base = 1
+		}
+
+		completion_reward = {
+			add_political_power = 50
+		}
+	}
+
+	focus = {
+		id = TU_REU_mobilize_wave2
+		icon = GFX_goal_generic_major_war
+		prerequisite = { focus = TU_REU_mobilize_units }
+		x = 86
+		y = 0
+		cost = 10
+
+		search_filters = { FOCUS_FILTER_POLITICAL }
+
+		ai_will_do = {
+			base = 1
+		}
+
+		completion_reward = {
+			add_political_power = 50
+			add_manpower = 30000
+		}
+	}
+
+	focus = {
+		id = TU_REU_mobilize_frontline
+		icon = GFX_goal_generic_army_artillery
+		prerequisite = { focus = TU_REU_mobilize_guards }
+		x = 87
+		y = 0
+		cost = 10
+
+		search_filters = { FOCUS_FILTER_ARMY_XP }
+
+		ai_will_do = {
+			base = 1
+		}
+
+		completion_reward = {
+			army_experience = 50
+			add_political_power = 25
+		}
+	}
+
+	focus = {
+		id = TU_REU_mobilize_wartime
+		icon = GFX_goal_generic_construct_mil_factory
+		prerequisite = { focus = TU_REU_mobilize_wave2 }
+		prerequisite = { focus = TU_REU_mobilize_industry }
+		x = 88
+		y = 0
+		cost = 10
+
+		search_filters = { FOCUS_FILTER_POLITICAL }
+
+		ai_will_do = {
+			base = 1
+		}
+
+		completion_reward = {
+			add_political_power = 75
+		}
+	}
+
+	focus = {
+		id = TU_REU_mobilize_total
+		icon = GFX_goal_generic_major_war
+		prerequisite = { focus = TU_REU_mobilize_wartime }
+		prerequisite = { focus = TU_REU_mobilize_frontline }
+		x = 89
+		y = 0
+		cost = 15
+
+		search_filters = { FOCUS_FILTER_POLITICAL }
+
+		ai_will_do = {
+			base = 1
+		}
+
+		completion_reward = {
+			country_event = { id = tu_reu_ev.6 }
+			add_political_power = 100
+			add_ideas = TU_REU_total_war_spirit
+		}
+	}
+
+	#### DIPLOMACY: ALLIANCE SEARCH (late, after the Chernobog heart) ####
+
+	focus = {
+		id = TU_REU_dip_alliance
+		icon = GFX_goal_generic_alliance
+		prerequisite = { focus = TU_REU_chernobog_heart }
+		x = 90
+		y = 0
+		cost = 10
+
+		search_filters = { FOCUS_FILTER_POLITICAL }
+
+		ai_will_do = {
+			base = 1
+		}
+
+		completion_reward = {
+			add_political_power = 50
+			set_country_flag = TU_dip_alliance_unlocked
+		}
+	}

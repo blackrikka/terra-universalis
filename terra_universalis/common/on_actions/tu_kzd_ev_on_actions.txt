@@ -1,0 +1,14 @@
+on_actions = {
+	# Kazdel monthly random events (tu_kzd_ev.14 - 18). Each event's trigger checks tag = KZD and its own one-time flag.
+	# 1000 = 0 is the "nothing happens" share, as in vanilla on_actions.
+	on_monthly = {
+		random_events = {
+			1000 = 0
+			40 = tu_kzd_ev.14
+			40 = tu_kzd_ev.15
+			40 = tu_kzd_ev.16
+			40 = tu_kzd_ev.17
+			40 = tu_kzd_ev.18
+		}
+	}
+}

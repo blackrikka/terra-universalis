@@ -1,0 +1,11 @@
+on_actions = {
+	# Reunion monthly events (spec 10). Each event checks tag = REU and fires once through its own flag.
+	on_monthly = {
+		random_events = {
+			1000 = 0
+			20 = tu_reu_ev.20
+			20 = tu_reu_ev.21
+			20 = tu_reu_ev.22
+		}
+	}
+}

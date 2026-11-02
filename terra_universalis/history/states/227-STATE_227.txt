@@ -1,0 +1,21 @@
+state={
+	id=227
+	name="STATE_227"
+	manpower = 50000
+
+	state_category = town
+
+	history={
+		owner = HIG
+		victory_points = { 1099 1 }
+		buildings = {
+			infrastructure = 2
+		}
+		add_core_of = HIG
+	}
+
+	provinces={
+		1094 1095 1096 1097 1099 1100 1101 1102
+	}
+	local_supplies=0.0
+}

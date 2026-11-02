@@ -1,0 +1,80 @@
+TU_RHO_bop = {
+	initial_value = 0.0
+	left_side = TU_RHO_bop_amiya
+	right_side = TU_RHO_bop_doctor
+	decision_category = TU_RHO_operations_category
+
+	#### AMIYA (idealism) ####
+	side = {
+		id = TU_RHO_bop_amiya
+		icon = GFX_bop_DEN_welfare_side
+
+		range = {
+			id = TU_RHO_bop_amiya_low_range
+			min = -0.33
+			max = 0
+			modifier = {
+				stability_factor = 0.02
+				political_power_gain = 0.05
+				send_volunteer_size = 1
+			}
+		}
+		range = {
+			id = TU_RHO_bop_amiya_mid_range
+			min = -0.66
+			max = -0.33
+			modifier = {
+				stability_factor = 0.04
+				political_power_gain = 0.1
+				send_volunteer_size = 2
+			}
+		}
+		range = {
+			id = TU_RHO_bop_amiya_high_range
+			min = -1
+			max = -0.66
+			modifier = {
+				stability_factor = 0.06
+				political_power_gain = 0.15
+				send_volunteer_size = 3
+			}
+		}
+	}
+
+	#### DOCTOR (pragmatism) ####
+	side = {
+		id = TU_RHO_bop_doctor
+		icon = GFX_bop_DEN_warfare_side
+
+		range = {
+			id = TU_RHO_bop_doctor_low_range
+			min = 0
+			max = 0.33
+			modifier = {
+				army_attack_factor = 0.02
+				industrial_capacity_factory = 0.05
+				war_support_factor = 0.02
+			}
+		}
+		range = {
+			id = TU_RHO_bop_doctor_mid_range
+			min = 0.33
+			max = 0.66
+			modifier = {
+				army_attack_factor = 0.04
+				industrial_capacity_factory = 0.1
+				war_support_factor = 0.04
+			}
+		}
+		range = {
+			id = TU_RHO_bop_doctor_high_range
+			min = 0.66
+			max = 1
+			modifier = {
+				army_attack_factor = 0.06
+				industrial_capacity_factory = 0.15
+				war_support_factor = 0.06
+			}
+		}
+	}
+}

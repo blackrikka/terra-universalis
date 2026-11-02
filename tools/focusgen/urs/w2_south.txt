@@ -1,0 +1,401 @@
+	#### SOUTH: YAN (YAN) - diplomacy x152 / border x154 / war x156 ####
+
+	focus = {
+		id = TU_URS_w2_yan_border_buildup
+		icon = GFX_goal_generic_defence
+		prerequisite = { focus = TU_URS_foreign_ministry }
+		x = 154
+		y = 4
+		cost = 10
+
+		search_filters = { FOCUS_FILTER_MANPOWER }
+
+		ai_will_do = {
+			base = 1
+		}
+
+		available = {
+			has_country_flag = TU_DEC_TU_URS_w2_yan_border_claims
+		}
+
+		completion_reward = {
+			add_manpower = 20000
+			add_political_power = 25
+		}
+	}
+
+	focus = {
+		id = TU_URS_w2_yan_mobilization
+		icon = GFX_goal_generic_army_motorized
+		prerequisite = { focus = TU_URS_foreign_ministry }
+		x = 156
+		y = 4
+		cost = 10
+
+		search_filters = { FOCUS_FILTER_ARMY_XP }
+
+		ai_will_do = {
+			base = 1
+		}
+
+		available = {
+			has_country_flag = TU_DEC_TU_URS_w2_yan_border_claims
+		}
+
+		completion_reward = {
+			army_experience = 15
+			add_manpower = 10000
+		}
+	}
+
+	focus = {
+		id = TU_URS_w2_yan_war_doctrine
+		icon = GFX_goal_generic_army_tanks
+		prerequisite = { focus = TU_URS_w2_yan_mobilization }
+		x = 156
+		y = 5
+		cost = 10
+
+		search_filters = { FOCUS_FILTER_ARMY_XP }
+
+		ai_will_do = {
+			base = 1
+		}
+
+		completion_reward = {
+			army_experience = 25
+		}
+	}
+
+	focus = {
+		id = TU_URS_w2_yan_awakening
+		icon = GFX_goal_generic_national_unity
+		prerequisite = { focus = TU_URS_w2_yan_border_buildup }
+		x = 154
+		y = 6
+		cost = 10
+
+		available = {
+			has_completed_focus = TU_URS_emperor_rule
+			has_country_flag = TU_DEC_TU_URS_w2_yan_border_ultimatum
+		}
+
+		search_filters = { FOCUS_FILTER_MANPOWER }
+
+		ai_will_do = {
+			base = 1
+		}
+
+		completion_reward = {
+			add_manpower = 40000
+			add_political_power = 50
+			add_ideas = TU_URS_w2_sleeping_giant
+		}
+	}
+
+	focus = {
+		id = TU_URS_w2_yan_occupation
+		icon = GFX_goal_generic_occupy_states_ongoing_war
+		prerequisite = { focus = TU_URS_w2_yan_war_doctrine }
+		x = 156
+		y = 8
+		cost = 10
+
+		search_filters = { FOCUS_FILTER_WAR_SUPPORT }
+
+		ai_will_do = {
+			base = 1
+		}
+
+		available = {
+			has_country_flag = TU_DEC_TU_URS_w2_yan_war_declaration
+		}
+
+		completion_reward = {
+			army_experience = 25
+			add_ideas = TU_URS_w2_occupation_strain
+		}
+	}
+
+	focus = {
+		id = TU_URS_w2_yan_core_integration
+		icon = GFX_goal_generic_construction
+		prerequisite = { focus = TU_URS_w2_yan_occupation }
+		x = 156
+		y = 11
+		cost = 10
+
+		search_filters = { FOCUS_FILTER_HISTORICAL }
+
+		ai_will_do = {
+			base = 1
+		}
+
+		completion_reward = {
+			add_political_power = 50
+			every_owned_state = {
+				limit = {
+					is_owned_and_controlled_by = ROOT
+					is_core_of = YAN
+				}
+				add_core_of = ROOT
+				add_compliance = 10
+				set_state_flag = TU_URS_w2_yan_integrated
+			}
+		}
+	}
+
+	#### SOUTH: LUNGMEN (LGM) - diplomacy x158 / border x160 / war x162 ####
+
+	focus = {
+		id = TU_URS_w2_lgm_reunion_pressure
+		icon = GFX_goal_generic_demand_territory
+		prerequisite = { focus = TU_URS_foreign_ministry }
+		x = 160
+		y = 4
+		cost = 10
+
+		search_filters = { FOCUS_FILTER_MANPOWER }
+
+		ai_will_do = {
+			base = 1
+		}
+
+		available = {
+			has_country_flag = TU_DEC_TU_URS_w2_lgm_border_claims
+		}
+
+		completion_reward = {
+			add_manpower = 20000
+			add_ideas = TU_URS_w2_reunion_front
+		}
+	}
+
+	focus = {
+		id = TU_URS_w2_lgm_mobilization
+		icon = GFX_goal_generic_army_motorized
+		prerequisite = { focus = TU_URS_foreign_ministry }
+		x = 162
+		y = 4
+		cost = 10
+
+		search_filters = { FOCUS_FILTER_ARMY_XP }
+
+		ai_will_do = {
+			base = 1
+		}
+
+		available = {
+			has_country_flag = TU_DEC_TU_URS_w2_lgm_border_claims
+		}
+
+		completion_reward = {
+			army_experience = 15
+		}
+	}
+
+	focus = {
+		id = TU_URS_w2_lgm_war_doctrine
+		icon = GFX_goal_generic_army_artillery
+		prerequisite = { focus = TU_URS_w2_lgm_mobilization }
+		x = 162
+		y = 5
+		cost = 10
+
+		search_filters = { FOCUS_FILTER_ARMY_XP }
+
+		ai_will_do = {
+			base = 1
+		}
+
+		completion_reward = {
+			army_experience = 25
+		}
+	}
+
+	focus = {
+		id = TU_URS_w2_lgm_noble_gate
+		icon = GFX_goal_generic_consumer_goods
+		prerequisite = { focus = TU_URS_w2_lgm_reunion_pressure }
+		x = 160
+		y = 6
+		cost = 10
+
+		available = {
+			has_completed_focus = TU_URS_noble_compromise
+			has_country_flag = TU_DEC_TU_URS_w2_lgm_border_ultimatum
+		}
+
+		search_filters = { FOCUS_FILTER_INDUSTRY }
+
+		ai_will_do = {
+			base = 1
+		}
+
+		completion_reward = {
+			add_political_power = 50
+			add_offsite_building = {
+				type = industrial_complex
+				level = 1
+			}
+			add_ideas = TU_URS_w2_merchant_fleet
+		}
+	}
+
+	focus = {
+		id = TU_URS_w2_lgm_core_integration
+		icon = GFX_goal_generic_construction
+		prerequisite = { focus = TU_URS_w2_lgm_war_doctrine }
+		x = 162
+		y = 9
+		cost = 10
+
+		search_filters = { FOCUS_FILTER_HISTORICAL }
+
+		ai_will_do = {
+			base = 1
+		}
+
+		available = {
+			has_country_flag = TU_DEC_TU_URS_w2_lgm_war_declaration
+		}
+
+		completion_reward = {
+			add_political_power = 50
+			every_owned_state = {
+				limit = {
+					is_owned_and_controlled_by = ROOT
+					is_core_of = LGM
+				}
+				add_core_of = ROOT
+				add_compliance = 10
+				set_state_flag = TU_URS_w2_lgm_integrated
+			}
+		}
+	}
+
+	#### SOUTH: HIGASHI (HIG) - diplomacy x164 / border x166 / war x168 ####
+
+	focus = {
+		id = TU_URS_w2_hig_naval_buildup
+		icon = GFX_goal_generic_build_navy
+		prerequisite = { focus = TU_URS_foreign_ministry }
+		x = 166
+		y = 4
+		cost = 10
+
+		search_filters = { FOCUS_FILTER_MANPOWER }
+
+		ai_will_do = {
+			base = 1
+		}
+
+		available = {
+			has_country_flag = TU_DEC_TU_URS_w2_hig_border_claims
+		}
+
+		completion_reward = {
+			add_manpower = 15000
+			add_political_power = 25
+		}
+	}
+
+	focus = {
+		id = TU_URS_w2_hig_mobilization
+		icon = GFX_goal_generic_amphibious_assault
+		prerequisite = { focus = TU_URS_foreign_ministry }
+		x = 168
+		y = 4
+		cost = 10
+
+		search_filters = { FOCUS_FILTER_ARMY_XP }
+
+		ai_will_do = {
+			base = 1
+		}
+
+		available = {
+			has_country_flag = TU_DEC_TU_URS_w2_hig_border_claims
+		}
+
+		completion_reward = {
+			army_experience = 15
+		}
+	}
+
+	focus = {
+		id = TU_URS_w2_hig_war_doctrine
+		icon = GFX_goal_generic_occupy_states_coastal
+		prerequisite = { focus = TU_URS_w2_hig_mobilization }
+		x = 168
+		y = 5
+		cost = 10
+
+		search_filters = { FOCUS_FILTER_ARMY_XP }
+
+		ai_will_do = {
+			base = 1
+		}
+
+		completion_reward = {
+			army_experience = 25
+		}
+	}
+
+	focus = {
+		id = TU_URS_w2_hig_junta_landing
+		icon = GFX_goal_generic_occupy_states_coastal
+		prerequisite = { focus = TU_URS_w2_hig_naval_buildup }
+		x = 166
+		y = 6
+		cost = 10
+
+		available = {
+			has_completed_focus = TU_URS_military_junta
+			has_country_flag = TU_DEC_TU_URS_w2_hig_ultimatum
+		}
+
+		search_filters = { FOCUS_FILTER_WAR_SUPPORT }
+
+		ai_will_do = {
+			base = 1
+		}
+
+		completion_reward = {
+			add_political_power = 50
+			add_war_support = 0.05
+			add_ideas = TU_URS_w2_naval_blockade
+		}
+	}
+
+	focus = {
+		id = TU_URS_w2_hig_core_integration
+		icon = GFX_goal_generic_construction
+		prerequisite = { focus = TU_URS_w2_hig_war_doctrine }
+		x = 168
+		y = 10
+		cost = 10
+
+		search_filters = { FOCUS_FILTER_HISTORICAL }
+
+		ai_will_do = {
+			base = 1
+		}
+
+		available = {
+			has_country_flag = TU_DEC_TU_URS_w2_hig_war_declaration
+		}
+
+		completion_reward = {
+			add_political_power = 50
+			every_owned_state = {
+				limit = {
+					is_owned_and_controlled_by = ROOT
+					is_core_of = HIG
+				}
+				add_core_of = ROOT
+				add_compliance = 10
+				set_state_flag = TU_URS_w2_hig_integrated
+			}
+		}
+	}

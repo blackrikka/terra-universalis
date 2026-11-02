@@ -1,0 +1,216 @@
+ideas = {
+
+	country = {
+
+		TU_URS_w3_idea_kaz_protectorate = {
+			picture = generic_political_support
+
+			allowed = {
+				original_tag = URS
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			modifier = {
+				stability_factor = 0.03
+				political_power_factor = 0.05
+			}
+		}
+
+		TU_URS_w3_idea_kaz_occupation = {
+			picture = generic_oppression
+
+			allowed = {
+				original_tag = URS
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			modifier = {
+				stability_factor = -0.05
+				war_support_factor = 0.05
+			}
+		}
+
+		TU_URS_w3_idea_kje_trade_road = {
+			picture = generic_railroads
+
+			allowed = {
+				original_tag = URS
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			modifier = {
+				production_speed_buildings_factor = 0.05
+			}
+		}
+
+		TU_URS_w3_idea_kje_mountain_garrison = {
+			picture = generic_mountain_defensive_training
+
+			allowed = {
+				original_tag = URS
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			modifier = {
+				army_defence_factor = 0.05
+			}
+		}
+
+		TU_URS_w3_idea_sami_ski_troops = {
+			picture = generic_mountain_warfare
+
+			allowed = {
+				original_tag = URS
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			modifier = {
+				army_attack_factor = 0.05
+			}
+		}
+
+		TU_URS_w3_idea_sami_administration = {
+			picture = generic_local_self_management
+
+			allowed = {
+				original_tag = URS
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			modifier = {
+				stability_factor = 0.03
+			}
+		}
+
+		TU_URS_w3_idea_infi_survey_team = {
+			picture = generic_research_bonus
+
+			allowed = {
+				original_tag = URS
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			modifier = {
+				research_speed_factor = 0.05
+			}
+		}
+
+		TU_URS_w3_idea_infi_frost_gear = {
+			picture = generic_infantry_bonus
+
+			allowed = {
+				original_tag = URS
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			modifier = {
+				winter_attrition_factor = -0.1
+			}
+		}
+
+		TU_URS_w3_idea_infi_supply_road = {
+			picture = generic_supply_line
+
+			allowed = {
+				original_tag = URS
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			modifier = {
+				supply_consumption_factor = -0.05
+			}
+		}
+
+		TU_URS_w4_idea_pact_unity = {
+			picture = generic_political_support
+
+			allowed = {
+				original_tag = URS
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			modifier = {
+				war_support_factor = 0.05
+				stability_factor = 0.02
+			}
+		}
+
+		TU_URS_w4_idea_order_mandate = {
+			picture = generic_central_management
+
+			allowed = {
+				original_tag = URS
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			modifier = {
+				political_power_factor = 0.1
+			}
+		}
+
+		TU_URS_w4_idea_rho_partner = {
+			picture = generic_foreign_capital
+
+			allowed = {
+				original_tag = URS
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			modifier = {
+				production_speed_buildings_factor = 0.05
+			}
+		}
+
+		TU_URS_w4_idea_reu_autonomy = {
+			picture = generic_local_self_management
+
+			allowed = {
+				original_tag = URS
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			modifier = {
+				stability_factor = 0.03
+			}
+		}
+	}
+}

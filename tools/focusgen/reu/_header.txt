@@ -1,0 +1,19 @@
+focus_tree = {
+	id = TU_REU_focus
+	continuous_focus_position = { x = 50 y = 780 }
+
+	country = {
+		factor = 0
+		modifier = {
+			add = 10
+			original_tag = REU
+		}
+	}
+
+	reset_on_civilwar = no
+
+	initial_show_position = {
+		focus = TU_REU_uprising
+	}
+
+	#### ROOT: INFECTED UPRISING ####

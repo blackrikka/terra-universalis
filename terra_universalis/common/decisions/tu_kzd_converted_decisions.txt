@@ -1,0 +1,64 @@
+TU_KZD_construction_category = {
+
+	TU_KZD_babel_industry = {
+		icon = GFX_decision_generic_construction
+
+		allowed = {
+			original_tag = KZD
+		}
+
+		visible = {
+			has_completed_focus = TU_KZD_babel_envoy
+		}
+
+		available = {
+			has_completed_focus = TU_KZD_babel_envoy
+		}
+
+		cost = 50
+		fire_only_once = yes
+
+		complete_effect = {
+			add_offsite_building = {
+				type = industrial_complex
+				level = 1
+			}
+			set_country_flag = TU_DEC_TU_KZD_babel_industry
+		}
+
+		ai_will_do = {
+			base = 1
+		}
+	}
+
+	TU_KZD_restored_workshops = {
+		icon = GFX_decision_generic_construction
+
+		allowed = {
+			original_tag = KZD
+		}
+
+		visible = {
+			has_completed_focus = TU_KZD_arms_export
+		}
+
+		available = {
+			has_completed_focus = TU_KZD_arms_export
+		}
+
+		cost = 50
+		fire_only_once = yes
+
+		complete_effect = {
+			add_offsite_building = {
+				type = industrial_complex
+				level = 1
+			}
+			set_country_flag = TU_DEC_TU_KZD_restored_workshops
+		}
+
+		ai_will_do = {
+			base = 1
+		}
+	}
+}

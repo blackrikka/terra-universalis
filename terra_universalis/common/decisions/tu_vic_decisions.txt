@@ -1,0 +1,88 @@
+TU_VIC_crown_category = {
+
+	TU_VIC_court_dukes_1 = {
+		icon = GFX_decision_generic_political_discourse
+
+		allowed = {
+			original_tag = VIC
+		}
+
+		cost = 50
+		fire_only_once = yes
+
+		complete_effect = {
+			add_power_balance_value = {
+				id = TU_VIC_bop
+				value = 0.05
+			}
+		}
+
+		ai_will_do = {
+			base = 0
+		}
+	}
+
+	TU_VIC_court_dukes_2 = {
+		icon = GFX_decision_generic_political_discourse
+
+		allowed = {
+			original_tag = VIC
+		}
+
+		cost = 50
+		fire_only_once = yes
+
+		complete_effect = {
+			add_power_balance_value = {
+				id = TU_VIC_bop
+				value = 0.05
+			}
+		}
+
+		ai_will_do = {
+			base = 0
+		}
+	}
+
+	TU_VIC_court_dukes_3 = {
+		icon = GFX_decision_generic_political_discourse
+
+		allowed = {
+			original_tag = VIC
+		}
+
+		cost = 50
+		fire_only_once = yes
+
+		complete_effect = {
+			add_power_balance_value = {
+				id = TU_VIC_bop
+				value = -0.05
+			}
+		}
+
+		ai_will_do = {
+			base = 0
+		}
+	}
+
+	TU_VIC_suppress_dublinn = {
+		icon = GFX_decision_generic_police_action
+
+		allowed = {
+			original_tag = VIC
+		}
+
+		cost = 25
+		days_re_enable = 60
+		fire_only_once = no
+
+		complete_effect = {
+			add_stability = 0.05
+		}
+
+		ai_will_do = {
+			base = 0
+		}
+	}
+}

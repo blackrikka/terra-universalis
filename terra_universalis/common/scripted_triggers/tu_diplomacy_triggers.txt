@@ -1,0 +1,31 @@
+# Diplomacy decision triggers (used by common/decisions/tu_diplomacy_decisions.txt). Scope: FROM (target country).
+
+# FROM has at least two parties: two of the four vanilla ideologies with popularity above 5%.
+TU_dip_has_multiple_parties = {
+	OR = {
+		AND = {
+			neutrality > 0.05
+			democratic > 0.05
+		}
+		AND = {
+			neutrality > 0.05
+			fascism > 0.05
+		}
+		AND = {
+			neutrality > 0.05
+			communism > 0.05
+		}
+		AND = {
+			democratic > 0.05
+			fascism > 0.05
+		}
+		AND = {
+			democratic > 0.05
+			communism > 0.05
+		}
+		AND = {
+			fascism > 0.05
+			communism > 0.05
+		}
+	}
+}

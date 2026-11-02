@@ -1,0 +1,15 @@
+#####################################
+### TU_VIC startup (country scope) ###
+#####################################
+
+# Called from common/on_actions/tu_vic_on_actions.txt (on_startup).
+# Twelve starting line infantry divisions in the capital state.
+TU_VIC_startup = {
+	capital_scope = {
+		create_unit = {
+			division = "division_template = \"TU_VIC_line_infantry\" start_experience_factor = 0.2 start_equipment_factor = 0.7"
+			owner = VIC
+			count = 12
+		}
+	}
+}

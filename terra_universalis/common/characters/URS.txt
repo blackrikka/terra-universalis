@@ -1,0 +1,52 @@
+characters = {
+
+	TU_URS_emperor = {
+		name = TU_URS_emperor
+		portraits = {
+			civilian = {
+				large = "GFX_Portrait_Europe_Generic_1"
+			}
+		}
+		country_leader = {
+			ideology = despotism
+			expire = "1200.1.1.1"
+			id = -1
+		}
+	}
+
+	TU_URS_general_1 = {
+		name = TU_URS_general_1
+		portraits = {
+			civilian = {
+				large = "GFX_Portrait_Europe_Generic_2"
+			}
+		}
+		corps_commander = {
+			traits = { }
+			skill = 3
+			attack_skill = 3
+			defense_skill = 3
+			planning_skill = 2
+			logistics_skill = 2
+			legacy_id = 0
+		}
+	}
+
+	TU_URS_general_2 = {
+		name = TU_URS_general_2
+		portraits = {
+			civilian = {
+				large = "GFX_Portrait_Europe_Generic_3"
+			}
+		}
+		corps_commander = {
+			traits = { }
+			skill = 3
+			attack_skill = 2
+			defense_skill = 4
+			planning_skill = 2
+			logistics_skill = 3
+			legacy_id = 0
+		}
+	}
+}

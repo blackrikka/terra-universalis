@@ -1,0 +1,1085 @@
+TU_VIC_expansion_category = {
+
+	TU_VIC_claim_kzd = {
+		icon = GFX_decision_generic_military
+
+		allowed = {
+			original_tag = VIC
+		}
+
+		visible = {
+			has_completed_focus = TU_VIC_kzd_claim_londinium
+		}
+
+		available = {
+			has_completed_focus = TU_VIC_kzd_claim_londinium
+			NOT = { has_war_with = KZD }
+		}
+
+		cost = 75
+		fire_only_once = yes
+
+		complete_effect = {
+			if = {
+				limit = { country_exists = KZD }
+				hidden_effect = {
+					KZD = {
+						every_owned_state = {
+							limit = { NOT = { is_claimed_by = ROOT } }
+							ROOT = { add_state_claim = PREV }
+						}
+					}
+				}
+			}
+			set_country_flag = TU_DEC_TU_VIC_claim_kzd
+		}
+
+		ai_will_do = {
+			base = 1
+		}
+	}
+
+	TU_VIC_claim_lei = {
+		icon = GFX_decision_generic_military
+
+		allowed = {
+			original_tag = VIC
+		}
+
+		visible = {
+			has_completed_focus = TU_VIC_lei_claim
+		}
+
+		available = {
+			has_completed_focus = TU_VIC_lei_claim
+			NOT = { has_war_with = LEI }
+		}
+
+		cost = 50
+		fire_only_once = yes
+
+		complete_effect = {
+			if = {
+				limit = { country_exists = LEI }
+				hidden_effect = {
+					LEI = {
+						every_owned_state = {
+							limit = { NOT = { is_claimed_by = ROOT } }
+							ROOT = { add_state_claim = PREV }
+						}
+					}
+				}
+			}
+			set_country_flag = TU_DEC_TU_VIC_claim_lei
+		}
+
+		ai_will_do = {
+			base = 1
+		}
+	}
+
+	TU_VIC_claim_col = {
+		icon = GFX_decision_generic_military
+
+		allowed = {
+			original_tag = VIC
+		}
+
+		visible = {
+			has_completed_focus = TU_VIC_col_claim
+		}
+
+		available = {
+			has_completed_focus = TU_VIC_col_claim
+			NOT = { has_war_with = COL }
+		}
+
+		cost = 50
+		fire_only_once = yes
+
+		complete_effect = {
+			if = {
+				limit = { country_exists = COL }
+				hidden_effect = {
+					COL = {
+						every_owned_state = {
+							limit = { NOT = { is_claimed_by = ROOT } }
+							ROOT = { add_state_claim = PREV }
+						}
+					}
+				}
+			}
+			set_country_flag = TU_DEC_TU_VIC_claim_col
+		}
+
+		ai_will_do = {
+			base = 1
+		}
+	}
+
+	TU_VIC_claim_bol = {
+		icon = GFX_decision_generic_military
+
+		allowed = {
+			original_tag = VIC
+		}
+
+		visible = {
+			has_completed_focus = TU_VIC_bol_claim
+		}
+
+		available = {
+			has_completed_focus = TU_VIC_bol_claim
+			NOT = { has_war_with = BOL }
+		}
+
+		cost = 50
+		fire_only_once = yes
+
+		complete_effect = {
+			if = {
+				limit = { country_exists = BOL }
+				hidden_effect = {
+					BOL = {
+						every_owned_state = {
+							limit = { NOT = { is_claimed_by = ROOT } }
+							ROOT = { add_state_claim = PREV }
+						}
+					}
+				}
+			}
+			set_country_flag = TU_DEC_TU_VIC_claim_bol
+		}
+
+		ai_will_do = {
+			base = 1
+		}
+	}
+
+	TU_VIC_claim_urs = {
+		icon = GFX_decision_generic_military
+
+		allowed = {
+			original_tag = VIC
+		}
+
+		visible = {
+			has_completed_focus = TU_VIC_urs_claim
+		}
+
+		available = {
+			has_completed_focus = TU_VIC_urs_claim
+			NOT = { has_war_with = URS }
+		}
+
+		cost = 100
+		fire_only_once = yes
+
+		complete_effect = {
+			if = {
+				limit = { country_exists = URS }
+				hidden_effect = {
+					URS = {
+						every_owned_state = {
+							limit = { NOT = { is_claimed_by = ROOT } }
+							ROOT = { add_state_claim = PREV }
+						}
+					}
+				}
+			}
+			set_country_flag = TU_DEC_TU_VIC_claim_urs
+		}
+
+		ai_will_do = {
+			base = 1
+		}
+	}
+
+	TU_VIC_claim_kaz = {
+		icon = GFX_decision_generic_military
+
+		allowed = {
+			original_tag = VIC
+		}
+
+		visible = {
+			has_completed_focus = TU_VIC_kaz_claim
+		}
+
+		available = {
+			has_completed_focus = TU_VIC_kaz_claim
+			NOT = { has_war_with = KAZ }
+		}
+
+		cost = 75
+		fire_only_once = yes
+
+		complete_effect = {
+			if = {
+				limit = { country_exists = KAZ }
+				hidden_effect = {
+					KAZ = {
+						every_owned_state = {
+							limit = { NOT = { is_claimed_by = ROOT } }
+							ROOT = { add_state_claim = PREV }
+						}
+					}
+				}
+			}
+			set_country_flag = TU_DEC_TU_VIC_claim_kaz
+		}
+
+		ai_will_do = {
+			base = 1
+		}
+	}
+
+	TU_VIC_war_kzd = {
+		icon = GFX_decision_generic_army_support
+
+		allowed = {
+			original_tag = VIC
+		}
+
+		visible = {
+			has_completed_focus = TU_VIC_kzd_war_plans
+		}
+
+		available = {
+			has_completed_focus = TU_VIC_kzd_war_plans
+			has_country_flag = TU_DEC_TU_VIC_claim_kzd
+			NOT = { has_war_with = KZD }
+		}
+
+		cost = 75
+		fire_only_once = yes
+
+		complete_effect = {
+			if = {
+				limit = { country_exists = KZD }
+				hidden_effect = {
+					create_wargoal = {
+						type = annex_everything
+						target = KZD
+					}
+				}
+			}
+			set_country_flag = TU_DEC_TU_VIC_war_kzd
+		}
+
+		ai_will_do = {
+			base = 0
+		}
+	}
+
+	TU_VIC_war_lei = {
+		icon = GFX_decision_generic_army_support
+
+		allowed = {
+			original_tag = VIC
+		}
+
+		visible = {
+			has_completed_focus = TU_VIC_lei_war_plans
+		}
+
+		available = {
+			has_completed_focus = TU_VIC_lei_war_plans
+			has_country_flag = TU_DEC_TU_VIC_claim_lei
+			NOT = { has_war_with = LEI }
+		}
+
+		cost = 75
+		fire_only_once = yes
+
+		complete_effect = {
+			if = {
+				limit = { country_exists = LEI }
+				hidden_effect = {
+					create_wargoal = {
+						type = puppet_wargoal_focus
+						target = LEI
+					}
+				}
+			}
+			set_country_flag = TU_DEC_TU_VIC_war_lei
+		}
+
+		ai_will_do = {
+			base = 0
+		}
+	}
+
+	TU_VIC_war_col = {
+		icon = GFX_decision_generic_army_support
+
+		allowed = {
+			original_tag = VIC
+		}
+
+		visible = {
+			has_completed_focus = TU_VIC_col_war_fleet
+		}
+
+		available = {
+			has_completed_focus = TU_VIC_col_war_fleet
+			has_country_flag = TU_DEC_TU_VIC_claim_col
+			NOT = { has_war_with = COL }
+		}
+
+		cost = 75
+		fire_only_once = yes
+
+		complete_effect = {
+			if = {
+				limit = { country_exists = COL }
+				hidden_effect = {
+					create_wargoal = {
+						type = puppet_wargoal_focus
+						target = COL
+					}
+				}
+			}
+			set_country_flag = TU_DEC_TU_VIC_war_col
+		}
+
+		ai_will_do = {
+			base = 0
+		}
+	}
+
+	TU_VIC_war_bol = {
+		icon = GFX_decision_generic_army_support
+
+		allowed = {
+			original_tag = VIC
+		}
+
+		visible = {
+			has_completed_focus = TU_VIC_bol_war_plans
+		}
+
+		available = {
+			has_completed_focus = TU_VIC_bol_war_plans
+			has_country_flag = TU_DEC_TU_VIC_claim_bol
+			NOT = { has_war_with = BOL }
+		}
+
+		cost = 75
+		fire_only_once = yes
+
+		complete_effect = {
+			if = {
+				limit = { country_exists = BOL }
+				hidden_effect = {
+					create_wargoal = {
+						type = puppet_wargoal_focus
+						target = BOL
+					}
+				}
+			}
+			set_country_flag = TU_DEC_TU_VIC_war_bol
+		}
+
+		ai_will_do = {
+			base = 0
+		}
+	}
+
+	TU_VIC_war_urs = {
+		icon = GFX_decision_generic_army_support
+
+		allowed = {
+			original_tag = VIC
+		}
+
+		visible = {
+			has_completed_focus = TU_VIC_urs_offensive_plans
+		}
+
+		available = {
+			has_completed_focus = TU_VIC_urs_offensive_plans
+			has_country_flag = TU_DEC_TU_VIC_claim_urs
+			NOT = { has_war_with = URS }
+		}
+
+		cost = 100
+		fire_only_once = yes
+
+		complete_effect = {
+			if = {
+				limit = { country_exists = URS }
+				hidden_effect = {
+					create_wargoal = {
+						type = annex_everything
+						target = URS
+					}
+				}
+			}
+			set_country_flag = TU_DEC_TU_VIC_war_urs
+		}
+
+		ai_will_do = {
+			base = 0
+		}
+	}
+
+	TU_VIC_war_kaz = {
+		icon = GFX_decision_generic_army_support
+
+		allowed = {
+			original_tag = VIC
+		}
+
+		visible = {
+			has_completed_focus = TU_VIC_kaz_war_plans
+		}
+
+		available = {
+			has_completed_focus = TU_VIC_kaz_war_plans
+			has_country_flag = TU_DEC_TU_VIC_claim_kaz
+			NOT = { has_war_with = KAZ }
+		}
+
+		cost = 100
+		fire_only_once = yes
+
+		complete_effect = {
+			if = {
+				limit = { country_exists = KAZ }
+				hidden_effect = {
+					create_wargoal = {
+						type = annex_everything
+						target = KAZ
+					}
+				}
+			}
+			set_country_flag = TU_DEC_TU_VIC_war_kaz
+		}
+
+		ai_will_do = {
+			base = 0
+		}
+	}
+}
+
+TU_VIC_diplomacy_category = {
+
+	TU_VIC_dip_opinion_kzd = {
+		icon = GFX_decision_generic_political_discourse
+
+		allowed = {
+			original_tag = VIC
+		}
+
+		visible = {
+			has_completed_focus = TU_VIC_kzd_peace_talks
+		}
+
+		available = {
+			has_completed_focus = TU_VIC_kzd_peace_talks
+			NOT = { has_war_with = KZD }
+		}
+
+		cost = 25
+		days_re_enable = 60
+		fire_only_once = no
+
+		complete_effect = {
+			if = {
+				limit = { country_exists = KZD }
+				add_opinion_modifier = {
+					target = KZD
+					modifier = TU_dip_envoy
+				}
+			}
+		}
+
+		ai_will_do = {
+			base = 1
+		}
+	}
+
+	TU_VIC_dip_opinion_lei = {
+		icon = GFX_decision_generic_political_discourse
+
+		allowed = {
+			original_tag = VIC
+		}
+
+		visible = {
+			has_completed_focus = TU_VIC_lei_treaty_talks
+		}
+
+		available = {
+			has_completed_focus = TU_VIC_lei_treaty_talks
+			NOT = { has_war_with = LEI }
+		}
+
+		cost = 25
+		days_re_enable = 60
+		fire_only_once = no
+
+		complete_effect = {
+			if = {
+				limit = { country_exists = LEI }
+				add_opinion_modifier = {
+					target = LEI
+					modifier = TU_dip_culture
+				}
+			}
+		}
+
+		ai_will_do = {
+			base = 1
+		}
+	}
+
+	TU_VIC_dip_opinion_col = {
+		icon = GFX_decision_generic_political_discourse
+
+		allowed = {
+			original_tag = VIC
+		}
+
+		visible = {
+			has_completed_focus = TU_VIC_col_trade_talks
+		}
+
+		available = {
+			has_completed_focus = TU_VIC_col_trade_talks
+			NOT = { has_war_with = COL }
+		}
+
+		cost = 25
+		days_re_enable = 60
+		fire_only_once = no
+
+		complete_effect = {
+			if = {
+				limit = { country_exists = COL }
+				add_opinion_modifier = {
+					target = COL
+					modifier = TU_dip_trade
+				}
+			}
+		}
+
+		ai_will_do = {
+			base = 1
+		}
+	}
+
+	TU_VIC_dip_opinion_bol = {
+		icon = GFX_decision_generic_political_discourse
+
+		allowed = {
+			original_tag = VIC
+		}
+
+		visible = {
+			has_completed_focus = TU_VIC_bol_opinion_campaign
+		}
+
+		available = {
+			has_completed_focus = TU_VIC_bol_opinion_campaign
+			NOT = { has_war_with = BOL }
+		}
+
+		cost = 25
+		days_re_enable = 60
+		fire_only_once = no
+
+		complete_effect = {
+			if = {
+				limit = { country_exists = BOL }
+				add_opinion_modifier = {
+					target = BOL
+					modifier = TU_dip_envoy
+				}
+			}
+		}
+
+		ai_will_do = {
+			base = 1
+		}
+	}
+
+	TU_VIC_dip_opinion_urs = {
+		icon = GFX_decision_generic_political_discourse
+
+		allowed = {
+			original_tag = VIC
+		}
+
+		visible = {
+			has_completed_focus = TU_VIC_urs_peace_talks
+		}
+
+		available = {
+			has_completed_focus = TU_VIC_urs_peace_talks
+			NOT = { has_war_with = URS }
+		}
+
+		cost = 25
+		days_re_enable = 60
+		fire_only_once = no
+
+		complete_effect = {
+			if = {
+				limit = { country_exists = URS }
+				add_opinion_modifier = {
+					target = URS
+					modifier = TU_dip_culture
+				}
+			}
+		}
+
+		ai_will_do = {
+			base = 1
+		}
+	}
+
+	TU_VIC_dip_opinion_kaz = {
+		icon = GFX_decision_generic_political_discourse
+
+		allowed = {
+			original_tag = VIC
+		}
+
+		visible = {
+			has_completed_focus = TU_VIC_kaz_opinion
+		}
+
+		available = {
+			has_completed_focus = TU_VIC_kaz_opinion
+			NOT = { has_war_with = KAZ }
+		}
+
+		cost = 25
+		days_re_enable = 60
+		fire_only_once = no
+
+		complete_effect = {
+			if = {
+				limit = { country_exists = KAZ }
+				add_opinion_modifier = {
+					target = KAZ
+					modifier = TU_dip_aid
+				}
+			}
+		}
+
+		ai_will_do = {
+			base = 1
+		}
+	}
+
+	TU_VIC_dip_nap_kzd = {
+		icon = GFX_decision_generic_political_discourse
+
+		allowed = {
+			original_tag = VIC
+		}
+
+		visible = {
+			has_completed_focus = TU_VIC_kzd_nonaggression
+		}
+
+		available = {
+			has_completed_focus = TU_VIC_kzd_nonaggression
+			NOT = { has_war_with = KZD }
+		}
+
+		cost = 50
+		fire_only_once = yes
+
+		complete_effect = {
+			if = {
+				limit = { country_exists = KZD }
+				diplomatic_relation = {
+					country = KZD
+					relation = non_aggression_pact
+					active = yes
+				}
+			}
+			set_country_flag = TU_DEC_TU_VIC_dip_nap_kzd
+		}
+
+		ai_will_do = {
+			base = 1
+		}
+	}
+
+	TU_VIC_dip_nap_lei = {
+		icon = GFX_decision_generic_political_discourse
+
+		allowed = {
+			original_tag = VIC
+		}
+
+		visible = {
+			has_completed_focus = TU_VIC_lei_nonaggression
+		}
+
+		available = {
+			has_completed_focus = TU_VIC_lei_nonaggression
+			NOT = { has_war_with = LEI }
+		}
+
+		cost = 50
+		fire_only_once = yes
+
+		complete_effect = {
+			if = {
+				limit = { country_exists = LEI }
+				diplomatic_relation = {
+					country = LEI
+					relation = non_aggression_pact
+					active = yes
+				}
+			}
+			set_country_flag = TU_DEC_TU_VIC_dip_nap_lei
+		}
+
+		ai_will_do = {
+			base = 1
+		}
+	}
+
+	TU_VIC_dip_nap_col = {
+		icon = GFX_decision_generic_political_discourse
+
+		allowed = {
+			original_tag = VIC
+		}
+
+		visible = {
+			has_completed_focus = TU_VIC_col_nonaggression
+		}
+
+		available = {
+			has_completed_focus = TU_VIC_col_nonaggression
+			NOT = { has_war_with = COL }
+		}
+
+		cost = 50
+		fire_only_once = yes
+
+		complete_effect = {
+			if = {
+				limit = { country_exists = COL }
+				diplomatic_relation = {
+					country = COL
+					relation = non_aggression_pact
+					active = yes
+				}
+			}
+			set_country_flag = TU_DEC_TU_VIC_dip_nap_col
+		}
+
+		ai_will_do = {
+			base = 1
+		}
+	}
+
+	TU_VIC_dip_nap_bol = {
+		icon = GFX_decision_generic_political_discourse
+
+		allowed = {
+			original_tag = VIC
+		}
+
+		visible = {
+			has_completed_focus = TU_VIC_bol_nonaggression
+		}
+
+		available = {
+			has_completed_focus = TU_VIC_bol_nonaggression
+			NOT = { has_war_with = BOL }
+		}
+
+		cost = 50
+		fire_only_once = yes
+
+		complete_effect = {
+			if = {
+				limit = { country_exists = BOL }
+				diplomatic_relation = {
+					country = BOL
+					relation = non_aggression_pact
+					active = yes
+				}
+			}
+			set_country_flag = TU_DEC_TU_VIC_dip_nap_bol
+		}
+
+		ai_will_do = {
+			base = 1
+		}
+	}
+
+	TU_VIC_dip_nap_urs = {
+		icon = GFX_decision_generic_political_discourse
+
+		allowed = {
+			original_tag = VIC
+		}
+
+		visible = {
+			has_completed_focus = TU_VIC_urs_nonaggression
+		}
+
+		available = {
+			has_completed_focus = TU_VIC_urs_nonaggression
+			NOT = { has_war_with = URS }
+		}
+
+		cost = 50
+		fire_only_once = yes
+
+		complete_effect = {
+			if = {
+				limit = { country_exists = URS }
+				diplomatic_relation = {
+					country = URS
+					relation = non_aggression_pact
+					active = yes
+				}
+			}
+			set_country_flag = TU_DEC_TU_VIC_dip_nap_urs
+		}
+
+		ai_will_do = {
+			base = 1
+		}
+	}
+
+	TU_VIC_dip_nap_kaz = {
+		icon = GFX_decision_generic_political_discourse
+
+		allowed = {
+			original_tag = VIC
+		}
+
+		visible = {
+			has_completed_focus = TU_VIC_kaz_nonaggression
+		}
+
+		available = {
+			has_completed_focus = TU_VIC_kaz_nonaggression
+			NOT = { has_war_with = KAZ }
+		}
+
+		cost = 50
+		fire_only_once = yes
+
+		complete_effect = {
+			if = {
+				limit = { country_exists = KAZ }
+				diplomatic_relation = {
+					country = KAZ
+					relation = non_aggression_pact
+					active = yes
+				}
+			}
+			set_country_flag = TU_DEC_TU_VIC_dip_nap_kaz
+		}
+
+		ai_will_do = {
+			base = 1
+		}
+	}
+
+	TU_VIC_dip_guarantee_kzd = {
+		icon = GFX_decision_generic_army_support
+
+		allowed = {
+			original_tag = VIC
+		}
+
+		visible = {
+			has_completed_focus = TU_VIC_kzd_security_pledge
+		}
+
+		available = {
+			has_completed_focus = TU_VIC_kzd_security_pledge
+			NOT = { has_war_with = KZD }
+		}
+
+		cost = 75
+		fire_only_once = yes
+
+		complete_effect = {
+			if = {
+				limit = { country_exists = KZD }
+				give_guarantee = KZD
+			}
+			set_country_flag = TU_DEC_TU_VIC_dip_guarantee_kzd
+		}
+
+		ai_will_do = {
+			base = 0
+		}
+	}
+
+	TU_VIC_dip_guarantee_lei = {
+		icon = GFX_decision_generic_army_support
+
+		allowed = {
+			original_tag = VIC
+		}
+
+		visible = {
+			has_completed_focus = TU_VIC_lei_security_pledge
+		}
+
+		available = {
+			has_completed_focus = TU_VIC_lei_security_pledge
+			NOT = { has_war_with = LEI }
+		}
+
+		cost = 75
+		fire_only_once = yes
+
+		complete_effect = {
+			if = {
+				limit = { country_exists = LEI }
+				give_guarantee = LEI
+			}
+			set_country_flag = TU_DEC_TU_VIC_dip_guarantee_lei
+		}
+
+		ai_will_do = {
+			base = 0
+		}
+	}
+
+	TU_VIC_dip_guarantee_col = {
+		icon = GFX_decision_generic_army_support
+
+		allowed = {
+			original_tag = VIC
+		}
+
+		visible = {
+			has_completed_focus = TU_VIC_col_security_pledge
+		}
+
+		available = {
+			has_completed_focus = TU_VIC_col_security_pledge
+			NOT = { has_war_with = COL }
+		}
+
+		cost = 75
+		fire_only_once = yes
+
+		complete_effect = {
+			if = {
+				limit = { country_exists = COL }
+				give_guarantee = COL
+			}
+			set_country_flag = TU_DEC_TU_VIC_dip_guarantee_col
+		}
+
+		ai_will_do = {
+			base = 0
+		}
+	}
+
+	TU_VIC_dip_guarantee_bol = {
+		icon = GFX_decision_generic_army_support
+
+		allowed = {
+			original_tag = VIC
+		}
+
+		visible = {
+			has_completed_focus = TU_VIC_bol_security_pledge
+		}
+
+		available = {
+			has_completed_focus = TU_VIC_bol_security_pledge
+			NOT = { has_war_with = BOL }
+		}
+
+		cost = 75
+		fire_only_once = yes
+
+		complete_effect = {
+			if = {
+				limit = { country_exists = BOL }
+				give_guarantee = BOL
+			}
+			set_country_flag = TU_DEC_TU_VIC_dip_guarantee_bol
+		}
+
+		ai_will_do = {
+			base = 0
+		}
+	}
+
+	TU_VIC_dip_guarantee_urs = {
+		icon = GFX_decision_generic_army_support
+
+		allowed = {
+			original_tag = VIC
+		}
+
+		visible = {
+			has_completed_focus = TU_VIC_urs_security_pledge
+		}
+
+		available = {
+			has_completed_focus = TU_VIC_urs_security_pledge
+			NOT = { has_war_with = URS }
+		}
+
+		cost = 75
+		fire_only_once = yes
+
+		complete_effect = {
+			if = {
+				limit = { country_exists = URS }
+				give_guarantee = URS
+			}
+			set_country_flag = TU_DEC_TU_VIC_dip_guarantee_urs
+		}
+
+		ai_will_do = {
+			base = 0
+		}
+	}
+
+	TU_VIC_dip_guarantee_kaz = {
+		icon = GFX_decision_generic_army_support
+
+		allowed = {
+			original_tag = VIC
+		}
+
+		visible = {
+			has_completed_focus = TU_VIC_kaz_security_pledge
+		}
+
+		available = {
+			has_completed_focus = TU_VIC_kaz_security_pledge
+			NOT = { has_war_with = KAZ }
+		}
+
+		cost = 75
+		fire_only_once = yes
+
+		complete_effect = {
+			if = {
+				limit = { country_exists = KAZ }
+				give_guarantee = KAZ
+			}
+			set_country_flag = TU_DEC_TU_VIC_dip_guarantee_kaz
+		}
+
+		ai_will_do = {
+			base = 0
+		}
+	}
+}

@@ -1,0 +1,21 @@
+state={
+	id=765
+	name="STATE_765"
+	impassable = yes
+	manpower = 1000
+
+	state_category = wasteland
+
+	history={
+		owner = BOL
+		buildings = {
+			infrastructure = 0
+		}
+		add_core_of = BOL
+	}
+
+	provinces={
+		2541
+	}
+	local_supplies=0.0
+}

@@ -1,0 +1,1836 @@
+	#### SPINE: DOCTRINE, DIPLOMACY UNLOCKS, ALLIANCE ####
+
+	focus = {
+		id = TU_KZD_exp_doctrine
+		icon = GFX_goal_generic_major_war
+		prerequisite = { focus = TU_KZD_military_commission_focus }
+		x = 0
+		y = 1
+		cost = 5
+
+		search_filters = { FOCUS_FILTER_POLITICAL }
+
+		completion_reward = {
+			add_political_power = 25
+			army_experience = 10
+		}
+
+		ai_will_do = {
+			base = 1
+		}
+	}
+
+	focus = {
+		id = TU_KZD_relations_envoy
+		icon = GFX_goal_generic_improve_relations
+		prerequisite = { focus = TU_KZD_exp_doctrine }
+		x = 0
+		y = 2
+		cost = 10
+
+		search_filters = { FOCUS_FILTER_POLITICAL }
+
+		completion_reward = {
+			set_country_flag = TU_dip_relations_unlocked
+			add_political_power = 50
+		}
+
+		ai_will_do = {
+			base = 1
+		}
+	}
+
+	focus = {
+		id = TU_KZD_exp_hub
+		icon = GFX_goal_generic_position_armies
+		prerequisite = { focus = TU_KZD_relations_envoy }
+		x = 0
+		y = 3
+		cost = 10
+
+		search_filters = { FOCUS_FILTER_POLITICAL }
+
+		completion_reward = {
+			add_political_power = 50
+		}
+
+		ai_will_do = {
+			base = 1
+		}
+	}
+
+	focus = {
+		id = TU_KZD_alliance_search
+		icon = GFX_goal_generic_major_alliance
+		prerequisite = { focus = TU_KZD_trade_routes focus = TU_KZD_vic_claims focus = TU_KZD_ursus_claims focus = TU_KZD_lei_claims }
+		x = 0
+		y = 6
+		cost = 15
+
+		search_filters = { FOCUS_FILTER_POLITICAL }
+
+		completion_reward = {
+			set_country_flag = TU_dip_alliance_unlocked
+			add_political_power = 100
+		}
+
+		ai_will_do = {
+			base = 1
+		}
+	}
+
+	focus = {
+		id = TU_KZD_alliance_treaty
+		icon = GFX_goal_generic_alliance
+		prerequisite = { focus = TU_KZD_alliance_search }
+		x = 0
+		y = 7
+		cost = 10
+
+		search_filters = { FOCUS_FILTER_POLITICAL }
+
+		completion_reward = {
+			add_political_power = 50
+			add_war_support = 0.02
+		}
+
+		ai_will_do = {
+			base = 1
+		}
+	}
+
+	#### DIPLOMACY BRANCH ####
+
+	focus = {
+		id = TU_KZD_envoy_network
+		icon = GFX_goal_generic_intelligence_exchange
+		prerequisite = { focus = TU_KZD_relations_envoy }
+		x = 0
+		y = 3
+		cost = 10
+
+		search_filters = { FOCUS_FILTER_POLITICAL }
+
+		completion_reward = {
+			add_political_power = 50
+		}
+
+		ai_will_do = {
+			base = 1
+		}
+	}
+
+	focus = {
+		id = TU_KZD_trade_routes
+		icon = GFX_goal_generic_positive_trade_relations
+		prerequisite = { focus = TU_KZD_envoy_network }
+		x = 0
+		y = 4
+		cost = 10
+
+		search_filters = { FOCUS_FILTER_POLITICAL }
+
+		completion_reward = {
+			add_political_power = 25
+			add_stability = 0.02
+		}
+
+		ai_will_do = {
+			base = 1
+		}
+	}
+
+	focus = {
+		id = TU_KZD_mercenary_embassy
+		icon = GFX_goal_generic_military_deal
+		prerequisite = { focus = TU_KZD_trade_routes }
+		x = 0
+		y = 5
+		cost = 10
+
+		search_filters = { FOCUS_FILTER_POLITICAL }
+
+		completion_reward = {
+			add_political_power = 75
+		}
+
+		ai_will_do = {
+			base = 1
+		}
+	}
+
+	focus = {
+		id = TU_KZD_embassy_courier
+		icon = GFX_goal_generic_dangerous_deal
+		prerequisite = { focus = TU_KZD_mercenary_embassy }
+		x = 0
+		y = 6
+		cost = 10
+
+		search_filters = { FOCUS_FILTER_POLITICAL }
+
+		completion_reward = {
+			add_political_power = 50
+		}
+
+		ai_will_do = {
+			base = 1
+		}
+	}
+
+	#### MILITARY BRANCH ####
+
+	focus = {
+		id = TU_KZD_mil_staff
+		icon = GFX_goal_generic_army_motorized
+		prerequisite = { focus = TU_KZD_exp_hub }
+		x = 0
+		y = 4
+		cost = 10
+
+		search_filters = { FOCUS_FILTER_ARMY_XP }
+
+		completion_reward = {
+			army_experience = 20
+		}
+
+		ai_will_do = {
+			base = 1
+		}
+	}
+
+	focus = {
+		id = TU_KZD_mil_reform
+		icon = GFX_goal_generic_army_doctrines
+		prerequisite = { focus = TU_KZD_mil_staff }
+		x = 0
+		y = 5
+		cost = 10
+
+		search_filters = { FOCUS_FILTER_POLITICAL }
+
+		completion_reward = {
+			add_political_power = 50
+		}
+
+		ai_will_do = {
+			base = 1
+		}
+	}
+
+	focus = {
+		id = TU_KZD_mil_conscription
+		icon = GFX_goal_generic_allies_build_infantry
+		prerequisite = { focus = TU_KZD_mil_reform }
+		x = 0
+		y = 6
+		cost = 10
+
+		search_filters = { FOCUS_FILTER_POLITICAL }
+
+		completion_reward = {
+			add_manpower = 30000
+		}
+
+		ai_will_do = {
+			base = 1
+		}
+	}
+
+	focus = {
+		id = TU_KZD_mil_training
+		icon = GFX_goal_generic_army_artillery2
+		prerequisite = { focus = TU_KZD_mil_conscription }
+		x = 0
+		y = 7
+		cost = 10
+
+		search_filters = { FOCUS_FILTER_ARMY_XP }
+
+		completion_reward = {
+			army_experience = 20
+		}
+
+		ai_will_do = {
+			base = 1
+		}
+	}
+
+	focus = {
+		id = TU_KZD_mil_guard_camp
+		icon = GFX_goal_generic_special_forces
+		prerequisite = { focus = TU_KZD_mil_training }
+		mutually_exclusive = { focus = TU_KZD_mil_guard_camp_alt }
+		x = 0
+		y = 8
+		cost = 10
+
+		search_filters = { FOCUS_FILTER_ARMY_XP }
+
+		completion_reward = {
+			army_experience = 15
+			add_stability = 0.02
+		}
+
+		ai_will_do = {
+			base = 1
+		}
+	}
+
+	focus = {
+		id = TU_KZD_mil_guard_camp_alt
+		icon = GFX_goal_generic_construct_civilian
+		prerequisite = { focus = TU_KZD_mil_training }
+		mutually_exclusive = { focus = TU_KZD_mil_guard_camp }
+		x = 0
+		y = 8
+		cost = 10
+
+		search_filters = { FOCUS_FILTER_ARMY_XP }
+
+		completion_reward = {
+			add_political_power = 25
+		}
+
+		ai_will_do = {
+			base = 1
+		}
+	}
+
+	focus = {
+		id = TU_KZD_mil_armor_doctrine
+		icon = GFX_goal_generic_army_tanks
+		prerequisite = { focus = TU_KZD_mil_training }
+		x = 0
+		y = 8
+		cost = 10
+
+		search_filters = { FOCUS_FILTER_RESEARCH }
+
+		completion_reward = {
+			add_tech_bonus = {
+				name = TU_KZD_armor_doctrine_bonus
+				bonus = 1.0
+				uses = 1
+				technology = motorised_infantry
+			}
+		}
+
+		ai_will_do = {
+			base = 1
+		}
+	}
+
+	focus = {
+		id = TU_KZD_mil_supply
+		icon = GFX_goal_generic_construct_infrastructure
+		prerequisite = { focus = TU_KZD_mil_training }
+		x = 0
+		y = 8
+		cost = 10
+
+		search_filters = { FOCUS_FILTER_INDUSTRY }
+
+		completion_reward = {
+			add_political_power = 50
+		}
+
+		ai_will_do = {
+			base = 1
+		}
+	}
+
+	focus = {
+		id = TU_KZD_mil_logistics_net
+		icon = GFX_goal_generic_construction2
+		prerequisite = { focus = TU_KZD_mil_supply }
+		x = 0
+		y = 9
+		cost = 10
+
+		search_filters = { FOCUS_FILTER_INDUSTRY }
+
+		completion_reward = {
+			add_stability = 0.02
+			add_political_power = 25
+		}
+
+		ai_will_do = {
+			base = 1
+		}
+	}
+
+	focus = {
+		id = TU_KZD_mil_artillery
+		icon = GFX_goal_generic_army_artillery
+		prerequisite = { focus = TU_KZD_mil_armor_doctrine }
+		x = 0
+		y = 9
+		cost = 10
+
+		search_filters = { FOCUS_FILTER_ARMY_XP }
+
+		completion_reward = {
+			army_experience = 15
+			add_tech_bonus = {
+				name = TU_KZD_mil_artillery_bonus
+				bonus = 1.0
+				uses = 2
+				category = artillery
+			}
+		}
+
+		ai_will_do = {
+			base = 1
+		}
+	}
+
+	#### VICTORIA (VIC) BRANCH ####
+
+	focus = {
+		id = TU_KZD_vic_intel
+		icon = GFX_goal_generic_intelligence_exchange
+		prerequisite = { focus = TU_KZD_exp_hub }
+		x = 0
+		y = 4
+		cost = 10
+
+		search_filters = { FOCUS_FILTER_POLITICAL }
+
+		completion_reward = {
+			add_political_power = 25
+		}
+
+		ai_will_do = {
+			base = 1
+		}
+	}
+
+	focus = {
+		id = TU_KZD_vic_claims
+		icon = GFX_goal_generic_more_territorial_claims
+		prerequisite = { focus = TU_KZD_vic_intel }
+		x = 0
+		y = 5
+		cost = 10
+
+		search_filters = { FOCUS_FILTER_POLITICAL }
+
+		completion_reward = {
+			add_political_power = 50
+			add_war_support = 0.02
+		}
+
+		ai_will_do = {
+			base = 1
+		}
+	}
+
+	focus = {
+		id = TU_KZD_vic_border_survey
+		icon = GFX_goal_generic_radar
+		prerequisite = { focus = TU_KZD_vic_claims }
+		x = 0
+		y = 6
+		cost = 10
+
+		search_filters = { FOCUS_FILTER_RESEARCH }
+
+		completion_reward = {
+			add_tech_bonus = {
+				name = TU_KZD_border_survey_bonus
+				bonus = 0.5
+				uses = 2
+				category = infantry_weapons
+			}
+		}
+
+		ai_will_do = {
+			base = 1
+		}
+	}
+
+	focus = {
+		id = TU_KZD_vic_mobile_column
+		icon = GFX_goal_generic_army_motorized
+		prerequisite = { focus = TU_KZD_vic_border_survey }
+		x = 0
+		y = 7
+		cost = 10
+
+		search_filters = { FOCUS_FILTER_ARMY_XP }
+
+		completion_reward = {
+			army_experience = 15
+		}
+
+		ai_will_do = {
+			base = 1
+		}
+	}
+
+	focus = {
+		id = TU_KZD_vic_war_plan
+		icon = GFX_goal_generic_major_war
+		prerequisite = { focus = TU_KZD_vic_mobile_column }
+		mutually_exclusive = { focus = TU_KZD_vic_peace }
+		x = 0
+		y = 8
+		cost = 10
+
+		search_filters = { FOCUS_FILTER_POLITICAL }
+
+		completion_reward = {
+			add_political_power = 50
+			add_war_support = 0.03
+		}
+
+		ai_will_do = {
+			base = 1
+		}
+	}
+
+	focus = {
+		id = TU_KZD_vic_steam_counter
+		icon = GFX_goal_generic_army_doctrines
+		prerequisite = { focus = TU_KZD_vic_mobile_column }
+		x = 0
+		y = 8
+		cost = 10
+
+		search_filters = { FOCUS_FILTER_ARMY_XP }
+
+		completion_reward = {
+			army_experience = 20
+			add_ideas = TU_KZD_p2_steam_counter
+		}
+
+		ai_will_do = {
+			base = 1
+		}
+	}
+
+	focus = {
+		id = TU_KZD_vic_siege_drill
+		icon = GFX_goal_generic_fortify_city
+		prerequisite = { focus = TU_KZD_vic_steam_counter }
+		x = 0
+		y = 9
+		cost = 10
+
+		search_filters = { FOCUS_FILTER_ARMY_XP }
+
+		completion_reward = {
+			army_experience = 15
+		}
+
+		ai_will_do = {
+			base = 1
+		}
+	}
+
+	focus = {
+		id = TU_KZD_vic_peace
+		icon = GFX_goal_generic_neutrality_focus
+		prerequisite = { focus = TU_KZD_vic_mobile_column }
+		mutually_exclusive = { focus = TU_KZD_vic_war_plan }
+		x = 0
+		y = 8
+		cost = 10
+
+		search_filters = { FOCUS_FILTER_POLITICAL }
+
+		completion_reward = {
+			add_political_power = 50
+			add_stability = 0.02
+			add_stability = 0.02
+		}
+
+		ai_will_do = {
+			base = 1
+		}
+	}
+
+	focus = {
+		id = TU_KZD_vic_exile_nobles
+		icon = GFX_goal_generic_political_pressure
+		prerequisite = { focus = TU_KZD_vic_peace }
+		x = 0
+		y = 9
+		cost = 10
+
+		search_filters = { FOCUS_FILTER_POLITICAL }
+
+		completion_reward = {
+			add_political_power = 75
+		}
+
+		ai_will_do = {
+			base = 1
+		}
+	}
+
+	focus = {
+		id = TU_KZD_vic_london_admin
+		icon = GFX_goal_generic_national_unity
+		prerequisite = { focus = TU_KZD_vic_war_plan }
+		x = 0
+		y = 9
+		cost = 10
+
+		search_filters = { FOCUS_FILTER_POLITICAL }
+
+		completion_reward = {
+			add_political_power = 50
+		}
+
+		ai_will_do = {
+			base = 1
+		}
+	}
+
+	focus = {
+		id = TU_KZD_vic_landing
+		icon = GFX_goal_generic_amphibious_assault
+		prerequisite = { focus = TU_KZD_vic_london_admin }
+		x = 0
+		y = 10
+		cost = 15
+
+		search_filters = { FOCUS_FILTER_ARMY_XP }
+
+		completion_reward = {
+			army_experience = 25
+		}
+
+		ai_will_do = {
+			base = 1
+		}
+	}
+
+	focus = {
+		id = TU_KZD_vic_occupation
+		icon = GFX_goal_generic_occupy_start_war
+		prerequisite = { focus = TU_KZD_vic_landing }
+		x = 0
+		y = 11
+		cost = 10
+
+		search_filters = { FOCUS_FILTER_POLITICAL }
+
+		completion_reward = {
+			add_political_power = 75
+		}
+
+		ai_will_do = {
+			base = 1
+		}
+	}
+
+	focus = {
+		id = TU_KZD_vic_london_order
+		icon = GFX_goal_generic_military_sphere
+		prerequisite = { focus = TU_KZD_vic_occupation }
+		x = 0
+		y = 12
+		cost = 10
+
+		search_filters = { FOCUS_FILTER_POLITICAL }
+
+		completion_reward = {
+			add_political_power = 50
+			add_stability = 0.02
+		}
+
+		ai_will_do = {
+			base = 1
+		}
+	}
+
+	focus = {
+		id = TU_KZD_vic_march_on_london
+		icon = GFX_goal_generic_occupy_states_ongoing_war
+		prerequisite = { focus = TU_KZD_vic_london_order }
+		x = 0
+		y = 13
+		cost = 10
+
+		search_filters = { FOCUS_FILTER_ARMY_XP }
+
+		completion_reward = {
+			army_experience = 20
+			country_event = { id = tu_kzd_ev.6 }
+		}
+
+		ai_will_do = {
+			base = 1
+		}
+	}
+
+	#### URSUS (URS) BRANCH ####
+
+	focus = {
+		id = TU_KZD_ursus_envoy
+		icon = GFX_goal_generic_military_deal
+		prerequisite = { focus = TU_KZD_exp_hub }
+		x = 0
+		y = 4
+		cost = 10
+
+		search_filters = { FOCUS_FILTER_POLITICAL }
+
+		completion_reward = {
+			add_political_power = 25
+		}
+
+		ai_will_do = {
+			base = 1
+		}
+	}
+
+	focus = {
+		id = TU_KZD_ursus_claims
+		icon = GFX_goal_generic_demand_territory
+		prerequisite = { focus = TU_KZD_ursus_envoy }
+		x = 0
+		y = 5
+		cost = 10
+
+		search_filters = { FOCUS_FILTER_POLITICAL }
+
+		completion_reward = {
+			add_political_power = 50
+			add_war_support = 0.02
+		}
+
+		ai_will_do = {
+			base = 1
+		}
+	}
+
+	focus = {
+		id = TU_KZD_ursus_reserve
+		icon = GFX_goal_generic_allies_build_infantry
+		prerequisite = { focus = TU_KZD_ursus_claims }
+		x = 0
+		y = 6
+		cost = 10
+
+		search_filters = { FOCUS_FILTER_ARMY_XP }
+
+		completion_reward = {
+			army_experience = 15
+			add_manpower = 20000
+		}
+
+		ai_will_do = {
+			base = 1
+		}
+	}
+
+	focus = {
+		id = TU_KZD_ursus_war
+		icon = GFX_goal_generic_territory_or_war
+		prerequisite = { focus = TU_KZD_ursus_reserve }
+		mutually_exclusive = { focus = TU_KZD_ursus_border_treaty }
+		x = 0
+		y = 7
+		cost = 10
+
+		search_filters = { FOCUS_FILTER_POLITICAL }
+
+		completion_reward = {
+			add_political_power = 50
+		}
+
+		ai_will_do = {
+			base = 1
+		}
+	}
+
+	focus = {
+		id = TU_KZD_ursus_winter
+		icon = GFX_goal_generic_small_arms
+		prerequisite = { focus = TU_KZD_ursus_reserve }
+		x = 0
+		y = 7
+		cost = 10
+
+		search_filters = { FOCUS_FILTER_ARMY_XP }
+
+		completion_reward = {
+			army_experience = 20
+		}
+
+		ai_will_do = {
+			base = 1
+		}
+	}
+
+	focus = {
+		id = TU_KZD_ursus_frontier_pact
+		icon = GFX_goal_generic_defence
+		prerequisite = { focus = TU_KZD_ursus_winter }
+		x = 0
+		y = 8
+		cost = 10
+
+		search_filters = { FOCUS_FILTER_POLITICAL }
+
+		completion_reward = {
+			add_political_power = 50
+			add_stability = 0.03
+		}
+
+		ai_will_do = {
+			base = 1
+		}
+	}
+
+	focus = {
+		id = TU_KZD_ursus_border_treaty
+		icon = GFX_goal_generic_forceful_treaty
+		prerequisite = { focus = TU_KZD_ursus_frontier_pact }
+		mutually_exclusive = { focus = TU_KZD_ursus_war }
+		x = 0
+		y = 9
+		cost = 10
+
+		search_filters = { FOCUS_FILTER_POLITICAL }
+
+		completion_reward = {
+			add_political_power = 50
+		}
+
+		ai_will_do = {
+			base = 1
+		}
+	}
+
+	focus = {
+		id = TU_KZD_ursus_exchange
+		icon = GFX_goal_generic_scientific_exchange
+		prerequisite = { focus = TU_KZD_ursus_frontier_pact }
+		x = 0
+		y = 9
+		cost = 10
+
+		search_filters = { FOCUS_FILTER_RESEARCH }
+
+		completion_reward = {
+			add_tech_bonus = {
+				name = TU_KZD_ursus_exchange_bonus
+				bonus = 1.0
+				uses = 2
+				category = artillery
+			}
+		}
+
+		ai_will_do = {
+			base = 1
+		}
+	}
+
+	focus = {
+		id = TU_KZD_ursus_arms_coop
+		icon = GFX_goal_generic_construct_mil_factory
+		prerequisite = { focus = TU_KZD_ursus_exchange }
+		x = 0
+		y = 10
+		cost = 10
+
+		search_filters = { FOCUS_FILTER_INDUSTRY }
+
+		completion_reward = {
+			add_political_power = 50
+		}
+
+		ai_will_do = {
+			base = 1
+		}
+	}
+
+	focus = {
+		id = TU_KZD_ursus_joint_drill
+		icon = GFX_goal_generic_cavalry
+		prerequisite = { focus = TU_KZD_ursus_arms_coop }
+		x = 0
+		y = 11
+		cost = 10
+
+		search_filters = { FOCUS_FILTER_ARMY_XP }
+
+		completion_reward = {
+			army_experience = 20
+		}
+
+		ai_will_do = {
+			base = 1
+		}
+	}
+
+	focus = {
+		id = TU_KZD_ursus_expedition
+		icon = GFX_goal_generic_attack_allies
+		prerequisite = { focus = TU_KZD_ursus_joint_drill }
+		x = 0
+		y = 12
+		cost = 10
+
+		search_filters = { FOCUS_FILTER_ARMY_XP }
+
+		completion_reward = {
+			army_experience = 25
+		}
+
+		ai_will_do = {
+			base = 1
+		}
+	}
+
+	focus = {
+		id = TU_KZD_ursus_capital_pact
+		icon = GFX_goal_generic_alliance
+		prerequisite = { focus = TU_KZD_ursus_border_treaty }
+		x = 0
+		y = 10
+		cost = 10
+
+		search_filters = { FOCUS_FILTER_POLITICAL }
+
+		completion_reward = {
+			add_political_power = 50
+		}
+
+		ai_will_do = {
+			base = 1
+		}
+	}
+
+	#### LEITHANIEN (LEI) BRANCH ####
+
+	focus = {
+		id = TU_KZD_lei_talks
+		icon = GFX_goal_generic_dangerous_deal
+		prerequisite = { focus = TU_KZD_exp_hub }
+		x = 0
+		y = 4
+		cost = 10
+
+		search_filters = { FOCUS_FILTER_POLITICAL }
+
+		completion_reward = {
+			add_political_power = 25
+		}
+
+		ai_will_do = {
+			base = 1
+		}
+	}
+
+	focus = {
+		id = TU_KZD_lei_claims
+		icon = GFX_goal_generic_demand_territory
+		prerequisite = { focus = TU_KZD_lei_talks }
+		x = 0
+		y = 5
+		cost = 10
+
+		search_filters = { FOCUS_FILTER_POLITICAL }
+
+		completion_reward = {
+			add_political_power = 50
+		}
+
+		ai_will_do = {
+			base = 1
+		}
+	}
+
+	focus = {
+		id = TU_KZD_lei_mercs
+		icon = GFX_goal_generic_small_arms
+		prerequisite = { focus = TU_KZD_lei_claims }
+		x = 0
+		y = 6
+		cost = 10
+
+		search_filters = { FOCUS_FILTER_ARMY_XP }
+
+		completion_reward = {
+			army_experience = 15
+		}
+
+		ai_will_do = {
+			base = 1
+		}
+	}
+
+	focus = {
+		id = TU_KZD_lei_war
+		icon = GFX_goal_generic_attack_allies
+		prerequisite = { focus = TU_KZD_lei_mercs }
+		mutually_exclusive = { focus = TU_KZD_lei_culture }
+		x = 0
+		y = 7
+		cost = 10
+
+		search_filters = { FOCUS_FILTER_POLITICAL }
+
+		completion_reward = {
+			add_political_power = 50
+		}
+
+		ai_will_do = {
+			base = 1
+		}
+	}
+
+	focus = {
+		id = TU_KZD_lei_culture
+		icon = GFX_goal_generic_propaganda
+		prerequisite = { focus = TU_KZD_lei_mercs }
+		mutually_exclusive = { focus = TU_KZD_lei_war }
+		x = 0
+		y = 7
+		cost = 10
+
+		search_filters = { FOCUS_FILTER_POLITICAL }
+
+		completion_reward = {
+			add_political_power = 50
+			add_stability = 0.02
+		}
+
+		ai_will_do = {
+			base = 1
+		}
+	}
+
+	focus = {
+		id = TU_KZD_lei_trade_road
+		icon = GFX_goal_generic_positive_trade_relations
+		prerequisite = { focus = TU_KZD_lei_culture }
+		x = 0
+		y = 8
+		cost = 10
+
+		search_filters = { FOCUS_FILTER_POLITICAL }
+
+		completion_reward = {
+			add_political_power = 50
+		}
+
+		ai_will_do = {
+			base = 1
+		}
+	}
+
+	focus = {
+		id = TU_KZD_lei_harbor
+		icon = GFX_goal_generic_construct_naval_dockyard
+		prerequisite = { focus = TU_KZD_lei_trade_road }
+		x = 0
+		y = 9
+		cost = 10
+
+		search_filters = { FOCUS_FILTER_INDUSTRY }
+
+		completion_reward = {
+			add_political_power = 25
+		}
+
+		ai_will_do = {
+			base = 1
+		}
+	}
+
+	focus = {
+		id = TU_KZD_lei_armor_raid
+		icon = GFX_goal_generic_army_motorized
+		prerequisite = { focus = TU_KZD_lei_war }
+		x = 0
+		y = 8
+		cost = 10
+
+		search_filters = { FOCUS_FILTER_ARMY_XP }
+
+		completion_reward = {
+			army_experience = 25
+		}
+
+		ai_will_do = {
+			base = 1
+		}
+	}
+
+	focus = {
+		id = TU_KZD_lei_occupation
+		icon = GFX_goal_generic_occupy_states_ongoing_war
+		prerequisite = { focus = TU_KZD_lei_armor_raid }
+		x = 0
+		y = 9
+		cost = 10
+
+		search_filters = { FOCUS_FILTER_POLITICAL }
+
+		completion_reward = {
+			add_political_power = 75
+		}
+
+		ai_will_do = {
+			base = 1
+		}
+	}
+
+	#### REUNION (REU) BRANCH ####
+
+	focus = {
+		id = TU_KZD_reu_survey
+		icon = GFX_goal_generic_radar
+		prerequisite = { focus = TU_KZD_exp_hub }
+		x = 0
+		y = 4
+		cost = 10
+
+		search_filters = { FOCUS_FILTER_RESEARCH }
+
+		completion_reward = {
+			add_political_power = 25
+		}
+
+		ai_will_do = {
+			base = 1
+		}
+	}
+
+	focus = {
+		id = TU_KZD_reu_claims
+		icon = GFX_goal_generic_demand_territory
+		prerequisite = { focus = TU_KZD_reu_survey }
+		x = 0
+		y = 5
+		cost = 10
+
+		search_filters = { FOCUS_FILTER_POLITICAL }
+
+		completion_reward = {
+			add_political_power = 50
+		}
+
+		ai_will_do = {
+			base = 1
+		}
+	}
+
+	focus = {
+		id = TU_KZD_reu_war
+		icon = GFX_goal_generic_war_with_comintern
+		prerequisite = { focus = TU_KZD_reu_claims }
+		x = 0
+		y = 6
+		cost = 10
+
+		search_filters = { FOCUS_FILTER_POLITICAL }
+
+		completion_reward = {
+			add_political_power = 50
+		}
+
+		ai_will_do = {
+			base = 1
+		}
+	}
+
+	focus = {
+		id = TU_KZD_reu_quarantine
+		icon = GFX_goal_generic_fortify_city
+		prerequisite = { focus = TU_KZD_reu_claims }
+		x = 0
+		y = 6
+		cost = 10
+
+		search_filters = { FOCUS_FILTER_POLITICAL }
+
+		completion_reward = {
+			add_political_power = 25
+			add_stability = 0.02
+		}
+
+		ai_will_do = {
+			base = 1
+		}
+	}
+
+	focus = {
+		id = TU_KZD_reu_supply_hub
+		icon = GFX_goal_generic_oil_refinery
+		prerequisite = { focus = TU_KZD_reu_quarantine }
+		x = 0
+		y = 7
+		cost = 10
+
+		search_filters = { FOCUS_FILTER_INDUSTRY }
+
+		completion_reward = {
+			add_political_power = 50
+		}
+
+		ai_will_do = {
+			base = 1
+		}
+	}
+
+	focus = {
+		id = TU_KZD_reu_medic_corps
+		icon = GFX_goal_generic_construct_civilian
+		prerequisite = { focus = TU_KZD_reu_supply_hub }
+		x = 0
+		y = 8
+		cost = 10
+
+		search_filters = { FOCUS_FILTER_RESEARCH }
+
+		completion_reward = {
+			add_stability = 0.02
+		}
+
+		ai_will_do = {
+			base = 1
+		}
+	}
+
+	focus = {
+		id = TU_KZD_reu_occupation
+		icon = GFX_goal_generic_occupy_states_coastal
+		prerequisite = { focus = TU_KZD_reu_war }
+		x = 0
+		y = 7
+		cost = 10
+
+		search_filters = { FOCUS_FILTER_ARMY_XP }
+
+		completion_reward = {
+			army_experience = 20
+		}
+
+		ai_will_do = {
+			base = 1
+		}
+	}
+
+	focus = {
+		id = TU_KZD_reu_encirclement
+		icon = GFX_goal_generic_military_sphere
+		prerequisite = { focus = TU_KZD_reu_occupation }
+		x = 0
+		y = 8
+		cost = 10
+
+		search_filters = { FOCUS_FILTER_POLITICAL }
+
+		completion_reward = {
+			add_political_power = 75
+		}
+
+		ai_will_do = {
+			base = 1
+		}
+	}
+
+	#### SARKAZ BLOODLINE BRANCH (vampire / wendigo / banshee) ####
+
+	focus = {
+		id = TU_KZD_sarkaz_root
+		icon = GFX_goal_generic_special_forces
+		prerequisite = { focus = TU_KZD_exp_doctrine }
+		x = 0
+		y = 2
+		cost = 5
+
+		search_filters = { FOCUS_FILTER_ARMY_XP }
+
+		completion_reward = {
+			add_political_power = 25
+			army_experience = 10
+			country_event = { id = tu_kzd_ev.7 }
+		}
+
+		ai_will_do = {
+			base = 1
+		}
+	}
+
+	focus = {
+		id = TU_KZD_vampire_blood
+		icon = GFX_goal_generic_special_forces
+		prerequisite = { focus = TU_KZD_sarkaz_root }
+		mutually_exclusive = { focus = TU_KZD_banshee_blood focus = TU_KZD_wendigo_blood }
+		x = 0
+		y = 3
+		cost = 10
+
+		search_filters = { FOCUS_FILTER_ARMY_XP }
+
+		completion_reward = {
+			army_experience = 20
+			add_ideas = TU_KZD_p2_vampire_blood
+			country_event = { id = tu_kzd_ev.8 }
+		}
+
+		ai_will_do = {
+			base = 1
+		}
+	}
+
+	focus = {
+		id = TU_KZD_vampire_night_raid
+		icon = GFX_goal_generic_wolf_pack
+		prerequisite = { focus = TU_KZD_vampire_blood }
+		x = 0
+		y = 4
+		cost = 10
+
+		search_filters = { FOCUS_FILTER_ARMY_XP }
+
+		completion_reward = {
+			army_experience = 20
+		}
+
+		ai_will_do = {
+			base = 1
+		}
+	}
+
+	focus = {
+		id = TU_KZD_vampire_elite
+		icon = GFX_goal_generic_special_forces
+		prerequisite = { focus = TU_KZD_vampire_night_raid }
+		x = 0
+		y = 5
+		cost = 15
+
+		search_filters = { FOCUS_FILTER_ARMY_XP }
+
+		completion_reward = {
+			army_experience = 25
+			add_political_power = 100
+			set_division_template_lock = {
+				division_template = "TU_KZD_elite_guard"
+				is_locked = no
+			}
+		}
+
+		ai_will_do = {
+			base = 1
+		}
+	}
+
+	focus = {
+		id = TU_KZD_vampire_legion
+		icon = GFX_goal_generic_army_doctrines
+		prerequisite = { focus = TU_KZD_vampire_elite }
+		x = 0
+		y = 6
+		cost = 10
+
+		search_filters = { FOCUS_FILTER_POLITICAL }
+
+		completion_reward = {
+			add_political_power = 50
+			add_manpower = 15000
+		}
+
+		ai_will_do = {
+			base = 1
+		}
+	}
+
+	focus = {
+		id = TU_KZD_wendigo_blood
+		icon = GFX_goal_generic_cavalry
+		prerequisite = { focus = TU_KZD_sarkaz_root }
+		mutually_exclusive = { focus = TU_KZD_banshee_blood focus = TU_KZD_vampire_blood }
+		x = 0
+		y = 3
+		cost = 10
+
+		search_filters = { FOCUS_FILTER_ARMY_XP }
+
+		completion_reward = {
+			army_experience = 20
+			country_event = { id = tu_kzd_ev.9 }
+		}
+
+		ai_will_do = {
+			base = 1
+		}
+	}
+
+	focus = {
+		id = TU_KZD_wendigo_snow_tactics
+		icon = GFX_goal_generic_army_doctrines
+		prerequisite = { focus = TU_KZD_wendigo_blood }
+		x = 0
+		y = 4
+		cost = 10
+
+		search_filters = { FOCUS_FILTER_RESEARCH }
+
+		completion_reward = {
+			add_tech_bonus = {
+				name = TU_KZD_snow_tactics_bonus
+				bonus = 1.0
+				uses = 2
+				category = infantry_weapons
+			}
+		}
+
+		ai_will_do = {
+			base = 1
+		}
+	}
+
+	focus = {
+		id = TU_KZD_wendigo_pack
+		icon = GFX_goal_generic_wolf_pack
+		prerequisite = { focus = TU_KZD_wendigo_snow_tactics }
+		x = 0
+		y = 5
+		cost = 10
+
+		search_filters = { FOCUS_FILTER_ARMY_XP }
+
+		completion_reward = {
+			army_experience = 25
+			add_ideas = TU_KZD_p2_wendigo_pack
+		}
+
+		ai_will_do = {
+			base = 1
+		}
+	}
+
+	focus = {
+		id = TU_KZD_wendigo_hunters
+		icon = GFX_goal_generic_allies_build_infantry
+		prerequisite = { focus = TU_KZD_wendigo_pack }
+		x = 0
+		y = 6
+		cost = 15
+
+		search_filters = { FOCUS_FILTER_POLITICAL }
+
+		completion_reward = {
+			add_political_power = 100
+			add_manpower = 20000
+		}
+
+		ai_will_do = {
+			base = 1
+		}
+	}
+
+	focus = {
+		id = TU_KZD_banshee_blood
+		icon = GFX_goal_generic_radar
+		prerequisite = { focus = TU_KZD_sarkaz_root }
+		mutually_exclusive = { focus = TU_KZD_vampire_blood focus = TU_KZD_wendigo_blood }
+		x = 0
+		y = 3
+		cost = 10
+
+		search_filters = { FOCUS_FILTER_RESEARCH }
+
+		completion_reward = {
+			army_experience = 15
+			add_political_power = 25
+			country_event = { id = tu_kzd_ev.10 }
+		}
+
+		ai_will_do = {
+			base = 1
+		}
+	}
+
+	focus = {
+		id = TU_KZD_banshee_signal
+		icon = GFX_goal_generic_intelligence_exchange
+		prerequisite = { focus = TU_KZD_banshee_blood }
+		x = 0
+		y = 4
+		cost = 10
+
+		search_filters = { FOCUS_FILTER_RESEARCH }
+
+		completion_reward = {
+			add_tech_bonus = {
+				name = TU_KZD_banshee_signal_bonus
+				bonus = 1.0
+				uses = 2
+				category = artillery
+			}
+		}
+
+		ai_will_do = {
+			base = 1
+		}
+	}
+
+	focus = {
+		id = TU_KZD_banshee_chorus
+		icon = GFX_goal_generic_propaganda
+		prerequisite = { focus = TU_KZD_banshee_signal }
+		x = 0
+		y = 5
+		cost = 10
+
+		search_filters = { FOCUS_FILTER_ARMY_XP }
+
+		completion_reward = {
+			army_experience = 20
+			add_ideas = TU_KZD_p2_banshee_chorus
+		}
+
+		ai_will_do = {
+			base = 1
+		}
+	}
+
+	focus = {
+		id = TU_KZD_banshee_bond
+		icon = GFX_goal_generic_military_deal
+		prerequisite = { focus = TU_KZD_banshee_chorus }
+		x = 0
+		y = 6
+		cost = 15
+
+		search_filters = { FOCUS_FILTER_POLITICAL }
+
+		completion_reward = {
+			add_political_power = 100
+		}
+
+		ai_will_do = {
+			base = 1
+		}
+	}
+
+	focus = {
+		id = TU_KZD_sarkaz_unity
+		icon = GFX_goal_generic_army_doctrines
+		prerequisite = { focus = TU_KZD_vampire_legion focus = TU_KZD_wendigo_hunters focus = TU_KZD_banshee_bond }
+		x = 0
+		y = 7
+		cost = 15
+
+		search_filters = { FOCUS_FILTER_POLITICAL }
+
+		completion_reward = {
+			add_political_power = 100
+			add_stability = 0.03
+		}
+
+		ai_will_do = {
+			base = 1
+		}
+	}
+
+	focus = {
+		id = TU_KZD_sarkaz_rites
+		icon = GFX_goal_generic_national_unity
+		prerequisite = { focus = TU_KZD_sarkaz_unity }
+		x = 0
+		y = 8
+		cost = 10
+
+		search_filters = { FOCUS_FILTER_POLITICAL }
+
+		completion_reward = {
+			add_political_power = 50
+		}
+
+		ai_will_do = {
+			base = 1
+		}
+	}
+
+	#### WASTELAND FORTRESS BRANCH ####
+
+	focus = {
+		id = TU_KZD_fort_design
+		icon = GFX_goal_generic_fortify_city
+		prerequisite = { focus = TU_KZD_exp_doctrine }
+		x = 0
+		y = 2
+		cost = 10
+
+		search_filters = { FOCUS_FILTER_POLITICAL }
+
+		completion_reward = {
+			add_political_power = 25
+		}
+
+		ai_will_do = {
+			base = 1
+		}
+	}
+
+	focus = {
+		id = TU_KZD_fort_survey
+		icon = GFX_goal_generic_construction
+		prerequisite = { focus = TU_KZD_fort_design }
+		x = 0
+		y = 3
+		cost = 10
+
+		search_filters = { FOCUS_FILTER_RESEARCH }
+
+		completion_reward = {
+			add_tech_bonus = {
+				name = TU_KZD_fort_survey_bonus
+				bonus = 0.5
+				uses = 2
+				category = infantry_weapons
+			}
+		}
+
+		ai_will_do = {
+			base = 1
+		}
+	}
+
+	focus = {
+		id = TU_KZD_fort_wasteland_bunker
+		icon = GFX_goal_generic_fortify_city
+		prerequisite = { focus = TU_KZD_fort_survey }
+		x = 0
+		y = 4
+		cost = 10
+
+		search_filters = { FOCUS_FILTER_POLITICAL }
+
+		completion_reward = {
+			add_political_power = 50
+			add_ideas = TU_KZD_p2_wasteland_fortress
+		}
+
+		ai_will_do = {
+			base = 1
+		}
+	}
+
+	focus = {
+		id = TU_KZD_fort_factory_camps
+		icon = GFX_goal_generic_construct_mil_factory
+		prerequisite = { focus = TU_KZD_fort_wasteland_bunker }
+		x = 0
+		y = 5
+		cost = 10
+
+		search_filters = { FOCUS_FILTER_INDUSTRY }
+
+		completion_reward = {
+			add_political_power = 25
+		}
+
+		ai_will_do = {
+			base = 1
+		}
+	}
+
+	focus = {
+		id = TU_KZD_fort_mountain_defence
+		icon = GFX_goal_generic_defence
+		prerequisite = { focus = TU_KZD_fort_wasteland_bunker }
+		x = 0
+		y = 5
+		cost = 10
+
+		search_filters = { FOCUS_FILTER_ARMY_XP }
+
+		completion_reward = {
+			army_experience = 15
+		}
+
+		ai_will_do = {
+			base = 1
+		}
+	}
+
+	focus = {
+		id = TU_KZD_fort_supply
+		icon = GFX_goal_generic_construct_infrastructure
+		prerequisite = { focus = TU_KZD_fort_factory_camps }
+		x = 0
+		y = 6
+		cost = 10
+
+		search_filters = { FOCUS_FILTER_INDUSTRY }
+
+		completion_reward = {
+			add_political_power = 25
+			add_stability = 0.02
+		}
+
+		ai_will_do = {
+			base = 1
+		}
+	}
+
+	focus = {
+		id = TU_KZD_fort_garrison
+		icon = GFX_goal_generic_allies_build_infantry
+		prerequisite = { focus = TU_KZD_fort_mountain_defence }
+		x = 0
+		y = 6
+		cost = 10
+
+		search_filters = { FOCUS_FILTER_POLITICAL }
+
+		completion_reward = {
+			add_political_power = 50
+		}
+
+		ai_will_do = {
+			base = 1
+		}
+	}
+
+	focus = {
+		id = TU_KZD_fort_ambush
+		icon = GFX_goal_generic_small_arms
+		prerequisite = { focus = TU_KZD_fort_mountain_defence }
+		x = 0
+		y = 6
+		cost = 10
+
+		search_filters = { FOCUS_FILTER_ARMY_XP }
+
+		completion_reward = {
+			army_experience = 20
+		}
+
+		ai_will_do = {
+			base = 1
+		}
+	}
+
+	focus = {
+		id = TU_KZD_fort_guerilla
+		icon = GFX_goal_generic_special_forces
+		prerequisite = { focus = TU_KZD_fort_ambush }
+		x = 0
+		y = 7
+		cost = 10
+
+		search_filters = { FOCUS_FILTER_ARMY_XP }
+
+		completion_reward = {
+			army_experience = 20
+			add_ideas = TU_KZD_p2_wasteland_guerilla
+		}
+
+		ai_will_do = {
+			base = 1
+		}
+	}
+
+	focus = {
+		id = TU_KZD_fort_frontier_wall
+		icon = GFX_goal_generic_fortify_city
+		prerequisite = { focus = TU_KZD_fort_supply }
+		x = 0
+		y = 7
+		cost = 15
+
+		search_filters = { FOCUS_FILTER_POLITICAL }
+
+		completion_reward = {
+			add_political_power = 75
+			add_stability = 0.02
+		}
+
+		ai_will_do = {
+			base = 1
+		}
+	}
+
+	focus = {
+		id = TU_KZD_fort_forward_base
+		icon = GFX_goal_generic_construct_military
+		prerequisite = { focus = TU_KZD_fort_frontier_wall }
+		x = 0
+		y = 8
+		cost = 10
+
+		search_filters = { FOCUS_FILTER_INDUSTRY }
+
+		completion_reward = {
+			add_political_power = 50
+		}
+
+		ai_will_do = {
+			base = 1
+		}
+	}
+
+	focus = {
+		id = TU_KZD_fort_watchtower
+		icon = GFX_goal_generic_construction2
+		prerequisite = { focus = TU_KZD_fort_forward_base }
+		x = 0
+		y = 9
+		cost = 10
+
+		search_filters = { FOCUS_FILTER_POLITICAL }
+
+		completion_reward = {
+			add_political_power = 25
+		}
+
+		ai_will_do = {
+			base = 1
+		}
+	}
+
+	focus = {
+		id = TU_KZD_fort_resource_dig
+		icon = GFX_goal_generic_production
+		prerequisite = { focus = TU_KZD_fort_factory_camps }
+		mutually_exclusive = { focus = TU_KZD_fort_resource_dig_alt }
+		x = 0
+		y = 6
+		cost = 10
+
+		search_filters = { FOCUS_FILTER_INDUSTRY }
+
+		completion_reward = {
+			add_political_power = 50
+		}
+
+		ai_will_do = {
+			base = 1
+		}
+	}
+
+	focus = {
+		id = TU_KZD_fort_resource_dig_alt
+		icon = GFX_goal_generic_construct_infrastructure
+		prerequisite = { focus = TU_KZD_fort_factory_camps }
+		mutually_exclusive = { focus = TU_KZD_fort_resource_dig }
+		x = 0
+		y = 6
+		cost = 10
+
+		search_filters = { FOCUS_FILTER_INDUSTRY }
+
+		completion_reward = {
+			add_political_power = 25
+			army_experience = 20
+		}
+
+		ai_will_do = {
+			base = 1
+		}
+	}

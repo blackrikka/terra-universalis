@@ -1,0 +1,12 @@
+capital = 58
+set_research_slots = 3
+set_politics = { ruling_party = neutrality last_election = "1096.1.1" election_frequency = 48 elections_allowed = no }
+set_popularities = { neutrality = 100 }
+# URS: appended to history/countries/URS - Ursus Empire.txt by build_countries.py.
+# neutrality ruling party, popularity and capital are written by build_countries.py.
+oob = "URS_1097"
+recruit_character = TU_URS_emperor
+recruit_character = TU_URS_general_1
+recruit_character = TU_URS_general_2
+add_ideas = { TU_URS_backward_infrastructure TU_URS_frozen_empire TU_URS_infected_discrimination }
+set_power_balance = { id = TU_URS_bop set_default = yes }

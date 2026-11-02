@@ -1,0 +1,21 @@
+state={
+	id=88
+	name="STATE_88"
+	manpower = 50000
+
+	state_category = town
+
+	history={
+		owner = LEI
+		victory_points = { 446 1 }
+		buildings = {
+			infrastructure = 2
+		}
+		add_core_of = LEI
+	}
+
+	provinces={
+		435 436 445 446 447 454 459 460
+	}
+	local_supplies=0.0
+}

@@ -1,0 +1,24 @@
+state={
+	id=285
+	name="STATE_285"
+	manpower = 50000
+
+	state_category = town
+
+	history={
+		owner = MIN
+		victory_points = { 1387 1 }
+		buildings = {
+			infrastructure = 2
+			industrial_complex = 2
+			arms_factory = 1
+			air_base = 1
+		}
+		add_core_of = MIN
+	}
+
+	provinces={
+		1386 1387 1388 1389 1390 1391 1392
+	}
+	local_supplies=0.0
+}

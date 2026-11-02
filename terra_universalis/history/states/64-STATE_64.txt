@@ -1,0 +1,24 @@
+state={
+	id=64
+	name="STATE_64"
+	manpower = 50000
+
+	state_category = town
+
+	history={
+		owner = KZD
+		victory_points = { 332 1 }
+		buildings = {
+			infrastructure = 2
+			industrial_complex = 2
+			arms_factory = 1
+			air_base = 1
+		}
+		add_core_of = KZD
+	}
+
+	provinces={
+		332
+	}
+	local_supplies=0.0
+}

@@ -1,0 +1,812 @@
+	#### U1 PART p2_junta (x 76-90): military junta, mobilisation, mobile cities, border purge, loyalty ####
+
+	#### FORK B: MILITARY JUNTA (CENTRALISATION, FASCISM TURN) ####
+
+	focus = {
+		id = TU_URS_military_junta
+		icon = GFX_goal_generic_major_war
+		prerequisite = { focus = TU_URS_imperial_decree }
+		mutually_exclusive = { focus = TU_URS_emperor_rule focus = TU_URS_noble_compromise focus = TU_URS_reform_path }
+		x = 88
+		y = 2
+		cost = 10
+
+		search_filters = { FOCUS_FILTER_BALANCE_OF_POWER }
+
+		ai_will_do = {
+			base = 1
+		}
+
+		completion_reward = {
+			country_event = { id = tu_urs_ev.2 }
+			add_power_balance_value = {
+				id = TU_URS_bop
+				value = -0.2
+			}
+			add_political_power = 50
+		}
+	}
+
+	focus = {
+		id = TU_URS_hardline_generals
+		icon = GFX_goal_generic_army_doctrines
+		prerequisite = { focus = TU_URS_military_junta }
+		x = 88
+		y = 3
+		cost = 10
+
+		search_filters = { FOCUS_FILTER_ARMY_XP }
+
+		ai_will_do = {
+			base = 1
+		}
+
+		completion_reward = {
+			country_event = { id = tu_urs_ev.5 }
+			recruit_character = TU_URS_p2_hardline_general
+			add_political_power = 40
+			army_experience = 20
+		}
+	}
+
+	focus = {
+		id = TU_URS_chernobog_response
+		icon = GFX_goal_generic_defence
+		prerequisite = { focus = TU_URS_hardline_generals }
+		x = 88
+		y = 4
+		cost = 10
+
+		search_filters = { FOCUS_FILTER_POLITICAL }
+
+		ai_will_do = {
+			base = 1
+		}
+
+		completion_reward = {
+			country_event = { id = tu_urs_ev.6 }
+			add_stability = -0.02
+			add_war_support = 0.05
+			add_political_power = 25
+		}
+	}
+
+	focus = {
+		id = TU_URS_war_mobilisation_law
+		icon = GFX_goal_generic_allies_build_infantry
+		prerequisite = { focus = TU_URS_chernobog_response }
+		x = 88
+		y = 5
+		cost = 10
+
+		search_filters = { FOCUS_FILTER_ARMY_XP }
+
+		ai_will_do = {
+			base = 1
+		}
+
+		completion_reward = {
+			add_manpower = 25000
+			add_political_power = 30
+		}
+	}
+
+	focus = {
+		id = TU_URS_fascist_turn
+		icon = GFX_goal_generic_propaganda
+		prerequisite = { focus = TU_URS_war_mobilisation_law }
+		mutually_exclusive = { focus = TU_URS_junta_caretaker }
+		x = 88
+		y = 6
+		cost = 10
+
+		search_filters = { FOCUS_FILTER_POLITICAL }
+
+		ai_will_do = {
+			base = 1
+		}
+
+		completion_reward = {
+			set_politics = {
+				ruling_party = fascism
+				elections_allowed = no
+			}
+			add_popularity = {
+				ideology = fascism
+				popularity = 0.1
+			}
+			add_power_balance_value = {
+				id = TU_URS_bop
+				value = -0.1
+			}
+			add_political_power = 40
+		}
+	}
+
+	focus = {
+		id = TU_URS_total_war_economy
+		icon = GFX_goal_generic_construct_mil_factory
+		prerequisite = { focus = TU_URS_fascist_turn focus = TU_URS_junta_caretaker }
+		x = 88
+		y = 7
+		cost = 10
+
+		search_filters = { FOCUS_FILTER_INDUSTRY }
+
+		ai_will_do = {
+			base = 1
+		}
+
+		completion_reward = {
+			add_ideas = TU_URS_p2_total_war_economy
+			add_political_power = 25
+		}
+	}
+
+	focus = {
+		id = TU_URS_purge_generals
+		icon = GFX_goal_generic_political_pressure
+		prerequisite = { focus = TU_URS_total_war_economy }
+		mutually_exclusive = { focus = TU_URS_loyalty_oath }
+		x = 88
+		y = 9
+		cost = 10
+
+		search_filters = { FOCUS_FILTER_POLITICAL }
+
+		ai_will_do = {
+			base = 1
+		}
+
+		available = {
+			has_country_flag = TU_DEC_TU_URS_war_production
+		}
+
+		completion_reward = {
+			add_stability = -0.03
+			add_political_power = 50
+			army_experience = 25
+		}
+	}
+
+	focus = {
+		id = TU_URS_total_mobilisation
+		icon = GFX_goal_generic_construct_military
+		prerequisite = { focus = TU_URS_purge_generals focus = TU_URS_loyalty_oath }
+		x = 88
+		y = 10
+		cost = 10
+
+		search_filters = { FOCUS_FILTER_ARMY_XP }
+
+		ai_will_do = {
+			base = 1
+		}
+
+		completion_reward = {
+			add_manpower = 20000
+			army_experience = 20
+		}
+	}
+
+	focus = {
+		id = TU_URS_front_state
+		icon = GFX_goal_generic_army_artillery2
+		prerequisite = { focus = TU_URS_total_mobilisation }
+		x = 88
+		y = 11
+		cost = 10
+
+		search_filters = { FOCUS_FILTER_POLITICAL }
+
+		ai_will_do = {
+			base = 1
+		}
+
+		completion_reward = {
+			add_war_support = 0.05
+			add_stability = -0.01
+			add_political_power = 30
+		}
+	}
+
+	focus = {
+		id = TU_URS_siege_doctrine
+		icon = GFX_goal_generic_army_doctrines
+		prerequisite = { focus = TU_URS_front_state }
+		x = 88
+		y = 12
+		cost = 10
+
+		search_filters = { FOCUS_FILTER_ARMY_XP }
+
+		ai_will_do = {
+			base = 1
+		}
+
+		completion_reward = {
+			army_experience = 30
+			add_tech_bonus = {
+				name = TU_URS_p2_siege_tech
+				bonus = 0.5
+				uses = 1
+				category = artillery
+			}
+		}
+	}
+
+	focus = {
+		id = TU_URS_iron_march
+		icon = GFX_goal_generic_army_tanks
+		prerequisite = { focus = TU_URS_siege_doctrine }
+		x = 88
+		y = 13
+		cost = 10
+
+		search_filters = { FOCUS_FILTER_ARMY_XP }
+
+		ai_will_do = {
+			base = 1
+		}
+
+		completion_reward = {
+			add_tech_bonus = {
+				name = TU_URS_p2_armor_tech
+				bonus = 0.5
+				uses = 1
+				category = armor
+			}
+			add_political_power = 30
+		}
+	}
+
+	focus = {
+		id = TU_URS_iron_regime
+		icon = GFX_goal_generic_military_sphere
+		prerequisite = { focus = TU_URS_iron_march }
+		x = 88
+		y = 14
+		cost = 15
+
+		search_filters = { FOCUS_FILTER_POLITICAL }
+
+		ai_will_do = {
+			base = 1
+		}
+
+		completion_reward = {
+			every_country = { news_event = { id = tu_urs_ev.19 } }
+			add_ideas = TU_URS_p2_iron_regime
+			add_power_balance_value = {
+				id = TU_URS_bop
+				value = -0.1
+			}
+			add_political_power = 60
+		}
+	}
+
+	focus = {
+		id = TU_URS_standing_junta
+		icon = GFX_goal_generic_national_unity
+		prerequisite = { focus = TU_URS_iron_regime }
+		x = 88
+		y = 15
+		cost = 10
+
+		search_filters = { FOCUS_FILTER_POLITICAL }
+
+		ai_will_do = {
+			base = 1
+		}
+
+		completion_reward = {
+			add_political_power = 40
+			add_stability = -0.01
+		}
+	}
+
+	focus = {
+		id = TU_URS_endless_junta
+		icon = GFX_goal_generic_military_sphere
+		prerequisite = { focus = TU_URS_standing_junta }
+		x = 88
+		y = 17
+		cost = 15
+
+		search_filters = { FOCUS_FILTER_POLITICAL }
+
+		ai_will_do = {
+			base = 1
+		}
+
+		available = {
+			has_country_flag = TU_DEC_TU_URS_militarise_state
+		}
+
+		completion_reward = {
+			country_event = { id = tu_urs_ev.11 }
+			add_political_power = 80
+			add_war_support = 0.05
+			add_power_balance_value = {
+				id = TU_URS_bop
+				value = -0.05
+			}
+		}
+	}
+
+
+	#### WAR MOBILISATION BRANCH (x 84-86) ####
+
+	focus = {
+		id = TU_URS_junta_caretaker
+		icon = GFX_goal_generic_neutrality_focus
+		prerequisite = { focus = TU_URS_war_mobilisation_law }
+		mutually_exclusive = { focus = TU_URS_fascist_turn }
+		x = 86
+		y = 6
+		cost = 10
+
+		search_filters = { FOCUS_FILTER_POLITICAL }
+
+		ai_will_do = {
+			base = 1
+		}
+
+		completion_reward = {
+			add_stability = 0.03
+			add_power_balance_value = {
+				id = TU_URS_bop
+				value = -0.05
+			}
+			add_political_power = 20
+		}
+	}
+
+	focus = {
+		id = TU_URS_frost_conscription
+		icon = GFX_goal_generic_allies_build_infantry
+		prerequisite = { focus = TU_URS_war_mobilisation_law }
+		x = 84
+		y = 6
+		cost = 10
+
+		search_filters = { FOCUS_FILTER_ARMY_XP }
+
+		ai_will_do = {
+			base = 1
+		}
+
+		completion_reward = {
+			add_manpower = 20000
+			army_experience = 10
+		}
+	}
+
+	focus = {
+		id = TU_URS_frontier_militia
+		icon = GFX_goal_generic_cavalry
+		prerequisite = { focus = TU_URS_frost_conscription }
+		x = 84
+		y = 7
+		cost = 10
+
+		search_filters = { FOCUS_FILTER_ARMY_XP }
+
+		ai_will_do = {
+			base = 1
+		}
+
+		completion_reward = {
+			army_experience = 20
+			add_stability = -0.01
+		}
+	}
+
+	focus = {
+		id = TU_URS_war_bonds
+		icon = GFX_goal_generic_consumer_goods
+		prerequisite = { focus = TU_URS_frontier_militia }
+		x = 84
+		y = 8
+		cost = 10
+
+		search_filters = { FOCUS_FILTER_POLITICAL }
+
+		ai_will_do = {
+			base = 1
+		}
+
+		completion_reward = {
+			add_political_power = 40
+			add_stability = -0.01
+		}
+	}
+
+	focus = {
+		id = TU_URS_rationing
+		icon = GFX_goal_generic_consumer_goods
+		prerequisite = { focus = TU_URS_war_bonds }
+		x = 86
+		y = 9
+		cost = 10
+
+		search_filters = { FOCUS_FILTER_POLITICAL }
+
+		ai_will_do = {
+			base = 1
+		}
+
+		available = {
+			NOT = { has_country_flag = TU_DEC_TU_URS_arms_factories }
+		}
+
+		completion_reward = {
+			add_stability = 0.03
+			add_political_power = 20
+		}
+	}
+
+	focus = {
+		id = TU_URS_steel_quota
+		icon = GFX_goal_generic_production
+		prerequisite = { focus = TU_URS_war_bonds }
+		x = 84
+		y = 10
+		cost = 10
+
+		search_filters = { FOCUS_FILTER_INDUSTRY }
+
+		ai_will_do = {
+			base = 1
+		}
+
+		available = {
+			has_country_flag = TU_DEC_TU_URS_arms_factories
+		}
+
+		completion_reward = {
+			add_tech_bonus = {
+				name = TU_URS_p2_quota_tech
+				bonus = 0.5
+				uses = 1
+				category = industry
+			}
+			add_political_power = 10
+		}
+	}
+
+	focus = {
+		id = TU_URS_artillery_push
+		icon = GFX_goal_generic_army_artillery
+		prerequisite = { focus = TU_URS_steel_quota }
+		x = 84
+		y = 11
+		cost = 10
+
+		search_filters = { FOCUS_FILTER_ARMY_XP }
+
+		ai_will_do = {
+			base = 1
+		}
+
+		completion_reward = {
+			army_experience = 20
+			add_tech_bonus = {
+				name = TU_URS_p2_barrage_tech
+				bonus = 0.5
+				uses = 1
+				category = artillery
+			}
+		}
+	}
+
+	focus = {
+		id = TU_URS_armor_corps
+		icon = GFX_goal_generic_build_tank
+		prerequisite = { focus = TU_URS_artillery_push }
+		x = 84
+		y = 12
+		cost = 10
+
+		search_filters = { FOCUS_FILTER_ARMY_XP }
+
+		ai_will_do = {
+			base = 1
+		}
+
+		completion_reward = {
+			army_experience = 25
+			add_tech_bonus = {
+				name = TU_URS_p2_corps_tech
+				bonus = 0.5
+				uses = 1
+				category = motorized_equipment
+			}
+		}
+	}
+
+	focus = {
+		id = TU_URS_mobile_divisions
+		icon = GFX_goal_generic_army_motorized
+		prerequisite = { focus = TU_URS_armor_corps }
+		x = 84
+		y = 13
+		cost = 10
+
+		search_filters = { FOCUS_FILTER_ARMY_XP }
+
+		ai_will_do = {
+			base = 1
+		}
+
+		completion_reward = {
+			country_event = { id = tu_urs_ev.7 }
+			recruit_character = TU_URS_p2_mobilisation_marshal
+			army_experience = 30
+		}
+	}
+
+
+	#### MILITARISED MOBILE CITIES BRANCH (x 80-82) ####
+
+	focus = {
+		id = TU_URS_mobile_city_plan
+		icon = GFX_goal_generic_construct_infrastructure
+		prerequisite = { focus = TU_URS_hardline_generals }
+		x = 82
+		y = 4
+		cost = 10
+
+		search_filters = { FOCUS_FILTER_POLITICAL }
+
+		ai_will_do = {
+			base = 1
+		}
+
+		completion_reward = {
+			add_political_power = 25
+			add_stability = 0.01
+		}
+	}
+
+	focus = {
+		id = TU_URS_mobile_garrisons
+		icon = GFX_goal_generic_fortify_city
+		prerequisite = { focus = TU_URS_mobile_city_plan }
+		x = 82
+		y = 5
+		cost = 10
+
+		search_filters = { FOCUS_FILTER_ARMY_XP }
+
+		ai_will_do = {
+			base = 1
+		}
+
+		completion_reward = {
+			army_experience = 15
+			add_manpower = 10000
+		}
+	}
+
+	focus = {
+		id = TU_URS_armored_rail
+		icon = GFX_goal_generic_army_motorized
+		prerequisite = { focus = TU_URS_mobile_garrisons }
+		mutually_exclusive = { focus = TU_URS_city_patrols }
+		x = 80
+		y = 6
+		cost = 10
+
+		search_filters = { FOCUS_FILTER_INDUSTRY }
+
+		ai_will_do = {
+			base = 1
+		}
+
+		completion_reward = {
+			add_tech_bonus = {
+				name = TU_URS_p2_armored_rail_tech
+				bonus = 0.5
+				uses = 1
+				category = motorized_equipment
+			}
+		}
+	}
+
+	focus = {
+		id = TU_URS_city_patrols
+		icon = GFX_goal_generic_special_forces
+		prerequisite = { focus = TU_URS_mobile_garrisons }
+		mutually_exclusive = { focus = TU_URS_armored_rail }
+		x = 82
+		y = 7
+		cost = 10
+
+		search_filters = { FOCUS_FILTER_POLITICAL }
+
+		ai_will_do = {
+			base = 1
+		}
+
+		completion_reward = {
+			add_stability = 0.02
+			add_political_power = 25
+		}
+	}
+
+	focus = {
+		id = TU_URS_siege_engines
+		icon = GFX_goal_generic_army_artillery2
+		prerequisite = { focus = TU_URS_armored_rail }
+		x = 80
+		y = 8
+		cost = 10
+
+		search_filters = { FOCUS_FILTER_ARMY_XP }
+
+		ai_will_do = {
+			base = 1
+		}
+
+		completion_reward = {
+			army_experience = 20
+		}
+	}
+
+	focus = {
+		id = TU_URS_mobile_fortress
+		icon = GFX_goal_generic_fortify_city
+		prerequisite = { focus = TU_URS_city_patrols }
+		x = 82
+		y = 9
+		cost = 10
+
+		search_filters = { FOCUS_FILTER_POLITICAL }
+
+		ai_will_do = {
+			base = 1
+		}
+
+		completion_reward = {
+			add_stability = 0.02
+			add_political_power = 30
+		}
+	}
+
+
+	#### BORDER PURGE AND WAR PLANS BRANCH (x 76-78) ####
+
+	focus = {
+		id = TU_URS_special_military_courts
+		icon = GFX_goal_generic_forceful_treaty
+		prerequisite = { focus = TU_URS_chernobog_response }
+		x = 78
+		y = 5
+		cost = 10
+
+		search_filters = { FOCUS_FILTER_POLITICAL }
+
+		ai_will_do = {
+			base = 1
+		}
+
+		completion_reward = {
+			add_political_power = 30
+			add_stability = -0.02
+		}
+	}
+
+	focus = {
+		id = TU_URS_black_regiment
+		icon = GFX_goal_generic_special_forces
+		prerequisite = { focus = TU_URS_special_military_courts }
+		mutually_exclusive = { focus = TU_URS_black_regiment_alt }
+		x = 76
+		y = 6
+		cost = 10
+
+		search_filters = { FOCUS_FILTER_ARMY_XP }
+
+		ai_will_do = {
+			base = 1
+		}
+
+		completion_reward = {
+			army_experience = 25
+			add_ideas = TU_URS_p2_black_regiment
+		}
+	}
+
+	focus = {
+		id = TU_URS_black_regiment_alt
+		icon = GFX_goal_generic_political_pressure
+		prerequisite = { focus = TU_URS_special_military_courts }
+		mutually_exclusive = { focus = TU_URS_black_regiment }
+		x = 78
+		y = 6
+		cost = 10
+
+		search_filters = { FOCUS_FILTER_POLITICAL }
+
+		ai_will_do = {
+			base = 1
+		}
+
+		completion_reward = {
+			add_political_power = 35
+			add_stability = -0.01
+		}
+	}
+
+	focus = {
+		id = TU_URS_border_purge
+		icon = GFX_goal_generic_dangerous_deal
+		prerequisite = { focus = TU_URS_special_military_courts }
+		x = 78
+		y = 7
+		cost = 10
+
+		search_filters = { FOCUS_FILTER_POLITICAL }
+
+		ai_will_do = {
+			base = 1
+		}
+
+		completion_reward = {
+			add_stability = -0.02
+			add_political_power = 25
+		}
+	}
+
+	focus = {
+		id = TU_URS_lei_diplomacy
+		icon = GFX_goal_generic_improve_relations
+		prerequisite = { focus = TU_URS_border_purge }
+		x = 78
+		y = 8
+		cost = 10
+
+		search_filters = { FOCUS_FILTER_POLITICAL }
+
+		ai_will_do = {
+			base = 1
+		}
+
+		available = {
+			NOT = { has_country_flag = TU_DEC_TU_URS_lei_war_plans }
+		}
+
+		completion_reward = {
+			add_political_power = 30
+			add_stability = 0.02
+		}
+	}
+
+
+	#### LOYALTY BRANCH (x 90) ####
+
+	focus = {
+		id = TU_URS_loyalty_oath
+		icon = GFX_goal_generic_national_unity
+		prerequisite = { focus = TU_URS_total_war_economy }
+		mutually_exclusive = { focus = TU_URS_purge_generals }
+		x = 90
+		y = 9
+		cost = 10
+
+		search_filters = { FOCUS_FILTER_POLITICAL }
+
+		ai_will_do = {
+			base = 1
+		}
+
+		available = {
+			has_country_flag = TU_DEC_TU_URS_war_production
+		}
+
+		completion_reward = {
+			add_stability = 0.03
+			add_political_power = 30
+		}
+	}

@@ -1,0 +1,122 @@
+ideas = {
+
+	country = {
+
+		TU_YAN_grand_canal_network = {
+			picture = generic_production_bonus
+
+			allowed = {
+				original_tag = YAN
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			modifier = {
+				production_speed_infrastructure_factor = 0.1
+			}
+		}
+
+		TU_YAN_mobile_city_doctrine = {
+			picture = generic_improved_industries
+
+			allowed = {
+				original_tag = YAN
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			modifier = {
+				production_speed_buildings_factor = 0.05
+				stability_factor = 0.02
+			}
+		}
+
+		TU_YAN_originium_sovereign = {
+			picture = generic_devalue_currency
+
+			allowed = {
+				original_tag = YAN
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			modifier = {
+				production_speed_industrial_complex_factor = 0.05
+				consumer_goods_factor = -0.05
+			}
+		}
+
+		TU_YAN_imperial_guard = {
+			picture = generic_central_management
+
+			allowed = {
+				original_tag = YAN
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			modifier = {
+				army_attack_factor = 0.05
+				army_defence_factor = 0.05
+			}
+		}
+
+		TU_YAN_arts_legion = {
+			picture = generic_research_bonus
+
+			allowed = {
+				original_tag = YAN
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			modifier = {
+				army_morale_factor = 0.05
+				experience_gain_army_factor = 0.1
+			}
+		}
+
+		TU_YAN_air_arm = {
+			picture = generic_air_bonus
+
+			allowed = {
+				original_tag = YAN
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			modifier = {
+				air_attack_factor = 0.05
+				production_speed_air_base_factor = 0.1
+			}
+		}
+
+		TU_YAN_scholar_league = {
+			picture = generic_research_bonus
+
+			allowed = {
+				original_tag = YAN
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			modifier = {
+				research_speed_factor = 0.05
+			}
+		}
+	}
+}

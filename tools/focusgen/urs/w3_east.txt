@@ -1,0 +1,566 @@
+	#### STEM: W3 EAST (KAZIMIERZ / KJERAG / SAMI / ICE FIELD) ####
+
+	#### KAZIMIERZ (KAZ): diplomacy vs claims ####
+
+	focus = {
+		id = TU_URS_w3_kaz_entry
+		icon = GFX_goal_generic_improve_relations
+		prerequisite = { focus = TU_URS_foreign_ministry }
+		x = 171
+		y = 2
+		cost = 5
+
+		search_filters = { FOCUS_FILTER_POLITICAL }
+
+		ai_will_do = {
+			base = 1
+		}
+
+		completion_reward = {
+			add_political_power = 25
+		}
+	}
+
+	focus = {
+		id = TU_URS_w3_kaz_offensive
+		icon = GFX_goal_generic_occupy_start_war
+		prerequisite = { focus = TU_URS_w3_kaz_entry }
+		x = 172
+		y = 5
+		cost = 10
+
+		search_filters = { FOCUS_FILTER_ARMY_XP }
+
+		ai_will_do = {
+			base = 1
+		}
+
+		available = {
+			has_country_flag = TU_DEC_TU_URS_w3_kaz_wargoal
+		}
+
+		completion_reward = {
+			army_experience = 25
+			add_war_support = 0.03
+		}
+	}
+
+	focus = {
+		id = TU_URS_w3_kaz_annex
+		icon = GFX_goal_generic_forceful_treaty
+		prerequisite = { focus = TU_URS_w3_kaz_offensive }
+		x = 172
+		y = 6
+		cost = 10
+
+		search_filters = { FOCUS_FILTER_ANNEXATION }
+
+		ai_will_do = {
+			base = 1
+		}
+
+		completion_reward = {
+			army_experience = 15
+			add_manpower = 15000
+		}
+	}
+
+	focus = {
+		id = TU_URS_w3_kaz_protectorate
+		icon = GFX_goal_generic_major_alliance
+		prerequisite = { focus = TU_URS_w3_kaz_entry }
+		mutually_exclusive = { focus = TU_URS_w3_kaz_protectorate_alt }
+		x = 170
+		y = 7
+		cost = 15
+
+		search_filters = { FOCUS_FILTER_POLITICAL }
+
+		ai_will_do = {
+			base = 1
+		}
+
+		available = {
+			has_country_flag = TU_DEC_TU_URS_w3_kaz_guarantee
+		}
+
+		completion_reward = {
+			add_ideas = TU_URS_w3_idea_kaz_protectorate
+			add_political_power = 75
+			add_stability = 0.02
+		}
+	}
+
+	focus = {
+		id = TU_URS_w3_kaz_protectorate_alt
+		icon = GFX_goal_generic_military_sphere
+		prerequisite = { focus = TU_URS_w3_kaz_entry }
+		mutually_exclusive = { focus = TU_URS_w3_kaz_protectorate }
+		x = 174
+		y = 7
+		cost = 15
+
+		search_filters = { FOCUS_FILTER_ARMY_XP }
+
+		ai_will_do = {
+			base = 1
+		}
+
+		available = {
+			has_country_flag = TU_DEC_TU_URS_w3_kaz_guarantee
+		}
+
+		completion_reward = {
+			add_political_power = 50
+			army_experience = 30
+		}
+	}
+
+	focus = {
+		id = TU_URS_w3_kaz_occupation
+		icon = GFX_goal_generic_occupy_states_ongoing_war
+		prerequisite = { focus = TU_URS_w3_kaz_annex }
+		x = 172
+		y = 7
+		cost = 15
+
+		search_filters = { FOCUS_FILTER_ANNEXATION }
+
+		ai_will_do = {
+			base = 1
+		}
+
+		completion_reward = {
+			add_ideas = TU_URS_w3_idea_kaz_occupation
+			army_experience = 20
+		}
+	}
+
+	#### KJERAG (KJE): mountain pact vs mountain claims ####
+
+	focus = {
+		id = TU_URS_w3_kje_entry
+		icon = GFX_goal_generic_improve_relations
+		prerequisite = { focus = TU_URS_foreign_ministry }
+		x = 175
+		y = 2
+		cost = 5
+
+		search_filters = { FOCUS_FILTER_POLITICAL }
+
+		ai_will_do = {
+			base = 1
+		}
+
+		completion_reward = {
+			add_political_power = 25
+		}
+	}
+
+	focus = {
+		id = TU_URS_w3_kje_trade
+		icon = GFX_goal_generic_positive_trade_relations
+		prerequisite = { focus = TU_URS_w3_kje_entry }
+		x = 174
+		y = 4
+		cost = 10
+
+		search_filters = { FOCUS_FILTER_INDUSTRY }
+
+		ai_will_do = {
+			base = 1
+		}
+
+		available = {
+			has_country_flag = TU_DEC_TU_URS_w3_kje_pact
+		}
+
+		completion_reward = {
+			add_ideas = TU_URS_w3_idea_kje_trade_road
+			add_political_power = 50
+		}
+	}
+
+	focus = {
+		id = TU_URS_w3_kje_offensive
+		icon = GFX_goal_generic_army_doctrines
+		prerequisite = { focus = TU_URS_w3_kje_entry }
+		available = {
+			has_completed_focus = TU_URS_military_junta
+			has_country_flag = TU_DEC_TU_URS_w3_kje_wargoal
+		}
+		x = 176
+		y = 5
+		cost = 10
+
+		search_filters = { FOCUS_FILTER_ARMY_XP }
+
+		ai_will_do = {
+			base = 1
+		}
+
+		completion_reward = {
+			army_experience = 25
+			add_manpower = 10000
+		}
+	}
+
+	focus = {
+		id = TU_URS_w3_kje_union
+		icon = GFX_goal_generic_alliance
+		prerequisite = { focus = TU_URS_w3_kje_trade }
+		x = 174
+		y = 6
+		cost = 15
+
+		search_filters = { FOCUS_FILTER_POLITICAL }
+
+		ai_will_do = {
+			base = 1
+		}
+
+		available = {
+			has_country_flag = TU_DEC_TU_URS_w3_kje_access
+		}
+
+		completion_reward = {
+			if = {
+				limit = { country_exists = KJE }
+				diplomatic_relation = {
+					country = KJE
+					relation = guarantee
+					active = yes
+				}
+			}
+			add_ideas = TU_URS_w3_idea_kje_mountain_garrison
+			add_political_power = 50
+		}
+	}
+
+	focus = {
+		id = TU_URS_w3_kje_occupation
+		icon = GFX_goal_generic_fortify_city
+		prerequisite = { focus = TU_URS_w3_kje_offensive }
+		x = 176
+		y = 6
+		cost = 15
+
+		search_filters = { FOCUS_FILTER_ARMY_XP }
+
+		ai_will_do = {
+			base = 1
+		}
+
+		completion_reward = {
+			army_experience = 20
+			add_manpower = 20000
+		}
+	}
+
+	#### SAMI (SAM): aid vs annexation ####
+
+	focus = {
+		id = TU_URS_w3_sami_entry
+		icon = GFX_goal_generic_improve_relations
+		prerequisite = { focus = TU_URS_foreign_ministry }
+		x = 179
+		y = 2
+		cost = 5
+
+		search_filters = { FOCUS_FILTER_POLITICAL }
+
+		ai_will_do = {
+			base = 1
+		}
+
+		completion_reward = {
+			add_political_power = 25
+		}
+	}
+
+	focus = {
+		id = TU_URS_w3_sami_ski
+		icon = GFX_goal_generic_allies_build_infantry
+		prerequisite = { focus = TU_URS_w3_sami_entry }
+		x = 178
+		y = 4
+		cost = 10
+
+		search_filters = { FOCUS_FILTER_ARMY_XP }
+
+		ai_will_do = {
+			base = 1
+		}
+
+		available = {
+			has_country_flag = TU_DEC_TU_URS_w3_sami_aid
+		}
+
+		completion_reward = {
+			add_ideas = TU_URS_w3_idea_sami_ski_troops
+			army_experience = 15
+		}
+	}
+
+	focus = {
+		id = TU_URS_w3_sami_control
+		icon = GFX_goal_generic_occupy_states_ongoing_war
+		prerequisite = { focus = TU_URS_w3_sami_entry }
+		x = 180
+		y = 5
+		cost = 10
+
+		search_filters = { FOCUS_FILTER_ANNEXATION }
+
+		ai_will_do = {
+			base = 1
+		}
+
+		available = {
+			has_country_flag = TU_DEC_TU_URS_w3_sami_puppet
+		}
+
+		completion_reward = {
+			army_experience = 20
+			add_war_support = 0.03
+		}
+	}
+
+	focus = {
+		id = TU_URS_w3_sami_administration
+		icon = GFX_goal_generic_political_pressure
+		prerequisite = { focus = TU_URS_w3_sami_control }
+		x = 180
+		y = 6
+		cost = 15
+
+		search_filters = { FOCUS_FILTER_ANNEXATION }
+
+		ai_will_do = {
+			base = 1
+		}
+
+		completion_reward = {
+			add_ideas = TU_URS_w3_idea_sami_administration
+			add_manpower = 15000
+		}
+	}
+
+	#### ICE FIELD (INFI): exploration, research vs resources ####
+
+	focus = {
+		id = TU_URS_w3_infi_entry
+		icon = GFX_goal_generic_scientific_exchange
+		prerequisite = { focus = TU_URS_foreign_ministry }
+		x = 184
+		y = 2
+		cost = 5
+
+		search_filters = { FOCUS_FILTER_RESEARCH }
+
+		ai_will_do = {
+			base = 1
+		}
+
+		completion_reward = {
+			add_political_power = 25
+		}
+	}
+
+	focus = {
+		id = TU_URS_w3_infi_survey
+		icon = GFX_goal_generic_radar
+		prerequisite = { focus = TU_URS_w3_infi_entry }
+		x = 182
+		y = 4
+		cost = 10
+
+		search_filters = { FOCUS_FILTER_RESEARCH }
+
+		ai_will_do = {
+			base = 1
+		}
+
+		available = {
+			NOT = { has_country_flag = TU_DEC_TU_URS_w3_infi_drilling }
+		}
+
+		completion_reward = {
+			add_tech_bonus = {
+				name = TU_URS_w3_infi_survey_bonus
+				bonus = 1.0
+				uses = 2
+				category = electronics
+			}
+			add_political_power = 25
+		}
+	}
+
+	focus = {
+		id = TU_URS_w3_infi_cold_lab
+		icon = GFX_goal_generic_secret_weapon
+		prerequisite = { focus = TU_URS_w3_infi_survey }
+		x = 182
+		y = 6
+		cost = 10
+
+		search_filters = { FOCUS_FILTER_RESEARCH }
+
+		ai_will_do = {
+			base = 1
+		}
+
+		completion_reward = {
+			add_ideas = TU_URS_w3_idea_infi_survey_team
+			add_political_power = 25
+		}
+	}
+
+	focus = {
+		id = TU_URS_w3_infi_frost_gear
+		icon = GFX_goal_generic_small_arms
+		prerequisite = { focus = TU_URS_w3_infi_cold_lab }
+		available = { has_completed_focus = TU_URS_reform_path }
+		x = 182
+		y = 8
+		cost = 10
+
+		search_filters = { FOCUS_FILTER_ARMY_XP }
+
+		ai_will_do = {
+			base = 1
+		}
+
+		completion_reward = {
+			add_ideas = TU_URS_w3_idea_infi_frost_gear
+			army_experience = 10
+		}
+	}
+
+	focus = {
+		id = TU_URS_w3_infi_pipeline
+		icon = GFX_goal_generic_construct_infrastructure
+		prerequisite = { focus = TU_URS_w3_infi_entry }
+		x = 186
+		y = 8
+		cost = 10
+
+		search_filters = { FOCUS_FILTER_INDUSTRY }
+
+		ai_will_do = {
+			base = 1
+		}
+
+		available = {
+			has_country_flag = TU_DEC_TU_URS_w3_infi_mining
+		}
+
+		completion_reward = {
+			add_ideas = TU_URS_w3_idea_infi_supply_road
+			add_political_power = 25
+		}
+	}
+
+	focus = {
+		id = TU_URS_w3_infi_polar_theory
+		icon = GFX_goal_generic_construction2
+		prerequisite = { focus = TU_URS_w3_infi_frost_gear }
+		x = 182
+		y = 10
+		cost = 10
+
+		search_filters = { FOCUS_FILTER_RESEARCH }
+
+		ai_will_do = {
+			base = 1
+		}
+
+		completion_reward = {
+			add_tech_bonus = {
+				name = TU_URS_w3_infi_polar_bonus
+				bonus = 0.5
+				uses = 1
+				category = land_doctrine
+			}
+		}
+	}
+
+	focus = {
+		id = TU_URS_w3_infi_arctic_expedition
+		icon = GFX_goal_generic_special_forces
+		prerequisite = { focus = TU_URS_w3_infi_polar_theory }
+		x = 182
+		y = 12
+		cost = 10
+
+		search_filters = { FOCUS_FILTER_ARMY_XP }
+
+		ai_will_do = {
+			base = 1
+		}
+
+		completion_reward = {
+			army_experience = 10
+			add_political_power = 50
+		}
+	}
+
+	focus = {
+		id = TU_URS_w3_infi_survey_station
+		icon = GFX_goal_generic_construction
+		prerequisite = { focus = TU_URS_w3_infi_arctic_expedition }
+		x = 182
+		y = 14
+		cost = 10
+
+		search_filters = { FOCUS_FILTER_RESEARCH }
+
+		ai_will_do = {
+			base = 1
+		}
+
+		completion_reward = {
+			add_political_power = 25
+			add_stability = 0.02
+		}
+	}
+
+	focus = {
+		id = TU_URS_w3_infi_ice_wall
+		icon = GFX_goal_generic_defence
+		prerequisite = { focus = TU_URS_w3_infi_survey_station }
+		x = 182
+		y = 16
+		cost = 10
+
+		search_filters = { FOCUS_FILTER_ARMY_XP }
+
+		ai_will_do = {
+			base = 1
+		}
+
+		completion_reward = {
+			army_experience = 15
+			add_manpower = 10000
+		}
+	}
+
+	focus = {
+		id = TU_URS_w3_infi_final_report
+		icon = GFX_goal_generic_intelligence_exchange
+		prerequisite = { focus = TU_URS_w3_infi_ice_wall }
+		x = 182
+		y = 18
+		cost = 15
+
+		search_filters = { FOCUS_FILTER_RESEARCH }
+
+		ai_will_do = {
+			base = 1
+		}
+
+		completion_reward = {
+			add_political_power = 75
+			add_stability = 0.03
+		}
+	}

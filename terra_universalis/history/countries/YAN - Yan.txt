@@ -1,0 +1,20 @@
+capital = 192
+set_research_slots = 3
+set_politics = { ruling_party = neutrality last_election = "1096.1.1" election_frequency = 48 elections_allowed = no }
+set_popularities = { neutrality = 100 }
+# YAN: appended to history/countries/YAN - Yan.txt by build_countries.py.
+# neutrality ruling party, popularity and capital are written by build_countries.py.
+oob = "YAN_1097"
+recruit_character = TU_YAN_emperor
+recruit_character = TU_YAN_chongyue
+recruit_character = TU_YAN_nian
+recruit_character = TU_YAN_dusk
+recruit_character = TU_YAN_ling
+add_ideas = { TU_YAN_sleeping_giant TU_YAN_imperial_bureaucracy TU_YAN_sui_legacy }
+set_stability = 0.6
+set_war_support = 0.2
+set_autonomy = {
+	target = LGM
+	autonomous_state = autonomy_dominion
+	freedom_level = 0.4
+}

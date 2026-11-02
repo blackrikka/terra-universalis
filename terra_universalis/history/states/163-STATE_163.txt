@@ -1,0 +1,21 @@
+state={
+	id=163
+	name="STATE_163"
+	manpower = 50000
+
+	state_category = town
+
+	history={
+		owner = RIM
+		victory_points = { 787 1 }
+		buildings = {
+			infrastructure = 2
+		}
+		add_core_of = RIM
+	}
+
+	provinces={
+		779 785 786 787 791 792
+	}
+	local_supplies=0.0
+}

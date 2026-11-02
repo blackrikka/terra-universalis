@@ -1,0 +1,10 @@
+# VIC: appended to history/countries/VIC - Victoria.txt by build_countries.py.
+# neutrality ruling party, popularity and capital are written by build_countries.py.
+oob = "VIC_1097"
+recruit_character = TU_VIC_dukes_council
+recruit_character = TU_VIC_siege
+recruit_character = TU_VIC_steam_knight_commander
+recruit_character = TU_VIC_gang_boss
+recruit_character = TU_VIC_tara_marshal
+add_ideas = { TU_VIC_industrial_titan TU_VIC_vacant_throne }
+set_power_balance = { id = TU_VIC_bop set_default = yes }

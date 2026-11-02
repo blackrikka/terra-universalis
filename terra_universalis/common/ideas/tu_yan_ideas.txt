@@ -1,0 +1,71 @@
+ideas = {
+
+	country = {
+
+		TU_YAN_sleeping_giant = {
+			picture = generic_improved_industries
+
+			allowed = {
+				original_tag = YAN
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			modifier = {
+				production_speed_buildings_factor = -0.1
+				conscription_factor = 0.05
+			}
+		}
+
+		TU_YAN_imperial_bureaucracy = {
+			picture = generic_central_management
+
+			allowed = {
+				original_tag = YAN
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			modifier = {
+				political_power_gain = 0.1
+				stability_factor = 0.05
+			}
+		}
+
+		TU_YAN_sui_legacy = {
+			picture = generic_research_bonus
+
+			allowed = {
+				original_tag = YAN
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			modifier = {
+				research_speed_factor = 0.03
+			}
+		}
+
+		TU_YAN_lungmen_levy = {
+			picture = generic_devalue_currency
+
+			allowed = {
+				original_tag = YAN
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			modifier = {
+				consumer_goods_factor = -0.1
+			}
+		}
+	}
+}

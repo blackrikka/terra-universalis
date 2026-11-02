@@ -1,0 +1,56 @@
+TU_YAN_court_category = {
+
+	TU_YAN_lungmen_trade_levy = {
+		icon = GFX_decision_generic_consumer_goods
+
+		allowed = {
+			original_tag = YAN
+		}
+
+		available = {
+			country_exists = LGM
+			LGM = {
+				is_subject_of = ROOT
+			}
+		}
+
+		cost = 50
+		days_remove = 180
+		fire_only_once = no
+
+		complete_effect = {
+			add_ideas = TU_YAN_lungmen_levy
+		}
+
+		remove_effect = {
+			remove_ideas = TU_YAN_lungmen_levy
+		}
+
+		ai_will_do = {
+			base = 0
+		}
+	}
+
+	TU_YAN_sui_council = {
+		icon = GFX_decision_generic_political_discourse
+
+		allowed = {
+			original_tag = YAN
+		}
+
+		available = {
+			has_completed_focus = TU_YAN_sui_brothers_unity
+		}
+
+		cost = 25
+		fire_only_once = yes
+
+		complete_effect = {
+			army_experience = 20
+		}
+
+		ai_will_do = {
+			base = 0
+		}
+	}
+}

@@ -1,0 +1,21 @@
+state={
+	id=364
+	name="STATE_364"
+	manpower = 50000
+
+	state_category = town
+
+	history={
+		owner = SAR
+		victory_points = { 1796 1 }
+		buildings = {
+			infrastructure = 2
+		}
+		add_core_of = SAR
+	}
+
+	provinces={
+		1780 1788 1796 1797 1800 1805 1810
+	}
+	local_supplies=0.0
+}

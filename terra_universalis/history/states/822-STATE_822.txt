@@ -1,0 +1,21 @@
+state={
+	id=822
+	name="STATE_822"
+	impassable = yes
+	manpower = 1000
+
+	state_category = wasteland
+
+	history={
+		owner = SAR
+		buildings = {
+			infrastructure = 0
+		}
+		add_core_of = SAR
+	}
+
+	provinces={
+		2657 2658 2659 2661
+	}
+	local_supplies=0.0
+}

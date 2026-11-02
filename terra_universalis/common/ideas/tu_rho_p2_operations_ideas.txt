@@ -1,0 +1,67 @@
+ideas = {
+	country = {
+		TU_RHO_idea_jump_training = {
+			picture = generic_morale_bonus
+			modifier = {
+				army_org_factor = 0.05
+			}
+		}
+		TU_RHO_idea_landship_ops = {
+			picture = generic_volunteer_expedition_bonus
+			modifier = {
+				send_volunteer_size = 2
+				army_org_factor = 0.05
+			}
+		}
+		TU_RHO_idea_riic_logistics = {
+			picture = generic_supply_depot
+			modifier = {
+				production_speed_buildings_factor = 0.05
+			}
+		}
+		TU_RHO_idea_sortie = {
+			picture = generic_war_preparation
+			modifier = {
+				army_org_factor = 0.05
+			}
+		}
+		TU_RHO_idea_overhaul = {
+			picture = generic_improved_industries
+			modifier = {
+				production_speed_buildings_factor = 0.1
+			}
+		}
+		TU_RHO_idea_jump_drill = {
+			picture = generic_train_tracks
+			modifier = {
+				army_morale_factor = 0.05
+			}
+		}
+		TU_RHO_idea_rescue_morale = {
+			picture = generic_political_support
+			modifier = {
+				war_support_factor = 0.05
+				stability_factor = 0.02
+			}
+		}
+		TU_RHO_idea_strike_ready = {
+			picture = generic_fortify_the_borders
+			modifier = {
+				army_morale_factor = 0.1
+			}
+		}
+		TU_RHO_idea_riic_rush = {
+			picture = generic_build_infrastructure
+			modifier = {
+				production_speed_arms_factory_factor = 0.1
+				production_speed_industrial_complex_factor = 0.1
+			}
+		}
+		TU_RHO_idea_hangar = {
+			picture = generic_logistics
+			modifier = {
+				fuel_gain_factor = 0.1
+			}
+		}
+	}
+}

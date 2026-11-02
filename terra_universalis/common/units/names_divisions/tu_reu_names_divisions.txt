@@ -1,0 +1,12 @@
+# TU Reunion division names. Only REU uses this group (for_countries). Other tags use TU_DIVNAMES_FALLBACK.
+TU_REU_DIVNAMES = {
+	name = "TU Reunion division names"
+
+	for_countries = { REU }
+
+	can_use = { always = yes }
+
+	division_types = { "infantry" "cavalry" "motorized" "mechanized" "light_armor" "medium_armor" "heavy_armor" "modern_armor" "paratrooper" "marine" "mountaineers" }
+
+	fallback_name = "%d. Reunion Division"
+}

@@ -1,0 +1,347 @@
+add_namespace = tu_lgm_ev
+
+# Lungmen (LGM) national events. Spec 10.
+# Focus-triggered (one country_event line in completion_reward): 1 autonomy talks, 2 independence, 3 chen coup, 4 guard expansion, 5 defence line (chain start), 6 survival pact.
+# News (every_country news_event line in completion_reward): 7 free city declaration, 8 reunion truce.
+# Chain: 5 schedules 31 (border pursuit) in one option.
+# Monthly: 20, 21, 22 via common/on_actions/tu_lgm_ev_on_actions.txt (random_events, tag = LGM in trigger, one-time flags).
+# Chernobog flags are set in events/tu_crisis_chernobog.txt (read only here): TU_chernobog_incident_started / _resolved, TU_lungmen_border_conflict, TU_lungmen_survived.
+
+# 1. Autonomy talks with Yan.
+country_event = {
+	id = tu_lgm_ev.1
+	title = tu_lgm_ev.1.t
+	desc = tu_lgm_ev.1.d
+	picture = GFX_report_event_generic_sign_treaty1
+	is_triggered_only = yes
+
+	option = {
+		name = tu_lgm_ev.1.a
+		ai_chance = {
+			factor = 60
+		}
+		add_stability = 0.02
+		add_political_power = 25
+	}
+
+	option = {
+		name = tu_lgm_ev.1.b
+		ai_chance = {
+			factor = 40
+		}
+		add_political_power = 50
+		add_war_support = 0.02
+		if = {
+			limit = {
+				country_exists = YAN
+			}
+			YAN = {
+				add_stability = -0.01
+			}
+		}
+	}
+}
+
+# 2. Independence drive.
+country_event = {
+	id = tu_lgm_ev.2
+	title = tu_lgm_ev.2.t
+	desc = tu_lgm_ev.2.d
+	picture = GFX_report_event_generic_rally
+	is_triggered_only = yes
+
+	option = {
+		name = tu_lgm_ev.2.a
+		ai_chance = {
+			factor = 50
+		}
+		add_political_power = 50
+		add_stability = -0.01
+	}
+
+	option = {
+		name = tu_lgm_ev.2.b
+		ai_chance = {
+			factor = 50
+		}
+		add_stability = 0.02
+		add_political_power = 25
+	}
+}
+
+# 3. Chen's guard coup.
+country_event = {
+	id = tu_lgm_ev.3
+	title = tu_lgm_ev.3.t
+	desc = tu_lgm_ev.3.d
+	picture = GFX_report_event_generic_army
+	is_triggered_only = yes
+
+	option = {
+		name = tu_lgm_ev.3.a
+		ai_chance = {
+			factor = 60
+		}
+		add_war_support = 0.03
+		add_political_power = 25
+	}
+
+	option = {
+		name = tu_lgm_ev.3.b
+		ai_chance = {
+			factor = 40
+		}
+		add_stability = 0.02
+		add_political_power = 50
+	}
+}
+
+# 4. Guard expansion beyond the city.
+country_event = {
+	id = tu_lgm_ev.4
+	title = tu_lgm_ev.4.t
+	desc = tu_lgm_ev.4.d
+	picture = GFX_report_event_generic_military_parade
+	is_triggered_only = yes
+
+	option = {
+		name = tu_lgm_ev.4.a
+		ai_chance = {
+			factor = 50
+		}
+		add_manpower = 15000
+		add_stability = -0.01
+	}
+
+	option = {
+		name = tu_lgm_ev.4.b
+		ai_chance = {
+			factor = 50
+		}
+		army_experience = 15
+		add_political_power = 25
+	}
+}
+
+# 5. Border skirmish with the Reunion front. Chain start: option a schedules 31.
+country_event = {
+	id = tu_lgm_ev.5
+	title = tu_lgm_ev.5.t
+	desc = tu_lgm_ev.5.d
+	picture = GFX_report_event_generic_defensive_preparations
+	is_triggered_only = yes
+
+	option = {
+		name = tu_lgm_ev.5.a
+		ai_chance = {
+			factor = 60
+		}
+		army_experience = 10
+		add_political_power = 25
+		country_event = {
+			id = tu_lgm_ev.31
+			days = 20
+			random_days = 10
+		}
+	}
+
+	option = {
+		name = tu_lgm_ev.5.b
+		ai_chance = {
+			factor = 40
+		}
+		add_stability = -0.01
+		add_political_power = 25
+	}
+}
+
+# 6. Survival pact after Lungmen holds its capital.
+country_event = {
+	id = tu_lgm_ev.6
+	title = tu_lgm_ev.6.t
+	desc = tu_lgm_ev.6.d
+	picture = GFX_report_event_generic_handshake
+	is_triggered_only = yes
+
+	option = {
+		name = tu_lgm_ev.6.a
+		ai_chance = {
+			factor = 60
+		}
+		add_stability = 0.03
+		add_political_power = 50
+	}
+
+	option = {
+		name = tu_lgm_ev.6.b
+		ai_chance = {
+			factor = 40
+		}
+		add_war_support = 0.05
+		add_stability = -0.01
+		add_political_power = 50
+	}
+}
+
+# 7. News: Lungmen declares a free city (every_country from TU_LGM_free_city_declaration).
+news_event = {
+	id = tu_lgm_ev.7
+	title = tu_lgm_ev.7.t
+	desc = tu_lgm_ev.7.d
+	picture = GFX_news_event_generic_rally
+	is_triggered_only = yes
+
+	option = {
+		name = tu_lgm_ev.7.a
+	}
+}
+
+# 8. News: Lungmen and Reunion agree a border truce (every_country from TU_LGM_reunion_truce).
+news_event = {
+	id = tu_lgm_ev.8
+	title = tu_lgm_ev.8.t
+	desc = tu_lgm_ev.8.d
+	picture = GFX_news_event_generic_handshake
+	is_triggered_only = yes
+
+	option = {
+		name = tu_lgm_ev.8.a
+	}
+}
+
+# 20. Rumours from the border (monthly, once). Before the border war, after the Chernobog incident starts.
+country_event = {
+	id = tu_lgm_ev.20
+	title = tu_lgm_ev.20.t
+	desc = tu_lgm_ev.20.d
+	picture = GFX_report_event_generic_read_write
+	is_triggered_only = yes
+
+	trigger = {
+		tag = LGM
+		has_global_flag = TU_chernobog_incident_started
+		NOT = { has_global_flag = TU_lungmen_border_conflict }
+		NOT = { has_country_flag = TU_lgm_ev_20_done }
+	}
+
+	immediate = {
+		set_country_flag = TU_lgm_ev_20_done
+	}
+
+	option = {
+		name = tu_lgm_ev.20.a
+		ai_chance = {
+			factor = 50
+		}
+		add_political_power = 25
+	}
+
+	option = {
+		name = tu_lgm_ev.20.b
+		ai_chance = {
+			factor = 50
+		}
+		add_stability = 0.01
+	}
+}
+
+# 21. Troops at the gate (monthly, once). During the border war, before the resolution.
+country_event = {
+	id = tu_lgm_ev.21
+	title = tu_lgm_ev.21.t
+	desc = tu_lgm_ev.21.d
+	picture = GFX_report_event_generic_rifles
+	is_triggered_only = yes
+
+	trigger = {
+		tag = LGM
+		has_global_flag = TU_lungmen_border_conflict
+		NOT = { has_global_flag = TU_chernobog_incident_resolved }
+		NOT = { has_country_flag = TU_lgm_ev_21_done }
+	}
+
+	immediate = {
+		set_country_flag = TU_lgm_ev_21_done
+	}
+
+	option = {
+		name = tu_lgm_ev.21.a
+		ai_chance = {
+			factor = 50
+		}
+		add_manpower = 5000
+		add_stability = -0.01
+	}
+
+	option = {
+		name = tu_lgm_ev.21.b
+		ai_chance = {
+			factor = 50
+		}
+		add_political_power = 25
+	}
+}
+
+# 22. Rebuilding after the crisis (monthly, once). Lungmen survived and the incident is resolved.
+country_event = {
+	id = tu_lgm_ev.22
+	title = tu_lgm_ev.22.t
+	desc = tu_lgm_ev.22.d
+	picture = GFX_report_event_generic_construction_site
+	is_triggered_only = yes
+
+	trigger = {
+		tag = LGM
+		has_global_flag = TU_lungmen_survived
+		has_global_flag = TU_chernobog_incident_resolved
+		NOT = { has_country_flag = TU_lgm_ev_22_done }
+	}
+
+	immediate = {
+		set_country_flag = TU_lgm_ev_22_done
+	}
+
+	option = {
+		name = tu_lgm_ev.22.a
+		ai_chance = {
+			factor = 50
+		}
+		add_stability = 0.02
+		add_political_power = 50
+	}
+
+	option = {
+		name = tu_lgm_ev.22.b
+		ai_chance = {
+			factor = 50
+		}
+		add_stability = 0.01
+		add_political_power = 25
+	}
+}
+
+# 31. Chain follow-up: border pursuit (scheduled from 5, option a).
+country_event = {
+	id = tu_lgm_ev.31
+	title = tu_lgm_ev.31.t
+	desc = tu_lgm_ev.31.d
+	picture = GFX_report_event_generic_battle
+	is_triggered_only = yes
+
+	option = {
+		name = tu_lgm_ev.31.a
+		ai_chance = {
+			factor = 50
+		}
+		army_experience = 15
+		add_political_power = 25
+	}
+
+	option = {
+		name = tu_lgm_ev.31.b
+		ai_chance = {
+			factor = 50
+		}
+		add_stability = 0.02
+	}
+}

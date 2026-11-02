@@ -1,0 +1,29 @@
+TU_RHO_landship_category = {
+	icon = GFX_decision_category_military_operation
+
+	allowed = {
+		original_tag = RHO
+	}
+
+	priority = 100
+}
+
+TU_RHO_riic_category = {
+	icon = GFX_decision_category_generic_industry
+
+	allowed = {
+		original_tag = RHO
+	}
+
+	priority = 99
+}
+
+TU_RHO_operations_category = {
+	icon = GFX_decision_category_power_struggle
+
+	allowed = {
+		original_tag = RHO
+	}
+
+	priority = 98
+}

@@ -1,0 +1,17 @@
+characters = {
+	TU_RHO_amiya = {
+		name = TU_RHO_amiya
+		portraits = { civilian = { large = "GFX_TU_portrait_amiya" } }
+		country_leader = { ideology = moderatism expire = "1200.1.1.1" id = -1 }
+	}
+	TU_RHO_doctor = {
+		name = TU_RHO_doctor
+		portraits = { civilian = { small = "GFX_TU_portrait_doctor_small" } }
+		advisor = { slot = high_command idea_token = TU_RHO_doctor }
+	}
+	TU_RHO_kaltsit = {
+		name = TU_RHO_kaltsit
+		portraits = { civilian = { small = "GFX_TU_portrait_kaltsit_small" } }
+		advisor = { slot = political_advisor idea_token = TU_RHO_kaltsit }
+	}
+}

@@ -1,0 +1,21 @@
+state={
+	id=112
+	name="STATE_112"
+	manpower = 50000
+
+	state_category = town
+
+	history={
+		owner = VIC
+		victory_points = { 574 1 }
+		buildings = {
+			infrastructure = 2
+		}
+		add_core_of = VIC
+	}
+
+	provinces={
+		571 574 577 579 581
+	}
+	local_supplies=0.0
+}

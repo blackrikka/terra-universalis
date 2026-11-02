@@ -1,0 +1,145 @@
+TU_YAN_diplomacy_category = {
+
+	TU_YAN_lungmen_autonomy = {
+		icon = GFX_decision_generic_political_discourse
+
+		allowed = {
+			original_tag = YAN
+		}
+
+		visible = {
+			has_completed_focus = TU_YAN_lungmen_policy
+		}
+
+		available = {
+			has_completed_focus = TU_YAN_lungmen_policy
+			NOT = { has_completed_focus = TU_YAN_lungmen_annex }
+		}
+
+		cost = 50
+		fire_only_once = yes
+
+		complete_effect = {
+			add_opinion_modifier = {
+				target = LGM
+				modifier = improve_relation
+			}
+			if = {
+				limit = {
+					country_exists = LGM
+				}
+				LGM = {
+					add_offsite_building = {
+						type = industrial_complex
+						level = 1
+					}
+				}
+			}
+			set_country_flag = TU_DEC_TU_YAN_lungmen_autonomy
+		}
+
+		ai_will_do = {
+			base = 1
+		}
+	}
+}
+
+TU_YAN_construction_category = {
+
+	TU_YAN_rail_network = {
+		icon = GFX_decision_generic_construction
+
+		allowed = {
+			original_tag = YAN
+		}
+
+		visible = {
+			has_completed_focus = TU_YAN_imperial_reform
+		}
+
+		available = {
+			has_completed_focus = TU_YAN_imperial_reform
+		}
+
+		cost = 25
+		fire_only_once = yes
+
+		complete_effect = {
+			192 = {
+				add_building_construction = {
+					type = infrastructure
+					level = 1
+					instant_build = yes
+				}
+			}
+			set_country_flag = TU_DEC_TU_YAN_rail_network
+		}
+
+		ai_will_do = {
+			base = 1
+		}
+	}
+
+	TU_YAN_nian_forge = {
+		icon = GFX_decision_generic_construction
+
+		allowed = {
+			original_tag = YAN
+		}
+
+		visible = {
+			has_completed_focus = TU_YAN_chongyue_return
+		}
+
+		available = {
+			has_completed_focus = TU_YAN_chongyue_return
+			NOT = { has_completed_focus = TU_YAN_ling_wine }
+		}
+
+		cost = 50
+		fire_only_once = yes
+
+		complete_effect = {
+			add_offsite_building = {
+				type = arms_factory
+				level = 1
+			}
+			set_country_flag = TU_DEC_TU_YAN_nian_forge
+		}
+
+		ai_will_do = {
+			base = 1
+		}
+	}
+
+	TU_YAN_lungmen_factories = {
+		icon = GFX_decision_generic_construction
+
+		allowed = {
+			original_tag = YAN
+		}
+
+		visible = {
+			has_completed_focus = TU_YAN_lungmen_annex
+		}
+
+		available = {
+			has_completed_focus = TU_YAN_lungmen_annex
+		}
+
+		cost = 50
+		fire_only_once = yes
+
+		complete_effect = {
+			add_offsite_building = {
+				type = industrial_complex
+				level = 1
+			}
+			set_country_flag = TU_DEC_TU_YAN_lungmen_factories
+		}
+
+		ai_will_do = {
+			base = 1
+		}
+	}
+}

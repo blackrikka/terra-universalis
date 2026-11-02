@@ -1,0 +1,20 @@
+state={
+	id=500
+	name="STATE_500"
+	manpower = 5000
+
+	state_category = pastoral
+
+	history={
+		owner = HIG
+		buildings = {
+			infrastructure = 1
+		}
+		add_core_of = HIG
+	}
+
+	provinces={
+		2111
+	}
+	local_supplies=0.0
+}

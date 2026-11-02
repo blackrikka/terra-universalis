@@ -1,0 +1,345 @@
+	focus = {
+		id = TU_KZD_military_commission_focus
+		icon = GFX_goal_generic_army_motorized
+		x = 0
+		y = 0
+		cost = 5
+
+		search_filters = { FOCUS_FILTER_POLITICAL }
+
+		completion_reward = {
+			add_political_power = 50
+			army_experience = 10
+		}
+	}
+
+	#### THREE FORKS (mutually exclusive heads) ####
+
+	#### FORK A: THERESIS, NEW KAZDEL EMPIRE (military, expansion) ####
+
+	focus = {
+		id = TU_KZD_new_empire
+		icon = GFX_goal_generic_major_war
+		prerequisite = { focus = TU_KZD_military_commission_focus }
+		mutually_exclusive = { focus = TU_KZD_six_kings focus = TU_KZD_babel_restoration }
+		x = -4
+		y = 1
+		cost = 10
+
+		search_filters = { FOCUS_FILTER_POLITICAL }
+
+		completion_reward = {
+			add_political_power = 25
+			add_war_support = 0.05
+			country_event = { id = tu_kzd_ev.1 }
+		}
+	}
+
+	focus = {
+		id = TU_KZD_conscription_drive
+		icon = GFX_goal_generic_allies_build_infantry
+		prerequisite = { focus = TU_KZD_new_empire }
+		x = -4
+		y = 2
+		cost = 10
+
+		search_filters = { FOCUS_FILTER_RESEARCH }
+
+		completion_reward = {
+			add_manpower = 50000
+		}
+	}
+
+	focus = {
+		id = TU_KZD_mobile_army
+		icon = GFX_goal_generic_army_tanks
+		prerequisite = { focus = TU_KZD_conscription_drive }
+		x = -4
+		y = 3
+		cost = 10
+
+		search_filters = { FOCUS_FILTER_ARMY_XP }
+
+		completion_reward = {
+			army_experience = 25
+		}
+	}
+
+	focus = {
+		id = TU_KZD_war_council
+		icon = GFX_goal_generic_position_armies
+		prerequisite = { focus = TU_KZD_mobile_army }
+		x = -5
+		y = 4
+		cost = 10
+
+		search_filters = { FOCUS_FILTER_POLITICAL }
+
+		completion_reward = {
+			add_political_power = 75
+		}
+	}
+
+	focus = {
+		id = TU_KZD_steel_doctrine
+		icon = GFX_goal_generic_army_doctrines
+		prerequisite = { focus = TU_KZD_mobile_army }
+		x = -3
+		y = 4
+		cost = 10
+
+		search_filters = { FOCUS_FILTER_ARMY_XP }
+
+		completion_reward = {
+			army_experience = 20
+		}
+	}
+
+	focus = {
+		id = TU_KZD_expansion_plan
+		icon = GFX_goal_generic_more_territorial_claims
+		prerequisite = { focus = TU_KZD_war_council }
+		x = -5
+		y = 5
+		cost = 10
+
+		search_filters = { FOCUS_FILTER_POLITICAL }
+
+		completion_reward = {
+			add_political_power = 50
+			add_war_support = 0.05
+		}
+	}
+
+	focus = {
+		id = TU_KZD_frontier_push
+		icon = GFX_goal_generic_attack_allies
+		prerequisite = { focus = TU_KZD_expansion_plan }
+		x = -5
+		y = 6
+		cost = 10
+
+		search_filters = { FOCUS_FILTER_ARMY_XP }
+
+		completion_reward = {
+			add_war_support = 0.05
+			army_experience = 15
+		}
+	}
+
+	#### FORK B: SIX KINGS (defence, special forces) ####
+
+	focus = {
+		id = TU_KZD_six_kings
+		icon = GFX_goal_generic_defence
+		prerequisite = { focus = TU_KZD_military_commission_focus }
+		mutually_exclusive = { focus = TU_KZD_new_empire focus = TU_KZD_babel_restoration }
+		x = 0
+		y = 1
+		cost = 10
+
+		search_filters = { FOCUS_FILTER_POLITICAL }
+
+		completion_reward = {
+			add_political_power = 25
+			add_stability = 0.03
+			country_event = { id = tu_kzd_ev.2 }
+		}
+	}
+
+	focus = {
+		id = TU_KZD_royal_guard
+		icon = GFX_goal_generic_special_forces
+		prerequisite = { focus = TU_KZD_six_kings }
+		x = 0
+		y = 2
+		cost = 10
+
+		search_filters = { FOCUS_FILTER_POLITICAL }
+
+		completion_reward = {
+			add_stability = 0.03
+		}
+	}
+
+	focus = {
+		id = TU_KZD_elite_template
+		icon = GFX_goal_generic_special_forces
+		prerequisite = { focus = TU_KZD_royal_guard }
+		x = 0
+		y = 3
+		cost = 10
+
+		search_filters = { FOCUS_FILTER_ARMY_XP }
+
+		completion_reward = {
+			set_division_template_lock = {
+				division_template = "TU_KZD_elite_guard"
+				is_locked = no
+			}
+			army_experience = 10
+		}
+	}
+
+	focus = {
+		id = TU_KZD_mountain_defence
+		icon = GFX_goal_generic_fortify_city
+		prerequisite = { focus = TU_KZD_elite_template }
+		x = -1
+		y = 4
+		cost = 10
+
+		search_filters = { FOCUS_FILTER_ARMY_XP }
+
+		completion_reward = {
+			army_experience = 15
+		}
+	}
+
+	focus = {
+		id = TU_KZD_fortified_frontier
+		icon = GFX_goal_generic_defence
+		prerequisite = { focus = TU_KZD_elite_template }
+		x = 1
+		y = 4
+		cost = 10
+
+		search_filters = { FOCUS_FILTER_POLITICAL }
+
+		completion_reward = {
+			add_stability = 0.02
+		}
+	}
+
+	focus = {
+		id = TU_KZD_six_kings_law
+		icon = GFX_goal_generic_national_unity
+		prerequisite = { focus = TU_KZD_mountain_defence }
+		x = -1
+		y = 5
+		cost = 10
+
+		search_filters = { FOCUS_FILTER_POLITICAL }
+
+		completion_reward = {
+			add_political_power = 50
+		}
+	}
+
+	focus = {
+		id = TU_KZD_elite_training
+		icon = GFX_goal_generic_army_artillery2
+		prerequisite = { focus = TU_KZD_six_kings_law }
+		x = -1
+		y = 6
+		cost = 10
+
+		search_filters = { FOCUS_FILTER_ARMY_XP }
+
+		completion_reward = {
+			army_experience = 30
+		}
+	}
+
+	#### FORK C: BABEL RESTORATION (relations with Rhodes, industry) ####
+
+	focus = {
+		id = TU_KZD_babel_restoration
+		icon = GFX_goal_generic_trade
+		prerequisite = { focus = TU_KZD_military_commission_focus }
+		mutually_exclusive = { focus = TU_KZD_new_empire focus = TU_KZD_six_kings }
+		x = 4
+		y = 1
+		cost = 10
+
+		search_filters = { FOCUS_FILTER_POLITICAL }
+
+		completion_reward = {
+			add_political_power = 25
+			country_event = { id = tu_kzd_ev.3 }
+		}
+	}
+
+	focus = {
+		id = TU_KZD_babel_envoy
+		icon = GFX_goal_generic_improve_relations
+		prerequisite = { focus = TU_KZD_babel_restoration }
+		x = 4
+		y = 2
+		cost = 10
+
+		search_filters = { FOCUS_FILTER_POLITICAL }
+
+		completion_reward = {
+			if = {
+				limit = {
+					country_exists = RHO
+				}
+				add_relation_modifier = {
+					target = RHO
+					modifier = TU_KZD_babel_relations
+				}
+			}
+			else = {
+				add_political_power = 25
+			}
+		}
+	}
+
+	focus = {
+		id = TU_KZD_arms_export
+		icon = GFX_goal_generic_positive_trade_relations
+		prerequisite = { focus = TU_KZD_babel_envoy }
+		x = 3
+		y = 3
+		cost = 10
+
+		search_filters = { FOCUS_FILTER_POLITICAL }
+
+		available = {
+			has_country_flag = TU_DEC_TU_KZD_babel_industry
+		}
+
+		completion_reward = {
+			add_political_power = 50
+		}
+	}
+
+	focus = {
+		id = TU_KZD_babel_school
+		icon = GFX_goal_generic_scientific_exchange
+		prerequisite = { focus = TU_KZD_babel_envoy }
+		x = 5
+		y = 3
+		cost = 10
+
+		search_filters = { FOCUS_FILTER_ARMY_XP }
+
+		available = {
+			has_country_flag = TU_DEC_TU_KZD_babel_industry
+		}
+
+		completion_reward = {
+			army_experience = 20
+		}
+	}
+
+	focus = {
+		id = TU_KZD_babel_ascension
+		icon = GFX_goal_generic_national_unity
+		prerequisite = { focus = TU_KZD_arms_export }
+		x = 3
+		y = 4
+		cost = 10
+
+		search_filters = { FOCUS_FILTER_POLITICAL }
+
+		available = {
+			has_country_flag = TU_DEC_TU_KZD_restored_workshops
+		}
+
+		completion_reward = {
+			add_political_power = 75
+			add_stability = 0.02
+		}
+	}

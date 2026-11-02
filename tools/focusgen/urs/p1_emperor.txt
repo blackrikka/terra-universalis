@@ -1,0 +1,1367 @@
+	#### U1 PART p1_emperor (x 46-74): imperial direct rule, guard, secret police, grand dukes, unification, capital rail ####
+
+	#### FORK A: EMPEROR DIRECT RULE TRUNK (BoP LEFT) ####
+
+	focus = {
+		id = TU_URS_emperor_rule
+		icon = GFX_goal_generic_national_unity
+		prerequisite = { focus = TU_URS_imperial_decree }
+		mutually_exclusive = { focus = TU_URS_noble_compromise focus = TU_URS_military_junta focus = TU_URS_reform_path }
+		x = 62
+		y = 2
+		cost = 10
+
+		search_filters = { FOCUS_FILTER_BALANCE_OF_POWER }
+
+		ai_will_do = {
+			base = 1
+		}
+
+		completion_reward = {
+			country_event = { id = tu_urs_ev.1 }
+			add_power_balance_value = {
+				id = TU_URS_bop
+				value = -0.25
+			}
+			add_political_power = 50
+		}
+	}
+
+	focus = {
+		id = TU_URS_central_administration
+		icon = GFX_goal_generic_construction
+		prerequisite = { focus = TU_URS_emperor_rule }
+		x = 62
+		y = 3
+		cost = 10
+
+		search_filters = { FOCUS_FILTER_POLITICAL }
+
+		ai_will_do = {
+			base = 1
+		}
+
+		completion_reward = {
+			add_power_balance_value = {
+				id = TU_URS_bop
+				value = -0.1
+			}
+			add_political_power = 75
+		}
+	}
+
+	focus = {
+		id = TU_URS_secret_police
+		icon = GFX_goal_generic_political_pressure
+		prerequisite = { focus = TU_URS_central_administration }
+		x = 62
+		y = 4
+		cost = 10
+
+		search_filters = { FOCUS_FILTER_POLITICAL }
+
+		ai_will_do = {
+			base = 1
+		}
+
+		completion_reward = {
+			add_political_power = 25
+			add_stability = -0.02
+		}
+	}
+
+	focus = {
+		id = TU_URS_absolute_throne
+		icon = GFX_goal_generic_national_unity
+		prerequisite = { focus = TU_URS_secret_police }
+		x = 62
+		y = 5
+		cost = 10
+
+		search_filters = { FOCUS_FILTER_POLITICAL }
+
+		ai_will_do = {
+			base = 1
+		}
+
+		completion_reward = {
+			add_power_balance_value = {
+				id = TU_URS_bop
+				value = -0.05
+			}
+			add_political_power = 40
+		}
+	}
+
+	focus = {
+		id = TU_URS_imperial_court
+		icon = GFX_goal_generic_propaganda
+		prerequisite = { focus = TU_URS_absolute_throne }
+		x = 62
+		y = 6
+		cost = 10
+
+		search_filters = { FOCUS_FILTER_POLITICAL }
+
+		ai_will_do = {
+			base = 1
+		}
+
+		completion_reward = {
+			add_political_power = 40
+			add_stability = 0.02
+		}
+	}
+
+	focus = {
+		id = TU_URS_absolutism_codex
+		icon = GFX_goal_generic_construction2
+		prerequisite = { focus = TU_URS_imperial_court }
+		mutually_exclusive = { focus = TU_URS_local_customs }
+		x = 62
+		y = 7
+		cost = 10
+
+		search_filters = { FOCUS_FILTER_POLITICAL }
+
+		ai_will_do = {
+			base = 1
+		}
+
+		completion_reward = {
+			add_political_power = 50
+			add_stability = 0.03
+		}
+	}
+
+	focus = {
+		id = TU_URS_imperial_mandate
+		icon = GFX_goal_generic_forceful_treaty
+		prerequisite = { focus = TU_URS_absolutism_codex }
+		x = 62
+		y = 8
+		cost = 10
+
+		search_filters = { FOCUS_FILTER_POLITICAL }
+
+		ai_will_do = {
+			base = 1
+		}
+
+		completion_reward = {
+			add_political_power = 40
+			add_stability = 0.01
+		}
+	}
+
+	focus = {
+		id = TU_URS_throne_unity
+		icon = GFX_goal_generic_military_sphere
+		prerequisite = { focus = TU_URS_imperial_mandate }
+		x = 62
+		y = 9
+		cost = 10
+
+		search_filters = { FOCUS_FILTER_POLITICAL }
+
+		ai_will_do = {
+			base = 1
+		}
+
+		completion_reward = {
+			add_power_balance_value = {
+				id = TU_URS_bop
+				value = -0.05
+			}
+			add_political_power = 40
+		}
+	}
+
+	focus = {
+		id = TU_URS_sovereign_seal
+		icon = GFX_goal_generic_national_unity
+		prerequisite = { focus = TU_URS_throne_unity }
+		x = 62
+		y = 10
+		cost = 10
+
+		search_filters = { FOCUS_FILTER_POLITICAL }
+
+		ai_will_do = {
+			base = 1
+		}
+
+		completion_reward = {
+			add_political_power = 50
+			add_stability = 0.03
+		}
+	}
+
+	focus = {
+		id = TU_URS_absolute_crown
+		icon = GFX_goal_generic_national_unity
+		prerequisite = { focus = TU_URS_sovereign_seal }
+		x = 62
+		y = 12
+		cost = 15
+
+		search_filters = { FOCUS_FILTER_POLITICAL }
+
+		ai_will_do = {
+			base = 1
+		}
+
+		available = {
+			has_country_flag = TU_DEC_TU_URS_palace_rebuild
+		}
+
+		completion_reward = {
+			country_event = { id = tu_urs_ev.8 }
+			add_ideas = TU_URS_p1_absolute_crown
+			add_power_balance_value = {
+				id = TU_URS_bop
+				value = -0.15
+			}
+			add_political_power = 75
+		}
+	}
+
+	focus = {
+		id = TU_URS_court_treasury
+		icon = GFX_goal_generic_production
+		prerequisite = { focus = TU_URS_absolute_crown }
+		x = 62
+		y = 13
+		cost = 10
+
+		search_filters = { FOCUS_FILTER_POLITICAL }
+
+		ai_will_do = {
+			base = 1
+		}
+
+		completion_reward = {
+			add_political_power = 40
+			add_stability = 0.02
+		}
+	}
+
+	focus = {
+		id = TU_URS_central_war_office
+		icon = GFX_goal_generic_army_doctrines
+		prerequisite = { focus = TU_URS_court_treasury }
+		x = 62
+		y = 14
+		cost = 10
+
+		search_filters = { FOCUS_FILTER_ARMY_XP }
+
+		ai_will_do = {
+			base = 1
+		}
+
+		completion_reward = {
+			army_experience = 30
+			add_tech_bonus = {
+				name = TU_URS_p1_war_office_tech
+				bonus = 0.5
+				uses = 1
+				category = infantry_weapons
+			}
+		}
+	}
+
+	focus = {
+		id = TU_URS_imperial_academy
+		icon = GFX_goal_generic_scientific_exchange
+		prerequisite = { focus = TU_URS_central_war_office }
+		x = 62
+		y = 15
+		cost = 10
+
+		search_filters = { FOCUS_FILTER_RESEARCH }
+
+		ai_will_do = {
+			base = 1
+		}
+
+		completion_reward = {
+			add_tech_bonus = {
+				name = TU_URS_p1_academy_tech
+				bonus = 0.5
+				uses = 1
+				category = electronics
+			}
+			add_political_power = 20
+		}
+	}
+
+	focus = {
+		id = TU_URS_civil_code
+		icon = GFX_goal_generic_construction
+		prerequisite = { focus = TU_URS_imperial_academy }
+		x = 62
+		y = 16
+		cost = 10
+
+		search_filters = { FOCUS_FILTER_POLITICAL }
+
+		ai_will_do = {
+			base = 1
+		}
+
+		completion_reward = {
+			add_political_power = 40
+			add_stability = 0.02
+		}
+	}
+
+	focus = {
+		id = TU_URS_clergy_reform
+		icon = GFX_goal_generic_propaganda
+		prerequisite = { focus = TU_URS_civil_code }
+		x = 62
+		y = 17
+		cost = 10
+
+		search_filters = { FOCUS_FILTER_POLITICAL }
+
+		ai_will_do = {
+			base = 1
+		}
+
+		completion_reward = {
+			add_political_power = 30
+			add_stability = 0.03
+		}
+	}
+
+	focus = {
+		id = TU_URS_imperial_progress
+		icon = GFX_goal_generic_improve_relations
+		prerequisite = { focus = TU_URS_clergy_reform }
+		x = 62
+		y = 18
+		cost = 10
+
+		search_filters = { FOCUS_FILTER_POLITICAL }
+
+		ai_will_do = {
+			base = 1
+		}
+
+		completion_reward = {
+			add_political_power = 50
+			add_stability = 0.03
+			add_war_support = 0.02
+		}
+	}
+
+	focus = {
+		id = TU_URS_eternal_throne
+		icon = GFX_goal_generic_national_unity
+		prerequisite = { focus = TU_URS_imperial_progress }
+		x = 62
+		y = 19
+		cost = 15
+
+		search_filters = { FOCUS_FILTER_POLITICAL }
+
+		ai_will_do = {
+			base = 1
+		}
+
+		completion_reward = {
+			country_event = { id = tu_urs_ev.9 }
+			add_ideas = TU_URS_p1_eternal_throne
+			add_power_balance_value = {
+				id = TU_URS_bop
+				value = -0.1
+			}
+			add_political_power = 80
+		}
+	}
+
+	focus = {
+		id = TU_URS_throne_archive
+		icon = GFX_goal_generic_intelligence_exchange
+		prerequisite = { focus = TU_URS_eternal_throne }
+		x = 62
+		y = 20
+		cost = 10
+
+		search_filters = { FOCUS_FILTER_POLITICAL }
+
+		ai_will_do = {
+			base = 1
+		}
+
+		completion_reward = {
+			add_political_power = 30
+			add_stability = 0.01
+		}
+	}
+
+
+	#### IMPERIAL GUARD BRANCH (x 58-60) ####
+
+	focus = {
+		id = TU_URS_imperial_guard
+		icon = GFX_goal_generic_army_doctrines
+		prerequisite = { focus = TU_URS_imperial_decree }
+		x = 60
+		y = 2
+		cost = 10
+
+		search_filters = { FOCUS_FILTER_ARMY_XP }
+
+		ai_will_do = {
+			base = 1
+		}
+
+		completion_reward = {
+			set_division_template_lock = {
+				division_template = "TU_URS_guard_division"
+				is_locked = no
+			}
+			add_ideas = TU_URS_imperial_guard_idea
+		}
+	}
+
+	focus = {
+		id = TU_URS_guard_drill
+		icon = GFX_goal_generic_army_artillery
+		prerequisite = { focus = TU_URS_imperial_guard }
+		x = 60
+		y = 3
+		cost = 10
+
+		search_filters = { FOCUS_FILTER_ARMY_XP }
+
+		ai_will_do = {
+			base = 1
+		}
+
+		completion_reward = {
+			army_experience = 25
+		}
+	}
+
+	focus = {
+		id = TU_URS_guard_expansion
+		icon = GFX_goal_generic_allies_build_infantry
+		prerequisite = { focus = TU_URS_guard_drill }
+		x = 60
+		y = 4
+		cost = 10
+
+		search_filters = { FOCUS_FILTER_ARMY_XP }
+
+		ai_will_do = {
+			base = 1
+		}
+
+		completion_reward = {
+			add_manpower = 20000
+		}
+	}
+
+	focus = {
+		id = TU_URS_guard_doctrine
+		icon = GFX_goal_generic_army_doctrines
+		prerequisite = { focus = TU_URS_guard_expansion }
+		x = 60
+		y = 5
+		cost = 10
+
+		search_filters = { FOCUS_FILTER_ARMY_XP }
+
+		ai_will_do = {
+			base = 1
+		}
+
+		completion_reward = {
+			army_experience = 25
+		}
+	}
+
+	focus = {
+		id = TU_URS_guard_palace_watch
+		icon = GFX_goal_generic_fortify_city
+		prerequisite = { focus = TU_URS_guard_doctrine }
+		x = 60
+		y = 6
+		cost = 10
+
+		search_filters = { FOCUS_FILTER_ARMY_XP }
+
+		ai_will_do = {
+			base = 1
+		}
+
+		completion_reward = {
+			army_experience = 20
+			add_stability = 0.02
+		}
+	}
+
+	focus = {
+		id = TU_URS_imperial_blades
+		icon = GFX_goal_generic_small_arms
+		prerequisite = { focus = TU_URS_guard_palace_watch }
+		x = 60
+		y = 7
+		cost = 15
+
+		search_filters = { FOCUS_FILTER_ARMY_XP }
+
+		ai_will_do = {
+			base = 1
+		}
+
+		completion_reward = {
+			country_event = { id = tu_urs_ev.10 }
+			add_ideas = TU_URS_p1_imperial_blades
+			recruit_character = TU_URS_p1_guard_marshal
+			army_experience = 30
+		}
+	}
+
+	focus = {
+		id = TU_URS_guard_elite_corps
+		icon = GFX_goal_generic_army_motorized
+		prerequisite = { focus = TU_URS_imperial_blades }
+		mutually_exclusive = { focus = TU_URS_guard_imperial_cavalry }
+		x = 60
+		y = 8
+		cost = 10
+
+		search_filters = { FOCUS_FILTER_ARMY_XP }
+
+		ai_will_do = {
+			base = 1
+		}
+
+		completion_reward = {
+			army_experience = 25
+			add_tech_bonus = {
+				name = TU_URS_p1_guard_tech
+				bonus = 0.5
+				uses = 1
+				category = infantry_weapons
+			}
+		}
+	}
+
+	focus = {
+		id = TU_URS_guard_imperial_cavalry
+		icon = GFX_goal_generic_cavalry
+		prerequisite = { focus = TU_URS_imperial_blades }
+		mutually_exclusive = { focus = TU_URS_guard_elite_corps }
+		x = 58
+		y = 8
+		cost = 10
+
+		search_filters = { FOCUS_FILTER_ARMY_XP }
+
+		ai_will_do = {
+			base = 1
+		}
+
+		completion_reward = {
+			army_experience = 20
+			add_manpower = 15000
+		}
+	}
+
+	focus = {
+		id = TU_URS_guard_bastion
+		icon = GFX_goal_generic_defence
+		prerequisite = { focus = TU_URS_guard_elite_corps focus = TU_URS_guard_imperial_cavalry }
+		x = 60
+		y = 9
+		cost = 10
+
+		search_filters = { FOCUS_FILTER_ARMY_XP }
+
+		ai_will_do = {
+			base = 1
+		}
+
+		completion_reward = {
+			army_experience = 20
+			add_stability = 0.02
+		}
+	}
+
+	focus = {
+		id = TU_URS_guard_last_bastion
+		icon = GFX_goal_generic_defence
+		prerequisite = { focus = TU_URS_guard_bastion }
+		x = 60
+		y = 10
+		cost = 10
+
+		search_filters = { FOCUS_FILTER_ARMY_XP }
+
+		ai_will_do = {
+			base = 1
+		}
+
+		completion_reward = {
+			add_political_power = 25
+			army_experience = 20
+		}
+	}
+
+	focus = {
+		id = TU_URS_guard_royal_regiment
+		icon = GFX_goal_generic_army_motorized
+		prerequisite = { focus = TU_URS_guard_last_bastion }
+		x = 60
+		y = 11
+		cost = 10
+
+		search_filters = { FOCUS_FILTER_ARMY_XP }
+
+		ai_will_do = {
+			base = 1
+		}
+
+		completion_reward = {
+			add_tech_bonus = {
+				name = TU_URS_p1_royal_tech
+				bonus = 0.5
+				uses = 1
+				category = motorized_equipment
+			}
+			army_experience = 20
+		}
+	}
+
+	focus = {
+		id = TU_URS_guard_dominion
+		icon = GFX_goal_generic_military_sphere
+		prerequisite = { focus = TU_URS_guard_royal_regiment }
+		x = 60
+		y = 12
+		cost = 15
+
+		search_filters = { FOCUS_FILTER_ARMY_XP }
+
+		ai_will_do = {
+			base = 1
+		}
+
+		completion_reward = {
+			add_war_support = 0.05
+			army_experience = 40
+		}
+	}
+
+
+	#### SECRET POLICE BRANCH (x 66-68) ####
+
+	focus = {
+		id = TU_URS_surveillance_bureau
+		icon = GFX_goal_generic_political_pressure
+		prerequisite = { focus = TU_URS_secret_police }
+		x = 66
+		y = 5
+		cost = 10
+
+		search_filters = { FOCUS_FILTER_POLITICAL }
+
+		ai_will_do = {
+			base = 1
+		}
+
+		completion_reward = {
+			add_ideas = TU_URS_p1_surveillance_state
+			add_political_power = 40
+			add_stability = -0.01
+		}
+	}
+
+	focus = {
+		id = TU_URS_informant_network
+		icon = GFX_goal_generic_intelligence_exchange
+		prerequisite = { focus = TU_URS_surveillance_bureau }
+		x = 66
+		y = 6
+		cost = 10
+
+		search_filters = { FOCUS_FILTER_POLITICAL }
+
+		ai_will_do = {
+			base = 1
+		}
+
+		completion_reward = {
+			add_political_power = 30
+			add_stability = -0.02
+		}
+	}
+
+	focus = {
+		id = TU_URS_censorship_regime
+		icon = GFX_goal_generic_propaganda
+		prerequisite = { focus = TU_URS_informant_network }
+		mutually_exclusive = { focus = TU_URS_public_trials }
+		x = 66
+		y = 7
+		cost = 10
+
+		search_filters = { FOCUS_FILTER_POLITICAL }
+
+		ai_will_do = {
+			base = 1
+		}
+
+		completion_reward = {
+			add_political_power = 30
+			add_stability = -0.02
+		}
+	}
+
+	focus = {
+		id = TU_URS_public_trials
+		icon = GFX_goal_generic_dangerous_deal
+		prerequisite = { focus = TU_URS_informant_network }
+		mutually_exclusive = { focus = TU_URS_censorship_regime }
+		x = 68
+		y = 7
+		cost = 10
+
+		search_filters = { FOCUS_FILTER_POLITICAL }
+
+		ai_will_do = {
+			base = 1
+		}
+
+		completion_reward = {
+			add_political_power = 25
+			add_power_balance_value = {
+				id = TU_URS_bop
+				value = -0.05
+			}
+		}
+	}
+
+	focus = {
+		id = TU_URS_purge_dissent
+		icon = GFX_goal_generic_political_pressure
+		prerequisite = { focus = TU_URS_censorship_regime focus = TU_URS_public_trials }
+		x = 66
+		y = 8
+		cost = 10
+
+		search_filters = { FOCUS_FILTER_POLITICAL }
+
+		ai_will_do = {
+			base = 1
+		}
+
+		completion_reward = {
+			add_political_power = 30
+			add_stability = -0.03
+		}
+	}
+
+	focus = {
+		id = TU_URS_show_trials
+		icon = GFX_goal_generic_forceful_treaty
+		prerequisite = { focus = TU_URS_public_trials }
+		x = 68
+		y = 8
+		cost = 10
+
+		search_filters = { FOCUS_FILTER_POLITICAL }
+
+		ai_will_do = {
+			base = 1
+		}
+
+		completion_reward = {
+			add_political_power = 20
+			add_stability = -0.02
+		}
+	}
+
+	focus = {
+		id = TU_URS_intel_network
+		icon = GFX_goal_generic_intelligence_exchange
+		prerequisite = { focus = TU_URS_purge_dissent }
+		x = 66
+		y = 9
+		cost = 10
+
+		search_filters = { FOCUS_FILTER_POLITICAL }
+
+		ai_will_do = {
+			base = 1
+		}
+
+		completion_reward = {
+			add_political_power = 50
+		}
+	}
+
+	focus = {
+		id = TU_URS_secret_archive
+		icon = GFX_goal_generic_construct_civilian
+		prerequisite = { focus = TU_URS_intel_network }
+		x = 66
+		y = 10
+		cost = 10
+
+		search_filters = { FOCUS_FILTER_POLITICAL }
+
+		ai_will_do = {
+			base = 1
+		}
+
+		completion_reward = {
+			add_political_power = 25
+			add_power_balance_value = {
+				id = TU_URS_bop
+				value = -0.05
+			}
+		}
+	}
+
+	focus = {
+		id = TU_URS_political_prisons
+		icon = GFX_goal_generic_political_pressure
+		prerequisite = { focus = TU_URS_secret_archive }
+		x = 66
+		y = 11
+		cost = 10
+
+		search_filters = { FOCUS_FILTER_POLITICAL }
+
+		ai_will_do = {
+			base = 1
+		}
+
+		completion_reward = {
+			add_political_power = 30
+			add_stability = -0.03
+			add_manpower = 10000
+		}
+	}
+
+
+	#### GRAND DUKES BRANCH (x 54-58) ####
+
+	focus = {
+		id = TU_URS_grand_dukes_summons
+		icon = GFX_goal_generic_dangerous_deal
+		prerequisite = { focus = TU_URS_central_administration }
+		x = 58
+		y = 4
+		cost = 10
+
+		search_filters = { FOCUS_FILTER_POLITICAL }
+
+		ai_will_do = {
+			base = 1
+		}
+
+		completion_reward = {
+			add_political_power = 40
+			add_power_balance_value = {
+				id = TU_URS_bop
+				value = -0.05
+			}
+		}
+	}
+
+	focus = {
+		id = TU_URS_grand_duke_audit
+		icon = GFX_goal_generic_construction
+		prerequisite = { focus = TU_URS_grand_dukes_summons }
+		x = 58
+		y = 5
+		cost = 10
+
+		search_filters = { FOCUS_FILTER_POLITICAL }
+
+		ai_will_do = {
+			base = 1
+		}
+
+		completion_reward = {
+			add_political_power = 30
+			add_stability = -0.01
+		}
+	}
+
+	focus = {
+		id = TU_URS_estate_seizure
+		icon = GFX_goal_generic_forceful_treaty
+		prerequisite = { focus = TU_URS_grand_duke_audit }
+		mutually_exclusive = { focus = TU_URS_grand_duke_appease }
+		x = 56
+		y = 6
+		cost = 10
+
+		search_filters = { FOCUS_FILTER_POLITICAL }
+
+		ai_will_do = {
+			base = 1
+		}
+
+		completion_reward = {
+			add_ideas = TU_URS_p1_grand_duke_fear
+			add_political_power = 40
+			add_stability = -0.03
+			add_power_balance_value = {
+				id = TU_URS_bop
+				value = -0.1
+			}
+		}
+	}
+
+	focus = {
+		id = TU_URS_grand_duke_appease
+		icon = GFX_goal_generic_improve_relations
+		prerequisite = { focus = TU_URS_grand_duke_audit }
+		mutually_exclusive = { focus = TU_URS_estate_seizure }
+		x = 58
+		y = 6
+		cost = 10
+
+		search_filters = { FOCUS_FILTER_POLITICAL }
+
+		ai_will_do = {
+			base = 1
+		}
+
+		completion_reward = {
+			add_stability = 0.03
+			add_power_balance_value = {
+				id = TU_URS_bop
+				value = 0.05
+			}
+			add_political_power = 20
+		}
+	}
+
+	focus = {
+		id = TU_URS_ducal_courts
+		icon = GFX_goal_generic_intelligence_exchange
+		prerequisite = { focus = TU_URS_estate_seizure focus = TU_URS_grand_duke_appease }
+		x = 56
+		y = 7
+		cost = 10
+
+		search_filters = { FOCUS_FILTER_POLITICAL }
+
+		ai_will_do = {
+			base = 1
+		}
+
+		completion_reward = {
+			add_political_power = 30
+			add_stability = 0.01
+		}
+	}
+
+	focus = {
+		id = TU_URS_local_customs
+		icon = GFX_goal_generic_positive_trade_relations
+		prerequisite = { focus = TU_URS_grand_duke_appease }
+		mutually_exclusive = { focus = TU_URS_absolutism_codex }
+		x = 54
+		y = 7
+		cost = 10
+
+		search_filters = { FOCUS_FILTER_POLITICAL }
+
+		ai_will_do = {
+			base = 1
+		}
+
+		completion_reward = {
+			add_political_power = 25
+			add_stability = 0.03
+		}
+	}
+
+	focus = {
+		id = TU_URS_feudal_levies_cut
+		icon = GFX_goal_generic_construct_military
+		prerequisite = { focus = TU_URS_ducal_courts }
+		x = 56
+		y = 8
+		cost = 10
+
+		search_filters = { FOCUS_FILTER_ARMY_XP }
+
+		ai_will_do = {
+			base = 1
+		}
+
+		completion_reward = {
+			add_manpower = 15000
+			army_experience = 10
+		}
+	}
+
+	focus = {
+		id = TU_URS_noble_estate_tax
+		icon = GFX_goal_generic_consumer_goods
+		prerequisite = { focus = TU_URS_local_customs }
+		x = 54
+		y = 8
+		cost = 10
+
+		search_filters = { FOCUS_FILTER_POLITICAL }
+
+		ai_will_do = {
+			base = 1
+		}
+
+		completion_reward = {
+			add_political_power = 30
+			add_stability = -0.01
+		}
+	}
+
+	focus = {
+		id = TU_URS_grand_duke_exile
+		icon = GFX_goal_generic_intelligence_exchange
+		prerequisite = { focus = TU_URS_feudal_levies_cut }
+		x = 56
+		y = 9
+		cost = 10
+
+		search_filters = { FOCUS_FILTER_POLITICAL }
+
+		ai_will_do = {
+			base = 1
+		}
+
+		completion_reward = {
+			add_political_power = 40
+			add_power_balance_value = {
+				id = TU_URS_bop
+				value = -0.05
+			}
+		}
+	}
+
+	focus = {
+		id = TU_URS_direct_rule_lands
+		icon = GFX_goal_generic_construct_infrastructure
+		prerequisite = { focus = TU_URS_grand_duke_exile }
+		x = 56
+		y = 10
+		cost = 10
+
+		search_filters = { FOCUS_FILTER_POLITICAL }
+
+		ai_will_do = {
+			base = 1
+		}
+
+		completion_reward = {
+			add_ideas = TU_URS_p1_crown_lands
+			add_power_balance_value = {
+				id = TU_URS_bop
+				value = -0.1
+			}
+			add_political_power = 40
+		}
+	}
+
+
+	#### URSUS UNIFICATION AND CLAIMS (x 46-52) ####
+
+	focus = {
+		id = TU_URS_unification_vision
+		icon = GFX_goal_generic_major_war
+		prerequisite = { focus = TU_URS_imperial_court }
+		x = 52
+		y = 6
+		cost = 10
+
+		search_filters = { FOCUS_FILTER_POLITICAL }
+
+		ai_will_do = {
+			base = 1
+		}
+
+		completion_reward = {
+			add_ideas = TU_URS_p1_unification_mandate
+			add_political_power = 50
+			army_experience = 20
+		}
+	}
+
+	focus = {
+		id = TU_URS_kazimir_diplomacy
+		icon = GFX_goal_generic_trade
+		prerequisite = { focus = TU_URS_unification_vision }
+		x = 50
+		y = 8
+		cost = 10
+
+		search_filters = { FOCUS_FILTER_POLITICAL }
+
+		ai_will_do = {
+			base = 1
+		}
+
+		available = {
+			has_country_flag = TU_DEC_TU_URS_kazdel_claims
+			NOT = { has_country_flag = TU_DEC_TU_URS_kazimir_war_plans }
+		}
+
+		completion_reward = {
+			add_political_power = 30
+			add_power_balance_value = {
+				id = TU_URS_bop
+				value = 0.05
+			}
+			add_stability = 0.02
+		}
+	}
+
+	focus = {
+		id = TU_URS_unification_complete
+		icon = GFX_goal_generic_national_unity
+		prerequisite = { focus = TU_URS_unification_vision }
+		x = 50
+		y = 12
+		cost = 15
+
+		search_filters = { FOCUS_FILTER_POLITICAL }
+
+		ai_will_do = {
+			base = 1
+		}
+
+		available = {
+			has_country_flag = TU_DEC_TU_URS_yan_war_plans
+		}
+
+		completion_reward = {
+			every_country = { news_event = { id = tu_urs_ev.16 } }
+			add_political_power = 100
+			add_stability = 0.05
+			add_war_support = 0.05
+			add_power_balance_value = {
+				id = TU_URS_bop
+				value = -0.1
+			}
+		}
+	}
+
+
+	#### CAPITAL RAILWAY BRANCH (x 70-72) ####
+
+	focus = {
+		id = TU_URS_capital_railway_plan
+		icon = GFX_goal_generic_construct_infrastructure
+		prerequisite = { focus = TU_URS_central_administration }
+		x = 70
+		y = 3
+		cost = 10
+
+		search_filters = { FOCUS_FILTER_INDUSTRY }
+
+		ai_will_do = {
+			base = 1
+		}
+
+		completion_reward = {
+			add_political_power = 20
+		}
+	}
+
+	focus = {
+		id = TU_URS_rail_gauge
+		icon = GFX_goal_generic_construct_civ_factory
+		prerequisite = { focus = TU_URS_capital_railway_plan }
+		mutually_exclusive = { focus = TU_URS_rail_heavy_industry }
+		x = 72
+		y = 5
+		cost = 10
+
+		search_filters = { FOCUS_FILTER_INDUSTRY }
+
+		ai_will_do = {
+			base = 1
+		}
+
+		available = {
+			has_country_flag = TU_DEC_TU_URS_capital_railway_build
+		}
+
+		completion_reward = {
+			add_political_power = 25
+			add_stability = 0.02
+		}
+	}
+
+	focus = {
+		id = TU_URS_rail_heavy_industry
+		icon = GFX_goal_generic_construct_mil_factory
+		prerequisite = { focus = TU_URS_capital_railway_plan }
+		mutually_exclusive = { focus = TU_URS_rail_gauge }
+		x = 70
+		y = 5
+		cost = 10
+
+		search_filters = { FOCUS_FILTER_INDUSTRY }
+
+		ai_will_do = {
+			base = 1
+		}
+
+		available = {
+			has_country_flag = TU_DEC_TU_URS_capital_railway_build
+		}
+
+		completion_reward = {
+			add_tech_bonus = {
+				name = TU_URS_p1_rail_tech
+				bonus = 0.5
+				uses = 1
+				category = industry
+			}
+			add_political_power = 10
+		}
+	}
+
+	focus = {
+		id = TU_URS_imperial_express
+		icon = GFX_goal_generic_construction
+		prerequisite = { focus = TU_URS_rail_heavy_industry focus = TU_URS_rail_gauge }
+		x = 70
+		y = 6
+		cost = 10
+
+		search_filters = { FOCUS_FILTER_INDUSTRY }
+
+		ai_will_do = {
+			base = 1
+		}
+
+		completion_reward = {
+			add_political_power = 30
+			add_stability = 0.03
+		}
+	}
+
+	focus = {
+		id = TU_URS_supply_trains
+		icon = GFX_goal_generic_army_artillery
+		prerequisite = { focus = TU_URS_rail_gauge }
+		x = 72
+		y = 6
+		cost = 10
+
+		search_filters = { FOCUS_FILTER_ARMY_XP }
+
+		ai_will_do = {
+			base = 1
+		}
+
+		completion_reward = {
+			army_experience = 25
+			add_manpower = 10000
+		}
+	}
+
+	focus = {
+		id = TU_URS_frozen_supply_line
+		icon = GFX_goal_generic_construct_infrastructure
+		prerequisite = { focus = TU_URS_supply_trains }
+		x = 72
+		y = 8
+		cost = 10
+
+		search_filters = { FOCUS_FILTER_INDUSTRY }
+
+		ai_will_do = {
+			base = 1
+		}
+
+		completion_reward = {
+			add_war_support = 0.03
+			add_political_power = 25
+		}
+	}
+
+	focus = {
+		id = TU_URS_steel_network
+		icon = GFX_goal_generic_production
+		prerequisite = { focus = TU_URS_imperial_express }
+		x = 70
+		y = 9
+		cost = 10
+
+		search_filters = { FOCUS_FILTER_INDUSTRY }
+
+		ai_will_do = {
+			base = 1
+		}
+
+		available = {
+			has_country_flag = TU_DEC_TU_URS_capital_factory_belt
+		}
+
+		completion_reward = {
+			add_tech_bonus = {
+				name = TU_URS_p1_steel_tech
+				bonus = 0.5
+				uses = 1
+				category = industry
+			}
+			add_political_power = 20
+		}
+	}
+
+	focus = {
+		id = TU_URS_capital_metro
+		icon = GFX_goal_generic_construct_civilian
+		prerequisite = { focus = TU_URS_steel_network }
+		x = 70
+		y = 10
+		cost = 10
+
+		search_filters = { FOCUS_FILTER_INDUSTRY }
+
+		ai_will_do = {
+			base = 1
+		}
+
+		completion_reward = {
+			add_stability = 0.02
+			add_political_power = 30
+		}
+	}
+
+	focus = {
+		id = TU_URS_capital_terminal
+		icon = GFX_goal_generic_construction2
+		prerequisite = { focus = TU_URS_capital_metro }
+		x = 70
+		y = 11
+		cost = 15
+
+		search_filters = { FOCUS_FILTER_INDUSTRY }
+
+		ai_will_do = {
+			base = 1
+		}
+
+		completion_reward = {
+			country_event = { id = tu_urs_ev.14 }
+			add_ideas = TU_URS_p1_capital_rail
+			add_political_power = 40
+		}
+	}

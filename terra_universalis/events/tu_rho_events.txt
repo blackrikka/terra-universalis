@@ -1,0 +1,25 @@
+add_namespace = tu_rho
+
+# PMC contract expiry (fired 180 days after TU_RHO_pmc_contract).
+country_event = {
+	id = tu_rho.1
+	hidden = yes
+	is_triggered_only = yes
+
+	immediate = {
+		subtract_from_variable = { TU_RHO_pmc_count = 1 }
+	}
+}
+
+# Chernobog rescue completion (fired 60 days after TU_RHO_op_chernobog).
+country_event = {
+	id = tu_rho.2
+	hidden = yes
+	is_triggered_only = yes
+
+	immediate = {
+		add_manpower = 5000
+		army_experience = 25
+		add_war_support = 0.05
+	}
+}

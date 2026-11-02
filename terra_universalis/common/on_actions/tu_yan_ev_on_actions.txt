@@ -1,0 +1,16 @@
+on_actions = {
+	on_monthly = {
+		# Monthly random events for YAN. Country tag and cooldown flags are checked in the event triggers.
+		random_events = {
+			1000 = 0
+			20 = tu_yan_ev.20
+			20 = tu_yan_ev.21
+			20 = tu_yan_ev.22
+			20 = tu_yan_ev.23
+			20 = tu_yan_ev.24
+			20 = tu_yan_ev.25
+			20 = tu_yan_ev.26
+			20 = tu_yan_ev.27
+		}
+	}
+}

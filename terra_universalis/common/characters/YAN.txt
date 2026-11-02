@@ -1,0 +1,104 @@
+characters = {
+
+	TU_YAN_emperor = {
+		name = TU_YAN_emperor
+		portraits = {
+			civilian = {
+				large = "GFX_Portrait_Europe_Generic_1"
+			}
+		}
+		country_leader = {
+			ideology = despotism
+			expire = "1200.1.1.1"
+			id = -1
+		}
+	}
+
+	TU_YAN_chongyue = {
+		name = TU_YAN_chongyue
+		portraits = {
+			army = {
+				large = "GFX_TU_portrait_chongyue"
+				small = "GFX_TU_portrait_chongyue_small"
+			}
+		}
+		corps_commander = {
+			traits = { }
+			skill = 4
+			attack_skill = 4
+			defense_skill = 4
+			planning_skill = 3
+			logistics_skill = 3
+			legacy_id = 0
+		}
+	}
+
+	TU_YAN_nian = {
+		name = TU_YAN_nian
+		portraits = {
+			civilian = {
+				small = "GFX_TU_portrait_nian_small"
+			}
+		}
+		advisor = {
+			slot = political_advisor
+			idea_token = TU_YAN_nian
+			allowed = {
+				original_tag = YAN
+			}
+			traits = {
+				industry_reformer
+			}
+			cost = 150
+			ai_will_do = {
+				factor = 1
+			}
+		}
+	}
+
+	TU_YAN_dusk = {
+		name = TU_YAN_dusk
+		portraits = {
+			civilian = {
+				small = "GFX_TU_portrait_dusk_small"
+			}
+		}
+		advisor = {
+			slot = political_advisor
+			idea_token = TU_YAN_dusk
+			allowed = {
+				original_tag = YAN
+			}
+			traits = {
+				smooth_talking_charmer
+			}
+			cost = 150
+			ai_will_do = {
+				factor = 1
+			}
+		}
+	}
+
+	TU_YAN_ling = {
+		name = TU_YAN_ling
+		portraits = {
+			civilian = {
+				small = "GFX_TU_portrait_ling_small"
+			}
+		}
+		advisor = {
+			slot = political_advisor
+			idea_token = TU_YAN_ling
+			allowed = {
+				original_tag = YAN
+			}
+			traits = {
+				compassionate_gentleman
+			}
+			cost = 150
+			ai_will_do = {
+				factor = 1
+			}
+		}
+	}
+}

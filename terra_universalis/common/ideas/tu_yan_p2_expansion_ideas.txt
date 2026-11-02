@@ -1,0 +1,104 @@
+ideas = {
+
+	country = {
+
+		TU_YAN_lgm_free_trade = {
+			picture = generic_foreign_capital
+
+			allowed = {
+				original_tag = YAN
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			modifier = {
+				trade_opinion_factor = 0.05
+				political_power_gain = 0.05
+			}
+		}
+
+		TU_YAN_frontier_drive = {
+			picture = generic_reserve_divisions
+
+			allowed = {
+				original_tag = YAN
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			modifier = {
+				army_attack_factor = 0.03
+				conscription_factor = 0.02
+			}
+		}
+
+		TU_YAN_tribute_court = {
+			picture = generic_central_management
+
+			allowed = {
+				original_tag = YAN
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			modifier = {
+				stability_factor = 0.02
+				political_power_gain = 0.05
+			}
+		}
+
+		TU_YAN_expansion_doctrine = {
+			picture = generic_war_preparation
+
+			allowed = {
+				original_tag = YAN
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			modifier = {
+				army_attack_factor = 0.03
+			}
+		}
+
+		TU_YAN_envoy_network = {
+			picture = generic_political_support
+
+			allowed = {
+				original_tag = YAN
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			modifier = {
+				stability_weekly = 0.0005
+			}
+		}
+
+		TU_YAN_frontier_logistics = {
+			picture = generic_logistics
+
+			allowed = {
+				original_tag = YAN
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			modifier = {
+				production_speed_buildings_factor = 0.03
+			}
+		}
+	}
+}

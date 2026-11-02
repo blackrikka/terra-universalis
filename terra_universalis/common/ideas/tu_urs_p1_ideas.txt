@@ -1,0 +1,193 @@
+ideas = {
+
+	country = {
+
+		TU_URS_p1_absolute_crown = {
+			picture = generic_central_management
+
+			allowed = {
+				original_tag = URS
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			modifier = {
+				stability_factor = 0.05
+				political_power_gain = 0.1
+			}
+		}
+
+		TU_URS_p1_unification_mandate = {
+			picture = generic_war_preparation
+
+			allowed = {
+				original_tag = URS
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			modifier = {
+				war_support_factor = 0.05
+				army_attack_factor = 0.05
+			}
+		}
+
+		TU_URS_p1_grand_duke_fear = {
+			picture = generic_oppression
+
+			allowed = {
+				original_tag = URS
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			modifier = {
+				stability_factor = -0.03
+				political_power_gain = 0.05
+			}
+		}
+
+		TU_URS_p1_surveillance_state = {
+			picture = generic_spy_political
+
+			allowed = {
+				original_tag = URS
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			modifier = {
+				stability_factor = 0.02
+				war_support_factor = -0.03
+			}
+		}
+
+		TU_URS_p1_imperial_blades = {
+			picture = professional_officer_corps_spirit
+
+			allowed = {
+				original_tag = URS
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			modifier = {
+				army_morale_factor = 0.05
+				army_org_factor = 0.05
+			}
+		}
+
+		TU_URS_p1_crown_lands = {
+			picture = generic_agrarian_reform
+
+			allowed = {
+				original_tag = URS
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			modifier = {
+				monthly_population = 0.05
+				production_speed_buildings_factor = 0.05
+			}
+		}
+
+		TU_URS_p1_eternal_throne = {
+			picture = generic_king_handled
+
+			allowed = {
+				original_tag = URS
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			modifier = {
+				political_power_gain = 0.1
+				stability_weekly = 0.001
+			}
+		}
+
+		TU_URS_p1_capital_rail = {
+			picture = generic_railroads
+
+			allowed = {
+				original_tag = URS
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			modifier = {
+				supply_consumption_factor = -0.1
+				production_speed_industrial_complex_factor = 0.05
+			}
+		}
+
+		TU_URS_p2_total_war_economy = {
+			picture = generic_war_preparation
+
+			allowed = {
+				original_tag = URS
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			modifier = {
+				consumer_goods_factor = -0.1
+				production_speed_buildings_factor = 0.1
+			}
+		}
+
+		TU_URS_p2_iron_regime = {
+			picture = generic_fascism_rising
+
+			allowed = {
+				original_tag = URS
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			modifier = {
+				army_attack_factor = 0.05
+				stability_factor = -0.05
+			}
+		}
+
+		TU_URS_p2_black_regiment = {
+			picture = generic_purge
+
+			allowed = {
+				original_tag = URS
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			modifier = {
+				stability_factor = -0.04
+				army_defence_factor = 0.05
+			}
+		}
+
+	}
+}

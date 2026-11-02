@@ -1,0 +1,11 @@
+# RIIC facility bonuses. The values are read from country variables that the
+# RIIC upgrade decisions (tu_rho_decisions.txt) keep up to date.
+TU_RHO_riic_modifier = {
+	icon = GFX_modifiers_generic_military_plans
+	enable = { always = yes }
+
+	army_org_regain = TU_RHO_riic_dorm_bonus
+	army_morale_factor = TU_RHO_riic_dorm_bonus
+	political_power_gain = TU_RHO_riic_reception_bonus
+	intel_network_gain = TU_RHO_riic_intel_bonus
+}

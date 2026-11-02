@@ -1,0 +1,21 @@
+state={
+	id=207
+	name="STATE_207"
+	manpower = 50000
+
+	state_category = town
+
+	history={
+		owner = YAN
+		victory_points = { 1012 1 }
+		buildings = {
+			infrastructure = 2
+		}
+		add_core_of = YAN
+	}
+
+	provinces={
+		1011 1012 1013 1015 1019
+	}
+	local_supplies=0.0
+}

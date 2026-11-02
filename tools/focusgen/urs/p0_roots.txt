@@ -1,0 +1,153 @@
+	focus = {
+		id = TU_URS_frozen_empire_focus
+		icon = GFX_goal_generic_national_unity
+		x = 88
+		y = 0
+		cost = 5
+
+		search_filters = { FOCUS_FILTER_POLITICAL }
+
+		ai_will_do = {
+			base = 1
+		}
+
+		completion_reward = {
+			add_political_power = 50
+		}
+	}
+
+	focus = {
+		id = TU_URS_imperial_decree
+		icon = GFX_goal_generic_political_pressure
+		prerequisite = { focus = TU_URS_frozen_empire_focus }
+		x = 88
+		y = 1
+		cost = 5
+
+		search_filters = { FOCUS_FILTER_POLITICAL }
+
+		ai_will_do = {
+			base = 1
+		}
+
+		completion_reward = {
+			add_political_power = 50
+			add_stability = 0.03
+		}
+	}
+
+	focus = {
+		id = TU_URS_railway_reform
+		icon = GFX_goal_generic_construct_infrastructure
+		x = 8
+		y = 0
+		cost = 5
+
+		search_filters = { FOCUS_FILTER_INDUSTRY }
+
+		ai_will_do = {
+			base = 1
+		}
+
+		completion_reward = {
+			remove_ideas = TU_URS_backward_infrastructure
+			add_political_power = 25
+		}
+	}
+
+	focus = {
+		id = TU_URS_army_root
+		icon = GFX_goal_generic_army_doctrines
+		x = 24
+		y = 0
+		cost = 5
+
+		search_filters = { FOCUS_FILTER_ARMY_XP }
+
+		ai_will_do = {
+			base = 1
+		}
+
+		completion_reward = {
+			army_experience = 10
+		}
+	}
+
+	focus = {
+		id = TU_URS_arts_research_root
+		icon = GFX_goal_generic_air_doctrine
+		x = 31
+		y = 0
+		cost = 5
+
+		search_filters = { FOCUS_FILTER_RESEARCH }
+
+		ai_will_do = {
+			base = 1
+		}
+
+		completion_reward = {
+			add_tech_bonus = {
+				name = TU_URS_arts_research_bonus
+				bonus = 0.5
+				uses = 1
+				category = electronics
+			}
+		}
+	}
+
+	focus = {
+		id = TU_URS_infection_policy
+		icon = GFX_goal_generic_propaganda
+		x = 42
+		y = 0
+		cost = 5
+
+		search_filters = { FOCUS_FILTER_POLITICAL }
+
+		ai_will_do = {
+			base = 1
+		}
+
+		completion_reward = {
+			add_political_power = 25
+		}
+	}
+
+	focus = {
+		id = TU_URS_foreign_policy_root
+		icon = GFX_goal_generic_improve_relations
+		x = 166
+		y = 0
+		cost = 5
+
+		search_filters = { FOCUS_FILTER_POLITICAL }
+
+		ai_will_do = {
+			base = 1
+		}
+
+		completion_reward = {
+			add_political_power = 25
+		}
+	}
+
+	focus = {
+		id = TU_URS_foreign_ministry
+		icon = GFX_goal_generic_positive_trade_relations
+		prerequisite = { focus = TU_URS_foreign_policy_root }
+		x = 166
+		y = 1
+		cost = 10
+
+		search_filters = { FOCUS_FILTER_POLITICAL }
+
+		ai_will_do = {
+			base = 1
+		}
+
+		completion_reward = {
+			add_political_power = 50
+			set_country_flag = TU_dip_relations_unlocked
+		}
+	}

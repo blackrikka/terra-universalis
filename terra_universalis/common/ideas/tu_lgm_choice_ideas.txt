@@ -1,0 +1,53 @@
+ideas = {
+
+	country = {
+
+		TU_LGM_choice_free_grain = {
+			picture = generic_economic_increase
+
+			allowed = {
+				original_tag = LGM
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			modifier = {
+				consumer_goods_factor = -0.05
+			}
+		}
+
+		TU_LGM_choice_bank_reserve = {
+			picture = generic_production_bonus
+
+			allowed = {
+				original_tag = LGM
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			modifier = {
+				production_speed_buildings_factor = 0.05
+			}
+		}
+
+		TU_LGM_choice_civic_schools = {
+			picture = generic_research_bonus
+
+			allowed = {
+				original_tag = LGM
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			modifier = {
+				research_speed_factor = 0.05
+			}
+		}
+	}
+}

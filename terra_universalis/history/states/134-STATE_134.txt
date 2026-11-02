@@ -1,0 +1,21 @@
+state={
+	id=134
+	name="STATE_134"
+	manpower = 50000
+
+	state_category = town
+
+	history={
+		owner = IBE
+		victory_points = { 673 1 }
+		buildings = {
+			infrastructure = 2
+		}
+		add_core_of = IBE
+	}
+
+	provinces={
+		664 673 675 679 680 682 686 689 693
+	}
+	local_supplies=0.0
+}

@@ -1,0 +1,173 @@
+	focus = {
+		id = TU_REU_uprising
+		icon = GFX_goal_generic_national_unity
+		x = 0
+		y = 0
+		cost = 5
+
+		search_filters = { FOCUS_FILTER_POLITICAL }
+
+		completion_reward = {
+			every_country = { news_event = { id = tu_reu_ev.7 days = 0 } }
+			add_political_power = 50
+		}
+	}
+
+	focus = {
+		id = TU_REU_militia_call
+		icon = GFX_goal_generic_allies_build_infantry
+		prerequisite = { focus = TU_REU_uprising }
+		x = 0
+		y = 1
+		cost = 5
+
+		search_filters = { FOCUS_FILTER_RESEARCH }
+
+		completion_reward = {
+			add_manpower = 30000
+		}
+	}
+
+	#### FORK A: THE BLACK SERPENT (TALULAH, CONQUEST) ####
+
+	focus = {
+		id = TU_REU_black_serpent
+		icon = GFX_goal_generic_political_pressure
+		prerequisite = { focus = TU_REU_uprising }
+		x = -2
+		y = 1
+		cost = 5
+
+		search_filters = { FOCUS_FILTER_POLITICAL }
+
+		completion_reward = {
+			country_event = { id = tu_reu_ev.1 }
+			add_political_power = 25
+		}
+	}
+
+	focus = {
+		id = TU_REU_serpent_army
+		icon = GFX_goal_generic_army_doctrines
+		prerequisite = { focus = TU_REU_black_serpent }
+		x = -2
+		y = 2
+		cost = 10
+
+		search_filters = { FOCUS_FILTER_ARMY_XP }
+
+		completion_reward = {
+			army_experience = 25
+		}
+	}
+
+	focus = {
+		id = TU_REU_serpent_march
+		icon = GFX_goal_generic_army_artillery
+		prerequisite = { focus = TU_REU_serpent_army }
+		x = -2
+		y = 3
+		cost = 10
+
+		search_filters = { FOCUS_FILTER_ARMY_XP }
+
+		completion_reward = {
+			army_experience = 25
+		}
+	}
+
+	focus = {
+		id = TU_REU_serpent_conquest
+		icon = GFX_goal_generic_army_doctrines
+		prerequisite = { focus = TU_REU_black_serpent }
+		prerequisite = { focus = TU_REU_serpent_march }
+		mutually_exclusive = { focus = TU_REU_frost_fortress }
+		x = -2
+		y = 4
+		cost = 10
+
+		search_filters = { FOCUS_FILTER_ARMY_XP }
+
+		available = {
+			has_country_flag = TU_DEC_TU_REU_ursus_claims
+		}
+
+		completion_reward = {
+			country_event = { id = tu_reu_ev.2 }
+			add_ideas = TU_REU_serpent_doctrine
+			add_political_power = 25
+		}
+	}
+
+	#### FORK B: FROST NOVA / PATRIOT (INFECTED ZONES, RHODES ALLIANCE) ####
+
+	focus = {
+		id = TU_REU_frost_nova
+		icon = GFX_goal_generic_propaganda
+		prerequisite = { focus = TU_REU_uprising }
+		x = 2
+		y = 1
+		cost = 5
+
+		search_filters = { FOCUS_FILTER_POLITICAL }
+
+		completion_reward = {
+			add_political_power = 25
+		}
+	}
+
+	focus = {
+		id = TU_REU_infected_zones
+		icon = GFX_goal_generic_construct_civilian
+		prerequisite = { focus = TU_REU_frost_nova }
+		x = 2
+		y = 2
+		cost = 10
+
+		search_filters = { FOCUS_FILTER_INDUSTRY }
+
+		completion_reward = {
+			add_manpower = 20000
+			add_stability = 0.03
+		}
+	}
+
+	focus = {
+		id = TU_REU_patriot_call
+		icon = GFX_goal_generic_national_unity
+		prerequisite = { focus = TU_REU_infected_zones }
+		x = 2
+		y = 3
+		cost = 10
+
+		search_filters = { FOCUS_FILTER_POLITICAL }
+
+		completion_reward = {
+			every_country = { news_event = { id = tu_reu_ev.8 days = 0 } }
+			recruit_character = TU_REU_patriot_leader
+			promote_character = TU_REU_patriot_leader
+		}
+	}
+
+	focus = {
+		id = TU_REU_frost_fortress
+		icon = GFX_goal_generic_defence
+		prerequisite = { focus = TU_REU_patriot_call }
+		prerequisite = { focus = TU_REU_infected_zones }
+		mutually_exclusive = { focus = TU_REU_serpent_conquest }
+		x = 2
+		y = 4
+		cost = 10
+
+		search_filters = { FOCUS_FILTER_ARMY_XP }
+
+		available = {
+			has_country_flag = TU_DEC_TU_REU_rhodes_pact
+		}
+
+		completion_reward = {
+			country_event = { id = tu_reu_ev.3 }
+			add_ideas = TU_REU_frost_bastion
+			add_stability = 0.03
+		}
+	}

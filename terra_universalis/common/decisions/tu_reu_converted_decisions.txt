@@ -1,0 +1,67 @@
+TU_REU_expansion_category = {
+
+	TU_REU_ursus_claims = {
+		icon = GFX_decision_generic_military
+
+		allowed = {
+			original_tag = REU
+		}
+
+		visible = {
+			has_completed_focus = TU_REU_black_serpent
+		}
+
+		available = {
+			has_completed_focus = TU_REU_black_serpent
+		}
+
+		cost = 50
+		fire_only_once = yes
+
+		complete_effect = {
+			add_state_claim = 33
+			add_state_claim = 36
+			add_state_claim = 40
+			set_country_flag = TU_DEC_TU_REU_ursus_claims
+		}
+
+		ai_will_do = {
+			base = 1
+		}
+	}
+}
+
+TU_REU_diplomacy_category = {
+
+	TU_REU_rhodes_pact = {
+		icon = GFX_decision_generic_political_discourse
+
+		allowed = {
+			original_tag = REU
+		}
+
+		visible = {
+			has_completed_focus = TU_REU_infected_zones
+		}
+
+		available = {
+			has_completed_focus = TU_REU_infected_zones
+		}
+
+		cost = 50
+		fire_only_once = yes
+
+		complete_effect = {
+			add_opinion_modifier = {
+				target = RHO
+				modifier = improve_relation
+			}
+			add_political_power = 25
+			set_country_flag = TU_DEC_TU_REU_rhodes_pact
+		}
+
+		ai_will_do = {
+			base = 1
+		}
+	}
+}

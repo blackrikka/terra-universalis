@@ -1,0 +1,14 @@
+on_actions = {
+	on_startup = {
+		effect = {
+			if = {
+				limit = {
+					country_exists = URS
+				}
+				URS = {
+					TU_URS_startup = yes
+				}
+			}
+		}
+	}
+}

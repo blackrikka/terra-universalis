@@ -1,0 +1,25 @@
+# Rhodes Island OOB. Templates only: the starting units are created by
+# TU_RHO_startup (tu_rho_effects.txt) in the capital state.
+
+division_template = {
+	name = "TU_RHO_operator_squad"
+
+	regiments = {
+		infantry = { x = 0 y = 0 }
+		infantry = { x = 0 y = 1 }
+	}
+	support = {
+		recon = { x = 0 y = 0 }
+	}
+}
+
+division_template = {
+	name = "TU_RHO_escort"
+
+	regiments = {
+		infantry = { x = 0 y = 0 }
+		infantry = { x = 0 y = 1 }
+		infantry = { x = 1 y = 0 }
+		infantry = { x = 1 y = 1 }
+	}
+}

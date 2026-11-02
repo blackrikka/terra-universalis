@@ -1,0 +1,70 @@
+TU_anchor_rho_start_available = {
+	NOT = { 215 = { is_owned_by = RHO } }
+	YAN = { exists = yes }
+	YAN = { NOT = { has_war_with = RHO } }
+	215 = { is_owned_by = YAN }
+}
+
+TU_anchor_victoria_available = {
+	NOT = { 91 = { is_owned_by = RHO } }
+	VIC = { exists = yes }
+	VIC = { NOT = { has_war_with = RHO } }
+	91 = { is_owned_by = VIC }
+}
+
+TU_anchor_columbia_available = {
+	NOT = { 241 = { is_owned_by = RHO } }
+	COL = { exists = yes }
+	COL = { NOT = { has_war_with = RHO } }
+	241 = { is_owned_by = COL }
+}
+
+TU_anchor_yan_available = {
+	NOT = { 194 = { is_owned_by = RHO } }
+	YAN = { exists = yes }
+	YAN = { NOT = { has_war_with = RHO } }
+	194 = { is_owned_by = YAN }
+}
+
+TU_anchor_kazimierz_available = {
+	NOT = { 73 = { is_owned_by = RHO } }
+	KAZ = { exists = yes }
+	KAZ = { NOT = { has_war_with = RHO } }
+	73 = { is_owned_by = KAZ }
+}
+
+TU_anchor_sargon_available = {
+	NOT = { 314 = { is_owned_by = RHO } }
+	SAR = { exists = yes }
+	SAR = { NOT = { has_war_with = RHO } }
+	314 = { is_owned_by = SAR }
+}
+
+TU_anchor_iberia_available = {
+	NOT = { 131 = { is_owned_by = RHO } }
+	IBE = { exists = yes }
+	IBE = { NOT = { has_war_with = RHO } }
+	131 = { is_owned_by = IBE }
+}
+
+TU_anchor_rim_available = {
+	NOT = { 159 = { is_owned_by = RHO } }
+	RIM = { exists = yes }
+	RIM = { NOT = { has_war_with = RHO } }
+	159 = { is_owned_by = RIM }
+}
+
+TU_anchor_kazdel_available = {
+	NOT = { 59 = { is_owned_by = RHO } }
+	KZD = { exists = yes }
+	KZD = { NOT = { has_war_with = RHO } }
+	59 = { is_owned_by = KZD }
+}
+
+TU_anchor_ursus_available = {
+	NOT = { 39 = { is_owned_by = RHO } }
+	URS = { exists = yes }
+	URS = { NOT = { has_war_with = RHO } }
+	39 = { is_owned_by = URS }
+}
+

@@ -1,0 +1,36 @@
+TU_LGM_construction_category = {
+
+	TU_LGM_port_expansion = {
+		icon = GFX_decision_generic_construction
+
+		allowed = {
+			original_tag = LGM
+		}
+
+		visible = {
+			has_completed_focus = TU_LGM_trade_hub_focus
+		}
+
+		available = {
+			has_completed_focus = TU_LGM_trade_hub_focus
+		}
+
+		cost = 25
+		fire_only_once = yes
+
+		complete_effect = {
+			916 = {
+				add_building_construction = {
+					type = infrastructure
+					level = 1
+					instant_build = yes
+				}
+			}
+			set_country_flag = TU_DEC_TU_LGM_port_expansion
+		}
+
+		ai_will_do = {
+			base = 1
+		}
+	}
+}

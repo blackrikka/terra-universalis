@@ -1,0 +1,744 @@
+TU_LGM_finance_category = {
+
+	TU_LGM_customs_house = {
+		icon = GFX_decision_generic_protection
+
+		allowed = {
+			original_tag = LGM
+		}
+
+		visible = {
+			has_completed_focus = TU_LGM_customs_union
+		}
+
+		available = {
+			has_completed_focus = TU_LGM_customs_union
+		}
+
+		cost = 25
+		fire_only_once = yes
+
+		complete_effect = {
+			add_political_power = 25
+			add_ideas = TU_LGM_tariff_policy
+		}
+
+		ai_will_do = {
+			base = 1
+		}
+	}
+
+	TU_LGM_merchant_license = {
+		icon = GFX_decision_generic_consumer_goods
+
+		allowed = {
+			original_tag = LGM
+		}
+
+		visible = {
+			has_completed_focus = TU_LGM_merchant_guilds
+		}
+
+		available = {
+			has_completed_focus = TU_LGM_merchant_guilds
+		}
+
+		cost = 25
+		fire_only_once = yes
+
+		complete_effect = {
+			add_stability = 0.01
+			add_political_power = 25
+		}
+
+		ai_will_do = {
+			base = 1
+		}
+	}
+
+	TU_LGM_city_bond = {
+		icon = GFX_decision_generic_fundraising
+
+		allowed = {
+			original_tag = LGM
+		}
+
+		visible = {
+			has_completed_focus = TU_LGM_banking_house
+		}
+
+		available = {
+			has_completed_focus = TU_LGM_banking_house
+		}
+
+		cost = 50
+		fire_only_once = yes
+
+		complete_effect = {
+			add_ideas = TU_LGM_bond_market
+			add_political_power = 50
+		}
+
+		ai_will_do = {
+			base = 1
+		}
+	}
+
+	TU_LGM_free_port = {
+		icon = GFX_decision_generic_naval
+
+		allowed = {
+			original_tag = LGM
+		}
+
+		visible = {
+			has_completed_focus = TU_LGM_free_port_zone
+		}
+
+		available = {
+			has_completed_focus = TU_LGM_free_port_zone
+		}
+
+		cost = 50
+		fire_only_once = yes
+
+		complete_effect = {
+			add_ideas = TU_LGM_free_port_status
+			add_stability = 0.02
+		}
+
+		ai_will_do = {
+			base = 1
+		}
+	}
+
+	TU_LGM_tax_collection = {
+		icon = GFX_decision_generic_confiscation
+
+		allowed = {
+			original_tag = LGM
+		}
+
+		visible = {
+			has_completed_focus = TU_LGM_tax_reform
+		}
+
+		available = {
+			has_completed_focus = TU_LGM_tax_reform
+		}
+
+		cost = 25
+		fire_only_once = yes
+
+		complete_effect = {
+			add_political_power = 50
+			add_stability = -0.02
+		}
+
+		ai_will_do = {
+			base = 1
+		}
+	}
+
+	TU_LGM_industrial_credit = {
+		icon = GFX_decision_generic_factory
+
+		allowed = {
+			original_tag = LGM
+		}
+
+		visible = {
+			has_completed_focus = TU_LGM_industrial_loans
+		}
+
+		available = {
+			has_completed_focus = TU_LGM_industrial_loans
+		}
+
+		cost = 25
+		fire_only_once = yes
+
+		complete_effect = {
+			add_ideas = TU_LGM_credit_line
+			add_political_power = 25
+		}
+
+		ai_will_do = {
+			base = 1
+		}
+	}
+}
+
+TU_LGM_guard_category = {
+
+	TU_LGM_guard_recruit = {
+		icon = GFX_decision_generic_military
+
+		allowed = {
+			original_tag = LGM
+		}
+
+		visible = {
+			has_completed_focus = TU_LGM_guard_expansion
+		}
+
+		available = {
+			has_completed_focus = TU_LGM_guard_expansion
+		}
+
+		cost = 50
+		fire_only_once = yes
+
+		complete_effect = {
+			capital_scope = {
+				create_unit = {
+					division = "division_template = \"TU_LGM_guard\" start_experience_factor = 0.3 start_equipment_factor = 0.8"
+					owner = LGM
+					count = 2
+				}
+			}
+		}
+
+		ai_will_do = {
+			base = 1
+		}
+	}
+
+	TU_LGM_guard_reserve_call = {
+		icon = GFX_decision_generic_army_support
+
+		allowed = {
+			original_tag = LGM
+		}
+
+		visible = {
+			has_completed_focus = TU_LGM_guard_reserve
+		}
+
+		available = {
+			has_completed_focus = TU_LGM_guard_reserve
+		}
+
+		cost = 25
+		fire_only_once = yes
+
+		complete_effect = {
+			add_manpower = 15000
+			add_ideas = TU_LGM_reserve_levy
+		}
+
+		ai_will_do = {
+			base = 1
+		}
+	}
+
+	TU_LGM_guard_armour_outfit = {
+		icon = GFX_decision_generic_tank
+
+		allowed = {
+			original_tag = LGM
+		}
+
+		visible = {
+			has_completed_focus = TU_LGM_guard_armour
+		}
+
+		available = {
+			has_completed_focus = TU_LGM_guard_armour
+		}
+
+		cost = 25
+		fire_only_once = yes
+
+		complete_effect = {
+			add_ideas = TU_LGM_armoured_guard
+			add_political_power = 25
+		}
+
+		ai_will_do = {
+			base = 1
+		}
+	}
+
+	TU_LGM_guard_officers = {
+		icon = GFX_decision_generic_operation
+
+		allowed = {
+			original_tag = LGM
+		}
+
+		visible = {
+			has_completed_focus = TU_LGM_guard_academy
+		}
+
+		available = {
+			has_completed_focus = TU_LGM_guard_academy
+		}
+
+		cost = 25
+		fire_only_once = yes
+
+		complete_effect = {
+			army_experience = 25
+			add_political_power = 25
+		}
+
+		ai_will_do = {
+			base = 1
+		}
+	}
+
+	TU_LGM_guard_second_corps = {
+		icon = GFX_decision_generic_motorized
+
+		allowed = {
+			original_tag = LGM
+		}
+
+		visible = {
+			has_completed_focus = TU_LGM_guard_mobile_corps
+		}
+
+		available = {
+			has_completed_focus = TU_LGM_guard_mobile_corps
+		}
+
+		cost = 50
+		fire_only_once = yes
+
+		complete_effect = {
+			capital_scope = {
+				create_unit = {
+					division = "division_template = \"TU_LGM_guard\" start_experience_factor = 0.4 start_equipment_factor = 0.8"
+					owner = LGM
+					count = 2
+				}
+			}
+		}
+
+		ai_will_do = {
+			base = 1
+		}
+	}
+
+	TU_LGM_guard_militia_call = {
+		icon = GFX_decision_generic_civil_support
+
+		allowed = {
+			original_tag = LGM
+		}
+
+		visible = {
+			has_completed_focus = TU_LGM_guard_militia
+		}
+
+		available = {
+			has_completed_focus = TU_LGM_guard_militia
+		}
+
+		cost = 25
+		fire_only_once = yes
+
+		complete_effect = {
+			add_manpower = 10000
+			add_war_support = 0.02
+		}
+
+		ai_will_do = {
+			base = 1
+		}
+	}
+}
+
+TU_LGM_construction_category = {
+
+	TU_LGM_build_transit = {
+		icon = GFX_decision_generic_train
+
+		allowed = {
+			original_tag = LGM
+		}
+
+		visible = {
+			has_completed_focus = TU_LGM_urban_planning
+		}
+
+		available = {
+			has_completed_focus = TU_LGM_urban_planning
+		}
+
+		cost = 25
+		fire_only_once = yes
+
+		complete_effect = {
+			916 = {
+				add_building_construction = {
+					type = infrastructure
+					level = 1
+					instant_build = yes
+				}
+			}
+		}
+
+		ai_will_do = {
+			base = 1
+		}
+	}
+
+	TU_LGM_build_dockyard = {
+		icon = GFX_decision_generic_construction
+
+		allowed = {
+			original_tag = LGM
+		}
+
+		visible = {
+			has_completed_focus = TU_LGM_harbor_works
+		}
+
+		available = {
+			has_completed_focus = TU_LGM_harbor_works
+		}
+
+		cost = 25
+		fire_only_once = yes
+
+		complete_effect = {
+			916 = {
+				add_building_construction = {
+					type = dockyard
+					level = 1
+					instant_build = yes
+				}
+			}
+		}
+
+		ai_will_do = {
+			base = 1
+		}
+	}
+
+	TU_LGM_build_factory = {
+		icon = GFX_decision_generic_factory
+
+		allowed = {
+			original_tag = LGM
+		}
+
+		visible = {
+			has_completed_focus = TU_LGM_factory_zone
+		}
+
+		available = {
+			has_completed_focus = TU_LGM_factory_zone
+		}
+
+		cost = 25
+		fire_only_once = yes
+
+		complete_effect = {
+			916 = {
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+				}
+			}
+		}
+
+		ai_will_do = {
+			base = 1
+		}
+	}
+
+	TU_LGM_build_bunker = {
+		icon = GFX_decision_generic_fortification
+
+		allowed = {
+			original_tag = LGM
+		}
+
+		visible = {
+			has_completed_focus = TU_LGM_fortified_districts
+		}
+
+		available = {
+			has_completed_focus = TU_LGM_fortified_districts
+		}
+
+		cost = 25
+		fire_only_once = yes
+
+		complete_effect = {
+			916 = {
+				add_building_construction = {
+					type = bunker
+					level = 1
+					instant_build = yes
+				}
+			}
+		}
+
+		ai_will_do = {
+			base = 1
+		}
+	}
+
+	TU_LGM_build_air_base = {
+		icon = GFX_decision_generic_air
+
+		allowed = {
+			original_tag = LGM
+		}
+
+		visible = {
+			has_completed_focus = TU_LGM_transit_network
+		}
+
+		available = {
+			has_completed_focus = TU_LGM_transit_network
+		}
+
+		cost = 50
+		fire_only_once = yes
+
+		complete_effect = {
+			916 = {
+				add_building_construction = {
+					type = air_base
+					level = 1
+					instant_build = yes
+				}
+			}
+		}
+
+		ai_will_do = {
+			base = 1
+		}
+	}
+
+	TU_LGM_build_radar = {
+		icon = GFX_decision_generic_intelligence_operation
+
+		allowed = {
+			original_tag = LGM
+		}
+
+		visible = {
+			has_completed_focus = TU_LGM_radar_grid
+		}
+
+		available = {
+			has_completed_focus = TU_LGM_radar_grid
+		}
+
+		cost = 25
+		fire_only_once = yes
+
+		complete_effect = {
+			916 = {
+				add_building_construction = {
+					type = radar_station
+					level = 1
+					instant_build = yes
+				}
+			}
+		}
+
+		ai_will_do = {
+			base = 1
+		}
+	}
+
+	TU_LGM_build_anti_air = {
+		icon = GFX_decision_generic_coastal_fortification
+
+		allowed = {
+			original_tag = LGM
+		}
+
+		visible = {
+			has_completed_focus = TU_LGM_city_wall
+		}
+
+		available = {
+			has_completed_focus = TU_LGM_city_wall
+		}
+
+		cost = 25
+		fire_only_once = yes
+
+		complete_effect = {
+			916 = {
+				add_building_construction = {
+					type = anti_air_building
+					level = 1
+					instant_build = yes
+				}
+			}
+		}
+
+		ai_will_do = {
+			base = 1
+		}
+	}
+}
+
+TU_LGM_diplomacy_category = {
+
+	TU_LGM_envoy_yan = {
+		icon = GFX_decision_generic_political_address
+
+		allowed = {
+			original_tag = LGM
+		}
+
+		visible = {
+			has_completed_focus = TU_LGM_yan_envoy
+		}
+
+		available = {
+			has_completed_focus = TU_LGM_yan_envoy
+			country_exists = YAN
+		}
+
+		cost = 25
+		fire_only_once = yes
+
+		complete_effect = {
+			YAN = {
+				add_opinion_modifier = {
+					target = ROOT
+					modifier = improve_relation
+				}
+			}
+		}
+
+		ai_will_do = {
+			base = 1
+		}
+	}
+
+	TU_LGM_envoy_kzd_gift = {
+		icon = GFX_decision_generic_speech
+
+		allowed = {
+			original_tag = LGM
+		}
+
+		visible = {
+			has_completed_focus = TU_LGM_envoy_kzd
+		}
+
+		available = {
+			has_completed_focus = TU_LGM_envoy_kzd
+			country_exists = KZD
+		}
+
+		cost = 25
+		fire_only_once = yes
+
+		complete_effect = {
+			KZD = {
+				add_opinion_modifier = {
+					target = ROOT
+					modifier = improve_relation
+				}
+			}
+		}
+
+		ai_will_do = {
+			base = 1
+		}
+	}
+
+	TU_LGM_rhodes_trade = {
+		icon = GFX_decision_generic_train
+
+		allowed = {
+			original_tag = LGM
+		}
+
+		visible = {
+			has_completed_focus = TU_LGM_envoy_rhodes
+		}
+
+		available = {
+			has_completed_focus = TU_LGM_envoy_rhodes
+			country_exists = RHO
+		}
+
+		cost = 25
+		fire_only_once = yes
+
+		complete_effect = {
+			RHO = {
+				add_opinion_modifier = {
+					target = ROOT
+					modifier = improve_relation
+				}
+			}
+		}
+
+		ai_will_do = {
+			base = 1
+		}
+	}
+
+	TU_LGM_border_alert = {
+		icon = GFX_decision_generic_police_action
+
+		allowed = {
+			original_tag = LGM
+		}
+
+		visible = {
+			has_completed_focus = TU_LGM_border_patrols
+		}
+
+		available = {
+			has_completed_focus = TU_LGM_border_patrols
+			has_global_flag = TU_chernobog_incident_started
+		}
+
+		cost = 25
+		fire_only_once = yes
+
+		complete_effect = {
+			add_stability = 0.02
+			add_war_support = 0.03
+		}
+
+		ai_will_do = {
+			base = 1
+		}
+	}
+
+	TU_LGM_autonomy_ceremony = {
+		icon = GFX_decision_generic_independence
+
+		allowed = {
+			original_tag = LGM
+		}
+
+		visible = {
+			has_completed_focus = TU_LGM_autonomy_council
+		}
+
+		available = {
+			has_completed_focus = TU_LGM_autonomy_council
+		}
+
+		cost = 25
+		fire_only_once = yes
+
+		complete_effect = {
+			add_stability = 0.02
+			add_political_power = 25
+		}
+
+		ai_will_do = {
+			base = 1
+		}
+	}
+}

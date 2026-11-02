@@ -1,0 +1,381 @@
+	focus = {
+		id = TU_VIC_crown_focus
+		icon = GFX_goal_generic_national_unity
+		x = 0
+		y = 0
+		cost = 5
+
+		search_filters = { FOCUS_FILTER_POLITICAL }
+
+		completion_reward = {
+			add_political_power = 50
+			country_event = { id = tu_vic_ev.1 }
+		}
+	}
+
+	focus = {
+		id = TU_VIC_dukes_summit
+		icon = GFX_goal_generic_political_pressure
+		prerequisite = { focus = TU_VIC_crown_focus }
+		x = 0
+		y = 1
+		cost = 5
+
+		search_filters = { FOCUS_FILTER_POLITICAL }
+
+		completion_reward = {
+			add_political_power = 25
+		}
+	}
+
+	#### FORK A: DUKES' COUNCIL (BoP RIGHT) ####
+
+	focus = {
+		id = TU_VIC_status_quo
+		icon = GFX_goal_generic_national_unity
+		prerequisite = { focus = TU_VIC_dukes_summit }
+		x = 0
+		y = 2
+		cost = 10
+
+		search_filters = { FOCUS_FILTER_POLITICAL }
+
+		completion_reward = {
+			add_power_balance_value = {
+				id = TU_VIC_bop
+				value = 0.1
+			}
+			add_political_power = 25
+		}
+	}
+
+	focus = {
+		id = TU_VIC_ducal_arsenal
+		icon = GFX_goal_generic_army_artillery
+		prerequisite = { focus = TU_VIC_status_quo }
+		mutually_exclusive = { focus = TU_VIC_ducal_arsenal_alt }
+		x = 1
+		y = 3
+		cost = 10
+
+		search_filters = { FOCUS_FILTER_ARMY_XP }
+
+		completion_reward = {
+			army_experience = 10
+		}
+	}
+
+	focus = {
+		id = TU_VIC_ducal_arsenal_alt
+		icon = GFX_goal_generic_national_unity
+		prerequisite = { focus = TU_VIC_status_quo }
+		mutually_exclusive = { focus = TU_VIC_ducal_arsenal }
+		x = 0
+		y = 0
+		cost = 10
+
+		search_filters = { FOCUS_FILTER_STABILITY }
+
+		ai_will_do = {
+			base = 1
+		}
+
+		completion_reward = {
+			add_stability = 0.01
+		}
+	}
+
+	focus = {
+		id = TU_VIC_london_fortress
+		icon = GFX_goal_generic_fortify_city
+		prerequisite = { focus = TU_VIC_status_quo }
+		x = -1
+		y = 3
+		cost = 10
+
+		search_filters = { FOCUS_FILTER_INDUSTRY }
+
+		available = {
+			has_country_flag = TU_DEC_TU_VIC_industrial_expansion
+		}
+
+		completion_reward = {
+			add_stability = 0.02
+			add_political_power = 25
+		}
+	}
+
+	focus = {
+		id = TU_VIC_dukes_order
+		icon = GFX_goal_generic_neutrality_focus
+		prerequisite = { focus = TU_VIC_london_fortress }
+		mutually_exclusive = { focus = TU_VIC_aslan_legitimacy }
+		x = -1
+		y = 4
+		cost = 10
+
+		search_filters = { FOCUS_FILTER_BALANCE_OF_POWER }
+
+		completion_reward = {
+			add_power_balance_value = {
+				id = TU_VIC_bop
+				value = 0.25
+			}
+			add_political_power = 50
+		}
+	}
+
+	#### FORK B: ASLAN RESTORATION (BoP LEFT) ####
+
+	focus = {
+		id = TU_VIC_glasgow_return
+		icon = GFX_goal_generic_demand_territory
+		prerequisite = { focus = TU_VIC_dukes_summit }
+		x = -4
+		y = 2
+		cost = 10
+
+		search_filters = { FOCUS_FILTER_POLITICAL }
+
+		completion_reward = {
+			add_power_balance_value = {
+				id = TU_VIC_bop
+				value = -0.05
+			}
+			add_political_power = 25
+			country_event = { id = tu_vic_ev.8 }
+		}
+	}
+
+	focus = {
+		id = TU_VIC_glasgow_volunteers
+		icon = GFX_goal_generic_allies_build_infantry
+		prerequisite = { focus = TU_VIC_glasgow_return }
+		mutually_exclusive = { focus = TU_VIC_glasgow_volunteers_alt }
+		x = -5
+		y = 3
+		cost = 10
+
+		search_filters = { FOCUS_FILTER_ARMY_XP }
+
+		completion_reward = {
+			army_experience = 15
+		}
+	}
+
+	focus = {
+		id = TU_VIC_glasgow_volunteers_alt
+		icon = GFX_goal_generic_propaganda
+		prerequisite = { focus = TU_VIC_glasgow_return }
+		mutually_exclusive = { focus = TU_VIC_glasgow_volunteers }
+		x = 0
+		y = 0
+		cost = 10
+
+		search_filters = { FOCUS_FILTER_POLITICAL }
+
+		ai_will_do = {
+			base = 1
+		}
+
+		completion_reward = {
+			add_war_support = 0.03
+		}
+	}
+
+	focus = {
+		id = TU_VIC_rally_dukes
+		icon = GFX_goal_generic_improve_relations
+		prerequisite = { focus = TU_VIC_glasgow_return }
+		x = -3
+		y = 3
+		cost = 10
+
+		search_filters = { FOCUS_FILTER_POLITICAL }
+
+		completion_reward = {
+			add_power_balance_value = {
+				id = TU_VIC_bop
+				value = -0.1
+			}
+			add_political_power = 25
+		}
+	}
+
+	focus = {
+		id = TU_VIC_siege_crowned
+		icon = GFX_goal_generic_major_alliance
+		prerequisite = { focus = TU_VIC_rally_dukes }
+		x = -3
+		y = 4
+		cost = 10
+
+		search_filters = { FOCUS_FILTER_BALANCE_OF_POWER }
+
+		completion_reward = {
+			recruit_character = TU_VIC_siege_leader
+			promote_character = {
+				character = TU_VIC_siege_leader
+				ideology = despotism
+			}
+			remove_ideas = TU_VIC_vacant_throne
+			add_power_balance_value = {
+				id = TU_VIC_bop
+				value = -0.25
+			}
+			every_country = { news_event = { id = tu_vic_ev.16 days = 0 } }
+		}
+	}
+
+	focus = {
+		id = TU_VIC_aslan_legitimacy
+		icon = GFX_goal_generic_propaganda
+		prerequisite = { focus = TU_VIC_siege_crowned }
+		mutually_exclusive = { focus = TU_VIC_dukes_order }
+		x = -3
+		y = 5
+		cost = 10
+
+		search_filters = { FOCUS_FILTER_POLITICAL }
+
+		completion_reward = {
+			add_stability = 0.03
+			add_political_power = 50
+		}
+	}
+
+	#### FORK C: DUBLINN UPRISING (suppress vs. talks) ####
+
+	focus = {
+		id = TU_VIC_dublinn_uprising
+		icon = GFX_goal_generic_defence
+		prerequisite = { focus = TU_VIC_dukes_summit }
+		x = 4
+		y = 2
+		cost = 5
+
+		search_filters = { FOCUS_FILTER_POLITICAL }
+
+		completion_reward = {
+			add_stability = -0.03
+			country_event = { id = tu_vic_ev.6 }
+		}
+	}
+
+	focus = {
+		id = TU_VIC_dublinn_suppression
+		icon = GFX_goal_generic_special_forces
+		prerequisite = { focus = TU_VIC_dublinn_uprising }
+		mutually_exclusive = { focus = TU_VIC_dublinn_talks }
+		x = 3
+		y = 3
+		cost = 10
+
+		search_filters = { FOCUS_FILTER_POLITICAL }
+
+		completion_reward = {
+			add_stability = 0.02
+			army_experience = 5
+		}
+	}
+
+	focus = {
+		id = TU_VIC_suppression_garrison
+		icon = GFX_goal_generic_fortify_city
+		prerequisite = { focus = TU_VIC_dublinn_suppression }
+		x = 3
+		y = 4
+		cost = 10
+
+		search_filters = { FOCUS_FILTER_ARMY_XP }
+
+		completion_reward = {
+			add_stability = 0.02
+			add_political_power = 25
+		}
+	}
+
+	focus = {
+		id = TU_VIC_public_order
+		icon = GFX_goal_generic_political_pressure
+		prerequisite = { focus = TU_VIC_suppression_garrison }
+		x = 3
+		y = 5
+		cost = 10
+
+		search_filters = { FOCUS_FILTER_POLITICAL }
+
+		completion_reward = {
+			add_stability = 0.05
+		}
+	}
+
+	focus = {
+		id = TU_VIC_dublinn_talks
+		icon = GFX_goal_generic_trade
+		prerequisite = { focus = TU_VIC_dublinn_uprising }
+		mutually_exclusive = { focus = TU_VIC_dublinn_suppression }
+		x = 5
+		y = 3
+		cost = 10
+
+		search_filters = { FOCUS_FILTER_POLITICAL }
+
+		completion_reward = {
+			recruit_character = TU_VIC_dublinn_leader
+			add_political_power = 25
+		}
+	}
+
+	focus = {
+		id = TU_VIC_dublinn_charter
+		icon = GFX_goal_generic_consumer_goods
+		prerequisite = { focus = TU_VIC_dublinn_talks }
+		x = 5
+		y = 4
+		cost = 10
+
+		search_filters = { FOCUS_FILTER_POLITICAL }
+
+		completion_reward = {
+			add_stability = 0.02
+		}
+	}
+
+	focus = {
+		id = TU_VIC_steam_knight_formation
+		icon = GFX_goal_generic_army_tanks
+		prerequisite = { focus = TU_VIC_dublinn_charter }
+		x = 5
+		y = 5
+		cost = 10
+
+		search_filters = { FOCUS_FILTER_ARMY_XP }
+
+		completion_reward = {
+			add_ideas = TU_VIC_steam_knights
+			capital_scope = {
+				create_unit = {
+					division = "division_template = \"TU_VIC_steam_knight\" start_experience_factor = 1.0"
+					owner = VIC
+					count = 1
+				}
+			}
+			country_event = { id = tu_vic_ev.7 }
+		}
+	}
+
+	focus = {
+		id = TU_VIC_steam_knight_training
+		icon = GFX_goal_generic_army_doctrines
+		prerequisite = { focus = TU_VIC_steam_knight_formation }
+		x = 5
+		y = 6
+		cost = 10
+
+		search_filters = { FOCUS_FILTER_ARMY_XP }
+
+		completion_reward = {
+			army_experience = 25
+		}
+	}

@@ -1,0 +1,1732 @@
+	#### HUB (common routes, diplomacy unlocks at rule 3 positions) ####
+
+	focus = {
+		id = TU_VIC_exp_mandate
+		icon = GFX_goal_generic_national_unity
+		prerequisite = { focus = TU_VIC_crown_focus }
+		x = 0
+		y = 0
+		cost = 5
+
+		search_filters = { FOCUS_FILTER_POLITICAL }
+
+		completion_reward = {
+			add_political_power = 25
+			country_event = { id = tu_vic_ev.13 }
+		}
+	}
+
+	focus = {
+		id = TU_VIC_exp_survey
+		icon = GFX_goal_generic_radar
+		prerequisite = { focus = TU_VIC_exp_mandate }
+		x = 1
+		y = 1
+		cost = 10
+
+		search_filters = { FOCUS_FILTER_POLITICAL }
+
+		completion_reward = {
+			add_political_power = 25
+		}
+	}
+
+	focus = {
+		id = TU_VIC_exp_relations_open
+		icon = GFX_goal_generic_improve_relations
+		prerequisite = { focus = TU_VIC_exp_survey }
+		x = 2
+		y = 2
+		cost = 10
+
+		search_filters = { FOCUS_FILTER_POLITICAL }
+
+		completion_reward = {
+			set_country_flag = TU_dip_relations_unlocked
+			add_political_power = 50
+		}
+	}
+
+	focus = {
+		id = TU_VIC_exp_envoys
+		icon = GFX_goal_generic_scientific_exchange
+		prerequisite = { focus = TU_VIC_exp_relations_open }
+		x = 3
+		y = 3
+		cost = 10
+
+		search_filters = { FOCUS_FILTER_POLITICAL }
+
+		completion_reward = {
+			add_political_power = 25
+		}
+	}
+
+	focus = {
+		id = TU_VIC_exp_intel
+		icon = GFX_goal_generic_intelligence_exchange
+		prerequisite = { focus = TU_VIC_exp_envoys }
+		x = 4
+		y = 4
+		cost = 10
+
+		search_filters = { FOCUS_FILTER_POLITICAL }
+
+		completion_reward = {
+			add_stability = 0.01
+			add_political_power = 25
+		}
+	}
+
+	focus = {
+		id = TU_VIC_exp_war_council
+		icon = GFX_goal_generic_army_doctrines
+		prerequisite = { focus = TU_VIC_exp_intel }
+		x = 5
+		y = 5
+		cost = 10
+
+		search_filters = { FOCUS_FILTER_ARMY_XP }
+
+		completion_reward = {
+			army_experience = 15
+			add_political_power = 25
+		}
+	}
+
+	focus = {
+		id = TU_VIC_exp_alliance_search
+		icon = GFX_goal_generic_major_alliance
+		prerequisite = { focus = TU_VIC_exp_war_council }
+		x = 6
+		y = 6
+		cost = 10
+
+		search_filters = { FOCUS_FILTER_POLITICAL }
+
+		completion_reward = {
+			set_country_flag = TU_dip_alliance_unlocked
+			add_political_power = 50
+		}
+	}
+
+	focus = {
+		id = TU_VIC_exp_frontier_hub
+		icon = GFX_goal_generic_position_armies
+		prerequisite = { focus = TU_VIC_exp_alliance_search }
+		x = 7
+		y = 7
+		cost = 10
+
+		search_filters = { FOCUS_FILTER_POLITICAL }
+
+		completion_reward = {
+			add_political_power = 25
+		}
+	}
+
+	#### KAZDEL KZD - Londinium reclaim ####
+
+	focus = {
+		id = TU_VIC_kzd_border_scouts
+		icon = GFX_goal_generic_cavalry
+		prerequisite = { focus = TU_VIC_exp_frontier_hub }
+		x = 100
+		y = 10
+		cost = 5
+
+		search_filters = { FOCUS_FILTER_POLITICAL }
+
+		completion_reward = {
+			add_political_power = 25
+		}
+	}
+
+	focus = {
+		id = TU_VIC_kzd_thames_drills
+		icon = GFX_goal_generic_army_motorized
+		prerequisite = { focus = TU_VIC_kzd_border_scouts }
+		x = 101
+		y = 11
+		cost = 10
+
+		search_filters = { FOCUS_FILTER_ARMY_XP }
+
+		completion_reward = {
+			army_experience = 10
+			add_political_power = 25
+		}
+	}
+
+	focus = {
+		id = TU_VIC_kzd_envoy_note
+		icon = GFX_goal_generic_forceful_treaty
+		prerequisite = { focus = TU_VIC_kzd_thames_drills }
+		x = 102
+		y = 12
+		cost = 10
+
+		search_filters = { FOCUS_FILTER_POLITICAL }
+
+		completion_reward = {
+			add_political_power = 25
+		}
+	}
+
+	focus = {
+		id = TU_VIC_kzd_claim_londinium
+		icon = GFX_goal_generic_more_territorial_claims
+		prerequisite = { focus = TU_VIC_kzd_envoy_note }
+		x = 103
+		y = 13
+		cost = 15
+
+		search_filters = { FOCUS_FILTER_POLITICAL }
+
+		completion_reward = {
+			add_political_power = 100
+			country_event = { id = tu_vic_ev.9 }
+		}
+	}
+
+	focus = {
+		id = TU_VIC_kzd_border_forts
+		icon = GFX_goal_generic_fortify_city
+		prerequisite = { focus = TU_VIC_kzd_claim_londinium }
+		x = 104
+		y = 14
+		cost = 10
+
+		search_filters = { FOCUS_FILTER_POLITICAL }
+
+		completion_reward = {
+			add_stability = 0.01
+			add_political_power = 25
+		}
+	}
+
+	focus = {
+		id = TU_VIC_kzd_steam_rail
+		icon = GFX_goal_generic_construct_infrastructure
+		prerequisite = { focus = TU_VIC_kzd_border_forts }
+		x = 105
+		y = 15
+		cost = 10
+
+		search_filters = { FOCUS_FILTER_INDUSTRY }
+
+		completion_reward = {
+			add_political_power = 25
+		}
+	}
+
+	focus = {
+		id = TU_VIC_kzd_war_plans
+		icon = GFX_goal_generic_army_tanks
+		prerequisite = { focus = TU_VIC_kzd_steam_rail }
+		mutually_exclusive = { focus = TU_VIC_kzd_peace_talks }
+		x = 106
+		y = 16
+		cost = 10
+
+		search_filters = { FOCUS_FILTER_ARMY_XP }
+
+		completion_reward = {
+			army_experience = 10
+			add_political_power = 50
+		}
+	}
+
+	focus = {
+		id = TU_VIC_kzd_siege_prep
+		icon = GFX_goal_generic_army_artillery
+		prerequisite = { focus = TU_VIC_kzd_war_plans }
+		x = 107
+		y = 17
+		cost = 10
+
+		search_filters = { FOCUS_FILTER_ARMY_XP }
+
+		completion_reward = {
+			army_experience = 20
+			add_political_power = 50
+		}
+	}
+
+	focus = {
+		id = TU_VIC_kzd_peace_talks
+		icon = GFX_goal_generic_military_deal
+		prerequisite = { focus = TU_VIC_kzd_envoy_note }
+		mutually_exclusive = { focus = TU_VIC_kzd_war_plans }
+		x = 108
+		y = 18
+		cost = 10
+
+		search_filters = { FOCUS_FILTER_POLITICAL }
+
+		completion_reward = {
+			add_political_power = 25
+		}
+	}
+
+	focus = {
+		id = TU_VIC_kzd_trade_route
+		icon = GFX_goal_generic_trade
+		prerequisite = { focus = TU_VIC_kzd_peace_talks }
+		x = 109
+		y = 19
+		cost = 10
+
+		search_filters = { FOCUS_FILTER_POLITICAL }
+
+		completion_reward = {
+			add_political_power = 25
+		}
+	}
+
+	focus = {
+		id = TU_VIC_kzd_intel_exchange
+		icon = GFX_goal_generic_military_sphere
+		prerequisite = { focus = TU_VIC_kzd_trade_route }
+		x = 110
+		y = 20
+		cost = 10
+
+		search_filters = { FOCUS_FILTER_POLITICAL }
+
+		completion_reward = {
+			add_political_power = 25
+		}
+	}
+
+	focus = {
+		id = TU_VIC_kzd_security_pledge
+		icon = GFX_goal_generic_defence
+		prerequisite = { focus = TU_VIC_kzd_intel_exchange }
+		x = 111
+		y = 21
+		cost = 10
+
+		search_filters = { FOCUS_FILTER_POLITICAL }
+
+		completion_reward = {
+			add_political_power = 50
+		}
+	}
+
+	focus = {
+		id = TU_VIC_kzd_nonaggression
+		icon = GFX_goal_generic_neutrality_focus
+		prerequisite = { focus = TU_VIC_kzd_security_pledge }
+		x = 112
+		y = 22
+		cost = 10
+
+		search_filters = { FOCUS_FILTER_POLITICAL }
+
+		completion_reward = {
+			add_political_power = 50
+		}
+	}
+
+	focus = {
+		id = TU_VIC_kzd_garrison
+		icon = GFX_goal_generic_occupy_start_war
+		prerequisite = { focus = TU_VIC_kzd_siege_prep }
+		x = 113
+		y = 23
+		cost = 10
+
+		search_filters = { FOCUS_FILTER_ARMY_XP }
+
+		completion_reward = {
+			army_experience = 10
+			add_political_power = 25
+		}
+	}
+
+	focus = {
+		id = TU_VIC_kzd_occupation_admin
+		icon = GFX_goal_generic_occupy_states_ongoing_war
+		prerequisite = { focus = TU_VIC_kzd_garrison }
+		x = 114
+		y = 24
+		cost = 10
+
+		search_filters = { FOCUS_FILTER_POLITICAL }
+
+		completion_reward = {
+			add_stability = 0.01
+			add_political_power = 25
+		}
+	}
+
+	focus = {
+		id = TU_VIC_kzd_victory_parade
+		icon = GFX_goal_generic_propaganda
+		prerequisite = { focus = TU_VIC_kzd_occupation_admin }
+		x = 115
+		y = 25
+		cost = 10
+
+		search_filters = { FOCUS_FILTER_POLITICAL }
+
+		completion_reward = {
+			add_stability = 0.02
+			add_political_power = 75
+			country_event = { id = tu_vic_ev.10 }
+		}
+	}
+
+	focus = {
+		id = TU_VIC_kzd_mercenaries
+		icon = GFX_goal_generic_small_arms
+		prerequisite = { focus = TU_VIC_kzd_garrison }
+		mutually_exclusive = { focus = TU_VIC_kzd_mercenaries_alt }
+		x = 116
+		y = 26
+		cost = 10
+
+		search_filters = { FOCUS_FILTER_ARMY_XP }
+
+		completion_reward = {
+			army_experience = 10
+			add_political_power = 25
+		}
+	}
+
+	focus = {
+		id = TU_VIC_kzd_mercenaries_alt
+		icon = GFX_goal_generic_fortify_city
+		prerequisite = { focus = TU_VIC_kzd_garrison }
+		mutually_exclusive = { focus = TU_VIC_kzd_mercenaries }
+		x = 0
+		y = 0
+		cost = 10
+
+		search_filters = { FOCUS_FILTER_STABILITY }
+
+		ai_will_do = {
+			base = 1
+		}
+
+		completion_reward = {
+			add_political_power = 25
+			add_stability = 0.01
+		}
+	}
+
+	focus = {
+		id = TU_VIC_kzd_spoils
+		icon = GFX_goal_generic_construct_civ_factory
+		prerequisite = { focus = TU_VIC_kzd_victory_parade }
+		x = 117
+		y = 27
+		cost = 10
+
+		search_filters = { FOCUS_FILTER_INDUSTRY }
+
+		completion_reward = {
+			add_ideas = TU_VIC_exp_londinium_vow
+			add_political_power = 50
+		}
+	}
+
+	#### LEITHANIEN LEI - central border ####
+
+	focus = {
+		id = TU_VIC_lei_envoy_road
+		icon = GFX_goal_generic_positive_trade_relations
+		prerequisite = { focus = TU_VIC_exp_frontier_hub }
+		x = 200
+		y = 10
+		cost = 5
+
+		search_filters = { FOCUS_FILTER_POLITICAL }
+
+		completion_reward = {
+			add_political_power = 25
+		}
+	}
+
+	focus = {
+		id = TU_VIC_lei_border_watch
+		icon = GFX_goal_generic_cavalry
+		prerequisite = { focus = TU_VIC_lei_envoy_road }
+		x = 201
+		y = 11
+		cost = 10
+
+		search_filters = { FOCUS_FILTER_POLITICAL }
+
+		completion_reward = {
+			add_political_power = 25
+		}
+	}
+
+	focus = {
+		id = TU_VIC_lei_culture_exchange
+		icon = GFX_goal_generic_scientific_exchange
+		prerequisite = { focus = TU_VIC_lei_border_watch }
+		x = 202
+		y = 12
+		cost = 10
+
+		search_filters = { FOCUS_FILTER_POLITICAL }
+
+		completion_reward = {
+			add_stability = 0.01
+			add_political_power = 25
+		}
+	}
+
+	focus = {
+		id = TU_VIC_lei_claim
+		icon = GFX_goal_generic_more_territorial_claims
+		prerequisite = { focus = TU_VIC_lei_culture_exchange }
+		x = 203
+		y = 13
+		cost = 15
+
+		search_filters = { FOCUS_FILTER_POLITICAL }
+
+		completion_reward = {
+			add_political_power = 100
+		}
+	}
+
+	focus = {
+		id = TU_VIC_lei_mountain_fort
+		icon = GFX_goal_generic_fortify_city
+		prerequisite = { focus = TU_VIC_lei_claim }
+		x = 204
+		y = 14
+		cost = 10
+
+		search_filters = { FOCUS_FILTER_POLITICAL }
+
+		completion_reward = {
+			add_political_power = 25
+		}
+	}
+
+	focus = {
+		id = TU_VIC_lei_grand_drill
+		icon = GFX_goal_generic_allies_build_infantry
+		prerequisite = { focus = TU_VIC_lei_mountain_fort }
+		x = 205
+		y = 15
+		cost = 10
+
+		search_filters = { FOCUS_FILTER_ARMY_XP }
+
+		completion_reward = {
+			army_experience = 15
+			add_political_power = 25
+		}
+	}
+
+	focus = {
+		id = TU_VIC_lei_war_plans
+		icon = GFX_goal_generic_demand_territory
+		prerequisite = { focus = TU_VIC_lei_grand_drill }
+		mutually_exclusive = { focus = TU_VIC_lei_treaty_talks }
+		x = 206
+		y = 16
+		cost = 10
+
+		search_filters = { FOCUS_FILTER_POLITICAL }
+
+		completion_reward = {
+			add_political_power = 50
+		}
+	}
+
+	focus = {
+		id = TU_VIC_lei_treaty_talks
+		icon = GFX_goal_generic_improve_relations
+		prerequisite = { focus = TU_VIC_lei_culture_exchange }
+		mutually_exclusive = { focus = TU_VIC_lei_war_plans }
+		x = 207
+		y = 17
+		cost = 10
+
+		search_filters = { FOCUS_FILTER_POLITICAL }
+
+		completion_reward = {
+			add_political_power = 25
+		}
+	}
+
+	focus = {
+		id = TU_VIC_lei_security_pledge
+		icon = GFX_goal_generic_defence
+		prerequisite = { focus = TU_VIC_lei_treaty_talks }
+		x = 208
+		y = 18
+		cost = 10
+
+		search_filters = { FOCUS_FILTER_POLITICAL }
+
+		completion_reward = {
+			add_political_power = 50
+		}
+	}
+
+	focus = {
+		id = TU_VIC_lei_nonaggression
+		icon = GFX_goal_generic_neutrality_focus
+		prerequisite = { focus = TU_VIC_lei_security_pledge }
+		x = 209
+		y = 19
+		cost = 10
+
+		search_filters = { FOCUS_FILTER_POLITICAL }
+
+		completion_reward = {
+			add_political_power = 50
+		}
+	}
+
+	focus = {
+		id = TU_VIC_lei_supply_hub
+		icon = GFX_goal_generic_construct_infrastructure
+		prerequisite = { focus = TU_VIC_lei_mountain_fort }
+		x = 210
+		y = 20
+		cost = 10
+
+		search_filters = { FOCUS_FILTER_INDUSTRY }
+
+		completion_reward = {
+			add_political_power = 25
+		}
+	}
+
+	focus = {
+		id = TU_VIC_lei_march_route
+		icon = GFX_goal_generic_army_motorized
+		prerequisite = { focus = TU_VIC_lei_supply_hub }
+		x = 211
+		y = 21
+		cost = 10
+
+		search_filters = { FOCUS_FILTER_ARMY_XP }
+
+		completion_reward = {
+			army_experience = 10
+			add_political_power = 50
+		}
+	}
+
+	focus = {
+		id = TU_VIC_lei_iron_roads
+		icon = GFX_goal_generic_construct_civilian
+		prerequisite = { focus = TU_VIC_lei_march_route }
+		x = 212
+		y = 22
+		cost = 10
+
+		search_filters = { FOCUS_FILTER_INDUSTRY }
+
+		completion_reward = {
+			add_political_power = 25
+		}
+	}
+
+	focus = {
+		id = TU_VIC_lei_peace_festival
+		icon = GFX_goal_generic_consumer_goods
+		prerequisite = { focus = TU_VIC_lei_nonaggression }
+		x = 213
+		y = 23
+		cost = 10
+
+		search_filters = { FOCUS_FILTER_POLITICAL }
+
+		completion_reward = {
+			add_political_power = 50
+		}
+	}
+
+	focus = {
+		id = TU_VIC_lei_union_treaty
+		icon = GFX_goal_generic_major_alliance
+		prerequisite = { focus = TU_VIC_lei_peace_festival }
+		x = 214
+		y = 24
+		cost = 10
+
+		search_filters = { FOCUS_FILTER_POLITICAL }
+
+		completion_reward = {
+			add_political_power = 75
+		}
+	}
+
+	focus = {
+		id = TU_VIC_lei_summit
+		icon = GFX_goal_generic_improve_relations
+		prerequisite = { focus = TU_VIC_lei_union_treaty }
+		x = 215
+		y = 25
+		cost = 10
+
+		search_filters = { FOCUS_FILTER_POLITICAL }
+
+		completion_reward = {
+			add_political_power = 25
+		}
+	}
+
+	#### COLUMBIA COL - coastal and colonial ####
+
+	focus = {
+		id = TU_VIC_col_port_survey
+		icon = GFX_goal_generic_construct_naval_dockyard
+		prerequisite = { focus = TU_VIC_exp_frontier_hub }
+		x = 300
+		y = 10
+		cost = 5
+
+		search_filters = { FOCUS_FILTER_POLITICAL }
+
+		completion_reward = {
+			add_political_power = 25
+		}
+	}
+
+	focus = {
+		id = TU_VIC_col_shipping_lanes
+		icon = GFX_goal_generic_navy_doctrines_tactics
+		prerequisite = { focus = TU_VIC_col_port_survey }
+		x = 301
+		y = 11
+		cost = 10
+
+		search_filters = { FOCUS_FILTER_POLITICAL }
+
+		completion_reward = {
+			add_political_power = 25
+		}
+	}
+
+	focus = {
+		id = TU_VIC_col_merchant_guilds
+		icon = GFX_goal_generic_trade
+		prerequisite = { focus = TU_VIC_col_shipping_lanes }
+		x = 302
+		y = 12
+		cost = 10
+
+		search_filters = { FOCUS_FILTER_POLITICAL }
+
+		completion_reward = {
+			add_political_power = 25
+		}
+	}
+
+	focus = {
+		id = TU_VIC_col_claim
+		icon = GFX_goal_generic_more_territorial_claims
+		prerequisite = { focus = TU_VIC_col_merchant_guilds }
+		x = 303
+		y = 13
+		cost = 15
+
+		search_filters = { FOCUS_FILTER_POLITICAL }
+
+		completion_reward = {
+			add_political_power = 100
+		}
+	}
+
+	focus = {
+		id = TU_VIC_col_naval_base
+		icon = GFX_goal_generic_build_navy
+		prerequisite = { focus = TU_VIC_col_claim }
+		x = 304
+		y = 14
+		cost = 10
+
+		search_filters = { FOCUS_FILTER_INDUSTRY }
+
+		completion_reward = {
+			add_political_power = 50
+		}
+	}
+
+	focus = {
+		id = TU_VIC_col_colonial_charter
+		icon = GFX_goal_generic_construct_civilian
+		prerequisite = { focus = TU_VIC_col_naval_base }
+		x = 305
+		y = 15
+		cost = 10
+
+		search_filters = { FOCUS_FILTER_POLITICAL }
+
+		completion_reward = {
+			add_ideas = TU_VIC_exp_colonial_charter
+			add_political_power = 25
+		}
+	}
+
+	focus = {
+		id = TU_VIC_col_war_fleet
+		icon = GFX_goal_generic_navy_battleship
+		prerequisite = { focus = TU_VIC_col_colonial_charter }
+		mutually_exclusive = { focus = TU_VIC_col_trade_talks }
+		x = 306
+		y = 16
+		cost = 10
+
+		search_filters = { FOCUS_FILTER_POLITICAL }
+
+		completion_reward = {
+			add_political_power = 50
+		}
+	}
+
+	focus = {
+		id = TU_VIC_col_trade_talks
+		icon = GFX_goal_generic_positive_trade_relations
+		prerequisite = { focus = TU_VIC_col_merchant_guilds }
+		mutually_exclusive = { focus = TU_VIC_col_war_fleet }
+		x = 307
+		y = 17
+		cost = 10
+
+		search_filters = { FOCUS_FILTER_POLITICAL }
+
+		completion_reward = {
+			add_political_power = 25
+		}
+	}
+
+	focus = {
+		id = TU_VIC_col_nonaggression
+		icon = GFX_goal_generic_neutrality_focus
+		prerequisite = { focus = TU_VIC_col_trade_talks }
+		x = 308
+		y = 18
+		cost = 10
+
+		search_filters = { FOCUS_FILTER_POLITICAL }
+
+		completion_reward = {
+			add_political_power = 50
+		}
+	}
+
+	focus = {
+		id = TU_VIC_col_security_pledge
+		icon = GFX_goal_generic_defence
+		prerequisite = { focus = TU_VIC_col_nonaggression }
+		x = 309
+		y = 19
+		cost = 10
+
+		search_filters = { FOCUS_FILTER_POLITICAL }
+
+		completion_reward = {
+			add_political_power = 50
+		}
+	}
+
+	focus = {
+		id = TU_VIC_col_fleet_review
+		icon = GFX_goal_generic_navy_carrier
+		prerequisite = { focus = TU_VIC_col_security_pledge }
+		x = 310
+		y = 20
+		cost = 10
+
+		search_filters = { FOCUS_FILTER_POLITICAL }
+
+		completion_reward = {
+			add_stability = 0.01
+			add_political_power = 25
+		}
+	}
+
+	focus = {
+		id = TU_VIC_col_tariff_reform
+		icon = GFX_goal_generic_dangerous_deal
+		prerequisite = { focus = TU_VIC_col_shipping_lanes }
+		x = 311
+		y = 21
+		cost = 10
+
+		search_filters = { FOCUS_FILTER_POLITICAL }
+
+		completion_reward = {
+			add_political_power = 25
+		}
+	}
+
+	focus = {
+		id = TU_VIC_col_trade_fair
+		icon = GFX_goal_generic_construction
+		prerequisite = { focus = TU_VIC_col_tariff_reform }
+		x = 312
+		y = 22
+		cost = 10
+
+		search_filters = { FOCUS_FILTER_POLITICAL }
+
+		completion_reward = {
+			add_political_power = 25
+		}
+	}
+
+	focus = {
+		id = TU_VIC_col_expedition_fund
+		icon = GFX_goal_generic_production
+		prerequisite = { focus = TU_VIC_col_trade_fair }
+		x = 313
+		y = 23
+		cost = 10
+
+		search_filters = { FOCUS_FILTER_POLITICAL }
+
+		completion_reward = {
+			add_political_power = 50
+		}
+	}
+
+	focus = {
+		id = TU_VIC_col_colonial_war_ready
+		icon = GFX_goal_generic_navy_doctrines_tactics
+		prerequisite = { focus = TU_VIC_col_expedition_fund }
+		x = 314
+		y = 24
+		cost = 10
+
+		search_filters = { FOCUS_FILTER_ARMY_XP }
+
+		completion_reward = {
+			army_experience = 10
+			add_political_power = 25
+		}
+	}
+
+	focus = {
+		id = TU_VIC_col_harbour_legacy
+		icon = GFX_goal_generic_build_navy
+		prerequisite = { focus = TU_VIC_col_colonial_war_ready }
+		x = 315
+		y = 25
+		cost = 10
+
+		search_filters = { FOCUS_FILTER_POLITICAL }
+
+		completion_reward = {
+			add_stability = 0.02
+			add_political_power = 75
+		}
+	}
+
+	#### BOLIVAR BOL - highlands and resources ####
+
+	focus = {
+		id = TU_VIC_bol_highland_survey
+		icon = GFX_goal_generic_radar
+		prerequisite = { focus = TU_VIC_exp_frontier_hub }
+		x = 400
+		y = 10
+		cost = 5
+
+		search_filters = { FOCUS_FILTER_POLITICAL }
+
+		completion_reward = {
+			add_political_power = 25
+		}
+	}
+
+	focus = {
+		id = TU_VIC_bol_mining_deal
+		icon = GFX_goal_generic_oil_refinery
+		prerequisite = { focus = TU_VIC_bol_highland_survey }
+		x = 401
+		y = 11
+		cost = 10
+
+		search_filters = { FOCUS_FILTER_INDUSTRY }
+
+		completion_reward = {
+			add_political_power = 25
+		}
+	}
+
+	focus = {
+		id = TU_VIC_bol_claim
+		icon = GFX_goal_generic_more_territorial_claims
+		prerequisite = { focus = TU_VIC_bol_mining_deal }
+		x = 402
+		y = 12
+		cost = 15
+
+		search_filters = { FOCUS_FILTER_POLITICAL }
+
+		completion_reward = {
+			add_political_power = 100
+		}
+	}
+
+	focus = {
+		id = TU_VIC_bol_mountain_training
+		icon = GFX_goal_generic_cavalry
+		prerequisite = { focus = TU_VIC_bol_claim }
+		x = 403
+		y = 13
+		cost = 10
+
+		search_filters = { FOCUS_FILTER_ARMY_XP }
+
+		completion_reward = {
+			army_experience = 15
+			add_political_power = 25
+		}
+	}
+
+	focus = {
+		id = TU_VIC_bol_highway
+		icon = GFX_goal_generic_construct_infrastructure
+		prerequisite = { focus = TU_VIC_bol_mountain_training }
+		x = 404
+		y = 14
+		cost = 10
+
+		search_filters = { FOCUS_FILTER_INDUSTRY }
+
+		completion_reward = {
+			add_political_power = 25
+		}
+	}
+
+	focus = {
+		id = TU_VIC_bol_war_plans
+		icon = GFX_goal_generic_army_motorized
+		prerequisite = { focus = TU_VIC_bol_highway }
+		mutually_exclusive = { focus = TU_VIC_bol_envoy_talks }
+		x = 405
+		y = 15
+		cost = 10
+
+		search_filters = { FOCUS_FILTER_POLITICAL }
+
+		completion_reward = {
+			add_political_power = 50
+		}
+	}
+
+	focus = {
+		id = TU_VIC_bol_supply_depot
+		icon = GFX_goal_generic_construct_military
+		prerequisite = { focus = TU_VIC_bol_highway }
+		x = 406
+		y = 16
+		cost = 10
+
+		search_filters = { FOCUS_FILTER_INDUSTRY }
+
+		completion_reward = {
+			add_political_power = 25
+		}
+	}
+
+	focus = {
+		id = TU_VIC_bol_envoy_talks
+		icon = GFX_goal_generic_improve_relations
+		prerequisite = { focus = TU_VIC_bol_mining_deal }
+		mutually_exclusive = { focus = TU_VIC_bol_war_plans }
+		x = 407
+		y = 17
+		cost = 10
+
+		search_filters = { FOCUS_FILTER_POLITICAL }
+
+		completion_reward = {
+			add_political_power = 25
+		}
+	}
+
+	focus = {
+		id = TU_VIC_bol_opinion_campaign
+		icon = GFX_goal_generic_propaganda
+		prerequisite = { focus = TU_VIC_bol_envoy_talks }
+		x = 408
+		y = 18
+		cost = 10
+
+		search_filters = { FOCUS_FILTER_POLITICAL }
+
+		completion_reward = {
+			add_political_power = 25
+		}
+	}
+
+	focus = {
+		id = TU_VIC_bol_security_pledge
+		icon = GFX_goal_generic_defence
+		prerequisite = { focus = TU_VIC_bol_opinion_campaign }
+		x = 409
+		y = 19
+		cost = 10
+
+		search_filters = { FOCUS_FILTER_POLITICAL }
+
+		completion_reward = {
+			add_political_power = 50
+		}
+	}
+
+	focus = {
+		id = TU_VIC_bol_nonaggression
+		icon = GFX_goal_generic_neutrality_focus
+		prerequisite = { focus = TU_VIC_bol_security_pledge }
+		x = 410
+		y = 20
+		cost = 10
+
+		search_filters = { FOCUS_FILTER_POLITICAL }
+
+		completion_reward = {
+			add_political_power = 50
+		}
+	}
+
+	focus = {
+		id = TU_VIC_bol_southern_fair
+		icon = GFX_goal_generic_trade
+		prerequisite = { focus = TU_VIC_bol_nonaggression }
+		x = 411
+		y = 21
+		cost = 10
+
+		search_filters = { FOCUS_FILTER_POLITICAL }
+
+		completion_reward = {
+			add_political_power = 25
+		}
+	}
+
+	focus = {
+		id = TU_VIC_bol_highland_parade
+		icon = GFX_goal_generic_consumer_goods
+		prerequisite = { focus = TU_VIC_bol_southern_fair }
+		x = 412
+		y = 22
+		cost = 10
+
+		search_filters = { FOCUS_FILTER_POLITICAL }
+
+		completion_reward = {
+			add_stability = 0.01
+			add_political_power = 50
+		}
+	}
+
+	focus = {
+		id = TU_VIC_bol_solidarity
+		icon = GFX_goal_generic_major_alliance
+		prerequisite = { focus = TU_VIC_bol_highland_parade }
+		x = 413
+		y = 23
+		cost = 10
+
+		search_filters = { FOCUS_FILTER_POLITICAL }
+
+		completion_reward = {
+			add_political_power = 75
+		}
+	}
+
+	focus = {
+		id = TU_VIC_bol_farm_development
+		icon = GFX_goal_generic_production
+		prerequisite = { focus = TU_VIC_bol_supply_depot }
+		x = 414
+		y = 24
+		cost = 10
+
+		search_filters = { FOCUS_FILTER_INDUSTRY }
+
+		completion_reward = {
+			add_political_power = 25
+		}
+	}
+
+	focus = {
+		id = TU_VIC_bol_liberation_day
+		icon = GFX_goal_generic_construct_civilian
+		prerequisite = { focus = TU_VIC_bol_solidarity }
+		x = 415
+		y = 25
+		cost = 10
+
+		search_filters = { FOCUS_FILTER_POLITICAL }
+
+		completion_reward = {
+			add_political_power = 50
+		}
+	}
+
+	#### URSUS URS - northern bloc ####
+
+	focus = {
+		id = TU_VIC_urs_border_summit
+		icon = GFX_goal_generic_dangerous_deal
+		prerequisite = { focus = TU_VIC_exp_frontier_hub }
+		x = 500
+		y = 10
+		cost = 5
+
+		search_filters = { FOCUS_FILTER_POLITICAL }
+
+		completion_reward = {
+			add_political_power = 25
+		}
+	}
+
+	focus = {
+		id = TU_VIC_urs_winter_trade
+		icon = GFX_goal_generic_trade
+		prerequisite = { focus = TU_VIC_urs_border_summit }
+		x = 501
+		y = 11
+		cost = 10
+
+		search_filters = { FOCUS_FILTER_POLITICAL }
+
+		completion_reward = {
+			add_political_power = 25
+		}
+	}
+
+	focus = {
+		id = TU_VIC_urs_snow_regiments
+		icon = GFX_goal_generic_allies_build_infantry
+		prerequisite = { focus = TU_VIC_urs_winter_trade }
+		x = 502
+		y = 12
+		cost = 10
+
+		search_filters = { FOCUS_FILTER_ARMY_XP }
+
+		completion_reward = {
+			army_experience = 15
+			add_political_power = 25
+		}
+	}
+
+	focus = {
+		id = TU_VIC_urs_claim
+		icon = GFX_goal_generic_more_territorial_claims
+		prerequisite = { focus = TU_VIC_urs_snow_regiments }
+		x = 503
+		y = 13
+		cost = 15
+
+		search_filters = { FOCUS_FILTER_POLITICAL }
+
+		completion_reward = {
+			add_political_power = 100
+		}
+	}
+
+	focus = {
+		id = TU_VIC_urs_northern_wall
+		icon = GFX_goal_generic_fortify_city
+		prerequisite = { focus = TU_VIC_urs_claim }
+		x = 504
+		y = 14
+		cost = 10
+
+		search_filters = { FOCUS_FILTER_POLITICAL }
+
+		completion_reward = {
+			add_political_power = 25
+		}
+	}
+
+	focus = {
+		id = TU_VIC_urs_north_rail
+		icon = GFX_goal_generic_construct_infrastructure
+		prerequisite = { focus = TU_VIC_urs_northern_wall }
+		x = 505
+		y = 15
+		cost = 10
+
+		search_filters = { FOCUS_FILTER_INDUSTRY }
+
+		completion_reward = {
+			add_political_power = 25
+		}
+	}
+
+	focus = {
+		id = TU_VIC_urs_offensive_plans
+		icon = GFX_goal_generic_army_tanks
+		prerequisite = { focus = TU_VIC_urs_north_rail }
+		mutually_exclusive = { focus = TU_VIC_urs_peace_talks }
+		x = 506
+		y = 16
+		cost = 10
+
+		search_filters = { FOCUS_FILTER_POLITICAL }
+
+		completion_reward = {
+			add_political_power = 50
+		}
+	}
+
+	focus = {
+		id = TU_VIC_urs_frozen_march
+		icon = GFX_goal_generic_army_motorized
+		prerequisite = { focus = TU_VIC_urs_offensive_plans }
+		x = 507
+		y = 17
+		cost = 10
+
+		search_filters = { FOCUS_FILTER_ARMY_XP }
+
+		completion_reward = {
+			army_experience = 20
+			add_political_power = 50
+		}
+	}
+
+	focus = {
+		id = TU_VIC_urs_siege_manual
+		icon = GFX_goal_generic_army_artillery
+		prerequisite = { focus = TU_VIC_urs_frozen_march }
+		x = 508
+		y = 18
+		cost = 10
+
+		search_filters = { FOCUS_FILTER_ARMY_XP }
+
+		completion_reward = {
+			army_experience = 5
+			add_political_power = 25
+		}
+	}
+
+	focus = {
+		id = TU_VIC_urs_peace_talks
+		icon = GFX_goal_generic_improve_relations
+		prerequisite = { focus = TU_VIC_urs_winter_trade }
+		mutually_exclusive = { focus = TU_VIC_urs_offensive_plans }
+		x = 509
+		y = 19
+		cost = 10
+
+		search_filters = { FOCUS_FILTER_POLITICAL }
+
+		completion_reward = {
+			add_political_power = 25
+		}
+	}
+
+	focus = {
+		id = TU_VIC_urs_nonaggression
+		icon = GFX_goal_generic_neutrality_focus
+		prerequisite = { focus = TU_VIC_urs_peace_talks }
+		x = 510
+		y = 20
+		cost = 10
+
+		search_filters = { FOCUS_FILTER_POLITICAL }
+
+		completion_reward = {
+			add_political_power = 50
+		}
+	}
+
+	focus = {
+		id = TU_VIC_urs_security_pledge
+		icon = GFX_goal_generic_defence
+		prerequisite = { focus = TU_VIC_urs_nonaggression }
+		x = 511
+		y = 21
+		cost = 10
+
+		search_filters = { FOCUS_FILTER_POLITICAL }
+
+		completion_reward = {
+			add_political_power = 50
+		}
+	}
+
+	focus = {
+		id = TU_VIC_urs_cultural_bridge
+		icon = GFX_goal_generic_scientific_exchange
+		prerequisite = { focus = TU_VIC_urs_security_pledge }
+		x = 512
+		y = 22
+		cost = 10
+
+		search_filters = { FOCUS_FILTER_POLITICAL }
+
+		completion_reward = {
+			add_stability = 0.01
+			add_political_power = 25
+		}
+	}
+
+	focus = {
+		id = TU_VIC_urs_scholars
+		icon = GFX_goal_generic_intelligence_exchange
+		prerequisite = { focus = TU_VIC_urs_cultural_bridge }
+		x = 513
+		y = 23
+		cost = 10
+
+		search_filters = { FOCUS_FILTER_POLITICAL }
+
+		completion_reward = {
+			add_political_power = 25
+		}
+	}
+
+	focus = {
+		id = TU_VIC_urs_northern_council
+		icon = GFX_goal_generic_national_unity
+		prerequisite = { focus = TU_VIC_urs_scholars }
+		x = 514
+		y = 24
+		cost = 10
+
+		search_filters = { FOCUS_FILTER_POLITICAL }
+
+		completion_reward = {
+			add_political_power = 50
+		}
+	}
+
+	focus = {
+		id = TU_VIC_urs_envoy_summit
+		icon = GFX_goal_generic_improve_relations
+		prerequisite = { focus = TU_VIC_urs_northern_council }
+		x = 515
+		y = 25
+		cost = 10
+
+		search_filters = { FOCUS_FILTER_POLITICAL }
+
+		completion_reward = {
+			add_political_power = 50
+		}
+	}
+
+	focus = {
+		id = TU_VIC_urs_northern_bloc
+		icon = GFX_goal_generic_major_alliance
+		prerequisite = { focus = TU_VIC_urs_envoy_summit }
+		x = 516
+		y = 26
+		cost = 10
+
+		search_filters = { FOCUS_FILTER_POLITICAL }
+
+		completion_reward = {
+			add_ideas = TU_VIC_exp_northern_bloc
+			add_political_power = 75
+		}
+	}
+
+	focus = {
+		id = TU_VIC_urs_frost_accord
+		icon = GFX_goal_generic_positive_trade_relations
+		prerequisite = { focus = TU_VIC_urs_northern_bloc }
+		x = 517
+		y = 27
+		cost = 10
+
+		search_filters = { FOCUS_FILTER_POLITICAL }
+
+		completion_reward = {
+			add_political_power = 25
+		}
+	}
+
+	#### KAZIMIERZ KAZ - eastern marches ####
+
+	focus = {
+		id = TU_VIC_kaz_frontier_survey
+		icon = GFX_goal_generic_radar
+		prerequisite = { focus = TU_VIC_exp_frontier_hub }
+		x = 600
+		y = 10
+		cost = 5
+
+		search_filters = { FOCUS_FILTER_POLITICAL }
+
+		completion_reward = {
+			add_political_power = 25
+		}
+	}
+
+	focus = {
+		id = TU_VIC_kaz_river_forts
+		icon = GFX_goal_generic_fortify_city
+		prerequisite = { focus = TU_VIC_kaz_frontier_survey }
+		x = 601
+		y = 11
+		cost = 10
+
+		search_filters = { FOCUS_FILTER_POLITICAL }
+
+		completion_reward = {
+			add_political_power = 25
+		}
+	}
+
+	focus = {
+		id = TU_VIC_kaz_archive
+		icon = GFX_goal_generic_construction
+		prerequisite = { focus = TU_VIC_kaz_river_forts }
+		x = 602
+		y = 12
+		cost = 10
+
+		search_filters = { FOCUS_FILTER_POLITICAL }
+
+		completion_reward = {
+			add_political_power = 25
+		}
+	}
+
+	focus = {
+		id = TU_VIC_kaz_claim
+		icon = GFX_goal_generic_more_territorial_claims
+		prerequisite = { focus = TU_VIC_kaz_archive }
+		x = 603
+		y = 13
+		cost = 15
+
+		search_filters = { FOCUS_FILTER_POLITICAL }
+
+		completion_reward = {
+			add_political_power = 100
+		}
+	}
+
+	focus = {
+		id = TU_VIC_kaz_levies
+		icon = GFX_goal_generic_allies_build_infantry
+		prerequisite = { focus = TU_VIC_kaz_claim }
+		x = 604
+		y = 14
+		cost = 10
+
+		search_filters = { FOCUS_FILTER_ARMY_XP }
+
+		completion_reward = {
+			army_experience = 15
+			add_political_power = 25
+		}
+	}
+
+	focus = {
+		id = TU_VIC_kaz_war_plans
+		icon = GFX_goal_generic_army_tanks
+		prerequisite = { focus = TU_VIC_kaz_levies }
+		mutually_exclusive = { focus = TU_VIC_kaz_talks }
+		x = 605
+		y = 15
+		cost = 10
+
+		search_filters = { FOCUS_FILTER_POLITICAL }
+
+		completion_reward = {
+			add_political_power = 50
+		}
+	}
+
+	focus = {
+		id = TU_VIC_kaz_eastern_supply
+		icon = GFX_goal_generic_construct_infrastructure
+		prerequisite = { focus = TU_VIC_kaz_war_plans }
+		x = 606
+		y = 16
+		cost = 10
+
+		search_filters = { FOCUS_FILTER_INDUSTRY }
+
+		completion_reward = {
+			add_political_power = 25
+		}
+	}
+
+	focus = {
+		id = TU_VIC_kaz_eastern_crusade
+		icon = GFX_goal_generic_army_doctrines
+		prerequisite = { focus = TU_VIC_kaz_eastern_supply }
+		x = 607
+		y = 17
+		cost = 10
+
+		search_filters = { FOCUS_FILTER_POLITICAL }
+
+		completion_reward = {
+			add_war_support = 0.05
+			add_ideas = TU_VIC_exp_frontier_legion
+			add_political_power = 50
+		}
+	}
+
+	focus = {
+		id = TU_VIC_kaz_talks
+		icon = GFX_goal_generic_military_deal
+		prerequisite = { focus = TU_VIC_kaz_river_forts }
+		mutually_exclusive = { focus = TU_VIC_kaz_war_plans }
+		x = 608
+		y = 18
+		cost = 10
+
+		search_filters = { FOCUS_FILTER_POLITICAL }
+
+		completion_reward = {
+			add_political_power = 25
+		}
+	}
+
+	focus = {
+		id = TU_VIC_kaz_opinion
+		icon = GFX_goal_generic_propaganda
+		prerequisite = { focus = TU_VIC_kaz_talks }
+		x = 609
+		y = 19
+		cost = 10
+
+		search_filters = { FOCUS_FILTER_POLITICAL }
+
+		completion_reward = {
+			add_political_power = 25
+		}
+	}
+
+	focus = {
+		id = TU_VIC_kaz_nonaggression
+		icon = GFX_goal_generic_neutrality_focus
+		prerequisite = { focus = TU_VIC_kaz_opinion }
+		x = 610
+		y = 20
+		cost = 10
+
+		search_filters = { FOCUS_FILTER_POLITICAL }
+
+		completion_reward = {
+			add_political_power = 50
+		}
+	}
+
+	focus = {
+		id = TU_VIC_kaz_security_pledge
+		icon = GFX_goal_generic_defence
+		prerequisite = { focus = TU_VIC_kaz_nonaggression }
+		x = 611
+		y = 21
+		cost = 10
+
+		search_filters = { FOCUS_FILTER_POLITICAL }
+
+		completion_reward = {
+			add_political_power = 50
+		}
+	}
+
+	focus = {
+		id = TU_VIC_kaz_eastern_trade
+		icon = GFX_goal_generic_trade
+		prerequisite = { focus = TU_VIC_kaz_security_pledge }
+		x = 612
+		y = 22
+		cost = 10
+
+		search_filters = { FOCUS_FILTER_POLITICAL }
+
+		completion_reward = {
+			add_political_power = 25
+		}
+	}
+
+	focus = {
+		id = TU_VIC_kaz_harvest_festival
+		icon = GFX_goal_generic_consumer_goods
+		prerequisite = { focus = TU_VIC_kaz_eastern_trade }
+		x = 613
+		y = 23
+		cost = 10
+
+		search_filters = { FOCUS_FILTER_POLITICAL }
+
+		completion_reward = {
+			add_stability = 0.01
+			add_political_power = 25
+		}
+	}
+
+	focus = {
+		id = TU_VIC_kaz_eastern_pact
+		icon = GFX_goal_generic_major_alliance
+		prerequisite = { focus = TU_VIC_kaz_harvest_festival }
+		x = 614
+		y = 24
+		cost = 10
+
+		search_filters = { FOCUS_FILTER_POLITICAL }
+
+		completion_reward = {
+			add_political_power = 75
+		}
+	}
+
+	focus = {
+		id = TU_VIC_kaz_settlers
+		icon = GFX_goal_generic_construct_civilian
+		prerequisite = { focus = TU_VIC_kaz_eastern_pact }
+		x = 615
+		y = 25
+		cost = 10
+
+		search_filters = { FOCUS_FILTER_POLITICAL }
+
+		completion_reward = {
+			add_stability = 0.01
+			add_political_power = 25
+		}
+	}
+
+	focus = {
+		id = TU_VIC_kaz_shared_memory
+		icon = GFX_goal_generic_propaganda
+		prerequisite = { focus = TU_VIC_kaz_settlers }
+		x = 616
+		y = 26
+		cost = 10
+
+		search_filters = { FOCUS_FILTER_POLITICAL }
+
+		completion_reward = {
+			add_political_power = 50
+		}
+	}
+
+	focus = {
+		id = TU_VIC_kaz_union_declaration
+		icon = GFX_goal_generic_major_alliance
+		prerequisite = { focus = TU_VIC_kaz_shared_memory }
+		x = 617
+		y = 27
+		cost = 10
+
+		search_filters = { FOCUS_FILTER_POLITICAL }
+
+		completion_reward = {
+			add_political_power = 75
+		}
+	}

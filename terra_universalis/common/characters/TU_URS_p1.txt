@@ -1,0 +1,57 @@
+characters = {
+
+	TU_URS_p1_guard_marshal = {
+		name = TU_URS_p1_guard_marshal
+		portraits = {
+			civilian = {
+				large = "GFX_Portrait_Europe_Generic_1"
+			}
+		}
+		corps_commander = {
+			traits = { harsh_leader politically_connected }
+			skill = 4
+			attack_skill = 3
+			defense_skill = 4
+			planning_skill = 3
+			logistics_skill = 3
+			legacy_id = -1
+		}
+	}
+
+	TU_URS_p2_hardline_general = {
+		name = TU_URS_p2_hardline_general
+		portraits = {
+			civilian = {
+				large = "GFX_Portrait_Europe_Generic_2"
+			}
+		}
+		corps_commander = {
+			traits = { inflexible_strategist offensive_doctrine }
+			skill = 4
+			attack_skill = 5
+			defense_skill = 3
+			planning_skill = 2
+			logistics_skill = 3
+			legacy_id = -1
+		}
+	}
+
+	TU_URS_p2_mobilisation_marshal = {
+		name = TU_URS_p2_mobilisation_marshal
+		portraits = {
+			civilian = {
+				large = "GFX_Portrait_Europe_Generic_3"
+			}
+		}
+		corps_commander = {
+			traits = { organisational_leader winter_specialist }
+			skill = 4
+			attack_skill = 3
+			defense_skill = 4
+			planning_skill = 4
+			logistics_skill = 3
+			legacy_id = -1
+		}
+	}
+
+}

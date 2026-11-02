@@ -1,0 +1,121 @@
+{
+  "map_size": [
+    512,
+    768
+  ],
+  "regions": [
+    {
+      "color": [
+        0,
+        0,
+        128
+      ],
+      "id": "sea",
+      "kind": "sea",
+      "prov_size": 3000
+    },
+    {
+      "color": [
+        40,
+        200,
+        200
+      ],
+      "id": "lake_tua",
+      "kind": "lake",
+      "prov_size": 300
+    },
+    {
+      "color": [
+        200,
+        60,
+        60
+      ],
+      "id": "tua_core",
+      "kind": "land",
+      "owner": "TUA",
+      "terrain": "plains",
+      "prov_size": 500,
+      "state_size": 6
+    },
+    {
+      "color": [
+        120,
+        90,
+        60
+      ],
+      "id": "tua_north",
+      "kind": "land",
+      "owner": "TUA",
+      "terrain": "forest",
+      "prov_size": 500,
+      "state_size": 6
+    },
+    {
+      "color": [
+        150,
+        150,
+        150
+      ],
+      "id": "waste_imp",
+      "kind": "impassable",
+      "owner": "TUA",
+      "terrain": "mountain",
+      "prov_size": 1500,
+      "state_size": 4
+    },
+    {
+      "color": [
+        180,
+        160,
+        100
+      ],
+      "id": "waste_pass",
+      "kind": "wasteland",
+      "owner": "TUB",
+      "terrain": "desert",
+      "prov_size": 700,
+      "state_size": 5
+    },
+    {
+      "color": [
+        60,
+        90,
+        200
+      ],
+      "id": "tub_core",
+      "kind": "land",
+      "owner": "TUB",
+      "terrain": "hills",
+      "prov_size": 500,
+      "state_size": 6
+    },
+    {
+      "color": [
+        90,
+        140,
+        220
+      ],
+      "id": "tub_south",
+      "kind": "land",
+      "owner": "TUB",
+      "terrain": "desert",
+      "prov_size": 500,
+      "state_size": 6
+    },
+    {
+      "color": [
+        60,
+        200,
+        60
+      ],
+      "id": "tub_island",
+      "kind": "land",
+      "owner": "TUB",
+      "terrain": "jungle",
+      "prov_size": 300,
+      "state_size": 3
+    }
+  ],
+  "strategic_land_states": 6,
+  "strategic_sea_provinces": 8
+}

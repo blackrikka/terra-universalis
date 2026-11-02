@@ -1,0 +1,789 @@
+add_namespace = tu_vic_ev
+
+# Victoria (VIC) national events. Namespace tu_vic_ev.
+# 1-15: country events fired from focus completion_reward (tools/focusgen/vic/*.txt).
+# 16-19: news events fired from focus completion_reward (every_country).
+# 20-27: monthly random events (common/on_actions/tu_vic_ev_on_actions.txt, on_monthly).
+# 28-29: chain follow-ups, fired with days = N from the option effects of 20 and 25.
+# One-time monthly events are guarded by country flags TU_VIC_ev_*. Nothing here polls.
+
+# 1. Focus TU_VIC_crown_focus: the vacant throne.
+country_event = {
+	id = tu_vic_ev.1
+	title = tu_vic_ev.1.t
+	desc = tu_vic_ev.1.d
+	picture = GFX_report_event_king_speech
+	is_triggered_only = yes
+
+	option = {
+		name = tu_vic_ev.1.a
+		ai_chance = { factor = 40 }
+		add_political_power = 25
+		add_power_balance_value = {
+			id = TU_VIC_bop
+			value = 0.03
+		}
+	}
+
+	option = {
+		name = tu_vic_ev.1.b
+		ai_chance = { factor = 30 }
+		add_power_balance_value = {
+			id = TU_VIC_bop
+			value = -0.03
+		}
+		add_stability = 0.01
+	}
+
+	option = {
+		name = tu_vic_ev.1.c
+		ai_chance = { factor = 30 }
+		add_stability = -0.01
+		add_political_power = 10
+	}
+}
+
+# 2. Focus TU_VIC_duk_route: the dukes' route starts.
+country_event = {
+	id = tu_vic_ev.2
+	title = tu_vic_ev.2.t
+	desc = tu_vic_ev.2.d
+	picture = GFX_report_event_generic_conference
+	is_triggered_only = yes
+
+	option = {
+		name = tu_vic_ev.2.a
+		ai_chance = { factor = 50 }
+		add_stability = 0.01
+		add_political_power = 25
+	}
+
+	option = {
+		name = tu_vic_ev.2.b
+		ai_chance = { factor = 50 }
+		add_political_power = 10
+		add_stability = 0.02
+	}
+}
+
+# 3. Focus TU_VIC_asl_route: Aslan declares his claim.
+country_event = {
+	id = tu_vic_ev.3
+	title = tu_vic_ev.3.t
+	desc = tu_vic_ev.3.d
+	picture = GFX_report_event_royal_parade
+	is_triggered_only = yes
+
+	option = {
+		name = tu_vic_ev.3.a
+		ai_chance = { factor = 50 }
+		add_political_power = 20
+		add_stability = 0.02
+	}
+
+	option = {
+		name = tu_vic_ev.3.b
+		ai_chance = { factor = 50 }
+		add_war_support = 0.03
+		add_stability = -0.01
+		add_power_balance_value = {
+			id = TU_VIC_bop
+			value = -0.02
+		}
+	}
+}
+
+# 4. Focus TU_VIC_drc_route: the Flame Line starts.
+country_event = {
+	id = tu_vic_ev.4
+	title = tu_vic_ev.4.t
+	desc = tu_vic_ev.4.d
+	picture = GFX_report_event_fascist_speech
+	is_triggered_only = yes
+
+	option = {
+		name = tu_vic_ev.4.a
+		ai_chance = { factor = 40 }
+		add_political_power = 25
+		add_war_support = 0.03
+	}
+
+	option = {
+		name = tu_vic_ev.4.b
+		ai_chance = { factor = 60 }
+		add_stability = 0.02
+		add_political_power = 10
+	}
+}
+
+# 5. Focus TU_VIC_par_route: the parliamentary route starts.
+country_event = {
+	id = tu_vic_ev.5
+	title = tu_vic_ev.5.t
+	desc = tu_vic_ev.5.d
+	picture = GFX_report_event_generic_parliament
+	is_triggered_only = yes
+
+	option = {
+		name = tu_vic_ev.5.a
+		ai_chance = { factor = 50 }
+		add_political_power = 25
+		add_stability = 0.01
+	}
+
+	option = {
+		name = tu_vic_ev.5.b
+		ai_chance = { factor = 50 }
+		add_stability = 0.02
+		add_power_balance_value = {
+			id = TU_VIC_bop
+			value = 0.02
+		}
+	}
+}
+
+# 6. Focus TU_VIC_dublinn_uprising: the Dublinn and Tara uprising.
+country_event = {
+	id = tu_vic_ev.6
+	title = tu_vic_ev.6.t
+	desc = tu_vic_ev.6.d
+	picture = GFX_report_event_generic_riot
+	is_triggered_only = yes
+
+	option = {
+		name = tu_vic_ev.6.a
+		ai_chance = { factor = 40 }
+		add_stability = 0.01
+		army_experience = 20
+	}
+
+	option = {
+		name = tu_vic_ev.6.b
+		ai_chance = { factor = 40 }
+		add_stability = -0.01
+		add_political_power = 25
+	}
+
+	option = {
+		name = tu_vic_ev.6.c
+		ai_chance = { factor = 20 }
+		add_stability = -0.03
+	}
+}
+
+# 7. Focus TU_VIC_steam_knight_formation: the Steam Knights are founded.
+country_event = {
+	id = tu_vic_ev.7
+	title = tu_vic_ev.7.t
+	desc = tu_vic_ev.7.d
+	picture = GFX_report_event_generic_factory
+	is_triggered_only = yes
+
+	option = {
+		name = tu_vic_ev.7.a
+		ai_chance = { factor = 60 }
+		add_stability = 0.02
+		add_war_support = 0.02
+	}
+
+	option = {
+		name = tu_vic_ev.7.b
+		ai_chance = { factor = 40 }
+		army_experience = 25
+	}
+}
+
+# 8. Focus TU_VIC_glasgow_return: the Glasgow gangs return.
+country_event = {
+	id = tu_vic_ev.8
+	title = tu_vic_ev.8.t
+	desc = tu_vic_ev.8.d
+	picture = GFX_report_event_generic_rally
+	is_triggered_only = yes
+
+	option = {
+		name = tu_vic_ev.8.a
+		ai_chance = { factor = 40 }
+		add_political_power = 25
+		add_stability = -0.01
+		add_power_balance_value = {
+			id = TU_VIC_bop
+			value = -0.02
+		}
+	}
+
+	option = {
+		name = tu_vic_ev.8.b
+		ai_chance = { factor = 60 }
+		add_stability = 0.02
+		add_political_power = 10
+	}
+}
+
+# 9. Focus TU_VIC_kzd_claim_londinium: the claim to Londinium, held by Kazdel.
+country_event = {
+	id = tu_vic_ev.9
+	title = tu_vic_ev.9.t
+	desc = tu_vic_ev.9.d
+	picture = GFX_report_event_generic_battle
+	is_triggered_only = yes
+
+	option = {
+		name = tu_vic_ev.9.a
+		ai_chance = { factor = 50 }
+		add_political_power = 10
+		if = {
+			limit = {
+				country_exists = KZD
+			}
+			KZD = {
+				add_stability = -0.01
+			}
+		}
+	}
+
+	option = {
+		name = tu_vic_ev.9.b
+		ai_chance = { factor = 50 }
+		add_war_support = 0.03
+		army_experience = 10
+	}
+}
+
+# 10. Focus TU_VIC_kzd_victory_parade: the parade in recaptured Londinium.
+country_event = {
+	id = tu_vic_ev.10
+	title = tu_vic_ev.10.t
+	desc = tu_vic_ev.10.d
+	picture = GFX_report_event_generic_military_parade
+	is_triggered_only = yes
+
+	option = {
+		name = tu_vic_ev.10.a
+		ai_chance = { factor = 50 }
+		add_stability = 0.02
+		add_political_power = 25
+		add_timed_idea = {
+			idea = TU_VIC_ev_parade_pride
+			days = 120
+		}
+	}
+
+	option = {
+		name = tu_vic_ev.10.b
+		ai_chance = { factor = 50 }
+		add_stability = 0.01
+		add_war_support = 0.01
+	}
+}
+
+# 11. Focus TU_VIC_drc_purge_dublinn: the purge of Dublinn.
+country_event = {
+	id = tu_vic_ev.11
+	title = tu_vic_ev.11.t
+	desc = tu_vic_ev.11.d
+	picture = GFX_report_event_fascist_militia
+	is_triggered_only = yes
+
+	option = {
+		name = tu_vic_ev.11.a
+		ai_chance = { factor = 40 }
+		add_political_power = 25
+		add_stability = -0.02
+		add_war_support = 0.02
+	}
+
+	option = {
+		name = tu_vic_ev.11.b
+		ai_chance = { factor = 60 }
+		add_stability = 0.02
+		add_power_balance_value = {
+			id = TU_VIC_bop
+			value = 0.02
+		}
+	}
+}
+
+# 12. Focus TU_VIC_par_free_press: the free press law.
+country_event = {
+	id = tu_vic_ev.12
+	title = tu_vic_ev.12.t
+	desc = tu_vic_ev.12.d
+	picture = GFX_report_event_generic_read_write
+	is_triggered_only = yes
+
+	option = {
+		name = tu_vic_ev.12.a
+		ai_chance = { factor = 50 }
+		add_stability = 0.01
+		add_political_power = 15
+	}
+
+	option = {
+		name = tu_vic_ev.12.b
+		ai_chance = { factor = 50 }
+		add_stability = 0.02
+		add_political_power = 5
+	}
+}
+
+# 13. Focus TU_VIC_exp_mandate: the edict of the empty throne.
+country_event = {
+	id = tu_vic_ev.13
+	title = tu_vic_ev.13.t
+	desc = tu_vic_ev.13.d
+	picture = GFX_report_event_generic_conference
+	is_triggered_only = yes
+
+	option = {
+		name = tu_vic_ev.13.a
+		ai_chance = { factor = 40 }
+		add_political_power = 25
+		add_war_support = 0.03
+		add_stability = -0.01
+	}
+
+	option = {
+		name = tu_vic_ev.13.b
+		ai_chance = { factor = 60 }
+		army_experience = 15
+		add_stability = 0.01
+	}
+}
+
+# 14. Focus TU_VIC_asl_gang_pact: the gang pact.
+country_event = {
+	id = tu_vic_ev.14
+	title = tu_vic_ev.14.t
+	desc = tu_vic_ev.14.d
+	picture = GFX_report_event_generic_strike
+	is_triggered_only = yes
+
+	option = {
+		name = tu_vic_ev.14.a
+		ai_chance = { factor = 60 }
+		add_stability = 0.02
+		add_power_balance_value = {
+			id = TU_VIC_bop
+			value = -0.02
+		}
+	}
+
+	option = {
+		name = tu_vic_ev.14.b
+		ai_chance = { factor = 40 }
+		add_political_power = 10
+		add_stability = -0.01
+	}
+}
+
+# 15. Focus TU_VIC_drc_fascist_state: the Flame State is proclaimed.
+country_event = {
+	id = tu_vic_ev.15
+	title = tu_vic_ev.15.t
+	desc = tu_vic_ev.15.d
+	picture = GFX_report_event_fascist_gathering
+	is_triggered_only = yes
+
+	option = {
+		name = tu_vic_ev.15.a
+		ai_chance = { factor = 50 }
+		add_war_support = 0.03
+		add_stability = -0.02
+		add_political_power = 25
+	}
+
+	option = {
+		name = tu_vic_ev.15.b
+		ai_chance = { factor = 50 }
+		add_stability = 0.02
+		add_power_balance_value = {
+			id = TU_VIC_bop
+			value = 0.02
+		}
+	}
+}
+
+# 16. News (focus TU_VIC_siege_crowned): King Siege is crowned.
+news_event = {
+	id = tu_vic_ev.16
+	title = tu_vic_ev.16.t
+	desc = tu_vic_ev.16.d
+	picture = GFX_news_event_generic_rally
+	is_triggered_only = yes
+
+	option = {
+		name = tu_vic_ev.16.a
+	}
+}
+
+# 17. News (focus TU_VIC_asl_coronation): Aslan's coronation.
+news_event = {
+	id = tu_vic_ev.17
+	title = tu_vic_ev.17.t
+	desc = tu_vic_ev.17.d
+	picture = GFX_news_event_generic_rally2
+	is_triggered_only = yes
+
+	option = {
+		name = tu_vic_ev.17.a
+	}
+}
+
+# 18. News (focus TU_VIC_drc_draco_leader): the Draco leader takes power.
+news_event = {
+	id = tu_vic_ev.18
+	title = tu_vic_ev.18.t
+	desc = tu_vic_ev.18.d
+	picture = GFX_news_event_generic_rally_3
+	is_triggered_only = yes
+
+	option = {
+		name = tu_vic_ev.18.a
+	}
+}
+
+# 19. News (focus TU_VIC_par_pm_election): Parliament elects a prime minister.
+news_event = {
+	id = tu_vic_ev.19
+	title = tu_vic_ev.19.t
+	desc = tu_vic_ev.19.d
+	picture = GFX_news_event_generic_parliament
+	is_triggered_only = yes
+
+	option = {
+		name = tu_vic_ev.19.a
+	}
+}
+
+# 20. Monthly, once (flag TU_VIC_ev_docks): Glasgow dock riot. Option b starts chain A (28).
+country_event = {
+	id = tu_vic_ev.20
+	title = tu_vic_ev.20.t
+	desc = tu_vic_ev.20.d
+	picture = GFX_report_event_worker_protests
+	is_triggered_only = yes
+
+	trigger = {
+		tag = VIC
+		NOT = { has_country_flag = TU_VIC_ev_docks }
+	}
+
+	immediate = {
+		set_country_flag = TU_VIC_ev_docks
+	}
+
+	option = {
+		name = tu_vic_ev.20.a
+		ai_chance = { factor = 40 }
+		army_experience = 10
+		add_stability = 0.01
+	}
+
+	option = {
+		name = tu_vic_ev.20.b
+		ai_chance = { factor = 40 }
+		add_political_power = 10
+		country_event = {
+			id = tu_vic_ev.28
+			days = 30
+		}
+	}
+
+	option = {
+		name = tu_vic_ev.20.c
+		ai_chance = { factor = 20 }
+		add_stability = -0.01
+		add_power_balance_value = {
+			id = TU_VIC_bop
+			value = 0.02
+		}
+	}
+}
+
+# 21. Monthly, once (flag TU_VIC_ev_knight_march): Steam Knights test march.
+country_event = {
+	id = tu_vic_ev.21
+	title = tu_vic_ev.21.t
+	desc = tu_vic_ev.21.d
+	picture = GFX_report_event_generic_military_parade
+	is_triggered_only = yes
+
+	trigger = {
+		tag = VIC
+		has_idea = TU_VIC_steam_knights
+		NOT = { has_country_flag = TU_VIC_ev_knight_march }
+	}
+
+	immediate = {
+		set_country_flag = TU_VIC_ev_knight_march
+	}
+
+	option = {
+		name = tu_vic_ev.21.a
+		ai_chance = { factor = 50 }
+		add_war_support = 0.01
+		add_stability = 0.01
+	}
+
+	option = {
+		name = tu_vic_ev.21.b
+		ai_chance = { factor = 50 }
+		add_political_power = 5
+	}
+}
+
+# 22. Monthly, repeatable while stability is low: tax revolt.
+country_event = {
+	id = tu_vic_ev.22
+	title = tu_vic_ev.22.t
+	desc = tu_vic_ev.22.d
+	picture = GFX_report_event_generic_strike
+	is_triggered_only = yes
+
+	trigger = {
+		tag = VIC
+		has_stability < 0.5
+	}
+
+	option = {
+		name = tu_vic_ev.22.a
+		ai_chance = { factor = 50 }
+		add_stability = 0.02
+		add_power_balance_value = {
+			id = TU_VIC_bop
+			value = 0.01
+		}
+	}
+
+	option = {
+		name = tu_vic_ev.22.b
+		ai_chance = { factor = 50 }
+		add_stability = -0.02
+		add_political_power = 15
+	}
+}
+
+# 23. Monthly, once (flag TU_VIC_ev_duke_grumble): dukes grumble over the empty throne.
+country_event = {
+	id = tu_vic_ev.23
+	title = tu_vic_ev.23.t
+	desc = tu_vic_ev.23.d
+	picture = GFX_report_event_generic_conference
+	is_triggered_only = yes
+
+	trigger = {
+		tag = VIC
+		has_idea = TU_VIC_vacant_throne
+		NOT = { has_country_flag = TU_VIC_ev_duke_grumble }
+	}
+
+	immediate = {
+		set_country_flag = TU_VIC_ev_duke_grumble
+	}
+
+	option = {
+		name = tu_vic_ev.23.a
+		ai_chance = { factor = 50 }
+		add_stability = 0.02
+		add_power_balance_value = {
+			id = TU_VIC_bop
+			value = 0.02
+		}
+	}
+
+	option = {
+		name = tu_vic_ev.23.b
+		ai_chance = { factor = 50 }
+		add_stability = -0.01
+		add_political_power = 10
+	}
+}
+
+# 24. Monthly, once (flag TU_VIC_ev_smuggle): smuggling on the Thames.
+country_event = {
+	id = tu_vic_ev.24
+	title = tu_vic_ev.24.t
+	desc = tu_vic_ev.24.d
+	picture = GFX_report_event_generic_stock_traders
+	is_triggered_only = yes
+
+	trigger = {
+		tag = VIC
+		NOT = { has_country_flag = TU_VIC_ev_smuggle }
+	}
+
+	immediate = {
+		set_country_flag = TU_VIC_ev_smuggle
+	}
+
+	option = {
+		name = tu_vic_ev.24.a
+		ai_chance = { factor = 50 }
+		add_political_power = 15
+		add_stability = -0.01
+		add_power_balance_value = {
+			id = TU_VIC_bop
+			value = -0.01
+		}
+	}
+
+	option = {
+		name = tu_vic_ev.24.b
+		ai_chance = { factor = 50 }
+		add_stability = 0.01
+		add_timed_idea = {
+			idea = TU_VIC_ev_smuggling_trade
+			days = 180
+		}
+	}
+}
+
+# 25. Monthly, once (flag TU_VIC_ev_refugees, needs KZD): refugees from Londinium. Option b starts chain B (29).
+country_event = {
+	id = tu_vic_ev.25
+	title = tu_vic_ev.25.t
+	desc = tu_vic_ev.25.d
+	picture = GFX_report_event_generic_train
+	is_triggered_only = yes
+
+	trigger = {
+		tag = VIC
+		country_exists = KZD
+		NOT = { has_country_flag = TU_VIC_ev_refugees }
+	}
+
+	immediate = {
+		set_country_flag = TU_VIC_ev_refugees
+	}
+
+	option = {
+		name = tu_vic_ev.25.a
+		ai_chance = { factor = 50 }
+		add_stability = 0.01
+		add_political_power = 5
+	}
+
+	option = {
+		name = tu_vic_ev.25.b
+		ai_chance = { factor = 50 }
+		add_stability = -0.01
+		country_event = {
+			id = tu_vic_ev.29
+			days = 45
+		}
+	}
+}
+
+# 26. Monthly, repeatable while Parliament is in the game: petition to the Commons.
+country_event = {
+	id = tu_vic_ev.26
+	title = tu_vic_ev.26.t
+	desc = tu_vic_ev.26.d
+	picture = GFX_report_event_generic_read_write
+	is_triggered_only = yes
+
+	trigger = {
+		tag = VIC
+		has_idea = TU_VIC_parliament
+	}
+
+	option = {
+		name = tu_vic_ev.26.a
+		ai_chance = { factor = 50 }
+		add_stability = 0.01
+		add_political_power = 10
+	}
+
+	option = {
+		name = tu_vic_ev.26.b
+		ai_chance = { factor = 50 }
+		add_stability = -0.01
+		add_power_balance_value = {
+			id = TU_VIC_bop
+			value = 0.01
+		}
+	}
+}
+
+# 27. Monthly, once (flag TU_VIC_ev_counterfeit): counterfeit notes from the royal mint.
+country_event = {
+	id = tu_vic_ev.27
+	title = tu_vic_ev.27.t
+	desc = tu_vic_ev.27.d
+	picture = GFX_report_event_generic_truck
+	is_triggered_only = yes
+
+	trigger = {
+		tag = VIC
+		NOT = { has_country_flag = TU_VIC_ev_counterfeit }
+	}
+
+	immediate = {
+		set_country_flag = TU_VIC_ev_counterfeit
+	}
+
+	option = {
+		name = tu_vic_ev.27.a
+		ai_chance = { factor = 50 }
+		add_stability = 0.01
+		army_experience = 5
+	}
+
+	option = {
+		name = tu_vic_ev.27.b
+		ai_chance = { factor = 50 }
+		add_political_power = 10
+		add_stability = -0.01
+	}
+}
+
+# 28. Chain A follow-up (from event 20, option b, after 30 days): the gangs answer.
+country_event = {
+	id = tu_vic_ev.28
+	title = tu_vic_ev.28.t
+	desc = tu_vic_ev.28.d
+	picture = GFX_report_event_gathering_protest
+	is_triggered_only = yes
+
+	option = {
+		name = tu_vic_ev.28.a
+		ai_chance = { factor = 50 }
+		add_stability = -0.01
+		add_political_power = 15
+		add_power_balance_value = {
+			id = TU_VIC_bop
+			value = -0.02
+		}
+	}
+
+	option = {
+		name = tu_vic_ev.28.b
+		ai_chance = { factor = 50 }
+		add_stability = 0.02
+		add_political_power = 5
+	}
+}
+
+# 29. Chain B follow-up (from event 25, option b, after 45 days): the refugee camps.
+country_event = {
+	id = tu_vic_ev.29
+	title = tu_vic_ev.29.t
+	desc = tu_vic_ev.29.d
+	picture = GFX_report_event_generic_train
+	is_triggered_only = yes
+
+	option = {
+		name = tu_vic_ev.29.a
+		ai_chance = { factor = 50 }
+		add_stability = 0.02
+		add_manpower = 3000
+	}
+
+	option = {
+		name = tu_vic_ev.29.b
+		ai_chance = { factor = 50 }
+		add_stability = -0.02
+		add_political_power = 10
+	}
+}

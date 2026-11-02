@@ -1,0 +1,31 @@
+characters = {
+
+	TU_YAN_p1_high_priest = {
+		name = TU_YAN_p1_high_priest
+		portraits = {
+			civilian = {
+				large = "GFX_Portrait_Europe_Generic_4"
+			}
+		}
+		country_leader = {
+			ideology = fascism_ideology
+			expire = "1200.1.1.1"
+			id = -1
+		}
+	}
+
+	TU_YAN_p1_chancellor = {
+		name = TU_YAN_p1_chancellor
+		portraits = {
+			civilian = {
+				large = "GFX_Portrait_Europe_Generic_1"
+			}
+		}
+		country_leader = {
+			ideology = liberalism
+			expire = "1200.1.1.1"
+			id = -1
+		}
+	}
+
+}

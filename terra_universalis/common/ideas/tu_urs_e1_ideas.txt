@@ -1,0 +1,310 @@
+ideas = {
+
+	country = {
+
+		TU_URS_e1_state_planning = {
+			picture = generic_production_bonus
+			allowed = {
+				original_tag = URS
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			modifier = {
+				production_speed_buildings_factor = 0.05
+				stability_factor = -0.02
+			}
+		}
+
+		TU_URS_e1_market_economy = {
+			picture = generic_political_support
+			allowed = {
+				original_tag = URS
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			modifier = {
+				political_power_gain = 0.05
+				consumer_goods_factor = -0.05
+			}
+		}
+
+		TU_URS_e1_war_economy = {
+			picture = generic_war_preparation
+			allowed = {
+				original_tag = URS
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			modifier = {
+				production_speed_buildings_factor = 0.1
+				consumer_goods_factor = 0.05
+				war_support_factor = 0.05
+			}
+		}
+
+		TU_URS_e1_consumer_goods = {
+			picture = generic_agrarian_reform
+			allowed = {
+				original_tag = URS
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			modifier = {
+				consumer_goods_factor = -0.05
+				stability_factor = 0.03
+			}
+		}
+
+		TU_URS_e1_mobile_civil = {
+			picture = generic_build_infrastructure
+			allowed = {
+				original_tag = URS
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			modifier = {
+				monthly_population = 0.1
+				stability_factor = 0.02
+			}
+		}
+
+		TU_URS_e1_mobile_fort = {
+			picture = generic_fortify_the_borders
+			allowed = {
+				original_tag = URS
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			modifier = {
+				army_defence_factor = 0.05
+				dig_in_speed_factor = 0.1
+			}
+		}
+
+		TU_URS_e1_frost_supply = {
+			picture = generic_railroads
+			allowed = {
+				original_tag = URS
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			modifier = {
+				supply_consumption_factor = -0.1
+				winter_attrition_factor = -0.05
+			}
+		}
+
+		TU_URS_e1_mobile_core = {
+			picture = generic_build_infrastructure
+			allowed = {
+				original_tag = URS
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			modifier = {
+				production_speed_buildings_factor = 0.05
+				monthly_population = 0.05
+			}
+		}
+
+		TU_URS_e1_originium_monopoly = {
+			picture = generic_research_bonus
+			allowed = {
+				original_tag = URS
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			modifier = {
+				research_speed_factor = 0.05
+				stability_factor = -0.02
+			}
+		}
+
+		TU_URS_e2_mass_conscription = {
+			picture = generic_manpower_bonus
+			allowed = {
+				original_tag = URS
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			modifier = {
+				conscription_factor = 0.05
+				experience_gain_army_factor = -0.1
+			}
+		}
+
+		TU_URS_e2_arts_units = {
+			picture = generic_army_war_college
+			allowed = {
+				original_tag = URS
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			modifier = {
+				army_attack_factor = 0.03
+				experience_gain_army_factor = 0.1
+			}
+		}
+
+		TU_URS_e2_frozen_warfare = {
+			picture = generic_infantry_bonus
+			allowed = {
+				original_tag = URS
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			modifier = {
+				winter_attrition_factor = -0.1
+				army_defence_factor = 0.02
+			}
+		}
+
+		TU_URS_e2_artillery_doctrine = {
+			picture = generic_artillery_regiments
+			allowed = {
+				original_tag = URS
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			modifier = {
+				army_artillery_attack_factor = 0.05
+			}
+		}
+
+		TU_URS_e2_armour_doctrine = {
+			picture = generic_armor
+			allowed = {
+				original_tag = URS
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			modifier = {
+				army_armor_attack_factor = 0.05
+				training_time_army_factor = -0.05
+			}
+		}
+
+		TU_URS_e2_general_staff = {
+			picture = generic_army_war_college
+			allowed = {
+				original_tag = URS
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			modifier = {
+				training_time_army_factor = -0.1
+			}
+		}
+
+		TU_URS_e2_total_war = {
+			picture = generic_war_preparation
+			allowed = {
+				original_tag = URS
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			modifier = {
+				war_support_factor = 0.05
+				stability_factor = -0.03
+			}
+		}
+
+		TU_URS_e3_frozen_air = {
+			picture = generic_air_bonus
+			allowed = {
+				original_tag = URS
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			modifier = {
+				air_weather_penalty = -0.1
+			}
+		}
+
+		TU_URS_e3_arts_research = {
+			picture = generic_air_research
+			allowed = {
+				original_tag = URS
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			modifier = {
+				research_speed_factor = 0.1
+			}
+		}
+
+		TU_URS_e3_frost_supremacy = {
+			picture = elite_fighter_pilots_spirit
+			allowed = {
+				original_tag = URS
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			modifier = {
+				air_superiority_efficiency = 0.05
+				air_intercept_efficiency = 0.05
+			}
+		}
+
+		TU_URS_e3_northern_range = {
+			picture = generic_air_fighter
+			allowed = {
+				original_tag = URS
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			modifier = {
+				air_range_factor = 0.1
+			}
+		}
+
+		TU_URS_e4_labour_quota = {
+			picture = generic_purge
+			allowed = {
+				original_tag = URS
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			modifier = {
+				production_speed_buildings_factor = 0.05
+				stability_factor = -0.03
+			}
+		}
+
+		TU_URS_e4_rho_medical = {
+			picture = generic_political_support
+			allowed = {
+				original_tag = URS
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			modifier = {
+				stability_factor = 0.03
+				monthly_population = 0.05
+			}
+		}
+
+	}
+}

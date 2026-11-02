@@ -1,0 +1,493 @@
+	#### STEM: W4 WORLD (NORTHERN PACT / TERRA ORDER / RHODES / REUNION) ####
+
+	#### NORTHERN PACT: faction vs neutral security treaty ####
+
+	focus = {
+		id = TU_URS_w4_pact_entry
+		icon = GFX_goal_generic_national_unity
+		prerequisite = { focus = TU_URS_foreign_ministry }
+		x = 189
+		y = 2
+		cost = 5
+
+		search_filters = { FOCUS_FILTER_POLITICAL }
+
+		ai_will_do = {
+			base = 1
+		}
+
+		completion_reward = {
+			add_political_power = 25
+		}
+	}
+
+	focus = {
+		id = TU_URS_alliance_search
+		icon = GFX_goal_generic_improve_relations
+		prerequisite = { focus = TU_URS_w4_pact_entry }
+		x = 191
+		y = 2
+		cost = 10
+
+		search_filters = { FOCUS_FILTER_POLITICAL }
+
+		ai_will_do = {
+			base = 1
+		}
+
+		completion_reward = {
+			add_political_power = 50
+			set_country_flag = TU_dip_alliance_unlocked
+		}
+	}
+
+	focus = {
+		id = TU_URS_w4_pact_charter
+		icon = GFX_goal_generic_major_alliance
+		prerequisite = { focus = TU_URS_alliance_search }
+		available = {
+			NOT = { is_in_faction = yes }
+			NOT = { has_country_flag = TU_DEC_TU_URS_w4_pact_neutral }
+		}
+		x = 188
+		y = 3
+		cost = 15
+
+		search_filters = { FOCUS_FILTER_POLITICAL }
+
+		ai_will_do = {
+			base = 1
+		}
+
+		completion_reward = {
+			set_rule = { can_create_factions = yes }
+			create_faction = TU_URS_w4_northern_pact
+			if = {
+				limit = {
+					country_exists = KAZ
+					KAZ = { is_in_faction = no }
+				}
+				add_to_faction = KAZ
+			}
+			if = {
+				limit = {
+					country_exists = KJE
+					KJE = { is_in_faction = no }
+				}
+				add_to_faction = KJE
+			}
+			if = {
+				limit = {
+					country_exists = SAM
+					SAM = { is_in_faction = no }
+				}
+				add_to_faction = SAM
+			}
+			add_political_power = 50
+		}
+	}
+
+	focus = {
+		id = TU_URS_w4_pact_defence
+		icon = GFX_goal_generic_defence
+		prerequisite = { focus = TU_URS_w4_pact_charter }
+		x = 188
+		y = 4
+		cost = 10
+
+		search_filters = { FOCUS_FILTER_POLITICAL }
+
+		ai_will_do = {
+			base = 1
+		}
+
+		completion_reward = {
+			add_ideas = TU_URS_w4_idea_pact_unity
+			add_political_power = 25
+		}
+	}
+
+	focus = {
+		id = TU_URS_w4_pact_army
+		icon = GFX_goal_generic_army_doctrines
+		prerequisite = { focus = TU_URS_w4_pact_charter }
+		x = 190
+		y = 4
+		cost = 10
+
+		search_filters = { FOCUS_FILTER_ARMY_XP }
+
+		ai_will_do = {
+			base = 1
+		}
+
+		completion_reward = {
+			army_experience = 25
+			add_manpower = 15000
+		}
+	}
+
+	focus = {
+		id = TU_URS_w4_pact_summit
+		icon = GFX_goal_generic_improve_relations
+		prerequisite = { focus = TU_URS_w4_pact_defence }
+		x = 188
+		y = 6
+		cost = 10
+
+		search_filters = { FOCUS_FILTER_POLITICAL }
+
+		ai_will_do = {
+			base = 1
+		}
+
+		completion_reward = {
+			add_political_power = 75
+			add_stability = 0.02
+		}
+	}
+
+	focus = {
+		id = TU_URS_w4_pact_trade
+		icon = GFX_goal_generic_positive_trade_relations
+		prerequisite = { focus = TU_URS_w4_pact_army }
+		x = 190
+		y = 6
+		cost = 10
+
+		search_filters = { FOCUS_FILTER_INDUSTRY }
+
+		ai_will_do = {
+			base = 1
+		}
+
+		completion_reward = {
+			add_political_power = 50
+			add_stability = 0.02
+		}
+	}
+
+	focus = {
+		id = TU_URS_w4_pact_common_army
+		icon = GFX_goal_generic_army_artillery
+		prerequisite = { focus = TU_URS_w4_pact_summit }
+		available = { has_completed_focus = TU_URS_military_junta }
+		x = 188
+		y = 8
+		cost = 10
+
+		search_filters = { FOCUS_FILTER_ARMY_XP }
+
+		ai_will_do = {
+			base = 1
+		}
+
+		completion_reward = {
+			army_experience = 25
+			add_war_support = 0.05
+		}
+	}
+
+	focus = {
+		id = TU_URS_w4_pact_secretariat
+		icon = GFX_goal_generic_political_pressure
+		prerequisite = { focus = TU_URS_w4_pact_trade }
+		available = { has_completed_focus = TU_URS_reform_path }
+		x = 190
+		y = 8
+		cost = 10
+
+		search_filters = { FOCUS_FILTER_POLITICAL }
+
+		ai_will_do = {
+			base = 1
+		}
+
+		completion_reward = {
+			add_political_power = 50
+			add_stability = 0.02
+		}
+	}
+
+	#### TERRA ORDER: doctrine by force vs council by diplomacy, late wargoals ####
+
+	focus = {
+		id = TU_URS_w4_order_entry
+		icon = GFX_goal_generic_national_unity
+		prerequisite = { focus = TU_URS_foreign_ministry }
+		x = 193
+		y = 2
+		cost = 5
+
+		search_filters = { FOCUS_FILTER_POLITICAL }
+
+		ai_will_do = {
+			base = 1
+		}
+
+		completion_reward = {
+			add_political_power = 25
+		}
+	}
+
+	focus = {
+		id = TU_URS_w4_order_doctrine
+		icon = GFX_goal_generic_army_doctrines
+		prerequisite = { focus = TU_URS_w4_order_entry }
+		mutually_exclusive = { focus = TU_URS_w4_order_council }
+		available = { has_completed_focus = TU_URS_emperor_rule }
+		x = 192
+		y = 4
+		cost = 10
+
+		search_filters = { FOCUS_FILTER_ARMY_XP }
+
+		ai_will_do = {
+			base = 1
+		}
+
+		completion_reward = {
+			add_war_support = 0.05
+			army_experience = 15
+		}
+	}
+
+	focus = {
+		id = TU_URS_w4_order_council
+		icon = GFX_goal_generic_political_pressure
+		prerequisite = { focus = TU_URS_w4_order_entry }
+		mutually_exclusive = { focus = TU_URS_w4_order_doctrine }
+		x = 194
+		y = 4
+		cost = 10
+
+		search_filters = { FOCUS_FILTER_POLITICAL }
+
+		ai_will_do = {
+			base = 1
+		}
+
+		completion_reward = {
+			add_political_power = 50
+			add_stability = 0.03
+		}
+	}
+
+	focus = {
+		id = TU_URS_w4_order_mandate
+		icon = GFX_goal_generic_major_war
+		prerequisite = { focus = TU_URS_w4_order_doctrine }
+		x = 192
+		y = 6
+		cost = 10
+
+		search_filters = { FOCUS_FILTER_WAR_SUPPORT }
+
+		ai_will_do = {
+			base = 1
+		}
+
+		completion_reward = {
+			add_ideas = TU_URS_w4_idea_order_mandate
+			add_political_power = 25
+		}
+	}
+
+	focus = {
+		id = TU_URS_w4_order_charter
+		icon = GFX_goal_generic_alliance
+		prerequisite = { focus = TU_URS_w4_order_council }
+		x = 194
+		y = 6
+		cost = 10
+
+		search_filters = { FOCUS_FILTER_POLITICAL }
+
+		ai_will_do = {
+			base = 1
+		}
+
+		completion_reward = {
+			add_political_power = 75
+		}
+	}
+
+	focus = {
+		id = TU_URS_w4_order_mobilization
+		icon = GFX_goal_generic_production
+		prerequisite = { focus = TU_URS_w4_order_charter }
+		x = 194
+		y = 8
+		cost = 10
+
+		search_filters = { FOCUS_FILTER_WAR_SUPPORT }
+
+		ai_will_do = {
+			base = 1
+		}
+
+		completion_reward = {
+			add_manpower = 20000
+			add_war_support = 0.05
+		}
+	}
+
+	#### RHODES ISLAND (RHO): cooperation vs hostility ####
+
+	focus = {
+		id = TU_URS_w4_rho_entry
+		icon = GFX_goal_generic_improve_relations
+		prerequisite = { focus = TU_URS_foreign_ministry }
+		x = 197
+		y = 2
+		cost = 5
+
+		search_filters = { FOCUS_FILTER_POLITICAL }
+
+		ai_will_do = {
+			base = 1
+		}
+
+		completion_reward = {
+			add_political_power = 25
+		}
+	}
+
+	focus = {
+		id = TU_URS_w4_rho_trade_pact
+		icon = GFX_goal_generic_trade
+		prerequisite = { focus = TU_URS_w4_rho_entry }
+		x = 196
+		y = 5
+		cost = 10
+
+		search_filters = { FOCUS_FILTER_INTERNATIONAL_TRADE }
+
+		ai_will_do = {
+			base = 1
+		}
+
+		available = {
+			has_country_flag = TU_DEC_TU_URS_w4_rho_coop
+		}
+
+		completion_reward = {
+			add_ideas = TU_URS_w4_idea_rho_partner
+			add_political_power = 25
+		}
+	}
+
+	focus = {
+		id = TU_URS_w4_rho_blockade
+		icon = GFX_goal_generic_fortify_city
+		prerequisite = { focus = TU_URS_w4_rho_entry }
+		x = 198
+		y = 5
+		cost = 10
+
+		search_filters = { FOCUS_FILTER_ARMY_XP }
+
+		ai_will_do = {
+			base = 1
+		}
+
+		available = {
+			has_country_flag = TU_DEC_TU_URS_w4_rho_hostile
+		}
+
+		completion_reward = {
+			army_experience = 20
+			add_war_support = 0.03
+		}
+	}
+
+	#### REUNION (REU): crush vs negotiate, gated by the Chernobog incident ####
+
+	focus = {
+		id = TU_URS_w4_reu_entry
+		icon = GFX_goal_generic_national_unity
+		prerequisite = { focus = TU_URS_foreign_ministry }
+		available = { has_global_flag = TU_chernobog_incident_started }
+		x = 199
+		y = 10
+		cost = 5
+
+		search_filters = { FOCUS_FILTER_POLITICAL }
+
+		ai_will_do = {
+			base = 1
+		}
+
+		completion_reward = {
+			add_political_power = 25
+		}
+	}
+
+	focus = {
+		id = TU_URS_w4_reu_army
+		icon = GFX_goal_generic_army_artillery
+		prerequisite = { focus = TU_URS_w4_reu_entry }
+		x = 198
+		y = 14
+		cost = 10
+
+		search_filters = { FOCUS_FILTER_ARMY_XP }
+
+		ai_will_do = {
+			base = 1
+		}
+
+		available = {
+			has_country_flag = TU_DEC_TU_URS_w4_reu_crush
+		}
+
+		completion_reward = {
+			army_experience = 25
+			add_manpower = 15000
+		}
+	}
+
+	focus = {
+		id = TU_URS_w4_reu_autonomy
+		icon = GFX_goal_generic_consumer_goods
+		prerequisite = { focus = TU_URS_w4_reu_entry }
+		available = {
+			has_completed_focus = TU_URS_reform_path
+			has_country_flag = TU_DEC_TU_URS_w4_reu_negotiate
+		}
+		x = 200
+		y = 14
+		cost = 10
+
+		search_filters = { FOCUS_FILTER_POLITICAL }
+
+		ai_will_do = {
+			base = 1
+		}
+
+		completion_reward = {
+			add_ideas = TU_URS_w4_idea_reu_autonomy
+			add_political_power = 50
+		}
+	}
+
+	focus = {
+		id = TU_URS_w4_reu_rebuild
+		icon = GFX_goal_generic_construction2
+		prerequisite = { focus = TU_URS_w4_reu_army }
+		available = { has_global_flag = TU_chernobog_incident_resolved }
+		x = 198
+		y = 16
+		cost = 10
+
+		search_filters = { FOCUS_FILTER_INDUSTRY }
+
+		ai_will_do = {
+			base = 1
+		}
+
+		completion_reward = {
+			add_stability = 0.03
+			add_political_power = 25
+		}
+	}

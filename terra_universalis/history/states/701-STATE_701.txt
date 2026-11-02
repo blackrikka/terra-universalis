@@ -1,0 +1,21 @@
+state={
+	id=701
+	name="STATE_701"
+	impassable = yes
+	manpower = 1000
+
+	state_category = wasteland
+
+	history={
+		owner = YAN
+		buildings = {
+			infrastructure = 0
+		}
+		add_core_of = YAN
+	}
+
+	provinces={
+		2459 2460 2463 2465
+	}
+	local_supplies=0.0
+}

@@ -1,0 +1,21 @@
+state={
+	id=282
+	name="STATE_282"
+	manpower = 50000
+
+	state_category = town
+
+	history={
+		owner = SAM
+		victory_points = { 1367 1 }
+		buildings = {
+			infrastructure = 2
+		}
+		add_core_of = SAM
+	}
+
+	provinces={
+		1365 1366 1367 1370 1371 1372
+	}
+	local_supplies=0.0
+}

@@ -1,0 +1,97 @@
+TU_VIC_bop = {
+	initial_value = 0.0
+	left_side = TU_VIC_bop_aslan
+	right_side = TU_VIC_bop_dukes
+
+#### ASLAN (LEFT) ####
+	side = {
+		id = TU_VIC_bop_aslan
+		icon = GFX_bop_ITA_king_vittorio_side
+
+		range = {
+			id = TU_VIC_bop_aslan_low_range
+			min = -0.3
+			max = 0
+			modifier = {
+				political_power_gain = 0.05
+			}
+			on_activate = {
+			}
+			on_deactivate = {
+			}
+		}
+		range = {
+			id = TU_VIC_bop_aslan_medium_range
+			min = -0.6
+			max = -0.3
+			modifier = {
+				political_power_gain = 0.1
+			}
+			on_activate = {
+			}
+			on_deactivate = {
+			}
+		}
+		range = {
+			id = TU_VIC_bop_aslan_high_range
+			min = -1
+			max = -0.6
+			modifier = {
+				political_power_gain = 0.15
+			}
+			on_activate = {
+			}
+			on_deactivate = {
+			}
+		}
+	}
+
+#### DUKES (RIGHT) ####
+	side = {
+		id = TU_VIC_bop_dukes
+		icon = GFX_bop_ITA_grand_council_side
+
+		range = {
+			id = TU_VIC_bop_dukes_low_range
+			min = 0
+			max = 0.3
+			modifier = {
+				production_factory_max_efficiency_factor = 0.05
+				production_speed_buildings_factor = 0.05
+				stability_factor = -0.02
+			}
+			on_activate = {
+			}
+			on_deactivate = {
+			}
+		}
+		range = {
+			id = TU_VIC_bop_dukes_medium_range
+			min = 0.3
+			max = 0.6
+			modifier = {
+				production_factory_max_efficiency_factor = 0.1
+				production_speed_buildings_factor = 0.1
+				stability_factor = -0.04
+			}
+			on_activate = {
+			}
+			on_deactivate = {
+			}
+		}
+		range = {
+			id = TU_VIC_bop_dukes_high_range
+			min = 0.6
+			max = 1
+			modifier = {
+				production_factory_max_efficiency_factor = 0.15
+				production_speed_buildings_factor = 0.15
+				stability_factor = -0.06
+			}
+			on_activate = {
+			}
+			on_deactivate = {
+			}
+		}
+	}
+}

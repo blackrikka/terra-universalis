@@ -1,0 +1,1099 @@
+TU_VIC_construction_category = {
+
+	TU_VIC_eco_dec_foundry_city = {
+		icon = GFX_decision_generic_factory
+
+		allowed = {
+			original_tag = VIC
+		}
+
+		visible = {
+			has_completed_focus = TU_VIC_eco_london_foundries
+		}
+
+		available = {
+			has_completed_focus = TU_VIC_eco_london_foundries
+		}
+
+		cost = 50
+		fire_only_once = yes
+
+		complete_effect = {
+			random_owned_controlled_state = {
+				limit = {
+					is_owned_and_controlled_by = ROOT
+					has_state_category = city
+				}
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+				}
+			}
+			set_country_flag = TU_DEC_TU_VIC_eco_dec_foundry_city
+		}
+
+		ai_will_do = {
+			base = 1
+		}
+	}
+
+	TU_VIC_eco_dec_rail_hub = {
+		icon = GFX_decision_generic_train
+
+		allowed = {
+			original_tag = VIC
+		}
+
+		visible = {
+			has_completed_focus = TU_VIC_eco_rail_network
+		}
+
+		available = {
+			has_completed_focus = TU_VIC_eco_rail_network
+		}
+
+		cost = 50
+		fire_only_once = yes
+
+		complete_effect = {
+			random_owned_controlled_state = {
+				limit = {
+					is_owned_and_controlled_by = ROOT
+					has_state_category = town
+				}
+				add_building_construction = {
+					type = infrastructure
+					level = 1
+					instant_build = yes
+				}
+			}
+			set_country_flag = TU_DEC_TU_VIC_eco_dec_rail_hub
+		}
+
+		ai_will_do = {
+			base = 1
+		}
+	}
+
+	TU_VIC_eco_dec_dock_coast = {
+		icon = GFX_decision_generic_naval
+
+		allowed = {
+			original_tag = VIC
+		}
+
+		visible = {
+			has_completed_focus = TU_VIC_eco_dock_city
+		}
+
+		available = {
+			has_completed_focus = TU_VIC_eco_dock_city
+		}
+
+		cost = 50
+		fire_only_once = yes
+
+		complete_effect = {
+			random_owned_controlled_state = {
+				limit = {
+					is_owned_and_controlled_by = ROOT
+					is_coastal = yes
+				}
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = dockyard
+					level = 1
+					instant_build = yes
+				}
+			}
+			set_country_flag = TU_DEC_TU_VIC_eco_dec_dock_coast
+		}
+
+		ai_will_do = {
+			base = 1
+		}
+	}
+
+	TU_VIC_eco_dec_arms_plant = {
+		icon = GFX_decision_generic_factory
+
+		allowed = {
+			original_tag = VIC
+		}
+
+		visible = {
+			has_completed_focus = TU_VIC_eco_arms_contracts
+		}
+
+		available = {
+			has_completed_focus = TU_VIC_eco_arms_contracts
+		}
+
+		cost = 50
+		fire_only_once = yes
+
+		complete_effect = {
+			random_owned_controlled_state = {
+				limit = {
+					is_owned_and_controlled_by = ROOT
+					has_state_category = city
+				}
+				add_building_construction = {
+					type = arms_factory
+					level = 1
+					instant_build = yes
+				}
+			}
+			set_country_flag = TU_DEC_TU_VIC_eco_dec_arms_plant
+		}
+
+		ai_will_do = {
+			base = 1
+		}
+	}
+
+	TU_VIC_eco_dec_fuel_depot = {
+		icon = GFX_decision_generic_construction
+
+		allowed = {
+			original_tag = VIC
+		}
+
+		visible = {
+			has_completed_focus = TU_VIC_eco_oil_refineries
+		}
+
+		available = {
+			has_completed_focus = TU_VIC_eco_oil_refineries
+		}
+
+		cost = 50
+		fire_only_once = yes
+
+		complete_effect = {
+			random_owned_controlled_state = {
+				limit = {
+					is_owned_and_controlled_by = ROOT
+					has_state_category = city
+				}
+				add_building_construction = {
+					type = fuel_silo
+					level = 1
+					instant_build = yes
+				}
+			}
+			set_country_flag = TU_DEC_TU_VIC_eco_dec_fuel_depot
+		}
+
+		ai_will_do = {
+			base = 1
+		}
+	}
+
+	TU_VIC_eco_dec_power_station = {
+		icon = GFX_decision_generic_construction
+
+		allowed = {
+			original_tag = VIC
+		}
+
+		visible = {
+			has_completed_focus = TU_VIC_eco_power_grid
+		}
+
+		available = {
+			has_completed_focus = TU_VIC_eco_power_grid
+		}
+
+		cost = 50
+		fire_only_once = yes
+
+		complete_effect = {
+			random_owned_controlled_state = {
+				limit = {
+					is_owned_and_controlled_by = ROOT
+					has_state_category = city
+				}
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = infrastructure
+					level = 1
+					instant_build = yes
+				}
+			}
+			set_country_flag = TU_DEC_TU_VIC_eco_dec_power_station
+		}
+
+		ai_will_do = {
+			base = 1
+		}
+	}
+
+	TU_VIC_eco_dec_town_factory = {
+		icon = GFX_decision_generic_factory
+
+		allowed = {
+			original_tag = VIC
+		}
+
+		visible = {
+			has_completed_focus = TU_VIC_eco_urban_housing
+		}
+
+		available = {
+			has_completed_focus = TU_VIC_eco_urban_housing
+		}
+
+		cost = 50
+		fire_only_once = yes
+
+		complete_effect = {
+			random_owned_controlled_state = {
+				limit = {
+					is_owned_and_controlled_by = ROOT
+					has_state_category = town
+				}
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+				}
+			}
+			set_country_flag = TU_DEC_TU_VIC_eco_dec_town_factory
+		}
+
+		ai_will_do = {
+			base = 1
+		}
+	}
+
+	TU_VIC_eco_dec_war_plant = {
+		icon = GFX_decision_generic_tank
+
+		allowed = {
+			original_tag = VIC
+		}
+
+		visible = {
+			has_completed_focus = TU_VIC_eco_war_factories
+		}
+
+		available = {
+			has_completed_focus = TU_VIC_eco_war_factories
+		}
+
+		cost = 50
+		fire_only_once = yes
+
+		complete_effect = {
+			random_owned_controlled_state = {
+				limit = {
+					is_owned_and_controlled_by = ROOT
+					has_state_category = city
+				}
+				add_building_construction = {
+					type = arms_factory
+					level = 1
+					instant_build = yes
+				}
+			}
+			set_country_flag = TU_DEC_TU_VIC_eco_dec_war_plant
+		}
+
+		ai_will_do = {
+			base = 1
+		}
+	}
+
+	TU_VIC_eco_dec_thames_bridge = {
+		icon = GFX_decision_generic_construction
+
+		allowed = {
+			original_tag = VIC
+		}
+
+		visible = {
+			has_completed_focus = TU_VIC_eco_grand_bridge
+		}
+
+		available = {
+			has_completed_focus = TU_VIC_eco_grand_bridge
+		}
+
+		cost = 50
+		fire_only_once = yes
+
+		complete_effect = {
+			random_owned_controlled_state = {
+				limit = {
+					is_owned_and_controlled_by = ROOT
+				}
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = infrastructure
+					level = 1
+					instant_build = yes
+				}
+			}
+			set_country_flag = TU_DEC_TU_VIC_eco_dec_thames_bridge
+		}
+
+		ai_will_do = {
+			base = 1
+		}
+	}
+
+	TU_VIC_eco_dec_dockyard_second = {
+		icon = GFX_decision_generic_naval
+
+		allowed = {
+			original_tag = VIC
+		}
+
+		visible = {
+			has_completed_focus = TU_VIC_eco_dockyard_expansion
+		}
+
+		available = {
+			has_completed_focus = TU_VIC_eco_dockyard_expansion
+		}
+
+		cost = 50
+		fire_only_once = yes
+
+		complete_effect = {
+			random_owned_controlled_state = {
+				limit = {
+					is_owned_and_controlled_by = ROOT
+					is_coastal = yes
+				}
+				add_building_construction = {
+					type = dockyard
+					level = 1
+					instant_build = yes
+				}
+			}
+			set_country_flag = TU_DEC_TU_VIC_eco_dec_dockyard_second
+		}
+
+		ai_will_do = {
+			base = 1
+		}
+	}
+
+	TU_VIC_eco_dec_knight_boiler = {
+		icon = GFX_decision_generic_tank
+
+		allowed = {
+			original_tag = VIC
+		}
+
+		visible = {
+			has_completed_focus = TU_VIC_eco_steam_boilers
+		}
+
+		available = {
+			has_completed_focus = TU_VIC_eco_steam_boilers
+		}
+
+		cost = 50
+		fire_only_once = yes
+
+		complete_effect = {
+			random_owned_controlled_state = {
+				limit = {
+					is_owned_and_controlled_by = ROOT
+					has_state_category = town
+				}
+				add_building_construction = {
+					type = arms_factory
+					level = 1
+					instant_build = yes
+				}
+			}
+			set_country_flag = TU_DEC_TU_VIC_eco_dec_knight_boiler
+		}
+
+		ai_will_do = {
+			base = 1
+		}
+	}
+
+	TU_VIC_eco_dec_knight_depot = {
+		icon = GFX_decision_generic_train
+
+		allowed = {
+			original_tag = VIC
+		}
+
+		visible = {
+			has_completed_focus = TU_VIC_eco_steam_supply
+		}
+
+		available = {
+			has_completed_focus = TU_VIC_eco_steam_supply
+		}
+
+		cost = 50
+		fire_only_once = yes
+
+		complete_effect = {
+			random_owned_controlled_state = {
+				limit = {
+					is_owned_and_controlled_by = ROOT
+				}
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = infrastructure
+					level = 1
+					instant_build = yes
+				}
+			}
+			set_country_flag = TU_DEC_TU_VIC_eco_dec_knight_depot
+		}
+
+		ai_will_do = {
+			base = 1
+		}
+	}
+
+	TU_VIC_eco_dec_naval_facility = {
+		icon = GFX_decision_generic_naval
+
+		allowed = {
+			original_tag = VIC
+		}
+
+		visible = {
+			has_completed_focus = TU_VIC_eco_harbour_grid
+		}
+
+		available = {
+			has_completed_focus = TU_VIC_eco_harbour_grid
+		}
+
+		cost = 50
+		fire_only_once = yes
+
+		complete_effect = {
+			random_owned_controlled_state = {
+				limit = {
+					is_owned_and_controlled_by = ROOT
+					is_coastal = yes
+				}
+				add_building_construction = {
+					type = naval_facility
+					level = 1
+					instant_build = yes
+				}
+			}
+			set_country_flag = TU_DEC_TU_VIC_eco_dec_naval_facility
+		}
+
+		ai_will_do = {
+			base = 1
+		}
+	}
+
+	TU_VIC_eco_dec_submarine_dock = {
+		icon = GFX_decision_generic_naval
+
+		allowed = {
+			original_tag = VIC
+		}
+
+		visible = {
+			has_completed_focus = TU_VIC_eco_submarine_pens
+		}
+
+		available = {
+			has_completed_focus = TU_VIC_eco_submarine_pens
+		}
+
+		cost = 50
+		fire_only_once = yes
+
+		complete_effect = {
+			random_owned_controlled_state = {
+				limit = {
+					is_owned_and_controlled_by = ROOT
+					is_coastal = yes
+				}
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = dockyard
+					level = 1
+					instant_build = yes
+				}
+			}
+			set_country_flag = TU_DEC_TU_VIC_eco_dec_submarine_dock
+		}
+
+		ai_will_do = {
+			base = 1
+		}
+	}
+
+	TU_VIC_eco_dec_thames_base = {
+		icon = GFX_decision_generic_naval
+
+		allowed = {
+			original_tag = VIC
+		}
+
+		visible = {
+			has_completed_focus = TU_VIC_eco_thames_naval_base
+		}
+
+		available = {
+			has_completed_focus = TU_VIC_eco_thames_naval_base
+		}
+
+		cost = 50
+		fire_only_once = yes
+
+		complete_effect = {
+			random_owned_controlled_state = {
+				limit = {
+					is_owned_and_controlled_by = ROOT
+					is_coastal = yes
+				}
+				add_building_construction = {
+					type = naval_base
+					level = 1
+					instant_build = yes
+				}
+			}
+			set_country_flag = TU_DEC_TU_VIC_eco_dec_thames_base
+		}
+
+		ai_will_do = {
+			base = 1
+		}
+	}
+
+	TU_VIC_eco_dec_coastal_bunker = {
+		icon = GFX_decision_generic_coastal_fortification
+
+		allowed = {
+			original_tag = VIC
+		}
+
+		visible = {
+			has_completed_focus = TU_VIC_eco_island_fortress
+		}
+
+		available = {
+			has_completed_focus = TU_VIC_eco_island_fortress
+		}
+
+		cost = 50
+		fire_only_once = yes
+
+		complete_effect = {
+			random_owned_controlled_state = {
+				limit = {
+					is_owned_and_controlled_by = ROOT
+					is_coastal = yes
+				}
+				add_building_construction = {
+					type = coastal_bunker
+					level = 1
+					instant_build = yes
+				}
+			}
+			set_country_flag = TU_DEC_TU_VIC_eco_dec_coastal_bunker
+		}
+
+		ai_will_do = {
+			base = 1
+		}
+	}
+
+	TU_VIC_eco_dec_airfield = {
+		icon = GFX_decision_generic_air
+
+		allowed = {
+			original_tag = VIC
+		}
+
+		visible = {
+			has_completed_focus = TU_VIC_eco_airfield_survey
+		}
+
+		available = {
+			has_completed_focus = TU_VIC_eco_airfield_survey
+		}
+
+		cost = 50
+		fire_only_once = yes
+
+		complete_effect = {
+			random_owned_controlled_state = {
+				limit = {
+					is_owned_and_controlled_by = ROOT
+				}
+				add_building_construction = {
+					type = air_base
+					level = 1
+					instant_build = yes
+				}
+			}
+			set_country_flag = TU_DEC_TU_VIC_eco_dec_airfield
+		}
+
+		ai_will_do = {
+			base = 1
+		}
+	}
+
+	TU_VIC_eco_dec_radar_station = {
+		icon = GFX_decision_generic_air
+
+		allowed = {
+			original_tag = VIC
+		}
+
+		visible = {
+			has_completed_focus = TU_VIC_eco_radar_chain
+		}
+
+		available = {
+			has_completed_focus = TU_VIC_eco_radar_chain
+		}
+
+		cost = 50
+		fire_only_once = yes
+
+		complete_effect = {
+			random_owned_controlled_state = {
+				limit = {
+					is_owned_and_controlled_by = ROOT
+					is_coastal = yes
+				}
+				add_building_construction = {
+					type = radar_station
+					level = 1
+					instant_build = yes
+				}
+			}
+			set_country_flag = TU_DEC_TU_VIC_eco_dec_radar_station
+		}
+
+		ai_will_do = {
+			base = 1
+		}
+	}
+
+	TU_VIC_eco_dec_air_network = {
+		icon = GFX_decision_generic_air
+
+		allowed = {
+			original_tag = VIC
+		}
+
+		visible = {
+			has_completed_focus = TU_VIC_eco_air_base_network
+		}
+
+		available = {
+			has_completed_focus = TU_VIC_eco_air_base_network
+		}
+
+		cost = 50
+		fire_only_once = yes
+
+		complete_effect = {
+			random_owned_controlled_state = {
+				limit = {
+					is_owned_and_controlled_by = ROOT
+					has_state_category = city
+				}
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = air_base
+					level = 1
+					instant_build = yes
+				}
+			}
+			set_country_flag = TU_DEC_TU_VIC_eco_dec_air_network
+		}
+
+		ai_will_do = {
+			base = 1
+		}
+	}
+
+	TU_VIC_eco_dec_flak_belt = {
+		icon = GFX_decision_generic_fortification
+
+		allowed = {
+			original_tag = VIC
+		}
+
+		visible = {
+			has_completed_focus = TU_VIC_eco_anti_air_belt
+		}
+
+		available = {
+			has_completed_focus = TU_VIC_eco_anti_air_belt
+		}
+
+		cost = 50
+		fire_only_once = yes
+
+		complete_effect = {
+			random_owned_controlled_state = {
+				limit = {
+					is_owned_and_controlled_by = ROOT
+					has_state_category = city
+				}
+				add_building_construction = {
+					type = anti_air_building
+					level = 1
+					instant_build = yes
+				}
+			}
+			set_country_flag = TU_DEC_TU_VIC_eco_dec_flak_belt
+		}
+
+		ai_will_do = {
+			base = 1
+		}
+	}
+
+	TU_VIC_eco_dec_aircraft_plant = {
+		icon = GFX_decision_generic_factory
+
+		allowed = {
+			original_tag = VIC
+		}
+
+		visible = {
+			has_completed_focus = TU_VIC_eco_air_production_lines
+		}
+
+		available = {
+			has_completed_focus = TU_VIC_eco_air_production_lines
+		}
+
+		cost = 50
+		fire_only_once = yes
+
+		complete_effect = {
+			random_owned_controlled_state = {
+				limit = {
+					is_owned_and_controlled_by = ROOT
+					has_state_category = city
+				}
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+				}
+			}
+			set_country_flag = TU_DEC_TU_VIC_eco_dec_aircraft_plant
+		}
+
+		ai_will_do = {
+			base = 1
+		}
+	}
+
+	TU_VIC_eco_dec_supply_hub = {
+		icon = GFX_decision_generic_train
+
+		allowed = {
+			original_tag = VIC
+		}
+
+		visible = {
+			has_completed_focus = TU_VIC_eco_rubber_import
+		}
+
+		available = {
+			has_completed_focus = TU_VIC_eco_rubber_import
+		}
+
+		cost = 50
+		fire_only_once = yes
+
+		complete_effect = {
+			random_owned_controlled_state = {
+				limit = {
+					is_owned_and_controlled_by = ROOT
+					has_state_category = town
+				}
+				add_building_construction = {
+					type = supply_node
+					level = 1
+					instant_build = yes
+				}
+			}
+			set_country_flag = TU_DEC_TU_VIC_eco_dec_supply_hub
+		}
+
+		ai_will_do = {
+			base = 1
+		}
+	}
+
+	TU_VIC_eco_dec_mine_rail = {
+		icon = GFX_decision_generic_train
+
+		allowed = {
+			original_tag = VIC
+		}
+
+		visible = {
+			has_completed_focus = TU_VIC_eco_coal_fields
+		}
+
+		available = {
+			has_completed_focus = TU_VIC_eco_coal_fields
+		}
+
+		cost = 50
+		fire_only_once = yes
+
+		complete_effect = {
+			random_owned_controlled_state = {
+				limit = {
+					is_owned_and_controlled_by = ROOT
+					has_state_category = town
+				}
+				add_building_construction = {
+					type = infrastructure
+					level = 1
+					instant_build = yes
+				}
+			}
+			set_country_flag = TU_DEC_TU_VIC_eco_dec_mine_rail
+		}
+
+		ai_will_do = {
+			base = 1
+		}
+	}
+
+	TU_VIC_eco_dec_steel_stock = {
+		icon = GFX_decision_generic_factory
+
+		allowed = {
+			original_tag = VIC
+		}
+
+		visible = {
+			has_completed_focus = TU_VIC_eco_steel_mills
+		}
+
+		available = {
+			has_completed_focus = TU_VIC_eco_steel_mills
+		}
+
+		cost = 25
+		fire_only_once = yes
+
+		complete_effect = {
+			random_owned_controlled_state = {
+				limit = {
+					is_owned_and_controlled_by = ROOT
+					has_state_category = city
+				}
+				add_resource = {
+					type = steel
+					amount = 10
+				}
+			}
+			set_country_flag = TU_DEC_TU_VIC_eco_dec_steel_stock
+		}
+
+		ai_will_do = {
+			base = 1
+		}
+	}
+
+	TU_VIC_eco_dec_oil_stock = {
+		icon = GFX_decision_generic_construction
+
+		allowed = {
+			original_tag = VIC
+		}
+
+		visible = {
+			has_completed_focus = TU_VIC_eco_oil_refineries
+		}
+
+		available = {
+			has_completed_focus = TU_VIC_eco_oil_refineries
+		}
+
+		cost = 25
+		fire_only_once = yes
+
+		complete_effect = {
+			random_owned_controlled_state = {
+				limit = {
+					is_owned_and_controlled_by = ROOT
+					has_state_category = city
+				}
+				add_resource = {
+					type = oil
+					amount = 8
+				}
+			}
+			set_country_flag = TU_DEC_TU_VIC_eco_dec_oil_stock
+		}
+
+		ai_will_do = {
+			base = 1
+		}
+	}
+
+	TU_VIC_eco_dec_rubber_stock = {
+		icon = GFX_decision_generic_construction
+
+		allowed = {
+			original_tag = VIC
+		}
+
+		visible = {
+			has_completed_focus = TU_VIC_eco_rubber_import
+		}
+
+		available = {
+			has_completed_focus = TU_VIC_eco_rubber_import
+		}
+
+		cost = 25
+		fire_only_once = yes
+
+		complete_effect = {
+			random_owned_controlled_state = {
+				limit = {
+					is_owned_and_controlled_by = ROOT
+					has_state_category = town
+				}
+				add_resource = {
+					type = rubber
+					amount = 8
+				}
+			}
+			set_country_flag = TU_DEC_TU_VIC_eco_dec_rubber_stock
+		}
+
+		ai_will_do = {
+			base = 1
+		}
+	}
+
+	TU_VIC_eco_dec_chromium_stock = {
+		icon = GFX_decision_generic_construction
+
+		allowed = {
+			original_tag = VIC
+		}
+
+		visible = {
+			has_completed_focus = TU_VIC_eco_steel_export
+		}
+
+		available = {
+			has_completed_focus = TU_VIC_eco_steel_export
+		}
+
+		cost = 25
+		fire_only_once = yes
+
+		complete_effect = {
+			random_owned_controlled_state = {
+				limit = {
+					is_owned_and_controlled_by = ROOT
+					has_state_category = city
+				}
+				add_resource = {
+					type = chromium
+					amount = 8
+				}
+			}
+			set_country_flag = TU_DEC_TU_VIC_eco_dec_chromium_stock
+		}
+
+		ai_will_do = {
+			base = 1
+		}
+	}
+
+	TU_VIC_eco_dec_knight_division = {
+		icon = GFX_decision_generic_tank
+
+		allowed = {
+			original_tag = VIC
+		}
+
+		visible = {
+			has_completed_focus = TU_VIC_eco_division_order
+		}
+
+		available = {
+			has_completed_focus = TU_VIC_eco_division_order
+		}
+
+		cost = 75
+		days_re_enable = 90
+		fire_only_once = no
+
+		complete_effect = {
+			capital_scope = {
+				create_unit = {
+					division = "division_template = \"TU_VIC_steam_knight\" start_experience_factor = 1.0"
+					owner = VIC
+					count = 1
+				}
+			}
+			set_country_flag = TU_DEC_TU_VIC_eco_dec_knight_division
+		}
+
+		ai_will_do = {
+			base = 1
+		}
+	}
+
+	TU_VIC_eco_dec_knight_legion = {
+		icon = GFX_decision_generic_tank
+
+		allowed = {
+			original_tag = VIC
+		}
+
+		visible = {
+			has_completed_focus = TU_VIC_eco_knight_legion
+		}
+
+		available = {
+			has_completed_focus = TU_VIC_eco_knight_legion
+		}
+
+		cost = 75
+		days_re_enable = 120
+		fire_only_once = no
+
+		complete_effect = {
+			capital_scope = {
+				create_unit = {
+					division = "division_template = \"TU_VIC_steam_knight\" start_experience_factor = 1.0"
+					owner = VIC
+					count = 2
+				}
+			}
+			set_country_flag = TU_DEC_TU_VIC_eco_dec_knight_legion
+		}
+
+		ai_will_do = {
+			base = 1
+		}
+	}
+}

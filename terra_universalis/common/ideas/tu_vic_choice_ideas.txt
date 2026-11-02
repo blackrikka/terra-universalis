@@ -1,0 +1,70 @@
+ideas = {
+
+	country = {
+
+		TU_VIC_choice_dock_drive = {
+			picture = generic_production_bonus
+
+			allowed = {
+				original_tag = VIC
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			modifier = {
+				production_factory_max_efficiency_factor = 0.05
+			}
+		}
+
+		TU_VIC_choice_rail_works = {
+			picture = generic_improved_industries
+
+			allowed = {
+				original_tag = VIC
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			modifier = {
+				production_speed_buildings_factor = 0.1
+			}
+		}
+
+		TU_VIC_choice_research_drive = {
+			picture = generic_research_bonus
+
+			allowed = {
+				original_tag = VIC
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			modifier = {
+				research_speed_factor = 0.03
+			}
+		}
+
+		TU_VIC_choice_conscript_law = {
+			picture = generic_manpower_bonus
+
+			allowed = {
+				original_tag = VIC
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			modifier = {
+				conscription_factor = 0.01
+			}
+		}
+
+	}
+}

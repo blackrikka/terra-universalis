@@ -1,0 +1,54 @@
+characters = {
+
+	TU_KZD_theresis = {
+		name = TU_KZD_theresis
+		portraits = {
+			civilian = {
+				large = "GFX_TU_portrait_theresis"
+			}
+		}
+		country_leader = {
+			ideology = despotism
+			expire = "1200.1.1.1"
+			id = -1
+		}
+	}
+
+	TU_KZD_w = {
+		name = TU_KZD_w
+		portraits = {
+			army = {
+				large = "GFX_TU_portrait_w"
+				small = "GFX_TU_portrait_w_small"
+			}
+		}
+		corps_commander = {
+			traits = { }
+			skill = 4
+			attack_skill = 4
+			defense_skill = 3
+			planning_skill = 3
+			logistics_skill = 2
+			legacy_id = 0
+		}
+	}
+
+	TU_KZD_ines = {
+		name = TU_KZD_ines
+		portraits = {
+			army = {
+				large = "GFX_TU_portrait_ines"
+				small = "GFX_TU_portrait_ines_small"
+			}
+		}
+		corps_commander = {
+			traits = { }
+			skill = 3
+			attack_skill = 3
+			defense_skill = 3
+			planning_skill = 4
+			logistics_skill = 3
+			legacy_id = 0
+		}
+	}
+}

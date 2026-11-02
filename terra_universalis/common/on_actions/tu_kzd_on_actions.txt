@@ -1,0 +1,14 @@
+on_actions = {
+	on_startup = {
+		effect = {
+			if = {
+				limit = {
+					country_exists = KZD
+				}
+				KZD = {
+					TU_KZD_startup = yes
+				}
+			}
+		}
+	}
+}

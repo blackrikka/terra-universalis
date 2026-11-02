@@ -1,0 +1,523 @@
+# Rhodes Island p1_politics decisions (medical research, elite operators, route follow-ups).
+# Category: TU_RHO_operations_category (defined in categories/tu_rho_categories.txt).
+# Visible after the unlocking focus. Timed effects use days_remove + remove_effect.
+
+TU_RHO_operations_category = {
+
+	# Medical research: clinical trial site (timed idea, 90 days).
+	TU_RHO_med_trial_site = {
+		icon = GFX_decision_generic_research
+
+		allowed = {
+			original_tag = RHO
+		}
+
+		visible = {
+			has_completed_focus = TU_RHO_med_start
+		}
+
+		available = {
+			check_variable = { var = TU_lmd value = 200 compare = greater_than_or_equals }
+			NOT = { has_idea = TU_RHO_clinical_trial }
+		}
+
+		cost = 40
+		days_remove = 90
+		ai_will_do = { factor = 0 }
+
+		complete_effect = {
+			subtract_from_variable = { TU_lmd = 200 }
+			add_ideas = TU_RHO_clinical_trial
+		}
+
+		remove_effect = {
+			remove_ideas = TU_RHO_clinical_trial
+		}
+	}
+
+	# Medical research: cure supply drive (repeatable, 60 days).
+	TU_RHO_med_supply_drive = {
+		icon = GFX_decision_generic_welfare
+
+		allowed = {
+			original_tag = RHO
+		}
+
+		visible = {
+			has_completed_focus = TU_RHO_cure_track
+		}
+
+		available = {
+			always = yes
+		}
+
+		cost = 30
+		days_re_enable = 60
+		ai_will_do = { factor = 0 }
+
+		complete_effect = {
+			add_stability = 0.01
+			add_to_variable = { TU_lmd = 100 }
+		}
+	}
+
+	# Medical research: open the Oripathy clinics (one time).
+	TU_RHO_clinic_open = {
+		icon = GFX_decision_generic_construction
+
+		allowed = {
+			original_tag = RHO
+		}
+
+		visible = {
+			has_completed_focus = TU_RHO_cure_clinic
+		}
+
+		available = {
+			always = yes
+		}
+
+		cost = 50
+		fire_only_once = yes
+		ai_will_do = { factor = 0 }
+
+		complete_effect = {
+			add_stability = 0.03
+			set_country_flag = TU_RHO_clinic_opened
+		}
+	}
+
+	# Medical research: publish results to the world (one time).
+	TU_RHO_med_publish = {
+		icon = GFX_decision_generic_political_discourse
+
+		allowed = {
+			original_tag = RHO
+		}
+
+		visible = {
+			has_completed_focus = TU_RHO_med_peer_review
+		}
+
+		available = {
+			always = yes
+		}
+
+		cost = 25
+		fire_only_once = yes
+		ai_will_do = { factor = 0 }
+
+		complete_effect = {
+			add_war_support = 0.01
+			add_stability = 0.01
+		}
+	}
+
+	# Enhancement track: field test of the serum (timed idea, 60 days).
+	TU_RHO_enh_field_test = {
+		icon = GFX_decision_generic_military
+
+		allowed = {
+			original_tag = RHO
+		}
+
+		visible = {
+			has_completed_focus = TU_RHO_enh_serum
+		}
+
+		available = {
+			NOT = { has_idea = TU_RHO_enh_surge }
+		}
+
+		cost = 40
+		days_remove = 60
+		ai_will_do = { factor = 0 }
+
+		complete_effect = {
+			add_ideas = TU_RHO_enh_surge
+		}
+
+		remove_effect = {
+			remove_ideas = TU_RHO_enh_surge
+		}
+	}
+
+	# Elite operators: recruit a surge of elite operators (timed idea, 120 days).
+	TU_RHO_elite_recruit = {
+		icon = GFX_decision_generic_intelligence_operation
+
+		allowed = {
+			original_tag = RHO
+		}
+
+		visible = {
+			has_completed_focus = TU_RHO_elite_selection
+		}
+
+		available = {
+			check_variable = { var = TU_lmd value = 150 compare = greater_than_or_equals }
+			NOT = { has_idea = TU_RHO_elite_surge }
+		}
+
+		cost = 30
+		days_remove = 120
+		ai_will_do = { factor = 0 }
+
+		complete_effect = {
+			subtract_from_variable = { TU_lmd = 150 }
+			army_experience = 25
+			add_ideas = TU_RHO_elite_surge
+		}
+
+		remove_effect = {
+			remove_ideas = TU_RHO_elite_surge
+		}
+	}
+
+	# Elite operators: joint drill for the elite squads (repeatable, 90 days).
+	TU_RHO_elite_drill = {
+		icon = GFX_decision_generic_army_support
+
+		allowed = {
+			original_tag = RHO
+		}
+
+		visible = {
+			has_completed_focus = TU_RHO_elite_squads
+		}
+
+		available = {
+			always = yes
+		}
+
+		cost = 35
+		days_re_enable = 90
+		ai_will_do = { factor = 0 }
+
+		complete_effect = {
+			army_experience = 30
+		}
+	}
+
+	# Elite operators: deploy the elite command (one time).
+	TU_RHO_elite_deploy = {
+		icon = GFX_decision_generic_operation
+
+		allowed = {
+			original_tag = RHO
+		}
+
+		visible = {
+			has_completed_focus = TU_RHO_elite_command
+		}
+
+		available = {
+			always = yes
+		}
+
+		cost = 40
+		fire_only_once = yes
+		ai_will_do = { factor = 0 }
+
+		complete_effect = {
+			army_experience = 50
+			add_war_support = 0.02
+		}
+	}
+
+	# Ark route: relief camp network (timed idea, 90 days).
+	TU_RHO_ark_relief_camp = {
+		icon = GFX_decision_generic_civil_support
+
+		allowed = {
+			original_tag = RHO
+		}
+
+		visible = {
+			has_completed_focus = TU_RHO_camp_build
+		}
+
+		available = {
+			NOT = { has_idea = TU_RHO_ark_relief_network }
+		}
+
+		cost = 40
+		days_remove = 90
+		ai_will_do = { factor = 0 }
+
+		complete_effect = {
+			add_stability = 0.02
+			add_ideas = TU_RHO_ark_relief_network
+		}
+
+		remove_effect = {
+			remove_ideas = TU_RHO_ark_relief_network
+		}
+	}
+
+	# Ark route: public speech from Amiya (repeatable, 120 days).
+	TU_RHO_ark_public_speech = {
+		icon = GFX_decision_generic_speech
+
+		allowed = {
+			original_tag = RHO
+		}
+
+		visible = {
+			has_completed_focus = TU_RHO_ark_broadcast
+		}
+
+		available = {
+			always = yes
+		}
+
+		cost = 30
+		days_re_enable = 120
+		ai_will_do = { factor = 0 }
+
+		complete_effect = {
+			add_war_support = 0.03
+			add_stability = 0.01
+		}
+	}
+
+	# Ark route: guard drill (repeatable, 60 days).
+	TU_RHO_ark_guard_drill = {
+		icon = GFX_decision_generic_army_support
+
+		allowed = {
+			original_tag = RHO
+		}
+
+		visible = {
+			has_completed_focus = TU_RHO_ark_guard_train
+		}
+
+		available = {
+			always = yes
+		}
+
+		cost = 30
+		days_re_enable = 60
+		ai_will_do = { factor = 0 }
+
+		complete_effect = {
+			army_experience = 20
+		}
+	}
+
+	# Ark route: mutual aid convoy (timed idea, 90 days).
+	TU_RHO_ark_mutual_aid = {
+		icon = GFX_decision_generic_welfare
+
+		allowed = {
+			original_tag = RHO
+		}
+
+		visible = {
+			has_completed_focus = TU_RHO_ark_convoy
+		}
+
+		available = {
+			NOT = { has_idea = TU_RHO_ark_convoy_aid }
+		}
+
+		cost = 35
+		days_remove = 90
+		ai_will_do = { factor = 0 }
+
+		complete_effect = {
+			add_ideas = TU_RHO_ark_convoy_aid
+		}
+
+		remove_effect = {
+			remove_ideas = TU_RHO_ark_convoy_aid
+		}
+	}
+
+	# Contractors route: fair brokerage (repeatable, 90 days).
+	TU_RHO_broker_fair = {
+		icon = GFX_decision_generic_fundraising
+
+		allowed = {
+			original_tag = RHO
+		}
+
+		visible = {
+			has_completed_focus = TU_RHO_broker_guild
+		}
+
+		available = {
+			always = yes
+		}
+
+		cost = 30
+		days_re_enable = 90
+		ai_will_do = { factor = 0 }
+
+		complete_effect = {
+			add_to_variable = { TU_lmd = 250 }
+		}
+	}
+
+	# Contractors route: gold auction (one time).
+	TU_RHO_gold_auction = {
+		icon = GFX_decision_generic_fundraising
+
+		allowed = {
+			original_tag = RHO
+		}
+
+		visible = {
+			has_completed_focus = TU_RHO_gold_fund
+		}
+
+		available = {
+			always = yes
+		}
+
+		cost = 40
+		fire_only_once = yes
+		ai_will_do = { factor = 0 }
+
+		complete_effect = {
+			add_to_variable = { TU_lmd = 800 }
+		}
+	}
+
+	# Contractors route: legion bounty (timed idea, 60 days).
+	TU_RHO_contract_bounty = {
+		icon = GFX_decision_generic_protection
+
+		allowed = {
+			original_tag = RHO
+		}
+
+		visible = {
+			has_completed_focus = TU_RHO_contract_legion
+		}
+
+		available = {
+			NOT = { has_idea = TU_RHO_contract_bonus }
+		}
+
+		cost = 35
+		days_remove = 60
+		ai_will_do = { factor = 0 }
+
+		complete_effect = {
+			add_ideas = TU_RHO_contract_bonus
+		}
+
+		remove_effect = {
+			remove_ideas = TU_RHO_contract_bonus
+		}
+	}
+
+	# Contractors route: hire operations for the PMC union (repeatable, 60 days).
+	TU_RHO_pmc_hire_ops = {
+		icon = GFX_decision_generic_military
+
+		allowed = {
+			original_tag = RHO
+		}
+
+		visible = {
+			has_completed_focus = TU_RHO_pmc_union
+		}
+
+		available = {
+			always = yes
+		}
+
+		cost = 30
+		days_re_enable = 60
+		ai_will_do = { factor = 0 }
+
+		complete_effect = {
+			army_experience = 15
+			add_to_variable = { TU_lmd = 100 }
+		}
+	}
+
+	# Demon King route: doctor's briefing (one time).
+	TU_RHO_doctor_briefing = {
+		icon = GFX_decision_generic_political_address
+
+		allowed = {
+			original_tag = RHO
+		}
+
+		visible = {
+			has_completed_focus = TU_RHO_doctrine_codex
+		}
+
+		available = {
+			always = yes
+		}
+
+		cost = 35
+		fire_only_once = yes
+		ai_will_do = { factor = 0 }
+
+		complete_effect = {
+			army_experience = 40
+			add_stability = 0.01
+		}
+	}
+
+	# Demon King route: shadow strike (timed idea, 45 days).
+	TU_RHO_shadow_strike = {
+		icon = GFX_decision_generic_intelligence_operation
+
+		allowed = {
+			original_tag = RHO
+		}
+
+		visible = {
+			has_completed_focus = TU_RHO_shadow_ops
+		}
+
+		available = {
+			NOT = { has_idea = TU_RHO_shadow_surge }
+		}
+
+		cost = 40
+		days_remove = 45
+		ai_will_do = { factor = 0 }
+
+		complete_effect = {
+			add_ideas = TU_RHO_shadow_surge
+		}
+
+		remove_effect = {
+			remove_ideas = TU_RHO_shadow_surge
+		}
+	}
+
+	# Demon King route: reinforce the front (repeatable, 90 days).
+	TU_RHO_front_reinforce = {
+		icon = GFX_decision_generic_military
+
+		allowed = {
+			original_tag = RHO
+		}
+
+		visible = {
+			has_completed_focus = TU_RHO_front_mobilize
+		}
+
+		available = {
+			always = yes
+		}
+
+		cost = 35
+		days_re_enable = 90
+		ai_will_do = { factor = 0 }
+
+		complete_effect = {
+			add_manpower = 2000
+			army_experience = 10
+		}
+	}
+}

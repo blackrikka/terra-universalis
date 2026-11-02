@@ -1,0 +1,534 @@
+# Rhodes Island (RHO) decisions. Categories are in categories/tu_rho_categories.txt.
+# Variables: TU_lmd (LMD), TU_RHO_riic_* (RIIC levels, costs, bonuses), TU_RHO_pmc_count.
+
+TU_RHO_landship_category = {
+
+	# Landship relocation. Anchor availability and effects come from the
+	# generated TU_anchor_<name>_available / TU_anchor_<name>_relocate_rho (tu_generated_*).
+	TU_RHO_relocate_rho_start = {
+		icon = GFX_decision_generic_naval
+		allowed = { original_tag = RHO }
+		available = {
+			TU_anchor_rho_start_available = yes
+			NOT = { has_country_flag = TU_RHO_landship_cooldown }
+		}
+		cost = 50
+		ai_will_do = { factor = 0 }
+		complete_effect = {
+			if = {
+				limit = { has_fuel > 999 }
+				add_fuel = -1000
+			}
+			TU_anchor_rho_start_relocate_rho = yes
+			set_country_flag = { flag = TU_RHO_landship_cooldown days = 30 }
+			add_timed_idea = { idea = TU_RHO_relocated days = 30 }
+		}
+	}
+
+	TU_RHO_relocate_victoria = {
+		icon = GFX_decision_generic_naval
+		allowed = { original_tag = RHO }
+		available = {
+			TU_anchor_victoria_available = yes
+			NOT = { has_country_flag = TU_RHO_landship_cooldown }
+		}
+		cost = 50
+		ai_will_do = { factor = 0 }
+		complete_effect = {
+			if = {
+				limit = { has_fuel > 999 }
+				add_fuel = -1000
+			}
+			TU_anchor_victoria_relocate_rho = yes
+			set_country_flag = { flag = TU_RHO_landship_cooldown days = 30 }
+			add_timed_idea = { idea = TU_RHO_relocated days = 30 }
+		}
+	}
+
+	TU_RHO_relocate_columbia = {
+		icon = GFX_decision_generic_naval
+		allowed = { original_tag = RHO }
+		available = {
+			TU_anchor_columbia_available = yes
+			NOT = { has_country_flag = TU_RHO_landship_cooldown }
+		}
+		cost = 50
+		ai_will_do = { factor = 0 }
+		complete_effect = {
+			if = {
+				limit = { has_fuel > 999 }
+				add_fuel = -1000
+			}
+			TU_anchor_columbia_relocate_rho = yes
+			set_country_flag = { flag = TU_RHO_landship_cooldown days = 30 }
+			add_timed_idea = { idea = TU_RHO_relocated days = 30 }
+		}
+	}
+
+	TU_RHO_relocate_yan = {
+		icon = GFX_decision_generic_naval
+		allowed = { original_tag = RHO }
+		available = {
+			TU_anchor_yan_available = yes
+			NOT = { has_country_flag = TU_RHO_landship_cooldown }
+		}
+		cost = 50
+		ai_will_do = { factor = 0 }
+		complete_effect = {
+			if = {
+				limit = { has_fuel > 999 }
+				add_fuel = -1000
+			}
+			TU_anchor_yan_relocate_rho = yes
+			set_country_flag = { flag = TU_RHO_landship_cooldown days = 30 }
+			add_timed_idea = { idea = TU_RHO_relocated days = 30 }
+		}
+	}
+
+	TU_RHO_relocate_kazimierz = {
+		icon = GFX_decision_generic_naval
+		allowed = { original_tag = RHO }
+		available = {
+			TU_anchor_kazimierz_available = yes
+			NOT = { has_country_flag = TU_RHO_landship_cooldown }
+		}
+		cost = 50
+		ai_will_do = { factor = 0 }
+		complete_effect = {
+			if = {
+				limit = { has_fuel > 999 }
+				add_fuel = -1000
+			}
+			TU_anchor_kazimierz_relocate_rho = yes
+			set_country_flag = { flag = TU_RHO_landship_cooldown days = 30 }
+			add_timed_idea = { idea = TU_RHO_relocated days = 30 }
+		}
+	}
+
+	TU_RHO_relocate_sargon = {
+		icon = GFX_decision_generic_naval
+		allowed = { original_tag = RHO }
+		available = {
+			TU_anchor_sargon_available = yes
+			NOT = { has_country_flag = TU_RHO_landship_cooldown }
+		}
+		cost = 50
+		ai_will_do = { factor = 0 }
+		complete_effect = {
+			if = {
+				limit = { has_fuel > 999 }
+				add_fuel = -1000
+			}
+			TU_anchor_sargon_relocate_rho = yes
+			set_country_flag = { flag = TU_RHO_landship_cooldown days = 30 }
+			add_timed_idea = { idea = TU_RHO_relocated days = 30 }
+		}
+	}
+
+	TU_RHO_relocate_iberia = {
+		icon = GFX_decision_generic_naval
+		allowed = { original_tag = RHO }
+		available = {
+			TU_anchor_iberia_available = yes
+			NOT = { has_country_flag = TU_RHO_landship_cooldown }
+		}
+		cost = 50
+		ai_will_do = { factor = 0 }
+		complete_effect = {
+			if = {
+				limit = { has_fuel > 999 }
+				add_fuel = -1000
+			}
+			TU_anchor_iberia_relocate_rho = yes
+			set_country_flag = { flag = TU_RHO_landship_cooldown days = 30 }
+			add_timed_idea = { idea = TU_RHO_relocated days = 30 }
+		}
+	}
+
+	TU_RHO_relocate_rim = {
+		icon = GFX_decision_generic_naval
+		allowed = { original_tag = RHO }
+		available = {
+			TU_anchor_rim_available = yes
+			NOT = { has_country_flag = TU_RHO_landship_cooldown }
+		}
+		cost = 50
+		ai_will_do = { factor = 0 }
+		complete_effect = {
+			if = {
+				limit = { has_fuel > 999 }
+				add_fuel = -1000
+			}
+			TU_anchor_rim_relocate_rho = yes
+			set_country_flag = { flag = TU_RHO_landship_cooldown days = 30 }
+			add_timed_idea = { idea = TU_RHO_relocated days = 30 }
+		}
+	}
+
+	TU_RHO_relocate_kazdel = {
+		icon = GFX_decision_generic_naval
+		allowed = { original_tag = RHO }
+		available = {
+			TU_anchor_kazdel_available = yes
+			NOT = { has_country_flag = TU_RHO_landship_cooldown }
+		}
+		cost = 50
+		ai_will_do = { factor = 0 }
+		complete_effect = {
+			if = {
+				limit = { has_fuel > 999 }
+				add_fuel = -1000
+			}
+			TU_anchor_kazdel_relocate_rho = yes
+			set_country_flag = { flag = TU_RHO_landship_cooldown days = 30 }
+			add_timed_idea = { idea = TU_RHO_relocated days = 30 }
+		}
+	}
+
+	TU_RHO_relocate_ursus = {
+		icon = GFX_decision_generic_naval
+		allowed = { original_tag = RHO }
+		available = {
+			TU_anchor_ursus_available = yes
+			NOT = { has_country_flag = TU_RHO_landship_cooldown }
+		}
+		cost = 50
+		ai_will_do = { factor = 0 }
+		complete_effect = {
+			if = {
+				limit = { has_fuel > 999 }
+				add_fuel = -1000
+			}
+			TU_anchor_ursus_relocate_rho = yes
+			set_country_flag = { flag = TU_RHO_landship_cooldown days = 30 }
+			add_timed_idea = { idea = TU_RHO_relocated days = 30 }
+		}
+	}
+}
+
+TU_RHO_riic_category = {
+
+	# Factory: offsite arms factory. Cap = TU_RHO_riic_cap (power plant level + 2).
+	TU_RHO_upgrade_factory = {
+		icon = GFX_decision_generic_factory
+		allowed = { original_tag = RHO }
+		available = {
+			check_variable = { TU_RHO_riic_factory < TU_RHO_riic_cap }
+			check_variable = { var = TU_lmd value = TU_RHO_riic_factory_cost compare = greater_than_or_equals }
+		}
+		cost = 25
+		days_re_enable = 30
+		ai_will_do = { factor = 0 }
+		complete_effect = {
+			subtract_from_variable = { TU_lmd = TU_RHO_riic_factory_cost }
+			add_to_variable = { TU_RHO_riic_factory = 1 }
+			add_to_variable = { TU_RHO_riic_factory_cost = 100 }
+			add_offsite_building = { type = arms_factory level = 1 }
+		}
+	}
+
+	# Trading post: offsite industrial complex (LMD income is in TU_RHO_update_income).
+	TU_RHO_upgrade_trade = {
+		icon = GFX_decision_generic_construction
+		allowed = { original_tag = RHO }
+		available = {
+			check_variable = { TU_RHO_riic_trade < TU_RHO_riic_cap }
+			check_variable = { var = TU_lmd value = TU_RHO_riic_trade_cost compare = greater_than_or_equals }
+		}
+		cost = 25
+		days_re_enable = 30
+		ai_will_do = { factor = 0 }
+		complete_effect = {
+			subtract_from_variable = { TU_lmd = TU_RHO_riic_trade_cost }
+			add_to_variable = { TU_RHO_riic_trade = 1 }
+			add_to_variable = { TU_RHO_riic_trade_cost = 100 }
+			add_offsite_building = { type = industrial_complex level = 1 }
+		}
+	}
+
+	# Power plant: only raises the cap for the other facilities (max level 3).
+	TU_RHO_upgrade_power = {
+		icon = GFX_decision_generic_industry
+		allowed = { original_tag = RHO }
+		available = {
+			check_variable = { TU_RHO_riic_power < 3 }
+			check_variable = { var = TU_lmd value = TU_RHO_riic_power_cost compare = greater_than_or_equals }
+		}
+		cost = 25
+		days_re_enable = 30
+		ai_will_do = { factor = 0 }
+		complete_effect = {
+			subtract_from_variable = { TU_lmd = TU_RHO_riic_power_cost }
+			add_to_variable = { TU_RHO_riic_power = 1 }
+			add_to_variable = { TU_RHO_riic_power_cost = 100 }
+			add_to_variable = { TU_RHO_riic_cap = 1 }
+		}
+	}
+
+	# Dormitory: army organisation regain and morale via TU_RHO_riic_modifier.
+	TU_RHO_upgrade_dorm = {
+		icon = GFX_decision_generic_civil_support
+		allowed = { original_tag = RHO }
+		available = {
+			check_variable = { TU_RHO_riic_dorm < TU_RHO_riic_cap }
+			check_variable = { var = TU_lmd value = TU_RHO_riic_dorm_cost compare = greater_than_or_equals }
+		}
+		cost = 25
+		days_re_enable = 30
+		ai_will_do = { factor = 0 }
+		complete_effect = {
+			subtract_from_variable = { TU_lmd = TU_RHO_riic_dorm_cost }
+			add_to_variable = { TU_RHO_riic_dorm = 1 }
+			add_to_variable = { TU_RHO_riic_dorm_cost = 100 }
+			add_to_variable = { TU_RHO_riic_dorm_bonus = 0.03 }
+			add_dynamic_modifier = { modifier = TU_RHO_riic_modifier }
+		}
+	}
+
+	# Reception room: political power gain via TU_RHO_riic_modifier.
+	# With La Resistance it also adds intel network gain.
+	TU_RHO_upgrade_reception = {
+		icon = GFX_decision_generic_political_rally
+		allowed = { original_tag = RHO }
+		available = {
+			check_variable = { TU_RHO_riic_reception < TU_RHO_riic_cap }
+			check_variable = { var = TU_lmd value = TU_RHO_riic_reception_cost compare = greater_than_or_equals }
+		}
+		cost = 25
+		days_re_enable = 30
+		ai_will_do = { factor = 0 }
+		complete_effect = {
+			subtract_from_variable = { TU_lmd = TU_RHO_riic_reception_cost }
+			add_to_variable = { TU_RHO_riic_reception = 1 }
+			add_to_variable = { TU_RHO_riic_reception_cost = 100 }
+			add_to_variable = { TU_RHO_riic_reception_bonus = 0.05 }
+			if = {
+				limit = { has_dlc = "La Resistance" }
+				add_to_variable = { TU_RHO_riic_intel_bonus = 0.1 }
+			}
+			add_dynamic_modifier = { modifier = TU_RHO_riic_modifier }
+		}
+	}
+}
+
+TU_RHO_operations_category = {
+
+	# Public recruitment: one operator squad in the capital.
+	TU_RHO_headhunting = {
+		icon = GFX_decision_generic_intelligence_operation
+		allowed = { original_tag = RHO }
+		available = {
+			check_variable = { var = TU_lmd value = 300 compare = greater_than_or_equals }
+		}
+		cost = 50
+		days_re_enable = 60
+		ai_will_do = { factor = 0 }
+		complete_effect = {
+			subtract_from_variable = { TU_lmd = 300 }
+			capital_scope = {
+				create_unit = {
+					division = "name = \"Rhodes Island Operator Squad\" division_template = \"TU_RHO_operator_squad\" start_experience_factor = 1.0"
+					owner = RHO
+				}
+			}
+		}
+	}
+
+	# Relief branches: once per target country. +300 manpower per month each.
+	TU_RHO_safehouse_URS = {
+		icon = GFX_decision_generic_civil_support
+		allowed = { original_tag = RHO }
+		visible = { country_exists = URS }
+		available = {
+			country_exists = URS
+			NOT = { has_country_flag = TU_RHO_safehouse_URS }
+		}
+		cost = 50
+		ai_will_do = { factor = 0 }
+		complete_effect = {
+			if = {
+				limit = { has_country_flag = TU_RHO_safehouse_discount }
+				add_political_power = 25
+			}
+			set_country_flag = TU_RHO_safehouse_URS
+			if = {
+				limit = { has_dlc = "La Resistance" }
+				add_intel = { target = URS civilian_intel = 3 }
+			}
+		}
+	}
+
+	TU_RHO_safehouse_KZD = {
+		icon = GFX_decision_generic_civil_support
+		allowed = { original_tag = RHO }
+		visible = { country_exists = KZD }
+		available = {
+			country_exists = KZD
+			NOT = { has_country_flag = TU_RHO_safehouse_KZD }
+		}
+		cost = 50
+		ai_will_do = { factor = 0 }
+		complete_effect = {
+			if = {
+				limit = { has_country_flag = TU_RHO_safehouse_discount }
+				add_political_power = 25
+			}
+			set_country_flag = TU_RHO_safehouse_KZD
+			if = {
+				limit = { has_dlc = "La Resistance" }
+				add_intel = { target = KZD civilian_intel = 3 }
+			}
+		}
+	}
+
+	TU_RHO_safehouse_YAN = {
+		icon = GFX_decision_generic_civil_support
+		allowed = { original_tag = RHO }
+		visible = { country_exists = YAN }
+		available = {
+			country_exists = YAN
+			NOT = { has_country_flag = TU_RHO_safehouse_YAN }
+		}
+		cost = 50
+		ai_will_do = { factor = 0 }
+		complete_effect = {
+			if = {
+				limit = { has_country_flag = TU_RHO_safehouse_discount }
+				add_political_power = 25
+			}
+			set_country_flag = TU_RHO_safehouse_YAN
+			if = {
+				limit = { has_dlc = "La Resistance" }
+				add_intel = { target = YAN civilian_intel = 3 }
+			}
+		}
+	}
+
+	TU_RHO_safehouse_VIC = {
+		icon = GFX_decision_generic_civil_support
+		allowed = { original_tag = RHO }
+		visible = { country_exists = VIC }
+		available = {
+			country_exists = VIC
+			NOT = { has_country_flag = TU_RHO_safehouse_VIC }
+		}
+		cost = 50
+		ai_will_do = { factor = 0 }
+		complete_effect = {
+			if = {
+				limit = { has_country_flag = TU_RHO_safehouse_discount }
+				add_political_power = 25
+			}
+			set_country_flag = TU_RHO_safehouse_VIC
+			if = {
+				limit = { has_dlc = "La Resistance" }
+				add_intel = { target = VIC civilian_intel = 3 }
+			}
+		}
+	}
+
+	TU_RHO_safehouse_COL = {
+		icon = GFX_decision_generic_civil_support
+		allowed = { original_tag = RHO }
+		visible = { country_exists = COL }
+		available = {
+			country_exists = COL
+			NOT = { has_country_flag = TU_RHO_safehouse_COL }
+		}
+		cost = 50
+		ai_will_do = { factor = 0 }
+		complete_effect = {
+			if = {
+				limit = { has_country_flag = TU_RHO_safehouse_discount }
+				add_political_power = 25
+			}
+			set_country_flag = TU_RHO_safehouse_COL
+			if = {
+				limit = { has_dlc = "La Resistance" }
+				add_intel = { target = COL civilian_intel = 3 }
+			}
+		}
+	}
+
+	TU_RHO_safehouse_KAZ = {
+		icon = GFX_decision_generic_civil_support
+		allowed = { original_tag = RHO }
+		visible = { country_exists = KAZ }
+		available = {
+			country_exists = KAZ
+			NOT = { has_country_flag = TU_RHO_safehouse_KAZ }
+		}
+		cost = 50
+		ai_will_do = { factor = 0 }
+		complete_effect = {
+			if = {
+				limit = { has_country_flag = TU_RHO_safehouse_discount }
+				add_political_power = 25
+			}
+			set_country_flag = TU_RHO_safehouse_KAZ
+			if = {
+				limit = { has_dlc = "La Resistance" }
+				add_intel = { target = KAZ civilian_intel = 3 }
+			}
+		}
+	}
+
+	TU_RHO_safehouse_LAT = {
+		icon = GFX_decision_generic_civil_support
+		allowed = { original_tag = RHO }
+		visible = { country_exists = LAT }
+		available = {
+			country_exists = LAT
+			NOT = { has_country_flag = TU_RHO_safehouse_LAT }
+		}
+		cost = 50
+		ai_will_do = { factor = 0 }
+		complete_effect = {
+			if = {
+				limit = { has_country_flag = TU_RHO_safehouse_discount }
+				add_political_power = 25
+			}
+			set_country_flag = TU_RHO_safehouse_LAT
+			if = {
+				limit = { has_dlc = "La Resistance" }
+				add_intel = { target = LAT civilian_intel = 3 }
+			}
+		}
+	}
+
+	# PMC contract: needs a country at war. Adds one contract for 180 days.
+	TU_RHO_pmc_contract = {
+		icon = GFX_decision_generic_military
+		allowed = { original_tag = RHO }
+		available = {
+			has_war = yes
+		}
+		cost = 25
+		days_re_enable = 30
+		ai_will_do = { factor = 0 }
+		complete_effect = {
+			add_to_variable = { TU_RHO_pmc_count = 1 }
+			country_event = { id = tu_rho.1 days = 180 }
+		}
+	}
+
+	# Operation: rescue Chernobog. Completes 60 days later (tu_rho.2).
+	TU_RHO_op_chernobog = {
+		icon = GFX_decision_generic_operation
+		allowed = { original_tag = RHO }
+		visible = { has_country_flag = TU_RHO_op_unlocked }
+		available = {
+			has_country_flag = TU_RHO_op_unlocked
+			country_exists = URS
+			command_power > 29
+			check_variable = { var = TU_lmd value = 500 compare = greater_than_or_equals }
+		}
+		fire_only_once = yes
+		ai_will_do = { factor = 0 }
+		complete_effect = {
+			subtract_from_variable = { TU_lmd = 500 }
+			add_command_power = -30
+			country_event = { id = tu_rho.2 days = 60 }
+		}
+	}
+}

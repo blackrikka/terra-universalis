@@ -1,0 +1,21 @@
+state={
+	id=737
+	name="STATE_737"
+	impassable = yes
+	manpower = 1000
+
+	state_category = wasteland
+
+	history={
+		owner = HIG
+		buildings = {
+			infrastructure = 0
+		}
+		add_core_of = HIG
+	}
+
+	provinces={
+		2501
+	}
+	local_supplies=0.0
+}

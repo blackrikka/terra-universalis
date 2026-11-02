@@ -1,0 +1,418 @@
+	#### WEST: KAZDEL (KZD) - diplomacy x132 / border x134 / war x136 ####
+
+	focus = {
+		id = TU_URS_w1_kzd_border_buildup
+		icon = GFX_goal_generic_construct_military
+		prerequisite = { focus = TU_URS_foreign_ministry }
+		x = 134
+		y = 4
+		cost = 10
+
+		search_filters = { FOCUS_FILTER_MANPOWER }
+
+		ai_will_do = {
+			base = 1
+		}
+
+		available = {
+			has_country_flag = TU_DEC_TU_URS_w1_kzd_border_claims
+		}
+
+		completion_reward = {
+			add_manpower = 20000
+			add_ideas = TU_URS_w1_border_readiness
+		}
+	}
+
+	focus = {
+		id = TU_URS_w1_kzd_mobilization
+		icon = GFX_goal_generic_army_motorized
+		prerequisite = { focus = TU_URS_foreign_ministry }
+		x = 136
+		y = 4
+		cost = 10
+
+		search_filters = { FOCUS_FILTER_ARMY_XP }
+
+		ai_will_do = {
+			base = 1
+		}
+
+		available = {
+			has_country_flag = TU_DEC_TU_URS_w1_kzd_border_claims
+		}
+
+		completion_reward = {
+			army_experience = 15
+		}
+	}
+
+	focus = {
+		id = TU_URS_w1_kzd_war_doctrine
+		icon = GFX_goal_generic_army_artillery
+		prerequisite = { focus = TU_URS_w1_kzd_mobilization }
+		x = 136
+		y = 5
+		cost = 10
+
+		search_filters = { FOCUS_FILTER_ARMY_XP }
+
+		ai_will_do = {
+			base = 1
+		}
+
+		completion_reward = {
+			army_experience = 25
+			add_ideas = TU_URS_w1_war_footing
+		}
+	}
+
+	focus = {
+		id = TU_URS_w1_kzd_imperial_levy
+		icon = GFX_goal_generic_allies_build_infantry
+		prerequisite = { focus = TU_URS_w1_kzd_border_buildup }
+		x = 134
+		y = 6
+		cost = 10
+
+		available = {
+			has_completed_focus = TU_URS_emperor_rule
+			has_country_flag = TU_DEC_TU_URS_w1_kzd_border_ultimatum
+		}
+
+		search_filters = { FOCUS_FILTER_MANPOWER }
+
+		ai_will_do = {
+			base = 1
+		}
+
+		completion_reward = {
+			add_manpower = 30000
+			add_ideas = TU_URS_w1_mercenary_levy
+			add_political_power = 25
+		}
+	}
+
+	focus = {
+		id = TU_URS_w1_kzd_occupation
+		icon = GFX_goal_generic_occupy_states_ongoing_war
+		prerequisite = { focus = TU_URS_w1_kzd_war_doctrine }
+		x = 136
+		y = 8
+		cost = 10
+
+		search_filters = { FOCUS_FILTER_WAR_SUPPORT }
+
+		ai_will_do = {
+			base = 1
+		}
+
+		available = {
+			has_country_flag = TU_DEC_TU_URS_w1_kzd_war_declaration
+		}
+
+		completion_reward = {
+			army_experience = 25
+			add_ideas = TU_URS_w1_occupation_strain
+		}
+	}
+
+	focus = {
+		id = TU_URS_w1_kzd_core_integration
+		icon = GFX_goal_generic_construction
+		prerequisite = { focus = TU_URS_w1_kzd_occupation }
+		x = 136
+		y = 11
+		cost = 10
+
+		search_filters = { FOCUS_FILTER_HISTORICAL }
+
+		ai_will_do = {
+			base = 1
+		}
+
+		completion_reward = {
+			add_political_power = 50
+			add_ideas = TU_URS_w1_cultural_absorption
+			every_owned_state = {
+				limit = {
+					is_owned_and_controlled_by = ROOT
+					is_core_of = KZD
+				}
+				add_core_of = ROOT
+				add_compliance = 10
+				set_state_flag = TU_URS_w1_kzd_integrated
+			}
+		}
+	}
+
+	#### WEST: VICTORIA (VIC) - diplomacy x138 / border x140 / war x142 ####
+
+	focus = {
+		id = TU_URS_w1_vic_border_buildup
+		icon = GFX_goal_generic_construct_military
+		prerequisite = { focus = TU_URS_foreign_ministry }
+		x = 140
+		y = 4
+		cost = 10
+
+		search_filters = { FOCUS_FILTER_MANPOWER }
+
+		ai_will_do = {
+			base = 1
+		}
+
+		available = {
+			has_country_flag = TU_DEC_TU_URS_w1_vic_border_claims
+		}
+
+		completion_reward = {
+			add_manpower = 20000
+			add_ideas = TU_URS_w1_border_readiness
+		}
+	}
+
+	focus = {
+		id = TU_URS_w1_vic_mobilization
+		icon = GFX_goal_generic_army_motorized
+		prerequisite = { focus = TU_URS_foreign_ministry }
+		x = 142
+		y = 4
+		cost = 10
+
+		search_filters = { FOCUS_FILTER_ARMY_XP }
+
+		ai_will_do = {
+			base = 1
+		}
+
+		available = {
+			has_country_flag = TU_DEC_TU_URS_w1_vic_border_claims
+		}
+
+		completion_reward = {
+			army_experience = 15
+		}
+	}
+
+	focus = {
+		id = TU_URS_w1_vic_war_doctrine
+		icon = GFX_goal_generic_army_tanks
+		prerequisite = { focus = TU_URS_w1_vic_mobilization }
+		x = 142
+		y = 5
+		cost = 10
+
+		search_filters = { FOCUS_FILTER_ARMY_XP }
+
+		ai_will_do = {
+			base = 1
+		}
+
+		completion_reward = {
+			army_experience = 25
+			add_ideas = TU_URS_w1_war_footing
+		}
+	}
+
+	focus = {
+		id = TU_URS_w1_vic_junta_intervention
+		icon = GFX_goal_generic_political_pressure
+		prerequisite = { focus = TU_URS_w1_vic_border_buildup }
+		x = 140
+		y = 6
+		cost = 10
+
+		available = {
+			has_completed_focus = TU_URS_military_junta
+			has_country_flag = TU_DEC_TU_URS_w1_vic_border_ultimatum
+		}
+
+		search_filters = { FOCUS_FILTER_POLITICAL }
+
+		ai_will_do = {
+			base = 1
+		}
+
+		completion_reward = {
+			add_political_power = 50
+			army_experience = 20
+			add_war_support = 0.05
+		}
+	}
+
+	focus = {
+		id = TU_URS_w1_vic_occupation
+		icon = GFX_goal_generic_occupy_states_ongoing_war
+		prerequisite = { focus = TU_URS_w1_vic_war_doctrine }
+		x = 142
+		y = 8
+		cost = 10
+
+		search_filters = { FOCUS_FILTER_WAR_SUPPORT }
+
+		ai_will_do = {
+			base = 1
+		}
+
+		available = {
+			has_country_flag = TU_DEC_TU_URS_w1_vic_war_declaration
+		}
+
+		completion_reward = {
+			army_experience = 25
+			add_ideas = TU_URS_w1_occupation_strain
+		}
+	}
+
+	focus = {
+		id = TU_URS_w1_vic_core_integration
+		icon = GFX_goal_generic_construction
+		prerequisite = { focus = TU_URS_w1_vic_occupation }
+		x = 142
+		y = 11
+		cost = 10
+
+		search_filters = { FOCUS_FILTER_HISTORICAL }
+
+		ai_will_do = {
+			base = 1
+		}
+
+		completion_reward = {
+			add_political_power = 50
+			add_ideas = TU_URS_w1_cultural_absorption
+			every_owned_state = {
+				limit = {
+					is_owned_and_controlled_by = ROOT
+					is_core_of = VIC
+				}
+				add_core_of = ROOT
+				add_compliance = 10
+				set_state_flag = TU_URS_w1_vic_integrated
+			}
+		}
+	}
+
+	#### WEST: LEITHANIEN (LEI) - diplomacy x144 / border x146 / war x148 ####
+
+	focus = {
+		id = TU_URS_w1_lei_border_buildup
+		icon = GFX_goal_generic_defence
+		prerequisite = { focus = TU_URS_foreign_ministry }
+		x = 146
+		y = 4
+		cost = 10
+
+		search_filters = { FOCUS_FILTER_MANPOWER }
+
+		ai_will_do = {
+			base = 1
+		}
+
+		available = {
+			has_country_flag = TU_DEC_TU_URS_w1_lei_border_claims
+		}
+
+		completion_reward = {
+			add_manpower = 20000
+			add_ideas = TU_URS_w1_border_readiness
+		}
+	}
+
+	focus = {
+		id = TU_URS_w1_lei_mobilization
+		icon = GFX_goal_generic_army_motorized
+		prerequisite = { focus = TU_URS_foreign_ministry }
+		x = 148
+		y = 4
+		cost = 10
+
+		search_filters = { FOCUS_FILTER_ARMY_XP }
+
+		ai_will_do = {
+			base = 1
+		}
+
+		available = {
+			has_country_flag = TU_DEC_TU_URS_w1_lei_border_claims
+		}
+
+		completion_reward = {
+			army_experience = 15
+			add_manpower = 10000
+		}
+	}
+
+	focus = {
+		id = TU_URS_w1_lei_war_doctrine
+		icon = GFX_goal_generic_army_artillery
+		prerequisite = { focus = TU_URS_w1_lei_mobilization }
+		x = 148
+		y = 5
+		cost = 10
+
+		search_filters = { FOCUS_FILTER_ARMY_XP }
+
+		ai_will_do = {
+			base = 1
+		}
+
+		completion_reward = {
+			army_experience = 25
+			add_ideas = TU_URS_w1_war_footing
+		}
+	}
+
+	focus = {
+		id = TU_URS_w1_lei_occupation
+		icon = GFX_goal_generic_occupy_states_ongoing_war
+		prerequisite = { focus = TU_URS_w1_lei_war_doctrine }
+		x = 148
+		y = 8
+		cost = 10
+
+		search_filters = { FOCUS_FILTER_WAR_SUPPORT }
+
+		ai_will_do = {
+			base = 1
+		}
+
+		available = {
+			has_country_flag = TU_DEC_TU_URS_w1_lei_war_declaration
+		}
+
+		completion_reward = {
+			army_experience = 25
+			add_ideas = TU_URS_w1_occupation_strain
+		}
+	}
+
+	focus = {
+		id = TU_URS_w1_lei_core_integration
+		icon = GFX_goal_generic_construction
+		prerequisite = { focus = TU_URS_w1_lei_occupation }
+		x = 148
+		y = 11
+		cost = 10
+
+		search_filters = { FOCUS_FILTER_HISTORICAL }
+
+		ai_will_do = {
+			base = 1
+		}
+
+		completion_reward = {
+			add_political_power = 50
+			add_ideas = TU_URS_w1_cultural_absorption
+			every_owned_state = {
+				limit = {
+					is_owned_and_controlled_by = ROOT
+					is_core_of = LEI
+				}
+				add_core_of = ROOT
+				add_compliance = 10
+				set_state_flag = TU_URS_w1_lei_integrated
+			}
+		}
+	}

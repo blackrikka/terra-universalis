@@ -1,0 +1,39 @@
+ideas = {
+
+	country = {
+
+		TU_URS_ev_chernobog_shadow = {
+			picture = generic_oppression
+
+			allowed = {
+				original_tag = URS
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			modifier = {
+				stability_factor = -0.03
+				war_support_factor = 0.03
+			}
+		}
+
+		TU_URS_ev_student_charter = {
+			picture = generic_central_management
+
+			allowed = {
+				original_tag = URS
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			modifier = {
+				political_power_gain = 0.1
+				stability_factor = 0.02
+			}
+		}
+	}
+}

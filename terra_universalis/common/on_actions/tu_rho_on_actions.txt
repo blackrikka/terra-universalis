@@ -1,0 +1,19 @@
+on_actions = {
+	on_startup = {
+		effect = {
+			if = {
+				limit = { country_exists = RHO }
+				RHO = { TU_RHO_startup = yes }
+			}
+		}
+	}
+
+	on_monthly = {
+		effect = {
+			if = {
+				limit = { tag = RHO }
+				TU_RHO_monthly = yes
+			}
+		}
+	}
+}

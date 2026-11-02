@@ -1,0 +1,144 @@
+ideas = {
+	country = {
+		# Permanent: medical research (focus TU_RHO_med_crystal)
+		TU_RHO_med_research_bonus = {
+			picture = generic_research_bonus
+			modifier = {
+				research_speed_factor = 0.10
+			}
+		}
+
+		# Permanent: mass production of the cure (focus TU_RHO_cure_mass)
+		TU_RHO_med_mass_production = {
+			picture = generic_production_bonus
+			modifier = {
+				consumer_goods_factor = -0.05
+				stability_factor = 0.03
+			}
+		}
+
+		# Permanent: Oripathy clinic network (focus TU_RHO_cure_clinic)
+		TU_RHO_clinic_network = {
+			picture = generic_manpower_bonus
+			modifier = {
+				stability_factor = 0.03
+				political_power_gain = 0.05
+			}
+		}
+
+		# Permanent: enhanced squad doctrine (focus TU_RHO_enh_squad)
+		TU_RHO_enhanced_squad = {
+			picture = generic_infantry_bonus
+			modifier = {
+				army_attack_factor = 0.10
+				army_morale_factor = 0.05
+			}
+		}
+
+		# Permanent: ethics committee dissolved (focus TU_RHO_enh_ethics)
+		TU_RHO_ethics_breach = {
+			picture = generic_secret_police
+			modifier = {
+				stability_factor = -0.05
+				war_support_factor = 0.05
+			}
+		}
+
+		# Timed: field test surge (decision TU_RHO_enh_field_test, removed after 60 days)
+		TU_RHO_enh_surge = {
+			picture = generic_war_preparation
+			modifier = {
+				army_attack_factor = 0.10
+				stability_factor = -0.02
+			}
+		}
+
+		# Permanent: elite equipment (focus TU_RHO_elite_equip)
+		TU_RHO_elite_gear = {
+			picture = generic_army_war_college
+			modifier = {
+				army_defence_factor = 0.05
+				army_attack_factor = 0.03
+			}
+		}
+
+		# Permanent: elite legend (focus TU_RHO_elite_legend)
+		TU_RHO_elite_legacy = {
+			picture = generic_morale_bonus
+			modifier = {
+				army_morale_factor = 0.10
+				experience_gain_army_factor = 0.10
+			}
+		}
+
+		# Timed: elite recruitment surge (decision TU_RHO_elite_recruit, removed after 120 days)
+		TU_RHO_elite_surge = {
+			picture = generic_morale_bonus
+			modifier = {
+				experience_gain_army_factor = 0.05
+				army_attack_factor = 0.05
+			}
+		}
+
+		# Timed: relief camp network (decision TU_RHO_ark_relief_camp, removed after 90 days)
+		TU_RHO_ark_relief_network = {
+			picture = generic_manpower_bonus
+			modifier = {
+				conscription_factor = 0.05
+				stability_factor = 0.02
+			}
+		}
+
+		# Permanent: public sympathy for the Ark (focus TU_RHO_public_rally)
+		TU_RHO_ark_sympathy = {
+			picture = generic_volunteer_expedition_bonus
+			modifier = {
+				war_support_factor = 0.05
+				stability_factor = 0.02
+			}
+		}
+
+		# Timed: convoy aid (decision TU_RHO_ark_mutual_aid, removed after 90 days)
+		TU_RHO_ark_convoy_aid = {
+			picture = generic_production_bonus
+			modifier = {
+				consumer_goods_factor = -0.03
+				production_speed_buildings_factor = 0.02
+			}
+		}
+
+		# Timed: contract bounty (decision TU_RHO_contract_bounty, removed after 60 days)
+		TU_RHO_contract_bonus = {
+			picture = generic_pp_unity_bonus
+			modifier = {
+				political_power_gain = 0.10
+			}
+		}
+
+		# Permanent: doctor's doctrine (focus TU_RHO_doctrine_codex)
+		TU_RHO_doctor_doctrine = {
+			picture = generic_army_war_college
+			modifier = {
+				experience_gain_army_factor = 0.15
+			}
+		}
+
+		# Timed: shadow strike (decision TU_RHO_shadow_strike, removed after 45 days)
+		TU_RHO_shadow_surge = {
+			picture = generic_intel_bonus
+			modifier = {
+				army_attack_factor = 0.10
+				stability_factor = -0.02
+			}
+		}
+
+		# Timed: clinical trial (decision TU_RHO_med_trial_site, removed after 90 days)
+		TU_RHO_clinical_trial = {
+			picture = generic_research_bonus
+			modifier = {
+				research_speed_factor = 0.05
+				stability_factor = 0.05
+			}
+		}
+	}
+}

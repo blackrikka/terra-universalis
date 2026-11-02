@@ -1,0 +1,2078 @@
+	#### R1 PART p1_politics: 3-route expansion (Ark / Contractors / Demon King), common Oripathy research, elite operators, PRTS side branch ####
+	#### x and y are placeholders; autolayout places every focus when the tree is merged ####
+
+	#### COMMON A: ORIPATHY MEDICAL RESEARCH (root: chernobog rescue, neutral BoP) ####
+
+	focus = {
+		id = TU_RHO_med_start
+		icon = GFX_goal_generic_scientific_exchange
+		cost = 5
+		x = 0
+		y = 0
+
+		prerequisite = { focus = TU_RHO_chernobog_rescue }
+
+		completion_reward = {
+			add_political_power = 50
+			set_country_flag = TU_RHO_med_started
+		}
+
+		ai_will_do = {
+			base = 1
+		}
+	}
+
+	focus = {
+		id = TU_RHO_med_sample
+		icon = GFX_goal_generic_intelligence_exchange
+		cost = 10
+		x = 0
+		y = 0
+
+		prerequisite = { focus = TU_RHO_med_start }
+
+		completion_reward = {
+			add_political_power = 40
+			add_stability = 0.02
+		}
+
+		ai_will_do = {
+			base = 1
+		}
+	}
+
+	focus = {
+		id = TU_RHO_med_crystal
+		icon = GFX_goal_generic_scientific_exchange
+		cost = 10
+		x = 0
+		y = 0
+
+		prerequisite = { focus = TU_RHO_med_sample }
+
+		completion_reward = {
+			add_political_power = 50
+			add_ideas = TU_RHO_med_research_bonus
+		}
+
+		ai_will_do = {
+			base = 1
+		}
+	}
+
+	focus = {
+		id = TU_RHO_cure_track
+		icon = GFX_goal_generic_improve_relations
+		cost = 10
+		x = 0
+		y = 0
+
+		prerequisite = { focus = TU_RHO_med_crystal }
+		mutually_exclusive = { focus = TU_RHO_enh_track }
+
+		completion_reward = {
+			add_political_power = 50
+			set_country_flag = TU_RHO_cure_track
+		}
+
+		ai_will_do = {
+			base = 1
+		}
+	}
+
+	focus = {
+		id = TU_RHO_enh_track
+		icon = GFX_goal_generic_dangerous_deal
+		cost = 10
+		x = 0
+		y = 0
+
+		prerequisite = { focus = TU_RHO_med_crystal }
+		mutually_exclusive = { focus = TU_RHO_cure_track }
+
+		completion_reward = {
+			add_political_power = 50
+			set_country_flag = TU_RHO_enh_track
+		}
+
+		ai_will_do = {
+			base = 1
+		}
+	}
+
+	focus = {
+		id = TU_RHO_cure_prototype
+		icon = GFX_goal_generic_consumer_goods
+		cost = 10
+		x = 0
+		y = 0
+
+		prerequisite = { focus = TU_RHO_cure_track }
+
+		completion_reward = {
+			add_political_power = 50
+		}
+
+		ai_will_do = {
+			base = 1
+		}
+	}
+
+	focus = {
+		id = TU_RHO_cure_trial
+		icon = GFX_goal_generic_positive_trade_relations
+		cost = 10
+		x = 0
+		y = 0
+
+		prerequisite = { focus = TU_RHO_cure_prototype }
+
+		completion_reward = {
+			add_political_power = 50
+			add_stability = 0.02
+		}
+
+		ai_will_do = {
+			base = 1
+		}
+	}
+
+	focus = {
+		id = TU_RHO_cure_mass
+		icon = GFX_goal_generic_production
+		cost = 10
+		x = 0
+		y = 0
+
+		prerequisite = { focus = TU_RHO_cure_trial }
+
+		completion_reward = {
+			add_political_power = 75
+			add_ideas = TU_RHO_med_mass_production
+		}
+
+		ai_will_do = {
+			base = 1
+		}
+	}
+
+	focus = {
+		id = TU_RHO_cure_clinic
+		icon = GFX_goal_generic_construct_civilian
+		cost = 15
+		x = 0
+		y = 0
+
+		prerequisite = { focus = TU_RHO_cure_mass }
+
+		completion_reward = {
+			add_political_power = 100
+			add_ideas = TU_RHO_clinic_network
+		}
+
+		ai_will_do = {
+			base = 1
+		}
+	}
+
+	focus = {
+		id = TU_RHO_enh_lab
+		icon = GFX_goal_generic_secret_weapon
+		cost = 10
+		x = 0
+		y = 0
+
+		prerequisite = { focus = TU_RHO_enh_track }
+
+		completion_reward = {
+			add_political_power = 50
+		}
+
+		ai_will_do = {
+			base = 1
+		}
+	}
+
+	focus = {
+		id = TU_RHO_enh_serum
+		icon = GFX_goal_generic_army_doctrines
+		cost = 10
+		x = 0
+		y = 0
+
+		prerequisite = { focus = TU_RHO_enh_lab }
+
+		completion_reward = {
+			add_political_power = 50
+			army_experience = 20
+		}
+
+		ai_will_do = {
+			base = 1
+		}
+	}
+
+	focus = {
+		id = TU_RHO_enh_squad
+		icon = GFX_goal_generic_special_forces
+		cost = 10
+		x = 0
+		y = 0
+
+		prerequisite = { focus = TU_RHO_enh_serum }
+
+		completion_reward = {
+			add_political_power = 75
+			add_ideas = TU_RHO_enhanced_squad
+		}
+
+		ai_will_do = {
+			base = 1
+		}
+	}
+
+	focus = {
+		id = TU_RHO_enh_ethics
+		icon = GFX_goal_generic_political_pressure
+		cost = 15
+		x = 0
+		y = 0
+
+		prerequisite = { focus = TU_RHO_enh_squad }
+
+		completion_reward = {
+			add_political_power = 100
+			add_ideas = TU_RHO_ethics_breach
+			country_event = { id = tu_rho_ev.6 }
+		}
+
+		ai_will_do = {
+			base = 1
+		}
+	}
+
+	focus = {
+		id = TU_RHO_med_research_hall
+		icon = GFX_goal_generic_scientific_exchange
+		cost = 10
+		x = 0
+		y = 0
+
+		prerequisite = { focus = TU_RHO_cure_clinic focus = TU_RHO_enh_ethics }
+
+		completion_reward = {
+			add_political_power = 60
+		}
+
+		ai_will_do = {
+			base = 1
+		}
+	}
+
+	focus = {
+		id = TU_RHO_med_peer_review
+		icon = GFX_goal_generic_propaganda
+		cost = 10
+		x = 0
+		y = 0
+
+		prerequisite = { focus = TU_RHO_med_research_hall }
+
+		completion_reward = {
+			add_political_power = 50
+			add_stability = 0.02
+		}
+
+		ai_will_do = {
+			base = 1
+		}
+	}
+
+	focus = {
+		id = TU_RHO_med_patent
+		icon = GFX_goal_generic_trade
+		cost = 10
+		x = 0
+		y = 0
+
+		prerequisite = { focus = TU_RHO_med_peer_review }
+
+		completion_reward = {
+			add_political_power = 75
+			add_to_variable = { TU_lmd = 500 }
+		}
+
+		ai_will_do = {
+			base = 1
+		}
+	}
+
+	focus = {
+		id = TU_RHO_med_global_cure
+		icon = GFX_goal_generic_national_unity
+		cost = 15
+		x = 0
+		y = 0
+
+		prerequisite = { focus = TU_RHO_med_patent }
+
+		completion_reward = {
+			add_political_power = 100
+			add_stability = 0.05
+			country_event = { id = tu_rho_ev.7 }
+		}
+
+		ai_will_do = {
+			base = 1
+		}
+	}
+
+	#### COMMON B: ELITE OPERATORS (root: chernobog rescue) ####
+
+	focus = {
+		id = TU_RHO_elite_selection
+		icon = GFX_goal_generic_special_forces
+		cost = 5
+		x = 0
+		y = 0
+
+		prerequisite = { focus = TU_RHO_chernobog_rescue }
+
+		completion_reward = {
+			add_political_power = 50
+			set_country_flag = TU_RHO_elite_track
+		}
+
+		ai_will_do = {
+			base = 1
+		}
+	}
+
+	focus = {
+		id = TU_RHO_elite_training
+		icon = GFX_goal_generic_army_doctrines
+		cost = 10
+		x = 0
+		y = 0
+
+		prerequisite = { focus = TU_RHO_elite_selection }
+
+		completion_reward = {
+			add_political_power = 50
+			army_experience = 30
+		}
+
+		ai_will_do = {
+			base = 1
+		}
+	}
+
+	focus = {
+		id = TU_RHO_elite_equip
+		icon = GFX_goal_generic_army_tanks
+		cost = 10
+		x = 0
+		y = 0
+
+		prerequisite = { focus = TU_RHO_elite_training }
+
+		completion_reward = {
+			add_political_power = 50
+			add_ideas = TU_RHO_elite_gear
+		}
+
+		ai_will_do = {
+			base = 1
+		}
+	}
+
+	focus = {
+		id = TU_RHO_elite_squads
+		icon = GFX_goal_generic_small_arms
+		cost = 10
+		x = 0
+		y = 0
+
+		prerequisite = { focus = TU_RHO_elite_equip }
+
+		completion_reward = {
+			add_political_power = 75
+			set_country_flag = TU_RHO_elite_squads
+		}
+
+		ai_will_do = {
+			base = 1
+		}
+	}
+
+	focus = {
+		id = TU_RHO_elite_command
+		icon = GFX_goal_generic_army_motorized
+		cost = 10
+		x = 0
+		y = 0
+
+		prerequisite = { focus = TU_RHO_elite_squads }
+
+		completion_reward = {
+			add_political_power = 75
+			army_experience = 50
+		}
+
+		ai_will_do = {
+			base = 1
+		}
+	}
+
+	focus = {
+		id = TU_RHO_elite_legend
+		icon = GFX_goal_generic_national_unity
+		cost = 15
+		x = 0
+		y = 0
+
+		prerequisite = { focus = TU_RHO_elite_command }
+
+		completion_reward = {
+			add_political_power = 100
+			add_ideas = TU_RHO_elite_legacy
+			country_event = { id = tu_rho_ev.8 }
+		}
+
+		ai_will_do = {
+			base = 1
+		}
+	}
+
+	#### ROUTE A: "THE TERRAN ARK" extension (Amiya, BoP left) ####
+
+	focus = {
+		id = TU_RHO_camp_survey
+		icon = GFX_goal_generic_construct_civilian
+		cost = 5
+		x = 0
+		y = 0
+
+		prerequisite = { focus = TU_RHO_ark_relief_office }
+
+		completion_reward = {
+			add_political_power = 40
+		}
+
+		ai_will_do = {
+			base = 1
+		}
+	}
+
+	focus = {
+		id = TU_RHO_camp_build
+		icon = GFX_goal_generic_construction
+		cost = 10
+		x = 0
+		y = 0
+
+		prerequisite = { focus = TU_RHO_camp_survey }
+
+		completion_reward = {
+			add_political_power = 50
+			add_stability = 0.02
+		}
+
+		ai_will_do = {
+			base = 1
+		}
+	}
+
+	focus = {
+		id = TU_RHO_camp_charter
+		icon = GFX_goal_generic_consumer_goods
+		cost = 10
+		x = 0
+		y = 0
+
+		prerequisite = { focus = TU_RHO_camp_build }
+
+		completion_reward = {
+			add_political_power = 50
+			add_manpower = 3000
+		}
+
+		ai_will_do = {
+			base = 1
+		}
+	}
+
+	focus = {
+		id = TU_RHO_camp_autonomy
+		icon = GFX_goal_generic_national_unity
+		cost = 10
+		x = 0
+		y = 0
+
+		prerequisite = { focus = TU_RHO_camp_charter }
+		mutually_exclusive = { focus = TU_RHO_camp_guard }
+
+		completion_reward = {
+			add_political_power = 60
+			add_stability = 0.03
+		}
+
+		ai_will_do = {
+			base = 1
+		}
+	}
+
+	focus = {
+		id = TU_RHO_camp_guard
+		icon = GFX_goal_generic_fortify_city
+		cost = 10
+		x = 0
+		y = 0
+
+		prerequisite = { focus = TU_RHO_camp_charter }
+		mutually_exclusive = { focus = TU_RHO_camp_autonomy }
+
+		completion_reward = {
+			add_political_power = 60
+			army_experience = 15
+		}
+
+		ai_will_do = {
+			base = 1
+		}
+	}
+
+	focus = {
+		id = TU_RHO_camp_gate
+		icon = GFX_goal_generic_propaganda
+		cost = 15
+		x = 0
+		y = 0
+
+		prerequisite = { focus = TU_RHO_camp_autonomy focus = TU_RHO_camp_guard }
+
+		completion_reward = {
+			add_political_power = 100
+			add_war_support = 0.03
+		}
+
+		ai_will_do = {
+			base = 1
+		}
+	}
+
+	focus = {
+		id = TU_RHO_speech_tour
+		icon = GFX_goal_generic_propaganda
+		cost = 5
+		x = 0
+		y = 0
+
+		prerequisite = { focus = TU_RHO_ark_speech }
+
+		completion_reward = {
+			add_political_power = 50
+			add_war_support = 0.02
+		}
+
+		ai_will_do = {
+			base = 1
+		}
+	}
+
+	focus = {
+		id = TU_RHO_petition
+		icon = GFX_goal_generic_political_pressure
+		cost = 10
+		x = 0
+		y = 0
+
+		prerequisite = { focus = TU_RHO_speech_tour }
+
+		completion_reward = {
+			add_political_power = 50
+			add_stability = 0.02
+		}
+
+		ai_will_do = {
+			base = 1
+		}
+	}
+
+	focus = {
+		id = TU_RHO_public_rally
+		icon = GFX_goal_generic_national_unity
+		cost = 10
+		x = 0
+		y = 0
+
+		prerequisite = { focus = TU_RHO_petition }
+
+		completion_reward = {
+			add_political_power = 60
+			add_ideas = TU_RHO_ark_sympathy
+		}
+
+		ai_will_do = {
+			base = 1
+		}
+	}
+
+	focus = {
+		id = TU_RHO_ark_broadcast
+		icon = GFX_goal_generic_radar
+		cost = 15
+		x = 0
+		y = 0
+
+		prerequisite = { focus = TU_RHO_public_rally }
+
+		completion_reward = {
+			add_political_power = 100
+		}
+
+		ai_will_do = {
+			base = 1
+		}
+	}
+
+	focus = {
+		id = TU_RHO_ark_council
+		icon = GFX_goal_generic_national_unity
+		cost = 5
+		x = 0
+		y = 0
+
+		prerequisite = { focus = TU_RHO_ark_final }
+
+		completion_reward = {
+			add_political_power = 60
+			add_power_balance_value = { id = TU_RHO_bop value = -0.1 }
+		}
+
+		ai_will_do = {
+			base = 1
+		}
+	}
+
+	focus = {
+		id = TU_RHO_ark_accord
+		icon = GFX_goal_generic_alliance
+		cost = 10
+		x = 0
+		y = 0
+
+		prerequisite = { focus = TU_RHO_ark_council }
+
+		completion_reward = {
+			add_political_power = 60
+			add_stability = 0.02
+			add_power_balance_value = { id = TU_RHO_bop value = -0.1 }
+		}
+
+		ai_will_do = {
+			base = 1
+		}
+	}
+
+	focus = {
+		id = TU_RHO_terra_charter
+		icon = GFX_goal_generic_major_alliance
+		cost = 15
+		x = 0
+		y = 0
+
+		prerequisite = { focus = TU_RHO_ark_accord }
+
+		completion_reward = {
+			add_political_power = 100
+			add_war_support = 0.05
+			add_power_balance_value = { id = TU_RHO_bop value = -0.15 }
+			country_event = { id = tu_rho_ev.2 }
+		}
+
+		ai_will_do = {
+			base = 1
+		}
+	}
+
+	focus = {
+		id = TU_RHO_ark_envoy
+		icon = GFX_goal_generic_improve_relations
+		cost = 10
+		x = 0
+		y = 0
+
+		prerequisite = { focus = TU_RHO_terra_charter }
+
+		completion_reward = {
+			add_political_power = 50
+		}
+
+		ai_will_do = {
+			base = 1
+		}
+	}
+
+	focus = {
+		id = TU_RHO_ark_eternal
+		icon = GFX_goal_generic_positive_trade_relations
+		cost = 15
+		x = 0
+		y = 0
+
+		prerequisite = { focus = TU_RHO_ark_envoy }
+
+		completion_reward = {
+			add_political_power = 100
+			add_power_balance_value = { id = TU_RHO_bop value = -0.05 }
+			every_country = { news_event = { id = tu_rho_ev.11 hours = 6 } }
+		}
+
+		ai_will_do = {
+			base = 1
+		}
+	}
+
+	focus = {
+		id = TU_RHO_volunteer_camp
+		icon = GFX_goal_generic_construct_military
+		cost = 5
+		x = 0
+		y = 0
+
+		prerequisite = { focus = TU_RHO_unlimited_volunteers }
+
+		completion_reward = {
+			add_political_power = 40
+			add_manpower = 3000
+		}
+
+		ai_will_do = {
+			base = 1
+		}
+	}
+
+	focus = {
+		id = TU_RHO_volunteer_drill
+		icon = GFX_goal_generic_army_artillery
+		cost = 10
+		x = 0
+		y = 0
+
+		prerequisite = { focus = TU_RHO_volunteer_camp }
+
+		completion_reward = {
+			add_political_power = 50
+			army_experience = 20
+		}
+
+		ai_will_do = {
+			base = 1
+		}
+	}
+
+	focus = {
+		id = TU_RHO_volunteer_front
+		icon = GFX_goal_generic_defence
+		cost = 10
+		x = 0
+		y = 0
+
+		prerequisite = { focus = TU_RHO_volunteer_drill }
+
+		completion_reward = {
+			add_political_power = 60
+			add_war_support = 0.03
+		}
+
+		ai_will_do = {
+			base = 1
+		}
+	}
+
+	focus = {
+		id = TU_RHO_volunteer_regiment
+		icon = GFX_goal_generic_construct_mil_factory
+		cost = 15
+		x = 0
+		y = 0
+
+		prerequisite = { focus = TU_RHO_volunteer_front }
+
+		completion_reward = {
+			add_political_power = 100
+			add_manpower = 5000
+		}
+
+		ai_will_do = {
+			base = 1
+		}
+	}
+
+	focus = {
+		id = TU_RHO_ark_guard_pick
+		icon = GFX_goal_generic_special_forces
+		cost = 5
+		x = 0
+		y = 0
+
+		prerequisite = { focus = TU_RHO_ark_charter }
+
+		completion_reward = {
+			add_political_power = 40
+		}
+
+		ai_will_do = {
+			base = 1
+		}
+	}
+
+	focus = {
+		id = TU_RHO_ark_guard_train
+		icon = GFX_goal_generic_small_arms
+		cost = 10
+		x = 0
+		y = 0
+
+		prerequisite = { focus = TU_RHO_ark_guard_pick }
+
+		completion_reward = {
+			add_political_power = 50
+			army_experience = 20
+		}
+
+		ai_will_do = {
+			base = 1
+		}
+	}
+
+	focus = {
+		id = TU_RHO_ark_guard_post
+		icon = GFX_goal_generic_army_doctrines
+		cost = 10
+		x = 0
+		y = 0
+
+		prerequisite = { focus = TU_RHO_ark_guard_train }
+
+		completion_reward = {
+			add_political_power = 60
+			add_stability = 0.02
+		}
+
+		ai_will_do = {
+			base = 1
+		}
+	}
+
+	focus = {
+		id = TU_RHO_ark_guard_oath
+		icon = GFX_goal_generic_national_unity
+		cost = 15
+		x = 0
+		y = 0
+
+		prerequisite = { focus = TU_RHO_ark_guard_post }
+
+		completion_reward = {
+			add_political_power = 100
+			army_experience = 30
+		}
+
+		ai_will_do = {
+			base = 1
+		}
+	}
+
+	focus = {
+		id = TU_RHO_ark_school
+		icon = GFX_goal_generic_construct_civilian
+		cost = 5
+		x = 0
+		y = 0
+
+		prerequisite = { focus = TU_RHO_ark_refugees }
+
+		completion_reward = {
+			add_political_power = 50
+		}
+
+		ai_will_do = {
+			base = 1
+		}
+	}
+
+	focus = {
+		id = TU_RHO_ark_teachers
+		icon = GFX_goal_generic_scientific_exchange
+		cost = 10
+		x = 0
+		y = 0
+
+		prerequisite = { focus = TU_RHO_ark_school }
+
+		completion_reward = {
+			add_political_power = 50
+			add_stability = 0.02
+		}
+
+		ai_will_do = {
+			base = 1
+		}
+	}
+
+	focus = {
+		id = TU_RHO_ark_academy
+		icon = GFX_goal_generic_propaganda
+		cost = 10
+		x = 0
+		y = 0
+
+		prerequisite = { focus = TU_RHO_ark_teachers }
+
+		completion_reward = {
+			add_political_power = 75
+		}
+
+		ai_will_do = {
+			base = 1
+		}
+	}
+
+	focus = {
+		id = TU_RHO_ark_scholars
+		icon = GFX_goal_generic_scientific_exchange
+		cost = 15
+		x = 0
+		y = 0
+
+		prerequisite = { focus = TU_RHO_ark_academy }
+
+		completion_reward = {
+			add_political_power = 100
+		}
+
+		ai_will_do = {
+			base = 1
+		}
+	}
+
+	focus = {
+		id = TU_RHO_ark_convoy
+		icon = GFX_goal_generic_trade
+		cost = 10
+		x = 0
+		y = 0
+
+		prerequisite = { focus = TU_RHO_ark_accord }
+
+		completion_reward = {
+			add_political_power = 50
+			add_to_variable = { TU_lmd = 200 }
+		}
+
+		ai_will_do = {
+			base = 1
+		}
+	}
+
+	focus = {
+		id = TU_RHO_ark_depot
+		icon = GFX_goal_generic_consumer_goods
+		cost = 10
+		x = 0
+		y = 0
+
+		prerequisite = { focus = TU_RHO_ark_convoy }
+
+		completion_reward = {
+			add_political_power = 50
+			add_stability = 0.01
+		}
+
+		ai_will_do = {
+			base = 1
+		}
+	}
+
+	focus = {
+		id = TU_RHO_ark_mandate
+		icon = GFX_goal_generic_national_unity
+		cost = 15
+		x = 0
+		y = 0
+
+		prerequisite = { focus = TU_RHO_ark_depot }
+
+		completion_reward = {
+			add_political_power = 100
+		}
+
+		ai_will_do = {
+			base = 1
+		}
+	}
+
+	#### ROUTE B: "CONTRACTORS OF TERRA" extension (PMC, neutral) ####
+
+	focus = {
+		id = TU_RHO_broker_office
+		icon = GFX_goal_generic_trade
+		cost = 5
+		x = 0
+		y = 0
+
+		prerequisite = { focus = TU_RHO_mercenary_market }
+
+		completion_reward = {
+			add_political_power = 50
+			add_to_variable = { TU_lmd = 300 }
+		}
+
+		ai_will_do = {
+			base = 1
+		}
+	}
+
+	focus = {
+		id = TU_RHO_broker_network
+		icon = GFX_goal_generic_intelligence_exchange
+		cost = 10
+		x = 0
+		y = 0
+
+		prerequisite = { focus = TU_RHO_broker_office }
+
+		completion_reward = {
+			add_political_power = 50
+		}
+
+		ai_will_do = {
+			base = 1
+		}
+	}
+
+	focus = {
+		id = TU_RHO_broker_fees
+		icon = GFX_goal_generic_positive_trade_relations
+		cost = 10
+		x = 0
+		y = 0
+
+		prerequisite = { focus = TU_RHO_broker_network }
+		mutually_exclusive = { focus = TU_RHO_broker_discount }
+
+		completion_reward = {
+			add_political_power = 60
+			add_to_variable = { TU_lmd = 400 }
+		}
+
+		ai_will_do = {
+			base = 1
+		}
+	}
+
+	focus = {
+		id = TU_RHO_broker_discount
+		icon = GFX_goal_generic_military_deal
+		cost = 10
+		x = 0
+		y = 0
+
+		prerequisite = { focus = TU_RHO_broker_network }
+		mutually_exclusive = { focus = TU_RHO_broker_fees }
+
+		completion_reward = {
+			add_political_power = 60
+			add_stability = 0.02
+		}
+
+		ai_will_do = {
+			base = 1
+		}
+	}
+
+	focus = {
+		id = TU_RHO_broker_guild
+		icon = GFX_goal_generic_dangerous_deal
+		cost = 15
+		x = 0
+		y = 0
+
+		prerequisite = { focus = TU_RHO_broker_fees focus = TU_RHO_broker_discount }
+
+		completion_reward = {
+			add_political_power = 100
+			add_to_variable = { TU_lmd = 500 }
+		}
+
+		ai_will_do = {
+			base = 1
+		}
+	}
+
+	focus = {
+		id = TU_RHO_gold_vault
+		icon = GFX_goal_generic_trade
+		cost = 5
+		x = 0
+		y = 0
+
+		prerequisite = { focus = TU_RHO_arms_dealing }
+
+		completion_reward = {
+			add_political_power = 50
+			add_to_variable = { TU_lmd = 300 }
+		}
+
+		ai_will_do = {
+			base = 1
+		}
+	}
+
+	focus = {
+		id = TU_RHO_gold_hedge
+		icon = GFX_goal_generic_positive_trade_relations
+		cost = 10
+		x = 0
+		y = 0
+
+		prerequisite = { focus = TU_RHO_gold_vault }
+
+		completion_reward = {
+			add_political_power = 50
+		}
+
+		ai_will_do = {
+			base = 1
+		}
+	}
+
+	focus = {
+		id = TU_RHO_gold_insurance
+		icon = GFX_goal_generic_neutrality_focus
+		cost = 10
+		x = 0
+		y = 0
+
+		prerequisite = { focus = TU_RHO_gold_hedge }
+
+		completion_reward = {
+			add_political_power = 60
+			add_stability = 0.03
+		}
+
+		ai_will_do = {
+			base = 1
+		}
+	}
+
+	focus = {
+		id = TU_RHO_gold_fund
+		icon = GFX_goal_generic_national_unity
+		cost = 15
+		x = 0
+		y = 0
+
+		prerequisite = { focus = TU_RHO_gold_insurance }
+
+		completion_reward = {
+			add_political_power = 100
+			add_to_variable = { TU_lmd = 500 }
+		}
+
+		ai_will_do = {
+			base = 1
+		}
+	}
+
+	focus = {
+		id = TU_RHO_contract_pick
+		icon = GFX_goal_generic_special_forces
+		cost = 5
+		x = 0
+		y = 0
+
+		prerequisite = { focus = TU_RHO_contractors }
+
+		completion_reward = {
+			add_political_power = 40
+		}
+
+		ai_will_do = {
+			base = 1
+		}
+	}
+
+	focus = {
+		id = TU_RHO_contract_train
+		icon = GFX_goal_generic_small_arms
+		cost = 10
+		x = 0
+		y = 0
+
+		prerequisite = { focus = TU_RHO_contract_pick }
+
+		completion_reward = {
+			add_political_power = 50
+			army_experience = 20
+		}
+
+		ai_will_do = {
+			base = 1
+		}
+	}
+
+	focus = {
+		id = TU_RHO_contract_escort
+		icon = GFX_goal_generic_defence
+		cost = 10
+		x = 0
+		y = 0
+
+		prerequisite = { focus = TU_RHO_contract_train }
+
+		completion_reward = {
+			add_political_power = 60
+			add_war_support = 0.02
+		}
+
+		ai_will_do = {
+			base = 1
+		}
+	}
+
+	focus = {
+		id = TU_RHO_contract_elite
+		icon = GFX_goal_generic_army_tanks
+		cost = 10
+		x = 0
+		y = 0
+
+		prerequisite = { focus = TU_RHO_contract_escort }
+
+		completion_reward = {
+			add_political_power = 60
+			army_experience = 30
+		}
+
+		ai_will_do = {
+			base = 1
+		}
+	}
+
+	focus = {
+		id = TU_RHO_contract_legion
+		icon = GFX_goal_generic_national_unity
+		cost = 15
+		x = 0
+		y = 0
+
+		prerequisite = { focus = TU_RHO_contract_elite }
+
+		completion_reward = {
+			add_political_power = 100
+			set_country_flag = TU_RHO_contract_legion
+		}
+
+		ai_will_do = {
+			base = 1
+		}
+	}
+
+	focus = {
+		id = TU_RHO_market_stall
+		icon = GFX_goal_generic_consumer_goods
+		cost = 5
+		x = 0
+		y = 0
+
+		prerequisite = { focus = TU_RHO_neutral_pact }
+
+		completion_reward = {
+			add_political_power = 40
+		}
+
+		ai_will_do = {
+			base = 1
+		}
+	}
+
+	focus = {
+		id = TU_RHO_market_hub
+		icon = GFX_goal_generic_trade
+		cost = 10
+		x = 0
+		y = 0
+
+		prerequisite = { focus = TU_RHO_market_stall }
+
+		completion_reward = {
+			add_political_power = 60
+			add_to_variable = { TU_lmd = 400 }
+		}
+
+		ai_will_do = {
+			base = 1
+		}
+	}
+
+	focus = {
+		id = TU_RHO_market_open
+		icon = GFX_goal_generic_improve_relations
+		cost = 10
+		x = 0
+		y = 0
+
+		prerequisite = { focus = TU_RHO_market_hub }
+
+		completion_reward = {
+			add_political_power = 60
+			add_stability = 0.02
+		}
+
+		ai_will_do = {
+			base = 1
+		}
+	}
+
+	focus = {
+		id = TU_RHO_market_union
+		icon = GFX_goal_generic_construct_infrastructure
+		cost = 15
+		x = 0
+		y = 0
+
+		prerequisite = { focus = TU_RHO_market_open }
+
+		completion_reward = {
+			add_political_power = 100
+		}
+
+		ai_will_do = {
+			base = 1
+		}
+	}
+
+	focus = {
+		id = TU_RHO_lmd_audit
+		icon = GFX_goal_generic_trade
+		cost = 5
+		x = 0
+		y = 0
+
+		prerequisite = { focus = TU_RHO_lmd_reward }
+
+		completion_reward = {
+			add_political_power = 40
+		}
+
+		ai_will_do = {
+			base = 1
+		}
+	}
+
+	focus = {
+		id = TU_RHO_lmd_bank
+		icon = GFX_goal_generic_production2
+		cost = 10
+		x = 0
+		y = 0
+
+		prerequisite = { focus = TU_RHO_lmd_audit }
+
+		completion_reward = {
+			add_political_power = 60
+			add_to_variable = { TU_lmd = 600 }
+		}
+
+		ai_will_do = {
+			base = 1
+		}
+	}
+
+	focus = {
+		id = TU_RHO_lmd_shield
+		icon = GFX_goal_generic_defence
+		cost = 15
+		x = 0
+		y = 0
+
+		prerequisite = { focus = TU_RHO_lmd_bank }
+
+		completion_reward = {
+			add_political_power = 100
+			add_stability = 0.02
+		}
+
+		ai_will_do = {
+			base = 1
+		}
+	}
+
+	focus = {
+		id = TU_RHO_pmc_escort
+		icon = GFX_goal_generic_defence
+		cost = 5
+		x = 0
+		y = 0
+
+		prerequisite = { focus = TU_RHO_pmc_bonus }
+
+		completion_reward = {
+			add_political_power = 50
+		}
+
+		ai_will_do = {
+			base = 1
+		}
+	}
+
+	focus = {
+		id = TU_RHO_pmc_guard
+		icon = GFX_goal_generic_fortify_city
+		cost = 10
+		x = 0
+		y = 0
+
+		prerequisite = { focus = TU_RHO_pmc_escort }
+
+		completion_reward = {
+			add_political_power = 60
+			add_stability = 0.02
+		}
+
+		ai_will_do = {
+			base = 1
+		}
+	}
+
+	focus = {
+		id = TU_RHO_pmc_board
+		icon = GFX_goal_generic_military_deal
+		cost = 10
+		x = 0
+		y = 0
+
+		prerequisite = { focus = TU_RHO_pmc_guard }
+
+		completion_reward = {
+			add_political_power = 60
+			add_to_variable = { TU_lmd = 300 }
+		}
+
+		ai_will_do = {
+			base = 1
+		}
+	}
+
+	focus = {
+		id = TU_RHO_pmc_union
+		icon = GFX_goal_generic_national_unity
+		cost = 15
+		x = 0
+		y = 0
+
+		prerequisite = { focus = TU_RHO_pmc_board }
+
+		completion_reward = {
+			add_political_power = 100
+			add_war_support = 0.02
+		}
+
+		ai_will_do = {
+			base = 1
+		}
+	}
+
+	focus = {
+		id = TU_RHO_accord_writ
+		icon = GFX_goal_generic_neutrality_focus
+		cost = 5
+		x = 0
+		y = 0
+
+		prerequisite = { focus = TU_RHO_gold_fund }
+
+		completion_reward = {
+			add_political_power = 50
+		}
+
+		ai_will_do = {
+			base = 1
+		}
+	}
+
+	focus = {
+		id = TU_RHO_accord_seal
+		icon = GFX_goal_generic_military_deal
+		cost = 10
+		x = 0
+		y = 0
+
+		prerequisite = { focus = TU_RHO_accord_writ }
+
+		completion_reward = {
+			add_political_power = 60
+			add_stability = 0.02
+		}
+
+		ai_will_do = {
+			base = 1
+		}
+	}
+
+	focus = {
+		id = TU_RHO_accord_final
+		icon = GFX_goal_generic_trade
+		cost = 15
+		x = 0
+		y = 0
+
+		prerequisite = { focus = TU_RHO_accord_seal }
+
+		completion_reward = {
+			add_political_power = 100
+			add_to_variable = { TU_lmd = 800 }
+			every_country = { news_event = { id = tu_rho_ev.12 hours = 6 } }
+		}
+
+		ai_will_do = {
+			base = 1
+		}
+	}
+
+	#### ROUTE C: "RETURN OF THE DEMON KING" extension (Doctor, BoP right) ####
+
+	focus = {
+		id = TU_RHO_doctrine_draft
+		icon = GFX_goal_generic_army_doctrines
+		cost = 5
+		x = 0
+		y = 0
+
+		prerequisite = { focus = TU_RHO_tactical_doctrine }
+
+		completion_reward = {
+			add_political_power = 50
+			army_experience = 20
+		}
+
+		ai_will_do = {
+			base = 1
+		}
+	}
+
+	focus = {
+		id = TU_RHO_doctrine_drill
+		icon = GFX_goal_generic_army_artillery
+		cost = 10
+		x = 0
+		y = 0
+
+		prerequisite = { focus = TU_RHO_doctrine_draft }
+
+		completion_reward = {
+			add_political_power = 60
+			army_experience = 30
+		}
+
+		ai_will_do = {
+			base = 1
+		}
+	}
+
+	focus = {
+		id = TU_RHO_doctrine_strike
+		icon = GFX_goal_generic_army_tanks
+		cost = 10
+		x = 0
+		y = 0
+
+		prerequisite = { focus = TU_RHO_doctrine_drill }
+		mutually_exclusive = { focus = TU_RHO_doctrine_siege }
+
+		completion_reward = {
+			add_political_power = 60
+			add_war_support = 0.03
+		}
+
+		ai_will_do = {
+			base = 1
+		}
+	}
+
+	focus = {
+		id = TU_RHO_doctrine_siege
+		icon = GFX_goal_generic_fortify_city
+		cost = 10
+		x = 0
+		y = 0
+
+		prerequisite = { focus = TU_RHO_doctrine_drill }
+		mutually_exclusive = { focus = TU_RHO_doctrine_strike }
+
+		completion_reward = {
+			add_political_power = 60
+			add_stability = 0.01
+			add_stability = 0.02
+		}
+
+		ai_will_do = {
+			base = 1
+		}
+	}
+
+	focus = {
+		id = TU_RHO_doctrine_codex
+		icon = GFX_goal_generic_army_motorized
+		cost = 15
+		x = 0
+		y = 0
+
+		prerequisite = { focus = TU_RHO_doctrine_strike focus = TU_RHO_doctrine_siege }
+
+		completion_reward = {
+			add_political_power = 100
+			army_experience = 40
+			add_ideas = TU_RHO_doctor_doctrine
+		}
+
+		ai_will_do = {
+			base = 1
+		}
+	}
+
+	focus = {
+		id = TU_RHO_doctrine_archive
+		icon = GFX_goal_generic_scientific_exchange
+		cost = 10
+		x = 0
+		y = 0
+
+		prerequisite = { focus = TU_RHO_doctrine_codex }
+
+		completion_reward = {
+			add_political_power = 75
+		}
+
+		ai_will_do = {
+			base = 1
+		}
+	}
+
+	focus = {
+		id = TU_RHO_front_mobilize
+		icon = GFX_goal_generic_construct_military
+		cost = 5
+		x = 0
+		y = 0
+
+		prerequisite = { focus = TU_RHO_doctor_war }
+
+		completion_reward = {
+			add_political_power = 60
+			add_manpower = 4000
+		}
+
+		ai_will_do = {
+			base = 1
+		}
+	}
+
+	focus = {
+		id = TU_RHO_front_assault
+		icon = GFX_goal_generic_major_war
+		cost = 10
+		x = 0
+		y = 0
+
+		prerequisite = { focus = TU_RHO_front_mobilize }
+
+		completion_reward = {
+			add_political_power = 60
+			add_war_support = 0.03
+			add_power_balance_value = { id = TU_RHO_bop value = 0.05 }
+		}
+
+		ai_will_do = {
+			base = 1
+		}
+	}
+
+	focus = {
+		id = TU_RHO_front_siege
+		icon = GFX_goal_generic_defence
+		cost = 10
+		x = 0
+		y = 0
+
+		prerequisite = { focus = TU_RHO_front_assault }
+
+		completion_reward = {
+			add_political_power = 60
+			army_experience = 20
+		}
+
+		ai_will_do = {
+			base = 1
+		}
+	}
+
+	focus = {
+		id = TU_RHO_front_victory
+		icon = GFX_goal_generic_national_unity
+		cost = 15
+		x = 0
+		y = 0
+
+		prerequisite = { focus = TU_RHO_front_siege }
+
+		completion_reward = {
+			add_political_power = 100
+			add_power_balance_value = { id = TU_RHO_bop value = 0.1 }
+		}
+
+		ai_will_do = {
+			base = 1
+		}
+	}
+
+	focus = {
+		id = TU_RHO_regular_barracks
+		icon = GFX_goal_generic_construct_military
+		cost = 5
+		x = 0
+		y = 0
+
+		prerequisite = { focus = TU_RHO_regular_army }
+
+		completion_reward = {
+			add_political_power = 50
+			add_manpower = 2000
+		}
+
+		ai_will_do = {
+			base = 1
+		}
+	}
+
+	focus = {
+		id = TU_RHO_regular_academy
+		icon = GFX_goal_generic_scientific_exchange
+		cost = 10
+		x = 0
+		y = 0
+
+		prerequisite = { focus = TU_RHO_regular_barracks }
+
+		completion_reward = {
+			add_political_power = 50
+			army_experience = 15
+		}
+
+		ai_will_do = {
+			base = 1
+		}
+	}
+
+	focus = {
+		id = TU_RHO_regular_pay
+		icon = GFX_goal_generic_consumer_goods
+		cost = 10
+		x = 0
+		y = 0
+
+		prerequisite = { focus = TU_RHO_regular_academy }
+
+		completion_reward = {
+			add_political_power = 60
+			add_stability = 0.02
+		}
+
+		ai_will_do = {
+			base = 1
+		}
+	}
+
+	focus = {
+		id = TU_RHO_regular_command
+		icon = GFX_goal_generic_cavalry
+		cost = 15
+		x = 0
+		y = 0
+
+		prerequisite = { focus = TU_RHO_regular_pay }
+
+		completion_reward = {
+			add_political_power = 100
+			army_experience = 30
+		}
+
+		ai_will_do = {
+			base = 1
+		}
+	}
+
+	focus = {
+		id = TU_RHO_kazdel_scouts
+		icon = GFX_goal_generic_radar
+		cost = 5
+		x = 0
+		y = 0
+
+		prerequisite = { focus = TU_RHO_kazdel_prep }
+
+		completion_reward = {
+			add_political_power = 50
+		}
+
+		ai_will_do = {
+			base = 1
+		}
+	}
+
+	focus = {
+		id = TU_RHO_kazdel_plans
+		icon = GFX_goal_generic_intelligence_exchange
+		cost = 10
+		x = 0
+		y = 0
+
+		prerequisite = { focus = TU_RHO_kazdel_scouts }
+
+		completion_reward = {
+			add_political_power = 60
+			add_stability = 0.02
+		}
+
+		ai_will_do = {
+			base = 1
+		}
+	}
+
+	focus = {
+		id = TU_RHO_kazdel_return
+		icon = GFX_goal_generic_national_unity
+		cost = 15
+		x = 0
+		y = 0
+
+		prerequisite = { focus = TU_RHO_kazdel_plans }
+
+		completion_reward = {
+			add_political_power = 100
+			every_country = { news_event = { id = tu_rho_ev.13 hours = 6 } }
+		}
+
+		ai_will_do = {
+			base = 1
+		}
+	}
+
+	focus = {
+		id = TU_RHO_babel_archive
+		icon = GFX_goal_generic_scientific_exchange
+		cost = 5
+		x = 0
+		y = 0
+
+		prerequisite = { focus = TU_RHO_babel_restoration }
+
+		completion_reward = {
+			add_political_power = 50
+		}
+
+		ai_will_do = {
+			base = 1
+		}
+	}
+
+	focus = {
+		id = TU_RHO_babel_library
+		icon = GFX_goal_generic_propaganda
+		cost = 10
+		x = 0
+		y = 0
+
+		prerequisite = { focus = TU_RHO_babel_archive }
+
+		completion_reward = {
+			add_political_power = 60
+		}
+
+		ai_will_do = {
+			base = 1
+		}
+	}
+
+	focus = {
+		id = TU_RHO_babel_council
+		icon = GFX_goal_generic_national_unity
+		cost = 15
+		x = 0
+		y = 0
+
+		prerequisite = { focus = TU_RHO_babel_library }
+
+		completion_reward = {
+			add_political_power = 75
+			add_power_balance_value = { id = TU_RHO_bop value = 0.05 }
+		}
+
+		ai_will_do = {
+			base = 1
+		}
+	}
+
+	focus = {
+		id = TU_RHO_shadow_cell
+		icon = GFX_goal_generic_intelligence_exchange
+		cost = 5
+		x = 0
+		y = 0
+
+		prerequisite = { focus = TU_RHO_demon_return }
+
+		completion_reward = {
+			add_political_power = 40
+		}
+
+		ai_will_do = {
+			base = 1
+		}
+	}
+
+	focus = {
+		id = TU_RHO_shadow_ops
+		icon = GFX_goal_generic_special_forces
+		cost = 10
+		x = 0
+		y = 0
+
+		prerequisite = { focus = TU_RHO_shadow_cell }
+
+		completion_reward = {
+			add_political_power = 60
+			add_power_balance_value = { id = TU_RHO_bop value = 0.05 }
+		}
+
+		ai_will_do = {
+			base = 1
+		}
+	}
+
+	focus = {
+		id = TU_RHO_shadow_pact
+		icon = GFX_goal_generic_dangerous_deal
+		cost = 10
+		x = 0
+		y = 0
+
+		prerequisite = { focus = TU_RHO_shadow_ops }
+
+		completion_reward = {
+			add_political_power = 75
+			add_stability = -0.02
+		}
+
+		ai_will_do = {
+			base = 1
+		}
+	}
+
+	focus = {
+		id = TU_RHO_shadow_crown
+		icon = GFX_goal_generic_national_unity
+		cost = 15
+		x = 0
+		y = 0
+
+		prerequisite = { focus = TU_RHO_shadow_pact }
+
+		completion_reward = {
+			add_political_power = 100
+			add_power_balance_value = { id = TU_RHO_bop value = 0.1 }
+		}
+
+		ai_will_do = {
+			base = 1
+		}
+	}
+
+	#### PRTS SIDE BRANCH (root: PRTS network, all routes) ####
+
+	focus = {
+		id = TU_RHO_prts_link
+		icon = GFX_goal_generic_radar
+		cost = 5
+		x = 0
+		y = 0
+
+		prerequisite = { focus = TU_RHO_prts_online }
+
+		completion_reward = {
+			add_political_power = 40
+		}
+
+		ai_will_do = {
+			base = 1
+		}
+	}
+
+	focus = {
+		id = TU_RHO_prts_archive
+		icon = GFX_goal_generic_scientific_exchange
+		cost = 10
+		x = 0
+		y = 0
+
+		prerequisite = { focus = TU_RHO_prts_link }
+
+		completion_reward = {
+			add_political_power = 50
+			add_stability = 0.01
+		}
+
+		ai_will_do = {
+			base = 1
+		}
+	}
+
+	focus = {
+		id = TU_RHO_prts_analysis
+		icon = GFX_goal_generic_intelligence_exchange
+		cost = 10
+		x = 0
+		y = 0
+
+		prerequisite = { focus = TU_RHO_prts_archive }
+
+		completion_reward = {
+			add_political_power = 60
+			add_to_variable = { TU_lmd = 200 }
+		}
+
+		ai_will_do = {
+			base = 1
+		}
+	}
+
+	focus = {
+		id = TU_RHO_prts_global
+		icon = GFX_goal_generic_national_unity
+		cost = 15
+		x = 0
+		y = 0
+
+		prerequisite = { focus = TU_RHO_prts_analysis }
+
+		completion_reward = {
+			add_political_power = 100
+		}
+
+		ai_will_do = {
+			base = 1
+		}
+	}

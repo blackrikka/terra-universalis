@@ -1,0 +1,1106 @@
+TU_YAN_construction_category = {
+
+	TU_YAN_trunk_rail_upgrade = {
+		icon = GFX_decision_generic_train
+
+		allowed = {
+			original_tag = YAN
+		}
+
+		visible = {
+			has_completed_focus = TU_YAN_trunk_rail
+		}
+
+		available = {
+			has_completed_focus = TU_YAN_trunk_rail
+		}
+
+		cost = 50
+		fire_only_once = yes
+
+		complete_effect = {
+			random_owned_controlled_state = {
+				limit = {
+					is_owned_and_controlled_by = ROOT
+					has_state_category = city
+				}
+				add_building_construction = {
+					type = infrastructure
+					level = 1
+					instant_build = yes
+				}
+			}
+			set_country_flag = TU_DEC_TU_YAN_trunk_rail_upgrade
+		}
+
+		ai_will_do = {
+			base = 1
+		}
+	}
+
+	TU_YAN_canal_locks = {
+		icon = GFX_decision_generic_construction
+
+		allowed = {
+			original_tag = YAN
+		}
+
+		visible = {
+			has_completed_focus = TU_YAN_canal_surveying
+		}
+
+		available = {
+			has_completed_focus = TU_YAN_canal_surveying
+		}
+
+		cost = 50
+		fire_only_once = yes
+
+		complete_effect = {
+			random_owned_controlled_state = {
+				limit = {
+					is_owned_and_controlled_by = ROOT
+					has_state_category = large_town
+				}
+				add_building_construction = {
+					type = infrastructure
+					level = 1
+					instant_build = yes
+				}
+				add_extra_state_shared_building_slots = 1
+			}
+			set_country_flag = TU_DEC_TU_YAN_canal_locks
+		}
+
+		ai_will_do = {
+			base = 1
+		}
+	}
+
+	TU_YAN_canal_dredging = {
+		icon = GFX_decision_generic_construction
+
+		allowed = {
+			original_tag = YAN
+		}
+
+		visible = {
+			has_completed_focus = TU_YAN_canal_excavation
+		}
+
+		available = {
+			has_completed_focus = TU_YAN_canal_excavation
+		}
+
+		cost = 50
+		fire_only_once = yes
+
+		complete_effect = {
+			random_owned_controlled_state = {
+				limit = {
+					is_owned_and_controlled_by = ROOT
+					is_coastal = yes
+				}
+				add_building_construction = {
+					type = dockyard
+					level = 1
+					instant_build = yes
+				}
+			}
+			set_country_flag = TU_DEC_TU_YAN_canal_dredging
+		}
+
+		ai_will_do = {
+			base = 1
+		}
+	}
+
+	TU_YAN_grand_canal_works = {
+		icon = GFX_decision_generic_construction
+
+		allowed = {
+			original_tag = YAN
+		}
+
+		visible = {
+			has_completed_focus = TU_YAN_grand_canal_core
+		}
+
+		available = {
+			has_completed_focus = TU_YAN_grand_canal_core
+		}
+
+		cost = 75
+		fire_only_once = yes
+
+		complete_effect = {
+			random_owned_controlled_state = {
+				limit = {
+					is_owned_and_controlled_by = ROOT
+					has_state_category = city
+				}
+				add_building_construction = {
+					type = infrastructure
+					level = 2
+					instant_build = yes
+				}
+				add_extra_state_shared_building_slots = 1
+			}
+			set_country_flag = TU_DEC_TU_YAN_grand_canal_works
+		}
+
+		ai_will_do = {
+			base = 1
+		}
+	}
+
+	TU_YAN_express_hub = {
+		icon = GFX_decision_generic_train
+
+		allowed = {
+			original_tag = YAN
+		}
+
+		visible = {
+			has_completed_focus = TU_YAN_express_core
+		}
+
+		available = {
+			has_completed_focus = TU_YAN_express_core
+		}
+
+		cost = 75
+		fire_only_once = yes
+
+		complete_effect = {
+			random_owned_controlled_state = {
+				limit = {
+					is_owned_and_controlled_by = ROOT
+					has_state_category = large_city
+				}
+				add_building_construction = {
+					type = infrastructure
+					level = 2
+					instant_build = yes
+				}
+			}
+			set_country_flag = TU_DEC_TU_YAN_express_hub
+		}
+
+		ai_will_do = {
+			base = 1
+		}
+	}
+
+	TU_YAN_river_bridges = {
+		icon = GFX_decision_generic_train
+
+		allowed = {
+			original_tag = YAN
+		}
+
+		visible = {
+			has_completed_focus = TU_YAN_express_bridges
+		}
+
+		available = {
+			has_completed_focus = TU_YAN_express_bridges
+		}
+
+		cost = 50
+		fire_only_once = yes
+
+		complete_effect = {
+			random_owned_controlled_state = {
+				limit = {
+					is_owned_and_controlled_by = ROOT
+					has_state_category = rural
+				}
+				add_building_construction = {
+					type = infrastructure
+					level = 1
+					instant_build = yes
+				}
+			}
+			set_country_flag = TU_DEC_TU_YAN_river_bridges
+		}
+
+		ai_will_do = {
+			base = 1
+		}
+	}
+
+	TU_YAN_harbor_dredging = {
+		icon = GFX_decision_generic_construction
+
+		allowed = {
+			original_tag = YAN
+		}
+
+		visible = {
+			has_completed_focus = TU_YAN_harbor_canal
+		}
+
+		available = {
+			has_completed_focus = TU_YAN_harbor_canal
+		}
+
+		cost = 50
+		fire_only_once = yes
+
+		complete_effect = {
+			random_owned_controlled_state = {
+				limit = {
+					is_owned_and_controlled_by = ROOT
+					is_coastal = yes
+				}
+				add_building_construction = {
+					type = dockyard
+					level = 1
+					instant_build = yes
+				}
+			}
+			set_country_flag = TU_DEC_TU_YAN_harbor_dredging
+		}
+
+		ai_will_do = {
+			base = 1
+		}
+	}
+
+	TU_YAN_rail_freight_yards = {
+		icon = GFX_decision_generic_train
+
+		allowed = {
+			original_tag = YAN
+		}
+
+		visible = {
+			has_completed_focus = TU_YAN_freight_terminals
+		}
+
+		available = {
+			has_completed_focus = TU_YAN_freight_terminals
+		}
+
+		cost = 50
+		fire_only_once = yes
+
+		complete_effect = {
+			random_owned_controlled_state = {
+				limit = {
+					is_owned_and_controlled_by = ROOT
+					has_state_category = city
+				}
+				add_building_construction = {
+					type = infrastructure
+					level = 1
+					instant_build = yes
+				}
+				add_extra_state_shared_building_slots = 1
+			}
+			set_country_flag = TU_DEC_TU_YAN_rail_freight_yards
+		}
+
+		ai_will_do = {
+			base = 1
+		}
+	}
+
+	TU_YAN_mobile_city_base = {
+		icon = GFX_decision_generic_construction
+
+		allowed = {
+			original_tag = YAN
+		}
+
+		visible = {
+			has_completed_focus = TU_YAN_mobile_city_plan
+		}
+
+		available = {
+			has_completed_focus = TU_YAN_mobile_city_plan
+		}
+
+		cost = 50
+		fire_only_once = yes
+
+		complete_effect = {
+			random_owned_controlled_state = {
+				limit = {
+					is_owned_and_controlled_by = ROOT
+					has_state_category = city
+				}
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = infrastructure
+					level = 1
+					instant_build = yes
+				}
+			}
+			set_country_flag = TU_DEC_TU_YAN_mobile_city_base
+		}
+
+		ai_will_do = {
+			base = 1
+		}
+	}
+
+	TU_YAN_mobile_dock_yard = {
+		icon = GFX_decision_generic_construction
+
+		allowed = {
+			original_tag = YAN
+		}
+
+		visible = {
+			has_completed_focus = TU_YAN_mobile_city_docks
+		}
+
+		available = {
+			has_completed_focus = TU_YAN_mobile_city_docks
+		}
+
+		cost = 50
+		fire_only_once = yes
+
+		complete_effect = {
+			random_owned_controlled_state = {
+				limit = {
+					is_owned_and_controlled_by = ROOT
+					is_coastal = yes
+				}
+				add_building_construction = {
+					type = dockyard
+					level = 1
+					instant_build = yes
+				}
+				add_extra_state_shared_building_slots = 1
+			}
+			set_country_flag = TU_DEC_TU_YAN_mobile_dock_yard
+		}
+
+		ai_will_do = {
+			base = 1
+		}
+	}
+
+	TU_YAN_wheel_depot = {
+		icon = GFX_decision_generic_train
+
+		allowed = {
+			original_tag = YAN
+		}
+
+		visible = {
+			has_completed_focus = TU_YAN_mobile_city_wheels
+		}
+
+		available = {
+			has_completed_focus = TU_YAN_mobile_city_wheels
+		}
+
+		cost = 50
+		fire_only_once = yes
+
+		complete_effect = {
+			random_owned_controlled_state = {
+				limit = {
+					is_owned_and_controlled_by = ROOT
+					has_state_category = town
+				}
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = infrastructure
+					level = 1
+					instant_build = yes
+				}
+			}
+			set_country_flag = TU_DEC_TU_YAN_wheel_depot
+		}
+
+		ai_will_do = {
+			base = 1
+		}
+	}
+
+	TU_YAN_rail_depot = {
+		icon = GFX_decision_generic_train
+
+		allowed = {
+			original_tag = YAN
+		}
+
+		visible = {
+			has_completed_focus = TU_YAN_mobile_city_rails
+		}
+
+		available = {
+			has_completed_focus = TU_YAN_mobile_city_rails
+		}
+
+		cost = 50
+		fire_only_once = yes
+
+		complete_effect = {
+			random_owned_controlled_state = {
+				limit = {
+					is_owned_and_controlled_by = ROOT
+					has_state_category = large_town
+				}
+				add_building_construction = {
+					type = infrastructure
+					level = 2
+					instant_build = yes
+				}
+			}
+			set_country_flag = TU_DEC_TU_YAN_rail_depot
+		}
+
+		ai_will_do = {
+			base = 1
+		}
+	}
+
+	TU_YAN_mobile_capital_hub = {
+		icon = GFX_decision_generic_construction
+
+		allowed = {
+			original_tag = YAN
+		}
+
+		visible = {
+			has_completed_focus = TU_YAN_mobile_capital
+		}
+
+		available = {
+			has_completed_focus = TU_YAN_mobile_capital
+		}
+
+		cost = 75
+		fire_only_once = yes
+
+		complete_effect = {
+			random_owned_controlled_state = {
+				limit = {
+					is_owned_and_controlled_by = ROOT
+					has_state_category = metropolis
+				}
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+				}
+			}
+			set_country_flag = TU_DEC_TU_YAN_mobile_capital_hub
+		}
+
+		ai_will_do = {
+			base = 1
+		}
+	}
+
+	TU_YAN_originium_mines = {
+		icon = GFX_decision_generic_industry
+
+		allowed = {
+			original_tag = YAN
+		}
+
+		visible = {
+			has_completed_focus = TU_YAN_originium_survey
+		}
+
+		available = {
+			has_completed_focus = TU_YAN_originium_survey
+		}
+
+		cost = 50
+		fire_only_once = yes
+
+		complete_effect = {
+			random_owned_controlled_state = {
+				limit = {
+					is_owned_and_controlled_by = ROOT
+					has_state_category = rural
+				}
+				add_resource = {
+					type = tungsten
+					amount = 2
+				}
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+				}
+			}
+			set_country_flag = TU_DEC_TU_YAN_originium_mines
+		}
+
+		ai_will_do = {
+			base = 1
+		}
+	}
+
+	TU_YAN_originium_refinery = {
+		icon = GFX_decision_generic_industry
+
+		allowed = {
+			original_tag = YAN
+		}
+
+		visible = {
+			has_completed_focus = TU_YAN_originium_refining
+		}
+
+		available = {
+			has_completed_focus = TU_YAN_originium_refining
+		}
+
+		cost = 50
+		fire_only_once = yes
+
+		complete_effect = {
+			random_owned_controlled_state = {
+				limit = {
+					is_owned_and_controlled_by = ROOT
+					has_state_category = town
+				}
+				add_resource = {
+					type = tungsten
+					amount = 1
+				}
+				add_building_construction = {
+					type = synthetic_refinery
+					level = 1
+					instant_build = yes
+				}
+			}
+			set_country_flag = TU_DEC_TU_YAN_originium_refinery
+		}
+
+		ai_will_do = {
+			base = 1
+		}
+	}
+
+	TU_YAN_deep_shafts = {
+		icon = GFX_decision_generic_industry
+
+		allowed = {
+			original_tag = YAN
+		}
+
+		visible = {
+			has_completed_focus = TU_YAN_originium_deep
+		}
+
+		available = {
+			has_completed_focus = TU_YAN_originium_deep
+		}
+
+		cost = 50
+		fire_only_once = yes
+
+		complete_effect = {
+			random_owned_controlled_state = {
+				limit = {
+					is_owned_and_controlled_by = ROOT
+					has_state_category = rural
+				}
+				add_resource = {
+					type = tungsten
+					amount = 3
+				}
+			}
+			set_country_flag = TU_DEC_TU_YAN_deep_shafts
+		}
+
+		ai_will_do = {
+			base = 1
+		}
+	}
+
+	TU_YAN_arts_power_grid = {
+		icon = GFX_decision_generic_electricity
+
+		allowed = {
+			original_tag = YAN
+		}
+
+		visible = {
+			has_completed_focus = TU_YAN_originium_grid
+		}
+
+		available = {
+			has_completed_focus = TU_YAN_originium_grid
+		}
+
+		cost = 50
+		fire_only_once = yes
+
+		complete_effect = {
+			random_owned_controlled_state = {
+				limit = {
+					is_owned_and_controlled_by = ROOT
+					has_state_category = city
+				}
+				add_building_construction = {
+					type = infrastructure
+					level = 1
+					instant_build = yes
+				}
+				add_extra_state_shared_building_slots = 1
+			}
+			set_country_flag = TU_DEC_TU_YAN_arts_power_grid
+		}
+
+		ai_will_do = {
+			base = 1
+		}
+	}
+
+	TU_YAN_stockpile_silos = {
+		icon = GFX_decision_generic_industry
+
+		allowed = {
+			original_tag = YAN
+		}
+
+		visible = {
+			has_completed_focus = TU_YAN_originium_stockpile
+		}
+
+		available = {
+			has_completed_focus = TU_YAN_originium_stockpile
+		}
+
+		cost = 50
+		fire_only_once = yes
+
+		complete_effect = {
+			random_owned_controlled_state = {
+				limit = {
+					is_owned_and_controlled_by = ROOT
+					has_state_category = city
+				}
+				add_resource = {
+					type = tungsten
+					amount = 2
+				}
+				add_building_construction = {
+					type = fuel_silo
+					level = 1
+					instant_build = yes
+				}
+			}
+			set_country_flag = TU_DEC_TU_YAN_stockpile_silos
+		}
+
+		ai_will_do = {
+			base = 1
+		}
+	}
+
+	TU_YAN_guard_arsenal = {
+		icon = GFX_decision_generic_factory
+
+		allowed = {
+			original_tag = YAN
+		}
+
+		visible = {
+			has_completed_focus = TU_YAN_guard_arms
+		}
+
+		available = {
+			has_completed_focus = TU_YAN_guard_arms
+		}
+
+		cost = 75
+		fire_only_once = yes
+
+		complete_effect = {
+			random_owned_controlled_state = {
+				limit = {
+					is_owned_and_controlled_by = ROOT
+					has_state_category = large_city
+				}
+				add_building_construction = {
+					type = arms_factory
+					level = 1
+					instant_build = yes
+				}
+			}
+			set_country_flag = TU_DEC_TU_YAN_guard_arsenal
+		}
+
+		ai_will_do = {
+			base = 1
+		}
+	}
+
+	TU_YAN_bunker_line = {
+		icon = GFX_decision_generic_fortification
+
+		allowed = {
+			original_tag = YAN
+		}
+
+		visible = {
+			has_completed_focus = TU_YAN_guard_fortress
+		}
+
+		available = {
+			has_completed_focus = TU_YAN_guard_fortress
+		}
+
+		cost = 50
+		fire_only_once = yes
+
+		complete_effect = {
+			random_owned_controlled_state = {
+				limit = {
+					is_owned_and_controlled_by = ROOT
+					has_state_category = rural
+				}
+				add_building_construction = {
+					type = bunker
+					level = 1
+					instant_build = yes
+				}
+			}
+			set_country_flag = TU_DEC_TU_YAN_bunker_line
+		}
+
+		ai_will_do = {
+			base = 1
+		}
+	}
+
+	TU_YAN_supply_depot = {
+		icon = GFX_decision_generic_construction
+
+		allowed = {
+			original_tag = YAN
+		}
+
+		visible = {
+			has_completed_focus = TU_YAN_guard_supply
+		}
+
+		available = {
+			has_completed_focus = TU_YAN_guard_supply
+		}
+
+		cost = 50
+		fire_only_once = yes
+
+		complete_effect = {
+			random_owned_controlled_state = {
+				limit = {
+					is_owned_and_controlled_by = ROOT
+					has_state_category = town
+				}
+				add_building_construction = {
+					type = supply_node
+					level = 1
+					instant_build = yes
+				}
+			}
+			set_country_flag = TU_DEC_TU_YAN_supply_depot
+		}
+
+		ai_will_do = {
+			base = 1
+		}
+	}
+
+	TU_YAN_guard_levy = {
+		icon = GFX_decision_generic_military
+
+		allowed = {
+			original_tag = YAN
+		}
+
+		visible = {
+			has_completed_focus = TU_YAN_guard_recruiting
+		}
+
+		available = {
+			has_completed_focus = TU_YAN_guard_recruiting
+		}
+
+		cost = 75
+		fire_only_once = yes
+
+		complete_effect = {
+			create_unit = {
+				division = "division_template = \"TU_YAN_infantry\" start_experience_factor = 0.4 start_equipment_factor = 1.0"
+				owner = YAN
+				count = 4
+			}
+			set_country_flag = TU_DEC_TU_YAN_guard_levy
+		}
+
+		ai_will_do = {
+			base = 1
+		}
+	}
+
+	TU_YAN_arts_corps_raise = {
+		icon = GFX_decision_generic_military
+
+		allowed = {
+			original_tag = YAN
+		}
+
+		visible = {
+			has_completed_focus = TU_YAN_arts_corps
+		}
+
+		available = {
+			has_completed_focus = TU_YAN_arts_corps
+		}
+
+		cost = 75
+		fire_only_once = yes
+
+		complete_effect = {
+			create_unit = {
+				division = "division_template = \"TU_YAN_infantry\" start_experience_factor = 0.3 start_equipment_factor = 0.8"
+				owner = YAN
+				count = 2
+			}
+			set_country_flag = TU_DEC_TU_YAN_arts_corps_raise
+		}
+
+		ai_will_do = {
+			base = 1
+		}
+	}
+
+	TU_YAN_guard_reserve = {
+		icon = GFX_decision_generic_military
+
+		allowed = {
+			original_tag = YAN
+		}
+
+		visible = {
+			has_completed_focus = TU_YAN_guard_core
+		}
+
+		available = {
+			has_completed_focus = TU_YAN_guard_core
+		}
+
+		cost = 75
+		fire_only_once = yes
+
+		complete_effect = {
+			create_unit = {
+				division = "division_template = \"TU_YAN_infantry\" start_experience_factor = 0.5 start_equipment_factor = 1.0"
+				owner = YAN
+				count = 6
+			}
+			set_country_flag = TU_DEC_TU_YAN_guard_reserve
+		}
+
+		ai_will_do = {
+			base = 1
+		}
+	}
+
+	TU_YAN_air_base_network = {
+		icon = GFX_decision_generic_air
+
+		allowed = {
+			original_tag = YAN
+		}
+
+		visible = {
+			has_completed_focus = TU_YAN_air_hangars
+		}
+
+		available = {
+			has_completed_focus = TU_YAN_air_hangars
+		}
+
+		cost = 50
+		fire_only_once = yes
+
+		complete_effect = {
+			random_owned_controlled_state = {
+				limit = {
+					is_owned_and_controlled_by = ROOT
+					has_state_category = city
+				}
+				add_building_construction = {
+					type = air_base
+					level = 1
+					instant_build = yes
+				}
+			}
+			set_country_flag = TU_DEC_TU_YAN_air_base_network
+		}
+
+		ai_will_do = {
+			base = 1
+		}
+	}
+
+	TU_YAN_air_factories = {
+		icon = GFX_decision_generic_air
+
+		allowed = {
+			original_tag = YAN
+		}
+
+		visible = {
+			has_completed_focus = TU_YAN_fighter_core
+		}
+
+		available = {
+			has_completed_focus = TU_YAN_fighter_core
+		}
+
+		cost = 75
+		fire_only_once = yes
+
+		complete_effect = {
+			random_owned_controlled_state = {
+				limit = {
+					is_owned_and_controlled_by = ROOT
+					has_state_category = large_city
+				}
+				add_building_construction = {
+					type = arms_factory
+					level = 1
+					instant_build = yes
+				}
+			}
+			set_country_flag = TU_DEC_TU_YAN_air_factories
+		}
+
+		ai_will_do = {
+			base = 1
+		}
+	}
+
+	TU_YAN_air_defence_belt = {
+		icon = GFX_decision_generic_air
+
+		allowed = {
+			original_tag = YAN
+		}
+
+		visible = {
+			has_completed_focus = TU_YAN_air_defence
+		}
+
+		available = {
+			has_completed_focus = TU_YAN_air_defence
+		}
+
+		cost = 50
+		fire_only_once = yes
+
+		complete_effect = {
+			random_owned_controlled_state = {
+				limit = {
+					is_owned_and_controlled_by = ROOT
+					has_state_category = city
+				}
+				add_building_construction = {
+					type = anti_air_building
+					level = 1
+					instant_build = yes
+				}
+			}
+			set_country_flag = TU_DEC_TU_YAN_air_defence_belt
+		}
+
+		ai_will_do = {
+			base = 1
+		}
+	}
+
+	TU_YAN_radar_network = {
+		icon = GFX_decision_generic_research
+
+		allowed = {
+			original_tag = YAN
+		}
+
+		visible = {
+			has_completed_focus = TU_YAN_bomber_core
+		}
+
+		available = {
+			has_completed_focus = TU_YAN_bomber_core
+		}
+
+		cost = 50
+		fire_only_once = yes
+
+		complete_effect = {
+			random_owned_controlled_state = {
+				limit = {
+					is_owned_and_controlled_by = ROOT
+					has_state_category = rural
+				}
+				add_building_construction = {
+					type = radar_station
+					level = 1
+					instant_build = yes
+				}
+			}
+			set_country_flag = TU_DEC_TU_YAN_radar_network
+		}
+
+		ai_will_do = {
+			base = 1
+		}
+	}
+
+	TU_YAN_academy_campus = {
+		icon = GFX_decision_generic_research
+
+		allowed = {
+			original_tag = YAN
+		}
+
+		visible = {
+			has_completed_focus = TU_YAN_academy_founding
+		}
+
+		available = {
+			has_completed_focus = TU_YAN_academy_founding
+		}
+
+		cost = 50
+		fire_only_once = yes
+
+		complete_effect = {
+			random_owned_controlled_state = {
+				limit = {
+					is_owned_and_controlled_by = ROOT
+					has_state_category = city
+				}
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = infrastructure
+					level = 1
+					instant_build = yes
+				}
+			}
+			set_country_flag = TU_DEC_TU_YAN_academy_campus
+		}
+
+		ai_will_do = {
+			base = 1
+		}
+	}
+}

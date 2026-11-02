@@ -1,0 +1,37 @@
+ideas = {
+
+	country = {
+
+		TU_REU_choice_serpent_rail = {
+			picture = generic_railroads
+
+			allowed = {
+				original_tag = REU
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			modifier = {
+				army_speed_factor = 0.05
+			}
+		}
+
+		TU_REU_choice_mobilize_quota = {
+			picture = generic_manpower_bonus
+
+			allowed = {
+				original_tag = REU
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			modifier = {
+				conscription_factor = 0.01
+			}
+		}
+	}
+}

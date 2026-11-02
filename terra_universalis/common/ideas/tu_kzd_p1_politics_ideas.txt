@@ -1,0 +1,242 @@
+ideas = {
+
+	country = {
+
+		TU_KZD_theresis_crown = {
+			picture = generic_political_support
+
+			allowed = {
+				original_tag = KZD
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			modifier = {
+				political_power_gain = 0.1
+				stability_factor = 0.03
+			}
+		}
+
+		TU_KZD_grand_army_doctrine = {
+			picture = mobile_warfare_army_spirit
+
+			allowed = {
+				original_tag = KZD
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			modifier = {
+				army_attack_factor = 0.1
+				army_morale_factor = 0.05
+			}
+		}
+
+		TU_KZD_babel_archives = {
+			picture = generic_research_bonus
+
+			allowed = {
+				original_tag = KZD
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			modifier = {
+				research_speed_factor = 0.05
+			}
+		}
+
+		TU_KZD_babel_workshops = {
+			picture = generic_production_bonus
+
+			allowed = {
+				original_tag = KZD
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			modifier = {
+				production_speed_buildings_factor = 0.05
+			}
+		}
+
+		TU_KZD_merc_guild_charter = {
+			picture = flexible_contracts_spirit
+
+			allowed = {
+				original_tag = KZD
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			modifier = {
+				political_power_gain = 0.05
+				stability_factor = 0.02
+			}
+		}
+
+		TU_KZD_merc_kingdom_charter = {
+			picture = generic_economic_increase
+
+			allowed = {
+				original_tag = KZD
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			modifier = {
+				political_power_gain = 0.1
+				stability_factor = 0.03
+				consumer_goods_factor = -0.02
+			}
+		}
+
+		TU_KZD_merc_guild_income = {
+			picture = subsidized_contracts_army_spirit
+
+			allowed = {
+				original_tag = KZD
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			modifier = {
+				political_power_gain = 0.1
+			}
+		}
+
+		TU_KZD_merc_clan_council_idea = {
+			picture = generic_local_self_management
+
+			allowed = {
+				original_tag = KZD
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			modifier = {
+				stability_factor = 0.03
+				war_support_factor = 0.02
+			}
+		}
+
+		TU_KZD_merc_pay_bonus_idea = {
+			picture = generic_war_preparation
+
+			allowed = {
+				original_tag = KZD
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			modifier = {
+				army_attack_factor = 0.05
+				consumer_goods_factor = 0.03
+			}
+		}
+
+		TU_KZD_merc_insurance_idea = {
+			picture = generic_logistics
+
+			allowed = {
+				original_tag = KZD
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			modifier = {
+				war_support_factor = 0.05
+				army_morale_factor = 0.03
+			}
+		}
+
+		TU_KZD_black_banner_idea = {
+			picture = generic_guerilla_warfare
+
+			allowed = {
+				original_tag = KZD
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			modifier = {
+				experience_gain_army_factor = 0.05
+				war_support_factor = 0.05
+			}
+		}
+
+		TU_KZD_veterans_pension_idea = {
+			picture = generic_morale_bonus
+
+			allowed = {
+				original_tag = KZD
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			modifier = {
+				army_morale_factor = 0.05
+				stability_weekly = 0.001
+			}
+		}
+
+		TU_KZD_war_profiteers = {
+			picture = generic_war_industrialist_western_european_2d
+
+			allowed = {
+				original_tag = KZD
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			modifier = {
+				political_power_gain = 0.15
+				stability_factor = -0.03
+			}
+		}
+
+		TU_KZD_reserve_pool_idea = {
+			picture = reserve_officers_spirit
+
+			allowed = {
+				original_tag = KZD
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			modifier = {
+				conscription_factor = 0.05
+				army_defence_factor = 0.05
+			}
+		}
+
+	}
+}

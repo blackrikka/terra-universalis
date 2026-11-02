@@ -1,0 +1,322 @@
+	focus = {
+		id = TU_RHO_prts_online
+		icon = GFX_goal_generic_radar
+		cost = 5
+		x = 0
+		y = 0
+
+		completion_reward = {
+			add_political_power = 50
+			set_country_flag = TU_RHO_prts_online
+		}
+	}
+
+	focus = {
+		id = TU_RHO_chernobog_rescue
+		icon = GFX_goal_generic_special_forces
+		cost = 7
+		x = 0
+		y = 1
+
+		prerequisite = { focus = TU_RHO_prts_online }
+
+		completion_reward = {
+			add_political_power = 25
+			set_country_flag = TU_RHO_op_unlocked
+		}
+	}
+
+	#### ROUTE A: "THE TERRAN ARK" (Amiya, BoP left) ####
+	focus = {
+		id = TU_RHO_ark_mission
+		icon = GFX_goal_generic_improve_relations
+		cost = 5
+		x = -2
+		y = 2
+
+		prerequisite = { focus = TU_RHO_chernobog_rescue }
+		mutually_exclusive = { focus = TU_RHO_contractors focus = TU_RHO_demon_return }
+
+		completion_reward = {
+			add_power_balance_value = { id = TU_RHO_bop value = -0.25 }
+			add_stability = 0.05
+			country_event = { id = tu_rho_ev.1 }
+		}
+	}
+
+	focus = {
+		id = TU_RHO_ark_charter
+		icon = GFX_goal_generic_national_unity
+		cost = 7
+		x = -2
+		y = 3
+
+		prerequisite = { focus = TU_RHO_ark_mission }
+
+		completion_reward = {
+			add_stability = 0.05
+			add_political_power = 50
+		}
+	}
+
+	focus = {
+		id = TU_RHO_unlimited_volunteers
+		icon = GFX_goal_generic_construct_military
+		cost = 8
+		x = -2
+		y = 4
+
+		prerequisite = { focus = TU_RHO_ark_charter }
+
+		completion_reward = {
+			remove_ideas = TU_RHO_landship
+			add_ideas = TU_RHO_landship_unlimited
+		}
+	}
+
+	focus = {
+		id = TU_RHO_ark_relief_office
+		icon = GFX_goal_generic_construct_civilian
+		cost = 6
+		x = -2
+		y = 5
+
+		prerequisite = { focus = TU_RHO_unlimited_volunteers }
+
+		completion_reward = {
+			set_country_flag = TU_RHO_safehouse_discount
+		}
+	}
+
+	focus = {
+		id = TU_RHO_ark_refugees
+		icon = GFX_goal_generic_consumer_goods
+		cost = 6
+		x = -2
+		y = 6
+
+		prerequisite = { focus = TU_RHO_ark_relief_office }
+
+		completion_reward = {
+			add_manpower = 5000
+		}
+	}
+
+	focus = {
+		id = TU_RHO_ark_speech
+		icon = GFX_goal_generic_propaganda
+		cost = 6
+		x = -2
+		y = 7
+
+		prerequisite = { focus = TU_RHO_ark_refugees }
+
+		completion_reward = {
+			add_war_support = 0.05
+			add_stability = 0.03
+		}
+	}
+
+	focus = {
+		id = TU_RHO_ark_final
+		icon = GFX_goal_generic_alliance
+		cost = 10
+		x = -2
+		y = 8
+
+		prerequisite = { focus = TU_RHO_ark_speech }
+
+		completion_reward = {
+			add_political_power = 100
+			add_power_balance_value = { id = TU_RHO_bop value = -0.25 }
+		}
+	}
+
+	#### ROUTE B: "CONTRACTORS OF TERRA" (PMC, neutral) ####
+	focus = {
+		id = TU_RHO_contractors
+		icon = GFX_goal_generic_trade
+		cost = 5
+		x = 0
+		y = 2
+
+		prerequisite = { focus = TU_RHO_chernobog_rescue }
+		mutually_exclusive = { focus = TU_RHO_ark_mission focus = TU_RHO_demon_return }
+
+		completion_reward = {
+			add_political_power = 25
+			set_country_flag = TU_RHO_contractor_stance
+			country_event = { id = tu_rho_ev.3 }
+		}
+	}
+
+	focus = {
+		id = TU_RHO_lmd_reward
+		icon = GFX_goal_generic_positive_trade_relations
+		cost = 6
+		x = 0
+		y = 3
+
+		prerequisite = { focus = TU_RHO_contractors }
+
+		completion_reward = {
+			add_to_variable = { TU_lmd = 500 }
+		}
+	}
+
+	focus = {
+		id = TU_RHO_pmc_bonus
+		icon = GFX_goal_generic_small_arms
+		cost = 6
+		x = 0
+		y = 4
+
+		prerequisite = { focus = TU_RHO_lmd_reward }
+
+		available = {
+			has_country_flag = TU_DEC_TU_RHO_offsite_plant
+		}
+
+		completion_reward = {
+			set_country_flag = TU_RHO_pmc_bonus
+		}
+	}
+
+	focus = {
+		id = TU_RHO_arms_dealing
+		icon = GFX_goal_generic_military_deal
+		cost = 7
+		x = 0
+		y = 5
+
+		prerequisite = { focus = TU_RHO_pmc_bonus }
+
+		completion_reward = {
+			add_to_variable = { TU_lmd = 1000 }
+		}
+	}
+
+	focus = {
+		id = TU_RHO_neutral_pact
+		icon = GFX_goal_generic_neutrality_focus
+		cost = 6
+		x = 0
+		y = 6
+
+		prerequisite = { focus = TU_RHO_arms_dealing }
+
+		completion_reward = {
+			add_political_power = 50
+			add_stability = 0.02
+		}
+	}
+
+	focus = {
+		id = TU_RHO_mercenary_market
+		icon = GFX_goal_generic_dangerous_deal
+		cost = 8
+		x = 0
+		y = 7
+
+		prerequisite = { focus = TU_RHO_neutral_pact }
+
+		completion_reward = {
+			add_political_power = 75
+			set_country_flag = TU_RHO_pmc_market
+		}
+	}
+
+	#### ROUTE C: "RETURN OF THE DEMON KING" (Doctor, BoP right) ####
+	focus = {
+		id = TU_RHO_demon_return
+		icon = GFX_goal_generic_army_doctrines
+		cost = 5
+		x = 2
+		y = 2
+
+		prerequisite = { focus = TU_RHO_chernobog_rescue }
+		mutually_exclusive = { focus = TU_RHO_ark_mission focus = TU_RHO_contractors }
+
+		completion_reward = {
+			add_power_balance_value = { id = TU_RHO_bop value = 0.25 }
+			country_event = { id = tu_rho_ev.4 }
+		}
+	}
+
+	focus = {
+		id = TU_RHO_regular_army
+		icon = GFX_goal_generic_army_motorized
+		cost = 7
+		x = 2
+		y = 3
+
+		prerequisite = { focus = TU_RHO_demon_return }
+
+		completion_reward = {
+			add_ideas = TU_RHO_regular_manpower
+		}
+	}
+
+	focus = {
+		id = TU_RHO_kazdel_prep
+		icon = GFX_goal_generic_more_territorial_claims
+		cost = 8
+		x = 2
+		y = 4
+
+		prerequisite = { focus = TU_RHO_regular_army }
+
+		available = {
+			has_country_flag = TU_DEC_TU_RHO_saria_mercs
+		}
+
+		completion_reward = {
+			add_political_power = 50
+			set_country_flag = TU_RHO_kazdel_prep
+		}
+	}
+
+	focus = {
+		id = TU_RHO_tactical_doctrine
+		icon = GFX_goal_generic_army_tanks
+		cost = 6
+		x = 2
+		y = 5
+
+		prerequisite = { focus = TU_RHO_kazdel_prep }
+
+		completion_reward = {
+			army_experience = 10
+		}
+	}
+
+	focus = {
+		id = TU_RHO_doctor_war
+		icon = GFX_goal_generic_major_war
+		cost = 8
+		x = 2
+		y = 6
+
+		prerequisite = { focus = TU_RHO_tactical_doctrine }
+
+		completion_reward = {
+			add_war_support = 0.05
+			add_power_balance_value = { id = TU_RHO_bop value = 0.2 }
+			country_event = { id = tu_rho_ev.5 }
+		}
+	}
+
+	focus = {
+		id = TU_RHO_babel_restoration
+		icon = GFX_goal_generic_construct_infrastructure
+		cost = 10
+		x = 2
+		y = 7
+
+		prerequisite = { focus = TU_RHO_doctor_war }
+
+		completion_reward = {
+			add_political_power = 100
+			set_country_flag = TU_RHO_babel_restored
+		}
+	}

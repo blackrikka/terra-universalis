@@ -1,0 +1,509 @@
+add_namespace = tu_kzd_ev
+
+# Kazdel events (spec 10). Ids tu_kzd_ev.N.
+# 1-10: country events fired from focus completion_reward (tools/focusgen/kzd pieces).
+# 11-13: news events fired with every_country from route-completion focuses.
+# 14-18: monthly random events, picked from common/on_actions/tu_kzd_ev_on_actions.txt (tag = KZD, one-time flags).
+# 19-21: chain. 19 is scheduled by option a of tu_kzd_ev.3, 20 by 19, 21 by 20.
+# All events are triggered only. Nothing here polls.
+
+# 1. Fork: New Kazdel Empire.
+country_event = {
+	id = tu_kzd_ev.1
+	title = tu_kzd_ev.1.t
+	desc = tu_kzd_ev.1.d
+	picture = GFX_report_event_generic_army
+	is_triggered_only = yes
+
+	option = {
+		name = tu_kzd_ev.1.a
+		ai_chance = { base = 60 }
+		add_war_support = 0.03
+		set_country_flag = TU_KZD_empire_banner
+	}
+
+	option = {
+		name = tu_kzd_ev.1.b
+		ai_chance = { base = 40 }
+		add_stability = 0.02
+	}
+}
+
+# 2. Fork: Rule of the Six Kings.
+country_event = {
+	id = tu_kzd_ev.2
+	title = tu_kzd_ev.2.t
+	desc = tu_kzd_ev.2.d
+	picture = GFX_report_event_generic_rally
+	is_triggered_only = yes
+
+	option = {
+		name = tu_kzd_ev.2.a
+		ai_chance = { base = 60 }
+		add_stability = 0.02
+		set_country_flag = TU_KZD_six_oath
+	}
+
+	option = {
+		name = tu_kzd_ev.2.b
+		ai_chance = { base = 40 }
+		add_political_power = 25
+	}
+}
+
+# 3. Fork: Restoration of Babel. Option a starts the Babel chain (19 -> 20 -> 21).
+country_event = {
+	id = tu_kzd_ev.3
+	title = tu_kzd_ev.3.t
+	desc = tu_kzd_ev.3.d
+	picture = GFX_report_event_generic_ruins
+	is_triggered_only = yes
+
+	option = {
+		name = tu_kzd_ev.3.a
+		ai_chance = { base = 50 }
+		set_country_flag = TU_KZD_babel_search
+		country_event = {
+			id = tu_kzd_ev.19
+			days = 30
+			random_days = 15
+		}
+	}
+
+	option = {
+		name = tu_kzd_ev.3.b
+		ai_chance = { base = 50 }
+		add_political_power = 15
+		add_stability = 0.01
+	}
+}
+
+# 4. Theresis takes the throne (TU_KZD_theresis_throne).
+country_event = {
+	id = tu_kzd_ev.4
+	title = tu_kzd_ev.4.t
+	desc = tu_kzd_ev.4.d
+	picture = GFX_report_event_generic_military_parade
+	is_triggered_only = yes
+
+	option = {
+		name = tu_kzd_ev.4.a
+		ai_chance = { base = 70 }
+		add_political_power = 25
+		add_war_support = 0.02
+	}
+
+	option = {
+		name = tu_kzd_ev.4.b
+		ai_chance = { base = 30 }
+		add_political_power = 10
+		add_stability = 0.01
+	}
+}
+
+# 5. Mercenary kingdom charter (TU_KZD_kingdom_charter).
+country_event = {
+	id = tu_kzd_ev.5
+	title = tu_kzd_ev.5.t
+	desc = tu_kzd_ev.5.d
+	picture = GFX_report_event_generic_sign_treaty1
+	is_triggered_only = yes
+
+	option = {
+		name = tu_kzd_ev.5.a
+		ai_chance = { base = 60 }
+		add_political_power = 25
+		set_country_flag = TU_KZD_charter_sealed
+	}
+
+	option = {
+		name = tu_kzd_ev.5.b
+		ai_chance = { base = 40 }
+		add_stability = 0.02
+	}
+}
+
+# 6. March on Londinium (TU_KZD_vic_march_on_london). VIC is hit only if it exists.
+country_event = {
+	id = tu_kzd_ev.6
+	title = tu_kzd_ev.6.t
+	desc = tu_kzd_ev.6.d
+	picture = GFX_report_event_generic_battle
+	is_triggered_only = yes
+
+	option = {
+		name = tu_kzd_ev.6.a
+		ai_chance = { base = 50 }
+		army_experience = 25
+		set_country_flag = TU_KZD_london_taken
+		if = {
+			limit = {
+				country_exists = VIC
+			}
+			VIC = {
+				add_stability = -0.02
+			}
+		}
+	}
+
+	option = {
+		name = tu_kzd_ev.6.b
+		ai_chance = { base = 50 }
+		add_stability = 0.02
+		add_political_power = 15
+	}
+}
+
+# 7. Sarkaz bloodline recruitment (TU_KZD_sarkaz_root).
+country_event = {
+	id = tu_kzd_ev.7
+	title = tu_kzd_ev.7.t
+	desc = tu_kzd_ev.7.d
+	picture = GFX_report_event_generic_rifles
+	is_triggered_only = yes
+
+	option = {
+		name = tu_kzd_ev.7.a
+		ai_chance = { base = 60 }
+		army_experience = 15
+		add_manpower = 20000
+	}
+
+	option = {
+		name = tu_kzd_ev.7.b
+		ai_chance = { base = 40 }
+		add_stability = 0.02
+	}
+}
+
+# 8. Vampire bloodline (TU_KZD_vampire_blood).
+country_event = {
+	id = tu_kzd_ev.8
+	title = tu_kzd_ev.8.t
+	desc = tu_kzd_ev.8.d
+	picture = GFX_report_event_generic_destroyed_vehicles
+	is_triggered_only = yes
+
+	option = {
+		name = tu_kzd_ev.8.a
+		ai_chance = { base = 50 }
+		army_experience = 20
+	}
+
+	option = {
+		name = tu_kzd_ev.8.b
+		ai_chance = { base = 50 }
+		add_stability = 0.02
+		add_political_power = 10
+	}
+}
+
+# 9. Wendigo bloodline (TU_KZD_wendigo_blood).
+country_event = {
+	id = tu_kzd_ev.9
+	title = tu_kzd_ev.9.t
+	desc = tu_kzd_ev.9.d
+	picture = GFX_report_event_generic_defensive_preparations
+	is_triggered_only = yes
+
+	option = {
+		name = tu_kzd_ev.9.a
+		ai_chance = { base = 50 }
+		army_experience = 20
+		add_war_support = 0.01
+	}
+
+	option = {
+		name = tu_kzd_ev.9.b
+		ai_chance = { base = 50 }
+		add_stability = 0.02
+	}
+}
+
+# 10. Banshee bloodline (TU_KZD_banshee_blood).
+country_event = {
+	id = tu_kzd_ev.10
+	title = tu_kzd_ev.10.t
+	desc = tu_kzd_ev.10.d
+	picture = GFX_report_event_generic_research_lab
+	is_triggered_only = yes
+
+	option = {
+		name = tu_kzd_ev.10.a
+		ai_chance = { base = 50 }
+		add_political_power = 25
+		set_country_flag = TU_KZD_banshee_decoded
+	}
+
+	option = {
+		name = tu_kzd_ev.10.b
+		ai_chance = { base = 50 }
+		add_stability = 0.01
+	}
+}
+
+# 11. News: Declaration of Renewal (TU_KZD_empire_finale).
+news_event = {
+	id = tu_kzd_ev.11
+	title = tu_kzd_ev.11.t
+	desc = tu_kzd_ev.11.d
+	picture = GFX_news_event_generic_army
+	is_triggered_only = yes
+
+	option = {
+		name = tu_kzd_ev.11.a
+		ai_chance = { base = 100 }
+	}
+}
+
+# 12. News: Royal Sanction of the Six (TU_KZD_royal_oath_final).
+news_event = {
+	id = tu_kzd_ev.12
+	title = tu_kzd_ev.12.t
+	desc = tu_kzd_ev.12.d
+	picture = GFX_news_event_generic_parliament
+	is_triggered_only = yes
+
+	option = {
+		name = tu_kzd_ev.12.a
+		ai_chance = { base = 100 }
+	}
+}
+
+# 13. News: Babel Rebuilt (TU_KZD_babel_reborn).
+news_event = {
+	id = tu_kzd_ev.13
+	title = tu_kzd_ev.13.t
+	desc = tu_kzd_ev.13.d
+	picture = GFX_news_event_generic_factory
+	is_triggered_only = yes
+
+	option = {
+		name = tu_kzd_ev.13.a
+		ai_chance = { base = 100 }
+	}
+}
+
+# 14. Monthly: mercenary contract dispute. Needs TU_KZD_kingdom_charter. Once.
+country_event = {
+	id = tu_kzd_ev.14
+	title = tu_kzd_ev.14.t
+	desc = tu_kzd_ev.14.d
+	picture = GFX_report_event_generic_stock_traders
+	is_triggered_only = yes
+
+	trigger = {
+		tag = KZD
+		has_completed_focus = TU_KZD_kingdom_charter
+		NOT = { has_country_flag = TU_KZD_ev_merc_dispute }
+	}
+
+	immediate = {
+		set_country_flag = TU_KZD_ev_merc_dispute
+	}
+
+	option = {
+		name = tu_kzd_ev.14.a
+		ai_chance = { base = 60 }
+		add_political_power = 15
+	}
+
+	option = {
+		name = tu_kzd_ev.14.b
+		ai_chance = { base = 40 }
+		add_war_support = 0.01
+	}
+}
+
+# 15. Monthly: sandstorm at the wasteland fortress. Needs TU_KZD_fort_design. Once.
+country_event = {
+	id = tu_kzd_ev.15
+	title = tu_kzd_ev.15.t
+	desc = tu_kzd_ev.15.d
+	picture = GFX_report_event_generic_construction_site
+	is_triggered_only = yes
+
+	trigger = {
+		tag = KZD
+		has_completed_focus = TU_KZD_fort_design
+		NOT = { has_country_flag = TU_KZD_ev_storm }
+	}
+
+	immediate = {
+		set_country_flag = TU_KZD_ev_storm
+	}
+
+	option = {
+		name = tu_kzd_ev.15.a
+		ai_chance = { base = 60 }
+		add_stability = 0.01
+		army_experience = 5
+	}
+
+	option = {
+		name = tu_kzd_ev.15.b
+		ai_chance = { base = 40 }
+		add_political_power = 10
+	}
+}
+
+# 16. Monthly: Londinium refugees. Needs TU_KZD_vic_london_order. Once.
+country_event = {
+	id = tu_kzd_ev.16
+	title = tu_kzd_ev.16.t
+	desc = tu_kzd_ev.16.d
+	picture = GFX_report_event_generic_truck
+	is_triggered_only = yes
+
+	trigger = {
+		tag = KZD
+		has_completed_focus = TU_KZD_vic_london_order
+		NOT = { has_country_flag = TU_KZD_ev_refugees }
+	}
+
+	immediate = {
+		set_country_flag = TU_KZD_ev_refugees
+	}
+
+	option = {
+		name = tu_kzd_ev.16.a
+		ai_chance = { base = 60 }
+		add_manpower = 10000
+	}
+
+	option = {
+		name = tu_kzd_ev.16.b
+		ai_chance = { base = 40 }
+		add_stability = 0.02
+	}
+}
+
+# 17. Monthly: voices in the Sarkaz recruits. Needs TU_KZD_sarkaz_root. Once.
+country_event = {
+	id = tu_kzd_ev.17
+	title = tu_kzd_ev.17.t
+	desc = tu_kzd_ev.17.d
+	picture = GFX_report_event_generic_rally2
+	is_triggered_only = yes
+
+	trigger = {
+		tag = KZD
+		has_completed_focus = TU_KZD_sarkaz_root
+		NOT = { has_country_flag = TU_KZD_ev_sarkaz_voices }
+	}
+
+	immediate = {
+		set_country_flag = TU_KZD_ev_sarkaz_voices
+	}
+
+	option = {
+		name = tu_kzd_ev.17.a
+		ai_chance = { base = 60 }
+		army_experience = 10
+	}
+
+	option = {
+		name = tu_kzd_ev.17.b
+		ai_chance = { base = 40 }
+		add_political_power = 10
+	}
+}
+
+# 18. Monthly: Babel relic found. Needs TU_KZD_babel_restoration. Once.
+country_event = {
+	id = tu_kzd_ev.18
+	title = tu_kzd_ev.18.t
+	desc = tu_kzd_ev.18.d
+	picture = GFX_report_event_generic_read_write
+	is_triggered_only = yes
+
+	trigger = {
+		tag = KZD
+		has_completed_focus = TU_KZD_babel_restoration
+		NOT = { has_country_flag = TU_KZD_ev_relic }
+	}
+
+	immediate = {
+		set_country_flag = TU_KZD_ev_relic
+	}
+
+	option = {
+		name = tu_kzd_ev.18.a
+		ai_chance = { base = 60 }
+		add_political_power = 15
+	}
+
+	option = {
+		name = tu_kzd_ev.18.b
+		ai_chance = { base = 40 }
+		add_stability = 0.01
+	}
+}
+
+# 19. Babel chain step 1. Scheduled by tu_kzd_ev.3 option a.
+country_event = {
+	id = tu_kzd_ev.19
+	title = tu_kzd_ev.19.t
+	desc = tu_kzd_ev.19.d
+	picture = GFX_report_event_generic_ruins
+	is_triggered_only = yes
+
+	option = {
+		name = tu_kzd_ev.19.a
+		ai_chance = { base = 60 }
+		add_political_power = 20
+		country_event = {
+			id = tu_kzd_ev.20
+			days = 60
+			random_days = 20
+		}
+	}
+
+	option = {
+		name = tu_kzd_ev.19.b
+		ai_chance = { base = 40 }
+		add_stability = 0.02
+	}
+}
+
+# 20. Babel chain step 2. Scheduled by tu_kzd_ev.19 option a.
+country_event = {
+	id = tu_kzd_ev.20
+	title = tu_kzd_ev.20.t
+	desc = tu_kzd_ev.20.d
+	picture = GFX_report_event_generic_read_write
+	is_triggered_only = yes
+
+	option = {
+		name = tu_kzd_ev.20.a
+		ai_chance = { base = 60 }
+		add_political_power = 25
+		set_country_flag = TU_KZD_babel_plan_read
+		country_event = {
+			id = tu_kzd_ev.21
+			days = 90
+		}
+	}
+
+	option = {
+		name = tu_kzd_ev.20.b
+		ai_chance = { base = 40 }
+		add_stability = 0.01
+	}
+}
+
+# 21. Babel chain step 3 (final). Scheduled by tu_kzd_ev.20 option a.
+country_event = {
+	id = tu_kzd_ev.21
+	title = tu_kzd_ev.21.t
+	desc = tu_kzd_ev.21.d
+	picture = GFX_report_event_generic_factory
+	is_triggered_only = yes
+
+	option = {
+		name = tu_kzd_ev.21.a
+		ai_chance = { base = 100 }
+		add_political_power = 30
+		army_experience = 10
+	}
+}

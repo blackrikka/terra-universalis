@@ -1,0 +1,100 @@
+TU_state_affairs_category = {
+
+	TU_state_production_drive = {
+		icon = GFX_decision_generic_factory
+
+		allowed = {
+			always = yes
+		}
+
+		cost = 75
+		days_re_enable = 180
+
+		complete_effect = {
+			add_timed_idea = {
+				idea = TU_state_production_drive_idea
+				days = 90
+			}
+		}
+
+		ai_will_do = {
+			base = 1
+			modifier = {
+				add = 2
+				has_political_power > 150
+			}
+		}
+	}
+
+	TU_state_research_grant = {
+		icon = GFX_decision_generic_research
+
+		allowed = {
+			always = yes
+		}
+
+		cost = 75
+		days_re_enable = 180
+
+		complete_effect = {
+			add_timed_idea = {
+				idea = TU_state_research_grant_idea
+				days = 90
+			}
+		}
+
+		ai_will_do = {
+			base = 1
+			modifier = {
+				add = 2
+				has_political_power > 150
+			}
+		}
+	}
+
+	TU_state_stability_campaign = {
+		icon = GFX_decision_generic_welfare
+
+		allowed = {
+			always = yes
+		}
+
+		cost = 50
+		days_re_enable = 120
+
+		complete_effect = {
+			add_stability = 0.05
+		}
+
+		ai_will_do = {
+			base = 1
+			modifier = {
+				add = 2
+				has_political_power > 150
+			}
+		}
+	}
+
+	TU_state_war_propaganda = {
+		icon = GFX_decision_generic_speech
+
+		allowed = {
+			always = yes
+		}
+
+		cost = 50
+		days_re_enable = 120
+
+		complete_effect = {
+			add_war_support = 0.05
+		}
+
+		ai_will_do = {
+			base = 1
+			modifier = {
+				add = 2
+				has_political_power > 150
+			}
+		}
+	}
+}

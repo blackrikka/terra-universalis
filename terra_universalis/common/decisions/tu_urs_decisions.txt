@@ -1,0 +1,28 @@
+TU_URS_chernobog_category = {
+
+	TU_URS_chernobog_patrol = {
+		icon = GFX_decision_generic_military
+
+		allowed = {
+			original_tag = URS
+		}
+
+		available = {
+			41 = {
+				is_owned_and_controlled_by = ROOT
+			}
+		}
+
+		cost = 25
+		days_re_enable = 90
+		fire_only_once = no
+
+		complete_effect = {
+			add_stability = 0.02
+		}
+
+		ai_will_do = {
+			base = 0
+		}
+	}
+}

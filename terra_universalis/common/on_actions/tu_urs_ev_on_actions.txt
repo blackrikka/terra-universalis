@@ -1,0 +1,17 @@
+on_actions = {
+	# Monthly random events for Ursus (tu_urs_events.txt, 20-27). Each event's trigger checks tag = URS and a one-time flag.
+	# Weight 1000 = 0 is the "no event" pick, as in vanilla (17000 = 0).
+	on_monthly = {
+		random_events = {
+			1000 = 0
+			10 = tu_urs_ev.20
+			10 = tu_urs_ev.21
+			10 = tu_urs_ev.22
+			10 = tu_urs_ev.23
+			10 = tu_urs_ev.24
+			10 = tu_urs_ev.25
+			10 = tu_urs_ev.26
+			10 = tu_urs_ev.27
+		}
+	}
+}

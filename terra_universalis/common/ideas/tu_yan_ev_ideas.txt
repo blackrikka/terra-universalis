@@ -1,0 +1,55 @@
+ideas = {
+
+	country = {
+
+		TU_YAN_ev_idea_court_unity = {
+			picture = generic_political_support
+
+			allowed = {
+				original_tag = YAN
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			modifier = {
+				stability_factor = 0.02
+				political_power_gain = 0.05
+			}
+		}
+
+		TU_YAN_ev_idea_court_unrest = {
+			picture = generic_oppression
+
+			allowed = {
+				original_tag = YAN
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			modifier = {
+				stability_factor = -0.03
+				political_power_gain = -0.05
+			}
+		}
+
+		TU_YAN_ev_idea_spirit_fervor = {
+			picture = generic_morale_bonus
+
+			allowed = {
+				original_tag = YAN
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			modifier = {
+				war_support_factor = 0.05
+			}
+		}
+	}
+}

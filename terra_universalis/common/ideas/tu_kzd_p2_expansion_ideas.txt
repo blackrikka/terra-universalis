@@ -1,0 +1,107 @@
+ideas = {
+
+	country = {
+
+		TU_KZD_p2_steam_counter = {
+			picture = generic_armor
+
+			allowed = {
+				original_tag = KZD
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			modifier = {
+				army_attack_factor = 0.05
+				army_defence_factor = 0.05
+			}
+		}
+
+		TU_KZD_p2_vampire_blood = {
+			picture = generic_infantry_bonus
+
+			allowed = {
+				original_tag = KZD
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			modifier = {
+				army_attack_factor = 0.05
+				experience_gain_army_factor = 0.1
+			}
+		}
+
+		TU_KZD_p2_wendigo_pack = {
+			picture = generic_mountain_warfare
+
+			allowed = {
+				original_tag = KZD
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			modifier = {
+				army_defence_factor = 0.05
+				experience_gain_army_factor = 0.1
+			}
+		}
+
+		TU_KZD_p2_banshee_chorus = {
+			picture = generic_radar
+
+			allowed = {
+				original_tag = KZD
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			modifier = {
+				army_attack_factor = 0.03
+				war_support_factor = 0.05
+			}
+		}
+
+		TU_KZD_p2_wasteland_fortress = {
+			picture = generic_fortify_the_borders
+
+			allowed = {
+				original_tag = KZD
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			modifier = {
+				army_defence_factor = 0.05
+				production_speed_buildings_factor = -0.05
+			}
+		}
+
+		TU_KZD_p2_wasteland_guerilla = {
+			picture = generic_guerilla_warfare
+
+			allowed = {
+				original_tag = KZD
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			modifier = {
+				army_attack_factor = 0.05
+				stability_factor = -0.02
+			}
+		}
+	}
+}

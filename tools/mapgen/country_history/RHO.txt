@@ -1,0 +1,37 @@
+set_politics = {
+	ruling_party = neutrality
+	last_election = "1096.1.1"
+	election_frequency = 48
+	elections_allowed = no
+}
+set_popularities = { neutrality = 100 }
+recruit_character = TU_RHO_amiya
+recruit_character = TU_RHO_doctor
+recruit_character = TU_RHO_kaltsit
+add_ideas = { TU_RHO_landship TU_RHO_pharma_company }
+oob = "RHO_1097"
+add_political_power = 100
+
+# Lungmen dollar and RIIC facility levels (see tu_rho_decisions.txt)
+set_variable = { TU_lmd = 500 }
+set_variable = { TU_RHO_riic_factory = 0 }
+set_variable = { TU_RHO_riic_trade = 0 }
+set_variable = { TU_RHO_riic_power = 0 }
+set_variable = { TU_RHO_riic_dorm = 0 }
+set_variable = { TU_RHO_riic_reception = 0 }
+set_variable = { TU_RHO_riic_factory_cost = 100 }
+set_variable = { TU_RHO_riic_trade_cost = 100 }
+set_variable = { TU_RHO_riic_power_cost = 100 }
+set_variable = { TU_RHO_riic_dorm_cost = 100 }
+set_variable = { TU_RHO_riic_reception_cost = 100 }
+set_variable = { TU_RHO_riic_cap = 2 }
+set_variable = { TU_RHO_riic_dorm_bonus = 0 }
+set_variable = { TU_RHO_riic_reception_bonus = 0 }
+set_variable = { TU_RHO_riic_intel_bonus = 0 }
+set_variable = { TU_RHO_pmc_count = 0 }
+set_variable = { TU_RHO_lmd_income = 0 }
+
+set_power_balance = {
+	id = TU_RHO_bop
+	set_default = yes
+}

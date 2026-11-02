@@ -1,0 +1,11 @@
+# TU fallback division name group. Used by every tag because the vanilla common/units/names_divisions
+# folder is replaced. No for_countries, so all countries can use it. Names come from fallback_name.
+TU_DIVNAMES_FALLBACK = {
+	name = "TU fallback division names"
+
+	can_use = { always = yes }
+
+	division_types = { "infantry" "cavalry" "motorized" "mechanized" "light_armor" "medium_armor" "heavy_armor" "modern_armor" "paratrooper" "marine" "mountaineers" }
+
+	fallback_name = "%d. Division"
+}

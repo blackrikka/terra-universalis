@@ -1,0 +1,21 @@
+state={
+	id=580
+	name="STATE_580"
+	impassable = yes
+	manpower = 1000
+
+	state_category = wasteland
+
+	history={
+		owner = VIC
+		buildings = {
+			infrastructure = 0
+		}
+		add_core_of = VIC
+	}
+
+	provinces={
+		2325
+	}
+	local_supplies=0.0
+}

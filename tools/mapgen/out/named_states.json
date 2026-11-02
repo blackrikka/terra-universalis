@@ -1,0 +1,120 @@
+{
+ "named": [
+  {
+   "name": "urs_capital",
+   "state": 58,
+   "owner": "URS",
+   "category": "town",
+   "province": 308,
+   "victory_points": 1
+  },
+  {
+   "name": "chernobog",
+   "state": 41,
+   "owner": "URS",
+   "category": "town",
+   "province": 202,
+   "victory_points": 10
+  },
+  {
+   "name": "kzd_capital",
+   "state": 64,
+   "owner": "KZD",
+   "category": "town",
+   "province": 332,
+   "victory_points": 1
+  },
+  {
+   "name": "lungmen",
+   "state": 916,
+   "owner": "LGM",
+   "category": "city",
+   "province": 948,
+   "victory_points": 15
+  }
+ ],
+ "anchors": [
+  {
+   "key": "rho_start",
+   "state": 215,
+   "host": "RHO",
+   "return": "YAN",
+   "aliases": [
+    "rho_start"
+   ],
+   "province": 1053
+  },
+  {
+   "key": "victoria",
+   "state": 91,
+   "host": "VIC",
+   "return": "VIC",
+   "aliases": [],
+   "province": 458
+  },
+  {
+   "key": "columbia",
+   "state": 241,
+   "host": "COL",
+   "return": "COL",
+   "aliases": [],
+   "province": 1163
+  },
+  {
+   "key": "yan",
+   "state": 194,
+   "host": "YAN",
+   "return": "YAN",
+   "aliases": [],
+   "province": 945
+  },
+  {
+   "key": "kazimierz",
+   "state": 73,
+   "host": "KAZ",
+   "return": "KAZ",
+   "aliases": [],
+   "province": 376
+  },
+  {
+   "key": "sargon",
+   "state": 314,
+   "host": "SAR",
+   "return": "SAR",
+   "aliases": [],
+   "province": 1520
+  },
+  {
+   "key": "iberia",
+   "state": 131,
+   "host": "IBE",
+   "return": "IBE",
+   "aliases": [],
+   "province": 649
+  },
+  {
+   "key": "rim",
+   "state": 159,
+   "host": "RIM",
+   "return": "RIM",
+   "aliases": [],
+   "province": 756
+  },
+  {
+   "key": "kazdel",
+   "state": 59,
+   "host": "KZD",
+   "return": "KZD",
+   "aliases": [],
+   "province": 310
+  },
+  {
+   "key": "ursus",
+   "state": 39,
+   "host": "URS",
+   "return": "URS",
+   "aliases": [],
+   "province": 190
+  }
+ ]
+}

@@ -1,0 +1,22 @@
+# REU extension decision categories. TU_REU_expansion_category and TU_REU_diplomacy_category
+# are already in tu_converted_categories.txt, so only the two new categories are defined here.
+
+TU_REU_construction_category = {
+	icon = GFX_decision_category_generic_industry
+
+	allowed = {
+		original_tag = REU
+	}
+
+	priority = 100
+}
+
+TU_REU_mobilize_category = {
+	icon = GFX_decision_category_generic_political_actions
+
+	allowed = {
+		original_tag = REU
+	}
+
+	priority = 100
+}

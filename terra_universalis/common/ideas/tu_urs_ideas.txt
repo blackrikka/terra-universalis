@@ -1,0 +1,72 @@
+ideas = {
+
+	country = {
+
+		TU_URS_backward_infrastructure = {
+			picture = generic_build_infrastructure
+
+			allowed = {
+				original_tag = URS
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			modifier = {
+				production_speed_buildings_factor = -0.2
+				supply_consumption_factor = 0.1
+			}
+		}
+
+		TU_URS_frozen_empire = {
+			picture = generic_agrarian_society
+
+			allowed = {
+				original_tag = URS
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			modifier = {
+				monthly_population = 0.2
+				conscription_factor = 0.05
+			}
+		}
+
+		TU_URS_infected_discrimination = {
+			picture = generic_secret_police
+
+			allowed = {
+				original_tag = URS
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			modifier = {
+				stability_factor = -0.1
+			}
+		}
+
+		TU_URS_imperial_guard_idea = {
+			picture = professional_officer_corps_spirit
+
+			allowed = {
+				original_tag = URS
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			modifier = {
+				army_attack_factor = 0.05
+				army_defence_factor = 0.05
+			}
+		}
+	}
+}

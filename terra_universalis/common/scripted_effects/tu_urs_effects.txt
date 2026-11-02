@@ -1,0 +1,15 @@
+#####################################
+### TU_URS startup (country scope) ###
+#####################################
+
+# Called from common/on_actions/tu_urs_on_actions.txt (on_startup).
+# Eight starting infantry divisions in the capital state.
+TU_URS_startup = {
+	capital_scope = {
+		create_unit = {
+			division = "division_template = \"TU_URS_infantry\" start_experience_factor = 0.2 start_equipment_factor = 0.7"
+			owner = URS
+			count = 8
+		}
+	}
+}

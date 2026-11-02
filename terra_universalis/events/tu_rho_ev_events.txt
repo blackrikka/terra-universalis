@@ -1,0 +1,585 @@
+add_namespace = tu_rho_ev
+
+# Rhodes Island events (spec 10). Ids tu_rho_ev.N. The old namespace tu_rho (events/tu_rho_events.txt) is untouched.
+# 1-10: country events fired from focus completion_reward (tools/focusgen/rho pieces).
+# 11-13: news events fired with every_country from route-completion focuses.
+# 14-18: monthly random events, picked from common/on_actions/tu_rho_ev_on_actions.txt (tag = RHO, one-time flags where noted).
+# 19-20: chain. 19 is scheduled by option c of tu_rho_ev.5, 20 by option a of 19.
+# All events are triggered only. Nothing here polls.
+
+# 1. Fork: Ark mission launch (TU_RHO_ark_mission). Amiya side or Doctor side on the BoP.
+country_event = {
+	id = tu_rho_ev.1
+	title = tu_rho_ev.1.t
+	desc = tu_rho_ev.1.d
+	picture = GFX_report_event_generic_army
+	is_triggered_only = yes
+
+	option = {
+		name = tu_rho_ev.1.a
+		ai_chance = { base = 60 }
+		add_stability = 0.02
+		add_political_power = 30
+		add_power_balance_value = { id = TU_RHO_bop value = -0.1 }
+	}
+
+	option = {
+		name = tu_rho_ev.1.b
+		ai_chance = { base = 40 }
+		add_political_power = 30
+		add_power_balance_value = { id = TU_RHO_bop value = 0.1 }
+	}
+
+	option = {
+		name = tu_rho_ev.1.c
+		ai_chance = { base = 30 }
+		add_political_power = 50
+		army_experience = 10
+	}
+}
+
+# 2. Ark: the Terra Charter is drafted (TU_RHO_terra_charter).
+country_event = {
+	id = tu_rho_ev.2
+	title = tu_rho_ev.2.t
+	desc = tu_rho_ev.2.d
+	picture = GFX_report_event_generic_sign_treaty1
+	is_triggered_only = yes
+
+	option = {
+		name = tu_rho_ev.2.a
+		ai_chance = { base = 50 }
+		add_political_power = 40
+		add_stability = 0.03
+		add_power_balance_value = { id = TU_RHO_bop value = -0.1 }
+	}
+
+	option = {
+		name = tu_rho_ev.2.b
+		ai_chance = { base = 30 }
+		add_political_power = 20
+		add_stability = 0.02
+	}
+
+	option = {
+		name = tu_rho_ev.2.c
+		ai_chance = { base = 15 }
+		add_political_power = 10
+		add_power_balance_value = { id = TU_RHO_bop value = 0.1 }
+	}
+}
+
+# 3. Fork: Declaration of the Contractors (TU_RHO_contractors).
+country_event = {
+	id = tu_rho_ev.3
+	title = tu_rho_ev.3.t
+	desc = tu_rho_ev.3.d
+	picture = GFX_report_event_generic_stock_traders
+	is_triggered_only = yes
+
+	option = {
+		name = tu_rho_ev.3.a
+		ai_chance = { base = 40 }
+		add_political_power = 50
+		add_to_variable = { TU_lmd = 500 }
+		add_power_balance_value = { id = TU_RHO_bop value = 0.05 }
+	}
+
+	option = {
+		name = tu_rho_ev.3.b
+		ai_chance = { base = 40 }
+		add_political_power = 30
+		add_stability = 0.02
+		add_power_balance_value = { id = TU_RHO_bop value = -0.05 }
+	}
+
+	option = {
+		name = tu_rho_ev.3.c
+		ai_chance = { base = 20 }
+		add_political_power = 15
+	}
+}
+
+# 4. Demon route: the return stirs (TU_RHO_demon_return).
+country_event = {
+	id = tu_rho_ev.4
+	title = tu_rho_ev.4.t
+	desc = tu_rho_ev.4.d
+	picture = GFX_report_event_generic_battle
+	is_triggered_only = yes
+
+	option = {
+		name = tu_rho_ev.4.a
+		ai_chance = { base = 40 }
+		add_political_power = 60
+		add_war_support = 0.03
+		add_power_balance_value = { id = TU_RHO_bop value = 0.1 }
+	}
+
+	option = {
+		name = tu_rho_ev.4.b
+		ai_chance = { base = 40 }
+		add_political_power = 30
+		add_stability = 0.03
+		add_power_balance_value = { id = TU_RHO_bop value = -0.15 }
+	}
+
+	option = {
+		name = tu_rho_ev.4.c
+		ai_chance = { base = 30 }
+		add_political_power = 25
+		army_experience = 5
+	}
+}
+
+# 5. Demon route: the Doctor's war (TU_RHO_doctor_war). Option c starts the front chain (19 -> 20).
+country_event = {
+	id = tu_rho_ev.5
+	title = tu_rho_ev.5.t
+	desc = tu_rho_ev.5.d
+	picture = GFX_report_event_generic_defensive_preparations
+	is_triggered_only = yes
+
+	option = {
+		name = tu_rho_ev.5.a
+		ai_chance = { base = 40 }
+		add_political_power = 50
+		add_war_support = 0.05
+		add_manpower = 3000
+		add_power_balance_value = { id = TU_RHO_bop value = 0.05 }
+	}
+
+	option = {
+		name = tu_rho_ev.5.b
+		ai_chance = { base = 40 }
+		add_political_power = 30
+		add_stability = 0.02
+		add_power_balance_value = { id = TU_RHO_bop value = -0.1 }
+	}
+
+	option = {
+		name = tu_rho_ev.5.c
+		ai_chance = { base = 30 }
+		add_political_power = 20
+		country_event = {
+			id = tu_rho_ev.19
+			days = 30
+			random_days = 15
+		}
+	}
+}
+
+# 6. Oripathy: the ethics of enhancement (TU_RHO_enh_ethics).
+country_event = {
+	id = tu_rho_ev.6
+	title = tu_rho_ev.6.t
+	desc = tu_rho_ev.6.d
+	picture = GFX_report_event_generic_research_lab
+	is_triggered_only = yes
+
+	option = {
+		name = tu_rho_ev.6.a
+		ai_chance = { base = 40 }
+		add_political_power = 40
+		add_stability = 0.02
+		army_experience = 10
+		add_power_balance_value = { id = TU_RHO_bop value = -0.05 }
+	}
+
+	option = {
+		name = tu_rho_ev.6.b
+		ai_chance = { base = 30 }
+		add_political_power = 20
+		add_stability = 0.02
+		add_power_balance_value = { id = TU_RHO_bop value = -0.1 }
+	}
+
+	option = {
+		name = tu_rho_ev.6.c
+		ai_chance = { base = 30 }
+		add_political_power = 50
+		army_experience = 15
+		add_stability = -0.02
+		add_power_balance_value = { id = TU_RHO_bop value = 0.1 }
+	}
+}
+
+# 7. Oripathy: a cure for the world (TU_RHO_med_global_cure).
+country_event = {
+	id = tu_rho_ev.7
+	title = tu_rho_ev.7.t
+	desc = tu_rho_ev.7.d
+	picture = GFX_report_event_generic_conference
+	is_triggered_only = yes
+
+	option = {
+		name = tu_rho_ev.7.a
+		ai_chance = { base = 40 }
+		add_political_power = 60
+		add_stability = 0.05
+		add_power_balance_value = { id = TU_RHO_bop value = -0.1 }
+	}
+
+	option = {
+		name = tu_rho_ev.7.b
+		ai_chance = { base = 40 }
+		add_political_power = 40
+		add_to_variable = { TU_lmd = 800 }
+		add_power_balance_value = { id = TU_RHO_bop value = 0.05 }
+	}
+
+	option = {
+		name = tu_rho_ev.7.c
+		ai_chance = { base = 30 }
+		add_political_power = 50
+		add_stability = 0.02
+	}
+}
+
+# 8. Elite operators: the legend (TU_RHO_elite_legend).
+country_event = {
+	id = tu_rho_ev.8
+	title = tu_rho_ev.8.t
+	desc = tu_rho_ev.8.d
+	picture = GFX_report_event_generic_military_parade
+	is_triggered_only = yes
+
+	option = {
+		name = tu_rho_ev.8.a
+		ai_chance = { base = 40 }
+		add_political_power = 60
+		add_war_support = 0.03
+		army_experience = 15
+	}
+
+	option = {
+		name = tu_rho_ev.8.b
+		ai_chance = { base = 40 }
+		add_political_power = 30
+		add_stability = 0.03
+	}
+
+	option = {
+		name = tu_rho_ev.8.c
+		ai_chance = { base = 25 }
+		add_war_support = 0.02
+		army_experience = 30
+		add_power_balance_value = { id = TU_RHO_bop value = 0.05 }
+	}
+}
+
+# 9. Landship: the final leap (TU_RHO_ops_ls_finale).
+country_event = {
+	id = tu_rho_ev.9
+	title = tu_rho_ev.9.t
+	desc = tu_rho_ev.9.d
+	picture = GFX_report_event_generic_train
+	is_triggered_only = yes
+
+	option = {
+		name = tu_rho_ev.9.a
+		ai_chance = { base = 40 }
+		add_political_power = 50
+		add_fuel = 300
+		army_experience = 10
+	}
+
+	option = {
+		name = tu_rho_ev.9.b
+		ai_chance = { base = 40 }
+		add_political_power = 30
+		add_stability = 0.02
+		add_manpower = 1000
+	}
+
+	option = {
+		name = tu_rho_ev.9.c
+		ai_chance = { base = 20 }
+		add_political_power = 20
+		add_to_variable = { TU_lmd = 600 }
+	}
+}
+
+# 10. RIIC: the industry runs again (TU_RHO_ops_riic_finale).
+country_event = {
+	id = tu_rho_ev.10
+	title = tu_rho_ev.10.t
+	desc = tu_rho_ev.10.d
+	picture = GFX_report_event_generic_factory
+	is_triggered_only = yes
+
+	option = {
+		name = tu_rho_ev.10.a
+		ai_chance = { base = 40 }
+		add_political_power = 40
+		add_war_support = 0.02
+		add_power_balance_value = { id = TU_RHO_bop value = 0.1 }
+	}
+
+	option = {
+		name = tu_rho_ev.10.b
+		ai_chance = { base = 40 }
+		add_political_power = 30
+		add_stability = 0.03
+		add_power_balance_value = { id = TU_RHO_bop value = -0.1 }
+	}
+
+	option = {
+		name = tu_rho_ev.10.c
+		ai_chance = { base = 30 }
+		add_political_power = 30
+		add_stability = 0.01
+		add_to_variable = { TU_lmd = 500 }
+	}
+}
+
+# 11. News: the eternal route of the Ark (TU_RHO_ark_eternal).
+news_event = {
+	id = tu_rho_ev.11
+	title = tu_rho_ev.11.t
+	desc = tu_rho_ev.11.d
+	picture = GFX_news_event_generic_handshake
+	major = yes
+	is_triggered_only = yes
+
+	option = {
+		name = tu_rho_ev.11.a
+		ai_chance = { base = 100 }
+	}
+}
+
+# 12. News: the accord of contracts is complete (TU_RHO_accord_final).
+news_event = {
+	id = tu_rho_ev.12
+	title = tu_rho_ev.12.t
+	desc = tu_rho_ev.12.d
+	picture = GFX_news_event_generic_sign_treaty2
+	major = yes
+	is_triggered_only = yes
+
+	option = {
+		name = tu_rho_ev.12.a
+		ai_chance = { base = 100 }
+	}
+}
+
+# 13. News: return to Kazdel (TU_RHO_kazdel_return).
+news_event = {
+	id = tu_rho_ev.13
+	title = tu_rho_ev.13.t
+	desc = tu_rho_ev.13.d
+	picture = GFX_news_event_generic_rally
+	major = yes
+	is_triggered_only = yes
+
+	option = {
+		name = tu_rho_ev.13.a
+		ai_chance = { base = 100 }
+	}
+}
+
+# 14. Monthly: night clinic at the Ark. Repeatable.
+country_event = {
+	id = tu_rho_ev.14
+	title = tu_rho_ev.14.t
+	desc = tu_rho_ev.14.d
+	picture = GFX_report_event_generic_read_write
+	is_triggered_only = yes
+
+	trigger = {
+		tag = RHO
+		has_completed_focus = TU_RHO_prts_online
+	}
+
+	option = {
+		name = tu_rho_ev.14.a
+		ai_chance = { base = 50 }
+		add_stability = 0.01
+		add_political_power = -10
+	}
+
+	option = {
+		name = tu_rho_ev.14.b
+		ai_chance = { base = 50 }
+		add_political_power = 15
+		add_stability = -0.01
+	}
+}
+
+# 15. Monthly: infected desertion beyond the control lines. Repeatable.
+country_event = {
+	id = tu_rho_ev.15
+	title = tu_rho_ev.15.t
+	desc = tu_rho_ev.15.d
+	picture = GFX_report_event_generic_riot
+	is_triggered_only = yes
+
+	trigger = {
+		tag = RHO
+		has_completed_focus = TU_RHO_chernobog_rescue
+	}
+
+	option = {
+		name = tu_rho_ev.15.a
+		ai_chance = { base = 40 }
+		add_stability = -0.01
+		army_experience = 10
+	}
+
+	option = {
+		name = tu_rho_ev.15.b
+		ai_chance = { base = 60 }
+		add_stability = 0.02
+		add_power_balance_value = { id = TU_RHO_bop value = -0.05 }
+	}
+}
+
+# 16. Monthly: the Doctor's memo reaches command. Once. Needs the contractor stance.
+country_event = {
+	id = tu_rho_ev.16
+	title = tu_rho_ev.16.t
+	desc = tu_rho_ev.16.d
+	picture = GFX_report_event_generic_read_write
+	is_triggered_only = yes
+
+	trigger = {
+		tag = RHO
+		has_completed_focus = TU_RHO_contractors
+		NOT = { has_country_flag = TU_RHO_ev_doctor_memo }
+	}
+
+	immediate = {
+		set_country_flag = TU_RHO_ev_doctor_memo
+	}
+
+	option = {
+		name = tu_rho_ev.16.a
+		ai_chance = { base = 50 }
+		add_stability = 0.02
+		add_power_balance_value = { id = TU_RHO_bop value = -0.05 }
+	}
+
+	option = {
+		name = tu_rho_ev.16.b
+		ai_chance = { base = 50 }
+		add_political_power = 30
+		add_power_balance_value = { id = TU_RHO_bop value = 0.05 }
+	}
+}
+
+# 17. Monthly: Kal'tsit's interim report on Oripathy research. Once.
+country_event = {
+	id = tu_rho_ev.17
+	title = tu_rho_ev.17.t
+	desc = tu_rho_ev.17.d
+	picture = GFX_report_event_generic_research_lab
+	is_triggered_only = yes
+
+	trigger = {
+		tag = RHO
+		has_completed_focus = TU_RHO_med_start
+		NOT = { has_country_flag = TU_RHO_ev_kaltsit_report }
+	}
+
+	immediate = {
+		set_country_flag = TU_RHO_ev_kaltsit_report
+	}
+
+	option = {
+		name = tu_rho_ev.17.a
+		ai_chance = { base = 40 }
+		add_political_power = -20
+		add_stability = 0.02
+	}
+
+	option = {
+		name = tu_rho_ev.17.b
+		ai_chance = { base = 40 }
+		add_political_power = 15
+	}
+}
+
+# 18. Monthly: anonymous donation to the relief office. Once.
+country_event = {
+	id = tu_rho_ev.18
+	title = tu_rho_ev.18.t
+	desc = tu_rho_ev.18.d
+	picture = GFX_report_event_generic_stock_traders
+	is_triggered_only = yes
+
+	trigger = {
+		tag = RHO
+		has_completed_focus = TU_RHO_ops_relief_start
+		NOT = { has_country_flag = TU_RHO_ev_relief_donation }
+	}
+
+	immediate = {
+		set_country_flag = TU_RHO_ev_relief_donation
+	}
+
+	option = {
+		name = tu_rho_ev.18.a
+		ai_chance = { base = 50 }
+		add_to_variable = { TU_lmd = 500 }
+		add_stability = 0.01
+	}
+
+	option = {
+		name = tu_rho_ev.18.b
+		ai_chance = { base = 40 }
+		add_political_power = 20
+		add_stability = 0.02
+	}
+}
+
+# 19. Front chain step 1. Scheduled by tu_rho_ev.5 option c.
+country_event = {
+	id = tu_rho_ev.19
+	title = tu_rho_ev.19.t
+	desc = tu_rho_ev.19.d
+	picture = GFX_report_event_generic_army
+	is_triggered_only = yes
+
+	option = {
+		name = tu_rho_ev.19.a
+		ai_chance = { base = 60 }
+		add_political_power = 20
+		add_war_support = 0.02
+		country_event = {
+			id = tu_rho_ev.20
+			days = 45
+			random_days = 15
+		}
+	}
+
+	option = {
+		name = tu_rho_ev.19.b
+		ai_chance = { base = 40 }
+		add_stability = 0.02
+	}
+}
+
+# 20. Front chain step 2 (final). Scheduled by tu_rho_ev.19 option a.
+country_event = {
+	id = tu_rho_ev.20
+	title = tu_rho_ev.20.t
+	desc = tu_rho_ev.20.d
+	picture = GFX_report_event_generic_rifles
+	is_triggered_only = yes
+
+	option = {
+		name = tu_rho_ev.20.a
+		ai_chance = { base = 50 }
+		add_stability = 0.02
+		add_political_power = 40
+		add_power_balance_value = { id = TU_RHO_bop value = -0.05 }
+	}
+
+	option = {
+		name = tu_rho_ev.20.b
+		ai_chance = { base = 50 }
+		add_political_power = 40
+		add_manpower = 2000
+		add_power_balance_value = { id = TU_RHO_bop value = 0.05 }
+	}
+}

@@ -1,0 +1,334 @@
+add_namespace = tu_crisis
+
+# Chernobog incident chain. Fired from common/on_actions/tu_crisis_on_actions.txt (on_startup, once).
+# Flags: TU_chernobog_incident_started / _resolved, TU_lungmen_border_conflict, TU_lungmen_survived.
+# Numeric state scopes only (41 = Chernobog, 916 = Lungmen capital). Nothing here polls.
+
+# 1. URS: "Flames over Chernobog". REU does not exist yet, so the transfer creates it.
+country_event = {
+	id = tu_crisis.1
+	title = tu_crisis.1.t
+	desc = tu_crisis.1.d
+	picture = GFX_report_event_generic_battle
+	is_triggered_only = yes
+
+	immediate = {
+		if = {
+			limit = {
+				NOT = { country_exists = REU }
+			}
+			set_global_flag = TU_chernobog_incident_started
+
+			# Dynamic REU: it exists only after it owns a state. Order matters below.
+			41 = { transfer_state_to = REU }
+
+			REU = {
+				set_capital = {
+					state = 41
+					remember_old_capital = no
+				}
+
+				division_template = {
+					name = "TU_REU_militia"
+					is_locked = no
+					priority = 1
+					regiments = {
+						infantry = { x = 0 y = 0 }
+						infantry = { x = 0 y = 1 }
+						infantry = { x = 1 y = 0 }
+						infantry = { x = 1 y = 1 }
+					}
+				}
+
+				41 = {
+					create_unit = {
+						division = "division_template = \"TU_REU_militia\" start_experience_factor = 0.2 start_equipment_factor = 0.7"
+						owner = REU
+						count = 8
+					}
+				}
+
+				add_ideas = TU_REU_infected_uprising
+
+				declare_war_on = {
+					target = URS
+					type = annex_everything
+				}
+
+				country_event = {
+					id = tu_crisis.3
+					days = 45
+					random_days = 15
+				}
+
+				news_event = {
+					id = tu_crisis.2
+					days = 0
+				}
+			}
+
+			URS = {
+				news_event = {
+					id = tu_crisis.2
+					days = 0
+				}
+			}
+
+			if = {
+				limit = {
+					country_exists = RHO
+				}
+				RHO = {
+					news_event = {
+						id = tu_crisis.2
+						days = 0
+					}
+				}
+			}
+		}
+	}
+
+	option = {
+		name = tu_crisis.1.a
+	}
+}
+
+# 2. News (URS, REU, RHO): Chernobog has fallen.
+news_event = {
+	id = tu_crisis.2
+	title = tu_crisis.2.t
+	desc = tu_crisis.2.d
+	picture = GFX_report_event_generic_ruins
+	is_triggered_only = yes
+
+	option = {
+		name = tu_crisis.2.a
+	}
+}
+
+# 3. REU, 45-59 days after the fall: the mobile city moves to Lungmen.
+# Only if Lungmen exists and REU is still at war with URS.
+country_event = {
+	id = tu_crisis.3
+	title = tu_crisis.3.t
+	desc = tu_crisis.3.d
+	picture = GFX_report_event_generic_army
+	is_triggered_only = yes
+
+	immediate = {
+		if = {
+			limit = {
+				country_exists = LGM
+				has_war_with = URS
+			}
+			set_global_flag = TU_lungmen_border_conflict
+
+			declare_war_on = {
+				target = LGM
+				type = annex_everything
+			}
+
+			LGM = {
+				country_event = {
+					id = tu_crisis.4
+				}
+			}
+
+			if = {
+				limit = {
+					country_exists = YAN
+				}
+				YAN = {
+					country_event = {
+						id = tu_crisis.4
+					}
+				}
+			}
+
+			if = {
+				limit = {
+					country_exists = RHO
+				}
+				RHO = {
+					country_event = {
+						id = tu_crisis.4
+					}
+				}
+			}
+
+			# Resolution is scheduled on YAN (LGM may be absorbed before it fires).
+			# Falls back to REU if YAN does not exist.
+			if = {
+				limit = {
+					country_exists = YAN
+				}
+				YAN = {
+					country_event = {
+						id = tu_crisis.5
+						days = 180
+					}
+				}
+			}
+			else = {
+				country_event = {
+					id = tu_crisis.5
+					days = 180
+				}
+			}
+		}
+	}
+
+	option = {
+		name = tu_crisis.3.a
+	}
+}
+
+# 4. LGM / YAN / RHO: the border war has begun.
+country_event = {
+	id = tu_crisis.4
+	title = tu_crisis.4.t
+	desc = tu_crisis.4.d
+	picture = GFX_report_event_generic_defensive_preparations
+	is_triggered_only = yes
+
+	option = {
+		name = tu_crisis.4.yan_support
+		trigger = {
+			tag = YAN
+		}
+		ai_chance = {
+			factor = 80
+		}
+
+		if = {
+			limit = {
+				country_exists = LGM
+			}
+			916 = {
+				create_unit = {
+					division = "division_template = \"TU_LGM_guard\" start_experience_factor = 0.5"
+					owner = LGM
+					count = 3
+				}
+			}
+		}
+	}
+
+	option = {
+		name = tu_crisis.4.yan_ignore
+		trigger = {
+			tag = YAN
+		}
+		ai_chance = {
+			factor = 20
+		}
+	}
+
+	option = {
+		name = tu_crisis.4.rho_op
+		trigger = {
+			tag = RHO
+		}
+		add_political_power = 50
+	}
+
+	option = {
+		name = tu_crisis.4.lgm_ack
+		trigger = {
+			tag = LGM
+		}
+	}
+}
+
+# 5. Resolution (about 180 days after the border war). Scheduled on YAN, or REU if YAN is gone.
+country_event = {
+	id = tu_crisis.5
+	title = tu_crisis.5.t
+	desc = tu_crisis.5.d
+	picture = GFX_report_event_generic_rifles
+	is_triggered_only = yes
+
+	immediate = {
+		if = {
+			limit = {
+				TU_crisis_lungmen_holds = yes
+			}
+			set_global_flag = TU_lungmen_survived
+			LGM = {
+				add_stability = 0.1
+			}
+		}
+
+		set_global_flag = TU_chernobog_incident_resolved
+
+		if = {
+			limit = {
+				NOT = { country_exists = REU }
+			}
+			news_event = {
+				id = tu_crisis.8
+				days = 0
+			}
+		}
+		else = {
+			if = {
+				limit = {
+					TU_crisis_lungmen_holds = yes
+				}
+				news_event = {
+					id = tu_crisis.6
+					days = 0
+				}
+			}
+			else = {
+				news_event = {
+					id = tu_crisis.7
+					days = 0
+				}
+			}
+		}
+	}
+
+	option = {
+		name = tu_crisis.5.a
+	}
+}
+
+# 6. News: Lungmen holds its capital.
+news_event = {
+	id = tu_crisis.6
+	title = tu_crisis.6.t
+	desc = tu_crisis.6.d
+	picture = GFX_report_event_generic_rifles
+	is_triggered_only = yes
+
+	option = {
+		name = tu_crisis.6.a
+	}
+}
+
+# 7. News: Lungmen has fallen.
+news_event = {
+	id = tu_crisis.7
+	title = tu_crisis.7.t
+	desc = tu_crisis.7.d
+	picture = GFX_report_event_generic_destroyed_vehicles
+	is_triggered_only = yes
+
+	option = {
+		name = tu_crisis.7.a
+	}
+}
+
+# 8. News: REU is gone before the resolution.
+news_event = {
+	id = tu_crisis.8
+	title = tu_crisis.8.t
+	desc = tu_crisis.8.d
+	picture = GFX_report_event_generic_soldiers_surrendering
+	is_triggered_only = yes
+
+	option = {
+		name = tu_crisis.8.a
+	}
+}

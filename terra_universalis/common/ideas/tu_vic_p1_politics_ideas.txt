@@ -1,0 +1,191 @@
+ideas = {
+
+	country = {
+
+		TU_VIC_oligarchic_council = {
+			picture = agrarian_society
+
+			allowed = {
+				original_tag = VIC
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			modifier = {
+				political_power_gain = 0.05
+				stability_factor = 0.02
+			}
+		}
+
+		TU_VIC_estate_industry = {
+			picture = improved_industries
+
+			allowed = {
+				original_tag = VIC
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			modifier = {
+				production_speed_buildings_factor = 0.1
+			}
+		}
+
+		TU_VIC_private_guard = {
+			picture = war_preparation
+
+			allowed = {
+				original_tag = VIC
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			modifier = {
+				army_attack_factor = 0.05
+				army_defence_factor = 0.05
+			}
+		}
+
+		TU_VIC_aslan_heir = {
+			picture = king_handled
+
+			allowed = {
+				original_tag = VIC
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			modifier = {
+				political_power_gain = 0.05
+				stability_factor = 0.03
+			}
+		}
+
+		TU_VIC_glasgow_gangs = {
+			picture = syndicalism
+
+			allowed = {
+				original_tag = VIC
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			modifier = {
+				army_morale_factor = 0.05
+				war_support_factor = 0.03
+			}
+		}
+
+		TU_VIC_tara_flame = {
+			picture = fascism_rising
+
+			allowed = {
+				original_tag = VIC
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			modifier = {
+				army_attack_factor = 0.05
+				war_support_factor = 0.05
+			}
+		}
+
+		TU_VIC_flame_arts = {
+			picture = fascist_workers
+
+			allowed = {
+				original_tag = VIC
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			modifier = {
+				production_factory_max_efficiency_factor = 0.05
+				army_morale_factor = 0.05
+			}
+		}
+
+		TU_VIC_parliament = {
+			picture = constitutional_guarantees
+
+			allowed = {
+				original_tag = VIC
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			modifier = {
+				political_power_gain = 0.1
+				stability_factor = 0.03
+			}
+		}
+
+		TU_VIC_free_press = {
+			picture = democratic_opposition
+
+			allowed = {
+				original_tag = VIC
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			modifier = {
+				political_power_gain = 0.05
+				stability_factor = 0.02
+			}
+		}
+
+		TU_VIC_public_works = {
+			picture = railroads
+
+			allowed = {
+				original_tag = VIC
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			modifier = {
+				production_speed_buildings_factor = 0.1
+			}
+		}
+
+		TU_VIC_london_exchange = {
+			picture = economic_recovery
+
+			allowed = {
+				original_tag = VIC
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			modifier = {
+				production_factory_max_efficiency_factor = 0.05
+				stability_factor = 0.02
+			}
+		}
+
+	}
+}

@@ -1,0 +1,33 @@
+TU_VIC_construction_category = {
+
+	TU_VIC_industrial_expansion = {
+		icon = GFX_decision_generic_construction
+
+		allowed = {
+			original_tag = VIC
+		}
+
+		visible = {
+			has_completed_focus = TU_VIC_status_quo
+		}
+
+		available = {
+			has_completed_focus = TU_VIC_status_quo
+		}
+
+		cost = 50
+		fire_only_once = yes
+
+		complete_effect = {
+			add_offsite_building = {
+				type = industrial_complex
+				level = 1
+			}
+			set_country_flag = TU_DEC_TU_VIC_industrial_expansion
+		}
+
+		ai_will_do = {
+			base = 1
+		}
+	}
+}

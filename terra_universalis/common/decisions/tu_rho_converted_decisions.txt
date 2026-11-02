@@ -1,0 +1,62 @@
+TU_RHO_diplomacy_category = {
+
+	TU_RHO_saria_mercs = {
+		icon = GFX_decision_generic_political_discourse
+
+		allowed = {
+			original_tag = RHO
+		}
+
+		visible = {
+			has_completed_focus = TU_RHO_regular_army
+		}
+
+		available = {
+			has_completed_focus = TU_RHO_regular_army
+		}
+
+		cost = 35
+		fire_only_once = yes
+
+		complete_effect = {
+			add_opinion_modifier = { target = KZD modifier = improve_relation }
+			set_country_flag = TU_RHO_saria_mercs
+			set_country_flag = TU_DEC_TU_RHO_saria_mercs
+		}
+
+		ai_will_do = {
+			base = 1
+		}
+	}
+}
+
+TU_RHO_construction_category = {
+
+	TU_RHO_offsite_plant = {
+		icon = GFX_decision_generic_construction
+
+		allowed = {
+			original_tag = RHO
+		}
+
+		visible = {
+			has_completed_focus = TU_RHO_lmd_reward
+		}
+
+		available = {
+			has_completed_focus = TU_RHO_lmd_reward
+		}
+
+		cost = 35
+		fire_only_once = yes
+
+		complete_effect = {
+			add_offsite_building = { type = arms_factory level = 1 }
+			set_country_flag = TU_DEC_TU_RHO_offsite_plant
+		}
+
+		ai_will_do = {
+			base = 1
+		}
+	}
+}

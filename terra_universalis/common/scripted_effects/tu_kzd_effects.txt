@@ -1,0 +1,15 @@
+#####################################
+### TU_KZD startup (country scope) ###
+#####################################
+
+# Called from common/on_actions/tu_kzd_on_actions.txt (on_startup).
+# Six starting infantry divisions in the capital state.
+TU_KZD_startup = {
+	capital_scope = {
+		create_unit = {
+			division = "division_template = \"TU_KZD_infantry\" start_experience_factor = 0.3 start_equipment_factor = 0.6"
+			owner = KZD
+			count = 6
+		}
+	}
+}

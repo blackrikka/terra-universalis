@@ -1,0 +1,19 @@
+focus_tree = {
+	id = TU_KZD_focus
+	continuous_focus_position = { x = 50 y = 1040 }
+
+	country = {
+		factor = 0
+		modifier = {
+			add = 10
+			original_tag = KZD
+		}
+	}
+
+	reset_on_civilwar = no
+
+	initial_show_position = {
+		focus = TU_KZD_military_commission_focus
+	}
+
+	#### STEM: MILITARY COMMISSION ####

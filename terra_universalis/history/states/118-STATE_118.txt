@@ -1,0 +1,21 @@
+state={
+	id=118
+	name="STATE_118"
+	manpower = 50000
+
+	state_category = town
+
+	history={
+		owner = SIR
+		victory_points = { 605 1 }
+		buildings = {
+			infrastructure = 2
+		}
+		add_core_of = SIR
+	}
+
+	provinces={
+		601 602 603 605 607
+	}
+	local_supplies=0.0
+}

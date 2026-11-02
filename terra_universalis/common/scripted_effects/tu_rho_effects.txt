@@ -1,0 +1,74 @@
+# Rhodes Island (RHO) scripted effects. Scope: COUNTRY (RHO).
+
+# Startup units: escorts and one operator squad, placed in the capital state.
+# Called from on_startup (tu_rho_on_actions.txt).
+TU_RHO_startup = {
+	capital_scope = {
+		create_unit = {
+			division = "name = \"Rhodes Island Escort 1\" division_template = \"TU_RHO_escort\" start_experience_factor = 0.5"
+			owner = RHO
+		}
+		create_unit = {
+			division = "name = \"Rhodes Island Escort 2\" division_template = \"TU_RHO_escort\" start_experience_factor = 0.5"
+			owner = RHO
+		}
+		create_unit = {
+			division = "name = \"Rhodes Island Operator Squad\" division_template = \"TU_RHO_operator_squad\" start_experience_factor = 1.0"
+			owner = RHO
+		}
+	}
+	TU_RHO_update_income = yes
+}
+
+# Monthly LMD income = 50 + trade post level * 30 + active PMC contracts * 40
+# (x1.5 on the PMC part with TU_RHO_pmc_bonus).
+TU_RHO_update_income = {
+	set_variable = { TU_RHO_lmd_income = 50 }
+
+	set_variable = { TU_RHO_tmp_trade = TU_RHO_riic_trade }
+	multiply_variable = { TU_RHO_tmp_trade = 30 }
+	add_to_variable = { TU_RHO_lmd_income = TU_RHO_tmp_trade }
+
+	set_variable = { TU_RHO_tmp_pmc = TU_RHO_pmc_count }
+	multiply_variable = { TU_RHO_tmp_pmc = 40 }
+	if = {
+		limit = { has_country_flag = TU_RHO_pmc_bonus }
+		multiply_variable = { TU_RHO_tmp_pmc = 1.5 }
+	}
+	add_to_variable = { TU_RHO_lmd_income = TU_RHO_tmp_pmc }
+}
+
+# Monthly tick (called from on_monthly for tag RHO).
+TU_RHO_monthly = {
+	TU_RHO_update_income = yes
+	add_to_variable = { TU_lmd = TU_RHO_lmd_income }
+
+	if = {
+		limit = { has_country_flag = TU_RHO_safehouse_URS }
+		add_manpower = 300
+	}
+	if = {
+		limit = { has_country_flag = TU_RHO_safehouse_KZD }
+		add_manpower = 300
+	}
+	if = {
+		limit = { has_country_flag = TU_RHO_safehouse_YAN }
+		add_manpower = 300
+	}
+	if = {
+		limit = { has_country_flag = TU_RHO_safehouse_VIC }
+		add_manpower = 300
+	}
+	if = {
+		limit = { has_country_flag = TU_RHO_safehouse_COL }
+		add_manpower = 300
+	}
+	if = {
+		limit = { has_country_flag = TU_RHO_safehouse_KAZ }
+		add_manpower = 300
+	}
+	if = {
+		limit = { has_country_flag = TU_RHO_safehouse_LAT }
+		add_manpower = 300
+	}
+}

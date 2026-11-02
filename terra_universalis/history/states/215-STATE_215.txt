@@ -1,0 +1,24 @@
+state={
+	id=215
+	name="STATE_215"
+	manpower = 1000
+
+	state_category = city
+
+	history={
+		owner = RHO
+		victory_points = { 1053 1 }
+		buildings = {
+			infrastructure = 3
+			industrial_complex = 2
+			arms_factory = 1
+			air_base = 1
+		}
+		add_core_of = RHO
+	}
+
+	provinces={
+		1053
+	}
+	local_supplies=0.0
+}

@@ -1,0 +1,18 @@
+focus_tree = {
+	id = TU_URS_focus
+
+	country = {
+		factor = 0
+		modifier = {
+			add = 10
+			original_tag = URS
+		}
+	}
+
+	reset_on_civilwar = no
+
+	initial_show_position = {
+		focus = TU_URS_frozen_empire_focus
+	}
+
+	#### STEM: FROZEN EMPIRE ####

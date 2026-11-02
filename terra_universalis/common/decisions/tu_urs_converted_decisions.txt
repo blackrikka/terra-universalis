@@ -1,0 +1,5197 @@
+TU_URS_expansion_category = {
+
+	TU_URS_kazdel_claims = {
+		icon = GFX_decision_generic_military
+
+		allowed = {
+			original_tag = URS
+		}
+
+		visible = {
+			has_completed_focus = TU_URS_unification_vision
+		}
+
+		available = {
+			has_completed_focus = TU_URS_unification_vision
+		}
+
+		cost = 50
+		fire_only_once = yes
+
+		complete_effect = {
+			if = {
+				limit = { country_exists = KZD }
+				hidden_effect = {
+					KZD = {
+						every_owned_state = {
+							limit = { NOT = { is_claimed_by = ROOT } }
+							ROOT = { add_state_claim = PREV }
+						}
+					}
+				}
+			}
+			add_political_power = 20
+			set_country_flag = TU_DEC_TU_URS_kazdel_claims
+		}
+
+		ai_will_do = {
+			base = 1
+		}
+	}
+
+	TU_URS_kazimir_war_plans = {
+		icon = GFX_decision_generic_military
+
+		allowed = {
+			original_tag = URS
+		}
+
+		visible = {
+			has_completed_focus = TU_URS_unification_vision
+		}
+
+		available = {
+			has_completed_focus = TU_URS_unification_vision
+			NOT = { has_completed_focus = TU_URS_kazimir_diplomacy }
+		}
+
+		cost = 50
+		fire_only_once = yes
+
+		complete_effect = {
+			if = {
+				limit = { country_exists = KAZ }
+				hidden_effect = {
+					create_wargoal = {
+						type = annex_everything
+						target = KAZ
+					}
+				}
+			}
+			army_experience = 20
+			set_country_flag = TU_DEC_TU_URS_kazimir_war_plans
+		}
+
+		ai_will_do = {
+			base = 1
+		}
+	}
+
+	TU_URS_leithanien_claims = {
+		icon = GFX_decision_generic_military
+
+		allowed = {
+			original_tag = URS
+		}
+
+		visible = {
+			has_country_flag = TU_DEC_TU_URS_kazdel_claims
+		}
+
+		available = {
+			has_country_flag = TU_DEC_TU_URS_kazdel_claims
+		}
+
+		cost = 50
+		fire_only_once = yes
+
+		complete_effect = {
+			if = {
+				limit = { country_exists = LEI }
+				hidden_effect = {
+					LEI = {
+						every_owned_state = {
+							limit = { NOT = { is_claimed_by = ROOT } }
+							ROOT = { add_state_claim = PREV }
+						}
+					}
+				}
+			}
+			add_political_power = 25
+			set_country_flag = TU_DEC_TU_URS_leithanien_claims
+		}
+
+		ai_will_do = {
+			base = 1
+		}
+	}
+
+	TU_URS_sami_claims = {
+		icon = GFX_decision_generic_military
+
+		allowed = {
+			original_tag = URS
+		}
+
+		visible = {
+			has_country_flag = TU_DEC_TU_URS_leithanien_claims
+		}
+
+		available = {
+			has_country_flag = TU_DEC_TU_URS_leithanien_claims
+		}
+
+		cost = 50
+		fire_only_once = yes
+
+		complete_effect = {
+			if = {
+				limit = { country_exists = SAM }
+				hidden_effect = {
+					SAM = {
+						every_owned_state = {
+							limit = { NOT = { is_claimed_by = ROOT } }
+							ROOT = { add_state_claim = PREV }
+						}
+					}
+				}
+			}
+			add_political_power = 25
+			set_country_flag = TU_DEC_TU_URS_sami_claims
+		}
+
+		ai_will_do = {
+			base = 1
+		}
+	}
+
+	TU_URS_yan_war_plans = {
+		icon = GFX_decision_generic_military
+
+		allowed = {
+			original_tag = URS
+		}
+
+		visible = {
+			has_country_flag = TU_DEC_TU_URS_leithanien_claims
+		}
+
+		available = {
+			has_country_flag = TU_DEC_TU_URS_leithanien_claims
+		}
+
+		cost = 50
+		fire_only_once = yes
+
+		complete_effect = {
+			if = {
+				limit = { country_exists = YAN }
+				hidden_effect = {
+					create_wargoal = {
+						type = annex_everything
+						target = YAN
+					}
+				}
+			}
+			army_experience = 25
+			set_country_flag = TU_DEC_TU_URS_yan_war_plans
+		}
+
+		ai_will_do = {
+			base = 1
+		}
+	}
+
+	TU_URS_lei_war_plans = {
+		icon = GFX_decision_generic_military
+
+		allowed = {
+			original_tag = URS
+		}
+
+		visible = {
+			has_completed_focus = TU_URS_border_purge
+		}
+
+		available = {
+			has_completed_focus = TU_URS_border_purge
+			NOT = { has_completed_focus = TU_URS_lei_diplomacy }
+		}
+
+		cost = 50
+		fire_only_once = yes
+
+		complete_effect = {
+			if = {
+				limit = { country_exists = LEI }
+				hidden_effect = {
+					create_wargoal = {
+						type = annex_everything
+						target = LEI
+					}
+				}
+			}
+			army_experience = 20
+			set_country_flag = TU_DEC_TU_URS_lei_war_plans
+		}
+
+		ai_will_do = {
+			base = 1
+		}
+	}
+
+	TU_URS_kazdel_border_claims = {
+		icon = GFX_decision_generic_military
+
+		allowed = {
+			original_tag = URS
+		}
+
+		visible = {
+			has_completed_focus = TU_URS_lei_diplomacy
+		}
+
+		available = {
+			has_completed_focus = TU_URS_lei_diplomacy
+		}
+
+		cost = 50
+		fire_only_once = yes
+
+		complete_effect = {
+			if = {
+				limit = { country_exists = KZD }
+				hidden_effect = {
+					KZD = {
+						every_owned_state = {
+							limit = { NOT = { is_claimed_by = ROOT } }
+							ROOT = { add_state_claim = PREV }
+						}
+					}
+				}
+			}
+			add_political_power = 20
+			set_country_flag = TU_DEC_TU_URS_kazdel_border_claims
+		}
+
+		ai_will_do = {
+			base = 1
+		}
+	}
+
+	TU_URS_sami_war_plans = {
+		icon = GFX_decision_generic_military
+
+		allowed = {
+			original_tag = URS
+		}
+
+		visible = {
+			has_country_flag = TU_DEC_TU_URS_kazdel_border_claims
+		}
+
+		available = {
+			has_country_flag = TU_DEC_TU_URS_kazdel_border_claims
+		}
+
+		cost = 50
+		fire_only_once = yes
+
+		complete_effect = {
+			if = {
+				limit = { country_exists = SAM }
+				hidden_effect = {
+					create_wargoal = {
+						type = annex_everything
+						target = SAM
+					}
+				}
+			}
+			army_experience = 20
+			set_country_flag = TU_DEC_TU_URS_sami_war_plans
+		}
+
+		ai_will_do = {
+			base = 1
+		}
+	}
+
+	TU_URS_noble_puppet_kazimierz = {
+		icon = GFX_decision_generic_military
+
+		allowed = {
+			original_tag = URS
+		}
+
+		visible = {
+			has_country_flag = TU_DEC_TU_URS_noble_marriage_pact
+		}
+
+		available = {
+			has_country_flag = TU_DEC_TU_URS_noble_marriage_pact
+			NOT = { has_country_flag = TU_DEC_TU_URS_noble_claim_victoria }
+		}
+
+		cost = 50
+		fire_only_once = yes
+
+		complete_effect = {
+			if = {
+				limit = { country_exists = KAZ }
+				create_wargoal = {
+					type = puppet_wargoal_focus
+					target = KAZ
+				}
+			}
+			add_political_power = 25
+			set_country_flag = TU_DEC_TU_URS_noble_puppet_kazimierz
+		}
+
+		ai_will_do = {
+			base = 1
+		}
+	}
+
+	TU_URS_noble_claim_victoria = {
+		icon = GFX_decision_generic_military
+
+		allowed = {
+			original_tag = URS
+		}
+
+		visible = {
+			has_country_flag = TU_DEC_TU_URS_noble_marriage_pact
+		}
+
+		available = {
+			has_country_flag = TU_DEC_TU_URS_noble_marriage_pact
+			NOT = { has_country_flag = TU_DEC_TU_URS_noble_puppet_kazimierz }
+		}
+
+		cost = 50
+		fire_only_once = yes
+
+		complete_effect = {
+			if = {
+				limit = { country_exists = VIC }
+				VIC = {
+					every_owned_state = {
+						ROOT = { add_state_claim = PREV }
+					}
+				}
+			}
+			add_political_power = 25
+			set_country_flag = TU_DEC_TU_URS_noble_claim_victoria
+		}
+
+		ai_will_do = {
+			base = 1
+		}
+	}
+
+	TU_URS_noble_lei_pressure = {
+		icon = GFX_decision_generic_military
+
+		allowed = {
+			original_tag = URS
+		}
+
+		visible = {
+			OR = {
+				has_country_flag = TU_DEC_TU_URS_noble_puppet_kazimierz
+				has_country_flag = TU_DEC_TU_URS_noble_claim_victoria
+			}
+		}
+
+		available = {
+			OR = {
+				has_country_flag = TU_DEC_TU_URS_noble_puppet_kazimierz
+				has_country_flag = TU_DEC_TU_URS_noble_claim_victoria
+			}
+		}
+
+		cost = 50
+		fire_only_once = yes
+
+		complete_effect = {
+			if = {
+				limit = { country_exists = LEI }
+				LEI = {
+					every_owned_state = {
+						ROOT = { add_state_claim = PREV }
+					}
+				}
+			}
+			add_political_power = 25
+			set_country_flag = TU_DEC_TU_URS_noble_lei_pressure
+		}
+
+		ai_will_do = {
+			base = 1
+		}
+	}
+
+	TU_URS_noble_puppet_sam = {
+		icon = GFX_decision_generic_military
+
+		allowed = {
+			original_tag = URS
+		}
+
+		visible = {
+			has_country_flag = TU_DEC_TU_URS_noble_guarantee_lei
+		}
+
+		available = {
+			has_country_flag = TU_DEC_TU_URS_noble_guarantee_lei
+		}
+
+		cost = 50
+		fire_only_once = yes
+
+		complete_effect = {
+			if = {
+				limit = { country_exists = SAM }
+				create_wargoal = {
+					type = puppet_wargoal_focus
+					target = SAM
+				}
+			}
+			add_political_power = 25
+			set_country_flag = TU_DEC_TU_URS_noble_puppet_sam
+		}
+
+		ai_will_do = {
+			base = 1
+		}
+	}
+
+	TU_URS_noble_annex_kazdel = {
+		icon = GFX_decision_generic_military
+
+		allowed = {
+			original_tag = URS
+		}
+
+		visible = {
+			has_country_flag = TU_DEC_TU_URS_noble_puppet_sam
+		}
+
+		available = {
+			has_country_flag = TU_DEC_TU_URS_noble_puppet_sam
+		}
+
+		cost = 75
+		fire_only_once = yes
+
+		complete_effect = {
+			if = {
+				limit = { country_exists = KZD }
+				create_wargoal = {
+					type = annex_everything
+					target = KZD
+				}
+			}
+			add_political_power = 50
+			set_country_flag = TU_DEC_TU_URS_noble_annex_kazdel
+		}
+
+		ai_will_do = {
+			base = 1
+		}
+	}
+
+	TU_URS_reform_vic_claims = {
+		icon = GFX_decision_generic_military
+
+		allowed = {
+			original_tag = URS
+		}
+
+		visible = {
+			has_completed_focus = TU_URS_reform_medical_aid
+		}
+
+		available = {
+			has_completed_focus = TU_URS_reform_medical_aid
+			NOT = { has_country_flag = TU_DEC_TU_URS_reform_vic_partnership }
+		}
+
+		cost = 50
+		fire_only_once = yes
+
+		complete_effect = {
+			if = {
+				limit = { country_exists = VIC }
+				VIC = {
+					every_owned_state = {
+						ROOT = { add_state_claim = PREV }
+					}
+				}
+			}
+			add_political_power = 25
+			set_country_flag = TU_DEC_TU_URS_reform_vic_claims
+		}
+
+		ai_will_do = {
+			base = 1
+		}
+	}
+
+	TU_URS_reform_lei_outreach = {
+		icon = GFX_decision_generic_military
+
+		allowed = {
+			original_tag = URS
+		}
+
+		visible = {
+			has_country_flag = TU_DEC_TU_URS_reform_kazimierz_talks
+		}
+
+		available = {
+			has_country_flag = TU_DEC_TU_URS_reform_kazimierz_talks
+		}
+
+		cost = 50
+		fire_only_once = yes
+
+		complete_effect = {
+			if = {
+				limit = { country_exists = LEI }
+				LEI = {
+					every_owned_state = {
+						ROOT = { add_state_claim = PREV }
+					}
+				}
+			}
+			add_political_power = 25
+			set_country_flag = TU_DEC_TU_URS_reform_lei_outreach
+		}
+
+		ai_will_do = {
+			base = 1
+		}
+	}
+
+	TU_URS_w1_kzd_border_claims = {
+		icon = GFX_decision_generic_military
+
+		allowed = {
+			original_tag = URS
+		}
+
+		visible = {
+			has_country_flag = TU_DEC_TU_URS_w1_kzd_envoy
+		}
+
+		available = {
+			has_country_flag = TU_DEC_TU_URS_w1_kzd_envoy
+		}
+
+		cost = 50
+		fire_only_once = yes
+
+		complete_effect = {
+			if = {
+				limit = { country_exists = KZD }
+				KZD = {
+					every_owned_state = {
+						ROOT = { add_state_claim = PREV }
+					}
+				}
+				add_opinion_modifier = {
+					target = KZD
+					modifier = claims_on_us
+				}
+			}
+			set_country_flag = TU_DEC_TU_URS_w1_kzd_border_claims
+		}
+
+		ai_will_do = {
+			base = 1
+		}
+	}
+
+	TU_URS_w1_kzd_war_declaration = {
+		icon = GFX_decision_generic_military
+
+		allowed = {
+			original_tag = URS
+		}
+
+		visible = {
+			has_completed_focus = TU_URS_w1_kzd_war_doctrine
+		}
+
+		available = {
+			has_completed_focus = TU_URS_w1_kzd_war_doctrine
+			NOT = { has_country_flag = TU_DEC_TU_URS_w1_kzd_guarantee }
+		}
+
+		cost = 75
+		fire_only_once = yes
+
+		complete_effect = {
+			if = {
+				limit = { country_exists = KZD }
+				create_wargoal = {
+					type = annex_everything
+					target = KZD
+				}
+			}
+			set_country_flag = TU_DEC_TU_URS_w1_kzd_war_declaration
+		}
+
+		ai_will_do = {
+			base = 1
+		}
+	}
+
+	TU_URS_w1_vic_border_claims = {
+		icon = GFX_decision_generic_military
+
+		allowed = {
+			original_tag = URS
+		}
+
+		visible = {
+			has_country_flag = TU_DEC_TU_URS_w1_vic_envoy
+		}
+
+		available = {
+			has_country_flag = TU_DEC_TU_URS_w1_vic_envoy
+		}
+
+		cost = 50
+		fire_only_once = yes
+
+		complete_effect = {
+			if = {
+				limit = { country_exists = VIC }
+				VIC = {
+					every_owned_state = {
+						ROOT = { add_state_claim = PREV }
+					}
+				}
+				add_opinion_modifier = {
+					target = VIC
+					modifier = claims_on_us
+				}
+			}
+			set_country_flag = TU_DEC_TU_URS_w1_vic_border_claims
+		}
+
+		ai_will_do = {
+			base = 1
+		}
+	}
+
+	TU_URS_w1_vic_war_declaration = {
+		icon = GFX_decision_generic_military
+
+		allowed = {
+			original_tag = URS
+		}
+
+		visible = {
+			has_completed_focus = TU_URS_w1_vic_war_doctrine
+		}
+
+		available = {
+			has_completed_focus = TU_URS_w1_vic_war_doctrine
+			NOT = { has_country_flag = TU_DEC_TU_URS_w1_vic_guarantee }
+		}
+
+		cost = 75
+		fire_only_once = yes
+
+		complete_effect = {
+			if = {
+				limit = { country_exists = VIC }
+				create_wargoal = {
+					type = annex_everything
+					target = VIC
+				}
+			}
+			set_country_flag = TU_DEC_TU_URS_w1_vic_war_declaration
+		}
+
+		ai_will_do = {
+			base = 1
+		}
+	}
+
+	TU_URS_w1_lei_border_claims = {
+		icon = GFX_decision_generic_military
+
+		allowed = {
+			original_tag = URS
+		}
+
+		visible = {
+			has_country_flag = TU_DEC_TU_URS_w1_lei_envoy
+		}
+
+		available = {
+			has_country_flag = TU_DEC_TU_URS_w1_lei_envoy
+		}
+
+		cost = 50
+		fire_only_once = yes
+
+		complete_effect = {
+			if = {
+				limit = { country_exists = LEI }
+				LEI = {
+					every_owned_state = {
+						ROOT = { add_state_claim = PREV }
+					}
+				}
+				add_opinion_modifier = {
+					target = LEI
+					modifier = claims_on_us
+				}
+			}
+			set_country_flag = TU_DEC_TU_URS_w1_lei_border_claims
+		}
+
+		ai_will_do = {
+			base = 1
+		}
+	}
+
+	TU_URS_w1_lei_war_declaration = {
+		icon = GFX_decision_generic_military
+
+		allowed = {
+			original_tag = URS
+		}
+
+		visible = {
+			has_completed_focus = TU_URS_w1_lei_war_doctrine
+		}
+
+		available = {
+			has_completed_focus = TU_URS_w1_lei_war_doctrine
+			NOT = { has_country_flag = TU_DEC_TU_URS_w1_lei_guarantee }
+		}
+
+		cost = 75
+		fire_only_once = yes
+
+		complete_effect = {
+			if = {
+				limit = { country_exists = LEI }
+				create_wargoal = {
+					type = annex_everything
+					target = LEI
+				}
+			}
+			set_country_flag = TU_DEC_TU_URS_w1_lei_war_declaration
+		}
+
+		ai_will_do = {
+			base = 1
+		}
+	}
+
+	TU_URS_w2_yan_border_claims = {
+		icon = GFX_decision_generic_military
+
+		allowed = {
+			original_tag = URS
+		}
+
+		visible = {
+			has_country_flag = TU_DEC_TU_URS_w2_yan_envoy
+		}
+
+		available = {
+			has_country_flag = TU_DEC_TU_URS_w2_yan_envoy
+		}
+
+		cost = 50
+		fire_only_once = yes
+
+		complete_effect = {
+			if = {
+				limit = { country_exists = YAN }
+				YAN = {
+					every_owned_state = {
+						ROOT = { add_state_claim = PREV }
+					}
+				}
+				add_opinion_modifier = {
+					target = YAN
+					modifier = claims_on_us
+				}
+			}
+			set_country_flag = TU_DEC_TU_URS_w2_yan_border_claims
+		}
+
+		ai_will_do = {
+			base = 1
+		}
+	}
+
+	TU_URS_w2_yan_war_declaration = {
+		icon = GFX_decision_generic_military
+
+		allowed = {
+			original_tag = URS
+		}
+
+		visible = {
+			has_completed_focus = TU_URS_w2_yan_war_doctrine
+		}
+
+		available = {
+			has_completed_focus = TU_URS_w2_yan_war_doctrine
+			NOT = { has_country_flag = TU_DEC_TU_URS_w2_yan_guarantee }
+		}
+
+		cost = 75
+		fire_only_once = yes
+
+		complete_effect = {
+			if = {
+				limit = { country_exists = YAN }
+				create_wargoal = {
+					type = annex_everything
+					target = YAN
+				}
+			}
+			set_country_flag = TU_DEC_TU_URS_w2_yan_war_declaration
+		}
+
+		ai_will_do = {
+			base = 1
+		}
+	}
+
+	TU_URS_w2_lgm_border_claims = {
+		icon = GFX_decision_generic_military
+
+		allowed = {
+			original_tag = URS
+		}
+
+		visible = {
+			has_country_flag = TU_DEC_TU_URS_w2_lgm_envoy
+		}
+
+		available = {
+			has_country_flag = TU_DEC_TU_URS_w2_lgm_envoy
+		}
+
+		cost = 50
+		fire_only_once = yes
+
+		complete_effect = {
+			if = {
+				limit = { country_exists = LGM }
+				LGM = {
+					every_owned_state = {
+						ROOT = { add_state_claim = PREV }
+					}
+				}
+				add_opinion_modifier = {
+					target = LGM
+					modifier = claims_on_us
+				}
+			}
+			set_country_flag = TU_DEC_TU_URS_w2_lgm_border_claims
+		}
+
+		ai_will_do = {
+			base = 1
+		}
+	}
+
+	TU_URS_w2_lgm_war_declaration = {
+		icon = GFX_decision_generic_military
+
+		allowed = {
+			original_tag = URS
+		}
+
+		visible = {
+			has_completed_focus = TU_URS_w2_lgm_war_doctrine
+		}
+
+		available = {
+			has_completed_focus = TU_URS_w2_lgm_war_doctrine
+			NOT = { has_country_flag = TU_DEC_TU_URS_w2_lgm_guarantee }
+		}
+
+		cost = 75
+		fire_only_once = yes
+
+		complete_effect = {
+			if = {
+				limit = { country_exists = LGM }
+				create_wargoal = {
+					type = annex_everything
+					target = LGM
+				}
+			}
+			set_country_flag = TU_DEC_TU_URS_w2_lgm_war_declaration
+		}
+
+		ai_will_do = {
+			base = 1
+		}
+	}
+
+	TU_URS_w2_hig_border_claims = {
+		icon = GFX_decision_generic_military
+
+		allowed = {
+			original_tag = URS
+		}
+
+		visible = {
+			has_country_flag = TU_DEC_TU_URS_w2_hig_envoy
+		}
+
+		available = {
+			has_country_flag = TU_DEC_TU_URS_w2_hig_envoy
+		}
+
+		cost = 50
+		fire_only_once = yes
+
+		complete_effect = {
+			if = {
+				limit = { country_exists = HIG }
+				HIG = {
+					every_owned_state = {
+						ROOT = { add_state_claim = PREV }
+					}
+				}
+				add_opinion_modifier = {
+					target = HIG
+					modifier = claims_on_us
+				}
+			}
+			set_country_flag = TU_DEC_TU_URS_w2_hig_border_claims
+		}
+
+		ai_will_do = {
+			base = 1
+		}
+	}
+
+	TU_URS_w2_hig_war_declaration = {
+		icon = GFX_decision_generic_military
+
+		allowed = {
+			original_tag = URS
+		}
+
+		visible = {
+			has_completed_focus = TU_URS_w2_hig_war_doctrine
+		}
+
+		available = {
+			has_completed_focus = TU_URS_w2_hig_war_doctrine
+			NOT = { has_country_flag = TU_DEC_TU_URS_w2_hig_guarantee }
+		}
+
+		cost = 75
+		fire_only_once = yes
+
+		complete_effect = {
+			if = {
+				limit = { country_exists = HIG }
+				create_wargoal = {
+					type = annex_everything
+					target = HIG
+				}
+			}
+			set_country_flag = TU_DEC_TU_URS_w2_hig_war_declaration
+		}
+
+		ai_will_do = {
+			base = 1
+		}
+	}
+
+	TU_URS_w3_kaz_claims = {
+		icon = GFX_decision_generic_military
+
+		allowed = {
+			original_tag = URS
+		}
+
+		visible = {
+			has_completed_focus = TU_URS_w3_kaz_entry
+		}
+
+		available = {
+			has_completed_focus = TU_URS_w3_kaz_entry
+			NOT = { has_country_flag = TU_DEC_TU_URS_w3_kaz_envoy }
+			has_completed_focus = TU_URS_military_junta
+		}
+
+		cost = 50
+		fire_only_once = yes
+
+		complete_effect = {
+			if = {
+				limit = { country_exists = KAZ }
+				KAZ = {
+					every_owned_state = {
+						ROOT = {
+							add_state_claim = PREV
+						}
+					}
+				}
+			}
+			add_war_support = 0.05
+			set_country_flag = TU_DEC_TU_URS_w3_kaz_claims
+		}
+
+		ai_will_do = {
+			base = 1
+		}
+	}
+
+	TU_URS_w3_kaz_wargoal = {
+		icon = GFX_decision_generic_military
+
+		allowed = {
+			original_tag = URS
+		}
+
+		visible = {
+			has_country_flag = TU_DEC_TU_URS_w3_kaz_claims
+		}
+
+		available = {
+			has_country_flag = TU_DEC_TU_URS_w3_kaz_claims
+		}
+
+		cost = 50
+		fire_only_once = yes
+
+		complete_effect = {
+			if = {
+				limit = { country_exists = KAZ }
+				create_wargoal = {
+					type = take_claimed_state
+					target = KAZ
+					generator = owned_states
+					expire = 0
+				}
+			}
+			set_country_flag = TU_DEC_TU_URS_w3_kaz_wargoal
+		}
+
+		ai_will_do = {
+			base = 1
+		}
+	}
+
+	TU_URS_w3_kje_claims = {
+		icon = GFX_decision_generic_military
+
+		allowed = {
+			original_tag = URS
+		}
+
+		visible = {
+			has_completed_focus = TU_URS_w3_kje_entry
+		}
+
+		available = {
+			has_completed_focus = TU_URS_w3_kje_entry
+			NOT = { has_country_flag = TU_DEC_TU_URS_w3_kje_pact }
+			has_completed_focus = TU_URS_emperor_rule
+		}
+
+		cost = 50
+		fire_only_once = yes
+
+		complete_effect = {
+			if = {
+				limit = { country_exists = KJE }
+				KJE = {
+					every_owned_state = {
+						ROOT = {
+							add_state_claim = PREV
+						}
+					}
+				}
+			}
+			add_war_support = 0.03
+			set_country_flag = TU_DEC_TU_URS_w3_kje_claims
+		}
+
+		ai_will_do = {
+			base = 1
+		}
+	}
+
+	TU_URS_w3_kje_wargoal = {
+		icon = GFX_decision_generic_military
+
+		allowed = {
+			original_tag = URS
+		}
+
+		visible = {
+			has_country_flag = TU_DEC_TU_URS_w3_kje_claims
+		}
+
+		available = {
+			has_country_flag = TU_DEC_TU_URS_w3_kje_claims
+		}
+
+		cost = 50
+		fire_only_once = yes
+
+		complete_effect = {
+			if = {
+				limit = { country_exists = KJE }
+				create_wargoal = {
+					type = take_claimed_state
+					target = KJE
+					generator = owned_states
+					expire = 0
+				}
+			}
+			set_country_flag = TU_DEC_TU_URS_w3_kje_wargoal
+		}
+
+		ai_will_do = {
+			base = 1
+		}
+	}
+
+	TU_URS_w3_sami_annex_plan = {
+		icon = GFX_decision_generic_military
+
+		allowed = {
+			original_tag = URS
+		}
+
+		visible = {
+			has_completed_focus = TU_URS_w3_sami_entry
+		}
+
+		available = {
+			has_completed_focus = TU_URS_w3_sami_entry
+			NOT = { has_country_flag = TU_DEC_TU_URS_w3_sami_aid }
+			has_completed_focus = TU_URS_military_junta
+		}
+
+		cost = 50
+		fire_only_once = yes
+
+		complete_effect = {
+			if = {
+				limit = { country_exists = SAM }
+				SAM = {
+					every_owned_state = {
+						ROOT = {
+							add_state_claim = PREV
+						}
+					}
+				}
+			}
+			add_war_support = 0.05
+			set_country_flag = TU_DEC_TU_URS_w3_sami_annex_plan
+		}
+
+		ai_will_do = {
+			base = 1
+		}
+	}
+
+	TU_URS_w3_sami_puppet = {
+		icon = GFX_decision_generic_military
+
+		allowed = {
+			original_tag = URS
+		}
+
+		visible = {
+			has_country_flag = TU_DEC_TU_URS_w3_sami_annex_plan
+		}
+
+		available = {
+			has_country_flag = TU_DEC_TU_URS_w3_sami_annex_plan
+		}
+
+		cost = 50
+		fire_only_once = yes
+
+		complete_effect = {
+			if = {
+				limit = { country_exists = SAM }
+				create_wargoal = {
+					type = puppet_wargoal_focus
+					target = SAM
+				}
+			}
+			set_country_flag = TU_DEC_TU_URS_w3_sami_puppet
+		}
+
+		ai_will_do = {
+			base = 1
+		}
+	}
+
+	TU_URS_w4_order_enforcement = {
+		icon = GFX_decision_generic_military
+
+		allowed = {
+			original_tag = URS
+		}
+
+		visible = {
+			has_completed_focus = TU_URS_w4_order_mandate
+		}
+
+		available = {
+			has_completed_focus = TU_URS_w4_order_mandate
+			has_completed_focus = TU_URS_military_junta
+		}
+
+		cost = 75
+		fire_only_once = yes
+
+		complete_effect = {
+			if = {
+				limit = {
+					country_exists = KZD
+					NOT = { is_in_faction_with = KZD }
+				}
+				create_wargoal = {
+					type = puppet_wargoal_focus
+					target = KZD
+				}
+			}
+			set_country_flag = TU_DEC_TU_URS_w4_order_enforcement
+		}
+
+		ai_will_do = {
+			base = 1
+		}
+	}
+
+	TU_URS_w4_order_hegemony = {
+		icon = GFX_decision_generic_military
+
+		allowed = {
+			original_tag = URS
+		}
+
+		visible = {
+			has_country_flag = TU_DEC_TU_URS_w4_order_enforcement
+		}
+
+		available = {
+			has_country_flag = TU_DEC_TU_URS_w4_order_enforcement
+		}
+
+		cost = 75
+		fire_only_once = yes
+
+		complete_effect = {
+			if = {
+				limit = {
+					country_exists = VIC
+					NOT = { is_in_faction_with = VIC }
+				}
+				create_wargoal = {
+					type = annex_everything
+					target = VIC
+					expire = 0
+				}
+			}
+			add_political_power = 50
+			set_country_flag = TU_DEC_TU_URS_w4_order_hegemony
+		}
+
+		ai_will_do = {
+			base = 1
+		}
+	}
+
+	TU_URS_w4_reu_crush = {
+		icon = GFX_decision_generic_military
+
+		allowed = {
+			original_tag = URS
+		}
+
+		visible = {
+			has_completed_focus = TU_URS_w4_reu_entry
+		}
+
+		available = {
+			has_completed_focus = TU_URS_w4_reu_entry
+			NOT = { has_country_flag = TU_DEC_TU_URS_w4_reu_negotiate }
+		}
+
+		cost = 50
+		fire_only_once = yes
+
+		complete_effect = {
+			if = {
+				limit = { country_exists = REU }
+				create_wargoal = {
+					type = annex_everything
+					target = REU
+					expire = 0
+				}
+			}
+			set_country_flag = TU_DEC_TU_URS_w4_reu_crush
+		}
+
+		ai_will_do = {
+			base = 1
+		}
+	}
+}
+
+TU_URS_diplomacy_category = {
+
+	TU_URS_noble_envoy_kazimierz = {
+		icon = GFX_decision_generic_political_discourse
+
+		allowed = {
+			original_tag = URS
+		}
+
+		visible = {
+			has_completed_focus = TU_URS_noble_envoy_office
+		}
+
+		available = {
+			has_completed_focus = TU_URS_noble_envoy_office
+		}
+
+		cost = 50
+		fire_only_once = yes
+
+		complete_effect = {
+			if = {
+				limit = { country_exists = KAZ }
+				diplomatic_relation = {
+					country = KAZ
+					relation = non_aggression_pact
+					active = yes
+				}
+			}
+			add_political_power = 25
+			set_country_flag = TU_DEC_TU_URS_noble_envoy_kazimierz
+		}
+
+		ai_will_do = {
+			base = 1
+		}
+	}
+
+	TU_URS_noble_marriage_pact = {
+		icon = GFX_decision_generic_political_discourse
+
+		allowed = {
+			original_tag = URS
+		}
+
+		visible = {
+			has_country_flag = TU_DEC_TU_URS_noble_envoy_kazimierz
+		}
+
+		available = {
+			has_country_flag = TU_DEC_TU_URS_noble_envoy_kazimierz
+		}
+
+		cost = 50
+		fire_only_once = yes
+
+		complete_effect = {
+			if = {
+				limit = { country_exists = KZD }
+				give_guarantee = KZD
+			}
+			add_stability = 0.01
+			set_country_flag = TU_DEC_TU_URS_noble_marriage_pact
+		}
+
+		ai_will_do = {
+			base = 1
+		}
+	}
+
+	TU_URS_noble_guarantee_lei = {
+		icon = GFX_decision_generic_political_discourse
+
+		allowed = {
+			original_tag = URS
+		}
+
+		visible = {
+			has_country_flag = TU_DEC_TU_URS_noble_lei_pressure
+		}
+
+		available = {
+			has_country_flag = TU_DEC_TU_URS_noble_lei_pressure
+		}
+
+		cost = 50
+		fire_only_once = yes
+
+		complete_effect = {
+			if = {
+				limit = { country_exists = LEI }
+				give_guarantee = LEI
+			}
+			add_stability = 0.01
+			set_country_flag = TU_DEC_TU_URS_noble_guarantee_lei
+		}
+
+		ai_will_do = {
+			base = 1
+		}
+	}
+
+	TU_URS_reform_reunion_talks = {
+		icon = GFX_decision_generic_political_discourse
+
+		allowed = {
+			original_tag = URS
+		}
+
+		visible = {
+			has_completed_focus = TU_URS_reform_student_council
+		}
+
+		available = {
+			has_completed_focus = TU_URS_reform_student_council
+		}
+
+		cost = 50
+		fire_only_once = yes
+
+		complete_effect = {
+			if = {
+				limit = { country_exists = REU }
+				diplomatic_relation = {
+					country = REU
+					relation = non_aggression_pact
+					active = yes
+				}
+			}
+			add_political_power = 25
+			set_country_flag = TU_DEC_TU_URS_reform_reunion_talks
+		}
+
+		ai_will_do = {
+			base = 1
+		}
+	}
+
+	TU_URS_reform_rhodes_pact = {
+		icon = GFX_decision_generic_political_discourse
+
+		allowed = {
+			original_tag = URS
+		}
+
+		visible = {
+			has_country_flag = TU_DEC_TU_URS_reform_reunion_talks
+		}
+
+		available = {
+			has_country_flag = TU_DEC_TU_URS_reform_reunion_talks
+			NOT = { has_completed_focus = TU_URS_reform_reunion_treaty }
+		}
+
+		cost = 50
+		fire_only_once = yes
+
+		complete_effect = {
+			if = {
+				limit = { country_exists = RHO }
+				diplomatic_relation = {
+					country = RHO
+					relation = non_aggression_pact
+					active = yes
+				}
+			}
+			add_stability = 0.01
+			set_country_flag = TU_DEC_TU_URS_reform_rhodes_pact
+		}
+
+		ai_will_do = {
+			base = 1
+		}
+	}
+
+	TU_URS_reform_vic_partnership = {
+		icon = GFX_decision_generic_political_discourse
+
+		allowed = {
+			original_tag = URS
+		}
+
+		visible = {
+			has_completed_focus = TU_URS_reform_medical_aid
+		}
+
+		available = {
+			has_completed_focus = TU_URS_reform_medical_aid
+			NOT = { has_country_flag = TU_DEC_TU_URS_reform_vic_claims }
+		}
+
+		cost = 50
+		fire_only_once = yes
+
+		complete_effect = {
+			if = {
+				limit = { country_exists = VIC }
+				give_guarantee = VIC
+			}
+			add_political_power = 25
+			set_country_flag = TU_DEC_TU_URS_reform_vic_partnership
+		}
+
+		ai_will_do = {
+			base = 1
+		}
+	}
+
+	TU_URS_reform_kazimierz_talks = {
+		icon = GFX_decision_generic_political_discourse
+
+		allowed = {
+			original_tag = URS
+		}
+
+		visible = {
+			OR = {
+				has_country_flag = TU_DEC_TU_URS_reform_vic_partnership
+				has_country_flag = TU_DEC_TU_URS_reform_vic_claims
+			}
+		}
+
+		available = {
+			OR = {
+				has_country_flag = TU_DEC_TU_URS_reform_vic_partnership
+				has_country_flag = TU_DEC_TU_URS_reform_vic_claims
+			}
+		}
+
+		cost = 50
+		fire_only_once = yes
+
+		complete_effect = {
+			if = {
+				limit = { country_exists = KAZ }
+				diplomatic_relation = {
+					country = KAZ
+					relation = non_aggression_pact
+					active = yes
+				}
+			}
+			add_political_power = 25
+			set_country_flag = TU_DEC_TU_URS_reform_kazimierz_talks
+		}
+
+		ai_will_do = {
+			base = 1
+		}
+	}
+
+	TU_URS_w1_kzd_envoy = {
+		icon = GFX_decision_generic_political_discourse
+
+		allowed = {
+			original_tag = URS
+		}
+
+		visible = {
+			has_completed_focus = TU_URS_foreign_ministry
+		}
+
+		available = {
+			has_completed_focus = TU_URS_foreign_ministry
+		}
+
+		cost = 25
+		fire_only_once = yes
+
+		complete_effect = {
+			add_political_power = 25
+			if = {
+				limit = { country_exists = KZD }
+				add_opinion_modifier = {
+					target = KZD
+					modifier = improve_relation
+				}
+			}
+			set_country_flag = TU_DEC_TU_URS_w1_kzd_envoy
+		}
+
+		ai_will_do = {
+			base = 1
+		}
+	}
+
+	TU_URS_w1_kzd_trade_talks = {
+		icon = GFX_decision_generic_political_discourse
+
+		allowed = {
+			original_tag = URS
+		}
+
+		visible = {
+			has_country_flag = TU_DEC_TU_URS_w1_kzd_envoy
+		}
+
+		available = {
+			has_country_flag = TU_DEC_TU_URS_w1_kzd_envoy
+		}
+
+		cost = 50
+		fire_only_once = yes
+
+		complete_effect = {
+			add_political_power = 25
+			if = {
+				limit = { country_exists = KZD }
+				add_opinion_modifier = {
+					target = KZD
+					modifier = improve_relation
+				}
+			}
+			set_country_flag = TU_DEC_TU_URS_w1_kzd_trade_talks
+		}
+
+		ai_will_do = {
+			base = 1
+		}
+	}
+
+	TU_URS_w1_kzd_cultural_exchange = {
+		icon = GFX_decision_generic_political_discourse
+
+		allowed = {
+			original_tag = URS
+		}
+
+		visible = {
+			has_country_flag = TU_DEC_TU_URS_w1_kzd_trade_talks
+		}
+
+		available = {
+			has_country_flag = TU_DEC_TU_URS_w1_kzd_trade_talks
+		}
+
+		cost = 50
+		fire_only_once = yes
+
+		complete_effect = {
+			add_stability = 0.02
+			if = {
+				limit = { country_exists = KZD }
+				add_opinion_modifier = {
+					target = KZD
+					modifier = improve_relation
+				}
+			}
+			set_country_flag = TU_DEC_TU_URS_w1_kzd_cultural_exchange
+		}
+
+		ai_will_do = {
+			base = 1
+		}
+	}
+
+	TU_URS_w1_kzd_non_aggression = {
+		icon = GFX_decision_generic_political_discourse
+
+		allowed = {
+			original_tag = URS
+		}
+
+		visible = {
+			has_country_flag = TU_DEC_TU_URS_w1_kzd_cultural_exchange
+		}
+
+		available = {
+			has_country_flag = TU_DEC_TU_URS_w1_kzd_cultural_exchange
+			NOT = { has_country_flag = TU_DEC_TU_URS_w1_kzd_border_ultimatum }
+		}
+
+		cost = 50
+		fire_only_once = yes
+
+		complete_effect = {
+			add_political_power = 50
+			add_stability = 0.02
+			if = {
+				limit = { country_exists = KZD }
+				diplomatic_relation = {
+					country = KZD
+					relation = non_aggression_pact
+					active = yes
+				}
+			}
+			set_country_flag = TU_DEC_TU_URS_w1_kzd_non_aggression
+		}
+
+		ai_will_do = {
+			base = 1
+		}
+	}
+
+	TU_URS_w1_kzd_border_ultimatum = {
+		icon = GFX_decision_generic_political_discourse
+
+		allowed = {
+			original_tag = URS
+		}
+
+		visible = {
+			has_completed_focus = TU_URS_w1_kzd_border_buildup
+		}
+
+		available = {
+			has_completed_focus = TU_URS_w1_kzd_border_buildup
+			NOT = { has_country_flag = TU_DEC_TU_URS_w1_kzd_non_aggression }
+		}
+
+		cost = 50
+		fire_only_once = yes
+
+		complete_effect = {
+			add_political_power = 50
+			add_war_support = 0.05
+			if = {
+				limit = { country_exists = KZD }
+				add_opinion_modifier = {
+					target = KZD
+					modifier = rejected_demands
+				}
+			}
+			set_country_flag = TU_DEC_TU_URS_w1_kzd_border_ultimatum
+		}
+
+		ai_will_do = {
+			base = 1
+		}
+	}
+
+	TU_URS_w1_kzd_guarantee = {
+		icon = GFX_decision_generic_political_discourse
+
+		allowed = {
+			original_tag = URS
+		}
+
+		visible = {
+			has_country_flag = TU_DEC_TU_URS_w1_kzd_non_aggression
+		}
+
+		available = {
+			has_country_flag = TU_DEC_TU_URS_w1_kzd_non_aggression
+			NOT = { has_country_flag = TU_DEC_TU_URS_w1_kzd_war_declaration }
+		}
+
+		cost = 50
+		fire_only_once = yes
+
+		complete_effect = {
+			add_political_power = 50
+			if = {
+				limit = { country_exists = KZD }
+				give_guarantee = KZD
+			}
+			set_country_flag = TU_DEC_TU_URS_w1_kzd_guarantee
+		}
+
+		ai_will_do = {
+			base = 1
+		}
+	}
+
+	TU_URS_w1_vic_envoy = {
+		icon = GFX_decision_generic_political_discourse
+
+		allowed = {
+			original_tag = URS
+		}
+
+		visible = {
+			has_completed_focus = TU_URS_foreign_ministry
+		}
+
+		available = {
+			has_completed_focus = TU_URS_foreign_ministry
+		}
+
+		cost = 25
+		fire_only_once = yes
+
+		complete_effect = {
+			add_political_power = 25
+			if = {
+				limit = { country_exists = VIC }
+				add_opinion_modifier = {
+					target = VIC
+					modifier = improve_relation
+				}
+			}
+			set_country_flag = TU_DEC_TU_URS_w1_vic_envoy
+		}
+
+		ai_will_do = {
+			base = 1
+		}
+	}
+
+	TU_URS_w1_vic_trade_talks = {
+		icon = GFX_decision_generic_political_discourse
+
+		allowed = {
+			original_tag = URS
+		}
+
+		visible = {
+			has_country_flag = TU_DEC_TU_URS_w1_vic_envoy
+		}
+
+		available = {
+			has_country_flag = TU_DEC_TU_URS_w1_vic_envoy
+		}
+
+		cost = 50
+		fire_only_once = yes
+
+		complete_effect = {
+			add_political_power = 25
+			if = {
+				limit = { country_exists = VIC }
+				add_opinion_modifier = {
+					target = VIC
+					modifier = improve_relation
+				}
+			}
+			set_country_flag = TU_DEC_TU_URS_w1_vic_trade_talks
+		}
+
+		ai_will_do = {
+			base = 1
+		}
+	}
+
+	TU_URS_w1_vic_cultural_exchange = {
+		icon = GFX_decision_generic_political_discourse
+
+		allowed = {
+			original_tag = URS
+		}
+
+		visible = {
+			has_country_flag = TU_DEC_TU_URS_w1_vic_trade_talks
+		}
+
+		available = {
+			has_country_flag = TU_DEC_TU_URS_w1_vic_trade_talks
+		}
+
+		cost = 50
+		fire_only_once = yes
+
+		complete_effect = {
+			add_stability = 0.02
+			if = {
+				limit = { country_exists = VIC }
+				add_opinion_modifier = {
+					target = VIC
+					modifier = improve_relation
+				}
+			}
+			set_country_flag = TU_DEC_TU_URS_w1_vic_cultural_exchange
+		}
+
+		ai_will_do = {
+			base = 1
+		}
+	}
+
+	TU_URS_w1_vic_non_aggression = {
+		icon = GFX_decision_generic_political_discourse
+
+		allowed = {
+			original_tag = URS
+		}
+
+		visible = {
+			has_country_flag = TU_DEC_TU_URS_w1_vic_cultural_exchange
+		}
+
+		available = {
+			has_country_flag = TU_DEC_TU_URS_w1_vic_cultural_exchange
+			NOT = { has_country_flag = TU_DEC_TU_URS_w1_vic_border_ultimatum }
+		}
+
+		cost = 50
+		fire_only_once = yes
+
+		complete_effect = {
+			add_political_power = 50
+			add_stability = 0.02
+			if = {
+				limit = { country_exists = VIC }
+				diplomatic_relation = {
+					country = VIC
+					relation = non_aggression_pact
+					active = yes
+				}
+			}
+			set_country_flag = TU_DEC_TU_URS_w1_vic_non_aggression
+		}
+
+		ai_will_do = {
+			base = 1
+		}
+	}
+
+	TU_URS_w1_vic_border_ultimatum = {
+		icon = GFX_decision_generic_political_discourse
+
+		allowed = {
+			original_tag = URS
+		}
+
+		visible = {
+			has_completed_focus = TU_URS_w1_vic_border_buildup
+		}
+
+		available = {
+			has_completed_focus = TU_URS_w1_vic_border_buildup
+			NOT = { has_country_flag = TU_DEC_TU_URS_w1_vic_non_aggression }
+		}
+
+		cost = 50
+		fire_only_once = yes
+
+		complete_effect = {
+			add_political_power = 50
+			add_war_support = 0.05
+			if = {
+				limit = { country_exists = VIC }
+				add_opinion_modifier = {
+					target = VIC
+					modifier = rejected_demands
+				}
+			}
+			set_country_flag = TU_DEC_TU_URS_w1_vic_border_ultimatum
+		}
+
+		ai_will_do = {
+			base = 1
+		}
+	}
+
+	TU_URS_w1_vic_guarantee = {
+		icon = GFX_decision_generic_political_discourse
+
+		allowed = {
+			original_tag = URS
+		}
+
+		visible = {
+			has_country_flag = TU_DEC_TU_URS_w1_vic_non_aggression
+		}
+
+		available = {
+			has_country_flag = TU_DEC_TU_URS_w1_vic_non_aggression
+			NOT = { has_country_flag = TU_DEC_TU_URS_w1_vic_war_declaration }
+		}
+
+		cost = 50
+		fire_only_once = yes
+
+		complete_effect = {
+			add_political_power = 50
+			if = {
+				limit = { country_exists = VIC }
+				give_guarantee = VIC
+			}
+			set_country_flag = TU_DEC_TU_URS_w1_vic_guarantee
+		}
+
+		ai_will_do = {
+			base = 1
+		}
+	}
+
+	TU_URS_w1_lei_envoy = {
+		icon = GFX_decision_generic_political_discourse
+
+		allowed = {
+			original_tag = URS
+		}
+
+		visible = {
+			has_completed_focus = TU_URS_foreign_ministry
+		}
+
+		available = {
+			has_completed_focus = TU_URS_foreign_ministry
+		}
+
+		cost = 25
+		fire_only_once = yes
+
+		complete_effect = {
+			add_political_power = 25
+			if = {
+				limit = { country_exists = LEI }
+				add_opinion_modifier = {
+					target = LEI
+					modifier = improve_relation
+				}
+			}
+			set_country_flag = TU_DEC_TU_URS_w1_lei_envoy
+		}
+
+		ai_will_do = {
+			base = 1
+		}
+	}
+
+	TU_URS_w1_lei_trade_talks = {
+		icon = GFX_decision_generic_political_discourse
+
+		allowed = {
+			original_tag = URS
+		}
+
+		visible = {
+			has_country_flag = TU_DEC_TU_URS_w1_lei_envoy
+		}
+
+		available = {
+			has_country_flag = TU_DEC_TU_URS_w1_lei_envoy
+		}
+
+		cost = 50
+		fire_only_once = yes
+
+		complete_effect = {
+			add_political_power = 25
+			if = {
+				limit = { country_exists = LEI }
+				add_opinion_modifier = {
+					target = LEI
+					modifier = improve_relation
+				}
+			}
+			set_country_flag = TU_DEC_TU_URS_w1_lei_trade_talks
+		}
+
+		ai_will_do = {
+			base = 1
+		}
+	}
+
+	TU_URS_w1_lei_cultural_exchange = {
+		icon = GFX_decision_generic_political_discourse
+
+		allowed = {
+			original_tag = URS
+		}
+
+		visible = {
+			has_country_flag = TU_DEC_TU_URS_w1_lei_trade_talks
+		}
+
+		available = {
+			has_country_flag = TU_DEC_TU_URS_w1_lei_trade_talks
+		}
+
+		cost = 50
+		fire_only_once = yes
+
+		complete_effect = {
+			add_stability = 0.02
+			if = {
+				limit = { country_exists = LEI }
+				add_opinion_modifier = {
+					target = LEI
+					modifier = improve_relation
+				}
+			}
+			set_country_flag = TU_DEC_TU_URS_w1_lei_cultural_exchange
+		}
+
+		ai_will_do = {
+			base = 1
+		}
+	}
+
+	TU_URS_w1_lei_non_aggression = {
+		icon = GFX_decision_generic_political_discourse
+
+		allowed = {
+			original_tag = URS
+		}
+
+		visible = {
+			has_country_flag = TU_DEC_TU_URS_w1_lei_cultural_exchange
+		}
+
+		available = {
+			has_country_flag = TU_DEC_TU_URS_w1_lei_cultural_exchange
+			NOT = { has_country_flag = TU_DEC_TU_URS_w1_lei_border_ultimatum }
+		}
+
+		cost = 50
+		fire_only_once = yes
+
+		complete_effect = {
+			add_political_power = 50
+			add_stability = 0.02
+			if = {
+				limit = { country_exists = LEI }
+				diplomatic_relation = {
+					country = LEI
+					relation = non_aggression_pact
+					active = yes
+				}
+			}
+			set_country_flag = TU_DEC_TU_URS_w1_lei_non_aggression
+		}
+
+		ai_will_do = {
+			base = 1
+		}
+	}
+
+	TU_URS_w1_lei_border_ultimatum = {
+		icon = GFX_decision_generic_political_discourse
+
+		allowed = {
+			original_tag = URS
+		}
+
+		visible = {
+			has_completed_focus = TU_URS_w1_lei_border_buildup
+		}
+
+		available = {
+			has_completed_focus = TU_URS_w1_lei_border_buildup
+			NOT = { has_country_flag = TU_DEC_TU_URS_w1_lei_non_aggression }
+		}
+
+		cost = 50
+		fire_only_once = yes
+
+		complete_effect = {
+			add_political_power = 50
+			add_war_support = 0.05
+			if = {
+				limit = { country_exists = LEI }
+				add_opinion_modifier = {
+					target = LEI
+					modifier = rejected_demands
+				}
+			}
+			set_country_flag = TU_DEC_TU_URS_w1_lei_border_ultimatum
+		}
+
+		ai_will_do = {
+			base = 1
+		}
+	}
+
+	TU_URS_w1_lei_guarantee = {
+		icon = GFX_decision_generic_political_discourse
+
+		allowed = {
+			original_tag = URS
+		}
+
+		visible = {
+			has_country_flag = TU_DEC_TU_URS_w1_lei_non_aggression
+		}
+
+		available = {
+			has_country_flag = TU_DEC_TU_URS_w1_lei_non_aggression
+			NOT = { has_country_flag = TU_DEC_TU_URS_w1_lei_war_declaration }
+		}
+
+		cost = 50
+		fire_only_once = yes
+
+		complete_effect = {
+			add_political_power = 50
+			if = {
+				limit = { country_exists = LEI }
+				give_guarantee = LEI
+			}
+			set_country_flag = TU_DEC_TU_URS_w1_lei_guarantee
+		}
+
+		ai_will_do = {
+			base = 1
+		}
+	}
+
+	TU_URS_w1_lei_reform_mediation = {
+		icon = GFX_decision_generic_political_discourse
+
+		allowed = {
+			original_tag = URS
+		}
+
+		visible = {
+			has_country_flag = TU_DEC_TU_URS_w1_lei_border_ultimatum
+		}
+
+		available = {
+			has_country_flag = TU_DEC_TU_URS_w1_lei_border_ultimatum
+			has_completed_focus = TU_URS_reform_path
+		}
+
+		cost = 50
+		fire_only_once = yes
+
+		complete_effect = {
+			add_political_power = 50
+			add_stability = 0.02
+			if = {
+				limit = { country_exists = LEI }
+				add_opinion_modifier = {
+					target = LEI
+					modifier = improve_relation
+				}
+			}
+			set_country_flag = TU_DEC_TU_URS_w1_lei_reform_mediation
+		}
+
+		ai_will_do = {
+			base = 1
+		}
+	}
+
+	TU_URS_w2_yan_envoy = {
+		icon = GFX_decision_generic_political_discourse
+
+		allowed = {
+			original_tag = URS
+		}
+
+		visible = {
+			has_completed_focus = TU_URS_foreign_ministry
+		}
+
+		available = {
+			has_completed_focus = TU_URS_foreign_ministry
+		}
+
+		cost = 25
+		fire_only_once = yes
+
+		complete_effect = {
+			add_political_power = 25
+			if = {
+				limit = { country_exists = YAN }
+				add_opinion_modifier = {
+					target = YAN
+					modifier = improve_relation
+				}
+			}
+			set_country_flag = TU_DEC_TU_URS_w2_yan_envoy
+		}
+
+		ai_will_do = {
+			base = 1
+		}
+	}
+
+	TU_URS_w2_yan_trade_talks = {
+		icon = GFX_decision_generic_political_discourse
+
+		allowed = {
+			original_tag = URS
+		}
+
+		visible = {
+			has_country_flag = TU_DEC_TU_URS_w2_yan_envoy
+		}
+
+		available = {
+			has_country_flag = TU_DEC_TU_URS_w2_yan_envoy
+		}
+
+		cost = 50
+		fire_only_once = yes
+
+		complete_effect = {
+			add_political_power = 25
+			if = {
+				limit = { country_exists = YAN }
+				add_opinion_modifier = {
+					target = YAN
+					modifier = improve_relation
+				}
+			}
+			set_country_flag = TU_DEC_TU_URS_w2_yan_trade_talks
+		}
+
+		ai_will_do = {
+			base = 1
+		}
+	}
+
+	TU_URS_w2_yan_non_aggression = {
+		icon = GFX_decision_generic_political_discourse
+
+		allowed = {
+			original_tag = URS
+		}
+
+		visible = {
+			has_country_flag = TU_DEC_TU_URS_w2_yan_trade_talks
+		}
+
+		available = {
+			has_country_flag = TU_DEC_TU_URS_w2_yan_trade_talks
+			NOT = { has_country_flag = TU_DEC_TU_URS_w2_yan_border_ultimatum }
+		}
+
+		cost = 50
+		fire_only_once = yes
+
+		complete_effect = {
+			add_political_power = 50
+			add_stability = 0.02
+			if = {
+				limit = { country_exists = YAN }
+				diplomatic_relation = {
+					country = YAN
+					relation = non_aggression_pact
+					active = yes
+				}
+			}
+			set_country_flag = TU_DEC_TU_URS_w2_yan_non_aggression
+		}
+
+		ai_will_do = {
+			base = 1
+		}
+	}
+
+	TU_URS_w2_yan_border_ultimatum = {
+		icon = GFX_decision_generic_political_discourse
+
+		allowed = {
+			original_tag = URS
+		}
+
+		visible = {
+			has_completed_focus = TU_URS_w2_yan_border_buildup
+		}
+
+		available = {
+			has_completed_focus = TU_URS_w2_yan_border_buildup
+			NOT = { has_country_flag = TU_DEC_TU_URS_w2_yan_non_aggression }
+		}
+
+		cost = 50
+		fire_only_once = yes
+
+		complete_effect = {
+			add_political_power = 50
+			add_war_support = 0.05
+			if = {
+				limit = { country_exists = YAN }
+				add_opinion_modifier = {
+					target = YAN
+					modifier = rejected_demands
+				}
+			}
+			set_country_flag = TU_DEC_TU_URS_w2_yan_border_ultimatum
+		}
+
+		ai_will_do = {
+			base = 1
+		}
+	}
+
+	TU_URS_w2_yan_military_access = {
+		icon = GFX_decision_generic_political_discourse
+
+		allowed = {
+			original_tag = URS
+		}
+
+		visible = {
+			has_country_flag = TU_DEC_TU_URS_w2_yan_non_aggression
+		}
+
+		available = {
+			has_country_flag = TU_DEC_TU_URS_w2_yan_non_aggression
+		}
+
+		cost = 50
+		fire_only_once = yes
+
+		complete_effect = {
+			add_political_power = 25
+			if = {
+				limit = { country_exists = YAN }
+				diplomatic_relation = {
+					country = YAN
+					relation = military_access
+					active = yes
+				}
+			}
+			set_country_flag = TU_DEC_TU_URS_w2_yan_military_access
+		}
+
+		ai_will_do = {
+			base = 1
+		}
+	}
+
+	TU_URS_w2_yan_guarantee = {
+		icon = GFX_decision_generic_political_discourse
+
+		allowed = {
+			original_tag = URS
+		}
+
+		visible = {
+			has_country_flag = TU_DEC_TU_URS_w2_yan_military_access
+		}
+
+		available = {
+			has_country_flag = TU_DEC_TU_URS_w2_yan_military_access
+			NOT = { has_country_flag = TU_DEC_TU_URS_w2_yan_war_declaration }
+		}
+
+		cost = 50
+		fire_only_once = yes
+
+		complete_effect = {
+			add_political_power = 50
+			if = {
+				limit = { country_exists = YAN }
+				give_guarantee = YAN
+			}
+			set_country_flag = TU_DEC_TU_URS_w2_yan_guarantee
+		}
+
+		ai_will_do = {
+			base = 1
+		}
+	}
+
+	TU_URS_w2_lgm_envoy = {
+		icon = GFX_decision_generic_political_discourse
+
+		allowed = {
+			original_tag = URS
+		}
+
+		visible = {
+			has_completed_focus = TU_URS_foreign_ministry
+		}
+
+		available = {
+			has_completed_focus = TU_URS_foreign_ministry
+		}
+
+		cost = 25
+		fire_only_once = yes
+
+		complete_effect = {
+			add_political_power = 25
+			if = {
+				limit = { country_exists = LGM }
+				add_opinion_modifier = {
+					target = LGM
+					modifier = improve_relation
+				}
+			}
+			set_country_flag = TU_DEC_TU_URS_w2_lgm_envoy
+		}
+
+		ai_will_do = {
+			base = 1
+		}
+	}
+
+	TU_URS_w2_lgm_trade_talks = {
+		icon = GFX_decision_generic_political_discourse
+
+		allowed = {
+			original_tag = URS
+		}
+
+		visible = {
+			has_country_flag = TU_DEC_TU_URS_w2_lgm_envoy
+		}
+
+		available = {
+			has_country_flag = TU_DEC_TU_URS_w2_lgm_envoy
+		}
+
+		cost = 50
+		fire_only_once = yes
+
+		complete_effect = {
+			add_political_power = 25
+			if = {
+				limit = { country_exists = LGM }
+				add_opinion_modifier = {
+					target = LGM
+					modifier = improve_relation
+				}
+			}
+			set_country_flag = TU_DEC_TU_URS_w2_lgm_trade_talks
+		}
+
+		ai_will_do = {
+			base = 1
+		}
+	}
+
+	TU_URS_w2_lgm_non_aggression = {
+		icon = GFX_decision_generic_political_discourse
+
+		allowed = {
+			original_tag = URS
+		}
+
+		visible = {
+			has_country_flag = TU_DEC_TU_URS_w2_lgm_trade_talks
+		}
+
+		available = {
+			has_country_flag = TU_DEC_TU_URS_w2_lgm_trade_talks
+			NOT = { has_country_flag = TU_DEC_TU_URS_w2_lgm_border_ultimatum }
+		}
+
+		cost = 50
+		fire_only_once = yes
+
+		complete_effect = {
+			add_political_power = 50
+			add_stability = 0.02
+			if = {
+				limit = { country_exists = LGM }
+				diplomatic_relation = {
+					country = LGM
+					relation = non_aggression_pact
+					active = yes
+				}
+			}
+			set_country_flag = TU_DEC_TU_URS_w2_lgm_non_aggression
+		}
+
+		ai_will_do = {
+			base = 1
+		}
+	}
+
+	TU_URS_w2_lgm_border_ultimatum = {
+		icon = GFX_decision_generic_political_discourse
+
+		allowed = {
+			original_tag = URS
+		}
+
+		visible = {
+			has_completed_focus = TU_URS_w2_lgm_reunion_pressure
+		}
+
+		available = {
+			has_completed_focus = TU_URS_w2_lgm_reunion_pressure
+			NOT = { has_country_flag = TU_DEC_TU_URS_w2_lgm_non_aggression }
+		}
+
+		cost = 50
+		fire_only_once = yes
+
+		complete_effect = {
+			add_political_power = 50
+			add_war_support = 0.05
+			if = {
+				limit = { country_exists = LGM }
+				add_opinion_modifier = {
+					target = LGM
+					modifier = rejected_demands
+				}
+			}
+			set_country_flag = TU_DEC_TU_URS_w2_lgm_border_ultimatum
+		}
+
+		ai_will_do = {
+			base = 1
+		}
+	}
+
+	TU_URS_w2_lgm_guarantee = {
+		icon = GFX_decision_generic_political_discourse
+
+		allowed = {
+			original_tag = URS
+		}
+
+		visible = {
+			has_country_flag = TU_DEC_TU_URS_w2_lgm_non_aggression
+		}
+
+		available = {
+			has_country_flag = TU_DEC_TU_URS_w2_lgm_non_aggression
+			NOT = { has_country_flag = TU_DEC_TU_URS_w2_lgm_war_declaration }
+		}
+
+		cost = 50
+		fire_only_once = yes
+
+		complete_effect = {
+			add_political_power = 50
+			if = {
+				limit = { country_exists = LGM }
+				give_guarantee = LGM
+			}
+			set_country_flag = TU_DEC_TU_URS_w2_lgm_guarantee
+		}
+
+		ai_will_do = {
+			base = 1
+		}
+	}
+
+	TU_URS_w2_hig_envoy = {
+		icon = GFX_decision_generic_political_discourse
+
+		allowed = {
+			original_tag = URS
+		}
+
+		visible = {
+			has_completed_focus = TU_URS_foreign_ministry
+		}
+
+		available = {
+			has_completed_focus = TU_URS_foreign_ministry
+		}
+
+		cost = 25
+		fire_only_once = yes
+
+		complete_effect = {
+			add_political_power = 25
+			if = {
+				limit = { country_exists = HIG }
+				add_opinion_modifier = {
+					target = HIG
+					modifier = improve_relation
+				}
+			}
+			set_country_flag = TU_DEC_TU_URS_w2_hig_envoy
+		}
+
+		ai_will_do = {
+			base = 1
+		}
+	}
+
+	TU_URS_w2_hig_trade_talks = {
+		icon = GFX_decision_generic_political_discourse
+
+		allowed = {
+			original_tag = URS
+		}
+
+		visible = {
+			has_country_flag = TU_DEC_TU_URS_w2_hig_envoy
+		}
+
+		available = {
+			has_country_flag = TU_DEC_TU_URS_w2_hig_envoy
+		}
+
+		cost = 50
+		fire_only_once = yes
+
+		complete_effect = {
+			add_political_power = 25
+			if = {
+				limit = { country_exists = HIG }
+				add_opinion_modifier = {
+					target = HIG
+					modifier = improve_relation
+				}
+			}
+			set_country_flag = TU_DEC_TU_URS_w2_hig_trade_talks
+		}
+
+		ai_will_do = {
+			base = 1
+		}
+	}
+
+	TU_URS_w2_hig_non_aggression = {
+		icon = GFX_decision_generic_political_discourse
+
+		allowed = {
+			original_tag = URS
+		}
+
+		visible = {
+			has_country_flag = TU_DEC_TU_URS_w2_hig_trade_talks
+		}
+
+		available = {
+			has_country_flag = TU_DEC_TU_URS_w2_hig_trade_talks
+			NOT = { has_country_flag = TU_DEC_TU_URS_w2_hig_ultimatum }
+		}
+
+		cost = 50
+		fire_only_once = yes
+
+		complete_effect = {
+			add_political_power = 50
+			add_stability = 0.02
+			if = {
+				limit = { country_exists = HIG }
+				diplomatic_relation = {
+					country = HIG
+					relation = non_aggression_pact
+					active = yes
+				}
+			}
+			set_country_flag = TU_DEC_TU_URS_w2_hig_non_aggression
+		}
+
+		ai_will_do = {
+			base = 1
+		}
+	}
+
+	TU_URS_w2_hig_ultimatum = {
+		icon = GFX_decision_generic_political_discourse
+
+		allowed = {
+			original_tag = URS
+		}
+
+		visible = {
+			has_completed_focus = TU_URS_w2_hig_naval_buildup
+		}
+
+		available = {
+			has_completed_focus = TU_URS_w2_hig_naval_buildup
+			NOT = { has_country_flag = TU_DEC_TU_URS_w2_hig_non_aggression }
+		}
+
+		cost = 50
+		fire_only_once = yes
+
+		complete_effect = {
+			add_political_power = 50
+			add_war_support = 0.05
+			if = {
+				limit = { country_exists = HIG }
+				add_opinion_modifier = {
+					target = HIG
+					modifier = rejected_demands
+				}
+			}
+			set_country_flag = TU_DEC_TU_URS_w2_hig_ultimatum
+		}
+
+		ai_will_do = {
+			base = 1
+		}
+	}
+
+	TU_URS_w2_hig_guarantee = {
+		icon = GFX_decision_generic_political_discourse
+
+		allowed = {
+			original_tag = URS
+		}
+
+		visible = {
+			has_country_flag = TU_DEC_TU_URS_w2_hig_non_aggression
+		}
+
+		available = {
+			has_country_flag = TU_DEC_TU_URS_w2_hig_non_aggression
+			NOT = { has_country_flag = TU_DEC_TU_URS_w2_hig_war_declaration }
+		}
+
+		cost = 50
+		fire_only_once = yes
+
+		complete_effect = {
+			add_political_power = 50
+			if = {
+				limit = { country_exists = HIG }
+				give_guarantee = HIG
+			}
+			set_country_flag = TU_DEC_TU_URS_w2_hig_guarantee
+		}
+
+		ai_will_do = {
+			base = 1
+		}
+	}
+
+	TU_URS_w3_kaz_envoy = {
+		icon = GFX_decision_generic_political_discourse
+
+		allowed = {
+			original_tag = URS
+		}
+
+		visible = {
+			has_completed_focus = TU_URS_w3_kaz_entry
+		}
+
+		available = {
+			has_completed_focus = TU_URS_w3_kaz_entry
+			NOT = { has_country_flag = TU_DEC_TU_URS_w3_kaz_claims }
+		}
+
+		cost = 50
+		fire_only_once = yes
+
+		complete_effect = {
+			if = {
+				limit = { country_exists = KAZ }
+				add_opinion_modifier = {
+					target = KAZ
+					modifier = improve_relation
+				}
+			}
+			add_political_power = 50
+			set_country_flag = TU_DEC_TU_URS_w3_kaz_envoy
+		}
+
+		ai_will_do = {
+			base = 1
+		}
+	}
+
+	TU_URS_w3_kaz_trade = {
+		icon = GFX_decision_generic_political_discourse
+
+		allowed = {
+			original_tag = URS
+		}
+
+		visible = {
+			has_country_flag = TU_DEC_TU_URS_w3_kaz_envoy
+		}
+
+		available = {
+			has_country_flag = TU_DEC_TU_URS_w3_kaz_envoy
+		}
+
+		cost = 50
+		fire_only_once = yes
+
+		complete_effect = {
+			if = {
+				limit = { country_exists = KAZ }
+				diplomatic_relation = {
+					country = KAZ
+					relation = non_aggression_pact
+					active = yes
+				}
+			}
+			add_political_power = 25
+			set_country_flag = TU_DEC_TU_URS_w3_kaz_trade
+		}
+
+		ai_will_do = {
+			base = 1
+		}
+	}
+
+	TU_URS_w3_kaz_access = {
+		icon = GFX_decision_generic_political_discourse
+
+		allowed = {
+			original_tag = URS
+		}
+
+		visible = {
+			has_country_flag = TU_DEC_TU_URS_w3_kaz_trade
+		}
+
+		available = {
+			has_country_flag = TU_DEC_TU_URS_w3_kaz_trade
+		}
+
+		cost = 50
+		fire_only_once = yes
+
+		complete_effect = {
+			if = {
+				limit = { country_exists = KAZ }
+				diplomatic_relation = {
+					country = KAZ
+					relation = military_access
+					active = yes
+				}
+			}
+			add_political_power = 25
+			set_country_flag = TU_DEC_TU_URS_w3_kaz_access
+		}
+
+		ai_will_do = {
+			base = 1
+		}
+	}
+
+	TU_URS_w3_kaz_guarantee = {
+		icon = GFX_decision_generic_political_discourse
+
+		allowed = {
+			original_tag = URS
+		}
+
+		visible = {
+			has_country_flag = TU_DEC_TU_URS_w3_kaz_access
+		}
+
+		available = {
+			has_country_flag = TU_DEC_TU_URS_w3_kaz_access
+			has_completed_focus = TU_URS_emperor_rule
+		}
+
+		cost = 50
+		fire_only_once = yes
+
+		complete_effect = {
+			if = {
+				limit = { country_exists = KAZ }
+				diplomatic_relation = {
+					country = KAZ
+					relation = guarantee
+					active = yes
+				}
+			}
+			add_political_power = 50
+			set_country_flag = TU_DEC_TU_URS_w3_kaz_guarantee
+		}
+
+		ai_will_do = {
+			base = 1
+		}
+	}
+
+	TU_URS_w3_kje_pact = {
+		icon = GFX_decision_generic_political_discourse
+
+		allowed = {
+			original_tag = URS
+		}
+
+		visible = {
+			has_completed_focus = TU_URS_w3_kje_entry
+		}
+
+		available = {
+			has_completed_focus = TU_URS_w3_kje_entry
+			NOT = { has_country_flag = TU_DEC_TU_URS_w3_kje_claims }
+		}
+
+		cost = 50
+		fire_only_once = yes
+
+		complete_effect = {
+			if = {
+				limit = { country_exists = KJE }
+				diplomatic_relation = {
+					country = KJE
+					relation = non_aggression_pact
+					active = yes
+				}
+			}
+			add_political_power = 25
+			set_country_flag = TU_DEC_TU_URS_w3_kje_pact
+		}
+
+		ai_will_do = {
+			base = 1
+		}
+	}
+
+	TU_URS_w3_kje_access = {
+		icon = GFX_decision_generic_political_discourse
+
+		allowed = {
+			original_tag = URS
+		}
+
+		visible = {
+			has_completed_focus = TU_URS_w3_kje_trade
+		}
+
+		available = {
+			has_completed_focus = TU_URS_w3_kje_trade
+		}
+
+		cost = 50
+		fire_only_once = yes
+
+		complete_effect = {
+			if = {
+				limit = { country_exists = KJE }
+				diplomatic_relation = {
+					country = KJE
+					relation = military_access
+					active = yes
+				}
+			}
+			add_political_power = 25
+			set_country_flag = TU_DEC_TU_URS_w3_kje_access
+		}
+
+		ai_will_do = {
+			base = 1
+		}
+	}
+
+	TU_URS_w3_sami_aid = {
+		icon = GFX_decision_generic_political_discourse
+
+		allowed = {
+			original_tag = URS
+		}
+
+		visible = {
+			has_completed_focus = TU_URS_w3_sami_entry
+		}
+
+		available = {
+			has_completed_focus = TU_URS_w3_sami_entry
+			NOT = { has_country_flag = TU_DEC_TU_URS_w3_sami_annex_plan }
+		}
+
+		cost = 50
+		fire_only_once = yes
+
+		complete_effect = {
+			if = {
+				limit = { country_exists = SAM }
+				add_opinion_modifier = {
+					target = SAM
+					modifier = improve_relation
+				}
+			}
+			add_stability = 0.02
+			set_country_flag = TU_DEC_TU_URS_w3_sami_aid
+		}
+
+		ai_will_do = {
+			base = 1
+		}
+	}
+
+	TU_URS_w3_sami_protocol = {
+		icon = GFX_decision_generic_political_discourse
+
+		allowed = {
+			original_tag = URS
+		}
+
+		visible = {
+			has_completed_focus = TU_URS_w3_sami_ski
+		}
+
+		available = {
+			has_completed_focus = TU_URS_w3_sami_ski
+		}
+
+		cost = 50
+		fire_only_once = yes
+
+		complete_effect = {
+			if = {
+				limit = { country_exists = SAM }
+				diplomatic_relation = {
+					country = SAM
+					relation = military_access
+					active = yes
+				}
+			}
+			add_political_power = 50
+			set_country_flag = TU_DEC_TU_URS_w3_sami_protocol
+		}
+
+		ai_will_do = {
+			base = 1
+		}
+	}
+
+	TU_URS_w3_sami_autonomy = {
+		icon = GFX_decision_generic_political_discourse
+
+		allowed = {
+			original_tag = URS
+		}
+
+		visible = {
+			has_country_flag = TU_DEC_TU_URS_w3_sami_protocol
+		}
+
+		available = {
+			has_country_flag = TU_DEC_TU_URS_w3_sami_protocol
+		}
+
+		cost = 75
+		fire_only_once = yes
+
+		complete_effect = {
+			if = {
+				limit = { country_exists = SAM }
+				diplomatic_relation = {
+					country = SAM
+					relation = guarantee
+					active = yes
+				}
+			}
+			add_political_power = 50
+			add_stability = 0.03
+			set_country_flag = TU_DEC_TU_URS_w3_sami_autonomy
+		}
+
+		ai_will_do = {
+			base = 1
+		}
+	}
+
+	TU_URS_w4_pact_neutral = {
+		icon = GFX_decision_generic_political_discourse
+
+		allowed = {
+			original_tag = URS
+		}
+
+		visible = {
+			has_completed_focus = TU_URS_w4_pact_entry
+		}
+
+		available = {
+			has_completed_focus = TU_URS_w4_pact_entry
+			NOT = { has_completed_focus = TU_URS_w4_pact_charter }
+		}
+
+		cost = 50
+		fire_only_once = yes
+
+		complete_effect = {
+			if = {
+				limit = { country_exists = KAZ }
+				diplomatic_relation = {
+					country = KAZ
+					relation = non_aggression_pact
+					active = yes
+				}
+			}
+			if = {
+				limit = { country_exists = KJE }
+				diplomatic_relation = {
+					country = KJE
+					relation = non_aggression_pact
+					active = yes
+				}
+			}
+			if = {
+				limit = { country_exists = SAM }
+				diplomatic_relation = {
+					country = SAM
+					relation = non_aggression_pact
+					active = yes
+				}
+			}
+			add_stability = 0.02
+			set_country_flag = TU_DEC_TU_URS_w4_pact_neutral
+		}
+
+		ai_will_do = {
+			base = 1
+		}
+	}
+
+	TU_URS_w4_rho_coop = {
+		icon = GFX_decision_generic_political_discourse
+
+		allowed = {
+			original_tag = URS
+		}
+
+		visible = {
+			has_completed_focus = TU_URS_w4_rho_entry
+		}
+
+		available = {
+			has_completed_focus = TU_URS_w4_rho_entry
+			NOT = { has_country_flag = TU_DEC_TU_URS_w4_rho_hostile }
+		}
+
+		cost = 50
+		fire_only_once = yes
+
+		complete_effect = {
+			if = {
+				limit = { country_exists = RHO }
+				add_opinion_modifier = {
+					target = RHO
+					modifier = improve_relation
+				}
+				diplomatic_relation = {
+					country = RHO
+					relation = military_access
+					active = yes
+				}
+			}
+			add_political_power = 50
+			set_country_flag = TU_DEC_TU_URS_w4_rho_coop
+		}
+
+		ai_will_do = {
+			base = 1
+		}
+	}
+
+	TU_URS_w4_rho_hostile = {
+		icon = GFX_decision_generic_political_discourse
+
+		allowed = {
+			original_tag = URS
+		}
+
+		visible = {
+			has_completed_focus = TU_URS_w4_rho_entry
+		}
+
+		available = {
+			has_completed_focus = TU_URS_w4_rho_entry
+			NOT = { has_country_flag = TU_DEC_TU_URS_w4_rho_coop }
+		}
+
+		cost = 50
+		fire_only_once = yes
+
+		complete_effect = {
+			if = {
+				limit = { country_exists = RHO }
+				add_opinion_modifier = {
+					target = RHO
+					modifier = medium_decrease
+				}
+			}
+			add_political_power = 25
+			add_war_support = 0.03
+			set_country_flag = TU_DEC_TU_URS_w4_rho_hostile
+		}
+
+		ai_will_do = {
+			base = 1
+		}
+	}
+
+	TU_URS_w4_rho_joint_op = {
+		icon = GFX_decision_generic_political_discourse
+
+		allowed = {
+			original_tag = URS
+		}
+
+		visible = {
+			has_completed_focus = TU_URS_w4_rho_trade_pact
+		}
+
+		available = {
+			has_completed_focus = TU_URS_w4_rho_trade_pact
+		}
+
+		cost = 75
+		fire_only_once = yes
+
+		complete_effect = {
+			if = {
+				limit = { country_exists = RHO }
+				diplomatic_relation = {
+					country = RHO
+					relation = guarantee
+					active = yes
+				}
+			}
+			add_political_power = 50
+			set_country_flag = TU_DEC_TU_URS_w4_rho_joint_op
+		}
+
+		ai_will_do = {
+			base = 1
+		}
+	}
+
+	TU_URS_w4_reu_negotiate = {
+		icon = GFX_decision_generic_political_discourse
+
+		allowed = {
+			original_tag = URS
+		}
+
+		visible = {
+			has_completed_focus = TU_URS_w4_reu_entry
+		}
+
+		available = {
+			has_completed_focus = TU_URS_w4_reu_entry
+			NOT = { has_country_flag = TU_DEC_TU_URS_w4_reu_crush }
+		}
+
+		cost = 50
+		fire_only_once = yes
+
+		complete_effect = {
+			if = {
+				limit = { country_exists = REU }
+				add_opinion_modifier = {
+					target = REU
+					modifier = improve_relation
+				}
+			}
+			add_stability = 0.02
+			set_country_flag = TU_DEC_TU_URS_w4_reu_negotiate
+		}
+
+		ai_will_do = {
+			base = 1
+		}
+	}
+
+	TU_URS_w4_reu_union_pact = {
+		icon = GFX_decision_generic_political_discourse
+
+		allowed = {
+			original_tag = URS
+		}
+
+		visible = {
+			has_completed_focus = TU_URS_w4_reu_autonomy
+		}
+
+		available = {
+			has_completed_focus = TU_URS_w4_reu_autonomy
+		}
+
+		cost = 75
+		fire_only_once = yes
+
+		complete_effect = {
+			if = {
+				limit = { country_exists = REU }
+				diplomatic_relation = {
+					country = REU
+					relation = guarantee
+					active = yes
+				}
+			}
+			add_political_power = 75
+			set_country_flag = TU_DEC_TU_URS_w4_reu_union_pact
+		}
+
+		ai_will_do = {
+			base = 1
+		}
+	}
+}
+
+TU_URS_construction_category = {
+
+	TU_URS_rail_bridges = {
+		icon = GFX_decision_generic_construction
+
+		allowed = {
+			original_tag = URS
+		}
+
+		visible = {
+			has_completed_focus = TU_URS_rail_standard
+		}
+
+		available = {
+			has_completed_focus = TU_URS_rail_standard
+		}
+
+		cost = 50
+		fire_only_once = yes
+
+		complete_effect = {
+			random_owned_controlled_state = {
+				limit = {
+					is_owned_and_controlled_by = ROOT
+					has_state_category = town
+				}
+				add_building_construction = {
+					type = infrastructure
+					level = 1
+					instant_build = yes
+				}
+			}
+			set_country_flag = TU_DEC_TU_URS_rail_bridges
+		}
+
+		ai_will_do = {
+			base = 1
+		}
+	}
+
+	TU_URS_originium_mines = {
+		icon = GFX_decision_generic_construction
+
+		allowed = {
+			original_tag = URS
+		}
+
+		visible = {
+			has_completed_focus = TU_URS_originium_survey
+		}
+
+		available = {
+			has_completed_focus = TU_URS_originium_survey
+		}
+
+		cost = 50
+		fire_only_once = yes
+
+		complete_effect = {
+			random_owned_controlled_state = {
+				limit = {
+					is_owned_and_controlled_by = ROOT
+					has_state_category = rural
+				}
+				add_resource = {
+					type = tungsten
+					amount = 2
+				}
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+				}
+			}
+			set_country_flag = TU_DEC_TU_URS_originium_mines
+		}
+
+		ai_will_do = {
+			base = 1
+		}
+	}
+
+	TU_URS_northern_survey = {
+		icon = GFX_decision_generic_construction
+
+		allowed = {
+			original_tag = URS
+		}
+
+		visible = {
+			has_completed_focus = TU_URS_frozen_road
+		}
+
+		available = {
+			has_completed_focus = TU_URS_frozen_road
+		}
+
+		cost = 50
+		fire_only_once = yes
+
+		complete_effect = {
+			random_owned_controlled_state = {
+				limit = {
+					is_owned_and_controlled_by = ROOT
+					has_state_category = rural
+				}
+				add_resource = {
+					type = steel
+					amount = 3
+				}
+			}
+			set_country_flag = TU_DEC_TU_URS_northern_survey
+		}
+
+		ai_will_do = {
+			base = 1
+		}
+	}
+
+	TU_URS_mobile_city = {
+		icon = GFX_decision_generic_construction
+
+		allowed = {
+			original_tag = URS
+		}
+
+		visible = {
+			has_completed_focus = TU_URS_mobile_plan
+		}
+
+		available = {
+			has_completed_focus = TU_URS_mobile_plan
+		}
+
+		cost = 75
+		fire_only_once = yes
+
+		complete_effect = {
+			random_owned_controlled_state = {
+				limit = {
+					is_owned_and_controlled_by = ROOT
+					has_state_category = city
+				}
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = infrastructure
+					level = 1
+					instant_build = yes
+				}
+			}
+			add_political_power = 50
+			set_country_flag = TU_DEC_TU_URS_mobile_city
+		}
+
+		ai_will_do = {
+			base = 1
+		}
+	}
+
+	TU_URS_northern_settlers = {
+		icon = GFX_decision_generic_construction
+
+		allowed = {
+			original_tag = URS
+		}
+
+		visible = {
+			has_completed_focus = TU_URS_northern_frontier
+		}
+
+		available = {
+			has_completed_focus = TU_URS_northern_frontier
+			NOT = { has_completed_focus = TU_URS_northern_garrison }
+		}
+
+		cost = 50
+		fire_only_once = yes
+
+		complete_effect = {
+			random_owned_controlled_state = {
+				limit = {
+					is_owned_and_controlled_by = ROOT
+					has_state_category = rural
+				}
+				add_extra_state_shared_building_slots = 1
+			}
+			add_stability = 0.02
+			set_country_flag = TU_DEC_TU_URS_northern_settlers
+		}
+
+		ai_will_do = {
+			base = 1
+		}
+	}
+
+	TU_URS_mobile_housing = {
+		icon = GFX_decision_generic_construction
+
+		allowed = {
+			original_tag = URS
+		}
+
+		visible = {
+			has_completed_focus = TU_URS_mobile_civil
+		}
+
+		available = {
+			has_completed_focus = TU_URS_mobile_civil
+		}
+
+		cost = 50
+		fire_only_once = yes
+
+		complete_effect = {
+			random_owned_controlled_state = {
+				limit = {
+					is_owned_and_controlled_by = ROOT
+					has_state_category = city
+				}
+				add_extra_state_shared_building_slots = 1
+			}
+			add_stability = 0.01
+			set_country_flag = TU_DEC_TU_URS_mobile_housing
+		}
+
+		ai_will_do = {
+			base = 1
+		}
+	}
+
+	TU_URS_mobile_arsenal = {
+		icon = GFX_decision_generic_construction
+
+		allowed = {
+			original_tag = URS
+		}
+
+		visible = {
+			has_completed_focus = TU_URS_mobile_fort
+		}
+
+		available = {
+			has_completed_focus = TU_URS_mobile_fort
+		}
+
+		cost = 50
+		fire_only_once = yes
+
+		complete_effect = {
+			random_owned_controlled_state = {
+				limit = {
+					is_owned_and_controlled_by = ROOT
+					has_state_category = town
+				}
+				add_building_construction = {
+					type = arms_factory
+					level = 1
+					instant_build = yes
+				}
+			}
+			set_country_flag = TU_DEC_TU_URS_mobile_arsenal
+		}
+
+		ai_will_do = {
+			base = 1
+		}
+	}
+
+	TU_URS_permafrost_mines = {
+		icon = GFX_decision_generic_construction
+
+		allowed = {
+			original_tag = URS
+		}
+
+		visible = {
+			has_country_flag = TU_DEC_TU_URS_northern_settlers
+		}
+
+		available = {
+			has_country_flag = TU_DEC_TU_URS_northern_settlers
+		}
+
+		cost = 50
+		fire_only_once = yes
+
+		complete_effect = {
+			random_owned_controlled_state = {
+				limit = {
+					is_owned_and_controlled_by = ROOT
+					has_state_category = rural
+				}
+				add_resource = {
+					type = tungsten
+					amount = 3
+				}
+			}
+			add_manpower = 10000
+			set_country_flag = TU_DEC_TU_URS_permafrost_mines
+		}
+
+		ai_will_do = {
+			base = 1
+		}
+	}
+
+	TU_URS_originium_plant = {
+		icon = GFX_decision_generic_construction
+
+		allowed = {
+			original_tag = URS
+		}
+
+		visible = {
+			has_completed_focus = TU_URS_originium_export
+		}
+
+		available = {
+			has_completed_focus = TU_URS_originium_export
+		}
+
+		cost = 50
+		fire_only_once = yes
+
+		complete_effect = {
+			random_owned_controlled_state = {
+				limit = {
+					is_owned_and_controlled_by = ROOT
+					has_state_category = rural
+				}
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+				}
+			}
+			add_political_power = 25
+			set_country_flag = TU_DEC_TU_URS_originium_plant
+		}
+
+		ai_will_do = {
+			base = 1
+		}
+	}
+
+	TU_URS_mobile_network = {
+		icon = GFX_decision_generic_construction
+
+		allowed = {
+			original_tag = URS
+		}
+
+		visible = {
+			OR = {
+				has_completed_focus = TU_URS_mobile_market
+				has_completed_focus = TU_URS_mobile_siege_rail
+			}
+		}
+
+		available = {
+			OR = {
+				has_completed_focus = TU_URS_mobile_market
+				has_completed_focus = TU_URS_mobile_siege_rail
+			}
+		}
+
+		cost = 50
+		fire_only_once = yes
+
+		complete_effect = {
+			random_owned_controlled_state = {
+				limit = {
+					is_owned_and_controlled_by = ROOT
+					has_state_category = city
+				}
+				add_building_construction = {
+					type = infrastructure
+					level = 1
+					instant_build = yes
+				}
+			}
+			add_political_power = 50
+			set_country_flag = TU_DEC_TU_URS_mobile_network
+		}
+
+		ai_will_do = {
+			base = 1
+		}
+	}
+
+	TU_URS_originium_stockpile = {
+		icon = GFX_decision_generic_construction
+
+		allowed = {
+			original_tag = URS
+		}
+
+		visible = {
+			has_completed_focus = TU_URS_originium_grid
+		}
+
+		available = {
+			has_completed_focus = TU_URS_originium_grid
+		}
+
+		cost = 50
+		fire_only_once = yes
+
+		complete_effect = {
+			random_owned_controlled_state = {
+				limit = {
+					is_owned_and_controlled_by = ROOT
+					has_state_category = rural
+				}
+				add_resource = {
+					type = tungsten
+					amount = 4
+				}
+			}
+			set_country_flag = TU_DEC_TU_URS_originium_stockpile
+		}
+
+		ai_will_do = {
+			base = 1
+		}
+	}
+
+	TU_URS_originium_deep = {
+		icon = GFX_decision_generic_construction
+
+		allowed = {
+			original_tag = URS
+		}
+
+		visible = {
+			has_country_flag = TU_DEC_TU_URS_originium_stockpile
+		}
+
+		available = {
+			has_country_flag = TU_DEC_TU_URS_originium_stockpile
+		}
+
+		cost = 75
+		fire_only_once = yes
+
+		complete_effect = {
+			random_owned_controlled_state = {
+				limit = {
+					is_owned_and_controlled_by = ROOT
+					has_state_category = rural
+				}
+				add_resource = {
+					type = tungsten
+					amount = 4
+				}
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+				}
+			}
+			set_country_flag = TU_DEC_TU_URS_originium_deep
+		}
+
+		ai_will_do = {
+			base = 1
+		}
+	}
+
+	TU_URS_mobile_expansion = {
+		icon = GFX_decision_generic_construction
+
+		allowed = {
+			original_tag = URS
+		}
+
+		visible = {
+			has_completed_focus = TU_URS_mobile_terminal
+		}
+
+		available = {
+			has_completed_focus = TU_URS_mobile_terminal
+		}
+
+		cost = 75
+		fire_only_once = yes
+
+		complete_effect = {
+			random_owned_controlled_state = {
+				limit = {
+					is_owned_and_controlled_by = ROOT
+					has_state_category = city
+				}
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = infrastructure
+					level = 1
+					instant_build = yes
+				}
+			}
+			add_political_power = 25
+			set_country_flag = TU_DEC_TU_URS_mobile_expansion
+		}
+
+		ai_will_do = {
+			base = 1
+		}
+	}
+
+	TU_URS_frozen_hangar = {
+		icon = GFX_decision_generic_construction
+
+		allowed = {
+			original_tag = URS
+		}
+
+		visible = {
+			has_completed_focus = TU_URS_frozen_airfield
+		}
+
+		available = {
+			has_completed_focus = TU_URS_frozen_airfield
+		}
+
+		cost = 50
+		fire_only_once = yes
+
+		complete_effect = {
+			random_owned_controlled_state = {
+				limit = {
+					is_owned_and_controlled_by = ROOT
+					has_state_category = rural
+				}
+				add_building_construction = {
+					type = air_base
+					level = 1
+					instant_build = yes
+				}
+			}
+			air_experience = 10
+			set_country_flag = TU_DEC_TU_URS_frozen_hangar
+		}
+
+		ai_will_do = {
+			base = 1
+		}
+	}
+
+	TU_URS_chernobog_development = {
+		icon = GFX_decision_generic_construction
+
+		allowed = {
+			original_tag = URS
+		}
+
+		visible = {
+			has_completed_focus = TU_URS_infection_policy
+		}
+
+		available = {
+			has_completed_focus = TU_URS_infection_policy
+			41 = {
+				is_owned_and_controlled_by = ROOT
+			}
+		}
+
+		cost = 50
+		fire_only_once = yes
+
+		complete_effect = {
+			41 = {
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+				}
+				add_building_construction = {
+					type = infrastructure
+					level = 1
+					instant_build = yes
+				}
+			}
+			set_country_flag = TU_DEC_TU_URS_chernobog_development
+		}
+
+		ai_will_do = {
+			base = 1
+		}
+	}
+
+	TU_URS_chernobog_reconstruction = {
+		icon = GFX_decision_generic_construction
+
+		allowed = {
+			original_tag = URS
+		}
+
+		visible = {
+			has_completed_focus = TU_URS_chernobog_garrison
+		}
+
+		available = {
+			has_completed_focus = TU_URS_chernobog_garrison
+			has_global_flag = TU_chernobog_incident_resolved
+			41 = {
+				is_owned_and_controlled_by = ROOT
+			}
+		}
+
+		cost = 75
+		fire_only_once = yes
+
+		complete_effect = {
+			41 = {
+				add_building_construction = {
+					type = arms_factory
+					level = 1
+					instant_build = yes
+				}
+				add_extra_state_shared_building_slots = 1
+			}
+			set_country_flag = TU_DEC_TU_URS_chernobog_reconstruction
+		}
+
+		ai_will_do = {
+			base = 1
+		}
+	}
+
+	TU_URS_chernobog_core = {
+		icon = GFX_decision_generic_construction
+
+		allowed = {
+			original_tag = URS
+		}
+
+		visible = {
+			has_completed_focus = TU_URS_chernobog_fortress
+		}
+
+		available = {
+			has_completed_focus = TU_URS_chernobog_fortress
+			41 = {
+				is_owned_and_controlled_by = ROOT
+			}
+		}
+
+		cost = 75
+		fire_only_once = yes
+
+		complete_effect = {
+			41 = {
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+				}
+				add_building_construction = {
+					type = infrastructure
+					level = 1
+					instant_build = yes
+				}
+			}
+			set_country_flag = TU_DEC_TU_URS_chernobog_core
+		}
+
+		ai_will_do = {
+			base = 1
+		}
+	}
+
+	TU_URS_palace_rebuild = {
+		icon = GFX_decision_generic_construction
+
+		allowed = {
+			original_tag = URS
+		}
+
+		visible = {
+			has_completed_focus = TU_URS_sovereign_seal
+		}
+
+		available = {
+			has_completed_focus = TU_URS_sovereign_seal
+		}
+
+		cost = 50
+		fire_only_once = yes
+
+		complete_effect = {
+			random_owned_controlled_state = {
+				limit = {
+					impassable = no
+					free_building_slots = {
+						building = industrial_complex
+						size > 0
+						include_locked = yes
+					}
+				}
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+				}
+			}
+			add_political_power = 30
+			set_country_flag = TU_DEC_TU_URS_palace_rebuild
+		}
+
+		ai_will_do = {
+			base = 1
+		}
+	}
+
+	TU_URS_capital_railway_build = {
+		icon = GFX_decision_generic_construction
+
+		allowed = {
+			original_tag = URS
+		}
+
+		visible = {
+			has_completed_focus = TU_URS_capital_railway_plan
+		}
+
+		available = {
+			has_completed_focus = TU_URS_capital_railway_plan
+		}
+
+		cost = 50
+		fire_only_once = yes
+
+		complete_effect = {
+			random_owned_controlled_state = {
+				limit = {
+					impassable = no
+					free_building_slots = {
+						building = industrial_complex
+						size > 0
+						include_locked = yes
+					}
+				}
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+				}
+			}
+			add_political_power = 15
+			set_country_flag = TU_DEC_TU_URS_capital_railway_build
+		}
+
+		ai_will_do = {
+			base = 1
+		}
+	}
+
+	TU_URS_capital_factory_belt = {
+		icon = GFX_decision_generic_construction
+
+		allowed = {
+			original_tag = URS
+		}
+
+		visible = {
+			has_completed_focus = TU_URS_imperial_express
+		}
+
+		available = {
+			has_completed_focus = TU_URS_imperial_express
+		}
+
+		cost = 50
+		fire_only_once = yes
+
+		complete_effect = {
+			random_owned_controlled_state = {
+				limit = {
+					impassable = no
+					free_building_slots = {
+						building = industrial_complex
+						size > 0
+						include_locked = yes
+					}
+				}
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+				}
+			}
+			random_owned_controlled_state = {
+				limit = {
+					impassable = no
+					free_building_slots = {
+						building = industrial_complex
+						size > 0
+						include_locked = yes
+					}
+				}
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+				}
+			}
+			set_country_flag = TU_DEC_TU_URS_capital_factory_belt
+		}
+
+		ai_will_do = {
+			base = 1
+		}
+	}
+
+	TU_URS_eastern_rail_link = {
+		icon = GFX_decision_generic_construction
+
+		allowed = {
+			original_tag = URS
+		}
+
+		visible = {
+			has_completed_focus = TU_URS_frozen_supply_line
+		}
+
+		available = {
+			has_completed_focus = TU_URS_frozen_supply_line
+		}
+
+		cost = 50
+		fire_only_once = yes
+
+		complete_effect = {
+			random_owned_controlled_state = {
+				limit = {
+					impassable = no
+					free_building_slots = {
+						building = industrial_complex
+						size > 0
+						include_locked = yes
+					}
+				}
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+				}
+			}
+			add_political_power = 20
+			set_country_flag = TU_DEC_TU_URS_eastern_rail_link
+		}
+
+		ai_will_do = {
+			base = 1
+		}
+	}
+
+	TU_URS_war_production = {
+		icon = GFX_decision_generic_construction
+
+		allowed = {
+			original_tag = URS
+		}
+
+		visible = {
+			has_completed_focus = TU_URS_total_war_economy
+		}
+
+		available = {
+			has_completed_focus = TU_URS_total_war_economy
+		}
+
+		cost = 50
+		fire_only_once = yes
+
+		complete_effect = {
+			random_owned_controlled_state = {
+				limit = {
+					impassable = no
+					free_building_slots = {
+						building = arms_factory
+						size > 0
+						include_locked = yes
+					}
+				}
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = arms_factory
+					level = 1
+					instant_build = yes
+				}
+			}
+			add_political_power = 15
+			set_country_flag = TU_DEC_TU_URS_war_production
+		}
+
+		ai_will_do = {
+			base = 1
+		}
+	}
+
+	TU_URS_militarise_state = {
+		icon = GFX_decision_generic_construction
+
+		allowed = {
+			original_tag = URS
+		}
+
+		visible = {
+			has_completed_focus = TU_URS_standing_junta
+		}
+
+		available = {
+			has_completed_focus = TU_URS_standing_junta
+		}
+
+		cost = 50
+		fire_only_once = yes
+
+		complete_effect = {
+			random_owned_controlled_state = {
+				limit = {
+					impassable = no
+					free_building_slots = {
+						building = industrial_complex
+						size > 0
+						include_locked = yes
+					}
+				}
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+				}
+			}
+			add_political_power = 20
+			set_country_flag = TU_DEC_TU_URS_militarise_state
+		}
+
+		ai_will_do = {
+			base = 1
+		}
+	}
+
+	TU_URS_arms_factories = {
+		icon = GFX_decision_generic_construction
+
+		allowed = {
+			original_tag = URS
+		}
+
+		visible = {
+			has_completed_focus = TU_URS_war_bonds
+		}
+
+		available = {
+			has_completed_focus = TU_URS_war_bonds
+			NOT = { has_completed_focus = TU_URS_rationing }
+		}
+
+		cost = 50
+		fire_only_once = yes
+
+		complete_effect = {
+			random_owned_controlled_state = {
+				limit = {
+					impassable = no
+					free_building_slots = {
+						building = arms_factory
+						size > 0
+						include_locked = yes
+					}
+				}
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = arms_factory
+					level = 1
+					instant_build = yes
+				}
+			}
+			random_owned_controlled_state = {
+				limit = {
+					impassable = no
+					free_building_slots = {
+						building = arms_factory
+						size > 0
+						include_locked = yes
+					}
+				}
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = arms_factory
+					level = 1
+					instant_build = yes
+				}
+			}
+			set_country_flag = TU_DEC_TU_URS_arms_factories
+		}
+
+		ai_will_do = {
+			base = 1
+		}
+	}
+
+	TU_URS_mobile_factory_city = {
+		icon = GFX_decision_generic_construction
+
+		allowed = {
+			original_tag = URS
+		}
+
+		visible = {
+			has_completed_focus = TU_URS_siege_engines
+		}
+
+		available = {
+			has_completed_focus = TU_URS_siege_engines
+		}
+
+		cost = 50
+		fire_only_once = yes
+
+		complete_effect = {
+			random_owned_controlled_state = {
+				limit = {
+					impassable = no
+					free_building_slots = {
+						building = industrial_complex
+						size > 0
+						include_locked = yes
+					}
+				}
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+				}
+			}
+			add_political_power = 15
+			set_country_flag = TU_DEC_TU_URS_mobile_factory_city
+		}
+
+		ai_will_do = {
+			base = 1
+		}
+	}
+
+	TU_URS_noble_factories = {
+		icon = GFX_decision_generic_construction
+
+		allowed = {
+			original_tag = URS
+		}
+
+		visible = {
+			has_completed_focus = TU_URS_noble_compromise
+		}
+
+		available = {
+			has_completed_focus = TU_URS_noble_compromise
+		}
+
+		cost = 50
+		fire_only_once = yes
+
+		complete_effect = {
+			add_offsite_building = {
+				type = industrial_complex
+				level = 1
+			}
+			set_country_flag = TU_DEC_TU_URS_noble_factories
+		}
+
+		ai_will_do = {
+			base = 1
+		}
+	}
+
+	TU_URS_noble_estate_law = {
+		icon = GFX_decision_generic_construction
+
+		allowed = {
+			original_tag = URS
+		}
+
+		visible = {
+			has_completed_focus = TU_URS_noble_governors
+		}
+
+		available = {
+			has_completed_focus = TU_URS_noble_governors
+		}
+
+		cost = 50
+		fire_only_once = yes
+
+		complete_effect = {
+			random_owned_controlled_state = {
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+				}
+			}
+			set_country_flag = TU_DEC_TU_URS_noble_estate_law
+		}
+
+		ai_will_do = {
+			base = 1
+		}
+	}
+
+	TU_URS_noble_trade_routes = {
+		icon = GFX_decision_generic_construction
+
+		allowed = {
+			original_tag = URS
+		}
+
+		visible = {
+			has_completed_focus = TU_URS_noble_free_trade
+		}
+
+		available = {
+			has_completed_focus = TU_URS_noble_free_trade
+		}
+
+		cost = 50
+		fire_only_once = yes
+
+		complete_effect = {
+			random_owned_controlled_state = {
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+				}
+			}
+			set_country_flag = TU_DEC_TU_URS_noble_trade_routes
+		}
+
+		ai_will_do = {
+			base = 1
+		}
+	}
+
+	TU_URS_noble_cartel_factories = {
+		icon = GFX_decision_generic_construction
+
+		allowed = {
+			original_tag = URS
+		}
+
+		visible = {
+			OR = {
+				has_completed_focus = TU_URS_noble_cartel_monopoly
+				has_completed_focus = TU_URS_noble_free_trade
+			}
+		}
+
+		available = {
+			OR = {
+				has_completed_focus = TU_URS_noble_cartel_monopoly
+				has_completed_focus = TU_URS_noble_free_trade
+			}
+		}
+
+		cost = 50
+		fire_only_once = yes
+
+		complete_effect = {
+			random_owned_controlled_state = {
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+				}
+			}
+			set_country_flag = TU_DEC_TU_URS_noble_cartel_factories
+		}
+
+		ai_will_do = {
+			base = 1
+		}
+	}
+
+	TU_URS_noble_cartel_arsenal = {
+		icon = GFX_decision_generic_construction
+
+		allowed = {
+			original_tag = URS
+		}
+
+		visible = {
+			has_completed_focus = TU_URS_noble_cartel_standard
+		}
+
+		available = {
+			has_completed_focus = TU_URS_noble_cartel_standard
+		}
+
+		cost = 50
+		fire_only_once = yes
+
+		complete_effect = {
+			random_owned_controlled_state = {
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+				}
+			}
+			set_country_flag = TU_DEC_TU_URS_noble_cartel_arsenal
+		}
+
+		ai_will_do = {
+			base = 1
+		}
+	}
+
+	TU_URS_noble_mobile_settlement = {
+		icon = GFX_decision_generic_construction
+
+		allowed = {
+			original_tag = URS
+		}
+
+		visible = {
+			has_completed_focus = TU_URS_noble_mobile_survey
+		}
+
+		available = {
+			has_completed_focus = TU_URS_noble_mobile_survey
+			NOT = { has_completed_focus = TU_URS_noble_caravan_route }
+		}
+
+		cost = 50
+		fire_only_once = yes
+
+		complete_effect = {
+			random_owned_controlled_state = {
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+				}
+			}
+			set_country_flag = TU_DEC_TU_URS_noble_mobile_settlement
+		}
+
+		ai_will_do = {
+			base = 1
+		}
+	}
+
+	TU_URS_noble_mobile_factory = {
+		icon = GFX_decision_generic_construction
+
+		allowed = {
+			original_tag = URS
+		}
+
+		visible = {
+			OR = {
+				has_country_flag = TU_DEC_TU_URS_noble_mobile_settlement
+				has_completed_focus = TU_URS_noble_caravan_route
+			}
+		}
+
+		available = {
+			OR = {
+				has_country_flag = TU_DEC_TU_URS_noble_mobile_settlement
+				has_completed_focus = TU_URS_noble_caravan_route
+			}
+		}
+
+		cost = 50
+		fire_only_once = yes
+
+		complete_effect = {
+			random_owned_controlled_state = {
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+				}
+			}
+			set_country_flag = TU_DEC_TU_URS_noble_mobile_factory
+		}
+
+		ai_will_do = {
+			base = 1
+		}
+	}
+
+	TU_URS_reform_monarch_assembly = {
+		icon = GFX_decision_generic_construction
+
+		allowed = {
+			original_tag = URS
+		}
+
+		visible = {
+			has_completed_focus = TU_URS_reform_crown_councils
+		}
+
+		available = {
+			has_completed_focus = TU_URS_reform_crown_councils
+		}
+
+		cost = 50
+		fire_only_once = yes
+
+		complete_effect = {
+			random_owned_controlled_state = {
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+				}
+			}
+			set_country_flag = TU_DEC_TU_URS_reform_monarch_assembly
+		}
+
+		ai_will_do = {
+			base = 1
+		}
+	}
+
+	TU_URS_reform_infected_hospitals = {
+		icon = GFX_decision_generic_construction
+
+		allowed = {
+			original_tag = URS
+		}
+
+		visible = {
+			OR = {
+				has_completed_focus = TU_URS_reform_infected_labour_rights
+				has_completed_focus = TU_URS_reform_infected_guild
+			}
+		}
+
+		available = {
+			OR = {
+				has_completed_focus = TU_URS_reform_infected_labour_rights
+				has_completed_focus = TU_URS_reform_infected_guild
+			}
+		}
+
+		cost = 50
+		fire_only_once = yes
+
+		complete_effect = {
+			random_owned_controlled_state = {
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+				}
+			}
+			add_stability = 0.02
+			set_country_flag = TU_DEC_TU_URS_reform_infected_hospitals
+		}
+
+		ai_will_do = {
+			base = 1
+		}
+	}
+
+	TU_URS_w1_kzd_long_term = {
+		icon = GFX_decision_generic_construction
+
+		allowed = {
+			original_tag = URS
+		}
+
+		visible = {
+			has_completed_focus = TU_URS_w1_kzd_core_integration
+		}
+
+		available = {
+			has_completed_focus = TU_URS_w1_kzd_core_integration
+		}
+
+		cost = 75
+		fire_only_once = yes
+
+		complete_effect = {
+			add_political_power = 50
+			every_owned_state = {
+				limit = {
+					is_owned_and_controlled_by = ROOT
+					has_state_flag = TU_URS_w1_kzd_integrated
+				}
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+				}
+				add_building_construction = {
+					type = infrastructure
+					level = 1
+				}
+			}
+			set_country_flag = TU_DEC_TU_URS_w1_kzd_long_term
+		}
+
+		ai_will_do = {
+			base = 1
+		}
+	}
+
+	TU_URS_w1_vic_long_term = {
+		icon = GFX_decision_generic_construction
+
+		allowed = {
+			original_tag = URS
+		}
+
+		visible = {
+			has_completed_focus = TU_URS_w1_vic_core_integration
+		}
+
+		available = {
+			has_completed_focus = TU_URS_w1_vic_core_integration
+		}
+
+		cost = 75
+		fire_only_once = yes
+
+		complete_effect = {
+			add_political_power = 50
+			every_owned_state = {
+				limit = {
+					is_owned_and_controlled_by = ROOT
+					has_state_flag = TU_URS_w1_vic_integrated
+				}
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+				}
+				add_building_construction = {
+					type = infrastructure
+					level = 1
+				}
+			}
+			set_country_flag = TU_DEC_TU_URS_w1_vic_long_term
+		}
+
+		ai_will_do = {
+			base = 1
+		}
+	}
+
+	TU_URS_w1_lei_long_term = {
+		icon = GFX_decision_generic_construction
+
+		allowed = {
+			original_tag = URS
+		}
+
+		visible = {
+			has_completed_focus = TU_URS_w1_lei_core_integration
+		}
+
+		available = {
+			has_completed_focus = TU_URS_w1_lei_core_integration
+		}
+
+		cost = 75
+		fire_only_once = yes
+
+		complete_effect = {
+			add_political_power = 50
+			every_owned_state = {
+				limit = {
+					is_owned_and_controlled_by = ROOT
+					has_state_flag = TU_URS_w1_lei_integrated
+				}
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+				}
+				add_building_construction = {
+					type = infrastructure
+					level = 1
+				}
+			}
+			set_country_flag = TU_DEC_TU_URS_w1_lei_long_term
+		}
+
+		ai_will_do = {
+			base = 1
+		}
+	}
+
+	TU_URS_w2_yan_long_term = {
+		icon = GFX_decision_generic_construction
+
+		allowed = {
+			original_tag = URS
+		}
+
+		visible = {
+			has_completed_focus = TU_URS_w2_yan_core_integration
+		}
+
+		available = {
+			has_completed_focus = TU_URS_w2_yan_core_integration
+		}
+
+		cost = 75
+		fire_only_once = yes
+
+		complete_effect = {
+			add_political_power = 50
+			every_owned_state = {
+				limit = {
+					is_owned_and_controlled_by = ROOT
+					has_state_flag = TU_URS_w2_yan_integrated
+				}
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+				}
+				add_building_construction = {
+					type = infrastructure
+					level = 1
+				}
+			}
+			set_country_flag = TU_DEC_TU_URS_w2_yan_long_term
+		}
+
+		ai_will_do = {
+			base = 1
+		}
+	}
+
+	TU_URS_w2_lgm_long_term = {
+		icon = GFX_decision_generic_construction
+
+		allowed = {
+			original_tag = URS
+		}
+
+		visible = {
+			has_completed_focus = TU_URS_w2_lgm_core_integration
+		}
+
+		available = {
+			has_completed_focus = TU_URS_w2_lgm_core_integration
+		}
+
+		cost = 75
+		fire_only_once = yes
+
+		complete_effect = {
+			add_political_power = 50
+			every_owned_state = {
+				limit = {
+					is_owned_and_controlled_by = ROOT
+					has_state_flag = TU_URS_w2_lgm_integrated
+				}
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+				}
+				add_building_construction = {
+					type = infrastructure
+					level = 1
+				}
+			}
+			set_country_flag = TU_DEC_TU_URS_w2_lgm_long_term
+		}
+
+		ai_will_do = {
+			base = 1
+		}
+	}
+
+	TU_URS_w2_hig_long_term = {
+		icon = GFX_decision_generic_construction
+
+		allowed = {
+			original_tag = URS
+		}
+
+		visible = {
+			has_completed_focus = TU_URS_w2_hig_core_integration
+		}
+
+		available = {
+			has_completed_focus = TU_URS_w2_hig_core_integration
+		}
+
+		cost = 75
+		fire_only_once = yes
+
+		complete_effect = {
+			add_political_power = 50
+			every_owned_state = {
+				limit = {
+					is_owned_and_controlled_by = ROOT
+					has_state_flag = TU_URS_w2_hig_integrated
+				}
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+				}
+				add_building_construction = {
+					type = infrastructure
+					level = 1
+				}
+			}
+			set_country_flag = TU_DEC_TU_URS_w2_hig_long_term
+		}
+
+		ai_will_do = {
+			base = 1
+		}
+	}
+
+	TU_URS_w3_infi_drilling = {
+		icon = GFX_decision_generic_construction
+
+		allowed = {
+			original_tag = URS
+		}
+
+		visible = {
+			has_completed_focus = TU_URS_w3_infi_entry
+		}
+
+		available = {
+			has_completed_focus = TU_URS_w3_infi_entry
+			NOT = { has_completed_focus = TU_URS_w3_infi_survey }
+		}
+
+		cost = 50
+		fire_only_once = yes
+
+		complete_effect = {
+			random_owned_controlled_state = {
+				limit = {
+					is_core_of = ROOT
+				}
+				add_resource = {
+					type = tungsten
+					amount = 10
+				}
+			}
+			set_country_flag = TU_DEC_TU_URS_w3_infi_drilling
+		}
+
+		ai_will_do = {
+			base = 1
+		}
+	}
+
+	TU_URS_w3_infi_mining = {
+		icon = GFX_decision_generic_construction
+
+		allowed = {
+			original_tag = URS
+		}
+
+		visible = {
+			has_country_flag = TU_DEC_TU_URS_w3_infi_drilling
+		}
+
+		available = {
+			has_country_flag = TU_DEC_TU_URS_w3_infi_drilling
+		}
+
+		cost = 50
+		fire_only_once = yes
+
+		complete_effect = {
+			random_owned_controlled_state = {
+				limit = {
+					is_core_of = ROOT
+				}
+				add_resource = {
+					type = aluminium
+					amount = 10
+				}
+			}
+			set_country_flag = TU_DEC_TU_URS_w3_infi_mining
+		}
+
+		ai_will_do = {
+			base = 1
+		}
+	}
+
+	TU_URS_w3_infi_mine_vein = {
+		icon = GFX_decision_generic_construction
+
+		allowed = {
+			original_tag = URS
+		}
+
+		visible = {
+			has_completed_focus = TU_URS_w3_infi_pipeline
+		}
+
+		available = {
+			has_completed_focus = TU_URS_w3_infi_pipeline
+		}
+
+		cost = 50
+		fire_only_once = yes
+
+		complete_effect = {
+			random_owned_controlled_state = {
+				limit = {
+					is_core_of = ROOT
+				}
+				add_resource = {
+					type = steel
+					amount = 15
+				}
+			}
+			add_political_power = 25
+			set_country_flag = TU_DEC_TU_URS_w3_infi_mine_vein
+		}
+
+		ai_will_do = {
+			base = 1
+		}
+	}
+
+	TU_URS_w3_infi_resource_mobilization = {
+		icon = GFX_decision_generic_construction
+
+		allowed = {
+			original_tag = URS
+		}
+
+		visible = {
+			has_country_flag = TU_DEC_TU_URS_w3_infi_mine_vein
+		}
+
+		available = {
+			has_country_flag = TU_DEC_TU_URS_w3_infi_mine_vein
+		}
+
+		cost = 50
+		fire_only_once = yes
+
+		complete_effect = {
+			random_owned_controlled_state = {
+				limit = {
+					is_core_of = ROOT
+				}
+				add_resource = {
+					type = oil
+					amount = 10
+				}
+			}
+			add_war_support = 0.03
+			set_country_flag = TU_DEC_TU_URS_w3_infi_resource_mobilization
+		}
+
+		ai_will_do = {
+			base = 1
+		}
+	}
+}

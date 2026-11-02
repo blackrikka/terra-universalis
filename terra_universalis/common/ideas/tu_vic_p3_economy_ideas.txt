@@ -1,0 +1,173 @@
+ideas = {
+
+	country = {
+		TU_VIC_eco_dock_guild = {
+			picture = generic_production_bonus
+
+			allowed = {
+				original_tag = VIC
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			modifier = {
+				industrial_capacity_dockyard = 0.1
+				production_speed_dockyard_factor = 0.1
+			}
+		}
+
+		TU_VIC_eco_titan_ascent = {
+			picture = generic_production_bonus
+
+			allowed = {
+				original_tag = VIC
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			modifier = {
+				production_factory_max_efficiency_factor = 0.05
+				production_speed_industrial_complex_factor = 0.1
+			}
+		}
+
+		TU_VIC_eco_knight_doctrine = {
+			picture = generic_army_europe_1
+
+			allowed = {
+				original_tag = VIC
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			modifier = {
+				army_core_attack_factor = 0.05
+				army_core_defence_factor = 0.05
+			}
+		}
+
+		TU_VIC_eco_steam_core = {
+			picture = generic_army_europe_2
+
+			allowed = {
+				original_tag = VIC
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			modifier = {
+				army_attack_factor = 0.05
+				army_morale_factor = 0.05
+			}
+		}
+
+		TU_VIC_eco_steam_champions = {
+			picture = generic_morale_bonus
+
+			allowed = {
+				original_tag = VIC
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			modifier = {
+				army_org_factor = 0.1
+				army_defence_factor = 0.05
+			}
+		}
+
+		TU_VIC_eco_coastal_fleet = {
+			picture = generic_sea_focused_navy
+
+			allowed = {
+				original_tag = VIC
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			modifier = {
+				naval_doctrine_cost_factor = -0.1
+				naval_strike_attack_factor = 0.05
+			}
+		}
+
+		TU_VIC_eco_skyward_ministry = {
+			picture = generic_air_europe_2
+
+			allowed = {
+				original_tag = VIC
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			modifier = {
+				air_doctrine_cost_factor = -0.1
+				production_speed_air_base_factor = 0.1
+			}
+		}
+
+		TU_VIC_eco_jet_age = {
+			picture = generic_air_europe_2
+
+			allowed = {
+				original_tag = VIC
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			modifier = {
+				air_agility_factor = 0.1
+				air_attack_factor = 0.05
+			}
+		}
+
+		TU_VIC_eco_research_lab = {
+			picture = generic_research_bonus
+
+			allowed = {
+				original_tag = VIC
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			modifier = {
+				research_speed_factor = 0.1
+			}
+		}
+
+		TU_VIC_eco_knowledge_hall = {
+			picture = generic_research_bonus
+
+			allowed = {
+				original_tag = VIC
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			modifier = {
+				research_speed_factor = 0.05
+				political_power_factor = 0.05
+			}
+		}
+	}
+}

@@ -1,0 +1,36 @@
+characters = {
+
+	TU_URS_p3_noble_marshal = {
+		name = TU_URS_p3_noble_marshal
+		portraits = {
+			civilian = {
+				large = "GFX_Portrait_Europe_Generic_2"
+			}
+		}
+		corps_commander = {
+			traits = { old_guard politically_connected }
+			skill = 3
+			attack_skill = 2
+			defense_skill = 4
+			planning_skill = 3
+			logistics_skill = 2
+		}
+	}
+
+	TU_URS_p3_estate_warden = {
+		name = TU_URS_p3_estate_warden
+		portraits = {
+			civilian = {
+				large = "GFX_Portrait_Europe_Generic_3"
+			}
+		}
+		corps_commander = {
+			traits = { harsh_leader trickster }
+			skill = 2
+			attack_skill = 3
+			defense_skill = 3
+			planning_skill = 2
+			logistics_skill = 3
+		}
+	}
+}

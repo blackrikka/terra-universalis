@@ -1,0 +1,21 @@
+state={
+	id=566
+	name="STATE_566"
+	impassable = yes
+	manpower = 1000
+
+	state_category = wasteland
+
+	history={
+		owner = URS
+		buildings = {
+			infrastructure = 0
+		}
+		add_core_of = URS
+	}
+
+	provinces={
+		2270 2274 2276 2279 2281 2282 2284 2285 2293
+	}
+	local_supplies=0.0
+}

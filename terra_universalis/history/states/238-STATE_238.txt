@@ -1,0 +1,21 @@
+state={
+	id=238
+	name="STATE_238"
+	manpower = 50000
+
+	state_category = town
+
+	history={
+		owner = COL
+		victory_points = { 1170 1 }
+		buildings = {
+			infrastructure = 2
+		}
+		add_core_of = COL
+	}
+
+	provinces={
+		1150 1160 1166 1170 1173 1174 1177
+	}
+	local_supplies=0.0
+}

@@ -1,0 +1,12 @@
+capital = 41
+set_research_slots = 3
+set_politics = { ruling_party = neutrality last_election = "1096.1.1" election_frequency = 48 elections_allowed = no }
+set_popularities = { neutrality = 100 }
+# REU: appended to history/countries/REU - Reunion.txt by build_countries.py.
+# REU is dynamic: it has no states at start (state 41 belongs to URS). The state, units and
+# ideas come in with the Chernobog incident (events/tu_crisis_chernobog.txt).
+# neutrality ruling party, popularity and capital are written by build_countries.py.
+recruit_character = TU_REU_talulah
+recruit_character = TU_REU_frostnova
+recruit_character = TU_REU_patriot
+recruit_character = TU_REU_skullshatterer

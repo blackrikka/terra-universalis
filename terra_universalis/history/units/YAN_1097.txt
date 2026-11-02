@@ -1,0 +1,19 @@
+# Yan OOB. Templates only: the starting units are created by
+# TU_YAN_startup (tu_yan_effects.txt) in the capital and adjacent states.
+
+division_template = {
+	name = "TU_YAN_infantry"
+	division_names_group = TU_DIVNAMES_FALLBACK
+
+	regiments = {
+		infantry = { x = 0 y = 0 }
+		infantry = { x = 0 y = 1 }
+		infantry = { x = 0 y = 2 }
+		infantry = { x = 1 y = 0 }
+		infantry = { x = 1 y = 1 }
+		infantry = { x = 1 y = 2 }
+	}
+}
+
+units = {
+}

@@ -1,0 +1,336 @@
+	#### ARTS RESEARCH (x 30) vs CONVENTIONAL RESEARCH (x 32) (mutually exclusive) ####
+	focus = {
+		id = TU_URS_arts_engineering
+		icon = GFX_goal_generic_scientific_exchange
+		prerequisite = { focus = TU_URS_arts_research_root }
+		mutually_exclusive = { focus = TU_URS_arts_conventional }
+		x = 30
+		y = 1
+		cost = 10
+
+		search_filters = { FOCUS_FILTER_RESEARCH }
+
+		ai_will_do = {
+			base = 1
+		}
+
+		completion_reward = {
+			add_tech_bonus = {
+				name = TU_URS_e3_arts_engineering_bonus
+				bonus = 1.0
+				uses = 1
+				category = electronics
+			}
+			add_political_power = 25
+		}
+	}
+
+	focus = {
+		id = TU_URS_arts_conventional
+		icon = GFX_goal_generic_construction
+		prerequisite = { focus = TU_URS_arts_research_root }
+		mutually_exclusive = { focus = TU_URS_arts_engineering }
+		x = 32
+		y = 1
+		cost = 10
+
+		search_filters = { FOCUS_FILTER_RESEARCH }
+
+		ai_will_do = {
+			base = 1
+		}
+
+		completion_reward = {
+			add_tech_bonus = {
+				name = TU_URS_e3_conventional_bonus
+				bonus = 0.5
+				uses = 1
+				category = air_doctrine
+			}
+		}
+	}
+
+	focus = {
+		id = TU_URS_arts_lab
+		icon = GFX_goal_generic_scientific_exchange
+		prerequisite = { focus = TU_URS_arts_engineering }
+		x = 30
+		y = 2
+		cost = 10
+
+		search_filters = { FOCUS_FILTER_RESEARCH }
+
+		ai_will_do = {
+			base = 1
+		}
+
+		available = {
+			has_completed_focus = TU_URS_reform_path
+		}
+
+		completion_reward = {
+			add_tech_bonus = {
+				name = TU_URS_e3_arts_lab_bonus
+				bonus = 0.5
+				uses = 1
+				category = radar_tech
+			}
+			add_ideas = TU_URS_e3_arts_research
+		}
+	}
+
+	#### FROZEN AIR FORCE (x 28) ####
+	focus = {
+		id = TU_URS_frozen_airfield
+		icon = GFX_goal_generic_build_airforce
+		prerequisite = { focus = TU_URS_arts_research_root }
+		x = 28
+		y = 1
+		cost = 10
+
+		search_filters = { FOCUS_FILTER_AIR_XP }
+
+		ai_will_do = {
+			base = 1
+		}
+
+		completion_reward = {
+			air_experience = 25
+			add_political_power = 25
+		}
+	}
+
+	focus = {
+		id = TU_URS_frozen_pilots
+		icon = GFX_goal_generic_air_fighter
+		prerequisite = { focus = TU_URS_frozen_airfield }
+		x = 28
+		y = 3
+		cost = 10
+
+		search_filters = { FOCUS_FILTER_AIR_XP }
+
+		ai_will_do = {
+			base = 1
+		}
+
+		available = {
+			has_completed_focus = TU_URS_emperor_rule
+			has_country_flag = TU_DEC_TU_URS_frozen_hangar
+		}
+
+		completion_reward = {
+			air_experience = 30
+			add_ideas = TU_URS_e3_frozen_air
+		}
+	}
+
+	focus = {
+		id = TU_URS_frozen_air_doctrine
+		icon = GFX_goal_generic_air_doctrine
+		prerequisite = { focus = TU_URS_frozen_pilots }
+		x = 28
+		y = 4
+		cost = 10
+
+		search_filters = { FOCUS_FILTER_RESEARCH }
+
+		ai_will_do = {
+			base = 1
+		}
+
+		completion_reward = {
+			add_tech_bonus = {
+				name = TU_URS_e3_frozen_doctrine_bonus
+				bonus = 1.0
+				uses = 1
+				category = air_doctrine
+			}
+		}
+	}
+
+	focus = {
+		id = TU_URS_frost_interceptors
+		icon = GFX_goal_generic_air_fighter2
+		prerequisite = { focus = TU_URS_frozen_air_doctrine }
+		x = 28
+		y = 5
+		cost = 10
+
+		search_filters = { FOCUS_FILTER_AIR_XP }
+
+		ai_will_do = {
+			base = 1
+		}
+
+		completion_reward = {
+			air_experience = 20
+		}
+	}
+
+	focus = {
+		id = TU_URS_frost_supremacy
+		icon = GFX_goal_generic_CAS
+		prerequisite = { focus = TU_URS_frost_interceptors }
+		x = 28
+		y = 7
+		cost = 15
+
+		search_filters = { FOCUS_FILTER_AIR_XP }
+
+		ai_will_do = {
+			base = 1
+		}
+
+		completion_reward = {
+			air_experience = 25
+			add_ideas = TU_URS_e3_frost_supremacy
+		}
+	}
+
+	focus = {
+		id = TU_URS_frost_legacy
+		icon = GFX_goal_generic_air_production
+		prerequisite = { focus = TU_URS_frost_supremacy }
+		x = 28
+		y = 10
+		cost = 15
+
+		search_filters = { FOCUS_FILTER_RESEARCH }
+
+		ai_will_do = {
+			base = 1
+		}
+
+		completion_reward = {
+			air_experience = 20
+			add_political_power = 50
+		}
+	}
+
+	#### END OF THE FROZEN AIR LINE ####
+	focus = {
+		id = TU_URS_frost_end
+		icon = GFX_goal_generic_air_bomber
+		prerequisite = { focus = TU_URS_frost_legacy }
+		x = 28
+		y = 18
+		cost = 15
+
+		search_filters = { FOCUS_FILTER_AIR_XP }
+
+		ai_will_do = {
+			base = 1
+		}
+
+		completion_reward = {
+			air_experience = 30
+			add_political_power = 75
+			add_stability = 0.02
+		}
+	}
+
+	#### NORTHERN EXPEDITION RESEARCH (x 32-34) ####
+	focus = {
+		id = TU_URS_northern_expedition
+		icon = GFX_goal_generic_position_armies
+		prerequisite = { focus = TU_URS_arts_research_root }
+		x = 34
+		y = 2
+		cost = 10
+
+		search_filters = { FOCUS_FILTER_RESEARCH }
+
+		ai_will_do = {
+			base = 1
+		}
+
+		available = {
+			has_completed_focus = TU_URS_military_junta
+		}
+
+		completion_reward = {
+			add_tech_bonus = {
+				name = TU_URS_e3_expedition_bonus
+				bonus = 1.0
+				uses = 1
+				category = air_equipment
+			}
+			add_political_power = 25
+		}
+	}
+
+	focus = {
+		id = TU_URS_northern_recon
+		icon = GFX_goal_generic_radar
+		prerequisite = { focus = TU_URS_northern_expedition }
+		x = 34
+		y = 3
+		cost = 10
+
+		search_filters = { FOCUS_FILTER_RESEARCH }
+
+		ai_will_do = {
+			base = 1
+		}
+
+		completion_reward = {
+			add_tech_bonus = {
+				name = TU_URS_e3_recon_bonus
+				bonus = 0.5
+				uses = 1
+				category = light_air
+			}
+		}
+	}
+
+	focus = {
+		id = TU_URS_northern_bomber
+		icon = GFX_goal_generic_air_bomber
+		prerequisite = { focus = TU_URS_northern_recon }
+		mutually_exclusive = { focus = TU_URS_northern_fighter }
+		x = 34
+		y = 4
+		cost = 10
+
+		search_filters = { FOCUS_FILTER_RESEARCH }
+
+		ai_will_do = {
+			base = 1
+		}
+
+		completion_reward = {
+			add_tech_bonus = {
+				name = TU_URS_e3_bomber_bonus
+				bonus = 1.0
+				uses = 1
+				category = tactical_bomber
+			}
+		}
+	}
+
+	focus = {
+		id = TU_URS_northern_fighter
+		icon = GFX_goal_generic_air_fighter
+		prerequisite = { focus = TU_URS_northern_recon }
+		mutually_exclusive = { focus = TU_URS_northern_bomber }
+		x = 32
+		y = 4
+		cost = 10
+
+		search_filters = { FOCUS_FILTER_RESEARCH }
+
+		ai_will_do = {
+			base = 1
+		}
+
+		completion_reward = {
+			add_tech_bonus = {
+				name = TU_URS_e3_fighter_bonus
+				bonus = 1.0
+				uses = 1
+				category = air_equipment
+			}
+			add_ideas = TU_URS_e3_northern_range
+		}
+	}

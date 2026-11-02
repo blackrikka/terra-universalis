@@ -1,0 +1,95 @@
+characters = {
+
+	TU_LGM_wei_yenwu = {
+		name = TU_LGM_wei_yenwu
+		portraits = {
+			civilian = {
+				large = "GFX_TU_portrait_wei_yenwu"
+			}
+		}
+		country_leader = {
+			ideology = centrism
+			expire = "1200.1.1.1"
+			id = -1
+		}
+	}
+
+	TU_LGM_chen = {
+		name = TU_LGM_chen
+		portraits = {
+			army = {
+				large = "GFX_TU_portrait_chen"
+				small = "GFX_TU_portrait_chen_small"
+			}
+		}
+		corps_commander = {
+			traits = { }
+			skill = 3
+			attack_skill = 3
+			defense_skill = 3
+			planning_skill = 2
+			logistics_skill = 2
+			legacy_id = 0
+		}
+	}
+
+	TU_LGM_chen_leader = {
+		name = TU_LGM_chen_leader
+		portraits = {
+			civilian = {
+				large = "GFX_TU_portrait_chen"
+			}
+		}
+		country_leader = {
+			ideology = despotism
+			expire = "1200.1.1.1"
+			id = -1
+		}
+	}
+
+	TU_LGM_hoshiguma = {
+		name = TU_LGM_hoshiguma
+		portraits = {
+			civilian = {
+				small = "GFX_TU_portrait_hoshiguma_small"
+			}
+		}
+		advisor = {
+			slot = army_chief
+			idea_token = TU_LGM_hoshiguma
+			allowed = {
+				original_tag = LGM
+			}
+			traits = {
+				army_chief_defensive_2
+			}
+			cost = 150
+			ai_will_do = {
+				factor = 1
+			}
+		}
+	}
+
+	TU_LGM_swire = {
+		name = TU_LGM_swire
+		portraits = {
+			civilian = {
+				small = "GFX_TU_portrait_swire_small"
+			}
+		}
+		advisor = {
+			slot = political_advisor
+			idea_token = TU_LGM_swire
+			allowed = {
+				original_tag = LGM
+			}
+			traits = {
+				financial_expert
+			}
+			cost = 150
+			ai_will_do = {
+				factor = 1
+			}
+		}
+	}
+}

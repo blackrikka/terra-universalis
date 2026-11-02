@@ -1,0 +1,67 @@
+characters = {
+
+	TU_VIC_draco_leader = {
+		name = TU_VIC_draco_leader
+		portraits = {
+			civilian = {
+				large = "GFX_Portrait_Europe_Generic_3"
+			}
+		}
+		country_leader = {
+			ideology = fascism_ideology
+			expire = "1200.1.1.1"
+			id = -1
+		}
+	}
+
+	TU_VIC_parliament_leader = {
+		name = TU_VIC_parliament_leader
+		portraits = {
+			civilian = {
+				large = "GFX_Portrait_Europe_Generic_1"
+			}
+		}
+		country_leader = {
+			ideology = liberalism
+			expire = "1200.1.1.1"
+			id = -1
+		}
+	}
+
+	TU_VIC_gang_boss = {
+		name = TU_VIC_gang_boss
+		portraits = {
+			civilian = {
+				large = "GFX_Portrait_Europe_Generic_2"
+			}
+		}
+		corps_commander = {
+			traits = { guerilla_fighter }
+			skill = 3
+			attack_skill = 3
+			defense_skill = 3
+			planning_skill = 2
+			logistics_skill = 2
+			legacy_id = 0
+		}
+	}
+
+	TU_VIC_tara_marshal = {
+		name = TU_VIC_tara_marshal
+		portraits = {
+			civilian = {
+				large = "GFX_Portrait_Europe_Generic_3"
+			}
+		}
+		corps_commander = {
+			traits = { harsh_leader }
+			skill = 3
+			attack_skill = 3
+			defense_skill = 3
+			planning_skill = 2
+			logistics_skill = 2
+			legacy_id = 0
+		}
+	}
+
+}

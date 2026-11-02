@@ -1,0 +1,88 @@
+characters = {
+
+	TU_REU_talulah = {
+		name = TU_REU_talulah
+		portraits = {
+			civilian = {
+				large = "GFX_TU_portrait_talulah"
+			}
+		}
+		country_leader = {
+			ideology = despotism
+			expire = "1200.1.1.1"
+			id = -1
+		}
+	}
+
+	TU_REU_frostnova = {
+		name = TU_REU_frostnova
+		portraits = {
+			army = {
+				large = "GFX_TU_portrait_frostnova"
+				small = "GFX_TU_portrait_frostnova_small"
+			}
+		}
+		corps_commander = {
+			traits = { }
+			skill = 3
+			attack_skill = 4
+			defense_skill = 3
+			planning_skill = 2
+			logistics_skill = 3
+			legacy_id = 0
+		}
+	}
+
+	TU_REU_patriot = {
+		name = TU_REU_patriot
+		portraits = {
+			army = {
+				large = "GFX_TU_portrait_patriot"
+				small = "GFX_TU_portrait_patriot_small"
+			}
+		}
+		corps_commander = {
+			traits = { }
+			skill = 3
+			attack_skill = 3
+			defense_skill = 4
+			planning_skill = 3
+			logistics_skill = 2
+			legacy_id = 0
+		}
+	}
+
+	TU_REU_skullshatterer = {
+		name = TU_REU_skullshatterer
+		portraits = {
+			army = {
+				large = "GFX_TU_portrait_skullshatterer"
+				small = "GFX_TU_portrait_skullshatterer_small"
+			}
+		}
+		corps_commander = {
+			traits = { }
+			skill = 4
+			attack_skill = 4
+			defense_skill = 2
+			planning_skill = 3
+			logistics_skill = 2
+			legacy_id = 0
+		}
+	}
+
+	# Patriot's country leader role. Recruited and promoted by the patriot focus (tu_reu.txt).
+	TU_REU_patriot_leader = {
+		name = TU_REU_patriot_leader
+		portraits = {
+			civilian = {
+				large = "GFX_TU_portrait_patriot"
+			}
+		}
+		country_leader = {
+			ideology = despotism
+			expire = "1200.1.1.1"
+			id = -1
+		}
+	}
+}

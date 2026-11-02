@@ -1,0 +1,137 @@
+ideas = {
+
+	country = {
+
+		# Permanent ideas granted by P1 focuses.
+		TU_REU_guerrilla_doctrine = {
+			picture = generic_guerilla_warfare
+
+			allowed = {
+				original_tag = REU
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			modifier = {
+				army_defence_factor = 0.05
+				army_org_factor = 0.05
+			}
+		}
+
+		TU_REU_chernobog_engine_idea = {
+			picture = generic_supply_line
+
+			allowed = {
+				original_tag = REU
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			modifier = {
+				supply_consumption_factor = -0.05
+			}
+		}
+
+		TU_REU_mobilize_spirit = {
+			picture = citizen_militia_1
+
+			allowed = {
+				original_tag = REU
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			modifier = {
+				conscription_factor = 0.1
+			}
+		}
+
+		TU_REU_total_war_spirit = {
+			picture = tot_economic_mobilisation
+
+			allowed = {
+				original_tag = REU
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			modifier = {
+				army_attack_factor = 0.05
+				conscription_factor = 0.05
+			}
+		}
+
+		TU_REU_serpent_legion = {
+			picture = generic_armor
+
+			allowed = {
+				original_tag = REU
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			modifier = {
+				army_morale_factor = 0.05
+			}
+		}
+
+		# Timed ideas added by the guerrilla raid decisions (days set in the decision).
+		TU_REU_raid_supply_idea = {
+			picture = generic_supply_depot
+
+			allowed = {
+				original_tag = REU
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			modifier = {
+				army_attack_factor = 0.05
+			}
+		}
+
+		TU_REU_raid_rail_idea = {
+			picture = generic_railroads
+
+			allowed = {
+				original_tag = REU
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			modifier = {
+				army_org_factor = 0.05
+			}
+		}
+
+		TU_REU_raid_city_idea = {
+			picture = generic_morale_bonus
+
+			allowed = {
+				original_tag = REU
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			modifier = {
+				war_support_factor = 0.03
+			}
+		}
+	}
+}

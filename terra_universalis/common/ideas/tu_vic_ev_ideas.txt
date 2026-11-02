@@ -1,0 +1,39 @@
+ideas = {
+
+	country = {
+
+		# Timed idea from tu_vic_ev.24 (option b). Added with add_timed_idea, 180 days.
+		TU_VIC_ev_smuggling_trade = {
+			picture = generic_improved_industries
+
+			allowed = {
+				original_tag = VIC
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			modifier = {
+				political_power_gain = 0.05
+			}
+		}
+
+		# Timed idea from tu_vic_ev.10 (option a). Added with add_timed_idea, 120 days.
+		TU_VIC_ev_parade_pride = {
+			picture = generic_armor
+
+			allowed = {
+				original_tag = VIC
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			modifier = {
+				stability_factor = 0.03
+			}
+		}
+	}
+}

@@ -1,0 +1,47 @@
+ideas = {
+	country = {
+		TU_RHO_landship = {
+			picture = generic_volunteer_expedition_bonus
+			modifier = {
+				send_volunteers_tension = -1
+				send_volunteer_size = 4
+				send_volunteer_divisions_required = -1
+				conscription_factor = -0.5
+			}
+		}
+
+		TU_RHO_pharma_company = {
+			picture = generic_research_bonus
+			modifier = {
+				political_power_gain = 0.25
+				stability_factor = 0.1
+			}
+		}
+
+		TU_RHO_relocated = {
+			picture = generic_war_preparation
+			modifier = {
+				industrial_capacity_factory = -0.5
+			}
+		}
+
+		# Replaces TU_RHO_landship (focus TU_RHO_unlimited_volunteers)
+		TU_RHO_landship_unlimited = {
+			picture = generic_volunteer_expedition_bonus
+			modifier = {
+				send_volunteers_tension = -1
+				send_volunteer_size = 8
+				send_volunteer_divisions_required = -2
+				conscription_factor = -0.25
+			}
+		}
+
+		# Offsets the landship conscription penalty (focus TU_RHO_regular_army)
+		TU_RHO_regular_manpower = {
+			picture = generic_manpower_bonus
+			modifier = {
+				conscription_factor = 0.5
+			}
+		}
+	}
+}

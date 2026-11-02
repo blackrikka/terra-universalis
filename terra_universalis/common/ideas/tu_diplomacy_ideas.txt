@@ -1,0 +1,55 @@
+ideas = {
+
+	country = {
+
+		TU_dip_trade_partner = {
+			picture = generic_economic_increase
+
+			allowed = {
+				always = yes
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			modifier = {
+				consumer_goods_factor = -0.05
+				production_speed_buildings_factor = 0.05
+			}
+		}
+
+		TU_state_production_drive_idea = {
+			picture = generic_production_bonus
+
+			allowed = {
+				always = yes
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			modifier = {
+				production_factory_max_efficiency_factor = 0.05
+				consumer_goods_factor = -0.05
+			}
+		}
+
+		TU_state_research_grant_idea = {
+			picture = generic_research_bonus
+
+			allowed = {
+				always = yes
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			modifier = {
+				research_speed_factor = 0.05
+			}
+		}
+	}
+}

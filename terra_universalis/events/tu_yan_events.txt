@@ -1,0 +1,1102 @@
+add_namespace = tu_yan_ev
+
+# YAN national events (spec 10).
+# 1-15: focus events (country_event from the completion_reward of the focus).
+# 16-19: news events (every_country news_event from the completion_reward of the route finals).
+# 20-27: monthly random events (on_action file tu_yan_ev_on_actions.txt, country tag checked here).
+# 28-29: chain follow-ups (scheduled with days from an option of 20 and 9).
+# All events are is_triggered_only = yes.
+
+#### FOCUS EVENTS ####
+
+# Focus: TU_YAN_imperial_reform
+country_event = {
+	id = tu_yan_ev.1
+	title = tu_yan_ev.1.t
+	desc = tu_yan_ev.1.d
+	picture = GFX_report_event_generic_china
+
+	is_triggered_only = yes
+
+	option = {
+		name = tu_yan_ev.1.a
+		ai_chance = {
+			base = 60
+		}
+		add_political_power = 25
+		add_stability = 0.02
+		add_timed_idea = {
+			idea = TU_YAN_ev_idea_court_unity
+			days = 90
+		}
+	}
+
+	option = {
+		name = tu_yan_ev.1.b
+		ai_chance = {
+			base = 30
+		}
+		add_political_power = 15
+		add_stability = 0.01
+	}
+
+	option = {
+		name = tu_yan_ev.1.c
+		ai_chance = {
+			base = 10
+		}
+		add_timed_idea = {
+			idea = TU_YAN_ev_idea_court_unrest
+			days = 120
+		}
+	}
+}
+
+# Focus: TU_YAN_bureaucratic_modernization
+country_event = {
+	id = tu_yan_ev.2
+	title = tu_yan_ev.2.t
+	desc = tu_yan_ev.2.d
+	picture = GFX_report_event_generic_read_write
+
+	is_triggered_only = yes
+
+	option = {
+		name = tu_yan_ev.2.a
+		ai_chance = {
+			base = 50
+		}
+		add_political_power = 25
+		add_stability = 0.02
+	}
+
+	option = {
+		name = tu_yan_ev.2.b
+		ai_chance = {
+			base = 35
+		}
+		add_political_power = 20
+		add_stability = 0.01
+	}
+
+	option = {
+		name = tu_yan_ev.2.c
+		ai_chance = {
+			base = 15
+		}
+		add_political_power = 10
+		add_timed_idea = {
+			idea = TU_YAN_ev_idea_court_unrest
+			days = 90
+		}
+	}
+}
+
+# Focus: TU_YAN_chongyue_return
+country_event = {
+	id = tu_yan_ev.3
+	title = tu_yan_ev.3.t
+	desc = tu_yan_ev.3.d
+	picture = GFX_report_event_generic_military_parade
+
+	is_triggered_only = yes
+
+	option = {
+		name = tu_yan_ev.3.a
+		ai_chance = {
+			base = 50
+		}
+		army_experience = 10
+		add_war_support = 0.02
+	}
+
+	option = {
+		name = tu_yan_ev.3.b
+		ai_chance = {
+			base = 30
+		}
+		army_experience = 20
+	}
+
+	option = {
+		name = tu_yan_ev.3.c
+		ai_chance = {
+			base = 20
+		}
+		add_political_power = 25
+		add_stability = -0.01
+	}
+}
+
+# Focus: TU_YAN_p1_throne_root
+country_event = {
+	id = tu_yan_ev.4
+	title = tu_yan_ev.4.t
+	desc = tu_yan_ev.4.d
+	picture = GFX_report_event_king_speech
+
+	is_triggered_only = yes
+
+	option = {
+		name = tu_yan_ev.4.a
+		ai_chance = {
+			base = 50
+		}
+		add_political_power = 25
+		add_timed_idea = {
+			idea = TU_YAN_ev_idea_court_unity
+			days = 90
+		}
+	}
+
+	option = {
+		name = tu_yan_ev.4.b
+		ai_chance = {
+			base = 30
+		}
+		add_political_power = 25
+		add_stability = -0.01
+	}
+
+	option = {
+		name = tu_yan_ev.4.c
+		ai_chance = {
+			base = 20
+		}
+		add_political_power = 50
+		add_stability = -0.02
+	}
+}
+
+# Focus: TU_YAN_p1_warlord_root
+country_event = {
+	id = tu_yan_ev.5
+	title = tu_yan_ev.5.t
+	desc = tu_yan_ev.5.d
+	picture = GFX_report_event_generic_army
+
+	is_triggered_only = yes
+
+	option = {
+		name = tu_yan_ev.5.a
+		ai_chance = {
+			base = 40
+		}
+		add_manpower = 20000
+		add_stability = -0.02
+	}
+
+	option = {
+		name = tu_yan_ev.5.b
+		ai_chance = {
+			base = 35
+		}
+		add_political_power = 25
+	}
+
+	option = {
+		name = tu_yan_ev.5.c
+		ai_chance = {
+			base = 15
+		}
+		army_experience = 15
+		add_stability = -0.01
+		add_war_support = 0.02
+	}
+}
+
+# Focus: TU_YAN_p1_guard_root
+country_event = {
+	id = tu_yan_ev.6
+	title = tu_yan_ev.6.t
+	desc = tu_yan_ev.6.d
+	picture = GFX_report_event_generic_parliament
+
+	is_triggered_only = yes
+
+	option = {
+		name = tu_yan_ev.6.a
+		ai_chance = {
+			base = 50
+		}
+		add_political_power = 25
+		add_stability = 0.02
+	}
+
+	option = {
+		name = tu_yan_ev.6.b
+		ai_chance = {
+			base = 30
+		}
+		add_political_power = 15
+		add_timed_idea = {
+			idea = TU_YAN_ev_idea_court_unity
+			days = 60
+		}
+	}
+
+	option = {
+		name = tu_yan_ev.6.c
+		ai_chance = {
+			base = 20
+		}
+		add_political_power = 10
+		add_timed_idea = {
+			idea = TU_YAN_ev_idea_court_unrest
+			days = 90
+		}
+	}
+}
+
+# Focus: TU_YAN_p1_spirit_root
+country_event = {
+	id = tu_yan_ev.7
+	title = tu_yan_ev.7.t
+	desc = tu_yan_ev.7.d
+	picture = GFX_report_event_generic_dancing
+
+	is_triggered_only = yes
+
+	option = {
+		name = tu_yan_ev.7.a
+		ai_chance = {
+			base = 50
+		}
+		add_political_power = 25
+		add_stability = 0.02
+		add_timed_idea = {
+			idea = TU_YAN_ev_idea_spirit_fervor
+			days = 120
+		}
+	}
+
+	option = {
+		name = tu_yan_ev.7.b
+		ai_chance = {
+			base = 25
+		}
+		add_political_power = 10
+		add_stability = -0.01
+	}
+
+	option = {
+		name = tu_yan_ev.7.c
+		ai_chance = {
+			base = 25
+		}
+		add_political_power = 25
+		army_experience = 5
+	}
+}
+
+# Focus: TU_YAN_sui_brothers_unity (Sui sibling choice)
+country_event = {
+	id = tu_yan_ev.8
+	title = tu_yan_ev.8.t
+	desc = tu_yan_ev.8.d
+	picture = GFX_report_event_generic_conference
+
+	is_triggered_only = yes
+
+	option = {
+		name = tu_yan_ev.8.a
+		ai_chance = {
+			base = 50
+		}
+		army_experience = 15
+		add_political_power = 25
+	}
+
+	option = {
+		name = tu_yan_ev.8.b
+		ai_chance = {
+			base = 30
+		}
+		add_political_power = 15
+		add_war_support = 0.02
+	}
+
+	option = {
+		name = tu_yan_ev.8.c
+		ai_chance = {
+			base = 20
+		}
+		army_experience = 25
+		add_stability = -0.01
+	}
+}
+
+# Focus: TU_YAN_lungmen_policy
+country_event = {
+	id = tu_yan_ev.9
+	title = tu_yan_ev.9.t
+	desc = tu_yan_ev.9.d
+	picture = GFX_report_event_asian_politicians
+
+	is_triggered_only = yes
+
+	option = {
+		name = tu_yan_ev.9.a
+		ai_chance = {
+			base = 50
+		}
+		add_political_power = 15
+		add_stability = 0.01
+		country_event = { id = tu_yan_ev.29 days = 60 }
+	}
+
+	option = {
+		name = tu_yan_ev.9.b
+		ai_chance = {
+			base = 30
+		}
+		add_political_power = 25
+		add_stability = -0.01
+	}
+
+	option = {
+		name = tu_yan_ev.9.c
+		ai_chance = {
+			base = 20
+		}
+		add_political_power = 10
+	}
+}
+
+# Focus: TU_YAN_lungmen_annex
+country_event = {
+	id = tu_yan_ev.10
+	title = tu_yan_ev.10.t
+	desc = tu_yan_ev.10.d
+	picture = GFX_report_event_gathering_protest
+
+	is_triggered_only = yes
+
+	option = {
+		name = tu_yan_ev.10.a
+		ai_chance = {
+			base = 25
+		}
+		army_experience = 10
+		add_stability = -0.02
+		add_war_support = 0.02
+	}
+
+	option = {
+		name = tu_yan_ev.10.b
+		ai_chance = {
+			base = 40
+		}
+		add_political_power = 10
+		add_stability = 0.01
+	}
+
+	option = {
+		name = tu_yan_ev.10.c
+		ai_chance = {
+			base = 20
+		}
+		add_political_power = -10
+		add_stability = 0.02
+	}
+}
+
+# Focus: TU_YAN_lungmen_trade_pact
+country_event = {
+	id = tu_yan_ev.11
+	title = tu_yan_ev.11.t
+	desc = tu_yan_ev.11.d
+	picture = GFX_report_event_generic_sign_treaty1
+
+	is_triggered_only = yes
+
+	option = {
+		name = tu_yan_ev.11.a
+		ai_chance = {
+			base = 50
+		}
+		add_political_power = 25
+		add_stability = 0.01
+	}
+
+	option = {
+		name = tu_yan_ev.11.b
+		ai_chance = {
+			base = 25
+		}
+		add_political_power = 25
+		add_stability = -0.01
+	}
+
+	option = {
+		name = tu_yan_ev.11.c
+		ai_chance = {
+			base = 20
+		}
+		add_political_power = 5
+	}
+}
+
+# Focus: TU_YAN_lgm_autonomy_charter
+country_event = {
+	id = tu_yan_ev.12
+	title = tu_yan_ev.12.t
+	desc = tu_yan_ev.12.d
+	picture = GFX_report_event_generic_sign_treaty2
+
+	is_triggered_only = yes
+
+	option = {
+		name = tu_yan_ev.12.a
+		ai_chance = {
+			base = 50
+		}
+		add_political_power = 25
+		add_stability = 0.02
+		if = {
+			limit = {
+				country_exists = LGM
+			}
+			LGM = {
+				add_stability = 0.02
+			}
+		}
+	}
+
+	option = {
+		name = tu_yan_ev.12.b
+		ai_chance = {
+			base = 30
+		}
+		add_political_power = 10
+		add_war_support = 0.01
+	}
+
+	option = {
+		name = tu_yan_ev.12.c
+		ai_chance = {
+			base = 15
+		}
+		army_experience = 10
+		add_stability = -0.02
+	}
+}
+
+# Focus: TU_YAN_ex_sui_accord
+country_event = {
+	id = tu_yan_ev.13
+	title = tu_yan_ev.13.t
+	desc = tu_yan_ev.13.d
+	picture = GFX_report_event_generic_handshake
+
+	is_triggered_only = yes
+
+	option = {
+		name = tu_yan_ev.13.a
+		ai_chance = {
+			base = 50
+		}
+		add_political_power = 25
+		add_stability = 0.02
+		add_timed_idea = {
+			idea = TU_YAN_ev_idea_court_unity
+			days = 120
+		}
+	}
+
+	option = {
+		name = tu_yan_ev.13.b
+		ai_chance = {
+			base = 30
+		}
+		add_political_power = 15
+	}
+
+	option = {
+		name = tu_yan_ev.13.c
+		ai_chance = {
+			base = 15
+		}
+		army_experience = 15
+		add_stability = -0.02
+	}
+}
+
+# Focus: TU_YAN_industrial_awakening
+country_event = {
+	id = tu_yan_ev.14
+	title = tu_yan_ev.14.t
+	desc = tu_yan_ev.14.d
+	picture = GFX_report_event_generic_factory
+
+	is_triggered_only = yes
+
+	option = {
+		name = tu_yan_ev.14.a
+		ai_chance = {
+			base = 50
+		}
+		add_political_power = 25
+		add_stability = 0.01
+	}
+
+	option = {
+		name = tu_yan_ev.14.b
+		ai_chance = {
+			base = 30
+		}
+		add_manpower = 20000
+		add_stability = -0.01
+	}
+
+	option = {
+		name = tu_yan_ev.14.c
+		ai_chance = {
+			base = 25
+		}
+		add_political_power = 15
+		add_stability = 0.02
+		add_timed_idea = {
+			idea = TU_YAN_ev_idea_court_unity
+			days = 60
+		}
+	}
+}
+
+# Focus: TU_YAN_p1_throne_lungmen
+country_event = {
+	id = tu_yan_ev.15
+	title = tu_yan_ev.15.t
+	desc = tu_yan_ev.15.d
+	picture = GFX_report_event_generic_train
+
+	is_triggered_only = yes
+
+	option = {
+		name = tu_yan_ev.15.a
+		ai_chance = {
+			base = 50
+		}
+		add_political_power = 25
+	}
+
+	option = {
+		name = tu_yan_ev.15.b
+		ai_chance = {
+			base = 25
+		}
+		add_stability = -0.01
+		add_war_support = 0.01
+	}
+
+	option = {
+		name = tu_yan_ev.15.c
+		ai_chance = {
+			base = 30
+		}
+		add_political_power = 10
+		add_stability = 0.01
+	}
+}
+
+#### NEWS EVENTS (route finals, every_country news_event) ####
+
+# Focus: TU_YAN_p1_throne_seal
+news_event = {
+	id = tu_yan_ev.16
+	title = tu_yan_ev.16.t
+	desc = tu_yan_ev.16.d
+	picture = GFX_news_event_king_speech
+
+	major = yes
+
+	is_triggered_only = yes
+
+	option = {
+		name = tu_yan_ev.16.a
+	}
+}
+
+# Focus: TU_YAN_p1_warlord_empire
+news_event = {
+	id = tu_yan_ev.17
+	title = tu_yan_ev.17.t
+	desc = tu_yan_ev.17.d
+	picture = GFX_news_event_generic_army
+
+	major = yes
+
+	is_triggered_only = yes
+
+	option = {
+		name = tu_yan_ev.17.a
+	}
+}
+
+# Focus: TU_YAN_p1_guard_republic
+news_event = {
+	id = tu_yan_ev.18
+	title = tu_yan_ev.18.t
+	desc = tu_yan_ev.18.d
+	picture = GFX_news_event_generic_parliament
+
+	major = yes
+
+	is_triggered_only = yes
+
+	option = {
+		name = tu_yan_ev.18.a
+	}
+}
+
+# Focus: TU_YAN_p1_spirit_theocracy
+news_event = {
+	id = tu_yan_ev.19
+	title = tu_yan_ev.19.t
+	desc = tu_yan_ev.19.d
+	picture = GFX_news_event_generic_rally_3
+
+	major = yes
+
+	is_triggered_only = yes
+
+	option = {
+		name = tu_yan_ev.19.a
+	}
+}
+
+#### MONTHLY RANDOM EVENTS (fired from tu_yan_ev_on_actions.txt) ####
+
+# Court rumors. Chain: option a schedules 28.
+country_event = {
+	id = tu_yan_ev.20
+	title = tu_yan_ev.20.t
+	desc = tu_yan_ev.20.d
+	picture = GFX_report_event_generic_read_write
+
+	is_triggered_only = yes
+
+	trigger = {
+		tag = YAN
+		NOT = { has_country_flag = TU_YAN_ev_cd_court_gossip }
+	}
+
+	option = {
+		name = tu_yan_ev.20.a
+		ai_chance = {
+			base = 40
+		}
+		add_political_power = 10
+		set_country_flag = { flag = TU_YAN_ev_cd_court_gossip value = 1 days = 180 }
+		country_event = { id = tu_yan_ev.28 days = 30 }
+	}
+
+	option = {
+		name = tu_yan_ev.20.b
+		ai_chance = {
+			base = 30
+		}
+		add_stability = -0.01
+		set_country_flag = { flag = TU_YAN_ev_cd_court_gossip value = 1 days = 180 }
+	}
+
+	option = {
+		name = tu_yan_ev.20.c
+		ai_chance = {
+			base = 15
+		}
+		add_political_power = 25
+		add_stability = -0.02
+		set_country_flag = { flag = TU_YAN_ev_cd_court_gossip value = 1 days = 180 }
+	}
+}
+
+# Merchants on the Grand Canal.
+country_event = {
+	id = tu_yan_ev.21
+	title = tu_yan_ev.21.t
+	desc = tu_yan_ev.21.d
+	picture = GFX_report_event_generic_truck
+
+	is_triggered_only = yes
+
+	trigger = {
+		tag = YAN
+		NOT = { has_country_flag = TU_YAN_ev_cd_canal }
+	}
+
+	option = {
+		name = tu_yan_ev.21.a
+		ai_chance = {
+			base = 40
+		}
+		add_stability = 0.02
+		add_political_power = -10
+		set_country_flag = { flag = TU_YAN_ev_cd_canal value = 1 days = 120 }
+	}
+
+	option = {
+		name = tu_yan_ev.21.b
+		ai_chance = {
+			base = 40
+		}
+		add_political_power = 15
+		set_country_flag = { flag = TU_YAN_ev_cd_canal value = 1 days = 120 }
+	}
+
+	option = {
+		name = tu_yan_ev.21.c
+		ai_chance = {
+			base = 20
+		}
+		add_political_power = 25
+		add_stability = -0.01
+		set_country_flag = { flag = TU_YAN_ev_cd_canal value = 1 days = 120 }
+	}
+}
+
+# Mobile city caravan. Needs the rail network decision flag.
+country_event = {
+	id = tu_yan_ev.22
+	title = tu_yan_ev.22.t
+	desc = tu_yan_ev.22.d
+	picture = GFX_report_event_generic_construction_site
+
+	is_triggered_only = yes
+
+	trigger = {
+		tag = YAN
+		has_country_flag = TU_DEC_TU_YAN_rail_network
+		NOT = { has_country_flag = TU_YAN_ev_cd_mobile }
+	}
+
+	option = {
+		name = tu_yan_ev.22.a
+		ai_chance = {
+			base = 40
+		}
+		add_manpower = 10000
+		add_stability = 0.01
+		set_country_flag = { flag = TU_YAN_ev_cd_mobile value = 1 days = 180 }
+	}
+
+	option = {
+		name = tu_yan_ev.22.b
+		ai_chance = {
+			base = 35
+		}
+		add_political_power = 10
+		set_country_flag = { flag = TU_YAN_ev_cd_mobile value = 1 days = 180 }
+	}
+
+	option = {
+		name = tu_yan_ev.22.c
+		ai_chance = {
+			base = 15
+		}
+		army_experience = 10
+		add_stability = -0.01
+		set_country_flag = { flag = TU_YAN_ev_cd_mobile value = 1 days = 180 }
+	}
+}
+
+# Originium vein discovered in the mountains.
+country_event = {
+	id = tu_yan_ev.23
+	title = tu_yan_ev.23.t
+	desc = tu_yan_ev.23.d
+	picture = GFX_report_event_generic_research_lab
+
+	is_triggered_only = yes
+
+	trigger = {
+		tag = YAN
+		NOT = { has_country_flag = TU_YAN_ev_cd_ore }
+	}
+
+	option = {
+		name = tu_yan_ev.23.a
+		ai_chance = {
+			base = 35
+		}
+		add_political_power = 25
+		add_stability = -0.01
+		set_country_flag = { flag = TU_YAN_ev_cd_ore value = 1 days = 240 }
+	}
+
+	option = {
+		name = tu_yan_ev.23.b
+		ai_chance = {
+			base = 40
+		}
+		add_political_power = 10
+		add_stability = 0.02
+		set_country_flag = { flag = TU_YAN_ev_cd_ore value = 1 days = 240 }
+	}
+
+	option = {
+		name = tu_yan_ev.23.c
+		ai_chance = {
+			base = 25
+		}
+		add_political_power = 15
+		army_experience = 10
+		set_country_flag = { flag = TU_YAN_ev_cd_ore value = 1 days = 240 }
+	}
+}
+
+# Frontier governor memorial.
+country_event = {
+	id = tu_yan_ev.24
+	title = tu_yan_ev.24.t
+	desc = tu_yan_ev.24.d
+	picture = GFX_report_event_generic_china
+
+	is_triggered_only = yes
+
+	trigger = {
+		tag = YAN
+		NOT = { has_country_flag = TU_YAN_ev_cd_governor }
+	}
+
+	option = {
+		name = tu_yan_ev.24.a
+		ai_chance = {
+			base = 40
+		}
+		add_stability = 0.02
+		add_political_power = -10
+		set_country_flag = { flag = TU_YAN_ev_cd_governor value = 1 days = 150 }
+	}
+
+	option = {
+		name = tu_yan_ev.24.b
+		ai_chance = {
+			base = 35
+		}
+		add_manpower = 10000
+		add_stability = -0.01
+		set_country_flag = { flag = TU_YAN_ev_cd_governor value = 1 days = 150 }
+	}
+
+	option = {
+		name = tu_yan_ev.24.c
+		ai_chance = {
+			base = 15
+		}
+		add_stability = -0.02
+		add_political_power = 10
+		set_country_flag = { flag = TU_YAN_ev_cd_governor value = 1 days = 150 }
+	}
+}
+
+# Festival of the spirits.
+country_event = {
+	id = tu_yan_ev.25
+	title = tu_yan_ev.25.t
+	desc = tu_yan_ev.25.d
+	picture = GFX_report_event_royal_parade
+
+	is_triggered_only = yes
+
+	trigger = {
+		tag = YAN
+		NOT = { has_country_flag = TU_YAN_ev_cd_festival }
+	}
+
+	option = {
+		name = tu_yan_ev.25.a
+		ai_chance = {
+			base = 40
+		}
+		add_stability = 0.02
+		add_timed_idea = {
+			idea = TU_YAN_ev_idea_spirit_fervor
+			days = 90
+		}
+		set_country_flag = { flag = TU_YAN_ev_cd_festival value = 1 days = 365 }
+	}
+
+	option = {
+		name = tu_yan_ev.25.b
+		ai_chance = {
+			base = 35
+		}
+		add_political_power = 15
+		set_country_flag = { flag = TU_YAN_ev_cd_festival value = 1 days = 365 }
+	}
+
+	option = {
+		name = tu_yan_ev.25.c
+		ai_chance = {
+			base = 15
+		}
+		add_stability = -0.02
+		add_political_power = 10
+		set_country_flag = { flag = TU_YAN_ev_cd_festival value = 1 days = 365 }
+	}
+}
+
+# Rumors of infection on the frontier.
+country_event = {
+	id = tu_yan_ev.26
+	title = tu_yan_ev.26.t
+	desc = tu_yan_ev.26.d
+	picture = GFX_report_event_generic_riot
+
+	is_triggered_only = yes
+
+	trigger = {
+		tag = YAN
+		NOT = { has_country_flag = TU_YAN_ev_cd_rumor }
+	}
+
+	option = {
+		name = tu_yan_ev.26.a
+		ai_chance = {
+			base = 40
+		}
+		add_stability = 0.01
+		add_political_power = 10
+		set_country_flag = { flag = TU_YAN_ev_cd_rumor value = 1 days = 180 }
+	}
+
+	option = {
+		name = tu_yan_ev.26.b
+		ai_chance = {
+			base = 30
+		}
+		add_stability = -0.01
+		army_experience = 5
+		set_country_flag = { flag = TU_YAN_ev_cd_rumor value = 1 days = 180 }
+	}
+
+	option = {
+		name = tu_yan_ev.26.c
+		ai_chance = {
+			base = 25
+		}
+		add_stability = -0.02
+		set_country_flag = { flag = TU_YAN_ev_cd_rumor value = 1 days = 180 }
+	}
+}
+
+# Letters from the three brothers. Only while the warlord route is taken.
+country_event = {
+	id = tu_yan_ev.27
+	title = tu_yan_ev.27.t
+	desc = tu_yan_ev.27.d
+	picture = GFX_report_event_generic_read_write
+
+	is_triggered_only = yes
+
+	trigger = {
+		tag = YAN
+		has_country_flag = TU_YAN_route_warlord
+		NOT = { has_country_flag = TU_YAN_ev_cd_letters }
+	}
+
+	option = {
+		name = tu_yan_ev.27.a
+		ai_chance = {
+			base = 40
+		}
+		add_political_power = 20
+		add_stability = 0.01
+		set_country_flag = { flag = TU_YAN_ev_cd_letters value = 1 days = 180 }
+	}
+
+	option = {
+		name = tu_yan_ev.27.b
+		ai_chance = {
+			base = 30
+		}
+		add_war_support = 0.02
+		add_stability = -0.01
+		set_country_flag = { flag = TU_YAN_ev_cd_letters value = 1 days = 180 }
+	}
+
+	option = {
+		name = tu_yan_ev.27.c
+		ai_chance = {
+			base = 35
+		}
+		add_political_power = 15
+		army_experience = 10
+		set_country_flag = { flag = TU_YAN_ev_cd_letters value = 1 days = 180 }
+	}
+}
+
+#### CHAIN FOLLOW-UPS (scheduled by 20 and 9) ####
+
+# Chain 1 stage 2: scheduled 30 days after 20 (option a).
+country_event = {
+	id = tu_yan_ev.28
+	title = tu_yan_ev.28.t
+	desc = tu_yan_ev.28.d
+	picture = GFX_report_event_generic_ruins
+
+	is_triggered_only = yes
+
+	option = {
+		name = tu_yan_ev.28.a
+		ai_chance = {
+			base = 40
+		}
+		add_political_power = 25
+		add_stability = 0.01
+	}
+
+	option = {
+		name = tu_yan_ev.28.b
+		ai_chance = {
+			base = 35
+		}
+		add_stability = 0.02
+		add_political_power = 5
+	}
+
+	option = {
+		name = tu_yan_ev.28.c
+		ai_chance = {
+			base = 25
+		}
+		add_political_power = 15
+	}
+}
+
+# Chain 2 stage 2: scheduled 60 days after 9 (option a).
+country_event = {
+	id = tu_yan_ev.29
+	title = tu_yan_ev.29.t
+	desc = tu_yan_ev.29.d
+	picture = GFX_report_event_generic_strike
+
+	is_triggered_only = yes
+
+	option = {
+		name = tu_yan_ev.29.a
+		ai_chance = {
+			base = 40
+		}
+		add_stability = 0.02
+		add_political_power = -10
+	}
+
+	option = {
+		name = tu_yan_ev.29.b
+		ai_chance = {
+			base = 30
+		}
+		add_stability = -0.02
+		army_experience = 10
+	}
+
+	option = {
+		name = tu_yan_ev.29.c
+		ai_chance = {
+			base = 30
+		}
+		add_political_power = 20
+	}
+}

@@ -1,0 +1,487 @@
+# Rhodes Island (RHO) p2_operations decisions.
+# Categories: categories/tu_rho_ext_categories.txt (expansion); tu_converted_categories.txt (diplomacy, construction).
+# Each decision is visible and available after its unlocking focus (has_completed_focus).
+
+TU_RHO_construction_category = {
+
+	TU_RHO_act_build_arms = {
+		icon = GFX_decision_generic_factory
+		allowed = { original_tag = RHO }
+		visible = {
+			has_completed_focus = TU_RHO_ops_riic_arms_build
+		}
+		available = {
+			has_completed_focus = TU_RHO_ops_riic_arms_build
+		}
+		cost = 40
+		fire_only_once = yes
+		ai_will_do = {
+			base = 1
+		}
+		complete_effect = {
+			add_offsite_building = { type = arms_factory level = 1 }
+		}
+	}
+
+	TU_RHO_act_build_industry = {
+		icon = GFX_decision_generic_industry
+		allowed = { original_tag = RHO }
+		visible = {
+			has_completed_focus = TU_RHO_ops_riic_industry_build
+		}
+		available = {
+			has_completed_focus = TU_RHO_ops_riic_industry_build
+		}
+		cost = 40
+		fire_only_once = yes
+		ai_will_do = {
+			base = 1
+		}
+		complete_effect = {
+			add_offsite_building = { type = industrial_complex level = 1 }
+		}
+	}
+
+	TU_RHO_act_build_dock = {
+		icon = GFX_decision_generic_naval
+		allowed = { original_tag = RHO }
+		visible = {
+			has_completed_focus = TU_RHO_ops_riic_dock_build
+		}
+		available = {
+			has_completed_focus = TU_RHO_ops_riic_dock_build
+		}
+		cost = 45
+		fire_only_once = yes
+		ai_will_do = {
+			base = 1
+		}
+		complete_effect = {
+			add_offsite_building = { type = dockyard level = 1 }
+		}
+	}
+
+	TU_RHO_act_build_arms2 = {
+		icon = GFX_decision_generic_factory
+		allowed = { original_tag = RHO }
+		visible = {
+			has_completed_focus = TU_RHO_ops_riic_arms_plan
+		}
+		available = {
+			has_completed_focus = TU_RHO_ops_riic_arms_plan
+		}
+		cost = 60
+		fire_only_once = yes
+		ai_will_do = {
+			base = 1
+		}
+		complete_effect = {
+			add_offsite_building = { type = arms_factory level = 2 }
+		}
+	}
+
+	TU_RHO_act_build_industry2 = {
+		icon = GFX_decision_generic_industry
+		allowed = { original_tag = RHO }
+		visible = {
+			has_completed_focus = TU_RHO_ops_riic_industry_plan
+		}
+		available = {
+			has_completed_focus = TU_RHO_ops_riic_industry_plan
+		}
+		cost = 60
+		fire_only_once = yes
+		ai_will_do = {
+			base = 1
+		}
+		complete_effect = {
+			add_offsite_building = { type = industrial_complex level = 2 }
+		}
+	}
+
+	TU_RHO_act_build_dorm = {
+		icon = GFX_decision_generic_civil_support
+		allowed = { original_tag = RHO }
+		visible = {
+			has_completed_focus = TU_RHO_ops_riic_dorm_plan
+		}
+		available = {
+			has_completed_focus = TU_RHO_ops_riic_dorm_plan
+		}
+		cost = 30
+		fire_only_once = yes
+		ai_will_do = {
+			base = 1
+		}
+		complete_effect = {
+			add_manpower = 1000
+			add_stability = 0.01
+		}
+	}
+
+	TU_RHO_act_build_hub = {
+		icon = GFX_decision_generic_construction
+		allowed = { original_tag = RHO }
+		visible = {
+			has_completed_focus = TU_RHO_ops_riic_logistics_build
+		}
+		available = {
+			has_completed_focus = TU_RHO_ops_riic_logistics_build
+		}
+		cost = 35
+		fire_only_once = yes
+		ai_will_do = {
+			base = 1
+		}
+		complete_effect = {
+			add_timed_idea = { idea = TU_RHO_idea_riic_rush days = 90 }
+		}
+	}
+
+}
+
+TU_RHO_diplomacy_category = {
+
+	TU_RHO_act_kzd_envoy = {
+		icon = GFX_decision_generic_political_discourse
+		allowed = { original_tag = RHO }
+		visible = {
+			has_completed_focus = TU_RHO_ops_dip_kzd
+			country_exists = KZD
+		}
+		available = {
+			has_completed_focus = TU_RHO_ops_dip_kzd
+			country_exists = KZD
+		}
+		cost = 30
+		fire_only_once = yes
+		ai_will_do = {
+			base = 1
+		}
+		complete_effect = {
+			add_opinion_modifier = { target = KZD modifier = improve_relation }
+		}
+	}
+
+	TU_RHO_act_yan_envoy = {
+		icon = GFX_decision_generic_political_discourse
+		allowed = { original_tag = RHO }
+		visible = {
+			has_completed_focus = TU_RHO_ops_dip_yan
+			country_exists = YAN
+		}
+		available = {
+			has_completed_focus = TU_RHO_ops_dip_yan
+			country_exists = YAN
+		}
+		cost = 30
+		fire_only_once = yes
+		ai_will_do = {
+			base = 1
+		}
+		complete_effect = {
+			add_opinion_modifier = { target = YAN modifier = attache_sent }
+		}
+	}
+
+	TU_RHO_act_urs_envoy = {
+		icon = GFX_decision_generic_political_discourse
+		allowed = { original_tag = RHO }
+		visible = {
+			has_completed_focus = TU_RHO_ops_dip_urs
+			country_exists = URS
+		}
+		available = {
+			has_completed_focus = TU_RHO_ops_dip_urs
+			country_exists = URS
+		}
+		cost = 30
+		fire_only_once = yes
+		ai_will_do = {
+			base = 1
+		}
+		complete_effect = {
+			add_opinion_modifier = { target = URS modifier = improve_relation }
+		}
+	}
+
+	TU_RHO_act_vic_envoy = {
+		icon = GFX_decision_generic_political_discourse
+		allowed = { original_tag = RHO }
+		visible = {
+			has_completed_focus = TU_RHO_ops_dip_vic
+			country_exists = VIC
+		}
+		available = {
+			has_completed_focus = TU_RHO_ops_dip_vic
+			country_exists = VIC
+		}
+		cost = 30
+		fire_only_once = yes
+		ai_will_do = {
+			base = 1
+		}
+		complete_effect = {
+			add_opinion_modifier = { target = VIC modifier = improve_relation }
+		}
+	}
+
+	TU_RHO_act_col_guarantee = {
+		icon = GFX_decision_generic_army_support
+		allowed = { original_tag = RHO }
+		visible = {
+			has_completed_focus = TU_RHO_ops_dip_col
+			country_exists = COL
+		}
+		available = {
+			has_completed_focus = TU_RHO_ops_dip_col
+			country_exists = COL
+			NOT = { has_war_with = COL }
+		}
+		cost = 60
+		fire_only_once = yes
+		ai_will_do = {
+			factor = 0
+		}
+		complete_effect = {
+			give_guarantee = COL
+		}
+	}
+
+	TU_RHO_act_kzd_guarantee = {
+		icon = GFX_decision_generic_army_support
+		allowed = { original_tag = RHO }
+		visible = {
+			has_completed_focus = TU_RHO_ops_dip_guarantee
+			country_exists = KZD
+		}
+		available = {
+			has_completed_focus = TU_RHO_ops_dip_guarantee
+			country_exists = KZD
+			NOT = { has_war_with = KZD }
+		}
+		cost = 60
+		fire_only_once = yes
+		ai_will_do = {
+			factor = 0
+		}
+		complete_effect = {
+			give_guarantee = KZD
+		}
+	}
+
+	TU_RHO_act_urs_access = {
+		icon = GFX_decision_generic_political_address
+		allowed = { original_tag = RHO }
+		visible = {
+			has_completed_focus = TU_RHO_ops_dip_alliance
+			country_exists = URS
+		}
+		available = {
+			has_completed_focus = TU_RHO_ops_dip_alliance
+			country_exists = URS
+			NOT = { has_war_with = URS }
+		}
+		cost = 40
+		fire_only_once = yes
+		ai_will_do = {
+			base = 1
+		}
+		complete_effect = {
+			diplomatic_relation = { country = URS relation = military_access active = yes }
+		}
+	}
+
+	TU_RHO_act_yan_access = {
+		icon = GFX_decision_generic_political_address
+		allowed = { original_tag = RHO }
+		visible = {
+			has_completed_focus = TU_RHO_ops_dip_alliance
+			country_exists = YAN
+		}
+		available = {
+			has_completed_focus = TU_RHO_ops_dip_alliance
+			country_exists = YAN
+			NOT = { has_war_with = YAN }
+		}
+		cost = 40
+		fire_only_once = yes
+		ai_will_do = {
+			base = 1
+		}
+		complete_effect = {
+			diplomatic_relation = { country = YAN relation = military_access active = yes }
+		}
+	}
+
+}
+
+TU_RHO_expansion_category = {
+
+	TU_RHO_act_sortie = {
+		icon = GFX_decision_generic_operation
+		allowed = { original_tag = RHO }
+		visible = {
+			has_completed_focus = TU_RHO_ops_ls_sortie_plan
+		}
+		available = {
+			has_completed_focus = TU_RHO_ops_ls_sortie_plan
+			command_power > 24
+		}
+		cost = 30
+		days_re_enable = 60
+		ai_will_do = {
+			base = 1
+		}
+		complete_effect = {
+			add_command_power = -25
+			add_timed_idea = { idea = TU_RHO_idea_sortie days = 60 }
+		}
+	}
+
+	TU_RHO_act_overhaul = {
+		icon = GFX_decision_generic_naval
+		allowed = { original_tag = RHO }
+		visible = {
+			has_completed_focus = TU_RHO_ops_ls_dock_plan
+		}
+		available = {
+			has_completed_focus = TU_RHO_ops_ls_dock_plan
+		}
+		cost = 60
+		days_re_enable = 90
+		ai_will_do = {
+			base = 1
+		}
+		complete_effect = {
+			add_timed_idea = { idea = TU_RHO_idea_overhaul days = 90 }
+		}
+	}
+
+	TU_RHO_act_jump_drill = {
+		icon = GFX_decision_generic_train
+		allowed = { original_tag = RHO }
+		visible = {
+			has_completed_focus = TU_RHO_ops_ls_jump_route
+		}
+		available = {
+			has_completed_focus = TU_RHO_ops_ls_jump_route
+			command_power > 14
+		}
+		cost = 25
+		days_re_enable = 30
+		ai_will_do = {
+			base = 1
+		}
+		complete_effect = {
+			add_command_power = -15
+			add_timed_idea = { idea = TU_RHO_idea_jump_drill days = 45 }
+		}
+	}
+
+	TU_RHO_act_rescue = {
+		icon = GFX_decision_generic_civil_support
+		allowed = { original_tag = RHO }
+		visible = {
+			has_completed_focus = TU_RHO_ops_proj_rescue_plan
+		}
+		available = {
+			has_completed_focus = TU_RHO_ops_proj_rescue_plan
+			command_power > 29
+		}
+		cost = 40
+		days_re_enable = 60
+		ai_will_do = {
+			base = 1
+		}
+		complete_effect = {
+			add_command_power = -30
+			add_timed_idea = { idea = TU_RHO_idea_rescue_morale days = 60 }
+		}
+	}
+
+	TU_RHO_act_supply = {
+		icon = GFX_decision_generic_trucks
+		allowed = { original_tag = RHO }
+		visible = {
+			has_completed_focus = TU_RHO_ops_proj_supply_plan
+		}
+		available = {
+			has_completed_focus = TU_RHO_ops_proj_supply_plan
+			command_power > 14
+		}
+		cost = 30
+		days_re_enable = 45
+		ai_will_do = {
+			base = 1
+		}
+		complete_effect = {
+			add_command_power = -15
+			add_fuel = 200
+		}
+	}
+
+	TU_RHO_act_strike = {
+		icon = GFX_decision_generic_intelligence_operation
+		allowed = { original_tag = RHO }
+		visible = {
+			has_completed_focus = TU_RHO_ops_proj_strike_plan
+		}
+		available = {
+			has_completed_focus = TU_RHO_ops_proj_strike_plan
+			command_power > 34
+		}
+		cost = 50
+		days_re_enable = 90
+		ai_will_do = {
+			base = 1
+		}
+		complete_effect = {
+			add_command_power = -35
+			add_timed_idea = { idea = TU_RHO_idea_strike_ready days = 45 }
+		}
+	}
+
+	TU_RHO_act_evac = {
+		icon = GFX_decision_generic_protection
+		allowed = { original_tag = RHO }
+		visible = {
+			has_completed_focus = TU_RHO_ops_proj_evac_plan
+		}
+		available = {
+			has_completed_focus = TU_RHO_ops_proj_evac_plan
+			command_power > 19
+		}
+		cost = 35
+		days_re_enable = 90
+		ai_will_do = {
+			base = 1
+		}
+		complete_effect = {
+			add_command_power = -20
+			add_manpower = 1000
+		}
+	}
+
+	TU_RHO_act_chernobog_aid = {
+		icon = GFX_decision_generic_operation
+		allowed = { original_tag = RHO }
+		visible = {
+			has_completed_focus = TU_RHO_ops_proj_chernobog_aid
+		}
+		available = {
+			has_completed_focus = TU_RHO_ops_proj_chernobog_aid
+			command_power > 9
+		}
+		cost = 30
+		fire_only_once = yes
+		ai_will_do = {
+			base = 1
+		}
+		complete_effect = {
+			add_command_power = -10
+			add_stability = 0.01
+		}
+	}
+
+}

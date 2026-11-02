@@ -1,0 +1,581 @@
+# REU P1 ALL decisions. Each decision is unlocked by a focus in tools/focusgen/reu/p1_all.txt.
+# Categories: expansion / diplomacy are defined in categories/tu_converted_categories.txt,
+# construction / mobilize in categories/tu_reu_ext_categories.txt.
+
+TU_REU_expansion_category = {
+
+	TU_REU_claim_north = {
+		icon = GFX_decision_generic_military
+
+		allowed = {
+			original_tag = REU
+		}
+
+		visible = {
+			has_completed_focus = TU_REU_conquest_claim_north
+		}
+
+		available = {
+			has_completed_focus = TU_REU_conquest_claim_north
+		}
+
+		cost = 50
+		fire_only_once = yes
+
+		complete_effect = {
+			add_state_claim = 34
+			add_state_claim = 35
+		}
+
+		ai_will_do = {
+			base = 1
+		}
+	}
+
+	TU_REU_claim_south = {
+		icon = GFX_decision_generic_military
+
+		allowed = {
+			original_tag = REU
+		}
+
+		visible = {
+			has_completed_focus = TU_REU_conquest_claim_south
+		}
+
+		available = {
+			has_completed_focus = TU_REU_conquest_claim_south
+		}
+
+		cost = 50
+		fire_only_once = yes
+
+		complete_effect = {
+			add_state_claim = 37
+			add_state_claim = 38
+		}
+
+		ai_will_do = {
+			base = 1
+		}
+	}
+
+	TU_REU_claim_east = {
+		icon = GFX_decision_generic_military
+
+		allowed = {
+			original_tag = REU
+		}
+
+		visible = {
+			has_completed_focus = TU_REU_conquest_claim_east
+		}
+
+		available = {
+			has_completed_focus = TU_REU_conquest_claim_east
+		}
+
+		cost = 50
+		fire_only_once = yes
+
+		complete_effect = {
+			add_state_claim = 42
+			add_state_claim = 43
+		}
+
+		ai_will_do = {
+			base = 1
+		}
+	}
+
+	# Guerrilla raids: timed ideas on REU. Each one can be used again after its cooldown.
+	TU_REU_raid_supply = {
+		icon = GFX_decision_generic_military
+
+		allowed = {
+			original_tag = REU
+		}
+
+		visible = {
+			has_completed_focus = TU_REU_guerrilla_raid_plan
+		}
+
+		available = {
+			has_completed_focus = TU_REU_guerrilla_raid_plan
+		}
+
+		cost = 25
+		days_re_enable = 90
+		fire_only_once = no
+
+		complete_effect = {
+			add_timed_idea = {
+				idea = TU_REU_raid_supply_idea
+				days = 60
+			}
+		}
+
+		ai_will_do = {
+			base = 1
+		}
+	}
+
+	TU_REU_raid_rail = {
+		icon = GFX_decision_generic_military
+
+		allowed = {
+			original_tag = REU
+		}
+
+		visible = {
+			has_completed_focus = TU_REU_guerrilla_rails
+		}
+
+		available = {
+			has_completed_focus = TU_REU_guerrilla_rails
+		}
+
+		cost = 25
+		days_re_enable = 90
+		fire_only_once = no
+
+		complete_effect = {
+			add_timed_idea = {
+				idea = TU_REU_raid_rail_idea
+				days = 45
+			}
+		}
+
+		ai_will_do = {
+			base = 1
+		}
+	}
+
+	TU_REU_raid_city = {
+		icon = GFX_decision_generic_military
+
+		allowed = {
+			original_tag = REU
+		}
+
+		visible = {
+			has_completed_focus = TU_REU_guerrilla_hideout
+		}
+
+		available = {
+			has_completed_focus = TU_REU_guerrilla_hideout
+		}
+
+		cost = 25
+		days_re_enable = 90
+		fire_only_once = no
+
+		complete_effect = {
+			add_timed_idea = {
+				idea = TU_REU_raid_city_idea
+				days = 60
+			}
+		}
+
+		ai_will_do = {
+			base = 1
+		}
+	}
+}
+
+TU_REU_construction_category = {
+
+	# Chernobog (state 41) construction. Numeric state scope.
+	TU_REU_chernobog_industry = {
+		icon = GFX_decision_generic_construction
+
+		allowed = {
+			original_tag = REU
+		}
+
+		visible = {
+			has_completed_focus = TU_REU_chernobog_reactor
+		}
+
+		available = {
+			has_completed_focus = TU_REU_chernobog_reactor
+			41 = {
+				is_owned_by = REU
+			}
+		}
+
+		cost = 25
+		fire_only_once = yes
+
+		complete_effect = {
+			41 = {
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+				}
+			}
+		}
+
+		ai_will_do = {
+			base = 1
+		}
+	}
+
+	TU_REU_chernobog_arms = {
+		icon = GFX_decision_generic_factory
+
+		allowed = {
+			original_tag = REU
+		}
+
+		visible = {
+			has_completed_focus = TU_REU_chernobog_workshop
+		}
+
+		available = {
+			has_completed_focus = TU_REU_chernobog_workshop
+			41 = {
+				is_owned_by = REU
+			}
+		}
+
+		cost = 25
+		fire_only_once = yes
+
+		complete_effect = {
+			41 = {
+				add_building_construction = {
+					type = arms_factory
+					level = 1
+					instant_build = yes
+				}
+			}
+		}
+
+		ai_will_do = {
+			base = 1
+		}
+	}
+
+	TU_REU_chernobog_rails = {
+		icon = GFX_decision_generic_construction
+
+		allowed = {
+			original_tag = REU
+		}
+
+		visible = {
+			has_completed_focus = TU_REU_chernobog_rail_link
+		}
+
+		available = {
+			has_completed_focus = TU_REU_chernobog_rail_link
+			41 = {
+				is_owned_by = REU
+			}
+		}
+
+		cost = 25
+		fire_only_once = yes
+
+		complete_effect = {
+			41 = {
+				add_building_construction = {
+					type = infrastructure
+					level = 1
+					instant_build = yes
+				}
+			}
+		}
+
+		ai_will_do = {
+			base = 1
+		}
+	}
+
+	TU_REU_chernobog_bunker = {
+		icon = GFX_decision_generic_fortification
+
+		allowed = {
+			original_tag = REU
+		}
+
+		visible = {
+			has_completed_focus = TU_REU_chernobog_bunkers
+		}
+
+		available = {
+			has_completed_focus = TU_REU_chernobog_bunkers
+			41 = {
+				is_owned_by = REU
+			}
+		}
+
+		cost = 25
+		fire_only_once = yes
+
+		complete_effect = {
+			41 = {
+				add_building_construction = {
+					type = bunker
+					level = 1
+					instant_build = yes
+				}
+			}
+		}
+
+		ai_will_do = {
+			base = 1
+		}
+	}
+
+	TU_REU_chernobog_airdefence = {
+		icon = GFX_decision_generic_fortification
+
+		allowed = {
+			original_tag = REU
+		}
+
+		visible = {
+			has_completed_focus = TU_REU_chernobog_defences
+		}
+
+		available = {
+			has_completed_focus = TU_REU_chernobog_defences
+			41 = {
+				is_owned_by = REU
+			}
+		}
+
+		cost = 25
+		fire_only_once = yes
+
+		complete_effect = {
+			41 = {
+				add_building_construction = {
+					type = anti_air_building
+					level = 1
+					instant_build = yes
+				}
+			}
+		}
+
+		ai_will_do = {
+			base = 1
+		}
+	}
+
+	TU_REU_chernobog_airbase = {
+		icon = GFX_decision_generic_construction
+
+		allowed = {
+			original_tag = REU
+		}
+
+		visible = {
+			has_completed_focus = TU_REU_chernobog_hangar
+		}
+
+		available = {
+			has_completed_focus = TU_REU_chernobog_hangar
+			41 = {
+				is_owned_by = REU
+			}
+		}
+
+		cost = 25
+		fire_only_once = yes
+
+		complete_effect = {
+			41 = {
+				add_building_construction = {
+					type = air_base
+					level = 1
+					instant_build = yes
+				}
+			}
+		}
+
+		ai_will_do = {
+			base = 1
+		}
+	}
+}
+
+TU_REU_mobilize_category = {
+
+	# Infected militia. TU_REU_militia is defined by the Chernobog incident (events/tu_crisis_chernobog.txt).
+	# Units are created in the capital (state 41 at the start), guarded by has_template.
+	TU_REU_militia_batch = {
+		icon = GFX_decision_generic_civil_support
+
+		allowed = {
+			original_tag = REU
+		}
+
+		visible = {
+			has_completed_focus = TU_REU_mobilize_units
+		}
+
+		available = {
+			has_completed_focus = TU_REU_mobilize_units
+			has_template = "TU_REU_militia"
+		}
+
+		cost = 50
+		days_re_enable = 120
+		fire_only_once = no
+
+		complete_effect = {
+			capital_scope = {
+				create_unit = {
+					division = "division_template = \"TU_REU_militia\" start_experience_factor = 0.2 start_equipment_factor = 0.7"
+					owner = REU
+					count = 4
+				}
+			}
+		}
+
+		ai_will_do = {
+			base = 1
+		}
+	}
+
+	TU_REU_wave_batch = {
+		icon = GFX_decision_generic_civil_support
+
+		allowed = {
+			original_tag = REU
+		}
+
+		visible = {
+			has_completed_focus = TU_REU_mobilize_wave2
+		}
+
+		available = {
+			has_completed_focus = TU_REU_mobilize_wave2
+			has_template = "TU_REU_militia"
+		}
+
+		cost = 75
+		days_re_enable = 120
+		fire_only_once = no
+
+		complete_effect = {
+			capital_scope = {
+				create_unit = {
+					division = "division_template = \"TU_REU_militia\" start_experience_factor = 0.2 start_equipment_factor = 0.7"
+					owner = REU
+					count = 6
+				}
+			}
+		}
+
+		ai_will_do = {
+			base = 1
+		}
+	}
+
+	TU_REU_garrison_batch = {
+		icon = GFX_decision_generic_army_support
+
+		allowed = {
+			original_tag = REU
+		}
+
+		visible = {
+			has_completed_focus = TU_REU_mobilize_guards
+		}
+
+		available = {
+			has_completed_focus = TU_REU_mobilize_guards
+			has_template = "TU_REU_militia"
+		}
+
+		cost = 25
+		days_re_enable = 60
+		fire_only_once = no
+
+		complete_effect = {
+			capital_scope = {
+				create_unit = {
+					division = "division_template = \"TU_REU_militia\" start_experience_factor = 0.3 start_equipment_factor = 0.7"
+					owner = REU
+					count = 2
+				}
+			}
+		}
+
+		ai_will_do = {
+			base = 1
+		}
+	}
+}
+
+TU_REU_diplomacy_category = {
+
+	TU_REU_envoy_kzd = {
+		icon = GFX_decision_generic_political_discourse
+
+		allowed = {
+			original_tag = REU
+		}
+
+		visible = {
+			has_completed_focus = TU_REU_dip_envoys
+		}
+
+		available = {
+			has_completed_focus = TU_REU_dip_envoys
+			country_exists = KZD
+		}
+
+		cost = 25
+		fire_only_once = yes
+
+		complete_effect = {
+			add_opinion_modifier = {
+				target = KZD
+				modifier = improve_relation
+			}
+			add_political_power = 25
+		}
+
+		ai_will_do = {
+			base = 1
+		}
+	}
+
+	TU_REU_envoy_yan = {
+		icon = GFX_decision_generic_political_discourse
+
+		allowed = {
+			original_tag = REU
+		}
+
+		visible = {
+			has_completed_focus = TU_REU_dip_envoys
+		}
+
+		available = {
+			has_completed_focus = TU_REU_dip_envoys
+			country_exists = YAN
+		}
+
+		cost = 25
+		fire_only_once = yes
+
+		complete_effect = {
+			add_opinion_modifier = {
+				target = YAN
+				modifier = improve_relation
+			}
+			add_political_power = 25
+		}
+
+		ai_will_do = {
+			base = 1
+		}
+	}
+}

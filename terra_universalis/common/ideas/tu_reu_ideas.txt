@@ -1,0 +1,55 @@
+ideas = {
+
+	country = {
+
+		TU_REU_infected_uprising = {
+			picture = generic_agrarian_society
+
+			allowed = {
+				original_tag = REU
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			modifier = {
+				conscription_factor = 0.5
+				equipment_capture_factor = 0.2
+				army_org_factor = -0.1
+			}
+		}
+
+		TU_REU_serpent_doctrine = {
+			picture = generic_army_war_college
+
+			allowed = {
+				original_tag = REU
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			modifier = {
+				army_attack_factor = 0.1
+			}
+		}
+
+		TU_REU_frost_bastion = {
+			picture = generic_fortify_the_borders
+
+			allowed = {
+				original_tag = REU
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			modifier = {
+				army_defence_factor = 0.1
+			}
+		}
+	}
+}

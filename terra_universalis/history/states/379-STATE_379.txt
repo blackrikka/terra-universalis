@@ -1,0 +1,21 @@
+state={
+	id=379
+	name="STATE_379"
+	manpower = 50000
+
+	state_category = town
+
+	history={
+		owner = SAR
+		victory_points = { 1874 1 }
+		buildings = {
+			infrastructure = 2
+		}
+		add_core_of = SAR
+	}
+
+	provinces={
+		1856 1858 1871 1874 1877
+	}
+	local_supplies=0.0
+}

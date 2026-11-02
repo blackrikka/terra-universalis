@@ -1,0 +1,895 @@
+TU_YAN_expansion_category = {
+
+	TU_YAN_claim_lgm = {
+		icon = GFX_decision_generic_military
+
+		allowed = {
+			original_tag = YAN
+		}
+
+		visible = {
+			has_completed_focus = TU_YAN_lgm_direct_survey
+		}
+
+		available = {
+			has_completed_focus = TU_YAN_lgm_direct_survey
+			NOT = { has_country_flag = TU_DEC_TU_YAN_claim_lgm }
+		}
+
+		cost = 50
+		fire_only_once = yes
+
+		complete_effect = {
+			if = {
+				limit = { country_exists = LGM }
+				hidden_effect = {
+					LGM = {
+						every_owned_state = {
+							limit = { NOT = { is_claimed_by = ROOT } }
+							ROOT = { add_state_claim = PREV }
+						}
+					}
+				}
+			}
+			add_political_power = 25
+			set_country_flag = TU_DEC_TU_YAN_claim_lgm
+		}
+
+		ai_will_do = {
+			base = 1
+		}
+	}
+
+	TU_YAN_claim_hig = {
+		icon = GFX_decision_generic_military
+
+		allowed = {
+			original_tag = YAN
+		}
+
+		visible = {
+			has_completed_focus = TU_YAN_hig_claim_focus
+		}
+
+		available = {
+			has_completed_focus = TU_YAN_hig_claim_focus
+			NOT = { has_country_flag = TU_DEC_TU_YAN_claim_hig }
+		}
+
+		cost = 50
+		fire_only_once = yes
+
+		complete_effect = {
+			if = {
+				limit = { country_exists = HIG }
+				hidden_effect = {
+					HIG = {
+						every_owned_state = {
+							limit = { NOT = { is_claimed_by = ROOT } }
+							ROOT = { add_state_claim = PREV }
+						}
+					}
+				}
+			}
+			add_political_power = 50
+			set_country_flag = TU_DEC_TU_YAN_claim_hig
+		}
+
+		ai_will_do = {
+			base = 1
+		}
+	}
+
+	TU_YAN_claim_urs = {
+		icon = GFX_decision_generic_military
+
+		allowed = {
+			original_tag = YAN
+		}
+
+		visible = {
+			has_completed_focus = TU_YAN_urs_claim_focus
+		}
+
+		available = {
+			has_completed_focus = TU_YAN_urs_claim_focus
+			NOT = { has_country_flag = TU_DEC_TU_YAN_claim_urs }
+		}
+
+		cost = 50
+		fire_only_once = yes
+
+		complete_effect = {
+			if = {
+				limit = { country_exists = URS }
+				hidden_effect = {
+					URS = {
+						every_owned_state = {
+							limit = { NOT = { is_claimed_by = ROOT } }
+							ROOT = { add_state_claim = PREV }
+						}
+					}
+				}
+			}
+			add_political_power = 50
+			set_country_flag = TU_DEC_TU_YAN_claim_urs
+		}
+
+		ai_will_do = {
+			base = 1
+		}
+	}
+
+	TU_YAN_claim_sar = {
+		icon = GFX_decision_generic_military
+
+		allowed = {
+			original_tag = YAN
+		}
+
+		visible = {
+			has_completed_focus = TU_YAN_sar_claim_focus
+		}
+
+		available = {
+			has_completed_focus = TU_YAN_sar_claim_focus
+			NOT = { has_country_flag = TU_DEC_TU_YAN_claim_sar }
+		}
+
+		cost = 50
+		fire_only_once = yes
+
+		complete_effect = {
+			if = {
+				limit = { country_exists = SAR }
+				hidden_effect = {
+					SAR = {
+						every_owned_state = {
+							limit = { NOT = { is_claimed_by = ROOT } }
+							ROOT = { add_state_claim = PREV }
+						}
+					}
+				}
+			}
+			add_political_power = 25
+			set_country_flag = TU_DEC_TU_YAN_claim_sar
+		}
+
+		ai_will_do = {
+			base = 1
+		}
+	}
+
+	TU_YAN_claim_rim = {
+		icon = GFX_decision_generic_military
+
+		allowed = {
+			original_tag = YAN
+		}
+
+		visible = {
+			has_completed_focus = TU_YAN_rim_claim_focus
+		}
+
+		available = {
+			has_completed_focus = TU_YAN_rim_claim_focus
+			NOT = { has_country_flag = TU_DEC_TU_YAN_claim_rim }
+		}
+
+		cost = 50
+		fire_only_once = yes
+
+		complete_effect = {
+			if = {
+				limit = { country_exists = RIM }
+				hidden_effect = {
+					RIM = {
+						every_owned_state = {
+							limit = { NOT = { is_claimed_by = ROOT } }
+							ROOT = { add_state_claim = PREV }
+						}
+					}
+				}
+			}
+			add_political_power = 25
+			set_country_flag = TU_DEC_TU_YAN_claim_rim
+		}
+
+		ai_will_do = {
+			base = 1
+		}
+	}
+
+	TU_YAN_claim_kzd = {
+		icon = GFX_decision_generic_military
+
+		allowed = {
+			original_tag = YAN
+		}
+
+		visible = {
+			has_completed_focus = TU_YAN_kzd_claim_focus
+		}
+
+		available = {
+			has_completed_focus = TU_YAN_kzd_claim_focus
+			NOT = { has_country_flag = TU_DEC_TU_YAN_claim_kzd }
+		}
+
+		cost = 50
+		fire_only_once = yes
+
+		complete_effect = {
+			if = {
+				limit = { country_exists = KZD }
+				hidden_effect = {
+					KZD = {
+						every_owned_state = {
+							limit = { NOT = { is_claimed_by = ROOT } }
+							ROOT = { add_state_claim = PREV }
+						}
+					}
+				}
+			}
+			add_political_power = 50
+			set_country_flag = TU_DEC_TU_YAN_claim_kzd
+		}
+
+		ai_will_do = {
+			base = 1
+		}
+	}
+
+	TU_YAN_war_hig = {
+		icon = GFX_decision_generic_military
+
+		allowed = {
+			original_tag = YAN
+		}
+
+		visible = {
+			has_completed_focus = TU_YAN_hig_war_plan
+		}
+
+		available = {
+			has_completed_focus = TU_YAN_hig_war_plan
+			has_country_flag = TU_DEC_TU_YAN_claim_hig
+			country_exists = HIG
+			NOT = { has_war_with = HIG }
+		}
+
+		cost = 100
+		fire_only_once = yes
+
+		complete_effect = {
+			if = {
+				limit = { country_exists = HIG }
+				hidden_effect = {
+					create_wargoal = {
+						type = take_claimed_state
+						target = HIG
+					}
+				}
+			}
+			set_country_flag = TU_DEC_TU_YAN_war_hig
+		}
+
+		ai_will_do = {
+			base = 1
+		}
+	}
+
+	TU_YAN_war_urs = {
+		icon = GFX_decision_generic_military
+
+		allowed = {
+			original_tag = YAN
+		}
+
+		visible = {
+			has_completed_focus = TU_YAN_urs_war_plan
+		}
+
+		available = {
+			has_completed_focus = TU_YAN_urs_war_plan
+			has_country_flag = TU_DEC_TU_YAN_claim_urs
+			country_exists = URS
+			NOT = { has_war_with = URS }
+		}
+
+		cost = 100
+		fire_only_once = yes
+
+		complete_effect = {
+			if = {
+				limit = { country_exists = URS }
+				hidden_effect = {
+					create_wargoal = {
+						type = take_claimed_state
+						target = URS
+					}
+				}
+			}
+			set_country_flag = TU_DEC_TU_YAN_war_urs
+		}
+
+		ai_will_do = {
+			base = 1
+		}
+	}
+
+	TU_YAN_war_sar = {
+		icon = GFX_decision_generic_military
+
+		allowed = {
+			original_tag = YAN
+		}
+
+		visible = {
+			has_completed_focus = TU_YAN_sar_war_plan
+		}
+
+		available = {
+			has_completed_focus = TU_YAN_sar_war_plan
+			has_country_flag = TU_DEC_TU_YAN_claim_sar
+			country_exists = SAR
+			NOT = { has_war_with = SAR }
+		}
+
+		cost = 100
+		fire_only_once = yes
+
+		complete_effect = {
+			if = {
+				limit = { country_exists = SAR }
+				hidden_effect = {
+					create_wargoal = {
+						type = take_claimed_state
+						target = SAR
+					}
+				}
+			}
+			set_country_flag = TU_DEC_TU_YAN_war_sar
+		}
+
+		ai_will_do = {
+			base = 1
+		}
+	}
+
+	TU_YAN_war_rim = {
+		icon = GFX_decision_generic_military
+
+		allowed = {
+			original_tag = YAN
+		}
+
+		visible = {
+			has_completed_focus = TU_YAN_rim_war_plan
+		}
+
+		available = {
+			has_completed_focus = TU_YAN_rim_war_plan
+			has_country_flag = TU_DEC_TU_YAN_claim_rim
+			country_exists = RIM
+			NOT = { has_war_with = RIM }
+		}
+
+		cost = 100
+		fire_only_once = yes
+
+		complete_effect = {
+			if = {
+				limit = { country_exists = RIM }
+				hidden_effect = {
+					create_wargoal = {
+						type = annex_everything
+						target = RIM
+					}
+				}
+			}
+			set_country_flag = TU_DEC_TU_YAN_war_rim
+		}
+
+		ai_will_do = {
+			base = 1
+		}
+	}
+
+	TU_YAN_war_kzd = {
+		icon = GFX_decision_generic_military
+
+		allowed = {
+			original_tag = YAN
+		}
+
+		visible = {
+			has_completed_focus = TU_YAN_kzd_war_plan
+		}
+
+		available = {
+			has_completed_focus = TU_YAN_kzd_war_plan
+			has_country_flag = TU_DEC_TU_YAN_claim_kzd
+			country_exists = KZD
+			NOT = { has_war_with = KZD }
+		}
+
+		cost = 100
+		fire_only_once = yes
+
+		complete_effect = {
+			if = {
+				limit = { country_exists = KZD }
+				hidden_effect = {
+					create_wargoal = {
+						type = take_core_state
+						target = KZD
+					}
+				}
+			}
+			set_country_flag = TU_DEC_TU_YAN_war_kzd
+		}
+
+		ai_will_do = {
+			base = 1
+		}
+	}
+}
+
+TU_YAN_diplomacy_category = {
+
+	TU_YAN_dip_lgm_envoy = {
+		icon = GFX_decision_generic_political_address
+
+		allowed = {
+			original_tag = YAN
+		}
+
+		visible = {
+			has_completed_focus = TU_YAN_lgm_envoy_hall
+		}
+
+		available = {
+			has_completed_focus = TU_YAN_lgm_envoy_hall
+			country_exists = LGM
+		}
+
+		cost = 25
+		fire_only_once = yes
+
+		complete_effect = {
+			if = {
+				limit = { country_exists = LGM }
+				add_opinion_modifier = {
+					target = LGM
+					modifier = improve_relation
+				}
+			}
+			set_country_flag = TU_DEC_TU_YAN_dip_lgm_envoy
+		}
+
+		ai_will_do = {
+			base = 1
+		}
+	}
+
+	TU_YAN_dip_hig_envoy = {
+		icon = GFX_decision_generic_political_address
+
+		allowed = {
+			original_tag = YAN
+		}
+
+		visible = {
+			has_completed_focus = TU_YAN_hig_envoy_mission
+		}
+
+		available = {
+			has_completed_focus = TU_YAN_hig_envoy_mission
+			country_exists = HIG
+		}
+
+		cost = 25
+		fire_only_once = yes
+
+		complete_effect = {
+			if = {
+				limit = { country_exists = HIG }
+				add_opinion_modifier = {
+					target = HIG
+					modifier = improve_relation
+				}
+			}
+			set_country_flag = TU_DEC_TU_YAN_dip_hig_envoy
+		}
+
+		ai_will_do = {
+			base = 1
+		}
+	}
+
+	TU_YAN_dip_hig_pact = {
+		icon = GFX_decision_generic_protection
+
+		allowed = {
+			original_tag = YAN
+		}
+
+		visible = {
+			has_completed_focus = TU_YAN_hig_non_aggression
+		}
+
+		available = {
+			has_completed_focus = TU_YAN_hig_non_aggression
+			country_exists = HIG
+		}
+
+		cost = 25
+		fire_only_once = yes
+
+		complete_effect = {
+			if = {
+				limit = { country_exists = HIG }
+				hidden_effect = {
+					diplomatic_relation = {
+						country = HIG
+						relation = non_aggression_pact
+						active = yes
+					}
+				}
+			}
+			set_country_flag = TU_DEC_TU_YAN_dip_hig_pact
+		}
+
+		ai_will_do = {
+			base = 1
+		}
+	}
+
+	TU_YAN_dip_urs_attache = {
+		icon = GFX_decision_generic_political_address
+
+		allowed = {
+			original_tag = YAN
+		}
+
+		visible = {
+			has_completed_focus = TU_YAN_urs_attache_exchange
+		}
+
+		available = {
+			has_completed_focus = TU_YAN_urs_attache_exchange
+			country_exists = URS
+		}
+
+		cost = 25
+		fire_only_once = yes
+
+		complete_effect = {
+			if = {
+				limit = { country_exists = URS }
+				add_opinion_modifier = {
+					target = URS
+					modifier = attache_sent
+				}
+			}
+			set_country_flag = TU_DEC_TU_YAN_dip_urs_attache
+		}
+
+		ai_will_do = {
+			base = 1
+		}
+	}
+
+	TU_YAN_dip_urs_access = {
+		icon = GFX_decision_generic_protection
+
+		allowed = {
+			original_tag = YAN
+		}
+
+		visible = {
+			has_completed_focus = TU_YAN_urs_military_access
+		}
+
+		available = {
+			has_completed_focus = TU_YAN_urs_military_access
+			country_exists = URS
+		}
+
+		cost = 25
+		fire_only_once = yes
+
+		complete_effect = {
+			if = {
+				limit = { country_exists = URS }
+				hidden_effect = {
+					diplomatic_relation = {
+						country = URS
+						relation = military_access
+						active = yes
+					}
+				}
+			}
+			set_country_flag = TU_DEC_TU_YAN_dip_urs_access
+		}
+
+		ai_will_do = {
+			base = 1
+		}
+	}
+
+	TU_YAN_dip_urs_pact = {
+		icon = GFX_decision_generic_political_discourse
+
+		allowed = {
+			original_tag = YAN
+		}
+
+		visible = {
+			has_completed_focus = TU_YAN_urs_pact
+		}
+
+		available = {
+			has_completed_focus = TU_YAN_urs_pact
+			country_exists = URS
+		}
+
+		cost = 25
+		fire_only_once = yes
+
+		complete_effect = {
+			if = {
+				limit = { country_exists = URS }
+				add_opinion_modifier = {
+					target = URS
+					modifier = medium_increase
+				}
+			}
+			set_country_flag = TU_DEC_TU_YAN_dip_urs_pact
+		}
+
+		ai_will_do = {
+			base = 1
+		}
+	}
+
+	TU_YAN_dip_sar_envoy = {
+		icon = GFX_decision_generic_political_address
+
+		allowed = {
+			original_tag = YAN
+		}
+
+		visible = {
+			has_completed_focus = TU_YAN_sar_envoy_court
+		}
+
+		available = {
+			has_completed_focus = TU_YAN_sar_envoy_court
+			country_exists = SAR
+		}
+
+		cost = 25
+		fire_only_once = yes
+
+		complete_effect = {
+			if = {
+				limit = { country_exists = SAR }
+				add_opinion_modifier = {
+					target = SAR
+					modifier = improve_relation
+				}
+			}
+			set_country_flag = TU_DEC_TU_YAN_dip_sar_envoy
+		}
+
+		ai_will_do = {
+			base = 1
+		}
+	}
+
+	TU_YAN_dip_sar_trade = {
+		icon = GFX_decision_generic_consumer_goods
+
+		allowed = {
+			original_tag = YAN
+		}
+
+		visible = {
+			has_completed_focus = TU_YAN_sar_trade_pact
+		}
+
+		available = {
+			has_completed_focus = TU_YAN_sar_trade_pact
+			country_exists = SAR
+		}
+
+		cost = 25
+		fire_only_once = yes
+
+		complete_effect = {
+			if = {
+				limit = { country_exists = SAR }
+				add_opinion_modifier = {
+					target = SAR
+					modifier = long_term_trade_partner
+				}
+			}
+			set_country_flag = TU_DEC_TU_YAN_dip_sar_trade
+		}
+
+		ai_will_do = {
+			base = 1
+		}
+	}
+
+	TU_YAN_dip_rim_envoy = {
+		icon = GFX_decision_generic_political_address
+
+		allowed = {
+			original_tag = YAN
+		}
+
+		visible = {
+			has_completed_focus = TU_YAN_rim_envoy
+		}
+
+		available = {
+			has_completed_focus = TU_YAN_rim_envoy
+			country_exists = RIM
+		}
+
+		cost = 25
+		fire_only_once = yes
+
+		complete_effect = {
+			if = {
+				limit = { country_exists = RIM }
+				add_opinion_modifier = {
+					target = RIM
+					modifier = improve_relation
+				}
+			}
+			set_country_flag = TU_DEC_TU_YAN_dip_rim_envoy
+		}
+
+		ai_will_do = {
+			base = 1
+		}
+	}
+
+	TU_YAN_dip_rim_guarantee = {
+		icon = GFX_decision_generic_protection
+
+		allowed = {
+			original_tag = YAN
+		}
+
+		visible = {
+			has_completed_focus = TU_YAN_rim_guarantee_offer
+		}
+
+		available = {
+			has_completed_focus = TU_YAN_rim_guarantee_offer
+			country_exists = RIM
+		}
+
+		cost = 25
+		fire_only_once = yes
+
+		complete_effect = {
+			if = {
+				limit = { country_exists = RIM }
+				give_guarantee = RIM
+			}
+			set_country_flag = TU_DEC_TU_YAN_dip_rim_guarantee
+		}
+
+		ai_will_do = {
+			base = 1
+		}
+	}
+
+	TU_YAN_dip_kzd_envoy = {
+		icon = GFX_decision_generic_political_discourse
+
+		allowed = {
+			original_tag = YAN
+		}
+
+		visible = {
+			has_completed_focus = TU_YAN_kzd_mercenary_pact
+		}
+
+		available = {
+			has_completed_focus = TU_YAN_kzd_mercenary_pact
+			country_exists = KZD
+		}
+
+		cost = 25
+		fire_only_once = yes
+
+		complete_effect = {
+			if = {
+				limit = { country_exists = KZD }
+				add_opinion_modifier = {
+					target = KZD
+					modifier = improve_relation
+				}
+			}
+			set_country_flag = TU_DEC_TU_YAN_dip_kzd_envoy
+		}
+
+		ai_will_do = {
+			base = 1
+		}
+	}
+
+	TU_YAN_dip_kzd_access = {
+		icon = GFX_decision_generic_protection
+
+		allowed = {
+			original_tag = YAN
+		}
+
+		visible = {
+			has_completed_focus = TU_YAN_kzd_access_talks
+		}
+
+		available = {
+			has_completed_focus = TU_YAN_kzd_access_talks
+			country_exists = KZD
+		}
+
+		cost = 25
+		fire_only_once = yes
+
+		complete_effect = {
+			if = {
+				limit = { country_exists = KZD }
+				hidden_effect = {
+					diplomatic_relation = {
+						country = KZD
+						relation = military_access
+						active = yes
+					}
+				}
+			}
+			set_country_flag = TU_DEC_TU_YAN_dip_kzd_access
+		}
+
+		ai_will_do = {
+			base = 1
+		}
+	}
+
+	TU_YAN_dip_imperial_edict = {
+		icon = GFX_decision_generic_political_discourse
+
+		allowed = {
+			original_tag = YAN
+		}
+
+		visible = {
+			has_completed_focus = TU_YAN_ex_mandate_edict
+		}
+
+		available = {
+			has_completed_focus = TU_YAN_ex_mandate_edict
+		}
+
+		cost = 25
+		fire_only_once = yes
+
+		complete_effect = {
+			add_stability = 0.02
+			add_war_support = 0.03
+			set_country_flag = TU_DEC_TU_YAN_dip_imperial_edict
+		}
+
+		ai_will_do = {
+			base = 1
+		}
+	}
+}

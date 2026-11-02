@@ -1,0 +1,56 @@
+ideas = {
+
+	country = {
+
+		TU_VIC_industrial_titan = {
+			picture = generic_improved_industries
+
+			allowed = {
+				original_tag = VIC
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			modifier = {
+				production_factory_max_efficiency_factor = 0.1
+				production_speed_buildings_factor = 0.1
+			}
+		}
+
+		TU_VIC_vacant_throne = {
+			picture = generic_monarchist_uprising
+
+			allowed = {
+				original_tag = VIC
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			modifier = {
+				stability_factor = -0.1
+				political_power_gain = -0.1
+			}
+		}
+
+		TU_VIC_steam_knights = {
+			picture = generic_armor
+
+			allowed = {
+				original_tag = VIC
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			modifier = {
+				army_defence_factor = 0.05
+				army_attack_factor = 0.05
+			}
+		}
+	}
+}

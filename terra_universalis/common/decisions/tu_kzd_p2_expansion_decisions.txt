@@ -1,0 +1,559 @@
+TU_KZD_expansion_category = {
+
+	TU_KZD_claim_VIC = {
+		icon = GFX_decision_generic_confiscation
+		allowed = {
+			original_tag = KZD
+		}
+		visible = {
+			has_completed_focus = TU_KZD_vic_claims
+		}
+		available = {
+			has_completed_focus = TU_KZD_vic_claims
+			country_exists = VIC
+		}
+		cost = 75
+		fire_only_once = yes
+		complete_effect = {
+			if = {
+				limit = {
+					country_exists = VIC
+				}
+				hidden_effect = {
+					VIC = {
+						every_owned_state = {
+							ROOT = {
+								add_state_claim = PREV
+							}
+						}
+					}
+				}
+			}
+			set_country_flag = TU_DEC_TU_KZD_claim_VIC
+		}
+		ai_will_do = {
+			base = 1
+		}
+	}
+
+	TU_KZD_claim_URS = {
+		icon = GFX_decision_generic_confiscation
+		allowed = {
+			original_tag = KZD
+		}
+		visible = {
+			has_completed_focus = TU_KZD_ursus_claims
+		}
+		available = {
+			has_completed_focus = TU_KZD_ursus_claims
+			country_exists = URS
+		}
+		cost = 75
+		fire_only_once = yes
+		complete_effect = {
+			if = {
+				limit = {
+					country_exists = URS
+				}
+				hidden_effect = {
+					URS = {
+						every_owned_state = {
+							ROOT = {
+								add_state_claim = PREV
+							}
+						}
+					}
+				}
+			}
+			set_country_flag = TU_DEC_TU_KZD_claim_URS
+		}
+		ai_will_do = {
+			base = 1
+		}
+	}
+
+	TU_KZD_claim_LEI = {
+		icon = GFX_decision_generic_confiscation
+		allowed = {
+			original_tag = KZD
+		}
+		visible = {
+			has_completed_focus = TU_KZD_lei_claims
+		}
+		available = {
+			has_completed_focus = TU_KZD_lei_claims
+			country_exists = LEI
+		}
+		cost = 50
+		fire_only_once = yes
+		complete_effect = {
+			if = {
+				limit = {
+					country_exists = LEI
+				}
+				hidden_effect = {
+					LEI = {
+						every_owned_state = {
+							ROOT = {
+								add_state_claim = PREV
+							}
+						}
+					}
+				}
+			}
+			set_country_flag = TU_DEC_TU_KZD_claim_LEI
+		}
+		ai_will_do = {
+			base = 1
+		}
+	}
+
+	TU_KZD_claim_REU = {
+		icon = GFX_decision_generic_confiscation
+		allowed = {
+			original_tag = KZD
+		}
+		visible = {
+			has_completed_focus = TU_KZD_reu_claims
+		}
+		available = {
+			has_completed_focus = TU_KZD_reu_claims
+			country_exists = REU
+		}
+		cost = 50
+		fire_only_once = yes
+		complete_effect = {
+			if = {
+				limit = {
+					country_exists = REU
+				}
+				hidden_effect = {
+					REU = {
+						every_owned_state = {
+							ROOT = {
+								add_state_claim = PREV
+							}
+						}
+					}
+				}
+			}
+			set_country_flag = TU_DEC_TU_KZD_claim_REU
+		}
+		ai_will_do = {
+			base = 1
+		}
+	}
+
+	TU_KZD_war_plan_VIC = {
+		icon = GFX_decision_generic_break_treaty
+		allowed = {
+			original_tag = KZD
+		}
+		visible = {
+			has_completed_focus = TU_KZD_vic_war_plan
+		}
+		available = {
+			has_completed_focus = TU_KZD_vic_war_plan
+			has_country_flag = TU_DEC_TU_KZD_claim_VIC
+			country_exists = VIC
+			NOT = { has_war_with = VIC }
+		}
+		cost = 100
+		fire_only_once = yes
+		complete_effect = {
+			if = {
+				limit = {
+					country_exists = VIC
+				}
+				hidden_effect = {
+					create_wargoal = {
+						type = annex_everything
+						target = VIC
+					}
+				}
+			}
+			set_country_flag = TU_DEC_TU_KZD_war_plan_VIC
+		}
+		ai_will_do = {
+			base = 0
+		}
+	}
+
+	TU_KZD_war_plan_URS = {
+		icon = GFX_decision_generic_break_treaty
+		allowed = {
+			original_tag = KZD
+		}
+		visible = {
+			has_completed_focus = TU_KZD_ursus_war
+		}
+		available = {
+			has_completed_focus = TU_KZD_ursus_war
+			has_country_flag = TU_DEC_TU_KZD_claim_URS
+			country_exists = URS
+			NOT = { has_war_with = URS }
+		}
+		cost = 100
+		fire_only_once = yes
+		complete_effect = {
+			if = {
+				limit = {
+					country_exists = URS
+				}
+				hidden_effect = {
+					create_wargoal = {
+						type = annex_everything
+						target = URS
+					}
+				}
+			}
+			set_country_flag = TU_DEC_TU_KZD_war_plan_URS
+		}
+		ai_will_do = {
+			base = 0
+		}
+	}
+
+	TU_KZD_war_plan_LEI = {
+		icon = GFX_decision_generic_break_treaty
+		allowed = {
+			original_tag = KZD
+		}
+		visible = {
+			has_completed_focus = TU_KZD_lei_war
+		}
+		available = {
+			has_completed_focus = TU_KZD_lei_war
+			has_country_flag = TU_DEC_TU_KZD_claim_LEI
+			country_exists = LEI
+			NOT = { has_war_with = LEI }
+		}
+		cost = 75
+		fire_only_once = yes
+		complete_effect = {
+			if = {
+				limit = {
+					country_exists = LEI
+				}
+				hidden_effect = {
+					create_wargoal = {
+						type = annex_everything
+						target = LEI
+					}
+				}
+			}
+			set_country_flag = TU_DEC_TU_KZD_war_plan_LEI
+		}
+		ai_will_do = {
+			base = 0
+		}
+	}
+
+	TU_KZD_war_plan_REU = {
+		icon = GFX_decision_generic_break_treaty
+		allowed = {
+			original_tag = KZD
+		}
+		visible = {
+			has_completed_focus = TU_KZD_reu_war
+		}
+		available = {
+			has_completed_focus = TU_KZD_reu_war
+			has_country_flag = TU_DEC_TU_KZD_claim_REU
+			country_exists = REU
+			NOT = { has_war_with = REU }
+		}
+		cost = 75
+		fire_only_once = yes
+		complete_effect = {
+			if = {
+				limit = {
+					country_exists = REU
+				}
+				hidden_effect = {
+					create_wargoal = {
+						type = annex_everything
+						target = REU
+					}
+				}
+			}
+			set_country_flag = TU_DEC_TU_KZD_war_plan_REU
+		}
+		ai_will_do = {
+			base = 0
+		}
+	}
+}
+
+TU_KZD_construction_category = {
+
+	TU_KZD_fort_wasteland = {
+		icon = GFX_decision_generic_fortification
+		allowed = {
+			original_tag = KZD
+		}
+		visible = {
+			has_completed_focus = TU_KZD_fort_wasteland_bunker
+		}
+		available = {
+			has_completed_focus = TU_KZD_fort_wasteland_bunker
+		}
+		cost = 50
+		fire_only_once = yes
+		complete_effect = {
+			random_owned_controlled_state = {
+				limit = {
+					is_owned_and_controlled_by = ROOT
+					free_building_slots = {
+						building = bunker
+						size > 0
+						include_locked = yes
+					}
+				}
+				add_building_construction = {
+					type = bunker
+					level = 2
+					instant_build = yes
+				}
+			}
+			set_country_flag = TU_DEC_TU_KZD_fort_wasteland
+		}
+		ai_will_do = {
+			base = 1
+		}
+	}
+
+	TU_KZD_arms_works = {
+		icon = GFX_decision_generic_factory
+		allowed = {
+			original_tag = KZD
+		}
+		visible = {
+			has_completed_focus = TU_KZD_fort_factory_camps
+		}
+		available = {
+			has_completed_focus = TU_KZD_fort_factory_camps
+		}
+		cost = 50
+		fire_only_once = yes
+		complete_effect = {
+			random_owned_controlled_state = {
+				limit = {
+					is_owned_and_controlled_by = ROOT
+					free_building_slots = {
+						building = arms_factory
+						size > 0
+						include_locked = yes
+					}
+				}
+				add_building_construction = {
+					type = arms_factory
+					level = 1
+					instant_build = yes
+				}
+			}
+			set_country_flag = TU_DEC_TU_KZD_arms_works
+		}
+		ai_will_do = {
+			base = 1
+		}
+	}
+
+	TU_KZD_industrial_camp = {
+		icon = GFX_decision_generic_industry
+		allowed = {
+			original_tag = KZD
+		}
+		visible = {
+			has_completed_focus = TU_KZD_fort_factory_camps
+		}
+		available = {
+			has_completed_focus = TU_KZD_fort_factory_camps
+		}
+		cost = 50
+		fire_only_once = yes
+		complete_effect = {
+			random_owned_controlled_state = {
+				limit = {
+					is_owned_and_controlled_by = ROOT
+					free_building_slots = {
+						building = industrial_complex
+						size > 0
+						include_locked = yes
+					}
+				}
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+				}
+			}
+			set_country_flag = TU_DEC_TU_KZD_industrial_camp
+		}
+		ai_will_do = {
+			base = 1
+		}
+	}
+
+	TU_KZD_raise_levies = {
+		icon = GFX_decision_generic_army_support
+		allowed = {
+			original_tag = KZD
+		}
+		visible = {
+			has_completed_focus = TU_KZD_fort_garrison
+		}
+		available = {
+			has_completed_focus = TU_KZD_fort_garrison
+		}
+		cost = 50
+		fire_only_once = no
+		days_re_enable = 60
+		complete_effect = {
+			capital_scope = {
+				create_unit = {
+					division = "division_template = \"TU_KZD_infantry\" start_experience_factor = 0.5"
+					owner = KZD
+					count = 2
+				}
+			}
+			set_country_flag = TU_DEC_TU_KZD_raise_levies
+		}
+		ai_will_do = {
+			base = 1
+		}
+	}
+
+	TU_KZD_raise_sarkaz_guard = {
+		icon = GFX_decision_generic_cavalry
+		allowed = {
+			original_tag = KZD
+		}
+		visible = {
+			OR = {
+				has_completed_focus = TU_KZD_vampire_elite
+				has_completed_focus = TU_KZD_elite_template
+			}
+		}
+		available = {
+			OR = {
+				has_completed_focus = TU_KZD_vampire_elite
+				has_completed_focus = TU_KZD_elite_template
+			}
+		}
+		cost = 75
+		fire_only_once = no
+		days_re_enable = 90
+		complete_effect = {
+			capital_scope = {
+				create_unit = {
+					division = "division_template = \"TU_KZD_elite_guard\" start_experience_factor = 0.5"
+					owner = KZD
+					count = 1
+				}
+			}
+			set_country_flag = TU_DEC_TU_KZD_raise_sarkaz_guard
+		}
+		ai_will_do = {
+			base = 1
+		}
+	}
+}
+
+TU_KZD_diplomacy_category = {
+
+	TU_KZD_guarantee_LEI = {
+		icon = GFX_decision_generic_political_discourse
+		allowed = {
+			original_tag = KZD
+		}
+		visible = {
+			has_completed_focus = TU_KZD_alliance_search
+		}
+		available = {
+			has_completed_focus = TU_KZD_alliance_search
+			country_exists = LEI
+			NOT = { has_war_with = LEI }
+		}
+		cost = 75
+		fire_only_once = yes
+		complete_effect = {
+			if = {
+				limit = {
+					country_exists = LEI
+				}
+				give_guarantee = LEI
+				set_country_flag = TU_DEC_TU_KZD_guarantee_LEI
+			}
+		}
+		ai_will_do = {
+			base = 1
+		}
+	}
+
+	TU_KZD_nonaggression_LEI = {
+		icon = GFX_decision_generic_political_discourse
+		allowed = {
+			original_tag = KZD
+		}
+		visible = {
+			has_completed_focus = TU_KZD_relations_envoy
+		}
+		available = {
+			has_completed_focus = TU_KZD_relations_envoy
+			country_exists = LEI
+			NOT = { has_war_with = LEI }
+		}
+		cost = 50
+		fire_only_once = yes
+		complete_effect = {
+			if = {
+				limit = {
+					country_exists = LEI
+				}
+				diplomatic_relation = {
+					country = LEI
+					relation = non_aggression_pact
+					active = yes
+				}
+				set_country_flag = TU_DEC_TU_KZD_nonaggression_LEI
+			}
+		}
+		ai_will_do = {
+			base = 1
+		}
+	}
+
+	TU_KZD_military_access_VIC = {
+		icon = GFX_decision_generic_political_discourse
+		allowed = {
+			original_tag = KZD
+		}
+		visible = {
+			has_completed_focus = TU_KZD_alliance_search
+		}
+		available = {
+			has_completed_focus = TU_KZD_alliance_search
+			country_exists = VIC
+			NOT = { has_war_with = VIC }
+		}
+		cost = 50
+		fire_only_once = yes
+		complete_effect = {
+			if = {
+				limit = {
+					country_exists = VIC
+				}
+				diplomatic_relation = {
+					country = VIC
+					relation = military_access
+					active = yes
+				}
+				set_country_flag = TU_DEC_TU_KZD_military_access_VIC
+			}
+		}
+		ai_will_do = {
+			base = 1
+		}
+	}
+}

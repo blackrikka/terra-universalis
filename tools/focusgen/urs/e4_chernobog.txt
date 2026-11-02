@@ -1,0 +1,538 @@
+	#### INFECTED POLICY: FORCED LABOUR vs QUARANTINE ####
+
+	focus = {
+		id = TU_URS_forced_labour
+		icon = GFX_goal_generic_construct_civilian
+		prerequisite = { focus = TU_URS_infection_policy }
+		mutually_exclusive = { focus = TU_URS_quarantine_zones }
+		x = 40
+		y = 1
+		cost = 10
+
+		search_filters = { FOCUS_FILTER_INDUSTRY }
+
+		ai_will_do = {
+			base = 1
+		}
+
+		completion_reward = {
+			add_manpower = 50000
+			add_stability = -0.05
+		}
+	}
+
+	focus = {
+		id = TU_URS_labour_camps
+		icon = GFX_goal_generic_construct_civilian
+		prerequisite = { focus = TU_URS_forced_labour }
+		x = 40
+		y = 2
+		cost = 10
+
+		search_filters = { FOCUS_FILTER_INDUSTRY }
+
+		ai_will_do = {
+			base = 1
+		}
+
+		completion_reward = {
+			add_manpower = 30000
+			add_stability = -0.02
+		}
+	}
+
+	focus = {
+		id = TU_URS_quarantine_zones
+		icon = GFX_goal_generic_fortify_city
+		prerequisite = { focus = TU_URS_infection_policy }
+		mutually_exclusive = { focus = TU_URS_forced_labour }
+		x = 42
+		y = 1
+		cost = 10
+
+		search_filters = { FOCUS_FILTER_POLITICAL }
+
+		ai_will_do = {
+			base = 1
+		}
+
+		completion_reward = {
+			add_stability = 0.05
+			remove_ideas = TU_URS_infected_discrimination
+		}
+	}
+
+	focus = {
+		id = TU_URS_quarantine_wall
+		icon = GFX_goal_generic_defence
+		prerequisite = { focus = TU_URS_quarantine_zones }
+		x = 42
+		y = 2
+		cost = 10
+
+		search_filters = { FOCUS_FILTER_POLITICAL }
+
+		ai_will_do = {
+			base = 1
+		}
+
+		completion_reward = {
+			add_stability = 0.03
+			add_political_power = 25
+		}
+	}
+
+	#### CHERNOBOG DEVELOPMENT ####
+
+	focus = {
+		id = TU_URS_chernobog_garrison
+		icon = GFX_goal_generic_fortify_city
+		prerequisite = { focus = TU_URS_infection_policy }
+		x = 44
+		y = 2
+		cost = 10
+
+		search_filters = { FOCUS_FILTER_ARMY_XP }
+
+		ai_will_do = {
+			base = 1
+		}
+
+		available = {
+			has_country_flag = TU_DEC_TU_URS_chernobog_development
+		}
+
+		completion_reward = {
+			army_experience = 10
+			add_political_power = 25
+		}
+	}
+
+	#### REUNION: SUPPRESSION (x 38) vs NEGOTIATION (x 36) (mutually exclusive) ####
+	focus = {
+		id = TU_URS_reu_suppression
+		icon = GFX_goal_generic_political_pressure
+		prerequisite = { focus = TU_URS_infection_policy }
+		mutually_exclusive = { focus = TU_URS_reu_negotiation }
+		x = 38
+		y = 1
+		cost = 10
+
+		search_filters = { FOCUS_FILTER_POLITICAL }
+
+		ai_will_do = {
+			base = 1
+		}
+
+		available = {
+			country_exists = REU
+			has_completed_focus = TU_URS_military_junta
+		}
+
+		completion_reward = {
+			if = {
+				limit = {
+					country_exists = REU
+				}
+				REU = {
+					add_stability = -0.05
+					add_war_support = -0.05
+				}
+			}
+			add_political_power = 25
+		}
+	}
+
+	focus = {
+		id = TU_URS_reu_negotiation
+		icon = GFX_goal_generic_improve_relations
+		prerequisite = { focus = TU_URS_infection_policy }
+		mutually_exclusive = { focus = TU_URS_reu_suppression }
+		x = 36
+		y = 1
+		cost = 10
+
+		search_filters = { FOCUS_FILTER_POLITICAL }
+
+		ai_will_do = {
+			base = 1
+		}
+
+		available = {
+			country_exists = REU
+			has_completed_focus = TU_URS_reform_path
+		}
+
+		completion_reward = {
+			if = {
+				limit = {
+					country_exists = REU
+				}
+				REU = {
+					add_stability = 0.02
+				}
+			}
+			add_political_power = 25
+		}
+	}
+
+	focus = {
+		id = TU_URS_reu_front
+		icon = GFX_goal_generic_occupy_states_ongoing_war
+		prerequisite = { focus = TU_URS_reu_suppression }
+		x = 38
+		y = 2
+		cost = 10
+
+		search_filters = { FOCUS_FILTER_ARMY_XP }
+
+		ai_will_do = {
+			base = 1
+		}
+
+		completion_reward = {
+			army_experience = 15
+			add_manpower = 20000
+		}
+	}
+
+	focus = {
+		id = TU_URS_reu_talks
+		icon = GFX_goal_generic_trade
+		prerequisite = { focus = TU_URS_reu_negotiation }
+		x = 36
+		y = 2
+		cost = 10
+
+		search_filters = { FOCUS_FILTER_POLITICAL }
+
+		ai_will_do = {
+			base = 1
+		}
+
+		completion_reward = {
+			add_political_power = 50
+			add_stability = 0.02
+		}
+	}
+
+	focus = {
+		id = TU_URS_reu_occupation
+		icon = GFX_goal_generic_demand_territory
+		prerequisite = { focus = TU_URS_reu_front }
+		x = 38
+		y = 3
+		cost = 15
+
+		search_filters = { FOCUS_FILTER_ARMY_XP }
+
+		ai_will_do = {
+			base = 1
+		}
+
+		completion_reward = {
+			army_experience = 20
+			add_war_support = 5
+			if = {
+				limit = {
+					country_exists = REU
+				}
+				REU = {
+					add_war_support = -0.05
+				}
+			}
+		}
+	}
+
+	focus = {
+		id = TU_URS_reu_peace
+		icon = GFX_goal_generic_neutrality_focus
+		prerequisite = { focus = TU_URS_reu_talks }
+		x = 36
+		y = 3
+		cost = 10
+
+		search_filters = { FOCUS_FILTER_POLITICAL }
+
+		ai_will_do = {
+			base = 1
+		}
+
+		available = {
+			has_global_flag = TU_chernobog_incident_resolved
+		}
+
+		completion_reward = {
+			add_political_power = 50
+			add_stability = 0.03
+		}
+	}
+
+	focus = {
+		id = TU_URS_lungmen_aid
+		icon = GFX_goal_generic_alliance
+		prerequisite = { focus = TU_URS_reu_peace }
+		x = 36
+		y = 4
+		cost = 10
+
+		search_filters = { FOCUS_FILTER_POLITICAL }
+
+		ai_will_do = {
+			base = 1
+		}
+
+		available = {
+			has_global_flag = TU_lungmen_survived
+		}
+
+		completion_reward = {
+			if = {
+				limit = {
+					country_exists = LGM
+				}
+				LGM = {
+					add_stability = 0.03
+				}
+			}
+			add_political_power = 25
+		}
+	}
+
+	focus = {
+		id = TU_URS_reu_siege
+		icon = GFX_goal_generic_major_war
+		prerequisite = { focus = TU_URS_reu_occupation }
+		x = 38
+		y = 4
+		cost = 10
+
+		search_filters = { FOCUS_FILTER_ARMY_XP }
+
+		ai_will_do = {
+			base = 1
+		}
+
+		available = {
+			country_exists = REU
+		}
+
+		completion_reward = {
+			army_experience = 25
+			if = {
+				limit = {
+					country_exists = REU
+				}
+				REU = {
+					add_war_support = -0.1
+				}
+			}
+		}
+	}
+
+	focus = {
+		id = TU_URS_reu_final
+		icon = GFX_goal_generic_occupy_start_war
+		prerequisite = { focus = TU_URS_reu_siege }
+		x = 38
+		y = 5
+		cost = 15
+
+		search_filters = { FOCUS_FILTER_ARMY_XP }
+
+		ai_will_do = {
+			base = 1
+		}
+
+		completion_reward = {
+			army_experience = 25
+			add_political_power = 50
+		}
+	}
+
+	focus = {
+		id = TU_URS_labour_expansion
+		icon = GFX_goal_generic_construct_civilian
+		prerequisite = { focus = TU_URS_labour_camps }
+		x = 40
+		y = 3
+		cost = 10
+
+		search_filters = { FOCUS_FILTER_INDUSTRY }
+
+		ai_will_do = {
+			base = 1
+		}
+
+		available = {
+			has_completed_focus = TU_URS_emperor_rule
+		}
+
+		completion_reward = {
+			add_manpower = 30000
+			add_stability = -0.03
+			add_ideas = TU_URS_e4_labour_quota
+		}
+	}
+
+	focus = {
+		id = TU_URS_quarantine_patrol
+		icon = GFX_goal_generic_intelligence_exchange
+		prerequisite = { focus = TU_URS_quarantine_wall }
+		x = 42
+		y = 3
+		cost = 10
+
+		search_filters = { FOCUS_FILTER_POLITICAL }
+
+		ai_will_do = {
+			base = 1
+		}
+
+		completion_reward = {
+			add_stability = 0.03
+			add_political_power = 25
+		}
+	}
+
+	focus = {
+		id = TU_URS_rho_cooperation
+		icon = GFX_goal_generic_scientific_exchange
+		prerequisite = { focus = TU_URS_quarantine_patrol }
+		x = 42
+		y = 4
+		cost = 10
+
+		search_filters = { FOCUS_FILTER_POLITICAL }
+
+		ai_will_do = {
+			base = 1
+		}
+
+		available = {
+			country_exists = RHO
+		}
+
+		completion_reward = {
+			add_stability = 0.03
+			if = {
+				limit = {
+					country_exists = RHO
+				}
+				RHO = {
+					add_stability = 0.02
+				}
+			}
+			add_ideas = TU_URS_e4_rho_medical
+		}
+	}
+
+	focus = {
+		id = TU_URS_chernobog_defence
+		icon = GFX_goal_generic_defence
+		prerequisite = { focus = TU_URS_chernobog_garrison }
+		x = 44
+		y = 4
+		cost = 10
+
+		search_filters = { FOCUS_FILTER_ARMY_XP }
+
+		ai_will_do = {
+			base = 1
+		}
+
+		available = {
+			has_country_flag = TU_DEC_TU_URS_chernobog_reconstruction
+		}
+
+		completion_reward = {
+			army_experience = 15
+			add_political_power = 25
+		}
+	}
+
+	focus = {
+		id = TU_URS_chernobog_fortress
+		icon = GFX_goal_generic_fortify_city
+		prerequisite = { focus = TU_URS_chernobog_defence }
+		x = 44
+		y = 6
+		cost = 10
+
+		search_filters = { FOCUS_FILTER_ARMY_XP }
+
+		ai_will_do = {
+			base = 1
+		}
+
+		completion_reward = {
+			army_experience = 15
+			add_stability = 0.02
+			add_manpower = 10000
+		}
+	}
+
+	focus = {
+		id = TU_URS_chernobog_seal
+		icon = GFX_goal_generic_radar
+		prerequisite = { focus = TU_URS_chernobog_fortress }
+		x = 44
+		y = 11
+		cost = 15
+
+		search_filters = { FOCUS_FILTER_ARMY_XP }
+
+		ai_will_do = {
+			base = 1
+		}
+
+		available = {
+			has_country_flag = TU_DEC_TU_URS_chernobog_core
+		}
+
+		completion_reward = {
+			add_political_power = 50
+			army_experience = 15
+		}
+	}
+
+	#### END OF THE CHERNOBOG LINE ####
+	focus = {
+		id = TU_URS_chernobog_legacy
+		icon = GFX_goal_generic_secret_weapon
+		prerequisite = { focus = TU_URS_chernobog_seal }
+		x = 44
+		y = 18
+		cost = 15
+
+		search_filters = { FOCUS_FILTER_POLITICAL }
+
+		ai_will_do = {
+			base = 1
+		}
+
+		completion_reward = {
+			add_political_power = 75
+			add_stability = 0.03
+		}
+	}
+
+	focus = {
+		id = TU_URS_infected_quota
+		icon = GFX_goal_generic_construction
+		prerequisite = { focus = TU_URS_labour_expansion }
+		x = 40
+		y = 4
+		cost = 10
+
+		search_filters = { FOCUS_FILTER_INDUSTRY }
+
+		ai_will_do = {
+			base = 1
+		}
+
+		completion_reward = {
+			add_manpower = 40000
+			add_stability = -0.04
+		}
+	}

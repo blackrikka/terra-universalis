@@ -1,0 +1,22 @@
+on_actions = {
+	on_startup = {
+		effect = {
+			if = {
+				limit = {
+					country_exists = YAN
+				}
+				YAN = {
+					TU_YAN_startup = yes
+				}
+			}
+			if = {
+				limit = {
+					country_exists = LGM
+				}
+				LGM = {
+					TU_LGM_startup = yes
+				}
+			}
+		}
+	}
+}

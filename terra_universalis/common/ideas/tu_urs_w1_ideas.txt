@@ -1,0 +1,175 @@
+ideas = {
+
+	country = {
+
+		TU_URS_w1_border_readiness = {
+			picture = generic_army_europe_1
+
+			allowed = {
+				original_tag = URS
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			modifier = {
+				army_defence_factor = 0.05
+				conscription_factor = 0.02
+			}
+		}
+
+		TU_URS_w1_mercenary_levy = {
+			picture = generic_manpower_bonus
+
+			allowed = {
+				original_tag = URS
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			modifier = {
+				conscription_factor = 0.05
+				army_morale_factor = 0.05
+			}
+		}
+
+		TU_URS_w1_war_footing = {
+			picture = generic_war_preparation
+
+			allowed = {
+				original_tag = URS
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			modifier = {
+				production_speed_buildings_factor = 0.05
+				army_attack_factor = 0.03
+			}
+		}
+
+		TU_URS_w1_occupation_strain = {
+			picture = generic_army_problems
+
+			allowed = {
+				original_tag = URS
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			modifier = {
+				stability_factor = -0.05
+				war_support_factor = -0.05
+			}
+		}
+
+		TU_URS_w1_cultural_absorption = {
+			picture = generic_agrarian_society
+
+			allowed = {
+				original_tag = URS
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			modifier = {
+				monthly_population = 0.1
+				stability_factor = 0.02
+			}
+		}
+
+		TU_URS_w2_sleeping_giant = {
+			picture = generic_reserve_divisions
+
+			allowed = {
+				original_tag = URS
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			modifier = {
+				conscription_factor = 0.05
+				monthly_population = 0.1
+			}
+		}
+
+		TU_URS_w2_merchant_fleet = {
+			picture = generic_foreign_capital
+
+			allowed = {
+				original_tag = URS
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			modifier = {
+				trade_opinion_factor = 0.1
+				production_speed_buildings_factor = 0.03
+			}
+		}
+
+		TU_URS_w2_naval_blockade = {
+			picture = generic_navy_bonus
+
+			allowed = {
+				original_tag = URS
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			modifier = {
+				trade_opinion_factor = -0.1
+				war_support_factor = 0.03
+			}
+		}
+
+		TU_URS_w2_reunion_front = {
+			picture = generic_army_europe_2
+
+			allowed = {
+				original_tag = URS
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			modifier = {
+				army_attack_factor = 0.03
+				army_morale_factor = 0.03
+			}
+		}
+
+		TU_URS_w2_occupation_strain = {
+			picture = generic_army_problems
+
+			allowed = {
+				original_tag = URS
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			modifier = {
+				stability_factor = -0.05
+				war_support_factor = -0.05
+			}
+		}
+	}
+}

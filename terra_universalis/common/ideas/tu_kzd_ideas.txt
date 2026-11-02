@@ -1,0 +1,55 @@
+ideas = {
+
+	country = {
+
+		TU_KZD_wasteland_homeland = {
+			picture = generic_agrarian_society
+
+			allowed = {
+				original_tag = KZD
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			modifier = {
+				production_speed_buildings_factor = -0.1
+			}
+		}
+
+		TU_KZD_mercenary_tradition = {
+			picture = officers_clique_spirit
+
+			allowed = {
+				original_tag = KZD
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			modifier = {
+				army_attack_factor = 0.1
+				conscription_factor = 0.05
+			}
+		}
+
+		TU_KZD_military_commission = {
+			picture = generic_commission
+
+			allowed = {
+				original_tag = KZD
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			modifier = {
+				political_power_gain = 0.1
+				stability_factor = -0.05
+			}
+		}
+	}
+}

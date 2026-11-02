@@ -1,0 +1,74 @@
+ideas = {
+
+	country = {
+
+		TU_VIC_exp_londinium_vow = {
+			picture = generic_political_support
+
+			allowed = {
+				original_tag = VIC
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			modifier = {
+				army_attack_factor = 0.05
+				political_power_gain = 0.05
+			}
+		}
+
+		TU_VIC_exp_colonial_charter = {
+			picture = generic_flexible_foreign_policy
+
+			allowed = {
+				original_tag = VIC
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			modifier = {
+				stability_factor = 0.02
+				production_speed_buildings_factor = 0.05
+			}
+		}
+
+		TU_VIC_exp_northern_bloc = {
+			picture = generic_conference
+
+			allowed = {
+				original_tag = VIC
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			modifier = {
+				political_power_gain = 0.05
+				stability_factor = 0.01
+			}
+		}
+
+		TU_VIC_exp_frontier_legion = {
+			picture = generic_reserve_divisions
+
+			allowed = {
+				original_tag = VIC
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			modifier = {
+				army_attack_factor = 0.05
+				army_defence_factor = 0.05
+			}
+		}
+
+	}
+}

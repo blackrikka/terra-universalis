@@ -1,0 +1,17 @@
+on_actions = {
+	# Victoria monthly random events (tu_vic_events.txt, ids 20-27).
+	# Weight 1000 = 0 is the "nothing happens" roll. Every event has tag = VIC in its trigger.
+	on_monthly = {
+		random_events = {
+			1000 = 0
+			25 = tu_vic_ev.20
+			25 = tu_vic_ev.21
+			25 = tu_vic_ev.22
+			25 = tu_vic_ev.23
+			25 = tu_vic_ev.24
+			25 = tu_vic_ev.25
+			25 = tu_vic_ev.26
+			25 = tu_vic_ev.27
+		}
+	}
+}

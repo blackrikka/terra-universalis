@@ -1,0 +1,214 @@
+	focus = {
+		id = TU_LGM_trade_hub_focus
+		icon = GFX_goal_generic_trade
+		x = 0
+		y = 0
+		cost = 5
+
+		search_filters = { FOCUS_FILTER_POLITICAL }
+
+		completion_reward = {
+			add_political_power = 50
+		}
+	}
+
+	focus = {
+		id = TU_LGM_defence_plan
+		icon = GFX_goal_generic_defence
+		prerequisite = { focus = TU_LGM_trade_hub_focus }
+		x = 3
+		y = 1
+		cost = 5
+
+		search_filters = { FOCUS_FILTER_ARMY_XP }
+
+		completion_reward = {
+			add_political_power = 25
+			army_experience = 10
+		}
+	}
+
+	focus = {
+		id = TU_LGM_refugee_camps
+		icon = GFX_goal_generic_construct_civilian
+		prerequisite = { focus = TU_LGM_defence_plan }
+		x = 3
+		y = 2
+		cost = 10
+
+		search_filters = { FOCUS_FILTER_INDUSTRY }
+
+		completion_reward = {
+			add_manpower = 20000
+		}
+	}
+
+	focus = {
+		id = TU_LGM_sanction_relief
+		icon = GFX_goal_generic_trade
+		prerequisite = { focus = TU_LGM_refugee_camps }
+		x = 3
+		y = 3
+		cost = 10
+
+		search_filters = { FOCUS_FILTER_POLITICAL }
+
+		completion_reward = {
+			add_stability = 0.03
+			add_political_power = 25
+		}
+	}
+
+	#### BRANCH A: AUTONOMY (YAN OVERLORD) ####
+
+	focus = {
+		id = TU_LGM_city_charter
+		icon = GFX_goal_generic_neutrality_focus
+		prerequisite = { focus = TU_LGM_trade_hub_focus }
+		x = -3
+		y = 1
+		cost = 10
+
+		search_filters = { FOCUS_FILTER_POLITICAL }
+
+		available = {
+			has_country_flag = TU_DEC_TU_LGM_port_expansion
+		}
+
+		completion_reward = {
+			add_political_power = 25
+		}
+	}
+
+	focus = {
+		id = TU_LGM_autonomy_talks
+		icon = GFX_goal_generic_improve_relations
+		prerequisite = { focus = TU_LGM_city_charter }
+		x = -3
+		y = 2
+		cost = 10
+
+		search_filters = { FOCUS_FILTER_POLITICAL }
+
+		available = {
+			has_global_flag = TU_lungmen_survived
+		}
+
+		completion_reward = {
+			country_event = { id = tu_lgm_ev.1 }
+			add_political_power = 50
+			if = {
+				limit = {
+					is_subject_of = YAN
+				}
+				YAN = {
+					end_puppet = ROOT
+				}
+			}
+		}
+	}
+
+	focus = {
+		id = TU_LGM_independence
+		icon = GFX_goal_generic_political_pressure
+		prerequisite = { focus = TU_LGM_autonomy_talks }
+		mutually_exclusive = { focus = TU_LGM_chen_coup }
+		x = -3
+		y = 3
+		cost = 10
+
+		search_filters = { FOCUS_FILTER_POLITICAL }
+
+		completion_reward = {
+			country_event = { id = tu_lgm_ev.2 }
+			add_stability = 0.05
+			add_political_power = 50
+		}
+	}
+
+	#### BRANCH B: GUARD COUP (CHEN) ####
+
+	focus = {
+		id = TU_LGM_guard_reform
+		icon = GFX_goal_generic_army_doctrines
+		prerequisite = { focus = TU_LGM_trade_hub_focus }
+		x = 0
+		y = 1
+		cost = 5
+
+		search_filters = { FOCUS_FILTER_ARMY_XP }
+
+		completion_reward = {
+			army_experience = 10
+			add_political_power = 25
+		}
+	}
+
+	focus = {
+		id = TU_LGM_chen_plan
+		icon = GFX_goal_generic_intelligence_exchange
+		prerequisite = { focus = TU_LGM_guard_reform }
+		x = -1
+		y = 2
+		cost = 10
+
+		search_filters = { FOCUS_FILTER_POLITICAL }
+
+		completion_reward = {
+			add_political_power = 25
+		}
+	}
+
+	focus = {
+		id = TU_LGM_chen_coup
+		icon = GFX_goal_generic_political_pressure
+		prerequisite = { focus = TU_LGM_chen_plan }
+		mutually_exclusive = { focus = TU_LGM_independence }
+		x = -1
+		y = 3
+		cost = 10
+
+		search_filters = { FOCUS_FILTER_POLITICAL }
+
+		completion_reward = {
+			country_event = { id = tu_lgm_ev.3 }
+			recruit_character = TU_LGM_chen_leader
+			promote_character = {
+				character = TU_LGM_chen_leader
+				ideology = despotism
+			}
+			add_war_support = 0.1
+			add_ideas = TU_LGM_guard_department
+		}
+	}
+
+	focus = {
+		id = TU_LGM_guard_drill
+		icon = GFX_goal_generic_army_artillery
+		prerequisite = { focus = TU_LGM_guard_reform }
+		x = 1
+		y = 2
+		cost = 10
+
+		search_filters = { FOCUS_FILTER_ARMY_XP }
+
+		completion_reward = {
+			army_experience = 25
+		}
+	}
+
+	focus = {
+		id = TU_LGM_border_watch
+		icon = GFX_goal_generic_fortify_city
+		prerequisite = { focus = TU_LGM_chen_coup }
+		x = -1
+		y = 4
+		cost = 10
+
+		search_filters = { FOCUS_FILTER_ARMY_XP }
+
+		completion_reward = {
+			army_experience = 10
+			add_stability = 0.02
+		}
+	}
