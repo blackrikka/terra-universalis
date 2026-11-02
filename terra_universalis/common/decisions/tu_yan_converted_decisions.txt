@@ -80,38 +80,6 @@ TU_YAN_construction_category = {
 		}
 	}
 
-	TU_YAN_nian_forge = {
-		icon = GFX_decision_generic_construction
-
-		allowed = {
-			original_tag = YAN
-		}
-
-		visible = {
-			has_completed_focus = TU_YAN_chongyue_return
-		}
-
-		available = {
-			has_completed_focus = TU_YAN_chongyue_return
-			NOT = { has_completed_focus = TU_YAN_ling_wine }
-		}
-
-		cost = 50
-		fire_only_once = yes
-
-		complete_effect = {
-			add_offsite_building = {
-				type = arms_factory
-				level = 1
-			}
-			set_country_flag = TU_DEC_TU_YAN_nian_forge
-		}
-
-		ai_will_do = {
-			base = 1
-		}
-	}
-
 	TU_YAN_lungmen_factories = {
 		icon = GFX_decision_generic_construction
 

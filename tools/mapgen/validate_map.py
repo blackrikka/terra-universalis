@@ -655,7 +655,7 @@ def main(argv=None):
         gfx_defined.update(x.lower() for x in re.findall(r'name\s*=\s*"([^"]+)"', text))
     loc_text = {}
     for lang in ("korean", "english"):
-        lp = mod / "localisation" / lang / ("tu_countries_l_%s.yml" % lang)
+        lp = mod / "localisation" / lang / "replace" / ("tu_countries_l_%s.yml" % lang)
         loc_text[lang] = lp.read_bytes().decode("utf-8-sig") if lp.is_file() else ""
     for tag in sorted(countries - custom_tags):
         leader_key = "%s_leader" % tag
@@ -765,7 +765,7 @@ def main(argv=None):
                 biggest = max(land_sr, key=lambda rid: (areas_sr[rid], -rid)) if land_sr else None
                 if regions and biggest is not None and regions[0] != biggest:
                     chk.err("20", "theater 첫 지역 %d가 가장 큰 육지 전략 지역 %d가 아님" % (regions[0], biggest))
-            map_loc = (mod / "localisation" / "korean" / "tu_map_l_korean.yml")
+            map_loc = (mod / "localisation" / "korean" / "replace" / "tu_map_l_korean.yml")
             map_loc_text = map_loc.read_bytes().decode("utf-8-sig") if map_loc.is_file() else ""
             if not re.search(r"^\s*TU_theater_terra:\d*\s+\"", map_loc_text, re.M):
                 chk.err("20", "TU_theater_terra 로컬라이제이션 키 없음 (tu_map_l_korean.yml)")

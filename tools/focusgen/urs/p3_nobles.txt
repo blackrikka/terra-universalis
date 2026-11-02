@@ -415,6 +415,7 @@
 		completion_reward = {
 			add_ideas = TU_URS_p3_cartel_bonds
 			add_political_power = 25
+			TU_build_civ_factory = yes
 		}
 	}
 
@@ -436,6 +437,7 @@
 		completion_reward = {
 			add_political_power = 50
 			add_stability = -0.01
+			TU_build_civ_factory = yes
 		}
 	}
 
@@ -505,6 +507,7 @@
 				uses = 1
 				category = industry
 			}
+			TU_build_mil_factory = yes
 		}
 	}
 

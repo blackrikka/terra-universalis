@@ -35,6 +35,7 @@
 		completion_reward = {
 			add_political_power = 25
 			add_fuel = 200
+			TU_build_mil_factory = yes
 		}
 	}
 
@@ -168,6 +169,7 @@
 		completion_reward = {
 			add_political_power = 40
 			set_country_flag = TU_RHO_ops_jump_route
+			TU_build_infrastructure = yes
 		}
 	}
 
@@ -187,6 +189,7 @@
 		completion_reward = {
 			add_political_power = 30
 			set_country_flag = TU_RHO_ops_dock_plan
+			TU_build_dockyard = yes
 		}
 	}
 
@@ -205,6 +208,7 @@
 
 		completion_reward = {
 			add_manpower = 3000
+			TU_build_civ_factory = yes
 		}
 	}
 
@@ -262,6 +266,7 @@
 		completion_reward = {
 			add_political_power = 30
 			set_country_flag = TU_RHO_ops_mobile_bay
+			TU_build_mil_factory = yes
 		}
 	}
 
@@ -339,6 +344,7 @@
 		completion_reward = {
 			add_political_power = 25
 			set_country_flag = TU_RHO_ops_jump_shield
+			TU_build_infrastructure = yes
 		}
 	}
 
@@ -411,6 +417,7 @@
 
 		completion_reward = {
 			add_timed_idea = { idea = TU_RHO_idea_hangar days = 60 }
+			TU_build_civ_factory = yes
 		}
 	}
 
@@ -432,6 +439,7 @@
 		completion_reward = {
 			add_political_power = 25
 			set_country_flag = TU_RHO_ops_riic_started
+			TU_build_civ_factory = yes
 		}
 	}
 
@@ -450,6 +458,7 @@
 
 		completion_reward = {
 			add_political_power = 25
+			TU_build_infrastructure = yes
 		}
 	}
 
@@ -469,6 +478,7 @@
 		completion_reward = {
 			add_political_power = 25
 			set_country_flag = TU_RHO_ops_riic_arms
+			TU_build_mil_factory = yes
 		}
 	}
 
@@ -507,6 +517,7 @@
 		completion_reward = {
 			add_political_power = 25
 			set_country_flag = TU_RHO_ops_riic_power
+			TU_build_infrastructure = yes
 		}
 	}
 
@@ -582,6 +593,7 @@
 		completion_reward = {
 			add_political_power = 30
 			set_country_flag = TU_RHO_ops_plan_dock
+			TU_build_dockyard = yes
 		}
 	}
 
@@ -601,6 +613,7 @@
 		completion_reward = {
 			add_political_power = 25
 			set_country_flag = TU_RHO_ops_plan_dorm
+			TU_build_civ_factory = yes
 		}
 	}
 
@@ -619,6 +632,7 @@
 
 		completion_reward = {
 			add_ideas = TU_RHO_idea_riic_logistics
+			TU_build_civ_factory = yes
 		}
 	}
 
@@ -638,6 +652,7 @@
 		completion_reward = {
 			add_political_power = 30
 			set_country_flag = TU_RHO_ops_plan_power
+			TU_build_infrastructure = yes
 		}
 	}
 
@@ -657,6 +672,7 @@
 		completion_reward = {
 			add_political_power = 30
 			set_country_flag = TU_RHO_ops_arms_started
+			TU_build_civ_factory = yes
 		}
 	}
 
@@ -676,6 +692,7 @@
 		completion_reward = {
 			add_political_power = 30
 			set_country_flag = TU_RHO_ops_industry_started
+			TU_build_civ_factory = yes
 		}
 	}
 
@@ -695,6 +712,7 @@
 		completion_reward = {
 			add_political_power = 40
 			set_country_flag = TU_RHO_ops_dock_started
+			TU_build_dockyard = yes
 		}
 	}
 
@@ -713,6 +731,7 @@
 
 		completion_reward = {
 			add_manpower = 1000
+			TU_build_civ_factory = yes
 		}
 	}
 
@@ -731,6 +750,7 @@
 
 		completion_reward = {
 			add_political_power = 40
+			TU_build_infrastructure = yes
 		}
 	}
 
@@ -804,6 +824,7 @@
 
 		completion_reward = {
 			add_political_power = 40
+			TU_build_infrastructure = yes
 		}
 	}
 
@@ -824,6 +845,7 @@
 			add_political_power = 100
 			set_country_flag = TU_RHO_ops_riic_done
 			country_event = { id = tu_rho_ev.10 }
+			TU_build_civ_factory = yes
 		}
 	}
 
@@ -845,6 +867,7 @@
 		completion_reward = {
 			add_political_power = 25
 			set_country_flag = TU_RHO_ops_relief_started
+			TU_build_civ_factory = yes
 		}
 	}
 
@@ -881,6 +904,7 @@
 
 		completion_reward = {
 			add_manpower = 1000
+			TU_build_civ_factory = yes
 		}
 	}
 
@@ -1050,6 +1074,7 @@
 
 		completion_reward = {
 			add_manpower = 2000
+			TU_build_infrastructure = yes
 		}
 	}
 
@@ -1141,6 +1166,7 @@
 
 		completion_reward = {
 			add_political_power = 40
+			TU_build_infrastructure = yes
 		}
 	}
 

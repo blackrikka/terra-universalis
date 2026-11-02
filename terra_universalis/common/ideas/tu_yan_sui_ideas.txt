@@ -337,5 +337,23 @@ ideas = {
 				army_org_factor = 0.05
 			}
 		}
+
+		TU_YAN_idea_new_era = {
+			picture = generic_pp_unity_bonus
+
+			allowed = {
+				original_tag = YAN
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			modifier = {
+				stability_factor = 0.1
+				political_power_gain = 0.1
+				production_factory_max_efficiency_factor = 0.05
+			}
+		}
 	}
 }

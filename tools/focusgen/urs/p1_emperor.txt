@@ -1178,6 +1178,7 @@
 
 		completion_reward = {
 			add_political_power = 20
+			TU_build_infrastructure = yes
 		}
 	}
 
@@ -1203,6 +1204,7 @@
 		completion_reward = {
 			add_political_power = 25
 			add_stability = 0.02
+			TU_build_civ_factory = yes
 		}
 	}
 
@@ -1233,6 +1235,7 @@
 				category = industry
 			}
 			add_political_power = 10
+			TU_build_mil_factory = yes
 		}
 	}
 
@@ -1253,6 +1256,7 @@
 		completion_reward = {
 			add_political_power = 30
 			add_stability = 0.03
+			TU_build_infrastructure = yes
 		}
 	}
 
@@ -1293,6 +1297,7 @@
 		completion_reward = {
 			add_war_support = 0.03
 			add_political_power = 25
+			TU_build_infrastructure = yes
 		}
 	}
 
@@ -1322,6 +1327,7 @@
 				category = industry
 			}
 			add_political_power = 20
+			TU_build_civ_factory = yes
 		}
 	}
 
@@ -1342,6 +1348,7 @@
 		completion_reward = {
 			add_stability = 0.02
 			add_political_power = 30
+			TU_build_civ_factory = yes
 		}
 	}
 
@@ -1363,5 +1370,6 @@
 			country_event = { id = tu_urs_ev.14 }
 			add_ideas = TU_URS_p1_capital_rail
 			add_political_power = 40
+			TU_build_civ_factory = yes
 		}
 	}

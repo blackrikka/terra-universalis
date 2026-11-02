@@ -380,6 +380,7 @@
 				uses = 2
 				category = industry
 			}
+			TU_build_civ_factory = yes
 		}
 	}
 
@@ -433,6 +434,7 @@
 				uses = 2
 				category = artillery
 			}
+			TU_build_mil_factory = yes
 		}
 	}
 
@@ -888,6 +890,10 @@
 
 		search_filters = { FOCUS_FILTER_POLITICAL }
 
+		allow_branch = {
+			has_country_flag = TU_YAN_chosen_chongyue
+		}
+
 		available = {
 			NOT = { has_country_flag = TU_YAN_sib_chongyue_defected }
 		}
@@ -956,6 +962,10 @@
 
 		search_filters = { FOCUS_FILTER_POLITICAL }
 
+		allow_branch = {
+			has_country_flag = TU_YAN_chosen_ling
+		}
+
 		available = {
 			NOT = { has_country_flag = TU_YAN_sib_ling_defected }
 		}
@@ -1022,6 +1032,10 @@
 
 		search_filters = { FOCUS_FILTER_POLITICAL }
 
+		allow_branch = {
+			has_country_flag = TU_YAN_chosen_wang
+		}
+
 		available = {
 			NOT = { has_country_flag = TU_YAN_sib_wang_defected }
 		}
@@ -1087,6 +1101,10 @@
 		cost = 10
 
 		search_filters = { FOCUS_FILTER_POLITICAL }
+
+		allow_branch = {
+			has_country_flag = TU_YAN_chosen_dusk
+		}
 
 		available = {
 			NOT = { has_country_flag = TU_YAN_sib_dusk_defected }
@@ -1155,6 +1173,10 @@
 
 		search_filters = { FOCUS_FILTER_POLITICAL }
 
+		allow_branch = {
+			has_country_flag = TU_YAN_chosen_shu
+		}
+
 		available = {
 			NOT = { has_country_flag = TU_YAN_sib_shu_defected }
 		}
@@ -1222,6 +1244,10 @@
 
 		search_filters = { FOCUS_FILTER_POLITICAL }
 
+		allow_branch = {
+			has_country_flag = TU_YAN_chosen_nian
+		}
+
 		available = {
 			NOT = { has_country_flag = TU_YAN_sib_nian_defected }
 		}
@@ -1288,6 +1314,10 @@
 
 		search_filters = { FOCUS_FILTER_POLITICAL }
 
+		allow_branch = {
+			has_country_flag = TU_YAN_chosen_jun
+		}
+
 		available = {
 			NOT = { has_country_flag = TU_YAN_sib_jun_defected }
 		}
@@ -1353,6 +1383,10 @@
 		cost = 10
 
 		search_filters = { FOCUS_FILTER_POLITICAL }
+
+		allow_branch = {
+			has_country_flag = TU_YAN_chosen_jie
+		}
 
 		available = {
 			NOT = { has_country_flag = TU_YAN_sib_jie_defected }
@@ -1421,6 +1455,10 @@
 
 		search_filters = { FOCUS_FILTER_POLITICAL }
 
+		allow_branch = {
+			has_country_flag = TU_YAN_chosen_ji
+		}
+
 		available = {
 			NOT = { has_country_flag = TU_YAN_sib_ji_defected }
 		}
@@ -1486,6 +1524,10 @@
 		cost = 10
 
 		search_filters = { FOCUS_FILTER_POLITICAL }
+
+		allow_branch = {
+			has_country_flag = TU_YAN_chosen_yi
+		}
 
 		available = {
 			NOT = { has_country_flag = TU_YAN_sib_yi_defected }
@@ -1554,6 +1596,10 @@
 
 		search_filters = { FOCUS_FILTER_POLITICAL }
 
+		allow_branch = {
+			has_country_flag = TU_YAN_chosen_fang
+		}
+
 		available = {
 			NOT = { has_country_flag = TU_YAN_sib_fang_defected }
 		}
@@ -1619,6 +1665,10 @@
 		cost = 10
 
 		search_filters = { FOCUS_FILTER_POLITICAL }
+
+		allow_branch = {
+			has_country_flag = TU_YAN_chosen_yu
+		}
 
 		available = {
 			NOT = { has_country_flag = TU_YAN_sib_yu_defected }
@@ -1686,6 +1736,10 @@
 		cost = 10
 
 		search_filters = { FOCUS_FILTER_POLITICAL }
+
+		allow_branch = {
+			has_country_flag = TU_YAN_chosen_ruin
+		}
 
 		ai_will_do = {
 			base = 0
@@ -1790,5 +1844,78 @@
 			add_political_power = 100
 			add_stability = 0.1
 			add_war_support = 0.1
+		}
+	}
+
+	focus = {
+		id = TU_YAN_p1_dragons_end
+		icon = GFX_goal_generic_national_unity
+		prerequisite = { focus = TU_YAN_p1_rule_chongyue focus = TU_YAN_p1_rule_ling focus = TU_YAN_p1_rule_wang focus = TU_YAN_p1_rule_dusk focus = TU_YAN_p1_rule_shu focus = TU_YAN_p1_rule_nian focus = TU_YAN_p1_rule_jun focus = TU_YAN_p1_rule_jie focus = TU_YAN_p1_rule_ji focus = TU_YAN_p1_rule_yi focus = TU_YAN_p1_rule_fang focus = TU_YAN_p1_rule_yu focus = TU_YAN_p1_path_of_ruin }
+		x = 0
+		y = 0
+		cost = 10
+
+		search_filters = { FOCUS_FILTER_POLITICAL }
+
+		available = {
+			has_country_flag = TU_YAN_age_of_dragons
+			NOT = {
+				any_country = {
+					has_country_flag = TU_YAN_sibling_faction
+					has_war_with = ROOT
+				}
+			}
+		}
+
+		ai_will_do = {
+			base = 1
+		}
+
+		completion_reward = {
+			set_country_flag = TU_YAN_civil_war_over
+			if = { limit = { has_idea = TU_YAN_idea_age_of_dragons } remove_ideas = TU_YAN_idea_age_of_dragons }
+			add_stability = 0.15
+			add_political_power = 100
+		}
+	}
+
+	focus = {
+		id = TU_YAN_p1_new_era
+		icon = GFX_goal_generic_propaganda
+		prerequisite = { focus = TU_YAN_p1_dragons_end }
+		x = 0
+		y = 0
+		cost = 10
+
+		search_filters = { FOCUS_FILTER_POLITICAL }
+
+		ai_will_do = {
+			base = 1
+		}
+
+		completion_reward = {
+			add_ideas = TU_YAN_idea_new_era
+			add_war_support = 0.05
+		}
+	}
+
+	focus = {
+		id = TU_YAN_p1_rebuild
+		icon = GFX_goal_generic_construct_civilian
+		prerequisite = { focus = TU_YAN_p1_dragons_end }
+		x = 0
+		y = 0
+		cost = 10
+
+		search_filters = { FOCUS_FILTER_INDUSTRY }
+
+		ai_will_do = {
+			base = 1
+		}
+
+		completion_reward = {
+			TU_build_infrastructure = yes
+			TU_build_civ_factory = yes
+			TU_build_civ_factory = yes
 		}
 	}

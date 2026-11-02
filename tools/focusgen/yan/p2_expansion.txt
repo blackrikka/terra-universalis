@@ -193,6 +193,7 @@
 
 		completion_reward = {
 			add_ideas = TU_YAN_frontier_logistics
+			TU_build_infrastructure = yes
 		}
 	}
 
@@ -214,28 +215,6 @@
 		completion_reward = {
 			add_political_power = 100
 			army_experience = 20
-		}
-	}
-
-	focus = {
-		id = TU_YAN_ex_sui_accord
-		icon = GFX_goal_generic_national_unity
-		prerequisite = { focus = TU_YAN_ex_alliance_search }
-		prerequisite = { focus = TU_YAN_sui_brothers_unity }
-		x = 4
-		y = 6
-		cost = 10
-
-		search_filters = { FOCUS_FILTER_POLITICAL }
-
-		ai_will_do = {
-			base = 1
-		}
-
-		completion_reward = {
-			add_political_power = 50
-			add_stability = 0.02
-			country_event = { id = tu_yan_ev.13 }
 		}
 	}
 
@@ -301,6 +280,7 @@
 
 		completion_reward = {
 			add_ideas = TU_YAN_lgm_free_trade
+			TU_build_civ_factory = yes
 		}
 	}
 
@@ -404,6 +384,7 @@
 		completion_reward = {
 			add_political_power = 25
 			add_manpower = 10000
+			TU_build_civ_factory = yes
 		}
 	}
 
@@ -561,6 +542,7 @@
 
 		completion_reward = {
 			add_political_power = 25
+			TU_build_civ_factory = yes
 		}
 	}
 
@@ -601,6 +583,7 @@
 		completion_reward = {
 			add_political_power = 25
 			add_war_support = 0.03
+			TU_build_dockyard = yes
 		}
 	}
 
@@ -703,6 +686,7 @@
 		completion_reward = {
 			add_political_power = 25
 			add_war_support = 0.02
+			TU_build_dockyard = yes
 		}
 	}
 
@@ -760,6 +744,7 @@
 
 		completion_reward = {
 			add_political_power = 25
+			TU_build_dockyard = yes
 		}
 	}
 
@@ -875,6 +860,7 @@
 
 		completion_reward = {
 			add_political_power = 25
+			TU_build_civ_factory = yes
 		}
 	}
 
@@ -1055,6 +1041,7 @@
 		completion_reward = {
 			add_political_power = 25
 			add_stability = 0.02
+			TU_build_infrastructure = yes
 		}
 	}
 
@@ -1075,6 +1062,7 @@
 		completion_reward = {
 			add_political_power = 25
 			add_war_support = 0.02
+			TU_build_infrastructure = yes
 		}
 	}
 
@@ -1215,6 +1203,7 @@
 
 		completion_reward = {
 			add_political_power = 25
+			TU_build_civ_factory = yes
 		}
 	}
 
@@ -1373,6 +1362,7 @@
 
 		completion_reward = {
 			add_political_power = 25
+			TU_build_infrastructure = yes
 		}
 	}
 
@@ -1490,6 +1480,7 @@
 
 		completion_reward = {
 			add_political_power = 25
+			TU_build_mil_factory = yes
 		}
 	}
 
@@ -1569,6 +1560,7 @@
 
 		completion_reward = {
 			add_political_power = 25
+			TU_build_civ_factory = yes
 		}
 	}
 
@@ -1628,6 +1620,7 @@
 		completion_reward = {
 			add_war_support = 0.03
 			add_political_power = 25
+			TU_build_dockyard = yes
 		}
 	}
 
@@ -1647,6 +1640,7 @@
 
 		completion_reward = {
 			add_political_power = 25
+			TU_build_dockyard = yes
 		}
 	}
 
@@ -1764,6 +1758,7 @@
 
 		completion_reward = {
 			add_political_power = 25
+			TU_build_infrastructure = yes
 		}
 	}
 
@@ -1925,6 +1920,7 @@
 
 		completion_reward = {
 			add_political_power = 25
+			TU_build_civ_factory = yes
 		}
 	}
 
@@ -2003,6 +1999,7 @@
 
 		completion_reward = {
 			add_political_power = 25
+			TU_build_civ_factory = yes
 		}
 	}
 
@@ -2061,6 +2058,7 @@
 
 		completion_reward = {
 			add_political_power = 25
+			TU_build_infrastructure = yes
 		}
 	}
 
@@ -2261,6 +2259,7 @@
 
 		completion_reward = {
 			add_political_power = 25
+			TU_build_mil_factory = yes
 		}
 	}
 

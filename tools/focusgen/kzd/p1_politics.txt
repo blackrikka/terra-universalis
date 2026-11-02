@@ -1165,6 +1165,7 @@
 		completion_reward = {
 			add_political_power = 50
 			add_stability = 0.02
+			TU_build_mil_factory = yes
 		}
 	}
 
@@ -1268,6 +1269,7 @@
 		completion_reward = {
 			add_political_power = 25
 			add_ideas = TU_KZD_babel_workshops
+			TU_build_civ_factory = yes
 		}
 	}
 
@@ -1288,6 +1290,7 @@
 
 		completion_reward = {
 			add_political_power = 50
+			TU_build_civ_factory = yes
 		}
 	}
 
@@ -1309,6 +1312,7 @@
 		completion_reward = {
 			add_political_power = 25
 			army_experience = 20
+			TU_build_civ_factory = yes
 		}
 	}
 
@@ -1566,6 +1570,7 @@
 
 		completion_reward = {
 			add_political_power = 50
+			TU_build_infrastructure = yes
 		}
 	}
 

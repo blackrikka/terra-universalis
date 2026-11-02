@@ -31,26 +31,4 @@ TU_YAN_court_category = {
 		}
 	}
 
-	TU_YAN_sui_council = {
-		icon = GFX_decision_generic_political_discourse
-
-		allowed = {
-			original_tag = YAN
-		}
-
-		available = {
-			has_completed_focus = TU_YAN_sui_brothers_unity
-		}
-
-		cost = 25
-		fire_only_once = yes
-
-		complete_effect = {
-			army_experience = 20
-		}
-
-		ai_will_do = {
-			base = 0
-		}
-	}
 }

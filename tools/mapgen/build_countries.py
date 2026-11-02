@@ -122,7 +122,7 @@ def clean_country_outputs(mod, countries):
             f.unlink()
     for sub in ("", "medium", "small"):
         for f in (mod / "gfx" / "flags" / sub).glob("*.tga") if sub else (mod / "gfx" / "flags").glob("*.tga"):
-            if f.stem not in tags:
+            if re.fullmatch(r"[A-Z]{3}", f.stem) and f.stem not in tags:   # 외형 태그 국기(TU_..)는 두고 태그 국기만
                 f.unlink()
 
 
@@ -588,7 +588,11 @@ def main(argv=None):
     for folder, lang, items, head in (("korean", "korean", ko, "l_korean:"),
                                       ("english", "english", en, "l_english:")):
         lines = [head] + [' %s:0 "%s"' % (k, v) for k, v in items]
-        write_utf8_bom(mod / "localisation" / folder / ("tu_countries_l_%s.yml" % lang), lines)
+        # replace 폴더: 바닐라에 같은 태그(SAR 사라왁, KAZ, LAT 등)가 있어 그 이름을 확실히 덮어쓴다
+        old = mod / "localisation" / folder / ("tu_countries_l_%s.yml" % lang)
+        if old.is_file():
+            old.unlink()
+        write_utf8_bom(mod / "localisation" / folder / "replace" / ("tu_countries_l_%s.yml" % lang), lines)
 
     write_owner_preview(mod, countries, index)
     print("countries: %s" % ", ".join(c["tag"] for c in countries))

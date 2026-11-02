@@ -41,6 +41,7 @@
 		completion_reward = {
 			add_political_power = 25
 			add_stability = 0.01
+			TU_build_civ_factory = yes
 		}
 	}
 
@@ -67,6 +68,7 @@
 				category = industry
 			}
 			add_ideas = TU_VIC_estate_industry
+			TU_build_civ_factory = yes
 		}
 	}
 
@@ -92,6 +94,7 @@
 				uses = 1
 				category = infantry_weapons
 			}
+			TU_build_mil_factory = yes
 		}
 	}
 
@@ -143,6 +146,7 @@
 				uses = 1
 				category = armor
 			}
+			TU_build_mil_factory = yes
 		}
 	}
 
@@ -162,6 +166,7 @@
 
 		completion_reward = {
 			add_political_power = 50
+			TU_build_infrastructure = yes
 		}
 	}
 
@@ -181,6 +186,7 @@
 
 		completion_reward = {
 			add_political_power = 50
+			TU_build_infrastructure = yes
 		}
 	}
 
@@ -200,6 +206,7 @@
 
 		completion_reward = {
 			add_political_power = 50
+			TU_build_dockyard = yes
 		}
 	}
 
@@ -219,6 +226,7 @@
 
 		completion_reward = {
 			add_political_power = 50
+			TU_build_dockyard = yes
 		}
 	}
 
@@ -462,6 +470,7 @@
 			add_political_power = 50
 			add_tech_bonus = { name = TU_VIC_duk_free_labour bonus = 0.5 uses = 1 category = industry }
 			add_stability = -0.02
+			TU_build_civ_factory = yes
 		}
 	}
 
@@ -504,6 +513,7 @@
 		completion_reward = {
 			add_political_power = 50
 			add_stability = -0.02
+			TU_build_civ_factory = yes
 		}
 	}
 
@@ -677,6 +687,7 @@
 				uses = 1
 				category = motorized_equipment
 			}
+			TU_build_infrastructure = yes
 		}
 	}
 
@@ -698,6 +709,7 @@
 		completion_reward = {
 			add_political_power = 25
 			add_ideas = TU_VIC_choice_rail_works
+			TU_build_infrastructure = yes
 		}
 	}
 
@@ -875,6 +887,7 @@
 				uses = 1
 				category = infantry_weapons
 			}
+			TU_build_mil_factory = yes
 		}
 	}
 
@@ -895,6 +908,7 @@
 		completion_reward = {
 			add_political_power = 25
 			add_stability = 0.02
+			TU_build_infrastructure = yes
 		}
 	}
 
@@ -1242,6 +1256,7 @@
 				uses = 1
 				category = industry
 			}
+			TU_build_civ_factory = yes
 		}
 	}
 
@@ -1657,6 +1672,7 @@
 				uses = 1
 				category = industry
 			}
+			TU_build_civ_factory = yes
 		}
 	}
 
@@ -1742,6 +1758,7 @@
 				uses = 1
 				category = armor
 			}
+			TU_build_mil_factory = yes
 		}
 	}
 
@@ -1813,6 +1830,7 @@
 				id = TU_VIC_bop
 				value = 0.05
 			}
+			TU_build_civ_factory = yes
 		}
 	}
 
@@ -2095,6 +2113,7 @@
 		completion_reward = {
 			add_political_power = 25
 			add_stability = 0.02
+			TU_build_infrastructure = yes
 		}
 	}
 
@@ -2116,6 +2135,7 @@
 		completion_reward = {
 			add_political_power = 50
 			add_stability = -0.02
+			TU_build_infrastructure = yes
 		}
 	}
 
@@ -2137,6 +2157,7 @@
 		completion_reward = {
 			add_political_power = 25
 			army_experience = 10
+			TU_build_civ_factory = yes
 		}
 	}
 
@@ -2158,6 +2179,7 @@
 		completion_reward = {
 			add_political_power = 25
 			add_ideas = TU_VIC_choice_dock_drive
+			TU_build_dockyard = yes
 		}
 	}
 
@@ -2184,6 +2206,7 @@
 				uses = 1
 				category = motorized_equipment
 			}
+			TU_build_infrastructure = yes
 		}
 	}
 
@@ -2330,6 +2353,7 @@
 
 		completion_reward = {
 			add_political_power = 50
+			TU_build_civ_factory = yes
 		}
 	}
 
@@ -2351,6 +2375,7 @@
 		completion_reward = {
 			add_political_power = 25
 			air_experience = 20
+			TU_build_mil_factory = yes
 		}
 	}
 
@@ -2538,6 +2563,7 @@
 		completion_reward = {
 			add_political_power = 50
 			add_ideas = TU_VIC_public_works
+			TU_build_infrastructure = yes
 		}
 	}
 
@@ -2879,6 +2905,7 @@
 				id = TU_VIC_bop
 				value = 0.05
 			}
+			TU_build_civ_factory = yes
 		}
 	}
 
@@ -2995,6 +3022,7 @@
 				uses = 1
 				category = industry
 			}
+			TU_build_civ_factory = yes
 		}
 	}
 
@@ -3016,6 +3044,7 @@
 		completion_reward = {
 			add_political_power = 50
 			add_stability = 0.02
+			TU_build_infrastructure = yes
 		}
 	}
 
@@ -3163,6 +3192,7 @@
 		completion_reward = {
 			add_political_power = 25
 			navy_experience = 15
+			TU_build_dockyard = yes
 		}
 	}
 
@@ -3184,6 +3214,7 @@
 		completion_reward = {
 			add_political_power = 25
 			air_experience = 15
+			TU_build_civ_factory = yes
 		}
 	}
 

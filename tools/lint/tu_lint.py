@@ -107,6 +107,8 @@ def check_loc(path, root, loc_dir, out, entries):
     rel_path = path.relative_to(root).as_posix()
     loc_rel = path.relative_to(loc_dir).as_posix()
     folder = path.parent.name
+    if folder == "replace":          # localisation/<언어>/replace/ : 바닐라 키를 덮어쓰는 파일
+        folder = path.parent.parent.name
     file_lang = folder if folder in LANGS else None
 
     m = LOC_NAME_RE.fullmatch(path.name)

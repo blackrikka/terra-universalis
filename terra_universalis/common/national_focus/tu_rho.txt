@@ -87,6 +87,7 @@ focus_tree = {
 		completion_reward = {
 			remove_ideas = TU_RHO_landship
 			add_ideas = TU_RHO_landship_unlimited
+			TU_build_mil_factory = yes
 		}
 	}
 
@@ -101,6 +102,7 @@ focus_tree = {
 
 		completion_reward = {
 			set_country_flag = TU_RHO_safehouse_discount
+			TU_build_civ_factory = yes
 		}
 	}
 
@@ -334,6 +336,7 @@ focus_tree = {
 		completion_reward = {
 			add_political_power = 100
 			set_country_flag = TU_RHO_babel_restored
+			TU_build_infrastructure = yes
 		}
 	}
 
@@ -507,6 +510,7 @@ focus_tree = {
 		completion_reward = {
 			add_political_power = 100
 			add_ideas = TU_RHO_clinic_network
+			TU_build_civ_factory = yes
 		}
 
 		ai_will_do = {
@@ -796,6 +800,7 @@ focus_tree = {
 
 		completion_reward = {
 			add_political_power = 40
+			TU_build_civ_factory = yes
 		}
 
 		ai_will_do = {
@@ -815,6 +820,7 @@ focus_tree = {
 		completion_reward = {
 			add_political_power = 50
 			add_stability = 0.02
+			TU_build_infrastructure = yes
 		}
 
 		ai_will_do = {
@@ -1085,6 +1091,7 @@ focus_tree = {
 		completion_reward = {
 			add_political_power = 40
 			add_manpower = 3000
+			TU_build_mil_factory = yes
 		}
 
 		ai_will_do = {
@@ -1142,6 +1149,7 @@ focus_tree = {
 		completion_reward = {
 			add_political_power = 100
 			add_manpower = 5000
+			TU_build_mil_factory = yes
 		}
 
 		ai_will_do = {
@@ -1235,6 +1243,7 @@ focus_tree = {
 
 		completion_reward = {
 			add_political_power = 50
+			TU_build_civ_factory = yes
 		}
 
 		ai_will_do = {
@@ -1687,6 +1696,7 @@ focus_tree = {
 
 		completion_reward = {
 			add_political_power = 100
+			TU_build_infrastructure = yes
 		}
 
 		ai_will_do = {
@@ -2013,6 +2023,7 @@ focus_tree = {
 		completion_reward = {
 			add_political_power = 60
 			add_manpower = 4000
+			TU_build_mil_factory = yes
 		}
 
 		ai_will_do = {
@@ -2090,6 +2101,7 @@ focus_tree = {
 		completion_reward = {
 			add_political_power = 50
 			add_manpower = 2000
+			TU_build_mil_factory = yes
 		}
 
 		ai_will_do = {
@@ -2453,6 +2465,7 @@ focus_tree = {
 		completion_reward = {
 			add_political_power = 25
 			add_fuel = 200
+			TU_build_mil_factory = yes
 		}
 	}
 
@@ -2586,6 +2599,7 @@ focus_tree = {
 		completion_reward = {
 			add_political_power = 40
 			set_country_flag = TU_RHO_ops_jump_route
+			TU_build_infrastructure = yes
 		}
 	}
 
@@ -2605,6 +2619,7 @@ focus_tree = {
 		completion_reward = {
 			add_political_power = 30
 			set_country_flag = TU_RHO_ops_dock_plan
+			TU_build_dockyard = yes
 		}
 	}
 
@@ -2623,6 +2638,7 @@ focus_tree = {
 
 		completion_reward = {
 			add_manpower = 3000
+			TU_build_civ_factory = yes
 		}
 	}
 
@@ -2680,6 +2696,7 @@ focus_tree = {
 		completion_reward = {
 			add_political_power = 30
 			set_country_flag = TU_RHO_ops_mobile_bay
+			TU_build_mil_factory = yes
 		}
 	}
 
@@ -2757,6 +2774,7 @@ focus_tree = {
 		completion_reward = {
 			add_political_power = 25
 			set_country_flag = TU_RHO_ops_jump_shield
+			TU_build_infrastructure = yes
 		}
 	}
 
@@ -2829,6 +2847,7 @@ focus_tree = {
 
 		completion_reward = {
 			add_timed_idea = { idea = TU_RHO_idea_hangar days = 60 }
+			TU_build_civ_factory = yes
 		}
 	}
 
@@ -2850,6 +2869,7 @@ focus_tree = {
 		completion_reward = {
 			add_political_power = 25
 			set_country_flag = TU_RHO_ops_riic_started
+			TU_build_civ_factory = yes
 		}
 	}
 
@@ -2868,6 +2888,7 @@ focus_tree = {
 
 		completion_reward = {
 			add_political_power = 25
+			TU_build_infrastructure = yes
 		}
 	}
 
@@ -2887,6 +2908,7 @@ focus_tree = {
 		completion_reward = {
 			add_political_power = 25
 			set_country_flag = TU_RHO_ops_riic_arms
+			TU_build_mil_factory = yes
 		}
 	}
 
@@ -2925,6 +2947,7 @@ focus_tree = {
 		completion_reward = {
 			add_political_power = 25
 			set_country_flag = TU_RHO_ops_riic_power
+			TU_build_infrastructure = yes
 		}
 	}
 
@@ -3000,6 +3023,7 @@ focus_tree = {
 		completion_reward = {
 			add_political_power = 30
 			set_country_flag = TU_RHO_ops_plan_dock
+			TU_build_dockyard = yes
 		}
 	}
 
@@ -3019,6 +3043,7 @@ focus_tree = {
 		completion_reward = {
 			add_political_power = 25
 			set_country_flag = TU_RHO_ops_plan_dorm
+			TU_build_civ_factory = yes
 		}
 	}
 
@@ -3037,6 +3062,7 @@ focus_tree = {
 
 		completion_reward = {
 			add_ideas = TU_RHO_idea_riic_logistics
+			TU_build_civ_factory = yes
 		}
 	}
 
@@ -3056,6 +3082,7 @@ focus_tree = {
 		completion_reward = {
 			add_political_power = 30
 			set_country_flag = TU_RHO_ops_plan_power
+			TU_build_infrastructure = yes
 		}
 	}
 
@@ -3075,6 +3102,7 @@ focus_tree = {
 		completion_reward = {
 			add_political_power = 30
 			set_country_flag = TU_RHO_ops_arms_started
+			TU_build_civ_factory = yes
 		}
 	}
 
@@ -3094,6 +3122,7 @@ focus_tree = {
 		completion_reward = {
 			add_political_power = 30
 			set_country_flag = TU_RHO_ops_industry_started
+			TU_build_civ_factory = yes
 		}
 	}
 
@@ -3113,6 +3142,7 @@ focus_tree = {
 		completion_reward = {
 			add_political_power = 40
 			set_country_flag = TU_RHO_ops_dock_started
+			TU_build_dockyard = yes
 		}
 	}
 
@@ -3131,6 +3161,7 @@ focus_tree = {
 
 		completion_reward = {
 			add_manpower = 1000
+			TU_build_civ_factory = yes
 		}
 	}
 
@@ -3149,6 +3180,7 @@ focus_tree = {
 
 		completion_reward = {
 			add_political_power = 40
+			TU_build_infrastructure = yes
 		}
 	}
 
@@ -3222,6 +3254,7 @@ focus_tree = {
 
 		completion_reward = {
 			add_political_power = 40
+			TU_build_infrastructure = yes
 		}
 	}
 
@@ -3242,6 +3275,7 @@ focus_tree = {
 			add_political_power = 100
 			set_country_flag = TU_RHO_ops_riic_done
 			country_event = { id = tu_rho_ev.10 }
+			TU_build_civ_factory = yes
 		}
 	}
 
@@ -3263,6 +3297,7 @@ focus_tree = {
 		completion_reward = {
 			add_political_power = 25
 			set_country_flag = TU_RHO_ops_relief_started
+			TU_build_civ_factory = yes
 		}
 	}
 
@@ -3299,6 +3334,7 @@ focus_tree = {
 
 		completion_reward = {
 			add_manpower = 1000
+			TU_build_civ_factory = yes
 		}
 	}
 
@@ -3468,6 +3504,7 @@ focus_tree = {
 
 		completion_reward = {
 			add_manpower = 2000
+			TU_build_infrastructure = yes
 		}
 	}
 
@@ -3559,6 +3596,7 @@ focus_tree = {
 
 		completion_reward = {
 			add_political_power = 40
+			TU_build_infrastructure = yes
 		}
 	}
 

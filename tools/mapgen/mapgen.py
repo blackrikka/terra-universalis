@@ -108,14 +108,15 @@ def write_ascii(path, text):
 
 
 def write_loc(mod, name, ko_items, en_items):
-    """localisation/{korean,english}/tu_<name>_l_<lang>.yml. UTF-8 BOM."""
+    """localisation/{korean,english}/replace/tu_<name>_l_<lang>.yml. UTF-8 BOM.
+    replace 폴더: 바닐라와 같은 키(STATE_1 등)를 확실히 덮어쓴다."""
     for folder, lang, items in (("korean", "korean", ko_items), ("english", "english", en_items)):
         lines = ["l_%s:" % lang]
         for key, value in items:
             if '"' in value:
                 raise MapgenError("loc value contains quote: %s" % key)
             lines.append(' %s:0 "%s"' % (key, value))
-        path = mod / "localisation" / folder / ("tu_%s_l_%s.yml" % (name, lang))
+        path = mod / "localisation" / folder / "replace" / ("tu_%s_l_%s.yml" % (name, lang))
         path.parent.mkdir(parents=True, exist_ok=True)
         path.write_bytes(("\n".join(lines) + "\n").encode("utf-8-sig"))
 
@@ -128,6 +129,8 @@ def clean_outputs(mod):
         (mod / "history" / "states", "*.txt"),
         (mod / "localisation" / "korean", "tu_map_l_*.yml"),
         (mod / "localisation" / "english", "tu_map_l_*.yml"),
+        (mod / "localisation" / "korean" / "replace", "tu_map_l_*.yml"),
+        (mod / "localisation" / "english" / "replace", "tu_map_l_*.yml"),
     ]
     for folder, pattern in patterns:
         if folder.is_dir():

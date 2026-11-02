@@ -849,38 +849,6 @@ TU_YAN_construction_category = {
 		}
 	}
 
-	TU_YAN_arts_corps_raise = {
-		icon = GFX_decision_generic_military
-
-		allowed = {
-			original_tag = YAN
-		}
-
-		visible = {
-			has_completed_focus = TU_YAN_arts_corps
-		}
-
-		available = {
-			has_completed_focus = TU_YAN_arts_corps
-		}
-
-		cost = 75
-		fire_only_once = yes
-
-		complete_effect = {
-			create_unit = {
-				division = "division_template = \"TU_YAN_infantry\" start_experience_factor = 0.3 start_equipment_factor = 0.8"
-				owner = YAN
-				count = 2
-			}
-			set_country_flag = TU_DEC_TU_YAN_arts_corps_raise
-		}
-
-		ai_will_do = {
-			base = 1
-		}
-	}
-
 	TU_YAN_guard_reserve = {
 		icon = GFX_decision_generic_military
 

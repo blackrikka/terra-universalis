@@ -18,6 +18,7 @@
 		completion_reward = {
 			add_manpower = 50000
 			add_stability = -0.05
+			TU_build_civ_factory = yes
 		}
 	}
 
@@ -38,6 +39,7 @@
 		completion_reward = {
 			add_manpower = 30000
 			add_stability = -0.02
+			TU_build_civ_factory = yes
 		}
 	}
 
@@ -372,6 +374,7 @@
 			add_manpower = 30000
 			add_stability = -0.03
 			add_ideas = TU_URS_e4_labour_quota
+			TU_build_civ_factory = yes
 		}
 	}
 
@@ -534,5 +537,6 @@
 		completion_reward = {
 			add_manpower = 40000
 			add_stability = -0.04
+			TU_build_infrastructure = yes
 		}
 	}
