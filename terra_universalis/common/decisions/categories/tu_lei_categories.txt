@@ -1,0 +1,55 @@
+TU_LEI_electors_category = {
+	icon = GFX_decision_category_generic_political_actions
+
+	allowed = {
+		original_tag = LEI
+	}
+
+	visible = {
+		has_country_flag = TU_LEI_electors
+	}
+
+	priority = 100
+}
+
+TU_LEI_arts_category = {
+	icon = GFX_decision_category_generic_industry
+
+	allowed = {
+		original_tag = LEI
+	}
+
+	visible = {
+		has_country_flag = TU_LEI_concerts
+	}
+
+	priority = 100
+}
+
+TU_LEI_relics_category = {
+	icon = GFX_decision_category_military_operation
+
+	allowed = {
+		original_tag = LEI
+	}
+
+	visible = {
+		has_country_flag = TU_LEI_relic_hunt
+	}
+
+	priority = 100
+}
+
+TU_LEI_foreign_category = {
+	icon = GFX_decision_category_generic_foreign_policy
+
+	allowed = {
+		original_tag = LEI
+	}
+
+	visible = {
+		has_country_flag = TU_LEI_league
+	}
+
+	priority = 100
+}

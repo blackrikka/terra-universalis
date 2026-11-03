@@ -1,0 +1,110 @@
+TU_LEI_electors_1 = {
+	custom_effect_tooltip = TU_LEI_electors_1_tt
+	hidden_effect = {
+		add_to_variable = { TU_LEI_electors = 1 }
+		clamp_variable = { var = TU_LEI_electors min = 0 max = 7 }
+	}
+}
+
+TU_LEI_electors_m2 = {
+	custom_effect_tooltip = TU_LEI_electors_m2_tt
+	hidden_effect = {
+		add_to_variable = { TU_LEI_electors = -2 }
+		clamp_variable = { var = TU_LEI_electors min = 0 max = 7 }
+	}
+}
+
+TU_LEI_resonance_10 = {
+	custom_effect_tooltip = TU_LEI_resonance_10_tt
+	hidden_effect = {
+		add_to_variable = { TU_LEI_resonance = 10 }
+		clamp_variable = { var = TU_LEI_resonance min = 0 max = 100 }
+	}
+}
+
+TU_LEI_resonance_5 = {
+	custom_effect_tooltip = TU_LEI_resonance_5_tt
+	hidden_effect = {
+		add_to_variable = { TU_LEI_resonance = 5 }
+		clamp_variable = { var = TU_LEI_resonance min = 0 max = 100 }
+	}
+}
+
+TU_LEI_resonance_20 = {
+	custom_effect_tooltip = TU_LEI_resonance_20_tt
+	hidden_effect = {
+		add_to_variable = { TU_LEI_resonance = 20 }
+		clamp_variable = { var = TU_LEI_resonance min = 0 max = 100 }
+	}
+}
+
+TU_LEI_electors_m1 = {
+	custom_effect_tooltip = TU_LEI_electors_m1_tt
+	hidden_effect = {
+		add_to_variable = { TU_LEI_electors = -1 }
+		clamp_variable = { var = TU_LEI_electors min = 0 max = 7 }
+	}
+}
+
+TU_LEI_resonance_m30 = {
+	custom_effect_tooltip = TU_LEI_resonance_m30_tt
+	hidden_effect = {
+		add_to_variable = { TU_LEI_resonance = -30 }
+		clamp_variable = { var = TU_LEI_resonance min = 0 max = 100 }
+	}
+}
+
+TU_LEI_extend_battle_symphony = {
+	country_event = { id = tu_lei_ev.40 days = 90 }
+	set_country_flag = TU_LEI_extended_battle_symphony
+}
+
+TU_LEI_extend_rebuild_concerto = {
+	country_event = { id = tu_lei_ev.40 days = 90 }
+	set_country_flag = TU_LEI_extended_rebuild_concerto
+}
+
+TU_LEI_extend_healing_song = {
+	country_event = { id = tu_lei_ev.40 days = 90 }
+	set_country_flag = TU_LEI_extended_healing_song
+}
+
+TU_LEI_relics_m1 = {
+	custom_effect_tooltip = TU_LEI_relics_m1_tt
+	hidden_effect = {
+		add_to_variable = { TU_LEI_relics = -1 }
+		clamp_variable = { var = TU_LEI_relics min = 0 max = 3 }
+	}
+}
+
+TU_LEI_relics_1 = {
+	custom_effect_tooltip = TU_LEI_relics_1_tt
+	hidden_effect = {
+		add_to_variable = { TU_LEI_relics = 1 }
+		clamp_variable = { var = TU_LEI_relics min = 0 max = 3 }
+	}
+}
+
+TU_LEI_resonance_15 = {
+	custom_effect_tooltip = TU_LEI_resonance_15_tt
+	hidden_effect = {
+		add_to_variable = { TU_LEI_resonance = 15 }
+		clamp_variable = { var = TU_LEI_resonance min = 0 max = 100 }
+	}
+}
+
+TU_LEI_resonance_m10 = {
+	custom_effect_tooltip = TU_LEI_resonance_m10_tt
+	hidden_effect = {
+		add_to_variable = { TU_LEI_resonance = -10 }
+		clamp_variable = { var = TU_LEI_resonance min = 0 max = 100 }
+	}
+}
+
+TU_LEI_resonance_m20 = {
+	custom_effect_tooltip = TU_LEI_resonance_m20_tt
+	hidden_effect = {
+		add_to_variable = { TU_LEI_resonance = -20 }
+		clamp_variable = { var = TU_LEI_resonance min = 0 max = 100 }
+	}
+}

@@ -1,0 +1,512 @@
+TU_LEI_electors_category = {
+	TU_LEI_persuade = {
+		icon = GFX_decision_generic_political_discourse
+
+		allowed = {
+			original_tag = LEI
+		}
+
+		available = {
+			check_variable = { TU_LEI_electors < 7 }
+		}
+
+		cost = 75
+		days_re_enable = 120
+
+		complete_effect = {
+			TU_LEI_electors_1 = yes
+		}
+
+		ai_will_do = {
+			base = 1
+		}
+	}
+
+	TU_LEI_banquet = {
+		icon = GFX_decision_generic_political_discourse
+
+		allowed = {
+			original_tag = LEI
+		}
+
+		available = {
+			check_variable = { TU_LEI_electors < 7 }
+		}
+
+		cost = 25
+		days_re_enable = 240
+
+		complete_effect = {
+			TU_LEI_electors_1 = yes
+			add_political_power = -25
+			TU_LEI_resonance_5 = yes
+		}
+
+		ai_will_do = {
+			base = 1
+		}
+	}
+
+	TU_LEI_grant_privileges = {
+		icon = GFX_decision_generic_political_discourse
+
+		allowed = {
+			original_tag = LEI
+		}
+
+		cost = 0
+		days_re_enable = 180
+
+		complete_effect = {
+			add_political_power = 75
+			TU_LEI_electors_m1 = yes
+		}
+
+		ai_will_do = {
+			base = 1
+		}
+	}
+
+	TU_LEI_imperial_edict = {
+		icon = GFX_decision_generic_political_address
+
+		allowed = {
+			original_tag = LEI
+		}
+
+		available = {
+			check_variable = { TU_LEI_electors > 4 }
+		}
+
+		cost = 50
+		days_re_enable = 180
+		days_remove = 365
+
+		complete_effect = {
+			add_ideas = TU_LEI_imperial_edict
+		}
+
+		remove_effect = {
+			remove_ideas = TU_LEI_imperial_edict
+		}
+
+		ai_will_do = {
+			base = 1
+		}
+	}
+
+	TU_LEI_elector_levy = {
+		icon = GFX_decision_generic_political_discourse
+
+		allowed = {
+			original_tag = LEI
+		}
+
+		cost = 25
+		days_re_enable = 240
+
+		complete_effect = {
+			add_manpower = 10000
+			TU_LEI_electors_m1 = yes
+		}
+
+		ai_will_do = {
+			base = 1
+		}
+	}
+
+	TU_LEI_elector_tax = {
+		icon = GFX_decision_generic_factory
+
+		allowed = {
+			original_tag = LEI
+		}
+
+		available = {
+			check_variable = { TU_LEI_electors > 3 }
+		}
+
+		cost = 100
+		days_re_enable = 365
+
+		complete_effect = {
+			TU_build_civ_factory = yes
+		}
+
+		ai_will_do = {
+			base = 1
+		}
+	}
+
+	TU_LEI_elector_council_vote = {
+		icon = GFX_decision_generic_political_discourse
+
+		allowed = {
+			original_tag = LEI
+		}
+
+		cost = 25
+		days_re_enable = 180
+
+		complete_effect = {
+			random_list = {
+				60 = { TU_LEI_electors_1 = yes }
+				40 = { TU_LEI_electors_m1 = yes }
+			}
+			add_political_power = 30
+		}
+
+		ai_will_do = {
+			base = 1
+		}
+	}
+
+}
+
+TU_LEI_arts_category = {
+	TU_LEI_concert = {
+		icon = GFX_decision_generic_speech
+
+		allowed = {
+			original_tag = LEI
+		}
+
+		cost = 25
+		days_re_enable = 60
+
+		complete_effect = {
+			TU_LEI_resonance_10 = yes
+		}
+
+		ai_will_do = {
+			base = 1
+		}
+	}
+
+	TU_LEI_opera_gala = {
+		icon = GFX_decision_generic_political_discourse
+
+		allowed = {
+			original_tag = LEI
+		}
+
+		visible = {
+			has_completed_focus = TU_LEI_opera_house
+		}
+
+		cost = 50
+		days_re_enable = 180
+
+		complete_effect = {
+			TU_LEI_resonance_20 = yes
+			add_stability = 0.02
+		}
+
+		ai_will_do = {
+			base = 1
+		}
+	}
+
+	TU_LEI_battle_symphony = {
+		icon = GFX_decision_generic_speech
+
+		allowed = {
+			original_tag = LEI
+		}
+
+		available = {
+			check_variable = { TU_LEI_resonance > 29 }
+			NOT = { has_idea = TU_LEI_battle_symphony }
+			NOT = { has_idea = TU_LEI_rebuild_concerto }
+			NOT = { has_idea = TU_LEI_healing_song }
+		}
+
+		cost = 25
+		days_re_enable = 30
+		days_remove = 90
+
+		complete_effect = {
+			add_ideas = TU_LEI_battle_symphony
+			TU_LEI_resonance_m30 = yes
+		}
+
+		remove_effect = {
+			if = { limit = { NOT = { has_country_flag = TU_LEI_grand_symphony } } remove_ideas = TU_LEI_battle_symphony }
+			if = { limit = { has_country_flag = TU_LEI_grand_symphony } TU_LEI_extend_battle_symphony = yes }
+		}
+
+		ai_will_do = {
+			base = 1
+		}
+	}
+
+	TU_LEI_rebuild_concerto = {
+		icon = GFX_decision_generic_speech
+
+		allowed = {
+			original_tag = LEI
+		}
+
+		available = {
+			check_variable = { TU_LEI_resonance > 29 }
+			NOT = { has_idea = TU_LEI_battle_symphony }
+			NOT = { has_idea = TU_LEI_rebuild_concerto }
+			NOT = { has_idea = TU_LEI_healing_song }
+		}
+
+		cost = 25
+		days_re_enable = 30
+		days_remove = 90
+
+		complete_effect = {
+			add_ideas = TU_LEI_rebuild_concerto
+			TU_LEI_resonance_m30 = yes
+		}
+
+		remove_effect = {
+			if = { limit = { NOT = { has_country_flag = TU_LEI_grand_symphony } } remove_ideas = TU_LEI_rebuild_concerto }
+			if = { limit = { has_country_flag = TU_LEI_grand_symphony } TU_LEI_extend_rebuild_concerto = yes }
+		}
+
+		ai_will_do = {
+			base = 1
+		}
+	}
+
+	TU_LEI_healing_song = {
+		icon = GFX_decision_generic_speech
+
+		allowed = {
+			original_tag = LEI
+		}
+
+		available = {
+			check_variable = { TU_LEI_resonance > 29 }
+			NOT = { has_idea = TU_LEI_battle_symphony }
+			NOT = { has_idea = TU_LEI_rebuild_concerto }
+			NOT = { has_idea = TU_LEI_healing_song }
+		}
+
+		cost = 25
+		days_re_enable = 30
+		days_remove = 90
+
+		complete_effect = {
+			add_ideas = TU_LEI_healing_song
+			TU_LEI_resonance_m30 = yes
+		}
+
+		remove_effect = {
+			if = { limit = { NOT = { has_country_flag = TU_LEI_grand_symphony } } remove_ideas = TU_LEI_healing_song }
+			if = { limit = { has_country_flag = TU_LEI_grand_symphony } TU_LEI_extend_healing_song = yes }
+		}
+
+		ai_will_do = {
+			base = 1
+		}
+	}
+
+	TU_LEI_street_music = {
+		icon = GFX_decision_generic_political_discourse
+
+		allowed = {
+			original_tag = LEI
+		}
+
+		cost = 10
+		days_re_enable = 90
+
+		complete_effect = {
+			TU_LEI_resonance_5 = yes
+			add_stability = 0.02
+		}
+
+		ai_will_do = {
+			base = 1
+		}
+	}
+
+}
+
+TU_LEI_relics_category = {
+	TU_LEI_relic_search = {
+		icon = GFX_decision_generic_operation
+
+		allowed = {
+			original_tag = LEI
+		}
+
+		available = {
+			check_variable = { TU_LEI_relics < 3 }
+			NOT = { has_country_flag = TU_LEI_searching }
+		}
+
+		cost = 75
+		days_re_enable = 30
+		days_remove = 120
+
+		complete_effect = {
+			set_country_flag = TU_LEI_searching
+		}
+
+		remove_effect = {
+			clr_country_flag = TU_LEI_searching
+			country_event = { id = tu_lei_ev.21 }
+		}
+
+		ai_will_do = {
+			base = 1
+		}
+	}
+
+	TU_LEI_seal_relic = {
+		icon = GFX_decision_generic_political_discourse
+
+		allowed = {
+			original_tag = LEI
+		}
+
+		available = {
+			check_variable = { TU_LEI_relics > 0 }
+		}
+
+		cost = 25
+		days_re_enable = 90
+
+		complete_effect = {
+			TU_LEI_relics_m1 = yes
+			add_stability = 0.05
+		}
+
+		ai_will_do = {
+			base = 1
+		}
+	}
+
+	TU_LEI_study_relic = {
+		icon = GFX_decision_generic_political_discourse
+
+		allowed = {
+			original_tag = LEI
+		}
+
+		available = {
+			check_variable = { TU_LEI_relics > 0 }
+		}
+
+		cost = 50
+		days_re_enable = 240
+
+		complete_effect = {
+			add_tech_bonus = { name = TU_LEI_study_relic bonus = 0.75 uses = 1 category = electronics category = industry }
+			add_stability = -0.02
+		}
+
+		ai_will_do = {
+			base = 1
+		}
+	}
+
+	TU_LEI_witch_hunt = {
+		icon = GFX_decision_generic_political_discourse
+
+		allowed = {
+			original_tag = LEI
+		}
+
+		visible = {
+			has_completed_focus = TU_LEI_witch_hunters
+		}
+
+		cost = 50
+		days_re_enable = 240
+
+		complete_effect = {
+			add_stability = 0.04
+			add_war_support = 0.02
+		}
+
+		ai_will_do = {
+			base = 1
+		}
+	}
+
+}
+
+TU_LEI_foreign_category = {
+	TU_LEI_found_league = {
+		icon = GFX_decision_generic_political_discourse
+
+		allowed = {
+			original_tag = LEI
+		}
+
+		available = {
+			is_in_faction = no
+		}
+
+		cost = 50
+		fire_only_once = yes
+
+		complete_effect = {
+			create_faction = TU_LEI_league
+		}
+
+		ai_will_do = {
+			base = 1
+		}
+	}
+
+	TU_LEI_invite_league = {
+		icon = GFX_decision_generic_political_discourse
+
+		allowed = {
+			original_tag = LEI
+		}
+
+		target_trigger = {
+			FROM = {
+				NOT = { tag = ROOT }
+				is_in_faction = no
+				NOT = { has_war_with = ROOT }
+				OR = { tag = KAZ tag = SIR tag = LAT tag = VIC }
+			}
+		}
+
+		visible = {
+			is_faction_leader = yes
+		}
+
+		cost = 50
+		days_re_enable = 90
+
+		complete_effect = {
+			add_to_faction = FROM
+		}
+
+		ai_will_do = {
+			base = 1
+		}
+	}
+
+	TU_LEI_arts_envoys = {
+		icon = GFX_decision_generic_political_discourse
+
+		allowed = {
+			original_tag = LEI
+		}
+
+		cost = 25
+		days_re_enable = 180
+
+		complete_effect = {
+			add_political_power = 50
+			TU_LEI_resonance_5 = yes
+		}
+
+		ai_will_do = {
+			base = 1
+		}
+	}
+
+}

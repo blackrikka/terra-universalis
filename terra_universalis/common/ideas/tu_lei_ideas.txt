@@ -1,0 +1,149 @@
+ideas = {
+
+	country = {
+
+		TU_LEI_twin_throne = {
+			picture = generic_political_support
+
+			allowed = {
+				original_tag = LEI
+			}
+
+			modifier = {
+				political_power_gain = -0.05
+				stability_factor = 0.03
+			}
+		}
+
+		TU_LEI_witch_king_shadow = {
+			picture = generic_army_problems
+
+			allowed = {
+				original_tag = LEI
+			}
+
+			modifier = {
+				stability_factor = -0.05
+				war_support_factor = -0.03
+			}
+		}
+
+		TU_LEI_battle_symphony = {
+			picture = generic_morale_bonus
+
+			allowed = {
+				original_tag = LEI
+			}
+
+			modifier = {
+				army_attack_factor = 0.1
+				army_org_factor = 0.05
+			}
+		}
+
+		TU_LEI_rebuild_concerto = {
+			picture = generic_production_bonus
+
+			allowed = {
+				original_tag = LEI
+			}
+
+			modifier = {
+				production_speed_buildings_factor = 0.15
+			}
+		}
+
+		TU_LEI_healing_song = {
+			picture = generic_morale_bonus
+
+			allowed = {
+				original_tag = LEI
+			}
+
+			modifier = {
+				stability_factor = 0.1
+				monthly_population = 0.15
+			}
+		}
+
+		TU_LEI_twin_empresses = {
+			picture = generic_central_management
+
+			allowed = {
+				original_tag = LEI
+			}
+
+			modifier = {
+				political_power_gain = 0.15
+				stability_factor = 0.1
+				research_speed_factor = 0.03
+			}
+		}
+
+		TU_LEI_electoral_federation = {
+			picture = generic_local_self_management
+
+			allowed = {
+				original_tag = LEI
+			}
+
+			modifier = {
+				production_speed_buildings_factor = 0.1
+				conscription_factor = 0.05
+				political_power_gain = -0.05
+			}
+		}
+
+		TU_LEI_witch_king_return = {
+			picture = generic_deal_with_the_devil
+
+			allowed = {
+				original_tag = LEI
+			}
+
+			modifier = {
+				army_attack_factor = 0.12
+				research_speed_factor = 0.05
+				stability_factor = -0.1
+			}
+		}
+
+		TU_LEI_arts_pinnacle = {
+			picture = generic_research_bonus
+
+			allowed = {
+				original_tag = LEI
+			}
+
+			modifier = {
+				research_speed_factor = 0.07
+			}
+		}
+
+		TU_LEI_caster_corps = {
+			picture = generic_army_war_college
+
+			allowed = {
+				original_tag = LEI
+			}
+
+			modifier = {
+				army_attack_factor = 0.06
+				army_morale_factor = 0.05
+			}
+		}
+
+		TU_LEI_imperial_edict = {
+			picture = generic_central_management
+
+			allowed = {
+				original_tag = LEI
+			}
+
+			modifier = {
+				political_power_gain = 0.1
+				production_factory_max_efficiency_factor = 0.05
+			}
+		}
+	}
+}
