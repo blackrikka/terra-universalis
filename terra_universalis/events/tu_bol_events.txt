@@ -1,0 +1,460 @@
+add_namespace = tu_bol_ev
+
+country_event = {
+	id = tu_bol_ev.1
+	title = tu_bol_ev.1.t
+	desc = tu_bol_ev.1.d
+	picture = GFX_report_event_generic_read_write
+	is_triggered_only = yes
+
+	option = {
+		name = tu_bol_ev.1.a
+		ai_chance = {
+			factor = 50
+		}
+		TU_BOL_control_5 = yes
+	}
+
+	option = {
+		name = tu_bol_ev.1.b
+		ai_chance = {
+			factor = 50
+		}
+		TU_BOL_weariness_m5 = yes
+	}
+}
+
+country_event = {
+	id = tu_bol_ev.20
+	title = tu_bol_ev.20.t
+	desc = tu_bol_ev.20.d
+	picture = GFX_report_event_generic_battle
+	is_triggered_only = yes
+
+	immediate = {
+		random_list = {
+			45 = { modifier = { factor = 1.3 has_completed_focus = TU_BOL_guerrilla_masters } set_country_flag = TU_BOL_res_win }
+			30 = { set_country_flag = TU_BOL_res_stall }
+			25 = { set_country_flag = TU_BOL_res_fail }
+		}
+		clr_country_flag = TU_BOL_big
+		clr_country_flag = TU_BOL_small
+	}
+
+	option = {
+		name = tu_bol_ev.20.a
+		ai_chance = {
+			factor = 1
+		}
+		trigger = { has_country_flag = TU_BOL_res_win }
+		TU_BOL_control_15 = yes
+		if = { limit = { has_country_flag = TU_BOL_big } TU_BOL_control_10 = yes }
+		army_experience = 15
+		clr_country_flag = TU_BOL_res_win
+	}
+
+	option = {
+		name = tu_bol_ev.20.b
+		ai_chance = {
+			factor = 1
+		}
+		trigger = { has_country_flag = TU_BOL_res_stall }
+		TU_BOL_control_5 = yes
+		TU_BOL_weariness_3 = yes
+		clr_country_flag = TU_BOL_res_stall
+	}
+
+	option = {
+		name = tu_bol_ev.20.c
+		ai_chance = {
+			factor = 1
+		}
+		trigger = { has_country_flag = TU_BOL_res_fail }
+		TU_BOL_control_m10 = yes
+		TU_BOL_weariness_5 = yes
+		add_manpower = -3000
+		clr_country_flag = TU_BOL_res_fail
+	}
+}
+
+country_event = {
+	id = tu_bol_ev.21
+	title = tu_bol_ev.21.t
+	desc = tu_bol_ev.21.d
+	picture = GFX_report_event_generic_riot
+
+	trigger = {
+		original_tag = BOL
+		check_variable = { TU_BOL_weariness > 69 }
+	}
+
+	mean_time_to_happen = {
+		days = 90
+	}
+
+	option = {
+		name = tu_bol_ev.21.a
+		ai_chance = {
+			factor = 50
+		}
+		add_stability = -0.02
+		army_experience = 5
+	}
+
+	option = {
+		name = tu_bol_ev.21.b
+		ai_chance = {
+			factor = 50
+		}
+		TU_BOL_weariness_m5 = yes
+		add_manpower = -3000
+	}
+}
+
+country_event = {
+	id = tu_bol_ev.22
+	title = tu_bol_ev.22.t
+	desc = tu_bol_ev.22.d
+	picture = GFX_report_event_generic_riot
+
+	trigger = {
+		original_tag = BOL
+		check_variable = { TU_BOL_weariness > 79 }
+	}
+
+	mean_time_to_happen = {
+		days = 120
+	}
+
+	option = {
+		name = tu_bol_ev.22.a
+		ai_chance = {
+			factor = 60
+		}
+		TU_BOL_weariness_m10 = yes
+		add_political_power = -30
+	}
+
+	option = {
+		name = tu_bol_ev.22.b
+		ai_chance = {
+			factor = 40
+		}
+		add_stability = -0.04
+	}
+}
+
+country_event = {
+	id = tu_bol_ev.23
+	title = tu_bol_ev.23.t
+	desc = tu_bol_ev.23.d
+	picture = GFX_report_event_generic_read_write
+
+	trigger = {
+		original_tag = BOL
+		check_variable = { TU_BOL_columbia > 59 }
+	}
+
+	mean_time_to_happen = {
+		days = 180
+	}
+
+	option = {
+		name = tu_bol_ev.23.a
+		ai_chance = {
+			factor = 50
+		}
+		TU_BOL_columbia_10 = yes
+		add_political_power = 25
+	}
+
+	option = {
+		name = tu_bol_ev.23.b
+		ai_chance = {
+			factor = 50
+		}
+		TU_BOL_columbia_m10 = yes
+		add_stability = -0.02
+	}
+}
+
+country_event = {
+	id = tu_bol_ev.24
+	title = tu_bol_ev.24.t
+	desc = tu_bol_ev.24.d
+	picture = GFX_report_event_generic_read_write
+
+	trigger = {
+		original_tag = BOL
+		check_variable = { TU_BOL_victoria > 59 }
+	}
+
+	mean_time_to_happen = {
+		days = 180
+	}
+
+	option = {
+		name = tu_bol_ev.24.a
+		ai_chance = {
+			factor = 50
+		}
+		TU_BOL_victoria_10 = yes
+		add_political_power = 25
+	}
+
+	option = {
+		name = tu_bol_ev.24.b
+		ai_chance = {
+			factor = 50
+		}
+		TU_BOL_victoria_m10 = yes
+		add_stability = -0.02
+	}
+}
+
+country_event = {
+	id = tu_bol_ev.25
+	title = tu_bol_ev.25.t
+	desc = tu_bol_ev.25.d
+	picture = GFX_report_event_generic_sign_treaty1
+	is_triggered_only = yes
+
+	option = {
+		name = tu_bol_ev.25.a
+		ai_chance = {
+			factor = 1
+		}
+		remove_ideas = TU_BOL_endless_war
+		add_stability = 0.1
+		TU_BOL_weariness_m20 = yes
+	}
+}
+
+country_event = {
+	id = tu_bol_ev.26
+	title = tu_bol_ev.26.t
+	desc = tu_bol_ev.26.d
+	picture = GFX_report_event_generic_read_write
+
+	trigger = {
+		original_tag = BOL
+		check_variable = { TU_BOL_control > 49 }
+		NOT = { has_country_flag = TU_BOL_war_over }
+	}
+	fire_only_once = yes
+
+	mean_time_to_happen = {
+		days = 200
+	}
+
+	option = {
+		name = tu_bol_ev.26.a
+		ai_chance = {
+			factor = 60
+		}
+		TU_BOL_control_10 = yes
+		add_political_power = -25
+	}
+
+	option = {
+		name = tu_bol_ev.26.b
+		ai_chance = {
+			factor = 40
+		}
+		army_experience = 10
+	}
+}
+
+country_event = {
+	id = tu_bol_ev.27
+	title = tu_bol_ev.27.t
+	desc = tu_bol_ev.27.d
+	picture = GFX_report_event_generic_read_write
+
+	trigger = {
+		original_tag = BOL
+		NOT = { has_country_flag = TU_BOL_war_over }
+	}
+	fire_only_once = yes
+
+	mean_time_to_happen = {
+		days = 300
+	}
+
+	option = {
+		name = tu_bol_ev.27.a
+		ai_chance = {
+			factor = 50
+		}
+		add_political_power = -20
+		TU_BOL_weariness_m3 = yes
+	}
+
+	option = {
+		name = tu_bol_ev.27.b
+		ai_chance = {
+			factor = 50
+		}
+		add_war_support = 0.05
+		TU_BOL_weariness_5 = yes
+	}
+}
+
+country_event = {
+	id = tu_bol_ev.28
+	title = tu_bol_ev.28.t
+	desc = tu_bol_ev.28.d
+	picture = GFX_report_event_generic_read_write
+	is_triggered_only = yes
+
+	option = {
+		name = tu_bol_ev.28.a
+		ai_chance = {
+			factor = 1
+		}
+		add_stability = 0.05
+	}
+}
+
+country_event = {
+	id = tu_bol_ev.29
+	title = tu_bol_ev.29.t
+	desc = tu_bol_ev.29.d
+	picture = GFX_report_event_generic_read_write
+	is_triggered_only = yes
+
+	option = {
+		name = tu_bol_ev.29.a
+		ai_chance = {
+			factor = 1
+		}
+		if = { limit = { country_exists = COL } COL = { puppet = BOL } }
+	}
+}
+
+country_event = {
+	id = tu_bol_ev.30
+	title = tu_bol_ev.30.t
+	desc = tu_bol_ev.30.d
+	picture = GFX_report_event_generic_read_write
+	is_triggered_only = yes
+
+	option = {
+		name = tu_bol_ev.30.a
+		ai_chance = {
+			factor = 1
+		}
+		if = { limit = { country_exists = VIC } VIC = { puppet = BOL } }
+	}
+}
+
+country_event = {
+	id = tu_bol_ev.31
+	title = tu_bol_ev.31.t
+	desc = tu_bol_ev.31.d
+	picture = GFX_report_event_generic_read_write
+
+	trigger = {
+		original_tag = BOL
+		has_completed_focus = TU_BOL_guerrilla_doctrine
+	}
+	fire_only_once = yes
+
+	mean_time_to_happen = {
+		days = 300
+	}
+
+	option = {
+		name = tu_bol_ev.31.a
+		ai_chance = {
+			factor = 1
+		}
+		army_experience = 20
+		add_war_support = 0.03
+	}
+}
+
+country_event = {
+	id = tu_bol_ev.32
+	title = tu_bol_ev.32.t
+	desc = tu_bol_ev.32.d
+	picture = GFX_report_event_generic_read_write
+
+	trigger = {
+		original_tag = BOL
+		check_variable = { TU_BOL_control > 39 }
+		NOT = { has_country_flag = TU_BOL_war_over }
+	}
+	fire_only_once = yes
+
+	mean_time_to_happen = {
+		days = 300
+	}
+
+	option = {
+		name = tu_bol_ev.32.a
+		ai_chance = {
+			factor = 1
+		}
+		TU_BOL_control_10 = yes
+	}
+}
+
+country_event = {
+	id = tu_bol_ev.33
+	title = tu_bol_ev.33.t
+	desc = tu_bol_ev.33.d
+	picture = GFX_report_event_generic_read_write
+
+	trigger = {
+		original_tag = BOL
+		check_variable = { TU_BOL_weariness > 59 }
+	}
+	fire_only_once = yes
+
+	mean_time_to_happen = {
+		days = 200
+	}
+
+	option = {
+		name = tu_bol_ev.33.a
+		ai_chance = {
+			factor = 50
+		}
+		add_stability = -0.02
+	}
+
+	option = {
+		name = tu_bol_ev.33.b
+		ai_chance = {
+			factor = 50
+		}
+		add_manpower = -3000
+		TU_BOL_weariness_m3 = yes
+	}
+}
+
+country_event = {
+	id = tu_bol_ev.34
+	title = tu_bol_ev.34.t
+	desc = tu_bol_ev.34.d
+	picture = GFX_report_event_generic_read_write
+
+	trigger = {
+		original_tag = BOL
+		has_country_flag = TU_BOL_war_over
+	}
+	fire_only_once = yes
+
+	mean_time_to_happen = {
+		days = 200
+	}
+
+	option = {
+		name = tu_bol_ev.34.a
+		ai_chance = {
+			factor = 1
+		}
+		add_stability = 0.04
+	}
+}

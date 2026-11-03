@@ -1,0 +1,211 @@
+TU_BOL_monthly = {
+	if = {
+		limit = { NOT = { has_country_flag = TU_BOL_war_over } }
+		add_to_variable = { TU_BOL_weariness = 1 }
+	}
+	if = {
+		limit = { has_country_flag = TU_BOL_war_over }
+		add_to_variable = { TU_BOL_weariness = -2 }
+	}
+	clamp_variable = { var = TU_BOL_weariness min = 0 max = 100 }
+	if = {
+		limit = {
+			check_variable = { TU_BOL_control > 99 }
+			NOT = { has_country_flag = TU_BOL_war_over }
+		}
+		set_country_flag = TU_BOL_war_over
+		country_event = { id = tu_bol_ev.25 }
+	}
+}
+
+TU_BOL_control_5 = {
+	custom_effect_tooltip = TU_BOL_control_5_tt
+	hidden_effect = {
+		add_to_variable = { TU_BOL_control = 5 }
+		clamp_variable = { var = TU_BOL_control min = 0 max = 100 }
+	}
+}
+
+TU_BOL_columbia_5 = {
+	custom_effect_tooltip = TU_BOL_columbia_5_tt
+	hidden_effect = {
+		add_to_variable = { TU_BOL_columbia = 5 }
+		clamp_variable = { var = TU_BOL_columbia min = 0 max = 100 }
+	}
+}
+
+TU_BOL_victoria_5 = {
+	custom_effect_tooltip = TU_BOL_victoria_5_tt
+	hidden_effect = {
+		add_to_variable = { TU_BOL_victoria = 5 }
+		clamp_variable = { var = TU_BOL_victoria min = 0 max = 100 }
+	}
+}
+
+TU_BOL_control_10 = {
+	custom_effect_tooltip = TU_BOL_control_10_tt
+	hidden_effect = {
+		add_to_variable = { TU_BOL_control = 10 }
+		clamp_variable = { var = TU_BOL_control min = 0 max = 100 }
+	}
+}
+
+TU_BOL_control_20 = {
+	custom_effect_tooltip = TU_BOL_control_20_tt
+	hidden_effect = {
+		add_to_variable = { TU_BOL_control = 20 }
+		clamp_variable = { var = TU_BOL_control min = 0 max = 100 }
+	}
+}
+
+TU_BOL_weariness_10 = {
+	custom_effect_tooltip = TU_BOL_weariness_10_tt
+	hidden_effect = {
+		add_to_variable = { TU_BOL_weariness = 10 }
+		clamp_variable = { var = TU_BOL_weariness min = 0 max = 100 }
+	}
+}
+
+TU_BOL_weariness_m10 = {
+	custom_effect_tooltip = TU_BOL_weariness_m10_tt
+	hidden_effect = {
+		add_to_variable = { TU_BOL_weariness = -10 }
+		clamp_variable = { var = TU_BOL_weariness min = 0 max = 100 }
+	}
+}
+
+TU_BOL_columbia_15 = {
+	custom_effect_tooltip = TU_BOL_columbia_15_tt
+	hidden_effect = {
+		add_to_variable = { TU_BOL_columbia = 15 }
+		clamp_variable = { var = TU_BOL_columbia min = 0 max = 100 }
+	}
+}
+
+TU_BOL_victoria_15 = {
+	custom_effect_tooltip = TU_BOL_victoria_15_tt
+	hidden_effect = {
+		add_to_variable = { TU_BOL_victoria = 15 }
+		clamp_variable = { var = TU_BOL_victoria min = 0 max = 100 }
+	}
+}
+
+TU_BOL_control_30 = {
+	custom_effect_tooltip = TU_BOL_control_30_tt
+	hidden_effect = {
+		add_to_variable = { TU_BOL_control = 30 }
+		clamp_variable = { var = TU_BOL_control min = 0 max = 100 }
+	}
+}
+
+TU_BOL_weariness_m5 = {
+	custom_effect_tooltip = TU_BOL_weariness_m5_tt
+	hidden_effect = {
+		add_to_variable = { TU_BOL_weariness = -5 }
+		clamp_variable = { var = TU_BOL_weariness min = 0 max = 100 }
+	}
+}
+
+TU_BOL_weariness_m8 = {
+	custom_effect_tooltip = TU_BOL_weariness_m8_tt
+	hidden_effect = {
+		add_to_variable = { TU_BOL_weariness = -8 }
+		clamp_variable = { var = TU_BOL_weariness min = 0 max = 100 }
+	}
+}
+
+TU_BOL_columbia_10 = {
+	custom_effect_tooltip = TU_BOL_columbia_10_tt
+	hidden_effect = {
+		add_to_variable = { TU_BOL_columbia = 10 }
+		clamp_variable = { var = TU_BOL_columbia min = 0 max = 100 }
+	}
+}
+
+TU_BOL_victoria_10 = {
+	custom_effect_tooltip = TU_BOL_victoria_10_tt
+	hidden_effect = {
+		add_to_variable = { TU_BOL_victoria = 10 }
+		clamp_variable = { var = TU_BOL_victoria min = 0 max = 100 }
+	}
+}
+
+TU_BOL_columbia_m10 = {
+	custom_effect_tooltip = TU_BOL_columbia_m10_tt
+	hidden_effect = {
+		add_to_variable = { TU_BOL_columbia = -10 }
+		clamp_variable = { var = TU_BOL_columbia min = 0 max = 100 }
+	}
+}
+
+TU_BOL_victoria_m10 = {
+	custom_effect_tooltip = TU_BOL_victoria_m10_tt
+	hidden_effect = {
+		add_to_variable = { TU_BOL_victoria = -10 }
+		clamp_variable = { var = TU_BOL_victoria min = 0 max = 100 }
+	}
+}
+
+TU_BOL_control_15 = {
+	custom_effect_tooltip = TU_BOL_control_15_tt
+	hidden_effect = {
+		add_to_variable = { TU_BOL_control = 15 }
+		clamp_variable = { var = TU_BOL_control min = 0 max = 100 }
+	}
+}
+
+TU_BOL_weariness_3 = {
+	custom_effect_tooltip = TU_BOL_weariness_3_tt
+	hidden_effect = {
+		add_to_variable = { TU_BOL_weariness = 3 }
+		clamp_variable = { var = TU_BOL_weariness min = 0 max = 100 }
+	}
+}
+
+TU_BOL_control_m10 = {
+	custom_effect_tooltip = TU_BOL_control_m10_tt
+	hidden_effect = {
+		add_to_variable = { TU_BOL_control = -10 }
+		clamp_variable = { var = TU_BOL_control min = 0 max = 100 }
+	}
+}
+
+TU_BOL_weariness_5 = {
+	custom_effect_tooltip = TU_BOL_weariness_5_tt
+	hidden_effect = {
+		add_to_variable = { TU_BOL_weariness = 5 }
+		clamp_variable = { var = TU_BOL_weariness min = 0 max = 100 }
+	}
+}
+
+TU_BOL_weariness_m20 = {
+	custom_effect_tooltip = TU_BOL_weariness_m20_tt
+	hidden_effect = {
+		add_to_variable = { TU_BOL_weariness = -20 }
+		clamp_variable = { var = TU_BOL_weariness min = 0 max = 100 }
+	}
+}
+
+TU_BOL_weariness_m3 = {
+	custom_effect_tooltip = TU_BOL_weariness_m3_tt
+	hidden_effect = {
+		add_to_variable = { TU_BOL_weariness = -3 }
+		clamp_variable = { var = TU_BOL_weariness min = 0 max = 100 }
+	}
+}
+
+TU_BOL_columbia_m3 = {
+	custom_effect_tooltip = TU_BOL_columbia_m3_tt
+	hidden_effect = {
+		add_to_variable = { TU_BOL_columbia = -3 }
+		clamp_variable = { var = TU_BOL_columbia min = 0 max = 100 }
+	}
+}
+
+TU_BOL_victoria_m3 = {
+	custom_effect_tooltip = TU_BOL_victoria_m3_tt
+	hidden_effect = {
+		add_to_variable = { TU_BOL_victoria = -3 }
+		clamp_variable = { var = TU_BOL_victoria min = 0 max = 100 }
+	}
+}

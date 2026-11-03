@@ -1,0 +1,113 @@
+ideas = {
+
+	country = {
+
+		TU_BOL_endless_war = {
+			picture = generic_army_problems
+
+			allowed = {
+				original_tag = BOL
+			}
+
+			modifier = {
+				stability_factor = -0.1
+				war_support_factor = 0.05
+				production_speed_buildings_factor = -0.1
+			}
+		}
+
+		TU_BOL_divided_land = {
+			picture = generic_local_self_management
+
+			allowed = {
+				original_tag = BOL
+			}
+
+			modifier = {
+				political_power_gain = -0.1
+			}
+		}
+
+		TU_BOL_peace_dividend = {
+			picture = generic_pp_unity_bonus
+
+			allowed = {
+				original_tag = BOL
+			}
+
+			modifier = {
+				stability_factor = 0.1
+				production_speed_buildings_factor = 0.1
+				monthly_population = 0.1
+			}
+		}
+
+		TU_BOL_bolivar_republic = {
+			picture = constitutional_guarantees
+
+			allowed = {
+				original_tag = BOL
+			}
+
+			modifier = {
+				stability_factor = 0.1
+				political_power_gain = 0.15
+				war_support_factor = 0.05
+			}
+		}
+
+		TU_BOL_columbian_protectorate = {
+			picture = generic_foreign_capital
+
+			allowed = {
+				original_tag = BOL
+			}
+
+			modifier = {
+				production_factory_max_efficiency_factor = 0.1
+				research_speed_factor = 0.05
+				political_power_gain = -0.05
+			}
+		}
+
+		TU_BOL_victorian_protectorate = {
+			picture = generic_foreign_capital
+
+			allowed = {
+				original_tag = BOL
+			}
+
+			modifier = {
+				army_org_factor = 0.05
+				production_speed_buildings_factor = 0.1
+				political_power_gain = -0.05
+			}
+		}
+
+		TU_BOL_guerrilla_masters = {
+			picture = generic_guerilla_warfare
+
+			allowed = {
+				original_tag = BOL
+			}
+
+			modifier = {
+				army_defence_factor = 0.08
+				attrition = -0.1
+			}
+		}
+
+		TU_BOL_veteran_army = {
+			picture = generic_army_war_college
+
+			allowed = {
+				original_tag = BOL
+			}
+
+			modifier = {
+				army_org_factor = 0.05
+				experience_gain_army_factor = 0.1
+			}
+		}
+	}
+}

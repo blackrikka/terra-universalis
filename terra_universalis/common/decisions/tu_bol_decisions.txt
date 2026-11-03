@@ -1,0 +1,459 @@
+TU_BOL_war_category = {
+	TU_BOL_offensive = {
+		icon = GFX_decision_generic_military
+
+		allowed = {
+			original_tag = BOL
+		}
+
+		available = {
+			NOT = { has_country_flag = TU_BOL_offensive_on }
+			NOT = { has_country_flag = TU_BOL_big_offensive_on }
+			NOT = { has_country_flag = TU_BOL_war_over }
+		}
+
+		cost = 50
+		days_re_enable = 30
+		days_remove = 60
+
+		complete_effect = {
+			add_manpower = -3000
+			set_country_flag = TU_BOL_offensive_on
+		}
+
+		remove_effect = {
+			clr_country_flag = TU_BOL_offensive_on
+			set_country_flag = TU_BOL_small
+			country_event = { id = tu_bol_ev.20 }
+		}
+
+		ai_will_do = {
+			base = 1
+		}
+	}
+
+	TU_BOL_big_offensive = {
+		icon = GFX_decision_generic_military
+
+		allowed = {
+			original_tag = BOL
+		}
+
+		available = {
+			NOT = { has_country_flag = TU_BOL_offensive_on }
+			NOT = { has_country_flag = TU_BOL_big_offensive_on }
+			NOT = { has_country_flag = TU_BOL_war_over }
+		}
+
+		cost = 100
+		days_re_enable = 30
+		days_remove = 60
+
+		complete_effect = {
+			add_manpower = -8000
+			set_country_flag = TU_BOL_big_offensive_on
+		}
+
+		remove_effect = {
+			clr_country_flag = TU_BOL_big_offensive_on
+			set_country_flag = TU_BOL_big
+			country_event = { id = tu_bol_ev.20 }
+		}
+
+		ai_will_do = {
+			base = 1
+		}
+	}
+
+	TU_BOL_local_ceasefire = {
+		icon = GFX_decision_generic_political_discourse
+
+		allowed = {
+			original_tag = BOL
+		}
+
+		available = {
+			NOT = { has_country_flag = TU_BOL_war_over }
+		}
+
+		cost = 25
+		days_re_enable = 120
+
+		complete_effect = {
+			TU_BOL_weariness_m10 = yes
+			add_political_power = -25
+		}
+
+		ai_will_do = {
+			base = 1
+		}
+	}
+
+	TU_BOL_relief_convoy = {
+		icon = GFX_decision_generic_civil_support
+
+		allowed = {
+			original_tag = BOL
+		}
+
+		cost = 50
+		days_re_enable = 120
+
+		complete_effect = {
+			TU_BOL_weariness_m8 = yes
+			add_stability = 0.02
+		}
+
+		ai_will_do = {
+			base = 1
+		}
+	}
+
+	TU_BOL_win_hearts = {
+		icon = GFX_decision_generic_political_discourse
+
+		allowed = {
+			original_tag = BOL
+		}
+
+		cost = 50
+		days_re_enable = 120
+
+		complete_effect = {
+			TU_BOL_control_5 = yes
+			add_political_power = -15
+		}
+
+		ai_will_do = {
+			base = 1
+		}
+	}
+
+	TU_BOL_warlord_bribe = {
+		icon = GFX_decision_generic_political_discourse
+
+		allowed = {
+			original_tag = BOL
+		}
+
+		available = {
+			NOT = { has_country_flag = TU_BOL_war_over }
+		}
+
+		cost = 0
+		days_re_enable = 240
+
+		complete_effect = {
+			TU_BOL_control_10 = yes
+			add_political_power = -50
+		}
+
+		ai_will_do = {
+			base = 1
+		}
+	}
+
+	TU_BOL_propaganda = {
+		icon = GFX_decision_generic_political_discourse
+
+		allowed = {
+			original_tag = BOL
+		}
+
+		cost = 25
+		days_re_enable = 120
+
+		complete_effect = {
+			TU_BOL_weariness_m5 = yes
+			add_war_support = 0.03
+		}
+
+		ai_will_do = {
+			base = 1
+		}
+	}
+
+	TU_BOL_jungle_sweep = {
+		icon = GFX_decision_generic_military
+
+		allowed = {
+			original_tag = BOL
+		}
+
+		visible = {
+			has_completed_focus = TU_BOL_jungle_scouts
+		}
+
+		available = {
+			NOT = { has_country_flag = TU_BOL_war_over }
+		}
+
+		cost = 50
+		days_re_enable = 120
+
+		complete_effect = {
+			TU_BOL_control_5 = yes
+			army_experience = 10
+			add_manpower = -2000
+		}
+
+		ai_will_do = {
+			base = 1
+		}
+	}
+
+	TU_BOL_rebel_defectors = {
+		icon = GFX_decision_generic_political_discourse
+
+		allowed = {
+			original_tag = BOL
+		}
+
+		available = {
+			NOT = { has_country_flag = TU_BOL_war_over }
+		}
+
+		cost = 50
+		days_re_enable = 180
+
+		complete_effect = {
+			TU_BOL_control_5 = yes
+			TU_BOL_weariness_m3 = yes
+		}
+
+		ai_will_do = {
+			base = 1
+		}
+	}
+
+	TU_BOL_veterans_pension = {
+		icon = GFX_decision_generic_political_discourse
+
+		allowed = {
+			original_tag = BOL
+		}
+
+		cost = 0
+		days_re_enable = 240
+
+		complete_effect = {
+			TU_BOL_weariness_m10 = yes
+			add_political_power = -30
+		}
+
+		ai_will_do = {
+			base = 1
+		}
+	}
+
+	TU_BOL_victory_bonds = {
+		icon = GFX_decision_generic_political_discourse
+
+		allowed = {
+			original_tag = BOL
+		}
+
+		cost = 0
+		days_re_enable = 240
+
+		complete_effect = {
+			add_political_power = 60
+			TU_BOL_weariness_3 = yes
+		}
+
+		ai_will_do = {
+			base = 1
+		}
+	}
+
+}
+
+TU_BOL_patrons_category = {
+	TU_BOL_columbia_arms = {
+		icon = GFX_decision_generic_military
+
+		allowed = {
+			original_tag = BOL
+		}
+
+		cost = 25
+		days_re_enable = 120
+
+		complete_effect = {
+			add_equipment_to_stockpile = { type = infantry_equipment amount = 800 producer = COL }
+			TU_BOL_columbia_10 = yes
+		}
+
+		ai_will_do = {
+			base = 1
+		}
+	}
+
+	TU_BOL_columbia_money = {
+		icon = GFX_decision_generic_fundraising
+
+		allowed = {
+			original_tag = BOL
+		}
+
+		cost = 0
+		days_re_enable = 120
+
+		complete_effect = {
+			add_political_power = 75
+			TU_BOL_columbia_10 = yes
+		}
+
+		ai_will_do = {
+			base = 1
+		}
+	}
+
+	TU_BOL_columbia_factory = {
+		icon = GFX_decision_generic_factory
+
+		allowed = {
+			original_tag = BOL
+		}
+
+		cost = 25
+		days_re_enable = 240
+
+		complete_effect = {
+			TU_build_civ_factory = yes
+			TU_BOL_columbia_15 = yes
+		}
+
+		ai_will_do = {
+			base = 1
+		}
+	}
+
+	TU_BOL_victoria_arms = {
+		icon = GFX_decision_generic_military
+
+		allowed = {
+			original_tag = BOL
+		}
+
+		cost = 25
+		days_re_enable = 120
+
+		complete_effect = {
+			add_equipment_to_stockpile = { type = infantry_equipment amount = 800 producer = VIC }
+			TU_BOL_victoria_10 = yes
+		}
+
+		ai_will_do = {
+			base = 1
+		}
+	}
+
+	TU_BOL_victoria_money = {
+		icon = GFX_decision_generic_fundraising
+
+		allowed = {
+			original_tag = BOL
+		}
+
+		cost = 0
+		days_re_enable = 120
+
+		complete_effect = {
+			add_political_power = 75
+			TU_BOL_victoria_10 = yes
+		}
+
+		ai_will_do = {
+			base = 1
+		}
+	}
+
+	TU_BOL_victoria_factory = {
+		icon = GFX_decision_generic_factory
+
+		allowed = {
+			original_tag = BOL
+		}
+
+		cost = 25
+		days_re_enable = 240
+
+		complete_effect = {
+			TU_build_civ_factory = yes
+			TU_BOL_victoria_15 = yes
+		}
+
+		ai_will_do = {
+			base = 1
+		}
+	}
+
+	TU_BOL_reduce_dependence = {
+		icon = GFX_decision_generic_political_discourse
+
+		allowed = {
+			original_tag = BOL
+		}
+
+		cost = 25
+		days_re_enable = 180
+
+		complete_effect = {
+			TU_BOL_columbia_m10 = yes
+			TU_BOL_victoria_m10 = yes
+			add_political_power = -50
+		}
+
+		ai_will_do = {
+			base = 1
+		}
+	}
+
+	TU_BOL_play_patrons = {
+		icon = GFX_decision_generic_political_discourse
+
+		allowed = {
+			original_tag = BOL
+		}
+
+		available = {
+			check_variable = { TU_BOL_columbia > 29 }
+			check_variable = { TU_BOL_victoria > 29 }
+		}
+
+		cost = 0
+		days_re_enable = 240
+
+		complete_effect = {
+			add_political_power = 60
+			add_stability = -0.02
+		}
+
+		ai_will_do = {
+			base = 1
+		}
+	}
+
+	TU_BOL_foreign_journalists = {
+		icon = GFX_decision_generic_political_discourse
+
+		allowed = {
+			original_tag = BOL
+		}
+
+		cost = 25
+		days_re_enable = 180
+
+		complete_effect = {
+			add_stability = 0.02
+			TU_BOL_columbia_m3 = yes
+			TU_BOL_victoria_m3 = yes
+		}
+
+		ai_will_do = {
+			base = 1
+		}
+	}
+
+}

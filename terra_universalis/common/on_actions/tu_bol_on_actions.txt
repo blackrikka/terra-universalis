@@ -1,0 +1,10 @@
+on_actions = {
+	on_monthly = {
+		effect = {
+			if = {
+				limit = { original_tag = BOL }
+				TU_BOL_monthly = yes
+			}
+		}
+	}
+}
