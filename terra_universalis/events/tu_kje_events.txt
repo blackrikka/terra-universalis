@@ -1,0 +1,403 @@
+add_namespace = tu_kje_ev
+
+country_event = {
+	id = tu_kje_ev.1
+	title = tu_kje_ev.1.t
+	desc = tu_kje_ev.1.d
+	picture = GFX_report_event_generic_read_write
+	is_triggered_only = yes
+
+	option = {
+		name = tu_kje_ev.1.a
+		ai_chance = {
+			factor = 50
+		}
+		TU_KJE_modern_5 = yes
+	}
+
+	option = {
+		name = tu_kje_ev.1.b
+		ai_chance = {
+			factor = 50
+		}
+		TU_KJE_modern_m5 = yes
+	}
+}
+
+country_event = {
+	id = tu_kje_ev.10
+	title = tu_kje_ev.10.t
+	desc = tu_kje_ev.10.d
+	picture = GFX_report_event_generic_defensive_preparations
+	is_triggered_only = yes
+
+	option = {
+		name = tu_kje_ev.10.a
+		ai_chance = {
+			factor = 1
+		}
+		if = { limit = { has_country_flag = TU_KJE_winter_master } set_country_flag = TU_KJE_winter_ready }
+	}
+}
+
+country_event = {
+	id = tu_kje_ev.11
+	title = tu_kje_ev.11.t
+	desc = tu_kje_ev.11.d
+	picture = GFX_report_event_generic_read_write
+	is_triggered_only = yes
+
+	option = {
+		name = tu_kje_ev.11.a
+		ai_chance = {
+			factor = 1
+		}
+		add_political_power = 10
+	}
+}
+
+country_event = {
+	id = tu_kje_ev.20
+	title = tu_kje_ev.20.t
+	desc = tu_kje_ev.20.d
+	picture = GFX_report_event_generic_read_write
+	is_triggered_only = yes
+
+	option = {
+		name = tu_kje_ev.20.a
+		ai_chance = {
+			factor = 40
+		}
+		TU_KJE_modern_10 = yes
+	}
+
+	option = {
+		name = tu_kje_ev.20.b
+		ai_chance = {
+			factor = 40
+		}
+		TU_KJE_modern_m10 = yes
+	}
+
+	option = {
+		name = tu_kje_ev.20.c
+		ai_chance = {
+			factor = 20
+		}
+		add_political_power = 25
+	}
+}
+
+country_event = {
+	id = tu_kje_ev.21
+	title = tu_kje_ev.21.t
+	desc = tu_kje_ev.21.d
+	picture = GFX_report_event_generic_read_write
+
+	trigger = {
+		original_tag = KJE
+		has_idea = TU_KJE_harsh_winter
+	}
+
+	mean_time_to_happen = {
+		days = 120
+	}
+
+	option = {
+		name = tu_kje_ev.21.a
+		ai_chance = {
+			factor = 70
+		}
+		add_political_power = -25
+		add_stability = 0.02
+	}
+
+	option = {
+		name = tu_kje_ev.21.b
+		ai_chance = {
+			factor = 30
+		}
+		add_manpower = -2000
+	}
+}
+
+country_event = {
+	id = tu_kje_ev.22
+	title = tu_kje_ev.22.t
+	desc = tu_kje_ev.22.d
+	picture = GFX_report_event_generic_read_write
+
+	trigger = {
+		original_tag = KJE
+		has_country_flag = TU_KJE_karlan
+	}
+	fire_only_once = yes
+
+	mean_time_to_happen = {
+		days = 300
+	}
+
+	option = {
+		name = tu_kje_ev.22.a
+		ai_chance = {
+			factor = 50
+		}
+		TU_KJE_modern_5 = yes
+		add_stability = -0.02
+	}
+
+	option = {
+		name = tu_kje_ev.22.b
+		ai_chance = {
+			factor = 50
+		}
+		TU_KJE_modern_m5 = yes
+		add_political_power = 25
+	}
+}
+
+country_event = {
+	id = tu_kje_ev.23
+	title = tu_kje_ev.23.t
+	desc = tu_kje_ev.23.d
+	picture = GFX_report_event_generic_read_write
+
+	trigger = {
+		original_tag = KJE
+		has_completed_focus = TU_KJE_kjeragandr_faith
+	}
+	fire_only_once = yes
+
+	mean_time_to_happen = {
+		days = 300
+	}
+
+	option = {
+		name = tu_kje_ev.23.a
+		ai_chance = {
+			factor = 1
+		}
+		add_stability = 0.03
+		TU_KJE_modern_m5 = yes
+	}
+}
+
+country_event = {
+	id = tu_kje_ev.24
+	title = tu_kje_ev.24.t
+	desc = tu_kje_ev.24.d
+	picture = GFX_report_event_generic_read_write
+
+	trigger = {
+		original_tag = KJE
+		has_completed_focus = TU_KJE_railway_ascent
+	}
+	fire_only_once = yes
+
+	mean_time_to_happen = {
+		days = 200
+	}
+
+	option = {
+		name = tu_kje_ev.24.a
+		ai_chance = {
+			factor = 50
+		}
+		TU_KJE_modern_5 = yes
+		add_stability = -0.03
+	}
+
+	option = {
+		name = tu_kje_ev.24.b
+		ai_chance = {
+			factor = 50
+		}
+		add_political_power = -30
+		TU_KJE_modern_m3 = yes
+	}
+}
+
+country_event = {
+	id = tu_kje_ev.25
+	title = tu_kje_ev.25.t
+	desc = tu_kje_ev.25.d
+	picture = GFX_report_event_generic_read_write
+
+	trigger = {
+		original_tag = KJE
+		has_completed_focus = TU_KJE_three_houses_talks
+	}
+	fire_only_once = yes
+
+	mean_time_to_happen = {
+		days = 300
+	}
+
+	option = {
+		name = tu_kje_ev.25.a
+		ai_chance = {
+			factor = 50
+		}
+		add_political_power = -25
+		add_stability = 0.02
+	}
+
+	option = {
+		name = tu_kje_ev.25.b
+		ai_chance = {
+			factor = 50
+		}
+		add_stability = -0.02
+	}
+}
+
+country_event = {
+	id = tu_kje_ev.26
+	title = tu_kje_ev.26.t
+	desc = tu_kje_ev.26.d
+	picture = GFX_report_event_generic_read_write
+
+	trigger = {
+		original_tag = KJE
+		check_variable = { TU_KJE_modern > 49 }
+	}
+	fire_only_once = yes
+
+	mean_time_to_happen = {
+		days = 300
+	}
+
+	option = {
+		name = tu_kje_ev.26.a
+		ai_chance = {
+			factor = 1
+		}
+		TU_KJE_modern_5 = yes
+		add_tech_bonus = { name = TU_KJE_guests bonus = 0.5 uses = 1 category = industry }
+	}
+}
+
+country_event = {
+	id = tu_kje_ev.27
+	title = tu_kje_ev.27.t
+	desc = tu_kje_ev.27.d
+	picture = GFX_report_event_generic_read_write
+
+	trigger = {
+		original_tag = KJE
+		has_idea = TU_KJE_mild_winter
+	}
+	fire_only_once = yes
+
+	mean_time_to_happen = {
+		days = 90
+	}
+
+	option = {
+		name = tu_kje_ev.27.a
+		ai_chance = {
+			factor = 1
+		}
+		add_stability = 0.02
+	}
+}
+
+country_event = {
+	id = tu_kje_ev.28
+	title = tu_kje_ev.28.t
+	desc = tu_kje_ev.28.d
+	picture = GFX_report_event_generic_read_write
+	is_triggered_only = yes
+
+	option = {
+		name = tu_kje_ev.28.a
+		ai_chance = {
+			factor = 1
+		}
+		add_political_power = 50
+	}
+}
+
+country_event = {
+	id = tu_kje_ev.29
+	title = tu_kje_ev.29.t
+	desc = tu_kje_ev.29.d
+	picture = GFX_report_event_generic_read_write
+	is_triggered_only = yes
+
+	option = {
+		name = tu_kje_ev.29.a
+		ai_chance = {
+			factor = 1
+		}
+		add_stability = 0.05
+	}
+}
+
+country_event = {
+	id = tu_kje_ev.30
+	title = tu_kje_ev.30.t
+	desc = tu_kje_ev.30.d
+	picture = GFX_report_event_generic_read_write
+	is_triggered_only = yes
+
+	option = {
+		name = tu_kje_ev.30.a
+		ai_chance = {
+			factor = 1
+		}
+		add_stability = 0.05
+	}
+}
+
+country_event = {
+	id = tu_kje_ev.31
+	title = tu_kje_ev.31.t
+	desc = tu_kje_ev.31.d
+	picture = GFX_report_event_generic_read_write
+
+	trigger = {
+		original_tag = KJE
+		has_completed_focus = TU_KJE_silverash_vision
+	}
+	fire_only_once = yes
+
+	mean_time_to_happen = {
+		days = 300
+	}
+
+	option = {
+		name = tu_kje_ev.31.a
+		ai_chance = {
+			factor = 1
+		}
+		TU_KJE_modern_10 = yes
+		add_stability = -0.02
+	}
+}
+
+country_event = {
+	id = tu_kje_ev.32
+	title = tu_kje_ev.32.t
+	desc = tu_kje_ev.32.d
+	picture = GFX_report_event_generic_read_write
+
+	trigger = {
+		original_tag = KJE
+		has_completed_focus = TU_KJE_sacred_peaks
+	}
+	fire_only_once = yes
+
+	mean_time_to_happen = {
+		days = 300
+	}
+
+	option = {
+		name = tu_kje_ev.32.a
+		ai_chance = {
+			factor = 1
+		}
+		TU_KJE_modern_m10 = yes
+		add_stability = 0.03
+	}
+}

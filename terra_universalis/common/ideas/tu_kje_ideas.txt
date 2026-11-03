@@ -1,0 +1,139 @@
+ideas = {
+
+	country = {
+
+		TU_KJE_harsh_winter = {
+			picture = generic_supply_line
+
+			allowed = {
+				original_tag = KJE
+			}
+
+			modifier = {
+				production_speed_buildings_factor = -0.2
+				supply_consumption_factor = 0.15
+				army_defence_factor = 0.1
+				stability_factor = -0.03
+			}
+		}
+
+		TU_KJE_mild_winter = {
+			picture = generic_supply_line
+
+			allowed = {
+				original_tag = KJE
+			}
+
+			modifier = {
+				production_speed_buildings_factor = -0.05
+				army_defence_factor = 0.1
+			}
+		}
+
+		TU_KJE_three_houses = {
+			picture = generic_local_self_management
+
+			allowed = {
+				original_tag = KJE
+			}
+
+			modifier = {
+				political_power_gain = -0.1
+			}
+		}
+
+		TU_KJE_mountain_folk = {
+			picture = generic_mountain_defensive_training
+
+			allowed = {
+				original_tag = KJE
+			}
+
+			modifier = {
+				army_defence_factor = 0.05
+				attrition = -0.1
+			}
+		}
+
+		TU_KJE_modern_kjerag = {
+			picture = generic_industrial_concern_1
+
+			allowed = {
+				original_tag = KJE
+			}
+
+			modifier = {
+				production_factory_max_efficiency_factor = 0.1
+				research_speed_factor = 0.05
+				stability_factor = -0.03
+			}
+		}
+
+		TU_KJE_saintess_theocracy = {
+			picture = generic_political_support
+
+			allowed = {
+				original_tag = KJE
+			}
+
+			modifier = {
+				stability_factor = 0.15
+				war_support_factor = 0.1
+				army_defence_factor = 0.05
+			}
+		}
+
+		TU_KJE_houses_united = {
+			picture = generic_pp_unity_bonus
+
+			allowed = {
+				original_tag = KJE
+			}
+
+			modifier = {
+				political_power_gain = 0.1
+				stability_factor = 0.08
+				production_speed_buildings_factor = 0.05
+			}
+		}
+
+		TU_KJE_karlan_trade = {
+			picture = generic_foreign_capital
+
+			allowed = {
+				original_tag = KJE
+			}
+
+			modifier = {
+				production_speed_buildings_factor = 0.08
+				consumer_goods_factor = -0.02
+			}
+		}
+
+		TU_KJE_kjeragandr_faith = {
+			picture = generic_morale_bonus
+
+			allowed = {
+				original_tag = KJE
+			}
+
+			modifier = {
+				stability_factor = 0.05
+				army_morale_factor = 0.05
+			}
+		}
+
+		TU_KJE_mountain_guard = {
+			picture = generic_mountain_defensive_training
+
+			allowed = {
+				original_tag = KJE
+			}
+
+			modifier = {
+				army_defence_factor = 0.1
+				army_org_factor = 0.05
+			}
+		}
+	}
+}

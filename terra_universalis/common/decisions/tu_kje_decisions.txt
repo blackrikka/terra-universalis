@@ -1,0 +1,474 @@
+TU_KJE_winter_category = {
+	TU_KJE_prepare_winter = {
+		icon = GFX_decision_generic_construction
+
+		allowed = {
+			original_tag = KJE
+		}
+
+		available = {
+			NOT = { has_country_flag = TU_KJE_winter_ready }
+		}
+
+		cost = 50
+		days_re_enable = 300
+
+		complete_effect = {
+			set_country_flag = TU_KJE_winter_ready
+		}
+
+		ai_will_do = {
+			base = 1
+		}
+	}
+
+	TU_KJE_clear_passes = {
+		icon = GFX_decision_generic_political_discourse
+
+		allowed = {
+			original_tag = KJE
+		}
+
+		available = {
+			has_idea = TU_KJE_harsh_winter
+		}
+
+		cost = 75
+		days_re_enable = 180
+
+		complete_effect = {
+			if = { limit = { has_idea = TU_KJE_harsh_winter } swap_ideas = { remove_idea = TU_KJE_harsh_winter add_idea = TU_KJE_mild_winter } }
+		}
+
+		ai_will_do = {
+			base = 1
+		}
+	}
+
+	TU_KJE_winter_festival = {
+		icon = GFX_decision_generic_political_discourse
+
+		allowed = {
+			original_tag = KJE
+		}
+
+		available = {
+			OR = { has_idea = TU_KJE_harsh_winter has_idea = TU_KJE_mild_winter }
+		}
+
+		cost = 25
+		days_re_enable = 300
+
+		complete_effect = {
+			add_stability = 0.03
+			add_war_support = 0.02
+		}
+
+		ai_will_do = {
+			base = 1
+		}
+	}
+
+	TU_KJE_winter_offensive_drill = {
+		icon = GFX_decision_generic_military
+
+		allowed = {
+			original_tag = KJE
+		}
+
+		available = {
+			OR = { has_idea = TU_KJE_harsh_winter has_idea = TU_KJE_mild_winter }
+		}
+
+		cost = 50
+		days_re_enable = 300
+
+		complete_effect = {
+			army_experience = 20
+		}
+
+		ai_will_do = {
+			base = 1
+		}
+	}
+
+	TU_KJE_fuel_imports = {
+		icon = GFX_decision_generic_political_discourse
+
+		allowed = {
+			original_tag = KJE
+		}
+
+		visible = {
+			has_country_flag = TU_KJE_karlan
+		}
+
+		available = {
+			NOT = { has_country_flag = TU_KJE_winter_ready }
+		}
+
+		cost = 0
+		days_re_enable = 300
+
+		complete_effect = {
+			set_country_flag = TU_KJE_winter_ready
+			add_political_power = -25
+		}
+
+		ai_will_do = {
+			base = 1
+		}
+	}
+
+	TU_KJE_snow_patrols = {
+		icon = GFX_decision_generic_political_discourse
+
+		allowed = {
+			original_tag = KJE
+		}
+
+		cost = 25
+		days_re_enable = 180
+
+		complete_effect = {
+			army_experience = 10
+			add_stability = 0.02
+		}
+
+		ai_will_do = {
+			base = 1
+		}
+	}
+
+	TU_KJE_stockpile_furs = {
+		icon = GFX_decision_generic_political_discourse
+
+		allowed = {
+			original_tag = KJE
+		}
+
+		visible = {
+			has_completed_focus = TU_KJE_fur_trade
+		}
+
+		available = {
+			NOT = { has_country_flag = TU_KJE_winter_ready }
+		}
+
+		cost = 25
+		days_re_enable = 300
+
+		complete_effect = {
+			set_country_flag = TU_KJE_winter_ready
+			add_political_power = -10
+		}
+
+		ai_will_do = {
+			base = 1
+		}
+	}
+
+}
+
+TU_KJE_modern_category = {
+	TU_KJE_karlan_contract = {
+		icon = GFX_decision_generic_factory
+
+		allowed = {
+			original_tag = KJE
+		}
+
+		visible = {
+			has_country_flag = TU_KJE_karlan
+		}
+
+		cost = 75
+		days_re_enable = 240
+
+		complete_effect = {
+			TU_build_civ_factory = yes
+			TU_KJE_modern_10 = yes
+		}
+
+		ai_will_do = {
+			base = 1
+		}
+	}
+
+	TU_KJE_foreign_engineers = {
+		icon = GFX_decision_generic_political_discourse
+
+		allowed = {
+			original_tag = KJE
+		}
+
+		visible = {
+			has_country_flag = TU_KJE_karlan
+		}
+
+		cost = 50
+		days_re_enable = 240
+
+		complete_effect = {
+			add_tech_bonus = { name = TU_KJE_engineers bonus = 0.75 uses = 1 category = industry category = electronics }
+			TU_KJE_modern_5 = yes
+		}
+
+		ai_will_do = {
+			base = 1
+		}
+	}
+
+	TU_KJE_temple_pilgrimage = {
+		icon = GFX_decision_generic_political_discourse
+
+		allowed = {
+			original_tag = KJE
+		}
+
+		cost = 25
+		days_re_enable = 180
+
+		complete_effect = {
+			add_stability = 0.04
+			TU_KJE_modern_m10 = yes
+		}
+
+		ai_will_do = {
+			base = 1
+		}
+	}
+
+	TU_KJE_saintess_sermon = {
+		icon = GFX_decision_generic_political_discourse
+
+		allowed = {
+			original_tag = KJE
+		}
+
+		cost = 25
+		days_re_enable = 180
+
+		complete_effect = {
+			add_war_support = 0.04
+			TU_KJE_modern_m5 = yes
+		}
+
+		ai_will_do = {
+			base = 1
+		}
+	}
+
+	TU_KJE_modern_schools = {
+		icon = GFX_decision_generic_political_discourse
+
+		allowed = {
+			original_tag = KJE
+		}
+
+		cost = 25
+		days_re_enable = 180
+
+		complete_effect = {
+			add_political_power = -25
+			TU_KJE_modern_10 = yes
+			add_stability = -0.02
+		}
+
+		ai_will_do = {
+			base = 1
+		}
+	}
+
+	TU_KJE_house_council = {
+		icon = GFX_decision_generic_political_discourse
+
+		allowed = {
+			original_tag = KJE
+		}
+
+		visible = {
+			has_completed_focus = TU_KJE_three_houses_talks
+		}
+
+		cost = 25
+		days_re_enable = 180
+
+		complete_effect = {
+			add_political_power = 60
+		}
+
+		ai_will_do = {
+			base = 1
+		}
+	}
+
+	TU_KJE_silver_exports = {
+		icon = GFX_decision_generic_political_discourse
+
+		allowed = {
+			original_tag = KJE
+		}
+
+		visible = {
+			has_completed_focus = TU_KJE_silver_mines
+		}
+
+		cost = 0
+		days_re_enable = 240
+
+		complete_effect = {
+			add_political_power = 75
+			TU_KJE_modern_5 = yes
+		}
+
+		ai_will_do = {
+			base = 1
+		}
+	}
+
+	TU_KJE_railway_contract = {
+		icon = GFX_decision_generic_construction
+
+		allowed = {
+			original_tag = KJE
+		}
+
+		visible = {
+			has_country_flag = TU_KJE_karlan
+		}
+
+		cost = 50
+		days_re_enable = 240
+
+		complete_effect = {
+			TU_build_infrastructure = yes
+			TU_KJE_modern_5 = yes
+		}
+
+		ai_will_do = {
+			base = 1
+		}
+	}
+
+	TU_KJE_faith_tithe = {
+		icon = GFX_decision_generic_political_discourse
+
+		allowed = {
+			original_tag = KJE
+		}
+
+		cost = 0
+		days_re_enable = 240
+
+		complete_effect = {
+			add_political_power = 60
+			TU_KJE_modern_m5 = yes
+		}
+
+		ai_will_do = {
+			base = 1
+		}
+	}
+
+	TU_KJE_house_arbitration = {
+		icon = GFX_decision_generic_political_discourse
+
+		allowed = {
+			original_tag = KJE
+		}
+
+		visible = {
+			has_completed_focus = TU_KJE_three_houses_talks
+		}
+
+		cost = 50
+		days_re_enable = 240
+
+		complete_effect = {
+			add_stability = 0.05
+		}
+
+		ai_will_do = {
+			base = 1
+		}
+	}
+
+}
+
+TU_KJE_pact_category = {
+	TU_KJE_found_pact = {
+		icon = GFX_decision_generic_political_discourse
+
+		allowed = {
+			original_tag = KJE
+		}
+
+		available = {
+			is_in_faction = no
+		}
+
+		cost = 50
+		fire_only_once = yes
+
+		complete_effect = {
+			create_faction = TU_KJE_pact
+		}
+
+		ai_will_do = {
+			base = 1
+		}
+	}
+
+	TU_KJE_invite_pact = {
+		icon = GFX_decision_generic_political_discourse
+
+		allowed = {
+			original_tag = KJE
+		}
+
+		target_trigger = {
+			FROM = {
+				NOT = { tag = ROOT }
+				is_in_faction = no
+				NOT = { has_war_with = ROOT }
+				OR = { tag = KAZ tag = COL tag = SAM tag = LEI }
+			}
+		}
+
+		visible = {
+			is_faction_leader = yes
+		}
+
+		cost = 50
+		days_re_enable = 90
+
+		complete_effect = {
+			add_to_faction = FROM
+		}
+
+		ai_will_do = {
+			base = 1
+		}
+	}
+
+	TU_KJE_mountain_guides = {
+		icon = GFX_decision_generic_political_discourse
+
+		allowed = {
+			original_tag = KJE
+		}
+
+		cost = 0
+		days_re_enable = 240
+
+		complete_effect = {
+			add_political_power = 50
+		}
+
+		ai_will_do = {
+			base = 1
+		}
+	}
+
+}
