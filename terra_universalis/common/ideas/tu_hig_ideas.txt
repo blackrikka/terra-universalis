@@ -1,0 +1,138 @@
+ideas = {
+
+	country = {
+
+		TU_HIG_seclusion = {
+			picture = generic_secret_police
+
+			allowed = {
+				original_tag = HIG
+			}
+
+			modifier = {
+				stability_factor = 0.05
+				research_speed_factor = -0.05
+				consumer_goods_factor = 0.02
+			}
+		}
+
+		TU_HIG_samurai_class = {
+			picture = generic_army_war_college
+
+			allowed = {
+				original_tag = HIG
+			}
+
+			modifier = {
+				army_org_factor = 0.05
+				political_power_gain = -0.05
+			}
+		}
+
+		TU_HIG_open_harbours = {
+			picture = generic_foreign_capital
+
+			allowed = {
+				original_tag = HIG
+			}
+
+			modifier = {
+				research_speed_factor = 0.03
+				consumer_goods_factor = -0.02
+			}
+		}
+
+		TU_HIG_shogunate = {
+			picture = generic_central_management
+
+			allowed = {
+				original_tag = HIG
+			}
+
+			modifier = {
+				stability_factor = 0.1
+				army_org_factor = 0.05
+				war_support_factor = 0.05
+			}
+		}
+
+		TU_HIG_open_far_east = {
+			picture = generic_foreign_capital
+
+			allowed = {
+				original_tag = HIG
+			}
+
+			modifier = {
+				research_speed_factor = 0.07
+				production_factory_max_efficiency_factor = 0.05
+			}
+		}
+
+		TU_HIG_imperial_restoration = {
+			picture = generic_political_support
+
+			allowed = {
+				original_tag = HIG
+			}
+
+			modifier = {
+				political_power_gain = 0.15
+				war_support_factor = 0.1
+				conscription_factor = 0.05
+			}
+		}
+
+		TU_HIG_combined_fleet = {
+			picture = generic_navy_bonus
+
+			allowed = {
+				original_tag = HIG
+			}
+
+			modifier = {
+				navy_org_factor = 0.08
+				naval_speed_factor = 0.05
+			}
+		}
+
+		TU_HIG_bushido = {
+			picture = generic_morale_bonus
+
+			allowed = {
+				original_tag = HIG
+			}
+
+			modifier = {
+				army_morale_factor = 0.08
+				army_attack_factor = 0.03
+			}
+		}
+
+		TU_HIG_shinobi_network = {
+			picture = generic_intel_bonus
+
+			allowed = {
+				original_tag = HIG
+			}
+
+			modifier = {
+				political_power_gain = 0.05
+				stability_factor = 0.03
+			}
+		}
+
+		TU_HIG_modern_army = {
+			picture = generic_army_europe_1
+
+			allowed = {
+				original_tag = HIG
+			}
+
+			modifier = {
+				army_attack_factor = 0.05
+				army_org_factor = 0.03
+			}
+		}
+	}
+}

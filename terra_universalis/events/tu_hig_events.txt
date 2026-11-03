@@ -1,0 +1,438 @@
+add_namespace = tu_hig_ev
+
+country_event = {
+	id = tu_hig_ev.1
+	title = tu_hig_ev.1.t
+	desc = tu_hig_ev.1.d
+	picture = GFX_report_event_generic_read_write
+	is_triggered_only = yes
+
+	option = {
+		name = tu_hig_ev.1.a
+		ai_chance = {
+			factor = 50
+		}
+		TU_HIG_foreign_m5 = yes
+	}
+
+	option = {
+		name = tu_hig_ev.1.b
+		ai_chance = {
+			factor = 50
+		}
+		TU_HIG_foreign_5 = yes
+	}
+}
+
+country_event = {
+	id = tu_hig_ev.20
+	title = tu_hig_ev.20.t
+	desc = tu_hig_ev.20.d
+	picture = GFX_report_event_generic_sign_treaty1
+	is_triggered_only = yes
+
+	option = {
+		name = tu_hig_ev.20.a
+		ai_chance = {
+			factor = 50
+		}
+		TU_HIG_ports_1 = yes
+		TU_HIG_foreign_10 = yes
+	}
+
+	option = {
+		name = tu_hig_ev.20.b
+		ai_chance = {
+			factor = 50
+		}
+		add_political_power = 25
+	}
+}
+
+country_event = {
+	id = tu_hig_ev.21
+	title = tu_hig_ev.21.t
+	desc = tu_hig_ev.21.d
+	picture = GFX_report_event_generic_read_write
+	is_triggered_only = yes
+
+	option = {
+		name = tu_hig_ev.21.a
+		ai_chance = {
+			factor = 50
+		}
+		TU_HIG_foreign_m10 = yes
+		set_country_flag = TU_HIG_loyalists
+	}
+
+	option = {
+		name = tu_hig_ev.21.b
+		ai_chance = {
+			factor = 50
+		}
+		add_stability = 0.02
+	}
+}
+
+country_event = {
+	id = tu_hig_ev.22
+	title = tu_hig_ev.22.t
+	desc = tu_hig_ev.22.d
+	picture = GFX_report_event_generic_riot
+
+	trigger = {
+		original_tag = HIG
+		check_variable = { TU_HIG_foreign > 59 }
+	}
+
+	mean_time_to_happen = {
+		days = 90
+	}
+
+	option = {
+		name = tu_hig_ev.22.a
+		ai_chance = {
+			factor = 40
+		}
+		add_stability = -0.03
+		army_experience = 15
+		TU_HIG_foreign_m10 = yes
+	}
+
+	option = {
+		name = tu_hig_ev.22.b
+		ai_chance = {
+			factor = 30
+		}
+		set_country_flag = TU_HIG_uprising_won
+		TU_HIG_foreign_m25 = yes
+		add_stability = -0.05
+	}
+
+	option = {
+		name = tu_hig_ev.22.c
+		ai_chance = {
+			factor = 30
+		}
+		TU_HIG_ports_m1 = yes
+		TU_HIG_foreign_m15 = yes
+	}
+}
+
+country_event = {
+	id = tu_hig_ev.23
+	title = tu_hig_ev.23.t
+	desc = tu_hig_ev.23.d
+	picture = GFX_report_event_generic_read_write
+
+	trigger = {
+		original_tag = HIG
+		check_variable = { TU_HIG_ports > 0 }
+	}
+	fire_only_once = yes
+
+	mean_time_to_happen = {
+		days = 240
+	}
+
+	option = {
+		name = tu_hig_ev.23.a
+		ai_chance = {
+			factor = 1
+		}
+		add_tech_bonus = { name = TU_HIG_gifts bonus = 0.5 uses = 1 category = industry }
+		TU_HIG_foreign_5 = yes
+	}
+}
+
+country_event = {
+	id = tu_hig_ev.24
+	title = tu_hig_ev.24.t
+	desc = tu_hig_ev.24.d
+	picture = GFX_report_event_generic_read_write
+
+	trigger = {
+		original_tag = HIG
+		check_variable = { TU_HIG_shinobi > 5 }
+	}
+	fire_only_once = yes
+
+	mean_time_to_happen = {
+		days = 300
+	}
+
+	option = {
+		name = tu_hig_ev.24.a
+		ai_chance = {
+			factor = 60
+		}
+		TU_HIG_shinobi_m1 = yes
+		add_stability = 0.02
+	}
+
+	option = {
+		name = tu_hig_ev.24.b
+		ai_chance = {
+			factor = 40
+		}
+		add_political_power = -25
+	}
+}
+
+country_event = {
+	id = tu_hig_ev.25
+	title = tu_hig_ev.25.t
+	desc = tu_hig_ev.25.d
+	picture = GFX_report_event_generic_read_write
+
+	trigger = {
+		original_tag = HIG
+		has_completed_focus = TU_HIG_modern_army
+	}
+	fire_only_once = yes
+
+	mean_time_to_happen = {
+		days = 300
+	}
+
+	option = {
+		name = tu_hig_ev.25.a
+		ai_chance = {
+			factor = 60
+		}
+		add_manpower = 5000
+		add_political_power = -15
+	}
+
+	option = {
+		name = tu_hig_ev.25.b
+		ai_chance = {
+			factor = 40
+		}
+		add_stability = -0.03
+	}
+}
+
+country_event = {
+	id = tu_hig_ev.26
+	title = tu_hig_ev.26.t
+	desc = tu_hig_ev.26.d
+	picture = GFX_report_event_generic_read_write
+
+	trigger = {
+		original_tag = HIG
+	}
+	fire_only_once = yes
+
+	mean_time_to_happen = {
+		days = 720
+	}
+
+	option = {
+		name = tu_hig_ev.26.a
+		ai_chance = {
+			factor = 1
+		}
+		add_political_power = -40
+		add_stability = 0.02
+	}
+}
+
+country_event = {
+	id = tu_hig_ev.27
+	title = tu_hig_ev.27.t
+	desc = tu_hig_ev.27.d
+	picture = GFX_report_event_generic_read_write
+
+	trigger = {
+		original_tag = HIG
+		check_variable = { TU_HIG_ports > 1 }
+	}
+	fire_only_once = yes
+
+	mean_time_to_happen = {
+		days = 200
+	}
+
+	option = {
+		name = tu_hig_ev.27.a
+		ai_chance = {
+			factor = 50
+		}
+		add_stability = 0.02
+	}
+
+	option = {
+		name = tu_hig_ev.27.b
+		ai_chance = {
+			factor = 50
+		}
+		TU_HIG_foreign_5 = yes
+	}
+}
+
+country_event = {
+	id = tu_hig_ev.28
+	title = tu_hig_ev.28.t
+	desc = tu_hig_ev.28.d
+	picture = GFX_report_event_generic_read_write
+	is_triggered_only = yes
+
+	option = {
+		name = tu_hig_ev.28.a
+		ai_chance = {
+			factor = 1
+		}
+		add_stability = 0.05
+	}
+}
+
+country_event = {
+	id = tu_hig_ev.29
+	title = tu_hig_ev.29.t
+	desc = tu_hig_ev.29.d
+	picture = GFX_report_event_generic_read_write
+	is_triggered_only = yes
+
+	option = {
+		name = tu_hig_ev.29.a
+		ai_chance = {
+			factor = 1
+		}
+		add_political_power = 50
+	}
+}
+
+country_event = {
+	id = tu_hig_ev.30
+	title = tu_hig_ev.30.t
+	desc = tu_hig_ev.30.d
+	picture = GFX_report_event_generic_read_write
+	is_triggered_only = yes
+
+	option = {
+		name = tu_hig_ev.30.a
+		ai_chance = {
+			factor = 1
+		}
+		add_war_support = 0.05
+	}
+}
+
+country_event = {
+	id = tu_hig_ev.31
+	title = tu_hig_ev.31.t
+	desc = tu_hig_ev.31.d
+	picture = GFX_report_event_generic_read_write
+
+	trigger = {
+		original_tag = HIG
+		has_completed_focus = TU_HIG_foreign_ships
+	}
+	fire_only_once = yes
+
+	mean_time_to_happen = {
+		days = 300
+	}
+
+	option = {
+		name = tu_hig_ev.31.a
+		ai_chance = {
+			factor = 50
+		}
+		TU_HIG_foreign_5 = yes
+		add_political_power = 25
+	}
+
+	option = {
+		name = tu_hig_ev.31.b
+		ai_chance = {
+			factor = 50
+		}
+		TU_HIG_foreign_m5 = yes
+	}
+}
+
+country_event = {
+	id = tu_hig_ev.32
+	title = tu_hig_ev.32.t
+	desc = tu_hig_ev.32.d
+	picture = GFX_report_event_generic_read_write
+
+	trigger = {
+		original_tag = HIG
+		has_idea = TU_HIG_samurai_class
+	}
+	fire_only_once = yes
+
+	mean_time_to_happen = {
+		days = 300
+	}
+
+	option = {
+		name = tu_hig_ev.32.a
+		ai_chance = {
+			factor = 1
+		}
+		army_experience = 15
+	}
+}
+
+country_event = {
+	id = tu_hig_ev.33
+	title = tu_hig_ev.33.t
+	desc = tu_hig_ev.33.d
+	picture = GFX_report_event_generic_read_write
+
+	trigger = {
+		original_tag = HIG
+		check_variable = { TU_HIG_foreign > 39 }
+	}
+	fire_only_once = yes
+
+	mean_time_to_happen = {
+		days = 300
+	}
+
+	option = {
+		name = tu_hig_ev.33.a
+		ai_chance = {
+			factor = 60
+		}
+		add_political_power = -30
+		add_stability = 0.02
+	}
+
+	option = {
+		name = tu_hig_ev.33.b
+		ai_chance = {
+			factor = 40
+		}
+		add_stability = -0.03
+	}
+}
+
+country_event = {
+	id = tu_hig_ev.34
+	title = tu_hig_ev.34.t
+	desc = tu_hig_ev.34.d
+	picture = GFX_report_event_generic_read_write
+
+	trigger = {
+		original_tag = HIG
+		check_variable = { TU_HIG_shinobi > 4 }
+	}
+	fire_only_once = yes
+
+	mean_time_to_happen = {
+		days = 300
+	}
+
+	option = {
+		name = tu_hig_ev.34.a
+		ai_chance = {
+			factor = 1
+		}
+		add_tech_bonus = { name = TU_HIG_plans bonus = 0.75 uses = 1 category = dd_tech category = ca_tech }
+	}
+}

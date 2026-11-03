@@ -1,0 +1,514 @@
+TU_HIG_ports_category = {
+	TU_HIG_open_port = {
+		icon = GFX_decision_generic_naval
+
+		allowed = {
+			original_tag = HIG
+		}
+
+		visible = {
+			has_country_flag = TU_HIG_ports
+		}
+
+		available = {
+			check_variable = { TU_HIG_ports < 4 }
+		}
+
+		cost = 50
+		days_re_enable = 120
+
+		complete_effect = {
+			TU_HIG_ports_1 = yes
+			TU_build_dockyard = yes
+			TU_HIG_foreign_5 = yes
+		}
+
+		ai_will_do = {
+			base = 1
+		}
+	}
+
+	TU_HIG_close_port = {
+		icon = GFX_decision_generic_political_discourse
+
+		allowed = {
+			original_tag = HIG
+		}
+
+		visible = {
+			has_country_flag = TU_HIG_close
+		}
+
+		available = {
+			check_variable = { TU_HIG_ports > 0 }
+		}
+
+		cost = 25
+		days_re_enable = 120
+
+		complete_effect = {
+			TU_HIG_ports_m1 = yes
+			TU_HIG_foreign_m10 = yes
+			add_stability = 0.02
+		}
+
+		ai_will_do = {
+			base = 1
+		}
+	}
+
+	TU_HIG_foreign_tech = {
+		icon = GFX_decision_generic_political_discourse
+
+		allowed = {
+			original_tag = HIG
+		}
+
+		available = {
+			check_variable = { TU_HIG_ports > 0 }
+		}
+
+		cost = 50
+		days_re_enable = 180
+
+		complete_effect = {
+			add_tech_bonus = { name = TU_HIG_foreign_tech bonus = 0.75 uses = 1 category = industry category = electronics }
+			TU_HIG_foreign_10 = yes
+		}
+
+		ai_will_do = {
+			base = 1
+		}
+	}
+
+	TU_HIG_expel_foreigners = {
+		icon = GFX_decision_generic_political_discourse
+
+		allowed = {
+			original_tag = HIG
+		}
+
+		available = {
+			check_variable = { TU_HIG_foreign > 19 }
+		}
+
+		cost = 25
+		days_re_enable = 240
+
+		complete_effect = {
+			TU_HIG_foreign_m20 = yes
+			add_stability = 0.03
+			add_political_power = -25
+		}
+
+		ai_will_do = {
+			base = 1
+		}
+	}
+
+	TU_HIG_foreign_loans = {
+		icon = GFX_decision_generic_factory
+
+		allowed = {
+			original_tag = HIG
+		}
+
+		available = {
+			check_variable = { TU_HIG_ports > 1 }
+		}
+
+		cost = 50
+		days_re_enable = 240
+
+		complete_effect = {
+			TU_build_civ_factory = yes
+			TU_HIG_foreign_10 = yes
+		}
+
+		ai_will_do = {
+			base = 1
+		}
+	}
+
+	TU_HIG_harbour_festival = {
+		icon = GFX_decision_generic_political_discourse
+
+		allowed = {
+			original_tag = HIG
+		}
+
+		available = {
+			check_variable = { TU_HIG_ports > 0 }
+		}
+
+		cost = 25
+		days_re_enable = 240
+
+		complete_effect = {
+			add_stability = 0.03
+			add_political_power = 25
+		}
+
+		ai_will_do = {
+			base = 1
+		}
+	}
+
+	TU_HIG_foreign_concessions = {
+		icon = GFX_decision_generic_political_discourse
+
+		allowed = {
+			original_tag = HIG
+		}
+
+		available = {
+			check_variable = { TU_HIG_ports > 1 }
+		}
+
+		cost = 0
+		days_re_enable = 365
+
+		complete_effect = {
+			add_political_power = 100
+			TU_HIG_foreign_15 = yes
+		}
+
+		ai_will_do = {
+			base = 1
+		}
+	}
+
+}
+
+TU_HIG_shinobi_category = {
+	TU_HIG_train_shinobi = {
+		icon = GFX_decision_generic_intelligence_operation
+
+		allowed = {
+			original_tag = HIG
+		}
+
+		available = {
+			check_variable = { TU_HIG_shinobi < 10 }
+		}
+
+		cost = 25
+		days_re_enable = 60
+
+		complete_effect = {
+			TU_HIG_shinobi_1 = yes
+		}
+
+		ai_will_do = {
+			base = 1
+		}
+	}
+
+	TU_HIG_steal_tech = {
+		icon = GFX_decision_generic_intelligence_operation
+
+		allowed = {
+			original_tag = HIG
+		}
+
+		target_trigger = {
+			FROM = {
+				NOT = { tag = ROOT }
+				exists = yes
+				NOT = { tag = WLD }
+			}
+		}
+
+		available = {
+			check_variable = { TU_HIG_shinobi > 1 }
+		}
+
+		cost = 25
+		days_re_enable = 120
+
+		complete_effect = {
+			add_tech_bonus = { name = TU_HIG_steal_tech bonus = 1.0 uses = 1 category = industry category = electronics category = infantry_weapons }
+			TU_HIG_shinobi_m2 = yes
+		}
+
+		ai_will_do = {
+			base = 1
+		}
+	}
+
+	TU_HIG_sabotage = {
+		icon = GFX_decision_generic_intelligence_operation
+
+		allowed = {
+			original_tag = HIG
+		}
+
+		target_trigger = {
+			FROM = {
+				NOT = { tag = ROOT }
+				exists = yes
+				NOT = { tag = WLD }
+				NOT = { has_war_with = ROOT }
+			}
+		}
+
+		available = {
+			check_variable = { TU_HIG_shinobi > 1 }
+		}
+
+		cost = 50
+		days_re_enable = 180
+
+		complete_effect = {
+			FROM = { add_stability = -0.05 add_political_power = -50 }
+			TU_HIG_shinobi_m2 = yes
+		}
+
+		ai_will_do = {
+			base = 1
+		}
+	}
+
+	TU_HIG_spy_war_plans = {
+		icon = GFX_decision_generic_intelligence_operation
+
+		allowed = {
+			original_tag = HIG
+		}
+
+		target_trigger = {
+			FROM = {
+				NOT = { tag = ROOT }
+				exists = yes
+				NOT = { tag = WLD }
+				has_war_with = ROOT
+			}
+		}
+
+		available = {
+			check_variable = { TU_HIG_shinobi > 1 }
+			has_war = yes
+		}
+
+		cost = 25
+		days_re_enable = 120
+
+		complete_effect = {
+			army_experience = 25
+			TU_HIG_shinobi_m2 = yes
+		}
+
+		ai_will_do = {
+			base = 1
+		}
+	}
+
+	TU_HIG_domestic_watch = {
+		icon = GFX_decision_generic_political_discourse
+
+		allowed = {
+			original_tag = HIG
+		}
+
+		available = {
+			check_variable = { TU_HIG_shinobi > 0 }
+		}
+
+		cost = 25
+		days_re_enable = 180
+
+		complete_effect = {
+			add_stability = 0.04
+			TU_HIG_foreign_m5 = yes
+			TU_HIG_shinobi_m1 = yes
+		}
+
+		ai_will_do = {
+			base = 1
+		}
+	}
+
+	TU_HIG_shinobi_raid = {
+		icon = GFX_decision_generic_political_discourse
+
+		allowed = {
+			original_tag = HIG
+		}
+
+		available = {
+			check_variable = { TU_HIG_shinobi > 1 }
+			has_war = yes
+		}
+
+		cost = 25
+		days_re_enable = 120
+
+		complete_effect = {
+			army_experience = 15
+			add_war_support = 0.02
+			TU_HIG_shinobi_m2 = yes
+		}
+
+		ai_will_do = {
+			base = 1
+		}
+	}
+
+	TU_HIG_shinobi_school = {
+		icon = GFX_decision_generic_political_discourse
+
+		allowed = {
+			original_tag = HIG
+		}
+
+		visible = {
+			has_completed_focus = TU_HIG_spy_school
+		}
+
+		available = {
+			check_variable = { TU_HIG_shinobi < 9 }
+		}
+
+		cost = 50
+		days_re_enable = 180
+
+		complete_effect = {
+			TU_HIG_shinobi_2 = yes
+		}
+
+		ai_will_do = {
+			base = 1
+		}
+	}
+
+}
+
+TU_HIG_court_category = {
+	TU_HIG_daimyo_levy = {
+		icon = GFX_decision_generic_political_discourse
+
+		allowed = {
+			original_tag = HIG
+		}
+
+		cost = 25
+		days_re_enable = 180
+
+		complete_effect = {
+			add_manpower = 10000
+			add_stability = -0.02
+		}
+
+		ai_will_do = {
+			base = 1
+		}
+	}
+
+	TU_HIG_samurai_stipend = {
+		icon = GFX_decision_generic_political_discourse
+
+		allowed = {
+			original_tag = HIG
+		}
+
+		cost = 0
+		days_re_enable = 180
+
+		complete_effect = {
+			add_stability = 0.04
+			add_political_power = -25
+		}
+
+		ai_will_do = {
+			base = 1
+		}
+	}
+
+	TU_HIG_imperial_audience = {
+		icon = GFX_decision_generic_political_discourse
+
+		allowed = {
+			original_tag = HIG
+		}
+
+		cost = 25
+		days_re_enable = 240
+
+		complete_effect = {
+			add_political_power = 50
+			TU_HIG_foreign_m5 = yes
+		}
+
+		ai_will_do = {
+			base = 1
+		}
+	}
+
+	TU_HIG_found_league = {
+		icon = GFX_decision_generic_political_discourse
+
+		allowed = {
+			original_tag = HIG
+		}
+
+		visible = {
+			has_completed_focus = TU_HIG_asian_league
+		}
+
+		available = {
+			is_in_faction = no
+		}
+
+		cost = 50
+		fire_only_once = yes
+
+		complete_effect = {
+			create_faction = TU_HIG_league
+		}
+
+		ai_will_do = {
+			base = 1
+		}
+	}
+
+	TU_HIG_castle_review = {
+		icon = GFX_decision_generic_political_discourse
+
+		allowed = {
+			original_tag = HIG
+		}
+
+		cost = 25
+		days_re_enable = 240
+
+		complete_effect = {
+			add_war_support = 0.04
+			army_experience = 10
+		}
+
+		ai_will_do = {
+			base = 1
+		}
+	}
+
+	TU_HIG_sakura_festival = {
+		icon = GFX_decision_generic_political_discourse
+
+		allowed = {
+			original_tag = HIG
+		}
+
+		cost = 25
+		days_re_enable = 365
+
+		complete_effect = {
+			add_stability = 0.03
+			TU_HIG_foreign_m3 = yes
+		}
+
+		ai_will_do = {
+			base = 1
+		}
+	}
+
+}
