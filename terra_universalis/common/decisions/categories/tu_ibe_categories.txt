@@ -1,0 +1,37 @@
+TU_IBE_coast_category = {
+	icon = GFX_decision_category_generic_political_actions
+
+	allowed = {
+		original_tag = IBE
+	}
+
+	visible = {
+		has_country_flag = TU_IBE_coast
+	}
+
+	priority = 100
+}
+
+TU_IBE_politics_category = {
+	icon = GFX_decision_category_generic_political_actions
+
+	allowed = {
+		original_tag = IBE
+	}
+
+	priority = 100
+}
+
+TU_IBE_foreign_category = {
+	icon = GFX_decision_category_generic_foreign_policy
+
+	allowed = {
+		original_tag = IBE
+	}
+
+	visible = {
+		has_country_flag = TU_IBE_league
+	}
+
+	priority = 100
+}

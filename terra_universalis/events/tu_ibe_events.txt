@@ -1,0 +1,396 @@
+add_namespace = tu_ibe_ev
+
+country_event = {
+	id = tu_ibe_ev.1
+	title = tu_ibe_ev.1.t
+	desc = tu_ibe_ev.1.d
+	picture = GFX_report_event_generic_ruins
+	is_triggered_only = yes
+
+	option = {
+		name = tu_ibe_ev.1.a
+		ai_chance = {
+			factor = 1
+		}
+		TU_IBE_threat_m5 = yes
+	}
+}
+
+country_event = {
+	id = tu_ibe_ev.20
+	title = tu_ibe_ev.20.t
+	desc = tu_ibe_ev.20.d
+	picture = GFX_report_event_generic_ruins
+
+	trigger = {
+		original_tag = IBE
+		check_variable = { TU_IBE_threat > 69 }
+	}
+
+	mean_time_to_happen = {
+		days = 60
+	}
+
+	option = {
+		name = tu_ibe_ev.20.a
+		ai_chance = {
+			factor = 50
+		}
+		add_stability = -0.03
+		add_power_balance_value = { id = TU_IBE_bop value = -0.05 }
+		TU_IBE_threat_m5 = yes
+	}
+
+	option = {
+		name = tu_ibe_ev.20.b
+		ai_chance = {
+			factor = 50
+		}
+		add_manpower = -3000
+		add_stability = -0.02
+	}
+}
+
+country_event = {
+	id = tu_ibe_ev.21
+	title = tu_ibe_ev.21.t
+	desc = tu_ibe_ev.21.d
+	picture = GFX_report_event_generic_read_write
+	is_triggered_only = yes
+
+	option = {
+		name = tu_ibe_ev.21.a
+		ai_chance = {
+			factor = 60
+		}
+		add_power_balance_value = { id = TU_IBE_bop value = -0.05 }
+		add_stability = 0.02
+	}
+
+	option = {
+		name = tu_ibe_ev.21.b
+		ai_chance = {
+			factor = 40
+		}
+		TU_IBE_threat_5 = yes
+		add_political_power = 25
+	}
+}
+
+country_event = {
+	id = tu_ibe_ev.22
+	title = tu_ibe_ev.22.t
+	desc = tu_ibe_ev.22.d
+	picture = GFX_report_event_generic_read_write
+	is_triggered_only = yes
+
+	option = {
+		name = tu_ibe_ev.22.a
+		ai_chance = {
+			factor = 50
+		}
+		add_power_balance_value = { id = TU_IBE_bop value = 0.1 }
+	}
+
+	option = {
+		name = tu_ibe_ev.22.b
+		ai_chance = {
+			factor = 50
+		}
+		add_power_balance_value = { id = TU_IBE_bop value = -0.05 }
+	}
+}
+
+country_event = {
+	id = tu_ibe_ev.23
+	title = tu_ibe_ev.23.t
+	desc = tu_ibe_ev.23.d
+	picture = GFX_report_event_generic_read_write
+	is_triggered_only = yes
+
+	option = {
+		name = tu_ibe_ev.23.a
+		ai_chance = {
+			factor = 1
+		}
+	}
+}
+
+country_event = {
+	id = tu_ibe_ev.25
+	title = tu_ibe_ev.25.t
+	desc = tu_ibe_ev.25.d
+	picture = GFX_report_event_generic_read_write
+	is_triggered_only = yes
+
+	option = {
+		name = tu_ibe_ev.25.a
+		ai_chance = {
+			factor = 70
+		}
+		set_country_flag = TU_IBE_hunters_met
+		TU_IBE_threat_m15 = yes
+	}
+
+	option = {
+		name = tu_ibe_ev.25.b
+		ai_chance = {
+			factor = 30
+		}
+		set_country_flag = TU_IBE_hunters_met
+		add_power_balance_value = { id = TU_IBE_bop value = -0.05 }
+	}
+}
+
+country_event = {
+	id = tu_ibe_ev.24
+	title = tu_ibe_ev.24.t
+	desc = tu_ibe_ev.24.d
+	picture = GFX_report_event_generic_read_write
+	is_triggered_only = yes
+
+	option = {
+		name = tu_ibe_ev.24.a
+		ai_chance = {
+			factor = 50
+		}
+		add_power_balance_value = { id = TU_IBE_bop value = 0.03 }
+		add_political_power = 25
+	}
+
+	option = {
+		name = tu_ibe_ev.24.b
+		ai_chance = {
+			factor = 50
+		}
+		add_power_balance_value = { id = TU_IBE_bop value = -0.05 }
+	}
+}
+
+country_event = {
+	id = tu_ibe_ev.26
+	title = tu_ibe_ev.26.t
+	desc = tu_ibe_ev.26.d
+	picture = GFX_report_event_generic_read_write
+
+	trigger = {
+		original_tag = IBE
+		check_variable = { TU_IBE_threat > 39 }
+	}
+	fire_only_once = yes
+
+	mean_time_to_happen = {
+		days = 200
+	}
+
+	option = {
+		name = tu_ibe_ev.26.a
+		ai_chance = {
+			factor = 50
+		}
+		add_tech_bonus = { name = TU_IBE_carcass bonus = 0.5 uses = 1 category = electronics }
+	}
+
+	option = {
+		name = tu_ibe_ev.26.b
+		ai_chance = {
+			factor = 50
+		}
+		TU_IBE_threat_m5 = yes
+		add_stability = 0.02
+	}
+}
+
+country_event = {
+	id = tu_ibe_ev.27
+	title = tu_ibe_ev.27.t
+	desc = tu_ibe_ev.27.d
+	picture = GFX_report_event_generic_read_write
+
+	trigger = {
+		original_tag = IBE
+		check_variable = { TU_IBE_threat < 26 }
+	}
+	fire_only_once = yes
+
+	mean_time_to_happen = {
+		days = 180
+	}
+
+	option = {
+		name = tu_ibe_ev.27.a
+		ai_chance = {
+			factor = 1
+		}
+		add_stability = 0.03
+		add_political_power = 25
+	}
+}
+
+country_event = {
+	id = tu_ibe_ev.28
+	title = tu_ibe_ev.28.t
+	desc = tu_ibe_ev.28.d
+	picture = GFX_report_event_generic_read_write
+	is_triggered_only = yes
+
+	option = {
+		name = tu_ibe_ev.28.a
+		ai_chance = {
+			factor = 1
+		}
+		TU_IBE_threat_m10 = yes
+	}
+}
+
+country_event = {
+	id = tu_ibe_ev.29
+	title = tu_ibe_ev.29.t
+	desc = tu_ibe_ev.29.d
+	picture = GFX_report_event_generic_read_write
+	is_triggered_only = yes
+
+	option = {
+		name = tu_ibe_ev.29.a
+		ai_chance = {
+			factor = 1
+		}
+		add_stability = 0.05
+	}
+}
+
+country_event = {
+	id = tu_ibe_ev.30
+	title = tu_ibe_ev.30.t
+	desc = tu_ibe_ev.30.d
+	picture = GFX_report_event_generic_read_write
+	is_triggered_only = yes
+
+	option = {
+		name = tu_ibe_ev.30.a
+		ai_chance = {
+			factor = 1
+		}
+		add_stability = 0.05
+	}
+}
+
+country_event = {
+	id = tu_ibe_ev.31
+	title = tu_ibe_ev.31.t
+	desc = tu_ibe_ev.31.d
+	picture = GFX_report_event_generic_read_write
+
+	trigger = {
+		original_tag = IBE
+		has_country_flag = TU_IBE_inquisition_strong
+	}
+	fire_only_once = yes
+
+	mean_time_to_happen = {
+		days = 300
+	}
+
+	option = {
+		name = tu_ibe_ev.31.a
+		ai_chance = {
+			factor = 50
+		}
+		add_power_balance_value = { id = TU_IBE_bop value = 0.05 }
+		add_stability = 0.02
+	}
+
+	option = {
+		name = tu_ibe_ev.31.b
+		ai_chance = {
+			factor = 50
+		}
+		add_power_balance_value = { id = TU_IBE_bop value = -0.05 }
+		add_stability = -0.03
+	}
+}
+
+country_event = {
+	id = tu_ibe_ev.32
+	title = tu_ibe_ev.32.t
+	desc = tu_ibe_ev.32.d
+	picture = GFX_report_event_generic_read_write
+
+	trigger = {
+		original_tag = IBE
+		check_variable = { TU_IBE_lighthouses > 2 }
+	}
+	fire_only_once = yes
+
+	mean_time_to_happen = {
+		days = 120
+	}
+
+	option = {
+		name = tu_ibe_ev.32.a
+		ai_chance = {
+			factor = 1
+		}
+		add_stability = 0.03
+	}
+}
+
+country_event = {
+	id = tu_ibe_ev.33
+	title = tu_ibe_ev.33.t
+	desc = tu_ibe_ev.33.d
+	picture = GFX_report_event_generic_read_write
+
+	trigger = {
+		original_tag = IBE
+		has_completed_focus = TU_IBE_inquisitor_academy
+	}
+	fire_only_once = yes
+
+	mean_time_to_happen = {
+		days = 300
+	}
+
+	option = {
+		name = tu_ibe_ev.33.a
+		ai_chance = {
+			factor = 1
+		}
+		army_experience = 15
+		TU_IBE_threat_m5 = yes
+	}
+}
+
+country_event = {
+	id = tu_ibe_ev.34
+	title = tu_ibe_ev.34.t
+	desc = tu_ibe_ev.34.d
+	picture = GFX_report_event_generic_read_write
+
+	trigger = {
+		original_tag = IBE
+		has_completed_focus = TU_IBE_nobles_return
+	}
+	fire_only_once = yes
+
+	mean_time_to_happen = {
+		days = 300
+	}
+
+	option = {
+		name = tu_ibe_ev.34.a
+		ai_chance = {
+			factor = 50
+		}
+		add_power_balance_value = { id = TU_IBE_bop value = 0.05 }
+		add_stability = -0.02
+	}
+
+	option = {
+		name = tu_ibe_ev.34.b
+		ai_chance = {
+			factor = 50
+		}
+		add_power_balance_value = { id = TU_IBE_bop value = -0.03 }
+	}
+}

@@ -1,0 +1,124 @@
+ideas = {
+
+	country = {
+
+		TU_IBE_great_silence = {
+			picture = generic_army_problems
+
+			allowed = {
+				original_tag = IBE
+			}
+
+			modifier = {
+				production_speed_buildings_factor = -0.1
+				monthly_population = -0.1
+			}
+		}
+
+		TU_IBE_fear_of_the_sea = {
+			picture = generic_navy_bonus
+
+			allowed = {
+				original_tag = IBE
+			}
+
+			modifier = {
+				naval_speed_factor = -0.1
+				stability_factor = -0.03
+			}
+		}
+
+		TU_IBE_watchful_coast = {
+			picture = generic_fortify_the_borders
+
+			allowed = {
+				original_tag = IBE
+			}
+
+			modifier = {
+				army_defence_factor = 0.05
+				stability_factor = 0.03
+			}
+		}
+
+		TU_IBE_inquisitor_state = {
+			picture = generic_secret_police
+
+			allowed = {
+				original_tag = IBE
+			}
+
+			modifier = {
+				stability_factor = 0.1
+				army_org_factor = 0.05
+				political_power_gain = 0.05
+			}
+		}
+
+		TU_IBE_crown_restored = {
+			picture = generic_central_management
+
+			allowed = {
+				original_tag = IBE
+			}
+
+			modifier = {
+				political_power_gain = 0.15
+				production_speed_buildings_factor = 0.1
+			}
+		}
+
+		TU_IBE_sea_reconciliation = {
+			picture = generic_navy_bonus
+
+			allowed = {
+				original_tag = IBE
+			}
+
+			modifier = {
+				naval_speed_factor = 0.1
+				navy_org_factor = 0.05
+				stability_factor = 0.05
+			}
+		}
+
+		TU_IBE_inquisitor_corps = {
+			picture = professional_officer_corps_spirit
+
+			allowed = {
+				original_tag = IBE
+			}
+
+			modifier = {
+				army_attack_factor = 0.05
+				army_org_factor = 0.05
+			}
+		}
+
+		TU_IBE_iberian_navy = {
+			picture = generic_navy_bonus
+
+			allowed = {
+				original_tag = IBE
+			}
+
+			modifier = {
+				navy_org_factor = 0.08
+				naval_speed_factor = 0.05
+			}
+		}
+
+		TU_IBE_purified_coast = {
+			picture = generic_morale_bonus
+
+			allowed = {
+				original_tag = IBE
+			}
+
+			modifier = {
+				monthly_population = 0.1
+				production_speed_buildings_factor = 0.05
+			}
+		}
+	}
+}

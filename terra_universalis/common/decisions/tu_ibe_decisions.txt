@@ -1,0 +1,461 @@
+TU_IBE_coast_category = {
+	TU_IBE_restore_lighthouse = {
+		icon = GFX_decision_generic_construction
+
+		allowed = {
+			original_tag = IBE
+		}
+
+		available = {
+			check_variable = { TU_IBE_lighthouses < 5 }
+		}
+
+		cost = 50
+		days_re_enable = 120
+
+		complete_effect = {
+			TU_IBE_lighthouses_1 = yes
+			TU_IBE_threat_m5 = yes
+			TU_build_infrastructure = yes
+		}
+
+		ai_will_do = {
+			base = 1
+		}
+	}
+
+	TU_IBE_coastal_patrol = {
+		icon = GFX_decision_generic_naval
+
+		allowed = {
+			original_tag = IBE
+		}
+
+		cost = 25
+		days_re_enable = 90
+
+		complete_effect = {
+			TU_IBE_threat_m10 = yes
+			army_experience = 5
+		}
+
+		ai_will_do = {
+			base = 1
+		}
+	}
+
+	TU_IBE_purification = {
+		icon = GFX_decision_generic_operation
+
+		allowed = {
+			original_tag = IBE
+		}
+
+		cost = 75
+		days_re_enable = 240
+
+		complete_effect = {
+			TU_IBE_threat_m20 = yes
+			add_stability = -0.02
+			add_power_balance_value = { id = TU_IBE_bop value = -0.05 }
+		}
+
+		ai_will_do = {
+			base = 1
+		}
+	}
+
+	TU_IBE_evacuate_town = {
+		icon = GFX_decision_generic_political_discourse
+
+		allowed = {
+			original_tag = IBE
+		}
+
+		available = {
+			check_variable = { TU_IBE_threat > 49 }
+		}
+
+		cost = 25
+		days_re_enable = 180
+
+		complete_effect = {
+			add_stability = 0.03
+			add_manpower = -2000
+		}
+
+		ai_will_do = {
+			base = 1
+		}
+	}
+
+	TU_IBE_hunters_contact = {
+		icon = GFX_decision_generic_political_discourse
+
+		allowed = {
+			original_tag = IBE
+		}
+
+		visible = {
+			has_completed_focus = TU_IBE_abyssal_rumours
+		}
+
+		available = {
+			NOT = { has_country_flag = TU_IBE_hunters_met }
+		}
+
+		cost = 75
+		fire_only_once = yes
+
+		complete_effect = {
+			country_event = { id = tu_ibe_ev.25 }
+		}
+
+		ai_will_do = {
+			base = 1
+		}
+	}
+
+	TU_IBE_sea_research = {
+		icon = GFX_decision_generic_political_discourse
+
+		allowed = {
+			original_tag = IBE
+		}
+
+		visible = {
+			has_completed_focus = TU_IBE_sea_studies
+		}
+
+		cost = 50
+		days_re_enable = 240
+
+		complete_effect = {
+			add_tech_bonus = { name = TU_IBE_sea_research bonus = 0.75 uses = 1 category = naval_doctrine category = electronics }
+			TU_IBE_threat_m5 = yes
+		}
+
+		ai_will_do = {
+			base = 1
+		}
+	}
+
+	TU_IBE_fortify_beach = {
+		icon = GFX_decision_generic_fortification
+
+		allowed = {
+			original_tag = IBE
+		}
+
+		cost = 75
+		days_re_enable = 240
+
+		complete_effect = {
+			TU_build_infrastructure = yes
+			TU_IBE_threat_m5 = yes
+		}
+
+		ai_will_do = {
+			base = 1
+		}
+	}
+
+	TU_IBE_sea_vigil = {
+		icon = GFX_decision_generic_political_discourse
+
+		allowed = {
+			original_tag = IBE
+		}
+
+		cost = 25
+		days_re_enable = 120
+
+		complete_effect = {
+			add_stability = 0.03
+			TU_IBE_threat_m3 = yes
+		}
+
+		ai_will_do = {
+			base = 1
+		}
+	}
+
+	TU_IBE_hunter_aid = {
+		icon = GFX_decision_generic_political_discourse
+
+		allowed = {
+			original_tag = IBE
+		}
+
+		visible = {
+			has_country_flag = TU_IBE_hunters_met
+		}
+
+		cost = 50
+		days_re_enable = 180
+
+		complete_effect = {
+			TU_IBE_threat_m15 = yes
+			add_political_power = -25
+		}
+
+		ai_will_do = {
+			base = 1
+		}
+	}
+
+}
+
+TU_IBE_politics_category = {
+	TU_IBE_inquisition_sermon = {
+		icon = GFX_decision_generic_political_discourse
+
+		allowed = {
+			original_tag = IBE
+		}
+
+		cost = 50
+		days_re_enable = 120
+
+		complete_effect = {
+			add_power_balance_value = { id = TU_IBE_bop value = -0.1 }
+			add_stability = 0.02
+		}
+
+		ai_will_do = {
+			base = 1
+		}
+	}
+
+	TU_IBE_crown_rally = {
+		icon = GFX_decision_generic_political_discourse
+
+		allowed = {
+			original_tag = IBE
+		}
+
+		cost = 50
+		days_re_enable = 120
+
+		complete_effect = {
+			add_power_balance_value = { id = TU_IBE_bop value = 0.1 }
+			add_political_power = 25
+		}
+
+		ai_will_do = {
+			base = 1
+		}
+	}
+
+	TU_IBE_heresy_trial = {
+		icon = GFX_decision_generic_political_discourse
+
+		allowed = {
+			original_tag = IBE
+		}
+
+		cost = 25
+		days_re_enable = 180
+
+		complete_effect = {
+			add_power_balance_value = { id = TU_IBE_bop value = -0.05 }
+			add_stability = 0.04
+			add_political_power = -15
+		}
+
+		ai_will_do = {
+			base = 1
+		}
+	}
+
+	TU_IBE_royal_tour = {
+		icon = GFX_decision_generic_political_discourse
+
+		allowed = {
+			original_tag = IBE
+		}
+
+		visible = {
+			has_completed_focus = TU_IBE_royal_heir
+		}
+
+		cost = 25
+		days_re_enable = 180
+
+		complete_effect = {
+			add_power_balance_value = { id = TU_IBE_bop value = 0.05 }
+			add_war_support = 0.03
+		}
+
+		ai_will_do = {
+			base = 1
+		}
+	}
+
+	TU_IBE_noble_taxes = {
+		icon = GFX_decision_generic_political_discourse
+
+		allowed = {
+			original_tag = IBE
+		}
+
+		cost = 0
+		days_re_enable = 240
+
+		complete_effect = {
+			add_political_power = 75
+			add_power_balance_value = { id = TU_IBE_bop value = -0.05 }
+		}
+
+		ai_will_do = {
+			base = 1
+		}
+	}
+
+	TU_IBE_inquisitor_recruits = {
+		icon = GFX_decision_generic_military
+
+		allowed = {
+			original_tag = IBE
+		}
+
+		visible = {
+			has_completed_focus = TU_IBE_inquisitor_guard
+		}
+
+		cost = 75
+		days_re_enable = 240
+
+		complete_effect = {
+			TU_IBE_inq_template = yes
+			capital_scope = { create_unit = { division = "division_template = \"TU_IBE_inquisitors\" start_experience_factor = 0.5 start_equipment_factor = 1" owner = IBE count = 2 } }
+		}
+
+		ai_will_do = {
+			base = 1
+		}
+	}
+
+	TU_IBE_crown_marriage = {
+		icon = GFX_decision_generic_political_discourse
+
+		allowed = {
+			original_tag = IBE
+		}
+
+		visible = {
+			has_completed_focus = TU_IBE_royal_heir
+		}
+
+		cost = 75
+		fire_only_once = yes
+
+		complete_effect = {
+			add_power_balance_value = { id = TU_IBE_bop value = 0.1 }
+			add_stability = 0.02
+		}
+
+		ai_will_do = {
+			base = 1
+		}
+	}
+
+	TU_IBE_inquisition_audit = {
+		icon = GFX_decision_generic_political_discourse
+
+		allowed = {
+			original_tag = IBE
+		}
+
+		cost = 50
+		days_re_enable = 240
+
+		complete_effect = {
+			add_power_balance_value = { id = TU_IBE_bop value = 0.08 }
+			add_political_power = 40
+		}
+
+		ai_will_do = {
+			base = 1
+		}
+	}
+
+}
+
+TU_IBE_foreign_category = {
+	TU_IBE_found_league = {
+		icon = GFX_decision_generic_political_discourse
+
+		allowed = {
+			original_tag = IBE
+		}
+
+		available = {
+			is_in_faction = no
+		}
+
+		cost = 50
+		fire_only_once = yes
+
+		complete_effect = {
+			create_faction = TU_IBE_league
+		}
+
+		ai_will_do = {
+			base = 1
+		}
+	}
+
+	TU_IBE_invite_league = {
+		icon = GFX_decision_generic_political_discourse
+
+		allowed = {
+			original_tag = IBE
+		}
+
+		target_trigger = {
+			FROM = {
+				NOT = { tag = ROOT }
+				is_in_faction = no
+				NOT = { has_war_with = ROOT }
+				OR = { tag = SAR tag = MIN tag = SIR tag = VIC }
+			}
+		}
+
+		visible = {
+			is_faction_leader = yes
+		}
+
+		cost = 50
+		days_re_enable = 90
+
+		complete_effect = {
+			add_to_faction = FROM
+		}
+
+		ai_will_do = {
+			base = 1
+		}
+	}
+
+	TU_IBE_share_warnings = {
+		icon = GFX_decision_generic_political_discourse
+
+		allowed = {
+			original_tag = IBE
+		}
+
+		cost = 25
+		days_re_enable = 180
+
+		complete_effect = {
+			add_political_power = 40
+			TU_IBE_threat_m5 = yes
+		}
+
+		ai_will_do = {
+			base = 1
+		}
+	}
+
+}
