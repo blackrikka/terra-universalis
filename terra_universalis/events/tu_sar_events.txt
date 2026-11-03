@@ -1,0 +1,472 @@
+add_namespace = tu_sar_ev
+
+country_event = {
+	id = tu_sar_ev.1
+	title = tu_sar_ev.1.t
+	desc = tu_sar_ev.1.d
+	picture = GFX_report_event_generic_read_write
+	is_triggered_only = yes
+
+	option = {
+		name = tu_sar_ev.1.a
+		ai_chance = {
+			factor = 50
+		}
+		TU_SAR_loyalty_5 = yes
+	}
+
+	option = {
+		name = tu_sar_ev.1.b
+		ai_chance = {
+			factor = 50
+		}
+		TU_SAR_gold_10 = yes
+	}
+}
+
+country_event = {
+	id = tu_sar_ev.20
+	title = tu_sar_ev.20.t
+	desc = tu_sar_ev.20.d
+	picture = GFX_report_event_generic_ruins
+	is_triggered_only = yes
+
+	immediate = {
+		random_list = {
+			35 = { set_country_flag = TU_SAR_exp_ruins }
+			35 = { set_country_flag = TU_SAR_exp_gold }
+			30 = { set_country_flag = TU_SAR_exp_lost }
+		}
+	}
+
+	option = {
+		name = tu_sar_ev.20.a
+		ai_chance = {
+			factor = 1
+		}
+		trigger = { has_country_flag = TU_SAR_exp_ruins }
+		set_country_flag = TU_SAR_found_ruins
+		add_tech_bonus = { name = TU_SAR_ruins bonus = 0.5 uses = 1 category = electronics }
+		clr_country_flag = TU_SAR_exp_ruins
+	}
+
+	option = {
+		name = tu_sar_ev.20.b
+		ai_chance = {
+			factor = 1
+		}
+		trigger = { has_country_flag = TU_SAR_exp_gold }
+		TU_SAR_gold_40 = yes
+		clr_country_flag = TU_SAR_exp_gold
+	}
+
+	option = {
+		name = tu_sar_ev.20.c
+		ai_chance = {
+			factor = 1
+		}
+		trigger = { has_country_flag = TU_SAR_exp_lost }
+		add_manpower = -2000
+		army_experience = 10
+		clr_country_flag = TU_SAR_exp_lost
+	}
+}
+
+country_event = {
+	id = tu_sar_ev.21
+	title = tu_sar_ev.21.t
+	desc = tu_sar_ev.21.d
+	picture = GFX_report_event_generic_riot
+
+	trigger = {
+		original_tag = SAR
+		check_variable = { TU_SAR_loyalty < 30 }
+	}
+
+	mean_time_to_happen = {
+		days = 90
+	}
+
+	option = {
+		name = tu_sar_ev.21.a
+		ai_chance = {
+			factor = 50
+		}
+		army_experience = 15
+		add_stability = -0.03
+		TU_SAR_loyalty_10 = yes
+	}
+
+	option = {
+		name = tu_sar_ev.21.b
+		ai_chance = {
+			factor = 30
+		}
+		TU_SAR_gold_m30 = yes
+		TU_SAR_loyalty_5 = yes
+	}
+
+	option = {
+		name = tu_sar_ev.21.c
+		ai_chance = {
+			factor = 20
+		}
+		add_political_power = -50
+		add_stability = 0.02
+	}
+}
+
+country_event = {
+	id = tu_sar_ev.22
+	title = tu_sar_ev.22.t
+	desc = tu_sar_ev.22.d
+	picture = GFX_report_event_generic_read_write
+
+	trigger = {
+		original_tag = SAR
+		has_country_flag = TU_SAR_caravans
+	}
+
+	mean_time_to_happen = {
+		days = 240
+	}
+
+	option = {
+		name = tu_sar_ev.22.a
+		ai_chance = {
+			factor = 1
+		}
+		TU_SAR_gold_m10 = yes
+	}
+}
+
+country_event = {
+	id = tu_sar_ev.23
+	title = tu_sar_ev.23.t
+	desc = tu_sar_ev.23.d
+	picture = GFX_report_event_generic_read_write
+
+	trigger = {
+		original_tag = SAR
+		has_completed_focus = TU_SAR_jungle_training
+	}
+	fire_only_once = yes
+
+	mean_time_to_happen = {
+		days = 360
+	}
+
+	option = {
+		name = tu_sar_ev.23.a
+		ai_chance = {
+			factor = 60
+		}
+		add_political_power = -25
+		add_stability = 0.02
+	}
+
+	option = {
+		name = tu_sar_ev.23.b
+		ai_chance = {
+			factor = 40
+		}
+		add_manpower = -3000
+	}
+}
+
+country_event = {
+	id = tu_sar_ev.24
+	title = tu_sar_ev.24.t
+	desc = tu_sar_ev.24.d
+	picture = GFX_report_event_generic_read_write
+
+	trigger = {
+		original_tag = SAR
+		check_variable = { TU_SAR_loyalty > 49 }
+	}
+	fire_only_once = yes
+
+	mean_time_to_happen = {
+		days = 300
+	}
+
+	option = {
+		name = tu_sar_ev.24.a
+		ai_chance = {
+			factor = 60
+		}
+		TU_SAR_loyalty_5 = yes
+		TU_SAR_gold_m10 = yes
+	}
+
+	option = {
+		name = tu_sar_ev.24.b
+		ai_chance = {
+			factor = 40
+		}
+		add_political_power = 25
+		TU_SAR_loyalty_m5 = yes
+	}
+}
+
+country_event = {
+	id = tu_sar_ev.25
+	title = tu_sar_ev.25.t
+	desc = tu_sar_ev.25.d
+	picture = GFX_report_event_generic_read_write
+
+	trigger = {
+		original_tag = SAR
+		check_variable = { TU_SAR_gold > 59 }
+	}
+	fire_only_once = yes
+
+	mean_time_to_happen = {
+		days = 240
+	}
+
+	option = {
+		name = tu_sar_ev.25.a
+		ai_chance = {
+			factor = 50
+		}
+		army_experience = 10
+		TU_SAR_gold_m10 = yes
+	}
+
+	option = {
+		name = tu_sar_ev.25.b
+		ai_chance = {
+			factor = 50
+		}
+		TU_SAR_gold_m20 = yes
+	}
+}
+
+country_event = {
+	id = tu_sar_ev.26
+	title = tu_sar_ev.26.t
+	desc = tu_sar_ev.26.d
+	picture = GFX_report_event_generic_read_write
+
+	trigger = {
+		original_tag = SAR
+		has_completed_focus = TU_SAR_trade_monopoly
+	}
+	fire_only_once = yes
+
+	mean_time_to_happen = {
+		days = 300
+	}
+
+	option = {
+		name = tu_sar_ev.26.a
+		ai_chance = {
+			factor = 50
+		}
+		TU_SAR_gold_15 = yes
+		TU_SAR_loyalty_m5 = yes
+	}
+
+	option = {
+		name = tu_sar_ev.26.b
+		ai_chance = {
+			factor = 50
+		}
+		TU_SAR_loyalty_5 = yes
+	}
+}
+
+country_event = {
+	id = tu_sar_ev.27
+	title = tu_sar_ev.27.t
+	desc = tu_sar_ev.27.d
+	picture = GFX_report_event_generic_read_write
+
+	trigger = {
+		original_tag = SAR
+		has_completed_focus = TU_SAR_desert_scouts
+	}
+	fire_only_once = yes
+
+	mean_time_to_happen = {
+		days = 360
+	}
+
+	option = {
+		name = tu_sar_ev.27.a
+		ai_chance = {
+			factor = 1
+		}
+		TU_build_infrastructure = yes
+		TU_SAR_gold_5 = yes
+	}
+}
+
+country_event = {
+	id = tu_sar_ev.28
+	title = tu_sar_ev.28.t
+	desc = tu_sar_ev.28.d
+	picture = GFX_report_event_generic_read_write
+	is_triggered_only = yes
+
+	option = {
+		name = tu_sar_ev.28.a
+		ai_chance = {
+			factor = 1
+		}
+		add_stability = 0.05
+	}
+}
+
+country_event = {
+	id = tu_sar_ev.29
+	title = tu_sar_ev.29.t
+	desc = tu_sar_ev.29.d
+	picture = GFX_report_event_generic_read_write
+	is_triggered_only = yes
+
+	option = {
+		name = tu_sar_ev.29.a
+		ai_chance = {
+			factor = 1
+		}
+		add_manpower = 10000
+	}
+}
+
+country_event = {
+	id = tu_sar_ev.30
+	title = tu_sar_ev.30.t
+	desc = tu_sar_ev.30.d
+	picture = GFX_report_event_generic_read_write
+	is_triggered_only = yes
+
+	option = {
+		name = tu_sar_ev.30.a
+		ai_chance = {
+			factor = 1
+		}
+		TU_SAR_gold_20 = yes
+	}
+}
+
+country_event = {
+	id = tu_sar_ev.31
+	title = tu_sar_ev.31.t
+	desc = tu_sar_ev.31.d
+	picture = GFX_report_event_generic_read_write
+
+	trigger = {
+		original_tag = SAR
+		check_variable = { TU_SAR_loyalty < 46 }
+	}
+	fire_only_once = yes
+
+	mean_time_to_happen = {
+		days = 300
+	}
+
+	option = {
+		name = tu_sar_ev.31.a
+		ai_chance = {
+			factor = 60
+		}
+		TU_SAR_loyalty_5 = yes
+		add_stability = -0.02
+	}
+
+	option = {
+		name = tu_sar_ev.31.b
+		ai_chance = {
+			factor = 40
+		}
+		add_stability = 0.02
+	}
+}
+
+country_event = {
+	id = tu_sar_ev.32
+	title = tu_sar_ev.32.t
+	desc = tu_sar_ev.32.d
+	picture = GFX_report_event_generic_read_write
+
+	trigger = {
+		original_tag = SAR
+		has_completed_focus = TU_SAR_gold_trade
+	}
+	fire_only_once = yes
+
+	mean_time_to_happen = {
+		days = 360
+	}
+
+	option = {
+		name = tu_sar_ev.32.a
+		ai_chance = {
+			factor = 1
+		}
+		TU_SAR_gold_30 = yes
+		TU_SAR_loyalty_m3 = yes
+	}
+}
+
+country_event = {
+	id = tu_sar_ev.33
+	title = tu_sar_ev.33.t
+	desc = tu_sar_ev.33.d
+	picture = GFX_report_event_generic_read_write
+
+	trigger = {
+		original_tag = SAR
+		has_completed_focus = TU_SAR_tribal_accord
+	}
+	fire_only_once = yes
+
+	mean_time_to_happen = {
+		days = 360
+	}
+
+	option = {
+		name = tu_sar_ev.33.a
+		ai_chance = {
+			factor = 1
+		}
+		TU_SAR_loyalty_5 = yes
+		add_stability = 0.02
+	}
+}
+
+country_event = {
+	id = tu_sar_ev.34
+	title = tu_sar_ev.34.t
+	desc = tu_sar_ev.34.d
+	picture = GFX_report_event_generic_read_write
+
+	trigger = {
+		original_tag = SAR
+		has_completed_focus = TU_SAR_irrigation
+	}
+	fire_only_once = yes
+
+	mean_time_to_happen = {
+		days = 400
+	}
+
+	option = {
+		name = tu_sar_ev.34.a
+		ai_chance = {
+			factor = 50
+		}
+		TU_SAR_gold_m15 = yes
+		add_stability = 0.02
+	}
+
+	option = {
+		name = tu_sar_ev.34.b
+		ai_chance = {
+			factor = 50
+		}
+		add_stability = -0.03
+	}
+}

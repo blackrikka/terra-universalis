@@ -1,0 +1,151 @@
+ideas = {
+
+	country = {
+
+		TU_SAR_feuding_lords = {
+			picture = generic_army_problems
+
+			allowed = {
+				original_tag = SAR
+			}
+
+			modifier = {
+				stability_factor = -0.05
+				political_power_gain = -0.1
+			}
+		}
+
+		TU_SAR_endless_desert = {
+			picture = generic_supply_line
+
+			allowed = {
+				original_tag = SAR
+			}
+
+			modifier = {
+				attrition = 0.05
+				supply_consumption_factor = 0.05
+			}
+		}
+
+		TU_SAR_desert_mastery = {
+			picture = generic_supply_line
+
+			allowed = {
+				original_tag = SAR
+			}
+
+			modifier = {
+				attrition = -0.1
+				supply_consumption_factor = -0.1
+				army_speed_factor = 0.05
+			}
+		}
+
+		TU_SAR_camel_riders = {
+			picture = generic_army_europe_1
+
+			allowed = {
+				original_tag = SAR
+			}
+
+			modifier = {
+				army_speed_factor = 0.08
+				army_org_factor = 0.03
+			}
+		}
+
+		TU_SAR_jungle_fighters = {
+			picture = generic_guerilla_warfare
+
+			allowed = {
+				original_tag = SAR
+			}
+
+			modifier = {
+				army_defence_factor = 0.08
+				attrition = -0.05
+			}
+		}
+
+		TU_SAR_golden_trade = {
+			picture = generic_economic_increase
+
+			allowed = {
+				original_tag = SAR
+			}
+
+			modifier = {
+				political_power_gain = 0.1
+				consumer_goods_factor = -0.03
+			}
+		}
+
+		TU_SAR_padishah_empire = {
+			picture = generic_central_management
+
+			allowed = {
+				original_tag = SAR
+			}
+
+			modifier = {
+				political_power_gain = 0.15
+				stability_factor = 0.1
+				conscription_factor = 0.05
+			}
+		}
+
+		TU_SAR_lords_confederation = {
+			picture = generic_local_self_management
+
+			allowed = {
+				original_tag = SAR
+			}
+
+			modifier = {
+				army_org_factor = 0.05
+				conscription_factor = 0.1
+				political_power_gain = -0.05
+			}
+		}
+
+		TU_SAR_golden_council = {
+			picture = generic_foreign_capital
+
+			allowed = {
+				original_tag = SAR
+			}
+
+			modifier = {
+				production_speed_buildings_factor = 0.1
+				consumer_goods_factor = -0.05
+				political_power_gain = 0.1
+			}
+		}
+
+		TU_SAR_oasis_network = {
+			picture = generic_railroads
+
+			allowed = {
+				original_tag = SAR
+			}
+
+			modifier = {
+				production_speed_infrastructure_factor = 0.15
+				attrition = -0.05
+			}
+		}
+
+		TU_SAR_ancient_knowledge = {
+			picture = generic_research_bonus
+
+			allowed = {
+				original_tag = SAR
+			}
+
+			modifier = {
+				research_speed_factor = 0.05
+			}
+		}
+	}
+}

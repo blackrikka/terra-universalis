@@ -1,0 +1,538 @@
+TU_SAR_court_category = {
+	TU_SAR_summon_lords = {
+		icon = GFX_decision_generic_political_address
+
+		allowed = {
+			original_tag = SAR
+		}
+
+		cost = 50
+		days_re_enable = 120
+
+		complete_effect = {
+			TU_SAR_loyalty_10 = yes
+			add_political_power = -10
+		}
+
+		ai_will_do = {
+			base = 1
+		}
+	}
+
+	TU_SAR_demand_tribute = {
+		icon = GFX_decision_generic_fundraising
+
+		allowed = {
+			original_tag = SAR
+		}
+
+		cost = 0
+		days_re_enable = 120
+
+		complete_effect = {
+			TU_SAR_gold_20 = yes
+			add_political_power = 40
+			TU_SAR_loyalty_m10 = yes
+		}
+
+		ai_will_do = {
+			base = 1
+		}
+	}
+
+	TU_SAR_punish_lord = {
+		icon = GFX_decision_generic_political_discourse
+
+		allowed = {
+			original_tag = SAR
+		}
+
+		available = {
+			has_army_manpower = { size > 20000 }
+		}
+
+		cost = 75
+		days_re_enable = 365
+
+		complete_effect = {
+			TU_SAR_loyalty_15 = yes
+			add_stability = -0.05
+			TU_SAR_gold_10 = yes
+		}
+
+		ai_will_do = {
+			base = 1
+		}
+	}
+
+	TU_SAR_gold_gifts = {
+		icon = GFX_decision_generic_political_discourse
+
+		allowed = {
+			original_tag = SAR
+		}
+
+		available = {
+			check_variable = { TU_SAR_gold > 29 }
+		}
+
+		cost = 0
+		days_re_enable = 120
+
+		complete_effect = {
+			TU_SAR_loyalty_15 = yes
+			TU_SAR_gold_m30 = yes
+		}
+
+		ai_will_do = {
+			base = 1
+		}
+	}
+
+	TU_SAR_royal_hunt = {
+		icon = GFX_decision_generic_political_discourse
+
+		allowed = {
+			original_tag = SAR
+		}
+
+		cost = 25
+		days_re_enable = 240
+
+		complete_effect = {
+			TU_SAR_loyalty_5 = yes
+			add_stability = 0.03
+		}
+
+		ai_will_do = {
+			base = 1
+		}
+	}
+
+	TU_SAR_lords_games = {
+		icon = GFX_decision_generic_political_discourse
+
+		allowed = {
+			original_tag = SAR
+		}
+
+		cost = 25
+		days_re_enable = 240
+
+		complete_effect = {
+			TU_SAR_loyalty_5 = yes
+			add_war_support = 0.03
+		}
+
+		ai_will_do = {
+			base = 1
+		}
+	}
+
+	TU_SAR_royal_pardon = {
+		icon = GFX_decision_generic_political_discourse
+
+		allowed = {
+			original_tag = SAR
+		}
+
+		cost = 50
+		days_re_enable = 365
+
+		complete_effect = {
+			TU_SAR_loyalty_10 = yes
+			add_stability = -0.02
+		}
+
+		ai_will_do = {
+			base = 1
+		}
+	}
+
+	TU_SAR_court_spies = {
+		icon = GFX_decision_generic_political_discourse
+
+		allowed = {
+			original_tag = SAR
+		}
+
+		visible = {
+			has_completed_focus = TU_SAR_royal_spies
+		}
+
+		cost = 50
+		days_re_enable = 240
+
+		complete_effect = {
+			TU_SAR_loyalty_5 = yes
+			add_stability = 0.02
+		}
+
+		ai_will_do = {
+			base = 1
+		}
+	}
+
+}
+
+TU_SAR_caravans_category = {
+	TU_SAR_caravan_east = {
+		icon = GFX_decision_generic_train
+
+		allowed = {
+			original_tag = SAR
+		}
+
+		visible = {
+			has_country_flag = TU_SAR_caravans
+		}
+
+		available = {
+			NOT = { has_country_flag = TU_SAR_caravan_east_out }
+		}
+
+		cost = 25
+		days_re_enable = 30
+		days_remove = 60
+
+		complete_effect = {
+			set_country_flag = TU_SAR_caravan_east_out
+		}
+
+		remove_effect = {
+			TU_SAR_gold_20 = yes
+			clr_country_flag = TU_SAR_caravan_east_out
+			if = { limit = { has_completed_focus = TU_SAR_caravan_guards } TU_SAR_gold_10 = yes }
+		}
+
+		ai_will_do = {
+			base = 1
+		}
+	}
+
+	TU_SAR_caravan_north = {
+		icon = GFX_decision_generic_train
+
+		allowed = {
+			original_tag = SAR
+		}
+
+		visible = {
+			has_country_flag = TU_SAR_caravans
+		}
+
+		available = {
+			NOT = { has_country_flag = TU_SAR_caravan_north_out }
+		}
+
+		cost = 50
+		days_re_enable = 30
+		days_remove = 60
+
+		complete_effect = {
+			set_country_flag = TU_SAR_caravan_north_out
+		}
+
+		remove_effect = {
+			TU_SAR_gold_35 = yes
+			clr_country_flag = TU_SAR_caravan_north_out
+			if = { limit = { has_completed_focus = TU_SAR_caravan_guards } TU_SAR_gold_10 = yes }
+		}
+
+		ai_will_do = {
+			base = 1
+		}
+	}
+
+	TU_SAR_expedition = {
+		icon = GFX_decision_generic_operation
+
+		allowed = {
+			original_tag = SAR
+		}
+
+		visible = {
+			has_country_flag = TU_SAR_expeditions
+		}
+
+		available = {
+			NOT = { has_country_flag = TU_SAR_expedition_out }
+		}
+
+		cost = 50
+		days_re_enable = 60
+		days_remove = 90
+
+		complete_effect = {
+			set_country_flag = TU_SAR_expedition_out
+		}
+
+		remove_effect = {
+			clr_country_flag = TU_SAR_expedition_out
+			country_event = { id = tu_sar_ev.20 }
+		}
+
+		ai_will_do = {
+			base = 1
+		}
+	}
+
+	TU_SAR_gold_mercs = {
+		icon = GFX_decision_generic_military
+
+		allowed = {
+			original_tag = SAR
+		}
+
+		visible = {
+			has_country_flag = TU_SAR_mercs
+		}
+
+		available = {
+			check_variable = { TU_SAR_gold > 39 }
+		}
+
+		cost = 25
+		days_re_enable = 120
+
+		complete_effect = {
+			TU_SAR_merc_template = yes
+			capital_scope = { create_unit = { division = "division_template = \"TU_SAR_mercs\" start_experience_factor = 0.4 start_equipment_factor = 0.8" owner = SAR count = 2 } }
+			TU_SAR_gold_m40 = yes
+		}
+
+		ai_will_do = {
+			base = 1
+		}
+	}
+
+	TU_SAR_gold_research = {
+		icon = GFX_decision_generic_political_discourse
+
+		allowed = {
+			original_tag = SAR
+		}
+
+		visible = {
+			has_country_flag = TU_SAR_caravans
+		}
+
+		available = {
+			check_variable = { TU_SAR_gold > 29 }
+		}
+
+		cost = 25
+		days_re_enable = 180
+
+		complete_effect = {
+			add_tech_bonus = { name = TU_SAR_gold_research bonus = 0.75 uses = 1 category = industry category = electronics }
+			TU_SAR_gold_m30 = yes
+		}
+
+		ai_will_do = {
+			base = 1
+		}
+	}
+
+	TU_SAR_found_alliance = {
+		icon = GFX_decision_generic_political_discourse
+
+		allowed = {
+			original_tag = SAR
+		}
+
+		visible = {
+			has_country_flag = TU_SAR_alliance
+		}
+
+		available = {
+			is_in_faction = no
+		}
+
+		cost = 50
+		fire_only_once = yes
+
+		complete_effect = {
+			create_faction = TU_SAR_alliance
+		}
+
+		ai_will_do = {
+			base = 1
+		}
+	}
+
+	TU_SAR_invite_alliance = {
+		icon = GFX_decision_generic_political_discourse
+
+		allowed = {
+			original_tag = SAR
+		}
+
+		target_trigger = {
+			FROM = {
+				NOT = { tag = ROOT }
+				is_in_faction = no
+				NOT = { has_war_with = ROOT }
+				OR = { tag = MIN tag = IBE tag = BOL tag = COL }
+			}
+		}
+
+		visible = {
+			has_country_flag = TU_SAR_alliance
+			is_faction_leader = yes
+		}
+
+		available = {
+			check_variable = { TU_SAR_gold > 19 }
+		}
+
+		cost = 50
+		days_re_enable = 90
+
+		complete_effect = {
+			add_to_faction = FROM
+			TU_SAR_gold_m20 = yes
+		}
+
+		ai_will_do = {
+			base = 1
+		}
+	}
+
+	TU_SAR_salt_caravan = {
+		icon = GFX_decision_generic_train
+
+		allowed = {
+			original_tag = SAR
+		}
+
+		visible = {
+			has_completed_focus = TU_SAR_salt_trade
+		}
+
+		available = {
+			NOT = { has_country_flag = TU_SAR_salt_out }
+		}
+
+		cost = 25
+		days_re_enable = 30
+		days_remove = 45
+
+		complete_effect = {
+			set_country_flag = TU_SAR_salt_out
+		}
+
+		remove_effect = {
+			TU_SAR_gold_15 = yes
+			clr_country_flag = TU_SAR_salt_out
+		}
+
+		ai_will_do = {
+			base = 1
+		}
+	}
+
+	TU_SAR_gold_infrastructure = {
+		icon = GFX_decision_generic_construction
+
+		allowed = {
+			original_tag = SAR
+		}
+
+		visible = {
+			has_country_flag = TU_SAR_caravans
+		}
+
+		available = {
+			check_variable = { TU_SAR_gold > 24 }
+		}
+
+		cost = 0
+		days_re_enable = 180
+
+		complete_effect = {
+			TU_build_infrastructure = yes
+			TU_SAR_gold_m25 = yes
+		}
+
+		ai_will_do = {
+			base = 1
+		}
+	}
+
+	TU_SAR_gold_factory = {
+		icon = GFX_decision_generic_factory
+
+		allowed = {
+			original_tag = SAR
+		}
+
+		visible = {
+			has_country_flag = TU_SAR_caravans
+		}
+
+		available = {
+			check_variable = { TU_SAR_gold > 49 }
+		}
+
+		cost = 0
+		days_re_enable = 240
+
+		complete_effect = {
+			TU_build_civ_factory = yes
+			TU_SAR_gold_m50 = yes
+		}
+
+		ai_will_do = {
+			base = 1
+		}
+	}
+
+	TU_SAR_dig_ruins = {
+		icon = GFX_decision_generic_political_discourse
+
+		allowed = {
+			original_tag = SAR
+		}
+
+		visible = {
+			has_country_flag = TU_SAR_found_ruins
+		}
+
+		cost = 75
+		days_re_enable = 365
+
+		complete_effect = {
+			add_tech_bonus = { name = TU_SAR_dig_ruins bonus = 0.75 uses = 1 category = electronics category = industry }
+		}
+
+		ai_will_do = {
+			base = 1
+		}
+	}
+
+	TU_SAR_jungle_timber = {
+		icon = GFX_decision_generic_political_discourse
+
+		allowed = {
+			original_tag = SAR
+		}
+
+		visible = {
+			has_completed_focus = TU_SAR_jungle_lords
+		}
+
+		cost = 0
+		days_re_enable = 180
+
+		complete_effect = {
+			TU_SAR_gold_15 = yes
+			TU_SAR_loyalty_m5 = yes
+		}
+
+		ai_will_do = {
+			base = 1
+		}
+	}
+
+}

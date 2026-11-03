@@ -1,0 +1,184 @@
+TU_SAR_monthly = {
+	if = { limit = { has_country_flag = TU_SAR_tribute_system } add_to_variable = { TU_SAR_gold = 2 } }
+	if = { limit = { has_idea = TU_SAR_feuding_lords } add_to_variable = { TU_SAR_loyalty = -1 } }
+	clamp_variable = { var = TU_SAR_loyalty min = 0 max = 100 }
+	clamp_variable = { var = TU_SAR_gold min = 0 max = 200 }
+}
+
+TU_SAR_loyalty_5 = {
+	custom_effect_tooltip = TU_SAR_loyalty_5_tt
+	hidden_effect = {
+		add_to_variable = { TU_SAR_loyalty = 5 }
+		clamp_variable = { var = TU_SAR_loyalty min = 0 max = 100 }
+	}
+}
+
+TU_SAR_gold_10 = {
+	custom_effect_tooltip = TU_SAR_gold_10_tt
+	hidden_effect = {
+		add_to_variable = { TU_SAR_gold = 10 }
+		clamp_variable = { var = TU_SAR_gold min = 0 max = 200 }
+	}
+}
+
+TU_SAR_loyalty_10 = {
+	custom_effect_tooltip = TU_SAR_loyalty_10_tt
+	hidden_effect = {
+		add_to_variable = { TU_SAR_loyalty = 10 }
+		clamp_variable = { var = TU_SAR_loyalty min = 0 max = 100 }
+	}
+}
+
+TU_SAR_loyalty_m5 = {
+	custom_effect_tooltip = TU_SAR_loyalty_m5_tt
+	hidden_effect = {
+		add_to_variable = { TU_SAR_loyalty = -5 }
+		clamp_variable = { var = TU_SAR_loyalty min = 0 max = 100 }
+	}
+}
+
+TU_SAR_gold_20 = {
+	custom_effect_tooltip = TU_SAR_gold_20_tt
+	hidden_effect = {
+		add_to_variable = { TU_SAR_gold = 20 }
+		clamp_variable = { var = TU_SAR_gold min = 0 max = 200 }
+	}
+}
+
+TU_SAR_gold_30 = {
+	custom_effect_tooltip = TU_SAR_gold_30_tt
+	hidden_effect = {
+		add_to_variable = { TU_SAR_gold = 30 }
+		clamp_variable = { var = TU_SAR_gold min = 0 max = 200 }
+	}
+}
+
+TU_SAR_gold_5 = {
+	custom_effect_tooltip = TU_SAR_gold_5_tt
+	hidden_effect = {
+		add_to_variable = { TU_SAR_gold = 5 }
+		clamp_variable = { var = TU_SAR_gold min = 0 max = 200 }
+	}
+}
+
+TU_SAR_gold_15 = {
+	custom_effect_tooltip = TU_SAR_gold_15_tt
+	hidden_effect = {
+		add_to_variable = { TU_SAR_gold = 15 }
+		clamp_variable = { var = TU_SAR_gold min = 0 max = 200 }
+	}
+}
+
+TU_SAR_loyalty_m10 = {
+	custom_effect_tooltip = TU_SAR_loyalty_m10_tt
+	hidden_effect = {
+		add_to_variable = { TU_SAR_loyalty = -10 }
+		clamp_variable = { var = TU_SAR_loyalty min = 0 max = 100 }
+	}
+}
+
+TU_SAR_loyalty_15 = {
+	custom_effect_tooltip = TU_SAR_loyalty_15_tt
+	hidden_effect = {
+		add_to_variable = { TU_SAR_loyalty = 15 }
+		clamp_variable = { var = TU_SAR_loyalty min = 0 max = 100 }
+	}
+}
+
+TU_SAR_gold_m30 = {
+	custom_effect_tooltip = TU_SAR_gold_m30_tt
+	hidden_effect = {
+		add_to_variable = { TU_SAR_gold = -30 }
+		clamp_variable = { var = TU_SAR_gold min = 0 max = 200 }
+	}
+}
+
+TU_SAR_gold_35 = {
+	custom_effect_tooltip = TU_SAR_gold_35_tt
+	hidden_effect = {
+		add_to_variable = { TU_SAR_gold = 35 }
+		clamp_variable = { var = TU_SAR_gold min = 0 max = 200 }
+	}
+}
+
+TU_SAR_gold_m40 = {
+	custom_effect_tooltip = TU_SAR_gold_m40_tt
+	hidden_effect = {
+		add_to_variable = { TU_SAR_gold = -40 }
+		clamp_variable = { var = TU_SAR_gold min = 0 max = 200 }
+	}
+}
+
+TU_SAR_gold_m20 = {
+	custom_effect_tooltip = TU_SAR_gold_m20_tt
+	hidden_effect = {
+		add_to_variable = { TU_SAR_gold = -20 }
+		clamp_variable = { var = TU_SAR_gold min = 0 max = 200 }
+	}
+}
+
+TU_SAR_merc_template = {
+	if = {
+		limit = { NOT = { has_country_flag = TU_SAR_merc_template_done } }
+		set_country_flag = TU_SAR_merc_template_done
+		division_template = {
+			name = "TU_SAR_mercs"
+			is_locked = no
+			priority = 2
+			regiments = {
+				infantry = { x = 0 y = 0 }
+				infantry = { x = 0 y = 1 }
+				cavalry = { x = 1 y = 0 }
+				cavalry = { x = 1 y = 1 }
+			}
+		}
+	}
+}
+
+TU_SAR_gold_40 = {
+	custom_effect_tooltip = TU_SAR_gold_40_tt
+	hidden_effect = {
+		add_to_variable = { TU_SAR_gold = 40 }
+		clamp_variable = { var = TU_SAR_gold min = 0 max = 200 }
+	}
+}
+
+TU_SAR_gold_m10 = {
+	custom_effect_tooltip = TU_SAR_gold_m10_tt
+	hidden_effect = {
+		add_to_variable = { TU_SAR_gold = -10 }
+		clamp_variable = { var = TU_SAR_gold min = 0 max = 200 }
+	}
+}
+
+TU_SAR_gold_m25 = {
+	custom_effect_tooltip = TU_SAR_gold_m25_tt
+	hidden_effect = {
+		add_to_variable = { TU_SAR_gold = -25 }
+		clamp_variable = { var = TU_SAR_gold min = 0 max = 200 }
+	}
+}
+
+TU_SAR_gold_m50 = {
+	custom_effect_tooltip = TU_SAR_gold_m50_tt
+	hidden_effect = {
+		add_to_variable = { TU_SAR_gold = -50 }
+		clamp_variable = { var = TU_SAR_gold min = 0 max = 200 }
+	}
+}
+
+TU_SAR_loyalty_m3 = {
+	custom_effect_tooltip = TU_SAR_loyalty_m3_tt
+	hidden_effect = {
+		add_to_variable = { TU_SAR_loyalty = -3 }
+		clamp_variable = { var = TU_SAR_loyalty min = 0 max = 100 }
+	}
+}
+
+TU_SAR_gold_m15 = {
+	custom_effect_tooltip = TU_SAR_gold_m15_tt
+	hidden_effect = {
+		add_to_variable = { TU_SAR_gold = -15 }
+		clamp_variable = { var = TU_SAR_gold min = 0 max = 200 }
+	}
+}
