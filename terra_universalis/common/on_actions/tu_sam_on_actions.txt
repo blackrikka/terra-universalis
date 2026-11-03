@@ -1,0 +1,10 @@
+on_actions = {
+	on_monthly = {
+		effect = {
+			if = {
+				limit = { original_tag = SAM }
+				TU_SAM_monthly = yes
+			}
+		}
+	}
+}

@@ -1,0 +1,477 @@
+TU_SAM_spirits_category = {
+	TU_SAM_pact_bear = {
+		icon = GFX_decision_generic_speech
+
+		allowed = {
+			original_tag = SAM
+		}
+
+		available = {
+			check_variable = { TU_SAM_grace > 19 }
+			check_variable = { TU_SAM_pacts < 2 }
+			NOT = { has_idea = TU_SAM_spirit_bear }
+		}
+
+		cost = 50
+		days_re_enable = 60
+
+		complete_effect = {
+			add_ideas = TU_SAM_spirit_bear
+			TU_SAM_pacts_1 = yes
+			TU_SAM_grace_m10 = yes
+		}
+
+		ai_will_do = {
+			base = 1
+		}
+	}
+
+	TU_SAM_break_bear = {
+		icon = GFX_decision_generic_political_discourse
+
+		allowed = {
+			original_tag = SAM
+		}
+
+		visible = {
+			has_idea = TU_SAM_spirit_bear
+		}
+
+		cost = 0
+		days_re_enable = 30
+
+		complete_effect = {
+			remove_ideas = TU_SAM_spirit_bear
+			TU_SAM_pacts_m1 = yes
+			add_stability = -0.02
+		}
+
+		ai_will_do = {
+			base = 1
+		}
+	}
+
+	TU_SAM_pact_wolf = {
+		icon = GFX_decision_generic_speech
+
+		allowed = {
+			original_tag = SAM
+		}
+
+		available = {
+			check_variable = { TU_SAM_grace > 19 }
+			check_variable = { TU_SAM_pacts < 2 }
+			NOT = { has_idea = TU_SAM_spirit_wolf }
+		}
+
+		cost = 50
+		days_re_enable = 60
+
+		complete_effect = {
+			add_ideas = TU_SAM_spirit_wolf
+			TU_SAM_pacts_1 = yes
+			TU_SAM_grace_m10 = yes
+		}
+
+		ai_will_do = {
+			base = 1
+		}
+	}
+
+	TU_SAM_break_wolf = {
+		icon = GFX_decision_generic_political_discourse
+
+		allowed = {
+			original_tag = SAM
+		}
+
+		visible = {
+			has_idea = TU_SAM_spirit_wolf
+		}
+
+		cost = 0
+		days_re_enable = 30
+
+		complete_effect = {
+			remove_ideas = TU_SAM_spirit_wolf
+			TU_SAM_pacts_m1 = yes
+			add_stability = -0.02
+		}
+
+		ai_will_do = {
+			base = 1
+		}
+	}
+
+	TU_SAM_pact_raven = {
+		icon = GFX_decision_generic_speech
+
+		allowed = {
+			original_tag = SAM
+		}
+
+		available = {
+			check_variable = { TU_SAM_grace > 19 }
+			check_variable = { TU_SAM_pacts < 2 }
+			NOT = { has_idea = TU_SAM_spirit_raven }
+		}
+
+		cost = 50
+		days_re_enable = 60
+
+		complete_effect = {
+			add_ideas = TU_SAM_spirit_raven
+			TU_SAM_pacts_1 = yes
+			TU_SAM_grace_m10 = yes
+		}
+
+		ai_will_do = {
+			base = 1
+		}
+	}
+
+	TU_SAM_break_raven = {
+		icon = GFX_decision_generic_political_discourse
+
+		allowed = {
+			original_tag = SAM
+		}
+
+		visible = {
+			has_idea = TU_SAM_spirit_raven
+		}
+
+		cost = 0
+		days_re_enable = 30
+
+		complete_effect = {
+			remove_ideas = TU_SAM_spirit_raven
+			TU_SAM_pacts_m1 = yes
+			add_stability = -0.02
+		}
+
+		ai_will_do = {
+			base = 1
+		}
+	}
+
+	TU_SAM_pact_reindeer = {
+		icon = GFX_decision_generic_speech
+
+		allowed = {
+			original_tag = SAM
+		}
+
+		available = {
+			check_variable = { TU_SAM_grace > 19 }
+			check_variable = { TU_SAM_pacts < 2 }
+			NOT = { has_idea = TU_SAM_spirit_reindeer }
+		}
+
+		cost = 50
+		days_re_enable = 60
+
+		complete_effect = {
+			add_ideas = TU_SAM_spirit_reindeer
+			TU_SAM_pacts_1 = yes
+			TU_SAM_grace_m10 = yes
+		}
+
+		ai_will_do = {
+			base = 1
+		}
+	}
+
+	TU_SAM_break_reindeer = {
+		icon = GFX_decision_generic_political_discourse
+
+		allowed = {
+			original_tag = SAM
+		}
+
+		visible = {
+			has_idea = TU_SAM_spirit_reindeer
+		}
+
+		cost = 0
+		days_re_enable = 30
+
+		complete_effect = {
+			remove_ideas = TU_SAM_spirit_reindeer
+			TU_SAM_pacts_m1 = yes
+			add_stability = -0.02
+		}
+
+		ai_will_do = {
+			base = 1
+		}
+	}
+
+	TU_SAM_offerings = {
+		icon = GFX_decision_generic_speech
+
+		allowed = {
+			original_tag = SAM
+		}
+
+		cost = 25
+		days_re_enable = 90
+
+		complete_effect = {
+			TU_SAM_grace_10 = yes
+		}
+
+		ai_will_do = {
+			base = 1
+		}
+	}
+
+	TU_SAM_great_offering = {
+		icon = GFX_decision_generic_political_discourse
+
+		allowed = {
+			original_tag = SAM
+		}
+
+		cost = 75
+		days_re_enable = 365
+
+		complete_effect = {
+			TU_SAM_grace_25 = yes
+			add_stability = 0.03
+		}
+
+		ai_will_do = {
+			base = 1
+		}
+	}
+
+}
+
+TU_SAM_tribes_category = {
+	TU_SAM_tribal_council = {
+		icon = GFX_decision_generic_political_discourse
+
+		allowed = {
+			original_tag = SAM
+		}
+
+		available = {
+			check_variable = { TU_SAM_councils < 3 }
+		}
+
+		cost = 50
+		days_re_enable = 180
+
+		complete_effect = {
+			TU_SAM_councils_1 = yes
+			add_political_power = 25
+		}
+
+		ai_will_do = {
+			base = 1
+		}
+	}
+
+	TU_SAM_tribal_levy = {
+		icon = GFX_decision_generic_political_discourse
+
+		allowed = {
+			original_tag = SAM
+		}
+
+		cost = 25
+		days_re_enable = 180
+
+		complete_effect = {
+			add_manpower = 8000
+		}
+
+		ai_will_do = {
+			base = 1
+		}
+	}
+
+	TU_SAM_reindeer_tribute = {
+		icon = GFX_decision_generic_political_discourse
+
+		allowed = {
+			original_tag = SAM
+		}
+
+		cost = 0
+		days_re_enable = 180
+
+		complete_effect = {
+			add_political_power = 50
+		}
+
+		ai_will_do = {
+			base = 1
+		}
+	}
+
+	TU_SAM_hunting_season = {
+		icon = GFX_decision_generic_political_discourse
+
+		allowed = {
+			original_tag = SAM
+		}
+
+		cost = 25
+		days_re_enable = 240
+
+		complete_effect = {
+			add_war_support = 0.03
+			army_experience = 10
+		}
+
+		ai_will_do = {
+			base = 1
+		}
+	}
+
+	TU_SAM_elders_judgement = {
+		icon = GFX_decision_generic_political_discourse
+
+		allowed = {
+			original_tag = SAM
+		}
+
+		visible = {
+			has_completed_focus = TU_SAM_elder_council
+		}
+
+		cost = 25
+		days_re_enable = 180
+
+		complete_effect = {
+			add_stability = 0.04
+		}
+
+		ai_will_do = {
+			base = 1
+		}
+	}
+
+}
+
+TU_SAM_outside_category = {
+	TU_SAM_logging_rights = {
+		icon = GFX_decision_generic_political_discourse
+
+		allowed = {
+			original_tag = SAM
+		}
+
+		cost = 0
+		days_re_enable = 240
+
+		complete_effect = {
+			add_political_power = 75
+			set_country_flag = TU_SAM_logging
+			TU_SAM_contact_5 = yes
+		}
+
+		ai_will_do = {
+			base = 1
+		}
+	}
+
+	TU_SAM_stop_logging = {
+		icon = GFX_decision_generic_political_discourse
+
+		allowed = {
+			original_tag = SAM
+		}
+
+		visible = {
+			has_country_flag = TU_SAM_logging
+		}
+
+		cost = 25
+		days_re_enable = 120
+
+		complete_effect = {
+			clr_country_flag = TU_SAM_logging
+			TU_SAM_grace_5 = yes
+		}
+
+		ai_will_do = {
+			base = 1
+		}
+	}
+
+	TU_SAM_foreign_factory = {
+		icon = GFX_decision_generic_factory
+
+		allowed = {
+			original_tag = SAM
+		}
+
+		cost = 50
+		days_re_enable = 240
+
+		complete_effect = {
+			TU_build_civ_factory = yes
+			TU_SAM_contact_10 = yes
+			TU_SAM_grace_m10 = yes
+		}
+
+		ai_will_do = {
+			base = 1
+		}
+	}
+
+	TU_SAM_found_alliance = {
+		icon = GFX_decision_generic_political_discourse
+
+		allowed = {
+			original_tag = SAM
+		}
+
+		visible = {
+			has_completed_focus = TU_SAM_northern_alliance
+		}
+
+		available = {
+			is_in_faction = no
+		}
+
+		cost = 50
+		fire_only_once = yes
+
+		complete_effect = {
+			create_faction = TU_SAM_alliance
+		}
+
+		ai_will_do = {
+			base = 1
+		}
+	}
+
+	TU_SAM_fur_auction = {
+		icon = GFX_decision_generic_political_discourse
+
+		allowed = {
+			original_tag = SAM
+		}
+
+		visible = {
+			has_completed_focus = TU_SAM_fur_trade
+		}
+
+		cost = 0
+		days_re_enable = 180
+
+		complete_effect = {
+			add_political_power = 50
+			TU_SAM_contact_3 = yes
+		}
+
+		ai_will_do = {
+			base = 1
+		}
+	}
+
+}

@@ -1,0 +1,150 @@
+ideas = {
+
+	country = {
+
+		TU_SAM_sacred_forest = {
+			picture = generic_morale_bonus
+
+			allowed = {
+				original_tag = SAM
+			}
+
+			modifier = {
+				army_defence_factor = 0.05
+				production_speed_buildings_factor = -0.1
+			}
+		}
+
+		TU_SAM_scattered_tribes = {
+			picture = generic_local_self_management
+
+			allowed = {
+				original_tag = SAM
+			}
+
+			modifier = {
+				political_power_gain = -0.1
+				conscription_factor = -0.1
+			}
+		}
+
+		TU_SAM_forest_theocracy = {
+			picture = generic_political_support
+
+			allowed = {
+				original_tag = SAM
+			}
+
+			modifier = {
+				stability_factor = 0.15
+				army_defence_factor = 0.1
+				war_support_factor = 0.05
+			}
+		}
+
+		TU_SAM_tribal_federation = {
+			picture = generic_pp_unity_bonus
+
+			allowed = {
+				original_tag = SAM
+			}
+
+			modifier = {
+				conscription_factor = 0.1
+				political_power_gain = 0.1
+				army_org_factor = 0.05
+			}
+		}
+
+		TU_SAM_open_sami = {
+			picture = generic_foreign_capital
+
+			allowed = {
+				original_tag = SAM
+			}
+
+			modifier = {
+				research_speed_factor = 0.05
+				production_speed_buildings_factor = 0.1
+			}
+		}
+
+		TU_SAM_spirit_warriors = {
+			picture = generic_army_war_college
+
+			allowed = {
+				original_tag = SAM
+			}
+
+			modifier = {
+				army_attack_factor = 0.05
+				army_morale_factor = 0.08
+			}
+		}
+
+		TU_SAM_forest_wrath = {
+			picture = generic_army_problems
+
+			allowed = {
+				original_tag = SAM
+			}
+
+			modifier = {
+				stability_factor = -0.1
+				attrition = 0.05
+			}
+		}
+
+		TU_SAM_spirit_bear = {
+			picture = generic_fortify_the_borders
+
+			allowed = {
+				original_tag = SAM
+			}
+
+			modifier = {
+				army_defence_factor = 0.1
+				max_dig_in = 1
+			}
+		}
+
+		TU_SAM_spirit_wolf = {
+			picture = generic_army_europe_1
+
+			allowed = {
+				original_tag = SAM
+			}
+
+			modifier = {
+				army_attack_factor = 0.08
+				army_speed_factor = 0.05
+			}
+		}
+
+		TU_SAM_spirit_raven = {
+			picture = generic_research_bonus
+
+			allowed = {
+				original_tag = SAM
+			}
+
+			modifier = {
+				research_speed_factor = 0.05
+				political_power_gain = 0.05
+			}
+		}
+
+		TU_SAM_spirit_reindeer = {
+			picture = generic_supply_line
+
+			allowed = {
+				original_tag = SAM
+			}
+
+			modifier = {
+				supply_consumption_factor = -0.15
+				attrition = -0.1
+			}
+		}
+	}
+}

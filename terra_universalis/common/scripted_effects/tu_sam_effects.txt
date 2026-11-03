@@ -1,0 +1,111 @@
+TU_SAM_monthly = {
+	add_to_variable = { TU_SAM_grace = 1 }
+	if = { limit = { has_country_flag = TU_SAM_rites } add_to_variable = { TU_SAM_grace = 1 } }
+	subtract_from_variable = { TU_SAM_grace = TU_SAM_pacts }
+	if = { limit = { has_country_flag = TU_SAM_logging } add_to_variable = { TU_SAM_grace = -1 } }
+	clamp_variable = { var = TU_SAM_grace min = 0 max = 100 }
+}
+
+TU_SAM_grace_10 = {
+	custom_effect_tooltip = TU_SAM_grace_10_tt
+	hidden_effect = {
+		add_to_variable = { TU_SAM_grace = 10 }
+		clamp_variable = { var = TU_SAM_grace min = 0 max = 100 }
+	}
+}
+
+TU_SAM_grace_5 = {
+	custom_effect_tooltip = TU_SAM_grace_5_tt
+	hidden_effect = {
+		add_to_variable = { TU_SAM_grace = 5 }
+		clamp_variable = { var = TU_SAM_grace min = 0 max = 100 }
+	}
+}
+
+TU_SAM_grace_20 = {
+	custom_effect_tooltip = TU_SAM_grace_20_tt
+	hidden_effect = {
+		add_to_variable = { TU_SAM_grace = 20 }
+		clamp_variable = { var = TU_SAM_grace min = 0 max = 100 }
+	}
+}
+
+TU_SAM_contact_10 = {
+	custom_effect_tooltip = TU_SAM_contact_10_tt
+	hidden_effect = {
+		add_to_variable = { TU_SAM_contact = 10 }
+		clamp_variable = { var = TU_SAM_contact min = 0 max = 100 }
+	}
+}
+
+TU_SAM_contact_5 = {
+	custom_effect_tooltip = TU_SAM_contact_5_tt
+	hidden_effect = {
+		add_to_variable = { TU_SAM_contact = 5 }
+		clamp_variable = { var = TU_SAM_contact min = 0 max = 100 }
+	}
+}
+
+TU_SAM_grace_m5 = {
+	custom_effect_tooltip = TU_SAM_grace_m5_tt
+	hidden_effect = {
+		add_to_variable = { TU_SAM_grace = -5 }
+		clamp_variable = { var = TU_SAM_grace min = 0 max = 100 }
+	}
+}
+
+TU_SAM_pacts_1 = {
+	custom_effect_tooltip = TU_SAM_pacts_1_tt
+	hidden_effect = {
+		add_to_variable = { TU_SAM_pacts = 1 }
+		clamp_variable = { var = TU_SAM_pacts min = 0 max = 2 }
+	}
+}
+
+TU_SAM_grace_m10 = {
+	custom_effect_tooltip = TU_SAM_grace_m10_tt
+	hidden_effect = {
+		add_to_variable = { TU_SAM_grace = -10 }
+		clamp_variable = { var = TU_SAM_grace min = 0 max = 100 }
+	}
+}
+
+TU_SAM_pacts_m1 = {
+	custom_effect_tooltip = TU_SAM_pacts_m1_tt
+	hidden_effect = {
+		add_to_variable = { TU_SAM_pacts = -1 }
+		clamp_variable = { var = TU_SAM_pacts min = 0 max = 2 }
+	}
+}
+
+TU_SAM_grace_25 = {
+	custom_effect_tooltip = TU_SAM_grace_25_tt
+	hidden_effect = {
+		add_to_variable = { TU_SAM_grace = 25 }
+		clamp_variable = { var = TU_SAM_grace min = 0 max = 100 }
+	}
+}
+
+TU_SAM_councils_1 = {
+	custom_effect_tooltip = TU_SAM_councils_1_tt
+	hidden_effect = {
+		add_to_variable = { TU_SAM_councils = 1 }
+		clamp_variable = { var = TU_SAM_councils min = 0 max = 3 }
+	}
+}
+
+TU_SAM_grace_3 = {
+	custom_effect_tooltip = TU_SAM_grace_3_tt
+	hidden_effect = {
+		add_to_variable = { TU_SAM_grace = 3 }
+		clamp_variable = { var = TU_SAM_grace min = 0 max = 100 }
+	}
+}
+
+TU_SAM_contact_3 = {
+	custom_effect_tooltip = TU_SAM_contact_3_tt
+	hidden_effect = {
+		add_to_variable = { TU_SAM_contact = 3 }
+		clamp_variable = { var = TU_SAM_contact min = 0 max = 100 }
+	}
+}

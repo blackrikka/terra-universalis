@@ -1,0 +1,41 @@
+TU_SAM_spirits_category = {
+	icon = GFX_decision_category_generic_political_actions
+
+	allowed = {
+		original_tag = SAM
+	}
+
+	visible = {
+		has_country_flag = TU_SAM_spirits
+	}
+
+	priority = 100
+}
+
+TU_SAM_tribes_category = {
+	icon = GFX_decision_category_generic_political_actions
+
+	allowed = {
+		original_tag = SAM
+	}
+
+	visible = {
+		has_country_flag = TU_SAM_tribes
+	}
+
+	priority = 100
+}
+
+TU_SAM_outside_category = {
+	icon = GFX_decision_category_generic_foreign_policy
+
+	allowed = {
+		original_tag = SAM
+	}
+
+	visible = {
+		has_country_flag = TU_SAM_outside
+	}
+
+	priority = 100
+}
