@@ -1,0 +1,469 @@
+TU_RIM_mines_category = {
+	TU_RIM_open_shaft = {
+		icon = GFX_decision_generic_construction
+
+		allowed = {
+			original_tag = RIM
+		}
+
+		available = {
+			check_variable = { TU_RIM_shafts < 8 }
+		}
+
+		cost = 50
+		days_re_enable = 90
+
+		complete_effect = {
+			TU_RIM_shafts_1 = yes
+		}
+
+		ai_will_do = {
+			base = 1
+		}
+	}
+
+	TU_RIM_close_shaft = {
+		icon = GFX_decision_generic_political_discourse
+
+		allowed = {
+			original_tag = RIM
+		}
+
+		available = {
+			check_variable = { TU_RIM_shafts > 0 }
+		}
+
+		cost = 10
+		days_re_enable = 60
+
+		complete_effect = {
+			TU_RIM_shafts_m1 = yes
+			TU_RIM_infection_m5 = yes
+		}
+
+		ai_will_do = {
+			base = 1
+		}
+	}
+
+	TU_RIM_sell_ore = {
+		icon = GFX_decision_generic_fundraising
+
+		allowed = {
+			original_tag = RIM
+		}
+
+		available = {
+			check_variable = { TU_RIM_ore > 49 }
+		}
+
+		cost = 0
+		days_re_enable = 60
+
+		complete_effect = {
+			TU_RIM_ore_m50 = yes
+			add_political_power = 75
+		}
+
+		ai_will_do = {
+			base = 1
+		}
+	}
+
+	TU_RIM_refine_ore = {
+		icon = GFX_decision_generic_factory
+
+		allowed = {
+			original_tag = RIM
+		}
+
+		available = {
+			check_variable = { TU_RIM_ore > 99 }
+		}
+
+		cost = 25
+		days_re_enable = 120
+
+		complete_effect = {
+			TU_RIM_ore_m100 = yes
+			TU_build_civ_factory = yes
+		}
+
+		ai_will_do = {
+			base = 1
+		}
+	}
+
+	TU_RIM_ore_arms = {
+		icon = GFX_decision_generic_factory
+
+		allowed = {
+			original_tag = RIM
+		}
+
+		available = {
+			check_variable = { TU_RIM_ore > 99 }
+		}
+
+		cost = 25
+		days_re_enable = 120
+
+		complete_effect = {
+			TU_RIM_ore_m100 = yes
+			TU_build_mil_factory = yes
+		}
+
+		ai_will_do = {
+			base = 1
+		}
+	}
+
+	TU_RIM_ore_research = {
+		icon = GFX_decision_generic_political_discourse
+
+		allowed = {
+			original_tag = RIM
+		}
+
+		available = {
+			check_variable = { TU_RIM_ore > 59 }
+		}
+
+		cost = 25
+		days_re_enable = 180
+
+		complete_effect = {
+			TU_RIM_ore_m60 = yes
+			add_tech_bonus = { name = TU_RIM_ore_research bonus = 1.0 uses = 1 category = industry category = electronics }
+		}
+
+		ai_will_do = {
+			base = 1
+		}
+	}
+
+	TU_RIM_safety_inspection = {
+		icon = GFX_decision_generic_political_discourse
+
+		allowed = {
+			original_tag = RIM
+		}
+
+		cost = 25
+		days_re_enable = 120
+
+		complete_effect = {
+			TU_RIM_infection_m5 = yes
+			add_stability = 0.02
+		}
+
+		ai_will_do = {
+			base = 1
+		}
+	}
+
+	TU_RIM_overtime = {
+		icon = GFX_decision_generic_political_discourse
+
+		allowed = {
+			original_tag = RIM
+		}
+
+		cost = 0
+		days_re_enable = 120
+
+		complete_effect = {
+			TU_RIM_ore_40 = yes
+			TU_RIM_infection_5 = yes
+			add_stability = -0.02
+		}
+
+		ai_will_do = {
+			base = 1
+		}
+	}
+
+}
+
+TU_RIM_health_category = {
+	TU_RIM_distribute_suppressants = {
+		icon = GFX_decision_generic_civil_support
+
+		allowed = {
+			original_tag = RIM
+		}
+
+		available = {
+			check_variable = { TU_RIM_ore > 19 }
+		}
+
+		cost = 25
+		days_re_enable = 90
+
+		complete_effect = {
+			TU_RIM_infection_m10 = yes
+			TU_RIM_ore_m20 = yes
+		}
+
+		ai_will_do = {
+			base = 1
+		}
+	}
+
+	TU_RIM_mobile_clinics = {
+		icon = GFX_decision_generic_civil_support
+
+		allowed = {
+			original_tag = RIM
+		}
+
+		visible = {
+			has_completed_focus = TU_RIM_oripathy_research
+		}
+
+		cost = 50
+		days_re_enable = 120
+
+		complete_effect = {
+			TU_RIM_infection_m8 = yes
+			add_stability = 0.02
+		}
+
+		ai_will_do = {
+			base = 1
+		}
+	}
+
+	TU_RIM_quarantine_sweep = {
+		icon = GFX_decision_generic_political_discourse
+
+		allowed = {
+			original_tag = RIM
+		}
+
+		cost = 25
+		days_re_enable = 180
+
+		complete_effect = {
+			TU_RIM_infection_m15 = yes
+			add_stability = -0.03
+		}
+
+		ai_will_do = {
+			base = 1
+		}
+	}
+
+	TU_RIM_rhodes_doctors = {
+		icon = GFX_decision_generic_political_discourse
+
+		allowed = {
+			original_tag = RIM
+		}
+
+		visible = {
+			has_completed_focus = TU_RIM_rhodes_office
+		}
+
+		cost = 25
+		days_re_enable = 180
+
+		complete_effect = {
+			TU_RIM_infection_m12 = yes
+			add_political_power = -20
+		}
+
+		ai_will_do = {
+			base = 1
+		}
+	}
+
+	TU_RIM_worker_bonus = {
+		icon = GFX_decision_generic_political_discourse
+
+		allowed = {
+			original_tag = RIM
+		}
+
+		available = {
+			check_variable = { TU_RIM_ore > 29 }
+		}
+
+		cost = 0
+		days_re_enable = 120
+
+		complete_effect = {
+			add_stability = 0.04
+			TU_RIM_ore_m30 = yes
+		}
+
+		ai_will_do = {
+			base = 1
+		}
+	}
+
+	TU_RIM_suppressant_imports = {
+		icon = GFX_decision_generic_political_discourse
+
+		allowed = {
+			original_tag = RIM
+		}
+
+		cost = 0
+		days_re_enable = 120
+
+		complete_effect = {
+			TU_RIM_infection_m10 = yes
+			add_political_power = -40
+		}
+
+		ai_will_do = {
+			base = 1
+		}
+	}
+
+}
+
+TU_RIM_settle_category = {
+	TU_RIM_build_settlement = {
+		icon = GFX_decision_generic_construction
+
+		allowed = {
+			original_tag = RIM
+		}
+
+		available = {
+			check_variable = { TU_RIM_settlements < 5 }
+		}
+
+		cost = 75
+		days_re_enable = 180
+
+		complete_effect = {
+			TU_RIM_settlements_1 = yes
+			add_manpower = 8000
+			TU_build_infrastructure = yes
+		}
+
+		ai_will_do = {
+			base = 1
+		}
+	}
+
+	TU_RIM_welcome_refugees = {
+		icon = GFX_decision_generic_political_discourse
+
+		allowed = {
+			original_tag = RIM
+		}
+
+		cost = 25
+		days_re_enable = 120
+
+		complete_effect = {
+			add_manpower = 5000
+			TU_RIM_infection_3 = yes
+			add_stability = -0.02
+		}
+
+		ai_will_do = {
+			base = 1
+		}
+	}
+
+	TU_RIM_settler_aid = {
+		icon = GFX_decision_generic_political_discourse
+
+		allowed = {
+			original_tag = RIM
+		}
+
+		available = {
+			check_variable = { TU_RIM_settlements > 0 }
+		}
+
+		cost = 50
+		days_re_enable = 180
+
+		complete_effect = {
+			add_stability = 0.04
+		}
+
+		ai_will_do = {
+			base = 1
+		}
+	}
+
+	TU_RIM_hire_guards = {
+		icon = GFX_decision_generic_military
+
+		allowed = {
+			original_tag = RIM
+		}
+
+		visible = {
+			has_completed_focus = TU_RIM_mercenary_hire
+		}
+
+		cost = 50
+		days_re_enable = 180
+
+		complete_effect = {
+			add_manpower = 6000
+			army_experience = 10
+		}
+
+		ai_will_do = {
+			base = 1
+		}
+	}
+
+	TU_RIM_settler_farms_aid = {
+		icon = GFX_decision_generic_political_discourse
+
+		allowed = {
+			original_tag = RIM
+		}
+
+		available = {
+			check_variable = { TU_RIM_settlements > 1 }
+		}
+
+		cost = 50
+		days_re_enable = 240
+
+		complete_effect = {
+			add_stability = 0.03
+			add_manpower = 3000
+		}
+
+		ai_will_do = {
+			base = 1
+		}
+	}
+
+	TU_RIM_infected_volunteers = {
+		icon = GFX_decision_generic_military
+
+		allowed = {
+			original_tag = RIM
+		}
+
+		visible = {
+			has_completed_focus = TU_RIM_infected_rights
+		}
+
+		cost = 50
+		days_re_enable = 240
+
+		complete_effect = {
+			add_manpower = 10000
+			add_war_support = 0.03
+		}
+
+		ai_will_do = {
+			base = 1
+		}
+	}
+
+}

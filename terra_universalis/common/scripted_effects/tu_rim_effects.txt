@@ -1,0 +1,170 @@
+TU_RIM_monthly = {
+	set_temp_variable = { tu_rim_t = TU_RIM_shafts }
+	multiply_temp_variable = { tu_rim_t = 5 }
+	add_to_variable = { TU_RIM_ore = tu_rim_t }
+	add_to_variable = { TU_RIM_infection = TU_RIM_shafts }
+	if = { limit = { has_country_flag = TU_RIM_clinics } add_to_variable = { TU_RIM_infection = -2 } }
+	if = { limit = { has_country_flag = TU_RIM_quarantine } add_to_variable = { TU_RIM_infection = -1 } }
+	clamp_variable = { var = TU_RIM_ore min = 0 max = 500 }
+	clamp_variable = { var = TU_RIM_infection min = 0 max = 100 }
+}
+
+TU_RIM_ore_20 = {
+	custom_effect_tooltip = TU_RIM_ore_20_tt
+	hidden_effect = {
+		add_to_variable = { TU_RIM_ore = 20 }
+		clamp_variable = { var = TU_RIM_ore min = 0 max = 500 }
+	}
+}
+
+TU_RIM_infection_m10 = {
+	custom_effect_tooltip = TU_RIM_infection_m10_tt
+	hidden_effect = {
+		add_to_variable = { TU_RIM_infection = -10 }
+		clamp_variable = { var = TU_RIM_infection min = 0 max = 100 }
+	}
+}
+
+TU_RIM_shafts_1 = {
+	custom_effect_tooltip = TU_RIM_shafts_1_tt
+	hidden_effect = {
+		add_to_variable = { TU_RIM_shafts = 1 }
+		clamp_variable = { var = TU_RIM_shafts min = 0 max = 8 }
+	}
+}
+
+TU_RIM_infection_5 = {
+	custom_effect_tooltip = TU_RIM_infection_5_tt
+	hidden_effect = {
+		add_to_variable = { TU_RIM_infection = 5 }
+		clamp_variable = { var = TU_RIM_infection min = 0 max = 100 }
+	}
+}
+
+TU_RIM_ore_30 = {
+	custom_effect_tooltip = TU_RIM_ore_30_tt
+	hidden_effect = {
+		add_to_variable = { TU_RIM_ore = 30 }
+		clamp_variable = { var = TU_RIM_ore min = 0 max = 500 }
+	}
+}
+
+TU_RIM_ore_50 = {
+	custom_effect_tooltip = TU_RIM_ore_50_tt
+	hidden_effect = {
+		add_to_variable = { TU_RIM_ore = 50 }
+		clamp_variable = { var = TU_RIM_ore min = 0 max = 500 }
+	}
+}
+
+TU_RIM_infection_m5 = {
+	custom_effect_tooltip = TU_RIM_infection_m5_tt
+	hidden_effect = {
+		add_to_variable = { TU_RIM_infection = -5 }
+		clamp_variable = { var = TU_RIM_infection min = 0 max = 100 }
+	}
+}
+
+TU_RIM_infection_m15 = {
+	custom_effect_tooltip = TU_RIM_infection_m15_tt
+	hidden_effect = {
+		add_to_variable = { TU_RIM_infection = -15 }
+		clamp_variable = { var = TU_RIM_infection min = 0 max = 100 }
+	}
+}
+
+TU_RIM_shafts_m1 = {
+	custom_effect_tooltip = TU_RIM_shafts_m1_tt
+	hidden_effect = {
+		add_to_variable = { TU_RIM_shafts = -1 }
+		clamp_variable = { var = TU_RIM_shafts min = 0 max = 8 }
+	}
+}
+
+TU_RIM_ore_m50 = {
+	custom_effect_tooltip = TU_RIM_ore_m50_tt
+	hidden_effect = {
+		add_to_variable = { TU_RIM_ore = -50 }
+		clamp_variable = { var = TU_RIM_ore min = 0 max = 500 }
+	}
+}
+
+TU_RIM_ore_m100 = {
+	custom_effect_tooltip = TU_RIM_ore_m100_tt
+	hidden_effect = {
+		add_to_variable = { TU_RIM_ore = -100 }
+		clamp_variable = { var = TU_RIM_ore min = 0 max = 500 }
+	}
+}
+
+TU_RIM_ore_m60 = {
+	custom_effect_tooltip = TU_RIM_ore_m60_tt
+	hidden_effect = {
+		add_to_variable = { TU_RIM_ore = -60 }
+		clamp_variable = { var = TU_RIM_ore min = 0 max = 500 }
+	}
+}
+
+TU_RIM_ore_m20 = {
+	custom_effect_tooltip = TU_RIM_ore_m20_tt
+	hidden_effect = {
+		add_to_variable = { TU_RIM_ore = -20 }
+		clamp_variable = { var = TU_RIM_ore min = 0 max = 500 }
+	}
+}
+
+TU_RIM_infection_m8 = {
+	custom_effect_tooltip = TU_RIM_infection_m8_tt
+	hidden_effect = {
+		add_to_variable = { TU_RIM_infection = -8 }
+		clamp_variable = { var = TU_RIM_infection min = 0 max = 100 }
+	}
+}
+
+TU_RIM_infection_m12 = {
+	custom_effect_tooltip = TU_RIM_infection_m12_tt
+	hidden_effect = {
+		add_to_variable = { TU_RIM_infection = -12 }
+		clamp_variable = { var = TU_RIM_infection min = 0 max = 100 }
+	}
+}
+
+TU_RIM_ore_m30 = {
+	custom_effect_tooltip = TU_RIM_ore_m30_tt
+	hidden_effect = {
+		add_to_variable = { TU_RIM_ore = -30 }
+		clamp_variable = { var = TU_RIM_ore min = 0 max = 500 }
+	}
+}
+
+TU_RIM_settlements_1 = {
+	custom_effect_tooltip = TU_RIM_settlements_1_tt
+	hidden_effect = {
+		add_to_variable = { TU_RIM_settlements = 1 }
+		clamp_variable = { var = TU_RIM_settlements min = 0 max = 5 }
+	}
+}
+
+TU_RIM_infection_3 = {
+	custom_effect_tooltip = TU_RIM_infection_3_tt
+	hidden_effect = {
+		add_to_variable = { TU_RIM_infection = 3 }
+		clamp_variable = { var = TU_RIM_infection min = 0 max = 100 }
+	}
+}
+
+TU_RIM_ore_80 = {
+	custom_effect_tooltip = TU_RIM_ore_80_tt
+	hidden_effect = {
+		add_to_variable = { TU_RIM_ore = 80 }
+		clamp_variable = { var = TU_RIM_ore min = 0 max = 500 }
+	}
+}
+
+TU_RIM_ore_40 = {
+	custom_effect_tooltip = TU_RIM_ore_40_tt
+	hidden_effect = {
+		add_to_variable = { TU_RIM_ore = 40 }
+		clamp_variable = { var = TU_RIM_ore min = 0 max = 500 }
+	}
+}

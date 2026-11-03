@@ -1,0 +1,112 @@
+ideas = {
+
+	country = {
+
+		TU_RIM_company_town = {
+			picture = generic_foreign_capital
+
+			allowed = {
+				original_tag = RIM
+			}
+
+			modifier = {
+				production_speed_buildings_factor = 0.05
+				stability_factor = -0.05
+			}
+		}
+
+		TU_RIM_oripathy_spread = {
+			picture = generic_army_problems
+
+			allowed = {
+				original_tag = RIM
+			}
+
+			modifier = {
+				monthly_population = -0.1
+				stability_factor = -0.03
+			}
+		}
+
+		TU_RIM_mining_superpower = {
+			picture = generic_production_bonus
+
+			allowed = {
+				original_tag = RIM
+			}
+
+			modifier = {
+				production_factory_max_efficiency_factor = 0.08
+				industrial_capacity_factory = 0.05
+			}
+		}
+
+		TU_RIM_corporate_rule = {
+			picture = generic_foreign_capital
+
+			allowed = {
+				original_tag = RIM
+			}
+
+			modifier = {
+				production_speed_buildings_factor = 0.15
+				political_power_gain = 0.1
+				stability_factor = -0.05
+			}
+		}
+
+		TU_RIM_workers_rule = {
+			picture = generic_local_self_management
+
+			allowed = {
+				original_tag = RIM
+			}
+
+			modifier = {
+				stability_factor = 0.1
+				conscription_factor = 0.05
+				production_factory_max_efficiency_factor = 0.05
+			}
+		}
+
+		TU_RIM_infected_haven = {
+			picture = generic_pp_unity_bonus
+
+			allowed = {
+				original_tag = RIM
+			}
+
+			modifier = {
+				monthly_population = 0.2
+				stability_factor = 0.08
+				conscription_factor = 0.1
+			}
+		}
+
+		TU_RIM_defence_force = {
+			picture = generic_fortify_the_borders
+
+			allowed = {
+				original_tag = RIM
+			}
+
+			modifier = {
+				army_defence_factor = 0.08
+				army_org_factor = 0.03
+			}
+		}
+
+		TU_RIM_suppressant_supply = {
+			picture = generic_morale_bonus
+
+			allowed = {
+				original_tag = RIM
+			}
+
+			modifier = {
+				monthly_population = 0.1
+				stability_factor = 0.03
+			}
+		}
+	}
+}

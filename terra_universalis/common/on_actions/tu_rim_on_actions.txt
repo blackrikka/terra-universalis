@@ -1,0 +1,10 @@
+on_actions = {
+	on_monthly = {
+		effect = {
+			if = {
+				limit = { original_tag = RIM }
+				TU_RIM_monthly = yes
+			}
+		}
+	}
+}
