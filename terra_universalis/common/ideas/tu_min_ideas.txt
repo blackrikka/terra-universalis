@@ -1,0 +1,176 @@
+ideas = {
+
+	country = {
+
+		TU_MIN_city_states = {
+			picture = generic_local_self_management
+
+			allowed = {
+				original_tag = MIN
+			}
+
+			modifier = {
+				political_power_gain = -0.05
+				stability_factor = 0.05
+			}
+		}
+
+		TU_MIN_pirate_seas = {
+			picture = generic_navy_bonus
+
+			allowed = {
+				original_tag = MIN
+			}
+
+			modifier = {
+				naval_speed_factor = -0.05
+				consumer_goods_factor = 0.02
+			}
+		}
+
+		TU_MIN_good_omen = {
+			picture = generic_morale_bonus
+
+			allowed = {
+				original_tag = MIN
+			}
+
+			modifier = {
+				stability_factor = 0.08
+				war_support_factor = 0.05
+			}
+		}
+
+		TU_MIN_bad_omen = {
+			picture = generic_army_problems
+
+			allowed = {
+				original_tag = MIN
+			}
+
+			modifier = {
+				stability_factor = -0.05
+				political_power_gain = -0.1
+			}
+		}
+
+		TU_MIN_riddle_omen = {
+			picture = generic_research_bonus
+
+			allowed = {
+				original_tag = MIN
+			}
+
+			modifier = {
+				research_speed_factor = 0.05
+				stability_factor = -0.02
+			}
+		}
+
+		TU_MIN_academia = {
+			picture = generic_research_bonus
+
+			allowed = {
+				original_tag = MIN
+			}
+
+			modifier = {
+				research_speed_factor = 0.05
+			}
+		}
+
+		TU_MIN_stoa = {
+			picture = generic_political_support
+
+			allowed = {
+				original_tag = MIN
+			}
+
+			modifier = {
+				stability_factor = 0.08
+				war_support_factor = 0.03
+			}
+		}
+
+		TU_MIN_cynics = {
+			picture = generic_economic_increase
+
+			allowed = {
+				original_tag = MIN
+			}
+
+			modifier = {
+				consumer_goods_factor = -0.04
+				political_power_gain = 0.05
+			}
+		}
+
+		TU_MIN_democratic_polis = {
+			picture = constitutional_guarantees
+
+			allowed = {
+				original_tag = MIN
+			}
+
+			modifier = {
+				stability_factor = 0.1
+				political_power_gain = 0.1
+				research_speed_factor = 0.03
+			}
+		}
+
+		TU_MIN_rule_of_elders = {
+			picture = generic_central_management
+
+			allowed = {
+				original_tag = MIN
+			}
+
+			modifier = {
+				stability_factor = 0.12
+				political_power_gain = 0.15
+				consumer_goods_factor = 0.02
+			}
+		}
+
+		TU_MIN_thalassocracy = {
+			picture = generic_navy_bonus
+
+			allowed = {
+				original_tag = MIN
+			}
+
+			modifier = {
+				naval_speed_factor = 0.1
+				navy_org_factor = 0.08
+				political_power_gain = 0.1
+			}
+		}
+
+		TU_MIN_grand_fleet = {
+			picture = generic_navy_bonus
+
+			allowed = {
+				original_tag = MIN
+			}
+
+			modifier = {
+				navy_org_factor = 0.08
+				naval_speed_factor = 0.05
+			}
+		}
+
+		TU_MIN_hoplites = {
+			picture = generic_infantry_bonus
+
+			allowed = {
+				original_tag = MIN
+			}
+
+			modifier = {
+				army_defence_factor = 0.08
+				army_org_factor = 0.03
+			}
+		}
+	}
+}

@@ -1,0 +1,64 @@
+TU_MIN_monthly = {
+	if = { limit = { check_variable = { TU_MIN_routes > 0 } } add_political_power = 0.3 }
+	if = { limit = { check_variable = { TU_MIN_routes > 1 } } add_political_power = 0.3 }
+	if = { limit = { check_variable = { TU_MIN_routes > 2 } } add_political_power = 0.3 }
+	if = { limit = { check_variable = { TU_MIN_routes > 3 } } add_political_power = 0.3 }
+	if = { limit = { check_variable = { TU_MIN_routes > 4 } } add_political_power = 0.3 }
+	if = { limit = { check_variable = { TU_MIN_routes > 5 } } add_political_power = 0.3 }
+}
+
+TU_MIN_assembly_5 = {
+	custom_effect_tooltip = TU_MIN_assembly_5_tt
+	hidden_effect = {
+		add_to_variable = { TU_MIN_assembly = 5 }
+		clamp_variable = { var = TU_MIN_assembly min = 0 max = 100 }
+	}
+}
+
+TU_MIN_assembly_10 = {
+	custom_effect_tooltip = TU_MIN_assembly_10_tt
+	hidden_effect = {
+		add_to_variable = { TU_MIN_assembly = 10 }
+		clamp_variable = { var = TU_MIN_assembly min = 0 max = 100 }
+	}
+}
+
+TU_MIN_assembly_m15 = {
+	custom_effect_tooltip = TU_MIN_assembly_m15_tt
+	hidden_effect = {
+		add_to_variable = { TU_MIN_assembly = -15 }
+		clamp_variable = { var = TU_MIN_assembly min = 0 max = 100 }
+	}
+}
+
+TU_MIN_routes_1 = {
+	custom_effect_tooltip = TU_MIN_routes_1_tt
+	hidden_effect = {
+		add_to_variable = { TU_MIN_routes = 1 }
+		clamp_variable = { var = TU_MIN_routes min = 0 max = 6 }
+	}
+}
+
+TU_MIN_assembly_m10 = {
+	custom_effect_tooltip = TU_MIN_assembly_m10_tt
+	hidden_effect = {
+		add_to_variable = { TU_MIN_assembly = -10 }
+		clamp_variable = { var = TU_MIN_assembly min = 0 max = 100 }
+	}
+}
+
+TU_MIN_routes_m1 = {
+	custom_effect_tooltip = TU_MIN_routes_m1_tt
+	hidden_effect = {
+		add_to_variable = { TU_MIN_routes = -1 }
+		clamp_variable = { var = TU_MIN_routes min = 0 max = 6 }
+	}
+}
+
+TU_MIN_assembly_m5 = {
+	custom_effect_tooltip = TU_MIN_assembly_m5_tt
+	hidden_effect = {
+		add_to_variable = { TU_MIN_assembly = -5 }
+		clamp_variable = { var = TU_MIN_assembly min = 0 max = 100 }
+	}
+}

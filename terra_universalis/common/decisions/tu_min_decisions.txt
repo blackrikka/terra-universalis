@@ -1,0 +1,477 @@
+TU_MIN_assembly_category = {
+	TU_MIN_law_grain = {
+		icon = GFX_decision_generic_political_discourse
+
+		allowed = {
+			original_tag = MIN
+		}
+
+		available = {
+			check_variable = { TU_MIN_assembly > 9 }
+		}
+
+		cost = 25
+		days_re_enable = 180
+
+		complete_effect = {
+			add_stability = 0.05
+			TU_MIN_assembly_m10 = yes
+		}
+
+		ai_will_do = {
+			base = 1
+		}
+	}
+
+	TU_MIN_law_fleet = {
+		icon = GFX_decision_generic_political_discourse
+
+		allowed = {
+			original_tag = MIN
+		}
+
+		available = {
+			check_variable = { TU_MIN_assembly > 14 }
+		}
+
+		cost = 25
+		days_re_enable = 180
+
+		complete_effect = {
+			TU_build_dockyard = yes
+			TU_MIN_assembly_m15 = yes
+		}
+
+		ai_will_do = {
+			base = 1
+		}
+	}
+
+	TU_MIN_law_walls = {
+		icon = GFX_decision_generic_political_discourse
+
+		allowed = {
+			original_tag = MIN
+		}
+
+		available = {
+			check_variable = { TU_MIN_assembly > 9 }
+		}
+
+		cost = 25
+		days_re_enable = 180
+
+		complete_effect = {
+			TU_build_infrastructure = yes
+			army_experience = 10
+			TU_MIN_assembly_m10 = yes
+		}
+
+		ai_will_do = {
+			base = 1
+		}
+	}
+
+	TU_MIN_law_schools = {
+		icon = GFX_decision_generic_political_discourse
+
+		allowed = {
+			original_tag = MIN
+		}
+
+		available = {
+			check_variable = { TU_MIN_assembly > 14 }
+		}
+
+		cost = 25
+		days_re_enable = 180
+
+		complete_effect = {
+			add_tech_bonus = { name = TU_MIN_law_schools bonus = 0.75 uses = 1 category = electronics category = industry }
+			TU_MIN_assembly_m15 = yes
+		}
+
+		ai_will_do = {
+			base = 1
+		}
+	}
+
+	TU_MIN_law_levy = {
+		icon = GFX_decision_generic_political_discourse
+
+		allowed = {
+			original_tag = MIN
+		}
+
+		available = {
+			check_variable = { TU_MIN_assembly > 14 }
+		}
+
+		cost = 25
+		days_re_enable = 180
+
+		complete_effect = {
+			add_manpower = 10000
+			TU_MIN_assembly_m15 = yes
+		}
+
+		ai_will_do = {
+			base = 1
+		}
+	}
+
+	TU_MIN_festival = {
+		icon = GFX_decision_generic_political_discourse
+
+		allowed = {
+			original_tag = MIN
+		}
+
+		cost = 25
+		days_re_enable = 120
+
+		complete_effect = {
+			TU_MIN_assembly_10 = yes
+			add_political_power = -15
+		}
+
+		ai_will_do = {
+			base = 1
+		}
+	}
+
+	TU_MIN_elders_decree = {
+		icon = GFX_decision_generic_political_discourse
+
+		allowed = {
+			original_tag = MIN
+		}
+
+		cost = 0
+		days_re_enable = 180
+
+		complete_effect = {
+			add_political_power = 75
+			TU_MIN_assembly_m10 = yes
+		}
+
+		ai_will_do = {
+			base = 1
+		}
+	}
+
+	TU_MIN_law_harbours = {
+		icon = GFX_decision_generic_construction
+
+		allowed = {
+			original_tag = MIN
+		}
+
+		available = {
+			check_variable = { TU_MIN_assembly > 14 }
+			check_variable = { TU_MIN_routes < 6 }
+		}
+
+		cost = 25
+		days_re_enable = 240
+
+		complete_effect = {
+			TU_build_infrastructure = yes
+			TU_MIN_routes_1 = yes
+			TU_MIN_assembly_m15 = yes
+		}
+
+		ai_will_do = {
+			base = 1
+		}
+	}
+
+	TU_MIN_rhetoric_contest = {
+		icon = GFX_decision_generic_political_discourse
+
+		allowed = {
+			original_tag = MIN
+		}
+
+		cost = 10
+		days_re_enable = 120
+
+		complete_effect = {
+			TU_MIN_assembly_5 = yes
+			add_political_power = 15
+		}
+
+		ai_will_do = {
+			base = 1
+		}
+	}
+
+}
+
+TU_MIN_oracle_category = {
+	TU_MIN_consult = {
+		icon = GFX_decision_generic_speech
+
+		allowed = {
+			original_tag = MIN
+		}
+
+		available = {
+			NOT = { has_idea = TU_MIN_good_omen }
+			NOT = { has_idea = TU_MIN_bad_omen }
+			NOT = { has_idea = TU_MIN_riddle_omen }
+		}
+
+		cost = 50
+		days_re_enable = 200
+
+		complete_effect = {
+			country_event = { id = tu_min_ev.20 }
+		}
+
+		ai_will_do = {
+			base = 1
+		}
+	}
+
+	TU_MIN_offerings = {
+		icon = GFX_decision_generic_political_discourse
+
+		allowed = {
+			original_tag = MIN
+		}
+
+		cost = 25
+		days_re_enable = 200
+
+		complete_effect = {
+			set_country_flag = TU_MIN_offerings
+			add_stability = 0.02
+		}
+
+		ai_will_do = {
+			base = 1
+		}
+	}
+
+	TU_MIN_cleansing = {
+		icon = GFX_decision_generic_political_discourse
+
+		allowed = {
+			original_tag = MIN
+		}
+
+		available = {
+			has_idea = TU_MIN_bad_omen
+		}
+
+		cost = 25
+		days_re_enable = 120
+
+		complete_effect = {
+			remove_ideas = TU_MIN_bad_omen
+			add_political_power = -25
+		}
+
+		ai_will_do = {
+			base = 1
+		}
+	}
+
+	TU_MIN_games = {
+		icon = GFX_decision_generic_political_discourse
+
+		allowed = {
+			original_tag = MIN
+		}
+
+		visible = {
+			has_completed_focus = TU_MIN_sacred_games
+		}
+
+		cost = 50
+		days_re_enable = 365
+
+		complete_effect = {
+			add_war_support = 0.04
+			TU_MIN_assembly_5 = yes
+		}
+
+		ai_will_do = {
+			base = 1
+		}
+	}
+
+	TU_MIN_temple_tithe = {
+		icon = GFX_decision_generic_political_discourse
+
+		allowed = {
+			original_tag = MIN
+		}
+
+		cost = 0
+		days_re_enable = 240
+
+		complete_effect = {
+			add_political_power = 60
+		}
+
+		ai_will_do = {
+			base = 1
+		}
+	}
+
+}
+
+TU_MIN_sea_category = {
+	TU_MIN_new_route = {
+		icon = GFX_decision_generic_naval
+
+		allowed = {
+			original_tag = MIN
+		}
+
+		available = {
+			check_variable = { TU_MIN_routes < 6 }
+		}
+
+		cost = 50
+		days_re_enable = 120
+
+		complete_effect = {
+			TU_MIN_routes_1 = yes
+		}
+
+		ai_will_do = {
+			base = 1
+		}
+	}
+
+	TU_MIN_hunt_pirates = {
+		icon = GFX_decision_generic_naval
+
+		allowed = {
+			original_tag = MIN
+		}
+
+		cost = 25
+		days_re_enable = 180
+
+		complete_effect = {
+			navy_experience = 15
+			set_country_flag = TU_MIN_pirates_hunted
+		}
+
+		ai_will_do = {
+			base = 1
+		}
+	}
+
+	TU_MIN_trade_fair = {
+		icon = GFX_decision_generic_political_discourse
+
+		allowed = {
+			original_tag = MIN
+		}
+
+		available = {
+			check_variable = { TU_MIN_routes > 2 }
+		}
+
+		cost = 0
+		days_re_enable = 240
+
+		complete_effect = {
+			add_political_power = 50
+		}
+
+		ai_will_do = {
+			base = 1
+		}
+	}
+
+	TU_MIN_found_league = {
+		icon = GFX_decision_generic_political_discourse
+
+		allowed = {
+			original_tag = MIN
+		}
+
+		visible = {
+			has_completed_focus = TU_MIN_league_pact
+		}
+
+		available = {
+			is_in_faction = no
+		}
+
+		cost = 50
+		fire_only_once = yes
+
+		complete_effect = {
+			create_faction = TU_MIN_league
+		}
+
+		ai_will_do = {
+			base = 1
+		}
+	}
+
+	TU_MIN_invite_league = {
+		icon = GFX_decision_generic_political_discourse
+
+		allowed = {
+			original_tag = MIN
+		}
+
+		target_trigger = {
+			FROM = {
+				NOT = { tag = ROOT }
+				is_in_faction = no
+				NOT = { has_war_with = ROOT }
+				OR = { tag = SAR tag = IBE tag = COL tag = LAT }
+			}
+		}
+
+		visible = {
+			has_completed_focus = TU_MIN_league_pact
+			is_faction_leader = yes
+		}
+
+		cost = 50
+		days_re_enable = 90
+
+		complete_effect = {
+			add_to_faction = FROM
+		}
+
+		ai_will_do = {
+			base = 1
+		}
+	}
+
+	TU_MIN_naval_escort = {
+		icon = GFX_decision_generic_political_discourse
+
+		allowed = {
+			original_tag = MIN
+		}
+
+		visible = {
+			has_completed_focus = TU_MIN_convoys
+		}
+
+		cost = 50
+		days_re_enable = 240
+
+		complete_effect = {
+			navy_experience = 20
+			set_country_flag = TU_MIN_pirates_hunted
+		}
+
+		ai_will_do = {
+			base = 1
+		}
+	}
+
+}

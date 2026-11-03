@@ -1,0 +1,41 @@
+TU_MIN_assembly_category = {
+	icon = GFX_decision_category_generic_political_actions
+
+	allowed = {
+		original_tag = MIN
+	}
+
+	visible = {
+		has_country_flag = TU_MIN_assembly
+	}
+
+	priority = 100
+}
+
+TU_MIN_oracle_category = {
+	icon = GFX_decision_category_generic_political_actions
+
+	allowed = {
+		original_tag = MIN
+	}
+
+	visible = {
+		has_country_flag = TU_MIN_oracle
+	}
+
+	priority = 100
+}
+
+TU_MIN_sea_category = {
+	icon = GFX_decision_category_generic_industry
+
+	allowed = {
+		original_tag = MIN
+	}
+
+	visible = {
+		has_country_flag = TU_MIN_routes
+	}
+
+	priority = 100
+}
