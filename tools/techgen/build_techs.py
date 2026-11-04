@@ -417,6 +417,22 @@ def main():
         for c in t["cats"]:
             assert c in CATEGORIES_VANILLA or c in CATEGORIES_EXTRA, (t["id"], c)
 
+    # GUI 칸 좌표: 폴더마다 쓰는 x 값을 차례대로 열 번호로 (열 간격 3칸 = 큰 기술 상자가 겹치지 않음)
+    sys.path.insert(0, str(Path(__file__).resolve().parent))
+    import build_techgui
+    col_names = {}
+    for folder in FILES:
+        xs = sorted({t["x"] for t in TECHS if t["folder"] == folder})
+        idx = {x: i for i, x in enumerate(xs)}
+        for x in xs:
+            first = min((t for t in TECHS if t["folder"] == folder and t["x"] == x), key=lambda t: t["era"])
+            col_names[(folder, idx[x])] = (first["ko"], first["en"])
+        for t in TECHS:
+            if t["folder"] == folder:
+                t["x"] = idx[t["x"]] * build_techgui.COL
+    all_folders = list(FILES) + ["nsb_armour_folder", "bba_air_techs_folder"]
+    gui_ko, gui_en = build_techgui.build(TECHS, ERA, list(FILES), all_folders, col_names)
+
     tdir = MOD / "common" / "technologies"
     tdir.mkdir(parents=True, exist_ok=True)
     for old in tdir.glob("*.txt"):
@@ -542,12 +558,15 @@ buildings = {
     for k, ko, en in folders + equipment:
         rep_ko.append((k, ko))
         rep_en.append((k, en))
+    new_ko += gui_ko
+    new_en += gui_en
     write_loc(MOD / "localisation/korean/tu_techs_l_korean.yml", "korean", new_ko)
     write_loc(MOD / "localisation/english/tu_techs_l_english.yml", "english", new_en)
     write_loc(MOD / "localisation/korean/replace/tu_techs_replace_l_korean.yml", "korean", rep_ko)
     write_loc(MOD / "localisation/english/replace/tu_techs_replace_l_english.yml", "english", rep_en)
 
-    for p in list(tdir.glob("*.txt")) + [tags / "00_technology.txt", bdir / "tu_buildings.txt", MOD / "interface/tu_technologies.gfx"]:
+    for p in list(tdir.glob("*.txt")) + [tags / "00_technology.txt", bdir / "tu_buildings.txt", MOD / "interface/tu_technologies.gfx",
+                                         MOD / "interface/countrytechtreeview.gui"]:
         s = p.read_text(encoding="utf-8")
         assert s.count("{") == s.count("}"), p
         assert all(ord(c) < 128 for c in s), p

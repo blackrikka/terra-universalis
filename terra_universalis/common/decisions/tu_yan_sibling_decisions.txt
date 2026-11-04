@@ -55,12 +55,14 @@ TU_YAN_sibling_category = {
 		available = {
 			has_country_flag = TU_YAN_ruler_chongyue
 			all_country = {
-				limit = {
-					has_country_flag = TU_YAN_sibling_faction
+				OR = {
+					NOT = { has_country_flag = TU_YAN_sibling_faction }
+					AND = {
+						has_country_flag = TU_YAN_fac_freed
+						NOT = { is_subject_of = ROOT }
+						NOT = { has_war_with = ROOT }
+					}
 				}
-				has_country_flag = TU_YAN_fac_freed
-				NOT = { is_subject_of = ROOT }
-				NOT = { has_war_with = ROOT }
 			}
 		}
 
