@@ -4,6 +4,10 @@ TU_IBE_monthly = {
 	multiply_temp_variable = { tu_ibe_lh = -0.5 }
 	add_to_variable = { TU_IBE_threat = tu_ibe_lh }
 	clamp_variable = { var = TU_IBE_threat min = 0 max = 100 }
+	if = {
+		limit = { has_country_flag = TU_IBE_ishar_route }
+		set_variable = { TU_IBE_threat = 0 }
+	}
 }
 
 TU_IBE_threat_m10 = {

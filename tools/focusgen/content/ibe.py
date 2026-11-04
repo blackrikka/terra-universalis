@@ -90,6 +90,10 @@ C.effects.append("""TU_IBE_monthly = {
 	multiply_temp_variable = { tu_ibe_lh = -0.5 }
 	add_to_variable = { TU_IBE_threat = tu_ibe_lh }
 	clamp_variable = { var = TU_IBE_threat min = 0 max = 100 }
+	if = {
+		limit = { has_country_flag = TU_IBE_ishar_route }
+		set_variable = { TU_IBE_threat = 0 }
+	}
 }""")
 C.on_actions.append("""on_monthly = {
 	effect = {
@@ -399,6 +403,65 @@ C.ev(33, ("심판관 아이린", "Inquisitor Irene"), ("젊은 심판관 아이�
 C.ev(34, ("귀족들의 불만", "Grumbling Nobles"), ("귀족들이 심판소의 간섭에 불만을 터뜨렸다.", "The nobles complain loudly about the Inquisition's meddling."),
      [("귀족 편을 든다.", "Side with the nobles.", [CROWN("0.05"), "add_stability = -0.02"], 50), ("무시한다.", "Ignore them.", [INQ("0.03")], 50)],
      trigger=["original_tag = IBE", "has_completed_focus = TU_IBE_nobles_return"], mtth=300)
+
+# ------------------------------------------------------------------ 숨은 루트: 이샤믈라 (사양서 24)
+# 1098년 11월 11일 스카디의 고백 -> "그래, 나도 사랑해" -> 30일 뒤 "혈족이 되자" -> 지도자 이샤믈라 + 숨은 갈래가 열린다.
+ISHAR = [HAS("ishar_route")]
+C.on_actions.append("""on_startup = {
+	effect = {
+		if = {
+			limit = { country_exists = IBE }
+			IBE = { country_event = { id = tu_ibe_ev.40 days = 679 } }
+		}
+	}
+}""")
+C.ev(40, ("11월 11일", "The Eleventh of November"),
+     ("해가 저무는 바닷가, 스카디가 한참을 말없이 파도를 보다가 고개를 돌렸다.\\n\\n\"박사 사랑해\"",
+      "On the shore at dusk, Skadi watches the waves in silence for a long while, then turns.\\n\\n\"Doctor, I love you.\""),
+     [("뭐...?", "What...?", [], 100),
+      ("그래, 나도 사랑해", "Yes. I love you too.", [FLAG("skadi_confession"), EV(41, 30)], 0)],
+     picture="GFX_report_event_generic_read_write")
+C.ev(41, ("혈족", "Kin"),
+     ("한 달 뒤, 스카디가 다시 바닷가에서 기다리고 있었다. 그런데 그 눈빛이 어딘가 달랐다.\\n\\n\"자, 박사...나와 혈족이 되자..\"",
+      "A month later Skadi waits on the shore again. Yet something in her eyes has changed.\\n\\n\"Come, Doctor... become my kin...\""),
+     [("파도가 발목을 적신다.", "The tide washes over your feet.",
+       [FLAG("ishar_route"), "recruit_character = TU_IBE_ishar_mla",
+        "promote_character = {\n\tcharacter = TU_IBE_ishar_mla\n\tideology = despotism\n}",
+        "set_variable = { TU_IBE_threat = 0 }", "add_ideas = TU_IBE_seaborn_kin", "mark_focus_tree_layout_dirty = yes"], 1)],
+     picture="GFX_report_event_generic_read_write")
+C.idea("seaborn_kin", "바다의 혈족", "Kin of the Sea",
+       {"army_org_factor": 0.10, "army_attack_factor": 0.05, "stability_factor": -0.10, "monthly_population": -0.05},
+       "generic_morale_bonus", ("이샤믈라가 이베리아를 이끈다. 바다는 더 이상 위협이 아니라 고향이다.",
+                                "Ishar-mla leads Iberia. The sea is no longer a threat but a home."))
+C.idea("tide_host", "밀물의 군세", "Host of the Tide", {"army_attack_factor": 0.08, "army_defence_factor": 0.05, "attrition": -0.05},
+       "generic_army_war_college")
+C.idea("deep_kingdom", "이샤믈라의 심해 왕국", "Ishar-mla's Kingdom of the Deep",
+       {"army_org_factor": 0.10, "war_support_factor": 0.15, "conscription_factor": 0.05, "stability_factor": -0.05},
+       "generic_morale_bonus")
+f("ishar_call", "심해의 부름", "Call of the Deep", pre=["root"], cost=5, theme=False, allow_branch=ISHAR, available=ISHAR,
+  reward=["add_political_power = 50", "set_variable = { TU_IBE_threat = 0 }"],
+  desc=("이샤믈라가 바다 쪽을 가리킨다. 이베리아는 더 이상 바다를 두려워하지 않는다.",
+        "Ishar-mla points to the sea. Iberia no longer fears it."))
+f("ishar_song", "심해의 노래", "Song of the Deep", pre=["ishar_call"], allow_branch=ISHAR, theme=False,
+  reward=["add_war_support = 0.10", "add_stability = -0.05", "add_political_power = 75"])
+f("ishar_hunters", "아비살 사냥꾼의 침묵", "Silence of the Abyssal Hunters", pre=["ishar_call"], allow_branch=ISHAR, theme=False,
+  reward=["add_manpower = 10000", "army_experience = 25"],
+  desc=("사냥꾼들은 등을 돌리거나, 바다에 녹아든다.", "The hunters either turn away or dissolve into the sea."))
+f("ishar_tide", "밀물의 군세", "Host of the Tide", pre=["ishar_song", "ishar_hunters"], allow_branch=ISHAR, theme=False, cost=10,
+  reward=["add_ideas = TU_IBE_tide_host", "army_experience = 25"])
+f("ishar_inquisition", "심판소 해체", "Dissolve the Inquisition", pre=["ishar_song"], allow_branch=ISHAR, theme=False,
+  reward=["add_stability = 0.05", "add_political_power = 50"])
+f("ishar_coast", "해안의 동화", "Assimilate the Coast", pre=["ishar_tide"], allow_branch=ISHAR, theme=False,
+  reward=["TU_build_infrastructure = yes", "add_manpower = 10000"])
+f("ishar_cathedral", "바다에 잠긴 대성당", "The Drowned Cathedral", pre=["ishar_inquisition", "ishar_coast"], allow_branch=ISHAR,
+  theme=False, reward=["add_war_support = 0.05", "add_stability = 0.05"])
+f("ishar_finale", "이샤믈라의 바다", "Ishar-mla's Sea", pre=["ishar_cathedral"], allow_branch=ISHAR, theme=False, cost=15,
+  me=["inquisitor_state", "crown_restored", "sea_reconciliation"],
+  reward=["swap_ideas = { remove_idea = TU_IBE_seaborn_kin add_idea = TU_IBE_deep_kingdom }"],
+  desc=("이베리아는 심해의 왕국이 된다.", "Iberia becomes a kingdom of the deep."))
+for _f in C.focuses:     # 다른 결말과 서로 배타
+    if _f["id"] in ("TU_IBE_inquisitor_state", "TU_IBE_crown_restored", "TU_IBE_sea_reconciliation"):
+        _f["me"].append("TU_IBE_ishar_finale")
 
 if __name__ == "__main__":
     C.write()

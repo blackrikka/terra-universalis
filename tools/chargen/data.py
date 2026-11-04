@@ -88,12 +88,14 @@ COUNTRIES = {
         ("skadi", "스카디", "Skadi", [("G", 6, 3, 2, 2)], None),
         ("specter", "스펙터", "Specter", [("G", 5, 3, 2, 2)], None),
         ("gladiia", "글래디아", "Gladiia", [("A", "theorist", "tu_theorist_tactics"), ("G", 4, 4, 4, 3)], None),
+        ("ishar_mla", "이샤믈라", "Ishar-mla", [("L", "despotism")], None),     # 숨은 루트 (이벤트 tu_ibe_ev.41)
     ], start=["grand_inquisitor", "irene", "ulpianus", "skadi", "specter", "gladiia"], hooks={
         "inquisitor_state": [("name", "INQUISITION", "이베리아 심판국", "Inquisitorial State of Iberia", "이베리아의", "Iberian")],
         "crown_restored": [("leader", "king", "despotism"),
                            ("name", "KINGDOM", "이베리아 왕국", "Kingdom of Iberia", "이베리아의", "Iberian")],
         "sea_reconciliation": [("leader", "irene", "moderatism"),
                                ("name", "NEW", "새 이베리아", "New Iberia", "이베리아의", "Iberian")],
+        "ishar_finale": [("name", "DEEP", "이샤믈라의 심해 왕국", "Ishar-mla's Kingdom of the Deep", "심해의", "Deep")],
     }),
     # ------------------------------------------------------------------ 사르곤
     "SAR": dict(cast=True, chars=[

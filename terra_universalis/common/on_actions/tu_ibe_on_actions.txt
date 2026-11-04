@@ -7,4 +7,12 @@ on_actions = {
 			}
 		}
 	}
+	on_startup = {
+		effect = {
+			if = {
+				limit = { country_exists = IBE }
+				IBE = { country_event = { id = tu_ibe_ev.40 days = 679 } }
+			}
+		}
+	}
 }

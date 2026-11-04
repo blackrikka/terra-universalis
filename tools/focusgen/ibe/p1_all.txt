@@ -170,7 +170,7 @@
 		icon = GFX_goal_generic_intelligence_exchange
 		prerequisite = { focus = TU_IBE_faith_laws focus = TU_IBE_tolerance }
 		prerequisite = { focus = TU_IBE_inquisitor_guard }
-		mutually_exclusive = { focus = TU_IBE_crown_restored focus = TU_IBE_sea_reconciliation }
+		mutually_exclusive = { focus = TU_IBE_crown_restored focus = TU_IBE_sea_reconciliation focus = TU_IBE_ishar_finale }
 		x = 0
 		y = 0
 		cost = 15
@@ -361,7 +361,7 @@
 		id = TU_IBE_crown_restored
 		icon = GFX_goal_generic_political_pressure
 		prerequisite = { focus = TU_IBE_crown_charter }
-		mutually_exclusive = { focus = TU_IBE_inquisitor_state focus = TU_IBE_sea_reconciliation }
+		mutually_exclusive = { focus = TU_IBE_inquisitor_state focus = TU_IBE_sea_reconciliation focus = TU_IBE_ishar_finale }
 		x = 0
 		y = 0
 		cost = 15
@@ -569,7 +569,7 @@
 		icon = GFX_goal_generic_trade
 		prerequisite = { focus = TU_IBE_abyssal_rumours }
 		prerequisite = { focus = TU_IBE_deep_sea_plan }
-		mutually_exclusive = { focus = TU_IBE_inquisitor_state focus = TU_IBE_crown_restored }
+		mutually_exclusive = { focus = TU_IBE_inquisitor_state focus = TU_IBE_crown_restored focus = TU_IBE_ishar_finale }
 		x = 0
 		y = 0
 		cost = 15
@@ -2180,5 +2180,204 @@
 		completion_reward = {
 			add_political_power = 60
 			add_tech_bonus = { name = TU_IBE_sargon_caravans bonus = 0.75 uses = 1 category = industry }
+		}
+	}
+
+	focus = {
+		id = TU_IBE_ishar_call
+		icon = GFX_goal_generic_political_pressure
+		prerequisite = { focus = TU_IBE_root }
+		x = 0
+		y = 0
+		cost = 5
+
+		search_filters = { FOCUS_FILTER_POLITICAL }
+
+		allow_branch = {
+			has_country_flag = TU_IBE_ishar_route
+		}
+
+		available = {
+			has_country_flag = TU_IBE_ishar_route
+		}
+
+		ai_will_do = {
+			base = 1
+		}
+
+		completion_reward = {
+			add_political_power = 50
+			set_variable = { TU_IBE_threat = 0 }
+		}
+	}
+
+	focus = {
+		id = TU_IBE_ishar_song
+		icon = GFX_goal_generic_political_pressure
+		prerequisite = { focus = TU_IBE_ishar_call }
+		x = 0
+		y = 0
+		cost = 10
+
+		search_filters = { FOCUS_FILTER_POLITICAL }
+
+		allow_branch = {
+			has_country_flag = TU_IBE_ishar_route
+		}
+
+		ai_will_do = {
+			base = 1
+		}
+
+		completion_reward = {
+			add_war_support = 0.10
+			add_stability = -0.05
+			add_political_power = 75
+		}
+	}
+
+	focus = {
+		id = TU_IBE_ishar_hunters
+		icon = GFX_goal_generic_allies_build_infantry
+		prerequisite = { focus = TU_IBE_ishar_call }
+		x = 0
+		y = 0
+		cost = 10
+
+		search_filters = { FOCUS_FILTER_POLITICAL }
+
+		allow_branch = {
+			has_country_flag = TU_IBE_ishar_route
+		}
+
+		ai_will_do = {
+			base = 1
+		}
+
+		completion_reward = {
+			add_manpower = 10000
+			army_experience = 25
+		}
+	}
+
+	focus = {
+		id = TU_IBE_ishar_tide
+		icon = GFX_goal_generic_trade
+		prerequisite = { focus = TU_IBE_ishar_song }
+		prerequisite = { focus = TU_IBE_ishar_hunters }
+		x = 0
+		y = 0
+		cost = 10
+
+		search_filters = { FOCUS_FILTER_POLITICAL }
+
+		allow_branch = {
+			has_country_flag = TU_IBE_ishar_route
+		}
+
+		ai_will_do = {
+			base = 1
+		}
+
+		completion_reward = {
+			add_ideas = TU_IBE_tide_host
+			army_experience = 25
+		}
+	}
+
+	focus = {
+		id = TU_IBE_ishar_inquisition
+		icon = GFX_goal_generic_intelligence_exchange
+		prerequisite = { focus = TU_IBE_ishar_song }
+		x = 0
+		y = 0
+		cost = 10
+
+		search_filters = { FOCUS_FILTER_POLITICAL }
+
+		allow_branch = {
+			has_country_flag = TU_IBE_ishar_route
+		}
+
+		ai_will_do = {
+			base = 1
+		}
+
+		completion_reward = {
+			add_stability = 0.05
+			add_political_power = 50
+		}
+	}
+
+	focus = {
+		id = TU_IBE_ishar_coast
+		icon = GFX_goal_generic_trade
+		prerequisite = { focus = TU_IBE_ishar_tide }
+		x = 0
+		y = 0
+		cost = 10
+
+		search_filters = { FOCUS_FILTER_POLITICAL }
+
+		allow_branch = {
+			has_country_flag = TU_IBE_ishar_route
+		}
+
+		ai_will_do = {
+			base = 1
+		}
+
+		completion_reward = {
+			TU_build_infrastructure = yes
+			add_manpower = 10000
+		}
+	}
+
+	focus = {
+		id = TU_IBE_ishar_cathedral
+		icon = GFX_goal_generic_political_pressure
+		prerequisite = { focus = TU_IBE_ishar_inquisition }
+		prerequisite = { focus = TU_IBE_ishar_coast }
+		x = 0
+		y = 0
+		cost = 10
+
+		search_filters = { FOCUS_FILTER_POLITICAL }
+
+		allow_branch = {
+			has_country_flag = TU_IBE_ishar_route
+		}
+
+		ai_will_do = {
+			base = 1
+		}
+
+		completion_reward = {
+			add_war_support = 0.05
+			add_stability = 0.05
+		}
+	}
+
+	focus = {
+		id = TU_IBE_ishar_finale
+		icon = GFX_goal_generic_trade
+		prerequisite = { focus = TU_IBE_ishar_cathedral }
+		mutually_exclusive = { focus = TU_IBE_inquisitor_state focus = TU_IBE_crown_restored focus = TU_IBE_sea_reconciliation }
+		x = 0
+		y = 0
+		cost = 15
+
+		search_filters = { FOCUS_FILTER_POLITICAL }
+
+		allow_branch = {
+			has_country_flag = TU_IBE_ishar_route
+		}
+
+		ai_will_do = {
+			base = 1
+		}
+
+		completion_reward = {
+			swap_ideas = { remove_idea = TU_IBE_seaborn_kin add_idea = TU_IBE_deep_kingdom }
 		}
 	}

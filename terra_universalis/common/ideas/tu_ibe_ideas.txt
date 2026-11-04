@@ -107,5 +107,49 @@ ideas = {
 				production_speed_buildings_factor = 0.05
 			}
 		}
+
+		TU_IBE_seaborn_kin = {
+			picture = generic_morale_bonus
+
+			allowed = {
+				original_tag = IBE
+			}
+
+			modifier = {
+				army_org_factor = 0.1
+				army_attack_factor = 0.05
+				stability_factor = -0.1
+				monthly_population = -0.05
+			}
+		}
+
+		TU_IBE_tide_host = {
+			picture = generic_army_war_college
+
+			allowed = {
+				original_tag = IBE
+			}
+
+			modifier = {
+				army_attack_factor = 0.08
+				army_defence_factor = 0.05
+				attrition = -0.05
+			}
+		}
+
+		TU_IBE_deep_kingdom = {
+			picture = generic_morale_bonus
+
+			allowed = {
+				original_tag = IBE
+			}
+
+			modifier = {
+				army_org_factor = 0.1
+				war_support_factor = 0.15
+				conscription_factor = 0.05
+				stability_factor = -0.05
+			}
+		}
 	}
 }

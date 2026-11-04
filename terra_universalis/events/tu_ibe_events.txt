@@ -394,3 +394,51 @@ country_event = {
 		add_power_balance_value = { id = TU_IBE_bop value = -0.03 }
 	}
 }
+
+country_event = {
+	id = tu_ibe_ev.40
+	title = tu_ibe_ev.40.t
+	desc = tu_ibe_ev.40.d
+	picture = GFX_report_event_generic_read_write
+	is_triggered_only = yes
+
+	option = {
+		name = tu_ibe_ev.40.a
+		ai_chance = {
+			factor = 100
+		}
+	}
+
+	option = {
+		name = tu_ibe_ev.40.b
+		ai_chance = {
+			factor = 0
+		}
+		set_country_flag = TU_IBE_skadi_confession
+		country_event = { id = tu_ibe_ev.41 days = 30 }
+	}
+}
+
+country_event = {
+	id = tu_ibe_ev.41
+	title = tu_ibe_ev.41.t
+	desc = tu_ibe_ev.41.d
+	picture = GFX_report_event_generic_read_write
+	is_triggered_only = yes
+
+	option = {
+		name = tu_ibe_ev.41.a
+		ai_chance = {
+			factor = 1
+		}
+		set_country_flag = TU_IBE_ishar_route
+		recruit_character = TU_IBE_ishar_mla
+		promote_character = {
+			character = TU_IBE_ishar_mla
+			ideology = despotism
+		}
+		set_variable = { TU_IBE_threat = 0 }
+		add_ideas = TU_IBE_seaborn_kin
+		mark_focus_tree_layout_dirty = yes
+	}
+}
