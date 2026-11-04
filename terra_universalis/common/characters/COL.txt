@@ -3,7 +3,7 @@ characters = {
 
 	TU_COL_president = {
 		name = TU_COL_president
-		country_leader = {
+		country_leader = { traits = { tu_lt_federal_president }
 			ideology = centrism
 			expire = "1200.1.1.1"
 			id = -1
@@ -12,7 +12,7 @@ characters = {
 
 	TU_COL_kristen = {
 		name = TU_COL_kristen
-		country_leader = {
+		country_leader = { traits = { tu_lt_rhine_genius tu_lt_merchant_prince }
 			ideology = oligarchism
 			expire = "1200.1.1.1"
 			id = -1
@@ -21,7 +21,7 @@ characters = {
 
 	TU_COL_frontier_rep = {
 		name = TU_COL_frontier_rep
-		country_leader = {
+		country_leader = { traits = { tu_lt_frontier_spirit }
 			ideology = moderatism
 			expire = "1200.1.1.1"
 			id = -1

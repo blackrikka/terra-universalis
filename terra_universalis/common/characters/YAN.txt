@@ -7,7 +7,7 @@ characters = {
 				large = "GFX_Portrait_Europe_Generic_1"
 			}
 		}
-		country_leader = {
+		country_leader = { traits = { tu_lt_dragon_throne }
 			ideology = tu_imperial_rule
 			expire = "1200.1.1.1"
 			id = -1
@@ -35,7 +35,7 @@ characters = {
 			logistics_skill = 3
 			legacy_id = 0
 		}
-		country_leader = {
+		country_leader = { traits = { tu_lt_sui_sibling tu_lt_martial_master }
 			ideology = tu_sui_rule
 			expire = "1200.1.1.1"
 			id = -1
@@ -64,7 +64,7 @@ characters = {
 				factor = 1
 			}
 		}
-		country_leader = {
+		country_leader = { traits = { tu_lt_sui_sibling tu_lt_forgemaster }
 			ideology = tu_sui_rule
 			expire = "1200.1.1.1"
 			id = -1
@@ -93,7 +93,7 @@ characters = {
 				factor = 1
 			}
 		}
-		country_leader = {
+		country_leader = { traits = { tu_lt_sui_sibling tu_lt_painter }
 			ideology = tu_sui_rule
 			expire = "1200.1.1.1"
 			id = -1
@@ -122,7 +122,7 @@ characters = {
 				factor = 1
 			}
 		}
-		country_leader = {
+		country_leader = { traits = { tu_lt_sui_sibling tu_lt_dreamer }
 			ideology = tu_sui_rule
 			expire = "1200.1.1.1"
 			id = -1

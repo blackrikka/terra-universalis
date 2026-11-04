@@ -3,7 +3,7 @@ characters = {
 
 	TU_SIR_elder_don = {
 		name = TU_SIR_elder_don
-		country_leader = {
+		country_leader = { traits = { tu_lt_omerta }
 			ideology = oligarchism
 			expire = "1200.1.1.1"
 			id = -1
@@ -12,7 +12,7 @@ characters = {
 
 	TU_SIR_family_head = {
 		name = TU_SIR_family_head
-		country_leader = {
+		country_leader = { traits = { tu_lt_omerta tu_lt_merchant_prince }
 			ideology = oligarchism
 			expire = "1200.1.1.1"
 			id = -1
@@ -21,7 +21,7 @@ characters = {
 
 	TU_SIR_penance = {
 		name = TU_SIR_penance
-		country_leader = {
+		country_leader = { traits = { tu_lt_judge }
 			ideology = moderatism
 			expire = "1200.1.1.1"
 			id = -1
@@ -42,7 +42,7 @@ characters = {
 
 	TU_SIR_wolf_heir = {
 		name = TU_SIR_wolf_heir
-		country_leader = {
+		country_leader = { traits = { tu_lt_wolf_blood }
 			ideology = despotism
 			expire = "1200.1.1.1"
 			id = -1

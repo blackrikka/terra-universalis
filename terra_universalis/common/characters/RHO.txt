@@ -2,7 +2,7 @@ characters = {
 	TU_RHO_amiya = {
 		name = TU_RHO_amiya
 		portraits = { civilian = { large = "GFX_TU_portrait_amiya" } }
-		country_leader = { ideology = moderatism expire = "1200.1.1.1" id = -1 }
+		country_leader = { traits = { tu_lt_rhodes_leader tu_lt_infected_champion } ideology = moderatism expire = "1200.1.1.1" id = -1 }
 	}
 	TU_RHO_doctor = {
 		name = TU_RHO_doctor

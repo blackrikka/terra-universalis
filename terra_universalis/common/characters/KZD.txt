@@ -7,7 +7,7 @@ characters = {
 				large = "GFX_TU_portrait_theresis"
 			}
 		}
-		country_leader = {
+		country_leader = { traits = { tu_lt_sarkaz_regent }
 			ideology = despotism
 			expire = "1200.1.1.1"
 			id = -1

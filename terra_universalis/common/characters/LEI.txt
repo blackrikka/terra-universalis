@@ -3,7 +3,7 @@ characters = {
 
 	TU_LEI_empresses = {
 		name = TU_LEI_empresses
-		country_leader = {
+		country_leader = { traits = { tu_lt_twin_voice }
 			ideology = despotism
 			expire = "1200.1.1.1"
 			id = -1
@@ -12,7 +12,7 @@ characters = {
 
 	TU_LEI_elector = {
 		name = TU_LEI_elector
-		country_leader = {
+		country_leader = { traits = { tu_lt_electors_compact }
 			ideology = oligarchism
 			expire = "1200.1.1.1"
 			id = -1
@@ -21,7 +21,7 @@ characters = {
 
 	TU_LEI_witch_king = {
 		name = TU_LEI_witch_king
-		country_leader = {
+		country_leader = { traits = { tu_lt_witch_king }
 			ideology = despotism
 			expire = "1200.1.1.1"
 			id = -1

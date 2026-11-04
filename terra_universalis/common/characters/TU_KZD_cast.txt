@@ -3,7 +3,7 @@ characters = {
 
 	TU_KZD_commission = {
 		name = TU_KZD_commission
-		country_leader = {
+		country_leader = { traits = { tu_lt_military_commission }
 			ideology = oligarchism
 			expire = "1200.1.1.1"
 			id = -1
@@ -12,7 +12,7 @@ characters = {
 
 	TU_KZD_six_kings_lead = {
 		name = TU_KZD_six_kings_lead
-		country_leader = {
+		country_leader = { traits = { tu_lt_six_kings }
 			ideology = oligarchism
 			expire = "1200.1.1.1"
 			id = -1
@@ -25,7 +25,7 @@ characters = {
 			civilian = { large = "GFX_TU_portrait_w" }
 			army = { large = "GFX_TU_portrait_w" }
 		}
-		country_leader = {
+		country_leader = { traits = { tu_lt_mercenary_king }
 			ideology = despotism
 			expire = "1200.1.1.1"
 			id = -1

@@ -7,7 +7,7 @@ characters = {
 				large = "GFX_Portrait_Europe_Generic_4"
 			}
 		}
-		country_leader = {
+		country_leader = { traits = { tu_lt_zealot }
 			ideology = fascism_ideology
 			expire = "1200.1.1.1"
 			id = -1
@@ -21,7 +21,7 @@ characters = {
 				large = "GFX_Portrait_Europe_Generic_1"
 			}
 		}
-		country_leader = {
+		country_leader = { traits = { tu_lt_reformer }
 			ideology = liberalism
 			expire = "1200.1.1.1"
 			id = -1

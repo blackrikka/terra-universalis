@@ -1,0 +1,397 @@
+# Terra country leader traits (tools/chargen/leader_traits.py, spec 25)
+leader_traits = {
+	tu_lt_union_shareholder = {
+		random = no
+		production_speed_buildings_factor = 0.05
+		consumer_goods_factor = -0.02
+		stability_factor = -0.03
+		ai_will_do = { factor = 1 }
+	}
+	tu_lt_merchant_prince = {
+		random = no
+		political_power_factor = 0.05
+		consumer_goods_factor = -0.03
+		ai_will_do = { factor = 1 }
+	}
+	tu_lt_golden_purse = {
+		random = no
+		consumer_goods_factor = -0.05
+		production_speed_buildings_factor = 0.05
+		ai_will_do = { factor = 1 }
+	}
+	tu_lt_company_man = {
+		random = no
+		production_speed_buildings_factor = 0.1
+		stability_factor = -0.05
+		ai_will_do = { factor = 1 }
+	}
+	tu_lt_rhine_genius = {
+		random = no
+		research_speed_factor = 0.07
+		ai_will_do = { factor = 1 }
+	}
+	tu_lt_karlan_magnate = {
+		random = no
+		political_power_factor = 0.05
+		research_speed_factor = 0.03
+		production_speed_buildings_factor = 0.05
+		ai_will_do = { factor = 1 }
+	}
+	tu_lt_knight_honour = {
+		random = no
+		army_org_factor = 0.05
+		war_support_factor = 0.05
+		ai_will_do = { factor = 1 }
+	}
+	tu_lt_radiant_knight = {
+		random = no
+		stability_factor = 0.05
+		army_morale_factor = 0.05
+		ai_will_do = { factor = 1 }
+	}
+	tu_lt_military_commission = {
+		random = no
+		army_org_factor = 0.05
+		conscription_factor = 0.03
+		ai_will_do = { factor = 1 }
+	}
+	tu_lt_sarkaz_regent = {
+		random = no
+		army_attack_factor = 0.1
+		war_support_factor = 0.1
+		political_power_factor = 0.05
+		ai_will_do = { factor = 1 }
+	}
+	tu_lt_six_kings = {
+		random = no
+		stability_factor = 0.05
+		army_defence_factor = 0.05
+		ai_will_do = { factor = 1 }
+	}
+	tu_lt_mercenary_king = {
+		random = no
+		army_attack_factor = 0.05
+		conscription_factor = 0.05
+		stability_factor = -0.05
+		ai_will_do = { factor = 1 }
+	}
+	tu_lt_frozen_emperor = {
+		random = no
+		army_defence_factor = 0.05
+		war_support_factor = 0.05
+		stability_factor = -0.03
+		ai_will_do = { factor = 1 }
+	}
+	tu_lt_junta = {
+		random = no
+		army_org_factor = 0.05
+		war_support_factor = 0.1
+		stability_factor = -0.05
+		ai_will_do = { factor = 1 }
+	}
+	tu_lt_shogun = {
+		random = no
+		army_attack_factor = 0.05
+		war_support_factor = 0.05
+		ai_will_do = { factor = 1 }
+	}
+	tu_lt_wolf_blood = {
+		random = no
+		army_attack_factor = 0.08
+		war_support_factor = 0.1
+		ai_will_do = { factor = 1 }
+	}
+	tu_lt_witch_king = {
+		random = no
+		army_attack_factor = 0.1
+		war_support_factor = 0.1
+		stability_factor = -0.05
+		ai_will_do = { factor = 1 }
+	}
+	tu_lt_corrupting_heart = {
+		random = no
+		army_org_factor = 0.1
+		army_attack_factor = 0.1
+		stability_factor = -0.1
+		ai_will_do = { factor = 1 }
+	}
+	tu_lt_dragon_flame = {
+		random = no
+		army_attack_factor = 0.1
+		stability_factor = -0.05
+		ai_will_do = { factor = 1 }
+	}
+	tu_lt_old_soldier = {
+		random = no
+		army_defence_factor = 0.1
+		war_support_factor = 0.05
+		ai_will_do = { factor = 1 }
+	}
+	tu_lt_lion_heir = {
+		random = no
+		stability_factor = 0.05
+		war_support_factor = 0.1
+		ai_will_do = { factor = 1 }
+	}
+	tu_lt_draco_flame = {
+		random = no
+		war_support_factor = 0.15
+		army_attack_factor = 0.05
+		ai_will_do = { factor = 1 }
+	}
+	tu_lt_dragon_blade = {
+		random = no
+		army_attack_factor = 0.05
+		army_org_factor = 0.05
+		ai_will_do = { factor = 1 }
+	}
+	tu_lt_martial_master = {
+		random = no
+		army_attack_factor = 0.08
+		army_org_factor = 0.05
+		ai_will_do = { factor = 1 }
+	}
+	tu_lt_zealot = {
+		random = no
+		war_support_factor = 0.1
+		stability_factor = -0.03
+		ai_will_do = { factor = 1 }
+	}
+	tu_lt_holy_see = {
+		random = no
+		stability_factor = 0.1
+		political_power_factor = 0.05
+		ai_will_do = { factor = 1 }
+	}
+	tu_lt_notary_law = {
+		random = no
+		stability_factor = 0.05
+		political_power_factor = 0.05
+		ai_will_do = { factor = 1 }
+	}
+	tu_lt_grand_inquisitor = {
+		random = no
+		stability_factor = 0.1
+		war_support_factor = 0.05
+		consumer_goods_factor = 0.02
+		ai_will_do = { factor = 1 }
+	}
+	tu_lt_sea_listener = {
+		random = no
+		stability_factor = 0.05
+		research_speed_factor = 0.03
+		ai_will_do = { factor = 1 }
+	}
+	tu_lt_judge = {
+		random = no
+		stability_factor = 0.1
+		ai_will_do = { factor = 1 }
+	}
+	tu_lt_saintess = {
+		random = no
+		stability_factor = 0.1
+		war_support_factor = 0.05
+		ai_will_do = { factor = 1 }
+	}
+	tu_lt_divine_emperor = {
+		random = no
+		stability_factor = 0.1
+		ai_will_do = { factor = 1 }
+	}
+	tu_lt_forest_voice = {
+		random = no
+		stability_factor = 0.05
+		army_defence_factor = 0.05
+		ai_will_do = { factor = 1 }
+	}
+	tu_lt_federal_president = {
+		random = no
+		political_power_factor = 0.1
+		ai_will_do = { factor = 1 }
+	}
+	tu_lt_frontier_spirit = {
+		random = no
+		production_speed_infrastructure_factor = 0.15
+		conscription_factor = 0.03
+		ai_will_do = { factor = 1 }
+	}
+	tu_lt_twin_voice = {
+		random = no
+		political_power_factor = 0.1
+		research_speed_factor = 0.03
+		ai_will_do = { factor = 1 }
+	}
+	tu_lt_electors_compact = {
+		random = no
+		stability_factor = 0.05
+		political_power_factor = 0.05
+		ai_will_do = { factor = 1 }
+	}
+	tu_lt_restored_crown = {
+		random = no
+		political_power_factor = 0.1
+		stability_factor = 0.03
+		ai_will_do = { factor = 1 }
+	}
+	tu_lt_padishah = {
+		random = no
+		political_power_factor = 0.1
+		conscription_factor = 0.03
+		ai_will_do = { factor = 1 }
+	}
+	tu_lt_lords_council = {
+		random = no
+		stability_factor = 0.05
+		political_power_factor = 0.03
+		ai_will_do = { factor = 1 }
+	}
+	tu_lt_omerta = {
+		random = no
+		stability_factor = 0.05
+		political_power_factor = 0.05
+		ai_will_do = { factor = 1 }
+	}
+	tu_lt_snow_elders = {
+		random = no
+		stability_factor = 0.05
+		army_defence_factor = 0.05
+		ai_will_do = { factor = 1 }
+	}
+	tu_lt_three_houses = {
+		random = no
+		stability_factor = 0.05
+		political_power_factor = 0.05
+		ai_will_do = { factor = 1 }
+	}
+	tu_lt_court_regent = {
+		random = no
+		political_power_factor = 0.05
+		stability_factor = 0.03
+		ai_will_do = { factor = 1 }
+	}
+	tu_lt_reformer = {
+		random = no
+		research_speed_factor = 0.05
+		consumer_goods_factor = -0.02
+		ai_will_do = { factor = 1 }
+	}
+	tu_lt_assembly_voice = {
+		random = no
+		stability_factor = 0.05
+		political_power_factor = 0.05
+		ai_will_do = { factor = 1 }
+	}
+	tu_lt_elders_wisdom = {
+		random = no
+		stability_factor = 0.08
+		ai_will_do = { factor = 1 }
+	}
+	tu_lt_thalassocrat = {
+		random = no
+		consumer_goods_factor = -0.03
+		army_attack_factor = 0.03
+		ai_will_do = { factor = 1 }
+	}
+	tu_lt_miners_union = {
+		random = no
+		stability_factor = 0.05
+		conscription_factor = 0.05
+		ai_will_do = { factor = 1 }
+	}
+	tu_lt_infected_champion = {
+		random = no
+		stability_factor = 0.05
+		monthly_population = 0.05
+		ai_will_do = { factor = 1 }
+	}
+	tu_lt_tribal_chief = {
+		random = no
+		conscription_factor = 0.05
+		stability_factor = 0.03
+		ai_will_do = { factor = 1 }
+	}
+	tu_lt_open_envoy = {
+		random = no
+		political_power_factor = 0.1
+		ai_will_do = { factor = 1 }
+	}
+	tu_lt_provisional = {
+		random = no
+		political_power_factor = 0.1
+		stability_factor = -0.05
+		ai_will_do = { factor = 1 }
+	}
+	tu_lt_colonial_governor = {
+		random = no
+		consumer_goods_factor = -0.03
+		stability_factor = -0.05
+		ai_will_do = { factor = 1 }
+	}
+	tu_lt_dukes_council = {
+		random = no
+		political_power_factor = 0.05
+		production_speed_buildings_factor = 0.05
+		ai_will_do = { factor = 1 }
+	}
+	tu_lt_parliament = {
+		random = no
+		stability_factor = 0.05
+		political_power_factor = 0.05
+		ai_will_do = { factor = 1 }
+	}
+	tu_lt_lungmen_magistrate = {
+		random = no
+		political_power_factor = 0.1
+		consumer_goods_factor = -0.03
+		ai_will_do = { factor = 1 }
+	}
+	tu_lt_rhodes_leader = {
+		random = no
+		stability_factor = 0.05
+		research_speed_factor = 0.03
+		ai_will_do = { factor = 1 }
+	}
+	tu_lt_dragon_throne = {
+		random = no
+		political_power_factor = 0.05
+		stability_factor = 0.05
+		ai_will_do = { factor = 1 }
+	}
+	tu_lt_sui_sibling = {
+		random = no
+		research_speed_factor = 0.03
+		stability_factor = 0.03
+		ai_will_do = { factor = 1 }
+	}
+	tu_lt_forgemaster = {
+		random = no
+		production_speed_arms_factory_factor = 0.1
+		production_speed_industrial_complex_factor = 0.05
+		ai_will_do = { factor = 1 }
+	}
+	tu_lt_painter = {
+		random = no
+		research_speed_factor = 0.05
+		stability_factor = 0.03
+		ai_will_do = { factor = 1 }
+	}
+	tu_lt_dreamer = {
+		random = no
+		war_support_factor = 0.05
+		stability_factor = 0.05
+		ai_will_do = { factor = 1 }
+	}
+	tu_lt_sibling_council = {
+		random = no
+		stability_factor = 0.05
+		political_power_factor = 0.05
+		ai_will_do = { factor = 1 }
+	}
+	tu_lt_sui_awakened = {
+		random = no
+		research_speed_factor = 0.05
+		army_attack_factor = 0.05
+		stability_factor = 0.05
+		ai_will_do = { factor = 1 }
+	}
+}

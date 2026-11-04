@@ -7,7 +7,7 @@ characters = {
 				large = "GFX_TU_portrait_wei_yenwu"
 			}
 		}
-		country_leader = {
+		country_leader = { traits = { tu_lt_lungmen_magistrate }
 			ideology = centrism
 			expire = "1200.1.1.1"
 			id = -1
@@ -40,7 +40,7 @@ characters = {
 				large = "GFX_TU_portrait_chen"
 			}
 		}
-		country_leader = {
+		country_leader = { traits = { tu_lt_dragon_blade }
 			ideology = despotism
 			expire = "1200.1.1.1"
 			id = -1

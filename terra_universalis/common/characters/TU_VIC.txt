@@ -7,7 +7,7 @@ characters = {
 				large = "GFX_Portrait_Europe_Generic_1"
 			}
 		}
-		country_leader = {
+		country_leader = { traits = { tu_lt_dukes_council }
 			ideology = oligarchism
 			expire = "1200.1.1.1"
 			id = -1
@@ -40,7 +40,7 @@ characters = {
 				large = "GFX_TU_portrait_siege"
 			}
 		}
-		country_leader = {
+		country_leader = { traits = { tu_lt_lion_heir }
 			ideology = despotism
 			expire = "1200.1.1.1"
 			id = -1
@@ -54,7 +54,7 @@ characters = {
 				large = "GFX_Portrait_Europe_Generic_3"
 			}
 		}
-		country_leader = {
+		country_leader = { traits = { tu_lt_dragon_flame }
 			ideology = centrism
 			expire = "1200.1.1.1"
 			id = -1

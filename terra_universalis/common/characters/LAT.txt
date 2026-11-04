@@ -3,7 +3,7 @@ characters = {
 
 	TU_LAT_pope = {
 		name = TU_LAT_pope
-		country_leader = {
+		country_leader = { traits = { tu_lt_holy_see }
 			ideology = despotism
 			expire = "1200.1.1.1"
 			id = -1
@@ -12,7 +12,7 @@ characters = {
 
 	TU_LAT_notary = {
 		name = TU_LAT_notary
-		country_leader = {
+		country_leader = { traits = { tu_lt_notary_law }
 			ideology = centrism
 			expire = "1200.1.1.1"
 			id = -1

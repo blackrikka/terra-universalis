@@ -3,7 +3,7 @@ characters = {
 
 	TU_KJE_elders = {
 		name = TU_KJE_elders
-		country_leader = {
+		country_leader = { traits = { tu_lt_snow_elders }
 			ideology = oligarchism
 			expire = "1200.1.1.1"
 			id = -1
@@ -12,7 +12,7 @@ characters = {
 
 	TU_KJE_silverash = {
 		name = TU_KJE_silverash
-		country_leader = {
+		country_leader = { traits = { tu_lt_karlan_magnate tu_lt_reformer }
 			ideology = centrism
 			expire = "1200.1.1.1"
 			id = -1
@@ -33,7 +33,7 @@ characters = {
 
 	TU_KJE_pramanix = {
 		name = TU_KJE_pramanix
-		country_leader = {
+		country_leader = { traits = { tu_lt_saintess }
 			ideology = despotism
 			expire = "1200.1.1.1"
 			id = -1
@@ -42,7 +42,7 @@ characters = {
 
 	TU_KJE_houses = {
 		name = TU_KJE_houses
-		country_leader = {
+		country_leader = { traits = { tu_lt_three_houses }
 			ideology = oligarchism
 			expire = "1200.1.1.1"
 			id = -1

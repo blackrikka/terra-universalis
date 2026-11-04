@@ -3,7 +3,7 @@ characters = {
 
 	TU_URS_junta = {
 		name = TU_URS_junta
-		country_leader = {
+		country_leader = { traits = { tu_lt_junta }
 			ideology = despotism
 			expire = "1200.1.1.1"
 			id = -1
@@ -12,7 +12,7 @@ characters = {
 
 	TU_URS_regent = {
 		name = TU_URS_regent
-		country_leader = {
+		country_leader = { traits = { tu_lt_court_regent }
 			ideology = oligarchism
 			expire = "1200.1.1.1"
 			id = -1
@@ -21,7 +21,7 @@ characters = {
 
 	TU_URS_democrat = {
 		name = TU_URS_democrat
-		country_leader = {
+		country_leader = { traits = { tu_lt_reformer }
 			ideology = liberalism
 			expire = "1200.1.1.1"
 			id = -1

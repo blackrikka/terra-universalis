@@ -22,6 +22,8 @@ from pathlib import Path
 HERE = Path(__file__).resolve().parent
 sys.path.insert(0, str(HERE))
 from data import COUNTRIES, TRAITS  # noqa: E402
+from leader_traits import LEADER_TRAITS, ASSIGN  # noqa: E402
+import re  # noqa: E402
 
 REPO = HERE.parents[1]
 MOD = REPO / "terra_universalis"
@@ -39,7 +41,8 @@ def char_text(tag, sid, ko, en, roles, portrait):
         L.append('\t\tportraits = {\n\t\t\tcivilian = { large = "%s" }\n\t\t\tarmy = { large = "%s" }\n\t\t}' % (portrait, portrait))
     for r in roles:
         if r[0] == "L":
-            L.append('\t\tcountry_leader = {\n\t\t\tideology = %s\n\t\t\texpire = "1200.1.1.1"\n\t\t\tid = -1\n\t\t}' % r[1])
+            tr = "\n\t\t\ttraits = { %s }" % " ".join(ASSIGN[c]) if c in ASSIGN else ""
+            L.append('\t\tcountry_leader = {\n\t\t\tideology = %s%s\n\t\t\texpire = "1200.1.1.1"\n\t\t\tid = -1\n\t\t}' % (r[1], tr))
         elif r[0] == "A":
             ledger = "\n\t\t\tledger = army" if r[1] in ("high_command", "theorist") else ""
             L.append("\t\tadvisor = {\n\t\t\tslot = %s\n\t\t\tidea_token = %s_adv%s\n\t\t\tallowed = {\n\t\t\t\toriginal_tag = %s\n\t\t\t}\n"
@@ -53,6 +56,34 @@ def char_text(tag, sid, ko, en, roles, portrait):
                      % (role, max(1, round((atk + dfn + pln + lg) / 4)), atk, dfn, pln, lg))
     L.append("\t}")
     return "\n".join(L)
+
+
+def patch_existing_leaders():
+    """모든 캐릭터 파일에서 ASSIGN 에 있는 캐릭터의 country_leader 블록에 traits 를 넣는다 (있으면 바꾼다).
+    반환: 찾은 캐릭터 id 집합."""
+    found = set()
+    for f in (MOD / "common" / "characters").glob("*.txt"):
+        s = f.read_text(encoding="utf-8-sig")
+        orig = s
+        for cid_, traits in ASSIGN.items():
+            m = re.search(r"\n\t%s = \{" % re.escape(cid_), s)
+            if not m:
+                continue
+            found.add(cid_)
+            i = s.find("country_leader", m.end())
+            j = s.index("{", i)
+            d, k = 0, j
+            while True:
+                d += {"{": 1, "}": -1}.get(s[k], 0)
+                if d == 0:
+                    break
+                k += 1
+            inner = re.sub(r"\s*traits\s*=\s*\{[^}]*\}", "", s[j + 1:k])
+            inner = " traits = { %s }" % " ".join(traits) + inner
+            s = s[:j + 1] + inner + s[k:]
+        if s != orig:
+            f.write_text(s, encoding="utf-8")
+    return found
 
 
 def main():
@@ -102,13 +133,27 @@ def main():
     cl.mkdir(exist_ok=True)
     (cl / "tu_advisor_traits.txt").write_text("\n".join(tl) + "\n", encoding="utf-8")
 
+    # 국가 지도자 특성 (사양서 25)
+    lt = ["# Terra country leader traits (tools/chargen/leader_traits.py, spec 25)", "leader_traits = {"]
+    for tid, (tko, ten, mods) in LEADER_TRAITS.items():
+        lt.append("\t%s = {\n\t\trandom = no\n%s\n\t\tai_will_do = { factor = 1 }\n\t}"
+                  % (tid, "\n".join("\t\t%s = %s" % kv for kv in mods.items())))
+        ko.append((tid, tko))
+        en.append((tid, ten))
+    lt.append("}")
+    (cl / "tu_leader_traits.txt").write_text("\n".join(lt) + "\n", encoding="utf-8")
+    patched = patch_existing_leaders()
+
     for lang, items in (("korean", ko), ("english", en)):
         body = "l_%s:\n" % lang + "".join(' %s:0 "%s"\n' % (k, v.replace('"', '\\"')) for k, v in items)
         (MOD / "localisation" / lang / ("tu_cast_l_%s.yml" % lang)).write_bytes(("\ufeff" + body).encode("utf-8"))
     for p in list((MOD / "common" / "characters").glob("*.txt")) + [cl / "tu_advisor_traits.txt"]:
         s = p.read_text(encoding="utf-8-sig")
         assert s.count("{") == s.count("}"), p
-    print("CAST countries=%d characters=%d traits=%d" % (len(COUNTRIES), nchar, len(TRAITS)))
+    missing = [c for c in ASSIGN if c not in patched]
+    assert not missing, "leader traits: character not found %s" % missing
+    print("CAST countries=%d characters=%d advisor traits=%d leader traits=%d (assigned %d)"
+          % (len(COUNTRIES), nchar, len(TRAITS), len(LEADER_TRAITS), len(ASSIGN)))
     return 0
 
 

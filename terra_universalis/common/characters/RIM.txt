@@ -3,7 +3,7 @@ characters = {
 
 	TU_RIM_governor = {
 		name = TU_RIM_governor
-		country_leader = {
+		country_leader = { traits = { tu_lt_company_man }
 			ideology = oligarchism
 			expire = "1200.1.1.1"
 			id = -1
@@ -12,7 +12,7 @@ characters = {
 
 	TU_RIM_ceo = {
 		name = TU_RIM_ceo
-		country_leader = {
+		country_leader = { traits = { tu_lt_company_man tu_lt_merchant_prince }
 			ideology = oligarchism
 			expire = "1200.1.1.1"
 			id = -1
@@ -21,7 +21,7 @@ characters = {
 
 	TU_RIM_union_leader = {
 		name = TU_RIM_union_leader
-		country_leader = {
+		country_leader = { traits = { tu_lt_miners_union }
 			ideology = moderatism
 			expire = "1200.1.1.1"
 			id = -1
@@ -30,7 +30,7 @@ characters = {
 
 	TU_RIM_haven_rep = {
 		name = TU_RIM_haven_rep
-		country_leader = {
+		country_leader = { traits = { tu_lt_infected_champion }
 			ideology = moderatism
 			expire = "1200.1.1.1"
 			id = -1

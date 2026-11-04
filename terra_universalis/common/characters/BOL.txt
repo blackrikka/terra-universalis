@@ -3,7 +3,7 @@ characters = {
 
 	TU_BOL_provisional = {
 		name = TU_BOL_provisional
-		country_leader = {
+		country_leader = { traits = { tu_lt_provisional }
 			ideology = centrism
 			expire = "1200.1.1.1"
 			id = -1
@@ -12,7 +12,7 @@ characters = {
 
 	TU_BOL_president = {
 		name = TU_BOL_president
-		country_leader = {
+		country_leader = { traits = { tu_lt_assembly_voice }
 			ideology = moderatism
 			expire = "1200.1.1.1"
 			id = -1
@@ -21,7 +21,7 @@ characters = {
 
 	TU_BOL_col_governor = {
 		name = TU_BOL_col_governor
-		country_leader = {
+		country_leader = { traits = { tu_lt_colonial_governor }
 			ideology = oligarchism
 			expire = "1200.1.1.1"
 			id = -1
@@ -30,7 +30,7 @@ characters = {
 
 	TU_BOL_vic_governor = {
 		name = TU_BOL_vic_governor
-		country_leader = {
+		country_leader = { traits = { tu_lt_colonial_governor }
 			ideology = despotism
 			expire = "1200.1.1.1"
 			id = -1

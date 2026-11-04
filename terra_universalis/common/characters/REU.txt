@@ -7,7 +7,7 @@ characters = {
 				large = "GFX_TU_portrait_talulah"
 			}
 		}
-		country_leader = {
+		country_leader = { traits = { tu_lt_dragon_flame tu_lt_infected_champion }
 			ideology = despotism
 			expire = "1200.1.1.1"
 			id = -1
@@ -79,7 +79,7 @@ characters = {
 				large = "GFX_TU_portrait_patriot"
 			}
 		}
-		country_leader = {
+		country_leader = { traits = { tu_lt_old_soldier tu_lt_infected_champion }
 			ideology = despotism
 			expire = "1200.1.1.1"
 			id = -1

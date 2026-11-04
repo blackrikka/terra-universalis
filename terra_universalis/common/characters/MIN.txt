@@ -3,7 +3,7 @@ characters = {
 
 	TU_MIN_archon = {
 		name = TU_MIN_archon
-		country_leader = {
+		country_leader = { traits = { tu_lt_assembly_voice }
 			ideology = centrism
 			expire = "1200.1.1.1"
 			id = -1
@@ -12,7 +12,7 @@ characters = {
 
 	TU_MIN_elder = {
 		name = TU_MIN_elder
-		country_leader = {
+		country_leader = { traits = { tu_lt_elders_wisdom }
 			ideology = oligarchism
 			expire = "1200.1.1.1"
 			id = -1
@@ -21,7 +21,7 @@ characters = {
 
 	TU_MIN_strategos = {
 		name = TU_MIN_strategos
-		country_leader = {
+		country_leader = { traits = { tu_lt_thalassocrat }
 			ideology = despotism
 			expire = "1200.1.1.1"
 			id = -1

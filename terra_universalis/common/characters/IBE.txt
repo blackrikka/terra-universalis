@@ -3,7 +3,7 @@ characters = {
 
 	TU_IBE_grand_inquisitor = {
 		name = TU_IBE_grand_inquisitor
-		country_leader = {
+		country_leader = { traits = { tu_lt_grand_inquisitor }
 			ideology = despotism
 			expire = "1200.1.1.1"
 			id = -1
@@ -12,7 +12,7 @@ characters = {
 
 	TU_IBE_king = {
 		name = TU_IBE_king
-		country_leader = {
+		country_leader = { traits = { tu_lt_restored_crown }
 			ideology = despotism
 			expire = "1200.1.1.1"
 			id = -1
@@ -21,7 +21,7 @@ characters = {
 
 	TU_IBE_irene = {
 		name = TU_IBE_irene
-		country_leader = {
+		country_leader = { traits = { tu_lt_sea_listener tu_lt_judge }
 			ideology = moderatism
 			expire = "1200.1.1.1"
 			id = -1
@@ -120,7 +120,7 @@ characters = {
 
 	TU_IBE_ishar_mla = {
 		name = TU_IBE_ishar_mla
-		country_leader = {
+		country_leader = { traits = { tu_lt_corrupting_heart }
 			ideology = despotism
 			expire = "1200.1.1.1"
 			id = -1
