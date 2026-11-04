@@ -502,6 +502,8 @@ focus_tree = {
 			set_country_flag = TU_COL_path_republic
 			add_ideas = TU_COL_republic_guard
 			country_event = { id = tu_col_ev.28 }
+			# spec 23 hooks
+			set_cosmetic_tag = TU_COL_FED
 		}
 	}
 
@@ -587,6 +589,13 @@ focus_tree = {
 			set_country_flag = TU_COL_path_corporate
 			add_ideas = TU_COL_corporate_republic
 			country_event = { id = tu_col_ev.29 }
+			# spec 23 hooks
+			recruit_character = TU_COL_kristen
+			promote_character = {
+				character = TU_COL_kristen
+				ideology = oligarchism
+			}
+			set_cosmetic_tag = TU_COL_CORP
 		}
 	}
 
@@ -669,6 +678,13 @@ focus_tree = {
 			set_country_flag = TU_COL_path_frontier
 			add_ideas = TU_COL_frontier_federation
 			country_event = { id = tu_col_ev.30 }
+			# spec 23 hooks
+			recruit_character = TU_COL_frontier_rep
+			promote_character = {
+				character = TU_COL_frontier_rep
+				ideology = moderatism
+			}
+			set_cosmetic_tag = TU_COL_FRONTIER
 		}
 	}
 

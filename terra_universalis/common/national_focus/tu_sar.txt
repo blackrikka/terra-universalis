@@ -228,6 +228,8 @@ focus_tree = {
 			set_country_flag = TU_SAR_path_padishah
 			add_ideas = TU_SAR_padishah_empire
 			country_event = { id = tu_sar_ev.28 }
+			# spec 23 hooks
+			set_cosmetic_tag = TU_SAR_EMPIRE
 		}
 	}
 
@@ -438,6 +440,13 @@ focus_tree = {
 			add_ideas = TU_SAR_lords_confederation
 			remove_ideas = TU_SAR_feuding_lords
 			country_event = { id = tu_sar_ev.29 }
+			# spec 23 hooks
+			recruit_character = TU_SAR_lords
+			promote_character = {
+				character = TU_SAR_lords
+				ideology = oligarchism
+			}
+			set_cosmetic_tag = TU_SAR_LORDS
 		}
 	}
 
@@ -673,6 +682,13 @@ focus_tree = {
 			set_country_flag = TU_SAR_path_gold
 			add_ideas = TU_SAR_golden_council
 			country_event = { id = tu_sar_ev.30 }
+			# spec 23 hooks
+			recruit_character = TU_SAR_guildmaster
+			promote_character = {
+				character = TU_SAR_guildmaster
+				ideology = oligarchism
+			}
+			set_cosmetic_tag = TU_SAR_GOLDEN
 		}
 	}
 

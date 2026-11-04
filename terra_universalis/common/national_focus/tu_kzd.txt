@@ -52,6 +52,8 @@ focus_tree = {
 			country_event = { id = tu_kzd_ev.1 }
 			add_political_power = 60
 			add_stability = 0.03
+			# spec 23 hooks
+			set_cosmetic_tag = TU_KZD_NEWEMPIRE
 		}
 	}
 
@@ -581,6 +583,12 @@ focus_tree = {
 			country_event = { id = tu_kzd_ev.4 }
 			add_political_power = 100
 			add_stability = 0.05
+			# spec 23 hooks
+			recruit_character = TU_KZD_theresis
+			promote_character = {
+				character = TU_KZD_theresis
+				ideology = despotism
+			}
 		}
 	}
 
@@ -929,6 +937,8 @@ focus_tree = {
 			every_country = { news_event = { id = tu_kzd_ev.11 hours = 6 } }
 			add_political_power = 100
 			add_stability = 0.05
+			# spec 23 hooks
+			set_cosmetic_tag = TU_KZD_EMPIRE
 		}
 	}
 
@@ -1398,6 +1408,13 @@ focus_tree = {
 		completion_reward = {
 			add_political_power = 100
 			add_stability = 0.05
+			# spec 23 hooks
+			recruit_character = TU_KZD_six_kings_lead
+			promote_character = {
+				character = TU_KZD_six_kings_lead
+				ideology = oligarchism
+			}
+			set_cosmetic_tag = TU_KZD_SIX
 		}
 	}
 
@@ -2083,6 +2100,13 @@ focus_tree = {
 			set_country_flag = TU_KZD_merc_kingdom
 			add_manpower = 5000
 			army_experience = 15
+			# spec 23 hooks
+			recruit_character = TU_KZD_w_leader
+			promote_character = {
+				character = TU_KZD_w_leader
+				ideology = despotism
+			}
+			set_cosmetic_tag = TU_KZD_MERC
 		}
 	}
 

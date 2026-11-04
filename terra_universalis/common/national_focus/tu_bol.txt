@@ -374,6 +374,13 @@ focus_tree = {
 			set_country_flag = TU_BOL_path_republic
 			add_ideas = TU_BOL_bolivar_republic
 			country_event = { id = tu_bol_ev.28 }
+			# spec 23 hooks
+			recruit_character = TU_BOL_president
+			promote_character = {
+				character = TU_BOL_president
+				ideology = moderatism
+			}
+			set_cosmetic_tag = TU_BOL_REPUBLIC
 		}
 	}
 
@@ -504,6 +511,13 @@ focus_tree = {
 			add_ideas = TU_BOL_columbian_protectorate
 			TU_BOL_control_30 = yes
 			country_event = { id = tu_bol_ev.29 }
+			# spec 23 hooks
+			recruit_character = TU_BOL_col_governor
+			promote_character = {
+				character = TU_BOL_col_governor
+				ideology = oligarchism
+			}
+			set_cosmetic_tag = TU_BOL_COLPROT
 		}
 	}
 
@@ -531,6 +545,13 @@ focus_tree = {
 			add_ideas = TU_BOL_victorian_protectorate
 			TU_BOL_control_30 = yes
 			country_event = { id = tu_bol_ev.30 }
+			# spec 23 hooks
+			recruit_character = TU_BOL_vic_governor
+			promote_character = {
+				character = TU_BOL_vic_governor
+				ideology = despotism
+			}
+			set_cosmetic_tag = TU_BOL_VICPROT
 		}
 	}
 

@@ -182,6 +182,13 @@ focus_tree = {
 			set_country_flag = TU_HIG_path_shogun
 			add_ideas = TU_HIG_shogunate
 			country_event = { id = tu_hig_ev.28 }
+			# spec 23 hooks
+			recruit_character = TU_HIG_shogun
+			promote_character = {
+				character = TU_HIG_shogun
+				ideology = despotism
+			}
+			set_cosmetic_tag = TU_HIG_SHOGUNATE
 		}
 	}
 
@@ -393,6 +400,13 @@ focus_tree = {
 			set_country_flag = TU_HIG_path_open
 			add_ideas = TU_HIG_open_far_east
 			country_event = { id = tu_hig_ev.29 }
+			# spec 23 hooks
+			recruit_character = TU_HIG_premier
+			promote_character = {
+				character = TU_HIG_premier
+				ideology = centrism
+			}
+			set_cosmetic_tag = TU_HIG_OPEN
 		}
 	}
 
@@ -578,6 +592,13 @@ focus_tree = {
 			set_country_flag = TU_HIG_path_emperor
 			add_ideas = TU_HIG_imperial_restoration
 			country_event = { id = tu_hig_ev.30 }
+			# spec 23 hooks
+			recruit_character = TU_HIG_emperor
+			promote_character = {
+				character = TU_HIG_emperor
+				ideology = despotism
+			}
+			set_cosmetic_tag = TU_HIG_EMPIRE
 		}
 	}
 

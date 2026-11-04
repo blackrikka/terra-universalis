@@ -498,7 +498,7 @@ def main(argv=None):
 
     # common/characters: 국가 지도자 (GFX는 바닐라 interface에 정의된 것). custom_characters 국가는 건너뜀 (연결 규약 4)
     for c in countries:
-        if c.get("custom_characters"):
+        if c.get("custom_characters") or c.get("cast"):    # cast: tools/chargen 가 캐릭터를 만든다 (사양서 23)
             continue
         t = c["tag"]
         leader = [
@@ -528,7 +528,7 @@ def main(argv=None):
             "set_popularities = { %s }" % " ".join("%s = %d" % kv for kv in pops.items()),
             "add_ideas = TU_sea_terror",     # 해군 없음 (사양서 18): 조선소·해군 기지 건설 불가
         ]
-        if not c.get("custom_characters"):
+        if not (c.get("custom_characters") or c.get("cast")):
             lines.append("recruit_character = %s_leader" % tag)
         text = "\n".join(lines) + "\n"
         snippet_path = MAPGEN_DIR / "country_history" / ("%s.txt" % tag)
@@ -536,6 +536,10 @@ def main(argv=None):
             snippet = snippet_path.read_bytes().decode("utf-8-sig")
             text += snippet if snippet.endswith("\n") else snippet + "\n"
             print("country_history snippet appended: %s" % tag)
+        cast_path = MAPGEN_DIR / "char_history" / ("%s.txt" % tag)     # tools/chargen (캐릭터 영입)
+        if cast_path.is_file():
+            cast = cast_path.read_bytes().decode("utf-8-sig")
+            text += cast if cast.endswith("\n") else cast + "\n"
         tier_path = MAPGEN_DIR / "tier_history" / ("%s.txt" % tag)     # tiers.py (체급: 기술·연구 슬롯·oob)
         if tier_path.is_file():
             tier = tier_path.read_bytes().decode("utf-8-sig")
@@ -591,7 +595,7 @@ def main(argv=None):
                (t + "_neutrality_ADJ", c["adj_en"])]
         ko.append(("OVERVIEW_%s" % t, "%s 개요" % c["name_ko"]))
         en.append(("OVERVIEW_%s" % t, "%s Overview" % c["name_en"]))
-        if not c.get("custom_characters"):
+        if not (c.get("custom_characters") or c.get("cast")):
             ko.append(("%s_leader" % t, "%s 지도자" % c["name_ko"]))
             en.append(("%s_leader" % t, "%s Leader" % c["name_en"]))
     ko += [("TU_BOOKMARK_1097_NAME", "테라력 1097년"),

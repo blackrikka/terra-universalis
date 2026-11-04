@@ -96,9 +96,94 @@ def thresholds(mx):
     return [mx * (k + 1) / n for k in range(n)]
 
 
+# 염국 내전(용의 시대) 현황판: 12형제 세력마다 이름 · 지도자 · 상태
+SIBLINGS = ["YCH", "YLI", "YWA", "YDU", "YSH", "YNI", "YJN", "YJE", "YJI", "YYI", "YFA", "YYU"]
+STATES = [  # (이름, 색, 한국어, 영어, 조건) 위에서부터 먼저 맞는 것
+    ("gone", "empty", "없음", "None", "NOT = { country_exists = %s }"),
+    ("freed", "green", "해방", "Freed", "%s = { has_country_flag = TU_YAN_fac_freed }"),
+    ("subject", "blue", "복속", "Subject", "%s = { is_subject_of = YAN }"),
+    ("war", "red", "교전 중", "At War", "%s = { has_war_with = YAN }"),
+    ("free", "gold", "독립", "Independent", "always = yes"),
+]
+
+
+def dragon_war(gui, sg, ko, en):
+    win = "TU_DRAGONWAR_panel_window"
+    elems, trig = [], []
+    for i, tag in enumerate(SIBLINGS):
+        y = TOP + i * 24
+        elems.append("""		instantTextBoxType = {
+			name = "tu_dw_name_%d"
+			position = { x = 14 y = %d }
+			font = "hoi_16mbs"
+			text = "TU_DW_NAME_%s"
+			maxWidth = 200
+			maxHeight = 20
+			format = left
+		}
+		instantTextBoxType = {
+			name = "tu_dw_leader_%d"
+			position = { x = 220 y = %d }
+			font = "hoi_16mbs"
+			text = "TU_DW_LEADER_%s"
+			maxWidth = 200
+			maxHeight = 20
+			format = left
+		}""" % (i, y, tag, i, y, tag))
+        ko += [("TU_DW_NAME_%s" % tag, "[%s.GetNameDef]" % tag), ("TU_DW_LEADER_%s" % tag, "[%s.GetLeader]" % tag)]
+        en += [("TU_DW_NAME_%s" % tag, "[%s.GetNameDef]" % tag), ("TU_DW_LEADER_%s" % tag, "[%s.GetLeader]" % tag)]
+        prev = []
+        for st, col, sko, sen, cond in STATES:
+            elems.append("""		iconType = {
+			name = "tu_dw_%s_icon_%d"
+			spriteType = "GFX_tu_seg_%s"
+			position = { x = 430 y = %d }
+		}
+		instantTextBoxType = {
+			name = "tu_dw_%s_text_%d"
+			position = { x = 462 y = %d }
+			font = "hoi_16mbs"
+			text = "TU_DW_STATE_%s"
+			maxWidth = 110
+			maxHeight = 20
+			format = left
+		}""" % (st, i, col, y + 3, st, i, y, st.upper()))
+            c = cond % tag if "%s" in cond else cond
+            body = " ".join(["NOT = { %s }" % x for x in prev] + [c])
+            trig.append("\t\t\ttu_dw_%s_icon_%d_visible = { %s }" % (st, i, body))
+            trig.append("\t\t\ttu_dw_%s_text_%d_visible = { %s }" % (st, i, body))
+            prev.append(c)
+    for st, col, sko, sen, cond in STATES:
+        ko.append(("TU_DW_STATE_%s" % st.upper(), sko))
+        en.append(("TU_DW_STATE_%s" % st.upper(), sen))
+    height = TOP + len(SIBLINGS) * 24 + 10
+    gui.append("""	containerWindowType = {
+		name = "%s"
+		position = { x = 0 y = 0 }
+		size = { width = %d height = %d }
+		background = {
+			name = "Background"
+			quadTextureSprite = "GFX_tiled_window_2b_border"
+		}
+
+%s
+	}""" % (win, WIDTH, height, "\n".join(elems)))
+    sg.append("""	TU_DRAGONWAR_panel = {
+		context_type = decision_category
+		window_name = "%s"
+		visible = {
+			YAN = { has_country_flag = TU_YAN_age_of_dragons }
+		}
+		triggers = {
+%s
+		}
+	}""" % (win, "\n".join(trig)))
+
+
 def main():
     draw_textures()
     sg, gui, ko, en = [], [], [], []
+    dragon_war(gui, sg, ko, en)
     for pid, rows in PANELS.items():
         win = "TU_%s_panel_window" % pid
         elems, trig = [], []

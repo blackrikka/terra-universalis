@@ -407,6 +407,10 @@ def main(argv=None):
         fh.write(text)
     print(f"wrote {show(out_path)}")
     sys.path.insert(0, str(HERE))
+    import focus_hooks      # 사양서 23: 결말 지도자 교체 · 국호 변경
+    hooked, missing = focus_hooks.apply(out_path, tag)
+    if hooked or missing:
+        print(f"focus hooks: {hooked}" + (f", missing focus {missing}" if missing else ""))
     import autolayout
     try:
         changed, stats = autolayout.layout_path(out_path, write=True)

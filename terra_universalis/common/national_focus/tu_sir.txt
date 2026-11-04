@@ -336,6 +336,13 @@ focus_tree = {
 			set_country_flag = TU_SIR_path_family
 			swap_ideas = { remove_idea = TU_SIR_family_cities add_idea = TU_SIR_family_council }
 			country_event = { id = tu_sir_ev.28 }
+			# spec 23 hooks
+			recruit_character = TU_SIR_family_head
+			promote_character = {
+				character = TU_SIR_family_head
+				ideology = oligarchism
+			}
+			set_cosmetic_tag = TU_SIR_FAMILIES
 		}
 	}
 
@@ -572,6 +579,13 @@ focus_tree = {
 			set_country_flag = TU_SIR_path_law
 			swap_ideas = { remove_idea = TU_SIR_family_cities add_idea = TU_SIR_rule_of_law }
 			country_event = { id = tu_sir_ev.29 }
+			# spec 23 hooks
+			recruit_character = TU_SIR_penance
+			promote_character = {
+				character = TU_SIR_penance
+				ideology = moderatism
+			}
+			set_cosmetic_tag = TU_SIR_LAW
 		}
 	}
 
@@ -756,6 +770,13 @@ focus_tree = {
 			add_ideas = TU_SIR_wolf_lord
 			remove_ideas = TU_SIR_family_cities
 			country_event = { id = tu_sir_ev.30 }
+			# spec 23 hooks
+			recruit_character = TU_SIR_wolf_heir
+			promote_character = {
+				character = TU_SIR_wolf_heir
+				ideology = despotism
+			}
+			set_cosmetic_tag = TU_SIR_WOLF
 		}
 	}
 

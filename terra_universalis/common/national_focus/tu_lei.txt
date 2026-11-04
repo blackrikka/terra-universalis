@@ -228,6 +228,8 @@ focus_tree = {
 			set_country_flag = TU_LEI_path_empress
 			swap_ideas = { remove_idea = TU_LEI_twin_throne add_idea = TU_LEI_twin_empresses }
 			country_event = { id = tu_lei_ev.28 }
+			# spec 23 hooks
+			set_cosmetic_tag = TU_LEI_EMPIRE
 		}
 	}
 
@@ -315,6 +317,13 @@ focus_tree = {
 			set_country_flag = TU_LEI_path_federation
 			swap_ideas = { remove_idea = TU_LEI_twin_throne add_idea = TU_LEI_electoral_federation }
 			country_event = { id = tu_lei_ev.29 }
+			# spec 23 hooks
+			recruit_character = TU_LEI_elector
+			promote_character = {
+				character = TU_LEI_elector
+				ideology = oligarchism
+			}
+			set_cosmetic_tag = TU_LEI_ELECTORAL
 		}
 	}
 
@@ -699,6 +708,13 @@ focus_tree = {
 			add_ideas = TU_LEI_witch_king_return
 			remove_ideas = TU_LEI_twin_throne
 			country_event = { id = tu_lei_ev.30 }
+			# spec 23 hooks
+			recruit_character = TU_LEI_witch_king
+			promote_character = {
+				character = TU_LEI_witch_king
+				ideology = despotism
+			}
+			set_cosmetic_tag = TU_LEI_WITCH
 		}
 	}
 

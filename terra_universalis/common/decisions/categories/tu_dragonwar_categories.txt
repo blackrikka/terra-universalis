@@ -1,0 +1,29 @@
+# Age of Dragons overview (spec 23): board of the twelve Sui factions for Yan and every sibling faction.
+TU_DRAGONWAR_category = {
+	icon = GFX_decision_category_generic_political_actions
+	scripted_gui = TU_DRAGONWAR_panel
+
+	allowed = {
+		OR = {
+			original_tag = YAN
+			original_tag = YCH
+			original_tag = YLI
+			original_tag = YWA
+			original_tag = YDU
+			original_tag = YSH
+			original_tag = YNI
+			original_tag = YJN
+			original_tag = YJE
+			original_tag = YJI
+			original_tag = YYI
+			original_tag = YFA
+			original_tag = YYU
+		}
+	}
+
+	visible = {
+		YAN = { has_country_flag = TU_YAN_age_of_dragons }
+	}
+
+	priority = 110
+}

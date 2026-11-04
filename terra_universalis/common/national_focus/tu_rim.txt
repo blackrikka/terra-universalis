@@ -284,6 +284,13 @@ focus_tree = {
 			set_country_flag = TU_RIM_path_company
 			swap_ideas = { remove_idea = TU_RIM_company_town add_idea = TU_RIM_corporate_rule }
 			country_event = { id = tu_rim_ev.28 }
+			# spec 23 hooks
+			recruit_character = TU_RIM_ceo
+			promote_character = {
+				character = TU_RIM_ceo
+				ideology = oligarchism
+			}
+			set_cosmetic_tag = TU_RIM_COMPANY
 		}
 	}
 
@@ -431,6 +438,13 @@ focus_tree = {
 			set_country_flag = TU_RIM_path_workers
 			swap_ideas = { remove_idea = TU_RIM_company_town add_idea = TU_RIM_workers_rule }
 			country_event = { id = tu_rim_ev.29 }
+			# spec 23 hooks
+			recruit_character = TU_RIM_union_leader
+			promote_character = {
+				character = TU_RIM_union_leader
+				ideology = moderatism
+			}
+			set_cosmetic_tag = TU_RIM_WORKERS
 		}
 	}
 
@@ -683,6 +697,13 @@ focus_tree = {
 			set_country_flag = TU_RIM_path_haven
 			swap_ideas = { remove_idea = TU_RIM_company_town add_idea = TU_RIM_infected_haven }
 			country_event = { id = tu_rim_ev.30 }
+			# spec 23 hooks
+			recruit_character = TU_RIM_haven_rep
+			promote_character = {
+				character = TU_RIM_haven_rep
+				ideology = moderatism
+			}
+			set_cosmetic_tag = TU_RIM_HAVEN
 		}
 	}
 

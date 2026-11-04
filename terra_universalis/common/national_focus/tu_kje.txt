@@ -326,6 +326,13 @@ focus_tree = {
 			add_ideas = TU_KJE_modern_kjerag
 			remove_ideas = TU_KJE_three_houses
 			country_event = { id = tu_kje_ev.28 }
+			# spec 23 hooks
+			recruit_character = TU_KJE_silverash
+			promote_character = {
+				character = TU_KJE_silverash
+				ideology = centrism
+			}
+			set_cosmetic_tag = TU_KJE_MODERN
 		}
 	}
 
@@ -516,6 +523,13 @@ focus_tree = {
 			add_ideas = TU_KJE_saintess_theocracy
 			remove_ideas = TU_KJE_three_houses
 			country_event = { id = tu_kje_ev.29 }
+			# spec 23 hooks
+			recruit_character = TU_KJE_pramanix
+			promote_character = {
+				character = TU_KJE_pramanix
+				ideology = despotism
+			}
+			set_cosmetic_tag = TU_KJE_SAINTESS
 		}
 	}
 
@@ -686,6 +700,13 @@ focus_tree = {
 			set_country_flag = TU_KJE_path_united
 			swap_ideas = { remove_idea = TU_KJE_three_houses add_idea = TU_KJE_houses_united }
 			country_event = { id = tu_kje_ev.30 }
+			# spec 23 hooks
+			recruit_character = TU_KJE_houses
+			promote_character = {
+				character = TU_KJE_houses
+				ideology = oligarchism
+			}
+			set_cosmetic_tag = TU_KJE_HOUSES
 		}
 	}
 

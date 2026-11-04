@@ -1,0 +1,41 @@
+TU_DRAGONWAR_category = {
+
+	TU_DRAGONWAR_report = {
+		icon = GFX_decision_generic_political_discourse
+
+		allowed = {
+			OR = {
+			original_tag = YAN
+			original_tag = YCH
+			original_tag = YLI
+			original_tag = YWA
+			original_tag = YDU
+			original_tag = YSH
+			original_tag = YNI
+			original_tag = YJN
+			original_tag = YJE
+			original_tag = YJI
+			original_tag = YYI
+			original_tag = YFA
+			original_tag = YYU
+			}
+		}
+
+		visible = {
+			YAN = { has_country_flag = TU_YAN_age_of_dragons }
+		}
+
+		cost = 10
+		fire_only_once = no
+		days_re_enable = 60
+
+		complete_effect = {
+			add_political_power = 15
+			army_experience = 5
+		}
+
+		ai_will_do = {
+			base = 1
+		}
+	}
+}

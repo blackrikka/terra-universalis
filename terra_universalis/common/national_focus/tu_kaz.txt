@@ -482,6 +482,8 @@ focus_tree = {
 			add_ideas = TU_KAZ_shareholder_state
 			add_political_power = 100
 			country_event = { id = tu_kaz_ev.28 }
+			# spec 23 hooks
+			set_cosmetic_tag = TU_KAZ_UNION
 		}
 	}
 
@@ -776,6 +778,13 @@ focus_tree = {
 			add_ideas = TU_KAZ_knight_kingdom
 			add_political_power = 100
 			country_event = { id = tu_kaz_ev.29 }
+			# spec 23 hooks
+			recruit_character = TU_KAZ_mlynar
+			promote_character = {
+				character = TU_KAZ_mlynar
+				ideology = despotism
+			}
+			set_cosmetic_tag = TU_KAZ_KNIGHTS
 		}
 	}
 
@@ -1049,6 +1058,13 @@ focus_tree = {
 			set_country_flag = TU_KAZ_path_infected
 			add_ideas = TU_KAZ_knights_for_all
 			country_event = { id = tu_kaz_ev.30 }
+			# spec 23 hooks
+			recruit_character = TU_KAZ_margaret
+			promote_character = {
+				character = TU_KAZ_margaret
+				ideology = moderatism
+			}
+			set_cosmetic_tag = TU_KAZ_FREE
 		}
 	}
 

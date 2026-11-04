@@ -200,6 +200,13 @@ focus_tree = {
 			set_country_flag = TU_SAM_path_forest
 			swap_ideas = { remove_idea = TU_SAM_scattered_tribes add_idea = TU_SAM_forest_theocracy }
 			country_event = { id = tu_sam_ev.28 }
+			# spec 23 hooks
+			recruit_character = TU_SAM_shaman
+			promote_character = {
+				character = TU_SAM_shaman
+				ideology = despotism
+			}
+			set_cosmetic_tag = TU_SAM_FOREST
 		}
 	}
 
@@ -346,6 +353,13 @@ focus_tree = {
 			set_country_flag = TU_SAM_path_tribes
 			swap_ideas = { remove_idea = TU_SAM_scattered_tribes add_idea = TU_SAM_tribal_federation }
 			country_event = { id = tu_sam_ev.29 }
+			# spec 23 hooks
+			recruit_character = TU_SAM_chieftain
+			promote_character = {
+				character = TU_SAM_chieftain
+				ideology = oligarchism
+			}
+			set_cosmetic_tag = TU_SAM_FEDERATION
 		}
 	}
 
@@ -495,6 +509,13 @@ focus_tree = {
 			set_country_flag = TU_SAM_path_open
 			swap_ideas = { remove_idea = TU_SAM_sacred_forest add_idea = TU_SAM_open_sami }
 			country_event = { id = tu_sam_ev.30 }
+			# spec 23 hooks
+			recruit_character = TU_SAM_envoy
+			promote_character = {
+				character = TU_SAM_envoy
+				ideology = centrism
+			}
+			set_cosmetic_tag = TU_SAM_OPEN
 		}
 	}
 

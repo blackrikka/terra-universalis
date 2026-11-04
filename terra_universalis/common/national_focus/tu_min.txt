@@ -189,6 +189,8 @@ focus_tree = {
 			set_country_flag = TU_MIN_path_demo
 			swap_ideas = { remove_idea = TU_MIN_city_states add_idea = TU_MIN_democratic_polis }
 			country_event = { id = tu_min_ev.28 }
+			# spec 23 hooks
+			set_cosmetic_tag = TU_MIN_POLIS
 		}
 	}
 
@@ -277,6 +279,13 @@ focus_tree = {
 			set_country_flag = TU_MIN_path_elders
 			swap_ideas = { remove_idea = TU_MIN_city_states add_idea = TU_MIN_rule_of_elders }
 			country_event = { id = tu_min_ev.29 }
+			# spec 23 hooks
+			recruit_character = TU_MIN_elder
+			promote_character = {
+				character = TU_MIN_elder
+				ideology = oligarchism
+			}
+			set_cosmetic_tag = TU_MIN_ELDERS
 		}
 	}
 
@@ -703,6 +712,13 @@ focus_tree = {
 			set_country_flag = TU_MIN_path_sea
 			swap_ideas = { remove_idea = TU_MIN_city_states add_idea = TU_MIN_thalassocracy }
 			country_event = { id = tu_min_ev.30 }
+			# spec 23 hooks
+			recruit_character = TU_MIN_strategos
+			promote_character = {
+				character = TU_MIN_strategos
+				ideology = despotism
+			}
+			set_cosmetic_tag = TU_MIN_EMPIRE
 		}
 	}
 

@@ -3982,6 +3982,13 @@ focus_tree = {
 			}
 			add_tech_bonus = { name = TU_URS_iron_regime bonus = 1.0 uses = 1 category = infantry_weapons }
 			army_experience = 40
+			# spec 23 hooks
+			recruit_character = TU_URS_junta
+			promote_character = {
+				character = TU_URS_junta
+				ideology = despotism
+			}
+			set_cosmetic_tag = TU_URS_JUNTA
 		}
 	}
 
@@ -4684,6 +4691,13 @@ focus_tree = {
 			add_ideas = TU_URS_p3_regency
 			add_political_power = 60
 			add_stability = 0.03
+			# spec 23 hooks
+			recruit_character = TU_URS_regent
+			promote_character = {
+				character = TU_URS_regent
+				ideology = oligarchism
+			}
+			set_cosmetic_tag = TU_URS_REGENCY
 		}
 	}
 
@@ -5739,6 +5753,13 @@ focus_tree = {
 			}
 			add_political_power = 60
 			add_stability = 0.03
+			# spec 23 hooks
+			recruit_character = TU_URS_democrat
+			promote_character = {
+				character = TU_URS_democrat
+				ideology = liberalism
+			}
+			set_cosmetic_tag = TU_URS_REPUBLIC
 		}
 	}
 
