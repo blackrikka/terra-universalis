@@ -15,8 +15,8 @@
 
 	focus = {
 		id = TU_YAN_bureaucratic_modernization
-		icon = GFX_goal_generic_construction
 		prerequisite = { focus = TU_YAN_imperial_reform }
+		icon = GFX_goal_generic_construction
 		x = -3
 		y = 1
 		cost = 10
@@ -36,8 +36,8 @@
 
 	focus = {
 		id = TU_YAN_civil_inspection
-		icon = GFX_goal_generic_political_pressure
 		prerequisite = { focus = TU_YAN_imperial_reform }
+		icon = GFX_goal_generic_political_pressure
 		x = -5
 		y = 1
 		cost = 10
@@ -56,8 +56,8 @@
 
 	focus = {
 		id = TU_YAN_provincial_levy
-		icon = GFX_goal_generic_allies_build_infantry
 		prerequisite = { focus = TU_YAN_civil_inspection }
+		icon = GFX_goal_generic_allies_build_infantry
 		x = -5
 		y = 2
 		cost = 10
@@ -72,8 +72,8 @@
 
 	focus = {
 		id = TU_YAN_industrial_awakening
-		icon = GFX_goal_generic_construct_civ_factory
 		prerequisite = { focus = TU_YAN_bureaucratic_modernization }
+		icon = GFX_goal_generic_construct_civ_factory
 		x = -3
 		y = 2
 		cost = 10
@@ -94,8 +94,8 @@
 
 	focus = {
 		id = TU_YAN_grand_mobilization
-		icon = GFX_goal_generic_army_doctrines
 		prerequisite = { focus = TU_YAN_industrial_awakening }
+		icon = GFX_goal_generic_army_doctrines
 		x = -3
 		y = 3
 		cost = 10
@@ -113,8 +113,8 @@
 
 	focus = {
 		id = TU_YAN_lungmen_policy
-		icon = GFX_goal_generic_military_deal
 		prerequisite = { focus = TU_YAN_imperial_reform }
+		icon = GFX_goal_generic_military_deal
 		x = 6
 		y = 1
 		cost = 5
@@ -130,8 +130,8 @@
 
 	focus = {
 		id = TU_YAN_lungmen_annex
-		icon = GFX_goal_generic_demand_territory
 		prerequisite = { focus = TU_YAN_lungmen_policy }
+		icon = GFX_goal_generic_demand_territory
 		x = 7
 		y = 2
 		cost = 15
@@ -163,8 +163,8 @@
 
 	focus = {
 		id = TU_YAN_lungmen_trade_pact
-		icon = GFX_goal_generic_positive_trade_relations
 		prerequisite = { focus = TU_YAN_lungmen_policy }
+		icon = GFX_goal_generic_positive_trade_relations
 		x = 5
 		y = 2
 		cost = 10

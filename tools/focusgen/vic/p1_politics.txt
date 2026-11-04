@@ -26,8 +26,8 @@
 
 	focus = {
 		id = TU_VIC_duk_estate_charters
-		icon = GFX_goal_generic_trade
 		prerequisite = { focus = TU_VIC_duk_route }
+		icon = GFX_goal_generic_trade
 		x = 0
 		y = 0
 		cost = 10
@@ -47,8 +47,8 @@
 
 	focus = {
 		id = TU_VIC_duk_estate_industry
-		icon = GFX_goal_generic_construct_civ_factory
 		prerequisite = { focus = TU_VIC_duk_estate_charters }
+		icon = GFX_goal_generic_construct_civ_factory
 		x = 0
 		y = 0
 		cost = 10
@@ -68,8 +68,8 @@
 
 	focus = {
 		id = TU_VIC_duk_ducal_foundry
-		icon = GFX_goal_generic_construct_mil_factory
 		prerequisite = { focus = TU_VIC_duk_estate_industry }
+		icon = GFX_goal_generic_construct_mil_factory
 		x = 0
 		y = 0
 		cost = 10
@@ -88,8 +88,8 @@
 
 	focus = {
 		id = TU_VIC_duk_arsenal_expand
-		icon = GFX_goal_generic_army_artillery
 		prerequisite = { focus = TU_VIC_duk_ducal_foundry }
+		icon = GFX_goal_generic_army_artillery
 		x = 0
 		y = 0
 		cost = 10
@@ -108,8 +108,8 @@
 
 	focus = {
 		id = TU_VIC_duk_grand_arsenal
-		icon = GFX_goal_generic_army_tanks
 		prerequisite = { focus = TU_VIC_duk_arsenal_expand }
+		icon = GFX_goal_generic_army_tanks
 		x = 0
 		y = 0
 		cost = 10
@@ -129,8 +129,8 @@
 
 	focus = {
 		id = TU_VIC_duk_estate_grid
-		icon = GFX_goal_generic_construct_infrastructure
 		prerequisite = { focus = TU_VIC_duk_grand_arsenal }
+		icon = GFX_goal_generic_construct_infrastructure
 		x = 0
 		y = 0
 		cost = 10
@@ -149,8 +149,8 @@
 
 	focus = {
 		id = TU_VIC_duk_capital_works
-		icon = GFX_goal_generic_construction
 		prerequisite = { focus = TU_VIC_duk_estate_grid }
+		icon = GFX_goal_generic_construction
 		x = 0
 		y = 0
 		cost = 10
@@ -168,53 +168,9 @@
 	}
 
 	focus = {
-		id = TU_VIC_duk_fleet_charter
-		icon = GFX_goal_generic_build_navy
-		prerequisite = { focus = TU_VIC_duk_capital_works }
-		x = 0
-		y = 0
-		cost = 10
-
-		search_filters = { FOCUS_FILTER_INDUSTRY }
-
-		ai_will_do = {
-			base = 1
-		}
-
-		completion_reward = {
-			TU_build_dockyard = yes
-			add_tech_bonus = { name = TU_VIC_duk_fleet_charter bonus = 0.75 uses = 1 category = dd_tech category = ca_tech }
-			add_doctrine_cost_reduction = { name = TU_VIC_duk_fleet_charter cost_reduction = 0.4 uses = 1 category = naval_doctrine }
-			navy_experience = 25
-		}
-	}
-
-	focus = {
-		id = TU_VIC_duk_shipyards
-		icon = GFX_goal_generic_construct_naval_dockyard
-		prerequisite = { focus = TU_VIC_duk_fleet_charter }
-		x = 0
-		y = 0
-		cost = 10
-
-		search_filters = { FOCUS_FILTER_INDUSTRY }
-
-		ai_will_do = {
-			base = 1
-		}
-
-		completion_reward = {
-			TU_build_dockyard = yes
-			add_tech_bonus = { name = TU_VIC_duk_shipyards bonus = 0.75 uses = 1 category = dd_tech category = ca_tech }
-			add_doctrine_cost_reduction = { name = TU_VIC_duk_shipyards cost_reduction = 0.4 uses = 1 category = naval_doctrine }
-			navy_experience = 25
-		}
-	}
-
-	focus = {
 		id = TU_VIC_duk_ducal_army
+		prerequisite = { focus = TU_VIC_duk_capital_works }
 		icon = GFX_goal_generic_army_motorized
-		prerequisite = { focus = TU_VIC_duk_shipyards }
 		x = 0
 		y = 0
 		cost = 10
@@ -233,8 +189,8 @@
 
 	focus = {
 		id = TU_VIC_duk_standing_levies
-		icon = GFX_goal_generic_allies_build_infantry
 		prerequisite = { focus = TU_VIC_duk_ducal_army }
+		icon = GFX_goal_generic_allies_build_infantry
 		x = 0
 		y = 0
 		cost = 10
@@ -253,8 +209,8 @@
 
 	focus = {
 		id = TU_VIC_duk_tax_farming
-		icon = GFX_goal_generic_construction2
 		prerequisite = { focus = TU_VIC_duk_standing_levies }
+		icon = GFX_goal_generic_construction2
 		x = 0
 		y = 0
 		cost = 10
@@ -276,8 +232,8 @@
 
 	focus = {
 		id = TU_VIC_duk_manor_reform
-		icon = GFX_goal_generic_defence
 		prerequisite = { focus = TU_VIC_duk_tax_farming }
+		icon = GFX_goal_generic_defence
 		x = 0
 		y = 0
 		cost = 10
@@ -296,8 +252,8 @@
 
 	focus = {
 		id = TU_VIC_duk_grand_council
-		icon = GFX_goal_generic_fortify_city
 		prerequisite = { focus = TU_VIC_duk_manor_reform }
+		icon = GFX_goal_generic_fortify_city
 		x = 0
 		y = 0
 		cost = 10
@@ -316,8 +272,8 @@
 
 	focus = {
 		id = TU_VIC_duk_oligarchic_order
-		icon = GFX_goal_generic_national_unity
 		prerequisite = { focus = TU_VIC_duk_grand_council }
+		icon = GFX_goal_generic_national_unity
 		x = 0
 		y = 0
 		cost = 15
@@ -340,8 +296,8 @@
 
 	focus = {
 		id = TU_VIC_duk_council_seats
-		icon = GFX_goal_generic_political_pressure
 		prerequisite = { focus = TU_VIC_duk_route }
+		icon = GFX_goal_generic_political_pressure
 		x = 0
 		y = 0
 		cost = 10
@@ -353,17 +309,16 @@
 		}
 
 		completion_reward = {
-			add_tech_bonus = { name = TU_VIC_duk_council_seats bonus = 0.75 uses = 1 category = dd_tech category = ca_tech }
-			add_doctrine_cost_reduction = { name = TU_VIC_duk_council_seats cost_reduction = 0.4 uses = 1 category = naval_doctrine }
-			navy_experience = 25
+			add_political_power = 60
+			add_stability = 0.03
 		}
 	}
 
 	focus = {
 		id = TU_VIC_duk_council_vote
-		icon = GFX_goal_generic_political_pressure
 		prerequisite = { focus = TU_VIC_duk_council_seats }
 		mutually_exclusive = { focus = TU_VIC_duk_open_council }
+		icon = GFX_goal_generic_political_pressure
 		x = 0
 		y = 0
 		cost = 10
@@ -386,9 +341,9 @@
 
 	focus = {
 		id = TU_VIC_duk_open_council
-		icon = GFX_goal_generic_improve_relations
 		prerequisite = { focus = TU_VIC_duk_council_seats }
 		mutually_exclusive = { focus = TU_VIC_duk_council_vote }
+		icon = GFX_goal_generic_improve_relations
 		x = 0
 		y = 0
 		cost = 10
@@ -411,9 +366,9 @@
 
 	focus = {
 		id = TU_VIC_duk_tenancy
-		icon = GFX_goal_generic_consumer_goods
 		prerequisite = { focus = TU_VIC_duk_estate_charters }
 		mutually_exclusive = { focus = TU_VIC_duk_free_labour }
+		icon = GFX_goal_generic_consumer_goods
 		x = 0
 		y = 0
 		cost = 10
@@ -436,9 +391,9 @@
 
 	focus = {
 		id = TU_VIC_duk_free_labour
-		icon = GFX_goal_generic_production
 		prerequisite = { focus = TU_VIC_duk_estate_charters }
 		mutually_exclusive = { focus = TU_VIC_duk_tenancy }
+		icon = GFX_goal_generic_production
 		x = 0
 		y = 0
 		cost = 10
@@ -457,9 +412,9 @@
 
 	focus = {
 		id = TU_VIC_duk_guild_pact
-		icon = GFX_goal_generic_trade
 		prerequisite = { focus = TU_VIC_duk_council_vote focus = TU_VIC_duk_open_council }
 		mutually_exclusive = { focus = TU_VIC_duk_guild_break }
+		icon = GFX_goal_generic_trade
 		x = 0
 		y = 0
 		cost = 10
@@ -478,9 +433,9 @@
 
 	focus = {
 		id = TU_VIC_duk_guild_break
-		icon = GFX_goal_generic_dangerous_deal
 		prerequisite = { focus = TU_VIC_duk_council_vote focus = TU_VIC_duk_open_council }
 		mutually_exclusive = { focus = TU_VIC_duk_guild_pact }
+		icon = GFX_goal_generic_dangerous_deal
 		x = 0
 		y = 0
 		cost = 10
@@ -500,9 +455,9 @@
 
 	focus = {
 		id = TU_VIC_duk_treasury_loans
-		icon = GFX_goal_generic_positive_trade_relations
 		prerequisite = { focus = TU_VIC_duk_guild_pact }
 		mutually_exclusive = { focus = TU_VIC_duk_banking_house }
+		icon = GFX_goal_generic_positive_trade_relations
 		x = 0
 		y = 0
 		cost = 10
@@ -521,9 +476,9 @@
 
 	focus = {
 		id = TU_VIC_duk_banking_house
-		icon = GFX_goal_generic_production2
 		prerequisite = { focus = TU_VIC_duk_guild_break }
 		mutually_exclusive = { focus = TU_VIC_duk_treasury_loans }
+		icon = GFX_goal_generic_production2
 		x = 0
 		y = 0
 		cost = 10
@@ -542,8 +497,8 @@
 
 	focus = {
 		id = TU_VIC_duk_private_guard
-		icon = GFX_goal_generic_small_arms
 		prerequisite = { focus = TU_VIC_duk_tenancy focus = TU_VIC_duk_free_labour }
+		icon = GFX_goal_generic_small_arms
 		x = 0
 		y = 0
 		cost = 10
@@ -563,8 +518,8 @@
 
 	focus = {
 		id = TU_VIC_duk_militia_drill
-		icon = GFX_goal_generic_army_doctrines
 		prerequisite = { focus = TU_VIC_duk_private_guard }
+		icon = GFX_goal_generic_army_doctrines
 		x = 0
 		y = 0
 		cost = 10
@@ -583,8 +538,8 @@
 
 	focus = {
 		id = TU_VIC_duk_ducal_accord
-		icon = GFX_goal_generic_military_sphere
 		prerequisite = { focus = TU_VIC_duk_treasury_loans }
+		icon = GFX_goal_generic_military_sphere
 		x = 0
 		y = 0
 		cost = 10
@@ -603,9 +558,9 @@
 
 	focus = {
 		id = TU_VIC_duk_council_law
-		icon = GFX_goal_generic_forceful_treaty
 		prerequisite = { focus = TU_VIC_duk_council_vote }
 		mutually_exclusive = { focus = TU_VIC_duk_council_law_alt }
+		icon = GFX_goal_generic_forceful_treaty
 		x = 0
 		y = 0
 		cost = 10
@@ -628,9 +583,9 @@
 
 	focus = {
 		id = TU_VIC_duk_council_law_alt
-		icon = GFX_goal_generic_consumer_goods
 		prerequisite = { focus = TU_VIC_duk_council_vote }
 		mutually_exclusive = { focus = TU_VIC_duk_council_law }
+		icon = GFX_goal_generic_consumer_goods
 		x = 0
 		y = 0
 		cost = 10
@@ -649,9 +604,9 @@
 
 	focus = {
 		id = TU_VIC_duk_rail_concession
-		icon = GFX_goal_generic_construction
 		prerequisite = { focus = TU_VIC_duk_estate_industry }
 		mutually_exclusive = { focus = TU_VIC_duk_rail_concession_alt }
+		icon = GFX_goal_generic_construction
 		x = 0
 		y = 0
 		cost = 10
@@ -669,9 +624,9 @@
 
 	focus = {
 		id = TU_VIC_duk_rail_concession_alt
-		icon = GFX_goal_generic_construction
 		prerequisite = { focus = TU_VIC_duk_estate_industry }
 		mutually_exclusive = { focus = TU_VIC_duk_rail_concession }
+		icon = GFX_goal_generic_construction
 		x = 0
 		y = 0
 		cost = 10
@@ -691,9 +646,9 @@
 
 	focus = {
 		id = TU_VIC_duk_war_cabinet
-		icon = GFX_goal_generic_major_war
 		prerequisite = { focus = TU_VIC_duk_ducal_army }
 		mutually_exclusive = { focus = TU_VIC_duk_war_cabinet_alt }
+		icon = GFX_goal_generic_major_war
 		x = 0
 		y = 0
 		cost = 10
@@ -712,9 +667,9 @@
 
 	focus = {
 		id = TU_VIC_duk_war_cabinet_alt
-		icon = GFX_goal_generic_army_doctrines
 		prerequisite = { focus = TU_VIC_duk_ducal_army }
 		mutually_exclusive = { focus = TU_VIC_duk_war_cabinet }
+		icon = GFX_goal_generic_army_doctrines
 		x = 0
 		y = 0
 		cost = 10
@@ -733,9 +688,9 @@
 
 	focus = {
 		id = TU_VIC_duk_fortified_estates
-		icon = GFX_goal_generic_fortify_city
 		prerequisite = { focus = TU_VIC_duk_manor_reform }
 		mutually_exclusive = { focus = TU_VIC_duk_fortified_estates_alt }
+		icon = GFX_goal_generic_fortify_city
 		x = 0
 		y = 0
 		cost = 10
@@ -753,9 +708,9 @@
 
 	focus = {
 		id = TU_VIC_duk_fortified_estates_alt
-		icon = GFX_goal_generic_defence
 		prerequisite = { focus = TU_VIC_duk_manor_reform }
 		mutually_exclusive = { focus = TU_VIC_duk_fortified_estates }
+		icon = GFX_goal_generic_defence
 		x = 0
 		y = 0
 		cost = 10
@@ -775,9 +730,9 @@
 
 	focus = {
 		id = TU_VIC_asl_route
-		icon = GFX_goal_generic_propaganda
 		prerequisite = { focus = TU_VIC_glasgow_return }
 		mutually_exclusive = { focus = TU_VIC_duk_route focus = TU_VIC_drc_route focus = TU_VIC_par_route }
+		icon = GFX_goal_generic_propaganda
 		x = 0
 		y = 0
 		cost = 5
@@ -802,8 +757,8 @@
 
 	focus = {
 		id = TU_VIC_asl_glasgow_gangs
-		icon = GFX_goal_generic_allies_build_infantry
 		prerequisite = { focus = TU_VIC_asl_route }
+		icon = GFX_goal_generic_allies_build_infantry
 		x = 0
 		y = 0
 		cost = 10
@@ -823,8 +778,8 @@
 
 	focus = {
 		id = TU_VIC_asl_gang_militia
-		icon = GFX_goal_generic_small_arms
 		prerequisite = { focus = TU_VIC_asl_glasgow_gangs }
+		icon = GFX_goal_generic_small_arms
 		x = 0
 		y = 0
 		cost = 10
@@ -843,8 +798,8 @@
 
 	focus = {
 		id = TU_VIC_asl_glasgow_armoury
-		icon = GFX_goal_generic_construct_mil_factory
 		prerequisite = { focus = TU_VIC_asl_gang_militia }
+		icon = GFX_goal_generic_construct_mil_factory
 		x = 0
 		y = 0
 		cost = 10
@@ -864,8 +819,8 @@
 
 	focus = {
 		id = TU_VIC_asl_barricades
-		icon = GFX_goal_generic_fortify_city
 		prerequisite = { focus = TU_VIC_asl_glasgow_armoury }
+		icon = GFX_goal_generic_fortify_city
 		x = 0
 		y = 0
 		cost = 10
@@ -885,8 +840,8 @@
 
 	focus = {
 		id = TU_VIC_asl_street_war
-		icon = GFX_goal_generic_army_doctrines
 		prerequisite = { focus = TU_VIC_asl_barricades }
+		icon = GFX_goal_generic_army_doctrines
 		x = 0
 		y = 0
 		cost = 10
@@ -905,8 +860,8 @@
 
 	focus = {
 		id = TU_VIC_asl_gang_banner
-		icon = GFX_goal_generic_propaganda
 		prerequisite = { focus = TU_VIC_asl_street_war }
+		icon = GFX_goal_generic_propaganda
 		x = 0
 		y = 0
 		cost = 10
@@ -925,8 +880,8 @@
 
 	focus = {
 		id = TU_VIC_asl_royal_levy
-		icon = GFX_goal_generic_cavalry
 		prerequisite = { focus = TU_VIC_asl_gang_banner }
+		icon = GFX_goal_generic_cavalry
 		x = 0
 		y = 0
 		cost = 10
@@ -945,8 +900,8 @@
 
 	focus = {
 		id = TU_VIC_asl_mass_rally
-		icon = GFX_goal_generic_political_pressure
 		prerequisite = { focus = TU_VIC_asl_royal_levy }
+		icon = GFX_goal_generic_political_pressure
 		x = 0
 		y = 0
 		cost = 10
@@ -965,8 +920,8 @@
 
 	focus = {
 		id = TU_VIC_asl_church_blessing
-		icon = GFX_goal_generic_improve_relations
 		prerequisite = { focus = TU_VIC_asl_mass_rally }
+		icon = GFX_goal_generic_improve_relations
 		x = 0
 		y = 0
 		cost = 10
@@ -985,8 +940,8 @@
 
 	focus = {
 		id = TU_VIC_asl_royal_army
-		icon = GFX_goal_generic_army_motorized
 		prerequisite = { focus = TU_VIC_asl_church_blessing }
+		icon = GFX_goal_generic_army_motorized
 		x = 0
 		y = 0
 		cost = 10
@@ -1005,8 +960,8 @@
 
 	focus = {
 		id = TU_VIC_asl_aslan_council
-		icon = GFX_goal_generic_defence
 		prerequisite = { focus = TU_VIC_asl_royal_army }
+		icon = GFX_goal_generic_defence
 		x = 0
 		y = 0
 		cost = 10
@@ -1029,8 +984,8 @@
 
 	focus = {
 		id = TU_VIC_asl_crown_restoration
-		icon = GFX_goal_generic_national_unity
 		prerequisite = { focus = TU_VIC_asl_aslan_council }
+		icon = GFX_goal_generic_national_unity
 		x = 0
 		y = 0
 		cost = 10
@@ -1053,8 +1008,8 @@
 
 	focus = {
 		id = TU_VIC_asl_royal_mint
-		icon = GFX_goal_generic_consumer_goods
 		prerequisite = { focus = TU_VIC_asl_crown_restoration }
+		icon = GFX_goal_generic_consumer_goods
 		x = 0
 		y = 0
 		cost = 10
@@ -1073,8 +1028,8 @@
 
 	focus = {
 		id = TU_VIC_asl_court_order
-		icon = GFX_goal_generic_major_alliance
 		prerequisite = { focus = TU_VIC_asl_royal_mint }
+		icon = GFX_goal_generic_major_alliance
 		x = 0
 		y = 0
 		cost = 10
@@ -1093,9 +1048,9 @@
 
 	focus = {
 		id = TU_VIC_asl_coronation
-		icon = GFX_goal_generic_forceful_treaty
 		prerequisite = { focus = TU_VIC_asl_court_order }
 		prerequisite = { focus = TU_VIC_siege_crowned }
+		icon = GFX_goal_generic_forceful_treaty
 		x = 0
 		y = 0
 		cost = 15
@@ -1119,8 +1074,8 @@
 
 	focus = {
 		id = TU_VIC_asl_royal_court
-		icon = GFX_goal_generic_political_pressure
 		prerequisite = { focus = TU_VIC_asl_route }
+		icon = GFX_goal_generic_political_pressure
 		x = 0
 		y = 0
 		cost = 10
@@ -1143,9 +1098,9 @@
 
 	focus = {
 		id = TU_VIC_asl_loyal_nobles
-		icon = GFX_goal_generic_improve_relations
 		prerequisite = { focus = TU_VIC_asl_royal_court }
 		mutually_exclusive = { focus = TU_VIC_asl_confiscation }
+		icon = GFX_goal_generic_improve_relations
 		x = 0
 		y = 0
 		cost = 10
@@ -1164,9 +1119,9 @@
 
 	focus = {
 		id = TU_VIC_asl_confiscation
-		icon = GFX_goal_generic_dangerous_deal
 		prerequisite = { focus = TU_VIC_asl_royal_court }
 		mutually_exclusive = { focus = TU_VIC_asl_loyal_nobles }
+		icon = GFX_goal_generic_dangerous_deal
 		x = 0
 		y = 0
 		cost = 10
@@ -1189,8 +1144,8 @@
 
 	focus = {
 		id = TU_VIC_asl_docks_protection
-		icon = GFX_goal_generic_trade
 		prerequisite = { focus = TU_VIC_asl_route }
+		icon = GFX_goal_generic_trade
 		x = 0
 		y = 0
 		cost = 10
@@ -1202,17 +1157,16 @@
 		}
 
 		completion_reward = {
-			add_tech_bonus = { name = TU_VIC_asl_docks_protection bonus = 0.75 uses = 1 category = dd_tech category = ca_tech }
-			add_doctrine_cost_reduction = { name = TU_VIC_asl_docks_protection cost_reduction = 0.4 uses = 1 category = naval_doctrine }
-			navy_experience = 25
+			add_political_power = 60
+			add_tech_bonus = { name = TU_VIC_asl_docks_protection bonus = 0.75 uses = 1 category = industry }
 		}
 	}
 
 	focus = {
 		id = TU_VIC_asl_docks_industry
-		icon = GFX_goal_generic_construct_civ_factory
 		prerequisite = { focus = TU_VIC_asl_docks_protection }
 		mutually_exclusive = { focus = TU_VIC_asl_docks_industry_alt }
+		icon = GFX_goal_generic_construct_civ_factory
 		x = 0
 		y = 0
 		cost = 10
@@ -1225,17 +1179,16 @@
 
 		completion_reward = {
 			TU_build_civ_factory = yes
-			add_tech_bonus = { name = TU_VIC_asl_docks_industry bonus = 0.75 uses = 1 category = dd_tech category = ca_tech }
-			add_doctrine_cost_reduction = { name = TU_VIC_asl_docks_industry cost_reduction = 0.4 uses = 1 category = naval_doctrine }
-			navy_experience = 25
+			add_political_power = 60
+			add_tech_bonus = { name = TU_VIC_asl_docks_industry bonus = 0.75 uses = 1 category = industry }
 		}
 	}
 
 	focus = {
 		id = TU_VIC_asl_docks_industry_alt
-		icon = GFX_goal_generic_positive_trade_relations
 		prerequisite = { focus = TU_VIC_asl_docks_protection }
 		mutually_exclusive = { focus = TU_VIC_asl_docks_industry }
+		icon = GFX_goal_generic_positive_trade_relations
 		x = 0
 		y = 0
 		cost = 10
@@ -1247,17 +1200,16 @@
 		}
 
 		completion_reward = {
-			add_tech_bonus = { name = TU_VIC_asl_docks_industry_alt bonus = 0.75 uses = 1 category = dd_tech category = ca_tech }
-			add_doctrine_cost_reduction = { name = TU_VIC_asl_docks_industry_alt cost_reduction = 0.4 uses = 1 category = naval_doctrine }
-			navy_experience = 25
+			add_political_power = 60
+			add_tech_bonus = { name = TU_VIC_asl_docks_industry_alt bonus = 0.75 uses = 1 category = industry }
 		}
 	}
 
 	focus = {
 		id = TU_VIC_asl_smuggling
-		icon = GFX_goal_generic_production
 		prerequisite = { focus = TU_VIC_asl_docks_protection }
 		mutually_exclusive = { focus = TU_VIC_asl_customs }
+		icon = GFX_goal_generic_production
 		x = 0
 		y = 0
 		cost = 10
@@ -1276,9 +1228,9 @@
 
 	focus = {
 		id = TU_VIC_asl_customs
-		icon = GFX_goal_generic_military_deal
 		prerequisite = { focus = TU_VIC_asl_docks_protection }
 		mutually_exclusive = { focus = TU_VIC_asl_smuggling }
+		icon = GFX_goal_generic_military_deal
 		x = 0
 		y = 0
 		cost = 10
@@ -1301,8 +1253,8 @@
 
 	focus = {
 		id = TU_VIC_asl_gang_pact
-		icon = GFX_goal_generic_trade
 		prerequisite = { focus = TU_VIC_asl_gang_militia }
+		icon = GFX_goal_generic_trade
 		x = 0
 		y = 0
 		cost = 10
@@ -1322,9 +1274,9 @@
 
 	focus = {
 		id = TU_VIC_asl_city_watch
-		icon = GFX_goal_generic_defence
 		prerequisite = { focus = TU_VIC_asl_glasgow_armoury }
 		mutually_exclusive = { focus = TU_VIC_asl_city_watch_alt }
+		icon = GFX_goal_generic_defence
 		x = 0
 		y = 0
 		cost = 10
@@ -1343,9 +1295,9 @@
 
 	focus = {
 		id = TU_VIC_asl_city_watch_alt
-		icon = GFX_goal_generic_intelligence_exchange
 		prerequisite = { focus = TU_VIC_asl_glasgow_armoury }
 		mutually_exclusive = { focus = TU_VIC_asl_city_watch }
+		icon = GFX_goal_generic_intelligence_exchange
 		x = 0
 		y = 0
 		cost = 10
@@ -1364,9 +1316,9 @@
 
 	focus = {
 		id = TU_VIC_asl_street_law
-		icon = GFX_goal_generic_political_pressure
 		prerequisite = { focus = TU_VIC_asl_barricades }
 		mutually_exclusive = { focus = TU_VIC_asl_gang_courts }
+		icon = GFX_goal_generic_political_pressure
 		x = 0
 		y = 0
 		cost = 10
@@ -1385,9 +1337,9 @@
 
 	focus = {
 		id = TU_VIC_asl_gang_courts
-		icon = GFX_goal_generic_national_unity
 		prerequisite = { focus = TU_VIC_asl_barricades }
 		mutually_exclusive = { focus = TU_VIC_asl_street_law }
+		icon = GFX_goal_generic_national_unity
 		x = 0
 		y = 0
 		cost = 10
@@ -1410,8 +1362,8 @@
 
 	focus = {
 		id = TU_VIC_asl_royal_guard
-		icon = GFX_goal_generic_special_forces
 		prerequisite = { focus = TU_VIC_asl_royal_court }
+		icon = GFX_goal_generic_special_forces
 		x = 0
 		y = 0
 		cost = 10
@@ -1430,8 +1382,8 @@
 
 	focus = {
 		id = TU_VIC_asl_war_chest
-		icon = GFX_goal_generic_production2
 		prerequisite = { focus = TU_VIC_asl_smuggling }
+		icon = GFX_goal_generic_production2
 		x = 0
 		y = 0
 		cost = 10
@@ -1450,9 +1402,9 @@
 
 	focus = {
 		id = TU_VIC_asl_loyal_regiment
-		icon = GFX_goal_generic_army_artillery
 		prerequisite = { focus = TU_VIC_asl_royal_army }
 		mutually_exclusive = { focus = TU_VIC_asl_loyal_regiment_alt }
+		icon = GFX_goal_generic_army_artillery
 		x = 0
 		y = 0
 		cost = 10
@@ -1471,9 +1423,9 @@
 
 	focus = {
 		id = TU_VIC_asl_loyal_regiment_alt
-		icon = GFX_goal_generic_army_tanks
 		prerequisite = { focus = TU_VIC_asl_royal_army }
 		mutually_exclusive = { focus = TU_VIC_asl_loyal_regiment }
+		icon = GFX_goal_generic_army_tanks
 		x = 0
 		y = 0
 		cost = 10
@@ -1492,9 +1444,9 @@
 
 	focus = {
 		id = TU_VIC_asl_glasgow_pilgrimage
-		icon = GFX_goal_generic_improve_relations
 		prerequisite = { focus = TU_VIC_asl_church_blessing }
 		mutually_exclusive = { focus = TU_VIC_asl_glasgow_pilgrimage_alt }
+		icon = GFX_goal_generic_improve_relations
 		x = 0
 		y = 0
 		cost = 10
@@ -1513,9 +1465,9 @@
 
 	focus = {
 		id = TU_VIC_asl_glasgow_pilgrimage_alt
-		icon = GFX_goal_generic_neutrality_focus
 		prerequisite = { focus = TU_VIC_asl_church_blessing }
 		mutually_exclusive = { focus = TU_VIC_asl_glasgow_pilgrimage }
+		icon = GFX_goal_generic_neutrality_focus
 		x = 0
 		y = 0
 		cost = 10
@@ -1534,8 +1486,8 @@
 
 	focus = {
 		id = TU_VIC_asl_gang_loans
-		icon = GFX_goal_generic_positive_trade_relations
 		prerequisite = { focus = TU_VIC_asl_gang_pact }
+		icon = GFX_goal_generic_positive_trade_relations
 		x = 0
 		y = 0
 		cost = 10
@@ -1554,9 +1506,9 @@
 
 	focus = {
 		id = TU_VIC_drc_route
-		icon = GFX_goal_generic_secret_weapon
 		prerequisite = { focus = TU_VIC_dublinn_uprising }
 		mutually_exclusive = { focus = TU_VIC_duk_route focus = TU_VIC_asl_route focus = TU_VIC_par_route focus = TU_VIC_dublinn_talks }
+		icon = GFX_goal_generic_secret_weapon
 		x = 0
 		y = 0
 		cost = 5
@@ -1581,8 +1533,8 @@
 
 	focus = {
 		id = TU_VIC_drc_tara_muster
-		icon = GFX_goal_generic_allies_build_infantry
 		prerequisite = { focus = TU_VIC_drc_route }
+		icon = GFX_goal_generic_allies_build_infantry
 		x = 0
 		y = 0
 		cost = 10
@@ -1601,8 +1553,8 @@
 
 	focus = {
 		id = TU_VIC_drc_flame_arts
-		icon = GFX_goal_generic_scientific_exchange
 		prerequisite = { focus = TU_VIC_drc_tara_muster }
+		icon = GFX_goal_generic_scientific_exchange
 		x = 0
 		y = 0
 		cost = 10
@@ -1621,8 +1573,8 @@
 
 	focus = {
 		id = TU_VIC_drc_blazing_mills
-		icon = GFX_goal_generic_construct_civ_factory
 		prerequisite = { focus = TU_VIC_drc_flame_arts }
+		icon = GFX_goal_generic_construct_civ_factory
 		x = 0
 		y = 0
 		cost = 10
@@ -1642,8 +1594,8 @@
 
 	focus = {
 		id = TU_VIC_drc_youth_corps
-		icon = GFX_goal_generic_army_motorized
 		prerequisite = { focus = TU_VIC_drc_blazing_mills }
+		icon = GFX_goal_generic_army_motorized
 		x = 0
 		y = 0
 		cost = 10
@@ -1663,8 +1615,8 @@
 
 	focus = {
 		id = TU_VIC_drc_street_terror
-		icon = GFX_goal_generic_political_pressure
 		prerequisite = { focus = TU_VIC_drc_youth_corps }
+		icon = GFX_goal_generic_political_pressure
 		x = 0
 		y = 0
 		cost = 10
@@ -1683,8 +1635,8 @@
 
 	focus = {
 		id = TU_VIC_drc_secret_police
-		icon = GFX_goal_generic_special_forces
 		prerequisite = { focus = TU_VIC_drc_street_terror }
+		icon = GFX_goal_generic_special_forces
 		x = 0
 		y = 0
 		cost = 10
@@ -1703,8 +1655,8 @@
 
 	focus = {
 		id = TU_VIC_drc_factory_quota
-		icon = GFX_goal_generic_construct_mil_factory
 		prerequisite = { focus = TU_VIC_drc_secret_police }
+		icon = GFX_goal_generic_construct_mil_factory
 		x = 0
 		y = 0
 		cost = 10
@@ -1723,8 +1675,8 @@
 
 	focus = {
 		id = TU_VIC_drc_tara_arsenal
-		icon = GFX_goal_generic_army_artillery
 		prerequisite = { focus = TU_VIC_drc_factory_quota }
+		icon = GFX_goal_generic_army_artillery
 		x = 0
 		y = 0
 		cost = 10
@@ -1743,8 +1695,8 @@
 
 	focus = {
 		id = TU_VIC_drc_purge_dublinn
-		icon = GFX_goal_generic_defence
 		prerequisite = { focus = TU_VIC_drc_tara_arsenal }
+		icon = GFX_goal_generic_defence
 		x = 0
 		y = 0
 		cost = 10
@@ -1764,8 +1716,8 @@
 
 	focus = {
 		id = TU_VIC_drc_war_economy
-		icon = GFX_goal_generic_production
 		prerequisite = { focus = TU_VIC_drc_purge_dublinn }
+		icon = GFX_goal_generic_production
 		x = 0
 		y = 0
 		cost = 10
@@ -1789,8 +1741,8 @@
 
 	focus = {
 		id = TU_VIC_drc_mobilised_youth
-		icon = GFX_goal_generic_construct_military
 		prerequisite = { focus = TU_VIC_drc_war_economy }
+		icon = GFX_goal_generic_construct_military
 		x = 0
 		y = 0
 		cost = 10
@@ -1810,8 +1762,8 @@
 
 	focus = {
 		id = TU_VIC_drc_fascist_rally
-		icon = GFX_goal_generic_propaganda
 		prerequisite = { focus = TU_VIC_drc_mobilised_youth }
+		icon = GFX_goal_generic_propaganda
 		x = 0
 		y = 0
 		cost = 10
@@ -1830,8 +1782,8 @@
 
 	focus = {
 		id = TU_VIC_drc_fascist_state
-		icon = GFX_goal_generic_national_unity
 		prerequisite = { focus = TU_VIC_drc_fascist_rally }
+		icon = GFX_goal_generic_national_unity
 		x = 0
 		y = 0
 		cost = 10
@@ -1855,8 +1807,8 @@
 
 	focus = {
 		id = TU_VIC_drc_fire_doctrine
-		icon = GFX_goal_generic_army_doctrines
 		prerequisite = { focus = TU_VIC_drc_fascist_state }
+		icon = GFX_goal_generic_army_doctrines
 		x = 0
 		y = 0
 		cost = 10
@@ -1875,8 +1827,8 @@
 
 	focus = {
 		id = TU_VIC_drc_regime_seal
-		icon = GFX_goal_generic_defence
 		prerequisite = { focus = TU_VIC_drc_fire_doctrine }
+		icon = GFX_goal_generic_defence
 		x = 0
 		y = 0
 		cost = 10
@@ -1888,16 +1840,15 @@
 		}
 
 		completion_reward = {
-			add_tech_bonus = { name = TU_VIC_drc_regime_seal bonus = 0.75 uses = 1 category = dd_tech category = ca_tech }
-			add_doctrine_cost_reduction = { name = TU_VIC_drc_regime_seal cost_reduction = 0.4 uses = 1 category = naval_doctrine }
-			navy_experience = 25
+			add_political_power = 60
+			add_stability = 0.03
 		}
 	}
 
 	focus = {
 		id = TU_VIC_drc_draco_leader
-		icon = GFX_goal_generic_major_war
 		prerequisite = { focus = TU_VIC_drc_regime_seal }
+		icon = GFX_goal_generic_major_war
 		x = 0
 		y = 0
 		cost = 15
@@ -1926,8 +1877,8 @@
 
 	focus = {
 		id = TU_VIC_drc_tara_sermon
-		icon = GFX_goal_generic_propaganda
 		prerequisite = { focus = TU_VIC_drc_route }
+		icon = GFX_goal_generic_propaganda
 		x = 0
 		y = 0
 		cost = 10
@@ -1946,9 +1897,9 @@
 
 	focus = {
 		id = TU_VIC_drc_tara_truce
-		icon = GFX_goal_generic_improve_relations
 		prerequisite = { focus = TU_VIC_drc_tara_sermon }
 		mutually_exclusive = { focus = TU_VIC_drc_tara_crackdown }
+		icon = GFX_goal_generic_improve_relations
 		x = 0
 		y = 0
 		cost = 10
@@ -1967,9 +1918,9 @@
 
 	focus = {
 		id = TU_VIC_drc_tara_crackdown
-		icon = GFX_goal_generic_dangerous_deal
 		prerequisite = { focus = TU_VIC_drc_tara_sermon }
 		mutually_exclusive = { focus = TU_VIC_drc_tara_truce }
+		icon = GFX_goal_generic_dangerous_deal
 		x = 0
 		y = 0
 		cost = 10
@@ -1988,9 +1939,9 @@
 
 	focus = {
 		id = TU_VIC_drc_flame_academies
-		icon = GFX_goal_generic_radar
 		prerequisite = { focus = TU_VIC_drc_flame_arts }
 		mutually_exclusive = { focus = TU_VIC_drc_flame_academies_alt }
+		icon = GFX_goal_generic_radar
 		x = 0
 		y = 0
 		cost = 10
@@ -2009,9 +1960,9 @@
 
 	focus = {
 		id = TU_VIC_drc_flame_academies_alt
-		icon = GFX_goal_generic_production2
 		prerequisite = { focus = TU_VIC_drc_flame_arts }
 		mutually_exclusive = { focus = TU_VIC_drc_flame_academies }
+		icon = GFX_goal_generic_production2
 		x = 0
 		y = 0
 		cost = 10
@@ -2030,9 +1981,9 @@
 
 	focus = {
 		id = TU_VIC_drc_flame_drill
-		icon = GFX_goal_generic_amphibious_assault
 		prerequisite = { focus = TU_VIC_drc_blazing_mills }
 		mutually_exclusive = { focus = TU_VIC_drc_flame_bastion }
+		icon = GFX_goal_generic_amphibious_assault
 		x = 0
 		y = 0
 		cost = 10
@@ -2051,9 +2002,9 @@
 
 	focus = {
 		id = TU_VIC_drc_flame_bastion
-		icon = GFX_goal_generic_fortify_city
 		prerequisite = { focus = TU_VIC_drc_blazing_mills }
 		mutually_exclusive = { focus = TU_VIC_drc_flame_drill }
+		icon = GFX_goal_generic_fortify_city
 		x = 0
 		y = 0
 		cost = 10
@@ -2072,9 +2023,9 @@
 
 	focus = {
 		id = TU_VIC_drc_ash_laborers
-		icon = GFX_goal_generic_construction
 		prerequisite = { focus = TU_VIC_drc_blazing_mills }
 		mutually_exclusive = { focus = TU_VIC_drc_ash_laborers_alt }
+		icon = GFX_goal_generic_construction
 		x = 0
 		y = 0
 		cost = 10
@@ -2094,9 +2045,9 @@
 
 	focus = {
 		id = TU_VIC_drc_ash_laborers_alt
-		icon = GFX_goal_generic_construct_civ_factory
 		prerequisite = { focus = TU_VIC_drc_blazing_mills }
 		mutually_exclusive = { focus = TU_VIC_drc_ash_laborers }
+		icon = GFX_goal_generic_construct_civ_factory
 		x = 0
 		y = 0
 		cost = 10
@@ -2115,34 +2066,9 @@
 	}
 
 	focus = {
-		id = TU_VIC_drc_dublinn_docks
-		icon = GFX_goal_generic_construct_naval_dockyard
-		prerequisite = { focus = TU_VIC_drc_factory_quota }
-		mutually_exclusive = { focus = TU_VIC_drc_iron_rail }
-		x = 0
-		y = 0
-		cost = 10
-
-		search_filters = { FOCUS_FILTER_INDUSTRY }
-
-		ai_will_do = {
-			base = 1
-		}
-
-		completion_reward = {
-			add_ideas = TU_VIC_choice_dock_drive
-			TU_build_dockyard = yes
-			add_tech_bonus = { name = TU_VIC_drc_dublinn_docks bonus = 0.75 uses = 1 category = dd_tech category = ca_tech }
-			add_doctrine_cost_reduction = { name = TU_VIC_drc_dublinn_docks cost_reduction = 0.4 uses = 1 category = naval_doctrine }
-			navy_experience = 25
-		}
-	}
-
-	focus = {
 		id = TU_VIC_drc_iron_rail
-		icon = GFX_goal_generic_construct_infrastructure
 		prerequisite = { focus = TU_VIC_drc_factory_quota }
-		mutually_exclusive = { focus = TU_VIC_drc_dublinn_docks }
+		icon = GFX_goal_generic_construct_infrastructure
 		x = 0
 		y = 0
 		cost = 10
@@ -2160,9 +2086,9 @@
 
 	focus = {
 		id = TU_VIC_drc_secret_radio
-		icon = GFX_goal_generic_intelligence_exchange
 		prerequisite = { focus = TU_VIC_drc_secret_police }
 		mutually_exclusive = { focus = TU_VIC_drc_secret_radio_alt }
+		icon = GFX_goal_generic_intelligence_exchange
 		x = 0
 		y = 0
 		cost = 10
@@ -2181,9 +2107,9 @@
 
 	focus = {
 		id = TU_VIC_drc_secret_radio_alt
-		icon = GFX_goal_generic_improve_relations
 		prerequisite = { focus = TU_VIC_drc_secret_police }
 		mutually_exclusive = { focus = TU_VIC_drc_secret_radio }
+		icon = GFX_goal_generic_improve_relations
 		x = 0
 		y = 0
 		cost = 10
@@ -2201,9 +2127,9 @@
 
 	focus = {
 		id = TU_VIC_drc_loyal_dublinn
-		icon = GFX_goal_generic_military_sphere
 		prerequisite = { focus = TU_VIC_drc_youth_corps }
 		mutually_exclusive = { focus = TU_VIC_drc_hostage_law }
+		icon = GFX_goal_generic_military_sphere
 		x = 0
 		y = 0
 		cost = 10
@@ -2222,9 +2148,9 @@
 
 	focus = {
 		id = TU_VIC_drc_hostage_law
-		icon = GFX_goal_generic_forceful_treaty
 		prerequisite = { focus = TU_VIC_drc_youth_corps }
 		mutually_exclusive = { focus = TU_VIC_drc_loyal_dublinn }
+		icon = GFX_goal_generic_forceful_treaty
 		x = 0
 		y = 0
 		cost = 10
@@ -2243,9 +2169,9 @@
 
 	focus = {
 		id = TU_VIC_drc_war_fund
-		icon = GFX_goal_generic_military_deal
 		prerequisite = { focus = TU_VIC_drc_war_economy }
 		mutually_exclusive = { focus = TU_VIC_drc_war_fund_alt }
+		icon = GFX_goal_generic_military_deal
 		x = 0
 		y = 0
 		cost = 10
@@ -2264,9 +2190,9 @@
 
 	focus = {
 		id = TU_VIC_drc_war_fund_alt
-		icon = GFX_goal_generic_military_deal
 		prerequisite = { focus = TU_VIC_drc_war_economy }
 		mutually_exclusive = { focus = TU_VIC_drc_war_fund }
+		icon = GFX_goal_generic_military_deal
 		x = 0
 		y = 0
 		cost = 10
@@ -2285,9 +2211,9 @@
 
 	focus = {
 		id = TU_VIC_drc_sky_flames
-		icon = GFX_goal_generic_air_fighter
 		prerequisite = { focus = TU_VIC_drc_tara_arsenal }
 		mutually_exclusive = { focus = TU_VIC_drc_sky_flames_alt }
+		icon = GFX_goal_generic_air_fighter
 		x = 0
 		y = 0
 		cost = 10
@@ -2308,9 +2234,9 @@
 
 	focus = {
 		id = TU_VIC_drc_sky_flames_alt
-		icon = GFX_goal_generic_air_production
 		prerequisite = { focus = TU_VIC_drc_tara_arsenal }
 		mutually_exclusive = { focus = TU_VIC_drc_sky_flames }
+		icon = GFX_goal_generic_air_production
 		x = 0
 		y = 0
 		cost = 10
@@ -2331,9 +2257,9 @@
 
 	focus = {
 		id = TU_VIC_drc_martial_courts
-		icon = GFX_goal_generic_national_unity
 		prerequisite = { focus = TU_VIC_drc_purge_dublinn }
 		mutually_exclusive = { focus = TU_VIC_drc_martial_courts_alt }
+		icon = GFX_goal_generic_national_unity
 		x = 0
 		y = 0
 		cost = 10
@@ -2352,9 +2278,9 @@
 
 	focus = {
 		id = TU_VIC_drc_martial_courts_alt
-		icon = GFX_goal_generic_dangerous_deal
 		prerequisite = { focus = TU_VIC_drc_purge_dublinn }
 		mutually_exclusive = { focus = TU_VIC_drc_martial_courts }
+		icon = GFX_goal_generic_dangerous_deal
 		x = 0
 		y = 0
 		cost = 10
@@ -2372,9 +2298,9 @@
 
 	focus = {
 		id = TU_VIC_drc_veteran_cadre
-		icon = GFX_goal_generic_army_tanks
 		prerequisite = { focus = TU_VIC_drc_fire_doctrine }
 		mutually_exclusive = { focus = TU_VIC_drc_veteran_cadre_alt }
+		icon = GFX_goal_generic_army_tanks
 		x = 0
 		y = 0
 		cost = 10
@@ -2393,9 +2319,9 @@
 
 	focus = {
 		id = TU_VIC_drc_veteran_cadre_alt
-		icon = GFX_goal_generic_army_artillery
 		prerequisite = { focus = TU_VIC_drc_fire_doctrine }
 		mutually_exclusive = { focus = TU_VIC_drc_veteran_cadre }
+		icon = GFX_goal_generic_army_artillery
 		x = 0
 		y = 0
 		cost = 10
@@ -2414,9 +2340,9 @@
 
 	focus = {
 		id = TU_VIC_par_route
-		icon = GFX_goal_generic_improve_relations
 		prerequisite = { focus = TU_VIC_dukes_summit }
 		mutually_exclusive = { focus = TU_VIC_duk_route focus = TU_VIC_asl_route focus = TU_VIC_drc_route }
+		icon = GFX_goal_generic_improve_relations
 		x = 0
 		y = 0
 		cost = 5
@@ -2437,8 +2363,8 @@
 
 	focus = {
 		id = TU_VIC_par_writ
-		icon = GFX_goal_generic_political_pressure
 		prerequisite = { focus = TU_VIC_par_route }
+		icon = GFX_goal_generic_political_pressure
 		x = 0
 		y = 0
 		cost = 10
@@ -2457,8 +2383,8 @@
 
 	focus = {
 		id = TU_VIC_par_free_press
-		icon = GFX_goal_generic_propaganda
 		prerequisite = { focus = TU_VIC_par_writ }
+		icon = GFX_goal_generic_propaganda
 		x = 0
 		y = 0
 		cost = 10
@@ -2479,8 +2405,8 @@
 
 	focus = {
 		id = TU_VIC_par_commons_reform
-		icon = GFX_goal_generic_national_unity
 		prerequisite = { focus = TU_VIC_par_free_press }
+		icon = GFX_goal_generic_national_unity
 		x = 0
 		y = 0
 		cost = 10
@@ -2499,8 +2425,8 @@
 
 	focus = {
 		id = TU_VIC_par_public_works
-		icon = GFX_goal_generic_construct_infrastructure
 		prerequisite = { focus = TU_VIC_par_commons_reform }
+		icon = GFX_goal_generic_construct_infrastructure
 		x = 0
 		y = 0
 		cost = 10
@@ -2520,8 +2446,8 @@
 
 	focus = {
 		id = TU_VIC_par_trade_act
-		icon = GFX_goal_generic_trade
 		prerequisite = { focus = TU_VIC_par_public_works }
+		icon = GFX_goal_generic_trade
 		x = 0
 		y = 0
 		cost = 10
@@ -2540,8 +2466,8 @@
 
 	focus = {
 		id = TU_VIC_par_factory_acts
-		icon = GFX_goal_generic_consumer_goods
 		prerequisite = { focus = TU_VIC_par_trade_act }
+		icon = GFX_goal_generic_consumer_goods
 		x = 0
 		y = 0
 		cost = 10
@@ -2559,8 +2485,8 @@
 
 	focus = {
 		id = TU_VIC_par_elections
-		icon = GFX_goal_generic_political_pressure
 		prerequisite = { focus = TU_VIC_par_factory_acts }
+		icon = GFX_goal_generic_political_pressure
 		x = 0
 		y = 0
 		cost = 10
@@ -2583,8 +2509,8 @@
 
 	focus = {
 		id = TU_VIC_par_civil_service
-		icon = GFX_goal_generic_construction
 		prerequisite = { focus = TU_VIC_par_elections }
+		icon = GFX_goal_generic_construction
 		x = 0
 		y = 0
 		cost = 10
@@ -2603,8 +2529,8 @@
 
 	focus = {
 		id = TU_VIC_par_london_exchange
-		icon = GFX_goal_generic_positive_trade_relations
 		prerequisite = { focus = TU_VIC_par_civil_service }
+		icon = GFX_goal_generic_positive_trade_relations
 		x = 0
 		y = 0
 		cost = 10
@@ -2628,8 +2554,8 @@
 
 	focus = {
 		id = TU_VIC_par_lords_review
-		icon = GFX_goal_generic_defence
 		prerequisite = { focus = TU_VIC_par_london_exchange }
+		icon = GFX_goal_generic_defence
 		x = 0
 		y = 0
 		cost = 10
@@ -2652,8 +2578,8 @@
 
 	focus = {
 		id = TU_VIC_par_army_reform
-		icon = GFX_goal_generic_army_doctrines
 		prerequisite = { focus = TU_VIC_par_lords_review }
+		icon = GFX_goal_generic_army_doctrines
 		x = 0
 		y = 0
 		cost = 10
@@ -2672,8 +2598,8 @@
 
 	focus = {
 		id = TU_VIC_par_ministry_war
-		icon = GFX_goal_generic_military_sphere
 		prerequisite = { focus = TU_VIC_par_army_reform }
+		icon = GFX_goal_generic_military_sphere
 		x = 0
 		y = 0
 		cost = 10
@@ -2692,8 +2618,8 @@
 
 	focus = {
 		id = TU_VIC_par_rule_of_law
-		icon = GFX_goal_generic_national_unity
 		prerequisite = { focus = TU_VIC_par_ministry_war }
+		icon = GFX_goal_generic_national_unity
 		x = 0
 		y = 0
 		cost = 10
@@ -2712,8 +2638,8 @@
 
 	focus = {
 		id = TU_VIC_par_national_consensus
-		icon = GFX_goal_generic_major_alliance
 		prerequisite = { focus = TU_VIC_par_rule_of_law }
+		icon = GFX_goal_generic_major_alliance
 		x = 0
 		y = 0
 		cost = 10
@@ -2732,8 +2658,8 @@
 
 	focus = {
 		id = TU_VIC_par_constitution
-		icon = GFX_goal_generic_political_pressure
 		prerequisite = { focus = TU_VIC_par_national_consensus }
+		icon = GFX_goal_generic_political_pressure
 		x = 0
 		y = 0
 		cost = 10
@@ -2752,8 +2678,8 @@
 
 	focus = {
 		id = TU_VIC_par_pm_election
-		icon = GFX_goal_generic_neutrality_focus
 		prerequisite = { focus = TU_VIC_par_constitution }
+		icon = GFX_goal_generic_neutrality_focus
 		x = 0
 		y = 0
 		cost = 15
@@ -2778,9 +2704,9 @@
 
 	focus = {
 		id = TU_VIC_par_pamphlets
-		icon = GFX_goal_generic_propaganda
 		prerequisite = { focus = TU_VIC_par_route }
 		mutually_exclusive = { focus = TU_VIC_par_pamphlets_alt }
+		icon = GFX_goal_generic_propaganda
 		x = 0
 		y = 0
 		cost = 10
@@ -2799,9 +2725,9 @@
 
 	focus = {
 		id = TU_VIC_par_pamphlets_alt
-		icon = GFX_goal_generic_political_pressure
 		prerequisite = { focus = TU_VIC_par_route }
 		mutually_exclusive = { focus = TU_VIC_par_pamphlets }
+		icon = GFX_goal_generic_political_pressure
 		x = 0
 		y = 0
 		cost = 10
@@ -2820,9 +2746,9 @@
 
 	focus = {
 		id = TU_VIC_par_union_law
-		icon = GFX_goal_generic_trade
 		prerequisite = { focus = TU_VIC_par_free_press }
 		mutually_exclusive = { focus = TU_VIC_par_guild_charter }
+		icon = GFX_goal_generic_trade
 		x = 0
 		y = 0
 		cost = 10
@@ -2841,9 +2767,9 @@
 
 	focus = {
 		id = TU_VIC_par_guild_charter
-		icon = GFX_goal_generic_production
 		prerequisite = { focus = TU_VIC_par_free_press }
 		mutually_exclusive = { focus = TU_VIC_par_union_law }
+		icon = GFX_goal_generic_production
 		x = 0
 		y = 0
 		cost = 10
@@ -2867,9 +2793,9 @@
 
 	focus = {
 		id = TU_VIC_par_tech_schools
-		icon = GFX_goal_generic_scientific_exchange
 		prerequisite = { focus = TU_VIC_par_public_works }
 		mutually_exclusive = { focus = TU_VIC_par_public_schools }
+		icon = GFX_goal_generic_scientific_exchange
 		x = 0
 		y = 0
 		cost = 10
@@ -2887,9 +2813,9 @@
 
 	focus = {
 		id = TU_VIC_par_public_schools
-		icon = GFX_goal_generic_political_pressure
 		prerequisite = { focus = TU_VIC_par_factory_acts }
 		mutually_exclusive = { focus = TU_VIC_par_tech_schools }
+		icon = GFX_goal_generic_political_pressure
 		x = 0
 		y = 0
 		cost = 10
@@ -2907,9 +2833,9 @@
 
 	focus = {
 		id = TU_VIC_par_free_trade
-		icon = GFX_goal_generic_improve_relations
 		prerequisite = { focus = TU_VIC_par_trade_act }
 		mutually_exclusive = { focus = TU_VIC_par_tariffs }
+		icon = GFX_goal_generic_improve_relations
 		x = 0
 		y = 0
 		cost = 10
@@ -2932,9 +2858,9 @@
 
 	focus = {
 		id = TU_VIC_par_tariffs
-		icon = GFX_goal_generic_military_deal
 		prerequisite = { focus = TU_VIC_par_trade_act }
 		mutually_exclusive = { focus = TU_VIC_par_free_trade }
+		icon = GFX_goal_generic_military_deal
 		x = 0
 		y = 0
 		cost = 10
@@ -2957,9 +2883,9 @@
 
 	focus = {
 		id = TU_VIC_par_steel_rail
-		icon = GFX_goal_generic_construct_civ_factory
 		prerequisite = { focus = TU_VIC_par_public_works }
 		mutually_exclusive = { focus = TU_VIC_par_steel_rail_alt }
+		icon = GFX_goal_generic_construct_civ_factory
 		x = 0
 		y = 0
 		cost = 10
@@ -2978,9 +2904,9 @@
 
 	focus = {
 		id = TU_VIC_par_steel_rail_alt
-		icon = GFX_goal_generic_construct_infrastructure
 		prerequisite = { focus = TU_VIC_par_public_works }
 		mutually_exclusive = { focus = TU_VIC_par_steel_rail }
+		icon = GFX_goal_generic_construct_infrastructure
 		x = 0
 		y = 0
 		cost = 10
@@ -3000,9 +2926,9 @@
 
 	focus = {
 		id = TU_VIC_par_police_reform
-		icon = GFX_goal_generic_defence
 		prerequisite = { focus = TU_VIC_par_commons_reform }
 		mutually_exclusive = { focus = TU_VIC_par_police_reform_alt }
+		icon = GFX_goal_generic_defence
 		x = 0
 		y = 0
 		cost = 10
@@ -3021,9 +2947,9 @@
 
 	focus = {
 		id = TU_VIC_par_police_reform_alt
-		icon = GFX_goal_generic_army_doctrines
 		prerequisite = { focus = TU_VIC_par_commons_reform }
 		mutually_exclusive = { focus = TU_VIC_par_police_reform }
+		icon = GFX_goal_generic_army_doctrines
 		x = 0
 		y = 0
 		cost = 10
@@ -3042,9 +2968,9 @@
 
 	focus = {
 		id = TU_VIC_par_free_elections
-		icon = GFX_goal_generic_political_pressure
 		prerequisite = { focus = TU_VIC_par_elections }
 		mutually_exclusive = { focus = TU_VIC_par_free_elections_alt }
+		icon = GFX_goal_generic_political_pressure
 		x = 0
 		y = 0
 		cost = 10
@@ -3063,9 +2989,9 @@
 
 	focus = {
 		id = TU_VIC_par_free_elections_alt
-		icon = GFX_goal_generic_national_unity
 		prerequisite = { focus = TU_VIC_par_elections }
 		mutually_exclusive = { focus = TU_VIC_par_free_elections }
+		icon = GFX_goal_generic_national_unity
 		x = 0
 		y = 0
 		cost = 10
@@ -3084,9 +3010,9 @@
 
 	focus = {
 		id = TU_VIC_par_veterans_bill
-		icon = GFX_goal_generic_small_arms
 		prerequisite = { focus = TU_VIC_par_army_reform }
 		mutually_exclusive = { focus = TU_VIC_par_veterans_bill_alt }
+		icon = GFX_goal_generic_small_arms
 		x = 0
 		y = 0
 		cost = 10
@@ -3105,9 +3031,9 @@
 
 	focus = {
 		id = TU_VIC_par_veterans_bill_alt
-		icon = GFX_goal_generic_army_tanks
 		prerequisite = { focus = TU_VIC_par_army_reform }
 		mutually_exclusive = { focus = TU_VIC_par_veterans_bill }
+		icon = GFX_goal_generic_army_tanks
 		x = 0
 		y = 0
 		cost = 10
@@ -3126,33 +3052,9 @@
 	}
 
 	focus = {
-		id = TU_VIC_par_navy_board
-		icon = GFX_goal_generic_build_navy
-		prerequisite = { focus = TU_VIC_par_ministry_war }
-		mutually_exclusive = { focus = TU_VIC_par_airship_mail }
-		x = 0
-		y = 0
-		cost = 10
-
-		search_filters = { FOCUS_FILTER_INDUSTRY }
-
-		ai_will_do = {
-			base = 1
-		}
-
-		completion_reward = {
-			TU_build_dockyard = yes
-			add_tech_bonus = { name = TU_VIC_par_navy_board bonus = 0.75 uses = 1 category = dd_tech category = ca_tech }
-			add_doctrine_cost_reduction = { name = TU_VIC_par_navy_board cost_reduction = 0.4 uses = 1 category = naval_doctrine }
-			navy_experience = 25
-		}
-	}
-
-	focus = {
 		id = TU_VIC_par_airship_mail
-		icon = GFX_goal_generic_build_airforce
 		prerequisite = { focus = TU_VIC_par_ministry_war }
-		mutually_exclusive = { focus = TU_VIC_par_navy_board }
+		icon = GFX_goal_generic_build_airforce
 		x = 0
 		y = 0
 		cost = 10
@@ -3173,9 +3075,9 @@
 
 	focus = {
 		id = TU_VIC_par_civil_rights
-		icon = GFX_goal_generic_national_unity
 		prerequisite = { focus = TU_VIC_par_rule_of_law }
 		mutually_exclusive = { focus = TU_VIC_par_civil_rights_alt }
+		icon = GFX_goal_generic_national_unity
 		x = 0
 		y = 0
 		cost = 10
@@ -3198,9 +3100,9 @@
 
 	focus = {
 		id = TU_VIC_par_civil_rights_alt
-		icon = GFX_goal_generic_positive_trade_relations
 		prerequisite = { focus = TU_VIC_par_rule_of_law }
 		mutually_exclusive = { focus = TU_VIC_par_civil_rights }
+		icon = GFX_goal_generic_positive_trade_relations
 		x = 0
 		y = 0
 		cost = 10
@@ -3219,9 +3121,9 @@
 
 	focus = {
 		id = TU_VIC_par_monarch_pension
-		icon = GFX_goal_generic_improve_relations
 		prerequisite = { focus = TU_VIC_par_lords_review }
 		mutually_exclusive = { focus = TU_VIC_par_monarch_pension_alt }
+		icon = GFX_goal_generic_improve_relations
 		x = 0
 		y = 0
 		cost = 10
@@ -3240,9 +3142,9 @@
 
 	focus = {
 		id = TU_VIC_par_monarch_pension_alt
-		icon = GFX_goal_generic_major_war
 		prerequisite = { focus = TU_VIC_par_lords_review }
 		mutually_exclusive = { focus = TU_VIC_par_monarch_pension }
+		icon = GFX_goal_generic_major_war
 		x = 0
 		y = 0
 		cost = 10
@@ -3261,9 +3163,9 @@
 
 	focus = {
 		id = TU_VIC_par_colonial_office
-		icon = GFX_goal_generic_positive_trade_relations
 		prerequisite = { focus = TU_VIC_par_london_exchange }
 		mutually_exclusive = { focus = TU_VIC_par_colonial_office_alt }
+		icon = GFX_goal_generic_positive_trade_relations
 		x = 0
 		y = 0
 		cost = 10
@@ -3282,9 +3184,9 @@
 
 	focus = {
 		id = TU_VIC_par_colonial_office_alt
-		icon = GFX_goal_generic_consumer_goods
 		prerequisite = { focus = TU_VIC_par_london_exchange }
 		mutually_exclusive = { focus = TU_VIC_par_colonial_office }
+		icon = GFX_goal_generic_consumer_goods
 		x = 0
 		y = 0
 		cost = 10

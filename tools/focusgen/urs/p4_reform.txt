@@ -2,9 +2,9 @@
 
 	focus = {
 		id = TU_URS_reform_path
-		icon = GFX_goal_generic_national_unity
 		prerequisite = { focus = TU_URS_imperial_decree }
 		mutually_exclusive = { focus = TU_URS_emperor_rule focus = TU_URS_military_junta focus = TU_URS_noble_compromise }
+		icon = GFX_goal_generic_national_unity
 		x = 122
 		y = 2
 		cost = 5
@@ -28,8 +28,8 @@
 
 	focus = {
 		id = TU_URS_reform_student_council
-		icon = GFX_goal_generic_propaganda
 		prerequisite = { focus = TU_URS_reform_path }
+		icon = GFX_goal_generic_propaganda
 		x = 122
 		y = 3
 		cost = 10
@@ -49,8 +49,8 @@
 
 	focus = {
 		id = TU_URS_reform_constitution_draft
-		icon = GFX_goal_generic_political_pressure
 		prerequisite = { focus = TU_URS_reform_student_council }
+		icon = GFX_goal_generic_political_pressure
 		x = 122
 		y = 4
 		cost = 10
@@ -70,9 +70,9 @@
 
 	focus = {
 		id = TU_URS_reform_constitutional_monarchy
-		icon = GFX_goal_generic_national_unity
 		prerequisite = { focus = TU_URS_reform_constitution_draft }
 		mutually_exclusive = { focus = TU_URS_reform_republic_path }
+		icon = GFX_goal_generic_national_unity
 		x = 120
 		y = 5
 		cost = 10
@@ -95,8 +95,8 @@
 
 	focus = {
 		id = TU_URS_reform_royal_charter
-		icon = GFX_goal_generic_political_pressure
 		prerequisite = { focus = TU_URS_reform_constitutional_monarchy focus = TU_URS_reform_republic_path }
+		icon = GFX_goal_generic_political_pressure
 		x = 120
 		y = 6
 		cost = 10
@@ -115,8 +115,8 @@
 
 	focus = {
 		id = TU_URS_reform_crown_councils
-		icon = GFX_goal_generic_construction
 		prerequisite = { focus = TU_URS_reform_royal_charter }
+		icon = GFX_goal_generic_construction
 		x = 120
 		y = 7
 		cost = 10
@@ -135,9 +135,9 @@
 
 	focus = {
 		id = TU_URS_reform_monarch_legacy
-		icon = GFX_goal_generic_national_unity
 		prerequisite = { focus = TU_URS_reform_crown_councils }
 		mutually_exclusive = { focus = TU_URS_reform_monarch_legacy_alt }
+		icon = GFX_goal_generic_national_unity
 		x = 120
 		y = 9
 		cost = 10
@@ -160,9 +160,9 @@
 
 	focus = {
 		id = TU_URS_reform_monarch_legacy_alt
-		icon = GFX_goal_generic_propaganda
 		prerequisite = { focus = TU_URS_reform_crown_councils }
 		mutually_exclusive = { focus = TU_URS_reform_monarch_legacy }
+		icon = GFX_goal_generic_propaganda
 		x = 122
 		y = 9
 		cost = 10
@@ -189,9 +189,9 @@
 
 	focus = {
 		id = TU_URS_reform_republic_path
-		icon = GFX_goal_generic_neutrality_focus
 		prerequisite = { focus = TU_URS_reform_constitution_draft }
 		mutually_exclusive = { focus = TU_URS_reform_constitutional_monarchy }
+		icon = GFX_goal_generic_neutrality_focus
 		x = 124
 		y = 5
 		cost = 10
@@ -214,8 +214,8 @@
 
 	focus = {
 		id = TU_URS_reform_republic_assembly
-		icon = GFX_goal_generic_improve_relations
 		prerequisite = { focus = TU_URS_reform_republic_path }
+		icon = GFX_goal_generic_improve_relations
 		x = 124
 		y = 6
 		cost = 10
@@ -234,8 +234,8 @@
 
 	focus = {
 		id = TU_URS_reform_republic_vote
-		icon = GFX_goal_generic_propaganda
 		prerequisite = { focus = TU_URS_reform_republic_assembly }
+		icon = GFX_goal_generic_propaganda
 		x = 124
 		y = 7
 		cost = 10
@@ -254,8 +254,8 @@
 
 	focus = {
 		id = TU_URS_reform_republic_civil_service
-		icon = GFX_goal_generic_construction2
 		prerequisite = { focus = TU_URS_reform_republic_vote }
+		icon = GFX_goal_generic_construction2
 		x = 124
 		y = 8
 		cost = 10
@@ -274,8 +274,8 @@
 
 	focus = {
 		id = TU_URS_reform_republic_legacy
-		icon = GFX_goal_generic_neutrality_focus
 		prerequisite = { focus = TU_URS_reform_republic_civil_service }
+		icon = GFX_goal_generic_neutrality_focus
 		x = 124
 		y = 9
 		cost = 10
@@ -298,8 +298,8 @@
 
 	focus = {
 		id = TU_URS_reform_democratic_party
-		icon = GFX_goal_generic_political_pressure
 		prerequisite = { focus = TU_URS_reform_crown_councils focus = TU_URS_reform_republic_vote }
+		icon = GFX_goal_generic_political_pressure
 		x = 118
 		y = 7
 		cost = 10
@@ -326,8 +326,8 @@
 
 	focus = {
 		id = TU_URS_reform_elections
-		icon = GFX_goal_generic_propaganda
 		prerequisite = { focus = TU_URS_reform_democratic_party }
+		icon = GFX_goal_generic_propaganda
 		x = 118
 		y = 8
 		cost = 10
@@ -346,8 +346,8 @@
 
 	focus = {
 		id = TU_URS_reform_coalition_rule
-		icon = GFX_goal_generic_improve_relations
 		prerequisite = { focus = TU_URS_reform_elections }
+		icon = GFX_goal_generic_improve_relations
 		x = 118
 		y = 9
 		cost = 10
@@ -365,8 +365,8 @@
 
 	focus = {
 		id = TU_URS_reform_civil_rights
-		icon = GFX_goal_generic_improve_relations
 		prerequisite = { focus = TU_URS_reform_coalition_rule }
+		icon = GFX_goal_generic_improve_relations
 		x = 118
 		y = 10
 		cost = 10
@@ -389,8 +389,8 @@
 
 	focus = {
 		id = TU_URS_reform_labour_law
-		icon = GFX_goal_generic_construct_civilian
 		prerequisite = { focus = TU_URS_reform_civil_rights }
+		icon = GFX_goal_generic_construct_civilian
 		x = 118
 		y = 11
 		cost = 10
@@ -408,8 +408,8 @@
 
 	focus = {
 		id = TU_URS_reform_welfare_state
-		icon = GFX_goal_generic_consumer_goods
 		prerequisite = { focus = TU_URS_reform_labour_law }
+		icon = GFX_goal_generic_consumer_goods
 		x = 118
 		y = 12
 		cost = 10
@@ -428,8 +428,8 @@
 
 	focus = {
 		id = TU_URS_reform_national_dialogue
-		icon = GFX_goal_generic_intelligence_exchange
 		prerequisite = { focus = TU_URS_reform_welfare_state }
+		icon = GFX_goal_generic_intelligence_exchange
 		x = 118
 		y = 13
 		cost = 10
@@ -452,8 +452,8 @@
 
 	focus = {
 		id = TU_URS_reform_constitutional_court
-		icon = GFX_goal_generic_defence
 		prerequisite = { focus = TU_URS_reform_national_dialogue }
+		icon = GFX_goal_generic_defence
 		x = 118
 		y = 14
 		cost = 10
@@ -472,8 +472,8 @@
 
 	focus = {
 		id = TU_URS_reform_anti_corruption
-		icon = GFX_goal_generic_political_pressure
 		prerequisite = { focus = TU_URS_reform_constitutional_court }
+		icon = GFX_goal_generic_political_pressure
 		x = 118
 		y = 15
 		cost = 10
@@ -492,8 +492,8 @@
 
 	focus = {
 		id = TU_URS_reform_open_government
-		icon = GFX_goal_generic_scientific_exchange
 		prerequisite = { focus = TU_URS_reform_anti_corruption }
+		icon = GFX_goal_generic_scientific_exchange
 		x = 118
 		y = 16
 		cost = 10
@@ -516,8 +516,8 @@
 
 	focus = {
 		id = TU_URS_reform_civil_society
-		icon = GFX_goal_generic_positive_trade_relations
 		prerequisite = { focus = TU_URS_reform_open_government }
+		icon = GFX_goal_generic_positive_trade_relations
 		x = 118
 		y = 17
 		cost = 10
@@ -536,8 +536,8 @@
 
 	focus = {
 		id = TU_URS_reform_completion
-		icon = GFX_goal_generic_national_unity
 		prerequisite = { focus = TU_URS_reform_civil_society }
+		icon = GFX_goal_generic_national_unity
 		x = 118
 		y = 18
 		cost = 15
@@ -561,8 +561,8 @@
 
 	focus = {
 		id = TU_URS_reform_reunion_treaty
-		icon = GFX_goal_generic_alliance
 		prerequisite = { focus = TU_URS_reform_student_council }
+		icon = GFX_goal_generic_alliance
 		x = 114
 		y = 6
 		cost = 10
@@ -587,8 +587,8 @@
 
 	focus = {
 		id = TU_URS_reform_medical_aid
-		icon = GFX_goal_generic_construct_civilian
 		prerequisite = { focus = TU_URS_reform_reunion_treaty focus = TU_URS_reform_student_council }
+		icon = GFX_goal_generic_construct_civilian
 		x = 114
 		y = 7
 		cost = 10
@@ -614,8 +614,8 @@
 
 	focus = {
 		id = TU_URS_reform_infected_citizenship
-		icon = GFX_goal_generic_propaganda
 		prerequisite = { focus = TU_URS_reform_student_council }
+		icon = GFX_goal_generic_propaganda
 		x = 126
 		y = 5
 		cost = 10
@@ -628,17 +628,16 @@
 
 		completion_reward = {
 			remove_ideas = TU_URS_infected_discrimination
-			add_tech_bonus = { name = TU_URS_reform_infected_citizenship bonus = 0.75 uses = 1 category = dd_tech category = ca_tech }
-			add_doctrine_cost_reduction = { name = TU_URS_reform_infected_citizenship cost_reduction = 0.4 uses = 1 category = naval_doctrine }
-			navy_experience = 25
+			add_stability = 0.03
+			add_manpower = 10000
 		}
 	}
 
 	focus = {
 		id = TU_URS_reform_infected_labour_rights
-		icon = GFX_goal_generic_construction
 		prerequisite = { focus = TU_URS_reform_infected_citizenship }
 		mutually_exclusive = { focus = TU_URS_reform_infected_guild }
+		icon = GFX_goal_generic_construction
 		x = 126
 		y = 6
 		cost = 10
@@ -657,9 +656,9 @@
 
 	focus = {
 		id = TU_URS_reform_infected_guild
-		icon = GFX_goal_generic_trade
 		prerequisite = { focus = TU_URS_reform_infected_citizenship }
 		mutually_exclusive = { focus = TU_URS_reform_infected_labour_rights }
+		icon = GFX_goal_generic_trade
 		x = 128
 		y = 6
 		cost = 10
@@ -682,8 +681,8 @@
 
 	focus = {
 		id = TU_URS_reform_infected_representation
-		icon = GFX_goal_generic_political_pressure
 		prerequisite = { focus = TU_URS_reform_infected_guild focus = TU_URS_reform_infected_labour_rights }
+		icon = GFX_goal_generic_political_pressure
 		x = 126
 		y = 8
 		cost = 10
@@ -710,8 +709,8 @@
 
 	focus = {
 		id = TU_URS_reform_citizenship_law
-		icon = GFX_goal_generic_national_unity
 		prerequisite = { focus = TU_URS_reform_infected_representation }
+		icon = GFX_goal_generic_national_unity
 		x = 126
 		y = 9
 		cost = 10
@@ -724,16 +723,15 @@
 
 		completion_reward = {
 			add_ideas = TU_URS_p4_citizenship
-			add_tech_bonus = { name = TU_URS_reform_citizenship_law bonus = 0.75 uses = 1 category = dd_tech category = ca_tech }
-			add_doctrine_cost_reduction = { name = TU_URS_reform_citizenship_law cost_reduction = 0.4 uses = 1 category = naval_doctrine }
-			navy_experience = 25
+			add_stability = 0.03
+			add_manpower = 10000
 		}
 	}
 
 	focus = {
 		id = TU_URS_reform_modern_schools
-		icon = GFX_goal_generic_scientific_exchange
 		prerequisite = { focus = TU_URS_reform_student_council }
+		icon = GFX_goal_generic_scientific_exchange
 		x = 130
 		y = 5
 		cost = 10
@@ -752,8 +750,8 @@
 
 	focus = {
 		id = TU_URS_reform_school_curriculum
-		icon = GFX_goal_generic_scientific_exchange
 		prerequisite = { focus = TU_URS_reform_modern_schools }
+		icon = GFX_goal_generic_scientific_exchange
 		x = 130
 		y = 6
 		cost = 10
@@ -772,8 +770,8 @@
 
 	focus = {
 		id = TU_URS_reform_university
-		icon = GFX_goal_generic_scientific_exchange
 		prerequisite = { focus = TU_URS_reform_school_curriculum }
+		icon = GFX_goal_generic_scientific_exchange
 		x = 130
 		y = 7
 		cost = 10
@@ -791,8 +789,8 @@
 
 	focus = {
 		id = TU_URS_reform_press_freedom
-		icon = GFX_goal_generic_propaganda
 		prerequisite = { focus = TU_URS_reform_university }
+		icon = GFX_goal_generic_propaganda
 		x = 130
 		y = 8
 		cost = 10
@@ -812,8 +810,8 @@
 
 	focus = {
 		id = TU_URS_reform_journalists
-		icon = GFX_goal_generic_intelligence_exchange
 		prerequisite = { focus = TU_URS_reform_press_freedom }
+		icon = GFX_goal_generic_intelligence_exchange
 		x = 130
 		y = 9
 		cost = 10
@@ -836,8 +834,8 @@
 
 	focus = {
 		id = TU_URS_reform_media_law
-		icon = GFX_goal_generic_political_pressure
 		prerequisite = { focus = TU_URS_reform_journalists }
+		icon = GFX_goal_generic_political_pressure
 		x = 130
 		y = 10
 		cost = 10

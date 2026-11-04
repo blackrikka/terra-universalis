@@ -191,7 +191,7 @@ focus_tree = {
 
 	focus = {
 		id = TU_SIR_bellone_docks
-		icon = GFX_goal_generic_build_navy
+		icon = GFX_goal_generic_trade
 		prerequisite = { focus = TU_SIR_bellone_construction }
 		x = -18
 		y = 5
@@ -204,10 +204,9 @@ focus_tree = {
 		}
 
 		completion_reward = {
-			add_tech_bonus = { name = TU_SIR_bellone_docks bonus = 0.75 uses = 1 category = dd_tech category = ca_tech }
-			add_doctrine_cost_reduction = { name = TU_SIR_bellone_docks cost_reduction = 0.4 uses = 1 category = naval_doctrine }
-			navy_experience = 25
-			TU_build_dockyard = yes
+			add_political_power = 60
+			add_tech_bonus = { name = TU_SIR_bellone_docks bonus = 0.75 uses = 1 category = industry }
+			TU_build_civ_factory = yes
 		}
 	}
 
@@ -1104,7 +1103,7 @@ focus_tree = {
 
 	focus = {
 		id = TU_SIR_harbour_cities
-		icon = GFX_goal_generic_build_navy
+		icon = GFX_goal_generic_trade
 		prerequisite = { focus = TU_SIR_root }
 		x = -23
 		y = 9
@@ -1123,9 +1122,9 @@ focus_tree = {
 
 	focus = {
 		id = TU_SIR_harbour_defence
-		icon = GFX_goal_generic_build_navy
+		icon = GFX_goal_generic_trade
 		prerequisite = { focus = TU_SIR_harbour_cities }
-		x = -25
+		x = -24
 		y = 10
 		cost = 10
 
@@ -1136,9 +1135,8 @@ focus_tree = {
 		}
 
 		completion_reward = {
-			add_tech_bonus = { name = TU_SIR_harbour_defence bonus = 0.75 uses = 1 category = dd_tech category = ca_tech }
-			add_doctrine_cost_reduction = { name = TU_SIR_harbour_defence cost_reduction = 0.4 uses = 1 category = naval_doctrine }
-			navy_experience = 25
+			add_political_power = 60
+			add_tech_bonus = { name = TU_SIR_harbour_defence bonus = 0.75 uses = 1 category = industry }
 		}
 	}
 
@@ -1146,7 +1144,7 @@ focus_tree = {
 		id = TU_SIR_smuggling_routes
 		icon = GFX_goal_generic_intelligence_exchange
 		prerequisite = { focus = TU_SIR_harbour_cities }
-		x = -21
+		x = -22
 		y = 10
 		cost = 10
 
@@ -1163,74 +1161,10 @@ focus_tree = {
 	}
 
 	focus = {
-		id = TU_SIR_coastal_fleet
-		icon = GFX_goal_generic_build_navy
-		prerequisite = { focus = TU_SIR_harbour_defence }
-		x = -25
-		y = 11
-		cost = 10
-
-		search_filters = { FOCUS_FILTER_POLITICAL }
-
-		ai_will_do = {
-			base = 1
-		}
-
-		completion_reward = {
-			add_tech_bonus = { name = TU_SIR_coastal_fleet bonus = 0.75 uses = 1 category = dd_tech category = ca_tech }
-			add_doctrine_cost_reduction = { name = TU_SIR_coastal_fleet cost_reduction = 0.4 uses = 1 category = naval_doctrine }
-			navy_experience = 25
-		}
-	}
-
-	focus = {
-		id = TU_SIR_torpedo_boats
-		icon = GFX_goal_generic_build_navy
-		prerequisite = { focus = TU_SIR_coastal_fleet }
-		x = -26
-		y = 12
-		cost = 10
-
-		search_filters = { FOCUS_FILTER_POLITICAL }
-
-		ai_will_do = {
-			base = 1
-		}
-
-		completion_reward = {
-			add_tech_bonus = { name = TU_SIR_torpedo_boats bonus = 0.75 uses = 1 category = dd_tech category = ca_tech }
-			add_doctrine_cost_reduction = { name = TU_SIR_torpedo_boats cost_reduction = 0.4 uses = 1 category = naval_doctrine }
-			navy_experience = 25
-		}
-	}
-
-	focus = {
-		id = TU_SIR_naval_base
-		icon = GFX_goal_generic_build_navy
-		prerequisite = { focus = TU_SIR_coastal_fleet }
-		x = -24
-		y = 12
-		cost = 10
-
-		search_filters = { FOCUS_FILTER_INDUSTRY }
-
-		ai_will_do = {
-			base = 1
-		}
-
-		completion_reward = {
-			add_tech_bonus = { name = TU_SIR_naval_base bonus = 0.75 uses = 1 category = dd_tech category = ca_tech }
-			add_doctrine_cost_reduction = { name = TU_SIR_naval_base cost_reduction = 0.4 uses = 1 category = naval_doctrine }
-			navy_experience = 25
-			TU_build_dockyard = yes
-		}
-	}
-
-	focus = {
 		id = TU_SIR_customs_house
 		icon = GFX_goal_generic_trade
 		prerequisite = { focus = TU_SIR_smuggling_routes }
-		x = -21
+		x = -22
 		y = 11
 		cost = 10
 
@@ -1248,9 +1182,9 @@ focus_tree = {
 
 	focus = {
 		id = TU_SIR_free_port
-		icon = GFX_goal_generic_build_navy
+		icon = GFX_goal_generic_trade
 		prerequisite = { focus = TU_SIR_customs_house }
-		x = -21
+		x = -22
 		y = 12
 		cost = 10
 
@@ -1261,9 +1195,8 @@ focus_tree = {
 		}
 
 		completion_reward = {
-			add_tech_bonus = { name = TU_SIR_free_port bonus = 0.75 uses = 1 category = dd_tech category = ca_tech }
-			add_doctrine_cost_reduction = { name = TU_SIR_free_port cost_reduction = 0.4 uses = 1 category = naval_doctrine }
-			navy_experience = 25
+			add_political_power = 60
+			add_tech_bonus = { name = TU_SIR_free_port bonus = 0.75 uses = 1 category = industry }
 		}
 	}
 
@@ -2186,9 +2119,9 @@ focus_tree = {
 
 	focus = {
 		id = TU_SIR_coastal_guns
-		icon = GFX_goal_generic_build_navy
+		icon = GFX_goal_generic_trade
 		prerequisite = { focus = TU_SIR_harbour_defence }
-		x = -23
+		x = -24
 		y = 11
 		cost = 10
 
@@ -2199,73 +2132,8 @@ focus_tree = {
 		}
 
 		completion_reward = {
-			add_tech_bonus = { name = TU_SIR_coastal_guns bonus = 0.75 uses = 1 category = dd_tech category = ca_tech }
-			add_doctrine_cost_reduction = { name = TU_SIR_coastal_guns cost_reduction = 0.4 uses = 1 category = naval_doctrine }
-			navy_experience = 25
-		}
-	}
-
-	focus = {
-		id = TU_SIR_submarines
-		icon = GFX_goal_generic_build_navy
-		prerequisite = { focus = TU_SIR_torpedo_boats }
-		x = -26
-		y = 13
-		cost = 10
-
-		search_filters = { FOCUS_FILTER_POLITICAL }
-
-		ai_will_do = {
-			base = 1
-		}
-
-		completion_reward = {
-			add_tech_bonus = { name = TU_SIR_submarines bonus = 0.75 uses = 1 category = dd_tech category = ca_tech }
-			add_doctrine_cost_reduction = { name = TU_SIR_submarines cost_reduction = 0.4 uses = 1 category = naval_doctrine }
-			navy_experience = 25
-		}
-	}
-
-	focus = {
-		id = TU_SIR_merchant_marine
-		icon = GFX_goal_generic_build_navy
-		prerequisite = { focus = TU_SIR_free_port }
-		x = -21
-		y = 13
-		cost = 10
-
-		search_filters = { FOCUS_FILTER_POLITICAL }
-
-		ai_will_do = {
-			base = 1
-		}
-
-		completion_reward = {
-			add_tech_bonus = { name = TU_SIR_merchant_marine bonus = 0.75 uses = 1 category = dd_tech category = ca_tech }
-			add_doctrine_cost_reduction = { name = TU_SIR_merchant_marine cost_reduction = 0.4 uses = 1 category = naval_doctrine }
-			navy_experience = 25
-		}
-	}
-
-	focus = {
-		id = TU_SIR_shipyards
-		icon = GFX_goal_generic_build_navy
-		prerequisite = { focus = TU_SIR_naval_base }
-		x = -24
-		y = 13
-		cost = 10
-
-		search_filters = { FOCUS_FILTER_INDUSTRY }
-
-		ai_will_do = {
-			base = 1
-		}
-
-		completion_reward = {
-			add_tech_bonus = { name = TU_SIR_shipyards bonus = 0.75 uses = 1 category = dd_tech category = ca_tech }
-			add_doctrine_cost_reduction = { name = TU_SIR_shipyards cost_reduction = 0.4 uses = 1 category = naval_doctrine }
-			navy_experience = 25
-			TU_build_dockyard = yes
+			add_political_power = 60
+			add_tech_bonus = { name = TU_SIR_coastal_guns bonus = 0.75 uses = 1 category = industry }
 		}
 	}
 
@@ -2451,7 +2319,7 @@ focus_tree = {
 
 	focus = {
 		id = TU_SIR_rhodes_office
-		icon = GFX_goal_generic_build_navy
+		icon = GFX_goal_generic_improve_relations
 		prerequisite = { focus = TU_SIR_foreign_ministry }
 		x = 8
 		y = 13
@@ -2464,9 +2332,8 @@ focus_tree = {
 		}
 
 		completion_reward = {
-			add_tech_bonus = { name = TU_SIR_rhodes_office bonus = 0.75 uses = 1 category = dd_tech category = ca_tech }
-			add_doctrine_cost_reduction = { name = TU_SIR_rhodes_office cost_reduction = 0.4 uses = 1 category = naval_doctrine }
-			navy_experience = 25
+			add_political_power = 60
+			add_stability = 0.03
 		}
 	}
 }

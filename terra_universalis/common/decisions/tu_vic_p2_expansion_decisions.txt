@@ -318,11 +318,11 @@ TU_VIC_expansion_category = {
 		}
 
 		visible = {
-			has_completed_focus = TU_VIC_col_war_fleet
+			has_completed_focus = TU_VIC_col_colonial_charter
 		}
 
 		available = {
-			has_completed_focus = TU_VIC_col_war_fleet
+			has_completed_focus = TU_VIC_col_colonial_charter
 			has_country_flag = TU_DEC_TU_VIC_claim_col
 			NOT = { has_war_with = COL }
 		}

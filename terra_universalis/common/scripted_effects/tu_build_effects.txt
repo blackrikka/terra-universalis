@@ -31,32 +31,6 @@ TU_build_mil_factory = {
 	}
 }
 
-TU_build_dockyard = {
-	if = {
-		limit = {
-			any_owned_state = {
-				is_controlled_by = ROOT
-				is_coastal = yes
-			}
-		}
-		random_owned_controlled_state = {
-			limit = {
-				is_controlled_by = ROOT
-				is_coastal = yes
-			}
-			add_extra_state_shared_building_slots = 1
-			add_building_construction = {
-				type = dockyard
-				level = 1
-				instant_build = yes
-			}
-		}
-	}
-	else = {
-		TU_build_mil_factory = yes
-	}
-}
-
 TU_build_infrastructure = {
 	random_owned_controlled_state = {
 		limit = {

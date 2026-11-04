@@ -111,7 +111,7 @@ C.idea("rule_of_law", "법의 시라쿠사", "Siracusa of Law", {"stability_fact
        "constitutional_guarantees")
 C.idea("wolf_lord", "늑대 군주의 귀환", "Return of the Wolf Lord",
        {"army_attack_factor": 0.1, "war_support_factor": 0.15, "army_morale_factor": 0.1}, "generic_war_preparation")
-C.idea("harbour_cities", "항구 도시", "Harbour Cities", {"naval_speed_factor": 0.05, "consumer_goods_factor": -0.02}, "generic_navy_bonus")
+C.idea("harbour_cities", "항구 도시", "Harbour Cities", {"political_power_gain": 0.05, "consumer_goods_factor": -0.02}, "generic_economic_increase")
 C.idea("urban_warfare", "시가전 전문가", "Urban Warfare Experts", {"army_defence_factor": 0.08, "army_org_factor": 0.03},
        "generic_fortify_the_borders")
 C.idea("wine_and_olive", "포도주와 올리브", "Wine and Olives", {"consumer_goods_factor": -0.03, "stability_factor": 0.03},
@@ -133,7 +133,7 @@ for k, ko, en in FAM:
       available=[AT_LEAST(k, 50)], reward=[FAMV(k, 10), "add_ideas = TU_SIR_%s_ties" % k],
       desc=("%s 패밀리와 손을 잡는다. (%s 영향력 50 이상)" % (ko, ko), "Join hands with the %s family. (%s influence 50+)" % (en, en)))
 f("bellone_construction", "벨로네 건설 회사", "Bellone Construction Company", pre=["bellone_court"], econ=True)
-f("bellone_docks", "벨로네 부두", "Bellone Docks", pre=["bellone_construction"], econ="TU_build_dockyard = yes")
+f("bellone_docks", "벨로네 부두", "Bellone Docks", pre=["bellone_construction"], econ="TU_build_civ_factory = yes")
 f("gambino_soldiers", "감비노 행동대", "Gambino Soldier Regiments", pre=["gambino_court"])
 f("gambino_arsenal", "감비노 무기고", "Gambino Arsenal", pre=["gambino_soldiers"])
 f("saluzzo_bank", "살루초 은행", "Saluzzo Bank", pre=["saluzzo_court"])
@@ -211,7 +211,7 @@ f("smuggling_routes", "밀수 항로", "Smuggling Routes", pre=["harbour_cities"
   desc=("밀수를 세금으로 바꾼다. '밀수 과세' 디시전이 열린다.", "Turn smuggling into taxes. Unlocks the Smuggling Tax decision."))
 f("coastal_fleet", "연안 함대", "Coastal Fleet", pre=["harbour_defence"])
 f("torpedo_boats", "어뢰정 전대", "Torpedo Boat Fleet", pre=["coastal_fleet"])
-f("naval_base", "해군 기지", "Naval Base Docks", pre=["coastal_fleet"], econ="TU_build_dockyard = yes")
+f("naval_base", "해군 기지", "Naval Base Docks", pre=["coastal_fleet"], econ="TU_build_civ_factory = yes")
 f("customs_house", "세관", "Customs House Trade", pre=["smuggling_routes"])
 f("free_port", "자유항", "Free Port Trade", pre=["customs_house"])
 
@@ -371,7 +371,7 @@ f("air_squadron", "시라쿠사 비행대", "Siracusan Air Squadron", pre=["offi
 f("coastal_guns", "해안포", "Coastal Guns Fortress", pre=["harbour_defence"])
 f("submarines", "잠수함 전대", "Submarine Fleet", pre=["torpedo_boats"])
 f("merchant_marine", "상선단", "Merchant Marine Fleet", pre=["free_port"])
-f("shipyards", "조선소", "Shipyards Dockyard", pre=["naval_base"], econ="TU_build_dockyard = yes")
+f("shipyards", "조선소", "Shipyards Dockyard", pre=["naval_base"], econ="TU_build_civ_factory = yes")
 f("vineyard_exports", "포도주 수출", "Wine Export Trade", pre=["wine_olive"])
 f("olive_oil_mills", "올리브유 공장", "Olive Oil Mills", pre=["vineyard_exports"], econ=True)
 f("steel_works", "제철소", "Steel Works", pre=["marble_quarries"], econ="TU_build_mil_factory = yes")
@@ -389,7 +389,7 @@ C.d(cat_fam, "witness_campaign", "증인 모집", "Recruit Witnesses", [LAW(10),
     days_re_enable=180, visible=[HAS("witness")])
 C.d(cat_eco, "olive_harvest", "올리브 수확 축제", "Olive Harvest Festival", ["add_stability = 0.03", "add_political_power = 25"], cost=25,
     once=False, days_re_enable=365, visible=["has_idea = TU_SIR_wine_and_olive"])
-C.d(cat_eco, "naval_patrol", "밀수 단속 순찰", "Anti-Smuggling Patrols", [LAW(5), "navy_experience = 15"], cost=50, once=False,
+C.d(cat_eco, "naval_patrol", "밀수 단속 순찰", "Anti-Smuggling Patrols", [LAW(5), "army_experience = 15"], cost=50, once=False,
     days_re_enable=180, visible=[HAS("smuggling")])
 C.ev(31, ("항구의 총격전", "Shootout at the Docks"), ("부두에서 두 조직이 화물을 두고 총격전을 벌였다.", "Two gangs had a shootout over cargo at the docks."),
      [("경찰을 투입한다.", "Send the police.", [LAW(5), "add_stability = -0.02"], 50), ("못 본 척한다.", "Look away.", [FAMV("bellone", 5)], 50)],

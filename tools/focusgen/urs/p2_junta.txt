@@ -4,9 +4,9 @@
 
 	focus = {
 		id = TU_URS_military_junta
-		icon = GFX_goal_generic_major_war
 		prerequisite = { focus = TU_URS_imperial_decree }
 		mutually_exclusive = { focus = TU_URS_emperor_rule focus = TU_URS_noble_compromise focus = TU_URS_reform_path }
+		icon = GFX_goal_generic_major_war
 		x = 88
 		y = 2
 		cost = 10
@@ -30,8 +30,8 @@
 
 	focus = {
 		id = TU_URS_hardline_generals
-		icon = GFX_goal_generic_army_doctrines
 		prerequisite = { focus = TU_URS_military_junta }
+		icon = GFX_goal_generic_army_doctrines
 		x = 88
 		y = 3
 		cost = 10
@@ -52,8 +52,8 @@
 
 	focus = {
 		id = TU_URS_chernobog_response
-		icon = GFX_goal_generic_defence
 		prerequisite = { focus = TU_URS_hardline_generals }
+		icon = GFX_goal_generic_defence
 		x = 88
 		y = 4
 		cost = 10
@@ -73,8 +73,8 @@
 
 	focus = {
 		id = TU_URS_war_mobilisation_law
-		icon = GFX_goal_generic_allies_build_infantry
 		prerequisite = { focus = TU_URS_chernobog_response }
+		icon = GFX_goal_generic_allies_build_infantry
 		x = 88
 		y = 5
 		cost = 10
@@ -94,9 +94,9 @@
 
 	focus = {
 		id = TU_URS_fascist_turn
-		icon = GFX_goal_generic_propaganda
 		prerequisite = { focus = TU_URS_war_mobilisation_law }
 		mutually_exclusive = { focus = TU_URS_junta_caretaker }
+		icon = GFX_goal_generic_propaganda
 		x = 88
 		y = 6
 		cost = 10
@@ -127,8 +127,8 @@
 
 	focus = {
 		id = TU_URS_total_war_economy
-		icon = GFX_goal_generic_construct_mil_factory
 		prerequisite = { focus = TU_URS_fascist_turn focus = TU_URS_junta_caretaker }
+		icon = GFX_goal_generic_construct_mil_factory
 		x = 88
 		y = 7
 		cost = 10
@@ -150,9 +150,9 @@
 
 	focus = {
 		id = TU_URS_purge_generals
-		icon = GFX_goal_generic_political_pressure
 		prerequisite = { focus = TU_URS_total_war_economy }
 		mutually_exclusive = { focus = TU_URS_loyalty_oath }
+		icon = GFX_goal_generic_political_pressure
 		x = 88
 		y = 9
 		cost = 10
@@ -175,8 +175,8 @@
 
 	focus = {
 		id = TU_URS_total_mobilisation
-		icon = GFX_goal_generic_construct_military
 		prerequisite = { focus = TU_URS_purge_generals focus = TU_URS_loyalty_oath }
+		icon = GFX_goal_generic_construct_military
 		x = 88
 		y = 10
 		cost = 10
@@ -196,8 +196,8 @@
 
 	focus = {
 		id = TU_URS_front_state
-		icon = GFX_goal_generic_army_artillery2
 		prerequisite = { focus = TU_URS_total_mobilisation }
+		icon = GFX_goal_generic_army_artillery2
 		x = 88
 		y = 11
 		cost = 10
@@ -217,8 +217,8 @@
 
 	focus = {
 		id = TU_URS_siege_doctrine
-		icon = GFX_goal_generic_army_doctrines
 		prerequisite = { focus = TU_URS_front_state }
+		icon = GFX_goal_generic_army_doctrines
 		x = 88
 		y = 12
 		cost = 10
@@ -237,8 +237,8 @@
 
 	focus = {
 		id = TU_URS_iron_march
-		icon = GFX_goal_generic_army_tanks
 		prerequisite = { focus = TU_URS_siege_doctrine }
+		icon = GFX_goal_generic_army_tanks
 		x = 88
 		y = 13
 		cost = 10
@@ -257,8 +257,8 @@
 
 	focus = {
 		id = TU_URS_iron_regime
-		icon = GFX_goal_generic_military_sphere
 		prerequisite = { focus = TU_URS_iron_march }
+		icon = GFX_goal_generic_military_sphere
 		x = 88
 		y = 14
 		cost = 15
@@ -283,8 +283,8 @@
 
 	focus = {
 		id = TU_URS_standing_junta
-		icon = GFX_goal_generic_national_unity
 		prerequisite = { focus = TU_URS_iron_regime }
+		icon = GFX_goal_generic_national_unity
 		x = 88
 		y = 15
 		cost = 10
@@ -303,8 +303,8 @@
 
 	focus = {
 		id = TU_URS_endless_junta
-		icon = GFX_goal_generic_military_sphere
 		prerequisite = { focus = TU_URS_standing_junta }
+		icon = GFX_goal_generic_military_sphere
 		x = 88
 		y = 17
 		cost = 15
@@ -335,9 +335,9 @@
 
 	focus = {
 		id = TU_URS_junta_caretaker
-		icon = GFX_goal_generic_neutrality_focus
 		prerequisite = { focus = TU_URS_war_mobilisation_law }
 		mutually_exclusive = { focus = TU_URS_fascist_turn }
+		icon = GFX_goal_generic_neutrality_focus
 		x = 86
 		y = 6
 		cost = 10
@@ -360,8 +360,8 @@
 
 	focus = {
 		id = TU_URS_frost_conscription
-		icon = GFX_goal_generic_allies_build_infantry
 		prerequisite = { focus = TU_URS_war_mobilisation_law }
+		icon = GFX_goal_generic_allies_build_infantry
 		x = 84
 		y = 6
 		cost = 10
@@ -380,8 +380,8 @@
 
 	focus = {
 		id = TU_URS_frontier_militia
-		icon = GFX_goal_generic_cavalry
 		prerequisite = { focus = TU_URS_frost_conscription }
+		icon = GFX_goal_generic_cavalry
 		x = 84
 		y = 7
 		cost = 10
@@ -400,8 +400,8 @@
 
 	focus = {
 		id = TU_URS_war_bonds
-		icon = GFX_goal_generic_consumer_goods
 		prerequisite = { focus = TU_URS_frontier_militia }
+		icon = GFX_goal_generic_consumer_goods
 		x = 84
 		y = 8
 		cost = 10
@@ -420,8 +420,8 @@
 
 	focus = {
 		id = TU_URS_rationing
-		icon = GFX_goal_generic_consumer_goods
 		prerequisite = { focus = TU_URS_war_bonds }
+		icon = GFX_goal_generic_consumer_goods
 		x = 86
 		y = 9
 		cost = 10
@@ -444,8 +444,8 @@
 
 	focus = {
 		id = TU_URS_steel_quota
-		icon = GFX_goal_generic_production
 		prerequisite = { focus = TU_URS_war_bonds }
+		icon = GFX_goal_generic_production
 		x = 84
 		y = 10
 		cost = 10
@@ -469,8 +469,8 @@
 
 	focus = {
 		id = TU_URS_artillery_push
-		icon = GFX_goal_generic_army_artillery
 		prerequisite = { focus = TU_URS_steel_quota }
+		icon = GFX_goal_generic_army_artillery
 		x = 84
 		y = 11
 		cost = 10
@@ -489,8 +489,8 @@
 
 	focus = {
 		id = TU_URS_armor_corps
-		icon = GFX_goal_generic_build_tank
 		prerequisite = { focus = TU_URS_artillery_push }
+		icon = GFX_goal_generic_build_tank
 		x = 84
 		y = 12
 		cost = 10
@@ -509,8 +509,8 @@
 
 	focus = {
 		id = TU_URS_mobile_divisions
-		icon = GFX_goal_generic_army_motorized
 		prerequisite = { focus = TU_URS_armor_corps }
+		icon = GFX_goal_generic_army_motorized
 		x = 84
 		y = 13
 		cost = 10
@@ -534,8 +534,8 @@
 
 	focus = {
 		id = TU_URS_mobile_city_plan
-		icon = GFX_goal_generic_construct_infrastructure
 		prerequisite = { focus = TU_URS_hardline_generals }
+		icon = GFX_goal_generic_construct_infrastructure
 		x = 82
 		y = 4
 		cost = 10
@@ -554,8 +554,8 @@
 
 	focus = {
 		id = TU_URS_mobile_garrisons
-		icon = GFX_goal_generic_fortify_city
 		prerequisite = { focus = TU_URS_mobile_city_plan }
+		icon = GFX_goal_generic_fortify_city
 		x = 82
 		y = 5
 		cost = 10
@@ -574,9 +574,9 @@
 
 	focus = {
 		id = TU_URS_armored_rail
-		icon = GFX_goal_generic_army_motorized
 		prerequisite = { focus = TU_URS_mobile_garrisons }
 		mutually_exclusive = { focus = TU_URS_city_patrols }
+		icon = GFX_goal_generic_army_motorized
 		x = 80
 		y = 6
 		cost = 10
@@ -596,9 +596,9 @@
 
 	focus = {
 		id = TU_URS_city_patrols
-		icon = GFX_goal_generic_special_forces
 		prerequisite = { focus = TU_URS_mobile_garrisons }
 		mutually_exclusive = { focus = TU_URS_armored_rail }
+		icon = GFX_goal_generic_special_forces
 		x = 82
 		y = 7
 		cost = 10
@@ -617,8 +617,8 @@
 
 	focus = {
 		id = TU_URS_siege_engines
-		icon = GFX_goal_generic_army_artillery2
 		prerequisite = { focus = TU_URS_armored_rail }
+		icon = GFX_goal_generic_army_artillery2
 		x = 80
 		y = 8
 		cost = 10
@@ -637,8 +637,8 @@
 
 	focus = {
 		id = TU_URS_mobile_fortress
-		icon = GFX_goal_generic_fortify_city
 		prerequisite = { focus = TU_URS_city_patrols }
+		icon = GFX_goal_generic_fortify_city
 		x = 82
 		y = 9
 		cost = 10
@@ -660,8 +660,8 @@
 
 	focus = {
 		id = TU_URS_special_military_courts
-		icon = GFX_goal_generic_forceful_treaty
 		prerequisite = { focus = TU_URS_chernobog_response }
+		icon = GFX_goal_generic_forceful_treaty
 		x = 78
 		y = 5
 		cost = 10
@@ -680,9 +680,9 @@
 
 	focus = {
 		id = TU_URS_black_regiment
-		icon = GFX_goal_generic_special_forces
 		prerequisite = { focus = TU_URS_special_military_courts }
 		mutually_exclusive = { focus = TU_URS_black_regiment_alt }
+		icon = GFX_goal_generic_special_forces
 		x = 76
 		y = 6
 		cost = 10
@@ -702,9 +702,9 @@
 
 	focus = {
 		id = TU_URS_black_regiment_alt
-		icon = GFX_goal_generic_political_pressure
 		prerequisite = { focus = TU_URS_special_military_courts }
 		mutually_exclusive = { focus = TU_URS_black_regiment }
+		icon = GFX_goal_generic_political_pressure
 		x = 78
 		y = 6
 		cost = 10
@@ -723,8 +723,8 @@
 
 	focus = {
 		id = TU_URS_border_purge
-		icon = GFX_goal_generic_dangerous_deal
 		prerequisite = { focus = TU_URS_special_military_courts }
+		icon = GFX_goal_generic_dangerous_deal
 		x = 78
 		y = 7
 		cost = 10
@@ -743,8 +743,8 @@
 
 	focus = {
 		id = TU_URS_lei_diplomacy
-		icon = GFX_goal_generic_improve_relations
 		prerequisite = { focus = TU_URS_border_purge }
+		icon = GFX_goal_generic_improve_relations
 		x = 78
 		y = 8
 		cost = 10
@@ -770,9 +770,9 @@
 
 	focus = {
 		id = TU_URS_loyalty_oath
-		icon = GFX_goal_generic_national_unity
 		prerequisite = { focus = TU_URS_total_war_economy }
 		mutually_exclusive = { focus = TU_URS_purge_generals }
+		icon = GFX_goal_generic_national_unity
 		x = 90
 		y = 9
 		cost = 10

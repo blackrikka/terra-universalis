@@ -2,8 +2,8 @@
 
 	focus = {
 		id = TU_URS_w1_kzd_border_buildup
-		icon = GFX_goal_generic_construct_military
 		prerequisite = { focus = TU_URS_foreign_ministry }
+		icon = GFX_goal_generic_construct_military
 		x = 134
 		y = 4
 		cost = 10
@@ -27,8 +27,8 @@
 
 	focus = {
 		id = TU_URS_w1_kzd_mobilization
-		icon = GFX_goal_generic_army_motorized
 		prerequisite = { focus = TU_URS_foreign_ministry }
+		icon = GFX_goal_generic_army_motorized
 		x = 136
 		y = 4
 		cost = 10
@@ -52,8 +52,8 @@
 
 	focus = {
 		id = TU_URS_w1_kzd_war_doctrine
-		icon = GFX_goal_generic_army_artillery
 		prerequisite = { focus = TU_URS_w1_kzd_mobilization }
+		icon = GFX_goal_generic_army_artillery
 		x = 136
 		y = 5
 		cost = 10
@@ -73,8 +73,8 @@
 
 	focus = {
 		id = TU_URS_w1_kzd_imperial_levy
-		icon = GFX_goal_generic_allies_build_infantry
 		prerequisite = { focus = TU_URS_w1_kzd_border_buildup }
+		icon = GFX_goal_generic_allies_build_infantry
 		x = 134
 		y = 6
 		cost = 10
@@ -99,8 +99,8 @@
 
 	focus = {
 		id = TU_URS_w1_kzd_occupation
-		icon = GFX_goal_generic_occupy_states_ongoing_war
 		prerequisite = { focus = TU_URS_w1_kzd_war_doctrine }
+		icon = GFX_goal_generic_occupy_states_ongoing_war
 		x = 136
 		y = 8
 		cost = 10
@@ -125,8 +125,8 @@
 
 	focus = {
 		id = TU_URS_w1_kzd_core_integration
-		icon = GFX_goal_generic_construction
 		prerequisite = { focus = TU_URS_w1_kzd_occupation }
+		icon = GFX_goal_generic_construction
 		x = 136
 		y = 11
 		cost = 10
@@ -157,8 +157,8 @@
 
 	focus = {
 		id = TU_URS_w1_vic_border_buildup
-		icon = GFX_goal_generic_construct_military
 		prerequisite = { focus = TU_URS_foreign_ministry }
+		icon = GFX_goal_generic_construct_military
 		x = 140
 		y = 4
 		cost = 10
@@ -181,8 +181,8 @@
 
 	focus = {
 		id = TU_URS_w1_vic_mobilization
-		icon = GFX_goal_generic_army_motorized
 		prerequisite = { focus = TU_URS_foreign_ministry }
+		icon = GFX_goal_generic_army_motorized
 		x = 142
 		y = 4
 		cost = 10
@@ -206,8 +206,8 @@
 
 	focus = {
 		id = TU_URS_w1_vic_war_doctrine
-		icon = GFX_goal_generic_army_tanks
 		prerequisite = { focus = TU_URS_w1_vic_mobilization }
+		icon = GFX_goal_generic_army_tanks
 		x = 142
 		y = 5
 		cost = 10
@@ -227,8 +227,8 @@
 
 	focus = {
 		id = TU_URS_w1_vic_junta_intervention
-		icon = GFX_goal_generic_political_pressure
 		prerequisite = { focus = TU_URS_w1_vic_border_buildup }
+		icon = GFX_goal_generic_political_pressure
 		x = 140
 		y = 6
 		cost = 10
@@ -252,8 +252,8 @@
 
 	focus = {
 		id = TU_URS_w1_vic_occupation
-		icon = GFX_goal_generic_occupy_states_ongoing_war
 		prerequisite = { focus = TU_URS_w1_vic_war_doctrine }
+		icon = GFX_goal_generic_occupy_states_ongoing_war
 		x = 142
 		y = 8
 		cost = 10
@@ -278,8 +278,8 @@
 
 	focus = {
 		id = TU_URS_w1_vic_core_integration
-		icon = GFX_goal_generic_construction
 		prerequisite = { focus = TU_URS_w1_vic_occupation }
+		icon = GFX_goal_generic_construction
 		x = 142
 		y = 11
 		cost = 10
@@ -310,8 +310,8 @@
 
 	focus = {
 		id = TU_URS_w1_lei_border_buildup
-		icon = GFX_goal_generic_defence
 		prerequisite = { focus = TU_URS_foreign_ministry }
+		icon = GFX_goal_generic_defence
 		x = 146
 		y = 4
 		cost = 10
@@ -334,8 +334,8 @@
 
 	focus = {
 		id = TU_URS_w1_lei_mobilization
-		icon = GFX_goal_generic_army_motorized
 		prerequisite = { focus = TU_URS_foreign_ministry }
+		icon = GFX_goal_generic_army_motorized
 		x = 148
 		y = 4
 		cost = 10
@@ -359,8 +359,8 @@
 
 	focus = {
 		id = TU_URS_w1_lei_war_doctrine
-		icon = GFX_goal_generic_army_artillery
 		prerequisite = { focus = TU_URS_w1_lei_mobilization }
+		icon = GFX_goal_generic_army_artillery
 		x = 148
 		y = 5
 		cost = 10
@@ -380,8 +380,8 @@
 
 	focus = {
 		id = TU_URS_w1_lei_occupation
-		icon = GFX_goal_generic_occupy_states_ongoing_war
 		prerequisite = { focus = TU_URS_w1_lei_war_doctrine }
+		icon = GFX_goal_generic_occupy_states_ongoing_war
 		x = 148
 		y = 8
 		cost = 10
@@ -406,8 +406,8 @@
 
 	focus = {
 		id = TU_URS_w1_lei_core_integration
-		icon = GFX_goal_generic_construction
 		prerequisite = { focus = TU_URS_w1_lei_occupation }
+		icon = GFX_goal_generic_construction
 		x = 148
 		y = 11
 		cost = 10

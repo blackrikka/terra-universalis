@@ -1,0 +1,28 @@
+# Ideas every Terra country starts with (added in history/countries by tools/mapgen/build_countries.py).
+# TU_sea_terror: Terra has no navies. The seas belong to the Sea Terrors, so dockyards and naval bases cannot be built.
+
+ideas = {
+
+	country = {
+
+		TU_sea_terror = {
+			picture = generic_fortify_the_borders
+
+			allowed = {
+				always = yes
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+
+			modifier = {
+				production_speed_dockyard_factor = -1
+				production_speed_naval_base_factor = -1
+				industrial_capacity_dockyard = -1
+			}
+		}
+	}
+}

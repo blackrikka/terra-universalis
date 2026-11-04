@@ -3,8 +3,8 @@
 
 	focus = {
 		id = TU_LGM_dip_relations
-		icon = GFX_goal_generic_improve_relations
 		prerequisite = { focus = TU_LGM_trade_hub_focus }
+		icon = GFX_goal_generic_improve_relations
 		x = -2
 		y = 2
 		cost = 10
@@ -26,8 +26,8 @@
 
 	focus = {
 		id = TU_LGM_customs_union
-		icon = GFX_goal_generic_trade
 		prerequisite = { focus = TU_LGM_trade_hub_focus }
+		icon = GFX_goal_generic_trade
 		x = -4
 		y = 2
 		cost = 10
@@ -46,8 +46,8 @@
 
 	focus = {
 		id = TU_LGM_merchant_guilds
-		icon = GFX_goal_generic_positive_trade_relations
 		prerequisite = { focus = TU_LGM_customs_union }
+		icon = GFX_goal_generic_positive_trade_relations
 		x = -5
 		y = 3
 		cost = 10
@@ -66,8 +66,8 @@
 
 	focus = {
 		id = TU_LGM_banking_house
-		icon = GFX_goal_generic_production
 		prerequisite = { focus = TU_LGM_merchant_guilds }
+		icon = GFX_goal_generic_production
 		x = -5
 		y = 4
 		cost = 10
@@ -86,8 +86,8 @@
 
 	focus = {
 		id = TU_LGM_free_port_zone
-		icon = GFX_goal_generic_trade
 		prerequisite = { focus = TU_LGM_customs_union }
+		icon = GFX_goal_generic_trade
 		x = -3
 		y = 3
 		cost = 10
@@ -99,16 +99,15 @@
 		}
 
 		completion_reward = {
-			add_tech_bonus = { name = TU_LGM_free_port_zone bonus = 0.75 uses = 1 category = dd_tech category = ca_tech }
-			add_doctrine_cost_reduction = { name = TU_LGM_free_port_zone cost_reduction = 0.4 uses = 1 category = naval_doctrine }
-			navy_experience = 25
+			add_political_power = 60
+			add_tech_bonus = { name = TU_LGM_free_port_zone bonus = 0.75 uses = 1 category = industry }
 		}
 	}
 
 	focus = {
 		id = TU_LGM_warehouse_district
-		icon = GFX_goal_generic_construct_civilian
 		prerequisite = { focus = TU_LGM_merchant_guilds }
+		icon = GFX_goal_generic_construct_civilian
 		x = -6
 		y = 4
 		cost = 10
@@ -127,9 +126,9 @@
 
 	focus = {
 		id = TU_LGM_grain_import
-		icon = GFX_goal_generic_consumer_goods
 		prerequisite = { focus = TU_LGM_customs_union }
 		mutually_exclusive = { focus = TU_LGM_smuggler_crackdown }
+		icon = GFX_goal_generic_consumer_goods
 		x = -4
 		y = 3
 		cost = 5
@@ -149,8 +148,8 @@
 
 	focus = {
 		id = TU_LGM_industrial_loans
-		icon = GFX_goal_generic_production2
 		prerequisite = { focus = TU_LGM_banking_house }
+		icon = GFX_goal_generic_production2
 		x = -6
 		y = 5
 		cost = 10
@@ -169,8 +168,8 @@
 
 	focus = {
 		id = TU_LGM_tax_reform
-		icon = GFX_goal_generic_political_pressure
 		prerequisite = { focus = TU_LGM_banking_house }
+		icon = GFX_goal_generic_political_pressure
 		x = -4
 		y = 5
 		cost = 10
@@ -189,8 +188,8 @@
 
 	focus = {
 		id = TU_LGM_stock_exchange
-		icon = GFX_goal_generic_production
 		prerequisite = { focus = TU_LGM_industrial_loans }
+		icon = GFX_goal_generic_production
 		x = -7
 		y = 6
 		cost = 15
@@ -211,8 +210,8 @@
 
 	focus = {
 		id = TU_LGM_trade_fair
-		icon = GFX_goal_generic_positive_trade_relations
 		prerequisite = { focus = TU_LGM_free_port_zone }
+		icon = GFX_goal_generic_positive_trade_relations
 		x = -2
 		y = 4
 		cost = 10
@@ -231,8 +230,8 @@
 
 	focus = {
 		id = TU_LGM_consumer_boom
-		icon = GFX_goal_generic_consumer_goods
 		prerequisite = { focus = TU_LGM_warehouse_district }
+		icon = GFX_goal_generic_consumer_goods
 		x = -7
 		y = 5
 		cost = 10
@@ -252,8 +251,8 @@
 
 	focus = {
 		id = TU_LGM_port_taxes
-		icon = GFX_goal_generic_trade
 		prerequisite = { focus = TU_LGM_tax_reform }
+		icon = GFX_goal_generic_trade
 		x = -3
 		y = 6
 		cost = 10
@@ -265,16 +264,15 @@
 		}
 
 		completion_reward = {
-			add_tech_bonus = { name = TU_LGM_port_taxes bonus = 0.75 uses = 1 category = dd_tech category = ca_tech }
-			add_doctrine_cost_reduction = { name = TU_LGM_port_taxes cost_reduction = 0.4 uses = 1 category = naval_doctrine }
-			navy_experience = 25
+			add_political_power = 60
+			add_tech_bonus = { name = TU_LGM_port_taxes bonus = 0.75 uses = 1 category = industry }
 		}
 	}
 
 	focus = {
 		id = TU_LGM_free_trade_treaty
-		icon = GFX_goal_generic_positive_trade_relations
 		prerequisite = { focus = TU_LGM_trade_fair }
+		icon = GFX_goal_generic_positive_trade_relations
 		x = -1
 		y = 5
 		cost = 10
@@ -293,8 +291,8 @@
 
 	focus = {
 		id = TU_LGM_trade_monopoly
-		icon = GFX_goal_generic_dangerous_deal
 		prerequisite = { focus = TU_LGM_stock_exchange }
+		icon = GFX_goal_generic_dangerous_deal
 		x = -8
 		y = 7
 		cost = 15
@@ -313,8 +311,8 @@
 
 	focus = {
 		id = TU_LGM_city_treasury
-		icon = GFX_goal_generic_production
 		prerequisite = { focus = TU_LGM_port_taxes }
+		icon = GFX_goal_generic_production
 		x = -3
 		y = 7
 		cost = 10
@@ -333,9 +331,9 @@
 
 	focus = {
 		id = TU_LGM_central_bank
-		icon = GFX_goal_generic_production2
 		prerequisite = { focus = TU_LGM_industrial_loans }
 		mutually_exclusive = { focus = TU_LGM_central_bank_alt }
+		icon = GFX_goal_generic_production2
 		x = -6
 		y = 7
 		cost = 10
@@ -355,9 +353,9 @@
 
 	focus = {
 		id = TU_LGM_central_bank_alt
-		icon = GFX_goal_generic_production2
 		prerequisite = { focus = TU_LGM_industrial_loans }
 		mutually_exclusive = { focus = TU_LGM_central_bank }
+		icon = GFX_goal_generic_production2
 		x = -4
 		y = 7
 		cost = 10
@@ -376,8 +374,8 @@
 
 	focus = {
 		id = TU_LGM_harbor_toll
-		icon = GFX_goal_generic_trade
 		prerequisite = { focus = TU_LGM_free_trade_treaty }
+		icon = GFX_goal_generic_trade
 		x = 0
 		y = 6
 		cost = 10
@@ -389,16 +387,15 @@
 		}
 
 		completion_reward = {
-			add_tech_bonus = { name = TU_LGM_harbor_toll bonus = 0.75 uses = 1 category = dd_tech category = ca_tech }
-			add_doctrine_cost_reduction = { name = TU_LGM_harbor_toll cost_reduction = 0.4 uses = 1 category = naval_doctrine }
-			navy_experience = 25
+			add_political_power = 60
+			add_tech_bonus = { name = TU_LGM_harbor_toll bonus = 0.75 uses = 1 category = industry }
 		}
 	}
 
 	focus = {
 		id = TU_LGM_debt_restructuring
-		icon = GFX_goal_generic_consumer_goods
 		prerequisite = { focus = TU_LGM_city_treasury }
+		icon = GFX_goal_generic_consumer_goods
 		x = -2
 		y = 8
 		cost = 10
@@ -417,9 +414,9 @@
 
 	focus = {
 		id = TU_LGM_smuggler_crackdown
-		icon = GFX_goal_generic_political_pressure
 		prerequisite = { focus = TU_LGM_customs_union }
 		mutually_exclusive = { focus = TU_LGM_grain_import }
+		icon = GFX_goal_generic_political_pressure
 		x = -5
 		y = 2
 		cost = 5
@@ -438,8 +435,8 @@
 
 	focus = {
 		id = TU_LGM_port_expansion_bid
-		icon = GFX_goal_generic_construct_naval_dockyard
 		prerequisite = { focus = TU_LGM_harbor_works }
+		icon = GFX_goal_generic_construct_naval_dockyard
 		x = 2
 		y = 4
 		cost = 10
@@ -451,41 +448,16 @@
 		}
 
 		completion_reward = {
-			TU_build_dockyard = yes
-			add_tech_bonus = { name = TU_LGM_port_expansion_bid bonus = 0.75 uses = 1 category = dd_tech category = ca_tech }
-			add_doctrine_cost_reduction = { name = TU_LGM_port_expansion_bid cost_reduction = 0.4 uses = 1 category = naval_doctrine }
-			navy_experience = 25
+			TU_build_civ_factory = yes
+			add_political_power = 60
+			add_tech_bonus = { name = TU_LGM_port_expansion_bid bonus = 0.75 uses = 1 category = industry }
 		}
 	}
-
-	focus = {
-		id = TU_LGM_shipyard_guild
-		icon = GFX_goal_generic_build_navy
-		prerequisite = { focus = TU_LGM_port_expansion_bid }
-		x = 2
-		y = 5
-		cost = 10
-
-		search_filters = { FOCUS_FILTER_INDUSTRY }
-
-		ai_will_do = {
-			base = 1
-		}
-
-		completion_reward = {
-			TU_build_dockyard = yes
-			add_tech_bonus = { name = TU_LGM_shipyard_guild bonus = 0.75 uses = 1 category = dd_tech category = ca_tech }
-			add_doctrine_cost_reduction = { name = TU_LGM_shipyard_guild cost_reduction = 0.4 uses = 1 category = naval_doctrine }
-			navy_experience = 25
-		}
-	}
-
-	#### STEM: CITY CONSTRUCTION ####
 
 	focus = {
 		id = TU_LGM_urban_planning
-		icon = GFX_goal_generic_construction
 		prerequisite = { focus = TU_LGM_trade_hub_focus }
+		icon = GFX_goal_generic_construction
 		x = 0
 		y = 2
 		cost = 10
@@ -504,8 +476,8 @@
 
 	focus = {
 		id = TU_LGM_harbor_works
-		icon = GFX_goal_generic_construct_naval_dockyard
 		prerequisite = { focus = TU_LGM_urban_planning }
+		icon = GFX_goal_generic_construct_naval_dockyard
 		x = 1
 		y = 3
 		cost = 10
@@ -517,17 +489,16 @@
 		}
 
 		completion_reward = {
-			TU_build_dockyard = yes
-			add_tech_bonus = { name = TU_LGM_harbor_works bonus = 0.75 uses = 1 category = dd_tech category = ca_tech }
-			add_doctrine_cost_reduction = { name = TU_LGM_harbor_works cost_reduction = 0.4 uses = 1 category = naval_doctrine }
-			navy_experience = 25
+			TU_build_civ_factory = yes
+			add_political_power = 60
+			add_tech_bonus = { name = TU_LGM_harbor_works bonus = 0.75 uses = 1 category = industry }
 		}
 	}
 
 	focus = {
 		id = TU_LGM_factory_zone
-		icon = GFX_goal_generic_construct_civ_factory
 		prerequisite = { focus = TU_LGM_urban_planning }
+		icon = GFX_goal_generic_construct_civ_factory
 		x = 0
 		y = 3
 		cost = 10
@@ -546,8 +517,8 @@
 
 	focus = {
 		id = TU_LGM_fortified_districts
-		icon = GFX_goal_generic_fortify_city
 		prerequisite = { focus = TU_LGM_factory_zone }
+		icon = GFX_goal_generic_fortify_city
 		x = 0
 		y = 4
 		cost = 10
@@ -565,8 +536,8 @@
 
 	focus = {
 		id = TU_LGM_housing_project
-		icon = GFX_goal_generic_construct_civilian
 		prerequisite = { focus = TU_LGM_urban_planning }
+		icon = GFX_goal_generic_construct_civilian
 		x = 2
 		y = 3
 		cost = 10
@@ -585,8 +556,8 @@
 
 	focus = {
 		id = TU_LGM_transit_network
-		icon = GFX_goal_generic_construct_infrastructure
 		prerequisite = { focus = TU_LGM_housing_project }
+		icon = GFX_goal_generic_construct_infrastructure
 		x = 2
 		y = 4
 		cost = 10
@@ -605,8 +576,8 @@
 
 	focus = {
 		id = TU_LGM_radar_grid
-		icon = GFX_goal_generic_radar
 		prerequisite = { focus = TU_LGM_transit_network }
+		icon = GFX_goal_generic_radar
 		x = 3
 		y = 5
 		cost = 10
@@ -624,8 +595,8 @@
 
 	focus = {
 		id = TU_LGM_city_wall
-		icon = GFX_goal_generic_fortify_city
 		prerequisite = { focus = TU_LGM_fortified_districts }
+		icon = GFX_goal_generic_fortify_city
 		x = -1
 		y = 5
 		cost = 10
@@ -643,8 +614,8 @@
 
 	focus = {
 		id = TU_LGM_industrial_park
-		icon = GFX_goal_generic_construct_mil_factory
 		prerequisite = { focus = TU_LGM_factory_zone }
+		icon = GFX_goal_generic_construct_mil_factory
 		x = -1
 		y = 4
 		cost = 15
@@ -663,8 +634,8 @@
 
 	focus = {
 		id = TU_LGM_power_plant
-		icon = GFX_goal_generic_production
 		prerequisite = { focus = TU_LGM_industrial_park }
+		icon = GFX_goal_generic_production
 		x = -1
 		y = 5
 		cost = 10
@@ -683,8 +654,8 @@
 
 	focus = {
 		id = TU_LGM_airfield_survey
-		icon = GFX_goal_generic_build_airforce
 		prerequisite = { focus = TU_LGM_transit_network }
+		icon = GFX_goal_generic_build_airforce
 		x = 1
 		y = 5
 		cost = 10
@@ -704,8 +675,8 @@
 
 	focus = {
 		id = TU_LGM_border_engineers
-		icon = GFX_goal_generic_construction2
 		prerequisite = { focus = TU_LGM_frontier_roads }
+		icon = GFX_goal_generic_construction2
 		x = 6
 		y = 6
 		cost = 10
@@ -727,8 +698,8 @@
 
 	focus = {
 		id = TU_LGM_city_census
-		icon = GFX_goal_generic_national_unity
 		prerequisite = { focus = TU_LGM_housing_project }
+		icon = GFX_goal_generic_national_unity
 		x = 4
 		y = 4
 		cost = 5
@@ -747,8 +718,8 @@
 
 	focus = {
 		id = TU_LGM_public_health
-		icon = GFX_goal_generic_construct_civilian
 		prerequisite = { focus = TU_LGM_city_census }
+		icon = GFX_goal_generic_construct_civilian
 		x = 4
 		y = 5
 		cost = 10
@@ -767,8 +738,8 @@
 
 	focus = {
 		id = TU_LGM_sanitation
-		icon = GFX_goal_generic_construct_civilian
 		prerequisite = { focus = TU_LGM_public_health }
+		icon = GFX_goal_generic_construct_civilian
 		x = 4
 		y = 6
 		cost = 10
@@ -787,9 +758,9 @@
 
 	focus = {
 		id = TU_LGM_education_reform
-		icon = GFX_goal_generic_scientific_exchange
 		prerequisite = { focus = TU_LGM_city_census }
 		mutually_exclusive = { focus = TU_LGM_education_reform_alt }
+		icon = GFX_goal_generic_scientific_exchange
 		x = 5
 		y = 5
 		cost = 10
@@ -808,9 +779,9 @@
 
 	focus = {
 		id = TU_LGM_education_reform_alt
-		icon = GFX_goal_generic_scientific_exchange
 		prerequisite = { focus = TU_LGM_city_census }
 		mutually_exclusive = { focus = TU_LGM_education_reform }
+		icon = GFX_goal_generic_scientific_exchange
 		x = 7
 		y = 5
 		cost = 10
@@ -828,8 +799,8 @@
 
 	focus = {
 		id = TU_LGM_police_reform
-		icon = GFX_goal_generic_political_pressure
 		prerequisite = { focus = TU_LGM_sanitation }
+		icon = GFX_goal_generic_political_pressure
 		x = 4
 		y = 7
 		cost = 10
@@ -848,9 +819,9 @@
 
 	focus = {
 		id = TU_LGM_refugee_census
-		icon = GFX_goal_generic_national_unity
 		prerequisite = { focus = TU_LGM_refugee_camps }
 		mutually_exclusive = { focus = TU_LGM_refugee_census_alt }
+		icon = GFX_goal_generic_national_unity
 		x = 6
 		y = 4
 		cost = 10
@@ -869,9 +840,9 @@
 
 	focus = {
 		id = TU_LGM_refugee_census_alt
-		icon = GFX_goal_generic_national_unity
 		prerequisite = { focus = TU_LGM_refugee_camps }
 		mutually_exclusive = { focus = TU_LGM_refugee_census }
+		icon = GFX_goal_generic_national_unity
 		x = 8
 		y = 4
 		cost = 10
@@ -890,8 +861,8 @@
 
 	focus = {
 		id = TU_LGM_sanction_talks
-		icon = GFX_goal_generic_positive_trade_relations
 		prerequisite = { focus = TU_LGM_sanction_relief }
+		icon = GFX_goal_generic_positive_trade_relations
 		x = 6
 		y = 5
 		cost = 10
@@ -912,8 +883,8 @@
 
 	focus = {
 		id = TU_LGM_guard_expansion
-		icon = GFX_goal_generic_allies_build_infantry
 		prerequisite = { focus = TU_LGM_guard_reform }
+		icon = GFX_goal_generic_allies_build_infantry
 		x = -1
 		y = 1
 		cost = 10
@@ -933,8 +904,8 @@
 
 	focus = {
 		id = TU_LGM_guard_quartermaster
-		icon = GFX_goal_generic_construct_military
 		prerequisite = { focus = TU_LGM_guard_expansion }
+		icon = GFX_goal_generic_construct_military
 		x = -2
 		y = 2
 		cost = 10
@@ -953,8 +924,8 @@
 
 	focus = {
 		id = TU_LGM_guard_academy
-		icon = GFX_goal_generic_army_doctrines
 		prerequisite = { focus = TU_LGM_guard_drill }
+		icon = GFX_goal_generic_army_doctrines
 		x = 2
 		y = 3
 		cost = 10
@@ -973,8 +944,8 @@
 
 	focus = {
 		id = TU_LGM_guard_reserve
-		icon = GFX_goal_generic_allies_build_infantry
 		prerequisite = { focus = TU_LGM_guard_expansion }
+		icon = GFX_goal_generic_allies_build_infantry
 		x = 0
 		y = 2
 		cost = 10
@@ -993,8 +964,8 @@
 
 	focus = {
 		id = TU_LGM_guard_armour
-		icon = GFX_goal_generic_army_tanks
 		prerequisite = { focus = TU_LGM_guard_quartermaster }
+		icon = GFX_goal_generic_army_tanks
 		x = -3
 		y = 3
 		cost = 10
@@ -1013,8 +984,8 @@
 
 	focus = {
 		id = TU_LGM_guard_militia
-		icon = GFX_goal_generic_small_arms
 		prerequisite = { focus = TU_LGM_guard_reserve }
+		icon = GFX_goal_generic_small_arms
 		x = 0
 		y = 3
 		cost = 10
@@ -1033,8 +1004,8 @@
 
 	focus = {
 		id = TU_LGM_guard_doctrine
-		icon = GFX_goal_generic_army_doctrines
 		prerequisite = { focus = TU_LGM_guard_academy }
+		icon = GFX_goal_generic_army_doctrines
 		x = 3
 		y = 4
 		cost = 10
@@ -1054,8 +1025,8 @@
 
 	focus = {
 		id = TU_LGM_guard_hq
-		icon = GFX_goal_generic_position_armies
 		prerequisite = { focus = TU_LGM_guard_armour }
+		icon = GFX_goal_generic_position_armies
 		x = -3
 		y = 4
 		cost = 15
@@ -1074,9 +1045,9 @@
 
 	focus = {
 		id = TU_LGM_guard_air_cover
-		icon = GFX_goal_generic_build_airforce
 		prerequisite = { focus = TU_LGM_guard_armour }
 		mutually_exclusive = { focus = TU_LGM_guard_air_cover_alt }
+		icon = GFX_goal_generic_build_airforce
 		x = -4
 		y = 4
 		cost = 10
@@ -1096,9 +1067,9 @@
 
 	focus = {
 		id = TU_LGM_guard_air_cover_alt
-		icon = GFX_goal_generic_build_airforce
 		prerequisite = { focus = TU_LGM_guard_armour }
 		mutually_exclusive = { focus = TU_LGM_guard_air_cover }
+		icon = GFX_goal_generic_build_airforce
 		x = -2
 		y = 4
 		cost = 10
@@ -1117,8 +1088,8 @@
 
 	focus = {
 		id = TU_LGM_guard_mobile_corps
-		icon = GFX_goal_generic_army_motorized
 		prerequisite = { focus = TU_LGM_guard_hq }
+		icon = GFX_goal_generic_army_motorized
 		x = -3
 		y = 5
 		cost = 15
@@ -1137,8 +1108,8 @@
 
 	focus = {
 		id = TU_LGM_guard_pay_raise
-		icon = GFX_goal_generic_national_unity
 		prerequisite = { focus = TU_LGM_guard_militia }
+		icon = GFX_goal_generic_national_unity
 		x = 1
 		y = 4
 		cost = 5
@@ -1157,8 +1128,8 @@
 
 	focus = {
 		id = TU_LGM_guard_loyalty_oath
-		icon = GFX_goal_generic_propaganda
 		prerequisite = { focus = TU_LGM_guard_pay_raise }
+		icon = GFX_goal_generic_propaganda
 		x = 1
 		y = 5
 		cost = 10
@@ -1177,8 +1148,8 @@
 
 	focus = {
 		id = TU_LGM_guard_general_staff
-		icon = GFX_goal_generic_army_doctrines
 		prerequisite = { focus = TU_LGM_guard_doctrine }
+		icon = GFX_goal_generic_army_doctrines
 		x = 3
 		y = 5
 		cost = 10
@@ -1197,9 +1168,9 @@
 
 	focus = {
 		id = TU_LGM_guard_supply_depot
-		icon = GFX_goal_generic_construct_military
 		prerequisite = { focus = TU_LGM_guard_quartermaster }
 		mutually_exclusive = { focus = TU_LGM_guard_supply_depot_alt }
+		icon = GFX_goal_generic_construct_military
 		x = -1
 		y = 3
 		cost = 10
@@ -1219,9 +1190,9 @@
 
 	focus = {
 		id = TU_LGM_guard_supply_depot_alt
-		icon = GFX_goal_generic_construct_military
 		prerequisite = { focus = TU_LGM_guard_quartermaster }
 		mutually_exclusive = { focus = TU_LGM_guard_supply_depot }
+		icon = GFX_goal_generic_construct_military
 		x = 1
 		y = 3
 		cost = 10
@@ -1243,8 +1214,8 @@
 
 	focus = {
 		id = TU_LGM_border_survey
-		icon = GFX_goal_generic_position_armies
 		prerequisite = { focus = TU_LGM_border_watch }
+		icon = GFX_goal_generic_position_armies
 		x = -1
 		y = 5
 		cost = 5
@@ -1263,8 +1234,8 @@
 
 	focus = {
 		id = TU_LGM_border_patrols
-		icon = GFX_goal_generic_special_forces
 		prerequisite = { focus = TU_LGM_border_survey }
+		icon = GFX_goal_generic_special_forces
 		x = -2
 		y = 6
 		cost = 10
@@ -1287,8 +1258,8 @@
 
 	focus = {
 		id = TU_LGM_chernobog_watch
-		icon = GFX_goal_generic_intelligence_exchange
 		prerequisite = { focus = TU_LGM_border_patrols }
+		icon = GFX_goal_generic_intelligence_exchange
 		x = -2
 		y = 7
 		cost = 10
@@ -1311,8 +1282,8 @@
 
 	focus = {
 		id = TU_LGM_fortify_border
-		icon = GFX_goal_generic_fortify_city
 		prerequisite = { focus = TU_LGM_border_survey }
+		icon = GFX_goal_generic_fortify_city
 		x = 0
 		y = 6
 		cost = 10
@@ -1330,9 +1301,9 @@
 
 	focus = {
 		id = TU_LGM_reunion_intel
-		icon = GFX_goal_generic_intelligence_exchange
 		prerequisite = { focus = TU_LGM_border_patrols }
 		mutually_exclusive = { focus = TU_LGM_reunion_intel_alt }
+		icon = GFX_goal_generic_intelligence_exchange
 		x = -1
 		y = 7
 		cost = 10
@@ -1351,9 +1322,9 @@
 
 	focus = {
 		id = TU_LGM_reunion_intel_alt
-		icon = GFX_goal_generic_intelligence_exchange
 		prerequisite = { focus = TU_LGM_border_patrols }
 		mutually_exclusive = { focus = TU_LGM_reunion_intel }
+		icon = GFX_goal_generic_intelligence_exchange
 		x = 1
 		y = 7
 		cost = 10
@@ -1373,8 +1344,8 @@
 
 	focus = {
 		id = TU_LGM_defence_line
-		icon = GFX_goal_generic_defence
 		prerequisite = { focus = TU_LGM_fortify_border }
+		icon = GFX_goal_generic_defence
 		x = 0
 		y = 7
 		cost = 10
@@ -1398,8 +1369,8 @@
 
 	focus = {
 		id = TU_LGM_border_conflict_plan
-		icon = GFX_goal_generic_major_war
 		prerequisite = { focus = TU_LGM_chernobog_watch }
+		icon = GFX_goal_generic_major_war
 		x = -3
 		y = 8
 		cost = 10
@@ -1422,8 +1393,8 @@
 
 	focus = {
 		id = TU_LGM_siege_drill
-		icon = GFX_goal_generic_army_artillery
 		prerequisite = { focus = TU_LGM_defence_line }
+		icon = GFX_goal_generic_army_artillery
 		x = 0
 		y = 8
 		cost = 10
@@ -1442,8 +1413,8 @@
 
 	focus = {
 		id = TU_LGM_survival_pact
-		icon = GFX_goal_generic_national_unity
 		prerequisite = { focus = TU_LGM_siege_drill }
+		icon = GFX_goal_generic_national_unity
 		x = 0
 		y = 9
 		cost = 15
@@ -1468,8 +1439,8 @@
 
 	focus = {
 		id = TU_LGM_refugee_return
-		icon = GFX_goal_generic_construct_civilian
 		prerequisite = { focus = TU_LGM_survival_pact }
+		icon = GFX_goal_generic_construct_civilian
 		x = 0
 		y = 10
 		cost = 10
@@ -1488,8 +1459,8 @@
 
 	focus = {
 		id = TU_LGM_reunion_truce
-		icon = GFX_goal_generic_neutrality_focus
 		prerequisite = { focus = TU_LGM_border_conflict_plan }
+		icon = GFX_goal_generic_neutrality_focus
 		x = -3
 		y = 9
 		cost = 10
@@ -1513,9 +1484,9 @@
 
 	focus = {
 		id = TU_LGM_mobile_city_drills
-		icon = GFX_goal_generic_army_artillery2
 		prerequisite = { focus = TU_LGM_defence_line }
 		mutually_exclusive = { focus = TU_LGM_mobile_city_drills_alt }
+		icon = GFX_goal_generic_army_artillery2
 		x = 1
 		y = 8
 		cost = 5
@@ -1534,9 +1505,9 @@
 
 	focus = {
 		id = TU_LGM_mobile_city_drills_alt
-		icon = GFX_goal_generic_army_artillery2
 		prerequisite = { focus = TU_LGM_defence_line }
 		mutually_exclusive = { focus = TU_LGM_mobile_city_drills }
+		icon = GFX_goal_generic_army_artillery2
 		x = 3
 		y = 8
 		cost = 5
@@ -1555,9 +1526,9 @@
 
 	focus = {
 		id = TU_LGM_chernobog_aftermath
-		icon = GFX_goal_generic_political_pressure
 		prerequisite = { focus = TU_LGM_chernobog_watch }
 		mutually_exclusive = { focus = TU_LGM_chernobog_aftermath_alt }
+		icon = GFX_goal_generic_political_pressure
 		x = -2
 		y = 8
 		cost = 10
@@ -1580,9 +1551,9 @@
 
 	focus = {
 		id = TU_LGM_chernobog_aftermath_alt
-		icon = GFX_goal_generic_political_pressure
 		prerequisite = { focus = TU_LGM_chernobog_watch }
 		mutually_exclusive = { focus = TU_LGM_chernobog_aftermath }
+		icon = GFX_goal_generic_political_pressure
 		x = 0
 		y = 8
 		cost = 10
@@ -1605,8 +1576,8 @@
 
 	focus = {
 		id = TU_LGM_frontier_roads
-		icon = GFX_goal_generic_construct_infrastructure
 		prerequisite = { focus = TU_LGM_fortify_border }
+		icon = GFX_goal_generic_construct_infrastructure
 		x = 1
 		y = 7
 		cost = 10
@@ -1628,8 +1599,8 @@
 
 	focus = {
 		id = TU_LGM_yan_envoy
-		icon = GFX_goal_generic_improve_relations
 		prerequisite = { focus = TU_LGM_dip_relations }
+		icon = GFX_goal_generic_improve_relations
 		x = -5
 		y = 4
 		cost = 10
@@ -1659,8 +1630,8 @@
 
 	focus = {
 		id = TU_LGM_envoy_kzd
-		icon = GFX_goal_generic_improve_relations
 		prerequisite = { focus = TU_LGM_dip_relations }
+		icon = GFX_goal_generic_improve_relations
 		x = -1
 		y = 3
 		cost = 10
@@ -1690,8 +1661,8 @@
 
 	focus = {
 		id = TU_LGM_envoy_rhodes
-		icon = GFX_goal_generic_positive_trade_relations
 		prerequisite = { focus = TU_LGM_dip_relations }
+		icon = GFX_goal_generic_positive_trade_relations
 		x = 0
 		y = 4
 		cost = 10
@@ -1721,8 +1692,8 @@
 
 	focus = {
 		id = TU_LGM_yan_tribute
-		icon = GFX_goal_generic_forceful_treaty
 		prerequisite = { focus = TU_LGM_yan_envoy }
+		icon = GFX_goal_generic_forceful_treaty
 		x = -5
 		y = 5
 		cost = 10
@@ -1747,8 +1718,8 @@
 
 	focus = {
 		id = TU_LGM_autonomy_council
-		icon = GFX_goal_generic_neutrality_focus
 		prerequisite = { focus = TU_LGM_autonomy_talks }
+		icon = GFX_goal_generic_neutrality_focus
 		x = -5
 		y = 6
 		cost = 10
@@ -1768,8 +1739,8 @@
 
 	focus = {
 		id = TU_LGM_autonomy_budget
-		icon = GFX_goal_generic_production
 		prerequisite = { focus = TU_LGM_autonomy_council }
+		icon = GFX_goal_generic_production
 		x = -6
 		y = 7
 		cost = 10
@@ -1788,9 +1759,9 @@
 
 	focus = {
 		id = TU_LGM_autonomy_police
-		icon = GFX_goal_generic_special_forces
 		prerequisite = { focus = TU_LGM_autonomy_council }
 		mutually_exclusive = { focus = TU_LGM_autonomy_police_alt }
+		icon = GFX_goal_generic_special_forces
 		x = -4
 		y = 7
 		cost = 10
@@ -1809,9 +1780,9 @@
 
 	focus = {
 		id = TU_LGM_autonomy_police_alt
-		icon = GFX_goal_generic_special_forces
 		prerequisite = { focus = TU_LGM_autonomy_council }
 		mutually_exclusive = { focus = TU_LGM_autonomy_police }
+		icon = GFX_goal_generic_special_forces
 		x = -2
 		y = 7
 		cost = 10
@@ -1830,8 +1801,8 @@
 
 	focus = {
 		id = TU_LGM_yan_loyalty
-		icon = GFX_goal_generic_national_unity
 		prerequisite = { focus = TU_LGM_yan_tribute }
+		icon = GFX_goal_generic_national_unity
 		x = -4
 		y = 6
 		cost = 10
@@ -1854,8 +1825,8 @@
 
 	focus = {
 		id = TU_LGM_yan_reconciliation
-		icon = GFX_goal_generic_improve_relations
 		prerequisite = { focus = TU_LGM_yan_loyalty }
+		icon = GFX_goal_generic_improve_relations
 		x = -4
 		y = 7
 		cost = 10
@@ -1874,8 +1845,8 @@
 
 	focus = {
 		id = TU_LGM_yan_border_talks
-		icon = GFX_goal_generic_improve_relations
 		prerequisite = { focus = TU_LGM_autonomy_budget }
+		icon = GFX_goal_generic_improve_relations
 		x = -6
 		y = 8
 		cost = 10
@@ -1894,8 +1865,8 @@
 
 	focus = {
 		id = TU_LGM_autonomy_treaty
-		icon = GFX_goal_generic_forceful_treaty
 		prerequisite = { focus = TU_LGM_yan_reconciliation }
+		icon = GFX_goal_generic_forceful_treaty
 		x = -4
 		y = 8
 		cost = 10
@@ -1914,8 +1885,8 @@
 
 	focus = {
 		id = TU_LGM_independence_war_plan
-		icon = GFX_goal_generic_major_war
 		prerequisite = { focus = TU_LGM_independence }
+		icon = GFX_goal_generic_major_war
 		x = -3
 		y = 7
 		cost = 10
@@ -1935,8 +1906,8 @@
 
 	focus = {
 		id = TU_LGM_free_city_declaration
-		icon = GFX_goal_generic_neutrality_focus
 		prerequisite = { focus = TU_LGM_independence_war_plan }
+		icon = GFX_goal_generic_neutrality_focus
 		x = -3
 		y = 8
 		cost = 15
@@ -1958,8 +1929,8 @@
 
 	focus = {
 		id = TU_LGM_guard_regency
-		icon = GFX_goal_generic_political_pressure
 		prerequisite = { focus = TU_LGM_chen_coup }
+		icon = GFX_goal_generic_political_pressure
 		x = -1
 		y = 6
 		cost = 10
@@ -1978,8 +1949,8 @@
 
 	focus = {
 		id = TU_LGM_guard_loyalty_council
-		icon = GFX_goal_generic_national_unity
 		prerequisite = { focus = TU_LGM_guard_regency }
+		icon = GFX_goal_generic_national_unity
 		x = -1
 		y = 7
 		cost = 10
@@ -2000,9 +1971,9 @@
 
 	focus = {
 		id = TU_LGM_dip_alliance
-		icon = GFX_goal_generic_alliance
 		prerequisite = { focus = TU_LGM_trade_fair }
 		mutually_exclusive = { focus = TU_LGM_dip_alliance_alt }
+		icon = GFX_goal_generic_alliance
 		x = -2
 		y = 5
 		cost = 10
@@ -2022,9 +1993,9 @@
 
 	focus = {
 		id = TU_LGM_dip_alliance_alt
-		icon = GFX_goal_generic_alliance
 		prerequisite = { focus = TU_LGM_trade_fair }
 		mutually_exclusive = { focus = TU_LGM_dip_alliance }
+		icon = GFX_goal_generic_alliance
 		x = 0
 		y = 5
 		cost = 10

@@ -41,7 +41,7 @@ focus_tree = {
 		id = TU_MIN_agora
 		icon = GFX_goal_generic_political_pressure
 		prerequisite = { focus = TU_MIN_root }
-		x = -10
+		x = -13
 		y = 1
 		cost = 10
 
@@ -61,7 +61,7 @@ focus_tree = {
 		id = TU_MIN_citizen_rolls
 		icon = GFX_goal_generic_consumer_goods
 		prerequisite = { focus = TU_MIN_agora }
-		x = -10
+		x = -13
 		y = 2
 		cost = 10
 
@@ -81,7 +81,7 @@ focus_tree = {
 		id = TU_MIN_ostracism
 		icon = GFX_goal_generic_political_pressure
 		prerequisite = { focus = TU_MIN_agora }
-		x = -6
+		x = -9
 		y = 2
 		cost = 10
 
@@ -102,7 +102,7 @@ focus_tree = {
 		id = TU_MIN_public_speeches
 		icon = GFX_goal_generic_propaganda
 		prerequisite = { focus = TU_MIN_citizen_rolls }
-		x = -10
+		x = -13
 		y = 3
 		cost = 10
 
@@ -125,7 +125,7 @@ focus_tree = {
 		prerequisite = { focus = TU_MIN_public_speeches }
 		prerequisite = { focus = TU_MIN_ostracism }
 		mutually_exclusive = { focus = TU_MIN_elders_reform }
-		x = -14
+		x = -17
 		y = 4
 		cost = 10
 
@@ -148,7 +148,7 @@ focus_tree = {
 		prerequisite = { focus = TU_MIN_public_speeches }
 		prerequisite = { focus = TU_MIN_ostracism }
 		mutually_exclusive = { focus = TU_MIN_democratic_reform }
-		x = -10
+		x = -13
 		y = 4
 		cost = 10
 
@@ -170,7 +170,7 @@ focus_tree = {
 		icon = GFX_goal_generic_political_pressure
 		prerequisite = { focus = TU_MIN_democratic_reform }
 		mutually_exclusive = { focus = TU_MIN_rule_of_elders focus = TU_MIN_thalassocracy }
-		x = -14
+		x = -17
 		y = 5
 		cost = 15
 
@@ -195,7 +195,7 @@ focus_tree = {
 		id = TU_MIN_jury_courts
 		icon = GFX_goal_generic_political_pressure
 		prerequisite = { focus = TU_MIN_democratic_polis }
-		x = -15
+		x = -18
 		y = 6
 		cost = 10
 
@@ -215,7 +215,7 @@ focus_tree = {
 		id = TU_MIN_free_schools
 		icon = GFX_goal_generic_consumer_goods
 		prerequisite = { focus = TU_MIN_democratic_polis }
-		x = -13
+		x = -16
 		y = 6
 		cost = 10
 
@@ -236,7 +236,7 @@ focus_tree = {
 		icon = GFX_goal_generic_trade
 		prerequisite = { focus = TU_MIN_jury_courts }
 		prerequisite = { focus = TU_MIN_free_schools }
-		x = -13
+		x = -16
 		y = 7
 		cost = 10
 
@@ -257,7 +257,7 @@ focus_tree = {
 		icon = GFX_goal_generic_political_pressure
 		prerequisite = { focus = TU_MIN_elders_reform }
 		mutually_exclusive = { focus = TU_MIN_democratic_polis focus = TU_MIN_thalassocracy }
-		x = -10
+		x = -13
 		y = 5
 		cost = 15
 
@@ -282,7 +282,7 @@ focus_tree = {
 		id = TU_MIN_elder_council
 		icon = GFX_goal_generic_political_pressure
 		prerequisite = { focus = TU_MIN_rule_of_elders }
-		x = -10
+		x = -13
 		y = 6
 		cost = 10
 
@@ -302,7 +302,7 @@ focus_tree = {
 		id = TU_MIN_temple_treasury
 		icon = GFX_goal_generic_trade
 		prerequisite = { focus = TU_MIN_elder_council }
-		x = -11
+		x = -14
 		y = 7
 		cost = 10
 
@@ -322,7 +322,7 @@ focus_tree = {
 		id = TU_MIN_temple_rites
 		icon = GFX_goal_generic_propaganda
 		prerequisite = { focus = TU_MIN_root }
-		x = 21
+		x = 13
 		y = 1
 		cost = 10
 
@@ -342,7 +342,7 @@ focus_tree = {
 		id = TU_MIN_oracle_priests
 		icon = GFX_goal_generic_political_pressure
 		prerequisite = { focus = TU_MIN_temple_rites }
-		x = 21
+		x = 13
 		y = 2
 		cost = 10
 
@@ -362,7 +362,7 @@ focus_tree = {
 		id = TU_MIN_sacred_games
 		icon = GFX_goal_generic_propaganda
 		prerequisite = { focus = TU_MIN_temple_rites }
-		x = 26
+		x = 18
 		y = 2
 		cost = 10
 
@@ -383,7 +383,7 @@ focus_tree = {
 		id = TU_MIN_prophecy_archive
 		icon = GFX_focus_research
 		prerequisite = { focus = TU_MIN_oracle_priests }
-		x = 21
+		x = 13
 		y = 3
 		cost = 10
 
@@ -403,7 +403,7 @@ focus_tree = {
 		icon = GFX_goal_generic_propaganda
 		prerequisite = { focus = TU_MIN_prophecy_archive }
 		prerequisite = { focus = TU_MIN_sacred_games }
-		x = 20
+		x = 12
 		y = 4
 		cost = 10
 
@@ -423,7 +423,7 @@ focus_tree = {
 		id = TU_MIN_philosophers
 		icon = GFX_focus_research
 		prerequisite = { focus = TU_MIN_root }
-		x = -16
+		x = -19
 		y = 10
 		cost = 10
 
@@ -443,7 +443,7 @@ focus_tree = {
 		icon = GFX_goal_generic_army_doctrines
 		prerequisite = { focus = TU_MIN_philosophers }
 		mutually_exclusive = { focus = TU_MIN_stoa focus = TU_MIN_cynics }
-		x = -18
+		x = -21
 		y = 11
 		cost = 10
 
@@ -463,7 +463,7 @@ focus_tree = {
 		icon = GFX_focus_research
 		prerequisite = { focus = TU_MIN_philosophers }
 		mutually_exclusive = { focus = TU_MIN_academia focus = TU_MIN_cynics }
-		x = -16
+		x = -19
 		y = 11
 		cost = 10
 
@@ -483,7 +483,7 @@ focus_tree = {
 		icon = GFX_focus_research
 		prerequisite = { focus = TU_MIN_philosophers }
 		mutually_exclusive = { focus = TU_MIN_academia focus = TU_MIN_stoa }
-		x = -14
+		x = -17
 		y = 11
 		cost = 10
 
@@ -502,7 +502,7 @@ focus_tree = {
 		id = TU_MIN_mathematics
 		icon = GFX_focus_research
 		prerequisite = { focus = TU_MIN_academia focus = TU_MIN_stoa focus = TU_MIN_cynics }
-		x = -16
+		x = -19
 		y = 12
 		cost = 10
 
@@ -521,7 +521,7 @@ focus_tree = {
 		id = TU_MIN_observatory
 		icon = GFX_focus_research
 		prerequisite = { focus = TU_MIN_mathematics }
-		x = -18
+		x = -21
 		y = 13
 		cost = 10
 
@@ -541,7 +541,7 @@ focus_tree = {
 		icon = GFX_goal_generic_consumer_goods
 		prerequisite = { focus = TU_MIN_mathematics }
 		mutually_exclusive = { focus = TU_MIN_engineering_studies }
-		x = -16
+		x = -19
 		y = 13
 		cost = 10
 
@@ -562,7 +562,7 @@ focus_tree = {
 		icon = GFX_focus_research
 		prerequisite = { focus = TU_MIN_mathematics }
 		mutually_exclusive = { focus = TU_MIN_medical_studies }
-		x = -14
+		x = -17
 		y = 13
 		cost = 10
 
@@ -582,7 +582,7 @@ focus_tree = {
 		icon = GFX_focus_research
 		prerequisite = { focus = TU_MIN_medical_studies focus = TU_MIN_engineering_studies }
 		prerequisite = { focus = TU_MIN_observatory }
-		x = -11
+		x = -14
 		y = 14
 		cost = 10
 
@@ -601,7 +601,7 @@ focus_tree = {
 		id = TU_MIN_research_slot
 		icon = GFX_focus_research
 		prerequisite = { focus = TU_MIN_great_library }
-		x = -12
+		x = -15
 		y = 15
 		cost = 10
 
@@ -618,9 +618,9 @@ focus_tree = {
 
 	focus = {
 		id = TU_MIN_harbour_works
-		icon = GFX_goal_generic_build_navy
+		icon = GFX_goal_generic_trade
 		prerequisite = { focus = TU_MIN_root }
-		x = 8
+		x = -5
 		y = 1
 		cost = 10
 
@@ -631,18 +631,17 @@ focus_tree = {
 		}
 
 		completion_reward = {
-			add_tech_bonus = { name = TU_MIN_harbour_works bonus = 0.75 uses = 1 category = dd_tech category = ca_tech }
-			add_doctrine_cost_reduction = { name = TU_MIN_harbour_works cost_reduction = 0.4 uses = 1 category = naval_doctrine }
-			navy_experience = 25
-			TU_build_dockyard = yes
+			add_political_power = 60
+			add_tech_bonus = { name = TU_MIN_harbour_works bonus = 0.75 uses = 1 category = industry }
+			TU_build_civ_factory = yes
 		}
 	}
 
 	focus = {
 		id = TU_MIN_trade_routes
-		icon = GFX_goal_generic_build_navy
+		icon = GFX_goal_generic_trade
 		prerequisite = { focus = TU_MIN_harbour_works }
-		x = -1
+		x = -5
 		y = 2
 		cost = 10
 
@@ -659,54 +658,11 @@ focus_tree = {
 	}
 
 	focus = {
-		id = TU_MIN_merchant_fleet
-		icon = GFX_goal_generic_build_navy
-		prerequisite = { focus = TU_MIN_trade_routes }
-		x = -2
-		y = 3
-		cost = 10
-
-		search_filters = { FOCUS_FILTER_POLITICAL }
-
-		ai_will_do = {
-			base = 1
-		}
-
-		completion_reward = {
-			TU_MIN_routes_1 = yes
-			add_tech_bonus = { name = TU_MIN_merchant_fleet bonus = 0.75 uses = 1 category = dd_tech category = ca_tech }
-			add_doctrine_cost_reduction = { name = TU_MIN_merchant_fleet cost_reduction = 0.4 uses = 1 category = naval_doctrine }
-			navy_experience = 25
-		}
-	}
-
-	focus = {
-		id = TU_MIN_pirate_hunt
-		icon = GFX_goal_generic_build_navy
-		prerequisite = { focus = TU_MIN_trade_routes }
-		x = 1
-		y = 3
-		cost = 10
-
-		search_filters = { FOCUS_FILTER_POLITICAL }
-
-		ai_will_do = {
-			base = 1
-		}
-
-		completion_reward = {
-			remove_ideas = TU_MIN_pirate_seas
-			navy_experience = 25
-		}
-	}
-
-	focus = {
 		id = TU_MIN_sea_supremacy
-		icon = GFX_goal_generic_build_navy
-		prerequisite = { focus = TU_MIN_merchant_fleet }
-		prerequisite = { focus = TU_MIN_pirate_hunt }
-		x = 3
-		y = 4
+		icon = GFX_goal_generic_trade
+		prerequisite = { focus = TU_MIN_trade_routes }
+		x = -5
+		y = 3
 		cost = 10
 
 		search_filters = { FOCUS_FILTER_POLITICAL }
@@ -716,9 +672,8 @@ focus_tree = {
 		}
 
 		completion_reward = {
-			add_tech_bonus = { name = TU_MIN_sea_supremacy bonus = 0.75 uses = 1 category = dd_tech category = ca_tech }
-			add_doctrine_cost_reduction = { name = TU_MIN_sea_supremacy cost_reduction = 0.4 uses = 1 category = naval_doctrine }
-			navy_experience = 25
+			add_political_power = 60
+			add_tech_bonus = { name = TU_MIN_sea_supremacy bonus = 0.75 uses = 1 category = industry }
 		}
 	}
 
@@ -727,8 +682,8 @@ focus_tree = {
 		icon = GFX_goal_generic_political_pressure
 		prerequisite = { focus = TU_MIN_sea_supremacy }
 		mutually_exclusive = { focus = TU_MIN_democratic_polis focus = TU_MIN_rule_of_elders }
-		x = 3
-		y = 5
+		x = -5
+		y = 4
 		cost = 15
 
 		search_filters = { FOCUS_FILTER_POLITICAL }
@@ -752,8 +707,8 @@ focus_tree = {
 		id = TU_MIN_colonies
 		icon = GFX_goal_generic_political_pressure
 		prerequisite = { focus = TU_MIN_thalassocracy }
-		x = 3
-		y = 6
+		x = -5
+		y = 5
 		cost = 10
 
 		search_filters = { FOCUS_FILTER_POLITICAL }
@@ -770,10 +725,10 @@ focus_tree = {
 
 	focus = {
 		id = TU_MIN_sea_empire
-		icon = GFX_goal_generic_build_navy
+		icon = GFX_goal_generic_trade
 		prerequisite = { focus = TU_MIN_colonies }
-		x = 2
-		y = 7
+		x = -6
+		y = 6
 		cost = 10
 
 		search_filters = { FOCUS_FILTER_POLITICAL }
@@ -789,137 +744,11 @@ focus_tree = {
 	}
 
 	focus = {
-		id = TU_MIN_galley_fleet
-		icon = GFX_goal_generic_build_navy
-		prerequisite = { focus = TU_MIN_harbour_works }
-		x = 11
-		y = 2
-		cost = 10
-
-		search_filters = { FOCUS_FILTER_POLITICAL }
-
-		ai_will_do = {
-			base = 1
-		}
-
-		completion_reward = {
-			add_tech_bonus = { name = TU_MIN_galley_fleet bonus = 0.75 uses = 1 category = dd_tech category = ca_tech }
-			add_doctrine_cost_reduction = { name = TU_MIN_galley_fleet cost_reduction = 0.4 uses = 1 category = naval_doctrine }
-			navy_experience = 25
-		}
-	}
-
-	focus = {
-		id = TU_MIN_naval_academy
-		icon = GFX_goal_generic_build_navy
-		prerequisite = { focus = TU_MIN_galley_fleet }
-		x = 11
-		y = 3
-		cost = 10
-
-		search_filters = { FOCUS_FILTER_POLITICAL }
-
-		ai_will_do = {
-			base = 1
-		}
-
-		completion_reward = {
-			add_tech_bonus = { name = TU_MIN_naval_academy bonus = 0.75 uses = 1 category = dd_tech category = ca_tech }
-			add_doctrine_cost_reduction = { name = TU_MIN_naval_academy cost_reduction = 0.4 uses = 1 category = naval_doctrine }
-			navy_experience = 25
-		}
-	}
-
-	focus = {
-		id = TU_MIN_trireme_doctrine
-		icon = GFX_goal_generic_build_navy
-		prerequisite = { focus = TU_MIN_naval_academy }
-		x = 11
-		y = 4
-		cost = 10
-
-		search_filters = { FOCUS_FILTER_POLITICAL }
-
-		ai_will_do = {
-			base = 1
-		}
-
-		completion_reward = {
-			add_tech_bonus = { name = TU_MIN_trireme_doctrine bonus = 0.75 uses = 1 category = dd_tech category = ca_tech }
-			add_doctrine_cost_reduction = { name = TU_MIN_trireme_doctrine cost_reduction = 0.4 uses = 1 category = naval_doctrine }
-			navy_experience = 25
-		}
-	}
-
-	focus = {
-		id = TU_MIN_battle_fleet
-		icon = GFX_goal_generic_build_navy
-		prerequisite = { focus = TU_MIN_trireme_doctrine }
-		mutually_exclusive = { focus = TU_MIN_raider_fleet }
-		x = 10
-		y = 5
-		cost = 10
-
-		search_filters = { FOCUS_FILTER_POLITICAL }
-
-		ai_will_do = {
-			base = 1
-		}
-
-		completion_reward = {
-			add_tech_bonus = { name = TU_MIN_battle_fleet bonus = 0.75 uses = 1 category = dd_tech category = ca_tech }
-			add_doctrine_cost_reduction = { name = TU_MIN_battle_fleet cost_reduction = 0.4 uses = 1 category = naval_doctrine }
-			navy_experience = 25
-		}
-	}
-
-	focus = {
-		id = TU_MIN_raider_fleet
-		icon = GFX_goal_generic_army_motorized
-		prerequisite = { focus = TU_MIN_trireme_doctrine }
-		mutually_exclusive = { focus = TU_MIN_battle_fleet }
-		x = 12
-		y = 5
-		cost = 10
-
-		search_filters = { FOCUS_FILTER_POLITICAL }
-
-		ai_will_do = {
-			base = 1
-		}
-
-		completion_reward = {
-			add_tech_bonus = { name = TU_MIN_raider_fleet bonus = 0.75 uses = 1 category = motorized_equipment }
-			add_doctrine_cost_reduction = { name = TU_MIN_raider_fleet cost_reduction = 0.4 uses = 1 category = land_doctrine }
-		}
-	}
-
-	focus = {
-		id = TU_MIN_grand_fleet
-		icon = GFX_goal_generic_build_navy
-		prerequisite = { focus = TU_MIN_battle_fleet focus = TU_MIN_raider_fleet }
-		x = 14
-		y = 6
-		cost = 10
-
-		search_filters = { FOCUS_FILTER_POLITICAL }
-
-		ai_will_do = {
-			base = 1
-		}
-
-		completion_reward = {
-			add_ideas = TU_MIN_grand_fleet
-			navy_experience = 50
-		}
-	}
-
-	focus = {
 		id = TU_MIN_hoplite_training
 		icon = GFX_goal_generic_army_doctrines
 		prerequisite = { focus = TU_MIN_root }
-		x = 6
-		y = 9
+		x = -2
+		y = 8
 		cost = 10
 
 		search_filters = { FOCUS_FILTER_POLITICAL }
@@ -938,8 +767,8 @@ focus_tree = {
 		id = TU_MIN_phalanx
 		icon = GFX_goal_generic_army_doctrines
 		prerequisite = { focus = TU_MIN_hoplite_training }
-		x = 1
-		y = 10
+		x = -7
+		y = 9
 		cost = 10
 
 		search_filters = { FOCUS_FILTER_POLITICAL }
@@ -958,8 +787,8 @@ focus_tree = {
 		id = TU_MIN_hoplites
 		icon = GFX_goal_generic_political_pressure
 		prerequisite = { focus = TU_MIN_phalanx }
-		x = -2
-		y = 11
+		x = -9
+		y = 10
 		cost = 10
 
 		search_filters = { FOCUS_FILTER_POLITICAL }
@@ -978,8 +807,8 @@ focus_tree = {
 		id = TU_MIN_city_walls
 		icon = GFX_goal_generic_defence
 		prerequisite = { focus = TU_MIN_hoplite_training }
-		x = 7
-		y = 10
+		x = -2
+		y = 9
 		cost = 10
 
 		search_filters = { FOCUS_FILTER_POLITICAL }
@@ -997,8 +826,8 @@ focus_tree = {
 		id = TU_MIN_bronze_arms
 		icon = GFX_goal_generic_small_arms
 		prerequisite = { focus = TU_MIN_hoplite_training }
-		x = 12
-		y = 10
+		x = 3
+		y = 9
 		cost = 10
 
 		search_filters = { FOCUS_FILTER_POLITICAL }
@@ -1017,8 +846,8 @@ focus_tree = {
 		id = TU_MIN_modern_rifles
 		icon = GFX_goal_generic_small_arms
 		prerequisite = { focus = TU_MIN_bronze_arms }
-		x = 10
-		y = 11
+		x = 1
+		y = 10
 		cost = 10
 
 		search_filters = { FOCUS_FILTER_POLITICAL }
@@ -1037,8 +866,8 @@ focus_tree = {
 		id = TU_MIN_artillery
 		icon = GFX_goal_generic_army_artillery
 		prerequisite = { focus = TU_MIN_modern_rifles }
-		x = 10
-		y = 12
+		x = 1
+		y = 11
 		cost = 10
 
 		search_filters = { FOCUS_FILTER_POLITICAL }
@@ -1054,31 +883,10 @@ focus_tree = {
 	}
 
 	focus = {
-		id = TU_MIN_marines
-		icon = GFX_goal_generic_build_navy
-		prerequisite = { focus = TU_MIN_phalanx }
-		x = 0
-		y = 11
-		cost = 10
-
-		search_filters = { FOCUS_FILTER_POLITICAL }
-
-		ai_will_do = {
-			base = 1
-		}
-
-		completion_reward = {
-			add_tech_bonus = { name = TU_MIN_marines bonus = 0.75 uses = 1 category = dd_tech category = ca_tech }
-			add_doctrine_cost_reduction = { name = TU_MIN_marines cost_reduction = 0.4 uses = 1 category = naval_doctrine }
-			navy_experience = 25
-		}
-	}
-
-	focus = {
 		id = TU_MIN_olive_farms
 		icon = GFX_goal_generic_production
 		prerequisite = { focus = TU_MIN_root }
-		x = 24
+		x = 16
 		y = 7
 		cost = 10
 
@@ -1098,7 +906,7 @@ focus_tree = {
 		id = TU_MIN_road_network
 		icon = GFX_goal_generic_production
 		prerequisite = { focus = TU_MIN_olive_farms }
-		x = 19
+		x = 11
 		y = 8
 		cost = 10
 
@@ -1118,7 +926,7 @@ focus_tree = {
 		id = TU_MIN_industrial_district
 		icon = GFX_goal_generic_production
 		prerequisite = { focus = TU_MIN_olive_farms }
-		x = 25
+		x = 17
 		y = 8
 		cost = 10
 
@@ -1139,7 +947,7 @@ focus_tree = {
 		icon = GFX_goal_generic_production
 		prerequisite = { focus = TU_MIN_industrial_district }
 		mutually_exclusive = { focus = TU_MIN_arms_program }
-		x = 23
+		x = 15
 		y = 9
 		cost = 10
 
@@ -1160,7 +968,7 @@ focus_tree = {
 		icon = GFX_goal_generic_small_arms
 		prerequisite = { focus = TU_MIN_industrial_district }
 		mutually_exclusive = { focus = TU_MIN_civ_program }
-		x = 25
+		x = 17
 		y = 9
 		cost = 10
 
@@ -1181,7 +989,7 @@ focus_tree = {
 		id = TU_MIN_marble_quarries
 		icon = GFX_goal_generic_political_pressure
 		prerequisite = { focus = TU_MIN_road_network }
-		x = 17
+		x = 9
 		y = 9
 		cost = 10
 
@@ -1203,7 +1011,7 @@ focus_tree = {
 		icon = GFX_goal_generic_production
 		prerequisite = { focus = TU_MIN_civ_program focus = TU_MIN_arms_program }
 		prerequisite = { focus = TU_MIN_marble_quarries }
-		x = 23
+		x = 15
 		y = 10
 		cost = 10
 
@@ -1223,7 +1031,7 @@ focus_tree = {
 		id = TU_MIN_assembly_hall
 		icon = GFX_goal_generic_production
 		prerequisite = { focus = TU_MIN_agora }
-		x = -4
+		x = -7
 		y = 2
 		cost = 10
 
@@ -1243,7 +1051,7 @@ focus_tree = {
 		id = TU_MIN_citizen_militia
 		icon = GFX_goal_generic_consumer_goods
 		prerequisite = { focus = TU_MIN_citizen_rolls }
-		x = -8
+		x = -11
 		y = 3
 		cost = 10
 
@@ -1263,7 +1071,7 @@ focus_tree = {
 		id = TU_MIN_tax_reform
 		icon = GFX_goal_generic_trade
 		prerequisite = { focus = TU_MIN_ostracism }
-		x = -6
+		x = -9
 		y = 3
 		cost = 10
 
@@ -1283,7 +1091,7 @@ focus_tree = {
 		id = TU_MIN_theatre
 		icon = GFX_goal_generic_propaganda
 		prerequisite = { focus = TU_MIN_public_speeches }
-		x = -6
+		x = -9
 		y = 4
 		cost = 10
 
@@ -1303,7 +1111,7 @@ focus_tree = {
 		id = TU_MIN_free_press
 		icon = GFX_goal_generic_production
 		prerequisite = { focus = TU_MIN_democratic_reform }
-		x = -12
+		x = -15
 		y = 5
 		cost = 10
 
@@ -1322,7 +1130,7 @@ focus_tree = {
 		id = TU_MIN_elder_guard
 		icon = GFX_goal_generic_allies_build_infantry
 		prerequisite = { focus = TU_MIN_elders_reform }
-		x = -8
+		x = -11
 		y = 5
 		cost = 10
 
@@ -1342,7 +1150,7 @@ focus_tree = {
 		id = TU_MIN_public_baths
 		icon = GFX_goal_generic_consumer_goods
 		prerequisite = { focus = TU_MIN_jury_courts }
-		x = -15
+		x = -18
 		y = 7
 		cost = 10
 
@@ -1362,7 +1170,7 @@ focus_tree = {
 		id = TU_MIN_sacred_groves
 		icon = GFX_goal_generic_propaganda
 		prerequisite = { focus = TU_MIN_oracle_priests }
-		x = 23
+		x = 15
 		y = 3
 		cost = 10
 
@@ -1382,7 +1190,7 @@ focus_tree = {
 		id = TU_MIN_pilgrimage
 		icon = GFX_goal_generic_trade
 		prerequisite = { focus = TU_MIN_sacred_games }
-		x = 25
+		x = 17
 		y = 3
 		cost = 10
 
@@ -1402,7 +1210,7 @@ focus_tree = {
 		id = TU_MIN_olympic_games
 		icon = GFX_goal_generic_propaganda
 		prerequisite = { focus = TU_MIN_sacred_games }
-		x = 27
+		x = 19
 		y = 3
 		cost = 10
 
@@ -1422,7 +1230,7 @@ focus_tree = {
 		id = TU_MIN_temple_builders
 		icon = GFX_goal_generic_production
 		prerequisite = { focus = TU_MIN_divine_mandate }
-		x = 20
+		x = 12
 		y = 5
 		cost = 10
 
@@ -1442,7 +1250,7 @@ focus_tree = {
 		id = TU_MIN_logic
 		icon = GFX_focus_research
 		prerequisite = { focus = TU_MIN_philosophers }
-		x = -12
+		x = -15
 		y = 11
 		cost = 10
 
@@ -1461,7 +1269,7 @@ focus_tree = {
 		id = TU_MIN_rhetoric
 		icon = GFX_focus_research
 		prerequisite = { focus = TU_MIN_philosophers }
-		x = -10
+		x = -13
 		y = 11
 		cost = 10
 
@@ -1480,7 +1288,7 @@ focus_tree = {
 		id = TU_MIN_geometry
 		icon = GFX_focus_research
 		prerequisite = { focus = TU_MIN_mathematics }
-		x = -12
+		x = -15
 		y = 13
 		cost = 10
 
@@ -1499,7 +1307,7 @@ focus_tree = {
 		id = TU_MIN_anatomy
 		icon = GFX_goal_generic_consumer_goods
 		prerequisite = { focus = TU_MIN_medical_studies }
-		x = -16
+		x = -19
 		y = 14
 		cost = 10
 
@@ -1519,7 +1327,7 @@ focus_tree = {
 		id = TU_MIN_mechanics
 		icon = GFX_focus_research
 		prerequisite = { focus = TU_MIN_engineering_studies }
-		x = -14
+		x = -17
 		y = 14
 		cost = 10
 
@@ -1538,7 +1346,7 @@ focus_tree = {
 		id = TU_MIN_star_charts
 		icon = GFX_goal_generic_political_pressure
 		prerequisite = { focus = TU_MIN_observatory }
-		x = -18
+		x = -21
 		y = 14
 		cost = 10
 
@@ -1556,9 +1364,9 @@ focus_tree = {
 
 	focus = {
 		id = TU_MIN_lighthouse
-		icon = GFX_goal_generic_build_navy
+		icon = GFX_goal_generic_trade
 		prerequisite = { focus = TU_MIN_harbour_works }
-		x = 15
+		x = 7
 		y = 2
 		cost = 10
 
@@ -1569,9 +1377,8 @@ focus_tree = {
 		}
 
 		completion_reward = {
-			add_tech_bonus = { name = TU_MIN_lighthouse bonus = 0.75 uses = 1 category = dd_tech category = ca_tech }
-			add_doctrine_cost_reduction = { name = TU_MIN_lighthouse cost_reduction = 0.4 uses = 1 category = naval_doctrine }
-			navy_experience = 25
+			add_political_power = 60
+			add_tech_bonus = { name = TU_MIN_lighthouse bonus = 0.75 uses = 1 category = industry }
 		}
 	}
 
@@ -1579,7 +1386,7 @@ focus_tree = {
 		id = TU_MIN_wine_trade
 		icon = GFX_goal_generic_trade
 		prerequisite = { focus = TU_MIN_trade_routes }
-		x = 5
+		x = -3
 		y = 3
 		cost = 10
 
@@ -1598,9 +1405,9 @@ focus_tree = {
 	focus = {
 		id = TU_MIN_insurance
 		icon = GFX_goal_generic_trade
-		prerequisite = { focus = TU_MIN_merchant_fleet }
-		x = -3
-		y = 4
+		prerequisite = { focus = TU_MIN_trade_routes }
+		x = -1
+		y = 3
 		cost = 10
 
 		search_filters = { FOCUS_FILTER_POLITICAL }
@@ -1616,96 +1423,11 @@ focus_tree = {
 	}
 
 	focus = {
-		id = TU_MIN_convoys
-		icon = GFX_goal_generic_build_navy
-		prerequisite = { focus = TU_MIN_pirate_hunt }
-		x = 1
-		y = 4
-		cost = 10
-
-		search_filters = { FOCUS_FILTER_POLITICAL }
-
-		ai_will_do = {
-			base = 1
-		}
-
-		completion_reward = {
-			add_tech_bonus = { name = TU_MIN_convoys bonus = 0.75 uses = 1 category = dd_tech category = ca_tech }
-			add_doctrine_cost_reduction = { name = TU_MIN_convoys cost_reduction = 0.4 uses = 1 category = naval_doctrine }
-			navy_experience = 25
-		}
-	}
-
-	focus = {
-		id = TU_MIN_naval_bases
-		icon = GFX_goal_generic_build_navy
-		prerequisite = { focus = TU_MIN_naval_academy }
-		x = 13
-		y = 4
-		cost = 10
-
-		search_filters = { FOCUS_FILTER_INDUSTRY }
-
-		ai_will_do = {
-			base = 1
-		}
-
-		completion_reward = {
-			add_tech_bonus = { name = TU_MIN_naval_bases bonus = 0.75 uses = 1 category = dd_tech category = ca_tech }
-			add_doctrine_cost_reduction = { name = TU_MIN_naval_bases cost_reduction = 0.4 uses = 1 category = naval_doctrine }
-			navy_experience = 25
-			TU_build_dockyard = yes
-		}
-	}
-
-	focus = {
-		id = TU_MIN_destroyers
-		icon = GFX_goal_generic_build_navy
-		prerequisite = { focus = TU_MIN_battle_fleet }
-		x = 10
-		y = 6
-		cost = 10
-
-		search_filters = { FOCUS_FILTER_POLITICAL }
-
-		ai_will_do = {
-			base = 1
-		}
-
-		completion_reward = {
-			add_tech_bonus = { name = TU_MIN_destroyers bonus = 0.75 uses = 1 category = dd_tech category = ca_tech }
-			add_doctrine_cost_reduction = { name = TU_MIN_destroyers cost_reduction = 0.4 uses = 1 category = naval_doctrine }
-			navy_experience = 25
-		}
-	}
-
-	focus = {
-		id = TU_MIN_submarines
-		icon = GFX_goal_generic_build_navy
-		prerequisite = { focus = TU_MIN_raider_fleet }
-		x = 12
-		y = 6
-		cost = 10
-
-		search_filters = { FOCUS_FILTER_POLITICAL }
-
-		ai_will_do = {
-			base = 1
-		}
-
-		completion_reward = {
-			add_tech_bonus = { name = TU_MIN_submarines bonus = 0.75 uses = 1 category = dd_tech category = ca_tech }
-			add_doctrine_cost_reduction = { name = TU_MIN_submarines cost_reduction = 0.4 uses = 1 category = naval_doctrine }
-			navy_experience = 25
-		}
-	}
-
-	focus = {
 		id = TU_MIN_cavalry
 		icon = GFX_goal_generic_army_motorized
 		prerequisite = { focus = TU_MIN_phalanx }
-		x = 2
-		y = 11
+		x = -7
+		y = 10
 		cost = 10
 
 		search_filters = { FOCUS_FILTER_POLITICAL }
@@ -1724,8 +1446,8 @@ focus_tree = {
 		id = TU_MIN_archer_corps
 		icon = GFX_goal_generic_small_arms
 		prerequisite = { focus = TU_MIN_bronze_arms }
-		x = 12
-		y = 11
+		x = 3
+		y = 10
 		cost = 10
 
 		search_filters = { FOCUS_FILTER_POLITICAL }
@@ -1744,8 +1466,8 @@ focus_tree = {
 		id = TU_MIN_coastal_forts
 		icon = GFX_goal_generic_defence
 		prerequisite = { focus = TU_MIN_city_walls }
-		x = 6
-		y = 11
+		x = -3
+		y = 10
 		cost = 10
 
 		search_filters = { FOCUS_FILTER_POLITICAL }
@@ -1763,8 +1485,8 @@ focus_tree = {
 		id = TU_MIN_field_medics
 		icon = GFX_goal_generic_consumer_goods
 		prerequisite = { focus = TU_MIN_hoplites }
-		x = -2
-		y = 12
+		x = -9
+		y = 11
 		cost = 10
 
 		search_filters = { FOCUS_FILTER_POLITICAL }
@@ -1783,7 +1505,7 @@ focus_tree = {
 		id = TU_MIN_pottery
 		icon = GFX_goal_generic_production
 		prerequisite = { focus = TU_MIN_olive_farms }
-		x = 29
+		x = 21
 		y = 8
 		cost = 10
 
@@ -1803,7 +1525,7 @@ focus_tree = {
 		id = TU_MIN_silver_mines
 		icon = GFX_goal_generic_production
 		prerequisite = { focus = TU_MIN_industrial_district }
-		x = 27
+		x = 19
 		y = 9
 		cost = 10
 
@@ -1823,7 +1545,7 @@ focus_tree = {
 		id = TU_MIN_rail_network
 		icon = GFX_goal_generic_construct_infrastructure
 		prerequisite = { focus = TU_MIN_road_network }
-		x = 19
+		x = 11
 		y = 9
 		cost = 10
 
@@ -1839,32 +1561,10 @@ focus_tree = {
 	}
 
 	focus = {
-		id = TU_MIN_shipyards
-		icon = GFX_goal_generic_build_navy
-		prerequisite = { focus = TU_MIN_harbour_works }
-		x = 17
-		y = 2
-		cost = 10
-
-		search_filters = { FOCUS_FILTER_INDUSTRY }
-
-		ai_will_do = {
-			base = 1
-		}
-
-		completion_reward = {
-			add_tech_bonus = { name = TU_MIN_shipyards bonus = 0.75 uses = 1 category = dd_tech category = ca_tech }
-			add_doctrine_cost_reduction = { name = TU_MIN_shipyards cost_reduction = 0.4 uses = 1 category = naval_doctrine }
-			navy_experience = 25
-			TU_build_dockyard = yes
-		}
-	}
-
-	focus = {
 		id = TU_MIN_power_plants
 		icon = GFX_goal_generic_production
 		prerequisite = { focus = TU_MIN_rail_network }
-		x = 19
+		x = 11
 		y = 10
 		cost = 10
 
@@ -1884,7 +1584,7 @@ focus_tree = {
 		id = TU_MIN_sargon_pact
 		icon = GFX_goal_generic_improve_relations
 		prerequisite = { focus = TU_MIN_trade_routes }
-		x = 7
+		x = 1
 		y = 3
 		cost = 10
 
@@ -1904,7 +1604,7 @@ focus_tree = {
 		id = TU_MIN_iberia_ties
 		icon = GFX_goal_generic_improve_relations
 		prerequisite = { focus = TU_MIN_trade_routes }
-		x = 9
+		x = 3
 		y = 3
 		cost = 10
 
@@ -1924,7 +1624,7 @@ focus_tree = {
 		id = TU_MIN_laterano_ties
 		icon = GFX_goal_generic_improve_relations
 		prerequisite = { focus = TU_MIN_temple_rites }
-		x = 28
+		x = 20
 		y = 2
 		cost = 10
 
@@ -1943,9 +1643,9 @@ focus_tree = {
 	focus = {
 		id = TU_MIN_columbia_trade
 		icon = GFX_goal_generic_trade
-		prerequisite = { focus = TU_MIN_merchant_fleet }
-		x = -1
-		y = 4
+		prerequisite = { focus = TU_MIN_trade_routes }
+		x = 5
+		y = 3
 		cost = 10
 
 		search_filters = { FOCUS_FILTER_POLITICAL }
@@ -1964,7 +1664,7 @@ focus_tree = {
 		id = TU_MIN_league_pact
 		icon = GFX_goal_generic_improve_relations
 		prerequisite = { focus = TU_MIN_sargon_pact }
-		x = 7
+		x = 1
 		y = 4
 		cost = 10
 
@@ -1984,7 +1684,7 @@ focus_tree = {
 		id = TU_MIN_foreign_academy
 		icon = GFX_goal_generic_improve_relations
 		prerequisite = { focus = TU_MIN_great_library }
-		x = -10
+		x = -13
 		y = 15
 		cost = 10
 
@@ -2004,7 +1704,7 @@ focus_tree = {
 		id = TU_MIN_theatre_arts
 		icon = GFX_goal_generic_propaganda
 		prerequisite = { focus = TU_MIN_theatre }
-		x = -6
+		x = -9
 		y = 5
 		cost = 10
 
@@ -2024,7 +1724,7 @@ focus_tree = {
 		id = TU_MIN_road_shrines
 		icon = GFX_goal_generic_production
 		prerequisite = { focus = TU_MIN_road_network }
-		x = 21
+		x = 13
 		y = 9
 		cost = 10
 
@@ -2043,8 +1743,8 @@ focus_tree = {
 		id = TU_MIN_bronze_foundry
 		icon = GFX_goal_generic_production
 		prerequisite = { focus = TU_MIN_bronze_arms }
-		x = 14
-		y = 11
+		x = 5
+		y = 10
 		cost = 10
 
 		search_filters = { FOCUS_FILTER_INDUSTRY }
@@ -2061,10 +1761,10 @@ focus_tree = {
 
 	focus = {
 		id = TU_MIN_sea_maps
-		icon = GFX_goal_generic_build_navy
-		prerequisite = { focus = TU_MIN_galley_fleet }
-		x = 13
-		y = 3
+		icon = GFX_goal_generic_trade
+		prerequisite = { focus = TU_MIN_harbour_works }
+		x = 9
+		y = 2
 		cost = 10
 
 		search_filters = { FOCUS_FILTER_POLITICAL }
@@ -2074,30 +1774,8 @@ focus_tree = {
 		}
 
 		completion_reward = {
-			add_tech_bonus = { name = TU_MIN_sea_maps bonus = 0.75 uses = 1 category = dd_tech category = ca_tech }
-			add_doctrine_cost_reduction = { name = TU_MIN_sea_maps cost_reduction = 0.4 uses = 1 category = naval_doctrine }
-			navy_experience = 25
-		}
-	}
-
-	focus = {
-		id = TU_MIN_naval_bombers
-		icon = GFX_goal_generic_air_doctrine
-		prerequisite = { focus = TU_MIN_grand_fleet }
-		x = 14
-		y = 7
-		cost = 10
-
-		search_filters = { FOCUS_FILTER_POLITICAL }
-
-		ai_will_do = {
-			base = 1
-		}
-
-		completion_reward = {
-			add_tech_bonus = { name = TU_MIN_naval_bombers bonus = 0.75 uses = 1 category = light_fighter category = tactical_bomber }
-			add_doctrine_cost_reduction = { name = TU_MIN_naval_bombers cost_reduction = 0.4 uses = 1 category = air_doctrine }
-			air_experience = 25
+			add_political_power = 60
+			add_tech_bonus = { name = TU_MIN_sea_maps bonus = 0.75 uses = 1 category = industry }
 		}
 	}
 
@@ -2105,8 +1783,8 @@ focus_tree = {
 		id = TU_MIN_labyrinth
 		icon = GFX_goal_generic_defence
 		prerequisite = { focus = TU_MIN_city_walls }
-		x = 8
-		y = 11
+		x = -1
+		y = 10
 		cost = 10
 
 		search_filters = { FOCUS_FILTER_POLITICAL }
@@ -2124,7 +1802,7 @@ focus_tree = {
 		id = TU_MIN_assembly_guard
 		icon = GFX_goal_generic_allies_build_infantry
 		prerequisite = { focus = TU_MIN_assembly_hall }
-		x = -4
+		x = -7
 		y = 3
 		cost = 10
 
@@ -2142,9 +1820,9 @@ focus_tree = {
 
 	focus = {
 		id = TU_MIN_grain_ships
-		icon = GFX_goal_generic_build_navy
+		icon = GFX_goal_generic_consumer_goods
 		prerequisite = { focus = TU_MIN_wine_trade }
-		x = 5
+		x = -3
 		y = 4
 		cost = 10
 
@@ -2155,9 +1833,8 @@ focus_tree = {
 		}
 
 		completion_reward = {
-			add_tech_bonus = { name = TU_MIN_grain_ships bonus = 0.75 uses = 1 category = dd_tech category = ca_tech }
-			add_doctrine_cost_reduction = { name = TU_MIN_grain_ships cost_reduction = 0.4 uses = 1 category = naval_doctrine }
-			navy_experience = 25
+			add_stability = 0.03
+			add_manpower = 10000
 		}
 	}
 
@@ -2165,7 +1842,7 @@ focus_tree = {
 		id = TU_MIN_elder_wisdom
 		icon = GFX_focus_research
 		prerequisite = { focus = TU_MIN_elder_council }
-		x = -9
+		x = -12
 		y = 7
 		cost = 10
 
@@ -2184,7 +1861,7 @@ focus_tree = {
 		id = TU_MIN_temple_banks
 		icon = GFX_goal_generic_trade
 		prerequisite = { focus = TU_MIN_temple_treasury }
-		x = -11
+		x = -14
 		y = 8
 		cost = 10
 
@@ -2204,7 +1881,7 @@ focus_tree = {
 		id = TU_MIN_oracle_guard
 		icon = GFX_goal_generic_allies_build_infantry
 		prerequisite = { focus = TU_MIN_prophecy_archive }
-		x = 22
+		x = 14
 		y = 4
 		cost = 10
 
@@ -2224,7 +1901,7 @@ focus_tree = {
 		id = TU_MIN_music_school
 		icon = GFX_focus_research
 		prerequisite = { focus = TU_MIN_theatre_arts }
-		x = -6
+		x = -9
 		y = 6
 		cost = 10
 
@@ -2243,7 +1920,7 @@ focus_tree = {
 		id = TU_MIN_astronomy
 		icon = GFX_focus_research
 		prerequisite = { focus = TU_MIN_star_charts }
-		x = -18
+		x = -21
 		y = 15
 		cost = 10
 
@@ -2262,7 +1939,7 @@ focus_tree = {
 		id = TU_MIN_hospitals
 		icon = GFX_goal_generic_consumer_goods
 		prerequisite = { focus = TU_MIN_anatomy }
-		x = -16
+		x = -19
 		y = 15
 		cost = 10
 
@@ -2282,7 +1959,7 @@ focus_tree = {
 		id = TU_MIN_siege_engines
 		icon = GFX_goal_generic_army_artillery
 		prerequisite = { focus = TU_MIN_mechanics }
-		x = -14
+		x = -17
 		y = 15
 		cost = 10
 
@@ -2302,8 +1979,8 @@ focus_tree = {
 		id = TU_MIN_trade_colonies
 		icon = GFX_goal_generic_trade
 		prerequisite = { focus = TU_MIN_colonies }
-		x = 4
-		y = 7
+		x = -4
+		y = 6
 		cost = 10
 
 		search_filters = { FOCUS_FILTER_POLITICAL }
@@ -2319,53 +1996,11 @@ focus_tree = {
 	}
 
 	focus = {
-		id = TU_MIN_naval_guns
-		icon = GFX_goal_generic_build_navy
-		prerequisite = { focus = TU_MIN_destroyers }
-		x = 10
-		y = 7
-		cost = 10
-
-		search_filters = { FOCUS_FILTER_POLITICAL }
-
-		ai_will_do = {
-			base = 1
-		}
-
-		completion_reward = {
-			add_tech_bonus = { name = TU_MIN_naval_guns bonus = 0.75 uses = 1 category = dd_tech category = ca_tech }
-			add_doctrine_cost_reduction = { name = TU_MIN_naval_guns cost_reduction = 0.4 uses = 1 category = naval_doctrine }
-			navy_experience = 25
-		}
-	}
-
-	focus = {
-		id = TU_MIN_cruisers
-		icon = GFX_goal_generic_build_navy
-		prerequisite = { focus = TU_MIN_naval_academy }
-		x = 15
-		y = 4
-		cost = 10
-
-		search_filters = { FOCUS_FILTER_POLITICAL }
-
-		ai_will_do = {
-			base = 1
-		}
-
-		completion_reward = {
-			add_tech_bonus = { name = TU_MIN_cruisers bonus = 0.75 uses = 1 category = dd_tech category = ca_tech }
-			add_doctrine_cost_reduction = { name = TU_MIN_cruisers cost_reduction = 0.4 uses = 1 category = naval_doctrine }
-			navy_experience = 25
-		}
-	}
-
-	focus = {
 		id = TU_MIN_light_infantry
 		icon = GFX_goal_generic_allies_build_infantry
 		prerequisite = { focus = TU_MIN_phalanx }
-		x = 4
-		y = 11
+		x = -5
+		y = 10
 		cost = 10
 
 		search_filters = { FOCUS_FILTER_POLITICAL }
@@ -2384,8 +2019,8 @@ focus_tree = {
 		id = TU_MIN_mountain_passes
 		icon = GFX_goal_generic_defence
 		prerequisite = { focus = TU_MIN_coastal_forts }
-		x = 6
-		y = 12
+		x = -3
+		y = 11
 		cost = 10
 
 		search_filters = { FOCUS_FILTER_POLITICAL }
@@ -2403,7 +2038,7 @@ focus_tree = {
 		id = TU_MIN_textile_mills
 		icon = GFX_goal_generic_production
 		prerequisite = { focus = TU_MIN_pottery }
-		x = 29
+		x = 21
 		y = 9
 		cost = 10
 
@@ -2423,7 +2058,7 @@ focus_tree = {
 		id = TU_MIN_steel_works
 		icon = GFX_goal_generic_small_arms
 		prerequisite = { focus = TU_MIN_silver_mines }
-		x = 27
+		x = 19
 		y = 10
 		cost = 10
 
@@ -2442,9 +2077,9 @@ focus_tree = {
 
 	focus = {
 		id = TU_MIN_harbour_cranes
-		icon = GFX_goal_generic_build_navy
+		icon = GFX_goal_generic_trade
 		prerequisite = { focus = TU_MIN_lighthouse }
-		x = 15
+		x = 7
 		y = 3
 		cost = 10
 
@@ -2455,9 +2090,8 @@ focus_tree = {
 		}
 
 		completion_reward = {
-			add_tech_bonus = { name = TU_MIN_harbour_cranes bonus = 0.75 uses = 1 category = dd_tech category = ca_tech }
-			add_doctrine_cost_reduction = { name = TU_MIN_harbour_cranes cost_reduction = 0.4 uses = 1 category = naval_doctrine }
-			navy_experience = 25
+			add_political_power = 60
+			add_tech_bonus = { name = TU_MIN_harbour_cranes bonus = 0.75 uses = 1 category = industry }
 			TU_build_civ_factory = yes
 		}
 	}

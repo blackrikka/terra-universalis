@@ -1,6 +1,6 @@
 focus_tree = {
 	id = TU_RIM_focus
-	continuous_focus_position = { x = 50 y = 2860 }
+	continuous_focus_position = { x = 50 y = 2990 }
 
 	country = {
 		factor = 0
@@ -41,7 +41,7 @@ focus_tree = {
 		id = TU_RIM_ore_mining
 		icon = GFX_goal_generic_production
 		prerequisite = { focus = TU_RIM_root }
-		x = -14
+		x = 4
 		y = 1
 		cost = 10
 
@@ -61,7 +61,7 @@ focus_tree = {
 		id = TU_RIM_ore_refinery
 		icon = GFX_goal_generic_production
 		prerequisite = { focus = TU_RIM_ore_mining }
-		x = -15
+		x = 3
 		y = 2
 		cost = 10
 
@@ -81,7 +81,7 @@ focus_tree = {
 		id = TU_RIM_mining_railway
 		icon = GFX_goal_generic_construct_infrastructure
 		prerequisite = { focus = TU_RIM_ore_mining }
-		x = -12
+		x = 6
 		y = 2
 		cost = 10
 
@@ -102,7 +102,7 @@ focus_tree = {
 		prerequisite = { focus = TU_RIM_ore_refinery }
 		prerequisite = { focus = TU_RIM_mining_railway }
 		mutually_exclusive = { focus = TU_RIM_labour_expansion }
-		x = -8
+		x = 10
 		y = 3
 		cost = 10
 
@@ -124,7 +124,7 @@ focus_tree = {
 		prerequisite = { focus = TU_RIM_ore_refinery }
 		prerequisite = { focus = TU_RIM_mining_railway }
 		mutually_exclusive = { focus = TU_RIM_automated_mines }
-		x = -4
+		x = 14
 		y = 3
 		cost = 10
 
@@ -145,7 +145,7 @@ focus_tree = {
 		id = TU_RIM_ore_exports
 		icon = GFX_goal_generic_production
 		prerequisite = { focus = TU_RIM_automated_mines focus = TU_RIM_labour_expansion }
-		x = -10
+		x = 8
 		y = 4
 		cost = 10
 
@@ -165,7 +165,7 @@ focus_tree = {
 		id = TU_RIM_mining_superpower
 		icon = GFX_goal_generic_production
 		prerequisite = { focus = TU_RIM_ore_exports }
-		x = -12
+		x = 6
 		y = 5
 		cost = 10
 
@@ -184,7 +184,7 @@ focus_tree = {
 		id = TU_RIM_company_board
 		icon = GFX_goal_generic_trade
 		prerequisite = { focus = TU_RIM_root }
-		x = -25
+		x = -7
 		y = 8
 		cost = 10
 
@@ -204,7 +204,7 @@ focus_tree = {
 		id = TU_RIM_corporate_charter
 		icon = GFX_goal_generic_political_pressure
 		prerequisite = { focus = TU_RIM_company_board }
-		x = -25
+		x = -7
 		y = 9
 		cost = 10
 
@@ -224,7 +224,7 @@ focus_tree = {
 		id = TU_RIM_company_security
 		icon = GFX_goal_generic_intelligence_exchange
 		prerequisite = { focus = TU_RIM_company_board }
-		x = -15
+		x = 1
 		y = 9
 		cost = 10
 
@@ -244,7 +244,7 @@ focus_tree = {
 		id = TU_RIM_corporate_police
 		icon = GFX_goal_generic_intelligence_exchange
 		prerequisite = { focus = TU_RIM_corporate_charter }
-		x = -25
+		x = -7
 		y = 10
 		cost = 10
 
@@ -266,7 +266,7 @@ focus_tree = {
 		prerequisite = { focus = TU_RIM_corporate_police }
 		prerequisite = { focus = TU_RIM_company_security }
 		mutually_exclusive = { focus = TU_RIM_workers_rule focus = TU_RIM_infected_haven }
-		x = -25
+		x = -7
 		y = 11
 		cost = 15
 
@@ -291,7 +291,7 @@ focus_tree = {
 		id = TU_RIM_shareholder_army
 		icon = GFX_goal_generic_allies_build_infantry
 		prerequisite = { focus = TU_RIM_corporate_rule }
-		x = -27
+		x = -9
 		y = 12
 		cost = 10
 
@@ -311,7 +311,7 @@ focus_tree = {
 		id = TU_RIM_ore_monopoly
 		icon = GFX_goal_generic_production
 		prerequisite = { focus = TU_RIM_corporate_rule }
-		x = -25
+		x = -7
 		y = 12
 		cost = 10
 
@@ -331,7 +331,7 @@ focus_tree = {
 		id = TU_RIM_miners_union
 		icon = GFX_goal_generic_production
 		prerequisite = { focus = TU_RIM_root }
-		x = -9
+		x = 7
 		y = 8
 		cost = 10
 
@@ -351,7 +351,7 @@ focus_tree = {
 		id = TU_RIM_safety_rules
 		icon = GFX_goal_generic_production
 		prerequisite = { focus = TU_RIM_miners_union }
-		x = -9
+		x = 7
 		y = 9
 		cost = 10
 
@@ -370,7 +370,7 @@ focus_tree = {
 		id = TU_RIM_workers_council
 		icon = GFX_goal_generic_political_pressure
 		prerequisite = { focus = TU_RIM_miners_union }
-		x = -2
+		x = 14
 		y = 9
 		cost = 10
 
@@ -390,7 +390,7 @@ focus_tree = {
 		id = TU_RIM_eight_hour_day
 		icon = GFX_goal_generic_political_pressure
 		prerequisite = { focus = TU_RIM_safety_rules }
-		x = -9
+		x = 7
 		y = 10
 		cost = 10
 
@@ -412,7 +412,7 @@ focus_tree = {
 		prerequisite = { focus = TU_RIM_eight_hour_day }
 		prerequisite = { focus = TU_RIM_workers_council }
 		mutually_exclusive = { focus = TU_RIM_corporate_rule focus = TU_RIM_infected_haven }
-		x = -9
+		x = 7
 		y = 11
 		cost = 15
 
@@ -438,7 +438,7 @@ focus_tree = {
 		id = TU_RIM_cooperatives
 		icon = GFX_goal_generic_production
 		prerequisite = { focus = TU_RIM_workers_rule }
-		x = -9
+		x = 7
 		y = 12
 		cost = 10
 
@@ -458,7 +458,7 @@ focus_tree = {
 		id = TU_RIM_workers_militia
 		icon = GFX_goal_generic_allies_build_infantry
 		prerequisite = { focus = TU_RIM_workers_rule }
-		x = -7
+		x = 9
 		y = 12
 		cost = 10
 
@@ -478,8 +478,8 @@ focus_tree = {
 		id = TU_RIM_oripathy_research
 		icon = GFX_goal_generic_consumer_goods
 		prerequisite = { focus = TU_RIM_root }
-		x = -29
-		y = 16
+		x = -13
+		y = 14
 		cost = 10
 
 		search_filters = { FOCUS_FILTER_POLITICAL }
@@ -498,8 +498,8 @@ focus_tree = {
 		id = TU_RIM_medical_centres
 		icon = GFX_goal_generic_consumer_goods
 		prerequisite = { focus = TU_RIM_oripathy_research }
-		x = -33
-		y = 17
+		x = -17
+		y = 15
 		cost = 10
 
 		search_filters = { FOCUS_FILTER_POLITICAL }
@@ -519,8 +519,8 @@ focus_tree = {
 		icon = GFX_goal_generic_consumer_goods
 		prerequisite = { focus = TU_RIM_medical_centres }
 		mutually_exclusive = { focus = TU_RIM_quarantine_zones }
-		x = -37
-		y = 18
+		x = -21
+		y = 16
 		cost = 10
 
 		search_filters = { FOCUS_FILTER_POLITICAL }
@@ -540,8 +540,8 @@ focus_tree = {
 		icon = GFX_goal_generic_consumer_goods
 		prerequisite = { focus = TU_RIM_medical_centres }
 		mutually_exclusive = { focus = TU_RIM_suppressant_production }
-		x = -35
-		y = 18
+		x = -19
+		y = 16
 		cost = 10
 
 		search_filters = { FOCUS_FILTER_POLITICAL }
@@ -559,10 +559,10 @@ focus_tree = {
 
 	focus = {
 		id = TU_RIM_rhodes_partnership
-		icon = GFX_goal_generic_build_navy
+		icon = GFX_goal_generic_consumer_goods
 		prerequisite = { focus = TU_RIM_suppressant_production focus = TU_RIM_quarantine_zones }
-		x = -33
-		y = 19
+		x = -17
+		y = 17
 		cost = 10
 
 		search_filters = { FOCUS_FILTER_POLITICAL }
@@ -581,7 +581,7 @@ focus_tree = {
 		id = TU_RIM_refugee_policy
 		icon = GFX_goal_generic_consumer_goods
 		prerequisite = { focus = TU_RIM_root }
-		x = 2
+		x = 18
 		y = 8
 		cost = 10
 
@@ -600,7 +600,7 @@ focus_tree = {
 		id = TU_RIM_infected_rights
 		icon = GFX_goal_generic_consumer_goods
 		prerequisite = { focus = TU_RIM_refugee_policy }
-		x = 1
+		x = 17
 		y = 9
 		cost = 10
 
@@ -620,7 +620,7 @@ focus_tree = {
 		id = TU_RIM_settlers_council
 		icon = GFX_goal_generic_political_pressure
 		prerequisite = { focus = TU_RIM_refugee_policy }
-		x = 3
+		x = 19
 		y = 9
 		cost = 10
 
@@ -641,7 +641,7 @@ focus_tree = {
 		icon = GFX_goal_generic_consumer_goods
 		prerequisite = { focus = TU_RIM_infected_rights }
 		prerequisite = { focus = TU_RIM_settlers_council }
-		x = 5
+		x = 21
 		y = 10
 		cost = 10
 
@@ -662,7 +662,7 @@ focus_tree = {
 		icon = GFX_goal_generic_consumer_goods
 		prerequisite = { focus = TU_RIM_new_homeland }
 		mutually_exclusive = { focus = TU_RIM_corporate_rule focus = TU_RIM_workers_rule }
-		x = 5
+		x = 21
 		y = 11
 		cost = 15
 
@@ -687,7 +687,7 @@ focus_tree = {
 		id = TU_RIM_haven_schools
 		icon = GFX_focus_research
 		prerequisite = { focus = TU_RIM_infected_haven }
-		x = 4
+		x = 20
 		y = 12
 		cost = 10
 
@@ -706,7 +706,7 @@ focus_tree = {
 		id = TU_RIM_haven_guard
 		icon = GFX_goal_generic_allies_build_infantry
 		prerequisite = { focus = TU_RIM_infected_haven }
-		x = 6
+		x = 22
 		y = 12
 		cost = 10
 
@@ -726,8 +726,8 @@ focus_tree = {
 		id = TU_RIM_mine_defence
 		icon = GFX_goal_generic_defence
 		prerequisite = { focus = TU_RIM_root }
-		x = -18
-		y = 13
+		x = -2
+		y = 16
 		cost = 10
 
 		search_filters = { FOCUS_FILTER_POLITICAL }
@@ -745,8 +745,8 @@ focus_tree = {
 		id = TU_RIM_mercenary_hire
 		icon = GFX_goal_generic_allies_build_infantry
 		prerequisite = { focus = TU_RIM_mine_defence }
-		x = -18
-		y = 14
+		x = -2
+		y = 17
 		cost = 10
 
 		search_filters = { FOCUS_FILTER_POLITICAL }
@@ -766,8 +766,8 @@ focus_tree = {
 		icon = GFX_goal_generic_army_motorized
 		prerequisite = { focus = TU_RIM_mercenary_hire }
 		mutually_exclusive = { focus = TU_RIM_fortified_mines }
-		x = -22
-		y = 15
+		x = -6
+		y = 18
 		cost = 10
 
 		search_filters = { FOCUS_FILTER_POLITICAL }
@@ -787,8 +787,8 @@ focus_tree = {
 		icon = GFX_goal_generic_defence
 		prerequisite = { focus = TU_RIM_mercenary_hire }
 		mutually_exclusive = { focus = TU_RIM_rapid_squads }
-		x = -20
-		y = 15
+		x = -4
+		y = 18
 		cost = 10
 
 		search_filters = { FOCUS_FILTER_POLITICAL }
@@ -806,8 +806,8 @@ focus_tree = {
 		id = TU_RIM_equipment_supply
 		icon = GFX_goal_generic_small_arms
 		prerequisite = { focus = TU_RIM_rapid_squads focus = TU_RIM_fortified_mines }
-		x = -18
-		y = 16
+		x = -2
+		y = 19
 		cost = 10
 
 		search_filters = { FOCUS_FILTER_POLITICAL }
@@ -826,8 +826,8 @@ focus_tree = {
 		id = TU_RIM_defence_force
 		icon = GFX_goal_generic_defence
 		prerequisite = { focus = TU_RIM_equipment_supply }
-		x = -20
-		y = 17
+		x = -4
+		y = 20
 		cost = 10
 
 		search_filters = { FOCUS_FILTER_POLITICAL }
@@ -846,7 +846,7 @@ focus_tree = {
 		id = TU_RIM_industrial_district
 		icon = GFX_goal_generic_production
 		prerequisite = { focus = TU_RIM_root }
-		x = 0
+		x = 16
 		y = 16
 		cost = 10
 
@@ -866,7 +866,7 @@ focus_tree = {
 		id = TU_RIM_road_network
 		icon = GFX_goal_generic_production
 		prerequisite = { focus = TU_RIM_industrial_district }
-		x = -5
+		x = 11
 		y = 17
 		cost = 10
 
@@ -887,7 +887,7 @@ focus_tree = {
 		icon = GFX_goal_generic_production
 		prerequisite = { focus = TU_RIM_industrial_district }
 		mutually_exclusive = { focus = TU_RIM_arms_program }
-		x = -3
+		x = 13
 		y = 17
 		cost = 10
 
@@ -908,7 +908,7 @@ focus_tree = {
 		icon = GFX_goal_generic_small_arms
 		prerequisite = { focus = TU_RIM_industrial_district }
 		mutually_exclusive = { focus = TU_RIM_civ_program }
-		x = -1
+		x = 15
 		y = 17
 		cost = 10
 
@@ -929,7 +929,7 @@ focus_tree = {
 		id = TU_RIM_originium_engineering
 		icon = GFX_focus_research
 		prerequisite = { focus = TU_RIM_road_network }
-		x = -8
+		x = 8
 		y = 18
 		cost = 10
 
@@ -948,7 +948,7 @@ focus_tree = {
 		id = TU_RIM_research_slot
 		icon = GFX_focus_research
 		prerequisite = { focus = TU_RIM_originium_engineering }
-		x = -9
+		x = 7
 		y = 19
 		cost = 10
 
@@ -968,7 +968,7 @@ focus_tree = {
 		icon = GFX_goal_generic_production
 		prerequisite = { focus = TU_RIM_civ_program focus = TU_RIM_arms_program }
 		prerequisite = { focus = TU_RIM_road_network }
-		x = 1
+		x = 17
 		y = 18
 		cost = 10
 
@@ -988,7 +988,7 @@ focus_tree = {
 		id = TU_RIM_deep_shafts
 		icon = GFX_goal_generic_production
 		prerequisite = { focus = TU_RIM_ore_refinery }
-		x = -15
+		x = 3
 		y = 3
 		cost = 10
 
@@ -1008,7 +1008,7 @@ focus_tree = {
 		id = TU_RIM_ore_trains
 		icon = GFX_goal_generic_construct_infrastructure
 		prerequisite = { focus = TU_RIM_mining_railway }
-		x = -12
+		x = 6
 		y = 3
 		cost = 10
 
@@ -1028,7 +1028,7 @@ focus_tree = {
 		id = TU_RIM_mine_lights
 		icon = GFX_focus_research
 		prerequisite = { focus = TU_RIM_automated_mines }
-		x = -6
+		x = 12
 		y = 4
 		cost = 10
 
@@ -1047,7 +1047,7 @@ focus_tree = {
 		id = TU_RIM_dynamite
 		icon = GFX_focus_research
 		prerequisite = { focus = TU_RIM_labour_expansion }
-		x = -4
+		x = 14
 		y = 4
 		cost = 10
 
@@ -1066,7 +1066,7 @@ focus_tree = {
 		id = TU_RIM_ore_markets
 		icon = GFX_goal_generic_production
 		prerequisite = { focus = TU_RIM_ore_exports }
-		x = -10
+		x = 8
 		y = 5
 		cost = 10
 
@@ -1085,7 +1085,7 @@ focus_tree = {
 		id = TU_RIM_geology_survey
 		icon = GFX_goal_generic_production
 		prerequisite = { focus = TU_RIM_ore_mining }
-		x = -10
+		x = 8
 		y = 2
 		cost = 10
 
@@ -1104,7 +1104,7 @@ focus_tree = {
 		id = TU_RIM_company_stores
 		icon = GFX_goal_generic_trade
 		prerequisite = { focus = TU_RIM_corporate_charter }
-		x = -19
+		x = -1
 		y = 10
 		cost = 10
 
@@ -1124,7 +1124,7 @@ focus_tree = {
 		id = TU_RIM_company_doctors
 		icon = GFX_goal_generic_consumer_goods
 		prerequisite = { focus = TU_RIM_company_security }
-		x = -15
+		x = 1
 		y = 10
 		cost = 10
 
@@ -1144,7 +1144,7 @@ focus_tree = {
 		id = TU_RIM_private_army
 		icon = GFX_goal_generic_allies_build_infantry
 		prerequisite = { focus = TU_RIM_corporate_police }
-		x = -23
+		x = -5
 		y = 11
 		cost = 10
 
@@ -1164,7 +1164,7 @@ focus_tree = {
 		id = TU_RIM_ore_futures
 		icon = GFX_goal_generic_production
 		prerequisite = { focus = TU_RIM_ore_monopoly }
-		x = -25
+		x = -7
 		y = 13
 		cost = 10
 
@@ -1183,7 +1183,7 @@ focus_tree = {
 		id = TU_RIM_strike_fund
 		icon = GFX_goal_generic_occupy_start_war
 		prerequisite = { focus = TU_RIM_workers_council }
-		x = -3
+		x = 13
 		y = 10
 		cost = 10
 
@@ -1204,7 +1204,7 @@ focus_tree = {
 		id = TU_RIM_workers_schools
 		icon = GFX_focus_research
 		prerequisite = { focus = TU_RIM_eight_hour_day }
-		x = -7
+		x = 9
 		y = 11
 		cost = 10
 
@@ -1223,7 +1223,7 @@ focus_tree = {
 		id = TU_RIM_workers_clinics
 		icon = GFX_goal_generic_consumer_goods
 		prerequisite = { focus = TU_RIM_safety_rules }
-		x = -7
+		x = 9
 		y = 10
 		cost = 10
 
@@ -1243,7 +1243,7 @@ focus_tree = {
 		id = TU_RIM_union_press
 		icon = GFX_goal_generic_improve_relations
 		prerequisite = { focus = TU_RIM_workers_council }
-		x = -1
+		x = 15
 		y = 10
 		cost = 10
 
@@ -1263,8 +1263,8 @@ focus_tree = {
 		id = TU_RIM_infection_survey
 		icon = GFX_goal_generic_consumer_goods
 		prerequisite = { focus = TU_RIM_oripathy_research }
-		x = -27
-		y = 17
+		x = -11
+		y = 15
 		cost = 10
 
 		search_filters = { FOCUS_FILTER_POLITICAL }
@@ -1283,8 +1283,8 @@ focus_tree = {
 		id = TU_RIM_protective_gear
 		icon = GFX_goal_generic_small_arms
 		prerequisite = { focus = TU_RIM_medical_centres }
-		x = -31
-		y = 18
+		x = -15
+		y = 16
 		cost = 10
 
 		search_filters = { FOCUS_FILTER_POLITICAL }
@@ -1303,8 +1303,8 @@ focus_tree = {
 		id = TU_RIM_clean_water
 		icon = GFX_goal_generic_consumer_goods
 		prerequisite = { focus = TU_RIM_medical_centres }
-		x = -29
-		y = 18
+		x = -13
+		y = 16
 		cost = 10
 
 		search_filters = { FOCUS_FILTER_INDUSTRY }
@@ -1324,8 +1324,8 @@ focus_tree = {
 		id = TU_RIM_hospital_trains
 		icon = GFX_goal_generic_consumer_goods
 		prerequisite = { focus = TU_RIM_rhodes_partnership }
-		x = -33
-		y = 20
+		x = -17
+		y = 18
 		cost = 10
 
 		search_filters = { FOCUS_FILTER_POLITICAL }
@@ -1344,7 +1344,7 @@ focus_tree = {
 		id = TU_RIM_settler_farms
 		icon = GFX_goal_generic_production
 		prerequisite = { focus = TU_RIM_settlers_council }
-		x = 3
+		x = 19
 		y = 10
 		cost = 10
 
@@ -1364,7 +1364,7 @@ focus_tree = {
 		id = TU_RIM_refugee_camps
 		icon = GFX_goal_generic_consumer_goods
 		prerequisite = { focus = TU_RIM_infected_rights }
-		x = 1
+		x = 17
 		y = 10
 		cost = 10
 
@@ -1384,7 +1384,7 @@ focus_tree = {
 		id = TU_RIM_settler_militia
 		icon = GFX_goal_generic_allies_build_infantry
 		prerequisite = { focus = TU_RIM_new_homeland }
-		x = 7
+		x = 23
 		y = 11
 		cost = 10
 
@@ -1404,7 +1404,7 @@ focus_tree = {
 		id = TU_RIM_haven_hospitals
 		icon = GFX_goal_generic_consumer_goods
 		prerequisite = { focus = TU_RIM_haven_schools }
-		x = 4
+		x = 20
 		y = 13
 		cost = 10
 
@@ -1424,8 +1424,8 @@ focus_tree = {
 		id = TU_RIM_border_scouts
 		icon = GFX_goal_generic_defence
 		prerequisite = { focus = TU_RIM_mine_defence }
-		x = -12
-		y = 14
+		x = 4
+		y = 17
 		cost = 10
 
 		search_filters = { FOCUS_FILTER_POLITICAL }
@@ -1444,8 +1444,8 @@ focus_tree = {
 		id = TU_RIM_anti_raider
 		icon = GFX_goal_generic_army_motorized
 		prerequisite = { focus = TU_RIM_mercenary_hire }
-		x = -14
-		y = 15
+		x = 2
+		y = 18
 		cost = 10
 
 		search_filters = { FOCUS_FILTER_POLITICAL }
@@ -1464,8 +1464,8 @@ focus_tree = {
 		id = TU_RIM_armoured_trains
 		icon = GFX_goal_generic_army_tanks
 		prerequisite = { focus = TU_RIM_rapid_squads }
-		x = -22
-		y = 16
+		x = -6
+		y = 19
 		cost = 10
 
 		search_filters = { FOCUS_FILTER_POLITICAL }
@@ -1484,8 +1484,8 @@ focus_tree = {
 		id = TU_RIM_mine_bunkers
 		icon = GFX_goal_generic_defence
 		prerequisite = { focus = TU_RIM_fortified_mines }
-		x = -20
-		y = 16
+		x = -4
+		y = 19
 		cost = 10
 
 		search_filters = { FOCUS_FILTER_POLITICAL }
@@ -1503,8 +1503,8 @@ focus_tree = {
 		id = TU_RIM_rifle_imports
 		icon = GFX_goal_generic_small_arms
 		prerequisite = { focus = TU_RIM_equipment_supply }
-		x = -18
-		y = 17
+		x = -2
+		y = 20
 		cost = 10
 
 		search_filters = { FOCUS_FILTER_POLITICAL }
@@ -1523,8 +1523,8 @@ focus_tree = {
 		id = TU_RIM_artillery_crews
 		icon = GFX_goal_generic_army_artillery
 		prerequisite = { focus = TU_RIM_equipment_supply }
-		x = -16
-		y = 17
+		x = 0
+		y = 20
 		cost = 10
 
 		search_filters = { FOCUS_FILTER_POLITICAL }
@@ -1543,7 +1543,7 @@ focus_tree = {
 		id = TU_RIM_steel_works
 		icon = GFX_goal_generic_small_arms
 		prerequisite = { focus = TU_RIM_industrial_district }
-		x = 4
+		x = 20
 		y = 17
 		cost = 10
 
@@ -1564,7 +1564,7 @@ focus_tree = {
 		id = TU_RIM_chemical_plants
 		icon = GFX_goal_generic_production
 		prerequisite = { focus = TU_RIM_steel_works }
-		x = 3
+		x = 19
 		y = 18
 		cost = 10
 
@@ -1584,7 +1584,7 @@ focus_tree = {
 		id = TU_RIM_power_plants
 		icon = GFX_goal_generic_production
 		prerequisite = { focus = TU_RIM_road_network }
-		x = -5
+		x = 11
 		y = 18
 		cost = 10
 
@@ -1604,7 +1604,7 @@ focus_tree = {
 		id = TU_RIM_rail_network
 		icon = GFX_goal_generic_construct_infrastructure
 		prerequisite = { focus = TU_RIM_road_network }
-		x = -3
+		x = 13
 		y = 18
 		cost = 10
 
@@ -1623,7 +1623,7 @@ focus_tree = {
 		id = TU_RIM_siracusa_corridor
 		icon = GFX_goal_generic_production
 		prerequisite = { focus = TU_RIM_road_network }
-		x = -1
+		x = 15
 		y = 18
 		cost = 10
 
@@ -1640,10 +1640,10 @@ focus_tree = {
 
 	focus = {
 		id = TU_RIM_rhodes_office
-		icon = GFX_goal_generic_build_navy
+		icon = GFX_goal_generic_improve_relations
 		prerequisite = { focus = TU_RIM_oripathy_research }
-		x = -25
-		y = 17
+		x = -9
+		y = 15
 		cost = 10
 
 		search_filters = { FOCUS_FILTER_POLITICAL }
@@ -1653,9 +1653,8 @@ focus_tree = {
 		}
 
 		completion_reward = {
-			add_tech_bonus = { name = TU_RIM_rhodes_office bonus = 0.75 uses = 1 category = dd_tech category = ca_tech }
-			add_doctrine_cost_reduction = { name = TU_RIM_rhodes_office cost_reduction = 0.4 uses = 1 category = naval_doctrine }
-			navy_experience = 25
+			add_political_power = 60
+			add_stability = 0.03
 		}
 	}
 
@@ -1663,7 +1662,7 @@ focus_tree = {
 		id = TU_RIM_columbia_investors
 		icon = GFX_goal_generic_trade
 		prerequisite = { focus = TU_RIM_company_board }
-		x = -13
+		x = 3
 		y = 9
 		cost = 10
 
@@ -1683,7 +1682,7 @@ focus_tree = {
 		id = TU_RIM_victoria_buyers
 		icon = GFX_goal_generic_production
 		prerequisite = { focus = TU_RIM_ore_exports }
-		x = -8
+		x = 10
 		y = 5
 		cost = 10
 
@@ -1702,7 +1701,7 @@ focus_tree = {
 		id = TU_RIM_yan_trade
 		icon = GFX_goal_generic_trade
 		prerequisite = { focus = TU_RIM_company_board }
-		x = -11
+		x = 5
 		y = 9
 		cost = 10
 
@@ -1722,7 +1721,7 @@ focus_tree = {
 		id = TU_RIM_kazdel_refugees
 		icon = GFX_goal_generic_consumer_goods
 		prerequisite = { focus = TU_RIM_refugee_policy }
-		x = 5
+		x = 21
 		y = 9
 		cost = 10
 
@@ -1742,7 +1741,7 @@ focus_tree = {
 		id = TU_RIM_originium_arts
 		icon = GFX_focus_research
 		prerequisite = { focus = TU_RIM_originium_engineering }
-		x = -7
+		x = 9
 		y = 19
 		cost = 10
 
@@ -1761,7 +1760,7 @@ focus_tree = {
 		id = TU_RIM_mobile_mines
 		icon = GFX_goal_generic_army_motorized
 		prerequisite = { focus = TU_RIM_deep_shafts }
-		x = -16
+		x = 2
 		y = 4
 		cost = 10
 
@@ -1781,7 +1780,7 @@ focus_tree = {
 		id = TU_RIM_ore_power
 		icon = GFX_focus_research
 		prerequisite = { focus = TU_RIM_power_plants }
-		x = -5
+		x = 11
 		y = 19
 		cost = 10
 
@@ -1801,7 +1800,7 @@ focus_tree = {
 		id = TU_RIM_workers_bank
 		icon = GFX_goal_generic_trade
 		prerequisite = { focus = TU_RIM_cooperatives }
-		x = -9
+		x = 7
 		y = 13
 		cost = 10
 
@@ -1821,7 +1820,7 @@ focus_tree = {
 		id = TU_RIM_haven_charter
 		icon = GFX_goal_generic_political_pressure
 		prerequisite = { focus = TU_RIM_haven_guard }
-		x = 6
+		x = 22
 		y = 13
 		cost = 10
 
@@ -1838,31 +1837,10 @@ focus_tree = {
 	}
 
 	focus = {
-		id = TU_RIM_company_navy
-		icon = GFX_goal_generic_build_navy
-		prerequisite = { focus = TU_RIM_corporate_charter }
-		x = -17
-		y = 10
-		cost = 10
-
-		search_filters = { FOCUS_FILTER_POLITICAL }
-
-		ai_will_do = {
-			base = 1
-		}
-
-		completion_reward = {
-			add_tech_bonus = { name = TU_RIM_company_navy bonus = 0.75 uses = 1 category = dd_tech category = ca_tech }
-			add_doctrine_cost_reduction = { name = TU_RIM_company_navy cost_reduction = 0.4 uses = 1 category = naval_doctrine }
-			navy_experience = 25
-		}
-	}
-
-	focus = {
 		id = TU_RIM_mine_rescue
 		icon = GFX_goal_generic_occupy_start_war
 		prerequisite = { focus = TU_RIM_safety_rules }
-		x = -5
+		x = 11
 		y = 10
 		cost = 10
 
@@ -1883,8 +1861,8 @@ focus_tree = {
 		id = TU_RIM_suppressant_exports
 		icon = GFX_goal_generic_consumer_goods
 		prerequisite = { focus = TU_RIM_suppressant_production }
-		x = -37
-		y = 19
+		x = -21
+		y = 17
 		cost = 10
 
 		search_filters = { FOCUS_FILTER_POLITICAL }
@@ -1903,8 +1881,8 @@ focus_tree = {
 		id = TU_RIM_quarantine_guards
 		icon = GFX_goal_generic_consumer_goods
 		prerequisite = { focus = TU_RIM_quarantine_zones }
-		x = -35
-		y = 19
+		x = -19
+		y = 17
 		cost = 10
 
 		search_filters = { FOCUS_FILTER_POLITICAL }
@@ -1923,7 +1901,7 @@ focus_tree = {
 		id = TU_RIM_ore_smelters
 		icon = GFX_goal_generic_production
 		prerequisite = { focus = TU_RIM_deep_shafts }
-		x = -14
+		x = 4
 		y = 4
 		cost = 10
 
@@ -1943,7 +1921,7 @@ focus_tree = {
 		id = TU_RIM_conveyor_belts
 		icon = GFX_goal_generic_production
 		prerequisite = { focus = TU_RIM_ore_trains }
-		x = -12
+		x = 6
 		y = 4
 		cost = 10
 
@@ -1963,7 +1941,7 @@ focus_tree = {
 		id = TU_RIM_drill_machines
 		icon = GFX_goal_generic_army_doctrines
 		prerequisite = { focus = TU_RIM_mine_lights }
-		x = -6
+		x = 12
 		y = 5
 		cost = 10
 
@@ -1983,7 +1961,7 @@ focus_tree = {
 		id = TU_RIM_ore_warehouses
 		icon = GFX_goal_generic_production
 		prerequisite = { focus = TU_RIM_ore_markets }
-		x = -10
+		x = 8
 		y = 6
 		cost = 10
 
@@ -2002,7 +1980,7 @@ focus_tree = {
 		id = TU_RIM_board_elections
 		icon = GFX_goal_generic_political_pressure
 		prerequisite = { focus = TU_RIM_company_stores }
-		x = -19
+		x = -1
 		y = 11
 		cost = 10
 
@@ -2022,7 +2000,7 @@ focus_tree = {
 		id = TU_RIM_company_spies
 		icon = GFX_goal_generic_intelligence_exchange
 		prerequisite = { focus = TU_RIM_corporate_police }
-		x = -21
+		x = -3
 		y = 11
 		cost = 10
 
@@ -2042,7 +2020,7 @@ focus_tree = {
 		id = TU_RIM_shareholder_dividends
 		icon = GFX_goal_generic_trade
 		prerequisite = { focus = TU_RIM_ore_futures }
-		x = -25
+		x = -7
 		y = 14
 		cost = 10
 
@@ -2062,7 +2040,7 @@ focus_tree = {
 		id = TU_RIM_union_hall
 		icon = GFX_goal_generic_production
 		prerequisite = { focus = TU_RIM_strike_fund }
-		x = -3
+		x = 13
 		y = 11
 		cost = 10
 
@@ -2082,7 +2060,7 @@ focus_tree = {
 		id = TU_RIM_workers_theatre
 		icon = GFX_goal_generic_propaganda
 		prerequisite = { focus = TU_RIM_union_press }
-		x = -1
+		x = 15
 		y = 11
 		cost = 10
 
@@ -2102,7 +2080,7 @@ focus_tree = {
 		id = TU_RIM_cooperative_stores
 		icon = GFX_goal_generic_trade
 		prerequisite = { focus = TU_RIM_workers_bank }
-		x = -9
+		x = 7
 		y = 14
 		cost = 10
 
@@ -2122,8 +2100,8 @@ focus_tree = {
 		id = TU_RIM_arts_therapy
 		icon = GFX_focus_research
 		prerequisite = { focus = TU_RIM_infection_survey }
-		x = -27
-		y = 18
+		x = -11
+		y = 16
 		cost = 10
 
 		search_filters = { FOCUS_FILTER_POLITICAL }
@@ -2141,8 +2119,8 @@ focus_tree = {
 		id = TU_RIM_oripathy_cure
 		icon = GFX_goal_generic_consumer_goods
 		prerequisite = { focus = TU_RIM_arts_therapy }
-		x = -27
-		y = 19
+		x = -11
+		y = 17
 		cost = 10
 
 		search_filters = { FOCUS_FILTER_POLITICAL }
@@ -2161,8 +2139,8 @@ focus_tree = {
 		id = TU_RIM_burial_rites
 		icon = GFX_goal_generic_consumer_goods
 		prerequisite = { focus = TU_RIM_protective_gear }
-		x = -31
-		y = 19
+		x = -15
+		y = 17
 		cost = 10
 
 		search_filters = { FOCUS_FILTER_POLITICAL }
@@ -2181,7 +2159,7 @@ focus_tree = {
 		id = TU_RIM_settler_schools
 		icon = GFX_focus_research
 		prerequisite = { focus = TU_RIM_settler_farms }
-		x = 3
+		x = 19
 		y = 11
 		cost = 10
 
@@ -2200,7 +2178,7 @@ focus_tree = {
 		id = TU_RIM_refugee_registry
 		icon = GFX_goal_generic_consumer_goods
 		prerequisite = { focus = TU_RIM_refugee_camps }
-		x = 1
+		x = 17
 		y = 11
 		cost = 10
 
@@ -2220,7 +2198,7 @@ focus_tree = {
 		id = TU_RIM_haven_markets
 		icon = GFX_goal_generic_trade
 		prerequisite = { focus = TU_RIM_haven_hospitals }
-		x = 4
+		x = 20
 		y = 14
 		cost = 10
 
@@ -2240,8 +2218,8 @@ focus_tree = {
 		id = TU_RIM_wasteland_rangers
 		icon = GFX_goal_generic_intelligence_exchange
 		prerequisite = { focus = TU_RIM_border_scouts }
-		x = -12
-		y = 15
+		x = 4
+		y = 18
 		cost = 10
 
 		search_filters = { FOCUS_FILTER_POLITICAL }
@@ -2260,8 +2238,8 @@ focus_tree = {
 		id = TU_RIM_motor_patrols
 		icon = GFX_goal_generic_army_motorized
 		prerequisite = { focus = TU_RIM_anti_raider }
-		x = -14
-		y = 16
+		x = 2
+		y = 19
 		cost = 10
 
 		search_filters = { FOCUS_FILTER_POLITICAL }
@@ -2280,8 +2258,8 @@ focus_tree = {
 		id = TU_RIM_armoured_cars
 		icon = GFX_goal_generic_army_tanks
 		prerequisite = { focus = TU_RIM_motor_patrols }
-		x = -14
-		y = 17
+		x = 2
+		y = 20
 		cost = 10
 
 		search_filters = { FOCUS_FILTER_POLITICAL }
@@ -2300,8 +2278,8 @@ focus_tree = {
 		id = TU_RIM_field_hospitals
 		icon = GFX_goal_generic_consumer_goods
 		prerequisite = { focus = TU_RIM_defence_force }
-		x = -21
-		y = 18
+		x = -5
+		y = 21
 		cost = 10
 
 		search_filters = { FOCUS_FILTER_POLITICAL }
@@ -2320,8 +2298,8 @@ focus_tree = {
 		id = TU_RIM_air_scouts
 		icon = GFX_goal_generic_air_doctrine
 		prerequisite = { focus = TU_RIM_defence_force }
-		x = -19
-		y = 18
+		x = -3
+		y = 21
 		cost = 10
 
 		search_filters = { FOCUS_FILTER_POLITICAL }
@@ -2341,7 +2319,7 @@ focus_tree = {
 		id = TU_RIM_textile_mills
 		icon = GFX_goal_generic_production
 		prerequisite = { focus = TU_RIM_steel_works }
-		x = 5
+		x = 21
 		y = 18
 		cost = 10
 
@@ -2361,7 +2339,7 @@ focus_tree = {
 		id = TU_RIM_cement_works
 		icon = GFX_goal_generic_production
 		prerequisite = { focus = TU_RIM_chemical_plants }
-		x = 3
+		x = 19
 		y = 19
 		cost = 10
 
@@ -2381,7 +2359,7 @@ focus_tree = {
 		id = TU_RIM_ore_reactors
 		icon = GFX_focus_research
 		prerequisite = { focus = TU_RIM_ore_power }
-		x = -5
+		x = 11
 		y = 20
 		cost = 10
 
@@ -2401,7 +2379,7 @@ focus_tree = {
 		id = TU_RIM_lungmen_trade
 		icon = GFX_goal_generic_trade
 		prerequisite = { focus = TU_RIM_yan_trade }
-		x = -11
+		x = 5
 		y = 10
 		cost = 10
 
@@ -2421,7 +2399,7 @@ focus_tree = {
 		id = TU_RIM_iberia_ties
 		icon = GFX_goal_generic_improve_relations
 		prerequisite = { focus = TU_RIM_siracusa_corridor }
-		x = -1
+		x = 15
 		y = 19
 		cost = 10
 

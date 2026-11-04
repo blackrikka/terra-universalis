@@ -83,7 +83,7 @@ C.on_actions.append("""on_monthly = {
 # ------------------------------------------------------------------ 국민정신
 C.idea("city_states", "도시국가 연맹", "League of City States", {"political_power_gain": -0.05, "stability_factor": 0.05}, "generic_local_self_management",
        ("다섯 도시가 민회에서 함께 결정한다. 느리지만 모두의 목소리가 담긴다.", "Five cities decide together in the assembly: slowly, but with every voice heard."))
-C.idea("pirate_seas", "해적의 바다", "Pirate Seas", {"naval_speed_factor": -0.05, "consumer_goods_factor": 0.02}, "generic_navy_bonus",
+C.idea("pirate_seas", "해적의 바다", "Pirate Seas", {"political_power_gain": -0.05, "consumer_goods_factor": 0.02}, "generic_economic_increase",
        ("교역로마다 해적이 숨어 있다.", "Pirates lurk along every trade route."))
 for sid, ko, en, mods, pic in (
         ("good_omen", "길조", "Good Omen", {"stability_factor": 0.08, "war_support_factor": 0.05}, "generic_morale_bonus"),
@@ -94,8 +94,7 @@ for sid, ko, en, mods, pic in (
         ("cynics", "키니코스 학파", "School of the Cynics", {"consumer_goods_factor": -0.04, "political_power_gain": 0.05}, "generic_economic_increase"),
         ("democratic_polis", "민주 폴리스", "Democratic Polis", {"stability_factor": 0.1, "political_power_gain": 0.1, "research_speed_factor": 0.03}, "constitutional_guarantees"),
         ("rule_of_elders", "원로 정체", "Rule of the Elders", {"stability_factor": 0.12, "political_power_gain": 0.15, "consumer_goods_factor": 0.02}, "generic_central_management"),
-        ("thalassocracy", "해상 패권", "Thalassocracy", {"naval_speed_factor": 0.1, "navy_org_factor": 0.08, "political_power_gain": 0.1}, "generic_navy_bonus"),
-        ("grand_fleet", "미노스 대함대", "Minoan Grand Fleet", {"navy_org_factor": 0.08, "naval_speed_factor": 0.05}, "generic_navy_bonus"),
+        ("thalassocracy", "해상 패권", "Thalassocracy", {"political_power_gain": 0.15, "consumer_goods_factor": -0.03, "stability_factor": 0.05}, "generic_economic_increase"),
         ("hoplites", "중장 보병", "Hoplite Phalanx", {"army_defence_factor": 0.08, "army_org_factor": 0.03}, "generic_infantry_bonus")):
     C.idea(sid, ko, en, mods, pic)
 
@@ -145,11 +144,11 @@ f("research_slot", "지혜의 도시", "City of Knowledge Research", pre=["great
   desc=("연구 슬롯 +1", "Research slot +1"))
 
 # D. 바다와 교역
-f("harbour_works", "항구 정비", "Harbour Works", pre=["root"], econ="TU_build_dockyard = yes")
+f("harbour_works", "항구 정비", "Harbour Works", pre=["root"], econ="TU_build_civ_factory = yes")
 f("trade_routes", "교역로 개척", "Sea Trade Lanes", pre=["harbour_works"], theme=False, reward=[FLAG("routes"), RT(1)],
   desc=("'해상 교역' 디시전이 열린다. 교역로마다 매달 정치력 +0.3.", "Unlocks the Sea Trade decisions. Each route gives +0.3 political power per month."))
 f("merchant_fleet", "상선 함대", "Merchant Fleet", pre=["trade_routes"], reward=[RT(1)])
-f("pirate_hunt", "해적 소탕", "Pirate Hunt Navy", pre=["trade_routes"], theme=False, reward=["remove_ideas = TU_MIN_pirate_seas", "navy_experience = 25"])
+f("pirate_hunt", "해적 소탕", "Pirate Hunt Navy", pre=["trade_routes"], theme=False, reward=["remove_ideas = TU_MIN_pirate_seas", "army_experience = 25"])
 f("sea_supremacy", "해상 패권", "Sea Supremacy", pre=["merchant_fleet", "pirate_hunt"])
 f("thalassocracy", "해상 패권 제국", "Thalassocracy", pre=["sea_supremacy"], me=["democratic_polis", "rule_of_elders"], cost=15, theme=False,
   available=[AT_LEAST("routes", 5)], reward=[FLAG("path_sea"), "swap_ideas = { remove_idea = TU_MIN_city_states add_idea = TU_MIN_thalassocracy }", EV(30)],
@@ -163,7 +162,7 @@ f("naval_academy", "해군 학교", "Naval Academy", pre=["galley_fleet"])
 f("trireme_doctrine", "삼단노선 교리", "Trireme Naval Doctrine", pre=["naval_academy"])
 f("battle_fleet", "전투 함대", "Battle Fleet", pre=["trireme_doctrine"], me=["raider_fleet"])
 f("raider_fleet", "통상 파괴 함대", "Raider Fleet", pre=["trireme_doctrine"], me=["battle_fleet"])
-f("grand_fleet", "미노스 대함대", "Minoan Grand Fleet", pre=[["battle_fleet", "raider_fleet"]], theme=False, reward=["add_ideas = TU_MIN_grand_fleet", "navy_experience = 50"])
+f("grand_fleet", "미노스 대함대", "Minoan Grand Fleet", pre=[["battle_fleet", "raider_fleet"]], theme=False, reward=["add_ideas = TU_MIN_grand_fleet", "army_experience = 50"])
 
 # F. 육군
 f("hoplite_training", "중장 보병 훈련", "Hoplite Training", pre=["root"])
@@ -196,12 +195,12 @@ for sid, ko, en, pre, econ in (
         ("anatomy", "해부학", "Anatomy Medical Research", "medical_studies", False), ("mechanics", "역학", "Mechanics Engineering Design", "engineering_studies", False),
         ("star_charts", "성도", "Star Charts Navigation", "observatory", False), ("lighthouse", "대등대", "Great Lighthouse Harbour", "harbour_works", False),
         ("wine_trade", "포도주 교역", "Wine Trade", "trade_routes", False), ("insurance", "해상 보험", "Maritime Insurance Companies", "merchant_fleet", False),
-        ("convoys", "호송 선단", "Convoy Escort Fleet", "pirate_hunt", False), ("naval_bases", "해군 기지", "Naval Base Docks", "naval_academy", "TU_build_dockyard = yes"),
+        ("convoys", "호송 선단", "Convoy Escort Fleet", "pirate_hunt", False), ("naval_bases", "해군 기지", "Naval Base Docks", "naval_academy", "TU_build_civ_factory = yes"),
         ("destroyers", "구축함 전대", "Destroyer Fleet", "battle_fleet", False), ("submarines", "잠수함 전대", "Submarine Fleet", "raider_fleet", False),
         ("cavalry", "기병대", "Cavalry Corps", "phalanx", False), ("archer_corps", "궁수대", "Archer Corps Weapons", "bronze_arms", False),
         ("coastal_forts", "해안 요새", "Coastal Fortresses", "city_walls", False), ("field_medics", "야전 의무대", "Field Medic Corps", "hoplites", False),
         ("pottery", "도기 공방", "Pottery Workshops", "olive_farms", True), ("silver_mines", "은 광산", "Silver Mines", "industrial_district", True),
-        ("rail_network", "철도 연결", "Rail Network Expansion", "road_network", "TU_build_infrastructure = yes"), ("shipyards", "조선 산업", "Shipbuilding Industry", "harbour_works", "TU_build_dockyard = yes"),
+        ("rail_network", "철도 연결", "Rail Network Expansion", "road_network", "TU_build_infrastructure = yes"), ("shipyards", "조선 산업", "Shipbuilding Industry", "harbour_works", "TU_build_civ_factory = yes"),
         ("power_plants", "발전소", "Power Plants", "rail_network", True), ("sargon_pact", "사르곤 협정", "Sargon Pact", "trade_routes", False),
         ("iberia_ties", "이베리아 교류", "Iberia Exchange", "trade_routes", False), ("laterano_ties", "라테라노 대화", "Laterano Dialogue Exchange", "temple_rites", False),
         ("columbia_trade", "컬럼비아 교역", "Columbia Trade Accord", "merchant_fleet", False), ("league_pact", "동맹 맹약", "League Pact Alliance", "sargon_pact", False),
@@ -216,7 +215,7 @@ cat_a = C.category("assembly", "민회", "The Assembly",
                    ("민회 지지를 써서 법안을 통과시킨다.", "Spend assembly support to pass laws."), visible=[HAS("assembly")])
 for sid, ko, en, eff, cost_asm in (
         ("law_grain", "곡물 배급법", "Grain Distribution Law", ["add_stability = 0.05"], 10),
-        ("law_fleet", "함대 건조법", "Fleet Construction Law", ["TU_build_dockyard = yes"], 15),
+        ("law_harbour", "항만 건설법", "Harbour Construction Law", ["TU_build_civ_factory = yes"], 15),
         ("law_walls", "성벽 보수법", "Wall Repair Law", ["TU_build_infrastructure = yes", "army_experience = 10"], 10),
         ("law_schools", "학교법", "Schools Law", ["add_tech_bonus = { name = TU_MIN_law_schools bonus = 0.75 uses = 1 category = electronics category = industry }"], 15),
         ("law_levy", "시민 징집법", "Citizen Levy Law", ["add_manpower = 10000"], 15)):
@@ -241,7 +240,7 @@ cat_s = C.category("sea", "해상 교역", "Sea Trade", icon="GFX_decision_categ
                    visible=[HAS("routes")])
 C.d(cat_s, "new_route", "교역로 개척", "Chart a New Route", [RT(1)], cost=50, once=False, days_re_enable=120, available=[AT_MOST("routes", 5)],
     desc=("교역로 +1 (최대 6)", "Trade routes +1 (max 6)"), icon="GFX_decision_generic_naval")
-C.d(cat_s, "hunt_pirates", "해적 소탕", "Hunt Pirates", ["navy_experience = 15", FLAG("pirates_hunted")], cost=25, once=False, days_re_enable=180,
+C.d(cat_s, "hunt_pirates", "해적 소탕", "Hunt Pirates", ["army_experience = 15", FLAG("pirates_hunted")], cost=25, once=False, days_re_enable=180,
     desc=("한동안 해적이 교역로를 덜 노린다.", "Pirates target the routes less for a while."), icon="GFX_decision_generic_naval")
 C.d(cat_s, "trade_fair", "항구 박람회", "Harbour Trade Fair", ["add_political_power = 50"], cost=0, once=False, days_re_enable=240, available=[AT_LEAST("routes", 3)])
 C.d(cat_s, "found_league", "해상 동맹 결성", "Found the Maritime League", ["create_faction = TU_MIN_league"], cost=50,
@@ -269,7 +268,7 @@ C.ev(21, ("신탁의 끝", "The Omen Fades"), ("신탁의 기운이 사라졌다
                                                        "if = { limit = { has_idea = TU_MIN_bad_omen } remove_ideas = TU_MIN_bad_omen }",
                                                        "if = { limit = { has_idea = TU_MIN_riddle_omen } remove_ideas = TU_MIN_riddle_omen }"], 1)])
 C.ev(22, ("해적의 습격", "Pirate Raid"), ("해적이 교역로 하나를 끊었다.", "Pirates have severed one of our trade routes."),
-     [("손실을 받아들인다.", "Accept the loss.", [RT(-1)], 50), ("함대를 보낸다.", "Send the fleet.", ["navy_experience = 10", "add_political_power = -25"], 50)],
+     [("손실을 받아들인다.", "Accept the loss.", [RT(-1)], 50), ("호위대를 보낸다.", "Send the guards.", ["army_experience = 10", "add_political_power = -25"], 50)],
      trigger=["original_tag = MIN", AT_LEAST("routes", 2), "NOT = { %s }" % HAS("pirates_hunted")], mtth=150, fire_once=False)
 C.ev(23, ("철학자들의 논쟁", "The Philosophers Debate"), ("광장에서 철학자들의 논쟁이 사흘째 이어진다.", "The philosophers' debate in the square enters its third day."),
      [("끝까지 듣는다.", "Hear it out.", ["add_tech_bonus = { name = TU_MIN_debate bonus = 0.5 uses = 1 category = electronics }"], 50),
@@ -311,10 +310,10 @@ C.d(cat_a, "law_harbours", "항만법", "Harbour Law", ["TU_build_infrastructure
     available=[AT_LEAST("assembly", 15), AT_MOST("routes", 5)], icon="GFX_decision_generic_construction")
 C.d(cat_a, "rhetoric_contest", "웅변 대회", "Rhetoric Contest", [ASM(5), "add_political_power = 15"], cost=10, once=False, days_re_enable=120)
 C.d(cat_o, "temple_tithe", "신전 헌금", "Temple Tithe", ["add_political_power = 60"], cost=0, once=False, days_re_enable=240)
-C.d(cat_s, "naval_escort", "호위 함대 파견", "Dispatch Escorts", ["navy_experience = 20", FLAG("pirates_hunted")], cost=50, once=False, days_re_enable=240,
+C.d(cat_s, "caravan_escort", "상단 호위대 파견", "Dispatch Caravan Guards", ["army_experience = 20", FLAG("pirates_hunted")], cost=50, once=False, days_re_enable=240,
     visible=["has_completed_focus = TU_MIN_convoys"])
-C.ev(34, ("해적의 투항", "Pirates Surrender"), ("해적 한 무리가 투항하며 미노스 함대에 들어오기를 청했다.", "A pirate band surrendered and asked to join Minos's fleet."),
-     [("받아들인다.", "Accept.", ["navy_experience = 25", "add_manpower = 2000"], 1)], trigger=["original_tag = MIN", "has_completed_focus = TU_MIN_pirate_hunt"], mtth=300)
+C.ev(34, ("해적의 투항", "Pirates Surrender"), ("해적 한 무리가 투항하며 미노스 군에 들어오기를 청했다.", "A pirate band surrendered and asked to join Minos's army."),
+     [("받아들인다.", "Accept.", ["army_experience = 25", "add_manpower = 2000"], 1)], trigger=["original_tag = MIN", "has_completed_focus = TU_MIN_pirate_hunt"], mtth=300)
 
 if __name__ == "__main__":
     C.write()

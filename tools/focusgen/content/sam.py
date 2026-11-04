@@ -282,7 +282,7 @@ for sid, ko, en, pre, econ in (
         ("message_drums", "전령 북", "Message Drum Signal", "tribal_messengers", False), ("federal_army", "연방군", "Federal Army Regiments", "federal_hunters", False),
         ("merchant_lodges", "상인 숙소", "Merchant Lodges Trade", "kazimierz_merchants", False), ("settler_treaty", "개척민 협약", "Settler Treaty", "ursus_settlers", False),
         ("foreign_schools", "외국 학교", "Foreign Schools Education", "translators", False), ("vaccines", "광석병 예방", "Oripathy Prevention Medical", "foreign_medicine", False),
-        ("northern_ports", "북방 항구", "Northern Ports Harbour", "railway_north", "TU_build_dockyard = yes"), ("snow_ambush", "눈 속 매복", "Snow Ambush Tactics", "trap_lines", False),
+        ("northern_ports", "북방 항구", "Northern Ports Harbour", "railway_north", "TU_build_civ_factory = yes"), ("snow_ambush", "눈 속 매복", "Snow Ambush Tactics", "trap_lines", False),
         ("ice_fortress", "빙하 요새", "Glacier Fortress Line", "ice_bunkers", False), ("hunter_marksmen", "명사수 사냥꾼", "Hunter Marksman Training", "rifle_trade", False),
         ("frost_artillery", "설원 포병", "Snowfield Artillery", "rifle_trade", False), ("motor_sleds", "동력 썰매", "Motor Sled Units", "ski_cavalry", False),
         ("arctic_doctrine", "극지 교리", "Arctic Warfare Doctrine", "winter_war", False), ("bomber_scouts", "설원 폭격대", "Snowfield Bomber Wing", "air_scouts", False),

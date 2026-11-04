@@ -102,7 +102,7 @@
 
 	focus = {
 		id = TU_IBE_purge_cults
-		icon = GFX_goal_generic_build_navy
+		icon = GFX_goal_generic_trade
 		prerequisite = { focus = TU_IBE_heresy_files }
 		x = 0
 		y = 0
@@ -213,31 +213,10 @@
 	}
 
 	focus = {
-		id = TU_IBE_inquisition_navy
-		icon = GFX_goal_generic_build_navy
-		prerequisite = { focus = TU_IBE_inquisitor_state }
-		x = 0
-		y = 0
-		cost = 10
-
-		search_filters = { FOCUS_FILTER_POLITICAL }
-
-		ai_will_do = {
-			base = 1
-		}
-
-		completion_reward = {
-			add_tech_bonus = { name = TU_IBE_inquisition_navy bonus = 0.75 uses = 1 category = dd_tech category = ca_tech }
-			add_doctrine_cost_reduction = { name = TU_IBE_inquisition_navy cost_reduction = 0.4 uses = 1 category = naval_doctrine }
-			navy_experience = 25
-		}
-	}
-
-	focus = {
 		id = TU_IBE_judgement_day
 		icon = GFX_goal_generic_occupy_start_war
 		prerequisite = { focus = TU_IBE_eternal_vigil }
-		prerequisite = { focus = TU_IBE_inquisition_navy }
+		prerequisite = { focus = TU_IBE_inquisitor_state }
 		x = 0
 		y = 0
 		cost = 10
@@ -425,31 +404,10 @@
 	}
 
 	focus = {
-		id = TU_IBE_royal_navy
-		icon = GFX_goal_generic_build_navy
-		prerequisite = { focus = TU_IBE_crown_restored }
-		x = 0
-		y = 0
-		cost = 10
-
-		search_filters = { FOCUS_FILTER_POLITICAL }
-
-		ai_will_do = {
-			base = 1
-		}
-
-		completion_reward = {
-			add_tech_bonus = { name = TU_IBE_royal_navy bonus = 0.75 uses = 1 category = dd_tech category = ca_tech }
-			add_doctrine_cost_reduction = { name = TU_IBE_royal_navy cost_reduction = 0.4 uses = 1 category = naval_doctrine }
-			navy_experience = 25
-		}
-	}
-
-	focus = {
 		id = TU_IBE_golden_age
 		icon = GFX_goal_generic_trade
 		prerequisite = { focus = TU_IBE_royal_reconstruction }
-		prerequisite = { focus = TU_IBE_royal_navy }
+		prerequisite = { focus = TU_IBE_crown_restored }
 		x = 0
 		y = 0
 		cost = 10
@@ -468,7 +426,7 @@
 
 	focus = {
 		id = TU_IBE_coastal_watch
-		icon = GFX_goal_generic_build_navy
+		icon = GFX_goal_generic_trade
 		prerequisite = { focus = TU_IBE_root }
 		x = 0
 		y = 0
@@ -488,7 +446,7 @@
 
 	focus = {
 		id = TU_IBE_sea_studies
-		icon = GFX_goal_generic_build_navy
+		icon = GFX_goal_generic_trade
 		prerequisite = { focus = TU_IBE_coastal_watch }
 		x = 0
 		y = 0
@@ -502,15 +460,14 @@
 
 		completion_reward = {
 			TU_IBE_threat_m5 = yes
-			add_tech_bonus = { name = TU_IBE_sea_studies bonus = 0.75 uses = 1 category = dd_tech category = ca_tech }
-			add_doctrine_cost_reduction = { name = TU_IBE_sea_studies cost_reduction = 0.4 uses = 1 category = naval_doctrine }
-			navy_experience = 25
+			add_political_power = 60
+			add_tech_bonus = { name = TU_IBE_sea_studies bonus = 0.75 uses = 1 category = industry }
 		}
 	}
 
 	focus = {
 		id = TU_IBE_tide_charts
-		icon = GFX_goal_generic_build_navy
+		icon = GFX_goal_generic_trade
 		prerequisite = { focus = TU_IBE_coastal_watch }
 		x = 0
 		y = 0
@@ -523,9 +480,8 @@
 		}
 
 		completion_reward = {
-			add_tech_bonus = { name = TU_IBE_tide_charts bonus = 0.75 uses = 1 category = dd_tech category = ca_tech }
-			add_doctrine_cost_reduction = { name = TU_IBE_tide_charts cost_reduction = 0.4 uses = 1 category = naval_doctrine }
-			navy_experience = 25
+			add_political_power = 60
+			add_tech_bonus = { name = TU_IBE_tide_charts bonus = 0.75 uses = 1 category = industry }
 		}
 	}
 
@@ -552,7 +508,6 @@
 		id = TU_IBE_coastal_forts
 		icon = GFX_goal_generic_defence
 		prerequisite = { focus = TU_IBE_tide_charts }
-		mutually_exclusive = { focus = TU_IBE_fleet_rebuild }
 		x = 0
 		y = 0
 		cost = 10
@@ -569,31 +524,9 @@
 	}
 
 	focus = {
-		id = TU_IBE_fleet_rebuild
-		icon = GFX_goal_generic_build_navy
-		prerequisite = { focus = TU_IBE_tide_charts }
-		mutually_exclusive = { focus = TU_IBE_coastal_forts }
-		x = 0
-		y = 0
-		cost = 10
-
-		search_filters = { FOCUS_FILTER_POLITICAL }
-
-		ai_will_do = {
-			base = 1
-		}
-
-		completion_reward = {
-			add_tech_bonus = { name = TU_IBE_fleet_rebuild bonus = 0.75 uses = 1 category = dd_tech category = ca_tech }
-			add_doctrine_cost_reduction = { name = TU_IBE_fleet_rebuild cost_reduction = 0.4 uses = 1 category = naval_doctrine }
-			navy_experience = 25
-		}
-	}
-
-	focus = {
 		id = TU_IBE_watchful_coast
-		icon = GFX_goal_generic_build_navy
-		prerequisite = { focus = TU_IBE_coastal_forts focus = TU_IBE_fleet_rebuild }
+		icon = GFX_goal_generic_trade
+		prerequisite = { focus = TU_IBE_coastal_forts }
 		x = 0
 		y = 0
 		cost = 10
@@ -612,7 +545,7 @@
 
 	focus = {
 		id = TU_IBE_deep_sea_plan
-		icon = GFX_goal_generic_build_navy
+		icon = GFX_goal_generic_trade
 		prerequisite = { focus = TU_IBE_watchful_coast }
 		x = 0
 		y = 0
@@ -626,15 +559,14 @@
 
 		completion_reward = {
 			TU_IBE_threat_m5 = yes
-			add_tech_bonus = { name = TU_IBE_deep_sea_plan bonus = 0.75 uses = 1 category = dd_tech category = ca_tech }
-			add_doctrine_cost_reduction = { name = TU_IBE_deep_sea_plan cost_reduction = 0.4 uses = 1 category = naval_doctrine }
-			navy_experience = 25
+			add_political_power = 60
+			add_tech_bonus = { name = TU_IBE_deep_sea_plan bonus = 0.75 uses = 1 category = industry }
 		}
 	}
 
 	focus = {
 		id = TU_IBE_sea_reconciliation
-		icon = GFX_goal_generic_build_navy
+		icon = GFX_goal_generic_trade
 		prerequisite = { focus = TU_IBE_abyssal_rumours }
 		prerequisite = { focus = TU_IBE_deep_sea_plan }
 		mutually_exclusive = { focus = TU_IBE_inquisitor_state focus = TU_IBE_crown_restored }
@@ -663,7 +595,7 @@
 
 	focus = {
 		id = TU_IBE_aegir_contact
-		icon = GFX_goal_generic_build_navy
+		icon = GFX_goal_generic_trade
 		prerequisite = { focus = TU_IBE_sea_reconciliation }
 		x = 0
 		y = 0
@@ -676,15 +608,14 @@
 		}
 
 		completion_reward = {
-			add_tech_bonus = { name = TU_IBE_aegir_contact bonus = 0.75 uses = 1 category = dd_tech category = ca_tech }
-			add_doctrine_cost_reduction = { name = TU_IBE_aegir_contact cost_reduction = 0.4 uses = 1 category = naval_doctrine }
-			navy_experience = 25
+			add_political_power = 60
+			add_tech_bonus = { name = TU_IBE_aegir_contact bonus = 0.75 uses = 1 category = industry }
 		}
 	}
 
 	focus = {
 		id = TU_IBE_deep_sea_trade
-		icon = GFX_goal_generic_build_navy
+		icon = GFX_goal_generic_trade
 		prerequisite = { focus = TU_IBE_aegir_contact }
 		x = 0
 		y = 0
@@ -697,9 +628,8 @@
 		}
 
 		completion_reward = {
-			add_tech_bonus = { name = TU_IBE_deep_sea_trade bonus = 0.75 uses = 1 category = dd_tech category = ca_tech }
-			add_doctrine_cost_reduction = { name = TU_IBE_deep_sea_trade cost_reduction = 0.4 uses = 1 category = naval_doctrine }
-			navy_experience = 25
+			add_political_power = 60
+			add_tech_bonus = { name = TU_IBE_deep_sea_trade bonus = 0.75 uses = 1 category = industry }
 		}
 	}
 
@@ -968,113 +898,8 @@
 	}
 
 	focus = {
-		id = TU_IBE_naval_school
-		icon = GFX_goal_generic_build_navy
-		prerequisite = { focus = TU_IBE_fleet_rebuild }
-		x = 0
-		y = 0
-		cost = 10
-
-		search_filters = { FOCUS_FILTER_POLITICAL }
-
-		ai_will_do = {
-			base = 1
-		}
-
-		completion_reward = {
-			add_tech_bonus = { name = TU_IBE_naval_school bonus = 0.75 uses = 1 category = dd_tech category = ca_tech }
-			add_doctrine_cost_reduction = { name = TU_IBE_naval_school cost_reduction = 0.4 uses = 1 category = naval_doctrine }
-			navy_experience = 25
-		}
-	}
-
-	focus = {
-		id = TU_IBE_coastal_gunboats
-		icon = GFX_goal_generic_build_navy
-		prerequisite = { focus = TU_IBE_naval_school }
-		x = 0
-		y = 0
-		cost = 10
-
-		search_filters = { FOCUS_FILTER_POLITICAL }
-
-		ai_will_do = {
-			base = 1
-		}
-
-		completion_reward = {
-			add_tech_bonus = { name = TU_IBE_coastal_gunboats bonus = 0.75 uses = 1 category = dd_tech category = ca_tech }
-			add_doctrine_cost_reduction = { name = TU_IBE_coastal_gunboats cost_reduction = 0.4 uses = 1 category = naval_doctrine }
-			navy_experience = 25
-		}
-	}
-
-	focus = {
-		id = TU_IBE_destroyers
-		icon = GFX_goal_generic_build_navy
-		prerequisite = { focus = TU_IBE_coastal_gunboats }
-		x = 0
-		y = 0
-		cost = 10
-
-		search_filters = { FOCUS_FILTER_POLITICAL }
-
-		ai_will_do = {
-			base = 1
-		}
-
-		completion_reward = {
-			add_tech_bonus = { name = TU_IBE_destroyers bonus = 0.75 uses = 1 category = dd_tech category = ca_tech }
-			add_doctrine_cost_reduction = { name = TU_IBE_destroyers cost_reduction = 0.4 uses = 1 category = naval_doctrine }
-			navy_experience = 25
-		}
-	}
-
-	focus = {
-		id = TU_IBE_iberian_navy
-		icon = GFX_goal_generic_build_navy
-		prerequisite = { focus = TU_IBE_destroyers }
-		x = 0
-		y = 0
-		cost = 10
-
-		search_filters = { FOCUS_FILTER_POLITICAL }
-
-		ai_will_do = {
-			base = 1
-		}
-
-		completion_reward = {
-			add_ideas = TU_IBE_iberian_navy
-			navy_experience = 50
-		}
-	}
-
-	focus = {
-		id = TU_IBE_dockyards
-		icon = GFX_goal_generic_build_navy
-		prerequisite = { focus = TU_IBE_naval_school }
-		x = 0
-		y = 0
-		cost = 10
-
-		search_filters = { FOCUS_FILTER_INDUSTRY }
-
-		ai_will_do = {
-			base = 1
-		}
-
-		completion_reward = {
-			add_tech_bonus = { name = TU_IBE_dockyards bonus = 0.75 uses = 1 category = dd_tech category = ca_tech }
-			add_doctrine_cost_reduction = { name = TU_IBE_dockyards cost_reduction = 0.4 uses = 1 category = naval_doctrine }
-			navy_experience = 25
-			TU_build_dockyard = yes
-		}
-	}
-
-	focus = {
 		id = TU_IBE_harbour_rebuild
-		icon = GFX_goal_generic_build_navy
+		icon = GFX_goal_generic_trade
 		prerequisite = { focus = TU_IBE_root }
 		x = 0
 		y = 0
@@ -1087,10 +912,9 @@
 		}
 
 		completion_reward = {
-			add_tech_bonus = { name = TU_IBE_harbour_rebuild bonus = 0.75 uses = 1 category = dd_tech category = ca_tech }
-			add_doctrine_cost_reduction = { name = TU_IBE_harbour_rebuild cost_reduction = 0.4 uses = 1 category = naval_doctrine }
-			navy_experience = 25
-			TU_build_dockyard = yes
+			add_political_power = 60
+			add_tech_bonus = { name = TU_IBE_harbour_rebuild bonus = 0.75 uses = 1 category = industry }
+			TU_build_civ_factory = yes
 		}
 	}
 
@@ -1198,7 +1022,7 @@
 
 	focus = {
 		id = TU_IBE_resettle_coast
-		icon = GFX_goal_generic_build_navy
+		icon = GFX_goal_generic_trade
 		prerequisite = { focus = TU_IBE_rail_network }
 		x = 0
 		y = 0
@@ -1222,7 +1046,7 @@
 
 	focus = {
 		id = TU_IBE_purified_coast
-		icon = GFX_goal_generic_build_navy
+		icon = GFX_goal_generic_trade
 		prerequisite = { focus = TU_IBE_resettle_coast }
 		x = 0
 		y = 0
@@ -1307,7 +1131,7 @@
 
 	focus = {
 		id = TU_IBE_research_slot
-		icon = GFX_goal_generic_build_navy
+		icon = GFX_goal_generic_trade
 		prerequisite = { focus = TU_IBE_industrial_revival }
 		prerequisite = { focus = TU_IBE_sea_studies }
 		x = 0
@@ -1406,7 +1230,7 @@
 
 	focus = {
 		id = TU_IBE_rhodes_doctors
-		icon = GFX_goal_generic_build_navy
+		icon = GFX_goal_generic_consumer_goods
 		prerequisite = { focus = TU_IBE_laterano_schism }
 		x = 0
 		y = 0
@@ -1419,15 +1243,14 @@
 		}
 
 		completion_reward = {
-			add_tech_bonus = { name = TU_IBE_rhodes_doctors bonus = 0.75 uses = 1 category = dd_tech category = ca_tech }
-			add_doctrine_cost_reduction = { name = TU_IBE_rhodes_doctors cost_reduction = 0.4 uses = 1 category = naval_doctrine }
-			navy_experience = 25
+			add_stability = 0.03
+			add_manpower = 10000
 		}
 	}
 
 	focus = {
 		id = TU_IBE_coastal_league
-		icon = GFX_goal_generic_build_navy
+		icon = GFX_goal_generic_trade
 		prerequisite = { focus = TU_IBE_victoria_trade }
 		prerequisite = { focus = TU_IBE_rhodes_doctors }
 		x = 0
@@ -1606,7 +1429,7 @@
 
 	focus = {
 		id = TU_IBE_lighthouse_keepers
-		icon = GFX_goal_generic_political_pressure
+		icon = GFX_goal_generic_trade
 		prerequisite = { focus = TU_IBE_coastal_watch }
 		x = 0
 		y = 0
@@ -1620,7 +1443,7 @@
 
 		completion_reward = {
 			add_political_power = 60
-			add_stability = 0.03
+			add_tech_bonus = { name = TU_IBE_lighthouse_keepers bonus = 0.75 uses = 1 category = industry }
 		}
 	}
 
@@ -1644,29 +1467,8 @@
 	}
 
 	focus = {
-		id = TU_IBE_depth_charges
-		icon = GFX_goal_generic_build_navy
-		prerequisite = { focus = TU_IBE_fleet_rebuild }
-		x = 0
-		y = 0
-		cost = 10
-
-		search_filters = { FOCUS_FILTER_POLITICAL }
-
-		ai_will_do = {
-			base = 1
-		}
-
-		completion_reward = {
-			add_tech_bonus = { name = TU_IBE_depth_charges bonus = 0.75 uses = 1 category = dd_tech category = ca_tech }
-			add_doctrine_cost_reduction = { name = TU_IBE_depth_charges cost_reduction = 0.4 uses = 1 category = naval_doctrine }
-			navy_experience = 25
-		}
-	}
-
-	focus = {
 		id = TU_IBE_sea_samples
-		icon = GFX_goal_generic_build_navy
+		icon = GFX_goal_generic_trade
 		prerequisite = { focus = TU_IBE_sea_studies }
 		x = 0
 		y = 0
@@ -1679,9 +1481,8 @@
 		}
 
 		completion_reward = {
-			add_tech_bonus = { name = TU_IBE_sea_samples bonus = 0.75 uses = 1 category = dd_tech category = ca_tech }
-			add_doctrine_cost_reduction = { name = TU_IBE_sea_samples cost_reduction = 0.4 uses = 1 category = naval_doctrine }
-			navy_experience = 25
+			add_political_power = 60
+			add_tech_bonus = { name = TU_IBE_sea_samples bonus = 0.75 uses = 1 category = industry }
 		}
 	}
 
@@ -1760,27 +1561,6 @@
 		completion_reward = {
 			add_tech_bonus = { name = TU_IBE_light_tanks bonus = 0.75 uses = 1 category = armor }
 			add_doctrine_cost_reduction = { name = TU_IBE_light_tanks cost_reduction = 0.4 uses = 1 category = land_doctrine }
-		}
-	}
-
-	focus = {
-		id = TU_IBE_submarine_hunters
-		icon = GFX_goal_generic_build_navy
-		prerequisite = { focus = TU_IBE_destroyers }
-		x = 0
-		y = 0
-		cost = 10
-
-		search_filters = { FOCUS_FILTER_POLITICAL }
-
-		ai_will_do = {
-			base = 1
-		}
-
-		completion_reward = {
-			add_tech_bonus = { name = TU_IBE_submarine_hunters bonus = 0.75 uses = 1 category = dd_tech category = ca_tech }
-			add_doctrine_cost_reduction = { name = TU_IBE_submarine_hunters cost_reduction = 0.4 uses = 1 category = naval_doctrine }
-			navy_experience = 25
 		}
 	}
 
@@ -1907,7 +1687,7 @@
 	focus = {
 		id = TU_IBE_holy_ordnance
 		icon = GFX_goal_generic_army_artillery
-		prerequisite = { focus = TU_IBE_inquisition_navy }
+		prerequisite = { focus = TU_IBE_inquisitor_state }
 		x = 0
 		y = 0
 		cost = 10
@@ -2043,7 +1823,7 @@
 
 	focus = {
 		id = TU_IBE_watch_towers
-		icon = GFX_goal_generic_build_navy
+		icon = GFX_goal_generic_trade
 		prerequisite = { focus = TU_IBE_lighthouse_keepers }
 		x = 0
 		y = 0
@@ -2056,9 +1836,8 @@
 		}
 
 		completion_reward = {
-			add_tech_bonus = { name = TU_IBE_watch_towers bonus = 0.75 uses = 1 category = dd_tech category = ca_tech }
-			add_doctrine_cost_reduction = { name = TU_IBE_watch_towers cost_reduction = 0.4 uses = 1 category = naval_doctrine }
-			navy_experience = 25
+			add_political_power = 60
+			add_tech_bonus = { name = TU_IBE_watch_towers bonus = 0.75 uses = 1 category = industry }
 		}
 	}
 
@@ -2102,7 +1881,7 @@
 
 	focus = {
 		id = TU_IBE_deep_charts
-		icon = GFX_goal_generic_build_navy
+		icon = GFX_goal_generic_trade
 		prerequisite = { focus = TU_IBE_tide_charts }
 		x = 0
 		y = 0
@@ -2115,15 +1894,14 @@
 		}
 
 		completion_reward = {
-			add_tech_bonus = { name = TU_IBE_deep_charts bonus = 0.75 uses = 1 category = dd_tech category = ca_tech }
-			add_doctrine_cost_reduction = { name = TU_IBE_deep_charts cost_reduction = 0.4 uses = 1 category = naval_doctrine }
-			navy_experience = 25
+			add_political_power = 60
+			add_tech_bonus = { name = TU_IBE_deep_charts bonus = 0.75 uses = 1 category = industry }
 		}
 	}
 
 	focus = {
 		id = TU_IBE_aegir_language
-		icon = GFX_goal_generic_build_navy
+		icon = GFX_goal_generic_trade
 		prerequisite = { focus = TU_IBE_aegir_contact }
 		x = 0
 		y = 0
@@ -2136,9 +1914,8 @@
 		}
 
 		completion_reward = {
-			add_tech_bonus = { name = TU_IBE_aegir_language bonus = 0.75 uses = 1 category = dd_tech category = ca_tech }
-			add_doctrine_cost_reduction = { name = TU_IBE_aegir_language cost_reduction = 0.4 uses = 1 category = naval_doctrine }
-			navy_experience = 25
+			add_political_power = 60
+			add_tech_bonus = { name = TU_IBE_aegir_language bonus = 0.75 uses = 1 category = industry }
 		}
 	}
 
@@ -2259,70 +2036,6 @@
 			add_tech_bonus = { name = TU_IBE_air_squadrons bonus = 0.75 uses = 1 category = light_fighter category = tactical_bomber }
 			add_doctrine_cost_reduction = { name = TU_IBE_air_squadrons cost_reduction = 0.4 uses = 1 category = air_doctrine }
 			air_experience = 25
-		}
-	}
-
-	focus = {
-		id = TU_IBE_naval_bombers
-		icon = GFX_goal_generic_air_doctrine
-		prerequisite = { focus = TU_IBE_air_squadrons }
-		x = 0
-		y = 0
-		cost = 10
-
-		search_filters = { FOCUS_FILTER_POLITICAL }
-
-		ai_will_do = {
-			base = 1
-		}
-
-		completion_reward = {
-			add_tech_bonus = { name = TU_IBE_naval_bombers bonus = 0.75 uses = 1 category = light_fighter category = tactical_bomber }
-			add_doctrine_cost_reduction = { name = TU_IBE_naval_bombers cost_reduction = 0.4 uses = 1 category = air_doctrine }
-			air_experience = 25
-		}
-	}
-
-	focus = {
-		id = TU_IBE_cruisers
-		icon = GFX_goal_generic_build_navy
-		prerequisite = { focus = TU_IBE_destroyers }
-		x = 0
-		y = 0
-		cost = 10
-
-		search_filters = { FOCUS_FILTER_POLITICAL }
-
-		ai_will_do = {
-			base = 1
-		}
-
-		completion_reward = {
-			add_tech_bonus = { name = TU_IBE_cruisers bonus = 0.75 uses = 1 category = dd_tech category = ca_tech }
-			add_doctrine_cost_reduction = { name = TU_IBE_cruisers cost_reduction = 0.4 uses = 1 category = naval_doctrine }
-			navy_experience = 25
-		}
-	}
-
-	focus = {
-		id = TU_IBE_naval_bases
-		icon = GFX_goal_generic_build_navy
-		prerequisite = { focus = TU_IBE_dockyards }
-		x = 0
-		y = 0
-		cost = 10
-
-		search_filters = { FOCUS_FILTER_INDUSTRY }
-
-		ai_will_do = {
-			base = 1
-		}
-
-		completion_reward = {
-			add_tech_bonus = { name = TU_IBE_naval_bases bonus = 0.75 uses = 1 category = dd_tech category = ca_tech }
-			add_doctrine_cost_reduction = { name = TU_IBE_naval_bases cost_reduction = 0.4 uses = 1 category = naval_doctrine }
-			navy_experience = 25
-			TU_build_civ_factory = yes
 		}
 	}
 

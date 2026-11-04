@@ -19,9 +19,9 @@
 
 	focus = {
 		id = TU_KZD_new_empire
-		icon = GFX_goal_generic_major_war
 		prerequisite = { focus = TU_KZD_military_commission_focus }
 		mutually_exclusive = { focus = TU_KZD_six_kings focus = TU_KZD_babel_restoration }
+		icon = GFX_goal_generic_major_war
 		x = -4
 		y = 1
 		cost = 10
@@ -37,8 +37,8 @@
 
 	focus = {
 		id = TU_KZD_conscription_drive
-		icon = GFX_goal_generic_allies_build_infantry
 		prerequisite = { focus = TU_KZD_new_empire }
+		icon = GFX_goal_generic_allies_build_infantry
 		x = -4
 		y = 2
 		cost = 10
@@ -53,8 +53,8 @@
 
 	focus = {
 		id = TU_KZD_mobile_army
-		icon = GFX_goal_generic_army_tanks
 		prerequisite = { focus = TU_KZD_conscription_drive }
+		icon = GFX_goal_generic_army_tanks
 		x = -4
 		y = 3
 		cost = 10
@@ -69,8 +69,8 @@
 
 	focus = {
 		id = TU_KZD_war_council
-		icon = GFX_goal_generic_position_armies
 		prerequisite = { focus = TU_KZD_mobile_army }
+		icon = GFX_goal_generic_position_armies
 		x = -5
 		y = 4
 		cost = 10
@@ -86,8 +86,8 @@
 
 	focus = {
 		id = TU_KZD_steel_doctrine
-		icon = GFX_goal_generic_army_doctrines
 		prerequisite = { focus = TU_KZD_mobile_army }
+		icon = GFX_goal_generic_army_doctrines
 		x = -3
 		y = 4
 		cost = 10
@@ -102,8 +102,8 @@
 
 	focus = {
 		id = TU_KZD_expansion_plan
-		icon = GFX_goal_generic_more_territorial_claims
 		prerequisite = { focus = TU_KZD_war_council }
+		icon = GFX_goal_generic_more_territorial_claims
 		x = -5
 		y = 5
 		cost = 10
@@ -119,8 +119,8 @@
 
 	focus = {
 		id = TU_KZD_frontier_push
-		icon = GFX_goal_generic_attack_allies
 		prerequisite = { focus = TU_KZD_expansion_plan }
+		icon = GFX_goal_generic_attack_allies
 		x = -5
 		y = 6
 		cost = 10
@@ -137,9 +137,9 @@
 
 	focus = {
 		id = TU_KZD_six_kings
-		icon = GFX_goal_generic_defence
 		prerequisite = { focus = TU_KZD_military_commission_focus }
 		mutually_exclusive = { focus = TU_KZD_new_empire focus = TU_KZD_babel_restoration }
+		icon = GFX_goal_generic_defence
 		x = 0
 		y = 1
 		cost = 10
@@ -155,8 +155,8 @@
 
 	focus = {
 		id = TU_KZD_royal_guard
-		icon = GFX_goal_generic_special_forces
 		prerequisite = { focus = TU_KZD_six_kings }
+		icon = GFX_goal_generic_special_forces
 		x = 0
 		y = 2
 		cost = 10
@@ -171,8 +171,8 @@
 
 	focus = {
 		id = TU_KZD_elite_template
-		icon = GFX_goal_generic_special_forces
 		prerequisite = { focus = TU_KZD_royal_guard }
+		icon = GFX_goal_generic_special_forces
 		x = 0
 		y = 3
 		cost = 10
@@ -191,8 +191,8 @@
 
 	focus = {
 		id = TU_KZD_mountain_defence
-		icon = GFX_goal_generic_fortify_city
 		prerequisite = { focus = TU_KZD_elite_template }
+		icon = GFX_goal_generic_fortify_city
 		x = -1
 		y = 4
 		cost = 10
@@ -207,8 +207,8 @@
 
 	focus = {
 		id = TU_KZD_fortified_frontier
-		icon = GFX_goal_generic_defence
 		prerequisite = { focus = TU_KZD_elite_template }
+		icon = GFX_goal_generic_defence
 		x = 1
 		y = 4
 		cost = 10
@@ -222,8 +222,8 @@
 
 	focus = {
 		id = TU_KZD_six_kings_law
-		icon = GFX_goal_generic_national_unity
 		prerequisite = { focus = TU_KZD_mountain_defence }
+		icon = GFX_goal_generic_national_unity
 		x = -1
 		y = 5
 		cost = 10
@@ -238,8 +238,8 @@
 
 	focus = {
 		id = TU_KZD_elite_training
-		icon = GFX_goal_generic_army_artillery2
 		prerequisite = { focus = TU_KZD_six_kings_law }
+		icon = GFX_goal_generic_army_artillery2
 		x = -1
 		y = 6
 		cost = 10
@@ -256,9 +256,9 @@
 
 	focus = {
 		id = TU_KZD_babel_restoration
-		icon = GFX_goal_generic_trade
 		prerequisite = { focus = TU_KZD_military_commission_focus }
 		mutually_exclusive = { focus = TU_KZD_new_empire focus = TU_KZD_six_kings }
+		icon = GFX_goal_generic_trade
 		x = 4
 		y = 1
 		cost = 10
@@ -273,8 +273,8 @@
 
 	focus = {
 		id = TU_KZD_babel_envoy
-		icon = GFX_goal_generic_improve_relations
 		prerequisite = { focus = TU_KZD_babel_restoration }
+		icon = GFX_goal_generic_improve_relations
 		x = 4
 		y = 2
 		cost = 10
@@ -300,8 +300,8 @@
 
 	focus = {
 		id = TU_KZD_arms_export
-		icon = GFX_goal_generic_positive_trade_relations
 		prerequisite = { focus = TU_KZD_babel_envoy }
+		icon = GFX_goal_generic_positive_trade_relations
 		x = 3
 		y = 3
 		cost = 10
@@ -320,8 +320,8 @@
 
 	focus = {
 		id = TU_KZD_babel_school
-		icon = GFX_goal_generic_scientific_exchange
 		prerequisite = { focus = TU_KZD_babel_envoy }
+		icon = GFX_goal_generic_scientific_exchange
 		x = 5
 		y = 3
 		cost = 10
@@ -340,8 +340,8 @@
 
 	focus = {
 		id = TU_KZD_babel_ascension
-		icon = GFX_goal_generic_national_unity
 		prerequisite = { focus = TU_KZD_arms_export }
+		icon = GFX_goal_generic_national_unity
 		x = 3
 		y = 4
 		cost = 10

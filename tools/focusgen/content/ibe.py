@@ -103,16 +103,15 @@ C.on_actions.append("""on_monthly = {
 # ------------------------------------------------------------------ 국민정신
 C.idea("great_silence", "대침묵의 상흔", "Scars of the Great Silence", {"production_speed_buildings_factor": -0.1, "monthly_population": -0.1},
        "generic_army_problems", ("바다에서 무언가가 올라왔고, 이베리아의 해안은 침묵했다.", "Something rose from the sea, and Iberia's coast fell silent."))
-C.idea("fear_of_the_sea", "바다의 공포", "Fear of the Sea", {"naval_speed_factor": -0.1, "stability_factor": -0.03}, "generic_navy_bonus",
+C.idea("fear_of_the_sea", "바다의 공포", "Fear of the Sea", {"political_power_gain": -0.1, "stability_factor": -0.03}, "generic_economic_increase",
        ("어부들은 더 이상 먼바다로 나가지 않는다.", "Fishermen no longer sail into deep waters."))
 C.idea("watchful_coast", "깨어 있는 해안", "The Watchful Coast", {"army_defence_factor": 0.05, "stability_factor": 0.03}, "generic_fortify_the_borders")
 C.idea("inquisitor_state", "심판관의 나라", "State of the Inquisitors", {"stability_factor": 0.1, "army_org_factor": 0.05, "political_power_gain": 0.05},
        "generic_secret_police")
 C.idea("crown_restored", "왕관의 부활", "The Crown Restored", {"political_power_gain": 0.15, "production_speed_buildings_factor": 0.1}, "generic_central_management")
-C.idea("sea_reconciliation", "바다와의 화해", "Reconciliation with the Sea", {"naval_speed_factor": 0.1, "navy_org_factor": 0.05, "stability_factor": 0.05},
-       "generic_navy_bonus")
+C.idea("sea_reconciliation", "바다와의 화해", "Reconciliation with the Sea", {"political_power_gain": 0.1, "army_org_factor": 0.05, "stability_factor": 0.05},
+       "generic_economic_increase")
 C.idea("inquisitor_corps", "심판관 정예대", "Elite Inquisitor Corps", {"army_attack_factor": 0.05, "army_org_factor": 0.05}, "professional_officer_corps_spirit")
-C.idea("iberian_navy", "이베리아 해군", "Iberian Navy", {"navy_org_factor": 0.08, "naval_speed_factor": 0.05}, "generic_navy_bonus")
 C.idea("purified_coast", "정화된 해안", "The Purified Coast", {"monthly_population": 0.1, "production_speed_buildings_factor": 0.05}, "generic_morale_bonus")
 
 # ------------------------------------------------------------------ 중점
@@ -192,11 +191,11 @@ f("air_watch", "해안 비행 감시", "Coastal Air Watch", pre=["officer_corps"
 f("naval_school", "해군 학교", "Naval Academy", pre=["fleet_rebuild"])
 f("coastal_gunboats", "연안 포함", "Coastal Gunboat Fleet", pre=["naval_school"])
 f("destroyers", "구축함 전대", "Destroyer Fleet", pre=["coastal_gunboats"])
-f("iberian_navy", "이베리아 해군", "Iberian Navy", pre=["destroyers"], theme=False, reward=["add_ideas = TU_IBE_iberian_navy", "navy_experience = 50"])
-f("dockyards", "조선소 재건", "Dockyard Rebuild", pre=["naval_school"], econ="TU_build_dockyard = yes")
+f("iberian_navy", "이베리아 해군", "Iberian Navy", pre=["destroyers"], theme=False, reward=["add_ideas = TU_IBE_iberian_navy", "army_experience = 50"])
+f("dockyards", "조선소 재건", "Dockyard Rebuild", pre=["naval_school"], econ="TU_build_civ_factory = yes")
 
 # F. 경제
-f("harbour_rebuild", "항구 재건", "Harbour Reconstruction", pre=["root"], econ="TU_build_dockyard = yes")
+f("harbour_rebuild", "항구 재건", "Harbour Reconstruction", pre=["root"], econ="TU_build_civ_factory = yes")
 f("road_network", "도로망 건설", "Road Network", pre=["harbour_rebuild"], econ="TU_build_infrastructure = yes")
 f("industrial_district", "공업 지구", "Industrial District", pre=["harbour_rebuild"], econ=True)
 f("civ_program", "민간 공장 계획", "Civilian Factory Program", pre=["industrial_district"], me=["arms_program"], econ=True)
@@ -265,7 +264,7 @@ C.d(cat_coast, "evacuate_town", "해안 마을 소개", "Evacuate a Coastal Town
 C.d(cat_coast, "hunters_contact", "심해 사냥꾼 수소문", "Seek the Abyssal Hunters", [EV(25)], cost=75, once=True,
     visible=["has_completed_focus = TU_IBE_abyssal_rumours"], available=["NOT = { %s }" % HAS("hunters_met")])
 C.d(cat_coast, "sea_research", "심해 연구 지원", "Fund Deep Sea Research",
-    ["add_tech_bonus = { name = TU_IBE_sea_research bonus = 0.75 uses = 1 category = naval_doctrine category = electronics }", THR(-5)],
+    ["add_tech_bonus = { name = TU_IBE_sea_research bonus = 0.75 uses = 1 category = electronics }", THR(-5)],
     cost=50, once=False, days_re_enable=240, visible=["has_completed_focus = TU_IBE_sea_studies"])
 cat_pol = C.category("politics", "심판소와 왕관", "Inquisition and Crown")
 C.d(cat_pol, "inquisition_sermon", "심판소 설교", "Inquisition Sermon", [INQ("0.1"), "add_stability = 0.02"], cost=50, once=False, days_re_enable=120)

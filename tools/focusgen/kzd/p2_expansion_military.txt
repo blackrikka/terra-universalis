@@ -2,8 +2,8 @@
 
 	focus = {
 		id = TU_KZD_exp_doctrine
-		icon = GFX_goal_generic_major_war
 		prerequisite = { focus = TU_KZD_military_commission_focus }
+		icon = GFX_goal_generic_major_war
 		x = 0
 		y = 1
 		cost = 5
@@ -22,8 +22,8 @@
 
 	focus = {
 		id = TU_KZD_relations_envoy
-		icon = GFX_goal_generic_improve_relations
 		prerequisite = { focus = TU_KZD_exp_doctrine }
+		icon = GFX_goal_generic_improve_relations
 		x = 0
 		y = 2
 		cost = 10
@@ -43,8 +43,8 @@
 
 	focus = {
 		id = TU_KZD_exp_hub
-		icon = GFX_goal_generic_position_armies
 		prerequisite = { focus = TU_KZD_relations_envoy }
+		icon = GFX_goal_generic_position_armies
 		x = 0
 		y = 3
 		cost = 10
@@ -63,8 +63,8 @@
 
 	focus = {
 		id = TU_KZD_alliance_search
-		icon = GFX_goal_generic_major_alliance
 		prerequisite = { focus = TU_KZD_trade_routes focus = TU_KZD_vic_claims focus = TU_KZD_ursus_claims focus = TU_KZD_lei_claims }
+		icon = GFX_goal_generic_major_alliance
 		x = 0
 		y = 6
 		cost = 15
@@ -73,9 +73,8 @@
 
 		completion_reward = {
 			set_country_flag = TU_dip_alliance_unlocked
-			add_tech_bonus = { name = TU_KZD_alliance_search bonus = 1.0 uses = 1 category = dd_tech category = ca_tech }
-			add_doctrine_cost_reduction = { name = TU_KZD_alliance_search cost_reduction = 0.5 uses = 1 category = naval_doctrine }
-			navy_experience = 40
+			add_political_power = 100
+			add_stability = 0.05
 		}
 
 		ai_will_do = {
@@ -85,8 +84,8 @@
 
 	focus = {
 		id = TU_KZD_alliance_treaty
-		icon = GFX_goal_generic_alliance
 		prerequisite = { focus = TU_KZD_alliance_search }
+		icon = GFX_goal_generic_alliance
 		x = 0
 		y = 7
 		cost = 10
@@ -107,8 +106,8 @@
 
 	focus = {
 		id = TU_KZD_envoy_network
-		icon = GFX_goal_generic_intelligence_exchange
 		prerequisite = { focus = TU_KZD_relations_envoy }
+		icon = GFX_goal_generic_intelligence_exchange
 		x = 0
 		y = 3
 		cost = 10
@@ -126,8 +125,8 @@
 
 	focus = {
 		id = TU_KZD_trade_routes
-		icon = GFX_goal_generic_positive_trade_relations
 		prerequisite = { focus = TU_KZD_envoy_network }
+		icon = GFX_goal_generic_positive_trade_relations
 		x = 0
 		y = 4
 		cost = 10
@@ -145,8 +144,8 @@
 
 	focus = {
 		id = TU_KZD_mercenary_embassy
-		icon = GFX_goal_generic_military_deal
 		prerequisite = { focus = TU_KZD_trade_routes }
+		icon = GFX_goal_generic_military_deal
 		x = 0
 		y = 5
 		cost = 10
@@ -165,8 +164,8 @@
 
 	focus = {
 		id = TU_KZD_embassy_courier
-		icon = GFX_goal_generic_dangerous_deal
 		prerequisite = { focus = TU_KZD_mercenary_embassy }
+		icon = GFX_goal_generic_dangerous_deal
 		x = 0
 		y = 6
 		cost = 10
@@ -187,8 +186,8 @@
 
 	focus = {
 		id = TU_KZD_mil_staff
-		icon = GFX_goal_generic_army_motorized
 		prerequisite = { focus = TU_KZD_exp_hub }
+		icon = GFX_goal_generic_army_motorized
 		x = 0
 		y = 4
 		cost = 10
@@ -207,8 +206,8 @@
 
 	focus = {
 		id = TU_KZD_mil_reform
-		icon = GFX_goal_generic_army_doctrines
 		prerequisite = { focus = TU_KZD_mil_staff }
+		icon = GFX_goal_generic_army_doctrines
 		x = 0
 		y = 5
 		cost = 10
@@ -227,8 +226,8 @@
 
 	focus = {
 		id = TU_KZD_mil_conscription
-		icon = GFX_goal_generic_allies_build_infantry
 		prerequisite = { focus = TU_KZD_mil_reform }
+		icon = GFX_goal_generic_allies_build_infantry
 		x = 0
 		y = 6
 		cost = 10
@@ -247,8 +246,8 @@
 
 	focus = {
 		id = TU_KZD_mil_training
-		icon = GFX_goal_generic_army_artillery2
 		prerequisite = { focus = TU_KZD_mil_conscription }
+		icon = GFX_goal_generic_army_artillery2
 		x = 0
 		y = 7
 		cost = 10
@@ -267,9 +266,9 @@
 
 	focus = {
 		id = TU_KZD_mil_guard_camp
-		icon = GFX_goal_generic_special_forces
 		prerequisite = { focus = TU_KZD_mil_training }
 		mutually_exclusive = { focus = TU_KZD_mil_guard_camp_alt }
+		icon = GFX_goal_generic_special_forces
 		x = 0
 		y = 8
 		cost = 10
@@ -288,9 +287,9 @@
 
 	focus = {
 		id = TU_KZD_mil_guard_camp_alt
-		icon = GFX_goal_generic_construct_civilian
 		prerequisite = { focus = TU_KZD_mil_training }
 		mutually_exclusive = { focus = TU_KZD_mil_guard_camp }
+		icon = GFX_goal_generic_construct_civilian
 		x = 0
 		y = 8
 		cost = 10
@@ -309,8 +308,8 @@
 
 	focus = {
 		id = TU_KZD_mil_armor_doctrine
-		icon = GFX_goal_generic_army_tanks
 		prerequisite = { focus = TU_KZD_mil_training }
+		icon = GFX_goal_generic_army_tanks
 		x = 0
 		y = 8
 		cost = 10
@@ -329,8 +328,8 @@
 
 	focus = {
 		id = TU_KZD_mil_supply
-		icon = GFX_goal_generic_construct_infrastructure
 		prerequisite = { focus = TU_KZD_mil_training }
+		icon = GFX_goal_generic_construct_infrastructure
 		x = 0
 		y = 8
 		cost = 10
@@ -349,8 +348,8 @@
 
 	focus = {
 		id = TU_KZD_mil_logistics_net
-		icon = GFX_goal_generic_construction2
 		prerequisite = { focus = TU_KZD_mil_supply }
+		icon = GFX_goal_generic_construction2
 		x = 0
 		y = 9
 		cost = 10
@@ -369,8 +368,8 @@
 
 	focus = {
 		id = TU_KZD_mil_artillery
-		icon = GFX_goal_generic_army_artillery
 		prerequisite = { focus = TU_KZD_mil_armor_doctrine }
+		icon = GFX_goal_generic_army_artillery
 		x = 0
 		y = 9
 		cost = 10
@@ -391,8 +390,8 @@
 
 	focus = {
 		id = TU_KZD_vic_intel
-		icon = GFX_goal_generic_intelligence_exchange
 		prerequisite = { focus = TU_KZD_exp_hub }
+		icon = GFX_goal_generic_intelligence_exchange
 		x = 0
 		y = 4
 		cost = 10
@@ -411,8 +410,8 @@
 
 	focus = {
 		id = TU_KZD_vic_claims
-		icon = GFX_goal_generic_more_territorial_claims
 		prerequisite = { focus = TU_KZD_vic_intel }
+		icon = GFX_goal_generic_more_territorial_claims
 		x = 0
 		y = 5
 		cost = 10
@@ -431,8 +430,8 @@
 
 	focus = {
 		id = TU_KZD_vic_border_survey
-		icon = GFX_goal_generic_radar
 		prerequisite = { focus = TU_KZD_vic_claims }
+		icon = GFX_goal_generic_radar
 		x = 0
 		y = 6
 		cost = 10
@@ -451,8 +450,8 @@
 
 	focus = {
 		id = TU_KZD_vic_mobile_column
-		icon = GFX_goal_generic_army_motorized
 		prerequisite = { focus = TU_KZD_vic_border_survey }
+		icon = GFX_goal_generic_army_motorized
 		x = 0
 		y = 7
 		cost = 10
@@ -471,9 +470,9 @@
 
 	focus = {
 		id = TU_KZD_vic_war_plan
-		icon = GFX_goal_generic_major_war
 		prerequisite = { focus = TU_KZD_vic_mobile_column }
 		mutually_exclusive = { focus = TU_KZD_vic_peace }
+		icon = GFX_goal_generic_major_war
 		x = 0
 		y = 8
 		cost = 10
@@ -493,8 +492,8 @@
 
 	focus = {
 		id = TU_KZD_vic_steam_counter
-		icon = GFX_goal_generic_army_doctrines
 		prerequisite = { focus = TU_KZD_vic_mobile_column }
+		icon = GFX_goal_generic_army_doctrines
 		x = 0
 		y = 8
 		cost = 10
@@ -514,8 +513,8 @@
 
 	focus = {
 		id = TU_KZD_vic_siege_drill
-		icon = GFX_goal_generic_fortify_city
 		prerequisite = { focus = TU_KZD_vic_steam_counter }
+		icon = GFX_goal_generic_fortify_city
 		x = 0
 		y = 9
 		cost = 10
@@ -534,9 +533,9 @@
 
 	focus = {
 		id = TU_KZD_vic_peace
-		icon = GFX_goal_generic_neutrality_focus
 		prerequisite = { focus = TU_KZD_vic_mobile_column }
 		mutually_exclusive = { focus = TU_KZD_vic_war_plan }
+		icon = GFX_goal_generic_neutrality_focus
 		x = 0
 		y = 8
 		cost = 10
@@ -555,8 +554,8 @@
 
 	focus = {
 		id = TU_KZD_vic_exile_nobles
-		icon = GFX_goal_generic_political_pressure
 		prerequisite = { focus = TU_KZD_vic_peace }
+		icon = GFX_goal_generic_political_pressure
 		x = 0
 		y = 9
 		cost = 10
@@ -575,8 +574,8 @@
 
 	focus = {
 		id = TU_KZD_vic_london_admin
-		icon = GFX_goal_generic_national_unity
 		prerequisite = { focus = TU_KZD_vic_war_plan }
+		icon = GFX_goal_generic_national_unity
 		x = 0
 		y = 9
 		cost = 10
@@ -595,30 +594,9 @@
 	}
 
 	focus = {
-		id = TU_KZD_vic_landing
-		icon = GFX_goal_generic_amphibious_assault
-		prerequisite = { focus = TU_KZD_vic_london_admin }
-		x = 0
-		y = 10
-		cost = 15
-
-		search_filters = { FOCUS_FILTER_ARMY_XP }
-
-		completion_reward = {
-			add_tech_bonus = { name = TU_KZD_vic_landing bonus = 1.0 uses = 1 category = dd_tech category = ca_tech }
-			add_doctrine_cost_reduction = { name = TU_KZD_vic_landing cost_reduction = 0.5 uses = 1 category = naval_doctrine }
-			navy_experience = 40
-		}
-
-		ai_will_do = {
-			base = 1
-		}
-	}
-
-	focus = {
 		id = TU_KZD_vic_occupation
+		prerequisite = { focus = TU_KZD_vic_london_admin }
 		icon = GFX_goal_generic_occupy_start_war
-		prerequisite = { focus = TU_KZD_vic_landing }
 		x = 0
 		y = 11
 		cost = 10
@@ -638,8 +616,8 @@
 
 	focus = {
 		id = TU_KZD_vic_london_order
-		icon = GFX_goal_generic_military_sphere
 		prerequisite = { focus = TU_KZD_vic_occupation }
+		icon = GFX_goal_generic_military_sphere
 		x = 0
 		y = 12
 		cost = 10
@@ -658,8 +636,8 @@
 
 	focus = {
 		id = TU_KZD_vic_march_on_london
-		icon = GFX_goal_generic_occupy_states_ongoing_war
 		prerequisite = { focus = TU_KZD_vic_london_order }
+		icon = GFX_goal_generic_occupy_states_ongoing_war
 		x = 0
 		y = 13
 		cost = 10
@@ -682,8 +660,8 @@
 
 	focus = {
 		id = TU_KZD_ursus_envoy
-		icon = GFX_goal_generic_military_deal
 		prerequisite = { focus = TU_KZD_exp_hub }
+		icon = GFX_goal_generic_military_deal
 		x = 0
 		y = 4
 		cost = 10
@@ -702,8 +680,8 @@
 
 	focus = {
 		id = TU_KZD_ursus_claims
-		icon = GFX_goal_generic_demand_territory
 		prerequisite = { focus = TU_KZD_ursus_envoy }
+		icon = GFX_goal_generic_demand_territory
 		x = 0
 		y = 5
 		cost = 10
@@ -722,8 +700,8 @@
 
 	focus = {
 		id = TU_KZD_ursus_reserve
-		icon = GFX_goal_generic_allies_build_infantry
 		prerequisite = { focus = TU_KZD_ursus_claims }
+		icon = GFX_goal_generic_allies_build_infantry
 		x = 0
 		y = 6
 		cost = 10
@@ -742,9 +720,9 @@
 
 	focus = {
 		id = TU_KZD_ursus_war
-		icon = GFX_goal_generic_territory_or_war
 		prerequisite = { focus = TU_KZD_ursus_reserve }
 		mutually_exclusive = { focus = TU_KZD_ursus_border_treaty }
+		icon = GFX_goal_generic_territory_or_war
 		x = 0
 		y = 7
 		cost = 10
@@ -764,8 +742,8 @@
 
 	focus = {
 		id = TU_KZD_ursus_winter
-		icon = GFX_goal_generic_small_arms
 		prerequisite = { focus = TU_KZD_ursus_reserve }
+		icon = GFX_goal_generic_small_arms
 		x = 0
 		y = 7
 		cost = 10
@@ -784,8 +762,8 @@
 
 	focus = {
 		id = TU_KZD_ursus_frontier_pact
-		icon = GFX_goal_generic_defence
 		prerequisite = { focus = TU_KZD_ursus_winter }
+		icon = GFX_goal_generic_defence
 		x = 0
 		y = 8
 		cost = 10
@@ -804,9 +782,9 @@
 
 	focus = {
 		id = TU_KZD_ursus_border_treaty
-		icon = GFX_goal_generic_forceful_treaty
 		prerequisite = { focus = TU_KZD_ursus_frontier_pact }
 		mutually_exclusive = { focus = TU_KZD_ursus_war }
+		icon = GFX_goal_generic_forceful_treaty
 		x = 0
 		y = 9
 		cost = 10
@@ -825,8 +803,8 @@
 
 	focus = {
 		id = TU_KZD_ursus_exchange
-		icon = GFX_goal_generic_scientific_exchange
 		prerequisite = { focus = TU_KZD_ursus_frontier_pact }
+		icon = GFX_goal_generic_scientific_exchange
 		x = 0
 		y = 9
 		cost = 10
@@ -845,8 +823,8 @@
 
 	focus = {
 		id = TU_KZD_ursus_arms_coop
-		icon = GFX_goal_generic_construct_mil_factory
 		prerequisite = { focus = TU_KZD_ursus_exchange }
+		icon = GFX_goal_generic_construct_mil_factory
 		x = 0
 		y = 10
 		cost = 10
@@ -866,8 +844,8 @@
 
 	focus = {
 		id = TU_KZD_ursus_joint_drill
-		icon = GFX_goal_generic_cavalry
 		prerequisite = { focus = TU_KZD_ursus_arms_coop }
+		icon = GFX_goal_generic_cavalry
 		x = 0
 		y = 11
 		cost = 10
@@ -886,8 +864,8 @@
 
 	focus = {
 		id = TU_KZD_ursus_expedition
-		icon = GFX_goal_generic_attack_allies
 		prerequisite = { focus = TU_KZD_ursus_joint_drill }
+		icon = GFX_goal_generic_attack_allies
 		x = 0
 		y = 12
 		cost = 10
@@ -907,8 +885,8 @@
 
 	focus = {
 		id = TU_KZD_ursus_capital_pact
-		icon = GFX_goal_generic_alliance
 		prerequisite = { focus = TU_KZD_ursus_border_treaty }
+		icon = GFX_goal_generic_alliance
 		x = 0
 		y = 10
 		cost = 10
@@ -929,8 +907,8 @@
 
 	focus = {
 		id = TU_KZD_lei_talks
-		icon = GFX_goal_generic_dangerous_deal
 		prerequisite = { focus = TU_KZD_exp_hub }
+		icon = GFX_goal_generic_dangerous_deal
 		x = 0
 		y = 4
 		cost = 10
@@ -949,8 +927,8 @@
 
 	focus = {
 		id = TU_KZD_lei_claims
-		icon = GFX_goal_generic_demand_territory
 		prerequisite = { focus = TU_KZD_lei_talks }
+		icon = GFX_goal_generic_demand_territory
 		x = 0
 		y = 5
 		cost = 10
@@ -969,8 +947,8 @@
 
 	focus = {
 		id = TU_KZD_lei_mercs
-		icon = GFX_goal_generic_small_arms
 		prerequisite = { focus = TU_KZD_lei_claims }
+		icon = GFX_goal_generic_small_arms
 		x = 0
 		y = 6
 		cost = 10
@@ -989,9 +967,9 @@
 
 	focus = {
 		id = TU_KZD_lei_war
-		icon = GFX_goal_generic_attack_allies
 		prerequisite = { focus = TU_KZD_lei_mercs }
 		mutually_exclusive = { focus = TU_KZD_lei_culture }
+		icon = GFX_goal_generic_attack_allies
 		x = 0
 		y = 7
 		cost = 10
@@ -1010,9 +988,9 @@
 
 	focus = {
 		id = TU_KZD_lei_culture
-		icon = GFX_goal_generic_propaganda
 		prerequisite = { focus = TU_KZD_lei_mercs }
 		mutually_exclusive = { focus = TU_KZD_lei_war }
+		icon = GFX_goal_generic_propaganda
 		x = 0
 		y = 7
 		cost = 10
@@ -1031,8 +1009,8 @@
 
 	focus = {
 		id = TU_KZD_lei_trade_road
-		icon = GFX_goal_generic_positive_trade_relations
 		prerequisite = { focus = TU_KZD_lei_culture }
+		icon = GFX_goal_generic_positive_trade_relations
 		x = 0
 		y = 8
 		cost = 10
@@ -1051,8 +1029,8 @@
 
 	focus = {
 		id = TU_KZD_lei_harbor
-		icon = GFX_goal_generic_construct_naval_dockyard
 		prerequisite = { focus = TU_KZD_lei_trade_road }
+		icon = GFX_goal_generic_construct_naval_dockyard
 		x = 0
 		y = 9
 		cost = 10
@@ -1060,10 +1038,9 @@
 		search_filters = { FOCUS_FILTER_INDUSTRY }
 
 		completion_reward = {
-			TU_build_dockyard = yes
-			add_tech_bonus = { name = TU_KZD_lei_harbor bonus = 0.75 uses = 1 category = dd_tech category = ca_tech }
-			add_doctrine_cost_reduction = { name = TU_KZD_lei_harbor cost_reduction = 0.4 uses = 1 category = naval_doctrine }
-			navy_experience = 25
+			TU_build_civ_factory = yes
+			add_political_power = 60
+			add_tech_bonus = { name = TU_KZD_lei_harbor bonus = 0.75 uses = 1 category = industry }
 		}
 
 		ai_will_do = {
@@ -1073,8 +1050,8 @@
 
 	focus = {
 		id = TU_KZD_lei_armor_raid
-		icon = GFX_goal_generic_army_motorized
 		prerequisite = { focus = TU_KZD_lei_war }
+		icon = GFX_goal_generic_army_motorized
 		x = 0
 		y = 8
 		cost = 10
@@ -1093,8 +1070,8 @@
 
 	focus = {
 		id = TU_KZD_lei_occupation
-		icon = GFX_goal_generic_occupy_states_ongoing_war
 		prerequisite = { focus = TU_KZD_lei_armor_raid }
+		icon = GFX_goal_generic_occupy_states_ongoing_war
 		x = 0
 		y = 9
 		cost = 10
@@ -1116,8 +1093,8 @@
 
 	focus = {
 		id = TU_KZD_reu_survey
-		icon = GFX_goal_generic_radar
 		prerequisite = { focus = TU_KZD_exp_hub }
+		icon = GFX_goal_generic_radar
 		x = 0
 		y = 4
 		cost = 10
@@ -1136,8 +1113,8 @@
 
 	focus = {
 		id = TU_KZD_reu_claims
-		icon = GFX_goal_generic_demand_territory
 		prerequisite = { focus = TU_KZD_reu_survey }
+		icon = GFX_goal_generic_demand_territory
 		x = 0
 		y = 5
 		cost = 10
@@ -1156,8 +1133,8 @@
 
 	focus = {
 		id = TU_KZD_reu_war
-		icon = GFX_goal_generic_war_with_comintern
 		prerequisite = { focus = TU_KZD_reu_claims }
+		icon = GFX_goal_generic_war_with_comintern
 		x = 0
 		y = 6
 		cost = 10
@@ -1177,8 +1154,8 @@
 
 	focus = {
 		id = TU_KZD_reu_quarantine
-		icon = GFX_goal_generic_fortify_city
 		prerequisite = { focus = TU_KZD_reu_claims }
+		icon = GFX_goal_generic_fortify_city
 		x = 0
 		y = 6
 		cost = 10
@@ -1197,8 +1174,8 @@
 
 	focus = {
 		id = TU_KZD_reu_supply_hub
-		icon = GFX_goal_generic_oil_refinery
 		prerequisite = { focus = TU_KZD_reu_quarantine }
+		icon = GFX_goal_generic_oil_refinery
 		x = 0
 		y = 7
 		cost = 10
@@ -1217,8 +1194,8 @@
 
 	focus = {
 		id = TU_KZD_reu_medic_corps
-		icon = GFX_goal_generic_construct_civilian
 		prerequisite = { focus = TU_KZD_reu_supply_hub }
+		icon = GFX_goal_generic_construct_civilian
 		x = 0
 		y = 8
 		cost = 10
@@ -1237,8 +1214,8 @@
 
 	focus = {
 		id = TU_KZD_reu_occupation
-		icon = GFX_goal_generic_occupy_states_coastal
 		prerequisite = { focus = TU_KZD_reu_war }
+		icon = GFX_goal_generic_occupy_states_coastal
 		x = 0
 		y = 7
 		cost = 10
@@ -1258,8 +1235,8 @@
 
 	focus = {
 		id = TU_KZD_reu_encirclement
-		icon = GFX_goal_generic_military_sphere
 		prerequisite = { focus = TU_KZD_reu_occupation }
+		icon = GFX_goal_generic_military_sphere
 		x = 0
 		y = 8
 		cost = 10
@@ -1280,8 +1257,8 @@
 
 	focus = {
 		id = TU_KZD_sarkaz_root
-		icon = GFX_goal_generic_special_forces
 		prerequisite = { focus = TU_KZD_exp_doctrine }
+		icon = GFX_goal_generic_special_forces
 		x = 0
 		y = 2
 		cost = 5
@@ -1301,9 +1278,9 @@
 
 	focus = {
 		id = TU_KZD_vampire_blood
-		icon = GFX_goal_generic_special_forces
 		prerequisite = { focus = TU_KZD_sarkaz_root }
 		mutually_exclusive = { focus = TU_KZD_banshee_blood focus = TU_KZD_wendigo_blood }
+		icon = GFX_goal_generic_special_forces
 		x = 0
 		y = 3
 		cost = 10
@@ -1324,8 +1301,8 @@
 
 	focus = {
 		id = TU_KZD_vampire_night_raid
-		icon = GFX_goal_generic_wolf_pack
 		prerequisite = { focus = TU_KZD_vampire_blood }
+		icon = GFX_goal_generic_wolf_pack
 		x = 0
 		y = 4
 		cost = 10
@@ -1344,8 +1321,8 @@
 
 	focus = {
 		id = TU_KZD_vampire_elite
-		icon = GFX_goal_generic_special_forces
 		prerequisite = { focus = TU_KZD_vampire_night_raid }
+		icon = GFX_goal_generic_special_forces
 		x = 0
 		y = 5
 		cost = 15
@@ -1368,8 +1345,8 @@
 
 	focus = {
 		id = TU_KZD_vampire_legion
-		icon = GFX_goal_generic_army_doctrines
 		prerequisite = { focus = TU_KZD_vampire_elite }
+		icon = GFX_goal_generic_army_doctrines
 		x = 0
 		y = 6
 		cost = 10
@@ -1388,9 +1365,9 @@
 
 	focus = {
 		id = TU_KZD_wendigo_blood
-		icon = GFX_goal_generic_cavalry
 		prerequisite = { focus = TU_KZD_sarkaz_root }
 		mutually_exclusive = { focus = TU_KZD_banshee_blood focus = TU_KZD_vampire_blood }
+		icon = GFX_goal_generic_cavalry
 		x = 0
 		y = 3
 		cost = 10
@@ -1410,8 +1387,8 @@
 
 	focus = {
 		id = TU_KZD_wendigo_snow_tactics
-		icon = GFX_goal_generic_army_doctrines
 		prerequisite = { focus = TU_KZD_wendigo_blood }
+		icon = GFX_goal_generic_army_doctrines
 		x = 0
 		y = 4
 		cost = 10
@@ -1430,8 +1407,8 @@
 
 	focus = {
 		id = TU_KZD_wendigo_pack
-		icon = GFX_goal_generic_wolf_pack
 		prerequisite = { focus = TU_KZD_wendigo_snow_tactics }
+		icon = GFX_goal_generic_wolf_pack
 		x = 0
 		y = 5
 		cost = 10
@@ -1451,8 +1428,8 @@
 
 	focus = {
 		id = TU_KZD_wendigo_hunters
-		icon = GFX_goal_generic_allies_build_infantry
 		prerequisite = { focus = TU_KZD_wendigo_pack }
+		icon = GFX_goal_generic_allies_build_infantry
 		x = 0
 		y = 6
 		cost = 15
@@ -1472,9 +1449,9 @@
 
 	focus = {
 		id = TU_KZD_banshee_blood
-		icon = GFX_goal_generic_radar
 		prerequisite = { focus = TU_KZD_sarkaz_root }
 		mutually_exclusive = { focus = TU_KZD_vampire_blood focus = TU_KZD_wendigo_blood }
+		icon = GFX_goal_generic_radar
 		x = 0
 		y = 3
 		cost = 10
@@ -1494,8 +1471,8 @@
 
 	focus = {
 		id = TU_KZD_banshee_signal
-		icon = GFX_goal_generic_intelligence_exchange
 		prerequisite = { focus = TU_KZD_banshee_blood }
+		icon = GFX_goal_generic_intelligence_exchange
 		x = 0
 		y = 4
 		cost = 10
@@ -1514,8 +1491,8 @@
 
 	focus = {
 		id = TU_KZD_banshee_chorus
-		icon = GFX_goal_generic_propaganda
 		prerequisite = { focus = TU_KZD_banshee_signal }
+		icon = GFX_goal_generic_propaganda
 		x = 0
 		y = 5
 		cost = 10
@@ -1535,8 +1512,8 @@
 
 	focus = {
 		id = TU_KZD_banshee_bond
-		icon = GFX_goal_generic_military_deal
 		prerequisite = { focus = TU_KZD_banshee_chorus }
+		icon = GFX_goal_generic_military_deal
 		x = 0
 		y = 6
 		cost = 15
@@ -1555,8 +1532,8 @@
 
 	focus = {
 		id = TU_KZD_sarkaz_unity
-		icon = GFX_goal_generic_army_doctrines
 		prerequisite = { focus = TU_KZD_vampire_legion focus = TU_KZD_wendigo_hunters focus = TU_KZD_banshee_bond }
+		icon = GFX_goal_generic_army_doctrines
 		x = 0
 		y = 7
 		cost = 15
@@ -1575,8 +1552,8 @@
 
 	focus = {
 		id = TU_KZD_sarkaz_rites
-		icon = GFX_goal_generic_national_unity
 		prerequisite = { focus = TU_KZD_sarkaz_unity }
+		icon = GFX_goal_generic_national_unity
 		x = 0
 		y = 8
 		cost = 10
@@ -1597,8 +1574,8 @@
 
 	focus = {
 		id = TU_KZD_fort_design
-		icon = GFX_goal_generic_fortify_city
 		prerequisite = { focus = TU_KZD_exp_doctrine }
+		icon = GFX_goal_generic_fortify_city
 		x = 0
 		y = 2
 		cost = 10
@@ -1616,8 +1593,8 @@
 
 	focus = {
 		id = TU_KZD_fort_survey
-		icon = GFX_goal_generic_construction
 		prerequisite = { focus = TU_KZD_fort_design }
+		icon = GFX_goal_generic_construction
 		x = 0
 		y = 3
 		cost = 10
@@ -1635,8 +1612,8 @@
 
 	focus = {
 		id = TU_KZD_fort_wasteland_bunker
-		icon = GFX_goal_generic_fortify_city
 		prerequisite = { focus = TU_KZD_fort_survey }
+		icon = GFX_goal_generic_fortify_city
 		x = 0
 		y = 4
 		cost = 10
@@ -1655,8 +1632,8 @@
 
 	focus = {
 		id = TU_KZD_fort_factory_camps
-		icon = GFX_goal_generic_construct_mil_factory
 		prerequisite = { focus = TU_KZD_fort_wasteland_bunker }
+		icon = GFX_goal_generic_construct_mil_factory
 		x = 0
 		y = 5
 		cost = 10
@@ -1675,8 +1652,8 @@
 
 	focus = {
 		id = TU_KZD_fort_mountain_defence
-		icon = GFX_goal_generic_defence
 		prerequisite = { focus = TU_KZD_fort_wasteland_bunker }
+		icon = GFX_goal_generic_defence
 		x = 0
 		y = 5
 		cost = 10
@@ -1695,8 +1672,8 @@
 
 	focus = {
 		id = TU_KZD_fort_supply
-		icon = GFX_goal_generic_construct_infrastructure
 		prerequisite = { focus = TU_KZD_fort_factory_camps }
+		icon = GFX_goal_generic_construct_infrastructure
 		x = 0
 		y = 6
 		cost = 10
@@ -1715,8 +1692,8 @@
 
 	focus = {
 		id = TU_KZD_fort_garrison
-		icon = GFX_goal_generic_allies_build_infantry
 		prerequisite = { focus = TU_KZD_fort_mountain_defence }
+		icon = GFX_goal_generic_allies_build_infantry
 		x = 0
 		y = 6
 		cost = 10
@@ -1734,8 +1711,8 @@
 
 	focus = {
 		id = TU_KZD_fort_ambush
-		icon = GFX_goal_generic_small_arms
 		prerequisite = { focus = TU_KZD_fort_mountain_defence }
+		icon = GFX_goal_generic_small_arms
 		x = 0
 		y = 6
 		cost = 10
@@ -1754,8 +1731,8 @@
 
 	focus = {
 		id = TU_KZD_fort_guerilla
-		icon = GFX_goal_generic_special_forces
 		prerequisite = { focus = TU_KZD_fort_ambush }
+		icon = GFX_goal_generic_special_forces
 		x = 0
 		y = 7
 		cost = 10
@@ -1775,8 +1752,8 @@
 
 	focus = {
 		id = TU_KZD_fort_frontier_wall
-		icon = GFX_goal_generic_fortify_city
 		prerequisite = { focus = TU_KZD_fort_supply }
+		icon = GFX_goal_generic_fortify_city
 		x = 0
 		y = 7
 		cost = 15
@@ -1794,8 +1771,8 @@
 
 	focus = {
 		id = TU_KZD_fort_forward_base
-		icon = GFX_goal_generic_construct_military
 		prerequisite = { focus = TU_KZD_fort_frontier_wall }
+		icon = GFX_goal_generic_construct_military
 		x = 0
 		y = 8
 		cost = 10
@@ -1815,8 +1792,8 @@
 
 	focus = {
 		id = TU_KZD_fort_watchtower
-		icon = GFX_goal_generic_construction2
 		prerequisite = { focus = TU_KZD_fort_forward_base }
+		icon = GFX_goal_generic_construction2
 		x = 0
 		y = 9
 		cost = 10
@@ -1835,9 +1812,9 @@
 
 	focus = {
 		id = TU_KZD_fort_resource_dig
-		icon = GFX_goal_generic_production
 		prerequisite = { focus = TU_KZD_fort_factory_camps }
 		mutually_exclusive = { focus = TU_KZD_fort_resource_dig_alt }
+		icon = GFX_goal_generic_production
 		x = 0
 		y = 6
 		cost = 10
@@ -1856,9 +1833,9 @@
 
 	focus = {
 		id = TU_KZD_fort_resource_dig_alt
-		icon = GFX_goal_generic_construct_infrastructure
 		prerequisite = { focus = TU_KZD_fort_factory_camps }
 		mutually_exclusive = { focus = TU_KZD_fort_resource_dig }
+		icon = GFX_goal_generic_construct_infrastructure
 		x = 0
 		y = 6
 		cost = 10

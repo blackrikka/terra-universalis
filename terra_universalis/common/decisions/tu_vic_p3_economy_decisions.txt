@@ -103,7 +103,7 @@ TU_VIC_construction_category = {
 				}
 				add_extra_state_shared_building_slots = 1
 				add_building_construction = {
-					type = dockyard
+					type = industrial_complex
 					level = 1
 					instant_build = yes
 				}
@@ -353,11 +353,11 @@ TU_VIC_construction_category = {
 		}
 
 		visible = {
-			has_completed_focus = TU_VIC_eco_dockyard_expansion
+			has_completed_focus = TU_VIC_eco_dock_city
 		}
 
 		available = {
-			has_completed_focus = TU_VIC_eco_dockyard_expansion
+			has_completed_focus = TU_VIC_eco_dock_city
 		}
 
 		cost = 50
@@ -370,7 +370,7 @@ TU_VIC_construction_category = {
 					is_coastal = yes
 				}
 				add_building_construction = {
-					type = dockyard
+					type = industrial_complex
 					level = 1
 					instant_build = yes
 				}
@@ -484,7 +484,7 @@ TU_VIC_construction_category = {
 					is_coastal = yes
 				}
 				add_building_construction = {
-					type = naval_facility
+					type = infrastructure
 					level = 1
 					instant_build = yes
 				}
@@ -505,11 +505,11 @@ TU_VIC_construction_category = {
 		}
 
 		visible = {
-			has_completed_focus = TU_VIC_eco_submarine_pens
+			has_completed_focus = TU_VIC_crown_focus
 		}
 
 		available = {
-			has_completed_focus = TU_VIC_eco_submarine_pens
+			has_completed_focus = TU_VIC_crown_focus
 		}
 
 		cost = 50
@@ -523,7 +523,7 @@ TU_VIC_construction_category = {
 				}
 				add_extra_state_shared_building_slots = 1
 				add_building_construction = {
-					type = dockyard
+					type = industrial_complex
 					level = 1
 					instant_build = yes
 				}
@@ -544,11 +544,11 @@ TU_VIC_construction_category = {
 		}
 
 		visible = {
-			has_completed_focus = TU_VIC_eco_thames_naval_base
+			has_completed_focus = TU_VIC_crown_focus
 		}
 
 		available = {
-			has_completed_focus = TU_VIC_eco_thames_naval_base
+			has_completed_focus = TU_VIC_crown_focus
 		}
 
 		cost = 50
@@ -561,7 +561,7 @@ TU_VIC_construction_category = {
 					is_coastal = yes
 				}
 				add_building_construction = {
-					type = naval_base
+					type = infrastructure
 					level = 1
 					instant_build = yes
 				}

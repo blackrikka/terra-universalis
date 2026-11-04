@@ -122,7 +122,7 @@ focus_tree = {
 
 	focus = {
 		id = TU_KAZ_sponsorship_rules
-		icon = GFX_goal_generic_build_navy
+		icon = GFX_goal_generic_political_pressure
 		prerequisite = { focus = TU_KAZ_live_broadcast }
 		mutually_exclusive = { focus = TU_KAZ_free_entry }
 		x = -13
@@ -2329,7 +2329,7 @@ focus_tree = {
 
 	focus = {
 		id = TU_KAZ_union_scholarships
-		icon = GFX_goal_generic_build_navy
+		icon = GFX_focus_research
 		prerequisite = { focus = TU_KAZ_stock_controls }
 		x = -6
 		y = 5
@@ -2342,9 +2342,7 @@ focus_tree = {
 		}
 
 		completion_reward = {
-			add_tech_bonus = { name = TU_KAZ_union_scholarships bonus = 0.75 uses = 1 category = dd_tech category = ca_tech }
-			add_doctrine_cost_reduction = { name = TU_KAZ_union_scholarships cost_reduction = 0.4 uses = 1 category = naval_doctrine }
-			navy_experience = 25
+			add_tech_bonus = { name = TU_KAZ_union_scholarships bonus = 0.75 uses = 1 category = electronics category = industry }
 		}
 	}
 

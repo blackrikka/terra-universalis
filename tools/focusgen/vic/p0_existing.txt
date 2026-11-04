@@ -15,8 +15,8 @@
 
 	focus = {
 		id = TU_VIC_dukes_summit
-		icon = GFX_goal_generic_political_pressure
 		prerequisite = { focus = TU_VIC_crown_focus }
+		icon = GFX_goal_generic_political_pressure
 		x = 0
 		y = 1
 		cost = 5
@@ -33,8 +33,8 @@
 
 	focus = {
 		id = TU_VIC_status_quo
-		icon = GFX_goal_generic_national_unity
 		prerequisite = { focus = TU_VIC_dukes_summit }
+		icon = GFX_goal_generic_national_unity
 		x = 0
 		y = 2
 		cost = 10
@@ -53,9 +53,9 @@
 
 	focus = {
 		id = TU_VIC_ducal_arsenal
-		icon = GFX_goal_generic_army_artillery
 		prerequisite = { focus = TU_VIC_status_quo }
 		mutually_exclusive = { focus = TU_VIC_ducal_arsenal_alt }
+		icon = GFX_goal_generic_army_artillery
 		x = 1
 		y = 3
 		cost = 10
@@ -70,9 +70,9 @@
 
 	focus = {
 		id = TU_VIC_ducal_arsenal_alt
-		icon = GFX_goal_generic_national_unity
 		prerequisite = { focus = TU_VIC_status_quo }
 		mutually_exclusive = { focus = TU_VIC_ducal_arsenal }
+		icon = GFX_goal_generic_national_unity
 		x = 0
 		y = 0
 		cost = 10
@@ -91,8 +91,8 @@
 
 	focus = {
 		id = TU_VIC_london_fortress
-		icon = GFX_goal_generic_fortify_city
 		prerequisite = { focus = TU_VIC_status_quo }
+		icon = GFX_goal_generic_fortify_city
 		x = -1
 		y = 3
 		cost = 10
@@ -111,9 +111,9 @@
 
 	focus = {
 		id = TU_VIC_dukes_order
-		icon = GFX_goal_generic_neutrality_focus
 		prerequisite = { focus = TU_VIC_london_fortress }
 		mutually_exclusive = { focus = TU_VIC_aslan_legitimacy }
+		icon = GFX_goal_generic_neutrality_focus
 		x = -1
 		y = 4
 		cost = 10
@@ -134,8 +134,8 @@
 
 	focus = {
 		id = TU_VIC_glasgow_return
-		icon = GFX_goal_generic_demand_territory
 		prerequisite = { focus = TU_VIC_dukes_summit }
+		icon = GFX_goal_generic_demand_territory
 		x = -4
 		y = 2
 		cost = 10
@@ -155,9 +155,9 @@
 
 	focus = {
 		id = TU_VIC_glasgow_volunteers
-		icon = GFX_goal_generic_allies_build_infantry
 		prerequisite = { focus = TU_VIC_glasgow_return }
 		mutually_exclusive = { focus = TU_VIC_glasgow_volunteers_alt }
+		icon = GFX_goal_generic_allies_build_infantry
 		x = -5
 		y = 3
 		cost = 10
@@ -172,9 +172,9 @@
 
 	focus = {
 		id = TU_VIC_glasgow_volunteers_alt
-		icon = GFX_goal_generic_propaganda
 		prerequisite = { focus = TU_VIC_glasgow_return }
 		mutually_exclusive = { focus = TU_VIC_glasgow_volunteers }
+		icon = GFX_goal_generic_propaganda
 		x = 0
 		y = 0
 		cost = 10
@@ -193,8 +193,8 @@
 
 	focus = {
 		id = TU_VIC_rally_dukes
-		icon = GFX_goal_generic_improve_relations
 		prerequisite = { focus = TU_VIC_glasgow_return }
+		icon = GFX_goal_generic_improve_relations
 		x = -3
 		y = 3
 		cost = 10
@@ -213,8 +213,8 @@
 
 	focus = {
 		id = TU_VIC_siege_crowned
-		icon = GFX_goal_generic_major_alliance
 		prerequisite = { focus = TU_VIC_rally_dukes }
+		icon = GFX_goal_generic_major_alliance
 		x = -3
 		y = 4
 		cost = 10
@@ -240,9 +240,9 @@
 
 	focus = {
 		id = TU_VIC_aslan_legitimacy
-		icon = GFX_goal_generic_propaganda
 		prerequisite = { focus = TU_VIC_siege_crowned }
 		mutually_exclusive = { focus = TU_VIC_dukes_order }
+		icon = GFX_goal_generic_propaganda
 		x = -3
 		y = 5
 		cost = 10
@@ -259,8 +259,8 @@
 
 	focus = {
 		id = TU_VIC_dublinn_uprising
-		icon = GFX_goal_generic_defence
 		prerequisite = { focus = TU_VIC_dukes_summit }
+		icon = GFX_goal_generic_defence
 		x = 4
 		y = 2
 		cost = 5
@@ -276,9 +276,9 @@
 
 	focus = {
 		id = TU_VIC_dublinn_suppression
-		icon = GFX_goal_generic_special_forces
 		prerequisite = { focus = TU_VIC_dublinn_uprising }
 		mutually_exclusive = { focus = TU_VIC_dublinn_talks }
+		icon = GFX_goal_generic_special_forces
 		x = 3
 		y = 3
 		cost = 10
@@ -293,8 +293,8 @@
 
 	focus = {
 		id = TU_VIC_suppression_garrison
-		icon = GFX_goal_generic_fortify_city
 		prerequisite = { focus = TU_VIC_dublinn_suppression }
+		icon = GFX_goal_generic_fortify_city
 		x = 3
 		y = 4
 		cost = 10
@@ -309,8 +309,8 @@
 
 	focus = {
 		id = TU_VIC_public_order
-		icon = GFX_goal_generic_political_pressure
 		prerequisite = { focus = TU_VIC_suppression_garrison }
+		icon = GFX_goal_generic_political_pressure
 		x = 3
 		y = 5
 		cost = 10
@@ -325,9 +325,9 @@
 
 	focus = {
 		id = TU_VIC_dublinn_talks
-		icon = GFX_goal_generic_trade
 		prerequisite = { focus = TU_VIC_dublinn_uprising }
 		mutually_exclusive = { focus = TU_VIC_dublinn_suppression }
+		icon = GFX_goal_generic_trade
 		x = 5
 		y = 3
 		cost = 10
@@ -343,8 +343,8 @@
 
 	focus = {
 		id = TU_VIC_dublinn_charter
-		icon = GFX_goal_generic_consumer_goods
 		prerequisite = { focus = TU_VIC_dublinn_talks }
+		icon = GFX_goal_generic_consumer_goods
 		x = 5
 		y = 4
 		cost = 10
@@ -359,8 +359,8 @@
 
 	focus = {
 		id = TU_VIC_steam_knight_formation
-		icon = GFX_goal_generic_army_tanks
 		prerequisite = { focus = TU_VIC_dublinn_charter }
+		icon = GFX_goal_generic_army_tanks
 		x = 5
 		y = 5
 		cost = 10
@@ -384,8 +384,8 @@
 
 	focus = {
 		id = TU_VIC_steam_knight_training
-		icon = GFX_goal_generic_army_doctrines
 		prerequisite = { focus = TU_VIC_steam_knight_formation }
+		icon = GFX_goal_generic_army_doctrines
 		x = 5
 		y = 6
 		cost = 10

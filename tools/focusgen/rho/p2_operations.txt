@@ -136,9 +136,8 @@
 
 		completion_reward = {
 			set_country_flag = TU_RHO_ops_ls_stable
-			army_experience = 25
-			add_war_support = 0.03
-			add_doctrine_cost_reduction = { name = TU_RHO_ops_ls_stable cost_reduction = 0.4 uses = 1 category = land_doctrine }
+			add_political_power = 60
+			add_tech_bonus = { name = TU_RHO_ops_ls_stable bonus = 0.75 uses = 1 category = industry }
 		}
 	}
 
@@ -199,10 +198,9 @@
 
 		completion_reward = {
 			set_country_flag = TU_RHO_ops_dock_plan
-			TU_build_dockyard = yes
-			add_tech_bonus = { name = TU_RHO_ops_ls_dock_plan bonus = 0.75 uses = 1 category = dd_tech category = ca_tech }
-			add_doctrine_cost_reduction = { name = TU_RHO_ops_ls_dock_plan cost_reduction = 0.4 uses = 1 category = naval_doctrine }
-			navy_experience = 25
+			TU_build_civ_factory = yes
+			add_political_power = 60
+			add_tech_bonus = { name = TU_RHO_ops_ls_dock_plan bonus = 0.75 uses = 1 category = industry }
 		}
 	}
 
@@ -627,7 +625,7 @@
 
 		completion_reward = {
 			set_country_flag = TU_RHO_ops_plan_dock
-			TU_build_dockyard = yes
+			TU_build_civ_factory = yes
 			add_tech_bonus = { name = TU_RHO_ops_riic_dock_plan bonus = 0.75 uses = 1 category = construction_tech }
 			add_tech_bonus = { name = TU_RHO_ops_riic_dock_plan bonus = 0.75 uses = 1 category = motorized_equipment }
 		}
@@ -753,10 +751,9 @@
 
 		completion_reward = {
 			set_country_flag = TU_RHO_ops_dock_started
-			TU_build_dockyard = yes
-			add_tech_bonus = { name = TU_RHO_ops_riic_dock_build bonus = 0.75 uses = 1 category = dd_tech category = ca_tech }
-			add_doctrine_cost_reduction = { name = TU_RHO_ops_riic_dock_build cost_reduction = 0.4 uses = 1 category = naval_doctrine }
-			navy_experience = 25
+			TU_build_civ_factory = yes
+			add_political_power = 60
+			add_tech_bonus = { name = TU_RHO_ops_riic_dock_build bonus = 0.75 uses = 1 category = industry }
 		}
 	}
 

@@ -1,9 +1,9 @@
 	#### CONSCRIPTION: MASS DRAFT vs ELITE DRAFT (mutually exclusive) ####
 	focus = {
 		id = TU_URS_army_mass_draft
-		icon = GFX_goal_generic_allies_build_infantry
 		prerequisite = { focus = TU_URS_army_root }
 		mutually_exclusive = { focus = TU_URS_army_elite_draft }
+		icon = GFX_goal_generic_allies_build_infantry
 		x = 22
 		y = 1
 		cost = 10
@@ -27,9 +27,9 @@
 
 	focus = {
 		id = TU_URS_army_elite_draft
-		icon = GFX_goal_generic_special_forces
 		prerequisite = { focus = TU_URS_army_root }
 		mutually_exclusive = { focus = TU_URS_army_mass_draft }
+		icon = GFX_goal_generic_special_forces
 		x = 26
 		y = 1
 		cost = 10
@@ -53,8 +53,8 @@
 	#### FROZEN GROUND WARFARE (x 16-18) ####
 	focus = {
 		id = TU_URS_army_frost_drill
-		icon = GFX_goal_generic_small_arms
 		prerequisite = { focus = TU_URS_army_root }
+		icon = GFX_goal_generic_small_arms
 		x = 18
 		y = 1
 		cost = 10
@@ -74,8 +74,8 @@
 	#### ARTS UNITS (x 20) ####
 	focus = {
 		id = TU_URS_army_arts_trials
-		icon = GFX_goal_generic_secret_weapon
 		prerequisite = { focus = TU_URS_army_root }
+		icon = GFX_goal_generic_secret_weapon
 		x = 20
 		y = 1
 		cost = 10
@@ -94,8 +94,8 @@
 
 	focus = {
 		id = TU_URS_army_conscript_camps
-		icon = GFX_goal_generic_allies_build_infantry
 		prerequisite = { focus = TU_URS_army_mass_draft focus = TU_URS_army_elite_draft }
+		icon = GFX_goal_generic_allies_build_infantry
 		x = 22
 		y = 2
 		cost = 10
@@ -114,8 +114,8 @@
 
 	focus = {
 		id = TU_URS_army_guard_selection
-		icon = GFX_goal_generic_special_forces
 		prerequisite = { focus = TU_URS_army_elite_draft }
+		icon = GFX_goal_generic_special_forces
 		x = 26
 		y = 2
 		cost = 10
@@ -134,8 +134,8 @@
 
 	focus = {
 		id = TU_URS_army_winter_doctrine
-		icon = GFX_goal_generic_army_doctrines
 		prerequisite = { focus = TU_URS_army_frost_drill }
+		icon = GFX_goal_generic_army_doctrines
 		x = 18
 		y = 2
 		cost = 10
@@ -155,8 +155,8 @@
 
 	focus = {
 		id = TU_URS_army_arts_assault
-		icon = GFX_goal_generic_secret_weapon
 		prerequisite = { focus = TU_URS_army_arts_trials }
+		icon = GFX_goal_generic_secret_weapon
 		x = 20
 		y = 2
 		cost = 10
@@ -177,8 +177,8 @@
 	#### ARTILLERY (x 24) ####
 	focus = {
 		id = TU_URS_army_artillery_school
-		icon = GFX_goal_generic_army_artillery
 		prerequisite = { focus = TU_URS_army_root }
+		icon = GFX_goal_generic_army_artillery
 		x = 24
 		y = 2
 		cost = 10
@@ -197,8 +197,8 @@
 
 	focus = {
 		id = TU_URS_army_conscript_levy
-		icon = GFX_goal_generic_allies_build_infantry
 		prerequisite = { focus = TU_URS_army_conscript_camps }
+		icon = GFX_goal_generic_allies_build_infantry
 		x = 22
 		y = 3
 		cost = 10
@@ -218,8 +218,8 @@
 	#### ARMOUR (x 26) ####
 	focus = {
 		id = TU_URS_army_armour_school
-		icon = GFX_goal_generic_army_tanks
 		prerequisite = { focus = TU_URS_army_guard_selection }
+		icon = GFX_goal_generic_army_tanks
 		x = 26
 		y = 3
 		cost = 10
@@ -239,9 +239,9 @@
 	#### FROZEN: ENTRENCH vs MOBILE (mutually exclusive) ####
 	focus = {
 		id = TU_URS_army_frost_entrench
-		icon = GFX_goal_generic_fortify_city
 		prerequisite = { focus = TU_URS_army_winter_doctrine }
 		mutually_exclusive = { focus = TU_URS_army_frost_mobile }
+		icon = GFX_goal_generic_fortify_city
 		x = 18
 		y = 3
 		cost = 10
@@ -259,9 +259,9 @@
 
 	focus = {
 		id = TU_URS_army_frost_mobile
-		icon = GFX_goal_generic_army_motorized
 		prerequisite = { focus = TU_URS_army_winter_doctrine }
 		mutually_exclusive = { focus = TU_URS_army_frost_entrench }
+		icon = GFX_goal_generic_army_motorized
 		x = 16
 		y = 3
 		cost = 10
@@ -280,8 +280,8 @@
 
 	focus = {
 		id = TU_URS_army_arts_legion
-		icon = GFX_goal_generic_secret_weapon
 		prerequisite = { focus = TU_URS_army_arts_assault }
+		icon = GFX_goal_generic_secret_weapon
 		x = 20
 		y = 3
 		cost = 10
@@ -299,8 +299,8 @@
 
 	focus = {
 		id = TU_URS_army_artillery_doctrine
-		icon = GFX_goal_generic_army_artillery2
 		prerequisite = { focus = TU_URS_army_artillery_school }
+		icon = GFX_goal_generic_army_artillery2
 		x = 24
 		y = 3
 		cost = 10
@@ -321,9 +321,9 @@
 	#### TOTAL MOBILISATION vs PROFESSIONAL ARMY (mutually exclusive) ####
 	focus = {
 		id = TU_URS_army_mass_mobilisation
-		icon = GFX_goal_generic_national_unity
 		prerequisite = { focus = TU_URS_army_conscript_levy }
 		mutually_exclusive = { focus = TU_URS_army_professional }
+		icon = GFX_goal_generic_national_unity
 		x = 22
 		y = 4
 		cost = 10
@@ -343,9 +343,9 @@
 
 	focus = {
 		id = TU_URS_army_professional
-		icon = GFX_goal_generic_army_doctrines
 		prerequisite = { focus = TU_URS_army_armour_school }
 		mutually_exclusive = { focus = TU_URS_army_mass_mobilisation }
+		icon = GFX_goal_generic_army_doctrines
 		x = 26
 		y = 4
 		cost = 10
@@ -364,8 +364,8 @@
 
 	focus = {
 		id = TU_URS_army_artillery_barrage
-		icon = GFX_goal_generic_army_artillery
 		prerequisite = { focus = TU_URS_army_artillery_doctrine }
+		icon = GFX_goal_generic_army_artillery
 		x = 24
 		y = 4
 		cost = 10
@@ -384,8 +384,8 @@
 
 	focus = {
 		id = TU_URS_army_frost_raid
-		icon = GFX_goal_generic_army_motorized
 		prerequisite = { focus = TU_URS_army_frost_mobile }
+		icon = GFX_goal_generic_army_motorized
 		x = 16
 		y = 4
 		cost = 10
@@ -404,8 +404,8 @@
 
 	focus = {
 		id = TU_URS_army_armour_division
-		icon = GFX_goal_generic_build_tank
 		prerequisite = { focus = TU_URS_army_professional }
+		icon = GFX_goal_generic_build_tank
 		x = 26
 		y = 5
 		cost = 15
@@ -424,8 +424,8 @@
 
 	focus = {
 		id = TU_URS_army_reserve
-		icon = GFX_goal_generic_army_doctrines
 		prerequisite = { focus = TU_URS_army_mass_mobilisation }
+		icon = GFX_goal_generic_army_doctrines
 		x = 22
 		y = 5
 		cost = 10
@@ -444,8 +444,8 @@
 
 	focus = {
 		id = TU_URS_army_artillery_corps
-		icon = GFX_goal_generic_army_artillery2
 		prerequisite = { focus = TU_URS_army_artillery_barrage }
+		icon = GFX_goal_generic_army_artillery2
 		x = 24
 		y = 5
 		cost = 15
@@ -465,8 +465,8 @@
 	#### CONVERGENCE: COMBINED ARMS ####
 	focus = {
 		id = TU_URS_army_combined_arms
-		icon = GFX_goal_generic_army_doctrines
 		prerequisite = { focus = TU_URS_army_reserve focus = TU_URS_army_artillery_corps }
+		icon = GFX_goal_generic_army_doctrines
 		x = 22
 		y = 6
 		cost = 15
@@ -485,8 +485,8 @@
 
 	focus = {
 		id = TU_URS_army_armour_doctrine
-		icon = GFX_goal_generic_army_tanks
 		prerequisite = { focus = TU_URS_army_armour_division }
+		icon = GFX_goal_generic_army_tanks
 		x = 26
 		y = 6
 		cost = 10
@@ -506,8 +506,8 @@
 
 	focus = {
 		id = TU_URS_army_general_staff
-		icon = GFX_goal_generic_army_doctrines
 		prerequisite = { focus = TU_URS_army_combined_arms }
+		icon = GFX_goal_generic_army_doctrines
 		x = 22
 		y = 7
 		cost = 10
@@ -531,8 +531,8 @@
 
 	focus = {
 		id = TU_URS_army_total_war
-		icon = GFX_goal_generic_construct_military
 		prerequisite = { focus = TU_URS_army_general_staff }
+		icon = GFX_goal_generic_construct_military
 		x = 22
 		y = 9
 		cost = 15
@@ -553,8 +553,8 @@
 
 	focus = {
 		id = TU_URS_army_grand
-		icon = GFX_goal_generic_army_motorized
 		prerequisite = { focus = TU_URS_army_total_war }
+		icon = GFX_goal_generic_army_motorized
 		x = 22
 		y = 11
 		cost = 15
@@ -573,8 +573,8 @@
 
 	focus = {
 		id = TU_URS_army_final
-		icon = GFX_goal_generic_army_tanks
 		prerequisite = { focus = TU_URS_army_grand }
+		icon = GFX_goal_generic_army_tanks
 		x = 22
 		y = 13
 		cost = 15
@@ -594,8 +594,8 @@
 
 	focus = {
 		id = TU_URS_army_supreme
-		icon = GFX_goal_generic_army_doctrines
 		prerequisite = { focus = TU_URS_army_final }
+		icon = GFX_goal_generic_army_doctrines
 		x = 22
 		y = 15
 		cost = 15
@@ -615,8 +615,8 @@
 	#### END OF THE ARMY LINE ####
 	focus = {
 		id = TU_URS_army_marshal
-		icon = GFX_goal_generic_construct_military
 		prerequisite = { focus = TU_URS_army_supreme }
+		icon = GFX_goal_generic_construct_military
 		x = 22
 		y = 18
 		cost = 15

@@ -4,8 +4,8 @@
 
 	focus = {
 		id = TU_URS_w4_pact_entry
-		icon = GFX_goal_generic_national_unity
 		prerequisite = { focus = TU_URS_foreign_ministry }
+		icon = GFX_goal_generic_national_unity
 		x = 189
 		y = 2
 		cost = 5
@@ -24,8 +24,8 @@
 
 	focus = {
 		id = TU_URS_alliance_search
-		icon = GFX_goal_generic_improve_relations
 		prerequisite = { focus = TU_URS_w4_pact_entry }
+		icon = GFX_goal_generic_improve_relations
 		x = 191
 		y = 2
 		cost = 10
@@ -38,16 +38,15 @@
 
 		completion_reward = {
 			set_country_flag = TU_dip_alliance_unlocked
-			add_tech_bonus = { name = TU_URS_alliance_search bonus = 0.75 uses = 1 category = dd_tech category = ca_tech }
-			add_doctrine_cost_reduction = { name = TU_URS_alliance_search cost_reduction = 0.4 uses = 1 category = naval_doctrine }
-			navy_experience = 25
+			add_political_power = 60
+			add_stability = 0.03
 		}
 	}
 
 	focus = {
 		id = TU_URS_w4_pact_charter
-		icon = GFX_goal_generic_major_alliance
 		prerequisite = { focus = TU_URS_alliance_search }
+		icon = GFX_goal_generic_major_alliance
 		available = {
 			NOT = { is_in_faction = yes }
 			NOT = { has_country_flag = TU_DEC_TU_URS_w4_pact_neutral }
@@ -93,8 +92,8 @@
 
 	focus = {
 		id = TU_URS_w4_pact_defence
-		icon = GFX_goal_generic_defence
 		prerequisite = { focus = TU_URS_w4_pact_charter }
+		icon = GFX_goal_generic_defence
 		x = 188
 		y = 4
 		cost = 10
@@ -113,8 +112,8 @@
 
 	focus = {
 		id = TU_URS_w4_pact_army
-		icon = GFX_goal_generic_army_doctrines
 		prerequisite = { focus = TU_URS_w4_pact_charter }
+		icon = GFX_goal_generic_army_doctrines
 		x = 190
 		y = 4
 		cost = 10
@@ -133,8 +132,8 @@
 
 	focus = {
 		id = TU_URS_w4_pact_summit
-		icon = GFX_goal_generic_improve_relations
 		prerequisite = { focus = TU_URS_w4_pact_defence }
+		icon = GFX_goal_generic_improve_relations
 		x = 188
 		y = 6
 		cost = 10
@@ -153,8 +152,8 @@
 
 	focus = {
 		id = TU_URS_w4_pact_trade
-		icon = GFX_goal_generic_positive_trade_relations
 		prerequisite = { focus = TU_URS_w4_pact_army }
+		icon = GFX_goal_generic_positive_trade_relations
 		x = 190
 		y = 6
 		cost = 10
@@ -174,8 +173,8 @@
 
 	focus = {
 		id = TU_URS_w4_pact_common_army
-		icon = GFX_goal_generic_army_artillery
 		prerequisite = { focus = TU_URS_w4_pact_summit }
+		icon = GFX_goal_generic_army_artillery
 		available = { has_completed_focus = TU_URS_military_junta }
 		x = 188
 		y = 8
@@ -195,8 +194,8 @@
 
 	focus = {
 		id = TU_URS_w4_pact_secretariat
-		icon = GFX_goal_generic_political_pressure
 		prerequisite = { focus = TU_URS_w4_pact_trade }
+		icon = GFX_goal_generic_political_pressure
 		available = { has_completed_focus = TU_URS_reform_path }
 		x = 190
 		y = 8
@@ -218,8 +217,8 @@
 
 	focus = {
 		id = TU_URS_w4_order_entry
-		icon = GFX_goal_generic_national_unity
 		prerequisite = { focus = TU_URS_foreign_ministry }
+		icon = GFX_goal_generic_national_unity
 		x = 193
 		y = 2
 		cost = 5
@@ -238,9 +237,9 @@
 
 	focus = {
 		id = TU_URS_w4_order_doctrine
-		icon = GFX_goal_generic_army_doctrines
 		prerequisite = { focus = TU_URS_w4_order_entry }
 		mutually_exclusive = { focus = TU_URS_w4_order_council }
+		icon = GFX_goal_generic_army_doctrines
 		available = { has_completed_focus = TU_URS_emperor_rule }
 		x = 192
 		y = 4
@@ -260,9 +259,9 @@
 
 	focus = {
 		id = TU_URS_w4_order_council
-		icon = GFX_goal_generic_political_pressure
 		prerequisite = { focus = TU_URS_w4_order_entry }
 		mutually_exclusive = { focus = TU_URS_w4_order_doctrine }
+		icon = GFX_goal_generic_political_pressure
 		x = 194
 		y = 4
 		cost = 10
@@ -281,8 +280,8 @@
 
 	focus = {
 		id = TU_URS_w4_order_mandate
-		icon = GFX_goal_generic_major_war
 		prerequisite = { focus = TU_URS_w4_order_doctrine }
+		icon = GFX_goal_generic_major_war
 		x = 192
 		y = 6
 		cost = 10
@@ -302,8 +301,8 @@
 
 	focus = {
 		id = TU_URS_w4_order_charter
-		icon = GFX_goal_generic_alliance
 		prerequisite = { focus = TU_URS_w4_order_council }
+		icon = GFX_goal_generic_alliance
 		x = 194
 		y = 6
 		cost = 10
@@ -322,8 +321,8 @@
 
 	focus = {
 		id = TU_URS_w4_order_mobilization
-		icon = GFX_goal_generic_production
 		prerequisite = { focus = TU_URS_w4_order_charter }
+		icon = GFX_goal_generic_production
 		x = 194
 		y = 8
 		cost = 10
@@ -345,8 +344,8 @@
 
 	focus = {
 		id = TU_URS_w4_rho_entry
-		icon = GFX_goal_generic_improve_relations
 		prerequisite = { focus = TU_URS_foreign_ministry }
+		icon = GFX_goal_generic_improve_relations
 		x = 197
 		y = 2
 		cost = 5
@@ -358,16 +357,15 @@
 		}
 
 		completion_reward = {
-			add_tech_bonus = { name = TU_URS_w4_rho_entry bonus = 0.5 uses = 1 category = dd_tech category = ca_tech }
-			add_doctrine_cost_reduction = { name = TU_URS_w4_rho_entry cost_reduction = 0.25 uses = 1 category = naval_doctrine }
-			navy_experience = 15
+			add_political_power = 35
+			add_stability = 0.02
 		}
 	}
 
 	focus = {
 		id = TU_URS_w4_rho_trade_pact
-		icon = GFX_goal_generic_trade
 		prerequisite = { focus = TU_URS_w4_rho_entry }
+		icon = GFX_goal_generic_trade
 		x = 196
 		y = 5
 		cost = 10
@@ -391,8 +389,8 @@
 
 	focus = {
 		id = TU_URS_w4_rho_blockade
-		icon = GFX_goal_generic_fortify_city
 		prerequisite = { focus = TU_URS_w4_rho_entry }
+		icon = GFX_goal_generic_fortify_city
 		x = 198
 		y = 5
 		cost = 10
@@ -408,9 +406,8 @@
 		}
 
 		completion_reward = {
-			add_tech_bonus = { name = TU_URS_w4_rho_blockade bonus = 0.75 uses = 1 category = dd_tech category = ca_tech }
-			add_doctrine_cost_reduction = { name = TU_URS_w4_rho_blockade cost_reduction = 0.4 uses = 1 category = naval_doctrine }
-			navy_experience = 25
+			add_tech_bonus = { name = TU_URS_w4_rho_blockade bonus = 0.75 uses = 1 category = construction_tech }
+			army_experience = 25
 		}
 	}
 
@@ -418,8 +415,8 @@
 
 	focus = {
 		id = TU_URS_w4_reu_entry
-		icon = GFX_goal_generic_national_unity
 		prerequisite = { focus = TU_URS_foreign_ministry }
+		icon = GFX_goal_generic_national_unity
 		available = { has_global_flag = TU_chernobog_incident_started }
 		x = 199
 		y = 10
@@ -439,8 +436,8 @@
 
 	focus = {
 		id = TU_URS_w4_reu_army
-		icon = GFX_goal_generic_army_artillery
 		prerequisite = { focus = TU_URS_w4_reu_entry }
+		icon = GFX_goal_generic_army_artillery
 		x = 198
 		y = 14
 		cost = 10
@@ -463,8 +460,8 @@
 
 	focus = {
 		id = TU_URS_w4_reu_autonomy
-		icon = GFX_goal_generic_consumer_goods
 		prerequisite = { focus = TU_URS_w4_reu_entry }
+		icon = GFX_goal_generic_consumer_goods
 		available = {
 			has_completed_focus = TU_URS_reform_path
 			has_country_flag = TU_DEC_TU_URS_w4_reu_negotiate
@@ -488,8 +485,8 @@
 
 	focus = {
 		id = TU_URS_w4_reu_rebuild
-		icon = GFX_goal_generic_construction2
 		prerequisite = { focus = TU_URS_w4_reu_army }
+		icon = GFX_goal_generic_construction2
 		available = { has_global_flag = TU_chernobog_incident_resolved }
 		x = 198
 		y = 16

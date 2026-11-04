@@ -225,7 +225,7 @@ f("royal_marriages", "왕실 혼인", "Royal Marriage Alliance", pre=["hostage_p
 f("lords_markets", "영주의 시장", "Lords' Markets", pre=["lords_levies"])
 f("tribal_warriors", "부족 전사", "Tribal Warrior Regiments", pre=["lords_levies"])
 f("clan_elders", "부족 원로", "Clan Elders Council", pre=["tribal_accord"])
-f("river_ports", "강 항구", "River Ports Harbour", pre=["jungle_lords"], econ="TU_build_dockyard = yes")
+f("river_ports", "강 항구", "River Ports Harbour", pre=["jungle_lords"], econ="TU_build_civ_factory = yes")
 f("salt_trade", "소금 교역", "Salt Trade", pre=["caravan_trade"], reward=[GOLD(5)])
 f("incense_routes", "향료 교역", "Incense Trade", pre=["oasis_markets"], reward=[GOLD(5)])
 f("caravanserai", "대상 숙소", "Caravanserai Construction", pre=["caravan_guards"], econ=True)

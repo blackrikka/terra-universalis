@@ -99,7 +99,6 @@ C.idea("shogunate", "쇼군의 막부", "The Shogunate", {"stability_factor": 0.
 C.idea("open_far_east", "개국 극동", "The Opened Far East", {"research_speed_factor": 0.07, "production_factory_max_efficiency_factor": 0.05}, "generic_foreign_capital")
 C.idea("imperial_restoration", "천황 친정", "Imperial Restoration", {"political_power_gain": 0.15, "war_support_factor": 0.1, "conscription_factor": 0.05},
        "generic_political_support")
-C.idea("combined_fleet", "극동 연합 함대", "Far East Combined Fleet", {"navy_org_factor": 0.08, "naval_speed_factor": 0.05}, "generic_navy_bonus")
 C.idea("bushido", "무사도", "Bushido", {"army_morale_factor": 0.08, "army_attack_factor": 0.03}, "generic_morale_bonus")
 C.idea("shinobi_network", "그림자 조직", "Shadow Network", {"political_power_gain": 0.05, "stability_factor": 0.03}, "generic_intel_bonus")
 C.idea("modern_army", "근대 육군", "Modern Army", {"army_attack_factor": 0.05, "army_org_factor": 0.03}, "generic_army_europe_1")
@@ -182,8 +181,8 @@ f("naval_academy", "해군 학교", "Naval Academy", pre=["coastal_fleet"])
 f("cruiser_fleet", "순양함 함대", "Cruiser Fleet", pre=["naval_academy"], me=["submarine_fleet"])
 f("submarine_fleet", "잠수함 함대", "Submarine Fleet", pre=["naval_academy"], me=["cruiser_fleet"])
 f("combined_fleet", "연합 함대", "Combined Fleet", pre=[["cruiser_fleet", "submarine_fleet"]], theme=False,
-  reward=["add_ideas = TU_HIG_combined_fleet", "navy_experience = 50"])
-f("dockyards", "조선소", "Dockyards", pre=["coastal_fleet"], econ="TU_build_dockyard = yes")
+  reward=["add_ideas = TU_HIG_combined_fleet", "army_experience = 50"])
+f("dockyards", "조선소", "Dockyards", pre=["coastal_fleet"], econ="TU_build_civ_factory = yes")
 f("naval_aviation", "해군 항공대", "Naval Aviation", pre=["combined_fleet"])
 
 # G. 경제
@@ -228,7 +227,7 @@ for sid, ko, en, pre, econ in (
         ("porcelain", "도자기 공방", "Porcelain Workshops", "rice_harvest", True),
         ("coal_mines", "탄광", "Coal Mines", "industrial_district", True),
         ("steel_works", "제철소", "Steel Works", "coal_mines", True),
-        ("shipbuilding", "조선 산업", "Shipbuilding Docks", "rail_network", "TU_build_dockyard = yes"),
+        ("shipbuilding", "조선 산업", "Shipbuilding Docks", "rail_network", "TU_build_civ_factory = yes"),
         ("yan_relations", "염국 관계", "Yan Relations Envoys", "foreign_ships", False),
         ("lungmen_trade", "용문 교역", "Lungmen Trade Accord", "yan_relations", False),
         ("rhodes_contact", "로도스 아일랜드 접촉", "Rhodes Island Contact Pact", "foreign_ships", False),
@@ -241,9 +240,9 @@ cat_p = C.category("ports", "개항과 쇄국", "Ports and Seclusion",
                    ("연 항구마다 매달 정치력 +0.5, 외세 영향 +2. 외세 영향이 60을 넘으면 존왕양이 봉기가 일어난다.",
                     "Each open port gives +0.5 political power and +2 foreign influence per month. Above 60 influence, loyalist uprisings break out."),
                    visible=["OR = {", "\t" + HAS("ports"), "\t" + HAS("close"), "}"])
-C.d(cat_p, "open_port", "항구 개항", "Open a Port", [V("ports", 1), "TU_build_dockyard = yes", FOR(5)], cost=50, once=False,
+C.d(cat_p, "open_port", "항구 개항", "Open a Port", [V("ports", 1), "TU_build_civ_factory = yes", FOR(5)], cost=50, once=False,
     days_re_enable=120, visible=[HAS("ports")], available=[AT_MOST("ports", 3)],
-    desc=("개항장 +1 (최대 4), 조선소, 외세 영향 +5", "Treaty ports +1 (max 4), a dockyard, foreign influence +5"), icon="GFX_decision_generic_naval")
+    desc=("개항장 +1 (최대 4), 민간 공장, 외세 영향 +5", "Treaty ports +1 (max 4), a civilian factory, foreign influence +5"), icon="GFX_decision_generic_naval")
 C.d(cat_p, "close_port", "항구 폐쇄", "Close a Port", [V("ports", -1), FOR(-10), "add_stability = 0.02"], cost=25, once=False,
     days_re_enable=120, visible=[HAS("close")], available=[AT_LEAST("ports", 1)])
 C.d(cat_p, "foreign_tech", "외국 기술 도입", "Import Foreign Technology",
@@ -365,8 +364,8 @@ C.ev(32, ("떠돌이 낭인", "A Wandering Ronin"), ("검술이 뛰어난 낭인
 C.ev(33, ("쌀 폭동", "Rice Riots"), ("쌀값이 치솟자 백성들이 쌀가게를 습격했다.", "As rice prices soared, people raided rice shops."),
      [("비축미를 푼다.", "Release reserves.", ["add_political_power = -30", "add_stability = 0.02"], 60), ("진압한다.", "Suppress them.", ["add_stability = -0.03"], 40)],
      trigger=["original_tag = HIG", AT_LEAST("foreign", 40)], mtth=300)
-C.ev(34, ("닌자의 공훈", "A Shinobi's Triumph"), ("닌자가 외국 함대의 설계도를 가져왔다.", "A shinobi brought back plans of a foreign fleet."),
-     [("훌륭하다.", "Excellent.", ["add_tech_bonus = { name = TU_HIG_plans bonus = 0.75 uses = 1 category = dd_tech category = ca_tech }"], 1)],
+C.ev(34, ("닌자의 공훈", "A Shinobi's Triumph"), ("닌자가 외국 육상함의 설계도를 가져왔다.", "A shinobi brought back plans of a foreign landship."),
+     [("훌륭하다.", "Excellent.", ["add_tech_bonus = { name = TU_HIG_plans bonus = 0.75 uses = 1 category = industry }"], 1)],
      trigger=["original_tag = HIG", AT_LEAST("shinobi", 5)], mtth=300)
 
 if __name__ == "__main__":

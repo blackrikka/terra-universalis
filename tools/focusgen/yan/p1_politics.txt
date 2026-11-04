@@ -7,9 +7,9 @@
 
 	focus = {
 		id = TU_YAN_p1_throne_root
-		icon = GFX_goal_generic_national_unity
 		prerequisite = { focus = TU_YAN_imperial_reform }
 		mutually_exclusive = { focus = TU_YAN_p1_depose_root }
+		icon = GFX_goal_generic_national_unity
 		x = 0
 		y = 0
 		cost = 5
@@ -32,9 +32,9 @@
 
 	focus = {
 		id = TU_YAN_p1_throne_court_purge
-		icon = GFX_goal_generic_political_pressure
 		prerequisite = { focus = TU_YAN_p1_throne_root }
 		mutually_exclusive = { focus = TU_YAN_p1_throne_court_pact }
+		icon = GFX_goal_generic_political_pressure
 		x = 0
 		y = 0
 		cost = 10
@@ -54,9 +54,9 @@
 
 	focus = {
 		id = TU_YAN_p1_throne_court_pact
-		icon = GFX_goal_generic_improve_relations
 		prerequisite = { focus = TU_YAN_p1_throne_root }
 		mutually_exclusive = { focus = TU_YAN_p1_throne_court_purge }
+		icon = GFX_goal_generic_improve_relations
 		x = 0
 		y = 0
 		cost = 10
@@ -76,8 +76,8 @@
 
 	focus = {
 		id = TU_YAN_p1_throne_court_settled
-		icon = GFX_goal_generic_national_unity
 		prerequisite = { focus = TU_YAN_p1_throne_court_purge focus = TU_YAN_p1_throne_court_pact }
+		icon = GFX_goal_generic_national_unity
 		x = 0
 		y = 0
 		cost = 10
@@ -97,9 +97,9 @@
 
 	focus = {
 		id = TU_YAN_p1_throne_appoint
-		icon = GFX_goal_generic_construction
 		prerequisite = { focus = TU_YAN_p1_throne_court_settled }
 		mutually_exclusive = { focus = TU_YAN_p1_throne_bargain }
+		icon = GFX_goal_generic_construction
 		x = 0
 		y = 0
 		cost = 10
@@ -119,9 +119,9 @@
 
 	focus = {
 		id = TU_YAN_p1_throne_bargain
-		icon = GFX_goal_generic_military_deal
 		prerequisite = { focus = TU_YAN_p1_throne_court_settled }
 		mutually_exclusive = { focus = TU_YAN_p1_throne_appoint }
+		icon = GFX_goal_generic_military_deal
 		x = 0
 		y = 0
 		cost = 10
@@ -141,8 +141,8 @@
 
 	focus = {
 		id = TU_YAN_p1_throne_admin
-		icon = GFX_goal_generic_construction2
 		prerequisite = { focus = TU_YAN_p1_throne_appoint focus = TU_YAN_p1_throne_bargain }
+		icon = GFX_goal_generic_construction2
 		x = 0
 		y = 0
 		cost = 10
@@ -162,9 +162,9 @@
 
 	focus = {
 		id = TU_YAN_p1_throne_guard
-		icon = GFX_goal_generic_army_doctrines
 		prerequisite = { focus = TU_YAN_p1_throne_admin }
 		mutually_exclusive = { focus = TU_YAN_p1_throne_levy }
+		icon = GFX_goal_generic_army_doctrines
 		x = 0
 		y = 0
 		cost = 10
@@ -184,9 +184,9 @@
 
 	focus = {
 		id = TU_YAN_p1_throne_levy
-		icon = GFX_goal_generic_allies_build_infantry
 		prerequisite = { focus = TU_YAN_p1_throne_admin }
 		mutually_exclusive = { focus = TU_YAN_p1_throne_guard }
+		icon = GFX_goal_generic_allies_build_infantry
 		x = 0
 		y = 0
 		cost = 10
@@ -206,8 +206,8 @@
 
 	focus = {
 		id = TU_YAN_p1_throne_loyal
-		icon = GFX_goal_generic_army_motorized
 		prerequisite = { focus = TU_YAN_p1_throne_guard focus = TU_YAN_p1_throne_levy }
+		icon = GFX_goal_generic_army_motorized
 		x = 0
 		y = 0
 		cost = 10
@@ -227,9 +227,9 @@
 
 	focus = {
 		id = TU_YAN_p1_throne_treasury
-		icon = GFX_goal_generic_trade
 		prerequisite = { focus = TU_YAN_p1_throne_loyal }
 		mutually_exclusive = { focus = TU_YAN_p1_throne_tax }
+		icon = GFX_goal_generic_trade
 		x = 0
 		y = 0
 		cost = 10
@@ -249,9 +249,9 @@
 
 	focus = {
 		id = TU_YAN_p1_throne_tax
-		icon = GFX_goal_generic_consumer_goods
 		prerequisite = { focus = TU_YAN_p1_throne_loyal }
 		mutually_exclusive = { focus = TU_YAN_p1_throne_treasury }
+		icon = GFX_goal_generic_consumer_goods
 		x = 0
 		y = 0
 		cost = 10
@@ -270,8 +270,8 @@
 
 	focus = {
 		id = TU_YAN_p1_throne_fiscal
-		icon = GFX_goal_generic_production
 		prerequisite = { focus = TU_YAN_p1_throne_treasury focus = TU_YAN_p1_throne_tax }
+		icon = GFX_goal_generic_production
 		x = 0
 		y = 0
 		cost = 10
@@ -291,9 +291,9 @@
 
 	focus = {
 		id = TU_YAN_p1_throne_codex
-		icon = GFX_goal_generic_political_pressure
 		prerequisite = { focus = TU_YAN_p1_throne_fiscal }
 		mutually_exclusive = { focus = TU_YAN_p1_throne_bureau }
+		icon = GFX_goal_generic_political_pressure
 		x = 0
 		y = 0
 		cost = 10
@@ -313,9 +313,9 @@
 
 	focus = {
 		id = TU_YAN_p1_throne_bureau
-		icon = GFX_goal_generic_intelligence_exchange
 		prerequisite = { focus = TU_YAN_p1_throne_fiscal }
 		mutually_exclusive = { focus = TU_YAN_p1_throne_codex }
+		icon = GFX_goal_generic_intelligence_exchange
 		x = 0
 		y = 0
 		cost = 10
@@ -335,8 +335,8 @@
 
 	focus = {
 		id = TU_YAN_p1_throne_statutes
-		icon = GFX_goal_generic_national_unity
 		prerequisite = { focus = TU_YAN_p1_throne_codex focus = TU_YAN_p1_throne_bureau }
+		icon = GFX_goal_generic_national_unity
 		x = 0
 		y = 0
 		cost = 10
@@ -356,9 +356,9 @@
 
 	focus = {
 		id = TU_YAN_p1_throne_palace
-		icon = GFX_goal_generic_construction2
 		prerequisite = { focus = TU_YAN_p1_throne_statutes }
 		mutually_exclusive = { focus = TU_YAN_p1_throne_academy }
+		icon = GFX_goal_generic_construction2
 		x = 0
 		y = 0
 		cost = 10
@@ -378,9 +378,9 @@
 
 	focus = {
 		id = TU_YAN_p1_throne_academy
-		icon = GFX_goal_generic_scientific_exchange
 		prerequisite = { focus = TU_YAN_p1_throne_statutes }
 		mutually_exclusive = { focus = TU_YAN_p1_throne_palace }
+		icon = GFX_goal_generic_scientific_exchange
 		x = 0
 		y = 0
 		cost = 10
@@ -400,8 +400,8 @@
 
 	focus = {
 		id = TU_YAN_p1_throne_plan
-		icon = GFX_goal_generic_production2
 		prerequisite = { focus = TU_YAN_p1_throne_palace focus = TU_YAN_p1_throne_academy }
+		icon = GFX_goal_generic_production2
 		x = 0
 		y = 0
 		cost = 10
@@ -423,9 +423,9 @@
 
 	focus = {
 		id = TU_YAN_p1_throne_tribute
-		icon = GFX_goal_generic_positive_trade_relations
 		prerequisite = { focus = TU_YAN_p1_throne_plan }
 		mutually_exclusive = { focus = TU_YAN_p1_throne_diplomats }
+		icon = GFX_goal_generic_positive_trade_relations
 		x = 0
 		y = 0
 		cost = 10
@@ -445,9 +445,9 @@
 
 	focus = {
 		id = TU_YAN_p1_throne_diplomats
-		icon = GFX_goal_generic_improve_relations
 		prerequisite = { focus = TU_YAN_p1_throne_plan }
 		mutually_exclusive = { focus = TU_YAN_p1_throne_tribute }
+		icon = GFX_goal_generic_improve_relations
 		x = 0
 		y = 0
 		cost = 10
@@ -467,8 +467,8 @@
 
 	focus = {
 		id = TU_YAN_p1_throne_envoy_settled
-		icon = GFX_goal_generic_alliance
 		prerequisite = { focus = TU_YAN_p1_throne_tribute focus = TU_YAN_p1_throne_diplomats }
+		icon = GFX_goal_generic_alliance
 		x = 0
 		y = 0
 		cost = 10
@@ -488,9 +488,9 @@
 
 	focus = {
 		id = TU_YAN_p1_throne_judiciary
-		icon = GFX_goal_generic_defence
 		prerequisite = { focus = TU_YAN_p1_throne_envoy_settled }
 		mutually_exclusive = { focus = TU_YAN_p1_throne_delegated }
+		icon = GFX_goal_generic_defence
 		x = 0
 		y = 0
 		cost = 10
@@ -510,9 +510,9 @@
 
 	focus = {
 		id = TU_YAN_p1_throne_delegated
-		icon = GFX_goal_generic_forceful_treaty
 		prerequisite = { focus = TU_YAN_p1_throne_envoy_settled }
 		mutually_exclusive = { focus = TU_YAN_p1_throne_judiciary }
+		icon = GFX_goal_generic_forceful_treaty
 		x = 0
 		y = 0
 		cost = 10
@@ -532,8 +532,8 @@
 
 	focus = {
 		id = TU_YAN_p1_throne_justice
-		icon = GFX_goal_generic_national_unity
 		prerequisite = { focus = TU_YAN_p1_throne_judiciary focus = TU_YAN_p1_throne_delegated }
+		icon = GFX_goal_generic_national_unity
 		x = 0
 		y = 0
 		cost = 10
@@ -553,9 +553,9 @@
 
 	focus = {
 		id = TU_YAN_p1_throne_absolute
-		icon = GFX_goal_generic_major_war
 		prerequisite = { focus = TU_YAN_p1_throne_justice }
 		mutually_exclusive = { focus = TU_YAN_p1_throne_restrained }
+		icon = GFX_goal_generic_major_war
 		x = 0
 		y = 0
 		cost = 10
@@ -576,9 +576,9 @@
 
 	focus = {
 		id = TU_YAN_p1_throne_restrained
-		icon = GFX_goal_generic_improve_relations
 		prerequisite = { focus = TU_YAN_p1_throne_justice }
 		mutually_exclusive = { focus = TU_YAN_p1_throne_absolute }
+		icon = GFX_goal_generic_improve_relations
 		x = 0
 		y = 0
 		cost = 10
@@ -599,8 +599,8 @@
 
 	focus = {
 		id = TU_YAN_p1_throne_seal
-		icon = GFX_goal_generic_national_unity
 		prerequisite = { focus = TU_YAN_p1_throne_absolute focus = TU_YAN_p1_throne_restrained }
+		icon = GFX_goal_generic_national_unity
 		x = 0
 		y = 0
 		cost = 15
@@ -615,18 +615,17 @@
 			add_ideas = TU_YAN_p1_idea_throne_seal
 			set_country_flag = TU_YAN_route_throne_done
 			every_country = { news_event = { id = tu_yan_ev.16 } }
-			add_tech_bonus = { name = TU_YAN_p1_throne_seal bonus = 1.0 uses = 1 category = dd_tech category = ca_tech }
-			add_doctrine_cost_reduction = { name = TU_YAN_p1_throne_seal cost_reduction = 0.5 uses = 1 category = naval_doctrine }
-			navy_experience = 40
+			add_political_power = 100
+			add_stability = 0.05
 		}
 	}
 
 
 	focus = {
 		id = TU_YAN_p1_throne_lungmen
-		icon = GFX_goal_generic_political_pressure
 		prerequisite = { focus = TU_YAN_lungmen_policy }
 		mutually_exclusive = { focus = TU_YAN_lungmen_trade_pact }
+		icon = GFX_goal_generic_political_pressure
 		x = 0
 		y = 0
 		cost = 10
@@ -651,9 +650,9 @@
 
 	focus = {
 		id = TU_YAN_p1_throne_progress
-		icon = GFX_goal_generic_construct_infrastructure
 		prerequisite = { focus = TU_YAN_p1_throne_admin }
 		mutually_exclusive = { focus = TU_YAN_p1_throne_progress_alt }
+		icon = GFX_goal_generic_construct_infrastructure
 		x = 0
 		y = 0
 		cost = 10
@@ -672,9 +671,9 @@
 
 	focus = {
 		id = TU_YAN_p1_throne_progress_alt
-		icon = GFX_goal_generic_construct_infrastructure
 		prerequisite = { focus = TU_YAN_p1_throne_admin }
 		mutually_exclusive = { focus = TU_YAN_p1_throne_progress }
+		icon = GFX_goal_generic_construct_infrastructure
 		x = 0
 		y = 0
 		cost = 10
@@ -694,9 +693,9 @@
 
 	focus = {
 		id = TU_YAN_p1_throne_review
-		icon = GFX_goal_generic_army_artillery
 		prerequisite = { focus = TU_YAN_p1_throne_loyal }
 		mutually_exclusive = { focus = TU_YAN_p1_throne_review_alt }
+		icon = GFX_goal_generic_army_artillery
 		x = 0
 		y = 0
 		cost = 10
@@ -715,9 +714,9 @@
 
 	focus = {
 		id = TU_YAN_p1_throne_review_alt
-		icon = GFX_goal_generic_army_artillery
 		prerequisite = { focus = TU_YAN_p1_throne_loyal }
 		mutually_exclusive = { focus = TU_YAN_p1_throne_review }
+		icon = GFX_goal_generic_army_artillery
 		x = 0
 		y = 0
 		cost = 10
@@ -737,9 +736,9 @@
 
 	focus = {
 		id = TU_YAN_p1_throne_proclaim
-		icon = GFX_goal_generic_propaganda
 		prerequisite = { focus = TU_YAN_p1_throne_statutes }
 		mutually_exclusive = { focus = TU_YAN_p1_throne_proclaim_alt }
+		icon = GFX_goal_generic_propaganda
 		x = 0
 		y = 0
 		cost = 10
@@ -758,9 +757,9 @@
 
 	focus = {
 		id = TU_YAN_p1_throne_proclaim_alt
-		icon = GFX_goal_generic_propaganda
 		prerequisite = { focus = TU_YAN_p1_throne_statutes }
 		mutually_exclusive = { focus = TU_YAN_p1_throne_proclaim }
+		icon = GFX_goal_generic_propaganda
 		x = 0
 		y = 0
 		cost = 10
@@ -782,9 +781,9 @@
 
 	focus = {
 		id = TU_YAN_p1_depose_root
-		icon = GFX_goal_generic_political_pressure
 		prerequisite = { focus = TU_YAN_imperial_reform }
 		mutually_exclusive = { focus = TU_YAN_p1_throne_root }
+		icon = GFX_goal_generic_political_pressure
 		x = 0
 		y = 0
 		cost = 5
@@ -804,8 +803,8 @@
 
 	focus = {
 		id = TU_YAN_p1_sui_seize
-		icon = GFX_goal_support_fascism
 		prerequisite = { focus = TU_YAN_p1_depose_root }
+		icon = GFX_goal_support_fascism
 		x = 0
 		y = 0
 		cost = 10
@@ -829,8 +828,8 @@
 
 	focus = {
 		id = TU_YAN_p1_power_struggle
-		icon = GFX_goal_generic_dangerous_deal
 		prerequisite = { focus = TU_YAN_p1_sui_seize }
+		icon = GFX_goal_generic_dangerous_deal
 		x = 0
 		y = 0
 		cost = 10
@@ -850,8 +849,8 @@
 
 	focus = {
 		id = TU_YAN_p1_age_of_dragons
-		icon = GFX_goal_generic_major_war
 		prerequisite = { focus = TU_YAN_p1_power_struggle }
+		icon = GFX_goal_generic_major_war
 		x = 0
 		y = 0
 		cost = 10
@@ -872,9 +871,9 @@
 
 	focus = {
 		id = TU_YAN_p1_rule_chongyue
-		icon = GFX_goal_generic_national_unity
 		prerequisite = { focus = TU_YAN_p1_age_of_dragons }
 		mutually_exclusive = { focus = TU_YAN_p1_rule_ling focus = TU_YAN_p1_rule_wang focus = TU_YAN_p1_rule_dusk focus = TU_YAN_p1_rule_shu focus = TU_YAN_p1_rule_nian focus = TU_YAN_p1_rule_jun focus = TU_YAN_p1_rule_jie focus = TU_YAN_p1_rule_ji focus = TU_YAN_p1_rule_yi focus = TU_YAN_p1_rule_fang focus = TU_YAN_p1_rule_yu focus = TU_YAN_p1_path_of_ruin }
+		icon = GFX_goal_generic_national_unity
 		x = 0
 		y = 0
 		cost = 10
@@ -906,8 +905,8 @@
 
 	focus = {
 		id = TU_YAN_p1_chongyue_way
-		icon = GFX_goal_generic_army_doctrines
 		prerequisite = { focus = TU_YAN_p1_rule_chongyue }
+		icon = GFX_goal_generic_army_doctrines
 		x = 0
 		y = 0
 		cost = 10
@@ -926,8 +925,8 @@
 
 	focus = {
 		id = TU_YAN_p1_chongyue_duty
-		icon = GFX_goal_generic_national_unity
 		prerequisite = { focus = TU_YAN_p1_chongyue_way }
+		icon = GFX_goal_generic_national_unity
 		x = 0
 		y = 0
 		cost = 10
@@ -946,9 +945,9 @@
 
 	focus = {
 		id = TU_YAN_p1_rule_ling
-		icon = GFX_goal_support_fascism
 		prerequisite = { focus = TU_YAN_p1_age_of_dragons }
 		mutually_exclusive = { focus = TU_YAN_p1_rule_chongyue focus = TU_YAN_p1_rule_wang focus = TU_YAN_p1_rule_dusk focus = TU_YAN_p1_rule_shu focus = TU_YAN_p1_rule_nian focus = TU_YAN_p1_rule_jun focus = TU_YAN_p1_rule_jie focus = TU_YAN_p1_rule_ji focus = TU_YAN_p1_rule_yi focus = TU_YAN_p1_rule_fang focus = TU_YAN_p1_rule_yu focus = TU_YAN_p1_path_of_ruin }
+		icon = GFX_goal_support_fascism
 		x = 0
 		y = 0
 		cost = 10
@@ -980,8 +979,8 @@
 
 	focus = {
 		id = TU_YAN_p1_ling_poem
-		icon = GFX_goal_generic_propaganda
 		prerequisite = { focus = TU_YAN_p1_rule_ling }
+		icon = GFX_goal_generic_propaganda
 		x = 0
 		y = 0
 		cost = 10
@@ -1000,8 +999,8 @@
 
 	focus = {
 		id = TU_YAN_p1_ling_dream
-		icon = GFX_goal_generic_neutrality_focus
 		prerequisite = { focus = TU_YAN_p1_ling_poem }
+		icon = GFX_goal_generic_neutrality_focus
 		x = 0
 		y = 0
 		cost = 10
@@ -1020,9 +1019,9 @@
 
 	focus = {
 		id = TU_YAN_p1_rule_wang
-		icon = GFX_goal_support_fascism
 		prerequisite = { focus = TU_YAN_p1_age_of_dragons }
 		mutually_exclusive = { focus = TU_YAN_p1_rule_chongyue focus = TU_YAN_p1_rule_ling focus = TU_YAN_p1_rule_dusk focus = TU_YAN_p1_rule_shu focus = TU_YAN_p1_rule_nian focus = TU_YAN_p1_rule_jun focus = TU_YAN_p1_rule_jie focus = TU_YAN_p1_rule_ji focus = TU_YAN_p1_rule_yi focus = TU_YAN_p1_rule_fang focus = TU_YAN_p1_rule_yu focus = TU_YAN_p1_path_of_ruin }
+		icon = GFX_goal_support_fascism
 		x = 0
 		y = 0
 		cost = 10
@@ -1054,8 +1053,8 @@
 
 	focus = {
 		id = TU_YAN_p1_wang_stars
-		icon = GFX_focus_research
 		prerequisite = { focus = TU_YAN_p1_rule_wang }
+		icon = GFX_focus_research
 		x = 0
 		y = 0
 		cost = 10
@@ -1074,8 +1073,8 @@
 
 	focus = {
 		id = TU_YAN_p1_wang_far
-		icon = GFX_goal_generic_scientific_exchange
 		prerequisite = { focus = TU_YAN_p1_wang_stars }
+		icon = GFX_goal_generic_scientific_exchange
 		x = 0
 		y = 0
 		cost = 10
@@ -1094,9 +1093,9 @@
 
 	focus = {
 		id = TU_YAN_p1_rule_dusk
-		icon = GFX_goal_support_fascism
 		prerequisite = { focus = TU_YAN_p1_age_of_dragons }
 		mutually_exclusive = { focus = TU_YAN_p1_rule_chongyue focus = TU_YAN_p1_rule_ling focus = TU_YAN_p1_rule_wang focus = TU_YAN_p1_rule_shu focus = TU_YAN_p1_rule_nian focus = TU_YAN_p1_rule_jun focus = TU_YAN_p1_rule_jie focus = TU_YAN_p1_rule_ji focus = TU_YAN_p1_rule_yi focus = TU_YAN_p1_rule_fang focus = TU_YAN_p1_rule_yu focus = TU_YAN_p1_path_of_ruin }
+		icon = GFX_goal_support_fascism
 		x = 0
 		y = 0
 		cost = 10
@@ -1128,8 +1127,8 @@
 
 	focus = {
 		id = TU_YAN_p1_dusk_painting
-		icon = GFX_goal_generic_propaganda
 		prerequisite = { focus = TU_YAN_p1_rule_dusk }
+		icon = GFX_goal_generic_propaganda
 		x = 0
 		y = 0
 		cost = 10
@@ -1148,8 +1147,8 @@
 
 	focus = {
 		id = TU_YAN_p1_dusk_canvas
-		icon = GFX_goal_generic_defence
 		prerequisite = { focus = TU_YAN_p1_dusk_painting }
+		icon = GFX_goal_generic_defence
 		x = 0
 		y = 0
 		cost = 10
@@ -1168,9 +1167,9 @@
 
 	focus = {
 		id = TU_YAN_p1_rule_shu
-		icon = GFX_goal_support_fascism
 		prerequisite = { focus = TU_YAN_p1_age_of_dragons }
 		mutually_exclusive = { focus = TU_YAN_p1_rule_chongyue focus = TU_YAN_p1_rule_ling focus = TU_YAN_p1_rule_wang focus = TU_YAN_p1_rule_dusk focus = TU_YAN_p1_rule_nian focus = TU_YAN_p1_rule_jun focus = TU_YAN_p1_rule_jie focus = TU_YAN_p1_rule_ji focus = TU_YAN_p1_rule_yi focus = TU_YAN_p1_rule_fang focus = TU_YAN_p1_rule_yu focus = TU_YAN_p1_path_of_ruin }
+		icon = GFX_goal_support_fascism
 		x = 0
 		y = 0
 		cost = 10
@@ -1202,8 +1201,8 @@
 
 	focus = {
 		id = TU_YAN_p1_shu_fields
-		icon = GFX_goal_generic_consumer_goods
 		prerequisite = { focus = TU_YAN_p1_rule_shu }
+		icon = GFX_goal_generic_consumer_goods
 		x = 0
 		y = 0
 		cost = 10
@@ -1221,8 +1220,8 @@
 
 	focus = {
 		id = TU_YAN_p1_shu_harvest
-		icon = GFX_goal_generic_construct_civilian
 		prerequisite = { focus = TU_YAN_p1_shu_fields }
+		icon = GFX_goal_generic_construct_civilian
 		x = 0
 		y = 0
 		cost = 10
@@ -1240,9 +1239,9 @@
 
 	focus = {
 		id = TU_YAN_p1_rule_nian
-		icon = GFX_goal_support_fascism
 		prerequisite = { focus = TU_YAN_p1_age_of_dragons }
 		mutually_exclusive = { focus = TU_YAN_p1_rule_chongyue focus = TU_YAN_p1_rule_ling focus = TU_YAN_p1_rule_wang focus = TU_YAN_p1_rule_dusk focus = TU_YAN_p1_rule_shu focus = TU_YAN_p1_rule_jun focus = TU_YAN_p1_rule_jie focus = TU_YAN_p1_rule_ji focus = TU_YAN_p1_rule_yi focus = TU_YAN_p1_rule_fang focus = TU_YAN_p1_rule_yu focus = TU_YAN_p1_path_of_ruin }
+		icon = GFX_goal_support_fascism
 		x = 0
 		y = 0
 		cost = 10
@@ -1274,8 +1273,8 @@
 
 	focus = {
 		id = TU_YAN_p1_nian_forge
-		icon = GFX_goal_generic_small_arms
 		prerequisite = { focus = TU_YAN_p1_rule_nian }
+		icon = GFX_goal_generic_small_arms
 		x = 0
 		y = 0
 		cost = 10
@@ -1294,8 +1293,8 @@
 
 	focus = {
 		id = TU_YAN_p1_nian_craft
-		icon = GFX_goal_generic_army_artillery
 		prerequisite = { focus = TU_YAN_p1_nian_forge }
+		icon = GFX_goal_generic_army_artillery
 		x = 0
 		y = 0
 		cost = 10
@@ -1314,9 +1313,9 @@
 
 	focus = {
 		id = TU_YAN_p1_rule_jun
-		icon = GFX_goal_support_fascism
 		prerequisite = { focus = TU_YAN_p1_age_of_dragons }
 		mutually_exclusive = { focus = TU_YAN_p1_rule_chongyue focus = TU_YAN_p1_rule_ling focus = TU_YAN_p1_rule_wang focus = TU_YAN_p1_rule_dusk focus = TU_YAN_p1_rule_shu focus = TU_YAN_p1_rule_nian focus = TU_YAN_p1_rule_jie focus = TU_YAN_p1_rule_ji focus = TU_YAN_p1_rule_yi focus = TU_YAN_p1_rule_fang focus = TU_YAN_p1_rule_yu focus = TU_YAN_p1_path_of_ruin }
+		icon = GFX_goal_support_fascism
 		x = 0
 		y = 0
 		cost = 10
@@ -1348,8 +1347,8 @@
 
 	focus = {
 		id = TU_YAN_p1_jun_coin
-		icon = GFX_goal_generic_trade
 		prerequisite = { focus = TU_YAN_p1_rule_jun }
+		icon = GFX_goal_generic_trade
 		x = 0
 		y = 0
 		cost = 10
@@ -1368,8 +1367,8 @@
 
 	focus = {
 		id = TU_YAN_p1_jun_merchant
-		icon = GFX_goal_generic_positive_trade_relations
 		prerequisite = { focus = TU_YAN_p1_jun_coin }
+		icon = GFX_goal_generic_positive_trade_relations
 		x = 0
 		y = 0
 		cost = 10
@@ -1387,9 +1386,9 @@
 
 	focus = {
 		id = TU_YAN_p1_rule_jie
-		icon = GFX_goal_support_fascism
 		prerequisite = { focus = TU_YAN_p1_age_of_dragons }
 		mutually_exclusive = { focus = TU_YAN_p1_rule_chongyue focus = TU_YAN_p1_rule_ling focus = TU_YAN_p1_rule_wang focus = TU_YAN_p1_rule_dusk focus = TU_YAN_p1_rule_shu focus = TU_YAN_p1_rule_nian focus = TU_YAN_p1_rule_jun focus = TU_YAN_p1_rule_ji focus = TU_YAN_p1_rule_yi focus = TU_YAN_p1_rule_fang focus = TU_YAN_p1_rule_yu focus = TU_YAN_p1_path_of_ruin }
+		icon = GFX_goal_support_fascism
 		x = 0
 		y = 0
 		cost = 10
@@ -1421,8 +1420,8 @@
 
 	focus = {
 		id = TU_YAN_p1_jie_tide
-		icon = GFX_goal_generic_navy_doctrines_tactics
 		prerequisite = { focus = TU_YAN_p1_rule_jie }
+		icon = GFX_goal_generic_navy_doctrines_tactics
 		x = 0
 		y = 0
 		cost = 10
@@ -1434,16 +1433,15 @@
 		}
 
 		completion_reward = {
-			add_tech_bonus = { name = TU_YAN_p1_jie_tide bonus = 0.75 uses = 1 category = dd_tech category = ca_tech }
-			add_doctrine_cost_reduction = { name = TU_YAN_p1_jie_tide cost_reduction = 0.4 uses = 1 category = naval_doctrine }
-			navy_experience = 25
+			add_political_power = 60
+			add_tech_bonus = { name = TU_YAN_p1_jie_tide bonus = 0.75 uses = 1 category = industry }
 		}
 	}
 
 	focus = {
 		id = TU_YAN_p1_jie_harbor
-		icon = GFX_goal_generic_build_navy
 		prerequisite = { focus = TU_YAN_p1_jie_tide }
+		icon = GFX_goal_generic_build_navy
 		x = 0
 		y = 0
 		cost = 10
@@ -1455,17 +1453,16 @@
 		}
 
 		completion_reward = {
-			add_tech_bonus = { name = TU_YAN_p1_jie_harbor bonus = 0.75 uses = 1 category = dd_tech category = ca_tech }
-			add_doctrine_cost_reduction = { name = TU_YAN_p1_jie_harbor cost_reduction = 0.4 uses = 1 category = naval_doctrine }
-			navy_experience = 25
+			add_political_power = 60
+			add_tech_bonus = { name = TU_YAN_p1_jie_harbor bonus = 0.75 uses = 1 category = industry }
 		}
 	}
 
 	focus = {
 		id = TU_YAN_p1_rule_ji
-		icon = GFX_goal_support_fascism
 		prerequisite = { focus = TU_YAN_p1_age_of_dragons }
 		mutually_exclusive = { focus = TU_YAN_p1_rule_chongyue focus = TU_YAN_p1_rule_ling focus = TU_YAN_p1_rule_wang focus = TU_YAN_p1_rule_dusk focus = TU_YAN_p1_rule_shu focus = TU_YAN_p1_rule_nian focus = TU_YAN_p1_rule_jun focus = TU_YAN_p1_rule_jie focus = TU_YAN_p1_rule_yi focus = TU_YAN_p1_rule_fang focus = TU_YAN_p1_rule_yu focus = TU_YAN_p1_path_of_ruin }
+		icon = GFX_goal_support_fascism
 		x = 0
 		y = 0
 		cost = 10
@@ -1497,8 +1494,8 @@
 
 	focus = {
 		id = TU_YAN_p1_ji_wind
-		icon = GFX_goal_generic_air_doctrine
 		prerequisite = { focus = TU_YAN_p1_rule_ji }
+		icon = GFX_goal_generic_air_doctrine
 		x = 0
 		y = 0
 		cost = 10
@@ -1517,8 +1514,8 @@
 
 	focus = {
 		id = TU_YAN_p1_ji_cloud
-		icon = GFX_goal_generic_air_fighter
 		prerequisite = { focus = TU_YAN_p1_ji_wind }
+		icon = GFX_goal_generic_air_fighter
 		x = 0
 		y = 0
 		cost = 10
@@ -1537,9 +1534,9 @@
 
 	focus = {
 		id = TU_YAN_p1_rule_yi
-		icon = GFX_goal_support_fascism
 		prerequisite = { focus = TU_YAN_p1_age_of_dragons }
 		mutually_exclusive = { focus = TU_YAN_p1_rule_chongyue focus = TU_YAN_p1_rule_ling focus = TU_YAN_p1_rule_wang focus = TU_YAN_p1_rule_dusk focus = TU_YAN_p1_rule_shu focus = TU_YAN_p1_rule_nian focus = TU_YAN_p1_rule_jun focus = TU_YAN_p1_rule_jie focus = TU_YAN_p1_rule_ji focus = TU_YAN_p1_rule_fang focus = TU_YAN_p1_rule_yu focus = TU_YAN_p1_path_of_ruin }
+		icon = GFX_goal_support_fascism
 		x = 0
 		y = 0
 		cost = 10
@@ -1571,8 +1568,8 @@
 
 	focus = {
 		id = TU_YAN_p1_yi_envoy
-		icon = GFX_goal_generic_improve_relations
 		prerequisite = { focus = TU_YAN_p1_rule_yi }
+		icon = GFX_goal_generic_improve_relations
 		x = 0
 		y = 0
 		cost = 10
@@ -1591,8 +1588,8 @@
 
 	focus = {
 		id = TU_YAN_p1_yi_guests
-		icon = GFX_goal_generic_alliance
 		prerequisite = { focus = TU_YAN_p1_yi_envoy }
+		icon = GFX_goal_generic_alliance
 		x = 0
 		y = 0
 		cost = 10
@@ -1611,9 +1608,9 @@
 
 	focus = {
 		id = TU_YAN_p1_rule_fang
-		icon = GFX_goal_support_fascism
 		prerequisite = { focus = TU_YAN_p1_age_of_dragons }
 		mutually_exclusive = { focus = TU_YAN_p1_rule_chongyue focus = TU_YAN_p1_rule_ling focus = TU_YAN_p1_rule_wang focus = TU_YAN_p1_rule_dusk focus = TU_YAN_p1_rule_shu focus = TU_YAN_p1_rule_nian focus = TU_YAN_p1_rule_jun focus = TU_YAN_p1_rule_jie focus = TU_YAN_p1_rule_ji focus = TU_YAN_p1_rule_yi focus = TU_YAN_p1_rule_yu focus = TU_YAN_p1_path_of_ruin }
+		icon = GFX_goal_support_fascism
 		x = 0
 		y = 0
 		cost = 10
@@ -1645,8 +1642,8 @@
 
 	focus = {
 		id = TU_YAN_p1_fang_walls
-		icon = GFX_goal_generic_fortify_city
 		prerequisite = { focus = TU_YAN_p1_rule_fang }
+		icon = GFX_goal_generic_fortify_city
 		x = 0
 		y = 0
 		cost = 10
@@ -1664,8 +1661,8 @@
 
 	focus = {
 		id = TU_YAN_p1_fang_stand
-		icon = GFX_goal_generic_defence
 		prerequisite = { focus = TU_YAN_p1_fang_walls }
+		icon = GFX_goal_generic_defence
 		x = 0
 		y = 0
 		cost = 10
@@ -1684,9 +1681,9 @@
 
 	focus = {
 		id = TU_YAN_p1_rule_yu
-		icon = GFX_goal_support_fascism
 		prerequisite = { focus = TU_YAN_p1_age_of_dragons }
 		mutually_exclusive = { focus = TU_YAN_p1_rule_chongyue focus = TU_YAN_p1_rule_ling focus = TU_YAN_p1_rule_wang focus = TU_YAN_p1_rule_dusk focus = TU_YAN_p1_rule_shu focus = TU_YAN_p1_rule_nian focus = TU_YAN_p1_rule_jun focus = TU_YAN_p1_rule_jie focus = TU_YAN_p1_rule_ji focus = TU_YAN_p1_rule_yi focus = TU_YAN_p1_rule_fang focus = TU_YAN_p1_path_of_ruin }
+		icon = GFX_goal_support_fascism
 		x = 0
 		y = 0
 		cost = 10
@@ -1718,8 +1715,8 @@
 
 	focus = {
 		id = TU_YAN_p1_yu_kitchen
-		icon = GFX_goal_generic_consumer_goods
 		prerequisite = { focus = TU_YAN_p1_rule_yu }
+		icon = GFX_goal_generic_consumer_goods
 		x = 0
 		y = 0
 		cost = 10
@@ -1738,8 +1735,8 @@
 
 	focus = {
 		id = TU_YAN_p1_yu_table
-		icon = GFX_goal_generic_national_unity
 		prerequisite = { focus = TU_YAN_p1_yu_kitchen }
+		icon = GFX_goal_generic_national_unity
 		x = 0
 		y = 0
 		cost = 10
@@ -1758,9 +1755,9 @@
 
 	focus = {
 		id = TU_YAN_p1_path_of_ruin
-		icon = GFX_goal_generic_secret_weapon
 		prerequisite = { focus = TU_YAN_p1_age_of_dragons }
 		mutually_exclusive = { focus = TU_YAN_p1_rule_chongyue focus = TU_YAN_p1_rule_ling focus = TU_YAN_p1_rule_wang focus = TU_YAN_p1_rule_dusk focus = TU_YAN_p1_rule_shu focus = TU_YAN_p1_rule_nian focus = TU_YAN_p1_rule_jun focus = TU_YAN_p1_rule_jie focus = TU_YAN_p1_rule_ji focus = TU_YAN_p1_rule_yi focus = TU_YAN_p1_rule_fang focus = TU_YAN_p1_rule_yu }
+		icon = GFX_goal_generic_secret_weapon
 		x = 0
 		y = 0
 		cost = 10
@@ -1787,8 +1784,8 @@
 
 	focus = {
 		id = TU_YAN_p1_ruin_awaken
-		icon = GFX_goal_generic_occupy_start_war
 		prerequisite = { focus = TU_YAN_p1_path_of_ruin }
+		icon = GFX_goal_generic_occupy_start_war
 		x = 0
 		y = 0
 		cost = 10
@@ -1808,8 +1805,8 @@
 
 	focus = {
 		id = TU_YAN_p1_ruin_devour
-		icon = GFX_goal_generic_major_war
 		prerequisite = { focus = TU_YAN_p1_ruin_awaken }
+		icon = GFX_goal_generic_major_war
 		x = 0
 		y = 0
 		cost = 10
@@ -1828,8 +1825,8 @@
 
 	focus = {
 		id = TU_YAN_p1_hand_in_hand
-		icon = GFX_goal_generic_alliance
 		prerequisite = { focus = TU_YAN_p1_rule_chongyue }
+		icon = GFX_goal_generic_alliance
 		x = 0
 		y = 0
 		cost = 5
@@ -1858,8 +1855,8 @@
 
 	focus = {
 		id = TU_YAN_p1_twelve_feast
-		icon = GFX_goal_generic_national_unity
 		prerequisite = { focus = TU_YAN_p1_hand_in_hand }
+		icon = GFX_goal_generic_national_unity
 		x = 0
 		y = 0
 		cost = 10
@@ -1882,8 +1879,8 @@
 
 	focus = {
 		id = TU_YAN_p1_dragons_end
-		icon = GFX_goal_generic_national_unity
 		prerequisite = { focus = TU_YAN_p1_rule_chongyue focus = TU_YAN_p1_rule_ling focus = TU_YAN_p1_rule_wang focus = TU_YAN_p1_rule_dusk focus = TU_YAN_p1_rule_shu focus = TU_YAN_p1_rule_nian focus = TU_YAN_p1_rule_jun focus = TU_YAN_p1_rule_jie focus = TU_YAN_p1_rule_ji focus = TU_YAN_p1_rule_yi focus = TU_YAN_p1_rule_fang focus = TU_YAN_p1_rule_yu focus = TU_YAN_p1_path_of_ruin }
+		icon = GFX_goal_generic_national_unity
 		x = 0
 		y = 0
 		cost = 10
@@ -1914,8 +1911,8 @@
 
 	focus = {
 		id = TU_YAN_p1_new_era
-		icon = GFX_goal_generic_propaganda
 		prerequisite = { focus = TU_YAN_p1_dragons_end }
+		icon = GFX_goal_generic_propaganda
 		x = 0
 		y = 0
 		cost = 10
@@ -1935,8 +1932,8 @@
 
 	focus = {
 		id = TU_YAN_p1_rebuild
-		icon = GFX_goal_generic_construct_civilian
 		prerequisite = { focus = TU_YAN_p1_dragons_end }
+		icon = GFX_goal_generic_construct_civilian
 		x = 0
 		y = 0
 		cost = 10

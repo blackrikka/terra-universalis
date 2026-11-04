@@ -1705,7 +1705,7 @@
 
 	focus = {
 		id = TU_SAR_river_ports
-		icon = GFX_goal_generic_build_navy
+		icon = GFX_goal_generic_trade
 		prerequisite = { focus = TU_SAR_jungle_lords }
 		x = 0
 		y = 0
@@ -1718,10 +1718,9 @@
 		}
 
 		completion_reward = {
-			add_tech_bonus = { name = TU_SAR_river_ports bonus = 0.75 uses = 1 category = dd_tech category = ca_tech }
-			add_doctrine_cost_reduction = { name = TU_SAR_river_ports cost_reduction = 0.4 uses = 1 category = naval_doctrine }
-			navy_experience = 25
-			TU_build_dockyard = yes
+			add_political_power = 60
+			add_tech_bonus = { name = TU_SAR_river_ports bonus = 0.75 uses = 1 category = industry }
+			TU_build_civ_factory = yes
 		}
 	}
 
@@ -2207,7 +2206,7 @@
 
 	focus = {
 		id = TU_SAR_padishah_portraits
-		icon = GFX_goal_generic_build_navy
+		icon = GFX_goal_generic_propaganda
 		prerequisite = { focus = TU_SAR_throne_of_sand }
 		x = 0
 		y = 0
@@ -2220,9 +2219,8 @@
 		}
 
 		completion_reward = {
-			add_tech_bonus = { name = TU_SAR_padishah_portraits bonus = 0.75 uses = 1 category = dd_tech category = ca_tech }
-			add_doctrine_cost_reduction = { name = TU_SAR_padishah_portraits cost_reduction = 0.4 uses = 1 category = naval_doctrine }
-			navy_experience = 25
+			add_war_support = 0.03
+			add_stability = 0.03
 		}
 	}
 

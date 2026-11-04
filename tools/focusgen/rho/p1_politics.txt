@@ -994,9 +994,7 @@
 
 		completion_reward = {
 			add_to_variable = { TU_lmd = 200 }
-			add_tech_bonus = { name = TU_RHO_ark_convoy bonus = 0.75 uses = 1 category = dd_tech category = ca_tech }
-			add_doctrine_cost_reduction = { name = TU_RHO_ark_convoy cost_reduction = 0.4 uses = 1 category = naval_doctrine }
-			navy_experience = 25
+			add_tech_bonus = { name = TU_RHO_ark_convoy bonus = 0.75 uses = 1 category = industry category = construction_tech }
 		}
 
 		ai_will_do = {

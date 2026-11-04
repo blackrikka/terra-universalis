@@ -526,6 +526,7 @@ def main(argv=None):
             'set_politics = { ruling_party = %s last_election = "1096.1.1" '
             'election_frequency = 48 elections_allowed = no }' % party,
             "set_popularities = { %s }" % " ".join("%s = %d" % kv for kv in pops.items()),
+            "add_ideas = TU_sea_terror",     # 해군 없음 (사양서 18): 조선소·해군 기지 건설 불가
         ]
         if not c.get("custom_characters"):
             lines.append("recruit_character = %s_leader" % tag)
@@ -535,6 +536,10 @@ def main(argv=None):
             snippet = snippet_path.read_bytes().decode("utf-8-sig")
             text += snippet if snippet.endswith("\n") else snippet + "\n"
             print("country_history snippet appended: %s" % tag)
+        tier_path = MAPGEN_DIR / "tier_history" / ("%s.txt" % tag)     # tiers.py (체급: 기술·연구 슬롯·oob)
+        if tier_path.is_file():
+            tier = tier_path.read_bytes().decode("utf-8-sig")
+            text += tier if tier.endswith("\n") else tier + "\n"
         write_ascii(mod / "history" / "countries" / ("%s - %s.txt" % (tag, c["name_en"])), text)
 
     # common/bookmarks

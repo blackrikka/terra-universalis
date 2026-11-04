@@ -23,7 +23,7 @@ TU_MIN_assembly_category = {
 		}
 	}
 
-	TU_MIN_law_fleet = {
+	TU_MIN_law_harbour = {
 		icon = GFX_decision_generic_political_discourse
 
 		allowed = {
@@ -38,7 +38,7 @@ TU_MIN_assembly_category = {
 		days_re_enable = 180
 
 		complete_effect = {
-			TU_build_dockyard = yes
+			TU_build_civ_factory = yes
 			TU_MIN_assembly_m15 = yes
 		}
 
@@ -358,7 +358,7 @@ TU_MIN_sea_category = {
 		days_re_enable = 180
 
 		complete_effect = {
-			navy_experience = 15
+			army_experience = 15
 			set_country_flag = TU_MIN_pirates_hunted
 		}
 
@@ -450,7 +450,7 @@ TU_MIN_sea_category = {
 		}
 	}
 
-	TU_MIN_naval_escort = {
+	TU_MIN_caravan_escort = {
 		icon = GFX_decision_generic_political_discourse
 
 		allowed = {
@@ -458,14 +458,14 @@ TU_MIN_sea_category = {
 		}
 
 		visible = {
-			has_completed_focus = TU_MIN_convoys
+			has_completed_focus = TU_MIN_trade_routes
 		}
 
 		cost = 50
 		days_re_enable = 240
 
 		complete_effect = {
-			navy_experience = 20
+			army_experience = 20
 			set_country_flag = TU_MIN_pirates_hunted
 		}
 

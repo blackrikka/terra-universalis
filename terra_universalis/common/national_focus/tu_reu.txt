@@ -1679,9 +1679,8 @@ focus_tree = {
 		}
 
 		completion_reward = {
-			add_tech_bonus = { name = TU_REU_chernobog_convoy bonus = 0.75 uses = 1 category = dd_tech category = ca_tech }
-			add_doctrine_cost_reduction = { name = TU_REU_chernobog_convoy cost_reduction = 0.4 uses = 1 category = naval_doctrine }
-			navy_experience = 25
+			add_political_power = 60
+			add_stability = 0.03
 		}
 	}
 
@@ -2210,9 +2209,8 @@ focus_tree = {
 
 		completion_reward = {
 			set_country_flag = TU_dip_alliance_unlocked
-			add_tech_bonus = { name = TU_REU_dip_alliance bonus = 0.75 uses = 1 category = dd_tech category = ca_tech }
-			add_doctrine_cost_reduction = { name = TU_REU_dip_alliance cost_reduction = 0.4 uses = 1 category = naval_doctrine }
-			navy_experience = 25
+			add_political_power = 60
+			add_stability = 0.03
 		}
 	}
 }

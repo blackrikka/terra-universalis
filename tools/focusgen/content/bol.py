@@ -205,7 +205,7 @@ for sid, ko, en, pre, econ in (
         ("orphan_schools", "고아 학교", "Orphan Schools", "war_orphans", False), ("banana_plantations", "바나나 농장", "Banana Plantation Farms", "coffee_farms", True),
         ("rail_network", "철도 연결", "Rail Network Expansion", "road_network", "TU_build_infrastructure = yes"), ("oil_wells", "유정", "Oil Wells", "industrial_district", True),
         ("rubber", "고무 농장", "Rubber Plantation Industry", "banana_plantations", True), ("steel_works", "제철소", "Steel Works", "oil_wells", True),
-        ("river_ports", "강 항구", "River Ports Harbour", "rail_network", "TU_build_dockyard = yes"), ("power_plants", "발전소", "Power Plants", "rail_network", True),
+        ("river_ports", "강 항구", "River Ports Harbour", "rail_network", "TU_build_civ_factory = yes"), ("power_plants", "발전소", "Power Plants", "rail_network", True),
         ("sargon_ties", "사르곤 교역", "Sargon Trade Accord", "foreign_patrons", False), ("minos_ties", "미노스 교류", "Minos Exchange", "foreign_patrons", False),
         ("kazimierz_mercs", "카시미어 용병", "Kazimierz Mercenary Contracts", "merc_contracts", False), ("rhodes_doctors", "로도스 의사", "Rhodes Island Doctors Relief", "refugee_relief", False),
         ("coffee_exports", "커피 수출", "Coffee Export Trade", "coffee_farms", False), ("smuggler_routes", "밀수로 장악", "Smuggler Route Control", "arms_smuggling", False),

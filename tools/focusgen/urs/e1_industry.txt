@@ -21,8 +21,8 @@
 	#### RAIL AND MOBILE CITY (trunk) ####
 	focus = {
 		id = TU_URS_rail_standard
-		icon = GFX_goal_generic_construct_infrastructure
 		prerequisite = { focus = TU_URS_railway_reform }
+		icon = GFX_goal_generic_construct_infrastructure
 		x = 10
 		y = 1
 		cost = 10
@@ -41,8 +41,8 @@
 	#### ORIGINIUM MINING (branch) ####
 	focus = {
 		id = TU_URS_originium_survey
-		icon = GFX_goal_generic_radar
 		prerequisite = { focus = TU_URS_railway_reform }
+		icon = GFX_goal_generic_radar
 		x = 14
 		y = 1
 		cost = 5
@@ -62,8 +62,8 @@
 	#### NORTHERN FRONTIER AND FROZEN SUPPLY ####
 	focus = {
 		id = TU_URS_frozen_road
-		icon = GFX_goal_generic_construct_infrastructure
 		prerequisite = { focus = TU_URS_ice_supply }
+		icon = GFX_goal_generic_construct_infrastructure
 		x = 4
 		y = 2
 		cost = 10
@@ -83,9 +83,9 @@
 	#### ECONOMIC POLICY FORK: STATE PLANNING (BoP LEFT) vs MARKET REFORM (BoP RIGHT) ####
 	focus = {
 		id = TU_URS_state_planning
-		icon = GFX_goal_generic_construction2
 		prerequisite = { focus = TU_URS_rail_standard }
 		mutually_exclusive = { focus = TU_URS_market_reform }
+		icon = GFX_goal_generic_construction2
 		x = 12
 		y = 3
 		cost = 10
@@ -114,9 +114,9 @@
 
 	focus = {
 		id = TU_URS_market_reform
-		icon = GFX_goal_generic_positive_trade_relations
 		prerequisite = { focus = TU_URS_rail_standard }
 		mutually_exclusive = { focus = TU_URS_state_planning }
+		icon = GFX_goal_generic_positive_trade_relations
 		x = 8
 		y = 3
 		cost = 10
@@ -146,8 +146,8 @@
 
 	focus = {
 		id = TU_URS_mobile_plan
-		icon = GFX_goal_generic_construct_civ_factory
 		prerequisite = { focus = TU_URS_rail_standard }
+		icon = GFX_goal_generic_construct_civ_factory
 		x = 10
 		y = 3
 		cost = 10
@@ -171,8 +171,8 @@
 
 	focus = {
 		id = TU_URS_northern_frontier
-		icon = GFX_goal_generic_construct_civilian
 		prerequisite = { focus = TU_URS_frozen_road }
+		icon = GFX_goal_generic_construct_civilian
 		x = 2
 		y = 4
 		cost = 10
@@ -196,8 +196,8 @@
 
 	focus = {
 		id = TU_URS_frost_supply
-		icon = GFX_goal_generic_production2
 		prerequisite = { focus = TU_URS_frozen_road }
+		icon = GFX_goal_generic_production2
 		x = 4
 		y = 4
 		cost = 10
@@ -217,9 +217,9 @@
 
 	focus = {
 		id = TU_URS_consumer_goods
-		icon = GFX_goal_generic_consumer_goods
 		prerequisite = { focus = TU_URS_market_reform }
 		mutually_exclusive = { focus = TU_URS_war_economy }
+		icon = GFX_goal_generic_consumer_goods
 		x = 8
 		y = 4
 		cost = 10
@@ -244,9 +244,9 @@
 
 	focus = {
 		id = TU_URS_war_economy
-		icon = GFX_goal_generic_construct_mil_factory
 		prerequisite = { focus = TU_URS_state_planning }
 		mutually_exclusive = { focus = TU_URS_consumer_goods }
+		icon = GFX_goal_generic_construct_mil_factory
 		x = 12
 		y = 4
 		cost = 10
@@ -275,8 +275,8 @@
 
 	focus = {
 		id = TU_URS_originium_refine
-		icon = GFX_goal_generic_oil_refinery
 		prerequisite = { focus = TU_URS_originium_survey }
+		icon = GFX_goal_generic_oil_refinery
 		x = 14
 		y = 4
 		cost = 10
@@ -300,9 +300,9 @@
 	#### MOBILE CITY: CIVILIAN vs FORTRESS (mutually exclusive) ####
 	focus = {
 		id = TU_URS_mobile_civil
-		icon = GFX_goal_generic_construct_civilian
 		prerequisite = { focus = TU_URS_mobile_plan }
 		mutually_exclusive = { focus = TU_URS_mobile_fort }
+		icon = GFX_goal_generic_construct_civilian
 		x = 8
 		y = 5
 		cost = 10
@@ -327,9 +327,9 @@
 
 	focus = {
 		id = TU_URS_mobile_fort
-		icon = GFX_goal_generic_fortify_city
 		prerequisite = { focus = TU_URS_mobile_plan }
 		mutually_exclusive = { focus = TU_URS_mobile_civil }
+		icon = GFX_goal_generic_fortify_city
 		x = 12
 		y = 5
 		cost = 10
@@ -355,8 +355,8 @@
 
 	focus = {
 		id = TU_URS_northern_garrison
-		icon = GFX_goal_generic_defence
 		prerequisite = { focus = TU_URS_frost_supply focus = TU_URS_northern_frontier }
+		icon = GFX_goal_generic_defence
 		x = 4
 		y = 5
 		cost = 10
@@ -379,8 +379,8 @@
 
 	focus = {
 		id = TU_URS_originium_export
-		icon = GFX_goal_generic_trade
 		prerequisite = { focus = TU_URS_originium_refine }
+		icon = GFX_goal_generic_trade
 		x = 14
 		y = 5
 		cost = 10
@@ -398,8 +398,8 @@
 
 	focus = {
 		id = TU_URS_frost_road2
-		icon = GFX_goal_generic_construct_infrastructure
 		prerequisite = { focus = TU_URS_northern_garrison }
+		icon = GFX_goal_generic_construct_infrastructure
 		x = 4
 		y = 6
 		cost = 10
@@ -417,8 +417,8 @@
 
 	focus = {
 		id = TU_URS_mobile_market
-		icon = GFX_goal_generic_trade
 		prerequisite = { focus = TU_URS_mobile_civil }
+		icon = GFX_goal_generic_trade
 		x = 8
 		y = 7
 		cost = 10
@@ -442,8 +442,8 @@
 
 	focus = {
 		id = TU_URS_mobile_siege_rail
-		icon = GFX_goal_generic_army_artillery
 		prerequisite = { focus = TU_URS_mobile_fort }
+		icon = GFX_goal_generic_army_artillery
 		x = 12
 		y = 7
 		cost = 10
@@ -466,9 +466,9 @@
 
 	focus = {
 		id = TU_URS_permafrost_rail
-		icon = GFX_goal_generic_construct_infrastructure
 		prerequisite = { focus = TU_URS_northern_frontier }
 		mutually_exclusive = { focus = TU_URS_permafrost_rail_alt }
+		icon = GFX_goal_generic_construct_infrastructure
 		x = 2
 		y = 7
 		cost = 10
@@ -490,9 +490,9 @@
 
 	focus = {
 		id = TU_URS_permafrost_rail_alt
-		icon = GFX_goal_generic_construct_civ_factory
 		prerequisite = { focus = TU_URS_northern_frontier }
 		mutually_exclusive = { focus = TU_URS_permafrost_rail }
+		icon = GFX_goal_generic_construct_civ_factory
 		x = 4
 		y = 7
 		cost = 10
@@ -515,8 +515,8 @@
 
 	focus = {
 		id = TU_URS_originium_grid
-		icon = GFX_goal_generic_construct_civilian
 		prerequisite = { focus = TU_URS_originium_export }
+		icon = GFX_goal_generic_construct_civilian
 		x = 14
 		y = 7
 		cost = 10
@@ -541,8 +541,8 @@
 
 	focus = {
 		id = TU_URS_mobile_terminal
-		icon = GFX_goal_generic_construction
 		prerequisite = { focus = TU_URS_mobile_market focus = TU_URS_mobile_siege_rail }
+		icon = GFX_goal_generic_construction
 		x = 10
 		y = 9
 		cost = 10
@@ -566,8 +566,8 @@
 
 	focus = {
 		id = TU_URS_originium_core
-		icon = GFX_goal_generic_oil_refinery
 		prerequisite = { focus = TU_URS_originium_grid }
+		icon = GFX_goal_generic_oil_refinery
 		x = 14
 		y = 12
 		cost = 15
@@ -590,8 +590,8 @@
 
 	focus = {
 		id = TU_URS_mobile_core
-		icon = GFX_goal_generic_construction2
 		prerequisite = { focus = TU_URS_mobile_terminal }
+		icon = GFX_goal_generic_construction2
 		x = 10
 		y = 13
 		cost = 15
@@ -616,8 +616,8 @@
 
 	focus = {
 		id = TU_URS_originium_secure
-		icon = GFX_goal_generic_dangerous_deal
 		prerequisite = { focus = TU_URS_originium_core }
+		icon = GFX_goal_generic_dangerous_deal
 		x = 14
 		y = 15
 		cost = 10
@@ -636,8 +636,8 @@
 
 	focus = {
 		id = TU_URS_mobile_final
-		icon = GFX_goal_generic_construction
 		prerequisite = { focus = TU_URS_mobile_core }
+		icon = GFX_goal_generic_construction
 		x = 10
 		y = 15
 		cost = 15
@@ -658,8 +658,8 @@
 	#### END OF THE NORTHERN INDUSTRY LINE ####
 	focus = {
 		id = TU_URS_final_grid
-		icon = GFX_goal_generic_construct_civ_factory
 		prerequisite = { focus = TU_URS_mobile_final focus = TU_URS_originium_secure }
+		icon = GFX_goal_generic_construct_civ_factory
 		x = 12
 		y = 17
 		cost = 15

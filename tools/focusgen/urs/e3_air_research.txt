@@ -1,9 +1,9 @@
 	#### ARTS RESEARCH (x 30) vs CONVENTIONAL RESEARCH (x 32) (mutually exclusive) ####
 	focus = {
 		id = TU_URS_arts_engineering
-		icon = GFX_goal_generic_scientific_exchange
 		prerequisite = { focus = TU_URS_arts_research_root }
 		mutually_exclusive = { focus = TU_URS_arts_conventional }
+		icon = GFX_goal_generic_scientific_exchange
 		x = 30
 		y = 1
 		cost = 10
@@ -21,9 +21,9 @@
 
 	focus = {
 		id = TU_URS_arts_conventional
-		icon = GFX_goal_generic_construction
 		prerequisite = { focus = TU_URS_arts_research_root }
 		mutually_exclusive = { focus = TU_URS_arts_engineering }
+		icon = GFX_goal_generic_construction
 		x = 32
 		y = 1
 		cost = 10
@@ -43,8 +43,8 @@
 
 	focus = {
 		id = TU_URS_arts_lab
-		icon = GFX_goal_generic_scientific_exchange
 		prerequisite = { focus = TU_URS_arts_engineering }
+		icon = GFX_goal_generic_scientific_exchange
 		x = 30
 		y = 2
 		cost = 10
@@ -68,8 +68,8 @@
 	#### FROZEN AIR FORCE (x 28) ####
 	focus = {
 		id = TU_URS_frozen_airfield
-		icon = GFX_goal_generic_build_airforce
 		prerequisite = { focus = TU_URS_arts_research_root }
+		icon = GFX_goal_generic_build_airforce
 		x = 28
 		y = 1
 		cost = 10
@@ -89,8 +89,8 @@
 
 	focus = {
 		id = TU_URS_frozen_pilots
-		icon = GFX_goal_generic_air_fighter
 		prerequisite = { focus = TU_URS_frozen_airfield }
+		icon = GFX_goal_generic_air_fighter
 		x = 28
 		y = 3
 		cost = 10
@@ -115,8 +115,8 @@
 
 	focus = {
 		id = TU_URS_frozen_air_doctrine
-		icon = GFX_goal_generic_air_doctrine
 		prerequisite = { focus = TU_URS_frozen_pilots }
+		icon = GFX_goal_generic_air_doctrine
 		x = 28
 		y = 4
 		cost = 10
@@ -136,8 +136,8 @@
 
 	focus = {
 		id = TU_URS_frost_interceptors
-		icon = GFX_goal_generic_air_fighter2
 		prerequisite = { focus = TU_URS_frozen_air_doctrine }
+		icon = GFX_goal_generic_air_fighter2
 		x = 28
 		y = 5
 		cost = 10
@@ -156,8 +156,8 @@
 
 	focus = {
 		id = TU_URS_frost_supremacy
-		icon = GFX_goal_generic_CAS
 		prerequisite = { focus = TU_URS_frost_interceptors }
+		icon = GFX_goal_generic_CAS
 		x = 28
 		y = 7
 		cost = 15
@@ -178,8 +178,8 @@
 
 	focus = {
 		id = TU_URS_frost_legacy
-		icon = GFX_goal_generic_air_production
 		prerequisite = { focus = TU_URS_frost_supremacy }
+		icon = GFX_goal_generic_air_production
 		x = 28
 		y = 10
 		cost = 15
@@ -200,8 +200,8 @@
 	#### END OF THE FROZEN AIR LINE ####
 	focus = {
 		id = TU_URS_frost_end
-		icon = GFX_goal_generic_air_bomber
 		prerequisite = { focus = TU_URS_frost_legacy }
+		icon = GFX_goal_generic_air_bomber
 		x = 28
 		y = 18
 		cost = 15
@@ -222,8 +222,8 @@
 	#### NORTHERN EXPEDITION RESEARCH (x 32-34) ####
 	focus = {
 		id = TU_URS_northern_expedition
-		icon = GFX_goal_generic_position_armies
 		prerequisite = { focus = TU_URS_arts_research_root }
+		icon = GFX_goal_generic_position_armies
 		x = 34
 		y = 2
 		cost = 10
@@ -247,8 +247,8 @@
 
 	focus = {
 		id = TU_URS_northern_recon
-		icon = GFX_goal_generic_radar
 		prerequisite = { focus = TU_URS_northern_expedition }
+		icon = GFX_goal_generic_radar
 		x = 34
 		y = 3
 		cost = 10
@@ -267,9 +267,9 @@
 
 	focus = {
 		id = TU_URS_northern_bomber
-		icon = GFX_goal_generic_air_bomber
 		prerequisite = { focus = TU_URS_northern_recon }
 		mutually_exclusive = { focus = TU_URS_northern_fighter }
+		icon = GFX_goal_generic_air_bomber
 		x = 34
 		y = 4
 		cost = 10
@@ -289,9 +289,9 @@
 
 	focus = {
 		id = TU_URS_northern_fighter
-		icon = GFX_goal_generic_air_fighter
 		prerequisite = { focus = TU_URS_northern_recon }
 		mutually_exclusive = { focus = TU_URS_northern_bomber }
+		icon = GFX_goal_generic_air_fighter
 		x = 32
 		y = 4
 		cost = 10

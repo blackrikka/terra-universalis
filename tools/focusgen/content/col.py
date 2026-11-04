@@ -107,8 +107,6 @@ C.idea("air_supremacy", "컬럼비아 제공권", "Columbian Air Supremacy",
        {"air_superiority_efficiency": 0.1, "air_attack_factor": 0.05}, "generic_air_bonus")
 C.idea("mechanised_army", "기계화 육군", "Mechanised Army",
        {"army_speed_factor": 0.05, "army_org_factor": 0.03}, "generic_army_europe_1")
-C.idea("two_ocean_navy", "양대양 해군", "Two-Ocean Navy",
-       {"navy_org_factor": 0.05, "naval_speed_factor": 0.05}, "generic_navy_bonus")
 C.idea("industrial_superpower", "산업 강국", "Industrial Superpower",
        {"production_factory_max_efficiency_factor": 0.1, "production_speed_buildings_factor": 0.1},
        "generic_industrial_concern_1")
@@ -218,7 +216,7 @@ f("coastal_fleet", "연안 함대", "Coastal Fleet", pre=["naval_board"])
 f("cruiser_squadrons", "순양함 전대", "Cruiser Fleet Squadrons", pre=["coastal_fleet"])
 f("carrier_programme", "항공모함 계획", "Carrier Fleet Programme", pre=["cruiser_squadrons", "naval_aviation"])
 f("two_ocean_navy", "양대양 해군", "Two-Ocean Navy", pre=["carrier_programme"], theme=False,
-  reward=["add_ideas = TU_COL_two_ocean_navy", "navy_experience = 50"])
+  reward=["add_ideas = TU_COL_two_ocean_navy", "army_experience = 50"])
 
 # F. 경제
 f("oil_industry", "석유 산업", "Oil Industry", pre=["root"], econ=True)
@@ -280,11 +278,11 @@ f("destroyer_fleet", "구축함 전대", "Destroyer Fleet", pre=["coastal_fleet"
 f("submarine_fleet", "잠수함 전대", "Submarine Fleet", pre=["destroyer_fleet"])
 f("marine_corps", "해병대", "Marine Corps Landing", pre=["naval_board"])
 f("coastal_forts", "해안 요새", "Coastal Fortresses", pre=["marine_corps"])
-f("naval_dockyards", "해군 조선소", "Naval Dockyards", pre=["naval_board"], econ="TU_build_dockyard = yes")
+f("naval_dockyards", "해군 조선소", "Naval Dockyards", pre=["naval_board"], econ="TU_build_civ_factory = yes")
 f("farm_mechanisation", "농업 기계화", "Farm Mechanisation", pre=["oil_industry"], econ=True)
 f("originium_mines", "원석 광산", "Originium Ore Mines", pre=["farm_mechanisation"], econ=True)
 f("chemical_industry", "화학 공업", "Chemical Industry", pre=["originium_mines"], econ=True)
-f("harbour_expansion", "항만 확장", "Harbour Expansion", pre=["continental_rail"], econ="TU_build_dockyard = yes")
+f("harbour_expansion", "항만 확장", "Harbour Expansion", pre=["continental_rail"], econ="TU_build_civ_factory = yes")
 f("federal_bank", "연방 은행", "Federal Bank", pre=["stock_exchange"])
 f("labour_unions", "노동조합", "Labour Unions", pre=["factory_towns"])
 f("automobile_industry", "자동차 산업", "Automobile Industry", pre=["assembly_lines"], econ=True)

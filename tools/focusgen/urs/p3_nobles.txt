@@ -2,9 +2,9 @@
 
 	focus = {
 		id = TU_URS_noble_compromise
-		icon = GFX_goal_generic_consumer_goods
 		prerequisite = { focus = TU_URS_imperial_decree }
 		mutually_exclusive = { focus = TU_URS_emperor_rule focus = TU_URS_military_junta focus = TU_URS_reform_path }
+		icon = GFX_goal_generic_consumer_goods
 		x = 100
 		y = 2
 		cost = 10
@@ -28,8 +28,8 @@
 
 	focus = {
 		id = TU_URS_noble_council
-		icon = GFX_goal_generic_improve_relations
 		prerequisite = { focus = TU_URS_noble_compromise }
+		icon = GFX_goal_generic_improve_relations
 		x = 100
 		y = 4
 		cost = 10
@@ -56,9 +56,9 @@
 
 	focus = {
 		id = TU_URS_noble_levies
-		icon = GFX_goal_generic_allies_build_infantry
 		prerequisite = { focus = TU_URS_noble_compromise }
 		mutually_exclusive = { focus = TU_URS_noble_levies_alt }
+		icon = GFX_goal_generic_allies_build_infantry
 		x = 102
 		y = 3
 		cost = 10
@@ -77,9 +77,9 @@
 
 	focus = {
 		id = TU_URS_noble_levies_alt
-		icon = GFX_goal_generic_trade
 		prerequisite = { focus = TU_URS_noble_compromise }
 		mutually_exclusive = { focus = TU_URS_noble_levies }
+		icon = GFX_goal_generic_trade
 		x = 100
 		y = 3
 		cost = 10
@@ -102,8 +102,8 @@
 
 	focus = {
 		id = TU_URS_noble_senate_summon
-		icon = GFX_goal_generic_national_unity
 		prerequisite = { focus = TU_URS_noble_compromise }
+		icon = GFX_goal_generic_national_unity
 		x = 92
 		y = 3
 		cost = 10
@@ -122,8 +122,8 @@
 
 	focus = {
 		id = TU_URS_noble_senate_law
-		icon = GFX_goal_generic_political_pressure
 		prerequisite = { focus = TU_URS_noble_senate_summon }
+		icon = GFX_goal_generic_political_pressure
 		x = 92
 		y = 4
 		cost = 10
@@ -143,9 +143,9 @@
 
 	focus = {
 		id = TU_URS_noble_senate_veto
-		icon = GFX_goal_generic_defence
 		prerequisite = { focus = TU_URS_noble_senate_law }
 		mutually_exclusive = { focus = TU_URS_noble_regency }
+		icon = GFX_goal_generic_defence
 		x = 92
 		y = 5
 		cost = 10
@@ -168,9 +168,9 @@
 
 	focus = {
 		id = TU_URS_noble_regency
-		icon = GFX_goal_generic_neutrality_focus
 		prerequisite = { focus = TU_URS_noble_senate_law }
 		mutually_exclusive = { focus = TU_URS_noble_senate_veto }
+		icon = GFX_goal_generic_neutrality_focus
 		x = 94
 		y = 5
 		cost = 10
@@ -190,8 +190,8 @@
 
 	focus = {
 		id = TU_URS_noble_regent_council
-		icon = GFX_goal_generic_improve_relations
 		prerequisite = { focus = TU_URS_noble_regency }
+		icon = GFX_goal_generic_improve_relations
 		x = 94
 		y = 6
 		cost = 10
@@ -210,8 +210,8 @@
 
 	focus = {
 		id = TU_URS_noble_senate_chamber
-		icon = GFX_goal_generic_construction
 		prerequisite = { focus = TU_URS_noble_senate_veto focus = TU_URS_noble_regency }
+		icon = GFX_goal_generic_construction
 		x = 92
 		y = 6
 		cost = 10
@@ -230,8 +230,8 @@
 
 	focus = {
 		id = TU_URS_noble_senate_levy
-		icon = GFX_goal_generic_allies_build_infantry
 		prerequisite = { focus = TU_URS_noble_senate_chamber }
+		icon = GFX_goal_generic_allies_build_infantry
 		x = 92
 		y = 7
 		cost = 10
@@ -250,8 +250,8 @@
 
 	focus = {
 		id = TU_URS_noble_senate_peace
-		icon = GFX_goal_generic_positive_trade_relations
 		prerequisite = { focus = TU_URS_noble_senate_levy }
+		icon = GFX_goal_generic_positive_trade_relations
 		x = 92
 		y = 8
 		cost = 10
@@ -274,8 +274,8 @@
 
 	focus = {
 		id = TU_URS_noble_feudal_charter
-		icon = GFX_goal_generic_consumer_goods
 		prerequisite = { focus = TU_URS_noble_compromise }
+		icon = GFX_goal_generic_consumer_goods
 		x = 96
 		y = 3
 		cost = 10
@@ -295,9 +295,9 @@
 
 	focus = {
 		id = TU_URS_noble_feudal_autonomy
-		icon = GFX_goal_generic_military_sphere
 		prerequisite = { focus = TU_URS_noble_feudal_charter }
 		mutually_exclusive = { focus = TU_URS_noble_local_taxes }
+		icon = GFX_goal_generic_military_sphere
 		x = 96
 		y = 4
 		cost = 10
@@ -320,9 +320,9 @@
 
 	focus = {
 		id = TU_URS_noble_local_taxes
-		icon = GFX_goal_generic_trade
 		prerequisite = { focus = TU_URS_noble_feudal_charter }
 		mutually_exclusive = { focus = TU_URS_noble_feudal_autonomy }
+		icon = GFX_goal_generic_trade
 		x = 98
 		y = 4
 		cost = 10
@@ -341,8 +341,8 @@
 
 	focus = {
 		id = TU_URS_noble_governors
-		icon = GFX_goal_generic_political_pressure
 		prerequisite = { focus = TU_URS_noble_feudal_autonomy focus = TU_URS_noble_local_taxes }
+		icon = GFX_goal_generic_political_pressure
 		x = 96
 		y = 5
 		cost = 10
@@ -361,8 +361,8 @@
 
 	focus = {
 		id = TU_URS_noble_decentral_union
-		icon = GFX_goal_generic_major_alliance
 		prerequisite = { focus = TU_URS_noble_governors }
+		icon = GFX_goal_generic_major_alliance
 		x = 96
 		y = 7
 		cost = 10
@@ -389,8 +389,8 @@
 
 	focus = {
 		id = TU_URS_noble_feudal_legacy
-		icon = GFX_goal_generic_army_doctrines
 		prerequisite = { focus = TU_URS_noble_decentral_union }
+		icon = GFX_goal_generic_army_doctrines
 		x = 96
 		y = 8
 		cost = 10
@@ -409,8 +409,8 @@
 
 	focus = {
 		id = TU_URS_noble_cartel_charter
-		icon = GFX_goal_generic_construct_civ_factory
 		prerequisite = { focus = TU_URS_noble_council }
+		icon = GFX_goal_generic_construct_civ_factory
 		x = 100
 		y = 5
 		cost = 10
@@ -431,9 +431,9 @@
 
 	focus = {
 		id = TU_URS_noble_cartel_monopoly
-		icon = GFX_goal_generic_production
 		prerequisite = { focus = TU_URS_noble_cartel_charter }
 		mutually_exclusive = { focus = TU_URS_noble_free_trade }
+		icon = GFX_goal_generic_production
 		x = 100
 		y = 6
 		cost = 10
@@ -453,9 +453,9 @@
 
 	focus = {
 		id = TU_URS_noble_free_trade
-		icon = GFX_goal_generic_trade
 		prerequisite = { focus = TU_URS_noble_cartel_charter }
 		mutually_exclusive = { focus = TU_URS_noble_cartel_monopoly }
+		icon = GFX_goal_generic_trade
 		x = 102
 		y = 6
 		cost = 10
@@ -474,8 +474,8 @@
 
 	focus = {
 		id = TU_URS_noble_cartel_bank
-		icon = GFX_goal_generic_consumer_goods
 		prerequisite = { focus = TU_URS_noble_cartel_monopoly focus = TU_URS_noble_free_trade }
+		icon = GFX_goal_generic_consumer_goods
 		x = 100
 		y = 8
 		cost = 10
@@ -498,8 +498,8 @@
 
 	focus = {
 		id = TU_URS_noble_cartel_exports
-		icon = GFX_goal_generic_production2
 		prerequisite = { focus = TU_URS_noble_cartel_bank }
+		icon = GFX_goal_generic_production2
 		x = 100
 		y = 9
 		cost = 10
@@ -519,8 +519,8 @@
 
 	focus = {
 		id = TU_URS_noble_industrial_union
-		icon = GFX_goal_generic_construction2
 		prerequisite = { focus = TU_URS_noble_cartel_exports }
+		icon = GFX_goal_generic_construction2
 		x = 100
 		y = 10
 		cost = 10
@@ -542,8 +542,8 @@
 
 	focus = {
 		id = TU_URS_noble_cartel_peak
-		icon = GFX_goal_generic_national_unity
 		prerequisite = { focus = TU_URS_noble_industrial_union }
+		icon = GFX_goal_generic_national_unity
 		x = 100
 		y = 11
 		cost = 15
@@ -564,8 +564,8 @@
 
 	focus = {
 		id = TU_URS_noble_cartel_standard
-		icon = GFX_goal_generic_small_arms
 		prerequisite = { focus = TU_URS_noble_cartel_peak }
+		icon = GFX_goal_generic_small_arms
 		x = 100
 		y = 12
 		cost = 10
@@ -584,8 +584,8 @@
 
 	focus = {
 		id = TU_URS_noble_monopoly_law
-		icon = GFX_goal_generic_political_pressure
 		prerequisite = { focus = TU_URS_noble_cartel_standard }
+		icon = GFX_goal_generic_political_pressure
 		x = 100
 		y = 14
 		cost = 10
@@ -612,8 +612,8 @@
 
 	focus = {
 		id = TU_URS_noble_cartel_empire
-		icon = GFX_goal_generic_construct_infrastructure
 		prerequisite = { focus = TU_URS_noble_monopoly_law }
+		icon = GFX_goal_generic_construct_infrastructure
 		x = 100
 		y = 15
 		cost = 10
@@ -636,8 +636,8 @@
 
 	focus = {
 		id = TU_URS_noble_cartel_legacy
-		icon = GFX_goal_generic_construction
 		prerequisite = { focus = TU_URS_noble_cartel_empire }
+		icon = GFX_goal_generic_construction
 		x = 100
 		y = 16
 		cost = 15
@@ -656,8 +656,8 @@
 
 	focus = {
 		id = TU_URS_noble_private_armies
-		icon = GFX_goal_generic_cavalry
 		prerequisite = { focus = TU_URS_noble_compromise }
+		icon = GFX_goal_generic_cavalry
 		x = 104
 		y = 3
 		cost = 10
@@ -676,8 +676,8 @@
 
 	focus = {
 		id = TU_URS_noble_estate_militia
-		icon = GFX_goal_generic_allies_build_infantry
 		prerequisite = { focus = TU_URS_noble_private_armies }
+		icon = GFX_goal_generic_allies_build_infantry
 		x = 104
 		y = 4
 		cost = 10
@@ -699,9 +699,9 @@
 
 	focus = {
 		id = TU_URS_noble_armed_retainers
-		icon = GFX_goal_generic_army_artillery
 		prerequisite = { focus = TU_URS_noble_estate_militia }
 		mutually_exclusive = { focus = TU_URS_noble_oath_pledge }
+		icon = GFX_goal_generic_army_artillery
 		x = 104
 		y = 5
 		cost = 10
@@ -720,9 +720,9 @@
 
 	focus = {
 		id = TU_URS_noble_oath_pledge
-		icon = GFX_goal_generic_propaganda
 		prerequisite = { focus = TU_URS_noble_estate_militia }
 		mutually_exclusive = { focus = TU_URS_noble_armed_retainers }
+		icon = GFX_goal_generic_propaganda
 		x = 106
 		y = 5
 		cost = 10
@@ -741,8 +741,8 @@
 
 	focus = {
 		id = TU_URS_noble_private_regiment
-		icon = GFX_goal_generic_army_doctrines
 		prerequisite = { focus = TU_URS_noble_armed_retainers focus = TU_URS_noble_oath_pledge }
+		icon = GFX_goal_generic_army_doctrines
 		x = 104
 		y = 6
 		cost = 10
@@ -761,8 +761,8 @@
 
 	focus = {
 		id = TU_URS_noble_armoured_retinue
-		icon = GFX_goal_generic_army_tanks
 		prerequisite = { focus = TU_URS_noble_private_regiment }
+		icon = GFX_goal_generic_army_tanks
 		x = 104
 		y = 7
 		cost = 10
@@ -781,8 +781,8 @@
 
 	focus = {
 		id = TU_URS_noble_estate_defence
-		icon = GFX_goal_generic_fortify_city
 		prerequisite = { focus = TU_URS_noble_armoured_retinue }
+		icon = GFX_goal_generic_fortify_city
 		x = 104
 		y = 8
 		cost = 10
@@ -805,8 +805,8 @@
 
 	focus = {
 		id = TU_URS_noble_mobile_estates
-		icon = GFX_goal_generic_construct_civilian
 		prerequisite = { focus = TU_URS_noble_compromise }
+		icon = GFX_goal_generic_construct_civilian
 		x = 108
 		y = 3
 		cost = 10
@@ -825,8 +825,8 @@
 
 	focus = {
 		id = TU_URS_noble_mobile_survey
-		icon = GFX_goal_generic_radar
 		prerequisite = { focus = TU_URS_noble_mobile_estates }
+		icon = GFX_goal_generic_radar
 		x = 108
 		y = 4
 		cost = 10
@@ -845,8 +845,8 @@
 
 	focus = {
 		id = TU_URS_noble_caravan_route
-		icon = GFX_goal_generic_trade
 		prerequisite = { focus = TU_URS_noble_mobile_survey }
+		icon = GFX_goal_generic_trade
 		x = 110
 		y = 5
 		cost = 10
@@ -869,8 +869,8 @@
 
 	focus = {
 		id = TU_URS_noble_mobile_capital
-		icon = GFX_goal_generic_national_unity
 		prerequisite = { focus = TU_URS_noble_caravan_route focus = TU_URS_noble_mobile_survey }
+		icon = GFX_goal_generic_national_unity
 		x = 108
 		y = 7
 		cost = 15
@@ -898,8 +898,8 @@
 
 	focus = {
 		id = TU_URS_noble_envoy_office
-		icon = GFX_goal_generic_intelligence_exchange
 		prerequisite = { focus = TU_URS_noble_compromise }
+		icon = GFX_goal_generic_intelligence_exchange
 		x = 112
 		y = 3
 		cost = 10

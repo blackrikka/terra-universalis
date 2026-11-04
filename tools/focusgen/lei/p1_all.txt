@@ -581,7 +581,7 @@
 
 	focus = {
 		id = TU_LEI_sealed_archives
-		icon = GFX_goal_generic_build_navy
+		icon = GFX_focus_research
 		prerequisite = { focus = TU_LEI_witch_king_legacy }
 		x = 0
 		y = 0
@@ -1465,7 +1465,7 @@
 
 	focus = {
 		id = TU_LEI_seal_guardians
-		icon = GFX_goal_generic_build_navy
+		icon = GFX_goal_generic_allies_build_infantry
 		prerequisite = { focus = TU_LEI_witch_hunters }
 		x = 0
 		y = 0
@@ -1478,9 +1478,8 @@
 		}
 
 		completion_reward = {
-			add_tech_bonus = { name = TU_LEI_seal_guardians bonus = 0.75 uses = 1 category = dd_tech category = ca_tech }
-			add_doctrine_cost_reduction = { name = TU_LEI_seal_guardians cost_reduction = 0.4 uses = 1 category = naval_doctrine }
-			navy_experience = 25
+			add_manpower = 10000
+			army_experience = 25
 		}
 	}
 
@@ -1807,7 +1806,7 @@
 
 	focus = {
 		id = TU_LEI_rhodes_office
-		icon = GFX_goal_generic_build_navy
+		icon = GFX_goal_generic_improve_relations
 		prerequisite = { focus = TU_LEI_foreign_office }
 		x = 0
 		y = 0
@@ -1820,9 +1819,8 @@
 		}
 
 		completion_reward = {
-			add_tech_bonus = { name = TU_LEI_rhodes_office bonus = 0.75 uses = 1 category = dd_tech category = ca_tech }
-			add_doctrine_cost_reduction = { name = TU_LEI_rhodes_office cost_reduction = 0.4 uses = 1 category = naval_doctrine }
-			navy_experience = 25
+			add_political_power = 60
+			add_stability = 0.03
 		}
 	}
 
@@ -1926,7 +1924,7 @@
 
 	focus = {
 		id = TU_LEI_twin_portraits
-		icon = GFX_goal_generic_build_navy
+		icon = GFX_goal_generic_propaganda
 		prerequisite = { focus = TU_LEI_twin_empresses }
 		x = 0
 		y = 0
@@ -1939,9 +1937,8 @@
 		}
 
 		completion_reward = {
-			add_tech_bonus = { name = TU_LEI_twin_portraits bonus = 0.75 uses = 1 category = dd_tech category = ca_tech }
-			add_doctrine_cost_reduction = { name = TU_LEI_twin_portraits cost_reduction = 0.4 uses = 1 category = naval_doctrine }
-			navy_experience = 25
+			add_war_support = 0.03
+			add_stability = 0.03
 		}
 	}
 

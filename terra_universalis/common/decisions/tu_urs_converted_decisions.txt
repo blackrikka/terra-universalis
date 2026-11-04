@@ -981,11 +981,11 @@ TU_URS_expansion_category = {
 		}
 
 		visible = {
-			has_completed_focus = TU_URS_w2_hig_war_doctrine
+			has_completed_focus = TU_URS_foreign_ministry
 		}
 
 		available = {
-			has_completed_focus = TU_URS_w2_hig_war_doctrine
+			has_completed_focus = TU_URS_foreign_ministry
 			NOT = { has_country_flag = TU_DEC_TU_URS_w2_hig_guarantee }
 		}
 
@@ -2782,11 +2782,11 @@ TU_URS_diplomacy_category = {
 		}
 
 		visible = {
-			has_completed_focus = TU_URS_w2_hig_naval_buildup
+			has_completed_focus = TU_URS_foreign_ministry
 		}
 
 		available = {
-			has_completed_focus = TU_URS_w2_hig_naval_buildup
+			has_completed_focus = TU_URS_foreign_ministry
 			NOT = { has_country_flag = TU_DEC_TU_URS_w2_hig_non_aggression }
 		}
 

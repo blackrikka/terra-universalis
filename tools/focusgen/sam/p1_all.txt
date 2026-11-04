@@ -1402,7 +1402,7 @@
 
 	focus = {
 		id = TU_SAM_fishing_villages
-		icon = GFX_goal_generic_political_pressure
+		icon = GFX_goal_generic_trade
 		prerequisite = { focus = TU_SAM_timber }
 		x = 0
 		y = 0
@@ -1416,7 +1416,7 @@
 
 		completion_reward = {
 			add_political_power = 60
-			add_stability = 0.03
+			add_tech_bonus = { name = TU_SAM_fishing_villages bonus = 0.75 uses = 1 category = industry }
 			TU_build_civ_factory = yes
 		}
 	}
@@ -2099,7 +2099,7 @@
 
 	focus = {
 		id = TU_SAM_northern_ports
-		icon = GFX_goal_generic_build_navy
+		icon = GFX_goal_generic_trade
 		prerequisite = { focus = TU_SAM_railway_north }
 		x = 0
 		y = 0
@@ -2112,10 +2112,9 @@
 		}
 
 		completion_reward = {
-			add_tech_bonus = { name = TU_SAM_northern_ports bonus = 0.75 uses = 1 category = dd_tech category = ca_tech }
-			add_doctrine_cost_reduction = { name = TU_SAM_northern_ports cost_reduction = 0.4 uses = 1 category = naval_doctrine }
-			navy_experience = 25
-			TU_build_dockyard = yes
+			add_political_power = 60
+			add_tech_bonus = { name = TU_SAM_northern_ports bonus = 0.75 uses = 1 category = industry }
+			TU_build_civ_factory = yes
 		}
 	}
 

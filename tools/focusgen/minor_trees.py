@@ -305,8 +305,6 @@ def build_kind(theme, en):
         return "TU_build_infrastructure"
     if theme in ("infantry_weapons", "artillery") or "arms factory" in e:
         return "TU_build_mil_factory"
-    if theme == "navy":
-        return "TU_build_dockyard"
     return "TU_build_civ_factory"
 
 

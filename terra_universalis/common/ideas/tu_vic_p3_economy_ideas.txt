@@ -13,8 +13,8 @@ ideas = {
 			}
 
 			modifier = {
-				industrial_capacity_dockyard = 0.1
-				production_speed_dockyard_factor = 0.1
+				industrial_capacity_factory = 0.05
+				production_speed_industrial_complex_factor = 0.1
 			}
 		}
 
@@ -87,7 +87,7 @@ ideas = {
 		}
 
 		TU_VIC_eco_coastal_fleet = {
-			picture = generic_sea_focused_navy
+			picture = generic_fortify_the_borders
 
 			allowed = {
 				original_tag = VIC
@@ -98,8 +98,8 @@ ideas = {
 			}
 
 			modifier = {
-				naval_doctrine_cost_factor = -0.1
-				naval_strike_attack_factor = 0.05
+				coastal_bunker_effectiveness_factor = 0.1
+				production_speed_coastal_bunker_factor = 0.25
 			}
 		}
 

@@ -2,8 +2,8 @@
 
 	focus = {
 		id = TU_URS_w2_yan_border_buildup
-		icon = GFX_goal_generic_defence
 		prerequisite = { focus = TU_URS_foreign_ministry }
+		icon = GFX_goal_generic_defence
 		x = 154
 		y = 4
 		cost = 10
@@ -26,8 +26,8 @@
 
 	focus = {
 		id = TU_URS_w2_yan_mobilization
-		icon = GFX_goal_generic_army_motorized
 		prerequisite = { focus = TU_URS_foreign_ministry }
+		icon = GFX_goal_generic_army_motorized
 		x = 156
 		y = 4
 		cost = 10
@@ -51,8 +51,8 @@
 
 	focus = {
 		id = TU_URS_w2_yan_war_doctrine
-		icon = GFX_goal_generic_army_tanks
 		prerequisite = { focus = TU_URS_w2_yan_mobilization }
+		icon = GFX_goal_generic_army_tanks
 		x = 156
 		y = 5
 		cost = 10
@@ -71,8 +71,8 @@
 
 	focus = {
 		id = TU_URS_w2_yan_awakening
-		icon = GFX_goal_generic_national_unity
 		prerequisite = { focus = TU_URS_w2_yan_border_buildup }
+		icon = GFX_goal_generic_national_unity
 		x = 154
 		y = 6
 		cost = 10
@@ -97,8 +97,8 @@
 
 	focus = {
 		id = TU_URS_w2_yan_occupation
-		icon = GFX_goal_generic_occupy_states_ongoing_war
 		prerequisite = { focus = TU_URS_w2_yan_war_doctrine }
+		icon = GFX_goal_generic_occupy_states_ongoing_war
 		x = 156
 		y = 8
 		cost = 10
@@ -123,8 +123,8 @@
 
 	focus = {
 		id = TU_URS_w2_yan_core_integration
-		icon = GFX_goal_generic_construction
 		prerequisite = { focus = TU_URS_w2_yan_occupation }
+		icon = GFX_goal_generic_construction
 		x = 156
 		y = 11
 		cost = 10
@@ -154,8 +154,8 @@
 
 	focus = {
 		id = TU_URS_w2_lgm_reunion_pressure
-		icon = GFX_goal_generic_demand_territory
 		prerequisite = { focus = TU_URS_foreign_ministry }
+		icon = GFX_goal_generic_demand_territory
 		x = 160
 		y = 4
 		cost = 10
@@ -180,8 +180,8 @@
 
 	focus = {
 		id = TU_URS_w2_lgm_mobilization
-		icon = GFX_goal_generic_army_motorized
 		prerequisite = { focus = TU_URS_foreign_ministry }
+		icon = GFX_goal_generic_army_motorized
 		x = 162
 		y = 4
 		cost = 10
@@ -205,8 +205,8 @@
 
 	focus = {
 		id = TU_URS_w2_lgm_war_doctrine
-		icon = GFX_goal_generic_army_artillery
 		prerequisite = { focus = TU_URS_w2_lgm_mobilization }
+		icon = GFX_goal_generic_army_artillery
 		x = 162
 		y = 5
 		cost = 10
@@ -225,8 +225,8 @@
 
 	focus = {
 		id = TU_URS_w2_lgm_noble_gate
-		icon = GFX_goal_generic_consumer_goods
 		prerequisite = { focus = TU_URS_w2_lgm_reunion_pressure }
+		icon = GFX_goal_generic_consumer_goods
 		x = 160
 		y = 6
 		cost = 10
@@ -255,8 +255,8 @@
 
 	focus = {
 		id = TU_URS_w2_lgm_core_integration
-		icon = GFX_goal_generic_construction
 		prerequisite = { focus = TU_URS_w2_lgm_war_doctrine }
+		icon = GFX_goal_generic_construction
 		x = 162
 		y = 9
 		cost = 10
@@ -289,107 +289,9 @@
 	#### SOUTH: HIGASHI (HIG) - diplomacy x164 / border x166 / war x168 ####
 
 	focus = {
-		id = TU_URS_w2_hig_naval_buildup
-		icon = GFX_goal_generic_build_navy
-		prerequisite = { focus = TU_URS_foreign_ministry }
-		x = 166
-		y = 4
-		cost = 10
-
-		search_filters = { FOCUS_FILTER_MANPOWER }
-
-		ai_will_do = {
-			base = 1
-		}
-
-		available = {
-			has_country_flag = TU_DEC_TU_URS_w2_hig_border_claims
-		}
-
-		completion_reward = {
-			add_tech_bonus = { name = TU_URS_w2_hig_naval_buildup bonus = 0.75 uses = 1 category = dd_tech category = ca_tech }
-			add_doctrine_cost_reduction = { name = TU_URS_w2_hig_naval_buildup cost_reduction = 0.4 uses = 1 category = naval_doctrine }
-			navy_experience = 25
-		}
-	}
-
-	focus = {
-		id = TU_URS_w2_hig_mobilization
-		icon = GFX_goal_generic_amphibious_assault
-		prerequisite = { focus = TU_URS_foreign_ministry }
-		x = 168
-		y = 4
-		cost = 10
-
-		search_filters = { FOCUS_FILTER_ARMY_XP }
-
-		ai_will_do = {
-			base = 1
-		}
-
-		available = {
-			has_country_flag = TU_DEC_TU_URS_w2_hig_border_claims
-		}
-
-		completion_reward = {
-			add_tech_bonus = { name = TU_URS_w2_hig_mobilization bonus = 0.75 uses = 1 category = dd_tech category = ca_tech }
-			add_doctrine_cost_reduction = { name = TU_URS_w2_hig_mobilization cost_reduction = 0.4 uses = 1 category = naval_doctrine }
-			navy_experience = 25
-		}
-	}
-
-	focus = {
-		id = TU_URS_w2_hig_war_doctrine
-		icon = GFX_goal_generic_occupy_states_coastal
-		prerequisite = { focus = TU_URS_w2_hig_mobilization }
-		x = 168
-		y = 5
-		cost = 10
-
-		search_filters = { FOCUS_FILTER_ARMY_XP }
-
-		ai_will_do = {
-			base = 1
-		}
-
-		completion_reward = {
-			add_tech_bonus = { name = TU_URS_w2_hig_war_doctrine bonus = 0.75 uses = 1 category = dd_tech category = ca_tech }
-			add_doctrine_cost_reduction = { name = TU_URS_w2_hig_war_doctrine cost_reduction = 0.4 uses = 1 category = naval_doctrine }
-			navy_experience = 25
-		}
-	}
-
-	focus = {
-		id = TU_URS_w2_hig_junta_landing
-		icon = GFX_goal_generic_occupy_states_coastal
-		prerequisite = { focus = TU_URS_w2_hig_naval_buildup }
-		x = 166
-		y = 6
-		cost = 10
-
-		available = {
-			has_completed_focus = TU_URS_military_junta
-			has_country_flag = TU_DEC_TU_URS_w2_hig_ultimatum
-		}
-
-		search_filters = { FOCUS_FILTER_WAR_SUPPORT }
-
-		ai_will_do = {
-			base = 1
-		}
-
-		completion_reward = {
-			add_ideas = TU_URS_w2_naval_blockade
-			add_tech_bonus = { name = TU_URS_w2_hig_junta_landing bonus = 0.75 uses = 1 category = dd_tech category = ca_tech }
-			add_doctrine_cost_reduction = { name = TU_URS_w2_hig_junta_landing cost_reduction = 0.4 uses = 1 category = naval_doctrine }
-			navy_experience = 25
-		}
-	}
-
-	focus = {
 		id = TU_URS_w2_hig_core_integration
+		prerequisite = { focus = TU_URS_foreign_ministry }
 		icon = GFX_goal_generic_construction
-		prerequisite = { focus = TU_URS_w2_hig_war_doctrine }
 		x = 168
 		y = 10
 		cost = 10

@@ -14,8 +14,8 @@
 
 	focus = {
 		id = TU_LGM_defence_plan
-		icon = GFX_goal_generic_defence
 		prerequisite = { focus = TU_LGM_trade_hub_focus }
+		icon = GFX_goal_generic_defence
 		x = 3
 		y = 1
 		cost = 5
@@ -30,8 +30,8 @@
 
 	focus = {
 		id = TU_LGM_refugee_camps
-		icon = GFX_goal_generic_construct_civilian
 		prerequisite = { focus = TU_LGM_defence_plan }
+		icon = GFX_goal_generic_construct_civilian
 		x = 3
 		y = 2
 		cost = 10
@@ -47,8 +47,8 @@
 
 	focus = {
 		id = TU_LGM_sanction_relief
-		icon = GFX_goal_generic_trade
 		prerequisite = { focus = TU_LGM_refugee_camps }
+		icon = GFX_goal_generic_trade
 		x = 3
 		y = 3
 		cost = 10
@@ -65,8 +65,8 @@
 
 	focus = {
 		id = TU_LGM_city_charter
-		icon = GFX_goal_generic_neutrality_focus
 		prerequisite = { focus = TU_LGM_trade_hub_focus }
+		icon = GFX_goal_generic_neutrality_focus
 		x = -3
 		y = 1
 		cost = 10
@@ -85,8 +85,8 @@
 
 	focus = {
 		id = TU_LGM_autonomy_talks
-		icon = GFX_goal_generic_improve_relations
 		prerequisite = { focus = TU_LGM_city_charter }
+		icon = GFX_goal_generic_improve_relations
 		x = -3
 		y = 2
 		cost = 10
@@ -114,9 +114,9 @@
 
 	focus = {
 		id = TU_LGM_independence
-		icon = GFX_goal_generic_political_pressure
 		prerequisite = { focus = TU_LGM_autonomy_talks }
 		mutually_exclusive = { focus = TU_LGM_chen_coup }
+		icon = GFX_goal_generic_political_pressure
 		x = -3
 		y = 3
 		cost = 10
@@ -134,8 +134,8 @@
 
 	focus = {
 		id = TU_LGM_guard_reform
-		icon = GFX_goal_generic_army_doctrines
 		prerequisite = { focus = TU_LGM_trade_hub_focus }
+		icon = GFX_goal_generic_army_doctrines
 		x = 0
 		y = 1
 		cost = 5
@@ -150,8 +150,8 @@
 
 	focus = {
 		id = TU_LGM_chen_plan
-		icon = GFX_goal_generic_intelligence_exchange
 		prerequisite = { focus = TU_LGM_guard_reform }
+		icon = GFX_goal_generic_intelligence_exchange
 		x = -1
 		y = 2
 		cost = 10
@@ -167,9 +167,9 @@
 
 	focus = {
 		id = TU_LGM_chen_coup
-		icon = GFX_goal_generic_political_pressure
 		prerequisite = { focus = TU_LGM_chen_plan }
 		mutually_exclusive = { focus = TU_LGM_independence }
+		icon = GFX_goal_generic_political_pressure
 		x = -1
 		y = 3
 		cost = 10
@@ -191,8 +191,8 @@
 
 	focus = {
 		id = TU_LGM_guard_drill
-		icon = GFX_goal_generic_army_artillery
 		prerequisite = { focus = TU_LGM_guard_reform }
+		icon = GFX_goal_generic_army_artillery
 		x = 1
 		y = 2
 		cost = 10
@@ -207,8 +207,8 @@
 
 	focus = {
 		id = TU_LGM_border_watch
-		icon = GFX_goal_generic_fortify_city
 		prerequisite = { focus = TU_LGM_chen_coup }
+		icon = GFX_goal_generic_fortify_city
 		x = -1
 		y = 4
 		cost = 10

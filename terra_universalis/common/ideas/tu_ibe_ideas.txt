@@ -16,14 +16,14 @@ ideas = {
 		}
 
 		TU_IBE_fear_of_the_sea = {
-			picture = generic_navy_bonus
+			picture = generic_economic_increase
 
 			allowed = {
 				original_tag = IBE
 			}
 
 			modifier = {
-				naval_speed_factor = -0.1
+				political_power_gain = -0.1
 				stability_factor = -0.03
 			}
 		}
@@ -69,15 +69,15 @@ ideas = {
 		}
 
 		TU_IBE_sea_reconciliation = {
-			picture = generic_navy_bonus
+			picture = generic_economic_increase
 
 			allowed = {
 				original_tag = IBE
 			}
 
 			modifier = {
-				naval_speed_factor = 0.1
-				navy_org_factor = 0.05
+				political_power_gain = 0.1
+				army_org_factor = 0.05
 				stability_factor = 0.05
 			}
 		}
@@ -92,19 +92,6 @@ ideas = {
 			modifier = {
 				army_attack_factor = 0.05
 				army_org_factor = 0.05
-			}
-		}
-
-		TU_IBE_iberian_navy = {
-			picture = generic_navy_bonus
-
-			allowed = {
-				original_tag = IBE
-			}
-
-			modifier = {
-				navy_org_factor = 0.08
-				naval_speed_factor = 0.05
 			}
 		}
 

@@ -1549,7 +1549,7 @@
 
 	focus = {
 		id = TU_BOL_river_ports
-		icon = GFX_goal_generic_build_navy
+		icon = GFX_goal_generic_trade
 		prerequisite = { focus = TU_BOL_rail_network }
 		x = 0
 		y = 0
@@ -1562,10 +1562,9 @@
 		}
 
 		completion_reward = {
-			add_tech_bonus = { name = TU_BOL_river_ports bonus = 0.75 uses = 1 category = dd_tech category = ca_tech }
-			add_doctrine_cost_reduction = { name = TU_BOL_river_ports cost_reduction = 0.4 uses = 1 category = naval_doctrine }
-			navy_experience = 25
-			TU_build_dockyard = yes
+			add_political_power = 60
+			add_tech_bonus = { name = TU_BOL_river_ports bonus = 0.75 uses = 1 category = industry }
+			TU_build_civ_factory = yes
 		}
 	}
 
@@ -1651,7 +1650,7 @@
 
 	focus = {
 		id = TU_BOL_rhodes_doctors
-		icon = GFX_goal_generic_build_navy
+		icon = GFX_goal_generic_consumer_goods
 		prerequisite = { focus = TU_BOL_refugee_relief }
 		x = 0
 		y = 0
@@ -1664,9 +1663,8 @@
 		}
 
 		completion_reward = {
-			add_tech_bonus = { name = TU_BOL_rhodes_doctors bonus = 0.75 uses = 1 category = dd_tech category = ca_tech }
-			add_doctrine_cost_reduction = { name = TU_BOL_rhodes_doctors cost_reduction = 0.4 uses = 1 category = naval_doctrine }
-			navy_experience = 25
+			add_stability = 0.03
+			add_manpower = 10000
 		}
 	}
 
@@ -1846,27 +1844,6 @@
 		completion_reward = {
 			add_doctrine_cost_reduction = { name = TU_BOL_ambush_school cost_reduction = 0.4 uses = 1 category = land_doctrine }
 			army_experience = 25
-		}
-	}
-
-	focus = {
-		id = TU_BOL_river_fleet
-		icon = GFX_goal_generic_build_navy
-		prerequisite = { focus = TU_BOL_river_patrols }
-		x = 0
-		y = 0
-		cost = 10
-
-		search_filters = { FOCUS_FILTER_POLITICAL }
-
-		ai_will_do = {
-			base = 1
-		}
-
-		completion_reward = {
-			add_tech_bonus = { name = TU_BOL_river_fleet bonus = 0.75 uses = 1 category = dd_tech category = ca_tech }
-			add_doctrine_cost_reduction = { name = TU_BOL_river_fleet cost_reduction = 0.4 uses = 1 category = naval_doctrine }
-			navy_experience = 25
 		}
 	}
 
@@ -2356,7 +2333,7 @@
 
 	focus = {
 		id = TU_BOL_rhodes_clinics
-		icon = GFX_goal_generic_build_navy
+		icon = GFX_goal_generic_consumer_goods
 		prerequisite = { focus = TU_BOL_rhodes_doctors }
 		x = 0
 		y = 0
@@ -2369,9 +2346,8 @@
 		}
 
 		completion_reward = {
-			add_tech_bonus = { name = TU_BOL_rhodes_clinics bonus = 0.75 uses = 1 category = dd_tech category = ca_tech }
-			add_doctrine_cost_reduction = { name = TU_BOL_rhodes_clinics cost_reduction = 0.4 uses = 1 category = naval_doctrine }
-			navy_experience = 25
+			add_stability = 0.03
+			add_manpower = 10000
 		}
 	}
 

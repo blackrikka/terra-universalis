@@ -2,9 +2,9 @@
 
 	focus = {
 		id = TU_URS_forced_labour
-		icon = GFX_goal_generic_construct_civilian
 		prerequisite = { focus = TU_URS_infection_policy }
 		mutually_exclusive = { focus = TU_URS_quarantine_zones }
+		icon = GFX_goal_generic_construct_civilian
 		x = 40
 		y = 1
 		cost = 10
@@ -23,8 +23,8 @@
 
 	focus = {
 		id = TU_URS_labour_camps
-		icon = GFX_goal_generic_construct_civilian
 		prerequisite = { focus = TU_URS_forced_labour }
+		icon = GFX_goal_generic_construct_civilian
 		x = 40
 		y = 2
 		cost = 10
@@ -43,9 +43,9 @@
 
 	focus = {
 		id = TU_URS_quarantine_zones
-		icon = GFX_goal_generic_fortify_city
 		prerequisite = { focus = TU_URS_infection_policy }
 		mutually_exclusive = { focus = TU_URS_forced_labour }
+		icon = GFX_goal_generic_fortify_city
 		x = 42
 		y = 1
 		cost = 10
@@ -65,8 +65,8 @@
 
 	focus = {
 		id = TU_URS_quarantine_wall
-		icon = GFX_goal_generic_defence
 		prerequisite = { focus = TU_URS_quarantine_zones }
+		icon = GFX_goal_generic_defence
 		x = 42
 		y = 2
 		cost = 10
@@ -86,8 +86,8 @@
 
 	focus = {
 		id = TU_URS_chernobog_garrison
-		icon = GFX_goal_generic_fortify_city
 		prerequisite = { focus = TU_URS_infection_policy }
+		icon = GFX_goal_generic_fortify_city
 		x = 44
 		y = 2
 		cost = 10
@@ -111,9 +111,9 @@
 	#### REUNION: SUPPRESSION (x 38) vs NEGOTIATION (x 36) (mutually exclusive) ####
 	focus = {
 		id = TU_URS_reu_suppression
-		icon = GFX_goal_generic_political_pressure
 		prerequisite = { focus = TU_URS_infection_policy }
 		mutually_exclusive = { focus = TU_URS_reu_negotiation }
+		icon = GFX_goal_generic_political_pressure
 		x = 38
 		y = 1
 		cost = 10
@@ -146,9 +146,9 @@
 
 	focus = {
 		id = TU_URS_reu_negotiation
-		icon = GFX_goal_generic_improve_relations
 		prerequisite = { focus = TU_URS_infection_policy }
 		mutually_exclusive = { focus = TU_URS_reu_suppression }
+		icon = GFX_goal_generic_improve_relations
 		x = 36
 		y = 1
 		cost = 10
@@ -180,8 +180,8 @@
 
 	focus = {
 		id = TU_URS_reu_front
-		icon = GFX_goal_generic_occupy_states_ongoing_war
 		prerequisite = { focus = TU_URS_reu_suppression }
+		icon = GFX_goal_generic_occupy_states_ongoing_war
 		x = 38
 		y = 2
 		cost = 10
@@ -201,8 +201,8 @@
 
 	focus = {
 		id = TU_URS_reu_talks
-		icon = GFX_goal_generic_trade
 		prerequisite = { focus = TU_URS_reu_negotiation }
+		icon = GFX_goal_generic_trade
 		x = 36
 		y = 2
 		cost = 10
@@ -221,8 +221,8 @@
 
 	focus = {
 		id = TU_URS_reu_occupation
-		icon = GFX_goal_generic_demand_territory
 		prerequisite = { focus = TU_URS_reu_front }
+		icon = GFX_goal_generic_demand_territory
 		x = 38
 		y = 3
 		cost = 15
@@ -250,8 +250,8 @@
 
 	focus = {
 		id = TU_URS_reu_peace
-		icon = GFX_goal_generic_neutrality_focus
 		prerequisite = { focus = TU_URS_reu_talks }
+		icon = GFX_goal_generic_neutrality_focus
 		x = 36
 		y = 3
 		cost = 10
@@ -274,8 +274,8 @@
 
 	focus = {
 		id = TU_URS_lungmen_aid
-		icon = GFX_goal_generic_alliance
 		prerequisite = { focus = TU_URS_reu_peace }
+		icon = GFX_goal_generic_alliance
 		x = 36
 		y = 4
 		cost = 10
@@ -306,8 +306,8 @@
 
 	focus = {
 		id = TU_URS_reu_siege
-		icon = GFX_goal_generic_major_war
 		prerequisite = { focus = TU_URS_reu_occupation }
+		icon = GFX_goal_generic_major_war
 		x = 38
 		y = 4
 		cost = 10
@@ -338,8 +338,8 @@
 
 	focus = {
 		id = TU_URS_reu_final
-		icon = GFX_goal_generic_occupy_start_war
 		prerequisite = { focus = TU_URS_reu_siege }
+		icon = GFX_goal_generic_occupy_start_war
 		x = 38
 		y = 5
 		cost = 15
@@ -359,8 +359,8 @@
 
 	focus = {
 		id = TU_URS_labour_expansion
-		icon = GFX_goal_generic_construct_civilian
 		prerequisite = { focus = TU_URS_labour_camps }
+		icon = GFX_goal_generic_construct_civilian
 		x = 40
 		y = 3
 		cost = 10
@@ -384,8 +384,8 @@
 
 	focus = {
 		id = TU_URS_quarantine_patrol
-		icon = GFX_goal_generic_intelligence_exchange
 		prerequisite = { focus = TU_URS_quarantine_wall }
+		icon = GFX_goal_generic_intelligence_exchange
 		x = 42
 		y = 3
 		cost = 10
@@ -404,8 +404,8 @@
 
 	focus = {
 		id = TU_URS_rho_cooperation
-		icon = GFX_goal_generic_scientific_exchange
 		prerequisite = { focus = TU_URS_quarantine_patrol }
+		icon = GFX_goal_generic_scientific_exchange
 		x = 42
 		y = 4
 		cost = 10
@@ -430,16 +430,16 @@
 				}
 			}
 			add_ideas = TU_URS_e4_rho_medical
-			add_tech_bonus = { name = TU_URS_rho_cooperation bonus = 0.75 uses = 1 category = dd_tech category = ca_tech }
-			add_doctrine_cost_reduction = { name = TU_URS_rho_cooperation cost_reduction = 0.4 uses = 1 category = naval_doctrine }
-			navy_experience = 25
+			army_experience = 25
+			add_war_support = 0.03
+			add_doctrine_cost_reduction = { name = TU_URS_rho_cooperation cost_reduction = 0.4 uses = 1 category = land_doctrine }
 		}
 	}
 
 	focus = {
 		id = TU_URS_chernobog_defence
-		icon = GFX_goal_generic_defence
 		prerequisite = { focus = TU_URS_chernobog_garrison }
+		icon = GFX_goal_generic_defence
 		x = 44
 		y = 4
 		cost = 10
@@ -461,8 +461,8 @@
 
 	focus = {
 		id = TU_URS_chernobog_fortress
-		icon = GFX_goal_generic_fortify_city
 		prerequisite = { focus = TU_URS_chernobog_defence }
+		icon = GFX_goal_generic_fortify_city
 		x = 44
 		y = 6
 		cost = 10
@@ -480,8 +480,8 @@
 
 	focus = {
 		id = TU_URS_chernobog_seal
-		icon = GFX_goal_generic_radar
 		prerequisite = { focus = TU_URS_chernobog_fortress }
+		icon = GFX_goal_generic_radar
 		x = 44
 		y = 11
 		cost = 15
@@ -497,17 +497,16 @@
 		}
 
 		completion_reward = {
-			add_tech_bonus = { name = TU_URS_chernobog_seal bonus = 1.0 uses = 1 category = dd_tech category = ca_tech }
-			add_doctrine_cost_reduction = { name = TU_URS_chernobog_seal cost_reduction = 0.5 uses = 1 category = naval_doctrine }
-			navy_experience = 40
+			add_political_power = 100
+			add_stability = 0.05
 		}
 	}
 
 	#### END OF THE CHERNOBOG LINE ####
 	focus = {
 		id = TU_URS_chernobog_legacy
-		icon = GFX_goal_generic_secret_weapon
 		prerequisite = { focus = TU_URS_chernobog_seal }
+		icon = GFX_goal_generic_secret_weapon
 		x = 44
 		y = 18
 		cost = 15
@@ -526,8 +525,8 @@
 
 	focus = {
 		id = TU_URS_infected_quota
-		icon = GFX_goal_generic_construction
 		prerequisite = { focus = TU_URS_labour_expansion }
+		icon = GFX_goal_generic_construction
 		x = 40
 		y = 4
 		cost = 10

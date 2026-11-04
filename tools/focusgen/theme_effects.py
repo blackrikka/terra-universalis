@@ -12,6 +12,18 @@ idea_modifiers(theme)      -> 갈래 끝 국민정신용 모디파이어 dict
 
 import re
 
+# 군함·조선소·해군기지 중점 (해군 기능을 없앴으므로 트리에서 지운다: content_lib.py, drop_focuses.py).
+WARSHIP_RE = (r"^(?!.*airship).*(?:naval|\bnavy|fleet|warship|battleship|cruiser|destroyer|submarine|carrier|torpedo|depth charge|gunboat|"
+              r"trireme|galley|dockyard|shipyard|shipbuild|shipwright|marine corps|amphib|landing force|landing corps|"
+              r"anti-submarine|merchant marine|ironclad|wolfpack)")
+# 지우지 않는 태그 (로도스 아일랜드: 육상함의 도크·수송대)
+WARSHIP_KEEP_TAGS = {"RHO"}
+
+
+def is_warship(name_en, tag=None):
+    return tag not in WARSHIP_KEEP_TAGS and re.search(WARSHIP_RE, name_en or "", re.I) is not None
+
+
 # (테마, 영어 이름 정규식). 위에서부터 처음 맞는 테마를 쓴다.
 THEMES = [
     ("mobile_city", r"mobile cit|landship|nomadic|moving cit"),
@@ -20,7 +32,8 @@ THEMES = [
     ("rail", r"^(?!.*(sabotage|guard|battery|fortress)).*(\brail|railway|\bgauge\b|\btracks?\b)"),
     ("mobile", r"mobile|mobility|motori[sz]|mechani[sz]|truck|blitz|cavalry|raid|rapid|express|lightning|manoeuvre|maneuver|pursuit"),
     ("air", r"\bair|airfield|fighter|bomber|\bsky|wing|flight|drone|aviat"),
-    ("navy", r"naval|\bnavy|fleet|harbou?r|\bdock|ship|\bsea|strait|coast|marine|blockade|convoy|\bport|island|landing|amphib|ocean|tide|aegir"),
+    ("warship", WARSHIP_RE),
+    ("harbour", r"harbou?r|\bports?\b|strait|coast|\bseas?\b|ocean|tide|(?<!rhodes )island|aegir|lighthouse|deep.sea|maritime|shipping|sea lane|anchorage|\bdocks?\b|fishing|black ships"),
     ("artillery", r"artiller|siege|cannon|\bguns?\b|battery|bombard|mortar"),
     ("infantry_weapons", r"\barms\b|rifle|weapon|arsenal|forge|steel|\biron|smith|blade|sword|munition|equipment|firearm|crossbow|bow"),
     ("fort", r"^(?!.*shield wall).*(fortress|\bforts?\b|fortif|\bwalls?\b|bastion|bulwark|stronghold|citadel|bunker|entrench|trench|barrier|rampart|redoubt|defen[cs]e line)"),
@@ -43,7 +56,8 @@ FOCUS_ICON = {
     "armor": "GFX_goal_generic_army_tanks",
     "mobile": "GFX_goal_generic_army_motorized",
     "air": "GFX_goal_generic_air_doctrine",
-    "navy": "GFX_goal_generic_build_navy",
+    "warship": "GFX_goal_generic_trade",
+    "harbour": "GFX_goal_generic_trade",
     "artillery": "GFX_goal_generic_army_artillery",
     "infantry_weapons": "GFX_goal_generic_small_arms",
     "doctrine": "GFX_goal_generic_army_doctrines",
@@ -105,9 +119,8 @@ def reward_lines(theme, fid, cost):
     if theme == "air":
         return [_tech(fid, ["light_fighter", "tactical_bomber"], s), _doc(fid, "air_doctrine", s),
                 "air_experience = %d" % xp]
-    if theme == "navy":
-        return [_tech(fid, ["dd_tech", "ca_tech"], s), _doc(fid, "naval_doctrine", s),
-                "navy_experience = %d" % xp]
+    if theme in ("harbour", "warship"):
+        return ["add_political_power = %d" % pp, _tech(fid, ["industry"], s)]
     if theme == "artillery":
         return [_tech(fid, ["artillery"], s), "army_experience = %d" % xp]
     if theme == "infantry_weapons":
@@ -148,7 +161,8 @@ IDEA_MODS = {
     "armor": {"army_armor_attack_factor": 0.05, "army_org_factor": 0.03},
     "mobile": {"army_speed_factor": 0.05, "army_org_factor": 0.03},
     "air": {"air_superiority_efficiency": 0.05, "air_attack_factor": 0.05},
-    "navy": {"navy_org_factor": 0.05, "naval_speed_factor": 0.05},
+    "warship": {"political_power_gain": 0.05, "consumer_goods_factor": -0.02},
+    "harbour": {"political_power_gain": 0.05, "consumer_goods_factor": -0.02},
     "artillery": {"army_attack_factor": 0.05},
     "infantry_weapons": {"army_attack_factor": 0.03, "army_defence_factor": 0.03},
     "doctrine": {"experience_gain_army_factor": 0.1, "army_org_factor": 0.03},
@@ -170,7 +184,7 @@ IDEA_MODS = {
 
 IDEA_PICTURE = {
     "mobile_city": "generic_railroads", "armor": "generic_armor", "mobile": "generic_army_europe_1",
-    "air": "generic_air_bonus", "navy": "generic_navy_bonus", "artillery": "generic_artillery_regiments",
+    "air": "generic_air_bonus", "warship": "generic_economic_increase", "harbour": "generic_economic_increase", "artillery": "generic_artillery_regiments",
     "infantry_weapons": "generic_infantry_bonus", "doctrine": "generic_army_war_college",
     "fort": "generic_fortify_the_borders", "coastal_fort": "generic_fortify_the_borders",
     "defense": "generic_fortify_the_borders", "rail": "generic_railroads", "medical": "generic_morale_bonus", "research": "generic_research_bonus",

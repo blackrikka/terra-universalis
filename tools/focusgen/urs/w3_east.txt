@@ -4,8 +4,8 @@
 
 	focus = {
 		id = TU_URS_w3_kaz_entry
-		icon = GFX_goal_generic_improve_relations
 		prerequisite = { focus = TU_URS_foreign_ministry }
+		icon = GFX_goal_generic_improve_relations
 		x = 171
 		y = 2
 		cost = 5
@@ -24,8 +24,8 @@
 
 	focus = {
 		id = TU_URS_w3_kaz_offensive
-		icon = GFX_goal_generic_occupy_start_war
 		prerequisite = { focus = TU_URS_w3_kaz_entry }
+		icon = GFX_goal_generic_occupy_start_war
 		x = 172
 		y = 5
 		cost = 10
@@ -49,8 +49,8 @@
 
 	focus = {
 		id = TU_URS_w3_kaz_annex
-		icon = GFX_goal_generic_forceful_treaty
 		prerequisite = { focus = TU_URS_w3_kaz_offensive }
+		icon = GFX_goal_generic_forceful_treaty
 		x = 172
 		y = 6
 		cost = 10
@@ -69,9 +69,9 @@
 
 	focus = {
 		id = TU_URS_w3_kaz_protectorate
-		icon = GFX_goal_generic_major_alliance
 		prerequisite = { focus = TU_URS_w3_kaz_entry }
 		mutually_exclusive = { focus = TU_URS_w3_kaz_protectorate_alt }
+		icon = GFX_goal_generic_major_alliance
 		x = 170
 		y = 7
 		cost = 15
@@ -95,9 +95,9 @@
 
 	focus = {
 		id = TU_URS_w3_kaz_protectorate_alt
-		icon = GFX_goal_generic_military_sphere
 		prerequisite = { focus = TU_URS_w3_kaz_entry }
 		mutually_exclusive = { focus = TU_URS_w3_kaz_protectorate }
+		icon = GFX_goal_generic_military_sphere
 		x = 174
 		y = 7
 		cost = 15
@@ -120,8 +120,8 @@
 
 	focus = {
 		id = TU_URS_w3_kaz_occupation
-		icon = GFX_goal_generic_occupy_states_ongoing_war
 		prerequisite = { focus = TU_URS_w3_kaz_annex }
+		icon = GFX_goal_generic_occupy_states_ongoing_war
 		x = 172
 		y = 7
 		cost = 15
@@ -144,8 +144,8 @@
 
 	focus = {
 		id = TU_URS_w3_kje_entry
-		icon = GFX_goal_generic_improve_relations
 		prerequisite = { focus = TU_URS_foreign_ministry }
+		icon = GFX_goal_generic_improve_relations
 		x = 175
 		y = 2
 		cost = 5
@@ -164,8 +164,8 @@
 
 	focus = {
 		id = TU_URS_w3_kje_trade
-		icon = GFX_goal_generic_positive_trade_relations
 		prerequisite = { focus = TU_URS_w3_kje_entry }
+		icon = GFX_goal_generic_positive_trade_relations
 		x = 174
 		y = 4
 		cost = 10
@@ -189,8 +189,8 @@
 
 	focus = {
 		id = TU_URS_w3_kje_offensive
-		icon = GFX_goal_generic_army_doctrines
 		prerequisite = { focus = TU_URS_w3_kje_entry }
+		icon = GFX_goal_generic_army_doctrines
 		available = {
 			has_completed_focus = TU_URS_military_junta
 			has_country_flag = TU_DEC_TU_URS_w3_kje_wargoal
@@ -213,8 +213,8 @@
 
 	focus = {
 		id = TU_URS_w3_kje_union
-		icon = GFX_goal_generic_alliance
 		prerequisite = { focus = TU_URS_w3_kje_trade }
+		icon = GFX_goal_generic_alliance
 		x = 174
 		y = 6
 		cost = 15
@@ -246,8 +246,8 @@
 
 	focus = {
 		id = TU_URS_w3_kje_occupation
-		icon = GFX_goal_generic_fortify_city
 		prerequisite = { focus = TU_URS_w3_kje_offensive }
+		icon = GFX_goal_generic_fortify_city
 		x = 176
 		y = 6
 		cost = 15
@@ -268,8 +268,8 @@
 
 	focus = {
 		id = TU_URS_w3_sami_entry
-		icon = GFX_goal_generic_improve_relations
 		prerequisite = { focus = TU_URS_foreign_ministry }
+		icon = GFX_goal_generic_improve_relations
 		x = 179
 		y = 2
 		cost = 5
@@ -288,8 +288,8 @@
 
 	focus = {
 		id = TU_URS_w3_sami_ski
-		icon = GFX_goal_generic_allies_build_infantry
 		prerequisite = { focus = TU_URS_w3_sami_entry }
+		icon = GFX_goal_generic_allies_build_infantry
 		x = 178
 		y = 4
 		cost = 10
@@ -313,8 +313,8 @@
 
 	focus = {
 		id = TU_URS_w3_sami_control
-		icon = GFX_goal_generic_occupy_states_ongoing_war
 		prerequisite = { focus = TU_URS_w3_sami_entry }
+		icon = GFX_goal_generic_occupy_states_ongoing_war
 		x = 180
 		y = 5
 		cost = 10
@@ -337,8 +337,8 @@
 
 	focus = {
 		id = TU_URS_w3_sami_administration
-		icon = GFX_goal_generic_political_pressure
 		prerequisite = { focus = TU_URS_w3_sami_control }
+		icon = GFX_goal_generic_political_pressure
 		x = 180
 		y = 6
 		cost = 15
@@ -360,8 +360,8 @@
 
 	focus = {
 		id = TU_URS_w3_infi_entry
-		icon = GFX_goal_generic_scientific_exchange
 		prerequisite = { focus = TU_URS_foreign_ministry }
+		icon = GFX_goal_generic_scientific_exchange
 		x = 184
 		y = 2
 		cost = 5
@@ -379,8 +379,8 @@
 
 	focus = {
 		id = TU_URS_w3_infi_survey
-		icon = GFX_goal_generic_radar
 		prerequisite = { focus = TU_URS_w3_infi_entry }
+		icon = GFX_goal_generic_radar
 		x = 182
 		y = 4
 		cost = 10
@@ -402,8 +402,8 @@
 
 	focus = {
 		id = TU_URS_w3_infi_cold_lab
-		icon = GFX_goal_generic_secret_weapon
 		prerequisite = { focus = TU_URS_w3_infi_survey }
+		icon = GFX_goal_generic_secret_weapon
 		x = 182
 		y = 6
 		cost = 10
@@ -422,8 +422,8 @@
 
 	focus = {
 		id = TU_URS_w3_infi_frost_gear
-		icon = GFX_goal_generic_small_arms
 		prerequisite = { focus = TU_URS_w3_infi_cold_lab }
+		icon = GFX_goal_generic_small_arms
 		available = { has_completed_focus = TU_URS_reform_path }
 		x = 182
 		y = 8
@@ -444,8 +444,8 @@
 
 	focus = {
 		id = TU_URS_w3_infi_pipeline
-		icon = GFX_goal_generic_construct_infrastructure
 		prerequisite = { focus = TU_URS_w3_infi_entry }
+		icon = GFX_goal_generic_construct_infrastructure
 		x = 186
 		y = 8
 		cost = 10
@@ -469,8 +469,8 @@
 
 	focus = {
 		id = TU_URS_w3_infi_polar_theory
-		icon = GFX_goal_generic_construction2
 		prerequisite = { focus = TU_URS_w3_infi_frost_gear }
+		icon = GFX_goal_generic_construction2
 		x = 182
 		y = 10
 		cost = 10
@@ -489,8 +489,8 @@
 
 	focus = {
 		id = TU_URS_w3_infi_arctic_expedition
-		icon = GFX_goal_generic_special_forces
 		prerequisite = { focus = TU_URS_w3_infi_polar_theory }
+		icon = GFX_goal_generic_special_forces
 		x = 182
 		y = 12
 		cost = 10
@@ -510,8 +510,8 @@
 
 	focus = {
 		id = TU_URS_w3_infi_survey_station
-		icon = GFX_goal_generic_construction
 		prerequisite = { focus = TU_URS_w3_infi_arctic_expedition }
+		icon = GFX_goal_generic_construction
 		x = 182
 		y = 14
 		cost = 10
@@ -529,8 +529,8 @@
 
 	focus = {
 		id = TU_URS_w3_infi_ice_wall
-		icon = GFX_goal_generic_defence
 		prerequisite = { focus = TU_URS_w3_infi_survey_station }
+		icon = GFX_goal_generic_defence
 		x = 182
 		y = 16
 		cost = 10
@@ -548,8 +548,8 @@
 
 	focus = {
 		id = TU_URS_w3_infi_final_report
-		icon = GFX_goal_generic_intelligence_exchange
 		prerequisite = { focus = TU_URS_w3_infi_ice_wall }
+		icon = GFX_goal_generic_intelligence_exchange
 		x = 182
 		y = 18
 		cost = 15

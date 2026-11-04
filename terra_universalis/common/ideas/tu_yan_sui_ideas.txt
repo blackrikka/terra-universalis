@@ -196,7 +196,7 @@ ideas = {
 		}
 
 		TU_YAN_idea_rule_jie = {
-			picture = generic_navy_bonus
+			picture = generic_economic_increase
 
 			allowed = {
 				original_tag = YAN
@@ -207,8 +207,8 @@ ideas = {
 			}
 
 			modifier = {
-				navy_org_factor = 0.1
-				naval_speed_factor = 0.05
+				army_org_factor = 0.05
+				army_speed_factor = 0.05
 			}
 		}
 

@@ -1138,7 +1138,7 @@ focus_tree = {
 
 	focus = {
 		id = TU_KJE_rhodes_ties
-		icon = GFX_goal_generic_build_navy
+		icon = GFX_goal_generic_occupy_start_war
 		prerequisite = { focus = TU_KJE_kazimierz_ties }
 		x = 18
 		y = 11
@@ -1151,9 +1151,9 @@ focus_tree = {
 		}
 
 		completion_reward = {
-			add_tech_bonus = { name = TU_KJE_rhodes_ties bonus = 0.75 uses = 1 category = dd_tech category = ca_tech }
-			add_doctrine_cost_reduction = { name = TU_KJE_rhodes_ties cost_reduction = 0.4 uses = 1 category = naval_doctrine }
-			navy_experience = 25
+			army_experience = 25
+			add_war_support = 0.03
+			add_doctrine_cost_reduction = { name = TU_KJE_rhodes_ties cost_reduction = 0.4 uses = 1 category = land_doctrine }
 		}
 	}
 

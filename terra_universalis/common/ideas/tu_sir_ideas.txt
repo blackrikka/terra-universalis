@@ -110,14 +110,14 @@ ideas = {
 		}
 
 		TU_SIR_harbour_cities = {
-			picture = generic_navy_bonus
+			picture = generic_economic_increase
 
 			allowed = {
 				original_tag = SIR
 			}
 
 			modifier = {
-				naval_speed_factor = 0.05
+				political_power_gain = 0.05
 				consumer_goods_factor = -0.02
 			}
 		}
