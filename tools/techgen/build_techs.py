@@ -282,7 +282,7 @@ T("coastal_fort_tech_1", ELE, 10, 3, "해안 방벽", "Sea Walls", cost=2, mods=
 
 # ======================================================================== 오리지늄 공학 (옛 해군 탭)
 ORIC = ["tu_originium_tech"]
-T("tu_ori_refining_1", ORI, 0, 1, "원석 정제", "Originium Refining", leads=["tu_ori_refining_2", "tu_ori_engines"],
+T("tu_ori_refining_1", ORI, 0, 1, "원석 정제", "Originium Refining", leads=["tu_ori_refining_2", "tu_ori_engines", "tu_landship_1"],
   bld=("originium_refinery", 2), cats=ORIC + ["industry"], ai=15, vanilla=False, icon="synth_oil_experiments",
   desc=("원석은 테라 문명의 연료이자 재앙이다. 정제소를 지을 수 있다.", "Originium is both the fuel and the curse of Terran civilisation. Unlocks the Originium Refinery."))
 T("tu_ori_refining_2", ORI, 0, 3, "고순도 정제", "High-Purity Refining", cost=2, leads=["tu_ori_refining_3"],
@@ -310,6 +310,17 @@ T("tu_ori_weapons", ORI, 6, 3, "원석 탄두", "Originium Warheads", cost=2, le
 T("tu_ori_weapons_2", ORI, 6, 5, "원석 폭발 공학", "Originium Blast Engineering", cost=2.5,
   unit={"artillery_brigade": {"soft_attack": 0.10}, "anti_tank_brigade": {"hard_attack": 0.10}}, cats=ORIC + ["artillery"], ai=3,
   vanilla=False, icon="experimental_rockets")
+
+# 육상함 (디시전 "육상함·이동도시" 를 연다: common/decisions/tu_landship_decisions.txt)
+T("tu_landship_1", ORI, 8, 2, "육상함 설계", "Landship Design", cost=2, leads=["tu_landship_2"], cats=ORIC, ai=6, vanilla=False,
+  icon="basic_construction", desc=("바다를 잃은 테라의 함대는 땅 위를 달린다. 경육상함 전대를 취역할 수 있다 (최대 2).",
+                                    "Terra's fleets, denied the sea, sail over land. Allows Light Landship Squadrons (up to 2)."))
+T("tu_landship_2", ORI, 8, 4, "중육상함", "Heavy Landships", cost=2.5, leads=["tu_landship_3"], cats=ORIC, ai=5, vanilla=False,
+  mods={"army_fuel_consumption_factor": -0.05}, icon="jet_engines",
+  desc=("중육상함 전대 (최대 4), 이동도시 이전 디시전.", "Heavy Landship Squadrons (up to 4) and the Relocate the Mobile City decision."))
+T("tu_landship_3", ORI, 8, 6, "이동도시급 육상함", "City-Class Landships", cost=3, cats=ORIC, ai=4, vanilla=False,
+  mods={"army_fuel_consumption_factor": -0.05}, icon="nuclear_reactor",
+  desc=("도시 하나가 통째로 움직이는 거대 육상함 (최대 6).", "Colossal landships that carry a whole city (up to 6)."))
 
 # ======================================================================== 광석병 의학 (옛 해군 지원 탭)
 MEDC = ["tu_oripathy_tech"]

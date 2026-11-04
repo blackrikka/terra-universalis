@@ -1,0 +1,39 @@
+# Mobile city states (spec 20): tu_landship_decisions.txt
+ideas = {
+
+	country = {
+
+		TU_city_in_transit = {
+			picture = generic_construction
+			allowed = { always = yes }
+			allowed_civil_war = { always = yes }
+			modifier = {
+				production_factory_efficiency_gain_factor = -0.1
+				production_speed_buildings_factor = -0.2
+				stability_factor = -0.05
+			}
+		}
+
+		TU_city_cruising = {
+			picture = generic_motorized
+			allowed = { always = yes }
+			allowed_civil_war = { always = yes }
+			modifier = {
+				army_speed_factor = 0.05
+				supply_consumption_factor = -0.10
+				production_speed_buildings_factor = -0.15
+			}
+		}
+
+		TU_city_anchored = {
+			picture = generic_production_bonus
+			allowed = { always = yes }
+			allowed_civil_war = { always = yes }
+			modifier = {
+				production_speed_buildings_factor = 0.10
+				industrial_capacity_factory = 0.05
+				army_speed_factor = -0.05
+			}
+		}
+	}
+}

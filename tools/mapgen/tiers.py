@@ -52,10 +52,10 @@ TECHS = {   # tools/techgen/build_techs.py 의 기술 id
                   "construction1", "tu_arts_theory"],
     "A": BASIC + ["infantry_weapons1", "tech_engineers", "tech_recon", "tech_field_hospital", "basic_machine_tools",
                   "construction1", "tu_arts_theory", "interwar_artillery", "tech_trucks", "gwtank", "early_fighter",
-                  "electronic_mechanical_engineering", "tu_ori_refining_1"],
+                  "electronic_mechanical_engineering", "tu_ori_refining_1", "tu_landship_1"],
     "S": BASIC + ["infantry_weapons1", "tech_engineers", "tech_recon", "tech_field_hospital", "basic_machine_tools",
                   "construction1", "tu_arts_theory", "interwar_artillery", "tech_trucks", "motorised_infantry", "gwtank",
-                  "early_fighter", "early_bomber", "electronic_mechanical_engineering", "tu_ori_refining_1", "fuel_silos",
+                  "early_fighter", "early_bomber", "electronic_mechanical_engineering", "tu_ori_refining_1", "tu_landship_1", "fuel_silos",
                   "excavation1"],
 }
 EXTRA_TECHS = {"LAT": ["tu_lat_firearms_1"], "RIM": ["tu_ori_refining_1"], "RHO": ["tu_suppressants", "tu_field_arts_medicine"]}

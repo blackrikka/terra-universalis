@@ -1,0 +1,103 @@
+# Landship squadrons (spec 20). Country scope. The best class the country can build: light / heavy / city-class.
+# Templates are created once per class (country flag), then one squadron is raised in the capital.
+
+TU_landship_build = {
+	add_to_variable = { TU_landships = 1 }
+	if = {
+		limit = { has_tech = tu_landship_3 }
+		if = {
+			limit = { NOT = { has_country_flag = TU_landship_tmpl_3 } }
+			set_country_flag = TU_landship_tmpl_3
+			division_template = {
+				name = "City-Class Landship"
+				division_names_group = TU_DIVNAMES_FALLBACK
+				is_locked = yes
+				regiments = {
+					infantry = { x = 0 y = 0 }
+					infantry = { x = 0 y = 1 }
+					infantry = { x = 0 y = 2 }
+					infantry = { x = 1 y = 0 }
+					infantry = { x = 1 y = 1 }
+					infantry = { x = 1 y = 2 }
+					artillery_brigade = { x = 2 y = 0 }
+					artillery_brigade = { x = 2 y = 1 }
+					artillery_brigade = { x = 2 y = 2 }
+					artillery_brigade = { x = 3 y = 0 }
+				}
+				support = {
+					engineer = { x = 0 y = 0 }
+					recon = { x = 0 y = 1 }
+					artillery = { x = 0 y = 2 }
+				}
+			}
+		}
+		capital_scope = {
+			create_unit = {
+				division = "division_template = \"City-Class Landship\" start_experience_factor = 0.8 start_equipment_factor = 1.0"
+				owner = ROOT
+			}
+		}
+	}
+	else_if = {
+		limit = { has_tech = tu_landship_2 }
+		if = {
+			limit = { NOT = { has_country_flag = TU_landship_tmpl_2 } }
+			set_country_flag = TU_landship_tmpl_2
+			division_template = {
+				name = "Heavy Landship Squadron"
+				division_names_group = TU_DIVNAMES_FALLBACK
+				is_locked = yes
+				regiments = {
+					infantry = { x = 0 y = 0 }
+					infantry = { x = 0 y = 1 }
+					infantry = { x = 0 y = 2 }
+					infantry = { x = 1 y = 0 }
+					infantry = { x = 1 y = 1 }
+					infantry = { x = 1 y = 2 }
+					artillery_brigade = { x = 2 y = 0 }
+					artillery_brigade = { x = 2 y = 1 }
+					artillery_brigade = { x = 2 y = 2 }
+				}
+				support = {
+					engineer = { x = 0 y = 0 }
+					recon = { x = 0 y = 1 }
+				}
+			}
+		}
+		capital_scope = {
+			create_unit = {
+				division = "division_template = \"Heavy Landship Squadron\" start_experience_factor = 0.6 start_equipment_factor = 1.0"
+				owner = ROOT
+			}
+		}
+	}
+	else = {
+		if = {
+			limit = { NOT = { has_country_flag = TU_landship_tmpl_1 } }
+			set_country_flag = TU_landship_tmpl_1
+			division_template = {
+				name = "Light Landship Squadron"
+				division_names_group = TU_DIVNAMES_FALLBACK
+				is_locked = yes
+				regiments = {
+					infantry = { x = 0 y = 0 }
+					infantry = { x = 0 y = 1 }
+					infantry = { x = 1 y = 0 }
+					infantry = { x = 1 y = 1 }
+					artillery_brigade = { x = 2 y = 0 }
+					artillery_brigade = { x = 2 y = 1 }
+				}
+				support = {
+					engineer = { x = 0 y = 0 }
+					recon = { x = 0 y = 1 }
+				}
+			}
+		}
+		capital_scope = {
+			create_unit = {
+				division = "division_template = \"Light Landship Squadron\" start_experience_factor = 0.5 start_equipment_factor = 1.0"
+				owner = ROOT
+			}
+		}
+	}
+}
