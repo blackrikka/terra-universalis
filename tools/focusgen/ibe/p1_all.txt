@@ -550,7 +550,7 @@
 
 	focus = {
 		id = TU_IBE_coastal_forts
-		icon = GFX_goal_generic_build_navy
+		icon = GFX_goal_generic_defence
 		prerequisite = { focus = TU_IBE_tide_charts }
 		mutually_exclusive = { focus = TU_IBE_fleet_rebuild }
 		x = 0
@@ -564,9 +564,7 @@
 		}
 
 		completion_reward = {
-			add_tech_bonus = { name = TU_IBE_coastal_forts bonus = 0.75 uses = 1 category = dd_tech category = ca_tech }
-			add_doctrine_cost_reduction = { name = TU_IBE_coastal_forts cost_reduction = 0.4 uses = 1 category = naval_doctrine }
-			navy_experience = 25
+			TU_build_coastal_forts_2 = yes
 		}
 	}
 
@@ -782,8 +780,7 @@
 		}
 
 		completion_reward = {
-			add_tech_bonus = { name = TU_IBE_trench_doctrine bonus = 0.75 uses = 1 category = construction_tech }
-			army_experience = 25
+			TU_build_forts_2 = yes
 		}
 	}
 
@@ -1182,7 +1179,7 @@
 
 	focus = {
 		id = TU_IBE_rail_network
-		icon = GFX_goal_generic_production
+		icon = GFX_goal_generic_construct_infrastructure
 		prerequisite = { focus = TU_IBE_road_network }
 		x = 0
 		y = 0
@@ -1195,8 +1192,7 @@
 		}
 
 		completion_reward = {
-			add_tech_bonus = { name = TU_IBE_rail_network bonus = 0.75 uses = 1 category = industry category = construction_tech }
-			TU_build_infrastructure = yes
+			TU_build_railway = yes
 		}
 	}
 
@@ -1630,7 +1626,7 @@
 
 	focus = {
 		id = TU_IBE_sea_wall
-		icon = GFX_goal_generic_build_navy
+		icon = GFX_goal_generic_defence
 		prerequisite = { focus = TU_IBE_coastal_forts }
 		x = 0
 		y = 0
@@ -1643,9 +1639,7 @@
 		}
 
 		completion_reward = {
-			add_tech_bonus = { name = TU_IBE_sea_wall bonus = 0.75 uses = 1 category = dd_tech category = ca_tech }
-			add_doctrine_cost_reduction = { name = TU_IBE_sea_wall cost_reduction = 0.4 uses = 1 category = naval_doctrine }
-			navy_experience = 25
+			TU_build_coastal_forts_2 = yes
 		}
 	}
 
@@ -1706,8 +1700,7 @@
 		}
 
 		completion_reward = {
-			add_tech_bonus = { name = TU_IBE_mountain_forts bonus = 0.75 uses = 1 category = construction_tech }
-			army_experience = 25
+			TU_build_forts_2 = yes
 		}
 	}
 
@@ -2084,8 +2077,7 @@
 		}
 
 		completion_reward = {
-			add_tech_bonus = { name = TU_IBE_tidal_barriers bonus = 0.75 uses = 1 category = construction_tech }
-			army_experience = 25
+			TU_build_coastal_forts_2 = yes
 		}
 	}
 
@@ -2205,8 +2197,7 @@
 		}
 
 		completion_reward = {
-			add_tech_bonus = { name = TU_IBE_mountain_passes bonus = 0.75 uses = 1 category = construction_tech }
-			army_experience = 25
+			TU_build_forts_2 = yes
 		}
 	}
 

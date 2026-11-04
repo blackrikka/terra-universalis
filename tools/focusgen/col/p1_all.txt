@@ -1317,7 +1317,7 @@
 
 	focus = {
 		id = TU_COL_continental_rail
-		icon = GFX_goal_generic_production
+		icon = GFX_goal_generic_construct_infrastructure
 		prerequisite = { focus = TU_COL_oil_industry }
 		x = 0
 		y = 0
@@ -1330,8 +1330,7 @@
 		}
 
 		completion_reward = {
-			add_tech_bonus = { name = TU_COL_continental_rail bonus = 0.75 uses = 1 category = industry category = construction_tech }
-			TU_build_infrastructure = yes
+			TU_build_railway = yes
 		}
 	}
 
@@ -1925,7 +1924,7 @@
 
 	focus = {
 		id = TU_COL_private_railways
-		icon = GFX_goal_generic_production
+		icon = GFX_goal_generic_construct_infrastructure
 		prerequisite = { focus = TU_COL_corporate_boards }
 		x = 0
 		y = 0
@@ -1938,8 +1937,7 @@
 		}
 
 		completion_reward = {
-			add_tech_bonus = { name = TU_COL_private_railways bonus = 0.75 uses = 1 category = industry category = construction_tech }
-			TU_build_infrastructure = yes
+			TU_build_railway = yes
 		}
 	}
 
@@ -1958,8 +1956,7 @@
 		}
 
 		completion_reward = {
-			add_tech_bonus = { name = TU_COL_frontier_forts bonus = 0.75 uses = 1 category = construction_tech }
-			army_experience = 25
+			TU_build_forts_2 = yes
 		}
 	}
 
@@ -2252,7 +2249,7 @@
 
 	focus = {
 		id = TU_COL_coastal_forts
-		icon = GFX_goal_generic_build_navy
+		icon = GFX_goal_generic_defence
 		prerequisite = { focus = TU_COL_marine_corps }
 		x = 0
 		y = 0
@@ -2265,9 +2262,7 @@
 		}
 
 		completion_reward = {
-			add_tech_bonus = { name = TU_COL_coastal_forts bonus = 0.75 uses = 1 category = dd_tech category = ca_tech }
-			add_doctrine_cost_reduction = { name = TU_COL_coastal_forts cost_reduction = 0.4 uses = 1 category = naval_doctrine }
-			navy_experience = 25
+			TU_build_coastal_forts_2 = yes
 		}
 	}
 

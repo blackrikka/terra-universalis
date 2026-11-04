@@ -216,8 +216,7 @@
 		search_filters = { FOCUS_FILTER_POLITICAL }
 
 		completion_reward = {
-			add_tech_bonus = { name = TU_KZD_fortified_frontier bonus = 0.75 uses = 1 category = construction_tech }
-			army_experience = 25
+			TU_build_forts_2 = yes
 		}
 	}
 

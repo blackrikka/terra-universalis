@@ -17,8 +17,7 @@
 		}
 
 		completion_reward = {
-			TU_build_infrastructure = yes
-			add_tech_bonus = { name = TU_YAN_rail_survey bonus = 0.5 uses = 1 category = industry category = construction_tech }
+			TU_build_railway = yes
 		}
 	}
 
@@ -37,8 +36,7 @@
 		}
 
 		completion_reward = {
-			TU_build_infrastructure = yes
-			add_tech_bonus = { name = TU_YAN_trunk_rail bonus = 0.75 uses = 1 category = industry category = construction_tech }
+			TU_build_railway = yes
 		}
 	}
 
@@ -81,9 +79,7 @@
 		}
 
 		completion_reward = {
-			TU_build_infrastructure = yes
-			add_tech_bonus = { name = TU_YAN_express_rail bonus = 0.5 uses = 1 category = motorized_equipment }
-			add_doctrine_cost_reduction = { name = TU_YAN_express_rail cost_reduction = 0.25 uses = 1 category = land_doctrine }
+			TU_build_railway = yes
 		}
 	}
 
@@ -350,7 +346,7 @@
 
 		completion_reward = {
 			TU_build_civ_factory = yes
-			add_tech_bonus = { name = TU_YAN_rail_electrification bonus = 0.75 uses = 1 category = industry category = construction_tech }
+			TU_build_railway = yes
 		}
 	}
 
@@ -411,7 +407,7 @@
 		}
 
 		completion_reward = {
-			add_tech_bonus = { name = TU_YAN_rail_bureau bonus = 0.75 uses = 1 category = industry category = construction_tech }
+			TU_build_railway = yes
 		}
 	}
 
@@ -470,8 +466,8 @@
 		}
 
 		completion_reward = {
-			TU_build_infrastructure = yes
-			add_tech_bonus = { name = TU_YAN_rail_core bonus = 1.0 uses = 1 category = industry category = construction_tech }
+			TU_build_railway = yes
+			TU_build_railway = yes
 		}
 	}
 
@@ -599,8 +595,7 @@
 		}
 
 		completion_reward = {
-			TU_build_infrastructure = yes
-			add_tech_bonus = { name = TU_YAN_mobile_city_rails bonus = 0.75 uses = 1 category = electronics category = industry }
+			TU_build_railway = yes
 		}
 	}
 
@@ -620,8 +615,7 @@
 
 		completion_reward = {
 			TU_build_infrastructure = yes
-			add_tech_bonus = { name = TU_YAN_wheeled_fortress bonus = 0.75 uses = 1 category = construction_tech }
-			army_experience = 25
+			TU_build_forts_2 = yes
 		}
 	}
 
@@ -641,8 +635,7 @@
 
 		completion_reward = {
 			TU_build_infrastructure = yes
-			add_tech_bonus = { name = TU_YAN_rail_fortress bonus = 0.75 uses = 1 category = construction_tech }
-			army_experience = 25
+			TU_build_forts_2 = yes
 		}
 	}
 
@@ -684,7 +677,8 @@
 
 		completion_reward = {
 			TU_build_civ_factory = yes
-			add_tech_bonus = { name = TU_YAN_rail_city bonus = 1.0 uses = 1 category = industry category = construction_tech }
+			TU_build_railway = yes
+			TU_build_railway = yes
 		}
 	}
 
@@ -1396,8 +1390,7 @@
 		}
 
 		completion_reward = {
-			add_tech_bonus = { name = TU_YAN_guard_fortress bonus = 0.75 uses = 1 category = construction_tech }
-			army_experience = 25
+			TU_build_forts_2 = yes
 		}
 	}
 

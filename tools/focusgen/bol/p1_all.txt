@@ -94,8 +94,7 @@
 		}
 
 		completion_reward = {
-			add_tech_bonus = { name = TU_BOL_jungle_forts bonus = 0.75 uses = 1 category = construction_tech }
-			army_experience = 25
+			TU_build_forts_2 = yes
 		}
 	}
 
@@ -1470,7 +1469,7 @@
 
 	focus = {
 		id = TU_BOL_rail_network
-		icon = GFX_goal_generic_production
+		icon = GFX_goal_generic_construct_infrastructure
 		prerequisite = { focus = TU_BOL_road_network }
 		x = 0
 		y = 0
@@ -1483,8 +1482,7 @@
 		}
 
 		completion_reward = {
-			add_tech_bonus = { name = TU_BOL_rail_network bonus = 0.75 uses = 1 category = industry category = construction_tech }
-			TU_build_infrastructure = yes
+			TU_build_railway = yes
 		}
 	}
 
@@ -2117,7 +2115,7 @@
 
 	focus = {
 		id = TU_BOL_victorian_railways
-		icon = GFX_goal_generic_production
+		icon = GFX_goal_generic_construct_infrastructure
 		prerequisite = { focus = TU_BOL_victorian_garrisons }
 		x = 0
 		y = 0
@@ -2130,8 +2128,7 @@
 		}
 
 		completion_reward = {
-			add_tech_bonus = { name = TU_BOL_victorian_railways bonus = 0.75 uses = 1 category = industry category = construction_tech }
-			TU_build_infrastructure = yes
+			TU_build_railway = yes
 		}
 	}
 

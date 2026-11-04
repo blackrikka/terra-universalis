@@ -1,6 +1,6 @@
 focus_tree = {
 	id = TU_KJE_focus
-	continuous_focus_position = { x = 50 y = 1300 }
+	continuous_focus_position = { x = 50 y = 2080 }
 
 	country = {
 		factor = 0
@@ -41,7 +41,7 @@ focus_tree = {
 		id = TU_KJE_winter_stores
 		icon = GFX_goal_generic_production
 		prerequisite = { focus = TU_KJE_root }
-		x = -33
+		x = -14
 		y = 1
 		cost = 10
 
@@ -61,7 +61,7 @@ focus_tree = {
 		id = TU_KJE_mountain_roads
 		icon = GFX_goal_generic_production
 		prerequisite = { focus = TU_KJE_winter_stores }
-		x = -36
+		x = -17
 		y = 2
 		cost = 10
 
@@ -81,7 +81,7 @@ focus_tree = {
 		id = TU_KJE_snow_tunnels
 		icon = GFX_goal_generic_production
 		prerequisite = { focus = TU_KJE_mountain_roads }
-		x = -37
+		x = -18
 		y = 3
 		cost = 10
 
@@ -101,7 +101,7 @@ focus_tree = {
 		id = TU_KJE_mountain_folk
 		icon = GFX_goal_generic_political_pressure
 		prerequisite = { focus = TU_KJE_winter_stores }
-		x = -33
+		x = -14
 		y = 2
 		cost = 10
 
@@ -120,7 +120,7 @@ focus_tree = {
 		id = TU_KJE_avalanche_watch
 		icon = GFX_goal_generic_political_pressure
 		prerequisite = { focus = TU_KJE_mountain_folk }
-		x = -33
+		x = -14
 		y = 3
 		cost = 10
 
@@ -140,7 +140,7 @@ focus_tree = {
 		id = TU_KJE_heated_barracks
 		icon = GFX_goal_generic_production
 		prerequisite = { focus = TU_KJE_avalanche_watch }
-		x = -35
+		x = -16
 		y = 4
 		cost = 10
 
@@ -161,7 +161,7 @@ focus_tree = {
 		icon = GFX_goal_generic_political_pressure
 		prerequisite = { focus = TU_KJE_snow_tunnels }
 		prerequisite = { focus = TU_KJE_heated_barracks }
-		x = -35
+		x = -16
 		y = 5
 		cost = 10
 
@@ -180,7 +180,7 @@ focus_tree = {
 		id = TU_KJE_karlan_company
 		icon = GFX_goal_generic_trade
 		prerequisite = { focus = TU_KJE_root }
-		x = -25
+		x = -5
 		y = 1
 		cost = 10
 
@@ -201,7 +201,7 @@ focus_tree = {
 		id = TU_KJE_silverash_vision
 		icon = GFX_goal_generic_production
 		prerequisite = { focus = TU_KJE_karlan_company }
-		x = -25
+		x = -5
 		y = 2
 		cost = 10
 
@@ -221,7 +221,7 @@ focus_tree = {
 		id = TU_KJE_foreign_investment
 		icon = GFX_goal_generic_trade
 		prerequisite = { focus = TU_KJE_karlan_company }
-		x = -23
+		x = -3
 		y = 2
 		cost = 10
 
@@ -243,7 +243,7 @@ focus_tree = {
 		icon = GFX_goal_generic_trade
 		prerequisite = { focus = TU_KJE_silverash_vision }
 		mutually_exclusive = { focus = TU_KJE_self_sufficient }
-		x = -27
+		x = -7
 		y = 3
 		cost = 10
 
@@ -265,7 +265,7 @@ focus_tree = {
 		icon = GFX_goal_generic_production
 		prerequisite = { focus = TU_KJE_silverash_vision }
 		mutually_exclusive = { focus = TU_KJE_tech_imports }
-		x = -25
+		x = -5
 		y = 3
 		cost = 10
 
@@ -286,7 +286,7 @@ focus_tree = {
 		icon = GFX_goal_generic_trade
 		prerequisite = { focus = TU_KJE_tech_imports focus = TU_KJE_self_sufficient }
 		prerequisite = { focus = TU_KJE_foreign_investment }
-		x = -25
+		x = -5
 		y = 4
 		cost = 10
 
@@ -307,7 +307,7 @@ focus_tree = {
 		icon = GFX_goal_generic_political_pressure
 		prerequisite = { focus = TU_KJE_kjerag_bank }
 		mutually_exclusive = { focus = TU_KJE_saintess_theocracy focus = TU_KJE_houses_united }
-		x = -25
+		x = -5
 		y = 5
 		cost = 15
 
@@ -333,7 +333,7 @@ focus_tree = {
 		id = TU_KJE_industrial_valleys
 		icon = GFX_goal_generic_production
 		prerequisite = { focus = TU_KJE_modern_kjerag }
-		x = -25
+		x = -5
 		y = 6
 		cost = 10
 
@@ -353,7 +353,7 @@ focus_tree = {
 		id = TU_KJE_research_slot
 		icon = GFX_focus_research
 		prerequisite = { focus = TU_KJE_modern_kjerag }
-		x = -23
+		x = -3
 		y = 6
 		cost = 10
 
@@ -372,7 +372,7 @@ focus_tree = {
 		id = TU_KJE_modern_army
 		icon = GFX_goal_generic_allies_build_infantry
 		prerequisite = { focus = TU_KJE_industrial_valleys }
-		x = -25
+		x = -5
 		y = 7
 		cost = 10
 
@@ -392,7 +392,7 @@ focus_tree = {
 		id = TU_KJE_saintess_blessing
 		icon = GFX_goal_generic_propaganda
 		prerequisite = { focus = TU_KJE_root }
-		x = -15
+		x = 5
 		y = 1
 		cost = 10
 
@@ -413,7 +413,7 @@ focus_tree = {
 		id = TU_KJE_kjeragandr_faith
 		icon = GFX_goal_generic_propaganda
 		prerequisite = { focus = TU_KJE_saintess_blessing }
-		x = -15
+		x = 5
 		y = 2
 		cost = 10
 
@@ -433,7 +433,7 @@ focus_tree = {
 		id = TU_KJE_elders_council
 		icon = GFX_goal_generic_political_pressure
 		prerequisite = { focus = TU_KJE_saintess_blessing }
-		x = -7
+		x = 13
 		y = 2
 		cost = 10
 
@@ -454,7 +454,7 @@ focus_tree = {
 		id = TU_KJE_sacred_peaks
 		icon = GFX_goal_generic_propaganda
 		prerequisite = { focus = TU_KJE_kjeragandr_faith }
-		x = -15
+		x = 5
 		y = 3
 		cost = 10
 
@@ -475,7 +475,7 @@ focus_tree = {
 		icon = GFX_goal_generic_political_pressure
 		prerequisite = { focus = TU_KJE_elders_council }
 		prerequisite = { focus = TU_KJE_sacred_peaks }
-		x = -15
+		x = 5
 		y = 4
 		cost = 10
 
@@ -497,7 +497,7 @@ focus_tree = {
 		icon = GFX_goal_generic_propaganda
 		prerequisite = { focus = TU_KJE_old_ways }
 		mutually_exclusive = { focus = TU_KJE_modern_kjerag focus = TU_KJE_houses_united }
-		x = -15
+		x = 5
 		y = 5
 		cost = 15
 
@@ -523,7 +523,7 @@ focus_tree = {
 		id = TU_KJE_faith_guardians
 		icon = GFX_goal_generic_allies_build_infantry
 		prerequisite = { focus = TU_KJE_saintess_theocracy }
-		x = -17
+		x = 3
 		y = 6
 		cost = 10
 
@@ -543,7 +543,7 @@ focus_tree = {
 		id = TU_KJE_snow_temples
 		icon = GFX_goal_generic_propaganda
 		prerequisite = { focus = TU_KJE_saintess_theocracy }
-		x = -13
+		x = 7
 		y = 6
 		cost = 10
 
@@ -563,7 +563,7 @@ focus_tree = {
 		id = TU_KJE_three_houses_talks
 		icon = GFX_goal_generic_improve_relations
 		prerequisite = { focus = TU_KJE_root }
-		x = -3
+		x = 17
 		y = 1
 		cost = 10
 
@@ -582,7 +582,7 @@ focus_tree = {
 		id = TU_KJE_enciodas_house
 		icon = GFX_goal_generic_improve_relations
 		prerequisite = { focus = TU_KJE_three_houses_talks }
-		x = -5
+		x = 15
 		y = 2
 		cost = 10
 
@@ -603,7 +603,7 @@ focus_tree = {
 		id = TU_KJE_saintess_house
 		icon = GFX_goal_generic_improve_relations
 		prerequisite = { focus = TU_KJE_three_houses_talks }
-		x = -3
+		x = 17
 		y = 2
 		cost = 10
 
@@ -624,7 +624,7 @@ focus_tree = {
 		id = TU_KJE_old_nobility
 		icon = GFX_goal_generic_improve_relations
 		prerequisite = { focus = TU_KJE_three_houses_talks }
-		x = -1
+		x = 19
 		y = 2
 		cost = 10
 
@@ -646,7 +646,7 @@ focus_tree = {
 		prerequisite = { focus = TU_KJE_enciodas_house }
 		prerequisite = { focus = TU_KJE_saintess_house }
 		prerequisite = { focus = TU_KJE_old_nobility }
-		x = 1
+		x = 21
 		y = 3
 		cost = 10
 
@@ -667,7 +667,7 @@ focus_tree = {
 		icon = GFX_goal_generic_political_pressure
 		prerequisite = { focus = TU_KJE_reconciliation }
 		mutually_exclusive = { focus = TU_KJE_modern_kjerag focus = TU_KJE_saintess_theocracy }
-		x = 1
+		x = 21
 		y = 4
 		cost = 15
 
@@ -693,7 +693,7 @@ focus_tree = {
 		id = TU_KJE_kjerag_charter
 		icon = GFX_goal_generic_political_pressure
 		prerequisite = { focus = TU_KJE_houses_united }
-		x = 1
+		x = 21
 		y = 5
 		cost = 10
 
@@ -713,7 +713,7 @@ focus_tree = {
 		id = TU_KJE_unified_army
 		icon = GFX_goal_generic_allies_build_infantry
 		prerequisite = { focus = TU_KJE_houses_united }
-		x = 3
+		x = 23
 		y = 5
 		cost = 10
 
@@ -733,8 +733,8 @@ focus_tree = {
 		id = TU_KJE_mountain_infantry
 		icon = GFX_goal_generic_allies_build_infantry
 		prerequisite = { focus = TU_KJE_root }
-		x = 9
-		y = 1
+		x = -15
+		y = 8
 		cost = 10
 
 		search_filters = { FOCUS_FILTER_POLITICAL }
@@ -753,8 +753,8 @@ focus_tree = {
 		id = TU_KJE_snow_forts
 		icon = GFX_goal_generic_defence
 		prerequisite = { focus = TU_KJE_mountain_infantry }
-		x = 8
-		y = 2
+		x = -16
+		y = 9
 		cost = 10
 
 		search_filters = { FOCUS_FILTER_POLITICAL }
@@ -764,8 +764,7 @@ focus_tree = {
 		}
 
 		completion_reward = {
-			add_tech_bonus = { name = TU_KJE_snow_forts bonus = 0.75 uses = 1 category = construction_tech }
-			army_experience = 25
+			TU_build_forts_2 = yes
 		}
 	}
 
@@ -773,8 +772,8 @@ focus_tree = {
 		id = TU_KJE_ski_troops
 		icon = GFX_goal_generic_army_motorized
 		prerequisite = { focus = TU_KJE_mountain_infantry }
-		x = 11
-		y = 2
+		x = -13
+		y = 9
 		cost = 10
 
 		search_filters = { FOCUS_FILTER_POLITICAL }
@@ -795,8 +794,8 @@ focus_tree = {
 		prerequisite = { focus = TU_KJE_ski_troops }
 		prerequisite = { focus = TU_KJE_snow_forts }
 		mutually_exclusive = { focus = TU_KJE_highland_defence }
-		x = 13
-		y = 3
+		x = -11
+		y = 10
 		cost = 10
 
 		search_filters = { FOCUS_FILTER_POLITICAL }
@@ -817,8 +816,8 @@ focus_tree = {
 		prerequisite = { focus = TU_KJE_ski_troops }
 		prerequisite = { focus = TU_KJE_snow_forts }
 		mutually_exclusive = { focus = TU_KJE_mountain_doctrine }
-		x = 15
-		y = 3
+		x = -9
+		y = 10
 		cost = 10
 
 		search_filters = { FOCUS_FILTER_POLITICAL }
@@ -837,8 +836,8 @@ focus_tree = {
 		id = TU_KJE_marksman_training
 		icon = GFX_goal_generic_army_doctrines
 		prerequisite = { focus = TU_KJE_mountain_doctrine focus = TU_KJE_highland_defence }
-		x = 13
-		y = 4
+		x = -11
+		y = 11
 		cost = 10
 
 		search_filters = { FOCUS_FILTER_POLITICAL }
@@ -857,8 +856,8 @@ focus_tree = {
 		id = TU_KJE_mountain_guard
 		icon = GFX_goal_generic_army_doctrines
 		prerequisite = { focus = TU_KJE_marksman_training }
-		x = 13
-		y = 5
+		x = -11
+		y = 12
 		cost = 10
 
 		search_filters = { FOCUS_FILTER_POLITICAL }
@@ -877,8 +876,8 @@ focus_tree = {
 		id = TU_KJE_courier_knights
 		icon = GFX_goal_generic_army_doctrines
 		prerequisite = { focus = TU_KJE_mountain_guard }
-		x = 12
-		y = 6
+		x = -12
+		y = 13
 		cost = 10
 
 		search_filters = { FOCUS_FILTER_POLITICAL }
@@ -897,8 +896,8 @@ focus_tree = {
 		id = TU_KJE_mountain_artillery
 		icon = GFX_goal_generic_army_artillery
 		prerequisite = { focus = TU_KJE_snow_forts }
-		x = 7
-		y = 3
+		x = -17
+		y = 10
 		cost = 10
 
 		search_filters = { FOCUS_FILTER_POLITICAL }
@@ -917,8 +916,8 @@ focus_tree = {
 		id = TU_KJE_silver_mines
 		icon = GFX_goal_generic_production
 		prerequisite = { focus = TU_KJE_root }
-		x = 24
-		y = 1
+		x = 10
+		y = 9
 		cost = 10
 
 		search_filters = { FOCUS_FILTER_INDUSTRY }
@@ -937,8 +936,8 @@ focus_tree = {
 		id = TU_KJE_timber
 		icon = GFX_goal_generic_production
 		prerequisite = { focus = TU_KJE_silver_mines }
-		x = 20
-		y = 2
+		x = 6
+		y = 10
 		cost = 10
 
 		search_filters = { FOCUS_FILTER_INDUSTRY }
@@ -957,8 +956,8 @@ focus_tree = {
 		id = TU_KJE_industrial_district
 		icon = GFX_goal_generic_production
 		prerequisite = { focus = TU_KJE_silver_mines }
-		x = 25
-		y = 2
+		x = 11
+		y = 10
 		cost = 10
 
 		search_filters = { FOCUS_FILTER_INDUSTRY }
@@ -978,8 +977,8 @@ focus_tree = {
 		icon = GFX_goal_generic_production
 		prerequisite = { focus = TU_KJE_industrial_district }
 		mutually_exclusive = { focus = TU_KJE_arms_program }
-		x = 24
-		y = 3
+		x = 10
+		y = 11
 		cost = 10
 
 		search_filters = { FOCUS_FILTER_INDUSTRY }
@@ -999,8 +998,8 @@ focus_tree = {
 		icon = GFX_goal_generic_small_arms
 		prerequisite = { focus = TU_KJE_industrial_district }
 		mutually_exclusive = { focus = TU_KJE_civ_program }
-		x = 26
-		y = 3
+		x = 12
+		y = 11
 		cost = 10
 
 		search_filters = { FOCUS_FILTER_INDUSTRY }
@@ -1020,8 +1019,8 @@ focus_tree = {
 		id = TU_KJE_cable_cars
 		icon = GFX_goal_generic_production
 		prerequisite = { focus = TU_KJE_timber }
-		x = 19
-		y = 3
+		x = 5
+		y = 11
 		cost = 10
 
 		search_filters = { FOCUS_FILTER_INDUSTRY }
@@ -1040,8 +1039,8 @@ focus_tree = {
 		id = TU_KJE_hydro_power
 		icon = GFX_goal_generic_production
 		prerequisite = { focus = TU_KJE_cable_cars }
-		x = 18
-		y = 4
+		x = 4
+		y = 12
 		cost = 10
 
 		search_filters = { FOCUS_FILTER_INDUSTRY }
@@ -1061,8 +1060,8 @@ focus_tree = {
 		icon = GFX_goal_generic_production
 		prerequisite = { focus = TU_KJE_civ_program focus = TU_KJE_arms_program }
 		prerequisite = { focus = TU_KJE_hydro_power }
-		x = 24
-		y = 5
+		x = 10
+		y = 13
 		cost = 10
 
 		search_filters = { FOCUS_FILTER_INDUSTRY }
@@ -1081,8 +1080,8 @@ focus_tree = {
 		id = TU_KJE_foreign_ties
 		icon = GFX_goal_generic_improve_relations
 		prerequisite = { focus = TU_KJE_root }
-		x = 34
-		y = 1
+		x = 22
+		y = 9
 		cost = 10
 
 		search_filters = { FOCUS_FILTER_POLITICAL }
@@ -1101,8 +1100,8 @@ focus_tree = {
 		id = TU_KJE_kazimierz_ties
 		icon = GFX_goal_generic_improve_relations
 		prerequisite = { focus = TU_KJE_foreign_ties }
-		x = 31
-		y = 2
+		x = 19
+		y = 10
 		cost = 10
 
 		search_filters = { FOCUS_FILTER_POLITICAL }
@@ -1121,8 +1120,8 @@ focus_tree = {
 		id = TU_KJE_columbia_ties
 		icon = GFX_goal_generic_trade
 		prerequisite = { focus = TU_KJE_foreign_ties }
-		x = 34
-		y = 2
+		x = 22
+		y = 10
 		cost = 10
 
 		search_filters = { FOCUS_FILTER_POLITICAL }
@@ -1141,8 +1140,8 @@ focus_tree = {
 		id = TU_KJE_rhodes_ties
 		icon = GFX_goal_generic_build_navy
 		prerequisite = { focus = TU_KJE_kazimierz_ties }
-		x = 30
-		y = 3
+		x = 18
+		y = 11
 		cost = 10
 
 		search_filters = { FOCUS_FILTER_POLITICAL }
@@ -1163,8 +1162,8 @@ focus_tree = {
 		icon = GFX_goal_generic_improve_relations
 		prerequisite = { focus = TU_KJE_columbia_ties }
 		prerequisite = { focus = TU_KJE_rhodes_ties }
-		x = 30
-		y = 4
+		x = 18
+		y = 12
 		cost = 10
 
 		search_filters = { FOCUS_FILTER_POLITICAL }
@@ -1182,7 +1181,7 @@ focus_tree = {
 		id = TU_KJE_fur_trade
 		icon = GFX_goal_generic_trade
 		prerequisite = { focus = TU_KJE_winter_stores }
-		x = -29
+		x = -10
 		y = 2
 		cost = 10
 
@@ -1202,7 +1201,7 @@ focus_tree = {
 		id = TU_KJE_ice_harvest
 		icon = GFX_goal_generic_production
 		prerequisite = { focus = TU_KJE_mountain_roads }
-		x = -35
+		x = -16
 		y = 3
 		cost = 10
 
@@ -1222,7 +1221,7 @@ focus_tree = {
 		id = TU_KJE_winter_drills
 		icon = GFX_goal_generic_army_doctrines
 		prerequisite = { focus = TU_KJE_avalanche_watch }
-		x = -33
+		x = -14
 		y = 4
 		cost = 10
 
@@ -1242,7 +1241,7 @@ focus_tree = {
 		id = TU_KJE_snow_scouts
 		icon = GFX_goal_generic_intelligence_exchange
 		prerequisite = { focus = TU_KJE_mountain_folk }
-		x = -31
+		x = -12
 		y = 3
 		cost = 10
 
@@ -1262,7 +1261,7 @@ focus_tree = {
 		id = TU_KJE_mountain_rescue
 		icon = GFX_goal_generic_occupy_start_war
 		prerequisite = { focus = TU_KJE_avalanche_watch }
-		x = -31
+		x = -12
 		y = 4
 		cost = 10
 
@@ -1283,7 +1282,7 @@ focus_tree = {
 		id = TU_KJE_karlan_ledgers
 		icon = GFX_goal_generic_trade
 		prerequisite = { focus = TU_KJE_karlan_company }
-		x = -21
+		x = -1
 		y = 2
 		cost = 10
 
@@ -1301,9 +1300,9 @@ focus_tree = {
 
 	focus = {
 		id = TU_KJE_railway_ascent
-		icon = GFX_goal_generic_production
+		icon = GFX_goal_generic_construct_infrastructure
 		prerequisite = { focus = TU_KJE_foreign_investment }
-		x = -23
+		x = -3
 		y = 3
 		cost = 10
 
@@ -1314,7 +1313,7 @@ focus_tree = {
 		}
 
 		completion_reward = {
-			add_tech_bonus = { name = TU_KJE_railway_ascent bonus = 0.75 uses = 1 category = industry category = construction_tech }
+			TU_build_railway = yes
 			TU_build_civ_factory = yes
 		}
 	}
@@ -1323,7 +1322,7 @@ focus_tree = {
 		id = TU_KJE_factory_valleys
 		icon = GFX_goal_generic_production
 		prerequisite = { focus = TU_KJE_kjerag_bank }
-		x = -21
+		x = -1
 		y = 5
 		cost = 10
 
@@ -1343,7 +1342,7 @@ focus_tree = {
 		id = TU_KJE_engineering_school
 		icon = GFX_focus_research
 		prerequisite = { focus = TU_KJE_tech_imports }
-		x = -27
+		x = -7
 		y = 4
 		cost = 10
 
@@ -1362,7 +1361,7 @@ focus_tree = {
 		id = TU_KJE_stock_company
 		icon = GFX_goal_generic_trade
 		prerequisite = { focus = TU_KJE_kjerag_bank }
-		x = -19
+		x = 1
 		y = 5
 		cost = 10
 
@@ -1382,7 +1381,7 @@ focus_tree = {
 		id = TU_KJE_modern_press
 		icon = GFX_goal_generic_propaganda
 		prerequisite = { focus = TU_KJE_modern_army }
-		x = -27
+		x = -7
 		y = 8
 		cost = 10
 
@@ -1402,7 +1401,7 @@ focus_tree = {
 		id = TU_KJE_ritual_calendar
 		icon = GFX_goal_generic_propaganda
 		prerequisite = { focus = TU_KJE_kjeragandr_faith }
-		x = -9
+		x = 11
 		y = 3
 		cost = 10
 
@@ -1422,7 +1421,7 @@ focus_tree = {
 		id = TU_KJE_monastery_schools
 		icon = GFX_focus_research
 		prerequisite = { focus = TU_KJE_elders_council }
-		x = -7
+		x = 13
 		y = 3
 		cost = 10
 
@@ -1441,7 +1440,7 @@ focus_tree = {
 		id = TU_KJE_sacred_relics
 		icon = GFX_focus_research
 		prerequisite = { focus = TU_KJE_sacred_peaks }
-		x = -13
+		x = 7
 		y = 4
 		cost = 10
 
@@ -1460,7 +1459,7 @@ focus_tree = {
 		id = TU_KJE_pilgrim_trails
 		icon = GFX_goal_generic_production
 		prerequisite = { focus = TU_KJE_sacred_peaks }
-		x = -11
+		x = 9
 		y = 4
 		cost = 10
 
@@ -1480,7 +1479,7 @@ focus_tree = {
 		id = TU_KJE_faith_crusaders
 		icon = GFX_goal_generic_allies_build_infantry
 		prerequisite = { focus = TU_KJE_faith_guardians }
-		x = -18
+		x = 2
 		y = 7
 		cost = 10
 
@@ -1500,7 +1499,7 @@ focus_tree = {
 		id = TU_KJE_enciodas_estates
 		icon = GFX_goal_generic_production
 		prerequisite = { focus = TU_KJE_enciodas_house }
-		x = -5
+		x = 15
 		y = 3
 		cost = 10
 
@@ -1520,7 +1519,7 @@ focus_tree = {
 		id = TU_KJE_saintess_guard
 		icon = GFX_goal_generic_allies_build_infantry
 		prerequisite = { focus = TU_KJE_saintess_house }
-		x = -3
+		x = 17
 		y = 3
 		cost = 10
 
@@ -1540,7 +1539,7 @@ focus_tree = {
 		id = TU_KJE_noble_hunt
 		icon = GFX_goal_generic_allies_build_infantry
 		prerequisite = { focus = TU_KJE_old_nobility }
-		x = -1
+		x = 19
 		y = 3
 		cost = 10
 
@@ -1560,7 +1559,7 @@ focus_tree = {
 		id = TU_KJE_house_marriages
 		icon = GFX_goal_generic_improve_relations
 		prerequisite = { focus = TU_KJE_reconciliation }
-		x = 5
+		x = 25
 		y = 4
 		cost = 10
 
@@ -1580,8 +1579,8 @@ focus_tree = {
 		id = TU_KJE_ski_raiders
 		icon = GFX_goal_generic_army_motorized
 		prerequisite = { focus = TU_KJE_ski_troops }
-		x = 11
-		y = 3
+		x = -13
+		y = 10
 		cost = 10
 
 		search_filters = { FOCUS_FILTER_POLITICAL }
@@ -1600,8 +1599,8 @@ focus_tree = {
 		id = TU_KJE_ice_bunkers
 		icon = GFX_goal_generic_defence
 		prerequisite = { focus = TU_KJE_snow_forts }
-		x = 9
-		y = 3
+		x = -15
+		y = 10
 		cost = 10
 
 		search_filters = { FOCUS_FILTER_POLITICAL }
@@ -1611,8 +1610,7 @@ focus_tree = {
 		}
 
 		completion_reward = {
-			add_tech_bonus = { name = TU_KJE_ice_bunkers bonus = 0.75 uses = 1 category = construction_tech }
-			army_experience = 25
+			TU_build_forts_2 = yes
 		}
 	}
 
@@ -1620,8 +1618,8 @@ focus_tree = {
 		id = TU_KJE_sniper_school
 		icon = GFX_goal_generic_army_doctrines
 		prerequisite = { focus = TU_KJE_marksman_training }
-		x = 15
-		y = 5
+		x = -9
+		y = 12
 		cost = 10
 
 		search_filters = { FOCUS_FILTER_POLITICAL }
@@ -1640,8 +1638,8 @@ focus_tree = {
 		id = TU_KJE_mountain_medics
 		icon = GFX_goal_generic_consumer_goods
 		prerequisite = { focus = TU_KJE_mountain_infantry }
-		x = 13
-		y = 2
+		x = -11
+		y = 9
 		cost = 10
 
 		search_filters = { FOCUS_FILTER_POLITICAL }
@@ -1660,8 +1658,8 @@ focus_tree = {
 		id = TU_KJE_air_scouts
 		icon = GFX_goal_generic_air_doctrine
 		prerequisite = { focus = TU_KJE_mountain_guard }
-		x = 14
-		y = 6
+		x = -10
+		y = 13
 		cost = 10
 
 		search_filters = { FOCUS_FILTER_POLITICAL }
@@ -1681,8 +1679,8 @@ focus_tree = {
 		id = TU_KJE_rifle_works
 		icon = GFX_goal_generic_small_arms
 		prerequisite = { focus = TU_KJE_mountain_infantry }
-		x = 15
-		y = 2
+		x = -9
+		y = 9
 		cost = 10
 
 		search_filters = { FOCUS_FILTER_POLITICAL }
@@ -1701,8 +1699,8 @@ focus_tree = {
 		id = TU_KJE_copper_mines
 		icon = GFX_goal_generic_production
 		prerequisite = { focus = TU_KJE_silver_mines }
-		x = 28
-		y = 2
+		x = 14
+		y = 10
 		cost = 10
 
 		search_filters = { FOCUS_FILTER_INDUSTRY }
@@ -1721,8 +1719,8 @@ focus_tree = {
 		id = TU_KJE_textile_mills
 		icon = GFX_goal_generic_production
 		prerequisite = { focus = TU_KJE_timber }
-		x = 22
-		y = 3
+		x = 8
+		y = 11
 		cost = 10
 
 		search_filters = { FOCUS_FILTER_INDUSTRY }
@@ -1741,8 +1739,8 @@ focus_tree = {
 		id = TU_KJE_chemical_works
 		icon = GFX_goal_generic_production
 		prerequisite = { focus = TU_KJE_hydro_power }
-		x = 17
-		y = 5
+		x = 3
+		y = 13
 		cost = 10
 
 		search_filters = { FOCUS_FILTER_INDUSTRY }
@@ -1761,8 +1759,8 @@ focus_tree = {
 		id = TU_KJE_leithanien_ties
 		icon = GFX_goal_generic_improve_relations
 		prerequisite = { focus = TU_KJE_foreign_ties }
-		x = 36
-		y = 2
+		x = 24
+		y = 10
 		cost = 10
 
 		search_filters = { FOCUS_FILTER_POLITICAL }
@@ -1781,8 +1779,8 @@ focus_tree = {
 		id = TU_KJE_sami_ties
 		icon = GFX_goal_generic_improve_relations
 		prerequisite = { focus = TU_KJE_foreign_ties }
-		x = 38
-		y = 2
+		x = 26
+		y = 10
 		cost = 10
 
 		search_filters = { FOCUS_FILTER_POLITICAL }
@@ -1801,8 +1799,8 @@ focus_tree = {
 		id = TU_KJE_ursus_watch
 		icon = GFX_goal_generic_defence
 		prerequisite = { focus = TU_KJE_kazimierz_ties }
-		x = 32
-		y = 3
+		x = 20
+		y = 11
 		cost = 10
 
 		search_filters = { FOCUS_FILTER_POLITICAL }
@@ -1821,7 +1819,7 @@ focus_tree = {
 		id = TU_KJE_unified_courts
 		icon = GFX_goal_generic_propaganda
 		prerequisite = { focus = TU_KJE_kjerag_charter }
-		x = 1
+		x = 21
 		y = 6
 		cost = 10
 
@@ -1841,7 +1839,7 @@ focus_tree = {
 		id = TU_KJE_snow_temple_schools
 		icon = GFX_focus_research
 		prerequisite = { focus = TU_KJE_snow_temples }
-		x = -14
+		x = 6
 		y = 7
 		cost = 10
 
@@ -1860,7 +1858,7 @@ focus_tree = {
 		id = TU_KJE_snow_chains
 		icon = GFX_goal_generic_production
 		prerequisite = { focus = TU_KJE_snow_tunnels }
-		x = -37
+		x = -18
 		y = 4
 		cost = 10
 
@@ -1879,7 +1877,7 @@ focus_tree = {
 		id = TU_KJE_winter_hospitals
 		icon = GFX_goal_generic_consumer_goods
 		prerequisite = { focus = TU_KJE_mountain_rescue }
-		x = -31
+		x = -12
 		y = 5
 		cost = 10
 
@@ -1899,7 +1897,7 @@ focus_tree = {
 		id = TU_KJE_frost_rations
 		icon = GFX_goal_generic_production
 		prerequisite = { focus = TU_KJE_fur_trade }
-		x = -29
+		x = -10
 		y = 3
 		cost = 10
 
@@ -1918,7 +1916,7 @@ focus_tree = {
 		id = TU_KJE_glacier_forts
 		icon = GFX_goal_generic_defence
 		prerequisite = { focus = TU_KJE_winter_mastery }
-		x = -35
+		x = -16
 		y = 6
 		cost = 10
 
@@ -1929,8 +1927,7 @@ focus_tree = {
 		}
 
 		completion_reward = {
-			add_tech_bonus = { name = TU_KJE_glacier_forts bonus = 0.75 uses = 1 category = construction_tech }
-			army_experience = 25
+			TU_build_forts_2 = yes
 		}
 	}
 
@@ -1938,7 +1935,7 @@ focus_tree = {
 		id = TU_KJE_karlan_shipping
 		icon = GFX_goal_generic_trade
 		prerequisite = { focus = TU_KJE_karlan_ledgers }
-		x = -21
+		x = -1
 		y = 3
 		cost = 10
 
@@ -1958,7 +1955,7 @@ focus_tree = {
 		id = TU_KJE_silverash_labs
 		icon = GFX_focus_research
 		prerequisite = { focus = TU_KJE_engineering_school }
-		x = -27
+		x = -7
 		y = 5
 		cost = 10
 
@@ -1977,7 +1974,7 @@ focus_tree = {
 		id = TU_KJE_modern_medicine
 		icon = GFX_goal_generic_consumer_goods
 		prerequisite = { focus = TU_KJE_stock_company }
-		x = -19
+		x = 1
 		y = 6
 		cost = 10
 
@@ -1997,7 +1994,7 @@ focus_tree = {
 		id = TU_KJE_electric_grid
 		icon = GFX_goal_generic_production
 		prerequisite = { focus = TU_KJE_factory_valleys }
-		x = -21
+		x = -1
 		y = 6
 		cost = 10
 
@@ -2017,7 +2014,7 @@ focus_tree = {
 		id = TU_KJE_armoured_sleds
 		icon = GFX_goal_generic_army_tanks
 		prerequisite = { focus = TU_KJE_modern_army }
-		x = -25
+		x = -5
 		y = 8
 		cost = 10
 
@@ -2037,7 +2034,7 @@ focus_tree = {
 		id = TU_KJE_air_force
 		icon = GFX_goal_generic_air_doctrine
 		prerequisite = { focus = TU_KJE_modern_army }
-		x = -23
+		x = -3
 		y = 8
 		cost = 10
 
@@ -2058,7 +2055,7 @@ focus_tree = {
 		id = TU_KJE_holy_texts
 		icon = GFX_focus_research
 		prerequisite = { focus = TU_KJE_monastery_schools }
-		x = -7
+		x = 13
 		y = 4
 		cost = 10
 
@@ -2077,7 +2074,7 @@ focus_tree = {
 		id = TU_KJE_faith_festival
 		icon = GFX_goal_generic_propaganda
 		prerequisite = { focus = TU_KJE_ritual_calendar }
-		x = -9
+		x = 11
 		y = 4
 		cost = 10
 
@@ -2097,7 +2094,7 @@ focus_tree = {
 		id = TU_KJE_temple_guards
 		icon = GFX_goal_generic_allies_build_infantry
 		prerequisite = { focus = TU_KJE_snow_temples }
-		x = -12
+		x = 8
 		y = 7
 		cost = 10
 
@@ -2117,7 +2114,7 @@ focus_tree = {
 		id = TU_KJE_faith_charity
 		icon = GFX_goal_generic_consumer_goods
 		prerequisite = { focus = TU_KJE_faith_guardians }
-		x = -16
+		x = 4
 		y = 7
 		cost = 10
 
@@ -2137,7 +2134,7 @@ focus_tree = {
 		id = TU_KJE_house_treasury
 		icon = GFX_goal_generic_trade
 		prerequisite = { focus = TU_KJE_house_marriages }
-		x = 5
+		x = 25
 		y = 5
 		cost = 10
 
@@ -2157,7 +2154,7 @@ focus_tree = {
 		id = TU_KJE_noble_cavalry
 		icon = GFX_goal_generic_army_motorized
 		prerequisite = { focus = TU_KJE_noble_hunt }
-		x = -1
+		x = 19
 		y = 4
 		cost = 10
 
@@ -2177,7 +2174,7 @@ focus_tree = {
 		id = TU_KJE_enciodas_mines
 		icon = GFX_goal_generic_production
 		prerequisite = { focus = TU_KJE_enciodas_estates }
-		x = -5
+		x = 15
 		y = 4
 		cost = 10
 
@@ -2197,7 +2194,7 @@ focus_tree = {
 		id = TU_KJE_saintess_hospitals
 		icon = GFX_goal_generic_consumer_goods
 		prerequisite = { focus = TU_KJE_saintess_guard }
-		x = -3
+		x = 17
 		y = 4
 		cost = 10
 
@@ -2217,7 +2214,7 @@ focus_tree = {
 		id = TU_KJE_unified_treasury
 		icon = GFX_goal_generic_trade
 		prerequisite = { focus = TU_KJE_unified_courts }
-		x = 1
+		x = 21
 		y = 7
 		cost = 10
 
@@ -2237,8 +2234,8 @@ focus_tree = {
 		id = TU_KJE_alpine_artillery
 		icon = GFX_goal_generic_army_artillery
 		prerequisite = { focus = TU_KJE_mountain_artillery }
-		x = 7
-		y = 4
+		x = -17
+		y = 11
 		cost = 10
 
 		search_filters = { FOCUS_FILTER_POLITICAL }
@@ -2257,8 +2254,8 @@ focus_tree = {
 		id = TU_KJE_snow_camouflage
 		icon = GFX_goal_generic_army_doctrines
 		prerequisite = { focus = TU_KJE_ski_raiders }
-		x = 11
-		y = 4
+		x = -13
+		y = 11
 		cost = 10
 
 		search_filters = { FOCUS_FILTER_POLITICAL }
@@ -2277,8 +2274,8 @@ focus_tree = {
 		id = TU_KJE_high_altitude
 		icon = GFX_goal_generic_army_doctrines
 		prerequisite = { focus = TU_KJE_air_scouts }
-		x = 14
-		y = 7
+		x = -10
+		y = 14
 		cost = 10
 
 		search_filters = { FOCUS_FILTER_POLITICAL }
@@ -2297,8 +2294,8 @@ focus_tree = {
 		id = TU_KJE_supply_lifts
 		icon = GFX_goal_generic_production
 		prerequisite = { focus = TU_KJE_cable_cars }
-		x = 20
-		y = 4
+		x = 6
+		y = 12
 		cost = 10
 
 		search_filters = { FOCUS_FILTER_POLITICAL }
@@ -2316,8 +2313,8 @@ focus_tree = {
 		id = TU_KJE_steel_works
 		icon = GFX_goal_generic_small_arms
 		prerequisite = { focus = TU_KJE_copper_mines }
-		x = 28
-		y = 3
+		x = 14
+		y = 11
 		cost = 10
 
 		search_filters = { FOCUS_FILTER_INDUSTRY }
@@ -2337,8 +2334,8 @@ focus_tree = {
 		id = TU_KJE_power_cables
 		icon = GFX_goal_generic_defence
 		prerequisite = { focus = TU_KJE_hydro_power }
-		x = 19
-		y = 5
+		x = 5
+		y = 13
 		cost = 10
 
 		search_filters = { FOCUS_FILTER_INDUSTRY }
@@ -2358,8 +2355,8 @@ focus_tree = {
 		id = TU_KJE_ski_industry
 		icon = GFX_goal_generic_production
 		prerequisite = { focus = TU_KJE_textile_mills }
-		x = 22
-		y = 4
+		x = 8
+		y = 12
 		cost = 10
 
 		search_filters = { FOCUS_FILTER_INDUSTRY }
@@ -2378,8 +2375,8 @@ focus_tree = {
 		id = TU_KJE_victoria_trade
 		icon = GFX_goal_generic_trade
 		prerequisite = { focus = TU_KJE_columbia_ties }
-		x = 34
-		y = 3
+		x = 22
+		y = 11
 		cost = 10
 
 		search_filters = { FOCUS_FILTER_POLITICAL }
@@ -2398,8 +2395,8 @@ focus_tree = {
 		id = TU_KJE_laterano_ties
 		icon = GFX_goal_generic_improve_relations
 		prerequisite = { focus = TU_KJE_leithanien_ties }
-		x = 36
-		y = 3
+		x = 24
+		y = 11
 		cost = 10
 
 		search_filters = { FOCUS_FILTER_POLITICAL }
@@ -2418,8 +2415,8 @@ focus_tree = {
 		id = TU_KJE_yan_contact
 		icon = GFX_goal_generic_improve_relations
 		prerequisite = { focus = TU_KJE_sami_ties }
-		x = 38
-		y = 3
+		x = 26
+		y = 11
 		cost = 10
 
 		search_filters = { FOCUS_FILTER_POLITICAL }
@@ -2438,8 +2435,8 @@ focus_tree = {
 		id = TU_KJE_border_posts
 		icon = GFX_goal_generic_defence
 		prerequisite = { focus = TU_KJE_ursus_watch }
-		x = 32
-		y = 4
+		x = 20
+		y = 12
 		cost = 10
 
 		search_filters = { FOCUS_FILTER_POLITICAL }

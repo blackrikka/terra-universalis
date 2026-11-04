@@ -61,7 +61,7 @@
 
 	focus = {
 		id = TU_RIM_mining_railway
-		icon = GFX_goal_generic_production
+		icon = GFX_goal_generic_construct_infrastructure
 		prerequisite = { focus = TU_RIM_ore_mining }
 		x = 0
 		y = 0
@@ -74,8 +74,7 @@
 		}
 
 		completion_reward = {
-			add_tech_bonus = { name = TU_RIM_mining_railway bonus = 0.75 uses = 1 category = industry category = construction_tech }
-			TU_build_infrastructure = yes
+			TU_build_railway = yes
 		}
 	}
 
@@ -720,8 +719,7 @@
 		}
 
 		completion_reward = {
-			add_tech_bonus = { name = TU_RIM_mine_defence bonus = 0.75 uses = 1 category = construction_tech }
-			army_experience = 25
+			TU_build_forts_2 = yes
 		}
 	}
 
@@ -782,8 +780,7 @@
 		}
 
 		completion_reward = {
-			add_tech_bonus = { name = TU_RIM_fortified_mines bonus = 0.75 uses = 1 category = construction_tech }
-			army_experience = 25
+			TU_build_forts_2 = yes
 		}
 	}
 
@@ -991,7 +988,7 @@
 
 	focus = {
 		id = TU_RIM_ore_trains
-		icon = GFX_goal_generic_production
+		icon = GFX_goal_generic_construct_infrastructure
 		prerequisite = { focus = TU_RIM_mining_railway }
 		x = 0
 		y = 0
@@ -1004,7 +1001,7 @@
 		}
 
 		completion_reward = {
-			add_tech_bonus = { name = TU_RIM_ore_trains bonus = 0.75 uses = 1 category = industry category = construction_tech }
+			TU_build_railway = yes
 			TU_build_civ_factory = yes
 		}
 	}
@@ -1480,8 +1477,7 @@
 		}
 
 		completion_reward = {
-			add_tech_bonus = { name = TU_RIM_mine_bunkers bonus = 0.75 uses = 1 category = construction_tech }
-			army_experience = 25
+			TU_build_forts_2 = yes
 		}
 	}
 
@@ -1588,7 +1584,7 @@
 
 	focus = {
 		id = TU_RIM_rail_network
-		icon = GFX_goal_generic_production
+		icon = GFX_goal_generic_construct_infrastructure
 		prerequisite = { focus = TU_RIM_road_network }
 		x = 0
 		y = 0
@@ -1601,8 +1597,7 @@
 		}
 
 		completion_reward = {
-			add_tech_bonus = { name = TU_RIM_rail_network bonus = 0.75 uses = 1 category = industry category = construction_tech }
-			TU_build_infrastructure = yes
+			TU_build_railway = yes
 		}
 	}
 

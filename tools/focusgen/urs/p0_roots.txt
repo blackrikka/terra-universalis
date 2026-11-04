@@ -51,8 +51,7 @@
 
 		completion_reward = {
 			remove_ideas = TU_URS_backward_infrastructure
-			TU_build_infrastructure = yes
-			add_tech_bonus = { name = TU_URS_railway_reform bonus = 0.5 uses = 1 category = industry category = construction_tech }
+			TU_build_railway = yes
 		}
 	}
 

@@ -1,6 +1,6 @@
 focus_tree = {
 	id = TU_MIN_focus
-	continuous_focus_position = { x = 50 y = 1300 }
+	continuous_focus_position = { x = 50 y = 2210 }
 
 	country = {
 		factor = 0
@@ -41,7 +41,7 @@ focus_tree = {
 		id = TU_MIN_agora
 		icon = GFX_goal_generic_political_pressure
 		prerequisite = { focus = TU_MIN_root }
-		x = -35
+		x = -10
 		y = 1
 		cost = 10
 
@@ -61,7 +61,7 @@ focus_tree = {
 		id = TU_MIN_citizen_rolls
 		icon = GFX_goal_generic_consumer_goods
 		prerequisite = { focus = TU_MIN_agora }
-		x = -35
+		x = -10
 		y = 2
 		cost = 10
 
@@ -81,7 +81,7 @@ focus_tree = {
 		id = TU_MIN_ostracism
 		icon = GFX_goal_generic_political_pressure
 		prerequisite = { focus = TU_MIN_agora }
-		x = -31
+		x = -6
 		y = 2
 		cost = 10
 
@@ -102,7 +102,7 @@ focus_tree = {
 		id = TU_MIN_public_speeches
 		icon = GFX_goal_generic_propaganda
 		prerequisite = { focus = TU_MIN_citizen_rolls }
-		x = -35
+		x = -10
 		y = 3
 		cost = 10
 
@@ -125,7 +125,7 @@ focus_tree = {
 		prerequisite = { focus = TU_MIN_public_speeches }
 		prerequisite = { focus = TU_MIN_ostracism }
 		mutually_exclusive = { focus = TU_MIN_elders_reform }
-		x = -39
+		x = -14
 		y = 4
 		cost = 10
 
@@ -148,7 +148,7 @@ focus_tree = {
 		prerequisite = { focus = TU_MIN_public_speeches }
 		prerequisite = { focus = TU_MIN_ostracism }
 		mutually_exclusive = { focus = TU_MIN_democratic_reform }
-		x = -35
+		x = -10
 		y = 4
 		cost = 10
 
@@ -170,7 +170,7 @@ focus_tree = {
 		icon = GFX_goal_generic_political_pressure
 		prerequisite = { focus = TU_MIN_democratic_reform }
 		mutually_exclusive = { focus = TU_MIN_rule_of_elders focus = TU_MIN_thalassocracy }
-		x = -39
+		x = -14
 		y = 5
 		cost = 15
 
@@ -195,7 +195,7 @@ focus_tree = {
 		id = TU_MIN_jury_courts
 		icon = GFX_goal_generic_political_pressure
 		prerequisite = { focus = TU_MIN_democratic_polis }
-		x = -40
+		x = -15
 		y = 6
 		cost = 10
 
@@ -215,7 +215,7 @@ focus_tree = {
 		id = TU_MIN_free_schools
 		icon = GFX_goal_generic_consumer_goods
 		prerequisite = { focus = TU_MIN_democratic_polis }
-		x = -38
+		x = -13
 		y = 6
 		cost = 10
 
@@ -236,7 +236,7 @@ focus_tree = {
 		icon = GFX_goal_generic_trade
 		prerequisite = { focus = TU_MIN_jury_courts }
 		prerequisite = { focus = TU_MIN_free_schools }
-		x = -38
+		x = -13
 		y = 7
 		cost = 10
 
@@ -257,7 +257,7 @@ focus_tree = {
 		icon = GFX_goal_generic_political_pressure
 		prerequisite = { focus = TU_MIN_elders_reform }
 		mutually_exclusive = { focus = TU_MIN_democratic_polis focus = TU_MIN_thalassocracy }
-		x = -35
+		x = -10
 		y = 5
 		cost = 15
 
@@ -282,7 +282,7 @@ focus_tree = {
 		id = TU_MIN_elder_council
 		icon = GFX_goal_generic_political_pressure
 		prerequisite = { focus = TU_MIN_rule_of_elders }
-		x = -35
+		x = -10
 		y = 6
 		cost = 10
 
@@ -302,7 +302,7 @@ focus_tree = {
 		id = TU_MIN_temple_treasury
 		icon = GFX_goal_generic_trade
 		prerequisite = { focus = TU_MIN_elder_council }
-		x = -36
+		x = -11
 		y = 7
 		cost = 10
 
@@ -322,7 +322,7 @@ focus_tree = {
 		id = TU_MIN_temple_rites
 		icon = GFX_goal_generic_propaganda
 		prerequisite = { focus = TU_MIN_root }
-		x = -27
+		x = 21
 		y = 1
 		cost = 10
 
@@ -342,7 +342,7 @@ focus_tree = {
 		id = TU_MIN_oracle_priests
 		icon = GFX_goal_generic_political_pressure
 		prerequisite = { focus = TU_MIN_temple_rites }
-		x = -27
+		x = 21
 		y = 2
 		cost = 10
 
@@ -362,7 +362,7 @@ focus_tree = {
 		id = TU_MIN_sacred_games
 		icon = GFX_goal_generic_propaganda
 		prerequisite = { focus = TU_MIN_temple_rites }
-		x = -22
+		x = 26
 		y = 2
 		cost = 10
 
@@ -383,7 +383,7 @@ focus_tree = {
 		id = TU_MIN_prophecy_archive
 		icon = GFX_focus_research
 		prerequisite = { focus = TU_MIN_oracle_priests }
-		x = -27
+		x = 21
 		y = 3
 		cost = 10
 
@@ -403,7 +403,7 @@ focus_tree = {
 		icon = GFX_goal_generic_propaganda
 		prerequisite = { focus = TU_MIN_prophecy_archive }
 		prerequisite = { focus = TU_MIN_sacred_games }
-		x = -28
+		x = 20
 		y = 4
 		cost = 10
 
@@ -424,7 +424,7 @@ focus_tree = {
 		icon = GFX_focus_research
 		prerequisite = { focus = TU_MIN_root }
 		x = -16
-		y = 1
+		y = 10
 		cost = 10
 
 		search_filters = { FOCUS_FILTER_POLITICAL }
@@ -444,7 +444,7 @@ focus_tree = {
 		prerequisite = { focus = TU_MIN_philosophers }
 		mutually_exclusive = { focus = TU_MIN_stoa focus = TU_MIN_cynics }
 		x = -18
-		y = 2
+		y = 11
 		cost = 10
 
 		search_filters = { FOCUS_FILTER_POLITICAL }
@@ -464,7 +464,7 @@ focus_tree = {
 		prerequisite = { focus = TU_MIN_philosophers }
 		mutually_exclusive = { focus = TU_MIN_academia focus = TU_MIN_cynics }
 		x = -16
-		y = 2
+		y = 11
 		cost = 10
 
 		search_filters = { FOCUS_FILTER_POLITICAL }
@@ -484,7 +484,7 @@ focus_tree = {
 		prerequisite = { focus = TU_MIN_philosophers }
 		mutually_exclusive = { focus = TU_MIN_academia focus = TU_MIN_stoa }
 		x = -14
-		y = 2
+		y = 11
 		cost = 10
 
 		search_filters = { FOCUS_FILTER_POLITICAL }
@@ -503,7 +503,7 @@ focus_tree = {
 		icon = GFX_focus_research
 		prerequisite = { focus = TU_MIN_academia focus = TU_MIN_stoa focus = TU_MIN_cynics }
 		x = -16
-		y = 3
+		y = 12
 		cost = 10
 
 		search_filters = { FOCUS_FILTER_POLITICAL }
@@ -522,7 +522,7 @@ focus_tree = {
 		icon = GFX_focus_research
 		prerequisite = { focus = TU_MIN_mathematics }
 		x = -18
-		y = 4
+		y = 13
 		cost = 10
 
 		search_filters = { FOCUS_FILTER_POLITICAL }
@@ -542,7 +542,7 @@ focus_tree = {
 		prerequisite = { focus = TU_MIN_mathematics }
 		mutually_exclusive = { focus = TU_MIN_engineering_studies }
 		x = -16
-		y = 4
+		y = 13
 		cost = 10
 
 		search_filters = { FOCUS_FILTER_POLITICAL }
@@ -563,7 +563,7 @@ focus_tree = {
 		prerequisite = { focus = TU_MIN_mathematics }
 		mutually_exclusive = { focus = TU_MIN_medical_studies }
 		x = -14
-		y = 4
+		y = 13
 		cost = 10
 
 		search_filters = { FOCUS_FILTER_POLITICAL }
@@ -583,7 +583,7 @@ focus_tree = {
 		prerequisite = { focus = TU_MIN_medical_studies focus = TU_MIN_engineering_studies }
 		prerequisite = { focus = TU_MIN_observatory }
 		x = -11
-		y = 5
+		y = 14
 		cost = 10
 
 		search_filters = { FOCUS_FILTER_POLITICAL }
@@ -602,7 +602,7 @@ focus_tree = {
 		icon = GFX_focus_research
 		prerequisite = { focus = TU_MIN_great_library }
 		x = -12
-		y = 6
+		y = 15
 		cost = 10
 
 		search_filters = { FOCUS_FILTER_POLITICAL }
@@ -620,7 +620,7 @@ focus_tree = {
 		id = TU_MIN_harbour_works
 		icon = GFX_goal_generic_build_navy
 		prerequisite = { focus = TU_MIN_root }
-		x = 1
+		x = 8
 		y = 1
 		cost = 10
 
@@ -642,7 +642,7 @@ focus_tree = {
 		id = TU_MIN_trade_routes
 		icon = GFX_goal_generic_build_navy
 		prerequisite = { focus = TU_MIN_harbour_works }
-		x = -8
+		x = -1
 		y = 2
 		cost = 10
 
@@ -662,7 +662,7 @@ focus_tree = {
 		id = TU_MIN_merchant_fleet
 		icon = GFX_goal_generic_build_navy
 		prerequisite = { focus = TU_MIN_trade_routes }
-		x = -9
+		x = -2
 		y = 3
 		cost = 10
 
@@ -684,7 +684,7 @@ focus_tree = {
 		id = TU_MIN_pirate_hunt
 		icon = GFX_goal_generic_build_navy
 		prerequisite = { focus = TU_MIN_trade_routes }
-		x = -6
+		x = 1
 		y = 3
 		cost = 10
 
@@ -705,7 +705,7 @@ focus_tree = {
 		icon = GFX_goal_generic_build_navy
 		prerequisite = { focus = TU_MIN_merchant_fleet }
 		prerequisite = { focus = TU_MIN_pirate_hunt }
-		x = -4
+		x = 3
 		y = 4
 		cost = 10
 
@@ -727,7 +727,7 @@ focus_tree = {
 		icon = GFX_goal_generic_political_pressure
 		prerequisite = { focus = TU_MIN_sea_supremacy }
 		mutually_exclusive = { focus = TU_MIN_democratic_polis focus = TU_MIN_rule_of_elders }
-		x = -4
+		x = 3
 		y = 5
 		cost = 15
 
@@ -752,7 +752,7 @@ focus_tree = {
 		id = TU_MIN_colonies
 		icon = GFX_goal_generic_political_pressure
 		prerequisite = { focus = TU_MIN_thalassocracy }
-		x = -4
+		x = 3
 		y = 6
 		cost = 10
 
@@ -772,7 +772,7 @@ focus_tree = {
 		id = TU_MIN_sea_empire
 		icon = GFX_goal_generic_build_navy
 		prerequisite = { focus = TU_MIN_colonies }
-		x = -5
+		x = 2
 		y = 7
 		cost = 10
 
@@ -792,7 +792,7 @@ focus_tree = {
 		id = TU_MIN_galley_fleet
 		icon = GFX_goal_generic_build_navy
 		prerequisite = { focus = TU_MIN_harbour_works }
-		x = 4
+		x = 11
 		y = 2
 		cost = 10
 
@@ -813,7 +813,7 @@ focus_tree = {
 		id = TU_MIN_naval_academy
 		icon = GFX_goal_generic_build_navy
 		prerequisite = { focus = TU_MIN_galley_fleet }
-		x = 4
+		x = 11
 		y = 3
 		cost = 10
 
@@ -834,7 +834,7 @@ focus_tree = {
 		id = TU_MIN_trireme_doctrine
 		icon = GFX_goal_generic_build_navy
 		prerequisite = { focus = TU_MIN_naval_academy }
-		x = 4
+		x = 11
 		y = 4
 		cost = 10
 
@@ -856,7 +856,7 @@ focus_tree = {
 		icon = GFX_goal_generic_build_navy
 		prerequisite = { focus = TU_MIN_trireme_doctrine }
 		mutually_exclusive = { focus = TU_MIN_raider_fleet }
-		x = 3
+		x = 10
 		y = 5
 		cost = 10
 
@@ -878,7 +878,7 @@ focus_tree = {
 		icon = GFX_goal_generic_army_motorized
 		prerequisite = { focus = TU_MIN_trireme_doctrine }
 		mutually_exclusive = { focus = TU_MIN_battle_fleet }
-		x = 5
+		x = 12
 		y = 5
 		cost = 10
 
@@ -898,7 +898,7 @@ focus_tree = {
 		id = TU_MIN_grand_fleet
 		icon = GFX_goal_generic_build_navy
 		prerequisite = { focus = TU_MIN_battle_fleet focus = TU_MIN_raider_fleet }
-		x = 7
+		x = 14
 		y = 6
 		cost = 10
 
@@ -918,8 +918,8 @@ focus_tree = {
 		id = TU_MIN_hoplite_training
 		icon = GFX_goal_generic_army_doctrines
 		prerequisite = { focus = TU_MIN_root }
-		x = 18
-		y = 1
+		x = 6
+		y = 9
 		cost = 10
 
 		search_filters = { FOCUS_FILTER_POLITICAL }
@@ -938,8 +938,8 @@ focus_tree = {
 		id = TU_MIN_phalanx
 		icon = GFX_goal_generic_army_doctrines
 		prerequisite = { focus = TU_MIN_hoplite_training }
-		x = 13
-		y = 2
+		x = 1
+		y = 10
 		cost = 10
 
 		search_filters = { FOCUS_FILTER_POLITICAL }
@@ -958,8 +958,8 @@ focus_tree = {
 		id = TU_MIN_hoplites
 		icon = GFX_goal_generic_political_pressure
 		prerequisite = { focus = TU_MIN_phalanx }
-		x = 10
-		y = 3
+		x = -2
+		y = 11
 		cost = 10
 
 		search_filters = { FOCUS_FILTER_POLITICAL }
@@ -978,8 +978,8 @@ focus_tree = {
 		id = TU_MIN_city_walls
 		icon = GFX_goal_generic_defence
 		prerequisite = { focus = TU_MIN_hoplite_training }
-		x = 19
-		y = 2
+		x = 7
+		y = 10
 		cost = 10
 
 		search_filters = { FOCUS_FILTER_POLITICAL }
@@ -989,8 +989,7 @@ focus_tree = {
 		}
 
 		completion_reward = {
-			add_tech_bonus = { name = TU_MIN_city_walls bonus = 0.75 uses = 1 category = construction_tech }
-			army_experience = 25
+			TU_build_forts_2 = yes
 		}
 	}
 
@@ -998,8 +997,8 @@ focus_tree = {
 		id = TU_MIN_bronze_arms
 		icon = GFX_goal_generic_small_arms
 		prerequisite = { focus = TU_MIN_hoplite_training }
-		x = 24
-		y = 2
+		x = 12
+		y = 10
 		cost = 10
 
 		search_filters = { FOCUS_FILTER_POLITICAL }
@@ -1018,8 +1017,8 @@ focus_tree = {
 		id = TU_MIN_modern_rifles
 		icon = GFX_goal_generic_small_arms
 		prerequisite = { focus = TU_MIN_bronze_arms }
-		x = 22
-		y = 3
+		x = 10
+		y = 11
 		cost = 10
 
 		search_filters = { FOCUS_FILTER_POLITICAL }
@@ -1038,8 +1037,8 @@ focus_tree = {
 		id = TU_MIN_artillery
 		icon = GFX_goal_generic_army_artillery
 		prerequisite = { focus = TU_MIN_modern_rifles }
-		x = 22
-		y = 4
+		x = 10
+		y = 12
 		cost = 10
 
 		search_filters = { FOCUS_FILTER_POLITICAL }
@@ -1058,8 +1057,8 @@ focus_tree = {
 		id = TU_MIN_marines
 		icon = GFX_goal_generic_build_navy
 		prerequisite = { focus = TU_MIN_phalanx }
-		x = 12
-		y = 3
+		x = 0
+		y = 11
 		cost = 10
 
 		search_filters = { FOCUS_FILTER_POLITICAL }
@@ -1079,8 +1078,8 @@ focus_tree = {
 		id = TU_MIN_olive_farms
 		icon = GFX_goal_generic_production
 		prerequisite = { focus = TU_MIN_root }
-		x = 35
-		y = 1
+		x = 24
+		y = 7
 		cost = 10
 
 		search_filters = { FOCUS_FILTER_INDUSTRY }
@@ -1099,8 +1098,8 @@ focus_tree = {
 		id = TU_MIN_road_network
 		icon = GFX_goal_generic_production
 		prerequisite = { focus = TU_MIN_olive_farms }
-		x = 30
-		y = 2
+		x = 19
+		y = 8
 		cost = 10
 
 		search_filters = { FOCUS_FILTER_INDUSTRY }
@@ -1119,8 +1118,8 @@ focus_tree = {
 		id = TU_MIN_industrial_district
 		icon = GFX_goal_generic_production
 		prerequisite = { focus = TU_MIN_olive_farms }
-		x = 36
-		y = 2
+		x = 25
+		y = 8
 		cost = 10
 
 		search_filters = { FOCUS_FILTER_INDUSTRY }
@@ -1140,8 +1139,8 @@ focus_tree = {
 		icon = GFX_goal_generic_production
 		prerequisite = { focus = TU_MIN_industrial_district }
 		mutually_exclusive = { focus = TU_MIN_arms_program }
-		x = 34
-		y = 3
+		x = 23
+		y = 9
 		cost = 10
 
 		search_filters = { FOCUS_FILTER_INDUSTRY }
@@ -1161,8 +1160,8 @@ focus_tree = {
 		icon = GFX_goal_generic_small_arms
 		prerequisite = { focus = TU_MIN_industrial_district }
 		mutually_exclusive = { focus = TU_MIN_civ_program }
-		x = 36
-		y = 3
+		x = 25
+		y = 9
 		cost = 10
 
 		search_filters = { FOCUS_FILTER_INDUSTRY }
@@ -1182,8 +1181,8 @@ focus_tree = {
 		id = TU_MIN_marble_quarries
 		icon = GFX_goal_generic_political_pressure
 		prerequisite = { focus = TU_MIN_road_network }
-		x = 28
-		y = 3
+		x = 17
+		y = 9
 		cost = 10
 
 		search_filters = { FOCUS_FILTER_INDUSTRY }
@@ -1204,8 +1203,8 @@ focus_tree = {
 		icon = GFX_goal_generic_production
 		prerequisite = { focus = TU_MIN_civ_program focus = TU_MIN_arms_program }
 		prerequisite = { focus = TU_MIN_marble_quarries }
-		x = 34
-		y = 4
+		x = 23
+		y = 10
 		cost = 10
 
 		search_filters = { FOCUS_FILTER_INDUSTRY }
@@ -1224,7 +1223,7 @@ focus_tree = {
 		id = TU_MIN_assembly_hall
 		icon = GFX_goal_generic_production
 		prerequisite = { focus = TU_MIN_agora }
-		x = -29
+		x = -4
 		y = 2
 		cost = 10
 
@@ -1244,7 +1243,7 @@ focus_tree = {
 		id = TU_MIN_citizen_militia
 		icon = GFX_goal_generic_consumer_goods
 		prerequisite = { focus = TU_MIN_citizen_rolls }
-		x = -33
+		x = -8
 		y = 3
 		cost = 10
 
@@ -1264,7 +1263,7 @@ focus_tree = {
 		id = TU_MIN_tax_reform
 		icon = GFX_goal_generic_trade
 		prerequisite = { focus = TU_MIN_ostracism }
-		x = -31
+		x = -6
 		y = 3
 		cost = 10
 
@@ -1284,7 +1283,7 @@ focus_tree = {
 		id = TU_MIN_theatre
 		icon = GFX_goal_generic_propaganda
 		prerequisite = { focus = TU_MIN_public_speeches }
-		x = -31
+		x = -6
 		y = 4
 		cost = 10
 
@@ -1304,7 +1303,7 @@ focus_tree = {
 		id = TU_MIN_free_press
 		icon = GFX_goal_generic_production
 		prerequisite = { focus = TU_MIN_democratic_reform }
-		x = -37
+		x = -12
 		y = 5
 		cost = 10
 
@@ -1323,7 +1322,7 @@ focus_tree = {
 		id = TU_MIN_elder_guard
 		icon = GFX_goal_generic_allies_build_infantry
 		prerequisite = { focus = TU_MIN_elders_reform }
-		x = -33
+		x = -8
 		y = 5
 		cost = 10
 
@@ -1343,7 +1342,7 @@ focus_tree = {
 		id = TU_MIN_public_baths
 		icon = GFX_goal_generic_consumer_goods
 		prerequisite = { focus = TU_MIN_jury_courts }
-		x = -40
+		x = -15
 		y = 7
 		cost = 10
 
@@ -1363,7 +1362,7 @@ focus_tree = {
 		id = TU_MIN_sacred_groves
 		icon = GFX_goal_generic_propaganda
 		prerequisite = { focus = TU_MIN_oracle_priests }
-		x = -25
+		x = 23
 		y = 3
 		cost = 10
 
@@ -1383,7 +1382,7 @@ focus_tree = {
 		id = TU_MIN_pilgrimage
 		icon = GFX_goal_generic_trade
 		prerequisite = { focus = TU_MIN_sacred_games }
-		x = -23
+		x = 25
 		y = 3
 		cost = 10
 
@@ -1403,7 +1402,7 @@ focus_tree = {
 		id = TU_MIN_olympic_games
 		icon = GFX_goal_generic_propaganda
 		prerequisite = { focus = TU_MIN_sacred_games }
-		x = -21
+		x = 27
 		y = 3
 		cost = 10
 
@@ -1423,7 +1422,7 @@ focus_tree = {
 		id = TU_MIN_temple_builders
 		icon = GFX_goal_generic_production
 		prerequisite = { focus = TU_MIN_divine_mandate }
-		x = -28
+		x = 20
 		y = 5
 		cost = 10
 
@@ -1444,7 +1443,7 @@ focus_tree = {
 		icon = GFX_focus_research
 		prerequisite = { focus = TU_MIN_philosophers }
 		x = -12
-		y = 2
+		y = 11
 		cost = 10
 
 		search_filters = { FOCUS_FILTER_POLITICAL }
@@ -1463,7 +1462,7 @@ focus_tree = {
 		icon = GFX_focus_research
 		prerequisite = { focus = TU_MIN_philosophers }
 		x = -10
-		y = 2
+		y = 11
 		cost = 10
 
 		search_filters = { FOCUS_FILTER_POLITICAL }
@@ -1482,7 +1481,7 @@ focus_tree = {
 		icon = GFX_focus_research
 		prerequisite = { focus = TU_MIN_mathematics }
 		x = -12
-		y = 4
+		y = 13
 		cost = 10
 
 		search_filters = { FOCUS_FILTER_POLITICAL }
@@ -1501,7 +1500,7 @@ focus_tree = {
 		icon = GFX_goal_generic_consumer_goods
 		prerequisite = { focus = TU_MIN_medical_studies }
 		x = -16
-		y = 5
+		y = 14
 		cost = 10
 
 		search_filters = { FOCUS_FILTER_POLITICAL }
@@ -1521,7 +1520,7 @@ focus_tree = {
 		icon = GFX_focus_research
 		prerequisite = { focus = TU_MIN_engineering_studies }
 		x = -14
-		y = 5
+		y = 14
 		cost = 10
 
 		search_filters = { FOCUS_FILTER_POLITICAL }
@@ -1540,7 +1539,7 @@ focus_tree = {
 		icon = GFX_goal_generic_political_pressure
 		prerequisite = { focus = TU_MIN_observatory }
 		x = -18
-		y = 5
+		y = 14
 		cost = 10
 
 		search_filters = { FOCUS_FILTER_POLITICAL }
@@ -1559,7 +1558,7 @@ focus_tree = {
 		id = TU_MIN_lighthouse
 		icon = GFX_goal_generic_build_navy
 		prerequisite = { focus = TU_MIN_harbour_works }
-		x = 8
+		x = 15
 		y = 2
 		cost = 10
 
@@ -1580,7 +1579,7 @@ focus_tree = {
 		id = TU_MIN_wine_trade
 		icon = GFX_goal_generic_trade
 		prerequisite = { focus = TU_MIN_trade_routes }
-		x = -2
+		x = 5
 		y = 3
 		cost = 10
 
@@ -1600,7 +1599,7 @@ focus_tree = {
 		id = TU_MIN_insurance
 		icon = GFX_goal_generic_trade
 		prerequisite = { focus = TU_MIN_merchant_fleet }
-		x = -10
+		x = -3
 		y = 4
 		cost = 10
 
@@ -1620,7 +1619,7 @@ focus_tree = {
 		id = TU_MIN_convoys
 		icon = GFX_goal_generic_build_navy
 		prerequisite = { focus = TU_MIN_pirate_hunt }
-		x = -6
+		x = 1
 		y = 4
 		cost = 10
 
@@ -1641,7 +1640,7 @@ focus_tree = {
 		id = TU_MIN_naval_bases
 		icon = GFX_goal_generic_build_navy
 		prerequisite = { focus = TU_MIN_naval_academy }
-		x = 6
+		x = 13
 		y = 4
 		cost = 10
 
@@ -1663,7 +1662,7 @@ focus_tree = {
 		id = TU_MIN_destroyers
 		icon = GFX_goal_generic_build_navy
 		prerequisite = { focus = TU_MIN_battle_fleet }
-		x = 3
+		x = 10
 		y = 6
 		cost = 10
 
@@ -1684,7 +1683,7 @@ focus_tree = {
 		id = TU_MIN_submarines
 		icon = GFX_goal_generic_build_navy
 		prerequisite = { focus = TU_MIN_raider_fleet }
-		x = 5
+		x = 12
 		y = 6
 		cost = 10
 
@@ -1705,8 +1704,8 @@ focus_tree = {
 		id = TU_MIN_cavalry
 		icon = GFX_goal_generic_army_motorized
 		prerequisite = { focus = TU_MIN_phalanx }
-		x = 14
-		y = 3
+		x = 2
+		y = 11
 		cost = 10
 
 		search_filters = { FOCUS_FILTER_POLITICAL }
@@ -1725,8 +1724,8 @@ focus_tree = {
 		id = TU_MIN_archer_corps
 		icon = GFX_goal_generic_small_arms
 		prerequisite = { focus = TU_MIN_bronze_arms }
-		x = 24
-		y = 3
+		x = 12
+		y = 11
 		cost = 10
 
 		search_filters = { FOCUS_FILTER_POLITICAL }
@@ -1743,10 +1742,10 @@ focus_tree = {
 
 	focus = {
 		id = TU_MIN_coastal_forts
-		icon = GFX_goal_generic_build_navy
+		icon = GFX_goal_generic_defence
 		prerequisite = { focus = TU_MIN_city_walls }
-		x = 18
-		y = 3
+		x = 6
+		y = 11
 		cost = 10
 
 		search_filters = { FOCUS_FILTER_POLITICAL }
@@ -1756,9 +1755,7 @@ focus_tree = {
 		}
 
 		completion_reward = {
-			add_tech_bonus = { name = TU_MIN_coastal_forts bonus = 0.75 uses = 1 category = dd_tech category = ca_tech }
-			add_doctrine_cost_reduction = { name = TU_MIN_coastal_forts cost_reduction = 0.4 uses = 1 category = naval_doctrine }
-			navy_experience = 25
+			TU_build_coastal_forts_2 = yes
 		}
 	}
 
@@ -1766,8 +1763,8 @@ focus_tree = {
 		id = TU_MIN_field_medics
 		icon = GFX_goal_generic_consumer_goods
 		prerequisite = { focus = TU_MIN_hoplites }
-		x = 10
-		y = 4
+		x = -2
+		y = 12
 		cost = 10
 
 		search_filters = { FOCUS_FILTER_POLITICAL }
@@ -1786,8 +1783,8 @@ focus_tree = {
 		id = TU_MIN_pottery
 		icon = GFX_goal_generic_production
 		prerequisite = { focus = TU_MIN_olive_farms }
-		x = 40
-		y = 2
+		x = 29
+		y = 8
 		cost = 10
 
 		search_filters = { FOCUS_FILTER_INDUSTRY }
@@ -1806,8 +1803,8 @@ focus_tree = {
 		id = TU_MIN_silver_mines
 		icon = GFX_goal_generic_production
 		prerequisite = { focus = TU_MIN_industrial_district }
-		x = 38
-		y = 3
+		x = 27
+		y = 9
 		cost = 10
 
 		search_filters = { FOCUS_FILTER_INDUSTRY }
@@ -1824,10 +1821,10 @@ focus_tree = {
 
 	focus = {
 		id = TU_MIN_rail_network
-		icon = GFX_goal_generic_production
+		icon = GFX_goal_generic_construct_infrastructure
 		prerequisite = { focus = TU_MIN_road_network }
-		x = 30
-		y = 3
+		x = 19
+		y = 9
 		cost = 10
 
 		search_filters = { FOCUS_FILTER_INDUSTRY }
@@ -1837,8 +1834,7 @@ focus_tree = {
 		}
 
 		completion_reward = {
-			add_tech_bonus = { name = TU_MIN_rail_network bonus = 0.75 uses = 1 category = industry category = construction_tech }
-			TU_build_infrastructure = yes
+			TU_build_railway = yes
 		}
 	}
 
@@ -1846,7 +1842,7 @@ focus_tree = {
 		id = TU_MIN_shipyards
 		icon = GFX_goal_generic_build_navy
 		prerequisite = { focus = TU_MIN_harbour_works }
-		x = 10
+		x = 17
 		y = 2
 		cost = 10
 
@@ -1868,8 +1864,8 @@ focus_tree = {
 		id = TU_MIN_power_plants
 		icon = GFX_goal_generic_production
 		prerequisite = { focus = TU_MIN_rail_network }
-		x = 30
-		y = 4
+		x = 19
+		y = 10
 		cost = 10
 
 		search_filters = { FOCUS_FILTER_INDUSTRY }
@@ -1888,7 +1884,7 @@ focus_tree = {
 		id = TU_MIN_sargon_pact
 		icon = GFX_goal_generic_improve_relations
 		prerequisite = { focus = TU_MIN_trade_routes }
-		x = 0
+		x = 7
 		y = 3
 		cost = 10
 
@@ -1908,7 +1904,7 @@ focus_tree = {
 		id = TU_MIN_iberia_ties
 		icon = GFX_goal_generic_improve_relations
 		prerequisite = { focus = TU_MIN_trade_routes }
-		x = 2
+		x = 9
 		y = 3
 		cost = 10
 
@@ -1928,7 +1924,7 @@ focus_tree = {
 		id = TU_MIN_laterano_ties
 		icon = GFX_goal_generic_improve_relations
 		prerequisite = { focus = TU_MIN_temple_rites }
-		x = -20
+		x = 28
 		y = 2
 		cost = 10
 
@@ -1948,7 +1944,7 @@ focus_tree = {
 		id = TU_MIN_columbia_trade
 		icon = GFX_goal_generic_trade
 		prerequisite = { focus = TU_MIN_merchant_fleet }
-		x = -8
+		x = -1
 		y = 4
 		cost = 10
 
@@ -1968,7 +1964,7 @@ focus_tree = {
 		id = TU_MIN_league_pact
 		icon = GFX_goal_generic_improve_relations
 		prerequisite = { focus = TU_MIN_sargon_pact }
-		x = 0
+		x = 7
 		y = 4
 		cost = 10
 
@@ -1989,7 +1985,7 @@ focus_tree = {
 		icon = GFX_goal_generic_improve_relations
 		prerequisite = { focus = TU_MIN_great_library }
 		x = -10
-		y = 6
+		y = 15
 		cost = 10
 
 		search_filters = { FOCUS_FILTER_POLITICAL }
@@ -2008,7 +2004,7 @@ focus_tree = {
 		id = TU_MIN_theatre_arts
 		icon = GFX_goal_generic_propaganda
 		prerequisite = { focus = TU_MIN_theatre }
-		x = -31
+		x = -6
 		y = 5
 		cost = 10
 
@@ -2028,8 +2024,8 @@ focus_tree = {
 		id = TU_MIN_road_shrines
 		icon = GFX_goal_generic_production
 		prerequisite = { focus = TU_MIN_road_network }
-		x = 32
-		y = 3
+		x = 21
+		y = 9
 		cost = 10
 
 		search_filters = { FOCUS_FILTER_POLITICAL }
@@ -2047,8 +2043,8 @@ focus_tree = {
 		id = TU_MIN_bronze_foundry
 		icon = GFX_goal_generic_production
 		prerequisite = { focus = TU_MIN_bronze_arms }
-		x = 26
-		y = 3
+		x = 14
+		y = 11
 		cost = 10
 
 		search_filters = { FOCUS_FILTER_INDUSTRY }
@@ -2067,7 +2063,7 @@ focus_tree = {
 		id = TU_MIN_sea_maps
 		icon = GFX_goal_generic_build_navy
 		prerequisite = { focus = TU_MIN_galley_fleet }
-		x = 6
+		x = 13
 		y = 3
 		cost = 10
 
@@ -2088,7 +2084,7 @@ focus_tree = {
 		id = TU_MIN_naval_bombers
 		icon = GFX_goal_generic_air_doctrine
 		prerequisite = { focus = TU_MIN_grand_fleet }
-		x = 7
+		x = 14
 		y = 7
 		cost = 10
 
@@ -2109,8 +2105,8 @@ focus_tree = {
 		id = TU_MIN_labyrinth
 		icon = GFX_goal_generic_defence
 		prerequisite = { focus = TU_MIN_city_walls }
-		x = 20
-		y = 3
+		x = 8
+		y = 11
 		cost = 10
 
 		search_filters = { FOCUS_FILTER_POLITICAL }
@@ -2120,8 +2116,7 @@ focus_tree = {
 		}
 
 		completion_reward = {
-			add_tech_bonus = { name = TU_MIN_labyrinth bonus = 0.75 uses = 1 category = construction_tech }
-			army_experience = 25
+			TU_build_forts_2 = yes
 		}
 	}
 
@@ -2129,7 +2124,7 @@ focus_tree = {
 		id = TU_MIN_assembly_guard
 		icon = GFX_goal_generic_allies_build_infantry
 		prerequisite = { focus = TU_MIN_assembly_hall }
-		x = -29
+		x = -4
 		y = 3
 		cost = 10
 
@@ -2149,7 +2144,7 @@ focus_tree = {
 		id = TU_MIN_grain_ships
 		icon = GFX_goal_generic_build_navy
 		prerequisite = { focus = TU_MIN_wine_trade }
-		x = -2
+		x = 5
 		y = 4
 		cost = 10
 
@@ -2170,7 +2165,7 @@ focus_tree = {
 		id = TU_MIN_elder_wisdom
 		icon = GFX_focus_research
 		prerequisite = { focus = TU_MIN_elder_council }
-		x = -34
+		x = -9
 		y = 7
 		cost = 10
 
@@ -2189,7 +2184,7 @@ focus_tree = {
 		id = TU_MIN_temple_banks
 		icon = GFX_goal_generic_trade
 		prerequisite = { focus = TU_MIN_temple_treasury }
-		x = -36
+		x = -11
 		y = 8
 		cost = 10
 
@@ -2209,7 +2204,7 @@ focus_tree = {
 		id = TU_MIN_oracle_guard
 		icon = GFX_goal_generic_allies_build_infantry
 		prerequisite = { focus = TU_MIN_prophecy_archive }
-		x = -26
+		x = 22
 		y = 4
 		cost = 10
 
@@ -2229,7 +2224,7 @@ focus_tree = {
 		id = TU_MIN_music_school
 		icon = GFX_focus_research
 		prerequisite = { focus = TU_MIN_theatre_arts }
-		x = -31
+		x = -6
 		y = 6
 		cost = 10
 
@@ -2249,7 +2244,7 @@ focus_tree = {
 		icon = GFX_focus_research
 		prerequisite = { focus = TU_MIN_star_charts }
 		x = -18
-		y = 6
+		y = 15
 		cost = 10
 
 		search_filters = { FOCUS_FILTER_POLITICAL }
@@ -2268,7 +2263,7 @@ focus_tree = {
 		icon = GFX_goal_generic_consumer_goods
 		prerequisite = { focus = TU_MIN_anatomy }
 		x = -16
-		y = 6
+		y = 15
 		cost = 10
 
 		search_filters = { FOCUS_FILTER_POLITICAL }
@@ -2288,7 +2283,7 @@ focus_tree = {
 		icon = GFX_goal_generic_army_artillery
 		prerequisite = { focus = TU_MIN_mechanics }
 		x = -14
-		y = 6
+		y = 15
 		cost = 10
 
 		search_filters = { FOCUS_FILTER_POLITICAL }
@@ -2307,7 +2302,7 @@ focus_tree = {
 		id = TU_MIN_trade_colonies
 		icon = GFX_goal_generic_trade
 		prerequisite = { focus = TU_MIN_colonies }
-		x = -3
+		x = 4
 		y = 7
 		cost = 10
 
@@ -2327,7 +2322,7 @@ focus_tree = {
 		id = TU_MIN_naval_guns
 		icon = GFX_goal_generic_build_navy
 		prerequisite = { focus = TU_MIN_destroyers }
-		x = 3
+		x = 10
 		y = 7
 		cost = 10
 
@@ -2348,7 +2343,7 @@ focus_tree = {
 		id = TU_MIN_cruisers
 		icon = GFX_goal_generic_build_navy
 		prerequisite = { focus = TU_MIN_naval_academy }
-		x = 8
+		x = 15
 		y = 4
 		cost = 10
 
@@ -2369,8 +2364,8 @@ focus_tree = {
 		id = TU_MIN_light_infantry
 		icon = GFX_goal_generic_allies_build_infantry
 		prerequisite = { focus = TU_MIN_phalanx }
-		x = 16
-		y = 3
+		x = 4
+		y = 11
 		cost = 10
 
 		search_filters = { FOCUS_FILTER_POLITICAL }
@@ -2389,8 +2384,8 @@ focus_tree = {
 		id = TU_MIN_mountain_passes
 		icon = GFX_goal_generic_defence
 		prerequisite = { focus = TU_MIN_coastal_forts }
-		x = 18
-		y = 4
+		x = 6
+		y = 12
 		cost = 10
 
 		search_filters = { FOCUS_FILTER_POLITICAL }
@@ -2400,8 +2395,7 @@ focus_tree = {
 		}
 
 		completion_reward = {
-			add_tech_bonus = { name = TU_MIN_mountain_passes bonus = 0.75 uses = 1 category = construction_tech }
-			army_experience = 25
+			TU_build_forts_2 = yes
 		}
 	}
 
@@ -2409,8 +2403,8 @@ focus_tree = {
 		id = TU_MIN_textile_mills
 		icon = GFX_goal_generic_production
 		prerequisite = { focus = TU_MIN_pottery }
-		x = 40
-		y = 3
+		x = 29
+		y = 9
 		cost = 10
 
 		search_filters = { FOCUS_FILTER_INDUSTRY }
@@ -2429,8 +2423,8 @@ focus_tree = {
 		id = TU_MIN_steel_works
 		icon = GFX_goal_generic_small_arms
 		prerequisite = { focus = TU_MIN_silver_mines }
-		x = 38
-		y = 4
+		x = 27
+		y = 10
 		cost = 10
 
 		search_filters = { FOCUS_FILTER_INDUSTRY }
@@ -2450,7 +2444,7 @@ focus_tree = {
 		id = TU_MIN_harbour_cranes
 		icon = GFX_goal_generic_build_navy
 		prerequisite = { focus = TU_MIN_lighthouse }
-		x = 8
+		x = 15
 		y = 3
 		cost = 10
 

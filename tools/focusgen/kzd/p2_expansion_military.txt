@@ -1606,8 +1606,7 @@
 		search_filters = { FOCUS_FILTER_POLITICAL }
 
 		completion_reward = {
-			add_tech_bonus = { name = TU_KZD_fort_design bonus = 0.75 uses = 1 category = construction_tech }
-			army_experience = 25
+			TU_build_forts_2 = yes
 		}
 
 		ai_will_do = {
@@ -1646,8 +1645,7 @@
 
 		completion_reward = {
 			add_ideas = TU_KZD_p2_wasteland_fortress
-			add_tech_bonus = { name = TU_KZD_fort_wasteland_bunker bonus = 0.75 uses = 1 category = construction_tech }
-			army_experience = 25
+			TU_build_forts_2 = yes
 		}
 
 		ai_will_do = {
@@ -1707,8 +1705,7 @@
 
 		completion_reward = {
 			TU_build_infrastructure = yes
-			add_tech_bonus = { name = TU_KZD_fort_supply bonus = 0.75 uses = 1 category = construction_tech }
-			army_experience = 25
+			TU_build_forts_2 = yes
 		}
 
 		ai_will_do = {
@@ -1727,8 +1724,7 @@
 		search_filters = { FOCUS_FILTER_POLITICAL }
 
 		completion_reward = {
-			add_tech_bonus = { name = TU_KZD_fort_garrison bonus = 0.75 uses = 1 category = construction_tech }
-			army_experience = 25
+			TU_build_forts_2 = yes
 		}
 
 		ai_will_do = {
@@ -1788,8 +1784,7 @@
 		search_filters = { FOCUS_FILTER_POLITICAL }
 
 		completion_reward = {
-			add_tech_bonus = { name = TU_KZD_fort_frontier_wall bonus = 1.0 uses = 1 category = construction_tech }
-			army_experience = 40
+			TU_build_forts_3 = yes
 		}
 
 		ai_will_do = {
@@ -1872,8 +1867,7 @@
 
 		completion_reward = {
 			TU_build_infrastructure = yes
-			add_tech_bonus = { name = TU_KZD_fort_resource_dig_alt bonus = 0.75 uses = 1 category = construction_tech }
-			army_experience = 25
+			TU_build_forts_2 = yes
 		}
 
 		ai_will_do = {

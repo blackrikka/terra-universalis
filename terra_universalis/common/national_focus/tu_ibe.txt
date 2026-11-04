@@ -1,6 +1,6 @@
 focus_tree = {
 	id = TU_IBE_focus
-	continuous_focus_position = { x = 50 y = 1300 }
+	continuous_focus_position = { x = 50 y = 2340 }
 
 	country = {
 		factor = 0
@@ -41,7 +41,7 @@ focus_tree = {
 		id = TU_IBE_inquisition_reform
 		icon = GFX_goal_generic_intelligence_exchange
 		prerequisite = { focus = TU_IBE_root }
-		x = -31
+		x = -18
 		y = 1
 		cost = 10
 
@@ -62,7 +62,7 @@ focus_tree = {
 		id = TU_IBE_inquisitor_academy
 		icon = GFX_goal_generic_army_doctrines
 		prerequisite = { focus = TU_IBE_inquisition_reform }
-		x = -34
+		x = -21
 		y = 2
 		cost = 10
 
@@ -82,7 +82,7 @@ focus_tree = {
 		id = TU_IBE_heresy_files
 		icon = GFX_focus_research
 		prerequisite = { focus = TU_IBE_inquisition_reform }
-		x = -31
+		x = -18
 		y = 2
 		cost = 10
 
@@ -102,7 +102,7 @@ focus_tree = {
 		id = TU_IBE_inquisitor_guard
 		icon = GFX_goal_generic_intelligence_exchange
 		prerequisite = { focus = TU_IBE_inquisitor_academy }
-		x = -35
+		x = -22
 		y = 3
 		cost = 10
 
@@ -122,7 +122,7 @@ focus_tree = {
 		id = TU_IBE_purge_cults
 		icon = GFX_goal_generic_build_navy
 		prerequisite = { focus = TU_IBE_heresy_files }
-		x = -31
+		x = -18
 		y = 3
 		cost = 10
 
@@ -144,7 +144,7 @@ focus_tree = {
 		icon = GFX_goal_generic_propaganda
 		prerequisite = { focus = TU_IBE_purge_cults }
 		mutually_exclusive = { focus = TU_IBE_tolerance }
-		x = -31
+		x = -18
 		y = 4
 		cost = 10
 
@@ -166,7 +166,7 @@ focus_tree = {
 		icon = GFX_goal_generic_political_pressure
 		prerequisite = { focus = TU_IBE_purge_cults }
 		mutually_exclusive = { focus = TU_IBE_faith_laws }
-		x = -29
+		x = -16
 		y = 4
 		cost = 10
 
@@ -189,7 +189,7 @@ focus_tree = {
 		prerequisite = { focus = TU_IBE_faith_laws focus = TU_IBE_tolerance }
 		prerequisite = { focus = TU_IBE_inquisitor_guard }
 		mutually_exclusive = { focus = TU_IBE_crown_restored focus = TU_IBE_sea_reconciliation }
-		x = -31
+		x = -18
 		y = 5
 		cost = 15
 
@@ -214,7 +214,7 @@ focus_tree = {
 		id = TU_IBE_eternal_vigil
 		icon = GFX_goal_generic_political_pressure
 		prerequisite = { focus = TU_IBE_inquisitor_state }
-		x = -32
+		x = -19
 		y = 6
 		cost = 10
 
@@ -234,7 +234,7 @@ focus_tree = {
 		id = TU_IBE_inquisition_navy
 		icon = GFX_goal_generic_build_navy
 		prerequisite = { focus = TU_IBE_inquisitor_state }
-		x = -30
+		x = -17
 		y = 6
 		cost = 10
 
@@ -256,7 +256,7 @@ focus_tree = {
 		icon = GFX_goal_generic_occupy_start_war
 		prerequisite = { focus = TU_IBE_eternal_vigil }
 		prerequisite = { focus = TU_IBE_inquisition_navy }
-		x = -28
+		x = -15
 		y = 7
 		cost = 10
 
@@ -276,7 +276,7 @@ focus_tree = {
 		id = TU_IBE_crown_council
 		icon = GFX_goal_generic_political_pressure
 		prerequisite = { focus = TU_IBE_root }
-		x = -22
+		x = -9
 		y = 1
 		cost = 10
 
@@ -297,7 +297,7 @@ focus_tree = {
 		id = TU_IBE_royal_heir
 		icon = GFX_goal_generic_political_pressure
 		prerequisite = { focus = TU_IBE_crown_council }
-		x = -25
+		x = -12
 		y = 2
 		cost = 10
 
@@ -317,7 +317,7 @@ focus_tree = {
 		id = TU_IBE_nobles_return
 		icon = GFX_goal_generic_political_pressure
 		prerequisite = { focus = TU_IBE_crown_council }
-		x = -22
+		x = -9
 		y = 2
 		cost = 10
 
@@ -338,7 +338,7 @@ focus_tree = {
 		id = TU_IBE_royal_treasury
 		icon = GFX_goal_generic_trade
 		prerequisite = { focus = TU_IBE_nobles_return }
-		x = -22
+		x = -9
 		y = 3
 		cost = 10
 
@@ -358,7 +358,7 @@ focus_tree = {
 		id = TU_IBE_royal_army
 		icon = GFX_goal_generic_allies_build_infantry
 		prerequisite = { focus = TU_IBE_royal_heir }
-		x = -25
+		x = -12
 		y = 3
 		cost = 10
 
@@ -379,7 +379,7 @@ focus_tree = {
 		icon = GFX_goal_generic_political_pressure
 		prerequisite = { focus = TU_IBE_royal_treasury }
 		prerequisite = { focus = TU_IBE_royal_army }
-		x = -22
+		x = -9
 		y = 4
 		cost = 10
 
@@ -401,7 +401,7 @@ focus_tree = {
 		icon = GFX_goal_generic_political_pressure
 		prerequisite = { focus = TU_IBE_crown_charter }
 		mutually_exclusive = { focus = TU_IBE_inquisitor_state focus = TU_IBE_sea_reconciliation }
-		x = -23
+		x = -10
 		y = 5
 		cost = 15
 
@@ -426,7 +426,7 @@ focus_tree = {
 		id = TU_IBE_royal_reconstruction
 		icon = GFX_goal_generic_production
 		prerequisite = { focus = TU_IBE_crown_restored }
-		x = -24
+		x = -11
 		y = 6
 		cost = 10
 
@@ -446,7 +446,7 @@ focus_tree = {
 		id = TU_IBE_royal_navy
 		icon = GFX_goal_generic_build_navy
 		prerequisite = { focus = TU_IBE_crown_restored }
-		x = -22
+		x = -9
 		y = 6
 		cost = 10
 
@@ -468,7 +468,7 @@ focus_tree = {
 		icon = GFX_goal_generic_trade
 		prerequisite = { focus = TU_IBE_royal_reconstruction }
 		prerequisite = { focus = TU_IBE_royal_navy }
-		x = -22
+		x = -9
 		y = 7
 		cost = 10
 
@@ -488,7 +488,7 @@ focus_tree = {
 		id = TU_IBE_coastal_watch
 		icon = GFX_goal_generic_build_navy
 		prerequisite = { focus = TU_IBE_root }
-		x = -11
+		x = 2
 		y = 1
 		cost = 10
 
@@ -508,7 +508,7 @@ focus_tree = {
 		id = TU_IBE_sea_studies
 		icon = GFX_goal_generic_build_navy
 		prerequisite = { focus = TU_IBE_coastal_watch }
-		x = -15
+		x = -2
 		y = 2
 		cost = 10
 
@@ -530,7 +530,7 @@ focus_tree = {
 		id = TU_IBE_tide_charts
 		icon = GFX_goal_generic_build_navy
 		prerequisite = { focus = TU_IBE_coastal_watch }
-		x = -11
+		x = 2
 		y = 2
 		cost = 10
 
@@ -551,7 +551,7 @@ focus_tree = {
 		id = TU_IBE_abyssal_rumours
 		icon = GFX_goal_generic_allies_build_infantry
 		prerequisite = { focus = TU_IBE_sea_studies }
-		x = -16
+		x = -3
 		y = 3
 		cost = 10
 
@@ -568,10 +568,10 @@ focus_tree = {
 
 	focus = {
 		id = TU_IBE_coastal_forts
-		icon = GFX_goal_generic_build_navy
+		icon = GFX_goal_generic_defence
 		prerequisite = { focus = TU_IBE_tide_charts }
 		mutually_exclusive = { focus = TU_IBE_fleet_rebuild }
-		x = -12
+		x = 1
 		y = 3
 		cost = 10
 
@@ -582,9 +582,7 @@ focus_tree = {
 		}
 
 		completion_reward = {
-			add_tech_bonus = { name = TU_IBE_coastal_forts bonus = 0.75 uses = 1 category = dd_tech category = ca_tech }
-			add_doctrine_cost_reduction = { name = TU_IBE_coastal_forts cost_reduction = 0.4 uses = 1 category = naval_doctrine }
-			navy_experience = 25
+			TU_build_coastal_forts_2 = yes
 		}
 	}
 
@@ -593,7 +591,7 @@ focus_tree = {
 		icon = GFX_goal_generic_build_navy
 		prerequisite = { focus = TU_IBE_tide_charts }
 		mutually_exclusive = { focus = TU_IBE_coastal_forts }
-		x = -9
+		x = 4
 		y = 3
 		cost = 10
 
@@ -614,7 +612,7 @@ focus_tree = {
 		id = TU_IBE_watchful_coast
 		icon = GFX_goal_generic_build_navy
 		prerequisite = { focus = TU_IBE_coastal_forts focus = TU_IBE_fleet_rebuild }
-		x = -5
+		x = 8
 		y = 4
 		cost = 10
 
@@ -634,7 +632,7 @@ focus_tree = {
 		id = TU_IBE_deep_sea_plan
 		icon = GFX_goal_generic_build_navy
 		prerequisite = { focus = TU_IBE_watchful_coast }
-		x = -5
+		x = 8
 		y = 5
 		cost = 10
 
@@ -658,7 +656,7 @@ focus_tree = {
 		prerequisite = { focus = TU_IBE_abyssal_rumours }
 		prerequisite = { focus = TU_IBE_deep_sea_plan }
 		mutually_exclusive = { focus = TU_IBE_inquisitor_state focus = TU_IBE_crown_restored }
-		x = -5
+		x = 8
 		y = 6
 		cost = 15
 
@@ -685,7 +683,7 @@ focus_tree = {
 		id = TU_IBE_aegir_contact
 		icon = GFX_goal_generic_build_navy
 		prerequisite = { focus = TU_IBE_sea_reconciliation }
-		x = -5
+		x = 8
 		y = 7
 		cost = 10
 
@@ -706,7 +704,7 @@ focus_tree = {
 		id = TU_IBE_deep_sea_trade
 		icon = GFX_goal_generic_build_navy
 		prerequisite = { focus = TU_IBE_aegir_contact }
-		x = -6
+		x = 7
 		y = 8
 		cost = 10
 
@@ -727,8 +725,8 @@ focus_tree = {
 		id = TU_IBE_mountain_infantry
 		icon = GFX_goal_generic_allies_build_infantry
 		prerequisite = { focus = TU_IBE_root }
-		x = -1
-		y = 1
+		x = -13
+		y = 9
 		cost = 10
 
 		search_filters = { FOCUS_FILTER_POLITICAL }
@@ -747,8 +745,8 @@ focus_tree = {
 		id = TU_IBE_bayonet_drill
 		icon = GFX_goal_generic_army_doctrines
 		prerequisite = { focus = TU_IBE_mountain_infantry }
-		x = -1
-		y = 2
+		x = -13
+		y = 10
 		cost = 10
 
 		search_filters = { FOCUS_FILTER_POLITICAL }
@@ -768,8 +766,8 @@ focus_tree = {
 		icon = GFX_goal_generic_army_motorized
 		prerequisite = { focus = TU_IBE_bayonet_drill }
 		mutually_exclusive = { focus = TU_IBE_trench_doctrine }
-		x = -3
-		y = 3
+		x = -15
+		y = 11
 		cost = 10
 
 		search_filters = { FOCUS_FILTER_POLITICAL }
@@ -789,8 +787,8 @@ focus_tree = {
 		icon = GFX_goal_generic_defence
 		prerequisite = { focus = TU_IBE_bayonet_drill }
 		mutually_exclusive = { focus = TU_IBE_mobile_doctrine }
-		x = -1
-		y = 3
+		x = -13
+		y = 11
 		cost = 10
 
 		search_filters = { FOCUS_FILTER_POLITICAL }
@@ -800,8 +798,7 @@ focus_tree = {
 		}
 
 		completion_reward = {
-			add_tech_bonus = { name = TU_IBE_trench_doctrine bonus = 0.75 uses = 1 category = construction_tech }
-			army_experience = 25
+			TU_build_forts_2 = yes
 		}
 	}
 
@@ -809,8 +806,8 @@ focus_tree = {
 		id = TU_IBE_artillery_rebuild
 		icon = GFX_goal_generic_army_artillery
 		prerequisite = { focus = TU_IBE_mountain_infantry }
-		x = 8
-		y = 2
+		x = -4
+		y = 10
 		cost = 10
 
 		search_filters = { FOCUS_FILTER_POLITICAL }
@@ -830,8 +827,8 @@ focus_tree = {
 		icon = GFX_goal_generic_army_doctrines
 		prerequisite = { focus = TU_IBE_mobile_doctrine focus = TU_IBE_trench_doctrine }
 		prerequisite = { focus = TU_IBE_artillery_rebuild }
-		x = -1
-		y = 4
+		x = -13
+		y = 12
 		cost = 10
 
 		search_filters = { FOCUS_FILTER_POLITICAL }
@@ -850,8 +847,8 @@ focus_tree = {
 		id = TU_IBE_rifle_workshops
 		icon = GFX_goal_generic_small_arms
 		prerequisite = { focus = TU_IBE_mountain_infantry }
-		x = 10
-		y = 2
+		x = -2
+		y = 10
 		cost = 10
 
 		search_filters = { FOCUS_FILTER_POLITICAL }
@@ -870,8 +867,8 @@ focus_tree = {
 		id = TU_IBE_harpoon_guns
 		icon = GFX_goal_generic_army_artillery
 		prerequisite = { focus = TU_IBE_rifle_workshops }
-		x = 10
-		y = 3
+		x = -2
+		y = 11
 		cost = 10
 
 		search_filters = { FOCUS_FILTER_POLITICAL }
@@ -890,8 +887,8 @@ focus_tree = {
 		id = TU_IBE_anti_creature
 		icon = GFX_goal_generic_army_doctrines
 		prerequisite = { focus = TU_IBE_harpoon_guns }
-		x = 10
-		y = 4
+		x = -2
+		y = 12
 		cost = 10
 
 		search_filters = { FOCUS_FILTER_POLITICAL }
@@ -911,8 +908,8 @@ focus_tree = {
 		id = TU_IBE_cavalry_patrols
 		icon = GFX_goal_generic_army_motorized
 		prerequisite = { focus = TU_IBE_bayonet_drill }
-		x = 4
-		y = 3
+		x = -8
+		y = 11
 		cost = 10
 
 		search_filters = { FOCUS_FILTER_POLITICAL }
@@ -931,8 +928,8 @@ focus_tree = {
 		id = TU_IBE_motor_pool
 		icon = GFX_goal_generic_army_motorized
 		prerequisite = { focus = TU_IBE_cavalry_patrols }
-		x = 4
-		y = 4
+		x = -8
+		y = 12
 		cost = 10
 
 		search_filters = { FOCUS_FILTER_POLITICAL }
@@ -951,8 +948,8 @@ focus_tree = {
 		id = TU_IBE_officer_corps
 		icon = GFX_goal_generic_army_doctrines
 		prerequisite = { focus = TU_IBE_elite_inquisitors }
-		x = -1
-		y = 5
+		x = -13
+		y = 13
 		cost = 10
 
 		search_filters = { FOCUS_FILTER_POLITICAL }
@@ -971,8 +968,8 @@ focus_tree = {
 		id = TU_IBE_air_watch
 		icon = GFX_goal_generic_air_doctrine
 		prerequisite = { focus = TU_IBE_officer_corps }
-		x = -1
-		y = 6
+		x = -13
+		y = 14
 		cost = 10
 
 		search_filters = { FOCUS_FILTER_POLITICAL }
@@ -992,7 +989,7 @@ focus_tree = {
 		id = TU_IBE_naval_school
 		icon = GFX_goal_generic_build_navy
 		prerequisite = { focus = TU_IBE_fleet_rebuild }
-		x = -9
+		x = 4
 		y = 4
 		cost = 10
 
@@ -1013,7 +1010,7 @@ focus_tree = {
 		id = TU_IBE_coastal_gunboats
 		icon = GFX_goal_generic_build_navy
 		prerequisite = { focus = TU_IBE_naval_school }
-		x = -10
+		x = 3
 		y = 5
 		cost = 10
 
@@ -1034,7 +1031,7 @@ focus_tree = {
 		id = TU_IBE_destroyers
 		icon = GFX_goal_generic_build_navy
 		prerequisite = { focus = TU_IBE_coastal_gunboats }
-		x = -10
+		x = 3
 		y = 6
 		cost = 10
 
@@ -1055,7 +1052,7 @@ focus_tree = {
 		id = TU_IBE_iberian_navy
 		icon = GFX_goal_generic_build_navy
 		prerequisite = { focus = TU_IBE_destroyers }
-		x = -12
+		x = 1
 		y = 7
 		cost = 10
 
@@ -1075,7 +1072,7 @@ focus_tree = {
 		id = TU_IBE_dockyards
 		icon = GFX_goal_generic_build_navy
 		prerequisite = { focus = TU_IBE_naval_school }
-		x = -8
+		x = 5
 		y = 5
 		cost = 10
 
@@ -1097,7 +1094,7 @@ focus_tree = {
 		id = TU_IBE_harbour_rebuild
 		icon = GFX_goal_generic_build_navy
 		prerequisite = { focus = TU_IBE_root }
-		x = 18
+		x = 16
 		y = 1
 		cost = 10
 
@@ -1119,7 +1116,7 @@ focus_tree = {
 		id = TU_IBE_road_network
 		icon = GFX_goal_generic_production
 		prerequisite = { focus = TU_IBE_harbour_rebuild }
-		x = 13
+		x = 11
 		y = 2
 		cost = 10
 
@@ -1139,7 +1136,7 @@ focus_tree = {
 		id = TU_IBE_industrial_district
 		icon = GFX_goal_generic_production
 		prerequisite = { focus = TU_IBE_harbour_rebuild }
-		x = 18
+		x = 16
 		y = 2
 		cost = 10
 
@@ -1160,7 +1157,7 @@ focus_tree = {
 		icon = GFX_goal_generic_production
 		prerequisite = { focus = TU_IBE_industrial_district }
 		mutually_exclusive = { focus = TU_IBE_arms_program }
-		x = 16
+		x = 14
 		y = 3
 		cost = 10
 
@@ -1181,7 +1178,7 @@ focus_tree = {
 		icon = GFX_goal_generic_small_arms
 		prerequisite = { focus = TU_IBE_industrial_district }
 		mutually_exclusive = { focus = TU_IBE_civ_program }
-		x = 18
+		x = 16
 		y = 3
 		cost = 10
 
@@ -1200,9 +1197,9 @@ focus_tree = {
 
 	focus = {
 		id = TU_IBE_rail_network
-		icon = GFX_goal_generic_production
+		icon = GFX_goal_generic_construct_infrastructure
 		prerequisite = { focus = TU_IBE_road_network }
-		x = 13
+		x = 11
 		y = 3
 		cost = 10
 
@@ -1213,8 +1210,7 @@ focus_tree = {
 		}
 
 		completion_reward = {
-			add_tech_bonus = { name = TU_IBE_rail_network bonus = 0.75 uses = 1 category = industry category = construction_tech }
-			TU_build_infrastructure = yes
+			TU_build_railway = yes
 		}
 	}
 
@@ -1222,7 +1218,7 @@ focus_tree = {
 		id = TU_IBE_resettle_coast
 		icon = GFX_goal_generic_build_navy
 		prerequisite = { focus = TU_IBE_rail_network }
-		x = 12
+		x = 10
 		y = 4
 		cost = 10
 
@@ -1246,7 +1242,7 @@ focus_tree = {
 		id = TU_IBE_purified_coast
 		icon = GFX_goal_generic_build_navy
 		prerequisite = { focus = TU_IBE_resettle_coast }
-		x = 12
+		x = 10
 		y = 5
 		cost = 10
 
@@ -1270,7 +1266,7 @@ focus_tree = {
 		id = TU_IBE_fishing_guild
 		icon = GFX_goal_generic_trade
 		prerequisite = { focus = TU_IBE_harbour_rebuild }
-		x = 24
+		x = 22
 		y = 2
 		cost = 10
 
@@ -1290,7 +1286,7 @@ focus_tree = {
 		id = TU_IBE_wine_trade
 		icon = GFX_goal_generic_trade
 		prerequisite = { focus = TU_IBE_fishing_guild }
-		x = 22
+		x = 20
 		y = 3
 		cost = 10
 
@@ -1311,7 +1307,7 @@ focus_tree = {
 		icon = GFX_goal_generic_production
 		prerequisite = { focus = TU_IBE_civ_program focus = TU_IBE_arms_program }
 		prerequisite = { focus = TU_IBE_rail_network }
-		x = 16
+		x = 14
 		y = 4
 		cost = 10
 
@@ -1332,7 +1328,7 @@ focus_tree = {
 		icon = GFX_goal_generic_build_navy
 		prerequisite = { focus = TU_IBE_industrial_revival }
 		prerequisite = { focus = TU_IBE_sea_studies }
-		x = 16
+		x = 14
 		y = 5
 		cost = 10
 
@@ -1351,8 +1347,8 @@ focus_tree = {
 		id = TU_IBE_foreign_office
 		icon = GFX_goal_generic_political_pressure
 		prerequisite = { focus = TU_IBE_root }
-		x = 32
-		y = 1
+		x = 13
+		y = 10
 		cost = 10
 
 		search_filters = { FOCUS_FILTER_POLITICAL }
@@ -1371,8 +1367,8 @@ focus_tree = {
 		id = TU_IBE_laterano_schism
 		icon = GFX_goal_generic_political_pressure
 		prerequisite = { focus = TU_IBE_foreign_office }
-		x = 29
-		y = 2
+		x = 10
+		y = 11
 		cost = 10
 
 		search_filters = { FOCUS_FILTER_POLITICAL }
@@ -1390,8 +1386,8 @@ focus_tree = {
 		id = TU_IBE_sargon_border
 		icon = GFX_goal_generic_defence
 		prerequisite = { focus = TU_IBE_foreign_office }
-		x = 33
-		y = 2
+		x = 14
+		y = 11
 		cost = 10
 
 		search_filters = { FOCUS_FILTER_POLITICAL }
@@ -1410,8 +1406,8 @@ focus_tree = {
 		id = TU_IBE_victoria_trade
 		icon = GFX_goal_generic_trade
 		prerequisite = { focus = TU_IBE_sargon_border }
-		x = 32
-		y = 3
+		x = 13
+		y = 12
 		cost = 10
 
 		search_filters = { FOCUS_FILTER_POLITICAL }
@@ -1430,8 +1426,8 @@ focus_tree = {
 		id = TU_IBE_rhodes_doctors
 		icon = GFX_goal_generic_build_navy
 		prerequisite = { focus = TU_IBE_laterano_schism }
-		x = 28
-		y = 3
+		x = 9
+		y = 12
 		cost = 10
 
 		search_filters = { FOCUS_FILTER_POLITICAL }
@@ -1452,8 +1448,8 @@ focus_tree = {
 		icon = GFX_goal_generic_build_navy
 		prerequisite = { focus = TU_IBE_victoria_trade }
 		prerequisite = { focus = TU_IBE_rhodes_doctors }
-		x = 31
-		y = 4
+		x = 12
+		y = 13
 		cost = 10
 
 		search_filters = { FOCUS_FILTER_POLITICAL }
@@ -1471,7 +1467,7 @@ focus_tree = {
 		id = TU_IBE_confessors
 		icon = GFX_goal_generic_intelligence_exchange
 		prerequisite = { focus = TU_IBE_heresy_files }
-		x = -27
+		x = -14
 		y = 3
 		cost = 10
 
@@ -1491,7 +1487,7 @@ focus_tree = {
 		id = TU_IBE_relic_vaults
 		icon = GFX_focus_research
 		prerequisite = { focus = TU_IBE_inquisitor_academy }
-		x = -33
+		x = -20
 		y = 3
 		cost = 10
 
@@ -1510,7 +1506,7 @@ focus_tree = {
 		id = TU_IBE_silent_monks
 		icon = GFX_goal_generic_propaganda
 		prerequisite = { focus = TU_IBE_faith_laws }
-		x = -29
+		x = -16
 		y = 5
 		cost = 10
 
@@ -1530,7 +1526,7 @@ focus_tree = {
 		id = TU_IBE_tribunal_courts
 		icon = GFX_goal_generic_political_pressure
 		prerequisite = { focus = TU_IBE_inquisitor_guard }
-		x = -35
+		x = -22
 		y = 4
 		cost = 10
 
@@ -1550,7 +1546,7 @@ focus_tree = {
 		id = TU_IBE_noble_estates
 		icon = GFX_goal_generic_production
 		prerequisite = { focus = TU_IBE_nobles_return }
-		x = -18
+		x = -5
 		y = 3
 		cost = 10
 
@@ -1570,7 +1566,7 @@ focus_tree = {
 		id = TU_IBE_crown_jewels
 		icon = GFX_goal_generic_trade
 		prerequisite = { focus = TU_IBE_royal_treasury }
-		x = -20
+		x = -7
 		y = 4
 		cost = 10
 
@@ -1590,7 +1586,7 @@ focus_tree = {
 		id = TU_IBE_royal_guard
 		icon = GFX_goal_generic_allies_build_infantry
 		prerequisite = { focus = TU_IBE_royal_army }
-		x = -25
+		x = -12
 		y = 4
 		cost = 10
 
@@ -1610,7 +1606,7 @@ focus_tree = {
 		id = TU_IBE_crown_propaganda
 		icon = GFX_goal_generic_propaganda
 		prerequisite = { focus = TU_IBE_crown_charter }
-		x = -20
+		x = -7
 		y = 5
 		cost = 10
 
@@ -1630,7 +1626,7 @@ focus_tree = {
 		id = TU_IBE_lighthouse_keepers
 		icon = GFX_goal_generic_political_pressure
 		prerequisite = { focus = TU_IBE_coastal_watch }
-		x = -5
+		x = 8
 		y = 2
 		cost = 10
 
@@ -1648,9 +1644,9 @@ focus_tree = {
 
 	focus = {
 		id = TU_IBE_sea_wall
-		icon = GFX_goal_generic_build_navy
+		icon = GFX_goal_generic_defence
 		prerequisite = { focus = TU_IBE_coastal_forts }
-		x = -12
+		x = 1
 		y = 4
 		cost = 10
 
@@ -1661,9 +1657,7 @@ focus_tree = {
 		}
 
 		completion_reward = {
-			add_tech_bonus = { name = TU_IBE_sea_wall bonus = 0.75 uses = 1 category = dd_tech category = ca_tech }
-			add_doctrine_cost_reduction = { name = TU_IBE_sea_wall cost_reduction = 0.4 uses = 1 category = naval_doctrine }
-			navy_experience = 25
+			TU_build_coastal_forts_2 = yes
 		}
 	}
 
@@ -1671,7 +1665,7 @@ focus_tree = {
 		id = TU_IBE_depth_charges
 		icon = GFX_goal_generic_build_navy
 		prerequisite = { focus = TU_IBE_fleet_rebuild }
-		x = -7
+		x = 6
 		y = 4
 		cost = 10
 
@@ -1692,7 +1686,7 @@ focus_tree = {
 		id = TU_IBE_sea_samples
 		icon = GFX_goal_generic_build_navy
 		prerequisite = { focus = TU_IBE_sea_studies }
-		x = -14
+		x = -1
 		y = 3
 		cost = 10
 
@@ -1713,8 +1707,8 @@ focus_tree = {
 		id = TU_IBE_mountain_forts
 		icon = GFX_goal_generic_defence
 		prerequisite = { focus = TU_IBE_trench_doctrine }
-		x = 1
-		y = 4
+		x = -11
+		y = 12
 		cost = 10
 
 		search_filters = { FOCUS_FILTER_POLITICAL }
@@ -1724,8 +1718,7 @@ focus_tree = {
 		}
 
 		completion_reward = {
-			add_tech_bonus = { name = TU_IBE_mountain_forts bonus = 0.75 uses = 1 category = construction_tech }
-			army_experience = 25
+			TU_build_forts_2 = yes
 		}
 	}
 
@@ -1733,8 +1726,8 @@ focus_tree = {
 		id = TU_IBE_field_hospitals
 		icon = GFX_goal_generic_consumer_goods
 		prerequisite = { focus = TU_IBE_artillery_rebuild }
-		x = 8
-		y = 3
+		x = -4
+		y = 11
 		cost = 10
 
 		search_filters = { FOCUS_FILTER_POLITICAL }
@@ -1753,8 +1746,8 @@ focus_tree = {
 		id = TU_IBE_supply_trains
 		icon = GFX_goal_generic_production
 		prerequisite = { focus = TU_IBE_motor_pool }
-		x = 3
-		y = 5
+		x = -9
+		y = 13
 		cost = 10
 
 		search_filters = { FOCUS_FILTER_POLITICAL }
@@ -1772,8 +1765,8 @@ focus_tree = {
 		id = TU_IBE_light_tanks
 		icon = GFX_goal_generic_army_tanks
 		prerequisite = { focus = TU_IBE_motor_pool }
-		x = 5
-		y = 5
+		x = -7
+		y = 13
 		cost = 10
 
 		search_filters = { FOCUS_FILTER_POLITICAL }
@@ -1792,7 +1785,7 @@ focus_tree = {
 		id = TU_IBE_submarine_hunters
 		icon = GFX_goal_generic_build_navy
 		prerequisite = { focus = TU_IBE_destroyers }
-		x = -10
+		x = 3
 		y = 7
 		cost = 10
 
@@ -1813,7 +1806,7 @@ focus_tree = {
 		id = TU_IBE_cork_forests
 		icon = GFX_goal_generic_production
 		prerequisite = { focus = TU_IBE_fishing_guild }
-		x = 24
+		x = 22
 		y = 3
 		cost = 10
 
@@ -1833,7 +1826,7 @@ focus_tree = {
 		id = TU_IBE_copper_mines
 		icon = GFX_goal_generic_production
 		prerequisite = { focus = TU_IBE_industrial_district }
-		x = 20
+		x = 18
 		y = 3
 		cost = 10
 
@@ -1853,7 +1846,7 @@ focus_tree = {
 		id = TU_IBE_power_plants
 		icon = GFX_goal_generic_production
 		prerequisite = { focus = TU_IBE_rail_network }
-		x = 14
+		x = 12
 		y = 4
 		cost = 10
 
@@ -1873,8 +1866,8 @@ focus_tree = {
 		id = TU_IBE_kazdel_refugees
 		icon = GFX_goal_generic_consumer_goods
 		prerequisite = { focus = TU_IBE_rhodes_doctors }
-		x = 28
-		y = 4
+		x = 9
+		y = 13
 		cost = 10
 
 		search_filters = { FOCUS_FILTER_POLITICAL }
@@ -1893,8 +1886,8 @@ focus_tree = {
 		id = TU_IBE_minos_ties
 		icon = GFX_goal_generic_improve_relations
 		prerequisite = { focus = TU_IBE_foreign_office }
-		x = 35
-		y = 2
+		x = 16
+		y = 11
 		cost = 10
 
 		search_filters = { FOCUS_FILTER_POLITICAL }
@@ -1913,7 +1906,7 @@ focus_tree = {
 		id = TU_IBE_penitent_brigades
 		icon = GFX_goal_generic_allies_build_infantry
 		prerequisite = { focus = TU_IBE_tribunal_courts }
-		x = -35
+		x = -22
 		y = 5
 		cost = 10
 
@@ -1933,7 +1926,7 @@ focus_tree = {
 		id = TU_IBE_holy_ordnance
 		icon = GFX_goal_generic_army_artillery
 		prerequisite = { focus = TU_IBE_inquisition_navy }
-		x = -30
+		x = -17
 		y = 7
 		cost = 10
 
@@ -1953,7 +1946,7 @@ focus_tree = {
 		id = TU_IBE_abbey_schools
 		icon = GFX_focus_research
 		prerequisite = { focus = TU_IBE_relic_vaults }
-		x = -33
+		x = -20
 		y = 4
 		cost = 10
 
@@ -1972,7 +1965,7 @@ focus_tree = {
 		id = TU_IBE_inquisition_spies
 		icon = GFX_goal_generic_intelligence_exchange
 		prerequisite = { focus = TU_IBE_confessors }
-		x = -27
+		x = -14
 		y = 4
 		cost = 10
 
@@ -1992,7 +1985,7 @@ focus_tree = {
 		id = TU_IBE_royal_court_music
 		icon = GFX_focus_research
 		prerequisite = { focus = TU_IBE_crown_propaganda }
-		x = -20
+		x = -7
 		y = 6
 		cost = 10
 
@@ -2011,7 +2004,7 @@ focus_tree = {
 		id = TU_IBE_crown_lands
 		icon = GFX_goal_generic_production
 		prerequisite = { focus = TU_IBE_noble_estates }
-		x = -18
+		x = -5
 		y = 4
 		cost = 10
 
@@ -2031,7 +2024,7 @@ focus_tree = {
 		id = TU_IBE_royal_engineers
 		icon = GFX_focus_research
 		prerequisite = { focus = TU_IBE_royal_guard }
-		x = -25
+		x = -12
 		y = 5
 		cost = 10
 
@@ -2050,7 +2043,7 @@ focus_tree = {
 		id = TU_IBE_royal_academy
 		icon = GFX_goal_generic_army_doctrines
 		prerequisite = { focus = TU_IBE_royal_reconstruction }
-		x = -24
+		x = -11
 		y = 7
 		cost = 10
 
@@ -2070,7 +2063,7 @@ focus_tree = {
 		id = TU_IBE_watch_towers
 		icon = GFX_goal_generic_build_navy
 		prerequisite = { focus = TU_IBE_lighthouse_keepers }
-		x = -5
+		x = 8
 		y = 3
 		cost = 10
 
@@ -2091,7 +2084,7 @@ focus_tree = {
 		id = TU_IBE_tidal_barriers
 		icon = GFX_goal_generic_defence
 		prerequisite = { focus = TU_IBE_sea_wall }
-		x = -12
+		x = 1
 		y = 5
 		cost = 10
 
@@ -2102,8 +2095,7 @@ focus_tree = {
 		}
 
 		completion_reward = {
-			add_tech_bonus = { name = TU_IBE_tidal_barriers bonus = 0.75 uses = 1 category = construction_tech }
-			army_experience = 25
+			TU_build_coastal_forts_2 = yes
 		}
 	}
 
@@ -2111,7 +2103,7 @@ focus_tree = {
 		id = TU_IBE_sonar_research
 		icon = GFX_focus_research
 		prerequisite = { focus = TU_IBE_sea_samples }
-		x = -14
+		x = -1
 		y = 4
 		cost = 10
 
@@ -2130,7 +2122,7 @@ focus_tree = {
 		id = TU_IBE_deep_charts
 		icon = GFX_goal_generic_build_navy
 		prerequisite = { focus = TU_IBE_tide_charts }
-		x = -7
+		x = 6
 		y = 3
 		cost = 10
 
@@ -2151,7 +2143,7 @@ focus_tree = {
 		id = TU_IBE_aegir_language
 		icon = GFX_goal_generic_build_navy
 		prerequisite = { focus = TU_IBE_aegir_contact }
-		x = -4
+		x = 9
 		y = 8
 		cost = 10
 
@@ -2172,8 +2164,8 @@ focus_tree = {
 		id = TU_IBE_hunter_training
 		icon = GFX_goal_generic_army_doctrines
 		prerequisite = { focus = TU_IBE_anti_creature }
-		x = 10
-		y = 5
+		x = -2
+		y = 13
 		cost = 10
 
 		search_filters = { FOCUS_FILTER_POLITICAL }
@@ -2192,8 +2184,8 @@ focus_tree = {
 		id = TU_IBE_musket_drill
 		icon = GFX_goal_generic_army_doctrines
 		prerequisite = { focus = TU_IBE_bayonet_drill }
-		x = 6
-		y = 3
+		x = -6
+		y = 11
 		cost = 10
 
 		search_filters = { FOCUS_FILTER_POLITICAL }
@@ -2212,8 +2204,8 @@ focus_tree = {
 		id = TU_IBE_mountain_passes
 		icon = GFX_goal_generic_defence
 		prerequisite = { focus = TU_IBE_mountain_forts }
-		x = 1
-		y = 5
+		x = -11
+		y = 13
 		cost = 10
 
 		search_filters = { FOCUS_FILTER_POLITICAL }
@@ -2223,8 +2215,7 @@ focus_tree = {
 		}
 
 		completion_reward = {
-			add_tech_bonus = { name = TU_IBE_mountain_passes bonus = 0.75 uses = 1 category = construction_tech }
-			army_experience = 25
+			TU_build_forts_2 = yes
 		}
 	}
 
@@ -2232,8 +2223,8 @@ focus_tree = {
 		id = TU_IBE_armoured_trains
 		icon = GFX_goal_generic_army_tanks
 		prerequisite = { focus = TU_IBE_supply_trains }
-		x = 3
-		y = 6
+		x = -9
+		y = 14
 		cost = 10
 
 		search_filters = { FOCUS_FILTER_POLITICAL }
@@ -2252,8 +2243,8 @@ focus_tree = {
 		id = TU_IBE_medium_tanks
 		icon = GFX_goal_generic_army_tanks
 		prerequisite = { focus = TU_IBE_light_tanks }
-		x = 5
-		y = 6
+		x = -7
+		y = 14
 		cost = 10
 
 		search_filters = { FOCUS_FILTER_POLITICAL }
@@ -2272,8 +2263,8 @@ focus_tree = {
 		id = TU_IBE_air_squadrons
 		icon = GFX_goal_generic_air_doctrine
 		prerequisite = { focus = TU_IBE_air_watch }
-		x = -1
-		y = 7
+		x = -13
+		y = 15
 		cost = 10
 
 		search_filters = { FOCUS_FILTER_POLITICAL }
@@ -2293,8 +2284,8 @@ focus_tree = {
 		id = TU_IBE_naval_bombers
 		icon = GFX_goal_generic_air_doctrine
 		prerequisite = { focus = TU_IBE_air_squadrons }
-		x = -1
-		y = 8
+		x = -13
+		y = 16
 		cost = 10
 
 		search_filters = { FOCUS_FILTER_POLITICAL }
@@ -2314,7 +2305,7 @@ focus_tree = {
 		id = TU_IBE_cruisers
 		icon = GFX_goal_generic_build_navy
 		prerequisite = { focus = TU_IBE_destroyers }
-		x = -8
+		x = 5
 		y = 7
 		cost = 10
 
@@ -2335,7 +2326,7 @@ focus_tree = {
 		id = TU_IBE_naval_bases
 		icon = GFX_goal_generic_build_navy
 		prerequisite = { focus = TU_IBE_dockyards }
-		x = -8
+		x = 5
 		y = 6
 		cost = 10
 
@@ -2357,7 +2348,7 @@ focus_tree = {
 		id = TU_IBE_steel_mills
 		icon = GFX_goal_generic_small_arms
 		prerequisite = { focus = TU_IBE_copper_mines }
-		x = 20
+		x = 18
 		y = 4
 		cost = 10
 
@@ -2378,7 +2369,7 @@ focus_tree = {
 		id = TU_IBE_textile_works
 		icon = GFX_goal_generic_production
 		prerequisite = { focus = TU_IBE_cork_forests }
-		x = 24
+		x = 22
 		y = 4
 		cost = 10
 
@@ -2398,7 +2389,7 @@ focus_tree = {
 		id = TU_IBE_olive_presses
 		icon = GFX_goal_generic_production
 		prerequisite = { focus = TU_IBE_wine_trade }
-		x = 22
+		x = 20
 		y = 4
 		cost = 10
 
@@ -2418,7 +2409,7 @@ focus_tree = {
 		id = TU_IBE_canneries
 		icon = GFX_goal_generic_production
 		prerequisite = { focus = TU_IBE_fishing_guild }
-		x = 26
+		x = 24
 		y = 3
 		cost = 10
 
@@ -2438,8 +2429,8 @@ focus_tree = {
 		id = TU_IBE_laterano_reunion
 		icon = GFX_goal_generic_improve_relations
 		prerequisite = { focus = TU_IBE_laterano_schism }
-		x = 30
-		y = 3
+		x = 11
+		y = 12
 		cost = 10
 
 		search_filters = { FOCUS_FILTER_POLITICAL }
@@ -2458,8 +2449,8 @@ focus_tree = {
 		id = TU_IBE_columbia_investment
 		icon = GFX_goal_generic_trade
 		prerequisite = { focus = TU_IBE_victoria_trade }
-		x = 33
-		y = 4
+		x = 14
+		y = 13
 		cost = 10
 
 		search_filters = { FOCUS_FILTER_POLITICAL }
@@ -2478,8 +2469,8 @@ focus_tree = {
 		id = TU_IBE_sargon_caravans
 		icon = GFX_goal_generic_trade
 		prerequisite = { focus = TU_IBE_sargon_border }
-		x = 34
-		y = 3
+		x = 15
+		y = 12
 		cost = 10
 
 		search_filters = { FOCUS_FILTER_POLITICAL }

@@ -1,6 +1,6 @@
 focus_tree = {
 	id = TU_KZD_focus
-	continuous_focus_position = { x = 50 y = 2470 }
+	continuous_focus_position = { x = 50 y = 4030 }
 
 	country = {
 		factor = 0
@@ -42,7 +42,7 @@ focus_tree = {
 		icon = GFX_goal_generic_major_war
 		prerequisite = { focus = TU_KZD_military_commission_focus }
 		mutually_exclusive = { focus = TU_KZD_six_kings focus = TU_KZD_babel_restoration }
-		x = -43
+		x = -25
 		y = 1
 		cost = 10
 
@@ -59,7 +59,7 @@ focus_tree = {
 		id = TU_KZD_conscription_drive
 		icon = GFX_goal_generic_allies_build_infantry
 		prerequisite = { focus = TU_KZD_new_empire }
-		x = -43
+		x = -25
 		y = 2
 		cost = 10
 
@@ -75,7 +75,7 @@ focus_tree = {
 		id = TU_KZD_mobile_army
 		icon = GFX_goal_generic_army_tanks
 		prerequisite = { focus = TU_KZD_conscription_drive }
-		x = -43
+		x = -25
 		y = 3
 		cost = 10
 
@@ -91,7 +91,7 @@ focus_tree = {
 		id = TU_KZD_war_council
 		icon = GFX_goal_generic_position_armies
 		prerequisite = { focus = TU_KZD_mobile_army }
-		x = -43
+		x = -25
 		y = 4
 		cost = 10
 
@@ -108,7 +108,7 @@ focus_tree = {
 		id = TU_KZD_steel_doctrine
 		icon = GFX_goal_generic_army_doctrines
 		prerequisite = { focus = TU_KZD_mobile_army }
-		x = -40
+		x = -22
 		y = 4
 		cost = 10
 
@@ -124,7 +124,7 @@ focus_tree = {
 		id = TU_KZD_expansion_plan
 		icon = GFX_goal_generic_more_territorial_claims
 		prerequisite = { focus = TU_KZD_war_council }
-		x = -43
+		x = -25
 		y = 5
 		cost = 10
 
@@ -141,7 +141,7 @@ focus_tree = {
 		id = TU_KZD_frontier_push
 		icon = GFX_goal_generic_attack_allies
 		prerequisite = { focus = TU_KZD_expansion_plan }
-		x = -43
+		x = -25
 		y = 6
 		cost = 10
 
@@ -160,7 +160,7 @@ focus_tree = {
 		icon = GFX_goal_generic_defence
 		prerequisite = { focus = TU_KZD_military_commission_focus }
 		mutually_exclusive = { focus = TU_KZD_new_empire focus = TU_KZD_babel_restoration }
-		x = -29
+		x = -11
 		y = 1
 		cost = 10
 
@@ -177,7 +177,7 @@ focus_tree = {
 		id = TU_KZD_royal_guard
 		icon = GFX_goal_generic_special_forces
 		prerequisite = { focus = TU_KZD_six_kings }
-		x = -29
+		x = -11
 		y = 2
 		cost = 10
 
@@ -193,7 +193,7 @@ focus_tree = {
 		id = TU_KZD_elite_template
 		icon = GFX_goal_generic_special_forces
 		prerequisite = { focus = TU_KZD_royal_guard }
-		x = -29
+		x = -11
 		y = 3
 		cost = 10
 
@@ -213,7 +213,7 @@ focus_tree = {
 		id = TU_KZD_mountain_defence
 		icon = GFX_goal_generic_fortify_city
 		prerequisite = { focus = TU_KZD_elite_template }
-		x = -29
+		x = -11
 		y = 4
 		cost = 10
 
@@ -229,15 +229,14 @@ focus_tree = {
 		id = TU_KZD_fortified_frontier
 		icon = GFX_goal_generic_defence
 		prerequisite = { focus = TU_KZD_elite_template }
-		x = -19
+		x = -1
 		y = 4
 		cost = 10
 
 		search_filters = { FOCUS_FILTER_POLITICAL }
 
 		completion_reward = {
-			add_tech_bonus = { name = TU_KZD_fortified_frontier bonus = 0.75 uses = 1 category = construction_tech }
-			army_experience = 25
+			TU_build_forts_2 = yes
 		}
 	}
 
@@ -245,7 +244,7 @@ focus_tree = {
 		id = TU_KZD_six_kings_law
 		icon = GFX_goal_generic_national_unity
 		prerequisite = { focus = TU_KZD_mountain_defence }
-		x = -29
+		x = -11
 		y = 5
 		cost = 10
 
@@ -261,7 +260,7 @@ focus_tree = {
 		id = TU_KZD_elite_training
 		icon = GFX_goal_generic_army_artillery2
 		prerequisite = { focus = TU_KZD_six_kings_law }
-		x = -29
+		x = -11
 		y = 6
 		cost = 10
 
@@ -280,7 +279,7 @@ focus_tree = {
 		icon = GFX_goal_generic_trade
 		prerequisite = { focus = TU_KZD_military_commission_focus }
 		mutually_exclusive = { focus = TU_KZD_new_empire focus = TU_KZD_six_kings }
-		x = -4
+		x = 14
 		y = 1
 		cost = 10
 
@@ -296,7 +295,7 @@ focus_tree = {
 		id = TU_KZD_babel_envoy
 		icon = GFX_goal_generic_improve_relations
 		prerequisite = { focus = TU_KZD_babel_restoration }
-		x = 4
+		x = 22
 		y = 2
 		cost = 10
 
@@ -323,7 +322,7 @@ focus_tree = {
 		id = TU_KZD_arms_export
 		icon = GFX_goal_generic_positive_trade_relations
 		prerequisite = { focus = TU_KZD_babel_envoy }
-		x = 5
+		x = 23
 		y = 3
 		cost = 10
 
@@ -343,7 +342,7 @@ focus_tree = {
 		id = TU_KZD_babel_school
 		icon = GFX_goal_generic_scientific_exchange
 		prerequisite = { focus = TU_KZD_babel_envoy }
-		x = 12
+		x = 30
 		y = 3
 		cost = 10
 
@@ -363,7 +362,7 @@ focus_tree = {
 		id = TU_KZD_babel_ascension
 		icon = GFX_goal_generic_national_unity
 		prerequisite = { focus = TU_KZD_arms_export }
-		x = 9
+		x = 27
 		y = 4
 		cost = 10
 
@@ -384,7 +383,7 @@ focus_tree = {
 		id = TU_KZD_empire_census
 		icon = GFX_goal_generic_construct_civilian
 		prerequisite = { focus = TU_KZD_frontier_push }
-		x = -43
+		x = -25
 		y = 7
 		cost = 10
 
@@ -404,7 +403,7 @@ focus_tree = {
 		id = TU_KZD_empire_levy
 		icon = GFX_goal_generic_consumer_goods
 		prerequisite = { focus = TU_KZD_empire_census }
-		x = -43
+		x = -25
 		y = 8
 		cost = 10
 
@@ -424,7 +423,7 @@ focus_tree = {
 		id = TU_KZD_empire_bureau
 		icon = GFX_goal_generic_construct_infrastructure
 		prerequisite = { focus = TU_KZD_empire_levy }
-		x = -43
+		x = -25
 		y = 9
 		cost = 10
 
@@ -444,7 +443,7 @@ focus_tree = {
 		id = TU_KZD_theresis_court
 		icon = GFX_goal_generic_propaganda
 		prerequisite = { focus = TU_KZD_empire_bureau }
-		x = -43
+		x = -25
 		y = 10
 		cost = 10
 
@@ -465,7 +464,7 @@ focus_tree = {
 		icon = GFX_goal_generic_forceful_treaty
 		prerequisite = { focus = TU_KZD_theresis_court }
 		mutually_exclusive = { focus = TU_KZD_gentle_mandate }
-		x = -44
+		x = -26
 		y = 11
 		cost = 10
 
@@ -486,7 +485,7 @@ focus_tree = {
 		icon = GFX_goal_generic_improve_relations
 		prerequisite = { focus = TU_KZD_theresis_court }
 		mutually_exclusive = { focus = TU_KZD_iron_mandate }
-		x = -42
+		x = -24
 		y = 11
 		cost = 10
 
@@ -506,7 +505,7 @@ focus_tree = {
 		id = TU_KZD_iron_enforcement
 		icon = GFX_goal_generic_defence
 		prerequisite = { focus = TU_KZD_iron_mandate focus = TU_KZD_gentle_mandate }
-		x = -40
+		x = -22
 		y = 12
 		cost = 10
 
@@ -526,7 +525,7 @@ focus_tree = {
 		id = TU_KZD_gentle_council
 		icon = GFX_goal_generic_military_sphere
 		prerequisite = { focus = TU_KZD_gentle_mandate }
-		x = -42
+		x = -24
 		y = 12
 		cost = 10
 
@@ -546,7 +545,7 @@ focus_tree = {
 		id = TU_KZD_empire_treasury
 		icon = GFX_goal_generic_trade
 		prerequisite = { focus = TU_KZD_iron_enforcement focus = TU_KZD_gentle_council }
-		x = -40
+		x = -22
 		y = 13
 		cost = 10
 
@@ -566,7 +565,7 @@ focus_tree = {
 		id = TU_KZD_theresis_throne
 		icon = GFX_goal_generic_national_unity
 		prerequisite = { focus = TU_KZD_empire_treasury }
-		x = -40
+		x = -22
 		y = 14
 		cost = 15
 
@@ -589,7 +588,7 @@ focus_tree = {
 		id = TU_KZD_grand_army_plan
 		icon = GFX_goal_generic_army_motorized
 		prerequisite = { focus = TU_KZD_mobile_army }
-		x = -36
+		x = -18
 		y = 4
 		cost = 10
 
@@ -611,7 +610,7 @@ focus_tree = {
 		icon = GFX_goal_generic_army_tanks
 		prerequisite = { focus = TU_KZD_grand_army_plan }
 		mutually_exclusive = { focus = TU_KZD_supply_wagons }
-		x = -37
+		x = -19
 		y = 5
 		cost = 10
 
@@ -631,7 +630,7 @@ focus_tree = {
 		id = TU_KZD_iron_drill
 		icon = GFX_goal_generic_army_artillery2
 		prerequisite = { focus = TU_KZD_armored_corps focus = TU_KZD_supply_wagons }
-		x = -33
+		x = -15
 		y = 6
 		cost = 10
 
@@ -652,7 +651,7 @@ focus_tree = {
 		id = TU_KZD_field_marshal_office
 		icon = GFX_goal_generic_position_armies
 		prerequisite = { focus = TU_KZD_iron_drill }
-		x = -33
+		x = -15
 		y = 7
 		cost = 10
 
@@ -671,7 +670,7 @@ focus_tree = {
 		id = TU_KZD_breakthrough_tactics
 		icon = GFX_goal_generic_attack_allies
 		prerequisite = { focus = TU_KZD_field_marshal_office }
-		x = -35
+		x = -17
 		y = 8
 		cost = 10
 
@@ -692,7 +691,7 @@ focus_tree = {
 		icon = GFX_goal_generic_construction2
 		prerequisite = { focus = TU_KZD_grand_army_plan }
 		mutually_exclusive = { focus = TU_KZD_armored_corps }
-		x = -35
+		x = -17
 		y = 5
 		cost = 10
 
@@ -711,7 +710,7 @@ focus_tree = {
 		id = TU_KZD_logistic_convoy
 		icon = GFX_goal_generic_production
 		prerequisite = { focus = TU_KZD_supply_wagons }
-		x = -35
+		x = -17
 		y = 6
 		cost = 10
 
@@ -732,7 +731,7 @@ focus_tree = {
 		id = TU_KZD_war_economy_draft
 		icon = GFX_goal_generic_production2
 		prerequisite = { focus = TU_KZD_steel_doctrine }
-		x = -41
+		x = -23
 		y = 5
 		cost = 10
 
@@ -752,7 +751,7 @@ focus_tree = {
 		id = TU_KZD_steel_standards
 		icon = GFX_goal_generic_army_doctrines
 		prerequisite = { focus = TU_KZD_steel_doctrine }
-		x = -39
+		x = -21
 		y = 5
 		cost = 10
 
@@ -772,7 +771,7 @@ focus_tree = {
 		id = TU_KZD_imperial_bank
 		icon = GFX_goal_generic_positive_trade_relations
 		prerequisite = { focus = TU_KZD_empire_treasury }
-		x = -38
+		x = -20
 		y = 14
 		cost = 10
 
@@ -793,7 +792,7 @@ focus_tree = {
 		icon = GFX_goal_generic_more_territorial_claims
 		prerequisite = { focus = TU_KZD_frontier_push }
 		mutually_exclusive = { focus = TU_KZD_conquest_charter_alt }
-		x = -41
+		x = -23
 		y = 7
 		cost = 10
 
@@ -815,7 +814,7 @@ focus_tree = {
 		icon = GFX_goal_generic_fortify_city
 		prerequisite = { focus = TU_KZD_frontier_push }
 		mutually_exclusive = { focus = TU_KZD_conquest_charter }
-		x = -39
+		x = -21
 		y = 7
 		cost = 10
 
@@ -835,7 +834,7 @@ focus_tree = {
 		id = TU_KZD_provincial_governors
 		icon = GFX_goal_generic_political_pressure
 		prerequisite = { focus = TU_KZD_imperial_bank }
-		x = -38
+		x = -20
 		y = 15
 		cost = 10
 
@@ -856,7 +855,7 @@ focus_tree = {
 		icon = GFX_goal_generic_special_forces
 		prerequisite = { focus = TU_KZD_field_marshal_office }
 		mutually_exclusive = { focus = TU_KZD_imperial_guard_corps_alt }
-		x = -33
+		x = -15
 		y = 8
 		cost = 10
 
@@ -877,7 +876,7 @@ focus_tree = {
 		icon = GFX_goal_generic_military_sphere
 		prerequisite = { focus = TU_KZD_field_marshal_office }
 		mutually_exclusive = { focus = TU_KZD_imperial_guard_corps }
-		x = -31
+		x = -13
 		y = 8
 		cost = 10
 
@@ -897,7 +896,7 @@ focus_tree = {
 		id = TU_KZD_veteran_cadres
 		icon = GFX_goal_generic_small_arms
 		prerequisite = { focus = TU_KZD_breakthrough_tactics }
-		x = -35
+		x = -17
 		y = 9
 		cost = 10
 
@@ -918,7 +917,7 @@ focus_tree = {
 		icon = GFX_goal_generic_major_war
 		prerequisite = { focus = TU_KZD_theresis_throne }
 		prerequisite = { focus = TU_KZD_breakthrough_tactics }
-		x = -40
+		x = -22
 		y = 15
 		cost = 15
 
@@ -939,7 +938,7 @@ focus_tree = {
 		id = TU_KZD_imperial_jubilee
 		icon = GFX_goal_generic_construct_civ_factory
 		prerequisite = { focus = TU_KZD_empire_finale }
-		x = -40
+		x = -22
 		y = 16
 		cost = 10
 
@@ -959,7 +958,7 @@ focus_tree = {
 		id = TU_KZD_theresis_legacy
 		icon = GFX_goal_generic_intelligence_exchange
 		prerequisite = { focus = TU_KZD_imperial_jubilee }
-		x = -40
+		x = -22
 		y = 17
 		cost = 10
 
@@ -982,7 +981,7 @@ focus_tree = {
 		icon = GFX_goal_generic_national_unity
 		prerequisite = { focus = TU_KZD_elite_training }
 		mutually_exclusive = { focus = TU_KZD_war_drums }
-		x = -31
+		x = -13
 		y = 7
 		cost = 10
 
@@ -1003,7 +1002,7 @@ focus_tree = {
 		icon = GFX_goal_generic_fortify_city
 		prerequisite = { focus = TU_KZD_mountain_defence }
 		mutually_exclusive = { focus = TU_KZD_plains_mobility }
-		x = -25
+		x = -7
 		y = 5
 		cost = 10
 
@@ -1024,7 +1023,7 @@ focus_tree = {
 		icon = GFX_goal_generic_army_motorized
 		prerequisite = { focus = TU_KZD_mountain_defence }
 		mutually_exclusive = { focus = TU_KZD_mountain_watch }
-		x = -23
+		x = -5
 		y = 5
 		cost = 10
 
@@ -1044,7 +1043,7 @@ focus_tree = {
 		id = TU_KZD_frontier_walls
 		icon = GFX_goal_generic_fortify_city
 		prerequisite = { focus = TU_KZD_fortified_frontier }
-		x = -19
+		x = -1
 		y = 5
 		cost = 10
 
@@ -1055,8 +1054,7 @@ focus_tree = {
 		}
 
 		completion_reward = {
-			add_tech_bonus = { name = TU_KZD_frontier_walls bonus = 0.75 uses = 1 category = construction_tech }
-			army_experience = 25
+			TU_build_forts_2 = yes
 		}
 	}
 
@@ -1065,7 +1063,7 @@ focus_tree = {
 		icon = GFX_goal_generic_trade
 		prerequisite = { focus = TU_KZD_royal_guard }
 		mutually_exclusive = { focus = TU_KZD_guard_discipline }
-		x = -17
+		x = 1
 		y = 3
 		cost = 10
 
@@ -1086,7 +1084,7 @@ focus_tree = {
 		icon = GFX_goal_generic_special_forces
 		prerequisite = { focus = TU_KZD_royal_guard }
 		mutually_exclusive = { focus = TU_KZD_royal_treasure }
-		x = -15
+		x = 3
 		y = 3
 		cost = 10
 
@@ -1106,7 +1104,7 @@ focus_tree = {
 		id = TU_KZD_crown_tribunal
 		icon = GFX_goal_generic_intelligence_exchange
 		prerequisite = { focus = TU_KZD_royal_treasure }
-		x = -17
+		x = 1
 		y = 4
 		cost = 10
 
@@ -1126,7 +1124,7 @@ focus_tree = {
 		id = TU_KZD_shield_wall
 		icon = GFX_goal_generic_defence
 		prerequisite = { focus = TU_KZD_guard_discipline }
-		x = -15
+		x = 3
 		y = 4
 		cost = 10
 
@@ -1146,7 +1144,7 @@ focus_tree = {
 		id = TU_KZD_sixfold_law
 		icon = GFX_goal_generic_national_unity
 		prerequisite = { focus = TU_KZD_six_kings_law }
-		x = -27
+		x = -9
 		y = 6
 		cost = 10
 
@@ -1166,7 +1164,7 @@ focus_tree = {
 		id = TU_KZD_sacred_bastion
 		icon = GFX_goal_generic_fortify_city
 		prerequisite = { focus = TU_KZD_sixfold_law }
-		x = -27
+		x = -9
 		y = 7
 		cost = 10
 
@@ -1177,8 +1175,7 @@ focus_tree = {
 		}
 
 		completion_reward = {
-			add_tech_bonus = { name = TU_KZD_sacred_bastion bonus = 0.75 uses = 1 category = construction_tech }
-			army_experience = 25
+			TU_build_forts_2 = yes
 		}
 	}
 
@@ -1187,7 +1184,7 @@ focus_tree = {
 		icon = GFX_goal_generic_national_unity
 		prerequisite = { focus = TU_KZD_sacred_bastion }
 		prerequisite = { focus = TU_KZD_oath_of_six focus = TU_KZD_war_drums }
-		x = -29
+		x = -11
 		y = 8
 		cost = 15
 
@@ -1208,7 +1205,7 @@ focus_tree = {
 		id = TU_KZD_elite_expansion
 		icon = GFX_goal_generic_special_forces
 		prerequisite = { focus = TU_KZD_elite_template }
-		x = -21
+		x = -3
 		y = 4
 		cost = 10
 
@@ -1228,7 +1225,7 @@ focus_tree = {
 		id = TU_KZD_elite_command
 		icon = GFX_goal_generic_position_armies
 		prerequisite = { focus = TU_KZD_elite_expansion }
-		x = -21
+		x = -3
 		y = 5
 		cost = 10
 
@@ -1248,7 +1245,7 @@ focus_tree = {
 		id = TU_KZD_elite_siege_drill
 		icon = GFX_goal_generic_army_artillery2
 		prerequisite = { focus = TU_KZD_elite_command }
-		x = -21
+		x = -3
 		y = 6
 		cost = 10
 
@@ -1268,7 +1265,7 @@ focus_tree = {
 		id = TU_KZD_quartermaster_corps
 		icon = GFX_goal_generic_construction
 		prerequisite = { focus = TU_KZD_frontier_walls }
-		x = -19
+		x = -1
 		y = 6
 		cost = 10
 
@@ -1289,7 +1286,7 @@ focus_tree = {
 		icon = GFX_goal_generic_attack_allies
 		prerequisite = { focus = TU_KZD_elite_training }
 		mutually_exclusive = { focus = TU_KZD_oath_of_six }
-		x = -29
+		x = -11
 		y = 7
 		cost = 10
 
@@ -1310,7 +1307,7 @@ focus_tree = {
 		id = TU_KZD_sworn_shields
 		icon = GFX_goal_generic_defence
 		prerequisite = { focus = TU_KZD_shield_wall }
-		x = -15
+		x = 3
 		y = 5
 		cost = 10
 
@@ -1330,7 +1327,7 @@ focus_tree = {
 		id = TU_KZD_mountain_citadel
 		icon = GFX_goal_generic_fortify_city
 		prerequisite = { focus = TU_KZD_mountain_watch }
-		x = -25
+		x = -7
 		y = 6
 		cost = 10
 
@@ -1341,8 +1338,7 @@ focus_tree = {
 		}
 
 		completion_reward = {
-			add_tech_bonus = { name = TU_KZD_mountain_citadel bonus = 0.75 uses = 1 category = construction_tech }
-			army_experience = 25
+			TU_build_forts_2 = yes
 		}
 	}
 
@@ -1350,7 +1346,7 @@ focus_tree = {
 		id = TU_KZD_plains_charge
 		icon = GFX_goal_generic_cavalry
 		prerequisite = { focus = TU_KZD_plains_mobility }
-		x = -23
+		x = -5
 		y = 6
 		cost = 10
 
@@ -1371,7 +1367,7 @@ focus_tree = {
 		id = TU_KZD_six_kings_council
 		icon = GFX_goal_generic_military_sphere
 		prerequisite = { focus = TU_KZD_crown_tribunal }
-		x = -17
+		x = 1
 		y = 5
 		cost = 10
 
@@ -1391,7 +1387,7 @@ focus_tree = {
 		id = TU_KZD_sixfold_throne
 		icon = GFX_goal_generic_national_unity
 		prerequisite = { focus = TU_KZD_six_kings_council }
-		x = -17
+		x = 1
 		y = 6
 		cost = 15
 
@@ -1411,7 +1407,7 @@ focus_tree = {
 		id = TU_KZD_pass_garrison
 		icon = GFX_goal_generic_fortify_city
 		prerequisite = { focus = TU_KZD_mountain_citadel }
-		x = -25
+		x = -7
 		y = 7
 		cost = 10
 
@@ -1431,7 +1427,7 @@ focus_tree = {
 		id = TU_KZD_royal_shrine
 		icon = GFX_goal_generic_propaganda
 		prerequisite = { focus = TU_KZD_royal_oath_final }
-		x = -29
+		x = -11
 		y = 9
 		cost = 10
 
@@ -1451,7 +1447,7 @@ focus_tree = {
 		id = TU_KZD_guardian_pledge
 		icon = GFX_goal_generic_national_unity
 		prerequisite = { focus = TU_KZD_sworn_shields }
-		x = -15
+		x = 3
 		y = 6
 		cost = 10
 
@@ -1471,7 +1467,7 @@ focus_tree = {
 		id = TU_KZD_plains_drill
 		icon = GFX_goal_generic_army_doctrines
 		prerequisite = { focus = TU_KZD_plains_charge }
-		x = -23
+		x = -5
 		y = 7
 		cost = 10
 
@@ -1491,7 +1487,7 @@ focus_tree = {
 		id = TU_KZD_gate_warden
 		icon = GFX_goal_generic_fortify_city
 		prerequisite = { focus = TU_KZD_guardian_pledge }
-		x = -15
+		x = 3
 		y = 7
 		cost = 10
 
@@ -1513,7 +1509,7 @@ focus_tree = {
 		id = TU_KZD_babel_archive_search
 		icon = GFX_goal_generic_scientific_exchange
 		prerequisite = { focus = TU_KZD_babel_restoration }
-		x = -12
+		x = 6
 		y = 2
 		cost = 10
 
@@ -1535,7 +1531,7 @@ focus_tree = {
 		id = TU_KZD_babel_scribes
 		icon = GFX_goal_generic_scientific_exchange
 		prerequisite = { focus = TU_KZD_babel_archive_search }
-		x = -12
+		x = 6
 		y = 3
 		cost = 10
 
@@ -1555,7 +1551,7 @@ focus_tree = {
 		icon = GFX_goal_generic_construct_mil_factory
 		prerequisite = { focus = TU_KZD_babel_scribes }
 		mutually_exclusive = { focus = TU_KZD_arcane_survey }
-		x = -13
+		x = 5
 		y = 4
 		cost = 10
 
@@ -1576,7 +1572,7 @@ focus_tree = {
 		icon = GFX_goal_generic_secret_weapon
 		prerequisite = { focus = TU_KZD_babel_scribes }
 		mutually_exclusive = { focus = TU_KZD_ancient_engineering }
-		x = -11
+		x = 7
 		y = 4
 		cost = 10
 
@@ -1595,7 +1591,7 @@ focus_tree = {
 		id = TU_KZD_babel_council
 		icon = GFX_goal_generic_improve_relations
 		prerequisite = { focus = TU_KZD_babel_envoy }
-		x = -4
+		x = 14
 		y = 3
 		cost = 10
 
@@ -1615,7 +1611,7 @@ focus_tree = {
 		icon = GFX_goal_generic_positive_trade_relations
 		prerequisite = { focus = TU_KZD_babel_envoy }
 		mutually_exclusive = { focus = TU_KZD_independent_path }
-		x = -2
+		x = 16
 		y = 3
 		cost = 10
 
@@ -1636,7 +1632,7 @@ focus_tree = {
 		icon = GFX_goal_generic_neutrality_focus
 		prerequisite = { focus = TU_KZD_babel_envoy }
 		mutually_exclusive = { focus = TU_KZD_rhodes_exchange }
-		x = 0
+		x = 18
 		y = 3
 		cost = 10
 
@@ -1656,7 +1652,7 @@ focus_tree = {
 		id = TU_KZD_babel_workshops_restore
 		icon = GFX_goal_generic_construct_civ_factory
 		prerequisite = { focus = TU_KZD_babel_school }
-		x = 11
+		x = 29
 		y = 4
 		cost = 10
 
@@ -1678,7 +1674,7 @@ focus_tree = {
 		icon = GFX_goal_generic_production
 		prerequisite = { focus = TU_KZD_arms_export }
 		mutually_exclusive = { focus = TU_KZD_babel_forge_alt }
-		x = 1
+		x = 19
 		y = 4
 		cost = 10
 
@@ -1700,7 +1696,7 @@ focus_tree = {
 		icon = GFX_goal_generic_construct_civ_factory
 		prerequisite = { focus = TU_KZD_arms_export }
 		mutually_exclusive = { focus = TU_KZD_babel_forge }
-		x = 3
+		x = 21
 		y = 4
 		cost = 10
 
@@ -1721,7 +1717,7 @@ focus_tree = {
 		icon = GFX_goal_generic_trade
 		prerequisite = { focus = TU_KZD_arms_export }
 		mutually_exclusive = { focus = TU_KZD_export_ban }
-		x = 5
+		x = 23
 		y = 4
 		cost = 10
 
@@ -1742,7 +1738,7 @@ focus_tree = {
 		icon = GFX_goal_generic_defence
 		prerequisite = { focus = TU_KZD_arms_export }
 		mutually_exclusive = { focus = TU_KZD_export_license }
-		x = 7
+		x = 25
 		y = 4
 		cost = 10
 
@@ -1762,7 +1758,7 @@ focus_tree = {
 		id = TU_KZD_babel_cadets
 		icon = GFX_goal_generic_small_arms
 		prerequisite = { focus = TU_KZD_babel_school }
-		x = 13
+		x = 31
 		y = 4
 		cost = 10
 
@@ -1781,7 +1777,7 @@ focus_tree = {
 		id = TU_KZD_babel_war_college
 		icon = GFX_goal_generic_army_doctrines
 		prerequisite = { focus = TU_KZD_babel_cadets }
-		x = 13
+		x = 31
 		y = 5
 		cost = 10
 
@@ -1801,7 +1797,7 @@ focus_tree = {
 		id = TU_KZD_rhodes_trade_fair
 		icon = GFX_goal_generic_trade
 		prerequisite = { focus = TU_KZD_rhodes_exchange focus = TU_KZD_independent_path }
-		x = -1
+		x = 17
 		y = 4
 		cost = 10
 
@@ -1821,7 +1817,7 @@ focus_tree = {
 		id = TU_KZD_babel_bank
 		icon = GFX_goal_generic_positive_trade_relations
 		prerequisite = { focus = TU_KZD_babel_council }
-		x = -5
+		x = 13
 		y = 4
 		cost = 10
 
@@ -1841,7 +1837,7 @@ focus_tree = {
 		icon = GFX_goal_generic_national_unity
 		prerequisite = { focus = TU_KZD_babel_ascension }
 		prerequisite = { focus = TU_KZD_babel_bank }
-		x = 9
+		x = 27
 		y = 5
 		cost = 15
 
@@ -1861,7 +1857,7 @@ focus_tree = {
 		id = TU_KZD_ancient_gate
 		icon = GFX_goal_generic_radar
 		prerequisite = { focus = TU_KZD_arcane_survey focus = TU_KZD_ancient_engineering }
-		x = -12
+		x = 6
 		y = 5
 		cost = 10
 
@@ -1881,7 +1877,7 @@ focus_tree = {
 		id = TU_KZD_babel_sanctum
 		icon = GFX_goal_generic_propaganda
 		prerequisite = { focus = TU_KZD_ancient_gate }
-		x = -12
+		x = 6
 		y = 6
 		cost = 10
 
@@ -1900,7 +1896,7 @@ focus_tree = {
 		id = TU_KZD_babel_mint
 		icon = GFX_goal_generic_trade
 		prerequisite = { focus = TU_KZD_babel_bank }
-		x = -5
+		x = 13
 		y = 5
 		cost = 10
 
@@ -1919,7 +1915,7 @@ focus_tree = {
 		id = TU_KZD_sealed_vault
 		icon = GFX_goal_generic_intelligence_exchange
 		prerequisite = { focus = TU_KZD_babel_mint }
-		x = -5
+		x = 13
 		y = 6
 		cost = 10
 
@@ -1940,7 +1936,7 @@ focus_tree = {
 		id = TU_KZD_babel_hymn
 		icon = GFX_goal_generic_propaganda
 		prerequisite = { focus = TU_KZD_babel_council }
-		x = -3
+		x = 15
 		y = 4
 		cost = 10
 
@@ -1959,7 +1955,7 @@ focus_tree = {
 		id = TU_KZD_trade_roads
 		icon = GFX_goal_generic_construct_infrastructure
 		prerequisite = { focus = TU_KZD_rhodes_trade_fair }
-		x = -1
+		x = 17
 		y = 5
 		cost = 10
 
@@ -1980,7 +1976,7 @@ focus_tree = {
 		icon = GFX_goal_generic_scientific_exchange
 		prerequisite = { focus = TU_KZD_babel_scribes }
 		mutually_exclusive = { focus = TU_KZD_records_vault_alt }
-		x = -9
+		x = 9
 		y = 4
 		cost = 10
 
@@ -2000,7 +1996,7 @@ focus_tree = {
 		icon = GFX_goal_generic_construction2
 		prerequisite = { focus = TU_KZD_babel_scribes }
 		mutually_exclusive = { focus = TU_KZD_records_vault }
-		x = -7
+		x = 11
 		y = 4
 		cost = 10
 
@@ -2019,7 +2015,7 @@ focus_tree = {
 		id = TU_KZD_cultural_relic
 		icon = GFX_goal_generic_intelligence_exchange
 		prerequisite = { focus = TU_KZD_babel_hymn }
-		x = -3
+		x = 15
 		y = 5
 		cost = 10
 
@@ -2038,7 +2034,7 @@ focus_tree = {
 		id = TU_KZD_babel_legend
 		icon = GFX_goal_generic_national_unity
 		prerequisite = { focus = TU_KZD_babel_sanctum }
-		x = -12
+		x = 6
 		y = 7
 		cost = 10
 
@@ -2057,7 +2053,7 @@ focus_tree = {
 		id = TU_KZD_babel_festival
 		icon = GFX_goal_generic_propaganda
 		prerequisite = { focus = TU_KZD_cultural_relic }
-		x = -3
+		x = 15
 		y = 6
 		cost = 10
 
@@ -2078,8 +2074,8 @@ focus_tree = {
 		id = TU_KZD_merc_kingdom
 		icon = GFX_goal_generic_trade
 		prerequisite = { focus = TU_KZD_military_commission_focus }
-		x = 17
-		y = 1
+		x = -27
+		y = 19
 		cost = 5
 
 		search_filters = { FOCUS_FILTER_INTERNATIONAL_TRADE }
@@ -2099,8 +2095,8 @@ focus_tree = {
 		id = TU_KZD_contract_registry
 		icon = GFX_goal_generic_positive_trade_relations
 		prerequisite = { focus = TU_KZD_merc_kingdom }
-		x = 17
-		y = 2
+		x = -27
+		y = 20
 		cost = 10
 
 		search_filters = { FOCUS_FILTER_INTERNATIONAL_TRADE }
@@ -2120,8 +2116,8 @@ focus_tree = {
 		icon = GFX_goal_generic_dangerous_deal
 		prerequisite = { focus = TU_KZD_contract_registry }
 		mutually_exclusive = { focus = TU_KZD_direct_hire }
-		x = 16
-		y = 3
+		x = -28
+		y = 21
 		cost = 10
 
 		search_filters = { FOCUS_FILTER_POLITICAL }
@@ -2142,8 +2138,8 @@ focus_tree = {
 		icon = GFX_goal_generic_military_deal
 		prerequisite = { focus = TU_KZD_contract_registry }
 		mutually_exclusive = { focus = TU_KZD_broker_offices }
-		x = 19
-		y = 3
+		x = -25
+		y = 21
 		cost = 10
 
 		search_filters = { FOCUS_FILTER_POLITICAL }
@@ -2163,8 +2159,8 @@ focus_tree = {
 		id = TU_KZD_guild_hall
 		icon = GFX_goal_generic_construct_civilian
 		prerequisite = { focus = TU_KZD_broker_offices focus = TU_KZD_direct_hire }
-		x = 23
-		y = 4
+		x = -21
+		y = 22
 		cost = 10
 
 		search_filters = { FOCUS_FILTER_POLITICAL }
@@ -2183,8 +2179,8 @@ focus_tree = {
 		id = TU_KZD_clan_council_focus
 		icon = GFX_goal_generic_military_sphere
 		prerequisite = { focus = TU_KZD_direct_hire }
-		x = 19
-		y = 4
+		x = -25
+		y = 22
 		cost = 10
 
 		search_filters = { FOCUS_FILTER_POLITICAL }
@@ -2204,8 +2200,8 @@ focus_tree = {
 		id = TU_KZD_clan_charter
 		icon = GFX_goal_generic_national_unity
 		prerequisite = { focus = TU_KZD_clan_council_focus }
-		x = 17
-		y = 5
+		x = -27
+		y = 23
 		cost = 10
 
 		search_filters = { FOCUS_FILTER_POLITICAL }
@@ -2225,8 +2221,8 @@ focus_tree = {
 		icon = GFX_goal_generic_improve_relations
 		prerequisite = { focus = TU_KZD_clan_council_focus }
 		mutually_exclusive = { focus = TU_KZD_clan_feud }
-		x = 19
-		y = 5
+		x = -25
+		y = 23
 		cost = 10
 
 		search_filters = { FOCUS_FILTER_POLITICAL }
@@ -2246,8 +2242,8 @@ focus_tree = {
 		icon = GFX_goal_generic_attack_allies
 		prerequisite = { focus = TU_KZD_clan_council_focus }
 		mutually_exclusive = { focus = TU_KZD_clan_unity }
-		x = 21
-		y = 5
+		x = -23
+		y = 23
 		cost = 10
 
 		search_filters = { FOCUS_FILTER_ARMY_XP }
@@ -2266,8 +2262,8 @@ focus_tree = {
 		id = TU_KZD_merc_insurance_focus
 		icon = GFX_goal_generic_consumer_goods
 		prerequisite = { focus = TU_KZD_guild_hall }
-		x = 23
-		y = 5
+		x = -21
+		y = 23
 		cost = 10
 
 		search_filters = { FOCUS_FILTER_POLITICAL }
@@ -2286,8 +2282,8 @@ focus_tree = {
 		icon = GFX_goal_generic_consumer_goods
 		prerequisite = { focus = TU_KZD_guild_hall }
 		mutually_exclusive = { focus = TU_KZD_war_bonds }
-		x = 28
-		y = 5
+		x = -16
+		y = 23
 		cost = 10
 
 		search_filters = { FOCUS_FILTER_POLITICAL }
@@ -2307,8 +2303,8 @@ focus_tree = {
 		icon = GFX_goal_generic_trade
 		prerequisite = { focus = TU_KZD_guild_hall }
 		mutually_exclusive = { focus = TU_KZD_veterans_fund }
-		x = 30
-		y = 5
+		x = -14
+		y = 23
 		cost = 10
 
 		search_filters = { FOCUS_FILTER_POLITICAL }
@@ -2327,8 +2323,8 @@ focus_tree = {
 		id = TU_KZD_arbiter_council
 		icon = GFX_goal_generic_political_pressure
 		prerequisite = { focus = TU_KZD_merc_insurance_focus }
-		x = 23
-		y = 6
+		x = -21
+		y = 24
 		cost = 10
 
 		search_filters = { FOCUS_FILTER_POLITICAL }
@@ -2347,8 +2343,8 @@ focus_tree = {
 		id = TU_KZD_black_banner_focus
 		icon = GFX_goal_generic_attack_allies
 		prerequisite = { focus = TU_KZD_clan_feud }
-		x = 21
-		y = 6
+		x = -23
+		y = 24
 		cost = 10
 
 		search_filters = { FOCUS_FILTER_ARMY_XP }
@@ -2367,8 +2363,8 @@ focus_tree = {
 		id = TU_KZD_gold_standard
 		icon = GFX_goal_generic_trade
 		prerequisite = { focus = TU_KZD_arbiter_council }
-		x = 23
-		y = 7
+		x = -21
+		y = 25
 		cost = 10
 
 		search_filters = { FOCUS_FILTER_POLITICAL }
@@ -2387,8 +2383,8 @@ focus_tree = {
 		id = TU_KZD_wartime_tariff
 		icon = GFX_goal_generic_positive_trade_relations
 		prerequisite = { focus = TU_KZD_gold_standard }
-		x = 20
-		y = 8
+		x = -24
+		y = 26
 		cost = 10
 
 		search_filters = { FOCUS_FILTER_POLITICAL }
@@ -2408,8 +2404,8 @@ focus_tree = {
 		icon = GFX_goal_generic_production
 		prerequisite = { focus = TU_KZD_gold_standard }
 		mutually_exclusive = { focus = TU_KZD_private_vaults }
-		x = 22
-		y = 8
+		x = -22
+		y = 26
 		cost = 10
 
 		search_filters = { FOCUS_FILTER_POLITICAL }
@@ -2429,8 +2425,8 @@ focus_tree = {
 		icon = GFX_goal_generic_intelligence_exchange
 		prerequisite = { focus = TU_KZD_gold_standard }
 		mutually_exclusive = { focus = TU_KZD_mercenary_bank }
-		x = 24
-		y = 8
+		x = -20
+		y = 26
 		cost = 10
 
 		search_filters = { FOCUS_FILTER_POLITICAL }
@@ -2450,8 +2446,8 @@ focus_tree = {
 		icon = GFX_goal_generic_build_navy
 		prerequisite = { focus = TU_KZD_wartime_tariff }
 		mutually_exclusive = { focus = TU_KZD_contract_fleets_alt }
-		x = 18
-		y = 9
+		x = -26
+		y = 27
 		cost = 10
 
 		search_filters = { FOCUS_FILTER_POLITICAL }
@@ -2472,8 +2468,8 @@ focus_tree = {
 		icon = GFX_goal_generic_trade
 		prerequisite = { focus = TU_KZD_wartime_tariff }
 		mutually_exclusive = { focus = TU_KZD_contract_fleets }
-		x = 20
-		y = 9
+		x = -24
+		y = 27
 		cost = 10
 
 		search_filters = { FOCUS_FILTER_POLITICAL }
@@ -2492,8 +2488,8 @@ focus_tree = {
 		id = TU_KZD_merc_pension
 		icon = GFX_goal_generic_consumer_goods
 		prerequisite = { focus = TU_KZD_veterans_fund }
-		x = 28
-		y = 6
+		x = -16
+		y = 24
 		cost = 10
 
 		search_filters = { FOCUS_FILTER_POLITICAL }
@@ -2512,8 +2508,8 @@ focus_tree = {
 		id = TU_KZD_merc_academy
 		icon = GFX_goal_generic_scientific_exchange
 		prerequisite = { focus = TU_KZD_merc_pension }
-		x = 28
-		y = 7
+		x = -16
+		y = 25
 		cost = 10
 
 		search_filters = { FOCUS_FILTER_ARMY_XP }
@@ -2532,8 +2528,8 @@ focus_tree = {
 		id = TU_KZD_sellsword_doctrine
 		icon = GFX_goal_generic_army_doctrines
 		prerequisite = { focus = TU_KZD_merc_academy }
-		x = 28
-		y = 8
+		x = -16
+		y = 26
 		cost = 10
 
 		search_filters = { FOCUS_FILTER_ARMY_XP }
@@ -2552,8 +2548,8 @@ focus_tree = {
 		id = TU_KZD_kingdom_charter
 		icon = GFX_goal_generic_national_unity
 		prerequisite = { focus = TU_KZD_gold_standard }
-		x = 26
-		y = 8
+		x = -18
+		y = 26
 		cost = 15
 
 		search_filters = { FOCUS_FILTER_POLITICAL }
@@ -2574,8 +2570,8 @@ focus_tree = {
 		id = TU_KZD_harbor_levy
 		icon = GFX_goal_generic_trade
 		prerequisite = { focus = TU_KZD_wartime_tariff }
-		x = 22
-		y = 9
+		x = -22
+		y = 27
 		cost = 10
 
 		search_filters = { FOCUS_FILTER_POLITICAL }
@@ -2595,8 +2591,8 @@ focus_tree = {
 		id = TU_KZD_caravan_routes
 		icon = GFX_goal_generic_trade
 		prerequisite = { focus = TU_KZD_harbor_levy }
-		x = 22
-		y = 10
+		x = -22
+		y = 28
 		cost = 10
 
 		search_filters = { FOCUS_FILTER_INTERNATIONAL_TRADE }
@@ -2616,8 +2612,8 @@ focus_tree = {
 		icon = GFX_goal_generic_neutrality_focus
 		prerequisite = { focus = TU_KZD_broker_offices }
 		mutually_exclusive = { focus = TU_KZD_war_contracts }
-		x = 15
-		y = 4
+		x = -29
+		y = 22
 		cost = 10
 
 		search_filters = { FOCUS_FILTER_POLITICAL }
@@ -2637,8 +2633,8 @@ focus_tree = {
 		icon = GFX_goal_generic_major_war
 		prerequisite = { focus = TU_KZD_broker_offices }
 		mutually_exclusive = { focus = TU_KZD_neutral_charters }
-		x = 17
-		y = 4
+		x = -27
+		y = 22
 		cost = 10
 
 		search_filters = { FOCUS_FILTER_ARMY_XP }
@@ -2657,8 +2653,8 @@ focus_tree = {
 		id = TU_KZD_contract_dividend
 		icon = GFX_goal_generic_trade
 		prerequisite = { focus = TU_KZD_kingdom_charter }
-		x = 26
-		y = 9
+		x = -18
+		y = 27
 		cost = 10
 
 		search_filters = { FOCUS_FILTER_POLITICAL }
@@ -2677,8 +2673,8 @@ focus_tree = {
 		id = TU_KZD_merc_capital
 		icon = GFX_goal_generic_construct_civ_factory
 		prerequisite = { focus = TU_KZD_contract_dividend }
-		x = 26
-		y = 10
+		x = -18
+		y = 28
 		cost = 10
 
 		search_filters = { FOCUS_FILTER_POLITICAL }
@@ -2697,8 +2693,8 @@ focus_tree = {
 		id = TU_KZD_merc_seal
 		icon = GFX_goal_generic_national_unity
 		prerequisite = { focus = TU_KZD_merc_capital }
-		x = 26
-		y = 11
+		x = -18
+		y = 29
 		cost = 10
 
 		search_filters = { FOCUS_FILTER_POLITICAL }
@@ -2720,8 +2716,8 @@ focus_tree = {
 		id = TU_KZD_exp_doctrine
 		icon = GFX_goal_generic_major_war
 		prerequisite = { focus = TU_KZD_military_commission_focus }
-		x = 43
-		y = 1
+		x = 2
+		y = 11
 		cost = 5
 
 		search_filters = { FOCUS_FILTER_POLITICAL }
@@ -2740,8 +2736,8 @@ focus_tree = {
 		id = TU_KZD_relations_envoy
 		icon = GFX_goal_generic_improve_relations
 		prerequisite = { focus = TU_KZD_exp_doctrine }
-		x = 43
-		y = 2
+		x = 2
+		y = 12
 		cost = 10
 
 		search_filters = { FOCUS_FILTER_POLITICAL }
@@ -2761,8 +2757,8 @@ focus_tree = {
 		id = TU_KZD_exp_hub
 		icon = GFX_goal_generic_position_armies
 		prerequisite = { focus = TU_KZD_relations_envoy }
-		x = 43
-		y = 3
+		x = 2
+		y = 13
 		cost = 10
 
 		search_filters = { FOCUS_FILTER_POLITICAL }
@@ -2781,8 +2777,8 @@ focus_tree = {
 		id = TU_KZD_alliance_search
 		icon = GFX_goal_generic_major_alliance
 		prerequisite = { focus = TU_KZD_trade_routes focus = TU_KZD_vic_claims focus = TU_KZD_ursus_claims focus = TU_KZD_lei_claims }
-		x = 42
-		y = 6
+		x = 1
+		y = 16
 		cost = 15
 
 		search_filters = { FOCUS_FILTER_POLITICAL }
@@ -2803,8 +2799,8 @@ focus_tree = {
 		id = TU_KZD_alliance_treaty
 		icon = GFX_goal_generic_alliance
 		prerequisite = { focus = TU_KZD_alliance_search }
-		x = 42
-		y = 7
+		x = 1
+		y = 17
 		cost = 10
 
 		search_filters = { FOCUS_FILTER_POLITICAL }
@@ -2825,8 +2821,8 @@ focus_tree = {
 		id = TU_KZD_envoy_network
 		icon = GFX_goal_generic_intelligence_exchange
 		prerequisite = { focus = TU_KZD_relations_envoy }
-		x = 56
-		y = 3
+		x = 15
+		y = 13
 		cost = 10
 
 		search_filters = { FOCUS_FILTER_POLITICAL }
@@ -2844,8 +2840,8 @@ focus_tree = {
 		id = TU_KZD_trade_routes
 		icon = GFX_goal_generic_positive_trade_relations
 		prerequisite = { focus = TU_KZD_envoy_network }
-		x = 56
-		y = 4
+		x = 15
+		y = 14
 		cost = 10
 
 		search_filters = { FOCUS_FILTER_POLITICAL }
@@ -2863,8 +2859,8 @@ focus_tree = {
 		id = TU_KZD_mercenary_embassy
 		icon = GFX_goal_generic_military_deal
 		prerequisite = { focus = TU_KZD_trade_routes }
-		x = 56
-		y = 5
+		x = 15
+		y = 15
 		cost = 10
 
 		search_filters = { FOCUS_FILTER_POLITICAL }
@@ -2883,8 +2879,8 @@ focus_tree = {
 		id = TU_KZD_embassy_courier
 		icon = GFX_goal_generic_dangerous_deal
 		prerequisite = { focus = TU_KZD_mercenary_embassy }
-		x = 56
-		y = 6
+		x = 15
+		y = 16
 		cost = 10
 
 		search_filters = { FOCUS_FILTER_POLITICAL }
@@ -2905,8 +2901,8 @@ focus_tree = {
 		id = TU_KZD_mil_staff
 		icon = GFX_goal_generic_army_motorized
 		prerequisite = { focus = TU_KZD_exp_hub }
-		x = 33
-		y = 4
+		x = -8
+		y = 14
 		cost = 10
 
 		search_filters = { FOCUS_FILTER_ARMY_XP }
@@ -2925,8 +2921,8 @@ focus_tree = {
 		id = TU_KZD_mil_reform
 		icon = GFX_goal_generic_army_doctrines
 		prerequisite = { focus = TU_KZD_mil_staff }
-		x = 33
-		y = 5
+		x = -8
+		y = 15
 		cost = 10
 
 		search_filters = { FOCUS_FILTER_POLITICAL }
@@ -2945,8 +2941,8 @@ focus_tree = {
 		id = TU_KZD_mil_conscription
 		icon = GFX_goal_generic_allies_build_infantry
 		prerequisite = { focus = TU_KZD_mil_reform }
-		x = 33
-		y = 6
+		x = -8
+		y = 16
 		cost = 10
 
 		search_filters = { FOCUS_FILTER_POLITICAL }
@@ -2965,8 +2961,8 @@ focus_tree = {
 		id = TU_KZD_mil_training
 		icon = GFX_goal_generic_army_artillery2
 		prerequisite = { focus = TU_KZD_mil_conscription }
-		x = 33
-		y = 7
+		x = -8
+		y = 17
 		cost = 10
 
 		search_filters = { FOCUS_FILTER_ARMY_XP }
@@ -2986,8 +2982,8 @@ focus_tree = {
 		icon = GFX_goal_generic_special_forces
 		prerequisite = { focus = TU_KZD_mil_training }
 		mutually_exclusive = { focus = TU_KZD_mil_guard_camp_alt }
-		x = 30
-		y = 8
+		x = -11
+		y = 18
 		cost = 10
 
 		search_filters = { FOCUS_FILTER_ARMY_XP }
@@ -3007,8 +3003,8 @@ focus_tree = {
 		icon = GFX_goal_generic_construct_civilian
 		prerequisite = { focus = TU_KZD_mil_training }
 		mutually_exclusive = { focus = TU_KZD_mil_guard_camp }
-		x = 32
-		y = 8
+		x = -9
+		y = 18
 		cost = 10
 
 		search_filters = { FOCUS_FILTER_ARMY_XP }
@@ -3027,8 +3023,8 @@ focus_tree = {
 		id = TU_KZD_mil_armor_doctrine
 		icon = GFX_goal_generic_army_tanks
 		prerequisite = { focus = TU_KZD_mil_training }
-		x = 34
-		y = 8
+		x = -7
+		y = 18
 		cost = 10
 
 		search_filters = { FOCUS_FILTER_RESEARCH }
@@ -3047,8 +3043,8 @@ focus_tree = {
 		id = TU_KZD_mil_supply
 		icon = GFX_goal_generic_construct_infrastructure
 		prerequisite = { focus = TU_KZD_mil_training }
-		x = 36
-		y = 8
+		x = -5
+		y = 18
 		cost = 10
 
 		search_filters = { FOCUS_FILTER_INDUSTRY }
@@ -3067,8 +3063,8 @@ focus_tree = {
 		id = TU_KZD_mil_logistics_net
 		icon = GFX_goal_generic_construction2
 		prerequisite = { focus = TU_KZD_mil_supply }
-		x = 36
-		y = 9
+		x = -5
+		y = 19
 		cost = 10
 
 		search_filters = { FOCUS_FILTER_INDUSTRY }
@@ -3087,8 +3083,8 @@ focus_tree = {
 		id = TU_KZD_mil_artillery
 		icon = GFX_goal_generic_army_artillery
 		prerequisite = { focus = TU_KZD_mil_armor_doctrine }
-		x = 34
-		y = 9
+		x = -7
+		y = 19
 		cost = 10
 
 		search_filters = { FOCUS_FILTER_ARMY_XP }
@@ -3109,8 +3105,8 @@ focus_tree = {
 		id = TU_KZD_vic_intel
 		icon = GFX_goal_generic_intelligence_exchange
 		prerequisite = { focus = TU_KZD_exp_hub }
-		x = 38
-		y = 4
+		x = -3
+		y = 14
 		cost = 10
 
 		search_filters = { FOCUS_FILTER_POLITICAL }
@@ -3129,8 +3125,8 @@ focus_tree = {
 		id = TU_KZD_vic_claims
 		icon = GFX_goal_generic_more_territorial_claims
 		prerequisite = { focus = TU_KZD_vic_intel }
-		x = 38
-		y = 5
+		x = -3
+		y = 15
 		cost = 10
 
 		search_filters = { FOCUS_FILTER_POLITICAL }
@@ -3149,8 +3145,8 @@ focus_tree = {
 		id = TU_KZD_vic_border_survey
 		icon = GFX_goal_generic_radar
 		prerequisite = { focus = TU_KZD_vic_claims }
-		x = 38
-		y = 6
+		x = -3
+		y = 16
 		cost = 10
 
 		search_filters = { FOCUS_FILTER_RESEARCH }
@@ -3169,8 +3165,8 @@ focus_tree = {
 		id = TU_KZD_vic_mobile_column
 		icon = GFX_goal_generic_army_motorized
 		prerequisite = { focus = TU_KZD_vic_border_survey }
-		x = 38
-		y = 7
+		x = -3
+		y = 17
 		cost = 10
 
 		search_filters = { FOCUS_FILTER_ARMY_XP }
@@ -3190,8 +3186,8 @@ focus_tree = {
 		icon = GFX_goal_generic_major_war
 		prerequisite = { focus = TU_KZD_vic_mobile_column }
 		mutually_exclusive = { focus = TU_KZD_vic_peace }
-		x = 38
-		y = 8
+		x = -3
+		y = 18
 		cost = 10
 
 		search_filters = { FOCUS_FILTER_POLITICAL }
@@ -3211,8 +3207,8 @@ focus_tree = {
 		id = TU_KZD_vic_steam_counter
 		icon = GFX_goal_generic_army_doctrines
 		prerequisite = { focus = TU_KZD_vic_mobile_column }
-		x = 42
-		y = 8
+		x = 1
+		y = 18
 		cost = 10
 
 		search_filters = { FOCUS_FILTER_ARMY_XP }
@@ -3232,8 +3228,8 @@ focus_tree = {
 		id = TU_KZD_vic_siege_drill
 		icon = GFX_goal_generic_fortify_city
 		prerequisite = { focus = TU_KZD_vic_steam_counter }
-		x = 42
-		y = 9
+		x = 1
+		y = 19
 		cost = 10
 
 		search_filters = { FOCUS_FILTER_ARMY_XP }
@@ -3253,8 +3249,8 @@ focus_tree = {
 		icon = GFX_goal_generic_neutrality_focus
 		prerequisite = { focus = TU_KZD_vic_mobile_column }
 		mutually_exclusive = { focus = TU_KZD_vic_war_plan }
-		x = 40
-		y = 8
+		x = -1
+		y = 18
 		cost = 10
 
 		search_filters = { FOCUS_FILTER_POLITICAL }
@@ -3273,8 +3269,8 @@ focus_tree = {
 		id = TU_KZD_vic_exile_nobles
 		icon = GFX_goal_generic_political_pressure
 		prerequisite = { focus = TU_KZD_vic_peace }
-		x = 40
-		y = 9
+		x = -1
+		y = 19
 		cost = 10
 
 		search_filters = { FOCUS_FILTER_POLITICAL }
@@ -3293,8 +3289,8 @@ focus_tree = {
 		id = TU_KZD_vic_london_admin
 		icon = GFX_goal_generic_national_unity
 		prerequisite = { focus = TU_KZD_vic_war_plan }
-		x = 38
-		y = 9
+		x = -3
+		y = 19
 		cost = 10
 
 		search_filters = { FOCUS_FILTER_POLITICAL }
@@ -3314,8 +3310,8 @@ focus_tree = {
 		id = TU_KZD_vic_landing
 		icon = GFX_goal_generic_amphibious_assault
 		prerequisite = { focus = TU_KZD_vic_london_admin }
-		x = 38
-		y = 10
+		x = -3
+		y = 20
 		cost = 15
 
 		search_filters = { FOCUS_FILTER_ARMY_XP }
@@ -3335,8 +3331,8 @@ focus_tree = {
 		id = TU_KZD_vic_occupation
 		icon = GFX_goal_generic_occupy_start_war
 		prerequisite = { focus = TU_KZD_vic_landing }
-		x = 38
-		y = 11
+		x = -3
+		y = 21
 		cost = 10
 
 		search_filters = { FOCUS_FILTER_POLITICAL }
@@ -3356,8 +3352,8 @@ focus_tree = {
 		id = TU_KZD_vic_london_order
 		icon = GFX_goal_generic_military_sphere
 		prerequisite = { focus = TU_KZD_vic_occupation }
-		x = 38
-		y = 12
+		x = -3
+		y = 22
 		cost = 10
 
 		search_filters = { FOCUS_FILTER_POLITICAL }
@@ -3376,8 +3372,8 @@ focus_tree = {
 		id = TU_KZD_vic_march_on_london
 		icon = GFX_goal_generic_occupy_states_ongoing_war
 		prerequisite = { focus = TU_KZD_vic_london_order }
-		x = 38
-		y = 13
+		x = -3
+		y = 23
 		cost = 10
 
 		search_filters = { FOCUS_FILTER_ARMY_XP }
@@ -3400,8 +3396,8 @@ focus_tree = {
 		id = TU_KZD_ursus_envoy
 		icon = GFX_goal_generic_military_deal
 		prerequisite = { focus = TU_KZD_exp_hub }
-		x = 46
-		y = 4
+		x = 5
+		y = 14
 		cost = 10
 
 		search_filters = { FOCUS_FILTER_POLITICAL }
@@ -3420,8 +3416,8 @@ focus_tree = {
 		id = TU_KZD_ursus_claims
 		icon = GFX_goal_generic_demand_territory
 		prerequisite = { focus = TU_KZD_ursus_envoy }
-		x = 46
-		y = 5
+		x = 5
+		y = 15
 		cost = 10
 
 		search_filters = { FOCUS_FILTER_POLITICAL }
@@ -3440,8 +3436,8 @@ focus_tree = {
 		id = TU_KZD_ursus_reserve
 		icon = GFX_goal_generic_allies_build_infantry
 		prerequisite = { focus = TU_KZD_ursus_claims }
-		x = 46
-		y = 6
+		x = 5
+		y = 16
 		cost = 10
 
 		search_filters = { FOCUS_FILTER_ARMY_XP }
@@ -3461,8 +3457,8 @@ focus_tree = {
 		icon = GFX_goal_generic_territory_or_war
 		prerequisite = { focus = TU_KZD_ursus_reserve }
 		mutually_exclusive = { focus = TU_KZD_ursus_border_treaty }
-		x = 44
-		y = 7
+		x = 3
+		y = 17
 		cost = 10
 
 		search_filters = { FOCUS_FILTER_POLITICAL }
@@ -3482,8 +3478,8 @@ focus_tree = {
 		id = TU_KZD_ursus_winter
 		icon = GFX_goal_generic_small_arms
 		prerequisite = { focus = TU_KZD_ursus_reserve }
-		x = 46
-		y = 7
+		x = 5
+		y = 17
 		cost = 10
 
 		search_filters = { FOCUS_FILTER_ARMY_XP }
@@ -3502,8 +3498,8 @@ focus_tree = {
 		id = TU_KZD_ursus_frontier_pact
 		icon = GFX_goal_generic_defence
 		prerequisite = { focus = TU_KZD_ursus_winter }
-		x = 46
-		y = 8
+		x = 5
+		y = 18
 		cost = 10
 
 		search_filters = { FOCUS_FILTER_POLITICAL }
@@ -3523,8 +3519,8 @@ focus_tree = {
 		icon = GFX_goal_generic_forceful_treaty
 		prerequisite = { focus = TU_KZD_ursus_frontier_pact }
 		mutually_exclusive = { focus = TU_KZD_ursus_war }
-		x = 44
-		y = 9
+		x = 3
+		y = 19
 		cost = 10
 
 		search_filters = { FOCUS_FILTER_POLITICAL }
@@ -3543,8 +3539,8 @@ focus_tree = {
 		id = TU_KZD_ursus_exchange
 		icon = GFX_goal_generic_scientific_exchange
 		prerequisite = { focus = TU_KZD_ursus_frontier_pact }
-		x = 46
-		y = 9
+		x = 5
+		y = 19
 		cost = 10
 
 		search_filters = { FOCUS_FILTER_RESEARCH }
@@ -3563,8 +3559,8 @@ focus_tree = {
 		id = TU_KZD_ursus_arms_coop
 		icon = GFX_goal_generic_construct_mil_factory
 		prerequisite = { focus = TU_KZD_ursus_exchange }
-		x = 46
-		y = 10
+		x = 5
+		y = 20
 		cost = 10
 
 		search_filters = { FOCUS_FILTER_INDUSTRY }
@@ -3584,8 +3580,8 @@ focus_tree = {
 		id = TU_KZD_ursus_joint_drill
 		icon = GFX_goal_generic_cavalry
 		prerequisite = { focus = TU_KZD_ursus_arms_coop }
-		x = 46
-		y = 11
+		x = 5
+		y = 21
 		cost = 10
 
 		search_filters = { FOCUS_FILTER_ARMY_XP }
@@ -3604,8 +3600,8 @@ focus_tree = {
 		id = TU_KZD_ursus_expedition
 		icon = GFX_goal_generic_attack_allies
 		prerequisite = { focus = TU_KZD_ursus_joint_drill }
-		x = 46
-		y = 12
+		x = 5
+		y = 22
 		cost = 10
 
 		search_filters = { FOCUS_FILTER_ARMY_XP }
@@ -3625,8 +3621,8 @@ focus_tree = {
 		id = TU_KZD_ursus_capital_pact
 		icon = GFX_goal_generic_alliance
 		prerequisite = { focus = TU_KZD_ursus_border_treaty }
-		x = 44
-		y = 10
+		x = 3
+		y = 20
 		cost = 10
 
 		search_filters = { FOCUS_FILTER_POLITICAL }
@@ -3647,8 +3643,8 @@ focus_tree = {
 		id = TU_KZD_lei_talks
 		icon = GFX_goal_generic_dangerous_deal
 		prerequisite = { focus = TU_KZD_exp_hub }
-		x = 49
-		y = 4
+		x = 8
+		y = 14
 		cost = 10
 
 		search_filters = { FOCUS_FILTER_POLITICAL }
@@ -3667,8 +3663,8 @@ focus_tree = {
 		id = TU_KZD_lei_claims
 		icon = GFX_goal_generic_demand_territory
 		prerequisite = { focus = TU_KZD_lei_talks }
-		x = 49
-		y = 5
+		x = 8
+		y = 15
 		cost = 10
 
 		search_filters = { FOCUS_FILTER_POLITICAL }
@@ -3687,8 +3683,8 @@ focus_tree = {
 		id = TU_KZD_lei_mercs
 		icon = GFX_goal_generic_small_arms
 		prerequisite = { focus = TU_KZD_lei_claims }
-		x = 49
-		y = 6
+		x = 8
+		y = 16
 		cost = 10
 
 		search_filters = { FOCUS_FILTER_ARMY_XP }
@@ -3708,8 +3704,8 @@ focus_tree = {
 		icon = GFX_goal_generic_attack_allies
 		prerequisite = { focus = TU_KZD_lei_mercs }
 		mutually_exclusive = { focus = TU_KZD_lei_culture }
-		x = 48
-		y = 7
+		x = 7
+		y = 17
 		cost = 10
 
 		search_filters = { FOCUS_FILTER_POLITICAL }
@@ -3729,8 +3725,8 @@ focus_tree = {
 		icon = GFX_goal_generic_propaganda
 		prerequisite = { focus = TU_KZD_lei_mercs }
 		mutually_exclusive = { focus = TU_KZD_lei_war }
-		x = 50
-		y = 7
+		x = 9
+		y = 17
 		cost = 10
 
 		search_filters = { FOCUS_FILTER_POLITICAL }
@@ -3749,8 +3745,8 @@ focus_tree = {
 		id = TU_KZD_lei_trade_road
 		icon = GFX_goal_generic_positive_trade_relations
 		prerequisite = { focus = TU_KZD_lei_culture }
-		x = 50
-		y = 8
+		x = 9
+		y = 18
 		cost = 10
 
 		search_filters = { FOCUS_FILTER_POLITICAL }
@@ -3769,8 +3765,8 @@ focus_tree = {
 		id = TU_KZD_lei_harbor
 		icon = GFX_goal_generic_construct_naval_dockyard
 		prerequisite = { focus = TU_KZD_lei_trade_road }
-		x = 50
-		y = 9
+		x = 9
+		y = 19
 		cost = 10
 
 		search_filters = { FOCUS_FILTER_INDUSTRY }
@@ -3791,8 +3787,8 @@ focus_tree = {
 		id = TU_KZD_lei_armor_raid
 		icon = GFX_goal_generic_army_motorized
 		prerequisite = { focus = TU_KZD_lei_war }
-		x = 48
-		y = 8
+		x = 7
+		y = 18
 		cost = 10
 
 		search_filters = { FOCUS_FILTER_ARMY_XP }
@@ -3811,8 +3807,8 @@ focus_tree = {
 		id = TU_KZD_lei_occupation
 		icon = GFX_goal_generic_occupy_states_ongoing_war
 		prerequisite = { focus = TU_KZD_lei_armor_raid }
-		x = 48
-		y = 9
+		x = 7
+		y = 19
 		cost = 10
 
 		search_filters = { FOCUS_FILTER_POLITICAL }
@@ -3834,8 +3830,8 @@ focus_tree = {
 		id = TU_KZD_reu_survey
 		icon = GFX_goal_generic_radar
 		prerequisite = { focus = TU_KZD_exp_hub }
-		x = 53
-		y = 4
+		x = 12
+		y = 14
 		cost = 10
 
 		search_filters = { FOCUS_FILTER_RESEARCH }
@@ -3854,8 +3850,8 @@ focus_tree = {
 		id = TU_KZD_reu_claims
 		icon = GFX_goal_generic_demand_territory
 		prerequisite = { focus = TU_KZD_reu_survey }
-		x = 53
-		y = 5
+		x = 12
+		y = 15
 		cost = 10
 
 		search_filters = { FOCUS_FILTER_POLITICAL }
@@ -3874,8 +3870,8 @@ focus_tree = {
 		id = TU_KZD_reu_war
 		icon = GFX_goal_generic_war_with_comintern
 		prerequisite = { focus = TU_KZD_reu_claims }
-		x = 52
-		y = 6
+		x = 11
+		y = 16
 		cost = 10
 
 		search_filters = { FOCUS_FILTER_POLITICAL }
@@ -3895,8 +3891,8 @@ focus_tree = {
 		id = TU_KZD_reu_quarantine
 		icon = GFX_goal_generic_fortify_city
 		prerequisite = { focus = TU_KZD_reu_claims }
-		x = 54
-		y = 6
+		x = 13
+		y = 16
 		cost = 10
 
 		search_filters = { FOCUS_FILTER_POLITICAL }
@@ -3915,8 +3911,8 @@ focus_tree = {
 		id = TU_KZD_reu_supply_hub
 		icon = GFX_goal_generic_oil_refinery
 		prerequisite = { focus = TU_KZD_reu_quarantine }
-		x = 54
-		y = 7
+		x = 13
+		y = 17
 		cost = 10
 
 		search_filters = { FOCUS_FILTER_INDUSTRY }
@@ -3935,8 +3931,8 @@ focus_tree = {
 		id = TU_KZD_reu_medic_corps
 		icon = GFX_goal_generic_construct_civilian
 		prerequisite = { focus = TU_KZD_reu_supply_hub }
-		x = 54
-		y = 8
+		x = 13
+		y = 18
 		cost = 10
 
 		search_filters = { FOCUS_FILTER_RESEARCH }
@@ -3955,8 +3951,8 @@ focus_tree = {
 		id = TU_KZD_reu_occupation
 		icon = GFX_goal_generic_occupy_states_coastal
 		prerequisite = { focus = TU_KZD_reu_war }
-		x = 52
-		y = 7
+		x = 11
+		y = 17
 		cost = 10
 
 		search_filters = { FOCUS_FILTER_ARMY_XP }
@@ -3976,8 +3972,8 @@ focus_tree = {
 		id = TU_KZD_reu_encirclement
 		icon = GFX_goal_generic_military_sphere
 		prerequisite = { focus = TU_KZD_reu_occupation }
-		x = 52
-		y = 8
+		x = 11
+		y = 18
 		cost = 10
 
 		search_filters = { FOCUS_FILTER_POLITICAL }
@@ -3998,8 +3994,8 @@ focus_tree = {
 		id = TU_KZD_sarkaz_root
 		icon = GFX_goal_generic_special_forces
 		prerequisite = { focus = TU_KZD_exp_doctrine }
-		x = 60
-		y = 2
+		x = 19
+		y = 12
 		cost = 5
 
 		search_filters = { FOCUS_FILTER_ARMY_XP }
@@ -4020,8 +4016,8 @@ focus_tree = {
 		icon = GFX_goal_generic_special_forces
 		prerequisite = { focus = TU_KZD_sarkaz_root }
 		mutually_exclusive = { focus = TU_KZD_banshee_blood focus = TU_KZD_wendigo_blood }
-		x = 58
-		y = 3
+		x = 17
+		y = 13
 		cost = 10
 
 		search_filters = { FOCUS_FILTER_ARMY_XP }
@@ -4042,8 +4038,8 @@ focus_tree = {
 		id = TU_KZD_vampire_night_raid
 		icon = GFX_goal_generic_wolf_pack
 		prerequisite = { focus = TU_KZD_vampire_blood }
-		x = 58
-		y = 4
+		x = 17
+		y = 14
 		cost = 10
 
 		search_filters = { FOCUS_FILTER_ARMY_XP }
@@ -4062,8 +4058,8 @@ focus_tree = {
 		id = TU_KZD_vampire_elite
 		icon = GFX_goal_generic_special_forces
 		prerequisite = { focus = TU_KZD_vampire_night_raid }
-		x = 58
-		y = 5
+		x = 17
+		y = 15
 		cost = 15
 
 		search_filters = { FOCUS_FILTER_ARMY_XP }
@@ -4086,8 +4082,8 @@ focus_tree = {
 		id = TU_KZD_vampire_legion
 		icon = GFX_goal_generic_army_doctrines
 		prerequisite = { focus = TU_KZD_vampire_elite }
-		x = 58
-		y = 6
+		x = 17
+		y = 16
 		cost = 10
 
 		search_filters = { FOCUS_FILTER_POLITICAL }
@@ -4107,8 +4103,8 @@ focus_tree = {
 		icon = GFX_goal_generic_cavalry
 		prerequisite = { focus = TU_KZD_sarkaz_root }
 		mutually_exclusive = { focus = TU_KZD_banshee_blood focus = TU_KZD_vampire_blood }
-		x = 60
-		y = 3
+		x = 19
+		y = 13
 		cost = 10
 
 		search_filters = { FOCUS_FILTER_ARMY_XP }
@@ -4128,8 +4124,8 @@ focus_tree = {
 		id = TU_KZD_wendigo_snow_tactics
 		icon = GFX_goal_generic_army_doctrines
 		prerequisite = { focus = TU_KZD_wendigo_blood }
-		x = 60
-		y = 4
+		x = 19
+		y = 14
 		cost = 10
 
 		search_filters = { FOCUS_FILTER_RESEARCH }
@@ -4148,8 +4144,8 @@ focus_tree = {
 		id = TU_KZD_wendigo_pack
 		icon = GFX_goal_generic_wolf_pack
 		prerequisite = { focus = TU_KZD_wendigo_snow_tactics }
-		x = 60
-		y = 5
+		x = 19
+		y = 15
 		cost = 10
 
 		search_filters = { FOCUS_FILTER_ARMY_XP }
@@ -4169,8 +4165,8 @@ focus_tree = {
 		id = TU_KZD_wendigo_hunters
 		icon = GFX_goal_generic_allies_build_infantry
 		prerequisite = { focus = TU_KZD_wendigo_pack }
-		x = 60
-		y = 6
+		x = 19
+		y = 16
 		cost = 15
 
 		search_filters = { FOCUS_FILTER_POLITICAL }
@@ -4191,8 +4187,8 @@ focus_tree = {
 		icon = GFX_goal_generic_radar
 		prerequisite = { focus = TU_KZD_sarkaz_root }
 		mutually_exclusive = { focus = TU_KZD_vampire_blood focus = TU_KZD_wendigo_blood }
-		x = 62
-		y = 3
+		x = 21
+		y = 13
 		cost = 10
 
 		search_filters = { FOCUS_FILTER_RESEARCH }
@@ -4212,8 +4208,8 @@ focus_tree = {
 		id = TU_KZD_banshee_signal
 		icon = GFX_goal_generic_intelligence_exchange
 		prerequisite = { focus = TU_KZD_banshee_blood }
-		x = 62
-		y = 4
+		x = 21
+		y = 14
 		cost = 10
 
 		search_filters = { FOCUS_FILTER_RESEARCH }
@@ -4232,8 +4228,8 @@ focus_tree = {
 		id = TU_KZD_banshee_chorus
 		icon = GFX_goal_generic_propaganda
 		prerequisite = { focus = TU_KZD_banshee_signal }
-		x = 62
-		y = 5
+		x = 21
+		y = 15
 		cost = 10
 
 		search_filters = { FOCUS_FILTER_ARMY_XP }
@@ -4253,8 +4249,8 @@ focus_tree = {
 		id = TU_KZD_banshee_bond
 		icon = GFX_goal_generic_military_deal
 		prerequisite = { focus = TU_KZD_banshee_chorus }
-		x = 62
-		y = 6
+		x = 21
+		y = 16
 		cost = 15
 
 		search_filters = { FOCUS_FILTER_POLITICAL }
@@ -4273,8 +4269,8 @@ focus_tree = {
 		id = TU_KZD_sarkaz_unity
 		icon = GFX_goal_generic_army_doctrines
 		prerequisite = { focus = TU_KZD_vampire_legion focus = TU_KZD_wendigo_hunters focus = TU_KZD_banshee_bond }
-		x = 60
-		y = 7
+		x = 19
+		y = 17
 		cost = 15
 
 		search_filters = { FOCUS_FILTER_POLITICAL }
@@ -4293,8 +4289,8 @@ focus_tree = {
 		id = TU_KZD_sarkaz_rites
 		icon = GFX_goal_generic_national_unity
 		prerequisite = { focus = TU_KZD_sarkaz_unity }
-		x = 60
-		y = 8
+		x = 19
+		y = 18
 		cost = 10
 
 		search_filters = { FOCUS_FILTER_POLITICAL }
@@ -4315,15 +4311,14 @@ focus_tree = {
 		id = TU_KZD_fort_design
 		icon = GFX_goal_generic_fortify_city
 		prerequisite = { focus = TU_KZD_exp_doctrine }
-		x = 64
-		y = 2
+		x = 23
+		y = 12
 		cost = 10
 
 		search_filters = { FOCUS_FILTER_POLITICAL }
 
 		completion_reward = {
-			add_tech_bonus = { name = TU_KZD_fort_design bonus = 0.75 uses = 1 category = construction_tech }
-			army_experience = 25
+			TU_build_forts_2 = yes
 		}
 
 		ai_will_do = {
@@ -4335,8 +4330,8 @@ focus_tree = {
 		id = TU_KZD_fort_survey
 		icon = GFX_goal_generic_construction
 		prerequisite = { focus = TU_KZD_fort_design }
-		x = 64
-		y = 3
+		x = 23
+		y = 13
 		cost = 10
 
 		search_filters = { FOCUS_FILTER_RESEARCH }
@@ -4354,16 +4349,15 @@ focus_tree = {
 		id = TU_KZD_fort_wasteland_bunker
 		icon = GFX_goal_generic_fortify_city
 		prerequisite = { focus = TU_KZD_fort_survey }
-		x = 64
-		y = 4
+		x = 23
+		y = 14
 		cost = 10
 
 		search_filters = { FOCUS_FILTER_POLITICAL }
 
 		completion_reward = {
 			add_ideas = TU_KZD_p2_wasteland_fortress
-			add_tech_bonus = { name = TU_KZD_fort_wasteland_bunker bonus = 0.75 uses = 1 category = construction_tech }
-			army_experience = 25
+			TU_build_forts_2 = yes
 		}
 
 		ai_will_do = {
@@ -4375,8 +4369,8 @@ focus_tree = {
 		id = TU_KZD_fort_factory_camps
 		icon = GFX_goal_generic_construct_mil_factory
 		prerequisite = { focus = TU_KZD_fort_wasteland_bunker }
-		x = 64
-		y = 5
+		x = 23
+		y = 15
 		cost = 10
 
 		search_filters = { FOCUS_FILTER_INDUSTRY }
@@ -4395,8 +4389,8 @@ focus_tree = {
 		id = TU_KZD_fort_mountain_defence
 		icon = GFX_goal_generic_defence
 		prerequisite = { focus = TU_KZD_fort_wasteland_bunker }
-		x = 71
-		y = 5
+		x = 30
+		y = 15
 		cost = 10
 
 		search_filters = { FOCUS_FILTER_ARMY_XP }
@@ -4415,16 +4409,15 @@ focus_tree = {
 		id = TU_KZD_fort_supply
 		icon = GFX_goal_generic_construct_infrastructure
 		prerequisite = { focus = TU_KZD_fort_factory_camps }
-		x = 64
-		y = 6
+		x = 23
+		y = 16
 		cost = 10
 
 		search_filters = { FOCUS_FILTER_INDUSTRY }
 
 		completion_reward = {
 			TU_build_infrastructure = yes
-			add_tech_bonus = { name = TU_KZD_fort_supply bonus = 0.75 uses = 1 category = construction_tech }
-			army_experience = 25
+			TU_build_forts_2 = yes
 		}
 
 		ai_will_do = {
@@ -4436,15 +4429,14 @@ focus_tree = {
 		id = TU_KZD_fort_garrison
 		icon = GFX_goal_generic_allies_build_infantry
 		prerequisite = { focus = TU_KZD_fort_mountain_defence }
-		x = 70
-		y = 6
+		x = 29
+		y = 16
 		cost = 10
 
 		search_filters = { FOCUS_FILTER_POLITICAL }
 
 		completion_reward = {
-			add_tech_bonus = { name = TU_KZD_fort_garrison bonus = 0.75 uses = 1 category = construction_tech }
-			army_experience = 25
+			TU_build_forts_2 = yes
 		}
 
 		ai_will_do = {
@@ -4456,8 +4448,8 @@ focus_tree = {
 		id = TU_KZD_fort_ambush
 		icon = GFX_goal_generic_small_arms
 		prerequisite = { focus = TU_KZD_fort_mountain_defence }
-		x = 72
-		y = 6
+		x = 31
+		y = 16
 		cost = 10
 
 		search_filters = { FOCUS_FILTER_ARMY_XP }
@@ -4476,8 +4468,8 @@ focus_tree = {
 		id = TU_KZD_fort_guerilla
 		icon = GFX_goal_generic_special_forces
 		prerequisite = { focus = TU_KZD_fort_ambush }
-		x = 72
-		y = 7
+		x = 31
+		y = 17
 		cost = 10
 
 		search_filters = { FOCUS_FILTER_ARMY_XP }
@@ -4497,15 +4489,14 @@ focus_tree = {
 		id = TU_KZD_fort_frontier_wall
 		icon = GFX_goal_generic_fortify_city
 		prerequisite = { focus = TU_KZD_fort_supply }
-		x = 64
-		y = 7
+		x = 23
+		y = 17
 		cost = 15
 
 		search_filters = { FOCUS_FILTER_POLITICAL }
 
 		completion_reward = {
-			add_tech_bonus = { name = TU_KZD_fort_frontier_wall bonus = 1.0 uses = 1 category = construction_tech }
-			army_experience = 40
+			TU_build_forts_3 = yes
 		}
 
 		ai_will_do = {
@@ -4517,8 +4508,8 @@ focus_tree = {
 		id = TU_KZD_fort_forward_base
 		icon = GFX_goal_generic_construct_military
 		prerequisite = { focus = TU_KZD_fort_frontier_wall }
-		x = 64
-		y = 8
+		x = 23
+		y = 18
 		cost = 10
 
 		search_filters = { FOCUS_FILTER_INDUSTRY }
@@ -4538,8 +4529,8 @@ focus_tree = {
 		id = TU_KZD_fort_watchtower
 		icon = GFX_goal_generic_construction2
 		prerequisite = { focus = TU_KZD_fort_forward_base }
-		x = 64
-		y = 9
+		x = 23
+		y = 19
 		cost = 10
 
 		search_filters = { FOCUS_FILTER_POLITICAL }
@@ -4559,8 +4550,8 @@ focus_tree = {
 		icon = GFX_goal_generic_production
 		prerequisite = { focus = TU_KZD_fort_factory_camps }
 		mutually_exclusive = { focus = TU_KZD_fort_resource_dig_alt }
-		x = 66
-		y = 6
+		x = 25
+		y = 16
 		cost = 10
 
 		search_filters = { FOCUS_FILTER_INDUSTRY }
@@ -4580,16 +4571,15 @@ focus_tree = {
 		icon = GFX_goal_generic_construct_infrastructure
 		prerequisite = { focus = TU_KZD_fort_factory_camps }
 		mutually_exclusive = { focus = TU_KZD_fort_resource_dig }
-		x = 68
-		y = 6
+		x = 27
+		y = 16
 		cost = 10
 
 		search_filters = { FOCUS_FILTER_INDUSTRY }
 
 		completion_reward = {
 			TU_build_infrastructure = yes
-			add_tech_bonus = { name = TU_KZD_fort_resource_dig_alt bonus = 0.75 uses = 1 category = construction_tech }
-			army_experience = 25
+			TU_build_forts_2 = yes
 		}
 
 		ai_will_do = {

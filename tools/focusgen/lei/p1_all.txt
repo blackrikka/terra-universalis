@@ -778,8 +778,7 @@
 		}
 
 		completion_reward = {
-			add_tech_bonus = { name = TU_LEI_mountain_line bonus = 0.75 uses = 1 category = construction_tech }
-			army_experience = 25
+			TU_build_forts_2 = yes
 		}
 	}
 
@@ -902,8 +901,7 @@
 		}
 
 		completion_reward = {
-			add_tech_bonus = { name = TU_LEI_kazimierz_border bonus = 0.75 uses = 1 category = construction_tech }
-			army_experience = 25
+			TU_build_forts_2 = yes
 		}
 	}
 
@@ -1012,7 +1010,7 @@
 
 	focus = {
 		id = TU_LEI_rail_network
-		icon = GFX_goal_generic_production
+		icon = GFX_goal_generic_construct_infrastructure
 		prerequisite = { focus = TU_LEI_road_network }
 		x = 0
 		y = 0
@@ -1025,8 +1023,7 @@
 		}
 
 		completion_reward = {
-			add_tech_bonus = { name = TU_LEI_rail_network bonus = 0.75 uses = 1 category = industry category = construction_tech }
-			TU_build_infrastructure = yes
+			TU_build_railway = yes
 		}
 	}
 
@@ -1622,8 +1619,7 @@
 		}
 
 		completion_reward = {
-			add_tech_bonus = { name = TU_LEI_bunkers bonus = 0.75 uses = 1 category = construction_tech }
-			army_experience = 25
+			TU_build_forts_2 = yes
 		}
 	}
 
@@ -2163,8 +2159,7 @@
 		}
 
 		completion_reward = {
-			add_tech_bonus = { name = TU_LEI_arts_shields bonus = 0.75 uses = 1 category = construction_tech }
-			army_experience = 25
+			TU_build_forts_2 = yes
 		}
 	}
 

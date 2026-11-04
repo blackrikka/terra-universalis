@@ -663,8 +663,7 @@
 		}
 
 		completion_reward = {
-			TU_build_infrastructure = yes
-			add_tech_bonus = { name = TU_VIC_duk_rail_concession bonus = 0.75 uses = 1 category = industry category = construction_tech }
+			TU_build_railway = yes
 		}
 	}
 
@@ -748,8 +747,7 @@
 		}
 
 		completion_reward = {
-			add_tech_bonus = { name = TU_VIC_duk_fortified_estates bonus = 0.75 uses = 1 category = construction_tech }
-			army_experience = 25
+			TU_build_forts_2 = yes
 		}
 	}
 
@@ -2068,8 +2066,7 @@
 
 		completion_reward = {
 			TU_build_infrastructure = yes
-			add_tech_bonus = { name = TU_VIC_drc_flame_bastion bonus = 0.75 uses = 1 category = construction_tech }
-			army_experience = 25
+			TU_build_forts_2 = yes
 		}
 	}
 
@@ -2157,9 +2154,7 @@
 		}
 
 		completion_reward = {
-			TU_build_infrastructure = yes
-			add_tech_bonus = { name = TU_VIC_drc_iron_rail bonus = 0.75 uses = 1 category = infantry_weapons }
-			army_experience = 25
+			TU_build_railway = yes
 		}
 	}
 
@@ -2977,8 +2972,7 @@
 
 		completion_reward = {
 			TU_build_civ_factory = yes
-			add_tech_bonus = { name = TU_VIC_par_steel_rail bonus = 0.75 uses = 1 category = infantry_weapons }
-			army_experience = 25
+			TU_build_railway = yes
 		}
 	}
 

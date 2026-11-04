@@ -1,6 +1,6 @@
 focus_tree = {
 	id = TU_LAT_focus
-	continuous_focus_position = { x = 50 y = 1430 }
+	continuous_focus_position = { x = 50 y = 2470 }
 
 	country = {
 		factor = 0
@@ -41,7 +41,7 @@ focus_tree = {
 		id = TU_LAT_papal_council
 		icon = GFX_goal_generic_political_pressure
 		prerequisite = { focus = TU_LAT_root }
-		x = -25
+		x = -13
 		y = 1
 		cost = 10
 
@@ -61,7 +61,7 @@ focus_tree = {
 		id = TU_LAT_college_cardinals
 		icon = GFX_goal_generic_political_pressure
 		prerequisite = { focus = TU_LAT_papal_council }
-		x = -25
+		x = -13
 		y = 2
 		cost = 10
 
@@ -81,7 +81,7 @@ focus_tree = {
 		id = TU_LAT_papal_decree
 		icon = GFX_goal_generic_political_pressure
 		prerequisite = { focus = TU_LAT_papal_council }
-		x = -20
+		x = -8
 		y = 2
 		cost = 10
 
@@ -101,7 +101,7 @@ focus_tree = {
 		id = TU_LAT_canonization
 		icon = GFX_goal_generic_political_pressure
 		prerequisite = { focus = TU_LAT_papal_decree }
-		x = -20
+		x = -8
 		y = 3
 		cost = 10
 
@@ -122,7 +122,7 @@ focus_tree = {
 		id = TU_LAT_sacred_texts
 		icon = GFX_focus_research
 		prerequisite = { focus = TU_LAT_college_cardinals }
-		x = -25
+		x = -13
 		y = 3
 		cost = 10
 
@@ -141,7 +141,7 @@ focus_tree = {
 		id = TU_LAT_liturgy_reform
 		icon = GFX_goal_generic_political_pressure
 		prerequisite = { focus = TU_LAT_sacred_texts }
-		x = -25
+		x = -13
 		y = 4
 		cost = 10
 
@@ -163,7 +163,7 @@ focus_tree = {
 		prerequisite = { focus = TU_LAT_liturgy_reform }
 		prerequisite = { focus = TU_LAT_canonization }
 		mutually_exclusive = { focus = TU_LAT_cardinals_accord }
-		x = -26
+		x = -14
 		y = 5
 		cost = 10
 
@@ -185,7 +185,7 @@ focus_tree = {
 		prerequisite = { focus = TU_LAT_liturgy_reform }
 		prerequisite = { focus = TU_LAT_canonization }
 		mutually_exclusive = { focus = TU_LAT_papal_authority }
-		x = -24
+		x = -12
 		y = 5
 		cost = 10
 
@@ -206,7 +206,7 @@ focus_tree = {
 		icon = GFX_goal_generic_political_pressure
 		prerequisite = { focus = TU_LAT_papal_authority focus = TU_LAT_cardinals_accord }
 		mutually_exclusive = { focus = TU_LAT_notarial_republic focus = TU_LAT_open_city }
-		x = -25
+		x = -13
 		y = 6
 		cost = 15
 
@@ -227,7 +227,7 @@ focus_tree = {
 		id = TU_LAT_holy_inquisition
 		icon = GFX_goal_generic_intelligence_exchange
 		prerequisite = { focus = TU_LAT_papal_theocracy }
-		x = -26
+		x = -14
 		y = 7
 		cost = 10
 
@@ -247,7 +247,7 @@ focus_tree = {
 		id = TU_LAT_saint_processions
 		icon = GFX_goal_generic_propaganda
 		prerequisite = { focus = TU_LAT_papal_theocracy }
-		x = -23
+		x = -11
 		y = 7
 		cost = 10
 
@@ -268,7 +268,7 @@ focus_tree = {
 		id = TU_LAT_crusade_preaching
 		icon = GFX_goal_generic_occupy_start_war
 		prerequisite = { focus = TU_LAT_holy_inquisition }
-		x = -27
+		x = -15
 		y = 8
 		cost = 10
 
@@ -290,7 +290,7 @@ focus_tree = {
 		icon = GFX_goal_generic_propaganda
 		prerequisite = { focus = TU_LAT_crusade_preaching }
 		prerequisite = { focus = TU_LAT_saint_processions }
-		x = -27
+		x = -15
 		y = 9
 		cost = 10
 
@@ -311,7 +311,7 @@ focus_tree = {
 		id = TU_LAT_notarial_hall
 		icon = GFX_goal_generic_political_pressure
 		prerequisite = { focus = TU_LAT_root }
-		x = -9
+		x = 3
 		y = 1
 		cost = 10
 
@@ -331,7 +331,7 @@ focus_tree = {
 		id = TU_LAT_laterano_law
 		icon = GFX_goal_generic_political_pressure
 		prerequisite = { focus = TU_LAT_notarial_hall }
-		x = -16
+		x = -4
 		y = 2
 		cost = 10
 
@@ -351,7 +351,7 @@ focus_tree = {
 		id = TU_LAT_notary_network
 		icon = GFX_goal_generic_production
 		prerequisite = { focus = TU_LAT_notarial_hall }
-		x = -9
+		x = 3
 		y = 2
 		cost = 10
 
@@ -371,7 +371,7 @@ focus_tree = {
 		id = TU_LAT_contract_courts
 		icon = GFX_goal_generic_trade
 		prerequisite = { focus = TU_LAT_laterano_law }
-		x = -16
+		x = -4
 		y = 3
 		cost = 10
 
@@ -391,7 +391,7 @@ focus_tree = {
 		id = TU_LAT_treaty_registry
 		icon = GFX_goal_generic_improve_relations
 		prerequisite = { focus = TU_LAT_notary_network }
-		x = -11
+		x = 1
 		y = 3
 		cost = 10
 
@@ -412,7 +412,7 @@ focus_tree = {
 		id = TU_LAT_fallen_registry
 		icon = GFX_goal_generic_political_pressure
 		prerequisite = { focus = TU_LAT_notary_network }
-		x = -9
+		x = 3
 		y = 3
 		cost = 10
 
@@ -434,7 +434,7 @@ focus_tree = {
 		prerequisite = { focus = TU_LAT_contract_courts }
 		prerequisite = { focus = TU_LAT_treaty_registry }
 		mutually_exclusive = { focus = TU_LAT_papal_theocracy focus = TU_LAT_open_city }
-		x = -16
+		x = -4
 		y = 4
 		cost = 15
 
@@ -455,7 +455,7 @@ focus_tree = {
 		id = TU_LAT_rule_of_law
 		icon = GFX_goal_generic_political_pressure
 		prerequisite = { focus = TU_LAT_notarial_republic }
-		x = -17
+		x = -5
 		y = 5
 		cost = 10
 
@@ -475,7 +475,7 @@ focus_tree = {
 		id = TU_LAT_international_notary
 		icon = GFX_goal_generic_improve_relations
 		prerequisite = { focus = TU_LAT_notarial_republic }
-		x = -15
+		x = -3
 		y = 5
 		cost = 10
 
@@ -497,7 +497,7 @@ focus_tree = {
 		icon = GFX_goal_generic_improve_relations
 		prerequisite = { focus = TU_LAT_international_notary }
 		prerequisite = { focus = TU_LAT_rule_of_law }
-		x = -13
+		x = -1
 		y = 6
 		cost = 10
 
@@ -517,7 +517,7 @@ focus_tree = {
 		id = TU_LAT_firearm_workshops
 		icon = GFX_goal_generic_small_arms
 		prerequisite = { focus = TU_LAT_root }
-		x = -4
+		x = 9
 		y = 1
 		cost = 10
 
@@ -537,7 +537,7 @@ focus_tree = {
 		id = TU_LAT_hymn_ammunition
 		icon = GFX_goal_generic_small_arms
 		prerequisite = { focus = TU_LAT_firearm_workshops }
-		x = -4
+		x = 9
 		y = 2
 		cost = 10
 
@@ -557,7 +557,7 @@ focus_tree = {
 		id = TU_LAT_blessing_rites
 		icon = GFX_goal_generic_small_arms
 		prerequisite = { focus = TU_LAT_firearm_workshops }
-		x = 2
+		x = 15
 		y = 2
 		cost = 10
 
@@ -577,7 +577,7 @@ focus_tree = {
 		id = TU_LAT_rifle_standard
 		icon = GFX_goal_generic_small_arms
 		prerequisite = { focus = TU_LAT_hymn_ammunition }
-		x = -4
+		x = 9
 		y = 3
 		cost = 10
 
@@ -597,7 +597,7 @@ focus_tree = {
 		id = TU_LAT_marksman_school
 		icon = GFX_goal_generic_army_doctrines
 		prerequisite = { focus = TU_LAT_rifle_standard }
-		x = -4
+		x = 9
 		y = 4
 		cost = 10
 
@@ -618,7 +618,7 @@ focus_tree = {
 		icon = GFX_goal_generic_army_doctrines
 		prerequisite = { focus = TU_LAT_marksman_school }
 		mutually_exclusive = { focus = TU_LAT_firepower_doctrine }
-		x = -5
+		x = 8
 		y = 5
 		cost = 10
 
@@ -639,7 +639,7 @@ focus_tree = {
 		icon = GFX_goal_generic_army_doctrines
 		prerequisite = { focus = TU_LAT_marksman_school }
 		mutually_exclusive = { focus = TU_LAT_sniper_doctrine }
-		x = -3
+		x = 10
 		y = 5
 		cost = 10
 
@@ -659,7 +659,7 @@ focus_tree = {
 		id = TU_LAT_sankta_marksmen
 		icon = GFX_goal_generic_propaganda
 		prerequisite = { focus = TU_LAT_sniper_doctrine focus = TU_LAT_firepower_doctrine }
-		x = -1
+		x = 12
 		y = 6
 		cost = 10
 
@@ -678,7 +678,7 @@ focus_tree = {
 		id = TU_LAT_cathedral_artillery
 		icon = GFX_goal_generic_army_artillery
 		prerequisite = { focus = TU_LAT_hymn_ammunition }
-		x = 0
+		x = 13
 		y = 3
 		cost = 10
 
@@ -698,7 +698,7 @@ focus_tree = {
 		id = TU_LAT_arms_factories
 		icon = GFX_goal_generic_small_arms
 		prerequisite = { focus = TU_LAT_blessing_rites }
-		x = 2
+		x = 15
 		y = 3
 		cost = 10
 
@@ -719,7 +719,7 @@ focus_tree = {
 		id = TU_LAT_firearm_exports
 		icon = GFX_goal_generic_small_arms
 		prerequisite = { focus = TU_LAT_arms_factories }
-		x = 2
+		x = 15
 		y = 4
 		cost = 10
 
@@ -740,7 +740,7 @@ focus_tree = {
 		id = TU_LAT_exusiai_style
 		icon = GFX_goal_generic_army_motorized
 		prerequisite = { focus = TU_LAT_sankta_marksmen }
-		x = -1
+		x = 12
 		y = 7
 		cost = 10
 
@@ -760,8 +760,8 @@ focus_tree = {
 		id = TU_LAT_laterano_guard
 		icon = GFX_goal_generic_allies_build_infantry
 		prerequisite = { focus = TU_LAT_root }
-		x = 6
-		y = 1
+		x = -9
+		y = 10
 		cost = 10
 
 		search_filters = { FOCUS_FILTER_POLITICAL }
@@ -780,8 +780,8 @@ focus_tree = {
 		id = TU_LAT_guard_rapid
 		icon = GFX_goal_generic_army_motorized
 		prerequisite = { focus = TU_LAT_laterano_guard }
-		x = 6
-		y = 2
+		x = -9
+		y = 11
 		cost = 10
 
 		search_filters = { FOCUS_FILTER_POLITICAL }
@@ -800,8 +800,8 @@ focus_tree = {
 		id = TU_LAT_holy_walls
 		icon = GFX_goal_generic_defence
 		prerequisite = { focus = TU_LAT_laterano_guard }
-		x = 10
-		y = 2
+		x = -5
+		y = 11
 		cost = 10
 
 		search_filters = { FOCUS_FILTER_POLITICAL }
@@ -811,8 +811,7 @@ focus_tree = {
 		}
 
 		completion_reward = {
-			add_tech_bonus = { name = TU_LAT_holy_walls bonus = 0.75 uses = 1 category = construction_tech }
-			army_experience = 25
+			TU_build_forts_2 = yes
 		}
 	}
 
@@ -821,8 +820,8 @@ focus_tree = {
 		icon = GFX_goal_generic_air_doctrine
 		prerequisite = { focus = TU_LAT_guard_rapid }
 		mutually_exclusive = { focus = TU_LAT_ground_patrol }
-		x = 4
-		y = 3
+		x = -11
+		y = 12
 		cost = 10
 
 		search_filters = { FOCUS_FILTER_POLITICAL }
@@ -843,8 +842,8 @@ focus_tree = {
 		icon = GFX_goal_generic_defence
 		prerequisite = { focus = TU_LAT_guard_rapid }
 		mutually_exclusive = { focus = TU_LAT_air_patrol }
-		x = 6
-		y = 3
+		x = -9
+		y = 12
 		cost = 10
 
 		search_filters = { FOCUS_FILTER_POLITICAL }
@@ -863,8 +862,8 @@ focus_tree = {
 		id = TU_LAT_officer_school
 		icon = GFX_goal_generic_army_doctrines
 		prerequisite = { focus = TU_LAT_holy_walls }
-		x = 8
-		y = 3
+		x = -7
+		y = 12
 		cost = 10
 
 		search_filters = { FOCUS_FILTER_POLITICAL }
@@ -883,8 +882,8 @@ focus_tree = {
 		id = TU_LAT_sankta_volunteers
 		icon = GFX_goal_generic_allies_build_infantry
 		prerequisite = { focus = TU_LAT_officer_school }
-		x = 8
-		y = 4
+		x = -7
+		y = 13
 		cost = 10
 
 		search_filters = { FOCUS_FILTER_POLITICAL }
@@ -904,8 +903,8 @@ focus_tree = {
 		icon = GFX_goal_generic_allies_build_infantry
 		prerequisite = { focus = TU_LAT_air_patrol focus = TU_LAT_ground_patrol }
 		prerequisite = { focus = TU_LAT_sankta_volunteers }
-		x = 6
-		y = 5
+		x = -9
+		y = 14
 		cost = 10
 
 		search_filters = { FOCUS_FILTER_POLITICAL }
@@ -924,8 +923,8 @@ focus_tree = {
 		id = TU_LAT_sky_apostles
 		icon = GFX_goal_generic_air_doctrine
 		prerequisite = { focus = TU_LAT_guard_spirit }
-		x = 6
-		y = 6
+		x = -9
+		y = 15
 		cost = 10
 
 		search_filters = { FOCUS_FILTER_POLITICAL }
@@ -945,8 +944,8 @@ focus_tree = {
 		id = TU_LAT_anti_air_guns
 		icon = GFX_goal_generic_air_doctrine
 		prerequisite = { focus = TU_LAT_holy_walls }
-		x = 10
-		y = 3
+		x = -5
+		y = 12
 		cost = 10
 
 		search_filters = { FOCUS_FILTER_POLITICAL }
@@ -966,8 +965,8 @@ focus_tree = {
 		id = TU_LAT_pilgrimage
 		icon = GFX_goal_generic_trade
 		prerequisite = { focus = TU_LAT_root }
-		x = 18
-		y = 1
+		x = 6
+		y = 11
 		cost = 10
 
 		search_filters = { FOCUS_FILTER_POLITICAL }
@@ -987,8 +986,8 @@ focus_tree = {
 		id = TU_LAT_pilgrim_roads
 		icon = GFX_goal_generic_production
 		prerequisite = { focus = TU_LAT_pilgrimage }
-		x = 16
-		y = 2
+		x = 4
+		y = 12
 		cost = 10
 
 		search_filters = { FOCUS_FILTER_INDUSTRY }
@@ -1007,8 +1006,8 @@ focus_tree = {
 		id = TU_LAT_guest_houses
 		icon = GFX_goal_generic_propaganda
 		prerequisite = { focus = TU_LAT_pilgrim_roads }
-		x = 16
-		y = 3
+		x = 4
+		y = 13
 		cost = 10
 
 		search_filters = { FOCUS_FILTER_INDUSTRY }
@@ -1028,8 +1027,8 @@ focus_tree = {
 		id = TU_LAT_relic_trade
 		icon = GFX_focus_research
 		prerequisite = { focus = TU_LAT_pilgrimage }
-		x = 20
-		y = 2
+		x = 8
+		y = 12
 		cost = 10
 
 		search_filters = { FOCUS_FILTER_POLITICAL }
@@ -1047,8 +1046,8 @@ focus_tree = {
 		id = TU_LAT_holy_bank
 		icon = GFX_goal_generic_trade
 		prerequisite = { focus = TU_LAT_relic_trade }
-		x = 20
-		y = 3
+		x = 8
+		y = 13
 		cost = 10
 
 		search_filters = { FOCUS_FILTER_POLITICAL }
@@ -1067,8 +1066,8 @@ focus_tree = {
 		id = TU_LAT_workshop_district
 		icon = GFX_goal_generic_production
 		prerequisite = { focus = TU_LAT_guest_houses }
-		x = 16
-		y = 4
+		x = 4
+		y = 14
 		cost = 10
 
 		search_filters = { FOCUS_FILTER_INDUSTRY }
@@ -1087,8 +1086,8 @@ focus_tree = {
 		id = TU_LAT_civil_factories
 		icon = GFX_goal_generic_production
 		prerequisite = { focus = TU_LAT_workshop_district }
-		x = 15
-		y = 5
+		x = 3
+		y = 15
 		cost = 10
 
 		search_filters = { FOCUS_FILTER_INDUSTRY }
@@ -1107,8 +1106,8 @@ focus_tree = {
 		id = TU_LAT_research_halls
 		icon = GFX_focus_research
 		prerequisite = { focus = TU_LAT_holy_bank }
-		x = 20
-		y = 4
+		x = 8
+		y = 14
 		cost = 10
 
 		search_filters = { FOCUS_FILTER_POLITICAL }
@@ -1127,8 +1126,8 @@ focus_tree = {
 		icon = GFX_goal_generic_production
 		prerequisite = { focus = TU_LAT_civil_factories }
 		prerequisite = { focus = TU_LAT_research_halls }
-		x = 14
-		y = 6
+		x = 2
+		y = 16
 		cost = 10
 
 		search_filters = { FOCUS_FILTER_INDUSTRY }
@@ -1147,8 +1146,8 @@ focus_tree = {
 		id = TU_LAT_covenant_idea
 		icon = GFX_goal_generic_improve_relations
 		prerequisite = { focus = TU_LAT_root }
-		x = 26
-		y = 1
+		x = 17
+		y = 7
 		cost = 10
 
 		search_filters = { FOCUS_FILTER_POLITICAL }
@@ -1168,8 +1167,8 @@ focus_tree = {
 		id = TU_LAT_envoys
 		icon = GFX_goal_generic_improve_relations
 		prerequisite = { focus = TU_LAT_covenant_idea }
-		x = 26
-		y = 2
+		x = 17
+		y = 8
 		cost = 10
 
 		search_filters = { FOCUS_FILTER_POLITICAL }
@@ -1188,8 +1187,8 @@ focus_tree = {
 		id = TU_LAT_victoria_ties
 		icon = GFX_goal_generic_improve_relations
 		prerequisite = { focus = TU_LAT_envoys }
-		x = 26
-		y = 3
+		x = 17
+		y = 9
 		cost = 10
 
 		search_filters = { FOCUS_FILTER_POLITICAL }
@@ -1208,8 +1207,8 @@ focus_tree = {
 		id = TU_LAT_columbia_ties
 		icon = GFX_goal_generic_improve_relations
 		prerequisite = { focus = TU_LAT_envoys }
-		x = 29
-		y = 3
+		x = 20
+		y = 9
 		cost = 10
 
 		search_filters = { FOCUS_FILTER_POLITICAL }
@@ -1228,8 +1227,8 @@ focus_tree = {
 		id = TU_LAT_kazimierz_ties
 		icon = GFX_goal_generic_improve_relations
 		prerequisite = { focus = TU_LAT_victoria_ties }
-		x = 26
-		y = 4
+		x = 17
+		y = 10
 		cost = 10
 
 		search_filters = { FOCUS_FILTER_POLITICAL }
@@ -1248,8 +1247,8 @@ focus_tree = {
 		id = TU_LAT_iberia_question
 		icon = GFX_goal_generic_political_pressure
 		prerequisite = { focus = TU_LAT_columbia_ties }
-		x = 28
-		y = 4
+		x = 19
+		y = 10
 		cost = 10
 
 		search_filters = { FOCUS_FILTER_POLITICAL }
@@ -1269,8 +1268,8 @@ focus_tree = {
 		icon = GFX_goal_generic_improve_relations
 		prerequisite = { focus = TU_LAT_kazimierz_ties }
 		prerequisite = { focus = TU_LAT_iberia_question }
-		x = 25
-		y = 5
+		x = 16
+		y = 11
 		cost = 10
 
 		search_filters = { FOCUS_FILTER_POLITICAL }
@@ -1289,7 +1288,7 @@ focus_tree = {
 		id = TU_LAT_fallen_question
 		icon = GFX_goal_generic_political_pressure
 		prerequisite = { focus = TU_LAT_fallen_registry }
-		x = -9
+		x = 3
 		y = 4
 		cost = 10
 
@@ -1310,7 +1309,7 @@ focus_tree = {
 		icon = GFX_goal_generic_political_pressure
 		prerequisite = { focus = TU_LAT_fallen_question }
 		mutually_exclusive = { focus = TU_LAT_pardon_fallen }
-		x = -11
+		x = 1
 		y = 5
 		cost = 10
 
@@ -1331,7 +1330,7 @@ focus_tree = {
 		icon = GFX_goal_generic_political_pressure
 		prerequisite = { focus = TU_LAT_fallen_question }
 		mutually_exclusive = { focus = TU_LAT_pursue_fallen }
-		x = -9
+		x = 3
 		y = 5
 		cost = 10
 
@@ -1352,7 +1351,7 @@ focus_tree = {
 		icon = GFX_goal_generic_propaganda
 		prerequisite = { focus = TU_LAT_pardon_fallen }
 		mutually_exclusive = { focus = TU_LAT_papal_theocracy focus = TU_LAT_notarial_republic }
-		x = -9
+		x = 3
 		y = 6
 		cost = 15
 
@@ -1378,7 +1377,7 @@ focus_tree = {
 		id = TU_LAT_citizenship_reform
 		icon = GFX_goal_generic_build_navy
 		prerequisite = { focus = TU_LAT_open_city }
-		x = -9
+		x = 3
 		y = 7
 		cost = 10
 
@@ -1399,7 +1398,7 @@ focus_tree = {
 		id = TU_LAT_refugee_shelters
 		icon = GFX_goal_generic_consumer_goods
 		prerequisite = { focus = TU_LAT_citizenship_reform }
-		x = -10
+		x = 2
 		y = 8
 		cost = 10
 
@@ -1419,7 +1418,7 @@ focus_tree = {
 		id = TU_LAT_city_of_all
 		icon = GFX_goal_generic_propaganda
 		prerequisite = { focus = TU_LAT_refugee_shelters }
-		x = -11
+		x = 1
 		y = 9
 		cost = 10
 
@@ -1439,7 +1438,7 @@ focus_tree = {
 		id = TU_LAT_choir_broadcast
 		icon = GFX_goal_generic_production
 		prerequisite = { focus = TU_LAT_papal_council }
-		x = -18
+		x = -6
 		y = 2
 		cost = 10
 
@@ -1458,7 +1457,7 @@ focus_tree = {
 		id = TU_LAT_seminaries
 		icon = GFX_focus_research
 		prerequisite = { focus = TU_LAT_sacred_texts }
-		x = -22
+		x = -10
 		y = 4
 		cost = 10
 
@@ -1477,7 +1476,7 @@ focus_tree = {
 		id = TU_LAT_halo_studies
 		icon = GFX_focus_research
 		prerequisite = { focus = TU_LAT_seminaries }
-		x = -22
+		x = -10
 		y = 5
 		cost = 10
 
@@ -1496,7 +1495,7 @@ focus_tree = {
 		id = TU_LAT_cathedral_restoration
 		icon = GFX_goal_generic_production
 		prerequisite = { focus = TU_LAT_canonization }
-		x = -20
+		x = -8
 		y = 4
 		cost = 10
 
@@ -1516,7 +1515,7 @@ focus_tree = {
 		id = TU_LAT_papal_guards_expand
 		icon = GFX_goal_generic_allies_build_infantry
 		prerequisite = { focus = TU_LAT_holy_inquisition }
-		x = -25
+		x = -13
 		y = 8
 		cost = 10
 
@@ -1536,7 +1535,7 @@ focus_tree = {
 		id = TU_LAT_missionaries
 		icon = GFX_goal_generic_improve_relations
 		prerequisite = { focus = TU_LAT_saint_processions }
-		x = -23
+		x = -11
 		y = 8
 		cost = 10
 
@@ -1557,7 +1556,7 @@ focus_tree = {
 		id = TU_LAT_notary_academy
 		icon = GFX_goal_generic_army_doctrines
 		prerequisite = { focus = TU_LAT_laterano_law }
-		x = -14
+		x = -2
 		y = 3
 		cost = 10
 
@@ -1577,7 +1576,7 @@ focus_tree = {
 		id = TU_LAT_archive_vaults
 		icon = GFX_focus_research
 		prerequisite = { focus = TU_LAT_treaty_registry }
-		x = -11
+		x = 1
 		y = 4
 		cost = 10
 
@@ -1596,7 +1595,7 @@ focus_tree = {
 		id = TU_LAT_appeal_courts
 		icon = GFX_goal_generic_political_pressure
 		prerequisite = { focus = TU_LAT_contract_courts }
-		x = -14
+		x = -2
 		y = 4
 		cost = 10
 
@@ -1616,7 +1615,7 @@ focus_tree = {
 		id = TU_LAT_law_enforcement
 		icon = GFX_goal_generic_intelligence_exchange
 		prerequisite = { focus = TU_LAT_rule_of_law }
-		x = -17
+		x = -5
 		y = 6
 		cost = 10
 
@@ -1636,7 +1635,7 @@ focus_tree = {
 		id = TU_LAT_contract_bank
 		icon = GFX_goal_generic_trade
 		prerequisite = { focus = TU_LAT_international_notary }
-		x = -15
+		x = -3
 		y = 6
 		cost = 10
 
@@ -1656,7 +1655,7 @@ focus_tree = {
 		id = TU_LAT_rifle_forges
 		icon = GFX_goal_generic_small_arms
 		prerequisite = { focus = TU_LAT_rifle_standard }
-		x = -2
+		x = 11
 		y = 4
 		cost = 10
 
@@ -1676,7 +1675,7 @@ focus_tree = {
 		id = TU_LAT_blessed_bullets
 		icon = GFX_goal_generic_small_arms
 		prerequisite = { focus = TU_LAT_cathedral_artillery }
-		x = 0
+		x = 13
 		y = 4
 		cost = 10
 
@@ -1696,7 +1695,7 @@ focus_tree = {
 		id = TU_LAT_mortar_choir
 		icon = GFX_goal_generic_army_artillery
 		prerequisite = { focus = TU_LAT_blessed_bullets }
-		x = 0
+		x = 13
 		y = 5
 		cost = 10
 
@@ -1716,7 +1715,7 @@ focus_tree = {
 		id = TU_LAT_smg_doctrine
 		icon = GFX_goal_generic_army_artillery
 		prerequisite = { focus = TU_LAT_sniper_doctrine }
-		x = -5
+		x = 8
 		y = 6
 		cost = 10
 
@@ -1736,7 +1735,7 @@ focus_tree = {
 		id = TU_LAT_heavy_weapons
 		icon = GFX_goal_generic_small_arms
 		prerequisite = { focus = TU_LAT_firepower_doctrine }
-		x = -3
+		x = 10
 		y = 6
 		cost = 10
 
@@ -1756,7 +1755,7 @@ focus_tree = {
 		id = TU_LAT_gun_maintenance
 		icon = GFX_goal_generic_army_artillery
 		prerequisite = { focus = TU_LAT_exusiai_style }
-		x = -1
+		x = 12
 		y = 8
 		cost = 10
 
@@ -1776,7 +1775,7 @@ focus_tree = {
 		id = TU_LAT_export_guild
 		icon = GFX_goal_generic_small_arms
 		prerequisite = { focus = TU_LAT_firearm_exports }
-		x = 2
+		x = 15
 		y = 5
 		cost = 10
 
@@ -1797,8 +1796,8 @@ focus_tree = {
 		id = TU_LAT_guard_drill
 		icon = GFX_goal_generic_army_doctrines
 		prerequisite = { focus = TU_LAT_laterano_guard }
-		x = 14
-		y = 2
+		x = -1
+		y = 11
 		cost = 10
 
 		search_filters = { FOCUS_FILTER_POLITICAL }
@@ -1817,8 +1816,8 @@ focus_tree = {
 		id = TU_LAT_guard_medics
 		icon = GFX_goal_generic_consumer_goods
 		prerequisite = { focus = TU_LAT_guard_drill }
-		x = 14
-		y = 3
+		x = -1
+		y = 12
 		cost = 10
 
 		search_filters = { FOCUS_FILTER_POLITICAL }
@@ -1837,8 +1836,8 @@ focus_tree = {
 		id = TU_LAT_bastion_gates
 		icon = GFX_goal_generic_defence
 		prerequisite = { focus = TU_LAT_holy_walls }
-		x = 12
-		y = 3
+		x = -3
+		y = 12
 		cost = 10
 
 		search_filters = { FOCUS_FILTER_POLITICAL }
@@ -1848,8 +1847,7 @@ focus_tree = {
 		}
 
 		completion_reward = {
-			add_tech_bonus = { name = TU_LAT_bastion_gates bonus = 0.75 uses = 1 category = construction_tech }
-			army_experience = 25
+			TU_build_forts_2 = yes
 		}
 	}
 
@@ -1857,8 +1855,8 @@ focus_tree = {
 		id = TU_LAT_signal_bells
 		icon = GFX_goal_generic_intelligence_exchange
 		prerequisite = { focus = TU_LAT_bastion_gates }
-		x = 12
-		y = 4
+		x = -3
+		y = 13
 		cost = 10
 
 		search_filters = { FOCUS_FILTER_POLITICAL }
@@ -1877,8 +1875,8 @@ focus_tree = {
 		id = TU_LAT_guard_reserves
 		icon = GFX_goal_generic_allies_build_infantry
 		prerequisite = { focus = TU_LAT_sankta_volunteers }
-		x = 8
-		y = 5
+		x = -7
+		y = 14
 		cost = 10
 
 		search_filters = { FOCUS_FILTER_POLITICAL }
@@ -1897,8 +1895,8 @@ focus_tree = {
 		id = TU_LAT_air_chapel
 		icon = GFX_goal_generic_air_doctrine
 		prerequisite = { focus = TU_LAT_sky_apostles }
-		x = 6
-		y = 7
+		x = -9
+		y = 16
 		cost = 10
 
 		search_filters = { FOCUS_FILTER_POLITICAL }
@@ -1918,8 +1916,8 @@ focus_tree = {
 		id = TU_LAT_angel_fighters
 		icon = GFX_goal_generic_air_doctrine
 		prerequisite = { focus = TU_LAT_air_chapel }
-		x = 6
-		y = 8
+		x = -9
+		y = 17
 		cost = 10
 
 		search_filters = { FOCUS_FILTER_POLITICAL }
@@ -1940,8 +1938,8 @@ focus_tree = {
 		icon = GFX_goal_generic_defence
 		prerequisite = { focus = TU_LAT_anti_air_guns }
 		prerequisite = { focus = TU_LAT_signal_bells }
-		x = 12
-		y = 5
+		x = -3
+		y = 14
 		cost = 10
 
 		search_filters = { FOCUS_FILTER_POLITICAL }
@@ -1960,8 +1958,8 @@ focus_tree = {
 		id = TU_LAT_pilgrim_markets
 		icon = GFX_goal_generic_trade
 		prerequisite = { focus = TU_LAT_relic_trade }
-		x = 24
-		y = 3
+		x = 12
+		y = 13
 		cost = 10
 
 		search_filters = { FOCUS_FILTER_POLITICAL }
@@ -1980,8 +1978,8 @@ focus_tree = {
 		id = TU_LAT_incense_trade
 		icon = GFX_goal_generic_trade
 		prerequisite = { focus = TU_LAT_pilgrim_markets }
-		x = 24
-		y = 4
+		x = 12
+		y = 14
 		cost = 10
 
 		search_filters = { FOCUS_FILTER_POLITICAL }
@@ -2000,8 +1998,8 @@ focus_tree = {
 		id = TU_LAT_donation_ledger
 		icon = GFX_goal_generic_trade
 		prerequisite = { focus = TU_LAT_holy_bank }
-		x = 22
-		y = 4
+		x = 10
+		y = 14
 		cost = 10
 
 		search_filters = { FOCUS_FILTER_POLITICAL }
@@ -2018,10 +2016,10 @@ focus_tree = {
 
 	focus = {
 		id = TU_LAT_pilgrim_rail
-		icon = GFX_goal_generic_production
+		icon = GFX_goal_generic_construct_infrastructure
 		prerequisite = { focus = TU_LAT_pilgrim_roads }
-		x = 18
-		y = 3
+		x = 6
+		y = 13
 		cost = 10
 
 		search_filters = { FOCUS_FILTER_INDUSTRY }
@@ -2031,8 +2029,7 @@ focus_tree = {
 		}
 
 		completion_reward = {
-			add_tech_bonus = { name = TU_LAT_pilgrim_rail bonus = 0.75 uses = 1 category = industry category = construction_tech }
-			TU_build_infrastructure = yes
+			TU_build_railway = yes
 		}
 	}
 
@@ -2040,8 +2037,8 @@ focus_tree = {
 		id = TU_LAT_bell_foundry
 		icon = GFX_goal_generic_production
 		prerequisite = { focus = TU_LAT_workshop_district }
-		x = 18
-		y = 5
+		x = 6
+		y = 15
 		cost = 10
 
 		search_filters = { FOCUS_FILTER_INDUSTRY }
@@ -2060,8 +2057,8 @@ focus_tree = {
 		id = TU_LAT_glass_works
 		icon = GFX_goal_generic_production
 		prerequisite = { focus = TU_LAT_bell_foundry }
-		x = 18
-		y = 6
+		x = 6
+		y = 16
 		cost = 10
 
 		search_filters = { FOCUS_FILTER_INDUSTRY }
@@ -2080,8 +2077,8 @@ focus_tree = {
 		id = TU_LAT_arms_complex
 		icon = GFX_goal_generic_small_arms
 		prerequisite = { focus = TU_LAT_civil_factories }
-		x = 16
-		y = 6
+		x = 4
+		y = 16
 		cost = 10
 
 		search_filters = { FOCUS_FILTER_INDUSTRY }
@@ -2101,8 +2098,8 @@ focus_tree = {
 		id = TU_LAT_holy_power_grid
 		icon = GFX_goal_generic_production
 		prerequisite = { focus = TU_LAT_pilgrim_rail }
-		x = 18
-		y = 4
+		x = 6
+		y = 14
 		cost = 10
 
 		search_filters = { FOCUS_FILTER_INDUSTRY }
@@ -2121,8 +2118,8 @@ focus_tree = {
 		id = TU_LAT_university
 		icon = GFX_focus_research
 		prerequisite = { focus = TU_LAT_research_halls }
-		x = 20
-		y = 5
+		x = 8
+		y = 15
 		cost = 10
 
 		search_filters = { FOCUS_FILTER_POLITICAL }
@@ -2140,8 +2137,8 @@ focus_tree = {
 		id = TU_LAT_research_slot
 		icon = GFX_goal_generic_army_doctrines
 		prerequisite = { focus = TU_LAT_university }
-		x = 20
-		y = 6
+		x = 8
+		y = 16
 		cost = 10
 
 		search_filters = { FOCUS_FILTER_POLITICAL }
@@ -2159,8 +2156,8 @@ focus_tree = {
 		id = TU_LAT_sargon_mission
 		icon = GFX_goal_generic_improve_relations
 		prerequisite = { focus = TU_LAT_covenant_idea }
-		x = 33
-		y = 2
+		x = 24
+		y = 8
 		cost = 10
 
 		search_filters = { FOCUS_FILTER_POLITICAL }
@@ -2180,8 +2177,8 @@ focus_tree = {
 		id = TU_LAT_minos_dialogue
 		icon = GFX_goal_generic_improve_relations
 		prerequisite = { focus = TU_LAT_sargon_mission }
-		x = 33
-		y = 3
+		x = 24
+		y = 9
 		cost = 10
 
 		search_filters = { FOCUS_FILTER_POLITICAL }
@@ -2200,8 +2197,8 @@ focus_tree = {
 		id = TU_LAT_leithanien_ties
 		icon = GFX_goal_generic_improve_relations
 		prerequisite = { focus = TU_LAT_kazimierz_ties }
-		x = 27
-		y = 5
+		x = 18
+		y = 11
 		cost = 10
 
 		search_filters = { FOCUS_FILTER_POLITICAL }
@@ -2220,8 +2217,8 @@ focus_tree = {
 		id = TU_LAT_siracusa_ties
 		icon = GFX_goal_generic_improve_relations
 		prerequisite = { focus = TU_LAT_columbia_ties }
-		x = 30
-		y = 4
+		x = 21
+		y = 10
 		cost = 10
 
 		search_filters = { FOCUS_FILTER_POLITICAL }
@@ -2240,8 +2237,8 @@ focus_tree = {
 		id = TU_LAT_rhodes_ties
 		icon = GFX_goal_generic_build_navy
 		prerequisite = { focus = TU_LAT_envoys }
-		x = 31
-		y = 3
+		x = 22
+		y = 9
 		cost = 10
 
 		search_filters = { FOCUS_FILTER_POLITICAL }
@@ -2261,8 +2258,8 @@ focus_tree = {
 		id = TU_LAT_covenant_army
 		icon = GFX_goal_generic_allies_build_infantry
 		prerequisite = { focus = TU_LAT_covenant_founding }
-		x = 24
-		y = 6
+		x = 15
+		y = 12
 		cost = 10
 
 		search_filters = { FOCUS_FILTER_POLITICAL }
@@ -2281,8 +2278,8 @@ focus_tree = {
 		id = TU_LAT_covenant_council
 		icon = GFX_goal_generic_political_pressure
 		prerequisite = { focus = TU_LAT_covenant_founding }
-		x = 26
-		y = 6
+		x = 17
+		y = 12
 		cost = 10
 
 		search_filters = { FOCUS_FILTER_POLITICAL }
@@ -2302,7 +2299,7 @@ focus_tree = {
 		id = TU_LAT_fallen_hunters
 		icon = GFX_goal_generic_allies_build_infantry
 		prerequisite = { focus = TU_LAT_pursue_fallen }
-		x = -11
+		x = 1
 		y = 6
 		cost = 10
 
@@ -2322,7 +2319,7 @@ focus_tree = {
 		id = TU_LAT_fallen_prisons
 		icon = GFX_goal_generic_intelligence_exchange
 		prerequisite = { focus = TU_LAT_fallen_hunters }
-		x = -11
+		x = 1
 		y = 7
 		cost = 10
 
@@ -2342,7 +2339,7 @@ focus_tree = {
 		id = TU_LAT_fallen_return
 		icon = GFX_goal_generic_consumer_goods
 		prerequisite = { focus = TU_LAT_pardon_fallen }
-		x = -7
+		x = 5
 		y = 6
 		cost = 10
 
@@ -2362,7 +2359,7 @@ focus_tree = {
 		id = TU_LAT_halo_research
 		icon = GFX_focus_research
 		prerequisite = { focus = TU_LAT_fallen_return }
-		x = -7
+		x = 5
 		y = 7
 		cost = 10
 
@@ -2381,7 +2378,7 @@ focus_tree = {
 		id = TU_LAT_open_markets
 		icon = GFX_goal_generic_trade
 		prerequisite = { focus = TU_LAT_citizenship_reform }
-		x = -7
+		x = 5
 		y = 8
 		cost = 10
 
@@ -2401,7 +2398,7 @@ focus_tree = {
 		id = TU_LAT_foreign_quarter
 		icon = GFX_goal_generic_production
 		prerequisite = { focus = TU_LAT_open_markets }
-		x = -7
+		x = 5
 		y = 9
 		cost = 10
 
@@ -2421,7 +2418,7 @@ focus_tree = {
 		id = TU_LAT_interfaith
 		icon = GFX_goal_generic_improve_relations
 		prerequisite = { focus = TU_LAT_refugee_shelters }
-		x = -9
+		x = 3
 		y = 9
 		cost = 10
 

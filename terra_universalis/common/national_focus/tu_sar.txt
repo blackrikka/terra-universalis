@@ -1,6 +1,6 @@
 focus_tree = {
 	id = TU_SAR_focus
-	continuous_focus_position = { x = 50 y = 1300 }
+	continuous_focus_position = { x = 50 y = 2470 }
 
 	country = {
 		factor = 0
@@ -41,7 +41,7 @@ focus_tree = {
 		id = TU_SAR_court_summons
 		icon = GFX_goal_generic_political_pressure
 		prerequisite = { focus = TU_SAR_root }
-		x = -34
+		x = -17
 		y = 1
 		cost = 10
 
@@ -61,7 +61,7 @@ focus_tree = {
 		id = TU_SAR_council_princes
 		icon = GFX_goal_generic_political_pressure
 		prerequisite = { focus = TU_SAR_court_summons }
-		x = -36
+		x = -19
 		y = 2
 		cost = 10
 
@@ -82,7 +82,7 @@ focus_tree = {
 		id = TU_SAR_royal_census
 		icon = GFX_goal_generic_political_pressure
 		prerequisite = { focus = TU_SAR_court_summons }
-		x = -32
+		x = -15
 		y = 2
 		cost = 10
 
@@ -102,7 +102,7 @@ focus_tree = {
 		id = TU_SAR_tribute_system
 		icon = GFX_goal_generic_trade
 		prerequisite = { focus = TU_SAR_council_princes }
-		x = -37
+		x = -20
 		y = 3
 		cost = 10
 
@@ -122,7 +122,7 @@ focus_tree = {
 		id = TU_SAR_royal_roads
 		icon = GFX_goal_generic_production
 		prerequisite = { focus = TU_SAR_royal_census }
-		x = -33
+		x = -16
 		y = 3
 		cost = 10
 
@@ -143,7 +143,7 @@ focus_tree = {
 		icon = GFX_goal_generic_political_pressure
 		prerequisite = { focus = TU_SAR_council_princes }
 		prerequisite = { focus = TU_SAR_royal_census }
-		x = -29
+		x = -12
 		y = 3
 		cost = 10
 
@@ -164,7 +164,7 @@ focus_tree = {
 		id = TU_SAR_palace_guard
 		icon = GFX_goal_generic_allies_build_infantry
 		prerequisite = { focus = TU_SAR_governors }
-		x = -30
+		x = -13
 		y = 4
 		cost = 10
 
@@ -184,7 +184,7 @@ focus_tree = {
 		id = TU_SAR_end_feuds
 		icon = GFX_goal_generic_political_pressure
 		prerequisite = { focus = TU_SAR_governors }
-		x = -28
+		x = -11
 		y = 4
 		cost = 10
 
@@ -210,7 +210,7 @@ focus_tree = {
 		prerequisite = { focus = TU_SAR_end_feuds }
 		prerequisite = { focus = TU_SAR_palace_guard }
 		mutually_exclusive = { focus = TU_SAR_lords_confederation focus = TU_SAR_golden_council }
-		x = -29
+		x = -12
 		y = 5
 		cost = 15
 
@@ -235,7 +235,7 @@ focus_tree = {
 		id = TU_SAR_imperial_law
 		icon = GFX_goal_generic_political_pressure
 		prerequisite = { focus = TU_SAR_padishah_empire }
-		x = -30
+		x = -13
 		y = 6
 		cost = 10
 
@@ -255,7 +255,7 @@ focus_tree = {
 		id = TU_SAR_imperial_army
 		icon = GFX_goal_generic_allies_build_infantry
 		prerequisite = { focus = TU_SAR_padishah_empire }
-		x = -28
+		x = -11
 		y = 6
 		cost = 10
 
@@ -276,7 +276,7 @@ focus_tree = {
 		icon = GFX_goal_generic_political_pressure
 		prerequisite = { focus = TU_SAR_imperial_law }
 		prerequisite = { focus = TU_SAR_imperial_army }
-		x = -28
+		x = -11
 		y = 7
 		cost = 10
 
@@ -296,7 +296,7 @@ focus_tree = {
 		id = TU_SAR_lords_rights
 		icon = GFX_goal_generic_political_pressure
 		prerequisite = { focus = TU_SAR_root }
-		x = -25
+		x = -8
 		y = 1
 		cost = 10
 
@@ -317,7 +317,7 @@ focus_tree = {
 		id = TU_SAR_tribal_accord
 		icon = GFX_goal_generic_improve_relations
 		prerequisite = { focus = TU_SAR_lords_rights }
-		x = -25
+		x = -8
 		y = 2
 		cost = 10
 
@@ -337,7 +337,7 @@ focus_tree = {
 		id = TU_SAR_lords_levies
 		icon = GFX_goal_generic_allies_build_infantry
 		prerequisite = { focus = TU_SAR_lords_rights }
-		x = -19
+		x = -2
 		y = 2
 		cost = 10
 
@@ -357,7 +357,7 @@ focus_tree = {
 		id = TU_SAR_jungle_lords
 		icon = GFX_goal_generic_improve_relations
 		prerequisite = { focus = TU_SAR_tribal_accord }
-		x = -26
+		x = -9
 		y = 3
 		cost = 10
 
@@ -377,7 +377,7 @@ focus_tree = {
 		id = TU_SAR_desert_lords
 		icon = GFX_goal_generic_improve_relations
 		prerequisite = { focus = TU_SAR_tribal_accord }
-		x = -24
+		x = -7
 		y = 3
 		cost = 10
 
@@ -398,7 +398,7 @@ focus_tree = {
 		icon = GFX_goal_generic_political_pressure
 		prerequisite = { focus = TU_SAR_jungle_lords }
 		prerequisite = { focus = TU_SAR_desert_lords }
-		x = -24
+		x = -7
 		y = 4
 		cost = 10
 
@@ -419,7 +419,7 @@ focus_tree = {
 		icon = GFX_goal_generic_improve_relations
 		prerequisite = { focus = TU_SAR_lords_council }
 		mutually_exclusive = { focus = TU_SAR_padishah_empire focus = TU_SAR_golden_council }
-		x = -24
+		x = -7
 		y = 5
 		cost = 15
 
@@ -445,7 +445,7 @@ focus_tree = {
 		id = TU_SAR_feudal_armies
 		icon = GFX_goal_generic_allies_build_infantry
 		prerequisite = { focus = TU_SAR_lords_confederation }
-		x = -25
+		x = -8
 		y = 6
 		cost = 10
 
@@ -465,7 +465,7 @@ focus_tree = {
 		id = TU_SAR_local_rule
 		icon = GFX_goal_generic_political_pressure
 		prerequisite = { focus = TU_SAR_lords_confederation }
-		x = -23
+		x = -6
 		y = 6
 		cost = 10
 
@@ -486,7 +486,7 @@ focus_tree = {
 		icon = GFX_goal_generic_improve_relations
 		prerequisite = { focus = TU_SAR_feudal_armies }
 		prerequisite = { focus = TU_SAR_local_rule }
-		x = -21
+		x = -4
 		y = 7
 		cost = 10
 
@@ -506,7 +506,7 @@ focus_tree = {
 		id = TU_SAR_gold_trade
 		icon = GFX_goal_generic_trade
 		prerequisite = { focus = TU_SAR_root }
-		x = -14
+		x = 3
 		y = 1
 		cost = 10
 
@@ -527,7 +527,7 @@ focus_tree = {
 		id = TU_SAR_caravan_trade
 		icon = GFX_goal_generic_trade
 		prerequisite = { focus = TU_SAR_gold_trade }
-		x = -16
+		x = 1
 		y = 2
 		cost = 10
 
@@ -548,7 +548,7 @@ focus_tree = {
 		id = TU_SAR_oasis_markets
 		icon = GFX_goal_generic_trade
 		prerequisite = { focus = TU_SAR_gold_trade }
-		x = -12
+		x = 5
 		y = 2
 		cost = 10
 
@@ -568,7 +568,7 @@ focus_tree = {
 		id = TU_SAR_caravan_guards
 		icon = GFX_goal_generic_allies_build_infantry
 		prerequisite = { focus = TU_SAR_caravan_trade }
-		x = -16
+		x = 1
 		y = 3
 		cost = 10
 
@@ -590,7 +590,7 @@ focus_tree = {
 		prerequisite = { focus = TU_SAR_oasis_markets }
 		prerequisite = { focus = TU_SAR_caravan_trade }
 		mutually_exclusive = { focus = TU_SAR_free_trade }
-		x = -10
+		x = 7
 		y = 3
 		cost = 10
 
@@ -613,7 +613,7 @@ focus_tree = {
 		prerequisite = { focus = TU_SAR_oasis_markets }
 		prerequisite = { focus = TU_SAR_caravan_trade }
 		mutually_exclusive = { focus = TU_SAR_trade_monopoly }
-		x = -8
+		x = 9
 		y = 3
 		cost = 10
 
@@ -633,7 +633,7 @@ focus_tree = {
 		id = TU_SAR_sargon_treasury
 		icon = GFX_goal_generic_trade
 		prerequisite = { focus = TU_SAR_trade_monopoly focus = TU_SAR_free_trade }
-		x = -10
+		x = 7
 		y = 4
 		cost = 10
 
@@ -655,7 +655,7 @@ focus_tree = {
 		icon = GFX_goal_generic_trade
 		prerequisite = { focus = TU_SAR_sargon_treasury }
 		mutually_exclusive = { focus = TU_SAR_padishah_empire focus = TU_SAR_lords_confederation }
-		x = -10
+		x = 7
 		y = 5
 		cost = 15
 
@@ -680,7 +680,7 @@ focus_tree = {
 		id = TU_SAR_merchant_banks
 		icon = GFX_goal_generic_trade
 		prerequisite = { focus = TU_SAR_golden_council }
-		x = -10
+		x = 7
 		y = 6
 		cost = 10
 
@@ -700,7 +700,7 @@ focus_tree = {
 		id = TU_SAR_gold_mints
 		icon = GFX_goal_generic_trade
 		prerequisite = { focus = TU_SAR_merchant_banks }
-		x = -11
+		x = 6
 		y = 7
 		cost = 10
 
@@ -721,7 +721,7 @@ focus_tree = {
 		id = TU_SAR_trade_empire
 		icon = GFX_goal_generic_trade
 		prerequisite = { focus = TU_SAR_gold_mints }
-		x = -11
+		x = 6
 		y = 8
 		cost = 10
 
@@ -741,7 +741,7 @@ focus_tree = {
 		id = TU_SAR_desert_scouts
 		icon = GFX_goal_generic_intelligence_exchange
 		prerequisite = { focus = TU_SAR_root }
-		x = -1
+		x = 18
 		y = 1
 		cost = 10
 
@@ -761,7 +761,7 @@ focus_tree = {
 		id = TU_SAR_water_wells
 		icon = GFX_goal_generic_consumer_goods
 		prerequisite = { focus = TU_SAR_desert_scouts }
-		x = -6
+		x = 13
 		y = 2
 		cost = 10
 
@@ -782,7 +782,7 @@ focus_tree = {
 		id = TU_SAR_oasis_network
 		icon = GFX_goal_generic_production
 		prerequisite = { focus = TU_SAR_water_wells }
-		x = -6
+		x = 13
 		y = 3
 		cost = 10
 
@@ -801,7 +801,7 @@ focus_tree = {
 		id = TU_SAR_foehn_expeditions
 		icon = GFX_goal_generic_occupy_start_war
 		prerequisite = { focus = TU_SAR_desert_scouts }
-		x = -1
+		x = 18
 		y = 2
 		cost = 10
 
@@ -820,7 +820,7 @@ focus_tree = {
 		id = TU_SAR_ruin_studies
 		icon = GFX_focus_research
 		prerequisite = { focus = TU_SAR_foehn_expeditions }
-		x = -1
+		x = 18
 		y = 3
 		cost = 10
 
@@ -839,7 +839,7 @@ focus_tree = {
 		id = TU_SAR_ancient_knowledge
 		icon = GFX_focus_research
 		prerequisite = { focus = TU_SAR_ruin_studies }
-		x = -3
+		x = 16
 		y = 4
 		cost = 10
 
@@ -862,7 +862,7 @@ focus_tree = {
 		id = TU_SAR_desert_mastery
 		icon = GFX_goal_generic_political_pressure
 		prerequisite = { focus = TU_SAR_oasis_network }
-		x = -7
+		x = 12
 		y = 4
 		cost = 10
 
@@ -881,8 +881,8 @@ focus_tree = {
 		id = TU_SAR_desert_warriors
 		icon = GFX_goal_generic_allies_build_infantry
 		prerequisite = { focus = TU_SAR_root }
-		x = 13
-		y = 1
+		x = -10
+		y = 10
 		cost = 10
 
 		search_filters = { FOCUS_FILTER_POLITICAL }
@@ -901,8 +901,8 @@ focus_tree = {
 		id = TU_SAR_camel_cavalry
 		icon = GFX_goal_generic_army_motorized
 		prerequisite = { focus = TU_SAR_desert_warriors }
-		x = 6
-		y = 2
+		x = -17
+		y = 11
 		cost = 10
 
 		search_filters = { FOCUS_FILTER_POLITICAL }
@@ -920,8 +920,8 @@ focus_tree = {
 		id = TU_SAR_jungle_training
 		icon = GFX_goal_generic_army_doctrines
 		prerequisite = { focus = TU_SAR_desert_warriors }
-		x = 13
-		y = 2
+		x = -10
+		y = 11
 		cost = 10
 
 		search_filters = { FOCUS_FILTER_POLITICAL }
@@ -940,8 +940,8 @@ focus_tree = {
 		id = TU_SAR_jungle_fighters
 		icon = GFX_goal_generic_air_doctrine
 		prerequisite = { focus = TU_SAR_jungle_training }
-		x = 13
-		y = 3
+		x = -10
+		y = 12
 		cost = 10
 
 		search_filters = { FOCUS_FILTER_POLITICAL }
@@ -960,8 +960,8 @@ focus_tree = {
 		icon = GFX_goal_generic_army_motorized
 		prerequisite = { focus = TU_SAR_camel_cavalry }
 		mutually_exclusive = { focus = TU_SAR_fortress_defence }
-		x = 5
-		y = 3
+		x = -18
+		y = 12
 		cost = 10
 
 		search_filters = { FOCUS_FILTER_POLITICAL }
@@ -981,8 +981,8 @@ focus_tree = {
 		icon = GFX_goal_generic_defence
 		prerequisite = { focus = TU_SAR_camel_cavalry }
 		mutually_exclusive = { focus = TU_SAR_raid_tactics }
-		x = 7
-		y = 3
+		x = -16
+		y = 12
 		cost = 10
 
 		search_filters = { FOCUS_FILTER_POLITICAL }
@@ -992,8 +992,7 @@ focus_tree = {
 		}
 
 		completion_reward = {
-			add_tech_bonus = { name = TU_SAR_fortress_defence bonus = 0.75 uses = 1 category = construction_tech }
-			army_experience = 25
+			TU_build_forts_2 = yes
 		}
 	}
 
@@ -1001,8 +1000,8 @@ focus_tree = {
 		id = TU_SAR_bow_arsenal
 		icon = GFX_goal_generic_small_arms
 		prerequisite = { focus = TU_SAR_desert_warriors }
-		x = 18
-		y = 2
+		x = -5
+		y = 11
 		cost = 10
 
 		search_filters = { FOCUS_FILTER_POLITICAL }
@@ -1021,8 +1020,8 @@ focus_tree = {
 		id = TU_SAR_rifle_imports
 		icon = GFX_goal_generic_small_arms
 		prerequisite = { focus = TU_SAR_bow_arsenal }
-		x = 17
-		y = 3
+		x = -6
+		y = 12
 		cost = 10
 
 		search_filters = { FOCUS_FILTER_POLITICAL }
@@ -1041,8 +1040,8 @@ focus_tree = {
 		id = TU_SAR_artillery_camels
 		icon = GFX_goal_generic_army_artillery
 		prerequisite = { focus = TU_SAR_rifle_imports }
-		x = 17
-		y = 4
+		x = -6
+		y = 13
 		cost = 10
 
 		search_filters = { FOCUS_FILTER_POLITICAL }
@@ -1061,8 +1060,8 @@ focus_tree = {
 		id = TU_SAR_motor_columns
 		icon = GFX_goal_generic_army_motorized
 		prerequisite = { focus = TU_SAR_raid_tactics focus = TU_SAR_fortress_defence }
-		x = 9
-		y = 4
+		x = -14
+		y = 13
 		cost = 10
 
 		search_filters = { FOCUS_FILTER_POLITICAL }
@@ -1081,8 +1080,8 @@ focus_tree = {
 		id = TU_SAR_armoured_cars
 		icon = GFX_goal_generic_army_tanks
 		prerequisite = { focus = TU_SAR_motor_columns }
-		x = 8
-		y = 5
+		x = -15
+		y = 14
 		cost = 10
 
 		search_filters = { FOCUS_FILTER_POLITICAL }
@@ -1101,8 +1100,8 @@ focus_tree = {
 		id = TU_SAR_officer_school
 		icon = GFX_goal_generic_army_doctrines
 		prerequisite = { focus = TU_SAR_jungle_fighters }
-		x = 13
-		y = 4
+		x = -10
+		y = 13
 		cost = 10
 
 		search_filters = { FOCUS_FILTER_POLITICAL }
@@ -1121,8 +1120,8 @@ focus_tree = {
 		id = TU_SAR_mercenary_bands
 		icon = GFX_goal_generic_allies_build_infantry
 		prerequisite = { focus = TU_SAR_officer_school }
-		x = 12
-		y = 5
+		x = -11
+		y = 14
 		cost = 10
 
 		search_filters = { FOCUS_FILTER_POLITICAL }
@@ -1141,8 +1140,8 @@ focus_tree = {
 		icon = GFX_goal_generic_allies_build_infantry
 		prerequisite = { focus = TU_SAR_armoured_cars }
 		prerequisite = { focus = TU_SAR_mercenary_bands }
-		x = 7
-		y = 6
+		x = -16
+		y = 15
 		cost = 10
 
 		search_filters = { FOCUS_FILTER_POLITICAL }
@@ -1161,8 +1160,8 @@ focus_tree = {
 		id = TU_SAR_air_scouts
 		icon = GFX_goal_generic_air_doctrine
 		prerequisite = { focus = TU_SAR_officer_school }
-		x = 14
-		y = 5
+		x = -9
+		y = 14
 		cost = 10
 
 		search_filters = { FOCUS_FILTER_POLITICAL }
@@ -1182,8 +1181,8 @@ focus_tree = {
 		id = TU_SAR_mining
 		icon = GFX_goal_generic_production
 		prerequisite = { focus = TU_SAR_root }
-		x = 22
-		y = 1
+		x = 0
+		y = 10
 		cost = 10
 
 		search_filters = { FOCUS_FILTER_INDUSTRY }
@@ -1202,8 +1201,8 @@ focus_tree = {
 		id = TU_SAR_road_network
 		icon = GFX_goal_generic_production
 		prerequisite = { focus = TU_SAR_mining }
-		x = 22
-		y = 2
+		x = 0
+		y = 11
 		cost = 10
 
 		search_filters = { FOCUS_FILTER_INDUSTRY }
@@ -1222,8 +1221,8 @@ focus_tree = {
 		id = TU_SAR_industrial_district
 		icon = GFX_goal_generic_production
 		prerequisite = { focus = TU_SAR_mining }
-		x = 24
-		y = 2
+		x = 2
+		y = 11
 		cost = 10
 
 		search_filters = { FOCUS_FILTER_INDUSTRY }
@@ -1243,8 +1242,8 @@ focus_tree = {
 		icon = GFX_goal_generic_production
 		prerequisite = { focus = TU_SAR_industrial_district }
 		mutually_exclusive = { focus = TU_SAR_arms_program }
-		x = 24
-		y = 3
+		x = 2
+		y = 12
 		cost = 10
 
 		search_filters = { FOCUS_FILTER_INDUSTRY }
@@ -1264,8 +1263,8 @@ focus_tree = {
 		icon = GFX_goal_generic_small_arms
 		prerequisite = { focus = TU_SAR_industrial_district }
 		mutually_exclusive = { focus = TU_SAR_civ_program }
-		x = 26
-		y = 3
+		x = 4
+		y = 12
 		cost = 10
 
 		search_filters = { FOCUS_FILTER_INDUSTRY }
@@ -1285,8 +1284,8 @@ focus_tree = {
 		id = TU_SAR_irrigation
 		icon = GFX_goal_generic_production
 		prerequisite = { focus = TU_SAR_road_network }
-		x = 22
-		y = 3
+		x = 0
+		y = 12
 		cost = 10
 
 		search_filters = { FOCUS_FILTER_INDUSTRY }
@@ -1303,10 +1302,10 @@ focus_tree = {
 
 	focus = {
 		id = TU_SAR_rail_network
-		icon = GFX_goal_generic_production
+		icon = GFX_goal_generic_construct_infrastructure
 		prerequisite = { focus = TU_SAR_irrigation }
-		x = 22
-		y = 4
+		x = 0
+		y = 13
 		cost = 10
 
 		search_filters = { FOCUS_FILTER_INDUSTRY }
@@ -1316,8 +1315,7 @@ focus_tree = {
 		}
 
 		completion_reward = {
-			add_tech_bonus = { name = TU_SAR_rail_network bonus = 0.75 uses = 1 category = industry category = construction_tech }
-			TU_build_infrastructure = yes
+			TU_build_railway = yes
 		}
 	}
 
@@ -1325,8 +1323,8 @@ focus_tree = {
 		id = TU_SAR_spice_plantations
 		icon = GFX_goal_generic_production
 		prerequisite = { focus = TU_SAR_irrigation }
-		x = 26
-		y = 4
+		x = 4
+		y = 13
 		cost = 10
 
 		search_filters = { FOCUS_FILTER_INDUSTRY }
@@ -1345,8 +1343,8 @@ focus_tree = {
 		id = TU_SAR_oil_fields
 		icon = GFX_goal_generic_production
 		prerequisite = { focus = TU_SAR_rail_network }
-		x = 22
-		y = 5
+		x = 0
+		y = 14
 		cost = 10
 
 		search_filters = { FOCUS_FILTER_INDUSTRY }
@@ -1365,8 +1363,8 @@ focus_tree = {
 		id = TU_SAR_refineries
 		icon = GFX_goal_generic_production
 		prerequisite = { focus = TU_SAR_oil_fields }
-		x = 22
-		y = 6
+		x = 0
+		y = 15
 		cost = 10
 
 		search_filters = { FOCUS_FILTER_INDUSTRY }
@@ -1386,8 +1384,8 @@ focus_tree = {
 		icon = GFX_goal_generic_production
 		prerequisite = { focus = TU_SAR_civ_program focus = TU_SAR_arms_program }
 		prerequisite = { focus = TU_SAR_refineries }
-		x = 24
-		y = 7
+		x = 2
+		y = 16
 		cost = 10
 
 		search_filters = { FOCUS_FILTER_INDUSTRY }
@@ -1406,8 +1404,8 @@ focus_tree = {
 		id = TU_SAR_research_slot
 		icon = GFX_goal_generic_army_doctrines
 		prerequisite = { focus = TU_SAR_industrialisation }
-		x = 24
-		y = 8
+		x = 2
+		y = 17
 		cost = 10
 
 		search_filters = { FOCUS_FILTER_POLITICAL }
@@ -1425,8 +1423,8 @@ focus_tree = {
 		id = TU_SAR_foreign_court
 		icon = GFX_goal_generic_improve_relations
 		prerequisite = { focus = TU_SAR_root }
-		x = 35
-		y = 1
+		x = 15
+		y = 8
 		cost = 10
 
 		search_filters = { FOCUS_FILTER_POLITICAL }
@@ -1445,8 +1443,8 @@ focus_tree = {
 		id = TU_SAR_columbia_trade
 		icon = GFX_goal_generic_trade
 		prerequisite = { focus = TU_SAR_foreign_court }
-		x = 31
-		y = 2
+		x = 11
+		y = 9
 		cost = 10
 
 		search_filters = { FOCUS_FILTER_POLITICAL }
@@ -1465,8 +1463,8 @@ focus_tree = {
 		id = TU_SAR_minos_pact
 		icon = GFX_goal_generic_improve_relations
 		prerequisite = { focus = TU_SAR_foreign_court }
-		x = 35
-		y = 2
+		x = 15
+		y = 9
 		cost = 10
 
 		search_filters = { FOCUS_FILTER_POLITICAL }
@@ -1485,8 +1483,8 @@ focus_tree = {
 		id = TU_SAR_iberia_border
 		icon = GFX_goal_generic_defence
 		prerequisite = { focus = TU_SAR_minos_pact }
-		x = 34
-		y = 3
+		x = 14
+		y = 10
 		cost = 10
 
 		search_filters = { FOCUS_FILTER_POLITICAL }
@@ -1505,8 +1503,8 @@ focus_tree = {
 		id = TU_SAR_bolivar_ties
 		icon = GFX_goal_generic_improve_relations
 		prerequisite = { focus = TU_SAR_columbia_trade }
-		x = 30
-		y = 3
+		x = 10
+		y = 10
 		cost = 10
 
 		search_filters = { FOCUS_FILTER_POLITICAL }
@@ -1526,8 +1524,8 @@ focus_tree = {
 		icon = GFX_goal_generic_improve_relations
 		prerequisite = { focus = TU_SAR_iberia_border }
 		prerequisite = { focus = TU_SAR_bolivar_ties }
-		x = 34
-		y = 4
+		x = 14
+		y = 11
 		cost = 10
 
 		search_filters = { FOCUS_FILTER_POLITICAL }
@@ -1545,7 +1543,7 @@ focus_tree = {
 		id = TU_SAR_court_poets
 		icon = GFX_goal_generic_propaganda
 		prerequisite = { focus = TU_SAR_court_summons }
-		x = -30
+		x = -13
 		y = 2
 		cost = 10
 
@@ -1565,7 +1563,7 @@ focus_tree = {
 		id = TU_SAR_royal_spies
 		icon = GFX_goal_generic_production
 		prerequisite = { focus = TU_SAR_royal_census }
-		x = -31
+		x = -14
 		y = 3
 		cost = 10
 
@@ -1584,7 +1582,7 @@ focus_tree = {
 		id = TU_SAR_palace_reforms
 		icon = GFX_goal_generic_political_pressure
 		prerequisite = { focus = TU_SAR_council_princes }
-		x = -35
+		x = -18
 		y = 3
 		cost = 10
 
@@ -1604,7 +1602,7 @@ focus_tree = {
 		id = TU_SAR_royal_treasury
 		icon = GFX_goal_generic_trade
 		prerequisite = { focus = TU_SAR_tribute_system }
-		x = -37
+		x = -20
 		y = 4
 		cost = 10
 
@@ -1625,7 +1623,7 @@ focus_tree = {
 		id = TU_SAR_hostage_princes
 		icon = GFX_goal_generic_political_pressure
 		prerequisite = { focus = TU_SAR_palace_reforms }
-		x = -35
+		x = -18
 		y = 4
 		cost = 10
 
@@ -1646,7 +1644,7 @@ focus_tree = {
 		id = TU_SAR_royal_marriages
 		icon = GFX_goal_generic_improve_relations
 		prerequisite = { focus = TU_SAR_hostage_princes }
-		x = -35
+		x = -18
 		y = 5
 		cost = 10
 
@@ -1667,7 +1665,7 @@ focus_tree = {
 		id = TU_SAR_lords_markets
 		icon = GFX_goal_generic_trade
 		prerequisite = { focus = TU_SAR_lords_levies }
-		x = -20
+		x = -3
 		y = 3
 		cost = 10
 
@@ -1687,7 +1685,7 @@ focus_tree = {
 		id = TU_SAR_tribal_warriors
 		icon = GFX_goal_generic_allies_build_infantry
 		prerequisite = { focus = TU_SAR_lords_levies }
-		x = -18
+		x = -1
 		y = 3
 		cost = 10
 
@@ -1707,7 +1705,7 @@ focus_tree = {
 		id = TU_SAR_clan_elders
 		icon = GFX_goal_generic_allies_build_infantry
 		prerequisite = { focus = TU_SAR_tribal_accord }
-		x = -22
+		x = -5
 		y = 3
 		cost = 10
 
@@ -1727,7 +1725,7 @@ focus_tree = {
 		id = TU_SAR_river_ports
 		icon = GFX_goal_generic_build_navy
 		prerequisite = { focus = TU_SAR_jungle_lords }
-		x = -26
+		x = -9
 		y = 4
 		cost = 10
 
@@ -1749,7 +1747,7 @@ focus_tree = {
 		id = TU_SAR_salt_trade
 		icon = GFX_goal_generic_trade
 		prerequisite = { focus = TU_SAR_caravan_trade }
-		x = -14
+		x = 3
 		y = 3
 		cost = 10
 
@@ -1770,7 +1768,7 @@ focus_tree = {
 		id = TU_SAR_incense_routes
 		icon = GFX_goal_generic_trade
 		prerequisite = { focus = TU_SAR_oasis_markets }
-		x = -12
+		x = 5
 		y = 3
 		cost = 10
 
@@ -1791,7 +1789,7 @@ focus_tree = {
 		id = TU_SAR_caravanserai
 		icon = GFX_goal_generic_production
 		prerequisite = { focus = TU_SAR_caravan_guards }
-		x = -16
+		x = 1
 		y = 4
 		cost = 10
 
@@ -1811,7 +1809,7 @@ focus_tree = {
 		id = TU_SAR_gold_reserves
 		icon = GFX_goal_generic_allies_build_infantry
 		prerequisite = { focus = TU_SAR_sargon_treasury }
-		x = -8
+		x = 9
 		y = 5
 		cost = 10
 
@@ -1832,7 +1830,7 @@ focus_tree = {
 		id = TU_SAR_sand_maps
 		icon = GFX_goal_generic_production
 		prerequisite = { focus = TU_SAR_desert_scouts }
-		x = 3
+		x = 22
 		y = 2
 		cost = 10
 
@@ -1851,7 +1849,7 @@ focus_tree = {
 		id = TU_SAR_expedition_camps
 		icon = GFX_goal_generic_occupy_start_war
 		prerequisite = { focus = TU_SAR_foehn_expeditions }
-		x = 1
+		x = 20
 		y = 3
 		cost = 10
 
@@ -1872,7 +1870,7 @@ focus_tree = {
 		id = TU_SAR_buried_cities
 		icon = GFX_focus_research
 		prerequisite = { focus = TU_SAR_ruin_studies }
-		x = -1
+		x = 18
 		y = 4
 		cost = 10
 
@@ -1891,7 +1889,7 @@ focus_tree = {
 		id = TU_SAR_ziggurat_restoration
 		icon = GFX_goal_generic_production
 		prerequisite = { focus = TU_SAR_buried_cities }
-		x = -1
+		x = 18
 		y = 5
 		cost = 10
 
@@ -1911,8 +1909,8 @@ focus_tree = {
 		id = TU_SAR_sand_storm_drills
 		icon = GFX_goal_generic_army_doctrines
 		prerequisite = { focus = TU_SAR_desert_warriors }
-		x = 20
-		y = 2
+		x = -3
+		y = 11
 		cost = 10
 
 		search_filters = { FOCUS_FILTER_POLITICAL }
@@ -1931,8 +1929,8 @@ focus_tree = {
 		id = TU_SAR_spear_doctrine
 		icon = GFX_goal_generic_army_doctrines
 		prerequisite = { focus = TU_SAR_bow_arsenal }
-		x = 19
-		y = 3
+		x = -4
+		y = 12
 		cost = 10
 
 		search_filters = { FOCUS_FILTER_POLITICAL }
@@ -1951,8 +1949,8 @@ focus_tree = {
 		id = TU_SAR_war_elephants
 		icon = GFX_goal_generic_army_motorized
 		prerequisite = { focus = TU_SAR_camel_cavalry }
-		x = 9
-		y = 3
+		x = -14
+		y = 12
 		cost = 10
 
 		search_filters = { FOCUS_FILTER_POLITICAL }
@@ -1971,8 +1969,8 @@ focus_tree = {
 		id = TU_SAR_jungle_ambush
 		icon = GFX_goal_generic_army_doctrines
 		prerequisite = { focus = TU_SAR_jungle_training }
-		x = 15
-		y = 3
+		x = -8
+		y = 12
 		cost = 10
 
 		search_filters = { FOCUS_FILTER_POLITICAL }
@@ -1991,8 +1989,8 @@ focus_tree = {
 		id = TU_SAR_field_hospitals
 		icon = GFX_goal_generic_consumer_goods
 		prerequisite = { focus = TU_SAR_jungle_fighters }
-		x = 15
-		y = 4
+		x = -8
+		y = 13
 		cost = 10
 
 		search_filters = { FOCUS_FILTER_POLITICAL }
@@ -2011,8 +2009,8 @@ focus_tree = {
 		id = TU_SAR_supply_caravans
 		icon = GFX_goal_generic_production
 		prerequisite = { focus = TU_SAR_motor_columns }
-		x = 10
-		y = 5
+		x = -13
+		y = 14
 		cost = 10
 
 		search_filters = { FOCUS_FILTER_POLITICAL }
@@ -2030,8 +2028,8 @@ focus_tree = {
 		id = TU_SAR_timber_industry
 		icon = GFX_goal_generic_production
 		prerequisite = { focus = TU_SAR_spice_plantations }
-		x = 26
-		y = 5
+		x = 4
+		y = 14
 		cost = 10
 
 		search_filters = { FOCUS_FILTER_INDUSTRY }
@@ -2050,8 +2048,8 @@ focus_tree = {
 		id = TU_SAR_copper_mines
 		icon = GFX_goal_generic_production
 		prerequisite = { focus = TU_SAR_mining }
-		x = 28
-		y = 2
+		x = 6
+		y = 11
 		cost = 10
 
 		search_filters = { FOCUS_FILTER_INDUSTRY }
@@ -2070,8 +2068,8 @@ focus_tree = {
 		id = TU_SAR_textile_mills
 		icon = GFX_goal_generic_production
 		prerequisite = { focus = TU_SAR_copper_mines }
-		x = 28
-		y = 3
+		x = 6
+		y = 12
 		cost = 10
 
 		search_filters = { FOCUS_FILTER_INDUSTRY }
@@ -2090,8 +2088,8 @@ focus_tree = {
 		id = TU_SAR_power_stations
 		icon = GFX_goal_generic_political_pressure
 		prerequisite = { focus = TU_SAR_rail_network }
-		x = 24
-		y = 5
+		x = 2
+		y = 14
 		cost = 10
 
 		search_filters = { FOCUS_FILTER_INDUSTRY }
@@ -2111,8 +2109,8 @@ focus_tree = {
 		id = TU_SAR_laterano_mission
 		icon = GFX_goal_generic_improve_relations
 		prerequisite = { focus = TU_SAR_foreign_court }
-		x = 37
-		y = 2
+		x = 17
+		y = 9
 		cost = 10
 
 		search_filters = { FOCUS_FILTER_POLITICAL }
@@ -2131,8 +2129,8 @@ focus_tree = {
 		id = TU_SAR_kazdel_refugees
 		icon = GFX_goal_generic_consumer_goods
 		prerequisite = { focus = TU_SAR_minos_pact }
-		x = 36
-		y = 3
+		x = 16
+		y = 10
 		cost = 10
 
 		search_filters = { FOCUS_FILTER_POLITICAL }
@@ -2151,8 +2149,8 @@ focus_tree = {
 		id = TU_SAR_rim_ore_trade
 		icon = GFX_goal_generic_production
 		prerequisite = { focus = TU_SAR_columbia_trade }
-		x = 32
-		y = 3
+		x = 12
+		y = 10
 		cost = 10
 
 		search_filters = { FOCUS_FILTER_POLITICAL }
@@ -2170,8 +2168,8 @@ focus_tree = {
 		id = TU_SAR_desert_fortresses
 		icon = GFX_goal_generic_defence
 		prerequisite = { focus = TU_SAR_fortress_defence }
-		x = 7
-		y = 4
+		x = -16
+		y = 13
 		cost = 10
 
 		search_filters = { FOCUS_FILTER_POLITICAL }
@@ -2181,8 +2179,7 @@ focus_tree = {
 		}
 
 		completion_reward = {
-			add_tech_bonus = { name = TU_SAR_desert_fortresses bonus = 0.75 uses = 1 category = construction_tech }
-			army_experience = 25
+			TU_build_forts_2 = yes
 		}
 	}
 
@@ -2190,8 +2187,8 @@ focus_tree = {
 		id = TU_SAR_dune_riders
 		icon = GFX_goal_generic_army_motorized
 		prerequisite = { focus = TU_SAR_raid_tactics }
-		x = 5
-		y = 4
+		x = -18
+		y = 13
 		cost = 10
 
 		search_filters = { FOCUS_FILTER_POLITICAL }
@@ -2210,7 +2207,7 @@ focus_tree = {
 		id = TU_SAR_lords_courts
 		icon = GFX_goal_generic_political_pressure
 		prerequisite = { focus = TU_SAR_local_rule }
-		x = -23
+		x = -6
 		y = 7
 		cost = 10
 
@@ -2230,7 +2227,7 @@ focus_tree = {
 		id = TU_SAR_padishah_portraits
 		icon = GFX_goal_generic_build_navy
 		prerequisite = { focus = TU_SAR_throne_of_sand }
-		x = -28
+		x = -11
 		y = 8
 		cost = 10
 
@@ -2251,7 +2248,7 @@ focus_tree = {
 		id = TU_SAR_imperial_highways
 		icon = GFX_goal_generic_production
 		prerequisite = { focus = TU_SAR_imperial_law }
-		x = -30
+		x = -13
 		y = 7
 		cost = 10
 
@@ -2270,7 +2267,7 @@ focus_tree = {
 		id = TU_SAR_gold_standard
 		icon = GFX_goal_generic_trade
 		prerequisite = { focus = TU_SAR_merchant_banks }
-		x = -9
+		x = 8
 		y = 7
 		cost = 10
 
@@ -2290,7 +2287,7 @@ focus_tree = {
 		id = TU_SAR_caravan_insurance
 		icon = GFX_goal_generic_trade
 		prerequisite = { focus = TU_SAR_caravanserai }
-		x = -16
+		x = 1
 		y = 5
 		cost = 10
 
@@ -2310,7 +2307,7 @@ focus_tree = {
 		id = TU_SAR_oasis_farms
 		icon = GFX_goal_generic_production
 		prerequisite = { focus = TU_SAR_oasis_network }
-		x = -5
+		x = 14
 		y = 4
 		cost = 10
 
@@ -2330,7 +2327,7 @@ focus_tree = {
 		id = TU_SAR_star_navigators
 		icon = GFX_focus_research
 		prerequisite = { focus = TU_SAR_sand_maps }
-		x = 3
+		x = 22
 		y = 3
 		cost = 10
 
@@ -2349,7 +2346,7 @@ focus_tree = {
 		id = TU_SAR_relic_museum
 		icon = GFX_focus_research
 		prerequisite = { focus = TU_SAR_ziggurat_restoration }
-		x = -1
+		x = 18
 		y = 6
 		cost = 10
 
@@ -2368,8 +2365,8 @@ focus_tree = {
 		id = TU_SAR_light_tanks
 		icon = GFX_goal_generic_army_tanks
 		prerequisite = { focus = TU_SAR_armoured_cars }
-		x = 9
-		y = 6
+		x = -14
+		y = 15
 		cost = 10
 
 		search_filters = { FOCUS_FILTER_POLITICAL }
@@ -2388,8 +2385,8 @@ focus_tree = {
 		id = TU_SAR_air_bases
 		icon = GFX_goal_generic_air_doctrine
 		prerequisite = { focus = TU_SAR_air_scouts }
-		x = 14
-		y = 6
+		x = -9
+		y = 15
 		cost = 10
 
 		search_filters = { FOCUS_FILTER_POLITICAL }
@@ -2409,8 +2406,8 @@ focus_tree = {
 		id = TU_SAR_chemical_works
 		icon = GFX_goal_generic_production
 		prerequisite = { focus = TU_SAR_refineries }
-		x = 22
-		y = 7
+		x = 0
+		y = 16
 		cost = 10
 
 		search_filters = { FOCUS_FILTER_INDUSTRY }
@@ -2429,8 +2426,8 @@ focus_tree = {
 		id = TU_SAR_glass_works
 		icon = GFX_goal_generic_production
 		prerequisite = { focus = TU_SAR_textile_mills }
-		x = 28
-		y = 4
+		x = 6
+		y = 13
 		cost = 10
 
 		search_filters = { FOCUS_FILTER_INDUSTRY }
@@ -2449,8 +2446,8 @@ focus_tree = {
 		id = TU_SAR_victoria_envoys
 		icon = GFX_goal_generic_improve_relations
 		prerequisite = { focus = TU_SAR_foreign_court }
-		x = 39
-		y = 2
+		x = 19
+		y = 9
 		cost = 10
 
 		search_filters = { FOCUS_FILTER_POLITICAL }

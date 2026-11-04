@@ -815,8 +815,7 @@
 		}
 
 		completion_reward = {
-			add_tech_bonus = { name = TU_KAZ_restore_citadels bonus = 0.75 uses = 1 category = construction_tech }
-			army_experience = 25
+			TU_build_forts_2 = yes
 		}
 	}
 
@@ -1558,14 +1557,13 @@
 		}
 
 		completion_reward = {
-			add_tech_bonus = { name = TU_KAZ_border_forts bonus = 0.75 uses = 1 category = construction_tech }
-			army_experience = 25
+			TU_build_forts_2 = yes
 		}
 	}
 
 	focus = {
 		id = TU_KAZ_trench_engineering
-		icon = GFX_focus_research
+		icon = GFX_goal_generic_defence
 		prerequisite = { focus = TU_KAZ_border_forts }
 		x = 0
 		y = 0
@@ -1578,7 +1576,7 @@
 		}
 
 		completion_reward = {
-			add_tech_bonus = { name = TU_KAZ_trench_engineering bonus = 0.75 uses = 1 category = electronics category = industry }
+			TU_build_forts_2 = yes
 		}
 	}
 
@@ -1787,7 +1785,7 @@
 
 	focus = {
 		id = TU_KAZ_rail_kaz
-		icon = GFX_goal_generic_production
+		icon = GFX_goal_generic_construct_infrastructure
 		prerequisite = { focus = TU_KAZ_corp_district }
 		x = 0
 		y = 0
@@ -1800,8 +1798,7 @@
 		}
 
 		completion_reward = {
-			add_tech_bonus = { name = TU_KAZ_rail_kaz bonus = 0.75 uses = 1 category = industry category = construction_tech }
-			TU_build_infrastructure = yes
+			TU_build_railway = yes
 		}
 	}
 

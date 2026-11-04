@@ -585,8 +585,7 @@
 		}
 
 		completion_reward = {
-			add_tech_bonus = { name = TU_URS_guard_bastion bonus = 0.75 uses = 1 category = construction_tech }
-			army_experience = 25
+			TU_build_forts_2 = yes
 		}
 	}
 
@@ -605,8 +604,7 @@
 		}
 
 		completion_reward = {
-			add_tech_bonus = { name = TU_URS_guard_last_bastion bonus = 0.75 uses = 1 category = construction_tech }
-			army_experience = 25
+			TU_build_forts_2 = yes
 		}
 	}
 
@@ -1172,10 +1170,7 @@
 		}
 
 		completion_reward = {
-			TU_build_infrastructure = yes
-			army_experience = 25
-			add_war_support = 0.03
-			add_doctrine_cost_reduction = { name = TU_URS_capital_railway_plan cost_reduction = 0.4 uses = 1 category = land_doctrine }
+			TU_build_railway = yes
 		}
 	}
 
@@ -1200,7 +1195,7 @@
 
 		completion_reward = {
 			TU_build_civ_factory = yes
-			add_tech_bonus = { name = TU_URS_rail_gauge bonus = 0.75 uses = 1 category = industry category = construction_tech }
+			TU_build_railway = yes
 		}
 	}
 
@@ -1225,7 +1220,7 @@
 
 		completion_reward = {
 			TU_build_mil_factory = yes
-			add_tech_bonus = { name = TU_URS_rail_heavy_industry bonus = 0.75 uses = 1 category = industry category = construction_tech }
+			TU_build_railway = yes
 		}
 	}
 

@@ -34,8 +34,7 @@
 		}
 
 		completion_reward = {
-			TU_build_infrastructure = yes
-			add_tech_bonus = { name = TU_URS_rail_standard bonus = 0.75 uses = 1 category = industry category = construction_tech }
+			TU_build_railway = yes
 		}
 	}
 
@@ -412,8 +411,7 @@
 		}
 
 		completion_reward = {
-			TU_build_infrastructure = yes
-			add_tech_bonus = { name = TU_URS_frost_road2 bonus = 0.75 uses = 1 category = industry category = construction_tech }
+			TU_build_railway = yes
 		}
 	}
 
@@ -486,8 +484,7 @@
 		}
 
 		completion_reward = {
-			TU_build_infrastructure = yes
-			add_tech_bonus = { name = TU_URS_permafrost_rail bonus = 0.75 uses = 1 category = industry category = construction_tech }
+			TU_build_railway = yes
 		}
 	}
 

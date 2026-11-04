@@ -211,8 +211,7 @@
 		search_filters = { FOCUS_FILTER_POLITICAL }
 
 		completion_reward = {
-			add_tech_bonus = { name = TU_VIC_kzd_border_forts bonus = 0.75 uses = 1 category = construction_tech }
-			army_experience = 25
+			TU_build_forts_2 = yes
 		}
 	}
 
@@ -227,8 +226,7 @@
 		search_filters = { FOCUS_FILTER_INDUSTRY }
 
 		completion_reward = {
-			TU_build_infrastructure = yes
-			add_tech_bonus = { name = TU_VIC_kzd_steam_rail bonus = 0.75 uses = 1 category = industry category = construction_tech }
+			TU_build_railway = yes
 		}
 	}
 
@@ -529,8 +527,7 @@
 		search_filters = { FOCUS_FILTER_POLITICAL }
 
 		completion_reward = {
-			add_tech_bonus = { name = TU_VIC_lei_mountain_fort bonus = 0.75 uses = 1 category = construction_tech }
-			army_experience = 25
+			TU_build_forts_2 = yes
 		}
 	}
 
@@ -662,7 +659,7 @@
 
 		completion_reward = {
 			TU_build_civ_factory = yes
-			add_tech_bonus = { name = TU_VIC_lei_iron_roads bonus = 0.75 uses = 1 category = industry category = construction_tech }
+			TU_build_railway = yes
 		}
 	}
 
@@ -1322,8 +1319,7 @@
 		search_filters = { FOCUS_FILTER_POLITICAL }
 
 		completion_reward = {
-			add_tech_bonus = { name = TU_VIC_urs_northern_wall bonus = 0.75 uses = 1 category = construction_tech }
-			army_experience = 25
+			TU_build_forts_2 = yes
 		}
 	}
 
@@ -1338,8 +1334,7 @@
 		search_filters = { FOCUS_FILTER_INDUSTRY }
 
 		completion_reward = {
-			TU_build_infrastructure = yes
-			add_tech_bonus = { name = TU_VIC_urs_north_rail bonus = 0.75 uses = 1 category = industry category = construction_tech }
+			TU_build_railway = yes
 		}
 	}
 
@@ -1569,8 +1564,7 @@
 		search_filters = { FOCUS_FILTER_POLITICAL }
 
 		completion_reward = {
-			add_tech_bonus = { name = TU_VIC_kaz_river_forts bonus = 0.75 uses = 1 category = construction_tech }
-			army_experience = 25
+			TU_build_forts_2 = yes
 		}
 	}
 

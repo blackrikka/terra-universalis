@@ -746,8 +746,7 @@
 		}
 
 		completion_reward = {
-			add_tech_bonus = { name = TU_KJE_snow_forts bonus = 0.75 uses = 1 category = construction_tech }
-			army_experience = 25
+			TU_build_forts_2 = yes
 		}
 	}
 
@@ -1283,7 +1282,7 @@
 
 	focus = {
 		id = TU_KJE_railway_ascent
-		icon = GFX_goal_generic_production
+		icon = GFX_goal_generic_construct_infrastructure
 		prerequisite = { focus = TU_KJE_foreign_investment }
 		x = 0
 		y = 0
@@ -1296,7 +1295,7 @@
 		}
 
 		completion_reward = {
-			add_tech_bonus = { name = TU_KJE_railway_ascent bonus = 0.75 uses = 1 category = industry category = construction_tech }
+			TU_build_railway = yes
 			TU_build_civ_factory = yes
 		}
 	}
@@ -1593,8 +1592,7 @@
 		}
 
 		completion_reward = {
-			add_tech_bonus = { name = TU_KJE_ice_bunkers bonus = 0.75 uses = 1 category = construction_tech }
-			army_experience = 25
+			TU_build_forts_2 = yes
 		}
 	}
 
@@ -1911,8 +1909,7 @@
 		}
 
 		completion_reward = {
-			add_tech_bonus = { name = TU_KJE_glacier_forts bonus = 0.75 uses = 1 category = construction_tech }
-			army_experience = 25
+			TU_build_forts_2 = yes
 		}
 	}
 

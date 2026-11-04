@@ -175,8 +175,7 @@
 
 		completion_reward = {
 			add_ideas = TU_URS_w1_border_readiness
-			add_tech_bonus = { name = TU_URS_w1_vic_border_buildup bonus = 0.75 uses = 1 category = construction_tech }
-			army_experience = 25
+			TU_build_forts_2 = yes
 		}
 	}
 
@@ -329,7 +328,7 @@
 
 		completion_reward = {
 			add_ideas = TU_URS_w1_border_readiness
-			add_tech_bonus = { name = TU_URS_w1_lei_border_buildup bonus = 0.75 uses = 1 category = electronics category = industry }
+			TU_build_forts_2 = yes
 		}
 	}
 

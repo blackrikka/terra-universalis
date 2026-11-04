@@ -27,6 +27,10 @@ GENERIC = {"add_political_power", "add_stability", "add_war_support", "army_expe
            "air_experience", "add_manpower", "add_tech_bonus", "add_doctrine_cost_reduction"}
 
 
+# 테마 보상이 넣는 건설 효과 (다시 돌릴 때 지우고 새로 넣는다)
+THEME_BUILD = ("TU_build_railway", "TU_build_forts_", "TU_build_coastal_forts_")
+
+
 def load_loc():
     loc = {}
     for f in LOC_EN.rglob("*.yml"):
@@ -101,8 +105,9 @@ def rewrite_block(block, loc, stats):
         k += 1
     body = block[j + 1:k]
     stmts = split_statements(body)
-    keep = [t for key, t in stmts if key not in GENERIC]
     theme = theme_of(loc.get(fid, ""))
+    keep = [t for key, t in stmts if key not in GENERIC and not key.startswith(THEME_BUILD)
+            and not (theme == "rail" and key == "TU_build_infrastructure")]
     stats[theme] += 1
     new = keep + reward_lines(theme, fid, cost)
     # 여러 줄 문장은 원래 들여쓰기를 그대로 가지고 있다 (첫 줄만 앞 공백이 빠짐)

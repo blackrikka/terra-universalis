@@ -559,8 +559,7 @@
 		}
 
 		completion_reward = {
-			add_tech_bonus = { name = TU_LGM_fortified_districts bonus = 0.75 uses = 1 category = construction_tech }
-			army_experience = 25
+			TU_build_forts_2 = yes
 		}
 	}
 
@@ -638,8 +637,7 @@
 		}
 
 		completion_reward = {
-			add_tech_bonus = { name = TU_LGM_city_wall bonus = 0.75 uses = 1 category = construction_tech }
-			army_experience = 25
+			TU_build_forts_2 = yes
 		}
 	}
 
@@ -1326,8 +1324,7 @@
 		}
 
 		completion_reward = {
-			add_tech_bonus = { name = TU_LGM_fortify_border bonus = 0.75 uses = 1 category = construction_tech }
-			army_experience = 25
+			TU_build_forts_2 = yes
 		}
 	}
 
@@ -1395,8 +1392,7 @@
 		completion_reward = {
 			country_event = { id = tu_lgm_ev.5 }
 			add_ideas = TU_LGM_fortified_line
-			add_tech_bonus = { name = TU_LGM_defence_line bonus = 0.75 uses = 1 category = construction_tech }
-			army_experience = 25
+			TU_build_forts_2 = yes
 		}
 	}
 

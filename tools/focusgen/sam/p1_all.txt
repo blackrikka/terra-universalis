@@ -482,7 +482,7 @@
 
 	focus = {
 		id = TU_SAM_railway_north
-		icon = GFX_goal_generic_production
+		icon = GFX_goal_generic_construct_infrastructure
 		prerequisite = { focus = TU_SAM_open_sami }
 		x = 0
 		y = 0
@@ -495,8 +495,7 @@
 		}
 
 		completion_reward = {
-			add_tech_bonus = { name = TU_SAM_railway_north bonus = 0.75 uses = 1 category = industry category = construction_tech }
-			TU_build_infrastructure = yes
+			TU_build_railway = yes
 		}
 	}
 
@@ -595,8 +594,7 @@
 		}
 
 		completion_reward = {
-			add_tech_bonus = { name = TU_SAM_snow_forts bonus = 0.75 uses = 1 category = construction_tech }
-			army_experience = 25
+			TU_build_forts_2 = yes
 		}
 	}
 
@@ -1298,8 +1296,7 @@
 		}
 
 		completion_reward = {
-			add_tech_bonus = { name = TU_SAM_ice_bunkers bonus = 0.75 uses = 1 category = construction_tech }
-			army_experience = 25
+			TU_build_forts_2 = yes
 		}
 	}
 
@@ -1508,7 +1505,7 @@
 
 	focus = {
 		id = TU_SAM_rail_network
-		icon = GFX_goal_generic_production
+		icon = GFX_goal_generic_construct_infrastructure
 		prerequisite = { focus = TU_SAM_road_network }
 		x = 0
 		y = 0
@@ -1521,8 +1518,7 @@
 		}
 
 		completion_reward = {
-			add_tech_bonus = { name = TU_SAM_rail_network bonus = 0.75 uses = 1 category = industry category = construction_tech }
-			TU_build_infrastructure = yes
+			TU_build_railway = yes
 		}
 	}
 
@@ -1822,8 +1818,7 @@
 		}
 
 		completion_reward = {
-			add_tech_bonus = { name = TU_SAM_frost_shield bonus = 0.75 uses = 1 category = construction_tech }
-			army_experience = 25
+			TU_build_forts_2 = yes
 		}
 	}
 
@@ -1842,8 +1837,7 @@
 		}
 
 		completion_reward = {
-			add_tech_bonus = { name = TU_SAM_living_walls bonus = 0.75 uses = 1 category = construction_tech }
-			army_experience = 25
+			TU_build_forts_2 = yes
 		}
 	}
 
@@ -2160,8 +2154,7 @@
 		}
 
 		completion_reward = {
-			add_tech_bonus = { name = TU_SAM_ice_fortress bonus = 0.75 uses = 1 category = construction_tech }
-			army_experience = 25
+			TU_build_forts_2 = yes
 		}
 	}
 
@@ -2348,7 +2341,7 @@
 
 	focus = {
 		id = TU_SAM_timber_rail
-		icon = GFX_goal_generic_production
+		icon = GFX_goal_generic_construct_infrastructure
 		prerequisite = { focus = TU_SAM_rail_network }
 		x = 0
 		y = 0
@@ -2361,8 +2354,7 @@
 		}
 
 		completion_reward = {
-			add_tech_bonus = { name = TU_SAM_timber_rail bonus = 0.75 uses = 1 category = industry category = construction_tech }
-			TU_build_infrastructure = yes
+			TU_build_railway = yes
 		}
 	}
 

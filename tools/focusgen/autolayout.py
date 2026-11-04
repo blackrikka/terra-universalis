@@ -719,6 +719,29 @@ def layout(tree):
     else:
         raise TuError(1, "배치가 수렴하지 않습니다")
 
+    # 단 접기 (bandpack.py): 갈래 묶음을 여러 단으로 쌓아 폭을 줄인다
+    if not tree.get("no_band"):
+        import bandpack
+
+        def sub_layout(nodes):
+            keep = set(nodes)
+            sub = []
+            for i in nodes:
+                f = fs[i]
+                sub.append({"id": f["id"], "line": f["line"], "x": orig[i][0], "y": orig[i][1],
+                            "x_span": None, "y_span": None, "rel": None, "rel_span": None,
+                            "parents": [p for p in f["parents"] if index[p] in keep],
+                            "mutex": [m for m in f["mutex"] if index[m] in keep]})
+            st = layout({"tree": tree["tree"], "init": None, "focuses": sub, "no_band": True})
+            return {i: xy for i, xy in zip(nodes, st["xy"])}
+
+        banded = bandpack.band_layout(n, parents, adj, Y, X, sub_layout, center)
+        if banded is not None:
+            X, Y = banded
+            clash = row_clash(zip(Y, X))
+            if clash is not None:
+                raise TuError(1, f"단 접기 검사 실패: y={clash[0]} 에서 dx={clash[1]}")
+
     # 통계
     before_x = [x for x, _ in orig]
     before_y = [y for _, y in orig]

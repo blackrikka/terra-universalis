@@ -899,8 +899,7 @@
 		}
 
 		completion_reward = {
-			add_tech_bonus = { name = TU_SIR_fortress_cities bonus = 0.75 uses = 1 category = construction_tech }
-			army_experience = 25
+			TU_build_forts_2 = yes
 		}
 	}
 
@@ -1331,7 +1330,7 @@
 
 	focus = {
 		id = TU_SIR_rail_network
-		icon = GFX_goal_generic_production
+		icon = GFX_goal_generic_construct_infrastructure
 		prerequisite = { focus = TU_SIR_road_network }
 		x = 0
 		y = 0
@@ -1344,8 +1343,7 @@
 		}
 
 		completion_reward = {
-			add_tech_bonus = { name = TU_SIR_rail_network bonus = 0.75 uses = 1 category = industry category = construction_tech }
-			TU_build_infrastructure = yes
+			TU_build_railway = yes
 		}
 	}
 
@@ -1735,7 +1733,7 @@
 
 	focus = {
 		id = TU_SIR_bellone_rail
-		icon = GFX_goal_generic_production
+		icon = GFX_goal_generic_construct_infrastructure
 		prerequisite = { focus = TU_SIR_bellone_construction }
 		x = 0
 		y = 0
@@ -1748,8 +1746,7 @@
 		}
 
 		completion_reward = {
-			add_tech_bonus = { name = TU_SIR_bellone_rail bonus = 0.75 uses = 1 category = industry category = construction_tech }
-			TU_build_infrastructure = yes
+			TU_build_railway = yes
 		}
 	}
 
@@ -1946,8 +1943,7 @@
 		}
 
 		completion_reward = {
-			add_tech_bonus = { name = TU_SIR_wolf_citadel bonus = 0.75 uses = 1 category = construction_tech }
-			army_experience = 25
+			TU_build_forts_2 = yes
 		}
 	}
 

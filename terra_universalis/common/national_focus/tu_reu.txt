@@ -1,6 +1,6 @@
 focus_tree = {
 	id = TU_REU_focus
-	continuous_focus_position = { x = 50 y = 1300 }
+	continuous_focus_position = { x = 50 y = 2470 }
 
 	country = {
 		factor = 0
@@ -37,7 +37,7 @@ focus_tree = {
 		id = TU_REU_militia_call
 		icon = GFX_goal_generic_allies_build_infantry
 		prerequisite = { focus = TU_REU_uprising }
-		x = -13
+		x = -3
 		y = 1
 		cost = 5
 
@@ -55,8 +55,8 @@ focus_tree = {
 		id = TU_REU_black_serpent
 		icon = GFX_goal_generic_political_pressure
 		prerequisite = { focus = TU_REU_uprising }
-		x = -29
-		y = 1
+		x = -26
+		y = 10
 		cost = 5
 
 		search_filters = { FOCUS_FILTER_POLITICAL }
@@ -72,8 +72,8 @@ focus_tree = {
 		id = TU_REU_serpent_army
 		icon = GFX_goal_generic_army_doctrines
 		prerequisite = { focus = TU_REU_black_serpent }
-		x = -29
-		y = 2
+		x = -26
+		y = 11
 		cost = 10
 
 		search_filters = { FOCUS_FILTER_ARMY_XP }
@@ -88,8 +88,8 @@ focus_tree = {
 		id = TU_REU_serpent_march
 		icon = GFX_goal_generic_army_artillery
 		prerequisite = { focus = TU_REU_serpent_army }
-		x = -29
-		y = 3
+		x = -26
+		y = 12
 		cost = 10
 
 		search_filters = { FOCUS_FILTER_ARMY_XP }
@@ -107,8 +107,8 @@ focus_tree = {
 		prerequisite = { focus = TU_REU_black_serpent }
 		prerequisite = { focus = TU_REU_serpent_march }
 		mutually_exclusive = { focus = TU_REU_frost_fortress }
-		x = -29
-		y = 4
+		x = -26
+		y = 13
 		cost = 10
 
 		search_filters = { FOCUS_FILTER_ARMY_XP }
@@ -132,8 +132,8 @@ focus_tree = {
 		id = TU_REU_frost_nova
 		icon = GFX_goal_generic_propaganda
 		prerequisite = { focus = TU_REU_uprising }
-		x = 8
-		y = 1
+		x = -12
+		y = 10
 		cost = 5
 
 		search_filters = { FOCUS_FILTER_POLITICAL }
@@ -148,8 +148,8 @@ focus_tree = {
 		id = TU_REU_infected_zones
 		icon = GFX_goal_generic_construct_civilian
 		prerequisite = { focus = TU_REU_frost_nova }
-		x = 8
-		y = 2
+		x = -12
+		y = 11
 		cost = 10
 
 		search_filters = { FOCUS_FILTER_INDUSTRY }
@@ -165,8 +165,8 @@ focus_tree = {
 		id = TU_REU_patriot_call
 		icon = GFX_goal_generic_national_unity
 		prerequisite = { focus = TU_REU_infected_zones }
-		x = 3
-		y = 3
+		x = -17
+		y = 12
 		cost = 10
 
 		search_filters = { FOCUS_FILTER_POLITICAL }
@@ -186,8 +186,8 @@ focus_tree = {
 		prerequisite = { focus = TU_REU_patriot_call }
 		prerequisite = { focus = TU_REU_infected_zones }
 		mutually_exclusive = { focus = TU_REU_serpent_conquest }
-		x = 3
-		y = 4
+		x = -17
+		y = 13
 		cost = 10
 
 		search_filters = { FOCUS_FILTER_ARMY_XP }
@@ -199,8 +199,7 @@ focus_tree = {
 		completion_reward = {
 			country_event = { id = tu_reu_ev.3 }
 			add_ideas = TU_REU_frost_bastion
-			add_tech_bonus = { name = TU_REU_frost_fortress bonus = 0.75 uses = 1 category = construction_tech }
-			army_experience = 25
+			TU_build_forts_2 = yes
 		}
 	}
 
@@ -213,8 +212,8 @@ focus_tree = {
 		id = TU_REU_dip_envoys
 		icon = GFX_goal_generic_improve_relations
 		prerequisite = { focus = TU_REU_uprising }
-		x = -11
-		y = 1
+		x = 4
+		y = 9
 		cost = 10
 
 		search_filters = { FOCUS_FILTER_POLITICAL }
@@ -237,8 +236,8 @@ focus_tree = {
 		icon = GFX_goal_generic_special_forces
 		prerequisite = { focus = TU_REU_serpent_army }
 		mutually_exclusive = { focus = TU_REU_serpent_supply }
-		x = -27
-		y = 3
+		x = -24
+		y = 12
 		cost = 10
 
 		search_filters = { FOCUS_FILTER_ARMY_XP }
@@ -258,8 +257,8 @@ focus_tree = {
 		icon = GFX_goal_generic_construct_infrastructure
 		prerequisite = { focus = TU_REU_serpent_army }
 		mutually_exclusive = { focus = TU_REU_serpent_scouts }
-		x = -25
-		y = 3
+		x = -22
+		y = 12
 		cost = 10
 
 		search_filters = { FOCUS_FILTER_POLITICAL }
@@ -277,8 +276,8 @@ focus_tree = {
 		id = TU_REU_serpent_recruits
 		icon = GFX_goal_generic_allies_build_infantry
 		prerequisite = { focus = TU_REU_black_serpent }
-		x = -23
-		y = 2
+		x = -20
+		y = 11
 		cost = 10
 
 		search_filters = { FOCUS_FILTER_POLITICAL }
@@ -298,8 +297,8 @@ focus_tree = {
 		icon = GFX_goal_generic_propaganda
 		prerequisite = { focus = TU_REU_black_serpent }
 		mutually_exclusive = { focus = TU_REU_talulah_speech_alt }
-		x = -21
-		y = 2
+		x = -18
+		y = 11
 		cost = 10
 
 		search_filters = { FOCUS_FILTER_POLITICAL }
@@ -319,8 +318,8 @@ focus_tree = {
 		icon = GFX_goal_generic_propaganda
 		prerequisite = { focus = TU_REU_black_serpent }
 		mutually_exclusive = { focus = TU_REU_talulah_speech }
-		x = -19
-		y = 2
+		x = -16
+		y = 11
 		cost = 10
 
 		search_filters = { FOCUS_FILTER_POLITICAL }
@@ -339,8 +338,8 @@ focus_tree = {
 		icon = GFX_goal_generic_army_motorized
 		prerequisite = { focus = TU_REU_serpent_march }
 		mutually_exclusive = { focus = TU_REU_serpent_rail_alt }
-		x = -27
-		y = 4
+		x = -24
+		y = 13
 		cost = 10
 
 		search_filters = { FOCUS_FILTER_ARMY_XP }
@@ -350,8 +349,7 @@ focus_tree = {
 		}
 
 		completion_reward = {
-			add_tech_bonus = { name = TU_REU_serpent_rail bonus = 0.75 uses = 1 category = construction_tech }
-			army_experience = 25
+			TU_build_railway = yes
 		}
 	}
 
@@ -360,8 +358,8 @@ focus_tree = {
 		icon = GFX_goal_generic_army_motorized
 		prerequisite = { focus = TU_REU_serpent_march }
 		mutually_exclusive = { focus = TU_REU_serpent_rail }
-		x = -25
-		y = 4
+		x = -22
+		y = 13
 		cost = 10
 
 		search_filters = { FOCUS_FILTER_ARMY_XP }
@@ -372,7 +370,7 @@ focus_tree = {
 
 		completion_reward = {
 			add_ideas = TU_REU_choice_serpent_rail
-			add_tech_bonus = { name = TU_REU_serpent_rail_alt bonus = 0.75 uses = 1 category = industry category = construction_tech }
+			TU_build_railway = yes
 		}
 	}
 
@@ -380,8 +378,8 @@ focus_tree = {
 		id = TU_REU_serpent_banners
 		icon = GFX_goal_generic_national_unity
 		prerequisite = { focus = TU_REU_serpent_recruits }
-		x = -23
-		y = 3
+		x = -20
+		y = 12
 		cost = 10
 
 		search_filters = { FOCUS_FILTER_POLITICAL }
@@ -402,8 +400,8 @@ focus_tree = {
 		id = TU_REU_conquest_north
 		icon = GFX_goal_generic_army_tanks
 		prerequisite = { focus = TU_REU_serpent_conquest }
-		x = -30
-		y = 5
+		x = -27
+		y = 14
 		cost = 10
 
 		search_filters = { FOCUS_FILTER_ARMY_XP }
@@ -423,8 +421,8 @@ focus_tree = {
 		id = TU_REU_conquest_south
 		icon = GFX_goal_generic_occupy_states_ongoing_war
 		prerequisite = { focus = TU_REU_serpent_conquest }
-		x = -28
-		y = 5
+		x = -25
+		y = 14
 		cost = 10
 
 		search_filters = { FOCUS_FILTER_ARMY_XP }
@@ -444,8 +442,8 @@ focus_tree = {
 		id = TU_REU_conquest_occupation
 		icon = GFX_goal_generic_political_pressure
 		prerequisite = { focus = TU_REU_serpent_conquest }
-		x = -26
-		y = 5
+		x = -23
+		y = 14
 		cost = 10
 
 		search_filters = { FOCUS_FILTER_POLITICAL }
@@ -465,8 +463,8 @@ focus_tree = {
 		id = TU_REU_conquest_blood_tax
 		icon = GFX_goal_generic_production
 		prerequisite = { focus = TU_REU_serpent_conquest }
-		x = -23
-		y = 5
+		x = -20
+		y = 14
 		cost = 10
 
 		search_filters = { FOCUS_FILTER_POLITICAL }
@@ -485,8 +483,8 @@ focus_tree = {
 		id = TU_REU_serpent_ledger
 		icon = GFX_goal_generic_trade
 		prerequisite = { focus = TU_REU_conquest_blood_tax }
-		x = -24
-		y = 6
+		x = -21
+		y = 15
 		cost = 10
 
 		search_filters = { FOCUS_FILTER_POLITICAL }
@@ -505,8 +503,8 @@ focus_tree = {
 		id = TU_REU_conquest_claim_north
 		icon = GFX_goal_generic_demand_territory
 		prerequisite = { focus = TU_REU_conquest_north }
-		x = -30
-		y = 6
+		x = -27
+		y = 15
 		cost = 10
 
 		search_filters = { FOCUS_FILTER_POLITICAL }
@@ -525,8 +523,8 @@ focus_tree = {
 		id = TU_REU_conquest_claim_south
 		icon = GFX_goal_generic_more_territorial_claims
 		prerequisite = { focus = TU_REU_conquest_south }
-		x = -28
-		y = 6
+		x = -25
+		y = 15
 		cost = 10
 
 		search_filters = { FOCUS_FILTER_POLITICAL }
@@ -546,8 +544,8 @@ focus_tree = {
 		icon = GFX_goal_generic_army_artillery
 		prerequisite = { focus = TU_REU_conquest_north }
 		prerequisite = { focus = TU_REU_conquest_south }
-		x = -26
-		y = 6
+		x = -23
+		y = 15
 		cost = 10
 
 		search_filters = { FOCUS_FILTER_ARMY_XP }
@@ -568,8 +566,8 @@ focus_tree = {
 		id = TU_REU_conquest_hunters
 		icon = GFX_goal_generic_special_forces
 		prerequisite = { focus = TU_REU_conquest_breakthrough }
-		x = -27
-		y = 7
+		x = -24
+		y = 16
 		cost = 10
 
 		search_filters = { FOCUS_FILTER_ARMY_XP }
@@ -589,8 +587,8 @@ focus_tree = {
 		icon = GFX_goal_generic_major_war
 		prerequisite = { focus = TU_REU_conquest_breakthrough }
 		prerequisite = { focus = TU_REU_conquest_occupation }
-		x = -25
-		y = 7
+		x = -22
+		y = 16
 		cost = 15
 
 		search_filters = { FOCUS_FILTER_ARMY_XP }
@@ -610,8 +608,8 @@ focus_tree = {
 		id = TU_REU_conquest_claim_east
 		icon = GFX_goal_generic_demand_territory
 		prerequisite = { focus = TU_REU_conquest_blood_tax }
-		x = -22
-		y = 6
+		x = -19
+		y = 15
 		cost = 10
 
 		search_filters = { FOCUS_FILTER_POLITICAL }
@@ -630,8 +628,8 @@ focus_tree = {
 		id = TU_REU_conquest_order
 		icon = GFX_goal_generic_national_unity
 		prerequisite = { focus = TU_REU_conquest_capital_assault }
-		x = -25
-		y = 8
+		x = -22
+		y = 17
 		cost = 10
 
 		search_filters = { FOCUS_FILTER_POLITICAL }
@@ -651,8 +649,8 @@ focus_tree = {
 		id = TU_REU_conquest_war_council
 		icon = GFX_goal_generic_army_doctrines
 		prerequisite = { focus = TU_REU_conquest_hunters }
-		x = -27
-		y = 8
+		x = -24
+		y = 17
 		cost = 10
 
 		search_filters = { FOCUS_FILTER_POLITICAL }
@@ -674,8 +672,8 @@ focus_tree = {
 		id = TU_REU_frost_scouts
 		icon = GFX_goal_generic_special_forces
 		prerequisite = { focus = TU_REU_frost_nova }
-		x = 19
-		y = 2
+		x = -1
+		y = 11
 		cost = 10
 
 		search_filters = { FOCUS_FILTER_POLITICAL }
@@ -694,8 +692,8 @@ focus_tree = {
 		id = TU_REU_frost_ice_roads
 		icon = GFX_goal_generic_construct_infrastructure
 		prerequisite = { focus = TU_REU_frost_nova }
-		x = 21
-		y = 2
+		x = 1
+		y = 11
 		cost = 10
 
 		search_filters = { FOCUS_FILTER_POLITICAL }
@@ -713,8 +711,8 @@ focus_tree = {
 		id = TU_REU_frost_signals
 		icon = GFX_goal_generic_radar
 		prerequisite = { focus = TU_REU_frost_scouts }
-		x = 19
-		y = 3
+		x = -1
+		y = 12
 		cost = 10
 
 		search_filters = { FOCUS_FILTER_POLITICAL }
@@ -733,8 +731,8 @@ focus_tree = {
 		id = TU_REU_frost_harvest
 		icon = GFX_goal_generic_consumer_goods
 		prerequisite = { focus = TU_REU_frost_ice_roads }
-		x = 21
-		y = 3
+		x = 1
+		y = 12
 		cost = 10
 
 		search_filters = { FOCUS_FILTER_POLITICAL }
@@ -753,8 +751,8 @@ focus_tree = {
 		icon = GFX_goal_generic_scientific_exchange
 		prerequisite = { focus = TU_REU_infected_zones }
 		mutually_exclusive = { focus = TU_REU_zone_clinics }
-		x = 15
-		y = 3
+		x = -5
+		y = 12
 		cost = 10
 
 		search_filters = { FOCUS_FILTER_POLITICAL }
@@ -773,8 +771,8 @@ focus_tree = {
 		icon = GFX_goal_generic_construct_civilian
 		prerequisite = { focus = TU_REU_infected_zones }
 		mutually_exclusive = { focus = TU_REU_zone_schools }
-		x = 17
-		y = 3
+		x = -3
+		y = 12
 		cost = 10
 
 		search_filters = { FOCUS_FILTER_POLITICAL }
@@ -793,8 +791,8 @@ focus_tree = {
 		id = TU_REU_zone_council
 		icon = GFX_goal_generic_political_pressure
 		prerequisite = { focus = TU_REU_infected_zones }
-		x = 13
-		y = 3
+		x = -7
+		y = 12
 		cost = 10
 
 		search_filters = { FOCUS_FILTER_POLITICAL }
@@ -813,8 +811,8 @@ focus_tree = {
 		id = TU_REU_zone_treaty
 		icon = GFX_goal_generic_positive_trade_relations
 		prerequisite = { focus = TU_REU_zone_council }
-		x = 12
-		y = 4
+		x = -8
+		y = 13
 		cost = 10
 
 		search_filters = { FOCUS_FILTER_POLITICAL }
@@ -833,8 +831,8 @@ focus_tree = {
 		id = TU_REU_frost_trade
 		icon = GFX_goal_generic_trade
 		prerequisite = { focus = TU_REU_zone_council }
-		x = 14
-		y = 4
+		x = -6
+		y = 13
 		cost = 10
 
 		search_filters = { FOCUS_FILTER_POLITICAL }
@@ -853,8 +851,8 @@ focus_tree = {
 		icon = GFX_goal_generic_propaganda
 		prerequisite = { focus = TU_REU_patriot_call }
 		mutually_exclusive = { focus = TU_REU_patriot_guard }
-		x = 5
-		y = 4
+		x = -15
+		y = 13
 		cost = 10
 
 		search_filters = { FOCUS_FILTER_POLITICAL }
@@ -873,8 +871,8 @@ focus_tree = {
 		id = TU_REU_patriot_council
 		icon = GFX_goal_generic_political_pressure
 		prerequisite = { focus = TU_REU_patriot_call }
-		x = 10
-		y = 4
+		x = -10
+		y = 13
 		cost = 10
 
 		search_filters = { FOCUS_FILTER_POLITICAL }
@@ -894,8 +892,8 @@ focus_tree = {
 		icon = GFX_goal_generic_special_forces
 		prerequisite = { focus = TU_REU_patriot_call }
 		mutually_exclusive = { focus = TU_REU_patriot_speech }
-		x = 7
-		y = 4
+		x = -13
+		y = 13
 		cost = 10
 
 		search_filters = { FOCUS_FILTER_ARMY_XP }
@@ -915,8 +913,8 @@ focus_tree = {
 		icon = GFX_goal_generic_construct_civilian
 		prerequisite = { focus = TU_REU_patriot_call }
 		prerequisite = { focus = TU_REU_zone_council }
-		x = 16
-		y = 4
+		x = -4
+		y = 13
 		cost = 10
 
 		search_filters = { FOCUS_FILTER_POLITICAL }
@@ -935,8 +933,8 @@ focus_tree = {
 		id = TU_REU_patriot_rhodes_aid
 		icon = GFX_goal_generic_positive_trade_relations
 		prerequisite = { focus = TU_REU_patriot_council }
-		x = 10
-		y = 5
+		x = -10
+		y = 14
 		cost = 10
 
 		search_filters = { FOCUS_FILTER_POLITICAL }
@@ -955,8 +953,8 @@ focus_tree = {
 		id = TU_REU_frost_walls
 		icon = GFX_goal_generic_fortify_city
 		prerequisite = { focus = TU_REU_frost_fortress }
-		x = 2
-		y = 5
+		x = -18
+		y = 14
 		cost = 10
 
 		search_filters = { FOCUS_FILTER_POLITICAL }
@@ -966,8 +964,7 @@ focus_tree = {
 		}
 
 		completion_reward = {
-			add_tech_bonus = { name = TU_REU_frost_walls bonus = 0.75 uses = 1 category = construction_tech }
-			army_experience = 25
+			TU_build_forts_2 = yes
 		}
 	}
 
@@ -975,8 +972,8 @@ focus_tree = {
 		id = TU_REU_fortress_supply
 		icon = GFX_goal_generic_construct_military
 		prerequisite = { focus = TU_REU_frost_fortress }
-		x = 4
-		y = 5
+		x = -16
+		y = 14
 		cost = 10
 
 		search_filters = { FOCUS_FILTER_POLITICAL }
@@ -986,8 +983,7 @@ focus_tree = {
 		}
 
 		completion_reward = {
-			add_tech_bonus = { name = TU_REU_fortress_supply bonus = 0.75 uses = 1 category = construction_tech }
-			army_experience = 25
+			TU_build_forts_2 = yes
 		}
 	}
 
@@ -996,8 +992,8 @@ focus_tree = {
 		icon = GFX_goal_generic_radar
 		prerequisite = { focus = TU_REU_frost_fortress }
 		mutually_exclusive = { focus = TU_REU_fortress_watch_alt }
-		x = 6
-		y = 5
+		x = -14
+		y = 14
 		cost = 10
 
 		search_filters = { FOCUS_FILTER_POLITICAL }
@@ -1017,8 +1013,8 @@ focus_tree = {
 		icon = GFX_goal_generic_radar
 		prerequisite = { focus = TU_REU_frost_fortress }
 		mutually_exclusive = { focus = TU_REU_fortress_watch }
-		x = 8
-		y = 5
+		x = -12
+		y = 14
 		cost = 10
 
 		search_filters = { FOCUS_FILTER_POLITICAL }
@@ -1028,8 +1024,7 @@ focus_tree = {
 		}
 
 		completion_reward = {
-			add_tech_bonus = { name = TU_REU_fortress_watch_alt bonus = 0.75 uses = 1 category = construction_tech }
-			army_experience = 25
+			TU_build_forts_2 = yes
 		}
 	}
 
@@ -1038,8 +1033,8 @@ focus_tree = {
 		icon = GFX_goal_generic_defence
 		prerequisite = { focus = TU_REU_frost_walls }
 		prerequisite = { focus = TU_REU_fortress_supply }
-		x = 3
-		y = 6
+		x = -17
+		y = 15
 		cost = 10
 
 		search_filters = { FOCUS_FILTER_ARMY_XP }
@@ -1049,8 +1044,7 @@ focus_tree = {
 		}
 
 		completion_reward = {
-			add_tech_bonus = { name = TU_REU_bastion_line bonus = 0.75 uses = 1 category = construction_tech }
-			army_experience = 25
+			TU_build_forts_2 = yes
 		}
 	}
 
@@ -1058,8 +1052,8 @@ focus_tree = {
 		id = TU_REU_frost_guardians
 		icon = GFX_goal_generic_fortify_city
 		prerequisite = { focus = TU_REU_bastion_line }
-		x = 3
-		y = 7
+		x = -17
+		y = 16
 		cost = 15
 
 		search_filters = { FOCUS_FILTER_POLITICAL }
@@ -1079,8 +1073,8 @@ focus_tree = {
 		icon = GFX_goal_generic_national_unity
 		prerequisite = { focus = TU_REU_patriot_reforms }
 		prerequisite = { focus = TU_REU_frost_guardians }
-		x = 3
-		y = 8
+		x = -17
+		y = 17
 		cost = 15
 
 		search_filters = { FOCUS_FILTER_POLITICAL }
@@ -1101,7 +1095,7 @@ focus_tree = {
 		id = TU_REU_guerrilla_root
 		icon = GFX_goal_generic_small_arms
 		prerequisite = { focus = TU_REU_militia_call }
-		x = -17
+		x = -7
 		y = 2
 		cost = 5
 
@@ -1123,7 +1117,7 @@ focus_tree = {
 		id = TU_REU_guerrilla_training
 		icon = GFX_goal_generic_army_doctrines
 		prerequisite = { focus = TU_REU_guerrilla_root }
-		x = -20
+		x = -10
 		y = 3
 		cost = 10
 
@@ -1143,7 +1137,7 @@ focus_tree = {
 		id = TU_REU_guerrilla_cells
 		icon = GFX_goal_generic_intelligence_exchange
 		prerequisite = { focus = TU_REU_guerrilla_root }
-		x = -17
+		x = -7
 		y = 3
 		cost = 10
 
@@ -1163,7 +1157,7 @@ focus_tree = {
 		id = TU_REU_guerrilla_intel
 		icon = GFX_goal_generic_radar
 		prerequisite = { focus = TU_REU_guerrilla_cells }
-		x = -17
+		x = -7
 		y = 4
 		cost = 10
 
@@ -1183,7 +1177,7 @@ focus_tree = {
 		id = TU_REU_guerrilla_caches
 		icon = GFX_goal_generic_construct_civilian
 		prerequisite = { focus = TU_REU_guerrilla_training }
-		x = -21
+		x = -11
 		y = 4
 		cost = 10
 
@@ -1203,7 +1197,7 @@ focus_tree = {
 		id = TU_REU_guerrilla_ambush
 		icon = GFX_goal_generic_army_artillery
 		prerequisite = { focus = TU_REU_guerrilla_training }
-		x = -19
+		x = -9
 		y = 4
 		cost = 10
 
@@ -1224,7 +1218,7 @@ focus_tree = {
 		icon = GFX_goal_generic_intelligence_exchange
 		prerequisite = { focus = TU_REU_guerrilla_cells }
 		mutually_exclusive = { focus = TU_REU_guerrilla_scouting_alt }
-		x = -15
+		x = -5
 		y = 4
 		cost = 10
 
@@ -1245,7 +1239,7 @@ focus_tree = {
 		icon = GFX_goal_generic_intelligence_exchange
 		prerequisite = { focus = TU_REU_guerrilla_cells }
 		mutually_exclusive = { focus = TU_REU_guerrilla_scouting }
-		x = -13
+		x = -3
 		y = 4
 		cost = 10
 
@@ -1265,7 +1259,7 @@ focus_tree = {
 		id = TU_REU_guerrilla_hideout
 		icon = GFX_goal_generic_fortify_city
 		prerequisite = { focus = TU_REU_guerrilla_cells }
-		x = -11
+		x = -1
 		y = 4
 		cost = 10
 
@@ -1285,7 +1279,7 @@ focus_tree = {
 		id = TU_REU_guerrilla_medic
 		icon = GFX_goal_generic_construct_civilian
 		prerequisite = { focus = TU_REU_guerrilla_caches }
-		x = -21
+		x = -11
 		y = 5
 		cost = 10
 
@@ -1306,7 +1300,7 @@ focus_tree = {
 		icon = GFX_goal_generic_occupy_states_ongoing_war
 		prerequisite = { focus = TU_REU_guerrilla_intel }
 		prerequisite = { focus = TU_REU_guerrilla_ambush }
-		x = -17
+		x = -7
 		y = 5
 		cost = 10
 
@@ -1326,7 +1320,7 @@ focus_tree = {
 		id = TU_REU_guerrilla_rails
 		icon = GFX_goal_generic_construct_infrastructure
 		prerequisite = { focus = TU_REU_guerrilla_raid_plan }
-		x = -18
+		x = -8
 		y = 6
 		cost = 10
 
@@ -1337,7 +1331,9 @@ focus_tree = {
 		}
 
 		completion_reward = {
-			add_tech_bonus = { name = TU_REU_guerrilla_rails bonus = 0.75 uses = 1 category = industry category = construction_tech }
+			army_experience = 25
+			add_war_support = 0.03
+			add_doctrine_cost_reduction = { name = TU_REU_guerrilla_rails cost_reduction = 0.4 uses = 1 category = land_doctrine }
 		}
 	}
 
@@ -1345,7 +1341,7 @@ focus_tree = {
 		id = TU_REU_guerrilla_voice
 		icon = GFX_goal_generic_propaganda
 		prerequisite = { focus = TU_REU_guerrilla_hideout }
-		x = -11
+		x = -1
 		y = 5
 		cost = 10
 
@@ -1365,7 +1361,7 @@ focus_tree = {
 		id = TU_REU_guerrilla_night
 		icon = GFX_goal_generic_occupy_start_war
 		prerequisite = { focus = TU_REU_guerrilla_raid_plan }
-		x = -16
+		x = -6
 		y = 6
 		cost = 10
 
@@ -1386,7 +1382,7 @@ focus_tree = {
 		icon = GFX_goal_generic_army_doctrines
 		prerequisite = { focus = TU_REU_guerrilla_rails }
 		prerequisite = { focus = TU_REU_guerrilla_night }
-		x = -17
+		x = -7
 		y = 7
 		cost = 10
 
@@ -1407,7 +1403,7 @@ focus_tree = {
 		icon = GFX_goal_generic_defence
 		prerequisite = { focus = TU_REU_guerrilla_council }
 		prerequisite = { focus = TU_REU_guerrilla_voice }
-		x = -17
+		x = -7
 		y = 8
 		cost = 15
 
@@ -1431,8 +1427,8 @@ focus_tree = {
 		id = TU_REU_chernobog_root
 		icon = GFX_goal_generic_construct_civ_factory
 		prerequisite = { focus = TU_REU_uprising }
-		x = 30
-		y = 1
+		x = 14
+		y = 6
 		cost = 5
 
 		search_filters = { FOCUS_FILTER_INDUSTRY }
@@ -1453,8 +1449,8 @@ focus_tree = {
 		id = TU_REU_chernobog_survey
 		icon = GFX_goal_generic_construction
 		prerequisite = { focus = TU_REU_chernobog_root }
-		x = 24
-		y = 2
+		x = 8
+		y = 7
 		cost = 10
 
 		search_filters = { FOCUS_FILTER_POLITICAL }
@@ -1472,8 +1468,8 @@ focus_tree = {
 		id = TU_REU_chernobog_crew
 		icon = GFX_goal_generic_construct_military
 		prerequisite = { focus = TU_REU_chernobog_root }
-		x = 26
-		y = 2
+		x = 10
+		y = 7
 		cost = 10
 
 		search_filters = { FOCUS_FILTER_POLITICAL }
@@ -1492,8 +1488,8 @@ focus_tree = {
 		id = TU_REU_chernobog_engine
 		icon = GFX_goal_generic_construct_mil_factory
 		prerequisite = { focus = TU_REU_chernobog_root }
-		x = 30
-		y = 2
+		x = 14
+		y = 7
 		cost = 10
 
 		search_filters = { FOCUS_FILTER_POLITICAL }
@@ -1511,8 +1507,8 @@ focus_tree = {
 		id = TU_REU_chernobog_reactor
 		icon = GFX_goal_generic_production
 		prerequisite = { focus = TU_REU_chernobog_engine }
-		x = 29
-		y = 3
+		x = 13
+		y = 8
 		cost = 10
 
 		search_filters = { FOCUS_FILTER_INDUSTRY }
@@ -1531,8 +1527,8 @@ focus_tree = {
 		id = TU_REU_chernobog_tracks
 		icon = GFX_goal_generic_army_motorized
 		prerequisite = { focus = TU_REU_chernobog_engine }
-		x = 31
-		y = 3
+		x = 15
+		y = 8
 		cost = 10
 
 		search_filters = { FOCUS_FILTER_POLITICAL }
@@ -1542,7 +1538,7 @@ focus_tree = {
 		}
 
 		completion_reward = {
-			add_tech_bonus = { name = TU_REU_chernobog_tracks bonus = 0.75 uses = 1 category = industry category = construction_tech }
+			TU_build_railway = yes
 		}
 	}
 
@@ -1551,8 +1547,8 @@ focus_tree = {
 		icon = GFX_goal_generic_defence
 		prerequisite = { focus = TU_REU_chernobog_crew }
 		prerequisite = { focus = TU_REU_chernobog_survey }
-		x = 27
-		y = 3
+		x = 11
+		y = 8
 		cost = 10
 
 		search_filters = { FOCUS_FILTER_POLITICAL }
@@ -1571,8 +1567,8 @@ focus_tree = {
 		id = TU_REU_chernobog_workshop
 		icon = GFX_goal_generic_construct_civ_factory
 		prerequisite = { focus = TU_REU_chernobog_reactor }
-		x = 29
-		y = 4
+		x = 13
+		y = 9
 		cost = 10
 
 		search_filters = { FOCUS_FILTER_INDUSTRY }
@@ -1592,8 +1588,8 @@ focus_tree = {
 		icon = GFX_goal_generic_army_tanks
 		prerequisite = { focus = TU_REU_chernobog_reactor }
 		prerequisite = { focus = TU_REU_chernobog_tracks }
-		x = 36
-		y = 4
+		x = 20
+		y = 9
 		cost = 10
 
 		search_filters = { FOCUS_FILTER_POLITICAL }
@@ -1613,8 +1609,8 @@ focus_tree = {
 		id = TU_REU_chernobog_rail_link
 		icon = GFX_goal_generic_construct_infrastructure
 		prerequisite = { focus = TU_REU_chernobog_movement }
-		x = 34
-		y = 5
+		x = 18
+		y = 10
 		cost = 10
 
 		search_filters = { FOCUS_FILTER_INDUSTRY }
@@ -1624,8 +1620,7 @@ focus_tree = {
 		}
 
 		completion_reward = {
-			TU_build_infrastructure = yes
-			add_tech_bonus = { name = TU_REU_chernobog_rail_link bonus = 0.75 uses = 1 category = industry category = construction_tech }
+			TU_build_railway = yes
 		}
 	}
 
@@ -1633,8 +1628,8 @@ focus_tree = {
 		id = TU_REU_chernobog_bridge
 		icon = GFX_goal_generic_construct_infrastructure
 		prerequisite = { focus = TU_REU_chernobog_movement }
-		x = 36
-		y = 5
+		x = 20
+		y = 10
 		cost = 10
 
 		search_filters = { FOCUS_FILTER_POLITICAL }
@@ -1653,8 +1648,8 @@ focus_tree = {
 		id = TU_REU_chernobog_refugees
 		icon = GFX_goal_generic_construct_civilian
 		prerequisite = { focus = TU_REU_chernobog_defences }
-		x = 27
-		y = 4
+		x = 11
+		y = 9
 		cost = 10
 
 		search_filters = { FOCUS_FILTER_POLITICAL }
@@ -1673,8 +1668,8 @@ focus_tree = {
 		id = TU_REU_chernobog_convoy
 		icon = GFX_goal_generic_army_artillery
 		prerequisite = { focus = TU_REU_chernobog_movement }
-		x = 38
-		y = 5
+		x = 22
+		y = 10
 		cost = 10
 
 		search_filters = { FOCUS_FILTER_ARMY_XP }
@@ -1695,8 +1690,8 @@ focus_tree = {
 		icon = GFX_goal_generic_fortify_city
 		prerequisite = { focus = TU_REU_chernobog_defences }
 		prerequisite = { focus = TU_REU_chernobog_workshop }
-		x = 28
-		y = 5
+		x = 12
+		y = 10
 		cost = 10
 
 		search_filters = { FOCUS_FILTER_POLITICAL }
@@ -1715,8 +1710,8 @@ focus_tree = {
 		id = TU_REU_chernobog_hangar
 		icon = GFX_goal_generic_air_fighter
 		prerequisite = { focus = TU_REU_chernobog_workshop }
-		x = 32
-		y = 5
+		x = 16
+		y = 10
 		cost = 10
 
 		search_filters = { FOCUS_FILTER_POLITICAL }
@@ -1735,8 +1730,8 @@ focus_tree = {
 		icon = GFX_goal_generic_radar
 		prerequisite = { focus = TU_REU_chernobog_survey }
 		mutually_exclusive = { focus = TU_REU_chernobog_sensors_alt }
-		x = 23
-		y = 3
+		x = 7
+		y = 8
 		cost = 10
 
 		search_filters = { FOCUS_FILTER_POLITICAL }
@@ -1756,8 +1751,8 @@ focus_tree = {
 		icon = GFX_goal_generic_radar
 		prerequisite = { focus = TU_REU_chernobog_survey }
 		mutually_exclusive = { focus = TU_REU_chernobog_sensors }
-		x = 25
-		y = 3
+		x = 9
+		y = 8
 		cost = 10
 
 		search_filters = { FOCUS_FILTER_POLITICAL }
@@ -1777,8 +1772,8 @@ focus_tree = {
 		icon = GFX_goal_generic_secret_weapon
 		prerequisite = { focus = TU_REU_chernobog_movement }
 		prerequisite = { focus = TU_REU_chernobog_workshop }
-		x = 30
-		y = 5
+		x = 14
+		y = 10
 		cost = 10
 
 		search_filters = { FOCUS_FILTER_INDUSTRY }
@@ -1798,8 +1793,8 @@ focus_tree = {
 		icon = GFX_goal_generic_major_war
 		prerequisite = { focus = TU_REU_chernobog_power }
 		prerequisite = { focus = TU_REU_chernobog_bunkers }
-		x = 29
-		y = 6
+		x = 13
+		y = 11
 		cost = 15
 
 		search_filters = { FOCUS_FILTER_POLITICAL }
@@ -1821,7 +1816,7 @@ focus_tree = {
 		id = TU_REU_mobilize_root
 		icon = GFX_goal_generic_allies_build_infantry
 		prerequisite = { focus = TU_REU_militia_call }
-		x = -9
+		x = 1
 		y = 2
 		cost = 5
 
@@ -1843,7 +1838,7 @@ focus_tree = {
 		id = TU_REU_mobilize_registry
 		icon = GFX_goal_generic_construct_civilian
 		prerequisite = { focus = TU_REU_mobilize_root }
-		x = -9
+		x = 1
 		y = 3
 		cost = 10
 
@@ -1863,7 +1858,7 @@ focus_tree = {
 		id = TU_REU_mobilize_volunteers
 		icon = GFX_goal_generic_national_unity
 		prerequisite = { focus = TU_REU_mobilize_root }
-		x = 0
+		x = 10
 		y = 3
 		cost = 10
 
@@ -1883,7 +1878,7 @@ focus_tree = {
 		id = TU_REU_mobilize_pledge
 		icon = GFX_goal_generic_national_unity
 		prerequisite = { focus = TU_REU_mobilize_volunteers }
-		x = -1
+		x = 9
 		y = 4
 		cost = 10
 
@@ -1903,7 +1898,7 @@ focus_tree = {
 		id = TU_REU_mobilize_training
 		icon = GFX_goal_generic_army_doctrines
 		prerequisite = { focus = TU_REU_mobilize_registry }
-		x = -9
+		x = 1
 		y = 4
 		cost = 10
 
@@ -1923,7 +1918,7 @@ focus_tree = {
 		id = TU_REU_mobilize_medics
 		icon = GFX_goal_generic_scientific_exchange
 		prerequisite = { focus = TU_REU_mobilize_registry }
-		x = -7
+		x = 3
 		y = 4
 		cost = 10
 
@@ -1944,7 +1939,7 @@ focus_tree = {
 		icon = GFX_goal_generic_construction
 		prerequisite = { focus = TU_REU_mobilize_registry }
 		mutually_exclusive = { focus = TU_REU_mobilize_schools_alt }
-		x = -5
+		x = 5
 		y = 4
 		cost = 10
 
@@ -1965,7 +1960,7 @@ focus_tree = {
 		icon = GFX_goal_generic_construction
 		prerequisite = { focus = TU_REU_mobilize_registry }
 		mutually_exclusive = { focus = TU_REU_mobilize_schools }
-		x = -3
+		x = 7
 		y = 4
 		cost = 10
 
@@ -1985,7 +1980,7 @@ focus_tree = {
 		id = TU_REU_mobilize_camps
 		icon = GFX_goal_generic_construct_civilian
 		prerequisite = { focus = TU_REU_mobilize_volunteers }
-		x = 1
+		x = 11
 		y = 4
 		cost = 10
 
@@ -2007,7 +2002,7 @@ focus_tree = {
 		icon = GFX_goal_generic_allies_build_infantry
 		prerequisite = { focus = TU_REU_mobilize_training }
 		prerequisite = { focus = TU_REU_mobilize_volunteers }
-		x = -9
+		x = 1
 		y = 5
 		cost = 10
 
@@ -2027,7 +2022,7 @@ focus_tree = {
 		id = TU_REU_mobilize_guards
 		icon = GFX_goal_generic_defence
 		prerequisite = { focus = TU_REU_mobilize_units }
-		x = -11
+		x = -1
 		y = 6
 		cost = 10
 
@@ -2048,7 +2043,7 @@ focus_tree = {
 		icon = GFX_goal_generic_construct_military
 		prerequisite = { focus = TU_REU_mobilize_guards }
 		mutually_exclusive = { focus = TU_REU_mobilize_quota_alt }
-		x = -13
+		x = -3
 		y = 7
 		cost = 10
 
@@ -2071,7 +2066,7 @@ focus_tree = {
 		icon = GFX_goal_generic_construct_military
 		prerequisite = { focus = TU_REU_mobilize_guards }
 		mutually_exclusive = { focus = TU_REU_mobilize_quota }
-		x = -11
+		x = -1
 		y = 7
 		cost = 10
 
@@ -2092,7 +2087,7 @@ focus_tree = {
 		icon = GFX_goal_generic_construct_civ_factory
 		prerequisite = { focus = TU_REU_mobilize_medics }
 		prerequisite = { focus = TU_REU_mobilize_camps }
-		x = -7
+		x = 3
 		y = 5
 		cost = 10
 
@@ -2113,7 +2108,7 @@ focus_tree = {
 		id = TU_REU_mobilize_wave2
 		icon = GFX_goal_generic_major_war
 		prerequisite = { focus = TU_REU_mobilize_units }
-		x = -7
+		x = 3
 		y = 6
 		cost = 10
 
@@ -2134,7 +2129,7 @@ focus_tree = {
 		id = TU_REU_mobilize_frontline
 		icon = GFX_goal_generic_army_artillery
 		prerequisite = { focus = TU_REU_mobilize_guards }
-		x = -9
+		x = 1
 		y = 7
 		cost = 10
 
@@ -2156,7 +2151,7 @@ focus_tree = {
 		icon = GFX_goal_generic_construct_mil_factory
 		prerequisite = { focus = TU_REU_mobilize_wave2 }
 		prerequisite = { focus = TU_REU_mobilize_industry }
-		x = -7
+		x = 3
 		y = 7
 		cost = 10
 
@@ -2178,7 +2173,7 @@ focus_tree = {
 		icon = GFX_goal_generic_major_war
 		prerequisite = { focus = TU_REU_mobilize_wartime }
 		prerequisite = { focus = TU_REU_mobilize_frontline }
-		x = -9
+		x = 1
 		y = 8
 		cost = 15
 
@@ -2203,8 +2198,8 @@ focus_tree = {
 		id = TU_REU_dip_alliance
 		icon = GFX_goal_generic_alliance
 		prerequisite = { focus = TU_REU_chernobog_heart }
-		x = 29
-		y = 7
+		x = 13
+		y = 12
 		cost = 10
 
 		search_filters = { FOCUS_FILTER_POLITICAL }

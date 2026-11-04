@@ -1,6 +1,6 @@
 focus_tree = {
 	id = TU_VIC_focus
-	continuous_focus_position = { x = 50 y = 2860 }
+	continuous_focus_position = { x = 50 y = 5330 }
 
 	country = {
 		factor = 0
@@ -37,7 +37,7 @@ focus_tree = {
 		id = TU_VIC_dukes_summit
 		icon = GFX_goal_generic_political_pressure
 		prerequisite = { focus = TU_VIC_crown_focus }
-		x = -47
+		x = -1
 		y = 1
 		cost = 5
 
@@ -55,7 +55,7 @@ focus_tree = {
 		id = TU_VIC_status_quo
 		icon = GFX_goal_generic_national_unity
 		prerequisite = { focus = TU_VIC_dukes_summit }
-		x = -49
+		x = -3
 		y = 2
 		cost = 10
 
@@ -76,7 +76,7 @@ focus_tree = {
 		icon = GFX_goal_generic_army_artillery
 		prerequisite = { focus = TU_VIC_status_quo }
 		mutually_exclusive = { focus = TU_VIC_ducal_arsenal_alt }
-		x = -51
+		x = -5
 		y = 3
 		cost = 10
 
@@ -93,7 +93,7 @@ focus_tree = {
 		icon = GFX_goal_generic_national_unity
 		prerequisite = { focus = TU_VIC_status_quo }
 		mutually_exclusive = { focus = TU_VIC_ducal_arsenal }
-		x = -53
+		x = -7
 		y = 3
 		cost = 10
 
@@ -113,7 +113,7 @@ focus_tree = {
 		id = TU_VIC_london_fortress
 		icon = GFX_goal_generic_fortify_city
 		prerequisite = { focus = TU_VIC_status_quo }
-		x = -55
+		x = -9
 		y = 3
 		cost = 10
 
@@ -125,8 +125,7 @@ focus_tree = {
 
 		completion_reward = {
 			TU_build_infrastructure = yes
-			add_tech_bonus = { name = TU_VIC_london_fortress bonus = 0.75 uses = 1 category = construction_tech }
-			army_experience = 25
+			TU_build_forts_2 = yes
 		}
 	}
 
@@ -135,7 +134,7 @@ focus_tree = {
 		icon = GFX_goal_generic_neutrality_focus
 		prerequisite = { focus = TU_VIC_london_fortress }
 		mutually_exclusive = { focus = TU_VIC_aslan_legitimacy }
-		x = -55
+		x = -9
 		y = 4
 		cost = 10
 
@@ -157,7 +156,7 @@ focus_tree = {
 		id = TU_VIC_glasgow_return
 		icon = GFX_goal_generic_demand_territory
 		prerequisite = { focus = TU_VIC_dukes_summit }
-		x = -68
+		x = -22
 		y = 2
 		cost = 10
 
@@ -179,7 +178,7 @@ focus_tree = {
 		icon = GFX_goal_generic_allies_build_infantry
 		prerequisite = { focus = TU_VIC_glasgow_return }
 		mutually_exclusive = { focus = TU_VIC_glasgow_volunteers_alt }
-		x = -74
+		x = -28
 		y = 3
 		cost = 10
 
@@ -196,7 +195,7 @@ focus_tree = {
 		icon = GFX_goal_generic_propaganda
 		prerequisite = { focus = TU_VIC_glasgow_return }
 		mutually_exclusive = { focus = TU_VIC_glasgow_volunteers }
-		x = -72
+		x = -26
 		y = 3
 		cost = 10
 
@@ -216,7 +215,7 @@ focus_tree = {
 		id = TU_VIC_rally_dukes
 		icon = GFX_goal_generic_improve_relations
 		prerequisite = { focus = TU_VIC_glasgow_return }
-		x = -70
+		x = -24
 		y = 3
 		cost = 10
 
@@ -236,7 +235,7 @@ focus_tree = {
 		id = TU_VIC_siege_crowned
 		icon = GFX_goal_generic_major_alliance
 		prerequisite = { focus = TU_VIC_rally_dukes }
-		x = -70
+		x = -24
 		y = 4
 		cost = 10
 
@@ -264,7 +263,7 @@ focus_tree = {
 		icon = GFX_goal_generic_propaganda
 		prerequisite = { focus = TU_VIC_siege_crowned }
 		mutually_exclusive = { focus = TU_VIC_dukes_order }
-		x = -70
+		x = -24
 		y = 5
 		cost = 10
 
@@ -282,7 +281,7 @@ focus_tree = {
 		id = TU_VIC_dublinn_uprising
 		icon = GFX_goal_generic_defence
 		prerequisite = { focus = TU_VIC_dukes_summit }
-		x = -25
+		x = 21
 		y = 2
 		cost = 5
 
@@ -300,7 +299,7 @@ focus_tree = {
 		icon = GFX_goal_generic_special_forces
 		prerequisite = { focus = TU_VIC_dublinn_uprising }
 		mutually_exclusive = { focus = TU_VIC_dublinn_talks }
-		x = -17
+		x = 29
 		y = 3
 		cost = 10
 
@@ -316,7 +315,7 @@ focus_tree = {
 		id = TU_VIC_suppression_garrison
 		icon = GFX_goal_generic_fortify_city
 		prerequisite = { focus = TU_VIC_dublinn_suppression }
-		x = -17
+		x = 29
 		y = 4
 		cost = 10
 
@@ -332,7 +331,7 @@ focus_tree = {
 		id = TU_VIC_public_order
 		icon = GFX_goal_generic_political_pressure
 		prerequisite = { focus = TU_VIC_suppression_garrison }
-		x = -17
+		x = 29
 		y = 5
 		cost = 10
 
@@ -349,7 +348,7 @@ focus_tree = {
 		icon = GFX_goal_generic_trade
 		prerequisite = { focus = TU_VIC_dublinn_uprising }
 		mutually_exclusive = { focus = TU_VIC_dublinn_suppression }
-		x = -19
+		x = 27
 		y = 3
 		cost = 10
 
@@ -366,7 +365,7 @@ focus_tree = {
 		id = TU_VIC_dublinn_charter
 		icon = GFX_goal_generic_consumer_goods
 		prerequisite = { focus = TU_VIC_dublinn_talks }
-		x = -19
+		x = 27
 		y = 4
 		cost = 10
 
@@ -382,7 +381,7 @@ focus_tree = {
 		id = TU_VIC_steam_knight_formation
 		icon = GFX_goal_generic_army_tanks
 		prerequisite = { focus = TU_VIC_dublinn_charter }
-		x = -19
+		x = 27
 		y = 5
 		cost = 10
 
@@ -407,7 +406,7 @@ focus_tree = {
 		id = TU_VIC_steam_knight_training
 		icon = GFX_goal_generic_army_doctrines
 		prerequisite = { focus = TU_VIC_steam_knight_formation }
-		x = -19
+		x = 27
 		y = 6
 		cost = 10
 
@@ -424,7 +423,7 @@ focus_tree = {
 		icon = GFX_goal_generic_neutrality_focus
 		prerequisite = { focus = TU_VIC_status_quo }
 		mutually_exclusive = { focus = TU_VIC_asl_route focus = TU_VIC_drc_route focus = TU_VIC_par_route }
-		x = -49
+		x = -3
 		y = 3
 		cost = 5
 
@@ -449,7 +448,7 @@ focus_tree = {
 		id = TU_VIC_duk_estate_charters
 		icon = GFX_goal_generic_trade
 		prerequisite = { focus = TU_VIC_duk_route }
-		x = -49
+		x = -3
 		y = 4
 		cost = 10
 
@@ -470,7 +469,7 @@ focus_tree = {
 		id = TU_VIC_duk_estate_industry
 		icon = GFX_goal_generic_construct_civ_factory
 		prerequisite = { focus = TU_VIC_duk_estate_charters }
-		x = -49
+		x = -3
 		y = 5
 		cost = 10
 
@@ -491,7 +490,7 @@ focus_tree = {
 		id = TU_VIC_duk_ducal_foundry
 		icon = GFX_goal_generic_construct_mil_factory
 		prerequisite = { focus = TU_VIC_duk_estate_industry }
-		x = -49
+		x = -3
 		y = 6
 		cost = 10
 
@@ -511,7 +510,7 @@ focus_tree = {
 		id = TU_VIC_duk_arsenal_expand
 		icon = GFX_goal_generic_army_artillery
 		prerequisite = { focus = TU_VIC_duk_ducal_foundry }
-		x = -49
+		x = -3
 		y = 7
 		cost = 10
 
@@ -531,7 +530,7 @@ focus_tree = {
 		id = TU_VIC_duk_grand_arsenal
 		icon = GFX_goal_generic_army_tanks
 		prerequisite = { focus = TU_VIC_duk_arsenal_expand }
-		x = -49
+		x = -3
 		y = 8
 		cost = 10
 
@@ -552,7 +551,7 @@ focus_tree = {
 		id = TU_VIC_duk_estate_grid
 		icon = GFX_goal_generic_construct_infrastructure
 		prerequisite = { focus = TU_VIC_duk_grand_arsenal }
-		x = -49
+		x = -3
 		y = 9
 		cost = 10
 
@@ -572,7 +571,7 @@ focus_tree = {
 		id = TU_VIC_duk_capital_works
 		icon = GFX_goal_generic_construction
 		prerequisite = { focus = TU_VIC_duk_estate_grid }
-		x = -49
+		x = -3
 		y = 10
 		cost = 10
 
@@ -592,7 +591,7 @@ focus_tree = {
 		id = TU_VIC_duk_fleet_charter
 		icon = GFX_goal_generic_build_navy
 		prerequisite = { focus = TU_VIC_duk_capital_works }
-		x = -49
+		x = -3
 		y = 11
 		cost = 10
 
@@ -614,7 +613,7 @@ focus_tree = {
 		id = TU_VIC_duk_shipyards
 		icon = GFX_goal_generic_construct_naval_dockyard
 		prerequisite = { focus = TU_VIC_duk_fleet_charter }
-		x = -49
+		x = -3
 		y = 12
 		cost = 10
 
@@ -636,7 +635,7 @@ focus_tree = {
 		id = TU_VIC_duk_ducal_army
 		icon = GFX_goal_generic_army_motorized
 		prerequisite = { focus = TU_VIC_duk_shipyards }
-		x = -49
+		x = -3
 		y = 13
 		cost = 10
 
@@ -656,7 +655,7 @@ focus_tree = {
 		id = TU_VIC_duk_standing_levies
 		icon = GFX_goal_generic_allies_build_infantry
 		prerequisite = { focus = TU_VIC_duk_ducal_army }
-		x = -49
+		x = -3
 		y = 14
 		cost = 10
 
@@ -676,7 +675,7 @@ focus_tree = {
 		id = TU_VIC_duk_tax_farming
 		icon = GFX_goal_generic_construction2
 		prerequisite = { focus = TU_VIC_duk_standing_levies }
-		x = -49
+		x = -3
 		y = 15
 		cost = 10
 
@@ -699,7 +698,7 @@ focus_tree = {
 		id = TU_VIC_duk_manor_reform
 		icon = GFX_goal_generic_defence
 		prerequisite = { focus = TU_VIC_duk_tax_farming }
-		x = -49
+		x = -3
 		y = 16
 		cost = 10
 
@@ -719,7 +718,7 @@ focus_tree = {
 		id = TU_VIC_duk_grand_council
 		icon = GFX_goal_generic_fortify_city
 		prerequisite = { focus = TU_VIC_duk_manor_reform }
-		x = -51
+		x = -5
 		y = 17
 		cost = 10
 
@@ -739,7 +738,7 @@ focus_tree = {
 		id = TU_VIC_duk_oligarchic_order
 		icon = GFX_goal_generic_national_unity
 		prerequisite = { focus = TU_VIC_duk_grand_council }
-		x = -51
+		x = -5
 		y = 18
 		cost = 15
 
@@ -763,7 +762,7 @@ focus_tree = {
 		id = TU_VIC_duk_council_seats
 		icon = GFX_goal_generic_political_pressure
 		prerequisite = { focus = TU_VIC_duk_route }
-		x = -39
+		x = 7
 		y = 4
 		cost = 10
 
@@ -785,7 +784,7 @@ focus_tree = {
 		icon = GFX_goal_generic_political_pressure
 		prerequisite = { focus = TU_VIC_duk_council_seats }
 		mutually_exclusive = { focus = TU_VIC_duk_open_council }
-		x = -40
+		x = 6
 		y = 5
 		cost = 10
 
@@ -810,7 +809,7 @@ focus_tree = {
 		icon = GFX_goal_generic_improve_relations
 		prerequisite = { focus = TU_VIC_duk_council_seats }
 		mutually_exclusive = { focus = TU_VIC_duk_council_vote }
-		x = -38
+		x = 8
 		y = 5
 		cost = 10
 
@@ -835,7 +834,7 @@ focus_tree = {
 		icon = GFX_goal_generic_consumer_goods
 		prerequisite = { focus = TU_VIC_duk_estate_charters }
 		mutually_exclusive = { focus = TU_VIC_duk_free_labour }
-		x = -44
+		x = 2
 		y = 5
 		cost = 10
 
@@ -860,7 +859,7 @@ focus_tree = {
 		icon = GFX_goal_generic_production
 		prerequisite = { focus = TU_VIC_duk_estate_charters }
 		mutually_exclusive = { focus = TU_VIC_duk_tenancy }
-		x = -42
+		x = 4
 		y = 5
 		cost = 10
 
@@ -881,7 +880,7 @@ focus_tree = {
 		icon = GFX_goal_generic_trade
 		prerequisite = { focus = TU_VIC_duk_council_vote focus = TU_VIC_duk_open_council }
 		mutually_exclusive = { focus = TU_VIC_duk_guild_break }
-		x = -37
+		x = 9
 		y = 6
 		cost = 10
 
@@ -902,7 +901,7 @@ focus_tree = {
 		icon = GFX_goal_generic_dangerous_deal
 		prerequisite = { focus = TU_VIC_duk_council_vote focus = TU_VIC_duk_open_council }
 		mutually_exclusive = { focus = TU_VIC_duk_guild_pact }
-		x = -35
+		x = 11
 		y = 6
 		cost = 10
 
@@ -924,7 +923,7 @@ focus_tree = {
 		icon = GFX_goal_generic_positive_trade_relations
 		prerequisite = { focus = TU_VIC_duk_guild_pact }
 		mutually_exclusive = { focus = TU_VIC_duk_banking_house }
-		x = -37
+		x = 9
 		y = 7
 		cost = 10
 
@@ -945,7 +944,7 @@ focus_tree = {
 		icon = GFX_goal_generic_production2
 		prerequisite = { focus = TU_VIC_duk_guild_break }
 		mutually_exclusive = { focus = TU_VIC_duk_treasury_loans }
-		x = -35
+		x = 11
 		y = 7
 		cost = 10
 
@@ -965,7 +964,7 @@ focus_tree = {
 		id = TU_VIC_duk_private_guard
 		icon = GFX_goal_generic_small_arms
 		prerequisite = { focus = TU_VIC_duk_tenancy focus = TU_VIC_duk_free_labour }
-		x = -43
+		x = 3
 		y = 6
 		cost = 10
 
@@ -986,7 +985,7 @@ focus_tree = {
 		id = TU_VIC_duk_militia_drill
 		icon = GFX_goal_generic_army_doctrines
 		prerequisite = { focus = TU_VIC_duk_private_guard }
-		x = -43
+		x = 3
 		y = 7
 		cost = 10
 
@@ -1006,7 +1005,7 @@ focus_tree = {
 		id = TU_VIC_duk_ducal_accord
 		icon = GFX_goal_generic_military_sphere
 		prerequisite = { focus = TU_VIC_duk_treasury_loans }
-		x = -37
+		x = 9
 		y = 8
 		cost = 10
 
@@ -1027,7 +1026,7 @@ focus_tree = {
 		icon = GFX_goal_generic_forceful_treaty
 		prerequisite = { focus = TU_VIC_duk_council_vote }
 		mutually_exclusive = { focus = TU_VIC_duk_council_law_alt }
-		x = -41
+		x = 5
 		y = 6
 		cost = 10
 
@@ -1052,7 +1051,7 @@ focus_tree = {
 		icon = GFX_goal_generic_consumer_goods
 		prerequisite = { focus = TU_VIC_duk_council_vote }
 		mutually_exclusive = { focus = TU_VIC_duk_council_law }
-		x = -39
+		x = 7
 		y = 6
 		cost = 10
 
@@ -1073,7 +1072,7 @@ focus_tree = {
 		icon = GFX_goal_generic_construction
 		prerequisite = { focus = TU_VIC_duk_estate_industry }
 		mutually_exclusive = { focus = TU_VIC_duk_rail_concession_alt }
-		x = -47
+		x = -1
 		y = 6
 		cost = 10
 
@@ -1084,8 +1083,7 @@ focus_tree = {
 		}
 
 		completion_reward = {
-			TU_build_infrastructure = yes
-			add_tech_bonus = { name = TU_VIC_duk_rail_concession bonus = 0.75 uses = 1 category = industry category = construction_tech }
+			TU_build_railway = yes
 		}
 	}
 
@@ -1094,7 +1092,7 @@ focus_tree = {
 		icon = GFX_goal_generic_construction
 		prerequisite = { focus = TU_VIC_duk_estate_industry }
 		mutually_exclusive = { focus = TU_VIC_duk_rail_concession }
-		x = -45
+		x = 1
 		y = 6
 		cost = 10
 
@@ -1116,7 +1114,7 @@ focus_tree = {
 		icon = GFX_goal_generic_major_war
 		prerequisite = { focus = TU_VIC_duk_ducal_army }
 		mutually_exclusive = { focus = TU_VIC_duk_war_cabinet_alt }
-		x = -47
+		x = -1
 		y = 14
 		cost = 10
 
@@ -1137,7 +1135,7 @@ focus_tree = {
 		icon = GFX_goal_generic_army_doctrines
 		prerequisite = { focus = TU_VIC_duk_ducal_army }
 		mutually_exclusive = { focus = TU_VIC_duk_war_cabinet }
-		x = -45
+		x = 1
 		y = 14
 		cost = 10
 
@@ -1158,7 +1156,7 @@ focus_tree = {
 		icon = GFX_goal_generic_fortify_city
 		prerequisite = { focus = TU_VIC_duk_manor_reform }
 		mutually_exclusive = { focus = TU_VIC_duk_fortified_estates_alt }
-		x = -49
+		x = -3
 		y = 17
 		cost = 10
 
@@ -1169,8 +1167,7 @@ focus_tree = {
 		}
 
 		completion_reward = {
-			add_tech_bonus = { name = TU_VIC_duk_fortified_estates bonus = 0.75 uses = 1 category = construction_tech }
-			army_experience = 25
+			TU_build_forts_2 = yes
 		}
 	}
 
@@ -1179,7 +1176,7 @@ focus_tree = {
 		icon = GFX_goal_generic_defence
 		prerequisite = { focus = TU_VIC_duk_manor_reform }
 		mutually_exclusive = { focus = TU_VIC_duk_fortified_estates }
-		x = -47
+		x = -1
 		y = 17
 		cost = 10
 
@@ -1201,7 +1198,7 @@ focus_tree = {
 		icon = GFX_goal_generic_propaganda
 		prerequisite = { focus = TU_VIC_glasgow_return }
 		mutually_exclusive = { focus = TU_VIC_duk_route focus = TU_VIC_drc_route focus = TU_VIC_par_route }
-		x = -68
+		x = -22
 		y = 3
 		cost = 5
 
@@ -1227,7 +1224,7 @@ focus_tree = {
 		id = TU_VIC_asl_glasgow_gangs
 		icon = GFX_goal_generic_allies_build_infantry
 		prerequisite = { focus = TU_VIC_asl_route }
-		x = -68
+		x = -22
 		y = 4
 		cost = 10
 
@@ -1248,7 +1245,7 @@ focus_tree = {
 		id = TU_VIC_asl_gang_militia
 		icon = GFX_goal_generic_small_arms
 		prerequisite = { focus = TU_VIC_asl_glasgow_gangs }
-		x = -68
+		x = -22
 		y = 5
 		cost = 10
 
@@ -1268,7 +1265,7 @@ focus_tree = {
 		id = TU_VIC_asl_glasgow_armoury
 		icon = GFX_goal_generic_construct_mil_factory
 		prerequisite = { focus = TU_VIC_asl_gang_militia }
-		x = -68
+		x = -22
 		y = 6
 		cost = 10
 
@@ -1289,7 +1286,7 @@ focus_tree = {
 		id = TU_VIC_asl_barricades
 		icon = GFX_goal_generic_fortify_city
 		prerequisite = { focus = TU_VIC_asl_glasgow_armoury }
-		x = -68
+		x = -22
 		y = 7
 		cost = 10
 
@@ -1310,7 +1307,7 @@ focus_tree = {
 		id = TU_VIC_asl_street_war
 		icon = GFX_goal_generic_army_doctrines
 		prerequisite = { focus = TU_VIC_asl_barricades }
-		x = -68
+		x = -22
 		y = 8
 		cost = 10
 
@@ -1330,7 +1327,7 @@ focus_tree = {
 		id = TU_VIC_asl_gang_banner
 		icon = GFX_goal_generic_propaganda
 		prerequisite = { focus = TU_VIC_asl_street_war }
-		x = -68
+		x = -22
 		y = 9
 		cost = 10
 
@@ -1350,7 +1347,7 @@ focus_tree = {
 		id = TU_VIC_asl_royal_levy
 		icon = GFX_goal_generic_cavalry
 		prerequisite = { focus = TU_VIC_asl_gang_banner }
-		x = -68
+		x = -22
 		y = 10
 		cost = 10
 
@@ -1370,7 +1367,7 @@ focus_tree = {
 		id = TU_VIC_asl_mass_rally
 		icon = GFX_goal_generic_political_pressure
 		prerequisite = { focus = TU_VIC_asl_royal_levy }
-		x = -68
+		x = -22
 		y = 11
 		cost = 10
 
@@ -1390,7 +1387,7 @@ focus_tree = {
 		id = TU_VIC_asl_church_blessing
 		icon = GFX_goal_generic_improve_relations
 		prerequisite = { focus = TU_VIC_asl_mass_rally }
-		x = -68
+		x = -22
 		y = 12
 		cost = 10
 
@@ -1410,7 +1407,7 @@ focus_tree = {
 		id = TU_VIC_asl_royal_army
 		icon = GFX_goal_generic_army_motorized
 		prerequisite = { focus = TU_VIC_asl_church_blessing }
-		x = -68
+		x = -22
 		y = 13
 		cost = 10
 
@@ -1430,7 +1427,7 @@ focus_tree = {
 		id = TU_VIC_asl_aslan_council
 		icon = GFX_goal_generic_defence
 		prerequisite = { focus = TU_VIC_asl_royal_army }
-		x = -68
+		x = -22
 		y = 14
 		cost = 10
 
@@ -1454,7 +1451,7 @@ focus_tree = {
 		id = TU_VIC_asl_crown_restoration
 		icon = GFX_goal_generic_national_unity
 		prerequisite = { focus = TU_VIC_asl_aslan_council }
-		x = -68
+		x = -22
 		y = 15
 		cost = 10
 
@@ -1478,7 +1475,7 @@ focus_tree = {
 		id = TU_VIC_asl_royal_mint
 		icon = GFX_goal_generic_consumer_goods
 		prerequisite = { focus = TU_VIC_asl_crown_restoration }
-		x = -68
+		x = -22
 		y = 16
 		cost = 10
 
@@ -1498,7 +1495,7 @@ focus_tree = {
 		id = TU_VIC_asl_court_order
 		icon = GFX_goal_generic_major_alliance
 		prerequisite = { focus = TU_VIC_asl_royal_mint }
-		x = -68
+		x = -22
 		y = 17
 		cost = 10
 
@@ -1519,7 +1516,7 @@ focus_tree = {
 		icon = GFX_goal_generic_forceful_treaty
 		prerequisite = { focus = TU_VIC_asl_court_order }
 		prerequisite = { focus = TU_VIC_siege_crowned }
-		x = -68
+		x = -22
 		y = 18
 		cost = 15
 
@@ -1544,7 +1541,7 @@ focus_tree = {
 		id = TU_VIC_asl_royal_court
 		icon = GFX_goal_generic_political_pressure
 		prerequisite = { focus = TU_VIC_asl_route }
-		x = -64
+		x = -18
 		y = 4
 		cost = 10
 
@@ -1569,7 +1566,7 @@ focus_tree = {
 		icon = GFX_goal_generic_improve_relations
 		prerequisite = { focus = TU_VIC_asl_royal_court }
 		mutually_exclusive = { focus = TU_VIC_asl_confiscation }
-		x = -66
+		x = -20
 		y = 5
 		cost = 10
 
@@ -1590,7 +1587,7 @@ focus_tree = {
 		icon = GFX_goal_generic_dangerous_deal
 		prerequisite = { focus = TU_VIC_asl_royal_court }
 		mutually_exclusive = { focus = TU_VIC_asl_loyal_nobles }
-		x = -64
+		x = -18
 		y = 5
 		cost = 10
 
@@ -1614,7 +1611,7 @@ focus_tree = {
 		id = TU_VIC_asl_docks_protection
 		icon = GFX_goal_generic_trade
 		prerequisite = { focus = TU_VIC_asl_route }
-		x = -57
+		x = -11
 		y = 4
 		cost = 10
 
@@ -1636,7 +1633,7 @@ focus_tree = {
 		icon = GFX_goal_generic_construct_civ_factory
 		prerequisite = { focus = TU_VIC_asl_docks_protection }
 		mutually_exclusive = { focus = TU_VIC_asl_docks_industry_alt }
-		x = -60
+		x = -14
 		y = 5
 		cost = 10
 
@@ -1659,7 +1656,7 @@ focus_tree = {
 		icon = GFX_goal_generic_positive_trade_relations
 		prerequisite = { focus = TU_VIC_asl_docks_protection }
 		mutually_exclusive = { focus = TU_VIC_asl_docks_industry }
-		x = -58
+		x = -12
 		y = 5
 		cost = 10
 
@@ -1681,7 +1678,7 @@ focus_tree = {
 		icon = GFX_goal_generic_production
 		prerequisite = { focus = TU_VIC_asl_docks_protection }
 		mutually_exclusive = { focus = TU_VIC_asl_customs }
-		x = -56
+		x = -10
 		y = 5
 		cost = 10
 
@@ -1702,7 +1699,7 @@ focus_tree = {
 		icon = GFX_goal_generic_military_deal
 		prerequisite = { focus = TU_VIC_asl_docks_protection }
 		mutually_exclusive = { focus = TU_VIC_asl_smuggling }
-		x = -54
+		x = -8
 		y = 5
 		cost = 10
 
@@ -1726,7 +1723,7 @@ focus_tree = {
 		id = TU_VIC_asl_gang_pact
 		icon = GFX_goal_generic_trade
 		prerequisite = { focus = TU_VIC_asl_gang_militia }
-		x = -62
+		x = -16
 		y = 6
 		cost = 10
 
@@ -1748,7 +1745,7 @@ focus_tree = {
 		icon = GFX_goal_generic_defence
 		prerequisite = { focus = TU_VIC_asl_glasgow_armoury }
 		mutually_exclusive = { focus = TU_VIC_asl_city_watch_alt }
-		x = -66
+		x = -20
 		y = 7
 		cost = 10
 
@@ -1769,7 +1766,7 @@ focus_tree = {
 		icon = GFX_goal_generic_intelligence_exchange
 		prerequisite = { focus = TU_VIC_asl_glasgow_armoury }
 		mutually_exclusive = { focus = TU_VIC_asl_city_watch }
-		x = -64
+		x = -18
 		y = 7
 		cost = 10
 
@@ -1790,7 +1787,7 @@ focus_tree = {
 		icon = GFX_goal_generic_political_pressure
 		prerequisite = { focus = TU_VIC_asl_barricades }
 		mutually_exclusive = { focus = TU_VIC_asl_gang_courts }
-		x = -66
+		x = -20
 		y = 8
 		cost = 10
 
@@ -1811,7 +1808,7 @@ focus_tree = {
 		icon = GFX_goal_generic_national_unity
 		prerequisite = { focus = TU_VIC_asl_barricades }
 		mutually_exclusive = { focus = TU_VIC_asl_street_law }
-		x = -64
+		x = -18
 		y = 8
 		cost = 10
 
@@ -1835,7 +1832,7 @@ focus_tree = {
 		id = TU_VIC_asl_royal_guard
 		icon = GFX_goal_generic_special_forces
 		prerequisite = { focus = TU_VIC_asl_royal_court }
-		x = -62
+		x = -16
 		y = 5
 		cost = 10
 
@@ -1855,7 +1852,7 @@ focus_tree = {
 		id = TU_VIC_asl_war_chest
 		icon = GFX_goal_generic_production2
 		prerequisite = { focus = TU_VIC_asl_smuggling }
-		x = -56
+		x = -10
 		y = 6
 		cost = 10
 
@@ -1876,7 +1873,7 @@ focus_tree = {
 		icon = GFX_goal_generic_army_artillery
 		prerequisite = { focus = TU_VIC_asl_royal_army }
 		mutually_exclusive = { focus = TU_VIC_asl_loyal_regiment_alt }
-		x = -66
+		x = -20
 		y = 14
 		cost = 10
 
@@ -1897,7 +1894,7 @@ focus_tree = {
 		icon = GFX_goal_generic_army_tanks
 		prerequisite = { focus = TU_VIC_asl_royal_army }
 		mutually_exclusive = { focus = TU_VIC_asl_loyal_regiment }
-		x = -64
+		x = -18
 		y = 14
 		cost = 10
 
@@ -1918,7 +1915,7 @@ focus_tree = {
 		icon = GFX_goal_generic_improve_relations
 		prerequisite = { focus = TU_VIC_asl_church_blessing }
 		mutually_exclusive = { focus = TU_VIC_asl_glasgow_pilgrimage_alt }
-		x = -66
+		x = -20
 		y = 13
 		cost = 10
 
@@ -1939,7 +1936,7 @@ focus_tree = {
 		icon = GFX_goal_generic_neutrality_focus
 		prerequisite = { focus = TU_VIC_asl_church_blessing }
 		mutually_exclusive = { focus = TU_VIC_asl_glasgow_pilgrimage }
-		x = -64
+		x = -18
 		y = 13
 		cost = 10
 
@@ -1959,7 +1956,7 @@ focus_tree = {
 		id = TU_VIC_asl_gang_loans
 		icon = GFX_goal_generic_positive_trade_relations
 		prerequisite = { focus = TU_VIC_asl_gang_pact }
-		x = -62
+		x = -16
 		y = 7
 		cost = 10
 
@@ -1980,7 +1977,7 @@ focus_tree = {
 		icon = GFX_goal_generic_secret_weapon
 		prerequisite = { focus = TU_VIC_dublinn_uprising }
 		mutually_exclusive = { focus = TU_VIC_duk_route focus = TU_VIC_asl_route focus = TU_VIC_par_route focus = TU_VIC_dublinn_talks }
-		x = -25
+		x = 21
 		y = 3
 		cost = 5
 
@@ -2006,7 +2003,7 @@ focus_tree = {
 		id = TU_VIC_drc_tara_muster
 		icon = GFX_goal_generic_allies_build_infantry
 		prerequisite = { focus = TU_VIC_drc_route }
-		x = -25
+		x = 21
 		y = 4
 		cost = 10
 
@@ -2026,7 +2023,7 @@ focus_tree = {
 		id = TU_VIC_drc_flame_arts
 		icon = GFX_goal_generic_scientific_exchange
 		prerequisite = { focus = TU_VIC_drc_tara_muster }
-		x = -25
+		x = 21
 		y = 5
 		cost = 10
 
@@ -2046,7 +2043,7 @@ focus_tree = {
 		id = TU_VIC_drc_blazing_mills
 		icon = GFX_goal_generic_construct_civ_factory
 		prerequisite = { focus = TU_VIC_drc_flame_arts }
-		x = -25
+		x = 21
 		y = 6
 		cost = 10
 
@@ -2067,7 +2064,7 @@ focus_tree = {
 		id = TU_VIC_drc_youth_corps
 		icon = GFX_goal_generic_army_motorized
 		prerequisite = { focus = TU_VIC_drc_blazing_mills }
-		x = -25
+		x = 21
 		y = 7
 		cost = 10
 
@@ -2088,7 +2085,7 @@ focus_tree = {
 		id = TU_VIC_drc_street_terror
 		icon = GFX_goal_generic_political_pressure
 		prerequisite = { focus = TU_VIC_drc_youth_corps }
-		x = -25
+		x = 21
 		y = 8
 		cost = 10
 
@@ -2108,7 +2105,7 @@ focus_tree = {
 		id = TU_VIC_drc_secret_police
 		icon = GFX_goal_generic_special_forces
 		prerequisite = { focus = TU_VIC_drc_street_terror }
-		x = -25
+		x = 21
 		y = 9
 		cost = 10
 
@@ -2128,7 +2125,7 @@ focus_tree = {
 		id = TU_VIC_drc_factory_quota
 		icon = GFX_goal_generic_construct_mil_factory
 		prerequisite = { focus = TU_VIC_drc_secret_police }
-		x = -25
+		x = 21
 		y = 10
 		cost = 10
 
@@ -2148,7 +2145,7 @@ focus_tree = {
 		id = TU_VIC_drc_tara_arsenal
 		icon = GFX_goal_generic_army_artillery
 		prerequisite = { focus = TU_VIC_drc_factory_quota }
-		x = -25
+		x = 21
 		y = 11
 		cost = 10
 
@@ -2168,7 +2165,7 @@ focus_tree = {
 		id = TU_VIC_drc_purge_dublinn
 		icon = GFX_goal_generic_defence
 		prerequisite = { focus = TU_VIC_drc_tara_arsenal }
-		x = -25
+		x = 21
 		y = 12
 		cost = 10
 
@@ -2189,7 +2186,7 @@ focus_tree = {
 		id = TU_VIC_drc_war_economy
 		icon = GFX_goal_generic_production
 		prerequisite = { focus = TU_VIC_drc_purge_dublinn }
-		x = -25
+		x = 21
 		y = 13
 		cost = 10
 
@@ -2214,7 +2211,7 @@ focus_tree = {
 		id = TU_VIC_drc_mobilised_youth
 		icon = GFX_goal_generic_construct_military
 		prerequisite = { focus = TU_VIC_drc_war_economy }
-		x = -25
+		x = 21
 		y = 14
 		cost = 10
 
@@ -2235,7 +2232,7 @@ focus_tree = {
 		id = TU_VIC_drc_fascist_rally
 		icon = GFX_goal_generic_propaganda
 		prerequisite = { focus = TU_VIC_drc_mobilised_youth }
-		x = -25
+		x = 21
 		y = 15
 		cost = 10
 
@@ -2255,7 +2252,7 @@ focus_tree = {
 		id = TU_VIC_drc_fascist_state
 		icon = GFX_goal_generic_national_unity
 		prerequisite = { focus = TU_VIC_drc_fascist_rally }
-		x = -25
+		x = 21
 		y = 16
 		cost = 10
 
@@ -2280,7 +2277,7 @@ focus_tree = {
 		id = TU_VIC_drc_fire_doctrine
 		icon = GFX_goal_generic_army_doctrines
 		prerequisite = { focus = TU_VIC_drc_fascist_state }
-		x = -25
+		x = 21
 		y = 17
 		cost = 10
 
@@ -2300,7 +2297,7 @@ focus_tree = {
 		id = TU_VIC_drc_regime_seal
 		icon = GFX_goal_generic_defence
 		prerequisite = { focus = TU_VIC_drc_fire_doctrine }
-		x = -27
+		x = 19
 		y = 18
 		cost = 10
 
@@ -2321,7 +2318,7 @@ focus_tree = {
 		id = TU_VIC_drc_draco_leader
 		icon = GFX_goal_generic_major_war
 		prerequisite = { focus = TU_VIC_drc_regime_seal }
-		x = -27
+		x = 19
 		y = 19
 		cost = 15
 
@@ -2351,7 +2348,7 @@ focus_tree = {
 		id = TU_VIC_drc_tara_sermon
 		icon = GFX_goal_generic_propaganda
 		prerequisite = { focus = TU_VIC_drc_route }
-		x = -22
+		x = 24
 		y = 4
 		cost = 10
 
@@ -2372,7 +2369,7 @@ focus_tree = {
 		icon = GFX_goal_generic_improve_relations
 		prerequisite = { focus = TU_VIC_drc_tara_sermon }
 		mutually_exclusive = { focus = TU_VIC_drc_tara_crackdown }
-		x = -23
+		x = 23
 		y = 5
 		cost = 10
 
@@ -2393,7 +2390,7 @@ focus_tree = {
 		icon = GFX_goal_generic_dangerous_deal
 		prerequisite = { focus = TU_VIC_drc_tara_sermon }
 		mutually_exclusive = { focus = TU_VIC_drc_tara_truce }
-		x = -21
+		x = 25
 		y = 5
 		cost = 10
 
@@ -2414,7 +2411,7 @@ focus_tree = {
 		icon = GFX_goal_generic_radar
 		prerequisite = { focus = TU_VIC_drc_flame_arts }
 		mutually_exclusive = { focus = TU_VIC_drc_flame_academies_alt }
-		x = -23
+		x = 23
 		y = 6
 		cost = 10
 
@@ -2435,7 +2432,7 @@ focus_tree = {
 		icon = GFX_goal_generic_production2
 		prerequisite = { focus = TU_VIC_drc_flame_arts }
 		mutually_exclusive = { focus = TU_VIC_drc_flame_academies }
-		x = -21
+		x = 25
 		y = 6
 		cost = 10
 
@@ -2456,7 +2453,7 @@ focus_tree = {
 		icon = GFX_goal_generic_amphibious_assault
 		prerequisite = { focus = TU_VIC_drc_blazing_mills }
 		mutually_exclusive = { focus = TU_VIC_drc_flame_bastion }
-		x = -23
+		x = 23
 		y = 7
 		cost = 10
 
@@ -2477,7 +2474,7 @@ focus_tree = {
 		icon = GFX_goal_generic_fortify_city
 		prerequisite = { focus = TU_VIC_drc_blazing_mills }
 		mutually_exclusive = { focus = TU_VIC_drc_flame_drill }
-		x = -21
+		x = 25
 		y = 7
 		cost = 10
 
@@ -2489,8 +2486,7 @@ focus_tree = {
 
 		completion_reward = {
 			TU_build_infrastructure = yes
-			add_tech_bonus = { name = TU_VIC_drc_flame_bastion bonus = 0.75 uses = 1 category = construction_tech }
-			army_experience = 25
+			TU_build_forts_2 = yes
 		}
 	}
 
@@ -2499,7 +2495,7 @@ focus_tree = {
 		icon = GFX_goal_generic_construction
 		prerequisite = { focus = TU_VIC_drc_blazing_mills }
 		mutually_exclusive = { focus = TU_VIC_drc_ash_laborers_alt }
-		x = -19
+		x = 27
 		y = 7
 		cost = 10
 
@@ -2521,7 +2517,7 @@ focus_tree = {
 		icon = GFX_goal_generic_construct_civ_factory
 		prerequisite = { focus = TU_VIC_drc_blazing_mills }
 		mutually_exclusive = { focus = TU_VIC_drc_ash_laborers }
-		x = -17
+		x = 29
 		y = 7
 		cost = 10
 
@@ -2543,7 +2539,7 @@ focus_tree = {
 		icon = GFX_goal_generic_construct_naval_dockyard
 		prerequisite = { focus = TU_VIC_drc_factory_quota }
 		mutually_exclusive = { focus = TU_VIC_drc_iron_rail }
-		x = -23
+		x = 23
 		y = 11
 		cost = 10
 
@@ -2567,7 +2563,7 @@ focus_tree = {
 		icon = GFX_goal_generic_construct_infrastructure
 		prerequisite = { focus = TU_VIC_drc_factory_quota }
 		mutually_exclusive = { focus = TU_VIC_drc_dublinn_docks }
-		x = -21
+		x = 25
 		y = 11
 		cost = 10
 
@@ -2578,9 +2574,7 @@ focus_tree = {
 		}
 
 		completion_reward = {
-			TU_build_infrastructure = yes
-			add_tech_bonus = { name = TU_VIC_drc_iron_rail bonus = 0.75 uses = 1 category = infantry_weapons }
-			army_experience = 25
+			TU_build_railway = yes
 		}
 	}
 
@@ -2589,7 +2583,7 @@ focus_tree = {
 		icon = GFX_goal_generic_intelligence_exchange
 		prerequisite = { focus = TU_VIC_drc_secret_police }
 		mutually_exclusive = { focus = TU_VIC_drc_secret_radio_alt }
-		x = -23
+		x = 23
 		y = 10
 		cost = 10
 
@@ -2610,7 +2604,7 @@ focus_tree = {
 		icon = GFX_goal_generic_improve_relations
 		prerequisite = { focus = TU_VIC_drc_secret_police }
 		mutually_exclusive = { focus = TU_VIC_drc_secret_radio }
-		x = -21
+		x = 25
 		y = 10
 		cost = 10
 
@@ -2630,7 +2624,7 @@ focus_tree = {
 		icon = GFX_goal_generic_military_sphere
 		prerequisite = { focus = TU_VIC_drc_youth_corps }
 		mutually_exclusive = { focus = TU_VIC_drc_hostage_law }
-		x = -23
+		x = 23
 		y = 8
 		cost = 10
 
@@ -2651,7 +2645,7 @@ focus_tree = {
 		icon = GFX_goal_generic_forceful_treaty
 		prerequisite = { focus = TU_VIC_drc_youth_corps }
 		mutually_exclusive = { focus = TU_VIC_drc_loyal_dublinn }
-		x = -21
+		x = 25
 		y = 8
 		cost = 10
 
@@ -2672,7 +2666,7 @@ focus_tree = {
 		icon = GFX_goal_generic_military_deal
 		prerequisite = { focus = TU_VIC_drc_war_economy }
 		mutually_exclusive = { focus = TU_VIC_drc_war_fund_alt }
-		x = -23
+		x = 23
 		y = 14
 		cost = 10
 
@@ -2693,7 +2687,7 @@ focus_tree = {
 		icon = GFX_goal_generic_military_deal
 		prerequisite = { focus = TU_VIC_drc_war_economy }
 		mutually_exclusive = { focus = TU_VIC_drc_war_fund }
-		x = -21
+		x = 25
 		y = 14
 		cost = 10
 
@@ -2714,7 +2708,7 @@ focus_tree = {
 		icon = GFX_goal_generic_air_fighter
 		prerequisite = { focus = TU_VIC_drc_tara_arsenal }
 		mutually_exclusive = { focus = TU_VIC_drc_sky_flames_alt }
-		x = -23
+		x = 23
 		y = 12
 		cost = 10
 
@@ -2737,7 +2731,7 @@ focus_tree = {
 		icon = GFX_goal_generic_air_production
 		prerequisite = { focus = TU_VIC_drc_tara_arsenal }
 		mutually_exclusive = { focus = TU_VIC_drc_sky_flames }
-		x = -21
+		x = 25
 		y = 12
 		cost = 10
 
@@ -2760,7 +2754,7 @@ focus_tree = {
 		icon = GFX_goal_generic_national_unity
 		prerequisite = { focus = TU_VIC_drc_purge_dublinn }
 		mutually_exclusive = { focus = TU_VIC_drc_martial_courts_alt }
-		x = -23
+		x = 23
 		y = 13
 		cost = 10
 
@@ -2781,7 +2775,7 @@ focus_tree = {
 		icon = GFX_goal_generic_dangerous_deal
 		prerequisite = { focus = TU_VIC_drc_purge_dublinn }
 		mutually_exclusive = { focus = TU_VIC_drc_martial_courts }
-		x = -21
+		x = 25
 		y = 13
 		cost = 10
 
@@ -2801,7 +2795,7 @@ focus_tree = {
 		icon = GFX_goal_generic_army_tanks
 		prerequisite = { focus = TU_VIC_drc_fire_doctrine }
 		mutually_exclusive = { focus = TU_VIC_drc_veteran_cadre_alt }
-		x = -25
+		x = 21
 		y = 18
 		cost = 10
 
@@ -2822,7 +2816,7 @@ focus_tree = {
 		icon = GFX_goal_generic_army_artillery
 		prerequisite = { focus = TU_VIC_drc_fire_doctrine }
 		mutually_exclusive = { focus = TU_VIC_drc_veteran_cadre }
-		x = -23
+		x = 23
 		y = 18
 		cost = 10
 
@@ -2843,7 +2837,7 @@ focus_tree = {
 		icon = GFX_goal_generic_improve_relations
 		prerequisite = { focus = TU_VIC_dukes_summit }
 		mutually_exclusive = { focus = TU_VIC_duk_route focus = TU_VIC_asl_route focus = TU_VIC_drc_route }
-		x = -33
+		x = 13
 		y = 2
 		cost = 5
 
@@ -2865,7 +2859,7 @@ focus_tree = {
 		id = TU_VIC_par_writ
 		icon = GFX_goal_generic_political_pressure
 		prerequisite = { focus = TU_VIC_par_route }
-		x = -33
+		x = 13
 		y = 3
 		cost = 10
 
@@ -2885,7 +2879,7 @@ focus_tree = {
 		id = TU_VIC_par_free_press
 		icon = GFX_goal_generic_propaganda
 		prerequisite = { focus = TU_VIC_par_writ }
-		x = -33
+		x = 13
 		y = 4
 		cost = 10
 
@@ -2907,7 +2901,7 @@ focus_tree = {
 		id = TU_VIC_par_commons_reform
 		icon = GFX_goal_generic_national_unity
 		prerequisite = { focus = TU_VIC_par_free_press }
-		x = -33
+		x = 13
 		y = 5
 		cost = 10
 
@@ -2927,7 +2921,7 @@ focus_tree = {
 		id = TU_VIC_par_public_works
 		icon = GFX_goal_generic_construct_infrastructure
 		prerequisite = { focus = TU_VIC_par_commons_reform }
-		x = -33
+		x = 13
 		y = 6
 		cost = 10
 
@@ -2948,7 +2942,7 @@ focus_tree = {
 		id = TU_VIC_par_trade_act
 		icon = GFX_goal_generic_trade
 		prerequisite = { focus = TU_VIC_par_public_works }
-		x = -33
+		x = 13
 		y = 7
 		cost = 10
 
@@ -2968,7 +2962,7 @@ focus_tree = {
 		id = TU_VIC_par_factory_acts
 		icon = GFX_goal_generic_consumer_goods
 		prerequisite = { focus = TU_VIC_par_trade_act }
-		x = -33
+		x = 13
 		y = 8
 		cost = 10
 
@@ -2987,7 +2981,7 @@ focus_tree = {
 		id = TU_VIC_par_elections
 		icon = GFX_goal_generic_political_pressure
 		prerequisite = { focus = TU_VIC_par_factory_acts }
-		x = -33
+		x = 13
 		y = 9
 		cost = 10
 
@@ -3011,7 +3005,7 @@ focus_tree = {
 		id = TU_VIC_par_civil_service
 		icon = GFX_goal_generic_construction
 		prerequisite = { focus = TU_VIC_par_elections }
-		x = -33
+		x = 13
 		y = 10
 		cost = 10
 
@@ -3031,7 +3025,7 @@ focus_tree = {
 		id = TU_VIC_par_london_exchange
 		icon = GFX_goal_generic_positive_trade_relations
 		prerequisite = { focus = TU_VIC_par_civil_service }
-		x = -33
+		x = 13
 		y = 11
 		cost = 10
 
@@ -3056,7 +3050,7 @@ focus_tree = {
 		id = TU_VIC_par_lords_review
 		icon = GFX_goal_generic_defence
 		prerequisite = { focus = TU_VIC_par_london_exchange }
-		x = -33
+		x = 13
 		y = 12
 		cost = 10
 
@@ -3080,7 +3074,7 @@ focus_tree = {
 		id = TU_VIC_par_army_reform
 		icon = GFX_goal_generic_army_doctrines
 		prerequisite = { focus = TU_VIC_par_lords_review }
-		x = -33
+		x = 13
 		y = 13
 		cost = 10
 
@@ -3100,7 +3094,7 @@ focus_tree = {
 		id = TU_VIC_par_ministry_war
 		icon = GFX_goal_generic_military_sphere
 		prerequisite = { focus = TU_VIC_par_army_reform }
-		x = -33
+		x = 13
 		y = 14
 		cost = 10
 
@@ -3120,7 +3114,7 @@ focus_tree = {
 		id = TU_VIC_par_rule_of_law
 		icon = GFX_goal_generic_national_unity
 		prerequisite = { focus = TU_VIC_par_ministry_war }
-		x = -33
+		x = 13
 		y = 15
 		cost = 10
 
@@ -3140,7 +3134,7 @@ focus_tree = {
 		id = TU_VIC_par_national_consensus
 		icon = GFX_goal_generic_major_alliance
 		prerequisite = { focus = TU_VIC_par_rule_of_law }
-		x = -33
+		x = 13
 		y = 16
 		cost = 10
 
@@ -3160,7 +3154,7 @@ focus_tree = {
 		id = TU_VIC_par_constitution
 		icon = GFX_goal_generic_political_pressure
 		prerequisite = { focus = TU_VIC_par_national_consensus }
-		x = -33
+		x = 13
 		y = 17
 		cost = 10
 
@@ -3180,7 +3174,7 @@ focus_tree = {
 		id = TU_VIC_par_pm_election
 		icon = GFX_goal_generic_neutrality_focus
 		prerequisite = { focus = TU_VIC_par_constitution }
-		x = -33
+		x = 13
 		y = 18
 		cost = 15
 
@@ -3207,7 +3201,7 @@ focus_tree = {
 		icon = GFX_goal_generic_propaganda
 		prerequisite = { focus = TU_VIC_par_route }
 		mutually_exclusive = { focus = TU_VIC_par_pamphlets_alt }
-		x = -31
+		x = 15
 		y = 3
 		cost = 10
 
@@ -3228,7 +3222,7 @@ focus_tree = {
 		icon = GFX_goal_generic_political_pressure
 		prerequisite = { focus = TU_VIC_par_route }
 		mutually_exclusive = { focus = TU_VIC_par_pamphlets }
-		x = -29
+		x = 17
 		y = 3
 		cost = 10
 
@@ -3249,7 +3243,7 @@ focus_tree = {
 		icon = GFX_goal_generic_trade
 		prerequisite = { focus = TU_VIC_par_free_press }
 		mutually_exclusive = { focus = TU_VIC_par_guild_charter }
-		x = -31
+		x = 15
 		y = 5
 		cost = 10
 
@@ -3270,7 +3264,7 @@ focus_tree = {
 		icon = GFX_goal_generic_production
 		prerequisite = { focus = TU_VIC_par_free_press }
 		mutually_exclusive = { focus = TU_VIC_par_union_law }
-		x = -29
+		x = 17
 		y = 5
 		cost = 10
 
@@ -3296,7 +3290,7 @@ focus_tree = {
 		icon = GFX_goal_generic_scientific_exchange
 		prerequisite = { focus = TU_VIC_par_public_works }
 		mutually_exclusive = { focus = TU_VIC_par_public_schools }
-		x = -31
+		x = 15
 		y = 7
 		cost = 10
 
@@ -3316,7 +3310,7 @@ focus_tree = {
 		icon = GFX_goal_generic_political_pressure
 		prerequisite = { focus = TU_VIC_par_factory_acts }
 		mutually_exclusive = { focus = TU_VIC_par_tech_schools }
-		x = -31
+		x = 15
 		y = 9
 		cost = 10
 
@@ -3336,7 +3330,7 @@ focus_tree = {
 		icon = GFX_goal_generic_improve_relations
 		prerequisite = { focus = TU_VIC_par_trade_act }
 		mutually_exclusive = { focus = TU_VIC_par_tariffs }
-		x = -31
+		x = 15
 		y = 8
 		cost = 10
 
@@ -3361,7 +3355,7 @@ focus_tree = {
 		icon = GFX_goal_generic_military_deal
 		prerequisite = { focus = TU_VIC_par_trade_act }
 		mutually_exclusive = { focus = TU_VIC_par_free_trade }
-		x = -29
+		x = 17
 		y = 8
 		cost = 10
 
@@ -3386,7 +3380,7 @@ focus_tree = {
 		icon = GFX_goal_generic_construct_civ_factory
 		prerequisite = { focus = TU_VIC_par_public_works }
 		mutually_exclusive = { focus = TU_VIC_par_steel_rail_alt }
-		x = -29
+		x = 17
 		y = 7
 		cost = 10
 
@@ -3398,8 +3392,7 @@ focus_tree = {
 
 		completion_reward = {
 			TU_build_civ_factory = yes
-			add_tech_bonus = { name = TU_VIC_par_steel_rail bonus = 0.75 uses = 1 category = infantry_weapons }
-			army_experience = 25
+			TU_build_railway = yes
 		}
 	}
 
@@ -3408,7 +3401,7 @@ focus_tree = {
 		icon = GFX_goal_generic_construct_infrastructure
 		prerequisite = { focus = TU_VIC_par_public_works }
 		mutually_exclusive = { focus = TU_VIC_par_steel_rail }
-		x = -27
+		x = 19
 		y = 7
 		cost = 10
 
@@ -3430,7 +3423,7 @@ focus_tree = {
 		icon = GFX_goal_generic_defence
 		prerequisite = { focus = TU_VIC_par_commons_reform }
 		mutually_exclusive = { focus = TU_VIC_par_police_reform_alt }
-		x = -31
+		x = 15
 		y = 6
 		cost = 10
 
@@ -3451,7 +3444,7 @@ focus_tree = {
 		icon = GFX_goal_generic_army_doctrines
 		prerequisite = { focus = TU_VIC_par_commons_reform }
 		mutually_exclusive = { focus = TU_VIC_par_police_reform }
-		x = -29
+		x = 17
 		y = 6
 		cost = 10
 
@@ -3472,7 +3465,7 @@ focus_tree = {
 		icon = GFX_goal_generic_political_pressure
 		prerequisite = { focus = TU_VIC_par_elections }
 		mutually_exclusive = { focus = TU_VIC_par_free_elections_alt }
-		x = -31
+		x = 15
 		y = 10
 		cost = 10
 
@@ -3493,7 +3486,7 @@ focus_tree = {
 		icon = GFX_goal_generic_national_unity
 		prerequisite = { focus = TU_VIC_par_elections }
 		mutually_exclusive = { focus = TU_VIC_par_free_elections }
-		x = -29
+		x = 17
 		y = 10
 		cost = 10
 
@@ -3514,7 +3507,7 @@ focus_tree = {
 		icon = GFX_goal_generic_small_arms
 		prerequisite = { focus = TU_VIC_par_army_reform }
 		mutually_exclusive = { focus = TU_VIC_par_veterans_bill_alt }
-		x = -31
+		x = 15
 		y = 14
 		cost = 10
 
@@ -3535,7 +3528,7 @@ focus_tree = {
 		icon = GFX_goal_generic_army_tanks
 		prerequisite = { focus = TU_VIC_par_army_reform }
 		mutually_exclusive = { focus = TU_VIC_par_veterans_bill }
-		x = -29
+		x = 17
 		y = 14
 		cost = 10
 
@@ -3557,7 +3550,7 @@ focus_tree = {
 		icon = GFX_goal_generic_build_navy
 		prerequisite = { focus = TU_VIC_par_ministry_war }
 		mutually_exclusive = { focus = TU_VIC_par_airship_mail }
-		x = -31
+		x = 15
 		y = 15
 		cost = 10
 
@@ -3580,7 +3573,7 @@ focus_tree = {
 		icon = GFX_goal_generic_build_airforce
 		prerequisite = { focus = TU_VIC_par_ministry_war }
 		mutually_exclusive = { focus = TU_VIC_par_navy_board }
-		x = -29
+		x = 17
 		y = 15
 		cost = 10
 
@@ -3603,7 +3596,7 @@ focus_tree = {
 		icon = GFX_goal_generic_national_unity
 		prerequisite = { focus = TU_VIC_par_rule_of_law }
 		mutually_exclusive = { focus = TU_VIC_par_civil_rights_alt }
-		x = -31
+		x = 15
 		y = 16
 		cost = 10
 
@@ -3628,7 +3621,7 @@ focus_tree = {
 		icon = GFX_goal_generic_positive_trade_relations
 		prerequisite = { focus = TU_VIC_par_rule_of_law }
 		mutually_exclusive = { focus = TU_VIC_par_civil_rights }
-		x = -29
+		x = 17
 		y = 16
 		cost = 10
 
@@ -3649,7 +3642,7 @@ focus_tree = {
 		icon = GFX_goal_generic_improve_relations
 		prerequisite = { focus = TU_VIC_par_lords_review }
 		mutually_exclusive = { focus = TU_VIC_par_monarch_pension_alt }
-		x = -31
+		x = 15
 		y = 13
 		cost = 10
 
@@ -3670,7 +3663,7 @@ focus_tree = {
 		icon = GFX_goal_generic_major_war
 		prerequisite = { focus = TU_VIC_par_lords_review }
 		mutually_exclusive = { focus = TU_VIC_par_monarch_pension }
-		x = -29
+		x = 17
 		y = 13
 		cost = 10
 
@@ -3691,7 +3684,7 @@ focus_tree = {
 		icon = GFX_goal_generic_positive_trade_relations
 		prerequisite = { focus = TU_VIC_par_london_exchange }
 		mutually_exclusive = { focus = TU_VIC_par_colonial_office_alt }
-		x = -31
+		x = 15
 		y = 12
 		cost = 10
 
@@ -3712,7 +3705,7 @@ focus_tree = {
 		icon = GFX_goal_generic_consumer_goods
 		prerequisite = { focus = TU_VIC_par_london_exchange }
 		mutually_exclusive = { focus = TU_VIC_par_colonial_office }
-		x = -29
+		x = 17
 		y = 12
 		cost = 10
 
@@ -3734,8 +3727,8 @@ focus_tree = {
 		id = TU_VIC_exp_mandate
 		icon = GFX_goal_generic_national_unity
 		prerequisite = { focus = TU_VIC_crown_focus }
-		x = -3
-		y = 1
+		x = -30
+		y = 20
 		cost = 5
 
 		search_filters = { FOCUS_FILTER_POLITICAL }
@@ -3751,8 +3744,8 @@ focus_tree = {
 		id = TU_VIC_exp_survey
 		icon = GFX_goal_generic_radar
 		prerequisite = { focus = TU_VIC_exp_mandate }
-		x = -3
-		y = 2
+		x = -30
+		y = 21
 		cost = 10
 
 		search_filters = { FOCUS_FILTER_POLITICAL }
@@ -3767,8 +3760,8 @@ focus_tree = {
 		id = TU_VIC_exp_relations_open
 		icon = GFX_goal_generic_improve_relations
 		prerequisite = { focus = TU_VIC_exp_survey }
-		x = -3
-		y = 3
+		x = -30
+		y = 22
 		cost = 10
 
 		search_filters = { FOCUS_FILTER_POLITICAL }
@@ -3784,8 +3777,8 @@ focus_tree = {
 		id = TU_VIC_exp_envoys
 		icon = GFX_goal_generic_scientific_exchange
 		prerequisite = { focus = TU_VIC_exp_relations_open }
-		x = -3
-		y = 4
+		x = -30
+		y = 23
 		cost = 10
 
 		search_filters = { FOCUS_FILTER_POLITICAL }
@@ -3800,8 +3793,8 @@ focus_tree = {
 		id = TU_VIC_exp_intel
 		icon = GFX_goal_generic_intelligence_exchange
 		prerequisite = { focus = TU_VIC_exp_envoys }
-		x = -3
-		y = 5
+		x = -30
+		y = 24
 		cost = 10
 
 		search_filters = { FOCUS_FILTER_POLITICAL }
@@ -3816,8 +3809,8 @@ focus_tree = {
 		id = TU_VIC_exp_war_council
 		icon = GFX_goal_generic_army_doctrines
 		prerequisite = { focus = TU_VIC_exp_intel }
-		x = -3
-		y = 6
+		x = -30
+		y = 25
 		cost = 10
 
 		search_filters = { FOCUS_FILTER_ARMY_XP }
@@ -3833,8 +3826,8 @@ focus_tree = {
 		id = TU_VIC_exp_alliance_search
 		icon = GFX_goal_generic_major_alliance
 		prerequisite = { focus = TU_VIC_exp_war_council }
-		x = -3
-		y = 7
+		x = -30
+		y = 26
 		cost = 10
 
 		search_filters = { FOCUS_FILTER_POLITICAL }
@@ -3850,8 +3843,8 @@ focus_tree = {
 		id = TU_VIC_exp_frontier_hub
 		icon = GFX_goal_generic_position_armies
 		prerequisite = { focus = TU_VIC_exp_alliance_search }
-		x = -3
-		y = 8
+		x = -30
+		y = 27
 		cost = 10
 
 		search_filters = { FOCUS_FILTER_POLITICAL }
@@ -3868,8 +3861,8 @@ focus_tree = {
 		id = TU_VIC_kzd_border_scouts
 		icon = GFX_goal_generic_cavalry
 		prerequisite = { focus = TU_VIC_exp_frontier_hub }
-		x = -17
-		y = 9
+		x = -44
+		y = 28
 		cost = 5
 
 		search_filters = { FOCUS_FILTER_POLITICAL }
@@ -3884,8 +3877,8 @@ focus_tree = {
 		id = TU_VIC_kzd_thames_drills
 		icon = GFX_goal_generic_army_motorized
 		prerequisite = { focus = TU_VIC_kzd_border_scouts }
-		x = -17
-		y = 10
+		x = -44
+		y = 29
 		cost = 10
 
 		search_filters = { FOCUS_FILTER_ARMY_XP }
@@ -3900,8 +3893,8 @@ focus_tree = {
 		id = TU_VIC_kzd_envoy_note
 		icon = GFX_goal_generic_forceful_treaty
 		prerequisite = { focus = TU_VIC_kzd_thames_drills }
-		x = -17
-		y = 11
+		x = -44
+		y = 30
 		cost = 10
 
 		search_filters = { FOCUS_FILTER_POLITICAL }
@@ -3916,8 +3909,8 @@ focus_tree = {
 		id = TU_VIC_kzd_claim_londinium
 		icon = GFX_goal_generic_more_territorial_claims
 		prerequisite = { focus = TU_VIC_kzd_envoy_note }
-		x = -17
-		y = 12
+		x = -44
+		y = 31
 		cost = 15
 
 		search_filters = { FOCUS_FILTER_POLITICAL }
@@ -3934,15 +3927,14 @@ focus_tree = {
 		id = TU_VIC_kzd_border_forts
 		icon = GFX_goal_generic_fortify_city
 		prerequisite = { focus = TU_VIC_kzd_claim_londinium }
-		x = -17
-		y = 13
+		x = -44
+		y = 32
 		cost = 10
 
 		search_filters = { FOCUS_FILTER_POLITICAL }
 
 		completion_reward = {
-			add_tech_bonus = { name = TU_VIC_kzd_border_forts bonus = 0.75 uses = 1 category = construction_tech }
-			army_experience = 25
+			TU_build_forts_2 = yes
 		}
 	}
 
@@ -3950,15 +3942,14 @@ focus_tree = {
 		id = TU_VIC_kzd_steam_rail
 		icon = GFX_goal_generic_construct_infrastructure
 		prerequisite = { focus = TU_VIC_kzd_border_forts }
-		x = -17
-		y = 14
+		x = -44
+		y = 33
 		cost = 10
 
 		search_filters = { FOCUS_FILTER_INDUSTRY }
 
 		completion_reward = {
-			TU_build_infrastructure = yes
-			add_tech_bonus = { name = TU_VIC_kzd_steam_rail bonus = 0.75 uses = 1 category = industry category = construction_tech }
+			TU_build_railway = yes
 		}
 	}
 
@@ -3967,8 +3958,8 @@ focus_tree = {
 		icon = GFX_goal_generic_army_tanks
 		prerequisite = { focus = TU_VIC_kzd_steam_rail }
 		mutually_exclusive = { focus = TU_VIC_kzd_peace_talks }
-		x = -17
-		y = 15
+		x = -44
+		y = 34
 		cost = 10
 
 		search_filters = { FOCUS_FILTER_ARMY_XP }
@@ -3984,8 +3975,8 @@ focus_tree = {
 		id = TU_VIC_kzd_siege_prep
 		icon = GFX_goal_generic_army_artillery
 		prerequisite = { focus = TU_VIC_kzd_war_plans }
-		x = -17
-		y = 16
+		x = -44
+		y = 35
 		cost = 10
 
 		search_filters = { FOCUS_FILTER_ARMY_XP }
@@ -4001,8 +3992,8 @@ focus_tree = {
 		icon = GFX_goal_generic_military_deal
 		prerequisite = { focus = TU_VIC_kzd_envoy_note }
 		mutually_exclusive = { focus = TU_VIC_kzd_war_plans }
-		x = -15
-		y = 12
+		x = -42
+		y = 31
 		cost = 10
 
 		search_filters = { FOCUS_FILTER_POLITICAL }
@@ -4017,8 +4008,8 @@ focus_tree = {
 		id = TU_VIC_kzd_trade_route
 		icon = GFX_goal_generic_trade
 		prerequisite = { focus = TU_VIC_kzd_peace_talks }
-		x = -15
-		y = 13
+		x = -42
+		y = 32
 		cost = 10
 
 		search_filters = { FOCUS_FILTER_POLITICAL }
@@ -4032,8 +4023,8 @@ focus_tree = {
 		id = TU_VIC_kzd_intel_exchange
 		icon = GFX_goal_generic_military_sphere
 		prerequisite = { focus = TU_VIC_kzd_trade_route }
-		x = -15
-		y = 14
+		x = -42
+		y = 33
 		cost = 10
 
 		search_filters = { FOCUS_FILTER_POLITICAL }
@@ -4048,8 +4039,8 @@ focus_tree = {
 		id = TU_VIC_kzd_security_pledge
 		icon = GFX_goal_generic_defence
 		prerequisite = { focus = TU_VIC_kzd_intel_exchange }
-		x = -15
-		y = 15
+		x = -42
+		y = 34
 		cost = 10
 
 		search_filters = { FOCUS_FILTER_POLITICAL }
@@ -4064,8 +4055,8 @@ focus_tree = {
 		id = TU_VIC_kzd_nonaggression
 		icon = GFX_goal_generic_neutrality_focus
 		prerequisite = { focus = TU_VIC_kzd_security_pledge }
-		x = -15
-		y = 16
+		x = -42
+		y = 35
 		cost = 10
 
 		search_filters = { FOCUS_FILTER_POLITICAL }
@@ -4080,8 +4071,8 @@ focus_tree = {
 		id = TU_VIC_kzd_garrison
 		icon = GFX_goal_generic_occupy_start_war
 		prerequisite = { focus = TU_VIC_kzd_siege_prep }
-		x = -17
-		y = 17
+		x = -44
+		y = 36
 		cost = 10
 
 		search_filters = { FOCUS_FILTER_ARMY_XP }
@@ -4096,8 +4087,8 @@ focus_tree = {
 		id = TU_VIC_kzd_occupation_admin
 		icon = GFX_goal_generic_occupy_states_ongoing_war
 		prerequisite = { focus = TU_VIC_kzd_garrison }
-		x = -17
-		y = 18
+		x = -44
+		y = 37
 		cost = 10
 
 		search_filters = { FOCUS_FILTER_POLITICAL }
@@ -4113,8 +4104,8 @@ focus_tree = {
 		id = TU_VIC_kzd_victory_parade
 		icon = GFX_goal_generic_propaganda
 		prerequisite = { focus = TU_VIC_kzd_occupation_admin }
-		x = -17
-		y = 19
+		x = -44
+		y = 38
 		cost = 10
 
 		search_filters = { FOCUS_FILTER_POLITICAL }
@@ -4132,8 +4123,8 @@ focus_tree = {
 		icon = GFX_goal_generic_small_arms
 		prerequisite = { focus = TU_VIC_kzd_garrison }
 		mutually_exclusive = { focus = TU_VIC_kzd_mercenaries_alt }
-		x = -19
-		y = 18
+		x = -46
+		y = 37
 		cost = 10
 
 		search_filters = { FOCUS_FILTER_ARMY_XP }
@@ -4149,8 +4140,8 @@ focus_tree = {
 		icon = GFX_goal_generic_fortify_city
 		prerequisite = { focus = TU_VIC_kzd_garrison }
 		mutually_exclusive = { focus = TU_VIC_kzd_mercenaries }
-		x = -21
-		y = 18
+		x = -48
+		y = 37
 		cost = 10
 
 		search_filters = { FOCUS_FILTER_STABILITY }
@@ -4169,8 +4160,8 @@ focus_tree = {
 		id = TU_VIC_kzd_spoils
 		icon = GFX_goal_generic_construct_civ_factory
 		prerequisite = { focus = TU_VIC_kzd_victory_parade }
-		x = -17
-		y = 20
+		x = -44
+		y = 39
 		cost = 10
 
 		search_filters = { FOCUS_FILTER_INDUSTRY }
@@ -4189,8 +4180,8 @@ focus_tree = {
 		id = TU_VIC_lei_envoy_road
 		icon = GFX_goal_generic_positive_trade_relations
 		prerequisite = { focus = TU_VIC_exp_frontier_hub }
-		x = -11
-		y = 9
+		x = -38
+		y = 28
 		cost = 5
 
 		search_filters = { FOCUS_FILTER_POLITICAL }
@@ -4204,8 +4195,8 @@ focus_tree = {
 		id = TU_VIC_lei_border_watch
 		icon = GFX_goal_generic_cavalry
 		prerequisite = { focus = TU_VIC_lei_envoy_road }
-		x = -11
-		y = 10
+		x = -38
+		y = 29
 		cost = 10
 
 		search_filters = { FOCUS_FILTER_POLITICAL }
@@ -4220,8 +4211,8 @@ focus_tree = {
 		id = TU_VIC_lei_culture_exchange
 		icon = GFX_goal_generic_scientific_exchange
 		prerequisite = { focus = TU_VIC_lei_border_watch }
-		x = -11
-		y = 11
+		x = -38
+		y = 30
 		cost = 10
 
 		search_filters = { FOCUS_FILTER_POLITICAL }
@@ -4236,8 +4227,8 @@ focus_tree = {
 		id = TU_VIC_lei_claim
 		icon = GFX_goal_generic_more_territorial_claims
 		prerequisite = { focus = TU_VIC_lei_culture_exchange }
-		x = -12
-		y = 12
+		x = -39
+		y = 31
 		cost = 15
 
 		search_filters = { FOCUS_FILTER_POLITICAL }
@@ -4252,15 +4243,14 @@ focus_tree = {
 		id = TU_VIC_lei_mountain_fort
 		icon = GFX_goal_generic_fortify_city
 		prerequisite = { focus = TU_VIC_lei_claim }
-		x = -12
-		y = 13
+		x = -39
+		y = 32
 		cost = 10
 
 		search_filters = { FOCUS_FILTER_POLITICAL }
 
 		completion_reward = {
-			add_tech_bonus = { name = TU_VIC_lei_mountain_fort bonus = 0.75 uses = 1 category = construction_tech }
-			army_experience = 25
+			TU_build_forts_2 = yes
 		}
 	}
 
@@ -4268,8 +4258,8 @@ focus_tree = {
 		id = TU_VIC_lei_grand_drill
 		icon = GFX_goal_generic_allies_build_infantry
 		prerequisite = { focus = TU_VIC_lei_mountain_fort }
-		x = -13
-		y = 14
+		x = -40
+		y = 33
 		cost = 10
 
 		search_filters = { FOCUS_FILTER_ARMY_XP }
@@ -4285,8 +4275,8 @@ focus_tree = {
 		icon = GFX_goal_generic_demand_territory
 		prerequisite = { focus = TU_VIC_lei_grand_drill }
 		mutually_exclusive = { focus = TU_VIC_lei_treaty_talks }
-		x = -13
-		y = 15
+		x = -40
+		y = 34
 		cost = 10
 
 		search_filters = { FOCUS_FILTER_POLITICAL }
@@ -4303,8 +4293,8 @@ focus_tree = {
 		icon = GFX_goal_generic_improve_relations
 		prerequisite = { focus = TU_VIC_lei_culture_exchange }
 		mutually_exclusive = { focus = TU_VIC_lei_war_plans }
-		x = -9
-		y = 12
+		x = -36
+		y = 31
 		cost = 10
 
 		search_filters = { FOCUS_FILTER_POLITICAL }
@@ -4319,8 +4309,8 @@ focus_tree = {
 		id = TU_VIC_lei_security_pledge
 		icon = GFX_goal_generic_defence
 		prerequisite = { focus = TU_VIC_lei_treaty_talks }
-		x = -9
-		y = 13
+		x = -36
+		y = 32
 		cost = 10
 
 		search_filters = { FOCUS_FILTER_POLITICAL }
@@ -4335,8 +4325,8 @@ focus_tree = {
 		id = TU_VIC_lei_nonaggression
 		icon = GFX_goal_generic_neutrality_focus
 		prerequisite = { focus = TU_VIC_lei_security_pledge }
-		x = -9
-		y = 14
+		x = -36
+		y = 33
 		cost = 10
 
 		search_filters = { FOCUS_FILTER_POLITICAL }
@@ -4351,8 +4341,8 @@ focus_tree = {
 		id = TU_VIC_lei_supply_hub
 		icon = GFX_goal_generic_construct_infrastructure
 		prerequisite = { focus = TU_VIC_lei_mountain_fort }
-		x = -11
-		y = 14
+		x = -38
+		y = 33
 		cost = 10
 
 		search_filters = { FOCUS_FILTER_INDUSTRY }
@@ -4367,8 +4357,8 @@ focus_tree = {
 		id = TU_VIC_lei_march_route
 		icon = GFX_goal_generic_army_motorized
 		prerequisite = { focus = TU_VIC_lei_supply_hub }
-		x = -11
-		y = 15
+		x = -38
+		y = 34
 		cost = 10
 
 		search_filters = { FOCUS_FILTER_ARMY_XP }
@@ -4384,15 +4374,15 @@ focus_tree = {
 		id = TU_VIC_lei_iron_roads
 		icon = GFX_goal_generic_construct_civilian
 		prerequisite = { focus = TU_VIC_lei_march_route }
-		x = -11
-		y = 16
+		x = -38
+		y = 35
 		cost = 10
 
 		search_filters = { FOCUS_FILTER_INDUSTRY }
 
 		completion_reward = {
 			TU_build_civ_factory = yes
-			add_tech_bonus = { name = TU_VIC_lei_iron_roads bonus = 0.75 uses = 1 category = industry category = construction_tech }
+			TU_build_railway = yes
 		}
 	}
 
@@ -4400,8 +4390,8 @@ focus_tree = {
 		id = TU_VIC_lei_peace_festival
 		icon = GFX_goal_generic_consumer_goods
 		prerequisite = { focus = TU_VIC_lei_nonaggression }
-		x = -9
-		y = 15
+		x = -36
+		y = 34
 		cost = 10
 
 		search_filters = { FOCUS_FILTER_POLITICAL }
@@ -4416,8 +4406,8 @@ focus_tree = {
 		id = TU_VIC_lei_union_treaty
 		icon = GFX_goal_generic_major_alliance
 		prerequisite = { focus = TU_VIC_lei_peace_festival }
-		x = -9
-		y = 16
+		x = -36
+		y = 35
 		cost = 10
 
 		search_filters = { FOCUS_FILTER_POLITICAL }
@@ -4432,8 +4422,8 @@ focus_tree = {
 		id = TU_VIC_lei_summit
 		icon = GFX_goal_generic_improve_relations
 		prerequisite = { focus = TU_VIC_lei_union_treaty }
-		x = -9
-		y = 17
+		x = -36
+		y = 36
 		cost = 10
 
 		search_filters = { FOCUS_FILTER_POLITICAL }
@@ -4451,8 +4441,8 @@ focus_tree = {
 		id = TU_VIC_col_port_survey
 		icon = GFX_goal_generic_construct_naval_dockyard
 		prerequisite = { focus = TU_VIC_exp_frontier_hub }
-		x = -5
-		y = 9
+		x = -32
+		y = 28
 		cost = 5
 
 		search_filters = { FOCUS_FILTER_POLITICAL }
@@ -4468,8 +4458,8 @@ focus_tree = {
 		id = TU_VIC_col_shipping_lanes
 		icon = GFX_goal_generic_navy_doctrines_tactics
 		prerequisite = { focus = TU_VIC_col_port_survey }
-		x = -5
-		y = 10
+		x = -32
+		y = 29
 		cost = 10
 
 		search_filters = { FOCUS_FILTER_POLITICAL }
@@ -4485,8 +4475,8 @@ focus_tree = {
 		id = TU_VIC_col_merchant_guilds
 		icon = GFX_goal_generic_trade
 		prerequisite = { focus = TU_VIC_col_shipping_lanes }
-		x = -6
-		y = 11
+		x = -33
+		y = 30
 		cost = 10
 
 		search_filters = { FOCUS_FILTER_POLITICAL }
@@ -4501,8 +4491,8 @@ focus_tree = {
 		id = TU_VIC_col_claim
 		icon = GFX_goal_generic_more_territorial_claims
 		prerequisite = { focus = TU_VIC_col_merchant_guilds }
-		x = -7
-		y = 12
+		x = -34
+		y = 31
 		cost = 15
 
 		search_filters = { FOCUS_FILTER_POLITICAL }
@@ -4518,8 +4508,8 @@ focus_tree = {
 		id = TU_VIC_col_naval_base
 		icon = GFX_goal_generic_build_navy
 		prerequisite = { focus = TU_VIC_col_claim }
-		x = -7
-		y = 13
+		x = -34
+		y = 32
 		cost = 10
 
 		search_filters = { FOCUS_FILTER_INDUSTRY }
@@ -4536,8 +4526,8 @@ focus_tree = {
 		id = TU_VIC_col_colonial_charter
 		icon = GFX_goal_generic_construct_civilian
 		prerequisite = { focus = TU_VIC_col_naval_base }
-		x = -7
-		y = 14
+		x = -34
+		y = 33
 		cost = 10
 
 		search_filters = { FOCUS_FILTER_POLITICAL }
@@ -4554,8 +4544,8 @@ focus_tree = {
 		icon = GFX_goal_generic_navy_battleship
 		prerequisite = { focus = TU_VIC_col_colonial_charter }
 		mutually_exclusive = { focus = TU_VIC_col_trade_talks }
-		x = -7
-		y = 15
+		x = -34
+		y = 34
 		cost = 10
 
 		search_filters = { FOCUS_FILTER_POLITICAL }
@@ -4572,8 +4562,8 @@ focus_tree = {
 		icon = GFX_goal_generic_positive_trade_relations
 		prerequisite = { focus = TU_VIC_col_merchant_guilds }
 		mutually_exclusive = { focus = TU_VIC_col_war_fleet }
-		x = -5
-		y = 12
+		x = -32
+		y = 31
 		cost = 10
 
 		search_filters = { FOCUS_FILTER_POLITICAL }
@@ -4588,8 +4578,8 @@ focus_tree = {
 		id = TU_VIC_col_nonaggression
 		icon = GFX_goal_generic_neutrality_focus
 		prerequisite = { focus = TU_VIC_col_trade_talks }
-		x = -5
-		y = 13
+		x = -32
+		y = 32
 		cost = 10
 
 		search_filters = { FOCUS_FILTER_POLITICAL }
@@ -4604,8 +4594,8 @@ focus_tree = {
 		id = TU_VIC_col_security_pledge
 		icon = GFX_goal_generic_defence
 		prerequisite = { focus = TU_VIC_col_nonaggression }
-		x = -5
-		y = 14
+		x = -32
+		y = 33
 		cost = 10
 
 		search_filters = { FOCUS_FILTER_POLITICAL }
@@ -4620,8 +4610,8 @@ focus_tree = {
 		id = TU_VIC_col_fleet_review
 		icon = GFX_goal_generic_navy_carrier
 		prerequisite = { focus = TU_VIC_col_security_pledge }
-		x = -5
-		y = 15
+		x = -32
+		y = 34
 		cost = 10
 
 		search_filters = { FOCUS_FILTER_POLITICAL }
@@ -4637,8 +4627,8 @@ focus_tree = {
 		id = TU_VIC_col_tariff_reform
 		icon = GFX_goal_generic_dangerous_deal
 		prerequisite = { focus = TU_VIC_col_shipping_lanes }
-		x = -3
-		y = 11
+		x = -30
+		y = 30
 		cost = 10
 
 		search_filters = { FOCUS_FILTER_POLITICAL }
@@ -4653,8 +4643,8 @@ focus_tree = {
 		id = TU_VIC_col_trade_fair
 		icon = GFX_goal_generic_construction
 		prerequisite = { focus = TU_VIC_col_tariff_reform }
-		x = -3
-		y = 12
+		x = -30
+		y = 31
 		cost = 10
 
 		search_filters = { FOCUS_FILTER_POLITICAL }
@@ -4669,8 +4659,8 @@ focus_tree = {
 		id = TU_VIC_col_expedition_fund
 		icon = GFX_goal_generic_production
 		prerequisite = { focus = TU_VIC_col_trade_fair }
-		x = -3
-		y = 13
+		x = -30
+		y = 32
 		cost = 10
 
 		search_filters = { FOCUS_FILTER_POLITICAL }
@@ -4686,8 +4676,8 @@ focus_tree = {
 		id = TU_VIC_col_colonial_war_ready
 		icon = GFX_goal_generic_navy_doctrines_tactics
 		prerequisite = { focus = TU_VIC_col_expedition_fund }
-		x = -3
-		y = 14
+		x = -30
+		y = 33
 		cost = 10
 
 		search_filters = { FOCUS_FILTER_ARMY_XP }
@@ -4702,8 +4692,8 @@ focus_tree = {
 		id = TU_VIC_col_harbour_legacy
 		icon = GFX_goal_generic_build_navy
 		prerequisite = { focus = TU_VIC_col_colonial_war_ready }
-		x = -3
-		y = 15
+		x = -30
+		y = 34
 		cost = 10
 
 		search_filters = { FOCUS_FILTER_POLITICAL }
@@ -4721,8 +4711,8 @@ focus_tree = {
 		id = TU_VIC_bol_highland_survey
 		icon = GFX_goal_generic_radar
 		prerequisite = { focus = TU_VIC_exp_frontier_hub }
-		x = 3
-		y = 9
+		x = -24
+		y = 28
 		cost = 5
 
 		search_filters = { FOCUS_FILTER_POLITICAL }
@@ -4736,8 +4726,8 @@ focus_tree = {
 		id = TU_VIC_bol_mining_deal
 		icon = GFX_goal_generic_oil_refinery
 		prerequisite = { focus = TU_VIC_bol_highland_survey }
-		x = 3
-		y = 10
+		x = -24
+		y = 29
 		cost = 10
 
 		search_filters = { FOCUS_FILTER_INDUSTRY }
@@ -4752,8 +4742,8 @@ focus_tree = {
 		id = TU_VIC_bol_claim
 		icon = GFX_goal_generic_more_territorial_claims
 		prerequisite = { focus = TU_VIC_bol_mining_deal }
-		x = 0
-		y = 11
+		x = -27
+		y = 30
 		cost = 15
 
 		search_filters = { FOCUS_FILTER_POLITICAL }
@@ -4767,8 +4757,8 @@ focus_tree = {
 		id = TU_VIC_bol_mountain_training
 		icon = GFX_goal_generic_cavalry
 		prerequisite = { focus = TU_VIC_bol_claim }
-		x = 0
-		y = 12
+		x = -27
+		y = 31
 		cost = 10
 
 		search_filters = { FOCUS_FILTER_ARMY_XP }
@@ -4783,8 +4773,8 @@ focus_tree = {
 		id = TU_VIC_bol_highway
 		icon = GFX_goal_generic_construct_infrastructure
 		prerequisite = { focus = TU_VIC_bol_mountain_training }
-		x = 0
-		y = 13
+		x = -27
+		y = 32
 		cost = 10
 
 		search_filters = { FOCUS_FILTER_INDUSTRY }
@@ -4800,8 +4790,8 @@ focus_tree = {
 		icon = GFX_goal_generic_army_motorized
 		prerequisite = { focus = TU_VIC_bol_highway }
 		mutually_exclusive = { focus = TU_VIC_bol_envoy_talks }
-		x = -1
-		y = 14
+		x = -28
+		y = 33
 		cost = 10
 
 		search_filters = { FOCUS_FILTER_POLITICAL }
@@ -4817,8 +4807,8 @@ focus_tree = {
 		id = TU_VIC_bol_supply_depot
 		icon = GFX_goal_generic_construct_military
 		prerequisite = { focus = TU_VIC_bol_highway }
-		x = 1
-		y = 14
+		x = -26
+		y = 33
 		cost = 10
 
 		search_filters = { FOCUS_FILTER_INDUSTRY }
@@ -4834,8 +4824,8 @@ focus_tree = {
 		icon = GFX_goal_generic_improve_relations
 		prerequisite = { focus = TU_VIC_bol_mining_deal }
 		mutually_exclusive = { focus = TU_VIC_bol_war_plans }
-		x = 3
-		y = 11
+		x = -24
+		y = 30
 		cost = 10
 
 		search_filters = { FOCUS_FILTER_POLITICAL }
@@ -4850,8 +4840,8 @@ focus_tree = {
 		id = TU_VIC_bol_opinion_campaign
 		icon = GFX_goal_generic_propaganda
 		prerequisite = { focus = TU_VIC_bol_envoy_talks }
-		x = 3
-		y = 12
+		x = -24
+		y = 31
 		cost = 10
 
 		search_filters = { FOCUS_FILTER_POLITICAL }
@@ -4867,8 +4857,8 @@ focus_tree = {
 		id = TU_VIC_bol_security_pledge
 		icon = GFX_goal_generic_defence
 		prerequisite = { focus = TU_VIC_bol_opinion_campaign }
-		x = 3
-		y = 13
+		x = -24
+		y = 32
 		cost = 10
 
 		search_filters = { FOCUS_FILTER_POLITICAL }
@@ -4883,8 +4873,8 @@ focus_tree = {
 		id = TU_VIC_bol_nonaggression
 		icon = GFX_goal_generic_neutrality_focus
 		prerequisite = { focus = TU_VIC_bol_security_pledge }
-		x = 3
-		y = 14
+		x = -24
+		y = 33
 		cost = 10
 
 		search_filters = { FOCUS_FILTER_POLITICAL }
@@ -4899,8 +4889,8 @@ focus_tree = {
 		id = TU_VIC_bol_southern_fair
 		icon = GFX_goal_generic_trade
 		prerequisite = { focus = TU_VIC_bol_nonaggression }
-		x = 3
-		y = 15
+		x = -24
+		y = 34
 		cost = 10
 
 		search_filters = { FOCUS_FILTER_POLITICAL }
@@ -4915,8 +4905,8 @@ focus_tree = {
 		id = TU_VIC_bol_highland_parade
 		icon = GFX_goal_generic_consumer_goods
 		prerequisite = { focus = TU_VIC_bol_southern_fair }
-		x = 3
-		y = 16
+		x = -24
+		y = 35
 		cost = 10
 
 		search_filters = { FOCUS_FILTER_POLITICAL }
@@ -4932,8 +4922,8 @@ focus_tree = {
 		id = TU_VIC_bol_solidarity
 		icon = GFX_goal_generic_major_alliance
 		prerequisite = { focus = TU_VIC_bol_highland_parade }
-		x = 3
-		y = 17
+		x = -24
+		y = 36
 		cost = 10
 
 		search_filters = { FOCUS_FILTER_POLITICAL }
@@ -4948,8 +4938,8 @@ focus_tree = {
 		id = TU_VIC_bol_farm_development
 		icon = GFX_goal_generic_production
 		prerequisite = { focus = TU_VIC_bol_supply_depot }
-		x = 1
-		y = 15
+		x = -26
+		y = 34
 		cost = 10
 
 		search_filters = { FOCUS_FILTER_INDUSTRY }
@@ -4964,8 +4954,8 @@ focus_tree = {
 		id = TU_VIC_bol_liberation_day
 		icon = GFX_goal_generic_construct_civilian
 		prerequisite = { focus = TU_VIC_bol_solidarity }
-		x = 3
-		y = 18
+		x = -24
+		y = 37
 		cost = 10
 
 		search_filters = { FOCUS_FILTER_POLITICAL }
@@ -4982,8 +4972,8 @@ focus_tree = {
 		id = TU_VIC_urs_border_summit
 		icon = GFX_goal_generic_dangerous_deal
 		prerequisite = { focus = TU_VIC_exp_frontier_hub }
-		x = 7
-		y = 9
+		x = -20
+		y = 28
 		cost = 5
 
 		search_filters = { FOCUS_FILTER_POLITICAL }
@@ -4998,8 +4988,8 @@ focus_tree = {
 		id = TU_VIC_urs_winter_trade
 		icon = GFX_goal_generic_trade
 		prerequisite = { focus = TU_VIC_urs_border_summit }
-		x = 7
-		y = 10
+		x = -20
+		y = 29
 		cost = 10
 
 		search_filters = { FOCUS_FILTER_POLITICAL }
@@ -5013,8 +5003,8 @@ focus_tree = {
 		id = TU_VIC_urs_snow_regiments
 		icon = GFX_goal_generic_allies_build_infantry
 		prerequisite = { focus = TU_VIC_urs_winter_trade }
-		x = 5
-		y = 11
+		x = -22
+		y = 30
 		cost = 10
 
 		search_filters = { FOCUS_FILTER_ARMY_XP }
@@ -5029,8 +5019,8 @@ focus_tree = {
 		id = TU_VIC_urs_claim
 		icon = GFX_goal_generic_more_territorial_claims
 		prerequisite = { focus = TU_VIC_urs_snow_regiments }
-		x = 5
-		y = 12
+		x = -22
+		y = 31
 		cost = 15
 
 		search_filters = { FOCUS_FILTER_POLITICAL }
@@ -5045,15 +5035,14 @@ focus_tree = {
 		id = TU_VIC_urs_northern_wall
 		icon = GFX_goal_generic_fortify_city
 		prerequisite = { focus = TU_VIC_urs_claim }
-		x = 5
-		y = 13
+		x = -22
+		y = 32
 		cost = 10
 
 		search_filters = { FOCUS_FILTER_POLITICAL }
 
 		completion_reward = {
-			add_tech_bonus = { name = TU_VIC_urs_northern_wall bonus = 0.75 uses = 1 category = construction_tech }
-			army_experience = 25
+			TU_build_forts_2 = yes
 		}
 	}
 
@@ -5061,15 +5050,14 @@ focus_tree = {
 		id = TU_VIC_urs_north_rail
 		icon = GFX_goal_generic_construct_infrastructure
 		prerequisite = { focus = TU_VIC_urs_northern_wall }
-		x = 5
-		y = 14
+		x = -22
+		y = 33
 		cost = 10
 
 		search_filters = { FOCUS_FILTER_INDUSTRY }
 
 		completion_reward = {
-			TU_build_infrastructure = yes
-			add_tech_bonus = { name = TU_VIC_urs_north_rail bonus = 0.75 uses = 1 category = industry category = construction_tech }
+			TU_build_railway = yes
 		}
 	}
 
@@ -5078,8 +5066,8 @@ focus_tree = {
 		icon = GFX_goal_generic_army_tanks
 		prerequisite = { focus = TU_VIC_urs_north_rail }
 		mutually_exclusive = { focus = TU_VIC_urs_peace_talks }
-		x = 5
-		y = 15
+		x = -22
+		y = 34
 		cost = 10
 
 		search_filters = { FOCUS_FILTER_POLITICAL }
@@ -5095,8 +5083,8 @@ focus_tree = {
 		id = TU_VIC_urs_frozen_march
 		icon = GFX_goal_generic_army_motorized
 		prerequisite = { focus = TU_VIC_urs_offensive_plans }
-		x = 5
-		y = 16
+		x = -22
+		y = 35
 		cost = 10
 
 		search_filters = { FOCUS_FILTER_ARMY_XP }
@@ -5112,8 +5100,8 @@ focus_tree = {
 		id = TU_VIC_urs_siege_manual
 		icon = GFX_goal_generic_army_artillery
 		prerequisite = { focus = TU_VIC_urs_frozen_march }
-		x = 5
-		y = 17
+		x = -22
+		y = 36
 		cost = 10
 
 		search_filters = { FOCUS_FILTER_ARMY_XP }
@@ -5129,8 +5117,8 @@ focus_tree = {
 		icon = GFX_goal_generic_improve_relations
 		prerequisite = { focus = TU_VIC_urs_winter_trade }
 		mutually_exclusive = { focus = TU_VIC_urs_offensive_plans }
-		x = 7
-		y = 11
+		x = -20
+		y = 30
 		cost = 10
 
 		search_filters = { FOCUS_FILTER_POLITICAL }
@@ -5145,8 +5133,8 @@ focus_tree = {
 		id = TU_VIC_urs_nonaggression
 		icon = GFX_goal_generic_neutrality_focus
 		prerequisite = { focus = TU_VIC_urs_peace_talks }
-		x = 7
-		y = 12
+		x = -20
+		y = 31
 		cost = 10
 
 		search_filters = { FOCUS_FILTER_POLITICAL }
@@ -5161,8 +5149,8 @@ focus_tree = {
 		id = TU_VIC_urs_security_pledge
 		icon = GFX_goal_generic_defence
 		prerequisite = { focus = TU_VIC_urs_nonaggression }
-		x = 7
-		y = 13
+		x = -20
+		y = 32
 		cost = 10
 
 		search_filters = { FOCUS_FILTER_POLITICAL }
@@ -5177,8 +5165,8 @@ focus_tree = {
 		id = TU_VIC_urs_cultural_bridge
 		icon = GFX_goal_generic_scientific_exchange
 		prerequisite = { focus = TU_VIC_urs_security_pledge }
-		x = 7
-		y = 14
+		x = -20
+		y = 33
 		cost = 10
 
 		search_filters = { FOCUS_FILTER_POLITICAL }
@@ -5193,8 +5181,8 @@ focus_tree = {
 		id = TU_VIC_urs_scholars
 		icon = GFX_goal_generic_intelligence_exchange
 		prerequisite = { focus = TU_VIC_urs_cultural_bridge }
-		x = 7
-		y = 15
+		x = -20
+		y = 34
 		cost = 10
 
 		search_filters = { FOCUS_FILTER_POLITICAL }
@@ -5208,8 +5196,8 @@ focus_tree = {
 		id = TU_VIC_urs_northern_council
 		icon = GFX_goal_generic_national_unity
 		prerequisite = { focus = TU_VIC_urs_scholars }
-		x = 7
-		y = 16
+		x = -20
+		y = 35
 		cost = 10
 
 		search_filters = { FOCUS_FILTER_POLITICAL }
@@ -5224,8 +5212,8 @@ focus_tree = {
 		id = TU_VIC_urs_envoy_summit
 		icon = GFX_goal_generic_improve_relations
 		prerequisite = { focus = TU_VIC_urs_northern_council }
-		x = 7
-		y = 17
+		x = -20
+		y = 36
 		cost = 10
 
 		search_filters = { FOCUS_FILTER_POLITICAL }
@@ -5240,8 +5228,8 @@ focus_tree = {
 		id = TU_VIC_urs_northern_bloc
 		icon = GFX_goal_generic_major_alliance
 		prerequisite = { focus = TU_VIC_urs_envoy_summit }
-		x = 7
-		y = 18
+		x = -20
+		y = 37
 		cost = 10
 
 		search_filters = { FOCUS_FILTER_POLITICAL }
@@ -5257,8 +5245,8 @@ focus_tree = {
 		id = TU_VIC_urs_frost_accord
 		icon = GFX_goal_generic_positive_trade_relations
 		prerequisite = { focus = TU_VIC_urs_northern_bloc }
-		x = 7
-		y = 19
+		x = -20
+		y = 38
 		cost = 10
 
 		search_filters = { FOCUS_FILTER_POLITICAL }
@@ -5275,8 +5263,8 @@ focus_tree = {
 		id = TU_VIC_kaz_frontier_survey
 		icon = GFX_goal_generic_radar
 		prerequisite = { focus = TU_VIC_exp_frontier_hub }
-		x = 11
-		y = 9
+		x = -16
+		y = 28
 		cost = 5
 
 		search_filters = { FOCUS_FILTER_POLITICAL }
@@ -5292,15 +5280,14 @@ focus_tree = {
 		id = TU_VIC_kaz_river_forts
 		icon = GFX_goal_generic_fortify_city
 		prerequisite = { focus = TU_VIC_kaz_frontier_survey }
-		x = 11
-		y = 10
+		x = -16
+		y = 29
 		cost = 10
 
 		search_filters = { FOCUS_FILTER_POLITICAL }
 
 		completion_reward = {
-			add_tech_bonus = { name = TU_VIC_kaz_river_forts bonus = 0.75 uses = 1 category = construction_tech }
-			army_experience = 25
+			TU_build_forts_2 = yes
 		}
 	}
 
@@ -5308,8 +5295,8 @@ focus_tree = {
 		id = TU_VIC_kaz_archive
 		icon = GFX_goal_generic_construction
 		prerequisite = { focus = TU_VIC_kaz_river_forts }
-		x = 9
-		y = 11
+		x = -18
+		y = 30
 		cost = 10
 
 		search_filters = { FOCUS_FILTER_POLITICAL }
@@ -5323,8 +5310,8 @@ focus_tree = {
 		id = TU_VIC_kaz_claim
 		icon = GFX_goal_generic_more_territorial_claims
 		prerequisite = { focus = TU_VIC_kaz_archive }
-		x = 9
-		y = 12
+		x = -18
+		y = 31
 		cost = 15
 
 		search_filters = { FOCUS_FILTER_POLITICAL }
@@ -5339,8 +5326,8 @@ focus_tree = {
 		id = TU_VIC_kaz_levies
 		icon = GFX_goal_generic_allies_build_infantry
 		prerequisite = { focus = TU_VIC_kaz_claim }
-		x = 9
-		y = 13
+		x = -18
+		y = 32
 		cost = 10
 
 		search_filters = { FOCUS_FILTER_ARMY_XP }
@@ -5357,8 +5344,8 @@ focus_tree = {
 		icon = GFX_goal_generic_army_tanks
 		prerequisite = { focus = TU_VIC_kaz_levies }
 		mutually_exclusive = { focus = TU_VIC_kaz_talks }
-		x = 9
-		y = 14
+		x = -18
+		y = 33
 		cost = 10
 
 		search_filters = { FOCUS_FILTER_POLITICAL }
@@ -5374,8 +5361,8 @@ focus_tree = {
 		id = TU_VIC_kaz_eastern_supply
 		icon = GFX_goal_generic_construct_infrastructure
 		prerequisite = { focus = TU_VIC_kaz_war_plans }
-		x = 9
-		y = 15
+		x = -18
+		y = 34
 		cost = 10
 
 		search_filters = { FOCUS_FILTER_INDUSTRY }
@@ -5391,8 +5378,8 @@ focus_tree = {
 		id = TU_VIC_kaz_eastern_crusade
 		icon = GFX_goal_generic_army_doctrines
 		prerequisite = { focus = TU_VIC_kaz_eastern_supply }
-		x = 9
-		y = 16
+		x = -18
+		y = 35
 		cost = 10
 
 		search_filters = { FOCUS_FILTER_POLITICAL }
@@ -5410,8 +5397,8 @@ focus_tree = {
 		icon = GFX_goal_generic_military_deal
 		prerequisite = { focus = TU_VIC_kaz_river_forts }
 		mutually_exclusive = { focus = TU_VIC_kaz_war_plans }
-		x = 11
-		y = 11
+		x = -16
+		y = 30
 		cost = 10
 
 		search_filters = { FOCUS_FILTER_POLITICAL }
@@ -5426,8 +5413,8 @@ focus_tree = {
 		id = TU_VIC_kaz_opinion
 		icon = GFX_goal_generic_propaganda
 		prerequisite = { focus = TU_VIC_kaz_talks }
-		x = 11
-		y = 12
+		x = -16
+		y = 31
 		cost = 10
 
 		search_filters = { FOCUS_FILTER_POLITICAL }
@@ -5443,8 +5430,8 @@ focus_tree = {
 		id = TU_VIC_kaz_nonaggression
 		icon = GFX_goal_generic_neutrality_focus
 		prerequisite = { focus = TU_VIC_kaz_opinion }
-		x = 11
-		y = 13
+		x = -16
+		y = 32
 		cost = 10
 
 		search_filters = { FOCUS_FILTER_POLITICAL }
@@ -5459,8 +5446,8 @@ focus_tree = {
 		id = TU_VIC_kaz_security_pledge
 		icon = GFX_goal_generic_defence
 		prerequisite = { focus = TU_VIC_kaz_nonaggression }
-		x = 11
-		y = 14
+		x = -16
+		y = 33
 		cost = 10
 
 		search_filters = { FOCUS_FILTER_POLITICAL }
@@ -5475,8 +5462,8 @@ focus_tree = {
 		id = TU_VIC_kaz_eastern_trade
 		icon = GFX_goal_generic_trade
 		prerequisite = { focus = TU_VIC_kaz_security_pledge }
-		x = 11
-		y = 15
+		x = -16
+		y = 34
 		cost = 10
 
 		search_filters = { FOCUS_FILTER_POLITICAL }
@@ -5491,8 +5478,8 @@ focus_tree = {
 		id = TU_VIC_kaz_harvest_festival
 		icon = GFX_goal_generic_consumer_goods
 		prerequisite = { focus = TU_VIC_kaz_eastern_trade }
-		x = 11
-		y = 16
+		x = -16
+		y = 35
 		cost = 10
 
 		search_filters = { FOCUS_FILTER_POLITICAL }
@@ -5506,8 +5493,8 @@ focus_tree = {
 		id = TU_VIC_kaz_eastern_pact
 		icon = GFX_goal_generic_major_alliance
 		prerequisite = { focus = TU_VIC_kaz_harvest_festival }
-		x = 11
-		y = 17
+		x = -16
+		y = 36
 		cost = 10
 
 		search_filters = { FOCUS_FILTER_POLITICAL }
@@ -5522,8 +5509,8 @@ focus_tree = {
 		id = TU_VIC_kaz_settlers
 		icon = GFX_goal_generic_construct_civilian
 		prerequisite = { focus = TU_VIC_kaz_eastern_pact }
-		x = 11
-		y = 18
+		x = -16
+		y = 37
 		cost = 10
 
 		search_filters = { FOCUS_FILTER_POLITICAL }
@@ -5538,8 +5525,8 @@ focus_tree = {
 		id = TU_VIC_kaz_shared_memory
 		icon = GFX_goal_generic_propaganda
 		prerequisite = { focus = TU_VIC_kaz_settlers }
-		x = 11
-		y = 19
+		x = -16
+		y = 38
 		cost = 10
 
 		search_filters = { FOCUS_FILTER_POLITICAL }
@@ -5554,8 +5541,8 @@ focus_tree = {
 		id = TU_VIC_kaz_union_declaration
 		icon = GFX_goal_generic_major_alliance
 		prerequisite = { focus = TU_VIC_kaz_shared_memory }
-		x = 11
-		y = 20
+		x = -16
+		y = 39
 		cost = 10
 
 		search_filters = { FOCUS_FILTER_POLITICAL }
@@ -5572,8 +5559,8 @@ focus_tree = {
 		id = TU_VIC_eco_industry_charter
 		icon = GFX_goal_generic_construction2
 		prerequisite = { focus = TU_VIC_crown_focus }
-		x = 6
-		y = 1
+		x = -6
+		y = 20
 		cost = 5
 
 		search_filters = { FOCUS_FILTER_INDUSTRY }
@@ -5592,8 +5579,8 @@ focus_tree = {
 		id = TU_VIC_eco_london_foundries
 		icon = GFX_goal_generic_construct_civ_factory
 		prerequisite = { focus = TU_VIC_eco_industry_charter }
-		x = 2
-		y = 2
+		x = -10
+		y = 21
 		cost = 10
 
 		search_filters = { FOCUS_FILTER_INDUSTRY }
@@ -5612,8 +5599,8 @@ focus_tree = {
 		id = TU_VIC_eco_coal_fields
 		icon = GFX_goal_generic_production
 		prerequisite = { focus = TU_VIC_eco_industry_charter }
-		x = 10
-		y = 2
+		x = -2
+		y = 21
 		cost = 10
 
 		search_filters = { FOCUS_FILTER_INDUSTRY }
@@ -5632,8 +5619,8 @@ focus_tree = {
 		id = TU_VIC_eco_rail_network
 		icon = GFX_goal_generic_construct_infrastructure
 		prerequisite = { focus = TU_VIC_eco_london_foundries }
-		x = 2
-		y = 3
+		x = -10
+		y = 22
 		cost = 10
 
 		search_filters = { FOCUS_FILTER_INDUSTRY }
@@ -5643,8 +5630,7 @@ focus_tree = {
 		}
 
 		completion_reward = {
-			TU_build_infrastructure = yes
-			add_tech_bonus = { name = TU_VIC_eco_rail_network bonus = 0.75 uses = 1 category = industry category = construction_tech }
+			TU_build_railway = yes
 		}
 	}
 
@@ -5652,8 +5638,8 @@ focus_tree = {
 		id = TU_VIC_eco_steel_mills
 		icon = GFX_goal_generic_production2
 		prerequisite = { focus = TU_VIC_eco_coal_fields }
-		x = 10
-		y = 3
+		x = -2
+		y = 22
 		cost = 10
 
 		search_filters = { FOCUS_FILTER_INDUSTRY }
@@ -5673,8 +5659,8 @@ focus_tree = {
 		id = TU_VIC_eco_dock_city
 		icon = GFX_goal_generic_construct_naval_dockyard
 		prerequisite = { focus = TU_VIC_eco_steel_mills }
-		x = 8
-		y = 4
+		x = -4
+		y = 23
 		cost = 10
 
 		search_filters = { FOCUS_FILTER_INDUSTRY }
@@ -5696,8 +5682,8 @@ focus_tree = {
 		id = TU_VIC_eco_arms_contracts
 		icon = GFX_goal_generic_construct_mil_factory
 		prerequisite = { focus = TU_VIC_eco_london_foundries }
-		x = 4
-		y = 3
+		x = -8
+		y = 22
 		cost = 10
 
 		search_filters = { FOCUS_FILTER_INDUSTRY }
@@ -5717,8 +5703,8 @@ focus_tree = {
 		id = TU_VIC_eco_mass_production
 		icon = GFX_goal_generic_construct_civ_factory
 		prerequisite = { focus = TU_VIC_eco_rail_network }
-		x = 2
-		y = 4
+		x = -10
+		y = 23
 		cost = 10
 
 		search_filters = { FOCUS_FILTER_INDUSTRY }
@@ -5737,8 +5723,8 @@ focus_tree = {
 		id = TU_VIC_eco_factory_retool
 		icon = GFX_goal_generic_production2
 		prerequisite = { focus = TU_VIC_eco_mass_production }
-		x = 0
-		y = 5
+		x = -12
+		y = 24
 		cost = 10
 
 		search_filters = { FOCUS_FILTER_INDUSTRY }
@@ -5757,8 +5743,8 @@ focus_tree = {
 		id = TU_VIC_eco_industrial_summit
 		icon = GFX_goal_generic_construction2
 		prerequisite = { focus = TU_VIC_eco_mass_production }
-		x = 5
-		y = 5
+		x = -7
+		y = 24
 		cost = 15
 
 		search_filters = { FOCUS_FILTER_INDUSTRY }
@@ -5778,8 +5764,8 @@ focus_tree = {
 		id = TU_VIC_eco_resource_survey
 		icon = GFX_goal_generic_radar
 		prerequisite = { focus = TU_VIC_eco_steel_mills }
-		x = 13
-		y = 4
+		x = 1
+		y = 23
 		cost = 10
 
 		search_filters = { FOCUS_FILTER_INDUSTRY }
@@ -5798,8 +5784,8 @@ focus_tree = {
 		id = TU_VIC_eco_oil_refineries
 		icon = GFX_goal_generic_oil_refinery
 		prerequisite = { focus = TU_VIC_eco_resource_survey }
-		x = 12
-		y = 5
+		x = 0
+		y = 24
 		cost = 10
 
 		search_filters = { FOCUS_FILTER_INDUSTRY }
@@ -5819,8 +5805,8 @@ focus_tree = {
 		id = TU_VIC_eco_rubber_import
 		icon = GFX_goal_generic_trade
 		prerequisite = { focus = TU_VIC_eco_resource_survey }
-		x = 14
-		y = 5
+		x = 2
+		y = 24
 		cost = 10
 
 		search_filters = { FOCUS_FILTER_INDUSTRY }
@@ -5840,8 +5826,8 @@ focus_tree = {
 		id = TU_VIC_eco_steel_export
 		icon = GFX_goal_generic_trade
 		prerequisite = { focus = TU_VIC_eco_dock_city }
-		x = 8
-		y = 5
+		x = -4
+		y = 24
 		cost = 10
 
 		search_filters = { FOCUS_FILTER_INDUSTRY }
@@ -5861,8 +5847,8 @@ focus_tree = {
 		id = TU_VIC_eco_power_grid
 		icon = GFX_goal_generic_construct_civilian
 		prerequisite = { focus = TU_VIC_eco_factory_retool }
-		x = -1
-		y = 6
+		x = -13
+		y = 25
 		cost = 10
 
 		search_filters = { FOCUS_FILTER_INDUSTRY }
@@ -5882,8 +5868,8 @@ focus_tree = {
 		icon = GFX_goal_generic_consumer_goods
 		prerequisite = { focus = TU_VIC_eco_factory_retool }
 		mutually_exclusive = { focus = TU_VIC_eco_war_factories }
-		x = 2
-		y = 6
+		x = -10
+		y = 25
 		cost = 10
 
 		search_filters = { FOCUS_FILTER_INDUSTRY }
@@ -5903,8 +5889,8 @@ focus_tree = {
 		id = TU_VIC_eco_workers_guild
 		icon = GFX_goal_generic_improve_relations
 		prerequisite = { focus = TU_VIC_eco_consumer_markets }
-		x = 1
-		y = 7
+		x = -11
+		y = 26
 		cost = 10
 
 		search_filters = { FOCUS_FILTER_INDUSTRY }
@@ -5924,8 +5910,8 @@ focus_tree = {
 		id = TU_VIC_eco_urban_housing
 		icon = GFX_goal_generic_construct_civilian
 		prerequisite = { focus = TU_VIC_eco_consumer_markets }
-		x = 3
-		y = 7
+		x = -9
+		y = 26
 		cost = 10
 
 		search_filters = { FOCUS_FILTER_INDUSTRY }
@@ -5946,8 +5932,8 @@ focus_tree = {
 		id = TU_VIC_eco_grand_bridge
 		icon = GFX_goal_generic_construct_infrastructure
 		prerequisite = { focus = TU_VIC_eco_steel_export }
-		x = 7
-		y = 6
+		x = -5
+		y = 25
 		cost = 10
 
 		search_filters = { FOCUS_FILTER_INDUSTRY }
@@ -5966,8 +5952,8 @@ focus_tree = {
 		id = TU_VIC_eco_thames_canal
 		icon = GFX_goal_generic_construct_infrastructure
 		prerequisite = { focus = TU_VIC_eco_grand_bridge }
-		x = 7
-		y = 7
+		x = -5
+		y = 26
 		cost = 15
 
 		search_filters = { FOCUS_FILTER_INDUSTRY }
@@ -5986,8 +5972,8 @@ focus_tree = {
 		id = TU_VIC_eco_foreign_capital
 		icon = GFX_goal_generic_trade
 		prerequisite = { focus = TU_VIC_eco_steel_export }
-		x = 9
-		y = 6
+		x = -3
+		y = 25
 		cost = 10
 
 		search_filters = { FOCUS_FILTER_INDUSTRY }
@@ -6007,8 +5993,8 @@ focus_tree = {
 		id = TU_VIC_eco_central_bank
 		icon = GFX_goal_generic_production
 		prerequisite = { focus = TU_VIC_eco_foreign_capital }
-		x = 9
-		y = 7
+		x = -3
+		y = 26
 		cost = 10
 
 		search_filters = { FOCUS_FILTER_INDUSTRY }
@@ -6028,8 +6014,8 @@ focus_tree = {
 		id = TU_VIC_eco_dockyard_expansion
 		icon = GFX_goal_generic_construct_naval_dockyard
 		prerequisite = { focus = TU_VIC_eco_dock_city }
-		x = 10
-		y = 5
+		x = -2
+		y = 24
 		cost = 10
 
 		search_filters = { FOCUS_FILTER_INDUSTRY }
@@ -6051,8 +6037,8 @@ focus_tree = {
 		icon = GFX_goal_generic_construct_mil_factory
 		prerequisite = { focus = TU_VIC_eco_industrial_summit }
 		mutually_exclusive = { focus = TU_VIC_eco_consumer_markets }
-		x = 5
-		y = 6
+		x = -7
+		y = 25
 		cost = 10
 
 		search_filters = { FOCUS_FILTER_INDUSTRY }
@@ -6072,8 +6058,8 @@ focus_tree = {
 		id = TU_VIC_eco_london_plant
 		icon = GFX_goal_generic_construct_mil_factory
 		prerequisite = { focus = TU_VIC_eco_war_factories }
-		x = 5
-		y = 7
+		x = -7
+		y = 26
 		cost = 15
 
 		search_filters = { FOCUS_FILTER_INDUSTRY }
@@ -6092,8 +6078,8 @@ focus_tree = {
 		id = TU_VIC_eco_engine_works
 		icon = GFX_goal_generic_production
 		prerequisite = { focus = TU_VIC_eco_london_plant }
-		x = 5
-		y = 8
+		x = -7
+		y = 27
 		cost = 10
 
 		search_filters = { FOCUS_FILTER_INDUSTRY }
@@ -6112,8 +6098,8 @@ focus_tree = {
 		id = TU_VIC_eco_skilled_labour
 		icon = GFX_goal_generic_improve_relations
 		prerequisite = { focus = TU_VIC_eco_workers_guild }
-		x = 1
-		y = 8
+		x = -11
+		y = 27
 		cost = 10
 
 		search_filters = { FOCUS_FILTER_INDUSTRY }
@@ -6132,8 +6118,8 @@ focus_tree = {
 		id = TU_VIC_eco_industrial_fair
 		icon = GFX_goal_generic_trade
 		prerequisite = { focus = TU_VIC_eco_urban_housing }
-		x = 3
-		y = 8
+		x = -9
+		y = 27
 		cost = 10
 
 		search_filters = { FOCUS_FILTER_INDUSTRY }
@@ -6152,8 +6138,8 @@ focus_tree = {
 		id = TU_VIC_eco_electrification
 		icon = GFX_goal_generic_production2
 		prerequisite = { focus = TU_VIC_eco_power_grid }
-		x = -1
-		y = 7
+		x = -13
+		y = 26
 		cost = 10
 
 		search_filters = { FOCUS_FILTER_INDUSTRY }
@@ -6173,8 +6159,8 @@ focus_tree = {
 		id = TU_VIC_eco_strategic_stock
 		icon = GFX_goal_generic_construction
 		prerequisite = { focus = TU_VIC_eco_rubber_import }
-		x = 14
-		y = 6
+		x = 2
+		y = 25
 		cost = 10
 
 		search_filters = { FOCUS_FILTER_INDUSTRY }
@@ -6196,8 +6182,8 @@ focus_tree = {
 		id = TU_VIC_eco_knight_recruit
 		icon = GFX_goal_generic_army_doctrines
 		prerequisite = { focus = TU_VIC_crown_focus }
-		x = 20
-		y = 1
+		x = 10
+		y = 20
 		cost = 5
 
 		search_filters = { FOCUS_FILTER_ARMY_XP }
@@ -6216,8 +6202,8 @@ focus_tree = {
 		id = TU_VIC_eco_knight_armory
 		icon = GFX_goal_generic_army_tanks
 		prerequisite = { focus = TU_VIC_eco_knight_recruit }
-		x = 20
-		y = 2
+		x = 10
+		y = 21
 		cost = 10
 
 		search_filters = { FOCUS_FILTER_ARMY_XP }
@@ -6236,8 +6222,8 @@ focus_tree = {
 		id = TU_VIC_eco_steam_boilers
 		icon = GFX_goal_generic_construct_mil_factory
 		prerequisite = { focus = TU_VIC_eco_knight_armory }
-		x = 17
-		y = 3
+		x = 7
+		y = 22
 		cost = 10
 
 		search_filters = { FOCUS_FILTER_INDUSTRY }
@@ -6256,8 +6242,8 @@ focus_tree = {
 		id = TU_VIC_eco_knight_oath
 		icon = GFX_goal_generic_army_doctrines
 		prerequisite = { focus = TU_VIC_eco_knight_recruit }
-		x = 22
-		y = 2
+		x = 12
+		y = 21
 		cost = 10
 
 		search_filters = { FOCUS_FILTER_ARMY_XP }
@@ -6276,8 +6262,8 @@ focus_tree = {
 		id = TU_VIC_eco_training_yard
 		icon = GFX_goal_generic_army_motorized
 		prerequisite = { focus = TU_VIC_eco_knight_oath }
-		x = 22
-		y = 3
+		x = 12
+		y = 22
 		cost = 10
 
 		search_filters = { FOCUS_FILTER_ARMY_XP }
@@ -6296,8 +6282,8 @@ focus_tree = {
 		id = TU_VIC_eco_armour_doctrine
 		icon = GFX_goal_generic_army_tanks
 		prerequisite = { focus = TU_VIC_eco_knight_armory }
-		x = 20
-		y = 3
+		x = 10
+		y = 22
 		cost = 10
 
 		search_filters = { FOCUS_FILTER_ARMY_XP }
@@ -6317,8 +6303,8 @@ focus_tree = {
 		id = TU_VIC_eco_heavy_plate
 		icon = GFX_goal_generic_construct_mil_factory
 		prerequisite = { focus = TU_VIC_eco_steam_boilers }
-		x = 17
-		y = 4
+		x = 7
+		y = 23
 		cost = 10
 
 		search_filters = { FOCUS_FILTER_INDUSTRY }
@@ -6337,8 +6323,8 @@ focus_tree = {
 		id = TU_VIC_eco_knight_companies
 		icon = GFX_goal_generic_army_tanks
 		prerequisite = { focus = TU_VIC_eco_armour_doctrine }
-		x = 20
-		y = 4
+		x = 10
+		y = 23
 		cost = 10
 
 		search_filters = { FOCUS_FILTER_ARMY_XP }
@@ -6357,8 +6343,8 @@ focus_tree = {
 		id = TU_VIC_eco_steam_cavalry
 		icon = GFX_goal_generic_army_motorized
 		prerequisite = { focus = TU_VIC_eco_training_yard }
-		x = 22
-		y = 4
+		x = 12
+		y = 23
 		cost = 10
 
 		search_filters = { FOCUS_FILTER_ARMY_XP }
@@ -6377,8 +6363,8 @@ focus_tree = {
 		id = TU_VIC_eco_knight_engineers
 		icon = GFX_goal_generic_construct_military
 		prerequisite = { focus = TU_VIC_eco_knight_companies }
-		x = 20
-		y = 5
+		x = 10
+		y = 24
 		cost = 10
 
 		search_filters = { FOCUS_FILTER_ARMY_XP }
@@ -6396,8 +6382,8 @@ focus_tree = {
 		id = TU_VIC_eco_division_order
 		icon = GFX_goal_generic_army_doctrines
 		prerequisite = { focus = TU_VIC_eco_knight_engineers }
-		x = 20
-		y = 6
+		x = 10
+		y = 25
 		cost = 15
 
 		search_filters = { FOCUS_FILTER_ARMY_XP }
@@ -6416,8 +6402,8 @@ focus_tree = {
 		id = TU_VIC_eco_steam_heart
 		icon = GFX_goal_generic_army_tanks
 		prerequisite = { focus = TU_VIC_eco_heavy_plate }
-		x = 17
-		y = 5
+		x = 7
+		y = 24
 		cost = 15
 
 		search_filters = { FOCUS_FILTER_ARMY_XP }
@@ -6436,8 +6422,8 @@ focus_tree = {
 		id = TU_VIC_eco_knight_artillery
 		icon = GFX_goal_generic_army_artillery
 		prerequisite = { focus = TU_VIC_eco_steam_cavalry }
-		x = 22
-		y = 5
+		x = 12
+		y = 24
 		cost = 10
 
 		search_filters = { FOCUS_FILTER_ARMY_XP }
@@ -6456,8 +6442,8 @@ focus_tree = {
 		id = TU_VIC_eco_anti_tank_steam
 		icon = GFX_goal_generic_army_artillery2
 		prerequisite = { focus = TU_VIC_eco_steam_heart }
-		x = 16
-		y = 6
+		x = 6
+		y = 25
 		cost = 10
 
 		search_filters = { FOCUS_FILTER_INDUSTRY }
@@ -6477,8 +6463,8 @@ focus_tree = {
 		id = TU_VIC_eco_rotation
 		icon = GFX_goal_generic_army_motorized
 		prerequisite = { focus = TU_VIC_eco_knight_artillery }
-		x = 22
-		y = 6
+		x = 12
+		y = 25
 		cost = 10
 
 		search_filters = { FOCUS_FILTER_ARMY_XP }
@@ -6497,8 +6483,8 @@ focus_tree = {
 		id = TU_VIC_eco_vanguard
 		icon = GFX_goal_generic_army_tanks
 		prerequisite = { focus = TU_VIC_eco_steam_heart }
-		x = 18
-		y = 6
+		x = 8
+		y = 25
 		cost = 10
 
 		search_filters = { FOCUS_FILTER_ARMY_XP }
@@ -6518,8 +6504,8 @@ focus_tree = {
 		id = TU_VIC_eco_siege_tactics
 		icon = GFX_goal_generic_fortify_city
 		prerequisite = { focus = TU_VIC_eco_vanguard }
-		x = 18
-		y = 7
+		x = 8
+		y = 26
 		cost = 10
 
 		search_filters = { FOCUS_FILTER_ARMY_XP }
@@ -6538,8 +6524,8 @@ focus_tree = {
 		id = TU_VIC_eco_elite_selection
 		icon = GFX_goal_generic_army_doctrines
 		prerequisite = { focus = TU_VIC_eco_division_order }
-		x = 20
-		y = 7
+		x = 10
+		y = 26
 		cost = 10
 
 		search_filters = { FOCUS_FILTER_ARMY_XP }
@@ -6558,8 +6544,8 @@ focus_tree = {
 		id = TU_VIC_eco_champions
 		icon = GFX_goal_generic_army_tanks
 		prerequisite = { focus = TU_VIC_eco_elite_selection }
-		x = 20
-		y = 8
+		x = 10
+		y = 27
 		cost = 15
 
 		search_filters = { FOCUS_FILTER_ARMY_XP }
@@ -6579,8 +6565,8 @@ focus_tree = {
 		id = TU_VIC_eco_training_program
 		icon = GFX_goal_generic_army_doctrines
 		prerequisite = { focus = TU_VIC_eco_champions }
-		x = 20
-		y = 9
+		x = 10
+		y = 28
 		cost = 10
 
 		search_filters = { FOCUS_FILTER_ARMY_XP }
@@ -6599,8 +6585,8 @@ focus_tree = {
 		id = TU_VIC_eco_knight_legion
 		icon = GFX_goal_generic_army_tanks
 		prerequisite = { focus = TU_VIC_eco_training_program }
-		x = 20
-		y = 10
+		x = 10
+		y = 29
 		cost = 15
 
 		search_filters = { FOCUS_FILTER_ARMY_XP }
@@ -6619,8 +6605,8 @@ focus_tree = {
 		id = TU_VIC_eco_rearm
 		icon = GFX_goal_generic_construct_mil_factory
 		prerequisite = { focus = TU_VIC_eco_anti_tank_steam }
-		x = 16
-		y = 7
+		x = 6
+		y = 26
 		cost = 10
 
 		search_filters = { FOCUS_FILTER_INDUSTRY }
@@ -6640,8 +6626,8 @@ focus_tree = {
 		id = TU_VIC_eco_mobile_knights
 		icon = GFX_goal_generic_army_motorized
 		prerequisite = { focus = TU_VIC_eco_rotation }
-		x = 22
-		y = 7
+		x = 12
+		y = 26
 		cost = 10
 
 		search_filters = { FOCUS_FILTER_ARMY_XP }
@@ -6660,8 +6646,8 @@ focus_tree = {
 		id = TU_VIC_eco_reserves
 		icon = GFX_goal_generic_defence
 		prerequisite = { focus = TU_VIC_eco_rearm }
-		x = 16
-		y = 8
+		x = 6
+		y = 27
 		cost = 10
 
 		search_filters = { FOCUS_FILTER_MANPOWER }
@@ -6680,8 +6666,8 @@ focus_tree = {
 		id = TU_VIC_eco_steam_supply
 		icon = GFX_goal_generic_construct_infrastructure
 		prerequisite = { focus = TU_VIC_eco_reserves }
-		x = 16
-		y = 9
+		x = 6
+		y = 28
 		cost = 10
 
 		search_filters = { FOCUS_FILTER_INDUSTRY }
@@ -6700,8 +6686,8 @@ focus_tree = {
 		id = TU_VIC_eco_knight_legacy
 		icon = GFX_goal_generic_national_unity
 		prerequisite = { focus = TU_VIC_eco_knight_legion }
-		x = 20
-		y = 11
+		x = 10
+		y = 30
 		cost = 10
 
 		search_filters = { FOCUS_FILTER_POLITICAL }
@@ -6720,8 +6706,8 @@ focus_tree = {
 		id = TU_VIC_eco_capital_guard
 		icon = GFX_goal_generic_defence
 		prerequisite = { focus = TU_VIC_eco_siege_tactics }
-		x = 18
-		y = 8
+		x = 8
+		y = 27
 		cost = 10
 
 		search_filters = { FOCUS_FILTER_ARMY_XP }
@@ -6742,8 +6728,8 @@ focus_tree = {
 		id = TU_VIC_eco_fleet_charter
 		icon = GFX_goal_generic_build_navy
 		prerequisite = { focus = TU_VIC_crown_focus }
-		x = 24
-		y = 1
+		x = 16
+		y = 21
 		cost = 5
 
 		search_filters = { FOCUS_FILTER_NAVY_XP }
@@ -6763,8 +6749,8 @@ focus_tree = {
 		id = TU_VIC_eco_coastal_yards
 		icon = GFX_goal_generic_construct_naval_dockyard
 		prerequisite = { focus = TU_VIC_eco_fleet_charter }
-		x = 24
-		y = 2
+		x = 16
+		y = 22
 		cost = 10
 
 		search_filters = { FOCUS_FILTER_INDUSTRY }
@@ -6785,8 +6771,8 @@ focus_tree = {
 		id = TU_VIC_eco_ironclad_lines
 		icon = GFX_goal_generic_navy_battleship
 		prerequisite = { focus = TU_VIC_eco_coastal_yards }
-		x = 24
-		y = 3
+		x = 16
+		y = 23
 		cost = 10
 
 		search_filters = { FOCUS_FILTER_NAVY_XP }
@@ -6805,8 +6791,8 @@ focus_tree = {
 		id = TU_VIC_eco_destroyer_flotilla
 		icon = GFX_goal_generic_navy_cruiser
 		prerequisite = { focus = TU_VIC_eco_ironclad_lines }
-		x = 24
-		y = 4
+		x = 16
+		y = 24
 		cost = 10
 
 		search_filters = { FOCUS_FILTER_NAVY_XP }
@@ -6825,8 +6811,8 @@ focus_tree = {
 		id = TU_VIC_eco_cruiser_program
 		icon = GFX_goal_generic_navy_cruiser
 		prerequisite = { focus = TU_VIC_eco_destroyer_flotilla }
-		x = 24
-		y = 5
+		x = 16
+		y = 25
 		cost = 10
 
 		search_filters = { FOCUS_FILTER_NAVY_XP }
@@ -6845,8 +6831,8 @@ focus_tree = {
 		id = TU_VIC_eco_battleship_program
 		icon = GFX_goal_generic_navy_battleship
 		prerequisite = { focus = TU_VIC_eco_cruiser_program }
-		x = 24
-		y = 6
+		x = 16
+		y = 26
 		cost = 15
 
 		search_filters = { FOCUS_FILTER_NAVY_XP }
@@ -6866,8 +6852,8 @@ focus_tree = {
 		id = TU_VIC_eco_submarine_pens
 		icon = GFX_goal_generic_navy_submarine
 		prerequisite = { focus = TU_VIC_eco_coastal_yards }
-		x = 30
-		y = 3
+		x = 22
+		y = 23
 		cost = 10
 
 		search_filters = { FOCUS_FILTER_NAVY_XP }
@@ -6888,8 +6874,8 @@ focus_tree = {
 		icon = GFX_goal_generic_navy_doctrines_tactics
 		prerequisite = { focus = TU_VIC_eco_submarine_pens }
 		mutually_exclusive = { focus = TU_VIC_eco_wolfpack_alt }
-		x = 26
-		y = 4
+		x = 18
+		y = 24
 		cost = 10
 
 		search_filters = { FOCUS_FILTER_NAVY_XP }
@@ -6910,8 +6896,8 @@ focus_tree = {
 		icon = GFX_goal_generic_build_navy
 		prerequisite = { focus = TU_VIC_eco_submarine_pens }
 		mutually_exclusive = { focus = TU_VIC_eco_wolfpack }
-		x = 28
-		y = 4
+		x = 20
+		y = 24
 		cost = 10
 
 		search_filters = { FOCUS_FILTER_INDUSTRY }
@@ -6932,8 +6918,8 @@ focus_tree = {
 		id = TU_VIC_eco_naval_mines
 		icon = GFX_goal_generic_navy_anti_submarine
 		prerequisite = { focus = TU_VIC_eco_submarine_pens }
-		x = 30
-		y = 4
+		x = 22
+		y = 24
 		cost = 10
 
 		search_filters = { FOCUS_FILTER_INDUSTRY }
@@ -6954,8 +6940,8 @@ focus_tree = {
 		id = TU_VIC_eco_harbour_grid
 		icon = GFX_goal_generic_construction
 		prerequisite = { focus = TU_VIC_eco_coastal_yards }
-		x = 32
-		y = 3
+		x = 24
+		y = 23
 		cost = 10
 
 		search_filters = { FOCUS_FILTER_INDUSTRY }
@@ -6976,8 +6962,8 @@ focus_tree = {
 		id = TU_VIC_eco_carrier_plan
 		icon = GFX_goal_generic_navy_carrier
 		prerequisite = { focus = TU_VIC_eco_battleship_program }
-		x = 24
-		y = 7
+		x = 16
+		y = 27
 		cost = 15
 
 		search_filters = { FOCUS_FILTER_NAVY_XP }
@@ -6997,8 +6983,8 @@ focus_tree = {
 		id = TU_VIC_eco_carrier_air
 		icon = GFX_goal_generic_air_naval_bomber
 		prerequisite = { focus = TU_VIC_eco_carrier_plan }
-		x = 24
-		y = 8
+		x = 16
+		y = 28
 		cost = 10
 
 		search_filters = { FOCUS_FILTER_NAVY_XP }
@@ -7018,8 +7004,8 @@ focus_tree = {
 		id = TU_VIC_eco_anti_sub_screen
 		icon = GFX_goal_generic_navy_anti_submarine
 		prerequisite = { focus = TU_VIC_eco_naval_mines }
-		x = 30
-		y = 5
+		x = 22
+		y = 25
 		cost = 10
 
 		search_filters = { FOCUS_FILTER_NAVY_XP }
@@ -7039,8 +7025,8 @@ focus_tree = {
 		id = TU_VIC_eco_convoy_lanes
 		icon = GFX_goal_generic_trade
 		prerequisite = { focus = TU_VIC_eco_anti_sub_screen }
-		x = 30
-		y = 6
+		x = 22
+		y = 26
 		cost = 10
 
 		search_filters = { FOCUS_FILTER_INDUSTRY }
@@ -7061,8 +7047,8 @@ focus_tree = {
 		id = TU_VIC_eco_naval_academy
 		icon = GFX_goal_generic_navy_doctrines_tactics
 		prerequisite = { focus = TU_VIC_eco_cruiser_program }
-		x = 26
-		y = 6
+		x = 18
+		y = 26
 		cost = 10
 
 		search_filters = { FOCUS_FILTER_NAVY_XP }
@@ -7082,8 +7068,8 @@ focus_tree = {
 		id = TU_VIC_eco_fleet_in_being
 		icon = GFX_goal_generic_navy_battleship
 		prerequisite = { focus = TU_VIC_eco_naval_academy }
-		x = 26
-		y = 7
+		x = 18
+		y = 27
 		cost = 10
 
 		search_filters = { FOCUS_FILTER_NAVY_XP }
@@ -7103,8 +7089,8 @@ focus_tree = {
 		id = TU_VIC_eco_thames_naval_base
 		icon = GFX_goal_generic_construct_naval_dockyard
 		prerequisite = { focus = TU_VIC_eco_carrier_air }
-		x = 24
-		y = 9
+		x = 16
+		y = 29
 		cost = 10
 
 		search_filters = { FOCUS_FILTER_INDUSTRY }
@@ -7125,8 +7111,8 @@ focus_tree = {
 		id = TU_VIC_eco_navy_expansion
 		icon = GFX_goal_generic_build_navy
 		prerequisite = { focus = TU_VIC_eco_thames_naval_base }
-		x = 24
-		y = 10
+		x = 16
+		y = 30
 		cost = 15
 
 		search_filters = { FOCUS_FILTER_NAVY_XP }
@@ -7146,8 +7132,8 @@ focus_tree = {
 		id = TU_VIC_eco_island_fortress
 		icon = GFX_goal_generic_fortify_city
 		prerequisite = { focus = TU_VIC_eco_convoy_lanes }
-		x = 30
-		y = 7
+		x = 22
+		y = 27
 		cost = 10
 
 		search_filters = { FOCUS_FILTER_INDUSTRY }
@@ -7158,9 +7144,7 @@ focus_tree = {
 
 		completion_reward = {
 			TU_build_infrastructure = yes
-			add_tech_bonus = { name = TU_VIC_eco_island_fortress bonus = 0.75 uses = 1 category = dd_tech category = ca_tech }
-			add_doctrine_cost_reduction = { name = TU_VIC_eco_island_fortress cost_reduction = 0.4 uses = 1 category = naval_doctrine }
-			navy_experience = 25
+			TU_build_coastal_forts_2 = yes
 		}
 	}
 
@@ -7170,8 +7154,8 @@ focus_tree = {
 		id = TU_VIC_eco_air_ministry
 		icon = GFX_goal_generic_air_doctrine
 		prerequisite = { focus = TU_VIC_crown_focus }
-		x = 42
-		y = 1
+		x = 35
+		y = 9
 		cost = 5
 
 		search_filters = { FOCUS_FILTER_AIR_XP }
@@ -7192,8 +7176,8 @@ focus_tree = {
 		id = TU_VIC_eco_airfield_survey
 		icon = GFX_goal_generic_construct_civilian
 		prerequisite = { focus = TU_VIC_eco_air_ministry }
-		x = 38
-		y = 2
+		x = 31
+		y = 10
 		cost = 10
 
 		search_filters = { FOCUS_FILTER_INDUSTRY }
@@ -7214,8 +7198,8 @@ focus_tree = {
 		id = TU_VIC_eco_fighter_squadron
 		icon = GFX_goal_generic_air_fighter
 		prerequisite = { focus = TU_VIC_eco_air_ministry }
-		x = 42
-		y = 2
+		x = 35
+		y = 10
 		cost = 10
 
 		search_filters = { FOCUS_FILTER_AIR_XP }
@@ -7235,8 +7219,8 @@ focus_tree = {
 		id = TU_VIC_eco_aero_engines
 		icon = GFX_goal_generic_air_production
 		prerequisite = { focus = TU_VIC_eco_fighter_squadron }
-		x = 42
-		y = 3
+		x = 35
+		y = 11
 		cost = 10
 
 		search_filters = { FOCUS_FILTER_INDUSTRY }
@@ -7255,8 +7239,8 @@ focus_tree = {
 		id = TU_VIC_eco_bomber_wing
 		icon = GFX_goal_generic_air_bomber
 		prerequisite = { focus = TU_VIC_eco_aero_engines }
-		x = 40
-		y = 4
+		x = 33
+		y = 12
 		cost = 10
 
 		search_filters = { FOCUS_FILTER_AIR_XP }
@@ -7277,8 +7261,8 @@ focus_tree = {
 		icon = GFX_goal_generic_air_production
 		prerequisite = { focus = TU_VIC_eco_airfield_survey }
 		mutually_exclusive = { focus = TU_VIC_eco_airship_fleet_alt }
-		x = 34
-		y = 3
+		x = 27
+		y = 11
 		cost = 10
 
 		search_filters = { FOCUS_FILTER_INDUSTRY }
@@ -7300,8 +7284,8 @@ focus_tree = {
 		icon = GFX_goal_generic_air_fighter
 		prerequisite = { focus = TU_VIC_eco_airfield_survey }
 		mutually_exclusive = { focus = TU_VIC_eco_airship_fleet }
-		x = 36
-		y = 3
+		x = 29
+		y = 11
 		cost = 10
 
 		search_filters = { FOCUS_FILTER_INDUSTRY }
@@ -7322,8 +7306,8 @@ focus_tree = {
 		id = TU_VIC_eco_fighter_tactics
 		icon = GFX_goal_generic_air_doctrine
 		prerequisite = { focus = TU_VIC_eco_fighter_squadron }
-		x = 44
-		y = 3
+		x = 37
+		y = 11
 		cost = 10
 
 		search_filters = { FOCUS_FILTER_AIR_XP }
@@ -7343,8 +7327,8 @@ focus_tree = {
 		id = TU_VIC_eco_air_control
 		icon = GFX_goal_generic_air_fighter2
 		prerequisite = { focus = TU_VIC_eco_fighter_tactics }
-		x = 44
-		y = 4
+		x = 37
+		y = 12
 		cost = 10
 
 		search_filters = { FOCUS_FILTER_AIR_XP }
@@ -7364,8 +7348,8 @@ focus_tree = {
 		id = TU_VIC_eco_radar_chain
 		icon = GFX_goal_generic_radar
 		prerequisite = { focus = TU_VIC_eco_airfield_survey }
-		x = 38
-		y = 3
+		x = 31
+		y = 11
 		cost = 10
 
 		search_filters = { FOCUS_FILTER_RESEARCH }
@@ -7384,8 +7368,8 @@ focus_tree = {
 		id = TU_VIC_eco_air_base_network
 		icon = GFX_goal_generic_construct_military
 		prerequisite = { focus = TU_VIC_eco_radar_chain }
-		x = 38
-		y = 4
+		x = 31
+		y = 12
 		cost = 10
 
 		search_filters = { FOCUS_FILTER_INDUSTRY }
@@ -7406,8 +7390,8 @@ focus_tree = {
 		id = TU_VIC_eco_air_production_lines
 		icon = GFX_goal_generic_air_production
 		prerequisite = { focus = TU_VIC_eco_aero_engines }
-		x = 42
-		y = 4
+		x = 35
+		y = 12
 		cost = 10
 
 		search_filters = { FOCUS_FILTER_INDUSTRY }
@@ -7428,8 +7412,8 @@ focus_tree = {
 		id = TU_VIC_eco_jet_program
 		icon = GFX_goal_generic_air_fighter2
 		prerequisite = { focus = TU_VIC_eco_air_production_lines }
-		x = 42
-		y = 5
+		x = 35
+		y = 13
 		cost = 15
 
 		search_filters = { FOCUS_FILTER_AIR_XP }
@@ -7448,8 +7432,8 @@ focus_tree = {
 		id = TU_VIC_eco_strategic_bomber
 		icon = GFX_goal_generic_air_bomber
 		prerequisite = { focus = TU_VIC_eco_jet_program }
-		x = 42
-		y = 6
+		x = 35
+		y = 14
 		cost = 15
 
 		search_filters = { FOCUS_FILTER_AIR_XP }
@@ -7469,8 +7453,8 @@ focus_tree = {
 		id = TU_VIC_eco_naval_air_wing
 		icon = GFX_goal_generic_air_naval_bomber
 		prerequisite = { focus = TU_VIC_eco_bomber_wing }
-		x = 40
-		y = 5
+		x = 33
+		y = 13
 		cost = 10
 
 		search_filters = { FOCUS_FILTER_AIR_XP }
@@ -7490,8 +7474,8 @@ focus_tree = {
 		id = TU_VIC_eco_anti_air_belt
 		icon = GFX_goal_generic_fortify_city
 		prerequisite = { focus = TU_VIC_eco_air_base_network }
-		x = 38
-		y = 5
+		x = 31
+		y = 13
 		cost = 10
 
 		search_filters = { FOCUS_FILTER_INDUSTRY }
@@ -7512,8 +7496,8 @@ focus_tree = {
 		id = TU_VIC_eco_air_supremacy
 		icon = GFX_goal_generic_air_doctrine
 		prerequisite = { focus = TU_VIC_eco_strategic_bomber }
-		x = 42
-		y = 7
+		x = 35
+		y = 15
 		cost = 15
 
 		search_filters = { FOCUS_FILTER_AIR_XP }
@@ -7535,7 +7519,7 @@ focus_tree = {
 		id = TU_VIC_eco_royal_academy
 		icon = GFX_goal_generic_scientific_exchange
 		prerequisite = { focus = TU_VIC_crown_focus }
-		x = 48
+		x = 42
 		y = 1
 		cost = 5
 
@@ -7555,7 +7539,7 @@ focus_tree = {
 		id = TU_VIC_eco_industrial_science
 		icon = GFX_goal_generic_production
 		prerequisite = { focus = TU_VIC_eco_royal_academy }
-		x = 48
+		x = 42
 		y = 2
 		cost = 10
 
@@ -7574,7 +7558,7 @@ focus_tree = {
 		id = TU_VIC_eco_metallurgy
 		icon = GFX_goal_generic_production2
 		prerequisite = { focus = TU_VIC_eco_industrial_science }
-		x = 46
+		x = 40
 		y = 3
 		cost = 10
 
@@ -7594,7 +7578,7 @@ focus_tree = {
 		id = TU_VIC_eco_electric_lab
 		icon = GFX_goal_generic_radar
 		prerequisite = { focus = TU_VIC_eco_industrial_science }
-		x = 48
+		x = 42
 		y = 3
 		cost = 10
 
@@ -7613,7 +7597,7 @@ focus_tree = {
 		id = TU_VIC_eco_steam_engineering
 		icon = GFX_goal_generic_construction2
 		prerequisite = { focus = TU_VIC_eco_metallurgy }
-		x = 46
+		x = 40
 		y = 4
 		cost = 10
 
@@ -7633,7 +7617,7 @@ focus_tree = {
 		id = TU_VIC_eco_research_grants
 		icon = GFX_goal_generic_scientific_exchange
 		prerequisite = { focus = TU_VIC_eco_electric_lab }
-		x = 48
+		x = 42
 		y = 4
 		cost = 10
 
@@ -7652,7 +7636,7 @@ focus_tree = {
 		id = TU_VIC_eco_university_expansion
 		icon = GFX_goal_generic_scientific_exchange
 		prerequisite = { focus = TU_VIC_eco_research_grants }
-		x = 48
+		x = 42
 		y = 5
 		cost = 10
 
@@ -7671,7 +7655,7 @@ focus_tree = {
 		id = TU_VIC_eco_applied_research
 		icon = GFX_goal_generic_production2
 		prerequisite = { focus = TU_VIC_eco_steam_engineering }
-		x = 46
+		x = 40
 		y = 5
 		cost = 10
 
@@ -7690,7 +7674,7 @@ focus_tree = {
 		id = TU_VIC_eco_secret_projects
 		icon = GFX_goal_generic_secret_weapon
 		prerequisite = { focus = TU_VIC_eco_applied_research }
-		x = 46
+		x = 40
 		y = 6
 		cost = 15
 
@@ -7709,7 +7693,7 @@ focus_tree = {
 		id = TU_VIC_eco_cross_discipline
 		icon = GFX_goal_generic_scientific_exchange
 		prerequisite = { focus = TU_VIC_eco_university_expansion }
-		x = 48
+		x = 42
 		y = 6
 		cost = 10
 
@@ -7728,7 +7712,7 @@ focus_tree = {
 		id = TU_VIC_eco_research_hall
 		icon = GFX_goal_generic_scientific_exchange
 		prerequisite = { focus = TU_VIC_eco_cross_discipline }
-		x = 48
+		x = 42
 		y = 7
 		cost = 15
 
@@ -7748,7 +7732,7 @@ focus_tree = {
 		id = TU_VIC_eco_patent_office
 		icon = GFX_goal_generic_construction
 		prerequisite = { focus = TU_VIC_eco_research_grants }
-		x = 50
+		x = 44
 		y = 5
 		cost = 10
 
@@ -7767,7 +7751,7 @@ focus_tree = {
 		id = TU_VIC_eco_engineering_schools
 		icon = GFX_goal_generic_construction2
 		prerequisite = { focus = TU_VIC_eco_patent_office }
-		x = 50
+		x = 44
 		y = 6
 		cost = 10
 
@@ -7786,7 +7770,7 @@ focus_tree = {
 		id = TU_VIC_eco_weapon_standards
 		icon = GFX_goal_generic_small_arms
 		prerequisite = { focus = TU_VIC_eco_secret_projects }
-		x = 46
+		x = 40
 		y = 7
 		cost = 10
 
@@ -7806,7 +7790,7 @@ focus_tree = {
 		id = TU_VIC_eco_research_exchange
 		icon = GFX_goal_generic_scientific_exchange
 		prerequisite = { focus = TU_VIC_eco_research_hall }
-		x = 48
+		x = 42
 		y = 8
 		cost = 10
 
@@ -7825,7 +7809,7 @@ focus_tree = {
 		id = TU_VIC_eco_knowledge_city
 		icon = GFX_goal_generic_scientific_exchange
 		prerequisite = { focus = TU_VIC_eco_research_exchange }
-		x = 48
+		x = 42
 		y = 9
 		cost = 15
 

@@ -16,14 +16,17 @@ import re
 THEMES = [
     ("mobile_city", r"mobile cit|landship|nomadic|moving cit"),
     ("armor", r"armou?r|tank|panzer|heavy assault"),
+    ("coastal_fort", r"coastal fort|coastal defen|harbou?r fort|island fortress|tidal barrier|sea wall|port fort"),
+    ("rail", r"^(?!.*(sabotage|guard|battery|fortress)).*(\brail|railway|\bgauge\b|\btracks?\b)"),
     ("mobile", r"mobile|mobility|motori[sz]|mechani[sz]|truck|blitz|cavalry|raid|rapid|express|lightning|manoeuvre|maneuver|pursuit"),
     ("air", r"\bair|airfield|fighter|bomber|\bsky|wing|flight|drone|aviat"),
     ("navy", r"naval|\bnavy|fleet|harbou?r|\bdock|ship|\bsea|strait|coast|marine|blockade|convoy|\bport|island|landing|amphib|ocean|tide|aegir"),
     ("artillery", r"artiller|siege|cannon|\bguns?\b|battery|bombard|mortar"),
     ("infantry_weapons", r"\barms\b|rifle|weapon|arsenal|forge|steel|\biron|smith|blade|sword|munition|equipment|firearm|crossbow|bow"),
+    ("fort", r"^(?!.*shield wall).*(fortress|\bforts?\b|fortif|\bwalls?\b|bastion|bulwark|stronghold|citadel|bunker|entrench|trench|barrier|rampart|redoubt|defen[cs]e line)"),
     ("doctrine", r"doctrine|tactic|training|drill|academy|staff|command|officer|war college|strateg|general|knight|tournament|duel|martial|elite|veteran"),
-    ("fort", r"fortress|\bfort|wall|bastion|defen[cs]e|border|garrison|\bline|shield|frontier|bulwark|stronghold|citadel|watchtower|watchpost|patrol|entrench|interceptor|warden|\bgate"),
-    ("war", r"war plan|\bplans?\b|operation|offensive|campaign|invasion|conquest|occup|\bmarch|assault|\bfront\b|frontline|breakthrough|advance|expedition|sortie|strike|victory|rescue|evacuat|guerr|resistance|total war|war council|\bjump|mobilis|mobiliz|war drum|charge|reclaim"),
+    ("defense", r"defen[cs]e|border|garrison|\bline|shield|frontier|watchtower|watchpost|patrol|interceptor|warden|\bgate"),
+    ("war", r"sabotage|war plan|\bplans?\b|operation|offensive|campaign|invasion|conquest|occup|\bmarch|assault|\bfront\b|frontline|breakthrough|advance|expedition|sortie|strike|victory|rescue|evacuat|guerr|resistance|total war|war council|\bjump|mobilis|mobiliz|war drum|charge|reclaim"),
     ("medical", r"medic|oripathy|infect|quarantine|suppressant|relief|doctor|hospital|health|refugee|cure|clinic|heal|housing|sanitation|grain|water|dormitor|shelter|citizen|petition|civilian district|welfare|aid to"),
     ("research", r"research|\barts\b|originium|scien|laborator|institute|school|universit|archive|records|engineer|design|babel|prts|rhine|knowledge|librar|scholar|philosoph|music|observator|study|studies|education|teacher|serum|ethics|patent|blueprint|relic|ancient"),
     ("intel", r"intelligen|secret|shadow|\bspy|agent|scout|reconnais|police|security|surveil|informant|cipher|inquisit|sensor|signal|beacon|cells|hideout|cache|smuggl"),
@@ -45,6 +48,9 @@ FOCUS_ICON = {
     "infantry_weapons": "GFX_goal_generic_small_arms",
     "doctrine": "GFX_goal_generic_army_doctrines",
     "fort": "GFX_goal_generic_defence",
+    "coastal_fort": "GFX_goal_generic_defence",
+    "defense": "GFX_goal_generic_defence",
+    "rail": "GFX_goal_generic_construct_infrastructure",
     "medical": "GFX_goal_generic_consumer_goods",
     "research": "GFX_focus_research",
     "intel": "GFX_goal_generic_intelligence_exchange",
@@ -108,7 +114,13 @@ def reward_lines(theme, fid, cost):
         return [_tech(fid, ["infantry_weapons"], s), "army_experience = %d" % xp]
     if theme == "doctrine":
         return [_doc(fid, "land_doctrine", s), "army_experience = %d" % xp]
+    if theme == "rail":
+        return ["TU_build_railway = yes"] * (2 if s == 2 else 1)
     if theme == "fort":
+        return ["TU_build_forts_%d = yes" % (s + 1)]
+    if theme == "coastal_fort":
+        return ["TU_build_coastal_forts_%d = yes" % (s + 1)]
+    if theme == "defense":
         return [_tech(fid, ["construction_tech"], s), "army_experience = %d" % xp]
     if theme == "war":
         return ["army_experience = %d" % xp, "add_war_support = %s" % st, _doc(fid, "land_doctrine", s)]
@@ -141,6 +153,9 @@ IDEA_MODS = {
     "infantry_weapons": {"army_attack_factor": 0.03, "army_defence_factor": 0.03},
     "doctrine": {"experience_gain_army_factor": 0.1, "army_org_factor": 0.03},
     "fort": {"army_defence_factor": 0.05, "max_dig_in": 1},
+    "coastal_fort": {"army_defence_factor": 0.05, "coastal_bunker_effectiveness_factor": 0.1},
+    "defense": {"army_defence_factor": 0.05, "max_dig_in": 1},
+    "rail": {"production_speed_infrastructure_factor": 0.1, "production_speed_rail_way_factor": 0.15},
     "medical": {"stability_factor": 0.05, "monthly_population": 0.1},
     "research": {"research_speed_factor": 0.05},
     "intel": {"stability_factor": 0.05, "political_power_gain": 0.05},
@@ -157,7 +172,8 @@ IDEA_PICTURE = {
     "mobile_city": "generic_railroads", "armor": "generic_armor", "mobile": "generic_army_europe_1",
     "air": "generic_air_bonus", "navy": "generic_navy_bonus", "artillery": "generic_artillery_regiments",
     "infantry_weapons": "generic_infantry_bonus", "doctrine": "generic_army_war_college",
-    "fort": "generic_fortify_the_borders", "medical": "generic_morale_bonus", "research": "generic_research_bonus",
+    "fort": "generic_fortify_the_borders", "coastal_fort": "generic_fortify_the_borders",
+    "defense": "generic_fortify_the_borders", "rail": "generic_railroads", "medical": "generic_morale_bonus", "research": "generic_research_bonus",
     "intel": "generic_intel_bonus", "manpower": "generic_manpower_bonus", "industry": "generic_production_bonus",
     "trade": "generic_economic_increase", "diplomacy": "generic_flexible_foreign_policy",
     "propaganda": "generic_morale_bonus", "war": "generic_war_preparation", "politics": "generic_central_management",

@@ -144,8 +144,7 @@
 		}
 
 		completion_reward = {
-			add_tech_bonus = { name = TU_REU_serpent_rail bonus = 0.75 uses = 1 category = construction_tech }
-			army_experience = 25
+			TU_build_railway = yes
 		}
 	}
 
@@ -166,7 +165,7 @@
 
 		completion_reward = {
 			add_ideas = TU_REU_choice_serpent_rail
-			add_tech_bonus = { name = TU_REU_serpent_rail_alt bonus = 0.75 uses = 1 category = industry category = construction_tech }
+			TU_build_railway = yes
 		}
 	}
 
@@ -760,8 +759,7 @@
 		}
 
 		completion_reward = {
-			add_tech_bonus = { name = TU_REU_frost_walls bonus = 0.75 uses = 1 category = construction_tech }
-			army_experience = 25
+			TU_build_forts_2 = yes
 		}
 	}
 
@@ -780,8 +778,7 @@
 		}
 
 		completion_reward = {
-			add_tech_bonus = { name = TU_REU_fortress_supply bonus = 0.75 uses = 1 category = construction_tech }
-			army_experience = 25
+			TU_build_forts_2 = yes
 		}
 	}
 
@@ -822,8 +819,7 @@
 		}
 
 		completion_reward = {
-			add_tech_bonus = { name = TU_REU_fortress_watch_alt bonus = 0.75 uses = 1 category = construction_tech }
-			army_experience = 25
+			TU_build_forts_2 = yes
 		}
 	}
 
@@ -843,8 +839,7 @@
 		}
 
 		completion_reward = {
-			add_tech_bonus = { name = TU_REU_bastion_line bonus = 0.75 uses = 1 category = construction_tech }
-			army_experience = 25
+			TU_build_forts_2 = yes
 		}
 	}
 
@@ -1131,7 +1126,9 @@
 		}
 
 		completion_reward = {
-			add_tech_bonus = { name = TU_REU_guerrilla_rails bonus = 0.75 uses = 1 category = industry category = construction_tech }
+			army_experience = 25
+			add_war_support = 0.03
+			add_doctrine_cost_reduction = { name = TU_REU_guerrilla_rails cost_reduction = 0.4 uses = 1 category = land_doctrine }
 		}
 	}
 
@@ -1336,7 +1333,7 @@
 		}
 
 		completion_reward = {
-			add_tech_bonus = { name = TU_REU_chernobog_tracks bonus = 0.75 uses = 1 category = industry category = construction_tech }
+			TU_build_railway = yes
 		}
 	}
 
@@ -1418,8 +1415,7 @@
 		}
 
 		completion_reward = {
-			TU_build_infrastructure = yes
-			add_tech_bonus = { name = TU_REU_chernobog_rail_link bonus = 0.75 uses = 1 category = industry category = construction_tech }
+			TU_build_railway = yes
 		}
 	}
 

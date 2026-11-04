@@ -179,7 +179,6 @@
 		completion_reward = {
 			country_event = { id = tu_reu_ev.3 }
 			add_ideas = TU_REU_frost_bastion
-			add_tech_bonus = { name = TU_REU_frost_fortress bonus = 0.75 uses = 1 category = construction_tech }
-			army_experience = 25
+			TU_build_forts_2 = yes
 		}
 	}
