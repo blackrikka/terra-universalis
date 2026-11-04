@@ -20,7 +20,7 @@
 | 폴더 | 내용 |
 |---|---|
 | `terra_universalis/` | 모드 본체 (게임이 읽는 폴더) |
-| `tools/` | 생성·검사 도구 (지도 생성, 중점 트리 합치기·자동 배치, 국기·초상화 빌드, 린트) |
+| `tools/` | 생성·검사 도구 (지도 생성, 중점 트리 합치기·자동 배치, 국기·초상화 빌드, 린트), 모드 편집기(`tools/editor/`) |
 | `docs/` | 기획서와 단계별 사양서 |
 | `reference/` | 참고 지도, 국가 문장, 캐릭터 일러스트 원본 |
 
@@ -34,7 +34,9 @@ python -I tools/mapgen/terra/build_terra.py      # 지도·주·국가·국기 �
 python -I tools/vanilla_cleanup.py               # 바닐라 정리(튜토리얼·습격 덮어쓰기 등)
 python -I tools/focusgen/merge_focus.py --tag VIC   # 중점 트리 조각 합치기 + 자동 배치 (태그별)
 python -I tools/portraits/build_portraits.py     # 초상화
+python -I tools/gauges/build_gauges.py           # 디시전 창 '국가 현황' 수치 막대 (변수 범위·기준값이 바뀌면 다시 실행)
 python -I tools/lint/tu_lint.py                  # 정적 검사
+python -I tools/editor/server.py                 # 모드 편집기 (브라우저에서 중점·디시전·국민정신·캐릭터·이벤트 편집)
 ```
 
 바닐라 HOI4가 설치되지 않은 환경(클라우드 세션 등)에서는 지도를 다시 만들기 전에 대체 폴더를 만들어 씁니다.

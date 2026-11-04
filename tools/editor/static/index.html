@@ -1,0 +1,58 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Terra Universalis 편집기</title>
+<link rel="icon" href="icon.png">
+<link rel="stylesheet" href="app.css">
+</head>
+<body>
+<header id="top">
+  <div class="brand">Terra Universalis <span>편집기</span></div>
+  <nav id="kinds"></nav>
+  <div class="spacer"></div>
+  <span id="dirty" class="dirty hidden">저장 안 됨</span>
+  <button id="btn-save" class="primary" title="Ctrl+S">저장</button>
+  <button id="btn-revert">되돌리기</button>
+  <button id="btn-docs">효과 사전</button>
+  <button id="btn-check">검사 실행</button>
+  <button id="btn-git" title="받기·커밋·업로드">GitHub</button>
+</header>
+
+<div id="layout">
+  <aside id="side">
+    <select id="file"></select>
+    <div id="file-info"></div>
+    <div class="row">
+      <input id="filter" type="search" placeholder="이름·ID 검색">
+      <button id="btn-new" title="새 항목">＋ 새로</button>
+    </div>
+    <ul id="list"></ul>
+  </aside>
+
+  <main id="main">
+    <div id="banner" class="banner hidden"></div>
+    <div id="tree-wrap" class="hidden">
+      <div class="tree-tools">
+        <button id="tree-fit">전체 보기</button>
+        <span class="hint">끌어서 위치 이동 · 빈 곳을 끌어서 화면 이동 · 휠로 확대/축소</span>
+      </div>
+      <svg id="tree"><g id="tree-g"></g></svg>
+    </div>
+    <section id="editor" class="editor"></section>
+  </main>
+</div>
+
+<div id="drawer" class="drawer hidden">
+  <div class="drawer-head">
+    <strong id="drawer-title"></strong>
+    <button id="drawer-close">닫기</button>
+  </div>
+  <div id="drawer-body"></div>
+</div>
+
+<div id="toast" class="toast hidden"></div>
+<script src="app.js"></script>
+</body>
+</html>
