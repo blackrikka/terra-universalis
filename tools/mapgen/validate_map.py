@@ -370,6 +370,10 @@ def main(argv=None):
         chk.err("6", "전략 지역 id가 1..R 연속이 아님")
     chk.many("6", [p for p in range(1, N + 1) if sr_of[p] == 0],
              lambda p: "프로빈스 %d가 전략 지역에 없음" % p)
+    # 주 하나의 프로빈스는 전략 지역 하나에만 있어야 한다 (어기면 게임이 로딩 중 터진다)
+    multi_sr = [(sid, sorted({sr_of[p] for p in info["provs"]})) for sid, info in sorted(state_info.items())
+                if len({sr_of[p] for p in info["provs"]}) > 1]
+    chk.many("6", multi_sr, lambda t: "주 %d가 전략 지역 여러 개에 걸침: %s" % t)
 
     # 7. coastal 플래그
     bad_coast = []

@@ -341,8 +341,64 @@ def main(argv=None):
     keep = [f for f in keep if not (f[1] == "dockyard" and int(f[0]) not in coast_states)]
     keep.sort(key=lambda f: int(f[0]))
     bpath.write_text("\n".join(";".join(f) for f in keep) + "\n", encoding="ascii")
-    print("states changed: %d, straits: %d" % (len(S.changed), len(straits)))
+    fixed_sr = fix_strategic_regions(S, bpath)
+    print("states changed: %d, straits: %d, provinces moved between strategic regions: %d" % (
+        len(S.changed), len(straits), fixed_sr))
     return 0
+
+
+def fix_strategic_regions(S, bpath):
+    """주 하나의 프로빈스는 전략 지역 하나에 있어야 한다 (어기면 게임이 터진다).
+    주마다 프로빈스가 가장 많은 전략 지역으로 나머지 프로빈스를 옮기고, 날씨 위치가 지역 밖이 되면 고친다."""
+    files, text, provs = {}, {}, {}
+    for f in (MOD / "map" / "strategicregions").glob("*.txt"):
+        t = f.read_text(encoding="utf-8-sig")
+        rid = int(re.search(r"\bid\s*=\s*(\d+)", t).group(1))
+        files[rid], text[rid] = f, t
+        provs[rid] = [int(x) for x in re.search(r"provinces\s*=\s*\{([^}]*)\}", t).group(1).split()]
+    sr = {p: r for r, ps in provs.items() for p in ps}
+    moved, changed = 0, set()
+    for sid, ps in S.provs.items():
+        cnt = Counter(sr[p] for p in ps if p in sr)
+        if len(cnt) <= 1:
+            continue
+        main = cnt.most_common(1)[0][0]
+        for p in ps:
+            r = sr.get(p)
+            if r is not None and r != main and len(provs[r]) > 1:
+                provs[r].remove(p)
+                provs[main].append(p)
+                sr[p] = main
+                changed.update({r, main})
+                moved += 1
+    for rid in changed:
+        ps = provs[rid]
+        lines = "\n".join("\t\t" + " ".join(str(x) for x in ps[i:i + 20]) for i in range(0, len(ps), 20))
+        t = re.sub(r"provinces\s*=\s*\{[^}]*\}", "provinces={\n%s\n\t}" % lines, text[rid], count=1)
+        files[rid].write_text(t, encoding="utf-8")
+    # 날씨 위치: 좌표 픽셀이 그 지역에 있어야 한다 (validate_map 9번)
+    _, colour = load_defs()
+    img = np.asarray(Image.open(MOD / "map" / "provinces.bmp").convert("RGB")).astype(np.int64)
+    H = img.shape[0]
+    cen = centroids()
+    wpath = MOD / "map" / "weatherpositions.txt"
+    out = []
+    for ln in wpath.read_text(encoding="ascii").splitlines():
+        f = ln.split(";")
+        if len(f) < 5:
+            out.append(ln)
+            continue
+        rid = int(f[0])
+        col, row = int(round(float(f[1]))), H - 1 - int(round(float(f[3])))
+        r, g, b = img[row, col]
+        p = colour.get((int(r) << 16) | (int(g) << 8) | int(b))
+        if sr.get(p) != rid and provs.get(rid):
+            q = max(provs[rid], key=lambda x: 0 if x not in cen else 1)
+            cy, cx = cen[q]
+            f[1], f[3] = "%.2f" % cx, "%.2f" % (H - 1 - cy)
+        out.append(";".join(f))
+    wpath.write_text("\n".join(out) + "\n", encoding="ascii")
+    return moved
 
 
 if __name__ == "__main__":
