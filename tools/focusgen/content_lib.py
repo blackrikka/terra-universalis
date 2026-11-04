@@ -218,10 +218,12 @@ class Country:
         # decisions
         if self.categories:
             cats = []
-            for cid, icon, vis in self.categories:
+            for n, (cid, icon, vis) in enumerate(self.categories):
                 v = "\n\tvisible = {\n%s\n\t}\n" % ind(vis, 2) if vis else ""
-                cats.append("%s = {\n\ticon = %s\n\n\tallowed = {\n\t\toriginal_tag = %s\n\t}\n%s\n\tpriority = 100\n}\n"
-                            % (cid, icon, t, v))
+                # 첫 분류에 나라 장치 패널 (tools/guigen/build_panels.py)
+                g = "\tscripted_gui = TU_%s_panel\n" % t if n == 0 else ""
+                cats.append("%s = {\n\ticon = %s\n%s\n\tallowed = {\n\t\toriginal_tag = %s\n\t}\n%s\n\tpriority = 100\n}\n"
+                            % (cid, icon, g, t, v))
             (MOD / ("common/decisions/categories/tu_%s_categories.txt" % low)).write_text("\n".join(cats), encoding="utf-8")
             out = []
             for cid, _, _ in self.categories:
