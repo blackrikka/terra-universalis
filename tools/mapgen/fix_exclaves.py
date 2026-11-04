@@ -174,6 +174,7 @@ def main(argv=None):
     for tag in sorted(caps):
         if tag == "WLD" or caps[tag] not in S.provs:
             continue
+        skipped = set()
         for _ in range(50):
             provs = own_provs(tag)
             comps = components(provs, land_nb)
@@ -181,7 +182,10 @@ def main(argv=None):
                 break
             cap_p = set(S.provs[caps[tag]])
             main_c = next((c for c in comps if c & cap_p), comps[0])
-            ex = min((c for c in comps if c is not main_c), key=len)
+            rest = [c for c in comps if c is not main_c and not (c & skipped)]
+            if not rest:
+                break
+            ex = min(rest, key=len)
             # BFS: 떨어진 덩어리 -> 황야 프로빈스만 -> 본토
             prev, frontier, end = {p: None for p in ex}, list(ex), None
             while frontier and end is None:
@@ -246,13 +250,10 @@ def main(argv=None):
                 if best:
                     break
             if best is None:
-                # 바다 두 칸 이상: 가장 가까운 해안 프로빈스끼리 육상 연결 (Type 비움, Through -1)
-                cen = centroids()
-                cands = [x for x in ex if any(ptype.get(y) == "sea" for y in adj[x])] or list(ex)
-                tgt = [y for y in main_c if any(ptype.get(z) == "sea" for z in adj[y])] or list(main_c)
-                p, q = min(((x, y) for x in cands for y in tgt),
-                           key=lambda t: (cen[t[0]][0] - cen[t[1]][0]) ** 2 + (cen[t[0]][1] - cen[t[1]][1]) ** 2)
-                best = (p, q, -1)
+                # 바다 한 칸으로 닿지 않음 (대부분 호수 안의 섬). 검증되지 않은 연결 형식(Type 비움)은 크래시 위험이 있어 쓰지 않는다.
+                report.append("%s: 섬 덩어리 %d프로빈스 %s - 잇지 못함 (호수 섬 또는 바다 두 칸 이상)" % (tag, len(ex), sorted(ex)[:3]))
+                skipped |= ex
+                continue
             p, q, sea = best
             straits.append(best)
             extra[p].add(q)

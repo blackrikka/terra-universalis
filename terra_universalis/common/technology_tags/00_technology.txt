@@ -86,10 +86,18 @@ technology_folders = {
 	infantry_folder = { ledger = army }
 	support_folder = { ledger = army }
 	armour_folder = { ledger = army }
+	nsb_armour_folder = {
+		ledger = army
+		available = { always = no }
+	}
 	artillery_folder = { ledger = army }
 	mtgnavalfolder = { ledger = civilian }
 	mtgnavalsupportfolder = { ledger = civilian }
 	air_techs_folder = { ledger = air }
+	bba_air_techs_folder = {
+		ledger = air
+		available = { always = no }
+	}
 	electronics_folder = { ledger = civilian }
 	industry_folder = { ledger = civilian }
 	land_doctrine_folder = {
