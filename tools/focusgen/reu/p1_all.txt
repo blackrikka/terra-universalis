@@ -557,7 +557,7 @@
 		}
 
 		completion_reward = {
-			add_tech_bonus = { name = TU_REU_zone_schools bonus = 0.75 uses = 1 category = electronics category = industry }
+			add_tech_bonus = { name = TU_REU_zone_schools bonus = 0.75 uses = 1 category = electronics category = tu_originium_tech }
 		}
 	}
 
@@ -579,6 +579,7 @@
 		completion_reward = {
 			add_stability = 0.03
 			add_manpower = 10000
+			add_tech_bonus = { name = TU_REU_zone_clinics bonus = 0.75 uses = 1 category = tu_oripathy_tech }
 		}
 	}
 
@@ -741,6 +742,7 @@
 		completion_reward = {
 			add_stability = 0.03
 			add_manpower = 10000
+			add_tech_bonus = { name = TU_REU_patriot_rhodes_aid bonus = 0.75 uses = 1 category = tu_oripathy_tech }
 		}
 	}
 
@@ -1087,6 +1089,7 @@
 		completion_reward = {
 			add_stability = 0.03
 			add_manpower = 10000
+			add_tech_bonus = { name = TU_REU_guerrilla_medic bonus = 0.75 uses = 1 category = tu_oripathy_tech }
 		}
 	}
 
@@ -1456,6 +1459,7 @@
 		completion_reward = {
 			add_stability = 0.03
 			add_manpower = 10000
+			add_tech_bonus = { name = TU_REU_chernobog_refugees bonus = 0.75 uses = 1 category = tu_oripathy_tech }
 		}
 	}
 
@@ -1497,6 +1501,7 @@
 		completion_reward = {
 			add_stability = 0.03
 			add_manpower = 10000
+			add_tech_bonus = { name = TU_REU_chernobog_bunkers bonus = 0.75 uses = 1 category = tu_oripathy_tech }
 		}
 	}
 
@@ -1645,6 +1650,7 @@
 		completion_reward = {
 			add_stability = 0.03
 			add_manpower = 10000
+			add_tech_bonus = { name = TU_REU_mobilize_registry bonus = 0.75 uses = 1 category = tu_oripathy_tech }
 		}
 	}
 
@@ -1746,6 +1752,7 @@
 		completion_reward = {
 			add_stability = 0.03
 			add_manpower = 10000
+			add_tech_bonus = { name = TU_REU_mobilize_schools bonus = 0.75 uses = 1 category = tu_oripathy_tech }
 		}
 	}
 
@@ -1809,6 +1816,7 @@
 		completion_reward = {
 			add_stability = 0.03
 			add_manpower = 10000
+			add_tech_bonus = { name = TU_REU_mobilize_units bonus = 0.75 uses = 1 category = tu_oripathy_tech }
 		}
 	}
 
@@ -1895,6 +1903,7 @@
 			TU_build_civ_factory = yes
 			add_stability = 0.03
 			add_manpower = 10000
+			add_tech_bonus = { name = TU_REU_mobilize_industry bonus = 0.75 uses = 1 category = tu_oripathy_tech }
 		}
 	}
 

@@ -16,6 +16,7 @@
 			set_country_flag = TU_RHO_med_started
 			add_stability = 0.02
 			add_manpower = 5000
+			add_tech_bonus = { name = TU_RHO_med_start bonus = 0.5 uses = 1 category = tu_oripathy_tech }
 		}
 
 		ai_will_do = {
@@ -35,6 +36,7 @@
 		completion_reward = {
 			add_stability = 0.03
 			add_manpower = 10000
+			add_tech_bonus = { name = TU_RHO_med_sample bonus = 0.75 uses = 1 category = tu_oripathy_tech }
 		}
 
 		ai_will_do = {
@@ -53,7 +55,7 @@
 
 		completion_reward = {
 			add_ideas = TU_RHO_med_research_bonus
-			add_tech_bonus = { name = TU_RHO_med_crystal bonus = 0.75 uses = 1 category = electronics category = industry }
+			add_tech_bonus = { name = TU_RHO_med_crystal bonus = 0.75 uses = 1 category = electronics category = tu_originium_tech }
 		}
 
 		ai_will_do = {
@@ -75,6 +77,7 @@
 			set_country_flag = TU_RHO_cure_track
 			add_stability = 0.03
 			add_manpower = 10000
+			add_tech_bonus = { name = TU_RHO_cure_track bonus = 0.75 uses = 1 category = tu_oripathy_tech }
 		}
 
 		ai_will_do = {
@@ -115,6 +118,7 @@
 		completion_reward = {
 			add_stability = 0.03
 			add_manpower = 10000
+			add_tech_bonus = { name = TU_RHO_cure_prototype bonus = 0.75 uses = 1 category = tu_oripathy_tech }
 		}
 
 		ai_will_do = {
@@ -134,6 +138,7 @@
 		completion_reward = {
 			add_stability = 0.03
 			add_manpower = 10000
+			add_tech_bonus = { name = TU_RHO_cure_trial bonus = 0.75 uses = 1 category = tu_oripathy_tech }
 		}
 
 		ai_will_do = {
@@ -154,6 +159,7 @@
 			add_ideas = TU_RHO_med_mass_production
 			add_stability = 0.03
 			add_manpower = 10000
+			add_tech_bonus = { name = TU_RHO_cure_mass bonus = 0.75 uses = 1 category = tu_oripathy_tech }
 		}
 
 		ai_will_do = {
@@ -175,6 +181,7 @@
 			TU_build_civ_factory = yes
 			add_stability = 0.05
 			add_manpower = 20000
+			add_tech_bonus = { name = TU_RHO_cure_clinic bonus = 1.0 uses = 1 category = tu_oripathy_tech }
 		}
 
 		ai_will_do = {
@@ -192,7 +199,7 @@
 		prerequisite = { focus = TU_RHO_enh_track }
 
 		completion_reward = {
-			add_tech_bonus = { name = TU_RHO_enh_lab bonus = 0.75 uses = 1 category = electronics category = industry }
+			add_tech_bonus = { name = TU_RHO_enh_lab bonus = 0.75 uses = 1 category = electronics category = tu_originium_tech }
 		}
 
 		ai_will_do = {
@@ -210,7 +217,7 @@
 		prerequisite = { focus = TU_RHO_enh_lab }
 
 		completion_reward = {
-			add_tech_bonus = { name = TU_RHO_enh_serum bonus = 0.75 uses = 1 category = electronics category = industry }
+			add_tech_bonus = { name = TU_RHO_enh_serum bonus = 0.75 uses = 1 category = electronics category = tu_originium_tech }
 		}
 
 		ai_will_do = {
@@ -250,7 +257,7 @@
 		completion_reward = {
 			add_ideas = TU_RHO_ethics_breach
 			country_event = { id = tu_rho_ev.6 }
-			add_tech_bonus = { name = TU_RHO_enh_ethics bonus = 1.0 uses = 1 category = electronics category = industry }
+			add_tech_bonus = { name = TU_RHO_enh_ethics bonus = 1.0 uses = 1 category = electronics category = tu_originium_tech }
 		}
 
 		ai_will_do = {
@@ -270,6 +277,7 @@
 		completion_reward = {
 			add_stability = 0.03
 			add_manpower = 10000
+			add_tech_bonus = { name = TU_RHO_med_research_hall bonus = 0.75 uses = 1 category = tu_oripathy_tech }
 		}
 
 		ai_will_do = {
@@ -307,7 +315,7 @@
 
 		completion_reward = {
 			add_to_variable = { TU_lmd = 500 }
-			add_tech_bonus = { name = TU_RHO_med_patent bonus = 0.75 uses = 1 category = electronics category = industry }
+			add_tech_bonus = { name = TU_RHO_med_patent bonus = 0.75 uses = 1 category = electronics category = tu_originium_tech }
 		}
 
 		ai_will_do = {
@@ -328,6 +336,7 @@
 			country_event = { id = tu_rho_ev.7 }
 			add_stability = 0.05
 			add_manpower = 20000
+			add_tech_bonus = { name = TU_RHO_med_global_cure bonus = 1.0 uses = 1 category = tu_oripathy_tech }
 		}
 
 		ai_will_do = {
@@ -471,6 +480,7 @@
 			TU_build_civ_factory = yes
 			add_stability = 0.02
 			add_manpower = 5000
+			add_tech_bonus = { name = TU_RHO_camp_survey bonus = 0.5 uses = 1 category = tu_oripathy_tech }
 		}
 
 		ai_will_do = {
@@ -491,6 +501,7 @@
 			TU_build_infrastructure = yes
 			add_stability = 0.03
 			add_manpower = 10000
+			add_tech_bonus = { name = TU_RHO_camp_build bonus = 0.75 uses = 1 category = tu_oripathy_tech }
 		}
 
 		ai_will_do = {
@@ -510,6 +521,7 @@
 		completion_reward = {
 			add_stability = 0.03
 			add_manpower = 10000
+			add_tech_bonus = { name = TU_RHO_camp_charter bonus = 0.75 uses = 1 category = tu_oripathy_tech }
 		}
 
 		ai_will_do = {
@@ -607,6 +619,7 @@
 		completion_reward = {
 			add_stability = 0.03
 			add_manpower = 10000
+			add_tech_bonus = { name = TU_RHO_petition bonus = 0.75 uses = 1 category = tu_oripathy_tech }
 		}
 
 		ai_will_do = {
@@ -921,6 +934,7 @@
 			TU_build_civ_factory = yes
 			add_stability = 0.02
 			add_manpower = 5000
+			add_tech_bonus = { name = TU_RHO_ark_school bonus = 0.5 uses = 1 category = tu_oripathy_tech }
 		}
 
 		ai_will_do = {
@@ -938,7 +952,7 @@
 		prerequisite = { focus = TU_RHO_ark_school }
 
 		completion_reward = {
-			add_tech_bonus = { name = TU_RHO_ark_teachers bonus = 0.75 uses = 1 category = electronics category = industry }
+			add_tech_bonus = { name = TU_RHO_ark_teachers bonus = 0.75 uses = 1 category = electronics category = tu_originium_tech }
 		}
 
 		ai_will_do = {
@@ -975,7 +989,7 @@
 		prerequisite = { focus = TU_RHO_ark_academy }
 
 		completion_reward = {
-			add_tech_bonus = { name = TU_RHO_ark_scholars bonus = 1.0 uses = 1 category = electronics category = industry }
+			add_tech_bonus = { name = TU_RHO_ark_scholars bonus = 1.0 uses = 1 category = electronics category = tu_originium_tech }
 		}
 
 		ai_will_do = {
@@ -1698,7 +1712,7 @@
 		prerequisite = { focus = TU_RHO_doctrine_codex }
 
 		completion_reward = {
-			add_tech_bonus = { name = TU_RHO_doctrine_archive bonus = 0.75 uses = 1 category = electronics category = industry }
+			add_tech_bonus = { name = TU_RHO_doctrine_archive bonus = 0.75 uses = 1 category = electronics category = tu_originium_tech }
 		}
 
 		ai_will_do = {
@@ -1934,7 +1948,7 @@
 		prerequisite = { focus = TU_RHO_babel_restoration }
 
 		completion_reward = {
-			add_tech_bonus = { name = TU_RHO_babel_archive bonus = 0.5 uses = 1 category = electronics category = industry }
+			add_tech_bonus = { name = TU_RHO_babel_archive bonus = 0.5 uses = 1 category = electronics category = tu_originium_tech }
 		}
 
 		ai_will_do = {
@@ -1952,7 +1966,7 @@
 		prerequisite = { focus = TU_RHO_babel_archive }
 
 		completion_reward = {
-			add_tech_bonus = { name = TU_RHO_babel_library bonus = 0.75 uses = 1 category = electronics category = industry }
+			add_tech_bonus = { name = TU_RHO_babel_library bonus = 0.75 uses = 1 category = electronics category = tu_originium_tech }
 		}
 
 		ai_will_do = {
@@ -1971,7 +1985,7 @@
 
 		completion_reward = {
 			add_power_balance_value = { id = TU_RHO_bop value = 0.05 }
-			add_tech_bonus = { name = TU_RHO_babel_council bonus = 1.0 uses = 1 category = electronics category = industry }
+			add_tech_bonus = { name = TU_RHO_babel_council bonus = 1.0 uses = 1 category = electronics category = tu_originium_tech }
 		}
 
 		ai_will_do = {
@@ -2070,7 +2084,7 @@
 		prerequisite = { focus = TU_RHO_prts_online }
 
 		completion_reward = {
-			add_tech_bonus = { name = TU_RHO_prts_link bonus = 0.5 uses = 1 category = electronics category = industry }
+			add_tech_bonus = { name = TU_RHO_prts_link bonus = 0.5 uses = 1 category = electronics category = tu_originium_tech }
 		}
 
 		ai_will_do = {
@@ -2088,7 +2102,7 @@
 		prerequisite = { focus = TU_RHO_prts_link }
 
 		completion_reward = {
-			add_tech_bonus = { name = TU_RHO_prts_archive bonus = 0.75 uses = 1 category = electronics category = industry }
+			add_tech_bonus = { name = TU_RHO_prts_archive bonus = 0.75 uses = 1 category = electronics category = tu_originium_tech }
 		}
 
 		ai_will_do = {
@@ -2107,7 +2121,7 @@
 
 		completion_reward = {
 			add_to_variable = { TU_lmd = 200 }
-			add_tech_bonus = { name = TU_RHO_prts_analysis bonus = 0.75 uses = 1 category = electronics category = industry }
+			add_tech_bonus = { name = TU_RHO_prts_analysis bonus = 0.75 uses = 1 category = electronics category = tu_originium_tech }
 		}
 
 		ai_will_do = {
@@ -2125,7 +2139,7 @@
 		prerequisite = { focus = TU_RHO_prts_analysis }
 
 		completion_reward = {
-			add_tech_bonus = { name = TU_RHO_prts_global bonus = 1.0 uses = 1 category = electronics category = industry }
+			add_tech_bonus = { name = TU_RHO_prts_global bonus = 1.0 uses = 1 category = electronics category = tu_originium_tech }
 		}
 
 		ai_will_do = {

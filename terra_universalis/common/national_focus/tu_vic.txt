@@ -1987,7 +1987,7 @@ focus_tree = {
 
 		completion_reward = {
 			add_ideas = TU_VIC_flame_arts
-			add_tech_bonus = { name = TU_VIC_drc_flame_arts bonus = 0.75 uses = 1 category = electronics category = industry }
+			add_tech_bonus = { name = TU_VIC_drc_flame_arts bonus = 0.75 uses = 1 category = electronics category = tu_originium_tech }
 		}
 	}
 
@@ -2395,7 +2395,7 @@ focus_tree = {
 
 		completion_reward = {
 			add_ideas = TU_VIC_choice_research_drive
-			add_tech_bonus = { name = TU_VIC_drc_flame_academies_alt bonus = 0.75 uses = 1 category = electronics category = industry }
+			add_tech_bonus = { name = TU_VIC_drc_flame_academies_alt bonus = 0.75 uses = 1 category = electronics category = tu_originium_tech }
 		}
 	}
 
@@ -3227,7 +3227,7 @@ focus_tree = {
 		}
 
 		completion_reward = {
-			add_tech_bonus = { name = TU_VIC_par_tech_schools bonus = 0.75 uses = 1 category = electronics category = industry }
+			add_tech_bonus = { name = TU_VIC_par_tech_schools bonus = 0.75 uses = 1 category = electronics category = tu_originium_tech }
 		}
 	}
 
@@ -3247,7 +3247,7 @@ focus_tree = {
 		}
 
 		completion_reward = {
-			add_tech_bonus = { name = TU_VIC_par_public_schools bonus = 0.75 uses = 1 category = electronics category = industry }
+			add_tech_bonus = { name = TU_VIC_par_public_schools bonus = 0.75 uses = 1 category = electronics category = tu_originium_tech }
 		}
 	}
 
@@ -3341,6 +3341,7 @@ focus_tree = {
 			TU_build_infrastructure = yes
 			add_stability = 0.03
 			add_manpower = 10000
+			add_tech_bonus = { name = TU_VIC_par_steel_rail_alt bonus = 0.75 uses = 1 category = tu_oripathy_tech }
 		}
 	}
 
@@ -5031,7 +5032,7 @@ focus_tree = {
 		search_filters = { FOCUS_FILTER_POLITICAL }
 
 		completion_reward = {
-			add_tech_bonus = { name = TU_VIC_urs_scholars bonus = 0.75 uses = 1 category = electronics category = industry }
+			add_tech_bonus = { name = TU_VIC_urs_scholars bonus = 0.75 uses = 1 category = electronics category = tu_originium_tech }
 		}
 	}
 
@@ -5145,7 +5146,7 @@ focus_tree = {
 		search_filters = { FOCUS_FILTER_POLITICAL }
 
 		completion_reward = {
-			add_tech_bonus = { name = TU_VIC_kaz_archive bonus = 0.75 uses = 1 category = electronics category = industry }
+			add_tech_bonus = { name = TU_VIC_kaz_archive bonus = 0.75 uses = 1 category = electronics category = tu_originium_tech }
 		}
 	}
 
@@ -5640,6 +5641,7 @@ focus_tree = {
 			TU_build_civ_factory = yes
 			add_stability = 0.03
 			add_manpower = 10000
+			add_tech_bonus = { name = TU_VIC_eco_oil_refineries bonus = 0.75 uses = 1 category = tu_oripathy_tech }
 		}
 	}
 
@@ -6054,7 +6056,7 @@ focus_tree = {
 
 		completion_reward = {
 			TU_build_mil_factory = yes
-			add_tech_bonus = { name = TU_VIC_eco_steam_boilers bonus = 0.75 uses = 1 category = electronics category = industry }
+			add_tech_bonus = { name = TU_VIC_eco_steam_boilers bonus = 0.75 uses = 1 category = electronics category = tu_originium_tech }
 		}
 	}
 
@@ -6194,7 +6196,7 @@ focus_tree = {
 		}
 
 		completion_reward = {
-			add_tech_bonus = { name = TU_VIC_eco_knight_engineers bonus = 0.75 uses = 1 category = electronics category = industry }
+			add_tech_bonus = { name = TU_VIC_eco_knight_engineers bonus = 0.75 uses = 1 category = electronics category = tu_originium_tech }
 		}
 	}
 
@@ -6987,7 +6989,7 @@ focus_tree = {
 		}
 
 		completion_reward = {
-			add_tech_bonus = { name = TU_VIC_eco_industrial_science bonus = 0.75 uses = 1 category = electronics category = industry }
+			add_tech_bonus = { name = TU_VIC_eco_industrial_science bonus = 0.75 uses = 1 category = electronics category = tu_originium_tech }
 		}
 	}
 
@@ -7026,7 +7028,7 @@ focus_tree = {
 		}
 
 		completion_reward = {
-			add_tech_bonus = { name = TU_VIC_eco_electric_lab bonus = 0.75 uses = 1 category = electronics category = industry }
+			add_tech_bonus = { name = TU_VIC_eco_electric_lab bonus = 0.75 uses = 1 category = electronics category = tu_originium_tech }
 		}
 	}
 
@@ -7046,7 +7048,7 @@ focus_tree = {
 
 		completion_reward = {
 			add_ideas = TU_VIC_eco_research_lab
-			add_tech_bonus = { name = TU_VIC_eco_steam_engineering bonus = 0.75 uses = 1 category = electronics category = industry }
+			add_tech_bonus = { name = TU_VIC_eco_steam_engineering bonus = 0.75 uses = 1 category = electronics category = tu_originium_tech }
 		}
 	}
 
@@ -7065,7 +7067,7 @@ focus_tree = {
 		}
 
 		completion_reward = {
-			add_tech_bonus = { name = TU_VIC_eco_research_grants bonus = 0.75 uses = 1 category = electronics category = industry }
+			add_tech_bonus = { name = TU_VIC_eco_research_grants bonus = 0.75 uses = 1 category = electronics category = tu_originium_tech }
 		}
 	}
 
@@ -7084,7 +7086,7 @@ focus_tree = {
 		}
 
 		completion_reward = {
-			add_tech_bonus = { name = TU_VIC_eco_university_expansion bonus = 0.75 uses = 1 category = electronics category = industry }
+			add_tech_bonus = { name = TU_VIC_eco_university_expansion bonus = 0.75 uses = 1 category = electronics category = tu_originium_tech }
 		}
 	}
 
@@ -7103,7 +7105,7 @@ focus_tree = {
 		}
 
 		completion_reward = {
-			add_tech_bonus = { name = TU_VIC_eco_applied_research bonus = 0.75 uses = 1 category = electronics category = industry }
+			add_tech_bonus = { name = TU_VIC_eco_applied_research bonus = 0.75 uses = 1 category = electronics category = tu_originium_tech }
 		}
 	}
 
@@ -7122,7 +7124,7 @@ focus_tree = {
 		}
 
 		completion_reward = {
-			add_tech_bonus = { name = TU_VIC_eco_secret_projects bonus = 1.0 uses = 1 category = electronics category = industry }
+			add_tech_bonus = { name = TU_VIC_eco_secret_projects bonus = 1.0 uses = 1 category = electronics category = tu_originium_tech }
 		}
 	}
 
@@ -7141,7 +7143,7 @@ focus_tree = {
 		}
 
 		completion_reward = {
-			add_tech_bonus = { name = TU_VIC_eco_cross_discipline bonus = 0.75 uses = 1 category = electronics category = industry }
+			add_tech_bonus = { name = TU_VIC_eco_cross_discipline bonus = 0.75 uses = 1 category = electronics category = tu_originium_tech }
 		}
 	}
 
@@ -7161,7 +7163,7 @@ focus_tree = {
 
 		completion_reward = {
 			add_ideas = TU_VIC_eco_knowledge_hall
-			add_tech_bonus = { name = TU_VIC_eco_research_hall bonus = 1.0 uses = 1 category = electronics category = industry }
+			add_tech_bonus = { name = TU_VIC_eco_research_hall bonus = 1.0 uses = 1 category = electronics category = tu_originium_tech }
 		}
 	}
 
@@ -7180,7 +7182,7 @@ focus_tree = {
 		}
 
 		completion_reward = {
-			add_tech_bonus = { name = TU_VIC_eco_patent_office bonus = 0.75 uses = 1 category = electronics category = industry }
+			add_tech_bonus = { name = TU_VIC_eco_patent_office bonus = 0.75 uses = 1 category = electronics category = tu_originium_tech }
 		}
 	}
 
@@ -7199,7 +7201,7 @@ focus_tree = {
 		}
 
 		completion_reward = {
-			add_tech_bonus = { name = TU_VIC_eco_engineering_schools bonus = 0.75 uses = 1 category = electronics category = industry }
+			add_tech_bonus = { name = TU_VIC_eco_engineering_schools bonus = 0.75 uses = 1 category = electronics category = tu_originium_tech }
 		}
 	}
 
@@ -7238,7 +7240,7 @@ focus_tree = {
 		}
 
 		completion_reward = {
-			add_tech_bonus = { name = TU_VIC_eco_research_exchange bonus = 0.75 uses = 1 category = electronics category = industry }
+			add_tech_bonus = { name = TU_VIC_eco_research_exchange bonus = 0.75 uses = 1 category = electronics category = tu_originium_tech }
 		}
 	}
 
@@ -7257,7 +7259,7 @@ focus_tree = {
 		}
 
 		completion_reward = {
-			add_tech_bonus = { name = TU_VIC_eco_knowledge_city bonus = 1.0 uses = 1 category = electronics category = industry }
+			add_tech_bonus = { name = TU_VIC_eco_knowledge_city bonus = 1.0 uses = 1 category = electronics category = tu_originium_tech }
 		}
 	}
 }

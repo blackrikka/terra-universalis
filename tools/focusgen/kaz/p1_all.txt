@@ -796,7 +796,7 @@
 		}
 
 		completion_reward = {
-			add_tech_bonus = { name = TU_KAZ_chivalry_schools bonus = 0.75 uses = 1 category = electronics category = industry }
+			add_tech_bonus = { name = TU_KAZ_chivalry_schools bonus = 0.75 uses = 1 category = electronics category = tu_originium_tech }
 		}
 	}
 
@@ -896,6 +896,7 @@
 		completion_reward = {
 			add_stability = 0.03
 			add_manpower = 10000
+			add_tech_bonus = { name = TU_KAZ_infected_fund bonus = 0.75 uses = 1 category = tu_oripathy_tech }
 		}
 	}
 
@@ -956,6 +957,7 @@
 		completion_reward = {
 			add_stability = 0.03
 			add_manpower = 10000
+			add_tech_bonus = { name = TU_KAZ_suppressant_factory bonus = 0.75 uses = 1 category = tu_oripathy_tech }
 			TU_build_civ_factory = yes
 		}
 	}
@@ -1963,7 +1965,7 @@
 		}
 
 		completion_reward = {
-			add_tech_bonus = { name = TU_KAZ_originium_grid bonus = 0.75 uses = 1 category = electronics category = industry }
+			add_tech_bonus = { name = TU_KAZ_originium_grid bonus = 0.75 uses = 1 category = electronics category = tu_originium_tech }
 			TU_build_infrastructure = yes
 		}
 	}
@@ -1983,7 +1985,7 @@
 		}
 
 		completion_reward = {
-			add_tech_bonus = { name = TU_KAZ_industrial_labs bonus = 0.75 uses = 1 category = electronics category = industry }
+			add_tech_bonus = { name = TU_KAZ_industrial_labs bonus = 0.75 uses = 1 category = electronics category = tu_originium_tech }
 		}
 	}
 
@@ -2324,7 +2326,7 @@
 		}
 
 		completion_reward = {
-			add_tech_bonus = { name = TU_KAZ_union_scholarships bonus = 0.75 uses = 1 category = electronics category = industry }
+			add_tech_bonus = { name = TU_KAZ_union_scholarships bonus = 0.75 uses = 1 category = electronics category = tu_originium_tech }
 		}
 	}
 
@@ -2385,7 +2387,7 @@
 		}
 
 		completion_reward = {
-			add_tech_bonus = { name = TU_KAZ_herald_office bonus = 0.75 uses = 1 category = electronics category = industry }
+			add_tech_bonus = { name = TU_KAZ_herald_office bonus = 0.75 uses = 1 category = electronics category = tu_originium_tech }
 		}
 	}
 
@@ -2406,6 +2408,7 @@
 		completion_reward = {
 			add_stability = 0.03
 			add_manpower = 10000
+			add_tech_bonus = { name = TU_KAZ_oripathy_research bonus = 0.75 uses = 1 category = tu_oripathy_tech }
 		}
 	}
 
@@ -2504,7 +2507,7 @@
 		}
 
 		completion_reward = {
-			add_tech_bonus = { name = TU_KAZ_originium_refinery bonus = 0.75 uses = 1 category = electronics category = industry }
+			add_tech_bonus = { name = TU_KAZ_originium_refinery bonus = 0.75 uses = 1 category = electronics category = tu_originium_tech }
 			TU_build_civ_factory = yes
 		}
 	}

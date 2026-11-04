@@ -1335,7 +1335,7 @@
 		}
 
 		completion_reward = {
-			add_tech_bonus = { name = TU_KJE_engineering_school bonus = 0.75 uses = 1 category = electronics category = industry }
+			add_tech_bonus = { name = TU_KJE_engineering_school bonus = 0.75 uses = 1 category = electronics category = tu_originium_tech }
 		}
 	}
 
@@ -1414,7 +1414,7 @@
 		}
 
 		completion_reward = {
-			add_tech_bonus = { name = TU_KJE_monastery_schools bonus = 0.75 uses = 1 category = electronics category = industry }
+			add_tech_bonus = { name = TU_KJE_monastery_schools bonus = 0.75 uses = 1 category = electronics category = tu_originium_tech }
 		}
 	}
 
@@ -1433,7 +1433,7 @@
 		}
 
 		completion_reward = {
-			add_tech_bonus = { name = TU_KJE_sacred_relics bonus = 0.75 uses = 1 category = electronics category = industry }
+			add_tech_bonus = { name = TU_KJE_sacred_relics bonus = 0.75 uses = 1 category = electronics category = tu_originium_tech }
 		}
 	}
 
@@ -1633,6 +1633,7 @@
 		completion_reward = {
 			add_stability = 0.03
 			add_manpower = 10000
+			add_tech_bonus = { name = TU_KJE_mountain_medics bonus = 0.75 uses = 1 category = tu_oripathy_tech }
 		}
 	}
 
@@ -1832,7 +1833,7 @@
 		}
 
 		completion_reward = {
-			add_tech_bonus = { name = TU_KJE_snow_temple_schools bonus = 0.75 uses = 1 category = electronics category = industry }
+			add_tech_bonus = { name = TU_KJE_snow_temple_schools bonus = 0.75 uses = 1 category = electronics category = tu_originium_tech }
 		}
 	}
 
@@ -1872,6 +1873,7 @@
 		completion_reward = {
 			add_stability = 0.03
 			add_manpower = 10000
+			add_tech_bonus = { name = TU_KJE_winter_hospitals bonus = 0.75 uses = 1 category = tu_oripathy_tech }
 		}
 	}
 
@@ -1948,7 +1950,7 @@
 		}
 
 		completion_reward = {
-			add_tech_bonus = { name = TU_KJE_silverash_labs bonus = 0.75 uses = 1 category = electronics category = industry }
+			add_tech_bonus = { name = TU_KJE_silverash_labs bonus = 0.75 uses = 1 category = electronics category = tu_originium_tech }
 		}
 	}
 
@@ -1969,6 +1971,7 @@
 		completion_reward = {
 			add_stability = 0.03
 			add_manpower = 10000
+			add_tech_bonus = { name = TU_KJE_modern_medicine bonus = 0.75 uses = 1 category = tu_oripathy_tech }
 		}
 	}
 
@@ -2048,7 +2051,7 @@
 		}
 
 		completion_reward = {
-			add_tech_bonus = { name = TU_KJE_holy_texts bonus = 0.75 uses = 1 category = electronics category = industry }
+			add_tech_bonus = { name = TU_KJE_holy_texts bonus = 0.75 uses = 1 category = electronics category = tu_originium_tech }
 		}
 	}
 
@@ -2109,6 +2112,7 @@
 		completion_reward = {
 			add_stability = 0.03
 			add_manpower = 10000
+			add_tech_bonus = { name = TU_KJE_faith_charity bonus = 0.75 uses = 1 category = tu_oripathy_tech }
 		}
 	}
 
@@ -2189,6 +2193,7 @@
 		completion_reward = {
 			add_stability = 0.03
 			add_manpower = 10000
+			add_tech_bonus = { name = TU_KJE_saintess_hospitals bonus = 0.75 uses = 1 category = tu_oripathy_tech }
 		}
 	}
 

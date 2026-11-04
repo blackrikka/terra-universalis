@@ -287,7 +287,7 @@ focus_tree = {
 
 		completion_reward = {
 			country_event = { id = tu_kzd_ev.3 }
-			add_tech_bonus = { name = TU_KZD_babel_restoration bonus = 0.75 uses = 1 category = electronics category = industry }
+			add_tech_bonus = { name = TU_KZD_babel_restoration bonus = 0.75 uses = 1 category = electronics category = tu_originium_tech }
 		}
 	}
 
@@ -314,7 +314,7 @@ focus_tree = {
 			else = {
 				add_political_power = 25
 			}
-			add_tech_bonus = { name = TU_KZD_babel_envoy bonus = 0.75 uses = 1 category = electronics category = industry }
+			add_tech_bonus = { name = TU_KZD_babel_envoy bonus = 0.75 uses = 1 category = electronics category = tu_originium_tech }
 		}
 	}
 
@@ -373,7 +373,7 @@ focus_tree = {
 		}
 
 		completion_reward = {
-			add_tech_bonus = { name = TU_KZD_babel_ascension bonus = 0.75 uses = 1 category = electronics category = industry }
+			add_tech_bonus = { name = TU_KZD_babel_ascension bonus = 0.75 uses = 1 category = electronics category = tu_originium_tech }
 		}
 	}
 
@@ -1519,7 +1519,7 @@ focus_tree = {
 
 		completion_reward = {
 			add_ideas = TU_KZD_babel_archives
-			add_tech_bonus = { name = TU_KZD_babel_archive_search bonus = 0.75 uses = 1 category = electronics category = industry }
+			add_tech_bonus = { name = TU_KZD_babel_archive_search bonus = 0.75 uses = 1 category = electronics category = tu_originium_tech }
 		}
 	}
 
@@ -1538,7 +1538,7 @@ focus_tree = {
 		}
 
 		completion_reward = {
-			add_tech_bonus = { name = TU_KZD_babel_scribes bonus = 0.75 uses = 1 category = electronics category = industry }
+			add_tech_bonus = { name = TU_KZD_babel_scribes bonus = 0.75 uses = 1 category = electronics category = tu_originium_tech }
 		}
 	}
 
@@ -1559,7 +1559,7 @@ focus_tree = {
 
 		completion_reward = {
 			TU_build_mil_factory = yes
-			add_tech_bonus = { name = TU_KZD_ancient_engineering bonus = 0.75 uses = 1 category = electronics category = industry }
+			add_tech_bonus = { name = TU_KZD_ancient_engineering bonus = 0.75 uses = 1 category = electronics category = tu_originium_tech }
 		}
 	}
 
@@ -1598,7 +1598,7 @@ focus_tree = {
 		}
 
 		completion_reward = {
-			add_tech_bonus = { name = TU_KZD_babel_council bonus = 0.75 uses = 1 category = electronics category = industry }
+			add_tech_bonus = { name = TU_KZD_babel_council bonus = 0.75 uses = 1 category = electronics category = tu_originium_tech }
 		}
 	}
 
@@ -1704,7 +1704,7 @@ focus_tree = {
 
 		completion_reward = {
 			TU_build_civ_factory = yes
-			add_tech_bonus = { name = TU_KZD_babel_forge_alt bonus = 0.75 uses = 1 category = electronics category = industry }
+			add_tech_bonus = { name = TU_KZD_babel_forge_alt bonus = 0.75 uses = 1 category = electronics category = tu_originium_tech }
 		}
 	}
 
@@ -1765,7 +1765,7 @@ focus_tree = {
 		}
 
 		completion_reward = {
-			add_tech_bonus = { name = TU_KZD_babel_cadets bonus = 0.75 uses = 1 category = electronics category = industry }
+			add_tech_bonus = { name = TU_KZD_babel_cadets bonus = 0.75 uses = 1 category = electronics category = tu_originium_tech }
 		}
 	}
 
@@ -1824,7 +1824,7 @@ focus_tree = {
 		}
 
 		completion_reward = {
-			add_tech_bonus = { name = TU_KZD_babel_bank bonus = 0.75 uses = 1 category = electronics category = industry }
+			add_tech_bonus = { name = TU_KZD_babel_bank bonus = 0.75 uses = 1 category = electronics category = tu_originium_tech }
 		}
 	}
 
@@ -1845,7 +1845,7 @@ focus_tree = {
 
 		completion_reward = {
 			every_country = { news_event = { id = tu_kzd_ev.13 hours = 6 } }
-			add_tech_bonus = { name = TU_KZD_babel_reborn bonus = 1.0 uses = 1 category = electronics category = industry }
+			add_tech_bonus = { name = TU_KZD_babel_reborn bonus = 1.0 uses = 1 category = electronics category = tu_originium_tech }
 		}
 	}
 
@@ -1884,7 +1884,7 @@ focus_tree = {
 		}
 
 		completion_reward = {
-			add_tech_bonus = { name = TU_KZD_babel_sanctum bonus = 0.75 uses = 1 category = electronics category = industry }
+			add_tech_bonus = { name = TU_KZD_babel_sanctum bonus = 0.75 uses = 1 category = electronics category = tu_originium_tech }
 		}
 	}
 
@@ -1903,7 +1903,7 @@ focus_tree = {
 		}
 
 		completion_reward = {
-			add_tech_bonus = { name = TU_KZD_babel_mint bonus = 0.75 uses = 1 category = electronics category = industry }
+			add_tech_bonus = { name = TU_KZD_babel_mint bonus = 0.75 uses = 1 category = electronics category = tu_originium_tech }
 		}
 	}
 
@@ -1942,7 +1942,7 @@ focus_tree = {
 		}
 
 		completion_reward = {
-			add_tech_bonus = { name = TU_KZD_babel_hymn bonus = 0.75 uses = 1 category = electronics category = industry }
+			add_tech_bonus = { name = TU_KZD_babel_hymn bonus = 0.75 uses = 1 category = electronics category = tu_originium_tech }
 		}
 	}
 
@@ -1982,7 +1982,7 @@ focus_tree = {
 		}
 
 		completion_reward = {
-			add_tech_bonus = { name = TU_KZD_records_vault bonus = 0.75 uses = 1 category = electronics category = industry }
+			add_tech_bonus = { name = TU_KZD_records_vault bonus = 0.75 uses = 1 category = electronics category = tu_originium_tech }
 		}
 	}
 
@@ -2002,7 +2002,7 @@ focus_tree = {
 		}
 
 		completion_reward = {
-			add_tech_bonus = { name = TU_KZD_records_vault_alt bonus = 0.75 uses = 1 category = electronics category = industry }
+			add_tech_bonus = { name = TU_KZD_records_vault_alt bonus = 0.75 uses = 1 category = electronics category = tu_originium_tech }
 		}
 	}
 
@@ -2021,7 +2021,7 @@ focus_tree = {
 		}
 
 		completion_reward = {
-			add_tech_bonus = { name = TU_KZD_cultural_relic bonus = 0.75 uses = 1 category = electronics category = industry }
+			add_tech_bonus = { name = TU_KZD_cultural_relic bonus = 0.75 uses = 1 category = electronics category = tu_originium_tech }
 		}
 	}
 
@@ -2040,7 +2040,7 @@ focus_tree = {
 		}
 
 		completion_reward = {
-			add_tech_bonus = { name = TU_KZD_babel_legend bonus = 0.75 uses = 1 category = electronics category = industry }
+			add_tech_bonus = { name = TU_KZD_babel_legend bonus = 0.75 uses = 1 category = electronics category = tu_originium_tech }
 		}
 	}
 
@@ -2059,7 +2059,7 @@ focus_tree = {
 		}
 
 		completion_reward = {
-			add_tech_bonus = { name = TU_KZD_babel_festival bonus = 0.75 uses = 1 category = electronics category = industry }
+			add_tech_bonus = { name = TU_KZD_babel_festival bonus = 0.75 uses = 1 category = electronics category = tu_originium_tech }
 		}
 	}
 
@@ -2268,7 +2268,7 @@ focus_tree = {
 		}
 
 		completion_reward = {
-			add_tech_bonus = { name = TU_KZD_merc_insurance_focus bonus = 0.75 uses = 1 category = electronics category = industry }
+			add_tech_bonus = { name = TU_KZD_merc_insurance_focus bonus = 0.75 uses = 1 category = electronics category = tu_originium_tech }
 		}
 	}
 
@@ -3702,6 +3702,7 @@ focus_tree = {
 		completion_reward = {
 			add_stability = 0.03
 			add_manpower = 10000
+			add_tech_bonus = { name = TU_KZD_lei_trade_road bonus = 0.75 uses = 1 category = tu_oripathy_tech }
 		}
 
 		ai_will_do = {
@@ -3847,6 +3848,7 @@ focus_tree = {
 		completion_reward = {
 			add_stability = 0.03
 			add_manpower = 10000
+			add_tech_bonus = { name = TU_KZD_reu_quarantine bonus = 0.75 uses = 1 category = tu_oripathy_tech }
 		}
 
 		ai_will_do = {
@@ -3887,6 +3889,7 @@ focus_tree = {
 		completion_reward = {
 			add_stability = 0.03
 			add_manpower = 10000
+			add_tech_bonus = { name = TU_KZD_reu_medic_corps bonus = 0.75 uses = 1 category = tu_oripathy_tech }
 		}
 
 		ai_will_do = {

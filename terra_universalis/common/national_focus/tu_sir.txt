@@ -670,7 +670,7 @@ focus_tree = {
 		}
 
 		completion_reward = {
-			add_tech_bonus = { name = TU_SIR_ancient_wolves bonus = 0.75 uses = 1 category = electronics category = industry }
+			add_tech_bonus = { name = TU_SIR_ancient_wolves bonus = 0.75 uses = 1 category = electronics category = tu_originium_tech }
 		}
 	}
 
@@ -709,7 +709,7 @@ focus_tree = {
 		}
 
 		completion_reward = {
-			add_tech_bonus = { name = TU_SIR_wolf_relics bonus = 0.75 uses = 1 category = electronics category = industry }
+			add_tech_bonus = { name = TU_SIR_wolf_relics bonus = 0.75 uses = 1 category = electronics category = tu_originium_tech }
 		}
 	}
 
@@ -1458,7 +1458,7 @@ focus_tree = {
 		}
 
 		completion_reward = {
-			add_tech_bonus = { name = TU_SIR_research_institute bonus = 0.75 uses = 1 category = electronics category = industry }
+			add_tech_bonus = { name = TU_SIR_research_institute bonus = 0.75 uses = 1 category = electronics category = tu_originium_tech }
 		}
 	}
 
@@ -1776,7 +1776,7 @@ focus_tree = {
 		}
 
 		completion_reward = {
-			add_tech_bonus = { name = TU_SIR_court_archives bonus = 0.75 uses = 1 category = electronics category = industry }
+			add_tech_bonus = { name = TU_SIR_court_archives bonus = 0.75 uses = 1 category = electronics category = tu_originium_tech }
 		}
 	}
 
@@ -1857,6 +1857,7 @@ focus_tree = {
 		completion_reward = {
 			add_stability = 0.03
 			add_manpower = 10000
+			add_tech_bonus = { name = TU_SIR_public_housing bonus = 0.75 uses = 1 category = tu_oripathy_tech }
 		}
 	}
 
@@ -1875,7 +1876,7 @@ focus_tree = {
 		}
 
 		completion_reward = {
-			add_tech_bonus = { name = TU_SIR_wolf_scholars bonus = 0.75 uses = 1 category = electronics category = industry }
+			add_tech_bonus = { name = TU_SIR_wolf_scholars bonus = 0.75 uses = 1 category = electronics category = tu_originium_tech }
 		}
 	}
 
@@ -2013,7 +2014,7 @@ focus_tree = {
 		}
 
 		completion_reward = {
-			add_tech_bonus = { name = TU_SIR_demolition_teams bonus = 0.75 uses = 1 category = electronics category = industry }
+			add_tech_bonus = { name = TU_SIR_demolition_teams bonus = 0.75 uses = 1 category = electronics category = tu_originium_tech }
 		}
 	}
 
@@ -2034,6 +2035,7 @@ focus_tree = {
 		completion_reward = {
 			add_stability = 0.03
 			add_manpower = 10000
+			add_tech_bonus = { name = TU_SIR_field_medics bonus = 0.75 uses = 1 category = tu_oripathy_tech }
 		}
 	}
 

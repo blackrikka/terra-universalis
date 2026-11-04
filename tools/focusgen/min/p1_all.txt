@@ -56,6 +56,7 @@
 		completion_reward = {
 			add_stability = 0.03
 			add_manpower = 10000
+			add_tech_bonus = { name = TU_MIN_citizen_rolls bonus = 0.75 uses = 1 category = tu_oripathy_tech }
 		}
 	}
 
@@ -210,6 +211,7 @@
 		completion_reward = {
 			add_stability = 0.03
 			add_manpower = 10000
+			add_tech_bonus = { name = TU_MIN_free_schools bonus = 0.75 uses = 1 category = tu_oripathy_tech }
 		}
 	}
 
@@ -376,7 +378,7 @@
 		}
 
 		completion_reward = {
-			add_tech_bonus = { name = TU_MIN_prophecy_archive bonus = 0.75 uses = 1 category = electronics category = industry }
+			add_tech_bonus = { name = TU_MIN_prophecy_archive bonus = 0.75 uses = 1 category = electronics category = tu_originium_tech }
 		}
 	}
 
@@ -416,7 +418,7 @@
 		}
 
 		completion_reward = {
-			add_tech_bonus = { name = TU_MIN_philosophers bonus = 0.75 uses = 1 category = electronics category = industry }
+			add_tech_bonus = { name = TU_MIN_philosophers bonus = 0.75 uses = 1 category = electronics category = tu_originium_tech }
 		}
 	}
 
@@ -495,7 +497,7 @@
 		}
 
 		completion_reward = {
-			add_tech_bonus = { name = TU_MIN_mathematics bonus = 0.75 uses = 1 category = electronics category = industry }
+			add_tech_bonus = { name = TU_MIN_mathematics bonus = 0.75 uses = 1 category = electronics category = tu_originium_tech }
 		}
 	}
 
@@ -514,7 +516,7 @@
 		}
 
 		completion_reward = {
-			add_tech_bonus = { name = TU_MIN_observatory bonus = 0.75 uses = 1 category = electronics category = industry }
+			add_tech_bonus = { name = TU_MIN_observatory bonus = 0.75 uses = 1 category = electronics category = tu_originium_tech }
 		}
 	}
 
@@ -536,6 +538,7 @@
 		completion_reward = {
 			add_stability = 0.03
 			add_manpower = 10000
+			add_tech_bonus = { name = TU_MIN_medical_studies bonus = 0.75 uses = 1 category = tu_oripathy_tech }
 		}
 	}
 
@@ -555,7 +558,7 @@
 		}
 
 		completion_reward = {
-			add_tech_bonus = { name = TU_MIN_engineering_studies bonus = 0.75 uses = 1 category = electronics category = industry }
+			add_tech_bonus = { name = TU_MIN_engineering_studies bonus = 0.75 uses = 1 category = electronics category = tu_originium_tech }
 		}
 	}
 
@@ -575,7 +578,7 @@
 		}
 
 		completion_reward = {
-			add_tech_bonus = { name = TU_MIN_great_library bonus = 0.75 uses = 1 category = electronics category = industry }
+			add_tech_bonus = { name = TU_MIN_great_library bonus = 0.75 uses = 1 category = electronics category = tu_originium_tech }
 		}
 	}
 
@@ -1046,6 +1049,7 @@
 		completion_reward = {
 			add_stability = 0.03
 			add_manpower = 10000
+			add_tech_bonus = { name = TU_MIN_citizen_militia bonus = 0.75 uses = 1 category = tu_oripathy_tech }
 		}
 	}
 
@@ -1145,6 +1149,7 @@
 		completion_reward = {
 			add_stability = 0.03
 			add_manpower = 10000
+			add_tech_bonus = { name = TU_MIN_public_baths bonus = 0.75 uses = 1 category = tu_oripathy_tech }
 		}
 	}
 
@@ -1243,7 +1248,7 @@
 		}
 
 		completion_reward = {
-			add_tech_bonus = { name = TU_MIN_logic bonus = 0.75 uses = 1 category = electronics category = industry }
+			add_tech_bonus = { name = TU_MIN_logic bonus = 0.75 uses = 1 category = electronics category = tu_originium_tech }
 		}
 	}
 
@@ -1262,7 +1267,7 @@
 		}
 
 		completion_reward = {
-			add_tech_bonus = { name = TU_MIN_rhetoric bonus = 0.75 uses = 1 category = electronics category = industry }
+			add_tech_bonus = { name = TU_MIN_rhetoric bonus = 0.75 uses = 1 category = electronics category = tu_originium_tech }
 		}
 	}
 
@@ -1281,7 +1286,7 @@
 		}
 
 		completion_reward = {
-			add_tech_bonus = { name = TU_MIN_geometry bonus = 0.75 uses = 1 category = electronics category = industry }
+			add_tech_bonus = { name = TU_MIN_geometry bonus = 0.75 uses = 1 category = electronics category = tu_originium_tech }
 		}
 	}
 
@@ -1302,6 +1307,7 @@
 		completion_reward = {
 			add_stability = 0.03
 			add_manpower = 10000
+			add_tech_bonus = { name = TU_MIN_anatomy bonus = 0.75 uses = 1 category = tu_oripathy_tech }
 		}
 	}
 
@@ -1320,7 +1326,7 @@
 		}
 
 		completion_reward = {
-			add_tech_bonus = { name = TU_MIN_mechanics bonus = 0.75 uses = 1 category = electronics category = industry }
+			add_tech_bonus = { name = TU_MIN_mechanics bonus = 0.75 uses = 1 category = electronics category = tu_originium_tech }
 		}
 	}
 
@@ -1480,6 +1486,7 @@
 		completion_reward = {
 			add_stability = 0.03
 			add_manpower = 10000
+			add_tech_bonus = { name = TU_MIN_field_medics bonus = 0.75 uses = 1 category = tu_oripathy_tech }
 		}
 	}
 
@@ -1817,6 +1824,7 @@
 		completion_reward = {
 			add_stability = 0.03
 			add_manpower = 10000
+			add_tech_bonus = { name = TU_MIN_grain_ships bonus = 0.75 uses = 1 category = tu_oripathy_tech }
 		}
 	}
 
@@ -1835,7 +1843,7 @@
 		}
 
 		completion_reward = {
-			add_tech_bonus = { name = TU_MIN_elder_wisdom bonus = 0.75 uses = 1 category = electronics category = industry }
+			add_tech_bonus = { name = TU_MIN_elder_wisdom bonus = 0.75 uses = 1 category = electronics category = tu_originium_tech }
 		}
 	}
 
@@ -1894,7 +1902,7 @@
 		}
 
 		completion_reward = {
-			add_tech_bonus = { name = TU_MIN_music_school bonus = 0.75 uses = 1 category = electronics category = industry }
+			add_tech_bonus = { name = TU_MIN_music_school bonus = 0.75 uses = 1 category = electronics category = tu_originium_tech }
 		}
 	}
 
@@ -1913,7 +1921,7 @@
 		}
 
 		completion_reward = {
-			add_tech_bonus = { name = TU_MIN_astronomy bonus = 0.75 uses = 1 category = electronics category = industry }
+			add_tech_bonus = { name = TU_MIN_astronomy bonus = 0.75 uses = 1 category = electronics category = tu_originium_tech }
 		}
 	}
 
@@ -1934,6 +1942,7 @@
 		completion_reward = {
 			add_stability = 0.03
 			add_manpower = 10000
+			add_tech_bonus = { name = TU_MIN_hospitals bonus = 0.75 uses = 1 category = tu_oripathy_tech }
 		}
 	}
 

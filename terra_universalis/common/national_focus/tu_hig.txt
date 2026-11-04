@@ -325,7 +325,7 @@ focus_tree = {
 
 		completion_reward = {
 			TU_HIG_foreign_5 = yes
-			add_tech_bonus = { name = TU_HIG_western_studies bonus = 0.75 uses = 1 category = electronics category = industry }
+			add_tech_bonus = { name = TU_HIG_western_studies bonus = 0.75 uses = 1 category = electronics category = tu_originium_tech }
 		}
 	}
 
@@ -365,7 +365,7 @@ focus_tree = {
 		}
 
 		completion_reward = {
-			add_tech_bonus = { name = TU_HIG_modern_schools bonus = 0.75 uses = 1 category = electronics category = industry }
+			add_tech_bonus = { name = TU_HIG_modern_schools bonus = 0.75 uses = 1 category = electronics category = tu_originium_tech }
 		}
 	}
 
@@ -1366,7 +1366,7 @@ focus_tree = {
 		}
 
 		completion_reward = {
-			add_tech_bonus = { name = TU_HIG_poison_studies bonus = 0.75 uses = 1 category = electronics category = industry }
+			add_tech_bonus = { name = TU_HIG_poison_studies bonus = 0.75 uses = 1 category = electronics category = tu_originium_tech }
 		}
 	}
 
@@ -1425,7 +1425,7 @@ focus_tree = {
 		}
 
 		completion_reward = {
-			add_tech_bonus = { name = TU_HIG_spy_school bonus = 0.75 uses = 1 category = electronics category = industry }
+			add_tech_bonus = { name = TU_HIG_spy_school bonus = 0.75 uses = 1 category = electronics category = tu_originium_tech }
 		}
 	}
 
@@ -1506,6 +1506,7 @@ focus_tree = {
 		completion_reward = {
 			add_stability = 0.03
 			add_manpower = 10000
+			add_tech_bonus = { name = TU_HIG_field_medics bonus = 0.75 uses = 1 category = tu_oripathy_tech }
 		}
 	}
 
@@ -1806,7 +1807,7 @@ focus_tree = {
 		}
 
 		completion_reward = {
-			add_tech_bonus = { name = TU_HIG_han_schools bonus = 0.75 uses = 1 category = electronics category = industry }
+			add_tech_bonus = { name = TU_HIG_han_schools bonus = 0.75 uses = 1 category = electronics category = tu_originium_tech }
 		}
 	}
 
@@ -1827,6 +1828,7 @@ focus_tree = {
 		completion_reward = {
 			add_stability = 0.03
 			add_manpower = 10000
+			add_tech_bonus = { name = TU_HIG_foreign_doctors bonus = 0.75 uses = 1 category = tu_oripathy_tech }
 		}
 	}
 

@@ -55,7 +55,7 @@
 
 		completion_reward = {
 			TU_build_civ_factory = yes
-			add_tech_bonus = { name = TU_URS_originium_survey bonus = 0.5 uses = 1 category = electronics category = industry }
+			add_tech_bonus = { name = TU_URS_originium_survey bonus = 0.5 uses = 1 category = electronics category = tu_originium_tech }
 		}
 	}
 
@@ -293,7 +293,7 @@
 
 		completion_reward = {
 			TU_build_civ_factory = yes
-			add_tech_bonus = { name = TU_URS_originium_refine bonus = 0.75 uses = 1 category = electronics category = industry }
+			add_tech_bonus = { name = TU_URS_originium_refine bonus = 0.75 uses = 1 category = electronics category = tu_originium_tech }
 		}
 	}
 
@@ -322,6 +322,7 @@
 			TU_build_civ_factory = yes
 			add_stability = 0.03
 			add_manpower = 10000
+			add_tech_bonus = { name = TU_URS_mobile_civil bonus = 0.75 uses = 1 category = tu_oripathy_tech }
 		}
 	}
 
@@ -392,7 +393,7 @@
 		}
 
 		completion_reward = {
-			add_tech_bonus = { name = TU_URS_originium_export bonus = 0.75 uses = 1 category = electronics category = industry }
+			add_tech_bonus = { name = TU_URS_originium_export bonus = 0.75 uses = 1 category = electronics category = tu_originium_tech }
 		}
 	}
 
@@ -533,7 +534,7 @@
 
 		completion_reward = {
 			TU_build_civ_factory = yes
-			add_tech_bonus = { name = TU_URS_originium_grid bonus = 0.75 uses = 1 category = electronics category = industry }
+			add_tech_bonus = { name = TU_URS_originium_grid bonus = 0.75 uses = 1 category = electronics category = tu_originium_tech }
 		}
 	}
 
@@ -584,7 +585,7 @@
 
 		completion_reward = {
 			TU_build_civ_factory = yes
-			add_tech_bonus = { name = TU_URS_originium_core bonus = 1.0 uses = 1 category = electronics category = industry }
+			add_tech_bonus = { name = TU_URS_originium_core bonus = 1.0 uses = 1 category = electronics category = tu_originium_tech }
 		}
 	}
 
@@ -630,7 +631,7 @@
 
 		completion_reward = {
 			add_ideas = TU_URS_e1_originium_monopoly
-			add_tech_bonus = { name = TU_URS_originium_secure bonus = 0.75 uses = 1 category = electronics category = industry }
+			add_tech_bonus = { name = TU_URS_originium_secure bonus = 0.75 uses = 1 category = electronics category = tu_originium_tech }
 		}
 	}
 

@@ -76,7 +76,7 @@
 
 		completion_reward = {
 			add_power_balance_value = { id = TU_IBE_bop value = -0.03 }
-			add_tech_bonus = { name = TU_IBE_heresy_files bonus = 0.75 uses = 1 category = electronics category = industry }
+			add_tech_bonus = { name = TU_IBE_heresy_files bonus = 0.75 uses = 1 category = electronics category = tu_originium_tech }
 		}
 	}
 
@@ -1245,6 +1245,7 @@
 		completion_reward = {
 			add_stability = 0.03
 			add_manpower = 10000
+			add_tech_bonus = { name = TU_IBE_rhodes_doctors bonus = 0.75 uses = 1 category = tu_oripathy_tech }
 		}
 	}
 
@@ -1303,7 +1304,7 @@
 		}
 
 		completion_reward = {
-			add_tech_bonus = { name = TU_IBE_relic_vaults bonus = 0.75 uses = 1 category = electronics category = industry }
+			add_tech_bonus = { name = TU_IBE_relic_vaults bonus = 0.75 uses = 1 category = electronics category = tu_originium_tech }
 		}
 	}
 
@@ -1522,6 +1523,7 @@
 		completion_reward = {
 			add_stability = 0.03
 			add_manpower = 10000
+			add_tech_bonus = { name = TU_IBE_field_hospitals bonus = 0.75 uses = 1 category = tu_oripathy_tech }
 		}
 	}
 
@@ -1641,6 +1643,7 @@
 		completion_reward = {
 			add_stability = 0.03
 			add_manpower = 10000
+			add_tech_bonus = { name = TU_IBE_kazdel_refugees bonus = 0.75 uses = 1 category = tu_oripathy_tech }
 		}
 	}
 
@@ -1719,7 +1722,7 @@
 		}
 
 		completion_reward = {
-			add_tech_bonus = { name = TU_IBE_abbey_schools bonus = 0.75 uses = 1 category = electronics category = industry }
+			add_tech_bonus = { name = TU_IBE_abbey_schools bonus = 0.75 uses = 1 category = electronics category = tu_originium_tech }
 		}
 	}
 
@@ -1758,7 +1761,7 @@
 		}
 
 		completion_reward = {
-			add_tech_bonus = { name = TU_IBE_royal_court_music bonus = 0.75 uses = 1 category = electronics category = industry }
+			add_tech_bonus = { name = TU_IBE_royal_court_music bonus = 0.75 uses = 1 category = electronics category = tu_originium_tech }
 		}
 	}
 
@@ -1797,7 +1800,7 @@
 		}
 
 		completion_reward = {
-			add_tech_bonus = { name = TU_IBE_royal_engineers bonus = 0.75 uses = 1 category = electronics category = industry }
+			add_tech_bonus = { name = TU_IBE_royal_engineers bonus = 0.75 uses = 1 category = electronics category = tu_originium_tech }
 		}
 	}
 
@@ -1875,7 +1878,7 @@
 		}
 
 		completion_reward = {
-			add_tech_bonus = { name = TU_IBE_sonar_research bonus = 0.75 uses = 1 category = electronics category = industry }
+			add_tech_bonus = { name = TU_IBE_sonar_research bonus = 0.75 uses = 1 category = electronics category = tu_originium_tech }
 		}
 	}
 

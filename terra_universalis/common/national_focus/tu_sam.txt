@@ -94,7 +94,7 @@ focus_tree = {
 		}
 
 		completion_reward = {
-			add_tech_bonus = { name = TU_SAM_spirit_lore bonus = 0.75 uses = 1 category = electronics category = industry }
+			add_tech_bonus = { name = TU_SAM_spirit_lore bonus = 0.75 uses = 1 category = electronics category = tu_originium_tech }
 		}
 	}
 
@@ -113,7 +113,7 @@ focus_tree = {
 		}
 
 		completion_reward = {
-			add_tech_bonus = { name = TU_SAM_spirit_arts bonus = 0.75 uses = 1 category = electronics category = industry }
+			add_tech_bonus = { name = TU_SAM_spirit_arts bonus = 0.75 uses = 1 category = electronics category = tu_originium_tech }
 		}
 	}
 
@@ -133,7 +133,7 @@ focus_tree = {
 		}
 
 		completion_reward = {
-			add_tech_bonus = { name = TU_SAM_ice_arts bonus = 0.75 uses = 1 category = electronics category = industry }
+			add_tech_bonus = { name = TU_SAM_ice_arts bonus = 0.75 uses = 1 category = electronics category = tu_originium_tech }
 		}
 	}
 
@@ -153,7 +153,7 @@ focus_tree = {
 		}
 
 		completion_reward = {
-			add_tech_bonus = { name = TU_SAM_forest_arts bonus = 0.75 uses = 1 category = electronics category = industry }
+			add_tech_bonus = { name = TU_SAM_forest_arts bonus = 0.75 uses = 1 category = electronics category = tu_originium_tech }
 		}
 	}
 
@@ -467,7 +467,7 @@ focus_tree = {
 
 		completion_reward = {
 			TU_SAM_contact_10 = yes
-			add_tech_bonus = { name = TU_SAM_foreign_teachers bonus = 0.75 uses = 1 category = electronics category = industry }
+			add_tech_bonus = { name = TU_SAM_foreign_teachers bonus = 0.75 uses = 1 category = electronics category = tu_originium_tech }
 		}
 	}
 
@@ -859,7 +859,7 @@ focus_tree = {
 		}
 
 		completion_reward = {
-			add_tech_bonus = { name = TU_SAM_spirit_stones bonus = 0.75 uses = 1 category = electronics category = industry }
+			add_tech_bonus = { name = TU_SAM_spirit_stones bonus = 0.75 uses = 1 category = electronics category = tu_originium_tech }
 		}
 	}
 
@@ -880,6 +880,7 @@ focus_tree = {
 		completion_reward = {
 			add_stability = 0.03
 			add_manpower = 10000
+			add_tech_bonus = { name = TU_SAM_herbal_medicine bonus = 0.75 uses = 1 category = tu_oripathy_tech }
 		}
 	}
 
@@ -898,7 +899,7 @@ focus_tree = {
 		}
 
 		completion_reward = {
-			add_tech_bonus = { name = TU_SAM_ancient_runestones bonus = 0.75 uses = 1 category = electronics category = industry }
+			add_tech_bonus = { name = TU_SAM_ancient_runestones bonus = 0.75 uses = 1 category = electronics category = tu_originium_tech }
 		}
 	}
 
@@ -917,7 +918,7 @@ focus_tree = {
 		}
 
 		completion_reward = {
-			add_tech_bonus = { name = TU_SAM_aurora_watch bonus = 0.75 uses = 1 category = electronics category = industry }
+			add_tech_bonus = { name = TU_SAM_aurora_watch bonus = 0.75 uses = 1 category = electronics category = tu_originium_tech }
 		}
 	}
 
@@ -956,7 +957,7 @@ focus_tree = {
 		}
 
 		completion_reward = {
-			add_tech_bonus = { name = TU_SAM_shaman_schools bonus = 0.75 uses = 1 category = electronics category = industry }
+			add_tech_bonus = { name = TU_SAM_shaman_schools bonus = 0.75 uses = 1 category = electronics category = tu_originium_tech }
 		}
 	}
 
@@ -1196,6 +1197,7 @@ focus_tree = {
 		completion_reward = {
 			add_stability = 0.03
 			add_manpower = 10000
+			add_tech_bonus = { name = TU_SAM_foreign_medicine bonus = 0.75 uses = 1 category = tu_oripathy_tech }
 		}
 	}
 
@@ -1375,6 +1377,7 @@ focus_tree = {
 		completion_reward = {
 			add_stability = 0.03
 			add_manpower = 10000
+			add_tech_bonus = { name = TU_SAM_field_shamans bonus = 0.75 uses = 1 category = tu_oripathy_tech }
 		}
 	}
 
@@ -1639,6 +1642,7 @@ focus_tree = {
 		completion_reward = {
 			add_stability = 0.03
 			add_manpower = 10000
+			add_tech_bonus = { name = TU_SAM_snow_shelters bonus = 0.75 uses = 1 category = tu_oripathy_tech }
 		}
 	}
 
@@ -1778,7 +1782,7 @@ focus_tree = {
 		}
 
 		completion_reward = {
-			add_tech_bonus = { name = TU_SAM_raven_totem bonus = 0.75 uses = 1 category = electronics category = industry }
+			add_tech_bonus = { name = TU_SAM_raven_totem bonus = 0.75 uses = 1 category = electronics category = tu_originium_tech }
 		}
 	}
 
@@ -1817,7 +1821,7 @@ focus_tree = {
 		}
 
 		completion_reward = {
-			add_tech_bonus = { name = TU_SAM_dream_walkers bonus = 0.75 uses = 1 category = electronics category = industry }
+			add_tech_bonus = { name = TU_SAM_dream_walkers bonus = 0.75 uses = 1 category = electronics category = tu_originium_tech }
 		}
 	}
 
@@ -1896,6 +1900,7 @@ focus_tree = {
 		completion_reward = {
 			add_stability = 0.03
 			add_manpower = 10000
+			add_tech_bonus = { name = TU_SAM_sacred_springs bonus = 0.75 uses = 1 category = tu_oripathy_tech }
 		}
 	}
 
@@ -1972,7 +1977,7 @@ focus_tree = {
 		}
 
 		completion_reward = {
-			add_tech_bonus = { name = TU_SAM_elders_wisdom bonus = 0.75 uses = 1 category = electronics category = industry }
+			add_tech_bonus = { name = TU_SAM_elders_wisdom bonus = 0.75 uses = 1 category = electronics category = tu_originium_tech }
 		}
 	}
 
@@ -2091,7 +2096,7 @@ focus_tree = {
 		}
 
 		completion_reward = {
-			add_tech_bonus = { name = TU_SAM_foreign_schools bonus = 0.75 uses = 1 category = electronics category = industry }
+			add_tech_bonus = { name = TU_SAM_foreign_schools bonus = 0.75 uses = 1 category = electronics category = tu_originium_tech }
 		}
 	}
 
@@ -2112,6 +2117,7 @@ focus_tree = {
 		completion_reward = {
 			add_stability = 0.03
 			add_manpower = 10000
+			add_tech_bonus = { name = TU_SAM_vaccines bonus = 0.75 uses = 1 category = tu_oripathy_tech }
 		}
 	}
 

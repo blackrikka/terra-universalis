@@ -1567,7 +1567,7 @@
 
 		completion_reward = {
 			add_ideas = TU_VIC_flame_arts
-			add_tech_bonus = { name = TU_VIC_drc_flame_arts bonus = 0.75 uses = 1 category = electronics category = industry }
+			add_tech_bonus = { name = TU_VIC_drc_flame_arts bonus = 0.75 uses = 1 category = electronics category = tu_originium_tech }
 		}
 	}
 
@@ -1975,7 +1975,7 @@
 
 		completion_reward = {
 			add_ideas = TU_VIC_choice_research_drive
-			add_tech_bonus = { name = TU_VIC_drc_flame_academies_alt bonus = 0.75 uses = 1 category = electronics category = industry }
+			add_tech_bonus = { name = TU_VIC_drc_flame_academies_alt bonus = 0.75 uses = 1 category = electronics category = tu_originium_tech }
 		}
 	}
 
@@ -2807,7 +2807,7 @@
 		}
 
 		completion_reward = {
-			add_tech_bonus = { name = TU_VIC_par_tech_schools bonus = 0.75 uses = 1 category = electronics category = industry }
+			add_tech_bonus = { name = TU_VIC_par_tech_schools bonus = 0.75 uses = 1 category = electronics category = tu_originium_tech }
 		}
 	}
 
@@ -2827,7 +2827,7 @@
 		}
 
 		completion_reward = {
-			add_tech_bonus = { name = TU_VIC_par_public_schools bonus = 0.75 uses = 1 category = electronics category = industry }
+			add_tech_bonus = { name = TU_VIC_par_public_schools bonus = 0.75 uses = 1 category = electronics category = tu_originium_tech }
 		}
 	}
 
@@ -2921,6 +2921,7 @@
 			TU_build_infrastructure = yes
 			add_stability = 0.03
 			add_manpower = 10000
+			add_tech_bonus = { name = TU_VIC_par_steel_rail_alt bonus = 0.75 uses = 1 category = tu_oripathy_tech }
 		}
 	}
 

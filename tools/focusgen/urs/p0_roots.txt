@@ -88,7 +88,7 @@
 		}
 
 		completion_reward = {
-			add_tech_bonus = { name = TU_URS_arts_research_root bonus = 0.5 uses = 1 category = electronics category = industry }
+			add_tech_bonus = { name = TU_URS_arts_research_root bonus = 0.5 uses = 1 category = electronics category = tu_originium_tech }
 		}
 	}
 
@@ -108,6 +108,7 @@
 		completion_reward = {
 			add_stability = 0.02
 			add_manpower = 5000
+			add_tech_bonus = { name = TU_URS_infection_policy bonus = 0.5 uses = 1 category = tu_oripathy_tech }
 		}
 	}
 

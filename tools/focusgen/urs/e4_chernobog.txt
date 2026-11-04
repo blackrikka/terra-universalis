@@ -60,6 +60,7 @@
 			remove_ideas = TU_URS_infected_discrimination
 			add_stability = 0.03
 			add_manpower = 10000
+			add_tech_bonus = { name = TU_URS_quarantine_zones bonus = 0.75 uses = 1 category = tu_oripathy_tech }
 		}
 	}
 
@@ -301,6 +302,7 @@
 			}
 			add_stability = 0.03
 			add_manpower = 10000
+			add_tech_bonus = { name = TU_URS_lungmen_aid bonus = 0.75 uses = 1 category = tu_oripathy_tech }
 		}
 	}
 
@@ -399,6 +401,7 @@
 		completion_reward = {
 			add_stability = 0.03
 			add_manpower = 10000
+			add_tech_bonus = { name = TU_URS_quarantine_patrol bonus = 0.75 uses = 1 category = tu_oripathy_tech }
 		}
 	}
 
@@ -541,5 +544,6 @@
 			TU_build_infrastructure = yes
 			add_stability = 0.03
 			add_manpower = 10000
+			add_tech_bonus = { name = TU_URS_infected_quota bonus = 0.75 uses = 1 category = tu_oripathy_tech }
 		}
 	}

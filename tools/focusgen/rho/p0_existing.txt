@@ -59,6 +59,7 @@
 		completion_reward = {
 			add_stability = 0.03
 			add_manpower = 10000
+			add_tech_bonus = { name = TU_RHO_ark_charter bonus = 0.75 uses = 1 category = tu_oripathy_tech }
 		}
 	}
 
@@ -94,6 +95,7 @@
 			TU_build_civ_factory = yes
 			add_stability = 0.03
 			add_manpower = 10000
+			add_tech_bonus = { name = TU_RHO_ark_relief_office bonus = 0.75 uses = 1 category = tu_oripathy_tech }
 		}
 	}
 
@@ -109,6 +111,7 @@
 		completion_reward = {
 			add_stability = 0.03
 			add_manpower = 10000
+			add_tech_bonus = { name = TU_RHO_ark_refugees bonus = 0.75 uses = 1 category = tu_oripathy_tech }
 		}
 	}
 
@@ -330,6 +333,7 @@
 			country_event = { id = tu_rho_ev.5 }
 			add_stability = 0.03
 			add_manpower = 10000
+			add_tech_bonus = { name = TU_RHO_doctor_war bonus = 0.75 uses = 1 category = tu_oripathy_tech }
 		}
 	}
 
@@ -345,6 +349,6 @@
 		completion_reward = {
 			set_country_flag = TU_RHO_babel_restored
 			TU_build_infrastructure = yes
-			add_tech_bonus = { name = TU_RHO_babel_restoration bonus = 0.75 uses = 1 category = electronics category = industry }
+			add_tech_bonus = { name = TU_RHO_babel_restoration bonus = 0.75 uses = 1 category = electronics category = tu_originium_tech }
 		}
 	}

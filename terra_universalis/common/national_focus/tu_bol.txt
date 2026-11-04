@@ -592,6 +592,7 @@ focus_tree = {
 			TU_BOL_weariness_m5 = yes
 			add_stability = 0.03
 			add_manpower = 10000
+			add_tech_bonus = { name = TU_BOL_refugee_relief bonus = 0.75 uses = 1 category = tu_oripathy_tech }
 		}
 	}
 
@@ -612,6 +613,7 @@ focus_tree = {
 		completion_reward = {
 			add_stability = 0.03
 			add_manpower = 10000
+			add_tech_bonus = { name = TU_BOL_hospital_rebuild bonus = 0.75 uses = 1 category = tu_oripathy_tech }
 		}
 	}
 
@@ -633,6 +635,7 @@ focus_tree = {
 			TU_BOL_weariness_m5 = yes
 			add_stability = 0.03
 			add_manpower = 10000
+			add_tech_bonus = { name = TU_BOL_grain_rationing bonus = 0.75 uses = 1 category = tu_oripathy_tech }
 		}
 	}
 
@@ -652,7 +655,7 @@ focus_tree = {
 		}
 
 		completion_reward = {
-			add_tech_bonus = { name = TU_BOL_education_reform bonus = 0.75 uses = 1 category = electronics category = industry }
+			add_tech_bonus = { name = TU_BOL_education_reform bonus = 0.75 uses = 1 category = electronics category = tu_originium_tech }
 		}
 	}
 
@@ -674,6 +677,7 @@ focus_tree = {
 		completion_reward = {
 			add_stability = 0.03
 			add_manpower = 10000
+			add_tech_bonus = { name = TU_BOL_housing_rebuild bonus = 0.75 uses = 1 category = tu_oripathy_tech }
 		}
 	}
 
@@ -696,6 +700,7 @@ focus_tree = {
 			TU_BOL_weariness_m5 = yes
 			add_stability = 0.03
 			add_manpower = 10000
+			add_tech_bonus = { name = TU_BOL_war_orphans bonus = 0.75 uses = 1 category = tu_oripathy_tech }
 		}
 	}
 
@@ -1123,6 +1128,7 @@ focus_tree = {
 		completion_reward = {
 			add_stability = 0.03
 			add_manpower = 10000
+			add_tech_bonus = { name = TU_BOL_field_hospitals bonus = 0.75 uses = 1 category = tu_oripathy_tech }
 		}
 	}
 
@@ -1382,6 +1388,7 @@ focus_tree = {
 		completion_reward = {
 			add_stability = 0.03
 			add_manpower = 10000
+			add_tech_bonus = { name = TU_BOL_clinics bonus = 0.75 uses = 1 category = tu_oripathy_tech }
 		}
 	}
 
@@ -1422,6 +1429,7 @@ focus_tree = {
 		completion_reward = {
 			add_stability = 0.03
 			add_manpower = 10000
+			add_tech_bonus = { name = TU_BOL_new_towns bonus = 0.75 uses = 1 category = tu_oripathy_tech }
 			TU_build_civ_factory = yes
 		}
 	}
@@ -1443,6 +1451,7 @@ focus_tree = {
 		completion_reward = {
 			add_stability = 0.03
 			add_manpower = 10000
+			add_tech_bonus = { name = TU_BOL_food_aid bonus = 0.75 uses = 1 category = tu_oripathy_tech }
 		}
 	}
 
@@ -1461,7 +1470,7 @@ focus_tree = {
 		}
 
 		completion_reward = {
-			add_tech_bonus = { name = TU_BOL_orphan_schools bonus = 0.75 uses = 1 category = electronics category = industry }
+			add_tech_bonus = { name = TU_BOL_orphan_schools bonus = 0.75 uses = 1 category = electronics category = tu_originium_tech }
 		}
 	}
 
@@ -1683,6 +1692,7 @@ focus_tree = {
 		completion_reward = {
 			add_stability = 0.03
 			add_manpower = 10000
+			add_tech_bonus = { name = TU_BOL_rhodes_doctors bonus = 0.75 uses = 1 category = tu_oripathy_tech }
 		}
 	}
 
@@ -1781,7 +1791,7 @@ focus_tree = {
 		}
 
 		completion_reward = {
-			add_tech_bonus = { name = TU_BOL_demining bonus = 0.75 uses = 1 category = electronics category = industry }
+			add_tech_bonus = { name = TU_BOL_demining bonus = 0.75 uses = 1 category = electronics category = tu_originium_tech }
 		}
 	}
 
@@ -2104,7 +2114,7 @@ focus_tree = {
 		}
 
 		completion_reward = {
-			add_tech_bonus = { name = TU_BOL_columbian_schools bonus = 0.75 uses = 1 category = electronics category = industry }
+			add_tech_bonus = { name = TU_BOL_columbian_schools bonus = 0.75 uses = 1 category = electronics category = tu_originium_tech }
 		}
 	}
 
@@ -2225,6 +2235,7 @@ focus_tree = {
 		completion_reward = {
 			add_stability = 0.03
 			add_manpower = 10000
+			add_tech_bonus = { name = TU_BOL_school_meals bonus = 0.75 uses = 1 category = tu_oripathy_tech }
 		}
 	}
 
@@ -2366,6 +2377,7 @@ focus_tree = {
 		completion_reward = {
 			add_stability = 0.03
 			add_manpower = 10000
+			add_tech_bonus = { name = TU_BOL_rhodes_clinics bonus = 0.75 uses = 1 category = tu_oripathy_tech }
 		}
 	}
 

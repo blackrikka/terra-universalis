@@ -1,0 +1,29 @@
+# Terra Universalis buildings (tools/techgen/build_techs.py). Added next to the vanilla buildings.
+# Originium Refinery: replaces the dockyard as the 'third industry'. Every level helps research and industry
+# but raises oripathy risk (stability). Unlocked by the Originium Engineering techs.
+
+buildings = {
+	originium_refinery = {
+		base_cost = 7200
+		icon_frame = 10
+		value = 4
+		show_on_map = 0
+		hide_if_missing_tech = yes
+		infrastructure_construction_effect = yes
+		show_modifier = yes
+
+		country_modifiers = {
+			modifiers = {
+				research_speed_factor = 0.004
+				industrial_capacity_factory = 0.004
+				fuel_gain_from_states = 1.0
+				stability_factor = -0.004
+			}
+		}
+
+		level_cap = {
+			shares_slots = yes
+			state_max = 6
+		}
+	}
+}

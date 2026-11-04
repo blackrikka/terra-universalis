@@ -62,6 +62,7 @@ focus_tree = {
 			TU_build_civ_factory = yes
 			add_stability = 0.03
 			add_manpower = 10000
+			add_tech_bonus = { name = TU_LGM_refugee_camps bonus = 0.75 uses = 1 category = tu_oripathy_tech }
 		}
 	}
 
@@ -78,6 +79,7 @@ focus_tree = {
 		completion_reward = {
 			add_stability = 0.03
 			add_manpower = 10000
+			add_tech_bonus = { name = TU_LGM_sanction_relief bonus = 0.75 uses = 1 category = tu_oripathy_tech }
 		}
 	}
 
@@ -147,6 +149,7 @@ focus_tree = {
 			country_event = { id = tu_lgm_ev.2 }
 			add_stability = 0.03
 			add_manpower = 10000
+			add_tech_bonus = { name = TU_LGM_independence bonus = 0.75 uses = 1 category = tu_oripathy_tech }
 		}
 	}
 
@@ -386,6 +389,7 @@ focus_tree = {
 			add_ideas = TU_LGM_choice_free_grain
 			add_stability = 0.02
 			add_manpower = 5000
+			add_tech_bonus = { name = TU_LGM_grain_import bonus = 0.5 uses = 1 category = tu_oripathy_tech }
 		}
 	}
 
@@ -794,6 +798,7 @@ focus_tree = {
 		completion_reward = {
 			add_stability = 0.03
 			add_manpower = 10000
+			add_tech_bonus = { name = TU_LGM_housing_project bonus = 0.75 uses = 1 category = tu_oripathy_tech }
 		}
 	}
 
@@ -976,6 +981,7 @@ focus_tree = {
 		completion_reward = {
 			add_stability = 0.03
 			add_manpower = 10000
+			add_tech_bonus = { name = TU_LGM_public_health bonus = 0.75 uses = 1 category = tu_oripathy_tech }
 		}
 	}
 
@@ -996,6 +1002,7 @@ focus_tree = {
 		completion_reward = {
 			add_stability = 0.03
 			add_manpower = 10000
+			add_tech_bonus = { name = TU_LGM_sanitation bonus = 0.75 uses = 1 category = tu_oripathy_tech }
 		}
 	}
 
@@ -1016,7 +1023,7 @@ focus_tree = {
 
 		completion_reward = {
 			add_ideas = TU_LGM_choice_civic_schools
-			add_tech_bonus = { name = TU_LGM_education_reform bonus = 0.75 uses = 1 category = electronics category = industry }
+			add_tech_bonus = { name = TU_LGM_education_reform bonus = 0.75 uses = 1 category = electronics category = tu_originium_tech }
 		}
 	}
 
@@ -1036,7 +1043,7 @@ focus_tree = {
 		}
 
 		completion_reward = {
-			add_tech_bonus = { name = TU_LGM_education_reform_alt bonus = 0.75 uses = 1 category = electronics category = industry }
+			add_tech_bonus = { name = TU_LGM_education_reform_alt bonus = 0.75 uses = 1 category = electronics category = tu_originium_tech }
 		}
 	}
 
@@ -1078,6 +1085,7 @@ focus_tree = {
 		completion_reward = {
 			add_stability = 0.03
 			add_manpower = 10000
+			add_tech_bonus = { name = TU_LGM_refugee_census bonus = 0.75 uses = 1 category = tu_oripathy_tech }
 		}
 	}
 
@@ -1697,6 +1705,7 @@ focus_tree = {
 		completion_reward = {
 			add_stability = 0.03
 			add_manpower = 10000
+			add_tech_bonus = { name = TU_LGM_refugee_return bonus = 0.75 uses = 1 category = tu_oripathy_tech }
 		}
 	}
 

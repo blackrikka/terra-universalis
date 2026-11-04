@@ -138,9 +138,9 @@ def reward_lines(theme, fid, cost):
     if theme == "war":
         return ["army_experience = %d" % xp, "add_war_support = %s" % st, _doc(fid, "land_doctrine", s)]
     if theme == "medical":
-        return ["add_stability = %s" % st, "add_manpower = %d" % mp]
+        return ["add_stability = %s" % st, "add_manpower = %d" % mp, _tech(fid, ["tu_oripathy_tech"], s)]
     if theme == "research":
-        return [_tech(fid, ["electronics", "industry"], s)]
+        return [_tech(fid, ["electronics", "tu_originium_tech"], s)]
     if theme == "intel":
         return [_tech(fid, ["radar_tech", "electronics"], s), "add_stability = %s" % st]
     if theme == "manpower":

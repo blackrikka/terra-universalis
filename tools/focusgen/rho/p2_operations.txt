@@ -406,6 +406,7 @@
 		completion_reward = {
 			add_stability = 0.03
 			add_manpower = 10000
+			add_tech_bonus = { name = TU_RHO_ops_ls_medical_bay bonus = 0.75 uses = 1 category = tu_oripathy_tech }
 		}
 	}
 
@@ -466,7 +467,7 @@
 		completion_reward = {
 			set_country_flag = TU_RHO_ops_riic_started
 			TU_build_civ_factory = yes
-			add_tech_bonus = { name = TU_RHO_ops_riic_start bonus = 0.5 uses = 1 category = electronics category = industry }
+			add_tech_bonus = { name = TU_RHO_ops_riic_start bonus = 0.5 uses = 1 category = electronics category = tu_originium_tech }
 		}
 	}
 
@@ -566,6 +567,7 @@
 		completion_reward = {
 			add_stability = 0.03
 			add_manpower = 10000
+			add_tech_bonus = { name = TU_RHO_ops_riic_water bonus = 0.75 uses = 1 category = tu_oripathy_tech }
 		}
 	}
 
@@ -669,7 +671,7 @@
 		completion_reward = {
 			add_ideas = TU_RHO_idea_riic_logistics
 			TU_build_civ_factory = yes
-			add_tech_bonus = { name = TU_RHO_ops_riic_logistics bonus = 0.75 uses = 1 category = electronics category = industry }
+			add_tech_bonus = { name = TU_RHO_ops_riic_logistics bonus = 0.75 uses = 1 category = electronics category = tu_originium_tech }
 		}
 	}
 
@@ -774,6 +776,7 @@
 			TU_build_civ_factory = yes
 			add_stability = 0.03
 			add_manpower = 10000
+			add_tech_bonus = { name = TU_RHO_ops_riic_dorm_build bonus = 0.75 uses = 1 category = tu_oripathy_tech }
 		}
 	}
 
@@ -974,6 +977,7 @@
 		completion_reward = {
 			add_stability = 0.03
 			add_manpower = 10000
+			add_tech_bonus = { name = TU_RHO_ops_relief_medical bonus = 0.75 uses = 1 category = tu_oripathy_tech }
 		}
 	}
 
@@ -1141,6 +1145,7 @@
 			TU_build_infrastructure = yes
 			add_stability = 0.03
 			add_manpower = 10000
+			add_tech_bonus = { name = TU_RHO_ops_relief_hub bonus = 0.75 uses = 1 category = tu_oripathy_tech }
 		}
 	}
 
@@ -1160,6 +1165,7 @@
 		completion_reward = {
 			add_stability = 0.03
 			add_manpower = 10000
+			add_tech_bonus = { name = TU_RHO_ops_relief_supply bonus = 0.75 uses = 1 category = tu_oripathy_tech }
 		}
 	}
 
@@ -1198,6 +1204,7 @@
 		completion_reward = {
 			add_stability = 0.03
 			add_manpower = 10000
+			add_tech_bonus = { name = TU_RHO_ops_relief_volunteer bonus = 0.75 uses = 1 category = tu_oripathy_tech }
 		}
 	}
 
@@ -1218,6 +1225,7 @@
 			set_country_flag = TU_RHO_ops_relief_network
 			add_stability = 0.03
 			add_manpower = 10000
+			add_tech_bonus = { name = TU_RHO_ops_relief_network bonus = 0.75 uses = 1 category = tu_oripathy_tech }
 		}
 	}
 
@@ -1258,6 +1266,7 @@
 			set_country_flag = TU_RHO_ops_relief_done
 			add_stability = 0.05
 			add_manpower = 20000
+			add_tech_bonus = { name = TU_RHO_ops_relief_finale bonus = 1.0 uses = 1 category = tu_oripathy_tech }
 		}
 	}
 
@@ -1712,6 +1721,7 @@
 			set_country_flag = TU_RHO_ops_dip_vic
 			add_stability = 0.03
 			add_manpower = 10000
+			add_tech_bonus = { name = TU_RHO_ops_dip_vic bonus = 0.75 uses = 1 category = tu_oripathy_tech }
 		}
 	}
 
@@ -1732,6 +1742,7 @@
 			set_country_flag = TU_RHO_ops_dip_col
 			add_stability = 0.03
 			add_manpower = 10000
+			add_tech_bonus = { name = TU_RHO_ops_dip_col bonus = 0.75 uses = 1 category = tu_oripathy_tech }
 		}
 	}
 
@@ -1831,5 +1842,6 @@
 			set_country_flag = TU_RHO_ops_dip_done
 			add_stability = 0.05
 			add_manpower = 20000
+			add_tech_bonus = { name = TU_RHO_ops_dip_finale bonus = 1.0 uses = 1 category = tu_oripathy_tech }
 		}
 	}

@@ -491,6 +491,7 @@ focus_tree = {
 		completion_reward = {
 			add_stability = 0.03
 			add_manpower = 10000
+			add_tech_bonus = { name = TU_RIM_oripathy_research bonus = 0.75 uses = 1 category = tu_oripathy_tech }
 		}
 	}
 
@@ -613,6 +614,7 @@ focus_tree = {
 		completion_reward = {
 			add_stability = 0.03
 			add_manpower = 10000
+			add_tech_bonus = { name = TU_RIM_infected_rights bonus = 0.75 uses = 1 category = tu_oripathy_tech }
 		}
 	}
 
@@ -654,6 +656,7 @@ focus_tree = {
 		completion_reward = {
 			add_stability = 0.03
 			add_manpower = 10000
+			add_tech_bonus = { name = TU_RIM_new_homeland bonus = 0.75 uses = 1 category = tu_oripathy_tech }
 		}
 	}
 
@@ -698,7 +701,7 @@ focus_tree = {
 		}
 
 		completion_reward = {
-			add_tech_bonus = { name = TU_RIM_haven_schools bonus = 0.75 uses = 1 category = electronics category = industry }
+			add_tech_bonus = { name = TU_RIM_haven_schools bonus = 0.75 uses = 1 category = electronics category = tu_originium_tech }
 		}
 	}
 
@@ -940,7 +943,7 @@ focus_tree = {
 		}
 
 		completion_reward = {
-			add_tech_bonus = { name = TU_RIM_originium_engineering bonus = 0.75 uses = 1 category = electronics category = industry }
+			add_tech_bonus = { name = TU_RIM_originium_engineering bonus = 0.75 uses = 1 category = electronics category = tu_originium_tech }
 		}
 	}
 
@@ -1039,7 +1042,7 @@ focus_tree = {
 		}
 
 		completion_reward = {
-			add_tech_bonus = { name = TU_RIM_mine_lights bonus = 0.75 uses = 1 category = electronics category = industry }
+			add_tech_bonus = { name = TU_RIM_mine_lights bonus = 0.75 uses = 1 category = electronics category = tu_originium_tech }
 		}
 	}
 
@@ -1058,7 +1061,7 @@ focus_tree = {
 		}
 
 		completion_reward = {
-			add_tech_bonus = { name = TU_RIM_dynamite bonus = 0.75 uses = 1 category = electronics category = industry }
+			add_tech_bonus = { name = TU_RIM_dynamite bonus = 0.75 uses = 1 category = electronics category = tu_originium_tech }
 		}
 	}
 
@@ -1137,6 +1140,7 @@ focus_tree = {
 		completion_reward = {
 			add_stability = 0.03
 			add_manpower = 10000
+			add_tech_bonus = { name = TU_RIM_company_doctors bonus = 0.75 uses = 1 category = tu_oripathy_tech }
 		}
 	}
 
@@ -1215,7 +1219,7 @@ focus_tree = {
 		}
 
 		completion_reward = {
-			add_tech_bonus = { name = TU_RIM_workers_schools bonus = 0.75 uses = 1 category = electronics category = industry }
+			add_tech_bonus = { name = TU_RIM_workers_schools bonus = 0.75 uses = 1 category = electronics category = tu_originium_tech }
 		}
 	}
 
@@ -1236,6 +1240,7 @@ focus_tree = {
 		completion_reward = {
 			add_stability = 0.03
 			add_manpower = 10000
+			add_tech_bonus = { name = TU_RIM_workers_clinics bonus = 0.75 uses = 1 category = tu_oripathy_tech }
 		}
 	}
 
@@ -1276,6 +1281,7 @@ focus_tree = {
 		completion_reward = {
 			add_stability = 0.03
 			add_manpower = 10000
+			add_tech_bonus = { name = TU_RIM_infection_survey bonus = 0.75 uses = 1 category = tu_oripathy_tech }
 		}
 	}
 
@@ -1316,6 +1322,7 @@ focus_tree = {
 		completion_reward = {
 			add_stability = 0.03
 			add_manpower = 10000
+			add_tech_bonus = { name = TU_RIM_clean_water bonus = 0.75 uses = 1 category = tu_oripathy_tech }
 			TU_build_civ_factory = yes
 		}
 	}
@@ -1337,6 +1344,7 @@ focus_tree = {
 		completion_reward = {
 			add_stability = 0.03
 			add_manpower = 10000
+			add_tech_bonus = { name = TU_RIM_hospital_trains bonus = 0.75 uses = 1 category = tu_oripathy_tech }
 		}
 	}
 
@@ -1377,6 +1385,7 @@ focus_tree = {
 		completion_reward = {
 			add_stability = 0.03
 			add_manpower = 10000
+			add_tech_bonus = { name = TU_RIM_refugee_camps bonus = 0.75 uses = 1 category = tu_oripathy_tech }
 		}
 	}
 
@@ -1417,6 +1426,7 @@ focus_tree = {
 		completion_reward = {
 			add_stability = 0.03
 			add_manpower = 10000
+			add_tech_bonus = { name = TU_RIM_haven_hospitals bonus = 0.75 uses = 1 category = tu_oripathy_tech }
 		}
 	}
 
@@ -1734,6 +1744,7 @@ focus_tree = {
 		completion_reward = {
 			add_stability = 0.03
 			add_manpower = 10000
+			add_tech_bonus = { name = TU_RIM_kazdel_refugees bonus = 0.75 uses = 1 category = tu_oripathy_tech }
 		}
 	}
 
@@ -1752,7 +1763,7 @@ focus_tree = {
 		}
 
 		completion_reward = {
-			add_tech_bonus = { name = TU_RIM_originium_arts bonus = 0.75 uses = 1 category = electronics category = industry }
+			add_tech_bonus = { name = TU_RIM_originium_arts bonus = 0.75 uses = 1 category = electronics category = tu_originium_tech }
 		}
 	}
 
@@ -1791,7 +1802,7 @@ focus_tree = {
 		}
 
 		completion_reward = {
-			add_tech_bonus = { name = TU_RIM_ore_power bonus = 0.75 uses = 1 category = electronics category = industry }
+			add_tech_bonus = { name = TU_RIM_ore_power bonus = 0.75 uses = 1 category = electronics category = tu_originium_tech }
 			TU_build_civ_factory = yes
 		}
 	}
@@ -1874,6 +1885,7 @@ focus_tree = {
 		completion_reward = {
 			add_stability = 0.03
 			add_manpower = 10000
+			add_tech_bonus = { name = TU_RIM_suppressant_exports bonus = 0.75 uses = 1 category = tu_oripathy_tech }
 		}
 	}
 
@@ -1894,6 +1906,7 @@ focus_tree = {
 		completion_reward = {
 			add_stability = 0.03
 			add_manpower = 10000
+			add_tech_bonus = { name = TU_RIM_quarantine_guards bonus = 0.75 uses = 1 category = tu_oripathy_tech }
 		}
 	}
 
@@ -2111,7 +2124,7 @@ focus_tree = {
 		}
 
 		completion_reward = {
-			add_tech_bonus = { name = TU_RIM_arts_therapy bonus = 0.75 uses = 1 category = electronics category = industry }
+			add_tech_bonus = { name = TU_RIM_arts_therapy bonus = 0.75 uses = 1 category = electronics category = tu_originium_tech }
 		}
 	}
 
@@ -2132,6 +2145,7 @@ focus_tree = {
 		completion_reward = {
 			add_stability = 0.03
 			add_manpower = 10000
+			add_tech_bonus = { name = TU_RIM_oripathy_cure bonus = 0.75 uses = 1 category = tu_oripathy_tech }
 		}
 	}
 
@@ -2152,6 +2166,7 @@ focus_tree = {
 		completion_reward = {
 			add_stability = 0.03
 			add_manpower = 10000
+			add_tech_bonus = { name = TU_RIM_burial_rites bonus = 0.75 uses = 1 category = tu_oripathy_tech }
 		}
 	}
 
@@ -2170,7 +2185,7 @@ focus_tree = {
 		}
 
 		completion_reward = {
-			add_tech_bonus = { name = TU_RIM_settler_schools bonus = 0.75 uses = 1 category = electronics category = industry }
+			add_tech_bonus = { name = TU_RIM_settler_schools bonus = 0.75 uses = 1 category = electronics category = tu_originium_tech }
 		}
 	}
 
@@ -2191,6 +2206,7 @@ focus_tree = {
 		completion_reward = {
 			add_stability = 0.03
 			add_manpower = 10000
+			add_tech_bonus = { name = TU_RIM_refugee_registry bonus = 0.75 uses = 1 category = tu_oripathy_tech }
 		}
 	}
 
@@ -2291,6 +2307,7 @@ focus_tree = {
 		completion_reward = {
 			add_stability = 0.03
 			add_manpower = 10000
+			add_tech_bonus = { name = TU_RIM_field_hospitals bonus = 0.75 uses = 1 category = tu_oripathy_tech }
 		}
 	}
 
@@ -2370,7 +2387,7 @@ focus_tree = {
 		}
 
 		completion_reward = {
-			add_tech_bonus = { name = TU_RIM_ore_reactors bonus = 0.75 uses = 1 category = electronics category = industry }
+			add_tech_bonus = { name = TU_RIM_ore_reactors bonus = 0.75 uses = 1 category = electronics category = tu_originium_tech }
 			TU_build_civ_factory = yes
 		}
 	}

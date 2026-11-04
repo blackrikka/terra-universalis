@@ -423,6 +423,7 @@
 		completion_reward = {
 			add_stability = 0.03
 			add_manpower = 10000
+			add_tech_bonus = { name = TU_URS_reform_welfare_state bonus = 0.75 uses = 1 category = tu_oripathy_tech }
 		}
 	}
 
@@ -609,6 +610,7 @@
 		completion_reward = {
 			add_stability = 0.03
 			add_manpower = 10000
+			add_tech_bonus = { name = TU_URS_reform_medical_aid bonus = 0.75 uses = 1 category = tu_oripathy_tech }
 		}
 	}
 
@@ -630,6 +632,7 @@
 			remove_ideas = TU_URS_infected_discrimination
 			add_stability = 0.03
 			add_manpower = 10000
+			add_tech_bonus = { name = TU_URS_reform_infected_citizenship bonus = 0.75 uses = 1 category = tu_oripathy_tech }
 		}
 	}
 
@@ -651,6 +654,7 @@
 		completion_reward = {
 			add_stability = 0.03
 			add_manpower = 10000
+			add_tech_bonus = { name = TU_URS_reform_infected_labour_rights bonus = 0.75 uses = 1 category = tu_oripathy_tech }
 		}
 	}
 
@@ -676,6 +680,7 @@
 			}
 			add_stability = 0.03
 			add_manpower = 10000
+			add_tech_bonus = { name = TU_URS_reform_infected_guild bonus = 0.75 uses = 1 category = tu_oripathy_tech }
 		}
 	}
 
@@ -704,6 +709,7 @@
 			}
 			add_stability = 0.03
 			add_manpower = 10000
+			add_tech_bonus = { name = TU_URS_reform_infected_representation bonus = 0.75 uses = 1 category = tu_oripathy_tech }
 		}
 	}
 
@@ -725,6 +731,7 @@
 			add_ideas = TU_URS_p4_citizenship
 			add_stability = 0.03
 			add_manpower = 10000
+			add_tech_bonus = { name = TU_URS_reform_citizenship_law bonus = 0.75 uses = 1 category = tu_oripathy_tech }
 		}
 	}
 
@@ -744,7 +751,7 @@
 
 		completion_reward = {
 			add_ideas = TU_URS_p4_modern_education
-			add_tech_bonus = { name = TU_URS_reform_modern_schools bonus = 0.75 uses = 1 category = electronics category = industry }
+			add_tech_bonus = { name = TU_URS_reform_modern_schools bonus = 0.75 uses = 1 category = electronics category = tu_originium_tech }
 		}
 	}
 
@@ -783,7 +790,7 @@
 		}
 
 		completion_reward = {
-			add_tech_bonus = { name = TU_URS_reform_university bonus = 0.75 uses = 1 category = electronics category = industry }
+			add_tech_bonus = { name = TU_URS_reform_university bonus = 0.75 uses = 1 category = electronics category = tu_originium_tech }
 		}
 	}
 

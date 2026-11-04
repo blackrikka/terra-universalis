@@ -392,7 +392,7 @@
 		}
 
 		completion_reward = {
-			add_tech_bonus = { name = TU_URS_throne_archive bonus = 0.75 uses = 1 category = electronics category = industry }
+			add_tech_bonus = { name = TU_URS_throne_archive bonus = 0.75 uses = 1 category = electronics category = tu_originium_tech }
 		}
 	}
 
@@ -816,7 +816,7 @@
 				id = TU_URS_bop
 				value = -0.05
 			}
-			add_tech_bonus = { name = TU_URS_secret_archive bonus = 0.75 uses = 1 category = electronics category = industry }
+			add_tech_bonus = { name = TU_URS_secret_archive bonus = 0.75 uses = 1 category = electronics category = tu_originium_tech }
 		}
 	}
 
