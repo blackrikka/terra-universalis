@@ -286,6 +286,7 @@ focus_tree = {
 			country_event = { id = tu_rim_ev.28 }
 			# spec 23 hooks
 			recruit_character = TU_RIM_ceo
+			set_politics = { ruling_party = neutrality elections_allowed = no }
 			promote_character = {
 				character = TU_RIM_ceo
 				ideology = oligarchism
@@ -440,9 +441,10 @@ focus_tree = {
 			country_event = { id = tu_rim_ev.29 }
 			# spec 23 hooks
 			recruit_character = TU_RIM_union_leader
+			set_politics = { ruling_party = communism elections_allowed = no }
 			promote_character = {
 				character = TU_RIM_union_leader
-				ideology = moderatism
+				ideology = marxism
 			}
 			set_cosmetic_tag = TU_RIM_WORKERS
 		}
@@ -699,6 +701,7 @@ focus_tree = {
 			country_event = { id = tu_rim_ev.30 }
 			# spec 23 hooks
 			recruit_character = TU_RIM_haven_rep
+			set_politics = { ruling_party = neutrality elections_allowed = no }
 			promote_character = {
 				character = TU_RIM_haven_rep
 				ideology = moderatism

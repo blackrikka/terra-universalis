@@ -25,6 +25,8 @@ from pathlib import Path
 
 HERE = Path(__file__).resolve().parent
 sys.path.insert(0, str(HERE))
+sys.path.insert(0, str(Path(__file__).resolve().parents[1]))
+import ruling_party as _ruling_party  # noqa: E402  (사양서 42)
 from theme_effects import theme_of, reward_lines, FOCUS_ICON, is_warship  # noqa: E402
 
 sys.path.insert(0, str(Path(__file__).resolve().parents[1] / "gauges"))
@@ -283,6 +285,7 @@ class Country:
                     out.append(s)
                 out.append("}\n\n")
             (MOD / ("common/decisions/tu_%s_decisions.txt" % low)).write_text("".join(out).rstrip("\n") + "\n", encoding="utf-8")
+            _ruling_party.fix_file(MOD / ("common/decisions/tu_%s_decisions.txt" % low))
 
         # events
         if self.events:
@@ -309,6 +312,7 @@ class Country:
                 s += "}\n\n"
                 out.append(s)
             (MOD / ("events/tu_%s_events.txt" % low)).write_text("".join(out).rstrip("\n") + "\n", encoding="utf-8")
+            _ruling_party.fix_file(MOD / ("events/tu_%s_events.txt" % low))
 
         # bop
         if self.bop:

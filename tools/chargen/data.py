@@ -16,7 +16,7 @@ GFX = "GFX_TU_portrait_%s"
 COUNTRIES = {
     # ------------------------------------------------------------------ 카시미어
     "KAZ": dict(cast=True, chars=[
-        ("chairman", "상업 연합회 의장", "Chairman of the Commercial Union", [("L", "oligarchism")], None),
+        ("chairman", "상업 연합회 의장", "Chairman of the Commercial Union", [("L", "liberalism")], None),
         ("mlynar", "믈리나르 니어", "Mlynar Nearl", [("L", "despotism"), ("G", 5, 4, 3, 3)], None),
         ("margaret", "마거릿 니어", "Margaret Nearl", [("L", "moderatism"), ("G", 4, 5, 3, 3)], None),
         ("blemishine", "마리아 니어", "Maria Nearl", [("A", "political_advisor", "tu_popular_knight")], None),
@@ -33,7 +33,7 @@ COUNTRIES = {
     }),
     # ------------------------------------------------------------------ 컬럼비아
     "COL": dict(cast=True, chars=[
-        ("president", "컬럼비아 대통령", "President of Columbia", [("L", "centrism")], None),
+        ("president", "컬럼비아 대통령", "President of Columbia", [("L", "liberalism")], None),
         ("kristen", "크리스틴 라이트", "Kristen Wright", [("L", "oligarchism")], None),
         ("frontier_rep", "개척자 연합 대표", "Frontier Union Representative", [("L", "moderatism")], None),
         ("silence", "사일런스", "Silence", [("A", "political_advisor", "tu_arts_scholar")], None),
@@ -81,7 +81,7 @@ COUNTRIES = {
     }),
     # ------------------------------------------------------------------ 이베리아
     "IBE": dict(cast=True, chars=[
-        ("grand_inquisitor", "대심판관", "Grand Inquisitor", [("L", "despotism")], None),
+        ("grand_inquisitor", "대심판관", "Grand Inquisitor", [("L", "fascism_ideology")], None),
         ("king", "이베리아 국왕", "King of Iberia", [("L", "despotism")], None),
         ("irene", "아이린", "Irene", [("L", "moderatism"), ("A", "political_advisor", "tu_inquisitor")], None),
         ("ulpianus", "울피아누스", "Ulpianus", [("L", "despotism"), ("A", "high_command", "tu_chief_defender"), ("G", 5, 5, 3, 2)], None),
@@ -167,7 +167,7 @@ COUNTRIES = {
     }),
     # ------------------------------------------------------------------ 미노스
     "MIN": dict(cast=True, chars=[
-        ("archon", "민회 집정관", "Archon of the Assembly", [("L", "centrism")], None),
+        ("archon", "민회 집정관", "Archon of the Assembly", [("L", "conservatism")], None),
         ("elder", "원로 회의장", "Head of the Elders", [("L", "oligarchism")], None),
         ("strategos", "해상 집정관", "Thalassocrat", [("L", "despotism")], None),
         ("philosopher", "아카데미아 학두", "Scholarch of the Academy", [("A", "theorist", "tu_theorist_tactics")], None),
@@ -184,7 +184,7 @@ COUNTRIES = {
     "RIM": dict(cast=True, chars=[
         ("governor", "광산 총독", "Mining Governor", [("L", "oligarchism")], None),
         ("ceo", "회사 이사장", "Company Chairman", [("L", "oligarchism")], None),
-        ("union_leader", "광부 노조 위원장", "Miners' Union Leader", [("L", "moderatism")], None),
+        ("union_leader", "광부 노조 위원장", "Miners' Union Leader", [("L", "marxism")], None),
         ("haven_rep", "안식처 대표", "Haven Representative", [("L", "moderatism")], None),
         ("mine_engineer", "수석 갱도 기사", "Chief Mine Engineer", [("A", "political_advisor", "tu_originium_magnate")], None),
         ("physician", "광석병 전문의", "Oripathy Physician", [("A", "political_advisor", "tu_oripathy_physician")], None),
@@ -193,7 +193,7 @@ COUNTRIES = {
     ], start=["governor", "mine_engineer", "physician", "security_chief", "foreman_general"], hooks={
         "corporate_rule": [("leader", "ceo", "oligarchism"),
                            ("name", "COMPANY", "림 빌리튼 회사국", "Rim Billiton Company State", "림 빌리튼의", "Rim Billiton")],
-        "workers_rule": [("leader", "union_leader", "moderatism"),
+        "workers_rule": [("leader", "union_leader", "marxism"),
                          ("name", "WORKERS", "림 빌리튼 노동자 자치령", "Rim Billiton Workers' Commune", "림 빌리튼의", "Rim Billiton")],
         "infected_haven": [("leader", "haven_rep", "moderatism"),
                            ("name", "HAVEN", "감염자의 안식처", "Haven of the Infected", "안식처의", "Haven")],
@@ -215,15 +215,15 @@ COUNTRIES = {
     }),
     # ------------------------------------------------------------------ 볼리바르
     "BOL": dict(cast=True, chars=[
-        ("provisional", "임시 대통령", "Provisional President", [("L", "centrism")], None),
-        ("president", "볼리바르 대통령", "President of Bolivar", [("L", "moderatism")], None),
+        ("provisional", "임시 대통령", "Provisional President", [("L", "liberalism")], None),
+        ("president", "볼리바르 대통령", "President of Bolivar", [("L", "liberalism")], None),
         ("col_governor", "컬럼비아 총독", "Columbian Governor", [("L", "oligarchism")], None),
         ("vic_governor", "빅토리아 총독", "Victorian Governor", [("L", "despotism")], None),
         ("rebel_chief", "반군 사령관", "Rebel Commander", [("G", 4, 3, 2, 3)], None),
         ("army_chief", "정부군 참모총장", "Chief of the Government Army", [("A", "high_command", "tu_chief_defender"), ("G", 3, 4, 3, 3)], None),
         ("coffee_baron", "커피 농장주", "Coffee Baron", [("A", "political_advisor", "tu_union_financier")], None),
     ], start=["provisional", "coffee_baron", "army_chief", "rebel_chief"], hooks={
-        "bolivar_republic": [("leader", "president", "moderatism"),
+        "bolivar_republic": [("leader", "president", "liberalism"),
                              ("name", "REPUBLIC", "볼리바르 공화국", "Republic of Bolivar", "볼리바르의", "Bolivarian")],
         "columbian_protectorate": [("leader", "col_governor", "oligarchism"),
                                    ("name", "COLPROT", "컬럼비아 보호령 볼리바르", "Columbian Protectorate of Bolivar", "볼리바르의", "Bolivarian")],
@@ -232,7 +232,7 @@ COUNTRIES = {
     }),
     # ------------------------------------------------------------------ 기존 대국 보강 (지도자는 이미 있음)
     "KZD": dict(cast=False, chars=[
-        ("commission", "카즈델 군사위원회", "Kazdel Military Commission", [("L", "oligarchism")], None),
+        ("commission", "카즈델 군사위원회", "Kazdel Military Commission", [("L", "fascism_ideology")], None),
         ("six_kings_lead", "육왕 평의회", "Council of the Six Kings", [("L", "oligarchism")], None),
         ("w_leader", "W", "W", [("L", "despotism")], GFX % "w"),
         ("logos", "로고스", "Logos", [("A", "political_advisor", "tu_arts_scholar")], None),
@@ -240,7 +240,7 @@ COUNTRIES = {
         ("mudrock", "머드락", "Mudrock", [("G", 4, 5, 3, 3)], None),
         ("broker", "용병 중개인", "Mercenary Broker", [("A", "political_advisor", "tu_mercenary_broker")], None),
     ], start=["commission", "logos", "broker", "hedley", "mudrock"], hooks={
-        "theresis_throne": [("leader_existing", "TU_KZD_theresis", "despotism")],
+        "theresis_throne": [("leader_existing", "TU_KZD_theresis", "fascism_ideology")],
         "empire_finale": [("name", "EMPIRE", "카즈델 제국", "Kazdel Empire", "카즈델의", "Kazdelian")],
         "new_empire": [("name", "NEWEMPIRE", "신 카즈델", "New Kazdel", "카즈델의", "Kazdelian")],
         "sixfold_throne": [("leader", "six_kings_lead", "oligarchism"),
@@ -249,14 +249,14 @@ COUNTRIES = {
                          ("name", "MERC", "카즈델 용병 왕국", "Mercenary Kingdom of Kazdel", "카즈델의", "Kazdelian")],
     }),
     "URS": dict(cast=False, chars=[
-        ("junta", "군정 평의회", "Military Junta", [("L", "despotism")], None),
+        ("junta", "군정 평의회", "Military Junta", [("L", "fascism_ideology")], None),
         ("regent", "섭정 귀족", "Noble Regent", [("L", "oligarchism")], None),
         ("democrat", "민주당 대표", "Democratic Party Leader", [("L", "liberalism")], None),
         ("chancellor", "제국 재상", "Imperial Chancellor", [("A", "political_advisor", "tu_union_financier")], None),
         ("okhrana", "비밀경찰 국장", "Head of the Secret Police", [("A", "political_advisor", "tu_spymaster")], None),
         ("chief_of_staff", "총참모장", "Chief of the General Staff", [("A", "high_command", "tu_chief_defender")], None),
     ], start=["chancellor", "okhrana", "chief_of_staff"], hooks={
-        "iron_regime": [("leader", "junta", "despotism"), ("name", "JUNTA", "우르수스 군정", "Ursus Military State", "우르수스의", "Ursine")],
+        "iron_regime": [("leader", "junta", "fascism_ideology"), ("name", "JUNTA", "우르수스 군정", "Ursus Military State", "우르수스의", "Ursine")],
         "noble_regency": [("leader", "regent", "oligarchism"), ("name", "REGENCY", "우르수스 섭정국", "Ursus Regency", "우르수스의", "Ursine")],
         "reform_democratic_party": [("leader", "democrat", "liberalism"),
                                     ("name", "REPUBLIC", "우르수스 공화국", "Ursine Republic", "우르수스의", "Ursine")],
@@ -338,3 +338,12 @@ COSMETIC_COLORS.update({
     "TU_LGM_GUARD": ((40, 70, 130), (80, 110, 170)),
     "TU_YAN_SUI": ((140, 20, 30), (190, 60, 60)),
 })
+
+# 손으로 만든 캐릭터 파일의 지도자 이념 덮어쓰기 (사양서 42: 나라마다 시작 이념이 다르다). build_characters 가 적용한다.
+LEADER_IDEOLOGY = {
+    "TU_URS_emperor": "fascism_ideology",       # 우르수스 제국 (파시즘)
+    "TU_VIC_dukes_council": "conservatism",      # 빅토리아 대공 의회 (민주)
+    "TU_REU_talulah": "marxism",                 # 리유니온 (공산)
+    "TU_KZD_theresis": "fascism_ideology",       # 테레시스 (카즈델 파시즘)
+    "TU_REU_patriot_leader": "marxism",
+}

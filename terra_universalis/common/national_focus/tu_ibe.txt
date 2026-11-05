@@ -385,6 +385,7 @@ focus_tree = {
 			country_event = { id = tu_ibe_ev.29 }
 			# spec 23 hooks
 			recruit_character = TU_IBE_king
+			set_politics = { ruling_party = neutrality elections_allowed = no }
 			promote_character = {
 				character = TU_IBE_king
 				ideology = despotism
@@ -602,6 +603,7 @@ focus_tree = {
 			country_event = { id = tu_ibe_ev.30 }
 			# spec 23 hooks
 			recruit_character = TU_IBE_irene
+			set_politics = { ruling_party = neutrality elections_allowed = no }
 			promote_character = {
 				character = TU_IBE_irene
 				ideology = moderatism

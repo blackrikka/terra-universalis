@@ -184,6 +184,7 @@ focus_tree = {
 			country_event = { id = tu_hig_ev.28 }
 			# spec 23 hooks
 			recruit_character = TU_HIG_shogun
+			set_politics = { ruling_party = neutrality elections_allowed = no }
 			promote_character = {
 				character = TU_HIG_shogun
 				ideology = despotism
@@ -402,6 +403,7 @@ focus_tree = {
 			country_event = { id = tu_hig_ev.29 }
 			# spec 23 hooks
 			recruit_character = TU_HIG_premier
+			set_politics = { ruling_party = neutrality elections_allowed = no }
 			promote_character = {
 				character = TU_HIG_premier
 				ideology = centrism
@@ -594,6 +596,7 @@ focus_tree = {
 			country_event = { id = tu_hig_ev.30 }
 			# spec 23 hooks
 			recruit_character = TU_HIG_emperor
+			set_politics = { ruling_party = neutrality elections_allowed = no }
 			promote_character = {
 				character = TU_HIG_emperor
 				ideology = despotism

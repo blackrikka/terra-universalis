@@ -464,9 +464,10 @@ focus_tree = {
 			add_stability = 0.05
 			# spec 23 hooks
 			recruit_character = TU_KZD_theresis
+			set_politics = { ruling_party = fascism elections_allowed = no }
 			promote_character = {
 				character = TU_KZD_theresis
-				ideology = despotism
+				ideology = fascism_ideology
 			}
 		}
 	}
@@ -1130,6 +1131,7 @@ focus_tree = {
 			add_stability = 0.05
 			# spec 23 hooks
 			recruit_character = TU_KZD_six_kings_lead
+			set_politics = { ruling_party = neutrality elections_allowed = no }
 			promote_character = {
 				character = TU_KZD_six_kings_lead
 				ideology = oligarchism
@@ -1691,6 +1693,7 @@ focus_tree = {
 			army_experience = 15
 			# spec 23 hooks
 			recruit_character = TU_KZD_w_leader
+			set_politics = { ruling_party = neutrality elections_allowed = no }
 			promote_character = {
 				character = TU_KZD_w_leader
 				ideology = despotism

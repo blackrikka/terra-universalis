@@ -24,6 +24,7 @@ country_event = {
 		ai_chance = { factor = 20 }
 		set_country_flag = TU_URS_serpent_route
 		recruit_character = TU_URS_kashchey
+		set_politics = { ruling_party = neutrality elections_allowed = no }
 		promote_character = {
 			character = TU_URS_kashchey
 			ideology = despotism
@@ -60,9 +61,10 @@ country_event = {
 		ai_chance = { factor = 30 }
 		set_country_flag = TU_REU_patriot_route
 		recruit_character = TU_REU_patriot_leader
+		set_politics = { ruling_party = communism elections_allowed = no }
 		promote_character = {
 			character = TU_REU_patriot_leader
-			ideology = despotism
+			ideology = marxism
 		}
 		add_ideas = TU_REU_patriot_oath
 		mark_focus_tree_layout_dirty = yes
@@ -98,6 +100,7 @@ country_event = {
 		ai_chance = { factor = 20 }
 		set_country_flag = TU_KZD_babel_route
 		recruit_character = TU_KZD_babel_assembly
+		set_politics = { ruling_party = neutrality elections_allowed = no }
 		promote_character = {
 			character = TU_KZD_babel_assembly
 			ideology = oligarchism
@@ -137,6 +140,7 @@ country_event = {
 		ai_chance = { factor = 30 }
 		set_country_flag = TU_SAM_forest_route
 		recruit_character = TU_SAM_forest_will
+		set_politics = { ruling_party = neutrality elections_allowed = no }
 		promote_character = {
 			character = TU_SAM_forest_will
 			ideology = despotism
@@ -173,6 +177,7 @@ country_event = {
 		ai_chance = { factor = 30 }
 		set_country_flag = TU_COL_rhine_route
 		recruit_character = TU_COL_kristen
+		set_politics = { ruling_party = neutrality elections_allowed = no }
 		promote_character = {
 			character = TU_COL_kristen
 			ideology = oligarchism

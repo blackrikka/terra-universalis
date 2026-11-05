@@ -329,6 +329,7 @@ focus_tree = {
 			country_event = { id = tu_kje_ev.28 }
 			# spec 23 hooks
 			recruit_character = TU_KJE_silverash
+			set_politics = { ruling_party = neutrality elections_allowed = no }
 			promote_character = {
 				character = TU_KJE_silverash
 				ideology = centrism
@@ -527,6 +528,7 @@ focus_tree = {
 			country_event = { id = tu_kje_ev.29 }
 			# spec 23 hooks
 			recruit_character = TU_KJE_pramanix
+			set_politics = { ruling_party = neutrality elections_allowed = no }
 			promote_character = {
 				character = TU_KJE_pramanix
 				ideology = despotism
@@ -705,6 +707,7 @@ focus_tree = {
 			country_event = { id = tu_kje_ev.30 }
 			# spec 23 hooks
 			recruit_character = TU_KJE_houses
+			set_politics = { ruling_party = neutrality elections_allowed = no }
 			promote_character = {
 				character = TU_KJE_houses
 				ideology = oligarchism

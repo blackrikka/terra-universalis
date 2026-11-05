@@ -528,7 +528,7 @@ def main(argv=None):
             "capital = %d" % capital_of[tag],
             "set_research_slots = 3",
             'set_politics = { ruling_party = %s last_election = "1096.1.1" '
-            'election_frequency = 48 elections_allowed = no }' % party,
+            'election_frequency = 48 elections_allowed = %s }' % (party, "yes" if party == "democratic" else "no"),   # 사양서 42
             "set_popularities = { %s }" % " ".join("%s = %d" % kv for kv in pops.items()),
             "add_ideas = TU_sea_terror",     # 해군 없음 (사양서 18): 조선소·해군 기지 건설 불가
         ]

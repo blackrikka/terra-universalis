@@ -376,9 +376,10 @@ focus_tree = {
 			country_event = { id = tu_bol_ev.28 }
 			# spec 23 hooks
 			recruit_character = TU_BOL_president
+			set_politics = { ruling_party = democratic elections_allowed = yes }
 			promote_character = {
 				character = TU_BOL_president
-				ideology = moderatism
+				ideology = liberalism
 			}
 			set_cosmetic_tag = TU_BOL_REPUBLIC
 		}
@@ -513,6 +514,7 @@ focus_tree = {
 			country_event = { id = tu_bol_ev.29 }
 			# spec 23 hooks
 			recruit_character = TU_BOL_col_governor
+			set_politics = { ruling_party = neutrality elections_allowed = no }
 			promote_character = {
 				character = TU_BOL_col_governor
 				ideology = oligarchism
@@ -547,6 +549,7 @@ focus_tree = {
 			country_event = { id = tu_bol_ev.30 }
 			# spec 23 hooks
 			recruit_character = TU_BOL_vic_governor
+			set_politics = { ruling_party = neutrality elections_allowed = no }
 			promote_character = {
 				character = TU_BOL_vic_governor
 				ideology = despotism

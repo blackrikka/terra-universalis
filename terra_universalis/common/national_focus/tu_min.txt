@@ -281,6 +281,7 @@ focus_tree = {
 			country_event = { id = tu_min_ev.29 }
 			# spec 23 hooks
 			recruit_character = TU_MIN_elder
+			set_politics = { ruling_party = neutrality elections_allowed = no }
 			promote_character = {
 				character = TU_MIN_elder
 				ideology = oligarchism
@@ -714,6 +715,7 @@ focus_tree = {
 			country_event = { id = tu_min_ev.30 }
 			# spec 23 hooks
 			recruit_character = TU_MIN_strategos
+			set_politics = { ruling_party = neutrality elections_allowed = no }
 			promote_character = {
 				character = TU_MIN_strategos
 				ideology = despotism

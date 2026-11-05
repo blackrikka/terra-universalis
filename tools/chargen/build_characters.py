@@ -21,7 +21,7 @@ from pathlib import Path
 
 HERE = Path(__file__).resolve().parent
 sys.path.insert(0, str(HERE))
-from data import COUNTRIES, TRAITS, COSMETIC_COLORS  # noqa: E402
+from data import COUNTRIES, TRAITS, COSMETIC_COLORS, LEADER_IDEOLOGY  # noqa: E402
 from leader_traits import LEADER_TRAITS, ASSIGN  # noqa: E402
 import re  # noqa: E402
 
@@ -84,6 +84,32 @@ def patch_existing_leaders():
         if s != orig:
             f.write_text(s, encoding="utf-8")
     return found
+
+
+def patch_leader_ideology():
+    """사양서 42: LEADER_IDEOLOGY 의 캐릭터(손으로 만든 파일 포함) country_leader 이념을 바꾼다."""
+    done = set()
+    for f in (MOD / "common" / "characters").glob("*.txt"):
+        s = f.read_text(encoding="utf-8-sig")
+        orig = s
+        for cid_, ide in LEADER_IDEOLOGY.items():
+            m = re.search(r"\n\t%s = \{" % re.escape(cid_), s)
+            if not m:
+                continue
+            i = s.find("country_leader", m.end())
+            j = s.index("{", i)
+            d, k = 0, j
+            while True:
+                d += {"{": 1, "}": -1}.get(s[k], 0)
+                if d == 0:
+                    break
+                k += 1
+            s = s[:j] + re.sub(r"ideology\s*=\s*\w+", "ideology = %s" % ide, s[j:k], count=1) + s[k:]
+            done.add(cid_)
+        if s != orig:
+            f.write_text(s, encoding="utf-8")
+    missing = sorted(set(LEADER_IDEOLOGY) - done)
+    assert not missing, "leader ideology: character not found %s" % missing
 
 
 def apply_cast_portraits():
@@ -199,6 +225,7 @@ def main():
     lt.append("}")
     (cl / "tu_leader_traits.txt").write_text("\n".join(lt) + "\n", encoding="utf-8")
     patched = patch_existing_leaders()
+    patch_leader_ideology()
     nport = apply_cast_portraits()
 
     for lang, items in (("korean", ko), ("english", en)):

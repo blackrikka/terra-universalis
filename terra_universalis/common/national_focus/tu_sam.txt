@@ -203,6 +203,7 @@ focus_tree = {
 			country_event = { id = tu_sam_ev.28 }
 			# spec 23 hooks
 			recruit_character = TU_SAM_shaman
+			set_politics = { ruling_party = neutrality elections_allowed = no }
 			promote_character = {
 				character = TU_SAM_shaman
 				ideology = despotism
@@ -357,6 +358,7 @@ focus_tree = {
 			country_event = { id = tu_sam_ev.29 }
 			# spec 23 hooks
 			recruit_character = TU_SAM_chieftain
+			set_politics = { ruling_party = neutrality elections_allowed = no }
 			promote_character = {
 				character = TU_SAM_chieftain
 				ideology = oligarchism
@@ -514,6 +516,7 @@ focus_tree = {
 			country_event = { id = tu_sam_ev.30 }
 			# spec 23 hooks
 			recruit_character = TU_SAM_envoy
+			set_politics = { ruling_party = neutrality elections_allowed = no }
 			promote_character = {
 				character = TU_SAM_envoy
 				ideology = centrism

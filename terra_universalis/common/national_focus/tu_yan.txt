@@ -1981,7 +1981,7 @@ focus_tree = {
 		id = TU_YAN_p1_ruin_devour
 		prerequisite = { focus = TU_YAN_p1_ruin_awaken }
 		icon = GFX_goal_generic_major_war
-		x = 49
+		x = 51
 		y = 7
 		cost = 10
 
@@ -6205,10 +6205,10 @@ focus_tree = {
 
 	focus = {
 		id = TU_YAN_sui_dream_names
-		prerequisite = { focus = TU_YAN_p1_ruin_awaken }
+		prerequisite = { focus = TU_YAN_p1_ruin_devour }
 		icon = GFX_goal_generic_secret_weapon
 		x = 51
-		y = 7
+		y = 8
 		cost = 10
 
 		search_filters = { FOCUS_FILTER_POLITICAL }
@@ -6235,7 +6235,7 @@ focus_tree = {
 		prerequisite = { focus = TU_YAN_sui_dream_names }
 		icon = GFX_goal_generic_secret_weapon
 		x = 50
-		y = 8
+		y = 9
 		cost = 10
 
 		search_filters = { FOCUS_FILTER_POLITICAL }
@@ -6261,7 +6261,7 @@ focus_tree = {
 		prerequisite = { focus = TU_YAN_sui_dream_names }
 		icon = GFX_goal_generic_secret_weapon
 		x = 52
-		y = 8
+		y = 9
 		cost = 10
 
 		search_filters = { FOCUS_FILTER_POLITICAL }
@@ -6284,7 +6284,7 @@ focus_tree = {
 		prerequisite = { focus = TU_YAN_sui_dream_mountains }
 		icon = GFX_goal_generic_secret_weapon
 		x = 50
-		y = 9
+		y = 10
 		cost = 10
 
 		search_filters = { FOCUS_FILTER_POLITICAL }
@@ -6308,7 +6308,7 @@ focus_tree = {
 		prerequisite = { focus = TU_YAN_sui_dream_dragon_court }
 		icon = GFX_goal_generic_secret_weapon
 		x = 52
-		y = 9
+		y = 10
 		cost = 10
 
 		search_filters = { FOCUS_FILTER_POLITICAL }
@@ -6332,7 +6332,7 @@ focus_tree = {
 		prerequisite = { focus = TU_YAN_sui_dream_arts }
 		icon = GFX_goal_generic_secret_weapon
 		x = 50
-		y = 10
+		y = 11
 		cost = 20
 
 		search_filters = { FOCUS_FILTER_POLITICAL }

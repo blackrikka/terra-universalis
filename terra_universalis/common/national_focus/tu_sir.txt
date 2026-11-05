@@ -339,6 +339,7 @@ focus_tree = {
 			country_event = { id = tu_sir_ev.28 }
 			# spec 23 hooks
 			recruit_character = TU_SIR_family_head
+			set_politics = { ruling_party = neutrality elections_allowed = no }
 			promote_character = {
 				character = TU_SIR_family_head
 				ideology = oligarchism
@@ -582,6 +583,7 @@ focus_tree = {
 			country_event = { id = tu_sir_ev.29 }
 			# spec 23 hooks
 			recruit_character = TU_SIR_penance
+			set_politics = { ruling_party = neutrality elections_allowed = no }
 			promote_character = {
 				character = TU_SIR_penance
 				ideology = moderatism
@@ -773,6 +775,7 @@ focus_tree = {
 			country_event = { id = tu_sir_ev.30 }
 			# spec 23 hooks
 			recruit_character = TU_SIR_wolf_heir
+			set_politics = { ruling_party = neutrality elections_allowed = no }
 			promote_character = {
 				character = TU_SIR_wolf_heir
 				ideology = despotism

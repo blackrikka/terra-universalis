@@ -1,7 +1,7 @@
 capital = 24
 set_research_slots = 3
-set_politics = { ruling_party = neutrality last_election = "1096.1.1" election_frequency = 48 elections_allowed = no }
-set_popularities = { neutrality = 100 }
+set_politics = { ruling_party = communism last_election = "1096.1.1" election_frequency = 48 elections_allowed = no }
+set_popularities = { communism = 80 fascism = 10 neutrality = 10 }
 add_ideas = TU_sea_terror
 # REU: appended to history/countries/REU - Reunion.txt by build_countries.py.
 # REU is dynamic: it has no states at start (state 24 belongs to URS). The state, units and

@@ -463,6 +463,7 @@ country_event = {
 			factor = 40
 		}
 		if = { limit = { NOT = { has_character = TU_IBE_skadi } } recruit_character = TU_IBE_skadi }
+		set_politics = { ruling_party = neutrality elections_allowed = no }
 		promote_character = {
 			character = TU_IBE_skadi
 			ideology = despotism
@@ -478,6 +479,7 @@ country_event = {
 			factor = 30
 		}
 		if = { limit = { NOT = { has_character = TU_IBE_gladiia } } recruit_character = TU_IBE_gladiia }
+		set_politics = { ruling_party = neutrality elections_allowed = no }
 		promote_character = {
 			character = TU_IBE_gladiia
 			ideology = despotism
@@ -493,6 +495,7 @@ country_event = {
 			factor = 15
 		}
 		if = { limit = { NOT = { has_character = TU_IBE_specter } } recruit_character = TU_IBE_specter }
+		set_politics = { ruling_party = neutrality elections_allowed = no }
 		promote_character = {
 			character = TU_IBE_specter
 			ideology = despotism
@@ -507,6 +510,7 @@ country_event = {
 			factor = 15
 		}
 		if = { limit = { NOT = { has_character = TU_IBE_ulpianus } } recruit_character = TU_IBE_ulpianus }
+		set_politics = { ruling_party = neutrality elections_allowed = no }
 		promote_character = {
 			character = TU_IBE_ulpianus
 			ideology = despotism
@@ -569,6 +573,7 @@ country_event = {
 		}
 		set_country_flag = TU_IBE_ishar_route
 		recruit_character = TU_IBE_ishar_mla
+		set_politics = { ruling_party = neutrality elections_allowed = no }
 		promote_character = {
 			character = TU_IBE_ishar_mla
 			ideology = despotism

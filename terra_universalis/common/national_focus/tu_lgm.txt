@@ -202,6 +202,7 @@ focus_tree = {
 		completion_reward = {
 			country_event = { id = tu_lgm_ev.3 }
 			recruit_character = TU_LGM_chen_leader
+			set_politics = { ruling_party = neutrality elections_allowed = no }
 			promote_character = {
 				character = TU_LGM_chen_leader
 				ideology = despotism
