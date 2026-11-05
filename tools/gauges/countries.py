@@ -5,7 +5,8 @@
   색: gold(보통) green(좋음) red(나쁨) blue(중립)
   kind="number": 막대 없이 숫자만 / max=: clamp_variable 이 없을 때 최댓값 / cap=: 상한이 변수일 때
   value=(ko, en): 값 글자를 바꿀 때. {v} 자리에 변수값이 들어간다
-  extra=(ko, en): 툴팁 값 줄 아래에 넣는 줄 (변수 표시 가능)
+  full=True: 작은 칸 수치도 한 줄 전체를 쓴다
+  layers=[(색, 개수 변수)…]: 뒤쪽 칸부터 그 개수만큼 다른 색으로 덮는다 (값이 칸 수인 수치만)
 설명의 수치·조건은 기존 디시전 분류 설명에 적힌 것만 옮겼다. 규칙이 바뀌면 여기도 고칠 것.
 §Y…§! 노랑, §G…§! 초록, §R…§! 빨강, §g…§! 회색
 """
@@ -50,10 +51,12 @@ COUNTRIES = [
         G("TU_IBE_threat", "바다의 위협", "Threat from the Sea", "red",
           tip=("심연에서 올라오는 것들의 기척입니다. 매달 오르며, 온전한 등대가 많을수록 덜 오릅니다. §Y70§! 이상이면 해안 마을이 침식됩니다.",
                "Signs of what rises from the deep. It grows every month, more slowly with each intact lighthouse. At §Y70§! or more, coastal towns are eroded.")),
-        G("TU_IBE_lighthouses", "되살린 등대", "Lighthouses Rekindled",
-          extra=("그중 손상된 등대: [?TU_IBE_lh_damaged|Y0]", "Damaged: [?TU_IBE_lh_damaged|Y0]"),
-          tip=("다시 불을 밝힌 해안의 등대입니다. 온전한 등대 하나마다 바다의 위협이 덜 오릅니다. 손상된 등대는 효과가 없습니다.",
-               "Coastal lighthouses lit once more. Each intact one slows the rise of the threat from the sea. Damaged lighthouses have no effect.")),
+        G("TU_IBE_lighthouses", "해안의 등대", "Coastal Lighthouses", full=True,
+          value=("불 밝힌 등대 [?TU_IBE_lighthouses|Y0]기 · §O꺼져 가는 등대 [?TU_IBE_lh_damaged|0]기§!",
+                 "[?TU_IBE_lighthouses|Y0] lit · §O[?TU_IBE_lh_damaged|0] failing§!"),
+          layers=[("orange", "TU_IBE_lh_damaged"), ("red", "TU_IBE_lh_severe")],
+          tip=("다시 불을 밝힌 해안의 등대입니다. 온전한 등대 하나마다 바다의 위협이 덜 오릅니다.\\n칸 색: §Y금색§! 온전 · §O주황§! 손상 1단계 · §R빨강§! 손상 2단계. 손상된 등대는 위협을 막지 못합니다.",
+               "Coastal lighthouses lit once more. Each intact one slows the rise of the threat from the sea.\\nCell colours: §Ygold§! intact, §Oorange§! damage stage 1, §Rred§! damage stage 2. Damaged lighthouses hold nothing back.")),
     ]),
     ("KAZ", [
         G("TU_KAZ_fame", "기사 명성", "Knightly Fame",

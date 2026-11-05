@@ -75,10 +75,10 @@ C.history += ["set_variable = { TU_IBE_threat = 40 }", "set_variable = { TU_IBE_
               "add_ideas = { TU_IBE_great_silence TU_IBE_fear_of_the_sea }"]
 C.effects.append("""TU_IBE_monthly = {
 	TU_IBE_lighthouse_monthly = yes
-	add_to_variable = { TU_IBE_threat = 2 }
+	add_to_variable = { TU_IBE_threat = 4 }
 	set_temp_variable = { tu_ibe_lh = TU_IBE_lighthouses }
 	subtract_from_temp_variable = { tu_ibe_lh = TU_IBE_lh_damaged }
-	multiply_temp_variable = { tu_ibe_lh = -0.5 }
+	multiply_temp_variable = { tu_ibe_lh = -1 }
 	add_to_variable = { TU_IBE_threat = tu_ibe_lh }
 	clamp_variable = { var = TU_IBE_threat min = 0 max = 100 }
 	if = {
@@ -86,7 +86,6 @@ C.effects.append("""TU_IBE_monthly = {
 		set_variable = { TU_IBE_threat = 0 }
 	}
 }""")
-C.on_actions.append("on_daily_IBE = {\n\teffect = {\n\t\tTU_IBE_lighthouse_daily = yes\n\t}\n}")
 C.on_actions.append("""on_monthly = {
 	effect = {
 		if = {
@@ -120,7 +119,7 @@ f("inquisition_reform", "심판소 재편", "Inquisition Court Reform", pre=["ro
 f("inquisitor_academy", "심판관 학교", "Inquisitor Academy", pre=["inquisition_reform"])
 f("heresy_files", "이단 기록", "Heresy Files Archive", pre=["inquisition_reform"], reward=[INQ("0.03")])
 f("inquisitor_guard", "심판관 근위대", "Inquisitor Guard", pre=["inquisitor_academy"])
-f("purge_cults", "심해 숭배 단속", "Purge the Deep-Sea Cults", pre=["heresy_files"], theme=False, reward=[INQ("0.05"), THR(-10), EV(21, 10)])
+f("purge_cults", "심해 숭배 단속", "Purge the Deep-Sea Cults", pre=["heresy_files"], theme=False, reward=[INQ("0.05"), THR(-5), EV(21, 10)])
 f("faith_laws", "신앙 법", "Faith Laws", pre=["purge_cults"], me=["tolerance"], reward=[INQ("0.05")])
 f("tolerance", "관용령", "Edict of Tolerance", pre=["purge_cults"], me=["faith_laws"], reward=[CROWN("0.05")])
 f("inquisitor_state", "심판관의 나라", "State of the Inquisitors", pre=[["faith_laws", "tolerance"], "inquisitor_guard"],
@@ -130,7 +129,7 @@ f("inquisitor_state", "심판관의 나라", "State of the Inquisitors", pre=[["
 f("eternal_vigil", "영원한 경계", "Eternal Vigil Watch", pre=["inquisitor_state"])
 f("inquisition_navy", "심판소 함대", "Inquisition Fleet", pre=["inquisitor_state"])
 f("judgement_day", "심판의 날", "Day of Judgement Campaign", pre=["eternal_vigil", "inquisition_navy"], theme=False,
-  reward=[THR(-20), "add_war_support = 0.1"])
+  reward=[THR(-10), "add_war_support = 0.1"])
 
 # B. 왕관
 f("crown_council", "왕실 회의", "Crown Council", pre=["root"], reward=[CROWN("0.05")])
@@ -149,16 +148,16 @@ f("golden_age", "새로운 황금기", "A New Golden Age", pre=["royal_reconstru
   reward=["add_political_power = 100", "add_stability = 0.05"])
 
 # C. 바다의 위협
-f("coastal_watch", "해안 감시", "Coastal Watch", pre=["root"], theme=False, reward=[FLAG("coast"), THR(-5)],
+f("coastal_watch", "해안 감시", "Coastal Watch", pre=["root"], theme=False, reward=[FLAG("coast"), THR(-3)],
   desc=("'해안' 디시전이 열린다 (등대 복원, 해안 순찰, 정화 작전).", "Unlocks the Coast decisions (lighthouses, patrols, purification)."))
-f("sea_studies", "바다의 위협 연구", "Study of the Sea Threat", pre=["coastal_watch"], reward=[THR(-5)])
+f("sea_studies", "바다의 위협 연구", "Study of the Sea Threat", pre=["coastal_watch"], reward=[THR(-3)])
 f("tide_charts", "조류 기록", "Tide Charts Records", pre=["coastal_watch"])
 f("abyssal_rumours", "어비셜 헌터스의 소문", "Rumours of the Abyssal Hunters", pre=["sea_studies"], theme=False, reward=[EV(23, 15)])
 f("coastal_forts", "해안 요새", "Coastal Fortress Line", pre=["tide_charts"], me=["fleet_rebuild"])
 f("fleet_rebuild", "함대 재건", "Fleet Reconstruction", pre=["tide_charts"], me=["coastal_forts"])
 f("watchful_coast", "깨어 있는 해안", "The Watchful Coast", pre=[["coastal_forts", "fleet_rebuild"]], theme=False,
-  reward=["swap_ideas = { remove_idea = TU_IBE_fear_of_the_sea add_idea = TU_IBE_watchful_coast }", THR(-10)])
-f("deep_sea_plan", "심해 대비 계획", "Deep Sea Defence Plan", pre=["watchful_coast"], reward=[THR(-5)])
+  reward=["swap_ideas = { remove_idea = TU_IBE_fear_of_the_sea add_idea = TU_IBE_watchful_coast }", THR(-5)])
+f("deep_sea_plan", "심해 대비 계획", "Deep Sea Defence Plan", pre=["watchful_coast"], reward=[THR(-3)])
 f("sea_reconciliation", "바다와의 화해", "Reconciliation with the Sea", pre=["abyssal_rumours", "deep_sea_plan"],
   me=["inquisitor_state", "crown_restored"], cost=15, theme=False, available=[AT_MOST("threat", 20), HAS("hunters_met")],
   reward=[FLAG("path_sea"), "add_ideas = TU_IBE_sea_reconciliation", "remove_ideas = TU_IBE_great_silence", EV(30)],
@@ -177,7 +176,7 @@ f("elite_inquisitors", "정예 심판관", "Elite Inquisitor Training", pre=[["m
   reward=["add_ideas = TU_IBE_inquisitor_corps", "army_experience = 40"])
 f("rifle_workshops", "소총 공방", "Rifle Workshops", pre=["mountain_infantry"])
 f("harpoon_guns", "작살포", "Harpoon Guns Artillery", pre=["rifle_workshops"])
-f("anti_creature", "대괴물 전술", "Anti-Creature Tactics", pre=["harpoon_guns"], reward=[THR(-5)])
+f("anti_creature", "대괴물 전술", "Anti-Creature Tactics", pre=["harpoon_guns"], reward=[THR(-3)])
 f("cavalry_patrols", "기병 순찰", "Cavalry Patrols", pre=["bayonet_drill"])
 f("motor_pool", "차량 정비", "Motor Pool Motorised", pre=["cavalry_patrols"])
 f("officer_corps", "장교단", "Officer Corps Training", pre=["elite_inquisitors"])
@@ -257,7 +256,7 @@ cat_coast = C.category("coast", "해안", "The Coast",
 # 주 대상 디시전: 디시전 탭을 열면 지도에서 해당 주 위에 버튼이 뜬다. 주 깃발:
 #   TU_IBE_lighthouse 등대 있음 / TU_IBE_lh_building 복원 공사 중 / TU_IBE_lh_damaged 손상 / TU_IBE_lh_severe 손상 2단계
 #   TU_IBE_lh_repairing 보수 중 / TU_IBE_lh_fort_building 요새 공사 중
-# 주 변수: TU_IBE_lh_risk 월간 손상 확률(%) / TU_IBE_lh_fort 해안 요새 단계(0~3) / TU_IBE_lh_days 다음 악화까지 남은 일수
+# 주 변수: TU_IBE_lh_risk 월간 손상 확률(%) / TU_IBE_lh_fort 해안 요새 단계(0~3)
 # 손상 확률 = 위협/4 x (1 - 0.25 x 요새) x 수비대 병력 보정 (LH_GARRISON), 최소 LH_MIN_RISK. 이샤믈라 루트는 0.
 LH_FORT_MAX = 3
 LH_STAGE_DAYS = 45          # 손상 1단계 -> 2단계 -> 붕괴 사이의 일수 (사양서 40)
@@ -295,15 +294,14 @@ def coastal_states():
     return dict(sorted(out.items()))
 
 
-# 수비대: 그 주에 있는 ROOT(이베리아) 사단의 실제 병력 (army_manpower_in_state 는 주 번호를 받으므로 해안 주마다 펼친다).
+# 수비대: 그 주에 있는 ROOT(이베리아) 사단의 실제 병력 (army_manpower_in_state, 현재 주를 PREV 로 넘긴다).
 # 병력이 깎인 사단은 적게 세므로, 습격 피해를 보충할 때까지 방어 효과도 약해진다. 주마다 배치된 장비를 세는 조건은 없어 장비는 보지 않는다.
 LH_GARRISON = [(40000, 0.45), (20000, 0.6), (10000, 0.8)]     # (병력 이상, 손상 확률 배율) 큰 것부터
 LH_PURGE_MP = 30000
 COAST = coastal_states()
+# 현재 주(THIS)의 병력을 본다: 주마다 조건을 나열하지 않고 PREV 로 자기 주를 넘긴다
 for mp in sorted({m for m, _ in LH_GARRISON} | {LH_PURGE_MP}):
-    C.triggers.append("TU_IBE_garrison_%dk = {\n\tOR = {\n%s\n\t}\n}" % (mp // 1000, "\n".join(
-        "\t\tAND = { state = %d ROOT = { army_manpower_in_state = { state = %d amount > %d } } }" % (s, s, mp - 1)
-        for s in COAST)))
+    C.triggers.append("TU_IBE_garrison_%dk = {\n\tROOT = { army_manpower_in_state = { state = PREV amount > %d } }\n}" % (mp // 1000, mp - 1))
 # 습격 피해: 그 주의 사단 조직력 -30%, 내구도(병력·장비) -5%. 사단이 회복하면서 국가 인력·장비를 끌어다 채운다
 C.effects.append("TU_IBE_raid_damage = {\n%s\n}" % "\n".join(
     "\tif = {\n\t\tlimit = { state = %d }\n\t\tROOT = { damage_units = { state = %d org_damage = 0.3 str_damage = 0.05 ratio = yes army = yes } }\n\t}"
@@ -346,23 +344,34 @@ C.effects.append("""TU_IBE_lh_update_risk = {
     "\t%sif = {\n\t\tlimit = { TU_IBE_garrison_%dk = yes }\n\t\tmultiply_variable = { TU_IBE_lh_risk = %s }\n\t}"
     % ("else_" if i else "", mp // 1000, f) for i, (mp, f) in enumerate(LH_GARRISON)), LH_MIN_RISK, LH_MIN_RISK))
 C.effects.append("""TU_IBE_lighthouse_monthly = {
-	set_variable = { TU_IBE_lighthouses = 0 }
-	set_variable = { TU_IBE_lh_damaged = 0 }
+	TU_IBE_lh_recount = yes
 	every_owned_state = {
 		limit = { has_state_flag = TU_IBE_lighthouse }
-		ROOT = { add_to_variable = { TU_IBE_lighthouses = 1 } }
 		TU_IBE_lh_update_risk = yes
 		if = {
-			limit = { has_state_flag = TU_IBE_lh_damaged }
-			ROOT = { add_to_variable = { TU_IBE_lh_damaged = 1 } }
-		}
-		else_if = {
-			limit = { NOT = { has_state_flag = TU_IBE_lh_repairing } }
+			limit = {
+				NOT = { has_state_flag = TU_IBE_lh_damaged }
+				NOT = { has_state_flag = TU_IBE_lh_repairing }
+			}
 			set_temp_variable_to_random = { var = tu_ibe_roll min = 0 max = 100 }
 			if = {
 				limit = { check_variable = { tu_ibe_roll < TU_IBE_lh_risk } }
 				TU_IBE_lh_damage = yes
-				ROOT = { add_to_variable = { TU_IBE_lh_damaged = 1 } }
+			}
+		}
+		# 주를 되찾은 등대의 미션을 다시 켠다. 이미 켜진 미션은 건드리지 않는다 (activate_targeted_decision 문서)
+		if = {
+			limit = {
+				has_state_flag = TU_IBE_lh_damaged
+				NOT = { has_state_flag = TU_IBE_lh_repairing }
+				is_owned_and_controlled_by = ROOT
+			}
+			if = {
+				limit = { has_state_flag = TU_IBE_lh_severe }
+				ROOT = { activate_targeted_decision = { target = PREV decision = TU_IBE_lh_stage2 } }
+			}
+			else = {
+				ROOT = { activate_targeted_decision = { target = PREV decision = TU_IBE_lh_stage1 } }
 			}
 		}
 		# 해안 요새 파손: 요새가 있으면 손상 확률과 같은 확률로 해안 프로빈스 하나의 요새에 피해
@@ -392,20 +401,57 @@ C.effects.append("""TU_IBE_lighthouse_monthly = {
 		}
 	}
 }""" % LH_RAID_DAMAGED_MULT)
-# 손상 진행: 대상 지정 미션 대신 주 변수로 직접 센다 (사양서 40). 미션은 타이머가 처음으로 되돌아가는 일이 있었다
+# 손상 진행은 미션이 맡는다 (사양서 43): 1단계 미션이 끝나면 2단계, 2단계 미션이 끝나면 붕괴.
+# 패널의 숫자는 상태가 바뀔 때 직접 더하고 뺀다. 매달 한 번만 주를 돌며 다시 맞춘다.
+# 디시전·미션 효과에서 주를 돌면 hidden_effect 안이어도 툴팁에 주 목록이 나온 일이 있어 쓰지 않는다
+C.effects.append("""TU_IBE_lh_recount = {
+	hidden_effect = {
+		set_variable = { TU_IBE_lighthouses = 0 }
+		set_variable = { TU_IBE_lh_damaged = 0 }
+		set_variable = { TU_IBE_lh_severe = 0 }
+		every_owned_state = {
+			limit = { has_state_flag = TU_IBE_lighthouse }
+			ROOT = { add_to_variable = { TU_IBE_lighthouses = 1 } }
+			if = {
+				limit = { has_state_flag = TU_IBE_lh_damaged }
+				ROOT = { add_to_variable = { TU_IBE_lh_damaged = 1 } }
+			}
+			if = {
+				limit = { has_state_flag = TU_IBE_lh_severe }
+				ROOT = { add_to_variable = { TU_IBE_lh_severe = 1 } }
+			}
+		}
+	}
+}""")
+# 손상이 사라질 때 나라 변수를 줄인다 (FROM 범위에서 깃발을 지우기 전에 부른다)
+C.effects.append("""TU_IBE_lh_clear_damage = {
+	if = {
+		limit = { has_state_flag = TU_IBE_lh_severe }
+		ROOT = { add_to_variable = { TU_IBE_lh_severe = -1 } }
+	}
+	ROOT = { add_to_variable = { TU_IBE_lh_damaged = -1 } }
+	clr_state_flag = TU_IBE_lh_damaged
+	clr_state_flag = TU_IBE_lh_severe
+}""")
 C.effects.append("""TU_IBE_lh_damage = {
 	set_state_flag = TU_IBE_lh_damaged
 	clr_state_flag = TU_IBE_lh_severe
-	set_variable = { TU_IBE_lh_days = %d }
 	save_event_target_as = tu_ibe_lh_state
-	ROOT = { country_event = { id = tu_ibe_ev.50 } }
-}""" % LH_STAGE_DAYS)
+	ROOT = {
+		activate_targeted_decision = { target = PREV decision = TU_IBE_lh_stage1 }
+		add_to_variable = { TU_IBE_lh_damaged = 1 }
+		country_event = { id = tu_ibe_ev.50 }
+	}
+}""")
 C.effects.append("""TU_IBE_lh_worsen = {
 	set_state_flag = TU_IBE_lh_severe
-	set_variable = { TU_IBE_lh_days = %d }
 	save_event_target_as = tu_ibe_lh_state
-	ROOT = { country_event = { id = tu_ibe_ev.53 } }
-}""" % LH_STAGE_DAYS)
+	ROOT = {
+		activate_targeted_decision = { target = PREV decision = TU_IBE_lh_stage2 }
+		add_to_variable = { TU_IBE_lh_severe = 1 }
+		country_event = { id = tu_ibe_ev.53 }
+	}
+}""")
 C.effects.append("""TU_IBE_lh_collapse = {
 	clr_state_flag = TU_IBE_lighthouse
 	clr_state_flag = TU_IBE_lh_damaged
@@ -415,33 +461,11 @@ C.effects.append("""TU_IBE_lh_collapse = {
 		%s
 		%s
 		%s
+		add_to_variable = { TU_IBE_lh_damaged = -1 }
+		add_to_variable = { TU_IBE_lh_severe = -1 }
 		country_event = { id = tu_ibe_ev.51 }
 	}
 }""" % (V("lighthouses", -1), THR(5), FLAG("lighthouse_fell")))
-# 하루마다: 손상된 등대의 남은 일수를 줄인다. 보수 중이거나 빼앗긴 등대는 멈춘다
-C.effects.append("""TU_IBE_lighthouse_daily = {
-	if = {
-		limit = { check_variable = { TU_IBE_lh_damaged > 0 } }
-		every_owned_state = {
-			limit = {
-				has_state_flag = TU_IBE_lh_damaged
-				NOT = { has_state_flag = TU_IBE_lh_repairing }
-				is_owned_and_controlled_by = ROOT
-			}
-			subtract_from_variable = { TU_IBE_lh_days = 1 }
-			if = {
-				limit = { check_variable = { TU_IBE_lh_days < 1 } }
-				if = {
-					limit = { has_state_flag = TU_IBE_lh_severe }
-					TU_IBE_lh_collapse = yes
-				}
-				else = {
-					TU_IBE_lh_worsen = yes
-				}
-			}
-		}
-	}
-}""")
 
 C.d(cat_coast, "restore_lighthouse", "등대 복원", "Restore a Lighthouse",
     ["FROM = { set_state_flag = { flag = TU_IBE_lh_building days = %d value = 1 } }" % (LH_RESTORE_DAYS + 10),
@@ -505,35 +529,55 @@ C.d(cat_coast, "lh_fort", "[FROM.GetName] 등대 해안 요새 보강", "Fortify
           "which are repaired through construction."),
     icon="GFX_decision_generic_fortification", ai=2)
 
-# 손상 표시: 손상된 등대마다 단계와 남은 일수를 보여 준다 (누를 수 없음). 보수 중에는 보수 디시전이 대신 보인다
+# 손상 미션: 단계마다 45일. 시간이 다 되면 다음 단계로 간다. 보수를 시작하거나 주를 잃으면 취소된다
+# 깃발 번역: 조건 툴팁에서 깃발 이름 대신 나온다
+C.loc("TU_IBE_lighthouse", "복원된 등대", "Restored Lighthouse")
+C.loc("TU_IBE_lh_damaged", "손상된 등대", "Damaged Lighthouse")
+C.loc("TU_IBE_lh_severe", "손상 2단계", "Damage Stage 2")
+C.loc("TU_IBE_lh_repairing", "등대 보수 중", "Lighthouse Under Repair")
+C.loc("TU_IBE_lh_building", "등대 복원 공사 중", "Lighthouse Under Restoration")
+C.loc("TU_IBE_lh_fort_building", "해안 요새 공사 중", "Coastal Fort Under Construction")
+C.loc("TU_IBE_lh_worsen_tt", "이 등대가 §R손상 2단계§!로 악화됩니다.\n'등대 손상 악화' 사건 발생",
+      "This lighthouse worsens to §Rdamage stage 2§!.\n'Lighthouse Damage Worsens' event occurs")
+C.loc("TU_IBE_lh_collapse_tt", "이 등대가 무너집니다: 등대 §R-1§!, 바다의 위협 §R+5§!\n'등대 붕괴' 사건 발생",
+      "This lighthouse collapses: lighthouses §R-1§!, sea threat §R+5§!\n'Lighthouse Collapsed' event occurs")
 LH_STAGES = [
-    ("lh_stage1", "§Y손상 1단계§!", "§YDamage Stage 1§!", "NOT = { has_state_flag = TU_IBE_lh_severe }",
+    ("lh_stage1", "§O손상 1단계§!", "§ODamage Stage 1§!", "NOT = { has_state_flag = TU_IBE_lh_severe }", "TU_IBE_lh_worsen",
      "악화", "worsens", "대응하지 않으면 손상 2단계로 악화된다.", "Without a response it worsens to stage 2."),
-    ("lh_stage2", "§R손상 2단계§!", "§RDamage Stage 2§!", "has_state_flag = TU_IBE_lh_severe",
+    ("lh_stage2", "§R손상 2단계§!", "§RDamage Stage 2§!", "has_state_flag = TU_IBE_lh_severe", "TU_IBE_lh_collapse",
      "붕괴", "collapses", "대응하지 않으면 등대가 무너진다 (등대 -1, 위협 +5).", "Without a response the lighthouse collapses (lighthouse -1, threat +5)."),
 ]
-for sid, ko, en, cond, verb_ko, verb_en, why_ko, why_en in LH_STAGES:
-    C.d(cat_coast, sid, "[FROM.GetName] 등대 %s — [?FROM.TU_IBE_lh_days|0]일 뒤 %s" % (ko, verb_ko),
-        "[FROM.GetName] Lighthouse %s — %s in [?FROM.TU_IBE_lh_days|0] days" % (en, verb_en), [], cost=0, once=False, state_target=True,
-        target=["is_owned_and_controlled_by = ROOT", "has_state_flag = TU_IBE_lighthouse", "has_state_flag = TU_IBE_lh_damaged",
+for sid, ko, en, cond, after, verb_ko, verb_en, why_ko, why_en in LH_STAGES:
+    C.d(cat_coast, sid, "[FROM.GetName] 등대 %s: %s까지" % (ko, verb_ko),
+        "[FROM.GetName] Lighthouse %s: until it %s" % (en, verb_en), [], cost=None, once=True, state_target=True,
+        # fire_only_once = yes 가 꼭 있어야 한다. no 면 취소되거나 끝난 미션이 저절로 다시 켜져 45일에서 깜빡인다.
+        # activate_targeted_decision 은 fire_only_once 를 무시하므로 다시 손상되면 효과로 또 켤 수 있다.
+        # 대상 조건은 취소 조건의 정반대로 쓴다
+        target=["is_owned_and_controlled_by = ROOT", "has_state_flag = TU_IBE_lh_damaged",
                 "NOT = { has_state_flag = TU_IBE_lh_repairing }", cond],
-        available=["always = no"],
+        # 조건은 그대로 보여 준다. 깃발 이름은 아래 번역 키로 읽을 수 있게 한다
+        mission={"days": LH_STAGE_DAYS,
+                 "cancel": ["FROM = {\n\tOR = {\n\t\tNOT = { is_owned_and_controlled_by = ROOT }\n\t\tNOT = { has_state_flag = TU_IBE_lh_damaged }\n"
+                            "\t\thas_state_flag = TU_IBE_lh_repairing\n\t\tNOT = { %s }\n\t}\n}" % cond],
+                 "timeout": ["custom_effect_tooltip = %s_tt" % after,
+                             "hidden_effect = {\n\tFROM = { %s = yes }\n}" % after]},
         desc=("시테러에게 손상된 등대. 손상된 등대는 바다의 위협을 막지 못한다. %s 보수하거나 수비대로 토벌하면 멈춘다." % why_ko,
               "A lighthouse damaged by Sea Terrors. It does not hold back the sea threat. %s Repairing it or clearing it with a garrison stops this." % why_en),
         icon="GFX_decision_generic_civil_support", ai=0)
 C.d(cat_coast, "lh_repair", "[FROM.GetName] 등대 보수", "Repair the [FROM.GetName] Lighthouse",
     ["FROM = { set_state_flag = TU_IBE_lh_repairing }"], cost=25, once=False, state_target=True, days_remove=30,
     modifier={"civilian_factory_use": 2},
-    remove_effect=["FROM = {\n\tclr_state_flag = TU_IBE_lh_damaged\n\tclr_state_flag = TU_IBE_lh_severe\n\tclr_state_flag = TU_IBE_lh_repairing\n}"],
+    remove_effect=["FROM = {\n\tTU_IBE_lh_clear_damage = yes\n\tclr_state_flag = TU_IBE_lh_repairing\n}"],
     target=["is_owned_and_controlled_by = ROOT", "has_state_flag = TU_IBE_lh_damaged"],     # 손상 깃발은 보수가 끝날 때 지운다
     available=["FROM = { NOT = { has_state_flag = TU_IBE_lh_repairing } }"],
     desc=("손상된 등대를 고친다: 정치력 25, 30일 동안 민간 공장 2개 사용. 보수를 시작하면 악화가 멈춘다.",
           "Fix the damaged lighthouse: 25 political power, 2 civilian factories for 30 days. Starting repairs stops it worsening."),
     icon="GFX_decision_generic_construction", ai=10)
+C.loc("TU_IBE_lh_purge_tt", "이 주에 배치된 인력 §Y30,000§! 이상", "§Y30,000§! or more manpower deployed in this state")
 C.d(cat_coast, "lh_purge", "[FROM.GetName] 해안 토벌", "Clear the [FROM.GetName] Coast",
-    ["FROM = {\n\tclr_state_flag = TU_IBE_lh_damaged\n\tclr_state_flag = TU_IBE_lh_severe\n}", THR(-3), "army_experience = 2"], cost=10, once=False, state_target=True,
+    ["FROM = { TU_IBE_lh_clear_damage = yes }", THR(-3), "army_experience = 2"], cost=10, once=False, state_target=True,
     target=["is_owned_and_controlled_by = ROOT", "has_state_flag = TU_IBE_lh_damaged", "NOT = { has_state_flag = TU_IBE_lh_repairing }"],
-    available=["FROM = { TU_IBE_garrison_%dk = yes }" % (LH_PURGE_MP // 1000)],
+    available=["custom_trigger_tooltip = {\n\ttooltip = TU_IBE_lh_purge_tt\n\tFROM = { TU_IBE_garrison_%dk = yes }\n}" % (LH_PURGE_MP // 1000)],
     desc=("이 주에 병력 3만 이상이 있으면 시테러를 몰아내고 등대를 바로 되찾는다: 위협 -3, 육군 경험치 +2.",
           "With 30,000+ manpower in this state, drive off the Sea Terrors and reclaim the lighthouse at once: threat -3, army experience +2."),
     icon="GFX_decision_generic_military", ai=5)
@@ -560,7 +604,7 @@ C.ev(52, ("해안 수비대 습격", "Coastal Garrison Ambushed"),
       "The garrison guarding the [tu_ibe_raid_state.GetName] coast was ambushed by Sea Terrors in the night. They were driven off, but not without losses.\n\n"
       "Divisions in that state lost 30% organisation and 5% strength."),
      [("전사자들을 기린다.", "Honour the fallen.",
-       ["army_experience = 2", THR(-2)], 1)])
+       ["army_experience = 2", THR(-1)], 1)])
 C.d(cat_coast, "coastal_patrol", "해안 순찰", "Coastal Patrol", [THR(-10), "army_experience = 5"], cost=25, once=False, days_re_enable=90,
     icon="GFX_decision_generic_naval")
 C.d(cat_coast, "purification", "정화 작전", "Purification Operation", [THR(-20), "add_stability = -0.02", INQ("0.05")], cost=75, once=False,
@@ -606,11 +650,11 @@ C.d(cat_for, "share_warnings", "바다의 경고 공유", "Share Warnings of the
 C.ev(1, ("침묵한 해안", "The Silent Coast"),
      ("해안 도시의 창문은 모두 닫혀 있다. 심판관들은 오늘도 바다를 등지고 서서 사람들을 지켜본다.",
       "Every window in the coastal towns is shut. The inquisitors stand with their backs to the sea, watching the people."),
-     [("바다를 경계하라.", "Watch the sea.", [THR(-5)], 1)], picture="GFX_report_event_generic_ruins")
+     [("바다를 경계하라.", "Watch the sea.", [THR(-3)], 1)], picture="GFX_report_event_generic_ruins")
 C.ev(20, ("심해의 침식", "Erosion from the Deep"),
      ("해안 마을 하나가 하룻밤 사이에 텅 비었다. 남은 것은 바다 냄새와 이상한 발자국뿐이다.",
       "A coastal village emptied overnight. All that remains is the smell of the sea and strange footprints."),
-     [("심판관을 보낸다.", "Send inquisitors.", ["add_stability = -0.03", INQ("0.05"), THR(-5)], 50),
+     [("심판관을 보낸다.", "Send inquisitors.", ["add_stability = -0.03", INQ("0.05"), THR(-3)], 50),
       ("마을을 봉쇄한다.", "Seal off the village.", ["add_manpower = -3000", "add_stability = -0.02"], 50)],
      trigger=["original_tag = IBE", AT_LEAST("threat", 70)], mtth=60, fire_once=False, picture="GFX_report_event_generic_ruins")
 C.ev(21, ("숭배자들의 지하실", "The Cultists' Cellar"),
@@ -626,20 +670,20 @@ C.ev(23, ("바닷가의 이방인", "Strangers by the Sea"),
 C.ev(25, ("어비셜 헌터스", "The Abyssal Hunters"),
      ("에기르에서 온 어비셜 헌터스와 만났다. 그들은 바다에서 올라오는 것들과 싸워 왔다고 했다.",
       "We met the hunters from Aegir. They say they have fought the things rising from the sea for a long time."),
-     [("협력한다.", "Cooperate.", [FLAG("hunters_met"), THR(-15)], 70), ("의심한다.", "Distrust them.", [FLAG("hunters_met"), INQ("0.05")], 30)])
+     [("협력한다.", "Cooperate.", [FLAG("hunters_met"), THR(-8)], 70), ("의심한다.", "Distrust them.", [FLAG("hunters_met"), INQ("0.05")], 30)])
 C.ev(24, ("라테라노와의 분열", "The Laterano Schism"),
      ("라테라노 교회는 이베리아 심판소의 방식을 오래전부터 비판해 왔다. 라테라노의 사절이 대화를 청했다.",
       "The Laterano church has long criticised Iberia's Inquisition. A Laterano envoy asks for talks."),
      [("대화에 응한다.", "Agree to talk.", [CROWN("0.03"), "add_political_power = 25"], 50), ("거절한다.", "Refuse.", ["add_stability = 0.02"], 50)])
 C.ev(26, ("밀려온 표류물", "Washed Ashore"), ("해변에 정체를 알 수 없는 생물의 사체가 밀려왔다.", "The carcass of an unknown creature washed ashore."),
      [("연구한다.", "Study it.", ["add_tech_bonus = { name = TU_IBE_carcass bonus = 0.5 uses = 1 category = electronics }"], 50),
-      ("태워 버린다.", "Burn it.", [THR(-5), "add_stability = 0.02"], 50)],
+      ("태워 버린다.", "Burn it.", [THR(-3), "add_stability = 0.02"], 50)],
      trigger=["original_tag = IBE", AT_LEAST("threat", 40)], mtth=200)
 C.ev(27, ("어부들의 귀환", "The Fishermen Return"), ("위협이 줄자 어부들이 다시 먼바다로 나가기 시작했다.", "With the threat receding, fishermen are sailing out again."),
      [("좋은 징조다.", "A good omen.", ["add_stability = 0.03", "add_political_power = 25"], 1)],
      trigger=["original_tag = IBE", AT_MOST("threat", 25)], mtth=180)
 C.ev(28, ("심판관의 나라", "State of the Inquisitors"), ("심판소가 이베리아의 모든 것을 맡았다.", "The Inquisition has taken charge of everything in Iberia."),
-     [("경계를 늦추지 않는다.", "Never lower our guard.", [THR(-10)], 1)])
+     [("경계를 늦추지 않는다.", "Never lower our guard.", [THR(-5)], 1)])
 C.ev(29, ("왕관의 부활", "The Crown Restored"), ("대관식이 열렸다. 이베리아에 다시 왕이 섰다.", "A coronation was held. Iberia has a king again."),
      [("국왕 만세!", "Long live the king!", ["add_stability = 0.05"], 1)])
 C.ev(30, ("바다와의 화해", "Reconciliation with the Sea"), ("이베리아는 바다를 두려워하는 대신 이해하기로 했다.", "Iberia has chosen to understand the sea rather than fear it."),
@@ -687,7 +731,7 @@ C.ev(32, ("등대의 불빛", "The Lighthouse Shines"), ("복원된 등대에 �
      [("빛이 돌아왔다.", "The light is back.", ["add_stability = 0.03"], 1)],
      trigger=["original_tag = IBE", AT_LEAST("lighthouses", 3)], mtth=120)
 C.ev(33, ("심판관 아이린", "Inquisitor Irene"), ("젊은 심판관 아이린이 해안 순찰에서 큰 공을 세웠다.", "The young inquisitor Irene distinguished herself on coastal patrol."),
-     [("그녀를 승진시킨다.", "Promote her.", ["army_experience = 15", THR(-5)], 1)],
+     [("그녀를 승진시킨다.", "Promote her.", ["army_experience = 15", THR(-3)], 1)],
      trigger=["original_tag = IBE", "has_completed_focus = TU_IBE_inquisitor_academy"], mtth=300)
 C.ev(34, ("귀족들의 불만", "Grumbling Nobles"), ("귀족들이 심판소의 간섭에 불만을 터뜨렸다.", "The nobles complain loudly about the Inquisition's meddling."),
      [("귀족 편을 든다.", "Side with the nobles.", [CROWN("0.05"), "add_stability = -0.02"], 50), ("무시한다.", "Ignore them.", ["add_stability = 0.01"], 50)],
@@ -711,7 +755,7 @@ C.idea("hunter_rule", "사냥꾼의 이베리아", "Iberia of the Hunters",
        "generic_army_war_college", ("어비셜 헌터스가 이베리아를 이끈다. 그들은 바다를 알지만, 바다도 그들을 안다.",
                                     "The Abyssal Hunters lead Iberia. They know the sea, and the sea knows them."))
 f("hunter_pact", "사냥꾼과의 맹약", "Pact with the Hunters", pre=["abyssal_rumours"], theme=False, available=[HAS("hunters_met")],
-  reward=["add_political_power = 50", THR(-5)],
+  reward=["add_political_power = 50", THR(-3)],
   desc=("어비셜 헌터스와 손을 잡는다. (어비셜 헌터스와 만난 뒤)", "Join hands with the Abyssal Hunters. (After meeting the hunters)"))
 f("hunter_drill", "사냥꾼의 훈련", "Abyssal Hunter Drill", pre=["hunter_pact"])
 f("hunter_blades", "사냥꾼의 대검", "Hunter Greatswords Weapons", pre=["hunter_pact"])
@@ -744,7 +788,7 @@ C.ev(42, ("누가 이베리아를 이끄는가", "Who Will Lead Iberia?"),
       ("스펙터. 말 없는 칼날이 길을 연다.", "Specter. The silent blade clears the way.",
        LEAD("specter", ["army_experience = 50"]), 15),
       ("울피아누스. 돌아온 옛 대장이 해안을 지킨다.", "Ulpianus. The old captain returns to guard the coast.",
-       LEAD("ulpianus", [THR(-15), "add_stability = 0.03"]), 15)],
+       LEAD("ulpianus", [THR(-8), "add_stability = 0.03"]), 15)],
      picture="GFX_report_event_generic_read_write")
 
 # ------------------------------------------------------------------ 숨은 루트: 이샤믈라 (사양서 24 개정)

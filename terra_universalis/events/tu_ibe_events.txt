@@ -58,7 +58,7 @@ country_event = {
 			factor = 1
 		}
 		army_experience = 2
-		TU_IBE_threat_m2 = yes
+		TU_IBE_threat_m1 = yes
 	}
 }
 
@@ -74,7 +74,7 @@ country_event = {
 		ai_chance = {
 			factor = 1
 		}
-		TU_IBE_threat_m5 = yes
+		TU_IBE_threat_m3 = yes
 	}
 }
 
@@ -99,7 +99,7 @@ country_event = {
 			factor = 50
 		}
 		add_stability = -0.03
-		TU_IBE_threat_m5 = yes
+		TU_IBE_threat_m3 = yes
 	}
 
 	option = {
@@ -189,7 +189,7 @@ country_event = {
 			factor = 70
 		}
 		set_country_flag = TU_IBE_hunters_met
-		TU_IBE_threat_m15 = yes
+		TU_IBE_threat_m8 = yes
 	}
 
 	option = {
@@ -254,7 +254,7 @@ country_event = {
 		ai_chance = {
 			factor = 50
 		}
-		TU_IBE_threat_m5 = yes
+		TU_IBE_threat_m3 = yes
 		add_stability = 0.02
 	}
 }
@@ -297,7 +297,7 @@ country_event = {
 		ai_chance = {
 			factor = 1
 		}
-		TU_IBE_threat_m10 = yes
+		TU_IBE_threat_m5 = yes
 	}
 }
 
@@ -413,7 +413,7 @@ country_event = {
 			factor = 1
 		}
 		army_experience = 15
-		TU_IBE_threat_m5 = yes
+		TU_IBE_threat_m3 = yes
 	}
 }
 
@@ -512,7 +512,7 @@ country_event = {
 			ideology = despotism
 		}
 		set_country_flag = TU_IBE_leader_ulpianus
-		TU_IBE_threat_m15 = yes
+		TU_IBE_threat_m8 = yes
 		add_stability = 0.03
 	}
 }

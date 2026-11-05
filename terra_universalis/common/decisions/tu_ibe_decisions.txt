@@ -297,11 +297,14 @@ TU_IBE_coast_category = {
 		target_trigger = {
 			FROM = {
 				is_owned_and_controlled_by = ROOT
-				has_state_flag = TU_IBE_lighthouse
 				has_state_flag = TU_IBE_lh_damaged
 				NOT = { has_state_flag = TU_IBE_lh_repairing }
 				NOT = { has_state_flag = TU_IBE_lh_severe }
 			}
+		}
+
+		activation = {
+			always = no
 		}
 
 		visible = {
@@ -312,7 +315,27 @@ TU_IBE_coast_category = {
 			always = no
 		}
 
-		cost = 0
+		days_mission_timeout = 45
+		is_good = no
+		fire_only_once = yes
+
+		cancel_trigger = {
+			FROM = {
+				OR = {
+					NOT = { is_owned_and_controlled_by = ROOT }
+					NOT = { has_state_flag = TU_IBE_lh_damaged }
+					has_state_flag = TU_IBE_lh_repairing
+					NOT = { NOT = { has_state_flag = TU_IBE_lh_severe } }
+				}
+			}
+		}
+
+		timeout_effect = {
+			custom_effect_tooltip = TU_IBE_lh_worsen_tt
+			hidden_effect = {
+				FROM = { TU_IBE_lh_worsen = yes }
+			}
+		}
 
 		ai_will_do = {
 			base = 0
@@ -332,11 +355,14 @@ TU_IBE_coast_category = {
 		target_trigger = {
 			FROM = {
 				is_owned_and_controlled_by = ROOT
-				has_state_flag = TU_IBE_lighthouse
 				has_state_flag = TU_IBE_lh_damaged
 				NOT = { has_state_flag = TU_IBE_lh_repairing }
 				has_state_flag = TU_IBE_lh_severe
 			}
+		}
+
+		activation = {
+			always = no
 		}
 
 		visible = {
@@ -347,7 +373,27 @@ TU_IBE_coast_category = {
 			always = no
 		}
 
-		cost = 0
+		days_mission_timeout = 45
+		is_good = no
+		fire_only_once = yes
+
+		cancel_trigger = {
+			FROM = {
+				OR = {
+					NOT = { is_owned_and_controlled_by = ROOT }
+					NOT = { has_state_flag = TU_IBE_lh_damaged }
+					has_state_flag = TU_IBE_lh_repairing
+					NOT = { has_state_flag = TU_IBE_lh_severe }
+				}
+			}
+		}
+
+		timeout_effect = {
+			custom_effect_tooltip = TU_IBE_lh_collapse_tt
+			hidden_effect = {
+				FROM = { TU_IBE_lh_collapse = yes }
+			}
+		}
 
 		ai_will_do = {
 			base = 0
@@ -392,8 +438,7 @@ TU_IBE_coast_category = {
 
 		remove_effect = {
 			FROM = {
-				clr_state_flag = TU_IBE_lh_damaged
-				clr_state_flag = TU_IBE_lh_severe
+				TU_IBE_lh_clear_damage = yes
 				clr_state_flag = TU_IBE_lh_repairing
 			}
 		}
@@ -426,16 +471,16 @@ TU_IBE_coast_category = {
 		}
 
 		available = {
-			FROM = { TU_IBE_garrison_30k = yes }
+			custom_trigger_tooltip = {
+				tooltip = TU_IBE_lh_purge_tt
+				FROM = { TU_IBE_garrison_30k = yes }
+			}
 		}
 
 		cost = 10
 
 		complete_effect = {
-			FROM = {
-				clr_state_flag = TU_IBE_lh_damaged
-				clr_state_flag = TU_IBE_lh_severe
-			}
+			FROM = { TU_IBE_lh_clear_damage = yes }
 			TU_IBE_threat_m3 = yes
 			army_experience = 2
 		}
