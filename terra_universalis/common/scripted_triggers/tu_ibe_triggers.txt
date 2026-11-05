@@ -2,13 +2,12 @@ TU_IBE_garrison_10k = {
 	OR = {
 		AND = { state = 1 ROOT = { army_manpower_in_state = { state = 1 amount > 9999 } } }
 		AND = { state = 30 ROOT = { army_manpower_in_state = { state = 30 amount > 9999 } } }
-		AND = { state = 65 ROOT = { army_manpower_in_state = { state = 65 amount > 9999 } } }
 		AND = { state = 69 ROOT = { army_manpower_in_state = { state = 69 amount > 9999 } } }
-		AND = { state = 73 ROOT = { army_manpower_in_state = { state = 73 amount > 9999 } } }
 		AND = { state = 74 ROOT = { army_manpower_in_state = { state = 74 amount > 9999 } } }
 		AND = { state = 75 ROOT = { army_manpower_in_state = { state = 75 amount > 9999 } } }
 		AND = { state = 76 ROOT = { army_manpower_in_state = { state = 76 amount > 9999 } } }
 		AND = { state = 116 ROOT = { army_manpower_in_state = { state = 116 amount > 9999 } } }
+		AND = { state = 117 ROOT = { army_manpower_in_state = { state = 117 amount > 9999 } } }
 		AND = { state = 119 ROOT = { army_manpower_in_state = { state = 119 amount > 9999 } } }
 		AND = { state = 120 ROOT = { army_manpower_in_state = { state = 120 amount > 9999 } } }
 		AND = { state = 121 ROOT = { army_manpower_in_state = { state = 121 amount > 9999 } } }
@@ -21,6 +20,7 @@ TU_IBE_garrison_10k = {
 		AND = { state = 132 ROOT = { army_manpower_in_state = { state = 132 amount > 9999 } } }
 		AND = { state = 133 ROOT = { army_manpower_in_state = { state = 133 amount > 9999 } } }
 		AND = { state = 134 ROOT = { army_manpower_in_state = { state = 134 amount > 9999 } } }
+		AND = { state = 174 ROOT = { army_manpower_in_state = { state = 174 amount > 9999 } } }
 		AND = { state = 177 ROOT = { army_manpower_in_state = { state = 177 amount > 9999 } } }
 		AND = { state = 181 ROOT = { army_manpower_in_state = { state = 181 amount > 9999 } } }
 		AND = { state = 199 ROOT = { army_manpower_in_state = { state = 199 amount > 9999 } } }
@@ -35,13 +35,18 @@ TU_IBE_garrison_10k = {
 		AND = { state = 210 ROOT = { army_manpower_in_state = { state = 210 amount > 9999 } } }
 		AND = { state = 211 ROOT = { army_manpower_in_state = { state = 211 amount > 9999 } } }
 		AND = { state = 212 ROOT = { army_manpower_in_state = { state = 212 amount > 9999 } } }
-		AND = { state = 213 ROOT = { army_manpower_in_state = { state = 213 amount > 9999 } } }
 		AND = { state = 214 ROOT = { army_manpower_in_state = { state = 214 amount > 9999 } } }
 		AND = { state = 215 ROOT = { army_manpower_in_state = { state = 215 amount > 9999 } } }
-		AND = { state = 216 ROOT = { army_manpower_in_state = { state = 216 amount > 9999 } } }
 		AND = { state = 217 ROOT = { army_manpower_in_state = { state = 217 amount > 9999 } } }
 		AND = { state = 218 ROOT = { army_manpower_in_state = { state = 218 amount > 9999 } } }
 		AND = { state = 219 ROOT = { army_manpower_in_state = { state = 219 amount > 9999 } } }
+		AND = { state = 315 ROOT = { army_manpower_in_state = { state = 315 amount > 9999 } } }
+		AND = { state = 317 ROOT = { army_manpower_in_state = { state = 317 amount > 9999 } } }
+		AND = { state = 318 ROOT = { army_manpower_in_state = { state = 318 amount > 9999 } } }
+		AND = { state = 319 ROOT = { army_manpower_in_state = { state = 319 amount > 9999 } } }
+		AND = { state = 326 ROOT = { army_manpower_in_state = { state = 326 amount > 9999 } } }
+		AND = { state = 470 ROOT = { army_manpower_in_state = { state = 470 amount > 9999 } } }
+		AND = { state = 474 ROOT = { army_manpower_in_state = { state = 474 amount > 9999 } } }
 	}
 }
 
@@ -49,13 +54,12 @@ TU_IBE_garrison_20k = {
 	OR = {
 		AND = { state = 1 ROOT = { army_manpower_in_state = { state = 1 amount > 19999 } } }
 		AND = { state = 30 ROOT = { army_manpower_in_state = { state = 30 amount > 19999 } } }
-		AND = { state = 65 ROOT = { army_manpower_in_state = { state = 65 amount > 19999 } } }
 		AND = { state = 69 ROOT = { army_manpower_in_state = { state = 69 amount > 19999 } } }
-		AND = { state = 73 ROOT = { army_manpower_in_state = { state = 73 amount > 19999 } } }
 		AND = { state = 74 ROOT = { army_manpower_in_state = { state = 74 amount > 19999 } } }
 		AND = { state = 75 ROOT = { army_manpower_in_state = { state = 75 amount > 19999 } } }
 		AND = { state = 76 ROOT = { army_manpower_in_state = { state = 76 amount > 19999 } } }
 		AND = { state = 116 ROOT = { army_manpower_in_state = { state = 116 amount > 19999 } } }
+		AND = { state = 117 ROOT = { army_manpower_in_state = { state = 117 amount > 19999 } } }
 		AND = { state = 119 ROOT = { army_manpower_in_state = { state = 119 amount > 19999 } } }
 		AND = { state = 120 ROOT = { army_manpower_in_state = { state = 120 amount > 19999 } } }
 		AND = { state = 121 ROOT = { army_manpower_in_state = { state = 121 amount > 19999 } } }
@@ -68,6 +72,7 @@ TU_IBE_garrison_20k = {
 		AND = { state = 132 ROOT = { army_manpower_in_state = { state = 132 amount > 19999 } } }
 		AND = { state = 133 ROOT = { army_manpower_in_state = { state = 133 amount > 19999 } } }
 		AND = { state = 134 ROOT = { army_manpower_in_state = { state = 134 amount > 19999 } } }
+		AND = { state = 174 ROOT = { army_manpower_in_state = { state = 174 amount > 19999 } } }
 		AND = { state = 177 ROOT = { army_manpower_in_state = { state = 177 amount > 19999 } } }
 		AND = { state = 181 ROOT = { army_manpower_in_state = { state = 181 amount > 19999 } } }
 		AND = { state = 199 ROOT = { army_manpower_in_state = { state = 199 amount > 19999 } } }
@@ -82,13 +87,18 @@ TU_IBE_garrison_20k = {
 		AND = { state = 210 ROOT = { army_manpower_in_state = { state = 210 amount > 19999 } } }
 		AND = { state = 211 ROOT = { army_manpower_in_state = { state = 211 amount > 19999 } } }
 		AND = { state = 212 ROOT = { army_manpower_in_state = { state = 212 amount > 19999 } } }
-		AND = { state = 213 ROOT = { army_manpower_in_state = { state = 213 amount > 19999 } } }
 		AND = { state = 214 ROOT = { army_manpower_in_state = { state = 214 amount > 19999 } } }
 		AND = { state = 215 ROOT = { army_manpower_in_state = { state = 215 amount > 19999 } } }
-		AND = { state = 216 ROOT = { army_manpower_in_state = { state = 216 amount > 19999 } } }
 		AND = { state = 217 ROOT = { army_manpower_in_state = { state = 217 amount > 19999 } } }
 		AND = { state = 218 ROOT = { army_manpower_in_state = { state = 218 amount > 19999 } } }
 		AND = { state = 219 ROOT = { army_manpower_in_state = { state = 219 amount > 19999 } } }
+		AND = { state = 315 ROOT = { army_manpower_in_state = { state = 315 amount > 19999 } } }
+		AND = { state = 317 ROOT = { army_manpower_in_state = { state = 317 amount > 19999 } } }
+		AND = { state = 318 ROOT = { army_manpower_in_state = { state = 318 amount > 19999 } } }
+		AND = { state = 319 ROOT = { army_manpower_in_state = { state = 319 amount > 19999 } } }
+		AND = { state = 326 ROOT = { army_manpower_in_state = { state = 326 amount > 19999 } } }
+		AND = { state = 470 ROOT = { army_manpower_in_state = { state = 470 amount > 19999 } } }
+		AND = { state = 474 ROOT = { army_manpower_in_state = { state = 474 amount > 19999 } } }
 	}
 }
 
@@ -96,13 +106,12 @@ TU_IBE_garrison_30k = {
 	OR = {
 		AND = { state = 1 ROOT = { army_manpower_in_state = { state = 1 amount > 29999 } } }
 		AND = { state = 30 ROOT = { army_manpower_in_state = { state = 30 amount > 29999 } } }
-		AND = { state = 65 ROOT = { army_manpower_in_state = { state = 65 amount > 29999 } } }
 		AND = { state = 69 ROOT = { army_manpower_in_state = { state = 69 amount > 29999 } } }
-		AND = { state = 73 ROOT = { army_manpower_in_state = { state = 73 amount > 29999 } } }
 		AND = { state = 74 ROOT = { army_manpower_in_state = { state = 74 amount > 29999 } } }
 		AND = { state = 75 ROOT = { army_manpower_in_state = { state = 75 amount > 29999 } } }
 		AND = { state = 76 ROOT = { army_manpower_in_state = { state = 76 amount > 29999 } } }
 		AND = { state = 116 ROOT = { army_manpower_in_state = { state = 116 amount > 29999 } } }
+		AND = { state = 117 ROOT = { army_manpower_in_state = { state = 117 amount > 29999 } } }
 		AND = { state = 119 ROOT = { army_manpower_in_state = { state = 119 amount > 29999 } } }
 		AND = { state = 120 ROOT = { army_manpower_in_state = { state = 120 amount > 29999 } } }
 		AND = { state = 121 ROOT = { army_manpower_in_state = { state = 121 amount > 29999 } } }
@@ -115,6 +124,7 @@ TU_IBE_garrison_30k = {
 		AND = { state = 132 ROOT = { army_manpower_in_state = { state = 132 amount > 29999 } } }
 		AND = { state = 133 ROOT = { army_manpower_in_state = { state = 133 amount > 29999 } } }
 		AND = { state = 134 ROOT = { army_manpower_in_state = { state = 134 amount > 29999 } } }
+		AND = { state = 174 ROOT = { army_manpower_in_state = { state = 174 amount > 29999 } } }
 		AND = { state = 177 ROOT = { army_manpower_in_state = { state = 177 amount > 29999 } } }
 		AND = { state = 181 ROOT = { army_manpower_in_state = { state = 181 amount > 29999 } } }
 		AND = { state = 199 ROOT = { army_manpower_in_state = { state = 199 amount > 29999 } } }
@@ -129,13 +139,18 @@ TU_IBE_garrison_30k = {
 		AND = { state = 210 ROOT = { army_manpower_in_state = { state = 210 amount > 29999 } } }
 		AND = { state = 211 ROOT = { army_manpower_in_state = { state = 211 amount > 29999 } } }
 		AND = { state = 212 ROOT = { army_manpower_in_state = { state = 212 amount > 29999 } } }
-		AND = { state = 213 ROOT = { army_manpower_in_state = { state = 213 amount > 29999 } } }
 		AND = { state = 214 ROOT = { army_manpower_in_state = { state = 214 amount > 29999 } } }
 		AND = { state = 215 ROOT = { army_manpower_in_state = { state = 215 amount > 29999 } } }
-		AND = { state = 216 ROOT = { army_manpower_in_state = { state = 216 amount > 29999 } } }
 		AND = { state = 217 ROOT = { army_manpower_in_state = { state = 217 amount > 29999 } } }
 		AND = { state = 218 ROOT = { army_manpower_in_state = { state = 218 amount > 29999 } } }
 		AND = { state = 219 ROOT = { army_manpower_in_state = { state = 219 amount > 29999 } } }
+		AND = { state = 315 ROOT = { army_manpower_in_state = { state = 315 amount > 29999 } } }
+		AND = { state = 317 ROOT = { army_manpower_in_state = { state = 317 amount > 29999 } } }
+		AND = { state = 318 ROOT = { army_manpower_in_state = { state = 318 amount > 29999 } } }
+		AND = { state = 319 ROOT = { army_manpower_in_state = { state = 319 amount > 29999 } } }
+		AND = { state = 326 ROOT = { army_manpower_in_state = { state = 326 amount > 29999 } } }
+		AND = { state = 470 ROOT = { army_manpower_in_state = { state = 470 amount > 29999 } } }
+		AND = { state = 474 ROOT = { army_manpower_in_state = { state = 474 amount > 29999 } } }
 	}
 }
 
@@ -143,13 +158,12 @@ TU_IBE_garrison_40k = {
 	OR = {
 		AND = { state = 1 ROOT = { army_manpower_in_state = { state = 1 amount > 39999 } } }
 		AND = { state = 30 ROOT = { army_manpower_in_state = { state = 30 amount > 39999 } } }
-		AND = { state = 65 ROOT = { army_manpower_in_state = { state = 65 amount > 39999 } } }
 		AND = { state = 69 ROOT = { army_manpower_in_state = { state = 69 amount > 39999 } } }
-		AND = { state = 73 ROOT = { army_manpower_in_state = { state = 73 amount > 39999 } } }
 		AND = { state = 74 ROOT = { army_manpower_in_state = { state = 74 amount > 39999 } } }
 		AND = { state = 75 ROOT = { army_manpower_in_state = { state = 75 amount > 39999 } } }
 		AND = { state = 76 ROOT = { army_manpower_in_state = { state = 76 amount > 39999 } } }
 		AND = { state = 116 ROOT = { army_manpower_in_state = { state = 116 amount > 39999 } } }
+		AND = { state = 117 ROOT = { army_manpower_in_state = { state = 117 amount > 39999 } } }
 		AND = { state = 119 ROOT = { army_manpower_in_state = { state = 119 amount > 39999 } } }
 		AND = { state = 120 ROOT = { army_manpower_in_state = { state = 120 amount > 39999 } } }
 		AND = { state = 121 ROOT = { army_manpower_in_state = { state = 121 amount > 39999 } } }
@@ -162,6 +176,7 @@ TU_IBE_garrison_40k = {
 		AND = { state = 132 ROOT = { army_manpower_in_state = { state = 132 amount > 39999 } } }
 		AND = { state = 133 ROOT = { army_manpower_in_state = { state = 133 amount > 39999 } } }
 		AND = { state = 134 ROOT = { army_manpower_in_state = { state = 134 amount > 39999 } } }
+		AND = { state = 174 ROOT = { army_manpower_in_state = { state = 174 amount > 39999 } } }
 		AND = { state = 177 ROOT = { army_manpower_in_state = { state = 177 amount > 39999 } } }
 		AND = { state = 181 ROOT = { army_manpower_in_state = { state = 181 amount > 39999 } } }
 		AND = { state = 199 ROOT = { army_manpower_in_state = { state = 199 amount > 39999 } } }
@@ -176,12 +191,17 @@ TU_IBE_garrison_40k = {
 		AND = { state = 210 ROOT = { army_manpower_in_state = { state = 210 amount > 39999 } } }
 		AND = { state = 211 ROOT = { army_manpower_in_state = { state = 211 amount > 39999 } } }
 		AND = { state = 212 ROOT = { army_manpower_in_state = { state = 212 amount > 39999 } } }
-		AND = { state = 213 ROOT = { army_manpower_in_state = { state = 213 amount > 39999 } } }
 		AND = { state = 214 ROOT = { army_manpower_in_state = { state = 214 amount > 39999 } } }
 		AND = { state = 215 ROOT = { army_manpower_in_state = { state = 215 amount > 39999 } } }
-		AND = { state = 216 ROOT = { army_manpower_in_state = { state = 216 amount > 39999 } } }
 		AND = { state = 217 ROOT = { army_manpower_in_state = { state = 217 amount > 39999 } } }
 		AND = { state = 218 ROOT = { army_manpower_in_state = { state = 218 amount > 39999 } } }
 		AND = { state = 219 ROOT = { army_manpower_in_state = { state = 219 amount > 39999 } } }
+		AND = { state = 315 ROOT = { army_manpower_in_state = { state = 315 amount > 39999 } } }
+		AND = { state = 317 ROOT = { army_manpower_in_state = { state = 317 amount > 39999 } } }
+		AND = { state = 318 ROOT = { army_manpower_in_state = { state = 318 amount > 39999 } } }
+		AND = { state = 319 ROOT = { army_manpower_in_state = { state = 319 amount > 39999 } } }
+		AND = { state = 326 ROOT = { army_manpower_in_state = { state = 326 amount > 39999 } } }
+		AND = { state = 470 ROOT = { army_manpower_in_state = { state = 470 amount > 39999 } } }
+		AND = { state = 474 ROOT = { army_manpower_in_state = { state = 474 amount > 39999 } } }
 	}
 }

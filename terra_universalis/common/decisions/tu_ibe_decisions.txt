@@ -146,7 +146,7 @@ TU_IBE_coast_category = {
 			FROM = {
 				is_owned_and_controlled_by = ROOT
 				has_state_flag = TU_IBE_lighthouse
-				check_variable = { TU_IBE_lh_risk > 0.009000000000000001 }
+				check_variable = { TU_IBE_lh_risk > 2.009 }
 				check_variable = { TU_IBE_lh_risk < 4 }
 			}
 		}
@@ -162,7 +162,7 @@ TU_IBE_coast_category = {
 		}
 	}
 
-	TU_IBE_lh_threat_n = {
+	TU_IBE_lh_threat_vl = {
 		icon = GFX_decision_generic_civil_support
 
 		allowed = {
@@ -176,7 +176,7 @@ TU_IBE_coast_category = {
 			FROM = {
 				is_owned_and_controlled_by = ROOT
 				has_state_flag = TU_IBE_lighthouse
-				check_variable = { TU_IBE_lh_risk < 0.01 }
+				check_variable = { TU_IBE_lh_risk < 2.01 }
 			}
 		}
 
@@ -227,7 +227,6 @@ TU_IBE_coast_category = {
 		remove_effect = {
 			FROM = {
 				clr_state_flag = TU_IBE_lh_fort_building
-				add_to_variable = { TU_IBE_lh_fort = 1 }
 				add_building_construction = { type = coastal_bunker level = 1 province = { all_provinces = yes limit_to_coastal = yes } instant_build = yes }
 				TU_IBE_lh_update_risk = yes
 			}
@@ -480,47 +479,6 @@ TU_IBE_coast_category = {
 
 		complete_effect = {
 			add_tech_bonus = { name = TU_IBE_sea_research bonus = 0.75 uses = 1 category = electronics }
-			TU_IBE_threat_m5 = yes
-		}
-
-		ai_will_do = {
-			base = 1
-		}
-	}
-
-	TU_IBE_fortify_beach = {
-		icon = GFX_decision_generic_fortification
-
-		allowed = {
-			original_tag = IBE
-		}
-
-		cost = 75
-		days_re_enable = 240
-
-		complete_effect = {
-			TU_build_infrastructure = yes
-			TU_IBE_threat_m5 = yes
-		}
-
-		ai_will_do = {
-			base = 1
-		}
-	}
-
-	TU_IBE_sea_vigil = {
-		icon = GFX_decision_generic_political_discourse
-
-		allowed = {
-			original_tag = IBE
-		}
-
-		cost = 25
-		days_re_enable = 120
-
-		complete_effect = {
-			add_stability = 0.03
-			TU_IBE_threat_m3 = yes
 		}
 
 		ai_will_do = {
@@ -794,7 +752,7 @@ TU_IBE_foreign_category = {
 		}
 
 		cost = 25
-		days_re_enable = 180
+		fire_only_once = yes
 
 		complete_effect = {
 			add_political_power = 40

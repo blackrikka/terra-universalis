@@ -46,16 +46,8 @@ TU_IBE_raid_damage = {
 		ROOT = { damage_units = { state = 30 org_damage = 0.3 str_damage = 0.05 ratio = yes army = yes } }
 	}
 	if = {
-		limit = { state = 65 }
-		ROOT = { damage_units = { state = 65 org_damage = 0.3 str_damage = 0.05 ratio = yes army = yes } }
-	}
-	if = {
 		limit = { state = 69 }
 		ROOT = { damage_units = { state = 69 org_damage = 0.3 str_damage = 0.05 ratio = yes army = yes } }
-	}
-	if = {
-		limit = { state = 73 }
-		ROOT = { damage_units = { state = 73 org_damage = 0.3 str_damage = 0.05 ratio = yes army = yes } }
 	}
 	if = {
 		limit = { state = 74 }
@@ -72,6 +64,10 @@ TU_IBE_raid_damage = {
 	if = {
 		limit = { state = 116 }
 		ROOT = { damage_units = { state = 116 org_damage = 0.3 str_damage = 0.05 ratio = yes army = yes } }
+	}
+	if = {
+		limit = { state = 117 }
+		ROOT = { damage_units = { state = 117 org_damage = 0.3 str_damage = 0.05 ratio = yes army = yes } }
 	}
 	if = {
 		limit = { state = 119 }
@@ -120,6 +116,10 @@ TU_IBE_raid_damage = {
 	if = {
 		limit = { state = 134 }
 		ROOT = { damage_units = { state = 134 org_damage = 0.3 str_damage = 0.05 ratio = yes army = yes } }
+	}
+	if = {
+		limit = { state = 174 }
+		ROOT = { damage_units = { state = 174 org_damage = 0.3 str_damage = 0.05 ratio = yes army = yes } }
 	}
 	if = {
 		limit = { state = 177 }
@@ -178,20 +178,12 @@ TU_IBE_raid_damage = {
 		ROOT = { damage_units = { state = 212 org_damage = 0.3 str_damage = 0.05 ratio = yes army = yes } }
 	}
 	if = {
-		limit = { state = 213 }
-		ROOT = { damage_units = { state = 213 org_damage = 0.3 str_damage = 0.05 ratio = yes army = yes } }
-	}
-	if = {
 		limit = { state = 214 }
 		ROOT = { damage_units = { state = 214 org_damage = 0.3 str_damage = 0.05 ratio = yes army = yes } }
 	}
 	if = {
 		limit = { state = 215 }
 		ROOT = { damage_units = { state = 215 org_damage = 0.3 str_damage = 0.05 ratio = yes army = yes } }
-	}
-	if = {
-		limit = { state = 216 }
-		ROOT = { damage_units = { state = 216 org_damage = 0.3 str_damage = 0.05 ratio = yes army = yes } }
 	}
 	if = {
 		limit = { state = 217 }
@@ -205,9 +197,748 @@ TU_IBE_raid_damage = {
 		limit = { state = 219 }
 		ROOT = { damage_units = { state = 219 org_damage = 0.3 str_damage = 0.05 ratio = yes army = yes } }
 	}
+	if = {
+		limit = { state = 315 }
+		ROOT = { damage_units = { state = 315 org_damage = 0.3 str_damage = 0.05 ratio = yes army = yes } }
+	}
+	if = {
+		limit = { state = 317 }
+		ROOT = { damage_units = { state = 317 org_damage = 0.3 str_damage = 0.05 ratio = yes army = yes } }
+	}
+	if = {
+		limit = { state = 318 }
+		ROOT = { damage_units = { state = 318 org_damage = 0.3 str_damage = 0.05 ratio = yes army = yes } }
+	}
+	if = {
+		limit = { state = 319 }
+		ROOT = { damage_units = { state = 319 org_damage = 0.3 str_damage = 0.05 ratio = yes army = yes } }
+	}
+	if = {
+		limit = { state = 326 }
+		ROOT = { damage_units = { state = 326 org_damage = 0.3 str_damage = 0.05 ratio = yes army = yes } }
+	}
+	if = {
+		limit = { state = 470 }
+		ROOT = { damage_units = { state = 470 org_damage = 0.3 str_damage = 0.05 ratio = yes army = yes } }
+	}
+	if = {
+		limit = { state = 474 }
+		ROOT = { damage_units = { state = 474 org_damage = 0.3 str_damage = 0.05 ratio = yes army = yes } }
+	}
+}
+
+TU_IBE_lh_fort_measure = {
+	set_variable = { TU_IBE_lh_fort = 0 }
+	if = {
+		limit = { state = 1 }
+		if = { limit = { any_province_building_level = { province = { id = 1 } building = coastal_bunker level > 0 } } add_to_variable = { TU_IBE_lh_fort = 1 } }
+		if = { limit = { any_province_building_level = { province = { id = 1 } building = coastal_bunker level > 1 } } add_to_variable = { TU_IBE_lh_fort = 1 } }
+		if = { limit = { any_province_building_level = { province = { id = 1 } building = coastal_bunker level > 2 } } add_to_variable = { TU_IBE_lh_fort = 1 } }
+		divide_variable = { TU_IBE_lh_fort = 1 }
+	}
+	else_if = {
+		limit = { state = 30 }
+		if = { limit = { any_province_building_level = { province = { id = 129 } building = coastal_bunker level > 0 } } add_to_variable = { TU_IBE_lh_fort = 1 } }
+		if = { limit = { any_province_building_level = { province = { id = 129 } building = coastal_bunker level > 1 } } add_to_variable = { TU_IBE_lh_fort = 1 } }
+		if = { limit = { any_province_building_level = { province = { id = 129 } building = coastal_bunker level > 2 } } add_to_variable = { TU_IBE_lh_fort = 1 } }
+		if = { limit = { any_province_building_level = { province = { id = 130 } building = coastal_bunker level > 0 } } add_to_variable = { TU_IBE_lh_fort = 1 } }
+		if = { limit = { any_province_building_level = { province = { id = 130 } building = coastal_bunker level > 1 } } add_to_variable = { TU_IBE_lh_fort = 1 } }
+		if = { limit = { any_province_building_level = { province = { id = 130 } building = coastal_bunker level > 2 } } add_to_variable = { TU_IBE_lh_fort = 1 } }
+		divide_variable = { TU_IBE_lh_fort = 2 }
+	}
+	else_if = {
+		limit = { state = 69 }
+		if = { limit = { any_province_building_level = { province = { id = 275 } building = coastal_bunker level > 0 } } add_to_variable = { TU_IBE_lh_fort = 1 } }
+		if = { limit = { any_province_building_level = { province = { id = 275 } building = coastal_bunker level > 1 } } add_to_variable = { TU_IBE_lh_fort = 1 } }
+		if = { limit = { any_province_building_level = { province = { id = 275 } building = coastal_bunker level > 2 } } add_to_variable = { TU_IBE_lh_fort = 1 } }
+		divide_variable = { TU_IBE_lh_fort = 1 }
+	}
+	else_if = {
+		limit = { state = 74 }
+		if = { limit = { any_province_building_level = { province = { id = 284 } building = coastal_bunker level > 0 } } add_to_variable = { TU_IBE_lh_fort = 1 } }
+		if = { limit = { any_province_building_level = { province = { id = 284 } building = coastal_bunker level > 1 } } add_to_variable = { TU_IBE_lh_fort = 1 } }
+		if = { limit = { any_province_building_level = { province = { id = 284 } building = coastal_bunker level > 2 } } add_to_variable = { TU_IBE_lh_fort = 1 } }
+		divide_variable = { TU_IBE_lh_fort = 1 }
+	}
+	else_if = {
+		limit = { state = 75 }
+		if = { limit = { any_province_building_level = { province = { id = 285 } building = coastal_bunker level > 0 } } add_to_variable = { TU_IBE_lh_fort = 1 } }
+		if = { limit = { any_province_building_level = { province = { id = 285 } building = coastal_bunker level > 1 } } add_to_variable = { TU_IBE_lh_fort = 1 } }
+		if = { limit = { any_province_building_level = { province = { id = 285 } building = coastal_bunker level > 2 } } add_to_variable = { TU_IBE_lh_fort = 1 } }
+		divide_variable = { TU_IBE_lh_fort = 1 }
+	}
+	else_if = {
+		limit = { state = 76 }
+		if = { limit = { any_province_building_level = { province = { id = 286 } building = coastal_bunker level > 0 } } add_to_variable = { TU_IBE_lh_fort = 1 } }
+		if = { limit = { any_province_building_level = { province = { id = 286 } building = coastal_bunker level > 1 } } add_to_variable = { TU_IBE_lh_fort = 1 } }
+		if = { limit = { any_province_building_level = { province = { id = 286 } building = coastal_bunker level > 2 } } add_to_variable = { TU_IBE_lh_fort = 1 } }
+		divide_variable = { TU_IBE_lh_fort = 1 }
+	}
+	else_if = {
+		limit = { state = 116 }
+		if = { limit = { any_province_building_level = { province = { id = 439 } building = coastal_bunker level > 0 } } add_to_variable = { TU_IBE_lh_fort = 1 } }
+		if = { limit = { any_province_building_level = { province = { id = 439 } building = coastal_bunker level > 1 } } add_to_variable = { TU_IBE_lh_fort = 1 } }
+		if = { limit = { any_province_building_level = { province = { id = 439 } building = coastal_bunker level > 2 } } add_to_variable = { TU_IBE_lh_fort = 1 } }
+		if = { limit = { any_province_building_level = { province = { id = 440 } building = coastal_bunker level > 0 } } add_to_variable = { TU_IBE_lh_fort = 1 } }
+		if = { limit = { any_province_building_level = { province = { id = 440 } building = coastal_bunker level > 1 } } add_to_variable = { TU_IBE_lh_fort = 1 } }
+		if = { limit = { any_province_building_level = { province = { id = 440 } building = coastal_bunker level > 2 } } add_to_variable = { TU_IBE_lh_fort = 1 } }
+		divide_variable = { TU_IBE_lh_fort = 2 }
+	}
+	else_if = {
+		limit = { state = 117 }
+		if = { limit = { any_province_building_level = { province = { id = 443 } building = coastal_bunker level > 0 } } add_to_variable = { TU_IBE_lh_fort = 1 } }
+		if = { limit = { any_province_building_level = { province = { id = 443 } building = coastal_bunker level > 1 } } add_to_variable = { TU_IBE_lh_fort = 1 } }
+		if = { limit = { any_province_building_level = { province = { id = 443 } building = coastal_bunker level > 2 } } add_to_variable = { TU_IBE_lh_fort = 1 } }
+		divide_variable = { TU_IBE_lh_fort = 1 }
+	}
+	else_if = {
+		limit = { state = 119 }
+		if = { limit = { any_province_building_level = { province = { id = 454 } building = coastal_bunker level > 0 } } add_to_variable = { TU_IBE_lh_fort = 1 } }
+		if = { limit = { any_province_building_level = { province = { id = 454 } building = coastal_bunker level > 1 } } add_to_variable = { TU_IBE_lh_fort = 1 } }
+		if = { limit = { any_province_building_level = { province = { id = 454 } building = coastal_bunker level > 2 } } add_to_variable = { TU_IBE_lh_fort = 1 } }
+		divide_variable = { TU_IBE_lh_fort = 1 }
+	}
+	else_if = {
+		limit = { state = 120 }
+		if = { limit = { any_province_building_level = { province = { id = 460 } building = coastal_bunker level > 0 } } add_to_variable = { TU_IBE_lh_fort = 1 } }
+		if = { limit = { any_province_building_level = { province = { id = 460 } building = coastal_bunker level > 1 } } add_to_variable = { TU_IBE_lh_fort = 1 } }
+		if = { limit = { any_province_building_level = { province = { id = 460 } building = coastal_bunker level > 2 } } add_to_variable = { TU_IBE_lh_fort = 1 } }
+		if = { limit = { any_province_building_level = { province = { id = 462 } building = coastal_bunker level > 0 } } add_to_variable = { TU_IBE_lh_fort = 1 } }
+		if = { limit = { any_province_building_level = { province = { id = 462 } building = coastal_bunker level > 1 } } add_to_variable = { TU_IBE_lh_fort = 1 } }
+		if = { limit = { any_province_building_level = { province = { id = 462 } building = coastal_bunker level > 2 } } add_to_variable = { TU_IBE_lh_fort = 1 } }
+		divide_variable = { TU_IBE_lh_fort = 2 }
+	}
+	else_if = {
+		limit = { state = 121 }
+		if = { limit = { any_province_building_level = { province = { id = 461 } building = coastal_bunker level > 0 } } add_to_variable = { TU_IBE_lh_fort = 1 } }
+		if = { limit = { any_province_building_level = { province = { id = 461 } building = coastal_bunker level > 1 } } add_to_variable = { TU_IBE_lh_fort = 1 } }
+		if = { limit = { any_province_building_level = { province = { id = 461 } building = coastal_bunker level > 2 } } add_to_variable = { TU_IBE_lh_fort = 1 } }
+		divide_variable = { TU_IBE_lh_fort = 1 }
+	}
+	else_if = {
+		limit = { state = 122 }
+		if = { limit = { any_province_building_level = { province = { id = 463 } building = coastal_bunker level > 0 } } add_to_variable = { TU_IBE_lh_fort = 1 } }
+		if = { limit = { any_province_building_level = { province = { id = 463 } building = coastal_bunker level > 1 } } add_to_variable = { TU_IBE_lh_fort = 1 } }
+		if = { limit = { any_province_building_level = { province = { id = 463 } building = coastal_bunker level > 2 } } add_to_variable = { TU_IBE_lh_fort = 1 } }
+		divide_variable = { TU_IBE_lh_fort = 1 }
+	}
+	else_if = {
+		limit = { state = 123 }
+		if = { limit = { any_province_building_level = { province = { id = 464 } building = coastal_bunker level > 0 } } add_to_variable = { TU_IBE_lh_fort = 1 } }
+		if = { limit = { any_province_building_level = { province = { id = 464 } building = coastal_bunker level > 1 } } add_to_variable = { TU_IBE_lh_fort = 1 } }
+		if = { limit = { any_province_building_level = { province = { id = 464 } building = coastal_bunker level > 2 } } add_to_variable = { TU_IBE_lh_fort = 1 } }
+		divide_variable = { TU_IBE_lh_fort = 1 }
+	}
+	else_if = {
+		limit = { state = 124 }
+		if = { limit = { any_province_building_level = { province = { id = 465 } building = coastal_bunker level > 0 } } add_to_variable = { TU_IBE_lh_fort = 1 } }
+		if = { limit = { any_province_building_level = { province = { id = 465 } building = coastal_bunker level > 1 } } add_to_variable = { TU_IBE_lh_fort = 1 } }
+		if = { limit = { any_province_building_level = { province = { id = 465 } building = coastal_bunker level > 2 } } add_to_variable = { TU_IBE_lh_fort = 1 } }
+		divide_variable = { TU_IBE_lh_fort = 1 }
+	}
+	else_if = {
+		limit = { state = 125 }
+		if = { limit = { any_province_building_level = { province = { id = 466 } building = coastal_bunker level > 0 } } add_to_variable = { TU_IBE_lh_fort = 1 } }
+		if = { limit = { any_province_building_level = { province = { id = 466 } building = coastal_bunker level > 1 } } add_to_variable = { TU_IBE_lh_fort = 1 } }
+		if = { limit = { any_province_building_level = { province = { id = 466 } building = coastal_bunker level > 2 } } add_to_variable = { TU_IBE_lh_fort = 1 } }
+		divide_variable = { TU_IBE_lh_fort = 1 }
+	}
+	else_if = {
+		limit = { state = 130 }
+		if = { limit = { any_province_building_level = { province = { id = 474 } building = coastal_bunker level > 0 } } add_to_variable = { TU_IBE_lh_fort = 1 } }
+		if = { limit = { any_province_building_level = { province = { id = 474 } building = coastal_bunker level > 1 } } add_to_variable = { TU_IBE_lh_fort = 1 } }
+		if = { limit = { any_province_building_level = { province = { id = 474 } building = coastal_bunker level > 2 } } add_to_variable = { TU_IBE_lh_fort = 1 } }
+		if = { limit = { any_province_building_level = { province = { id = 476 } building = coastal_bunker level > 0 } } add_to_variable = { TU_IBE_lh_fort = 1 } }
+		if = { limit = { any_province_building_level = { province = { id = 476 } building = coastal_bunker level > 1 } } add_to_variable = { TU_IBE_lh_fort = 1 } }
+		if = { limit = { any_province_building_level = { province = { id = 476 } building = coastal_bunker level > 2 } } add_to_variable = { TU_IBE_lh_fort = 1 } }
+		if = { limit = { any_province_building_level = { province = { id = 478 } building = coastal_bunker level > 0 } } add_to_variable = { TU_IBE_lh_fort = 1 } }
+		if = { limit = { any_province_building_level = { province = { id = 478 } building = coastal_bunker level > 1 } } add_to_variable = { TU_IBE_lh_fort = 1 } }
+		if = { limit = { any_province_building_level = { province = { id = 478 } building = coastal_bunker level > 2 } } add_to_variable = { TU_IBE_lh_fort = 1 } }
+		divide_variable = { TU_IBE_lh_fort = 3 }
+	}
+	else_if = {
+		limit = { state = 131 }
+		if = { limit = { any_province_building_level = { province = { id = 477 } building = coastal_bunker level > 0 } } add_to_variable = { TU_IBE_lh_fort = 1 } }
+		if = { limit = { any_province_building_level = { province = { id = 477 } building = coastal_bunker level > 1 } } add_to_variable = { TU_IBE_lh_fort = 1 } }
+		if = { limit = { any_province_building_level = { province = { id = 477 } building = coastal_bunker level > 2 } } add_to_variable = { TU_IBE_lh_fort = 1 } }
+		divide_variable = { TU_IBE_lh_fort = 1 }
+	}
+	else_if = {
+		limit = { state = 132 }
+		if = { limit = { any_province_building_level = { province = { id = 479 } building = coastal_bunker level > 0 } } add_to_variable = { TU_IBE_lh_fort = 1 } }
+		if = { limit = { any_province_building_level = { province = { id = 479 } building = coastal_bunker level > 1 } } add_to_variable = { TU_IBE_lh_fort = 1 } }
+		if = { limit = { any_province_building_level = { province = { id = 479 } building = coastal_bunker level > 2 } } add_to_variable = { TU_IBE_lh_fort = 1 } }
+		divide_variable = { TU_IBE_lh_fort = 1 }
+	}
+	else_if = {
+		limit = { state = 133 }
+		if = { limit = { any_province_building_level = { province = { id = 482 } building = coastal_bunker level > 0 } } add_to_variable = { TU_IBE_lh_fort = 1 } }
+		if = { limit = { any_province_building_level = { province = { id = 482 } building = coastal_bunker level > 1 } } add_to_variable = { TU_IBE_lh_fort = 1 } }
+		if = { limit = { any_province_building_level = { province = { id = 482 } building = coastal_bunker level > 2 } } add_to_variable = { TU_IBE_lh_fort = 1 } }
+		divide_variable = { TU_IBE_lh_fort = 1 }
+	}
+	else_if = {
+		limit = { state = 134 }
+		if = { limit = { any_province_building_level = { province = { id = 483 } building = coastal_bunker level > 0 } } add_to_variable = { TU_IBE_lh_fort = 1 } }
+		if = { limit = { any_province_building_level = { province = { id = 483 } building = coastal_bunker level > 1 } } add_to_variable = { TU_IBE_lh_fort = 1 } }
+		if = { limit = { any_province_building_level = { province = { id = 483 } building = coastal_bunker level > 2 } } add_to_variable = { TU_IBE_lh_fort = 1 } }
+		divide_variable = { TU_IBE_lh_fort = 1 }
+	}
+	else_if = {
+		limit = { state = 174 }
+		if = { limit = { any_province_building_level = { province = { id = 613 } building = coastal_bunker level > 0 } } add_to_variable = { TU_IBE_lh_fort = 1 } }
+		if = { limit = { any_province_building_level = { province = { id = 613 } building = coastal_bunker level > 1 } } add_to_variable = { TU_IBE_lh_fort = 1 } }
+		if = { limit = { any_province_building_level = { province = { id = 613 } building = coastal_bunker level > 2 } } add_to_variable = { TU_IBE_lh_fort = 1 } }
+		divide_variable = { TU_IBE_lh_fort = 1 }
+	}
+	else_if = {
+		limit = { state = 177 }
+		if = { limit = { any_province_building_level = { province = { id = 621 } building = coastal_bunker level > 0 } } add_to_variable = { TU_IBE_lh_fort = 1 } }
+		if = { limit = { any_province_building_level = { province = { id = 621 } building = coastal_bunker level > 1 } } add_to_variable = { TU_IBE_lh_fort = 1 } }
+		if = { limit = { any_province_building_level = { province = { id = 621 } building = coastal_bunker level > 2 } } add_to_variable = { TU_IBE_lh_fort = 1 } }
+		if = { limit = { any_province_building_level = { province = { id = 629 } building = coastal_bunker level > 0 } } add_to_variable = { TU_IBE_lh_fort = 1 } }
+		if = { limit = { any_province_building_level = { province = { id = 629 } building = coastal_bunker level > 1 } } add_to_variable = { TU_IBE_lh_fort = 1 } }
+		if = { limit = { any_province_building_level = { province = { id = 629 } building = coastal_bunker level > 2 } } add_to_variable = { TU_IBE_lh_fort = 1 } }
+		if = { limit = { any_province_building_level = { province = { id = 630 } building = coastal_bunker level > 0 } } add_to_variable = { TU_IBE_lh_fort = 1 } }
+		if = { limit = { any_province_building_level = { province = { id = 630 } building = coastal_bunker level > 1 } } add_to_variable = { TU_IBE_lh_fort = 1 } }
+		if = { limit = { any_province_building_level = { province = { id = 630 } building = coastal_bunker level > 2 } } add_to_variable = { TU_IBE_lh_fort = 1 } }
+		divide_variable = { TU_IBE_lh_fort = 3 }
+	}
+	else_if = {
+		limit = { state = 181 }
+		if = { limit = { any_province_building_level = { province = { id = 646 } building = coastal_bunker level > 0 } } add_to_variable = { TU_IBE_lh_fort = 1 } }
+		if = { limit = { any_province_building_level = { province = { id = 646 } building = coastal_bunker level > 1 } } add_to_variable = { TU_IBE_lh_fort = 1 } }
+		if = { limit = { any_province_building_level = { province = { id = 646 } building = coastal_bunker level > 2 } } add_to_variable = { TU_IBE_lh_fort = 1 } }
+		if = { limit = { any_province_building_level = { province = { id = 649 } building = coastal_bunker level > 0 } } add_to_variable = { TU_IBE_lh_fort = 1 } }
+		if = { limit = { any_province_building_level = { province = { id = 649 } building = coastal_bunker level > 1 } } add_to_variable = { TU_IBE_lh_fort = 1 } }
+		if = { limit = { any_province_building_level = { province = { id = 649 } building = coastal_bunker level > 2 } } add_to_variable = { TU_IBE_lh_fort = 1 } }
+		divide_variable = { TU_IBE_lh_fort = 2 }
+	}
+	else_if = {
+		limit = { state = 199 }
+		if = { limit = { any_province_building_level = { province = { id = 720 } building = coastal_bunker level > 0 } } add_to_variable = { TU_IBE_lh_fort = 1 } }
+		if = { limit = { any_province_building_level = { province = { id = 720 } building = coastal_bunker level > 1 } } add_to_variable = { TU_IBE_lh_fort = 1 } }
+		if = { limit = { any_province_building_level = { province = { id = 720 } building = coastal_bunker level > 2 } } add_to_variable = { TU_IBE_lh_fort = 1 } }
+		divide_variable = { TU_IBE_lh_fort = 1 }
+	}
+	else_if = {
+		limit = { state = 200 }
+		if = { limit = { any_province_building_level = { province = { id = 721 } building = coastal_bunker level > 0 } } add_to_variable = { TU_IBE_lh_fort = 1 } }
+		if = { limit = { any_province_building_level = { province = { id = 721 } building = coastal_bunker level > 1 } } add_to_variable = { TU_IBE_lh_fort = 1 } }
+		if = { limit = { any_province_building_level = { province = { id = 721 } building = coastal_bunker level > 2 } } add_to_variable = { TU_IBE_lh_fort = 1 } }
+		if = { limit = { any_province_building_level = { province = { id = 724 } building = coastal_bunker level > 0 } } add_to_variable = { TU_IBE_lh_fort = 1 } }
+		if = { limit = { any_province_building_level = { province = { id = 724 } building = coastal_bunker level > 1 } } add_to_variable = { TU_IBE_lh_fort = 1 } }
+		if = { limit = { any_province_building_level = { province = { id = 724 } building = coastal_bunker level > 2 } } add_to_variable = { TU_IBE_lh_fort = 1 } }
+		if = { limit = { any_province_building_level = { province = { id = 729 } building = coastal_bunker level > 0 } } add_to_variable = { TU_IBE_lh_fort = 1 } }
+		if = { limit = { any_province_building_level = { province = { id = 729 } building = coastal_bunker level > 1 } } add_to_variable = { TU_IBE_lh_fort = 1 } }
+		if = { limit = { any_province_building_level = { province = { id = 729 } building = coastal_bunker level > 2 } } add_to_variable = { TU_IBE_lh_fort = 1 } }
+		divide_variable = { TU_IBE_lh_fort = 3 }
+	}
+	else_if = {
+		limit = { state = 202 }
+		if = { limit = { any_province_building_level = { province = { id = 728 } building = coastal_bunker level > 0 } } add_to_variable = { TU_IBE_lh_fort = 1 } }
+		if = { limit = { any_province_building_level = { province = { id = 728 } building = coastal_bunker level > 1 } } add_to_variable = { TU_IBE_lh_fort = 1 } }
+		if = { limit = { any_province_building_level = { province = { id = 728 } building = coastal_bunker level > 2 } } add_to_variable = { TU_IBE_lh_fort = 1 } }
+		divide_variable = { TU_IBE_lh_fort = 1 }
+	}
+	else_if = {
+		limit = { state = 203 }
+		if = { limit = { any_province_building_level = { province = { id = 747 } building = coastal_bunker level > 0 } } add_to_variable = { TU_IBE_lh_fort = 1 } }
+		if = { limit = { any_province_building_level = { province = { id = 747 } building = coastal_bunker level > 1 } } add_to_variable = { TU_IBE_lh_fort = 1 } }
+		if = { limit = { any_province_building_level = { province = { id = 747 } building = coastal_bunker level > 2 } } add_to_variable = { TU_IBE_lh_fort = 1 } }
+		if = { limit = { any_province_building_level = { province = { id = 753 } building = coastal_bunker level > 0 } } add_to_variable = { TU_IBE_lh_fort = 1 } }
+		if = { limit = { any_province_building_level = { province = { id = 753 } building = coastal_bunker level > 1 } } add_to_variable = { TU_IBE_lh_fort = 1 } }
+		if = { limit = { any_province_building_level = { province = { id = 753 } building = coastal_bunker level > 2 } } add_to_variable = { TU_IBE_lh_fort = 1 } }
+		if = { limit = { any_province_building_level = { province = { id = 759 } building = coastal_bunker level > 0 } } add_to_variable = { TU_IBE_lh_fort = 1 } }
+		if = { limit = { any_province_building_level = { province = { id = 759 } building = coastal_bunker level > 1 } } add_to_variable = { TU_IBE_lh_fort = 1 } }
+		if = { limit = { any_province_building_level = { province = { id = 759 } building = coastal_bunker level > 2 } } add_to_variable = { TU_IBE_lh_fort = 1 } }
+		divide_variable = { TU_IBE_lh_fort = 3 }
+	}
+	else_if = {
+		limit = { state = 205 }
+		if = { limit = { any_province_building_level = { province = { id = 734 } building = coastal_bunker level > 0 } } add_to_variable = { TU_IBE_lh_fort = 1 } }
+		if = { limit = { any_province_building_level = { province = { id = 734 } building = coastal_bunker level > 1 } } add_to_variable = { TU_IBE_lh_fort = 1 } }
+		if = { limit = { any_province_building_level = { province = { id = 734 } building = coastal_bunker level > 2 } } add_to_variable = { TU_IBE_lh_fort = 1 } }
+		divide_variable = { TU_IBE_lh_fort = 1 }
+	}
+	else_if = {
+		limit = { state = 206 }
+		if = { limit = { any_province_building_level = { province = { id = 735 } building = coastal_bunker level > 0 } } add_to_variable = { TU_IBE_lh_fort = 1 } }
+		if = { limit = { any_province_building_level = { province = { id = 735 } building = coastal_bunker level > 1 } } add_to_variable = { TU_IBE_lh_fort = 1 } }
+		if = { limit = { any_province_building_level = { province = { id = 735 } building = coastal_bunker level > 2 } } add_to_variable = { TU_IBE_lh_fort = 1 } }
+		divide_variable = { TU_IBE_lh_fort = 1 }
+	}
+	else_if = {
+		limit = { state = 207 }
+		if = { limit = { any_province_building_level = { province = { id = 736 } building = coastal_bunker level > 0 } } add_to_variable = { TU_IBE_lh_fort = 1 } }
+		if = { limit = { any_province_building_level = { province = { id = 736 } building = coastal_bunker level > 1 } } add_to_variable = { TU_IBE_lh_fort = 1 } }
+		if = { limit = { any_province_building_level = { province = { id = 736 } building = coastal_bunker level > 2 } } add_to_variable = { TU_IBE_lh_fort = 1 } }
+		if = { limit = { any_province_building_level = { province = { id = 744 } building = coastal_bunker level > 0 } } add_to_variable = { TU_IBE_lh_fort = 1 } }
+		if = { limit = { any_province_building_level = { province = { id = 744 } building = coastal_bunker level > 1 } } add_to_variable = { TU_IBE_lh_fort = 1 } }
+		if = { limit = { any_province_building_level = { province = { id = 744 } building = coastal_bunker level > 2 } } add_to_variable = { TU_IBE_lh_fort = 1 } }
+		if = { limit = { any_province_building_level = { province = { id = 746 } building = coastal_bunker level > 0 } } add_to_variable = { TU_IBE_lh_fort = 1 } }
+		if = { limit = { any_province_building_level = { province = { id = 746 } building = coastal_bunker level > 1 } } add_to_variable = { TU_IBE_lh_fort = 1 } }
+		if = { limit = { any_province_building_level = { province = { id = 746 } building = coastal_bunker level > 2 } } add_to_variable = { TU_IBE_lh_fort = 1 } }
+		if = { limit = { any_province_building_level = { province = { id = 751 } building = coastal_bunker level > 0 } } add_to_variable = { TU_IBE_lh_fort = 1 } }
+		if = { limit = { any_province_building_level = { province = { id = 751 } building = coastal_bunker level > 1 } } add_to_variable = { TU_IBE_lh_fort = 1 } }
+		if = { limit = { any_province_building_level = { province = { id = 751 } building = coastal_bunker level > 2 } } add_to_variable = { TU_IBE_lh_fort = 1 } }
+		if = { limit = { any_province_building_level = { province = { id = 752 } building = coastal_bunker level > 0 } } add_to_variable = { TU_IBE_lh_fort = 1 } }
+		if = { limit = { any_province_building_level = { province = { id = 752 } building = coastal_bunker level > 1 } } add_to_variable = { TU_IBE_lh_fort = 1 } }
+		if = { limit = { any_province_building_level = { province = { id = 752 } building = coastal_bunker level > 2 } } add_to_variable = { TU_IBE_lh_fort = 1 } }
+		divide_variable = { TU_IBE_lh_fort = 5 }
+	}
+	else_if = {
+		limit = { state = 208 }
+		if = { limit = { any_province_building_level = { province = { id = 737 } building = coastal_bunker level > 0 } } add_to_variable = { TU_IBE_lh_fort = 1 } }
+		if = { limit = { any_province_building_level = { province = { id = 737 } building = coastal_bunker level > 1 } } add_to_variable = { TU_IBE_lh_fort = 1 } }
+		if = { limit = { any_province_building_level = { province = { id = 737 } building = coastal_bunker level > 2 } } add_to_variable = { TU_IBE_lh_fort = 1 } }
+		divide_variable = { TU_IBE_lh_fort = 1 }
+	}
+	else_if = {
+		limit = { state = 209 }
+		if = { limit = { any_province_building_level = { province = { id = 743 } building = coastal_bunker level > 0 } } add_to_variable = { TU_IBE_lh_fort = 1 } }
+		if = { limit = { any_province_building_level = { province = { id = 743 } building = coastal_bunker level > 1 } } add_to_variable = { TU_IBE_lh_fort = 1 } }
+		if = { limit = { any_province_building_level = { province = { id = 743 } building = coastal_bunker level > 2 } } add_to_variable = { TU_IBE_lh_fort = 1 } }
+		divide_variable = { TU_IBE_lh_fort = 1 }
+	}
+	else_if = {
+		limit = { state = 210 }
+		if = { limit = { any_province_building_level = { province = { id = 749 } building = coastal_bunker level > 0 } } add_to_variable = { TU_IBE_lh_fort = 1 } }
+		if = { limit = { any_province_building_level = { province = { id = 749 } building = coastal_bunker level > 1 } } add_to_variable = { TU_IBE_lh_fort = 1 } }
+		if = { limit = { any_province_building_level = { province = { id = 749 } building = coastal_bunker level > 2 } } add_to_variable = { TU_IBE_lh_fort = 1 } }
+		divide_variable = { TU_IBE_lh_fort = 1 }
+	}
+	else_if = {
+		limit = { state = 211 }
+		if = { limit = { any_province_building_level = { province = { id = 754 } building = coastal_bunker level > 0 } } add_to_variable = { TU_IBE_lh_fort = 1 } }
+		if = { limit = { any_province_building_level = { province = { id = 754 } building = coastal_bunker level > 1 } } add_to_variable = { TU_IBE_lh_fort = 1 } }
+		if = { limit = { any_province_building_level = { province = { id = 754 } building = coastal_bunker level > 2 } } add_to_variable = { TU_IBE_lh_fort = 1 } }
+		if = { limit = { any_province_building_level = { province = { id = 755 } building = coastal_bunker level > 0 } } add_to_variable = { TU_IBE_lh_fort = 1 } }
+		if = { limit = { any_province_building_level = { province = { id = 755 } building = coastal_bunker level > 1 } } add_to_variable = { TU_IBE_lh_fort = 1 } }
+		if = { limit = { any_province_building_level = { province = { id = 755 } building = coastal_bunker level > 2 } } add_to_variable = { TU_IBE_lh_fort = 1 } }
+		if = { limit = { any_province_building_level = { province = { id = 757 } building = coastal_bunker level > 0 } } add_to_variable = { TU_IBE_lh_fort = 1 } }
+		if = { limit = { any_province_building_level = { province = { id = 757 } building = coastal_bunker level > 1 } } add_to_variable = { TU_IBE_lh_fort = 1 } }
+		if = { limit = { any_province_building_level = { province = { id = 757 } building = coastal_bunker level > 2 } } add_to_variable = { TU_IBE_lh_fort = 1 } }
+		if = { limit = { any_province_building_level = { province = { id = 758 } building = coastal_bunker level > 0 } } add_to_variable = { TU_IBE_lh_fort = 1 } }
+		if = { limit = { any_province_building_level = { province = { id = 758 } building = coastal_bunker level > 1 } } add_to_variable = { TU_IBE_lh_fort = 1 } }
+		if = { limit = { any_province_building_level = { province = { id = 758 } building = coastal_bunker level > 2 } } add_to_variable = { TU_IBE_lh_fort = 1 } }
+		if = { limit = { any_province_building_level = { province = { id = 760 } building = coastal_bunker level > 0 } } add_to_variable = { TU_IBE_lh_fort = 1 } }
+		if = { limit = { any_province_building_level = { province = { id = 760 } building = coastal_bunker level > 1 } } add_to_variable = { TU_IBE_lh_fort = 1 } }
+		if = { limit = { any_province_building_level = { province = { id = 760 } building = coastal_bunker level > 2 } } add_to_variable = { TU_IBE_lh_fort = 1 } }
+		if = { limit = { any_province_building_level = { province = { id = 763 } building = coastal_bunker level > 0 } } add_to_variable = { TU_IBE_lh_fort = 1 } }
+		if = { limit = { any_province_building_level = { province = { id = 763 } building = coastal_bunker level > 1 } } add_to_variable = { TU_IBE_lh_fort = 1 } }
+		if = { limit = { any_province_building_level = { province = { id = 763 } building = coastal_bunker level > 2 } } add_to_variable = { TU_IBE_lh_fort = 1 } }
+		divide_variable = { TU_IBE_lh_fort = 6 }
+	}
+	else_if = {
+		limit = { state = 212 }
+		if = { limit = { any_province_building_level = { province = { id = 766 } building = coastal_bunker level > 0 } } add_to_variable = { TU_IBE_lh_fort = 1 } }
+		if = { limit = { any_province_building_level = { province = { id = 766 } building = coastal_bunker level > 1 } } add_to_variable = { TU_IBE_lh_fort = 1 } }
+		if = { limit = { any_province_building_level = { province = { id = 766 } building = coastal_bunker level > 2 } } add_to_variable = { TU_IBE_lh_fort = 1 } }
+		divide_variable = { TU_IBE_lh_fort = 1 }
+	}
+	else_if = {
+		limit = { state = 214 }
+		if = { limit = { any_province_building_level = { province = { id = 771 } building = coastal_bunker level > 0 } } add_to_variable = { TU_IBE_lh_fort = 1 } }
+		if = { limit = { any_province_building_level = { province = { id = 771 } building = coastal_bunker level > 1 } } add_to_variable = { TU_IBE_lh_fort = 1 } }
+		if = { limit = { any_province_building_level = { province = { id = 771 } building = coastal_bunker level > 2 } } add_to_variable = { TU_IBE_lh_fort = 1 } }
+		divide_variable = { TU_IBE_lh_fort = 1 }
+	}
+	else_if = {
+		limit = { state = 215 }
+		if = { limit = { any_province_building_level = { province = { id = 1772 } building = coastal_bunker level > 0 } } add_to_variable = { TU_IBE_lh_fort = 1 } }
+		if = { limit = { any_province_building_level = { province = { id = 1772 } building = coastal_bunker level > 1 } } add_to_variable = { TU_IBE_lh_fort = 1 } }
+		if = { limit = { any_province_building_level = { province = { id = 1772 } building = coastal_bunker level > 2 } } add_to_variable = { TU_IBE_lh_fort = 1 } }
+		divide_variable = { TU_IBE_lh_fort = 1 }
+	}
+	else_if = {
+		limit = { state = 217 }
+		if = { limit = { any_province_building_level = { province = { id = 777 } building = coastal_bunker level > 0 } } add_to_variable = { TU_IBE_lh_fort = 1 } }
+		if = { limit = { any_province_building_level = { province = { id = 777 } building = coastal_bunker level > 1 } } add_to_variable = { TU_IBE_lh_fort = 1 } }
+		if = { limit = { any_province_building_level = { province = { id = 777 } building = coastal_bunker level > 2 } } add_to_variable = { TU_IBE_lh_fort = 1 } }
+		if = { limit = { any_province_building_level = { province = { id = 779 } building = coastal_bunker level > 0 } } add_to_variable = { TU_IBE_lh_fort = 1 } }
+		if = { limit = { any_province_building_level = { province = { id = 779 } building = coastal_bunker level > 1 } } add_to_variable = { TU_IBE_lh_fort = 1 } }
+		if = { limit = { any_province_building_level = { province = { id = 779 } building = coastal_bunker level > 2 } } add_to_variable = { TU_IBE_lh_fort = 1 } }
+		if = { limit = { any_province_building_level = { province = { id = 780 } building = coastal_bunker level > 0 } } add_to_variable = { TU_IBE_lh_fort = 1 } }
+		if = { limit = { any_province_building_level = { province = { id = 780 } building = coastal_bunker level > 1 } } add_to_variable = { TU_IBE_lh_fort = 1 } }
+		if = { limit = { any_province_building_level = { province = { id = 780 } building = coastal_bunker level > 2 } } add_to_variable = { TU_IBE_lh_fort = 1 } }
+		divide_variable = { TU_IBE_lh_fort = 3 }
+	}
+	else_if = {
+		limit = { state = 218 }
+		if = { limit = { any_province_building_level = { province = { id = 781 } building = coastal_bunker level > 0 } } add_to_variable = { TU_IBE_lh_fort = 1 } }
+		if = { limit = { any_province_building_level = { province = { id = 781 } building = coastal_bunker level > 1 } } add_to_variable = { TU_IBE_lh_fort = 1 } }
+		if = { limit = { any_province_building_level = { province = { id = 781 } building = coastal_bunker level > 2 } } add_to_variable = { TU_IBE_lh_fort = 1 } }
+		divide_variable = { TU_IBE_lh_fort = 1 }
+	}
+	else_if = {
+		limit = { state = 219 }
+		if = { limit = { any_province_building_level = { province = { id = 782 } building = coastal_bunker level > 0 } } add_to_variable = { TU_IBE_lh_fort = 1 } }
+		if = { limit = { any_province_building_level = { province = { id = 782 } building = coastal_bunker level > 1 } } add_to_variable = { TU_IBE_lh_fort = 1 } }
+		if = { limit = { any_province_building_level = { province = { id = 782 } building = coastal_bunker level > 2 } } add_to_variable = { TU_IBE_lh_fort = 1 } }
+		divide_variable = { TU_IBE_lh_fort = 1 }
+	}
+	else_if = {
+		limit = { state = 315 }
+		if = { limit = { any_province_building_level = { province = { id = 1666 } building = coastal_bunker level > 0 } } add_to_variable = { TU_IBE_lh_fort = 1 } }
+		if = { limit = { any_province_building_level = { province = { id = 1666 } building = coastal_bunker level > 1 } } add_to_variable = { TU_IBE_lh_fort = 1 } }
+		if = { limit = { any_province_building_level = { province = { id = 1666 } building = coastal_bunker level > 2 } } add_to_variable = { TU_IBE_lh_fort = 1 } }
+		divide_variable = { TU_IBE_lh_fort = 1 }
+	}
+	else_if = {
+		limit = { state = 317 }
+		if = { limit = { any_province_building_level = { province = { id = 1668 } building = coastal_bunker level > 0 } } add_to_variable = { TU_IBE_lh_fort = 1 } }
+		if = { limit = { any_province_building_level = { province = { id = 1668 } building = coastal_bunker level > 1 } } add_to_variable = { TU_IBE_lh_fort = 1 } }
+		if = { limit = { any_province_building_level = { province = { id = 1668 } building = coastal_bunker level > 2 } } add_to_variable = { TU_IBE_lh_fort = 1 } }
+		divide_variable = { TU_IBE_lh_fort = 1 }
+	}
+	else_if = {
+		limit = { state = 318 }
+		if = { limit = { any_province_building_level = { province = { id = 1689 } building = coastal_bunker level > 0 } } add_to_variable = { TU_IBE_lh_fort = 1 } }
+		if = { limit = { any_province_building_level = { province = { id = 1689 } building = coastal_bunker level > 1 } } add_to_variable = { TU_IBE_lh_fort = 1 } }
+		if = { limit = { any_province_building_level = { province = { id = 1689 } building = coastal_bunker level > 2 } } add_to_variable = { TU_IBE_lh_fort = 1 } }
+		divide_variable = { TU_IBE_lh_fort = 1 }
+	}
+	else_if = {
+		limit = { state = 319 }
+		if = { limit = { any_province_building_level = { province = { id = 1690 } building = coastal_bunker level > 0 } } add_to_variable = { TU_IBE_lh_fort = 1 } }
+		if = { limit = { any_province_building_level = { province = { id = 1690 } building = coastal_bunker level > 1 } } add_to_variable = { TU_IBE_lh_fort = 1 } }
+		if = { limit = { any_province_building_level = { province = { id = 1690 } building = coastal_bunker level > 2 } } add_to_variable = { TU_IBE_lh_fort = 1 } }
+		divide_variable = { TU_IBE_lh_fort = 1 }
+	}
+	else_if = {
+		limit = { state = 326 }
+		if = { limit = { any_province_building_level = { province = { id = 1773 } building = coastal_bunker level > 0 } } add_to_variable = { TU_IBE_lh_fort = 1 } }
+		if = { limit = { any_province_building_level = { province = { id = 1773 } building = coastal_bunker level > 1 } } add_to_variable = { TU_IBE_lh_fort = 1 } }
+		if = { limit = { any_province_building_level = { province = { id = 1773 } building = coastal_bunker level > 2 } } add_to_variable = { TU_IBE_lh_fort = 1 } }
+		divide_variable = { TU_IBE_lh_fort = 1 }
+	}
+	else_if = {
+		limit = { state = 470 }
+		if = { limit = { any_province_building_level = { province = { id = 2430 } building = coastal_bunker level > 0 } } add_to_variable = { TU_IBE_lh_fort = 1 } }
+		if = { limit = { any_province_building_level = { province = { id = 2430 } building = coastal_bunker level > 1 } } add_to_variable = { TU_IBE_lh_fort = 1 } }
+		if = { limit = { any_province_building_level = { province = { id = 2430 } building = coastal_bunker level > 2 } } add_to_variable = { TU_IBE_lh_fort = 1 } }
+		divide_variable = { TU_IBE_lh_fort = 1 }
+	}
+	else_if = {
+		limit = { state = 474 }
+		if = { limit = { any_province_building_level = { province = { id = 2435 } building = coastal_bunker level > 0 } } add_to_variable = { TU_IBE_lh_fort = 1 } }
+		if = { limit = { any_province_building_level = { province = { id = 2435 } building = coastal_bunker level > 1 } } add_to_variable = { TU_IBE_lh_fort = 1 } }
+		if = { limit = { any_province_building_level = { province = { id = 2435 } building = coastal_bunker level > 2 } } add_to_variable = { TU_IBE_lh_fort = 1 } }
+		divide_variable = { TU_IBE_lh_fort = 1 }
+	}
+}
+
+TU_IBE_lh_fort_decay = {
+	if = {
+		limit = { state = 1 }
+		random_list = {
+			1 = { damage_building = { type = coastal_bunker damage = 1 province = 1 } }
+		}
+	}
+	else_if = {
+		limit = { state = 30 }
+		random_list = {
+			1 = { damage_building = { type = coastal_bunker damage = 1 province = 129 } }
+			1 = { damage_building = { type = coastal_bunker damage = 1 province = 130 } }
+		}
+	}
+	else_if = {
+		limit = { state = 69 }
+		random_list = {
+			1 = { damage_building = { type = coastal_bunker damage = 1 province = 275 } }
+		}
+	}
+	else_if = {
+		limit = { state = 74 }
+		random_list = {
+			1 = { damage_building = { type = coastal_bunker damage = 1 province = 284 } }
+		}
+	}
+	else_if = {
+		limit = { state = 75 }
+		random_list = {
+			1 = { damage_building = { type = coastal_bunker damage = 1 province = 285 } }
+		}
+	}
+	else_if = {
+		limit = { state = 76 }
+		random_list = {
+			1 = { damage_building = { type = coastal_bunker damage = 1 province = 286 } }
+		}
+	}
+	else_if = {
+		limit = { state = 116 }
+		random_list = {
+			1 = { damage_building = { type = coastal_bunker damage = 1 province = 439 } }
+			1 = { damage_building = { type = coastal_bunker damage = 1 province = 440 } }
+		}
+	}
+	else_if = {
+		limit = { state = 117 }
+		random_list = {
+			1 = { damage_building = { type = coastal_bunker damage = 1 province = 443 } }
+		}
+	}
+	else_if = {
+		limit = { state = 119 }
+		random_list = {
+			1 = { damage_building = { type = coastal_bunker damage = 1 province = 454 } }
+		}
+	}
+	else_if = {
+		limit = { state = 120 }
+		random_list = {
+			1 = { damage_building = { type = coastal_bunker damage = 1 province = 460 } }
+			1 = { damage_building = { type = coastal_bunker damage = 1 province = 462 } }
+		}
+	}
+	else_if = {
+		limit = { state = 121 }
+		random_list = {
+			1 = { damage_building = { type = coastal_bunker damage = 1 province = 461 } }
+		}
+	}
+	else_if = {
+		limit = { state = 122 }
+		random_list = {
+			1 = { damage_building = { type = coastal_bunker damage = 1 province = 463 } }
+		}
+	}
+	else_if = {
+		limit = { state = 123 }
+		random_list = {
+			1 = { damage_building = { type = coastal_bunker damage = 1 province = 464 } }
+		}
+	}
+	else_if = {
+		limit = { state = 124 }
+		random_list = {
+			1 = { damage_building = { type = coastal_bunker damage = 1 province = 465 } }
+		}
+	}
+	else_if = {
+		limit = { state = 125 }
+		random_list = {
+			1 = { damage_building = { type = coastal_bunker damage = 1 province = 466 } }
+		}
+	}
+	else_if = {
+		limit = { state = 130 }
+		random_list = {
+			1 = { damage_building = { type = coastal_bunker damage = 1 province = 474 } }
+			1 = { damage_building = { type = coastal_bunker damage = 1 province = 476 } }
+			1 = { damage_building = { type = coastal_bunker damage = 1 province = 478 } }
+		}
+	}
+	else_if = {
+		limit = { state = 131 }
+		random_list = {
+			1 = { damage_building = { type = coastal_bunker damage = 1 province = 477 } }
+		}
+	}
+	else_if = {
+		limit = { state = 132 }
+		random_list = {
+			1 = { damage_building = { type = coastal_bunker damage = 1 province = 479 } }
+		}
+	}
+	else_if = {
+		limit = { state = 133 }
+		random_list = {
+			1 = { damage_building = { type = coastal_bunker damage = 1 province = 482 } }
+		}
+	}
+	else_if = {
+		limit = { state = 134 }
+		random_list = {
+			1 = { damage_building = { type = coastal_bunker damage = 1 province = 483 } }
+		}
+	}
+	else_if = {
+		limit = { state = 174 }
+		random_list = {
+			1 = { damage_building = { type = coastal_bunker damage = 1 province = 613 } }
+		}
+	}
+	else_if = {
+		limit = { state = 177 }
+		random_list = {
+			1 = { damage_building = { type = coastal_bunker damage = 1 province = 621 } }
+			1 = { damage_building = { type = coastal_bunker damage = 1 province = 629 } }
+			1 = { damage_building = { type = coastal_bunker damage = 1 province = 630 } }
+		}
+	}
+	else_if = {
+		limit = { state = 181 }
+		random_list = {
+			1 = { damage_building = { type = coastal_bunker damage = 1 province = 646 } }
+			1 = { damage_building = { type = coastal_bunker damage = 1 province = 649 } }
+		}
+	}
+	else_if = {
+		limit = { state = 199 }
+		random_list = {
+			1 = { damage_building = { type = coastal_bunker damage = 1 province = 720 } }
+		}
+	}
+	else_if = {
+		limit = { state = 200 }
+		random_list = {
+			1 = { damage_building = { type = coastal_bunker damage = 1 province = 721 } }
+			1 = { damage_building = { type = coastal_bunker damage = 1 province = 724 } }
+			1 = { damage_building = { type = coastal_bunker damage = 1 province = 729 } }
+		}
+	}
+	else_if = {
+		limit = { state = 202 }
+		random_list = {
+			1 = { damage_building = { type = coastal_bunker damage = 1 province = 728 } }
+		}
+	}
+	else_if = {
+		limit = { state = 203 }
+		random_list = {
+			1 = { damage_building = { type = coastal_bunker damage = 1 province = 747 } }
+			1 = { damage_building = { type = coastal_bunker damage = 1 province = 753 } }
+			1 = { damage_building = { type = coastal_bunker damage = 1 province = 759 } }
+		}
+	}
+	else_if = {
+		limit = { state = 205 }
+		random_list = {
+			1 = { damage_building = { type = coastal_bunker damage = 1 province = 734 } }
+		}
+	}
+	else_if = {
+		limit = { state = 206 }
+		random_list = {
+			1 = { damage_building = { type = coastal_bunker damage = 1 province = 735 } }
+		}
+	}
+	else_if = {
+		limit = { state = 207 }
+		random_list = {
+			1 = { damage_building = { type = coastal_bunker damage = 1 province = 736 } }
+			1 = { damage_building = { type = coastal_bunker damage = 1 province = 744 } }
+			1 = { damage_building = { type = coastal_bunker damage = 1 province = 746 } }
+			1 = { damage_building = { type = coastal_bunker damage = 1 province = 751 } }
+			1 = { damage_building = { type = coastal_bunker damage = 1 province = 752 } }
+		}
+	}
+	else_if = {
+		limit = { state = 208 }
+		random_list = {
+			1 = { damage_building = { type = coastal_bunker damage = 1 province = 737 } }
+		}
+	}
+	else_if = {
+		limit = { state = 209 }
+		random_list = {
+			1 = { damage_building = { type = coastal_bunker damage = 1 province = 743 } }
+		}
+	}
+	else_if = {
+		limit = { state = 210 }
+		random_list = {
+			1 = { damage_building = { type = coastal_bunker damage = 1 province = 749 } }
+		}
+	}
+	else_if = {
+		limit = { state = 211 }
+		random_list = {
+			1 = { damage_building = { type = coastal_bunker damage = 1 province = 754 } }
+			1 = { damage_building = { type = coastal_bunker damage = 1 province = 755 } }
+			1 = { damage_building = { type = coastal_bunker damage = 1 province = 757 } }
+			1 = { damage_building = { type = coastal_bunker damage = 1 province = 758 } }
+			1 = { damage_building = { type = coastal_bunker damage = 1 province = 760 } }
+			1 = { damage_building = { type = coastal_bunker damage = 1 province = 763 } }
+		}
+	}
+	else_if = {
+		limit = { state = 212 }
+		random_list = {
+			1 = { damage_building = { type = coastal_bunker damage = 1 province = 766 } }
+		}
+	}
+	else_if = {
+		limit = { state = 214 }
+		random_list = {
+			1 = { damage_building = { type = coastal_bunker damage = 1 province = 771 } }
+		}
+	}
+	else_if = {
+		limit = { state = 215 }
+		random_list = {
+			1 = { damage_building = { type = coastal_bunker damage = 1 province = 1772 } }
+		}
+	}
+	else_if = {
+		limit = { state = 217 }
+		random_list = {
+			1 = { damage_building = { type = coastal_bunker damage = 1 province = 777 } }
+			1 = { damage_building = { type = coastal_bunker damage = 1 province = 779 } }
+			1 = { damage_building = { type = coastal_bunker damage = 1 province = 780 } }
+		}
+	}
+	else_if = {
+		limit = { state = 218 }
+		random_list = {
+			1 = { damage_building = { type = coastal_bunker damage = 1 province = 781 } }
+		}
+	}
+	else_if = {
+		limit = { state = 219 }
+		random_list = {
+			1 = { damage_building = { type = coastal_bunker damage = 1 province = 782 } }
+		}
+	}
+	else_if = {
+		limit = { state = 315 }
+		random_list = {
+			1 = { damage_building = { type = coastal_bunker damage = 1 province = 1666 } }
+		}
+	}
+	else_if = {
+		limit = { state = 317 }
+		random_list = {
+			1 = { damage_building = { type = coastal_bunker damage = 1 province = 1668 } }
+		}
+	}
+	else_if = {
+		limit = { state = 318 }
+		random_list = {
+			1 = { damage_building = { type = coastal_bunker damage = 1 province = 1689 } }
+		}
+	}
+	else_if = {
+		limit = { state = 319 }
+		random_list = {
+			1 = { damage_building = { type = coastal_bunker damage = 1 province = 1690 } }
+		}
+	}
+	else_if = {
+		limit = { state = 326 }
+		random_list = {
+			1 = { damage_building = { type = coastal_bunker damage = 1 province = 1773 } }
+		}
+	}
+	else_if = {
+		limit = { state = 470 }
+		random_list = {
+			1 = { damage_building = { type = coastal_bunker damage = 1 province = 2430 } }
+		}
+	}
+	else_if = {
+		limit = { state = 474 }
+		random_list = {
+			1 = { damage_building = { type = coastal_bunker damage = 1 province = 2435 } }
+		}
+	}
 }
 
 TU_IBE_lh_update_risk = {
+	TU_IBE_lh_fort_measure = yes
 	set_variable = { TU_IBE_lh_risk = ROOT.TU_IBE_threat }
 	divide_variable = { TU_IBE_lh_risk = 4 }
 	set_temp_variable = { tu_ibe_f = TU_IBE_lh_fort }
@@ -225,6 +956,10 @@ TU_IBE_lh_update_risk = {
 	else_if = {
 		limit = { TU_IBE_garrison_10k = yes }
 		multiply_variable = { TU_IBE_lh_risk = 0.8 }
+	}
+	if = {
+		limit = { check_variable = { TU_IBE_lh_risk < 2 } }
+		set_variable = { TU_IBE_lh_risk = 2 }
 	}
 	if = {
 		limit = { ROOT = { has_country_flag = TU_IBE_ishar_route } }
@@ -252,12 +987,26 @@ TU_IBE_lighthouse_monthly = {
 				ROOT = { add_to_variable = { TU_IBE_lh_damaged = 1 } }
 			}
 		}
-		# 해안 수비대 습격 (병력 1만 이상): 확률 = 손상 확률의 절반, 그 주 사단에 피해
+		# 해안 요새 파손: 요새가 있으면 손상 확률과 같은 확률로 해안 프로빈스 하나의 요새에 피해
 		if = {
-			limit = { TU_IBE_garrison_10k = yes }
-			set_temp_variable_to_random = { var = tu_ibe_roll min = 0 max = 200 }
+			limit = { check_variable = { TU_IBE_lh_fort > 0 } }
+			set_temp_variable_to_random = { var = tu_ibe_roll min = 0 max = 100 }
 			if = {
 				limit = { check_variable = { tu_ibe_roll < TU_IBE_lh_risk } }
+				TU_IBE_lh_fort_decay = yes
+			}
+		}
+		# 해안 수비대 습격 (병력 1만 이상, 상시): 확률 = 손상 확률의 절반, 등대가 손상된 동안은 그 3배. 그 주 사단에 피해
+		if = {
+			limit = { TU_IBE_garrison_10k = yes }
+			set_temp_variable = { tu_ibe_raid = TU_IBE_lh_risk }
+			if = {
+				limit = { has_state_flag = TU_IBE_lh_damaged }
+				multiply_temp_variable = { tu_ibe_raid = 3 }
+			}
+			set_temp_variable_to_random = { var = tu_ibe_roll min = 0 max = 200 }
+			if = {
+				limit = { check_variable = { tu_ibe_roll < tu_ibe_raid } }
 				TU_IBE_raid_damage = yes
 				save_event_target_as = tu_ibe_raid_state
 				ROOT = { country_event = { id = tu_ibe_ev.52 } }
