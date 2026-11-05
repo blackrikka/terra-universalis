@@ -652,14 +652,37 @@ f("hunter_blades", "사냥꾼의 대검", "Hunter Greatswords Weapons", pre=["hu
 f("hunter_deep_scouting", "심해 정찰", "Deep Sea Scouting", pre=["hunter_drill"])
 f("hunter_regiment", "아비살 사냥꾼 연대", "Abyssal Hunter Regiment", pre=["hunter_drill", "hunter_blades"],
   reward=["add_manpower = 10000"])
-f("hunter_skadi", "스카디를 앞세우다", "Skadi Leads the Way", pre=["hunter_regiment", "hunter_deep_scouting"], cost=15, theme=False,
+f("hunter_skadi", "사냥꾼의 지도자", "A Leader Among the Hunters", pre=["hunter_regiment", "hunter_deep_scouting"], cost=15, theme=False,
   me=["inquisitor_state", "crown_restored", "sea_reconciliation"],
-  reward=[FLAG("hunter_rule"), "add_ideas = TU_IBE_hunter_rule", "army_experience = 50"],
-  desc=("사냥꾼 스카디가 이베리아의 지도자가 된다. 바다가 그녀를 부르는 소리는 아직 아무도 듣지 못했다.",
-        "The hunter Skadi becomes Iberia's leader. No one has yet heard the sea calling her."))
+  reward=[FLAG("hunter_rule"), "add_ideas = TU_IBE_hunter_rule", "army_experience = 50", EV(42)],
+  desc=("아비살 사냥꾼 가운데 누가 이베리아를 이끌지 정한다. (이벤트로 지도자 선택)",
+        "Decide which of the Abyssal Hunters will lead Iberia. (Leader chosen by event)"))
+
+
+def LEAD(who, extra):
+    """사냥꾼 지도자 세우기: 영입 → 지도자 → 깃발."""
+    return ["if = { limit = { NOT = { has_character = TU_IBE_%s } } recruit_character = TU_IBE_%s }" % (who, who),
+            "promote_character = {\n\tcharacter = TU_IBE_%s\n\tideology = despotism\n}" % who,
+            FLAG("leader_%s" % who)] + extra
+
+
+C.ev(42, ("누가 이베리아를 이끄는가", "Who Will Lead Iberia?"),
+     ("사냥꾼들이 낡은 등대 아래에 모였다. 심판소는 물러났고, 이제 바다와 싸워 본 이들이 나라를 맡는다. "
+      "하지만 사냥꾼들 사이에도 누가 앞장설지는 정해지지 않았다.",
+      "The hunters gather beneath an old lighthouse. The Inquisition has stepped back, and those who have fought the sea "
+      "will now hold the country. Yet even among the hunters, no one has decided who will lead."),
+     [("스카디. 가장 강한 사냥꾼이 앞에 선다.", "Skadi. The strongest hunter stands in front.",
+       LEAD("skadi", ["army_experience = 25", "add_war_support = 0.05"]), 40),
+      ("글래디아. 사냥꾼들의 대장이 지휘한다.", "Gladiia. The captain of the hunters takes command.",
+       LEAD("gladiia", ["add_political_power = 75", "add_stability = 0.03"]), 30),
+      ("스펙터. 말 없는 칼날이 길을 연다.", "Specter. The silent blade clears the way.",
+       LEAD("specter", ["army_experience = 50"]), 15),
+      ("울피아누스. 돌아온 옛 대장이 해안을 지킨다.", "Ulpianus. The old captain returns to guard the coast.",
+       LEAD("ulpianus", [THR(-15), "add_stability = 0.03"]), 15)],
+     picture="GFX_report_event_generic_read_write")
 
 # ------------------------------------------------------------------ 숨은 루트: 이샤믈라 (사양서 24 개정)
-# 스카디가 지도자인 상태에서 등대가 모두 무너지면 (한 번이라도 무너진 적이 있고 지금 0) "노랫소리" ->
+# 사냥꾼 지도자 이벤트(42)에서 스카디를 고르고, 스카디가 지도자인 상태에서 등대가 모두 무너지면 (한 번이라도 무너진 적이 있고 지금 0) "노랫소리" ->
 # "조금은 빠져들어도 되겠지.." -> 15일 뒤 "하나가...되는거야..." -> 지도자 이샤믈라 + 숨은 갈래.
 ISHAR = [HAS("ishar_route")]
 C.ev(40, ("노랫소리", "A Song"),
@@ -668,7 +691,7 @@ C.ev(40, ("노랫소리", "A Song"),
      [("내 착각인것같다", "It must be my imagination", [], 100),
       ("조금은 빠져들어도 되겠지..", "Surely I can lose myself a little..", [FLAG("ishar_song_heard"), EV(41, 15)], 0)],
      picture="GFX_report_event_generic_read_write",
-     trigger=["original_tag = IBE", "has_completed_focus = TU_IBE_hunter_skadi",
+     trigger=["original_tag = IBE", "has_completed_focus = TU_IBE_hunter_skadi", HAS("leader_skadi"),
               "has_country_leader = { character = TU_IBE_skadi ruling_only = yes }",
               "check_variable = { TU_IBE_lighthouses < 1 }", HAS("lighthouse_fell"), "NOT = { %s }" % HAS("ishar_route")],
      mtth=20)

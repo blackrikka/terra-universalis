@@ -436,6 +436,73 @@ country_event = {
 }
 
 country_event = {
+	id = tu_ibe_ev.42
+	title = tu_ibe_ev.42.t
+	desc = tu_ibe_ev.42.d
+	picture = GFX_report_event_generic_read_write
+	is_triggered_only = yes
+
+	option = {
+		name = tu_ibe_ev.42.a
+		ai_chance = {
+			factor = 40
+		}
+		if = { limit = { NOT = { has_character = TU_IBE_skadi } } recruit_character = TU_IBE_skadi }
+		promote_character = {
+			character = TU_IBE_skadi
+			ideology = despotism
+		}
+		set_country_flag = TU_IBE_leader_skadi
+		army_experience = 25
+		add_war_support = 0.05
+	}
+
+	option = {
+		name = tu_ibe_ev.42.b
+		ai_chance = {
+			factor = 30
+		}
+		if = { limit = { NOT = { has_character = TU_IBE_gladiia } } recruit_character = TU_IBE_gladiia }
+		promote_character = {
+			character = TU_IBE_gladiia
+			ideology = despotism
+		}
+		set_country_flag = TU_IBE_leader_gladiia
+		add_political_power = 75
+		add_stability = 0.03
+	}
+
+	option = {
+		name = tu_ibe_ev.42.c
+		ai_chance = {
+			factor = 15
+		}
+		if = { limit = { NOT = { has_character = TU_IBE_specter } } recruit_character = TU_IBE_specter }
+		promote_character = {
+			character = TU_IBE_specter
+			ideology = despotism
+		}
+		set_country_flag = TU_IBE_leader_specter
+		army_experience = 50
+	}
+
+	option = {
+		name = tu_ibe_ev.42.d
+		ai_chance = {
+			factor = 15
+		}
+		if = { limit = { NOT = { has_character = TU_IBE_ulpianus } } recruit_character = TU_IBE_ulpianus }
+		promote_character = {
+			character = TU_IBE_ulpianus
+			ideology = despotism
+		}
+		set_country_flag = TU_IBE_leader_ulpianus
+		TU_IBE_threat_m15 = yes
+		add_stability = 0.03
+	}
+}
+
+country_event = {
 	id = tu_ibe_ev.40
 	title = tu_ibe_ev.40.t
 	desc = tu_ibe_ev.40.d
@@ -444,6 +511,7 @@ country_event = {
 	trigger = {
 		original_tag = IBE
 		has_completed_focus = TU_IBE_hunter_skadi
+		has_country_flag = TU_IBE_leader_skadi
 		has_country_leader = { character = TU_IBE_skadi ruling_only = yes }
 		check_variable = { TU_IBE_lighthouses < 1 }
 		has_country_flag = TU_IBE_lighthouse_fell

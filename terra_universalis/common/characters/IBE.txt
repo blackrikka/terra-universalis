@@ -42,6 +42,11 @@ characters = {
 
 	TU_IBE_ulpianus = {
 		name = TU_IBE_ulpianus
+		country_leader = { traits = { tu_lt_old_captain }
+			ideology = despotism
+			expire = "1200.1.1.1"
+			id = -1
+		}
 		advisor = {
 			slot = high_command
 			idea_token = TU_IBE_ulpianus_adv
@@ -86,6 +91,11 @@ characters = {
 
 	TU_IBE_specter = {
 		name = TU_IBE_specter
+		country_leader = { traits = { tu_lt_silent_blade }
+			ideology = despotism
+			expire = "1200.1.1.1"
+			id = -1
+		}
 		corps_commander = {
 			traits = { }
 			skill = 3
@@ -99,6 +109,11 @@ characters = {
 
 	TU_IBE_gladiia = {
 		name = TU_IBE_gladiia
+		country_leader = { traits = { tu_lt_hunter_captain }
+			ideology = despotism
+			expire = "1200.1.1.1"
+			id = -1
+		}
 		advisor = {
 			slot = theorist
 			idea_token = TU_IBE_gladiia_adv

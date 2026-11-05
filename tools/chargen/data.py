@@ -84,10 +84,10 @@ COUNTRIES = {
         ("grand_inquisitor", "대심판관", "Grand Inquisitor", [("L", "despotism")], None),
         ("king", "이베리아 국왕", "King of Iberia", [("L", "despotism")], None),
         ("irene", "아이린", "Irene", [("L", "moderatism"), ("A", "political_advisor", "tu_inquisitor")], None),
-        ("ulpianus", "울피아누스", "Ulpianus", [("A", "high_command", "tu_chief_defender"), ("G", 5, 5, 3, 2)], None),
+        ("ulpianus", "울피아누스", "Ulpianus", [("L", "despotism"), ("A", "high_command", "tu_chief_defender"), ("G", 5, 5, 3, 2)], None),
         ("skadi", "스카디", "Skadi", [("L", "despotism"), ("G", 6, 3, 2, 2)], None),
-        ("specter", "스펙터", "Specter", [("G", 5, 3, 2, 2)], None),
-        ("gladiia", "글래디아", "Gladiia", [("A", "theorist", "tu_theorist_tactics"), ("G", 4, 4, 4, 3)], None),
+        ("specter", "스펙터", "Specter", [("L", "despotism"), ("G", 5, 3, 2, 2)], None),
+        ("gladiia", "글래디아", "Gladiia", [("L", "despotism"), ("A", "theorist", "tu_theorist_tactics"), ("G", 4, 4, 4, 3)], None),
         ("ishar_mla", "이샤믈라", "Ishar-mla", [("L", "despotism")], None),     # 숨은 루트 (이벤트 tu_ibe_ev.41)
     ], start=["grand_inquisitor", "irene", "ulpianus", "skadi", "specter", "gladiia"], hooks={
         "inquisitor_state": [("name", "INQUISITION", "이베리아 심판국", "Inquisitorial State of Iberia", "이베리아의", "Iberian")],
@@ -95,7 +95,7 @@ COUNTRIES = {
                            ("name", "KINGDOM", "이베리아 왕국", "Kingdom of Iberia", "이베리아의", "Iberian")],
         "sea_reconciliation": [("leader", "irene", "moderatism"),
                                ("name", "NEW", "새 이베리아", "New Iberia", "이베리아의", "Iberian")],
-        "hunter_skadi": [("leader", "skadi", "despotism")],
+        # hunter_skadi: 지도자는 중점이 아니라 이벤트 tu_ibe_ev.42 가 고른다 (사양서 38)
         "ishar_finale": [("name", "DEEP", "심해", "The Deep", "심해의", "Deep")],
     }),
     # ------------------------------------------------------------------ 사르곤

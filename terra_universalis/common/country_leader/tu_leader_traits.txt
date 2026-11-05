@@ -115,6 +115,27 @@ leader_traits = {
 		war_support_factor = 0.1
 		ai_will_do = { factor = 1 }
 	}
+	tu_lt_hunter_captain = {
+		random = no
+		army_org_factor = 0.08
+		planning_speed = 0.1
+		political_power_factor = 0.05
+		ai_will_do = { factor = 1 }
+	}
+	tu_lt_silent_blade = {
+		random = no
+		army_attack_factor = 0.08
+		army_morale_factor = 0.08
+		stability_factor = -0.03
+		ai_will_do = { factor = 1 }
+	}
+	tu_lt_old_captain = {
+		random = no
+		army_defence_factor = 0.1
+		stability_factor = 0.05
+		war_support_factor = 0.05
+		ai_will_do = { factor = 1 }
+	}
 	tu_lt_corrupting_heart = {
 		random = no
 		army_attack_factor = 0.15

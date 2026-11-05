@@ -2471,7 +2471,7 @@
 
 	focus = {
 		id = TU_IBE_hunter_skadi
-		icon = GFX_goal_generic_political_pressure
+		icon = GFX_goal_generic_allies_build_infantry
 		prerequisite = { focus = TU_IBE_hunter_regiment }
 		prerequisite = { focus = TU_IBE_hunter_deep_scouting }
 		mutually_exclusive = { focus = TU_IBE_inquisitor_state focus = TU_IBE_crown_restored focus = TU_IBE_sea_reconciliation }
@@ -2489,6 +2489,7 @@
 			set_country_flag = TU_IBE_hunter_rule
 			add_ideas = TU_IBE_hunter_rule
 			army_experience = 50
+			country_event = { id = tu_ibe_ev.42 }
 		}
 	}
 
