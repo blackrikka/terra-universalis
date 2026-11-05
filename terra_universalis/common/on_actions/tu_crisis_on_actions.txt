@@ -8,12 +8,9 @@ on_actions = {
 					NOT = { has_global_flag = TU_chernobog_incident_scheduled }
 				}
 				set_global_flag = TU_chernobog_incident_scheduled
+				# Countdown mission (spec 29): tu_crisis.1 fires when TU_URS_uprising_mission times out.
 				URS = {
-					country_event = {
-						id = tu_crisis.1
-						days = 60
-						random_days = 30
-					}
+					activate_mission = TU_URS_uprising_mission
 				}
 			}
 		}
