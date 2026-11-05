@@ -258,25 +258,6 @@ TU_KAZ_contracts_category = {
 }
 
 TU_KAZ_politics_category = {
-	TU_KAZ_union_lobby = {
-		icon = GFX_decision_generic_political_discourse
-
-		allowed = {
-			original_tag = KAZ
-		}
-
-		cost = 25
-		days_re_enable = 120
-
-		complete_effect = {
-			add_political_power = 25
-		}
-
-		ai_will_do = {
-			base = 1
-		}
-	}
-
 	TU_KAZ_knight_rally = {
 		icon = GFX_decision_generic_political_discourse
 

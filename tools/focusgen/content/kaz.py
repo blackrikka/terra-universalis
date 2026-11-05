@@ -406,10 +406,8 @@ C.d(cat_contract, "merc_arsenal", "용병 무기 조달", "Mercenary Arms Procur
     ["add_equipment_to_stockpile = { type = infantry_equipment amount = 1000 }"], cost=50, once=False,
     days_re_enable=180, visible=[HAS("mercs")])
 
-cat_pol = C.category("politics", "연합회와 기사", "Union and Knights",
-                     ("상업 연합회와 기사 사이에서 저울을 움직인다.", "Tip the scales between the Commercial Union and the knights."))
-C.d(cat_pol, "union_lobby", "연합회 로비 수용", "Accept Union Lobbying",
-    [U("0.1"), "add_political_power = 25"], cost=25, once=False, days_re_enable=120)
+cat_pol = C.category("politics", "카시미어 정무", "Kazimierz Affairs",
+                     ("기업과 기사, 감염자 사이의 일을 처리한다.", "Handle the affairs between the corporations, the knights and the infected."))
 C.d(cat_pol, "knight_rally", "기사 집회 지원", "Support a Knights' Rally",
     [K("0.1"), FAME(5)], cost=50, once=False, days_re_enable=120)
 C.d(cat_pol, "corporate_tax", "기업 감세 거래", "Corporate Tax Deal",

@@ -485,133 +485,6 @@ TU_IBE_coast_category = {
 		}
 	}
 
-	TU_IBE_hunter_aid = {
-		icon = GFX_decision_generic_political_discourse
-
-		allowed = {
-			original_tag = IBE
-		}
-
-		visible = {
-			has_country_flag = TU_IBE_hunters_met
-		}
-
-		cost = 50
-		days_re_enable = 180
-
-		complete_effect = {
-			TU_IBE_threat_m15 = yes
-			add_political_power = -25
-		}
-
-		ai_will_do = {
-			base = 1
-		}
-	}
-
-}
-
-TU_IBE_politics_category = {
-	TU_IBE_inquisition_sermon = {
-		icon = GFX_decision_generic_political_discourse
-
-		allowed = {
-			original_tag = IBE
-		}
-
-		cost = 50
-		days_re_enable = 120
-
-		complete_effect = {
-			add_stability = 0.02
-		}
-
-		ai_will_do = {
-			base = 1
-		}
-	}
-
-	TU_IBE_crown_rally = {
-		icon = GFX_decision_generic_political_discourse
-
-		allowed = {
-			original_tag = IBE
-		}
-
-		cost = 50
-		days_re_enable = 120
-
-		complete_effect = {
-			add_political_power = 25
-		}
-
-		ai_will_do = {
-			base = 1
-		}
-	}
-
-	TU_IBE_heresy_trial = {
-		icon = GFX_decision_generic_political_discourse
-
-		allowed = {
-			original_tag = IBE
-		}
-
-		cost = 25
-		days_re_enable = 180
-
-		complete_effect = {
-			add_stability = 0.04
-			add_political_power = -15
-		}
-
-		ai_will_do = {
-			base = 1
-		}
-	}
-
-	TU_IBE_royal_tour = {
-		icon = GFX_decision_generic_political_discourse
-
-		allowed = {
-			original_tag = IBE
-		}
-
-		visible = {
-			has_completed_focus = TU_IBE_royal_heir
-		}
-
-		cost = 25
-		days_re_enable = 180
-
-		complete_effect = {
-			add_war_support = 0.03
-		}
-
-		ai_will_do = {
-			base = 1
-		}
-	}
-
-	TU_IBE_noble_taxes = {
-		icon = GFX_decision_generic_political_discourse
-
-		allowed = {
-			original_tag = IBE
-		}
-
-		cost = 0
-		days_re_enable = 240
-
-		complete_effect = {
-			add_political_power = 75
-		}
-
-		ai_will_do = {
-			base = 1
-		}
-	}
-
 	TU_IBE_inquisitor_recruits = {
 		icon = GFX_decision_generic_military
 
@@ -636,7 +509,7 @@ TU_IBE_politics_category = {
 		}
 	}
 
-	TU_IBE_crown_marriage = {
+	TU_IBE_hunter_aid = {
 		icon = GFX_decision_generic_political_discourse
 
 		allowed = {
@@ -644,33 +517,15 @@ TU_IBE_politics_category = {
 		}
 
 		visible = {
-			has_completed_focus = TU_IBE_royal_heir
-		}
-
-		cost = 75
-		fire_only_once = yes
-
-		complete_effect = {
-			add_stability = 0.02
-		}
-
-		ai_will_do = {
-			base = 1
-		}
-	}
-
-	TU_IBE_inquisition_audit = {
-		icon = GFX_decision_generic_political_discourse
-
-		allowed = {
-			original_tag = IBE
+			has_country_flag = TU_IBE_hunters_met
 		}
 
 		cost = 50
-		days_re_enable = 240
+		days_re_enable = 180
 
 		complete_effect = {
-			add_political_power = 40
+			TU_IBE_threat_m15 = yes
+			add_political_power = -25
 		}
 
 		ai_will_do = {

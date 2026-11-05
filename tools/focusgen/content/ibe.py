@@ -506,15 +506,8 @@ C.d(cat_coast, "hunters_contact", "심해 사냥꾼 수소문", "Seek the Abyssa
 C.d(cat_coast, "sea_research", "심해 연구 지원", "Fund Deep Sea Research",
     ["add_tech_bonus = { name = TU_IBE_sea_research bonus = 0.75 uses = 1 category = electronics }"],
     cost=50, once=False, days_re_enable=240, visible=["has_completed_focus = TU_IBE_sea_studies"])
-cat_pol = C.category("politics", "심판소와 왕관", "Inquisition and Crown")
-C.d(cat_pol, "inquisition_sermon", "심판소 설교", "Inquisition Sermon", [INQ("0.1"), "add_stability = 0.02"], cost=50, once=False, days_re_enable=120)
-C.d(cat_pol, "crown_rally", "왕관 지지 집회", "Rally for the Crown", [CROWN("0.1"), "add_political_power = 25"], cost=50, once=False, days_re_enable=120)
-C.d(cat_pol, "heresy_trial", "이단 재판", "Heresy Trial", [INQ("0.05"), "add_stability = 0.04", "add_political_power = -15"], cost=25, once=False,
-    days_re_enable=180)
-C.d(cat_pol, "royal_tour", "왕실 순행", "Royal Tour", [CROWN("0.05"), "add_war_support = 0.03"], cost=25, once=False, days_re_enable=180,
-    visible=["has_completed_focus = TU_IBE_royal_heir"])
-C.d(cat_pol, "noble_taxes", "귀족 과세", "Tax the Nobles", ["add_political_power = 75", CROWN("-0.05")], cost=0, once=False, days_re_enable=240)
-C.d(cat_pol, "inquisitor_recruits", "심판관 모집", "Recruit Inquisitors",
+# 세력 균형 줄다리기 디시전("심판소와 왕관" 분류)은 사양서 37에서 삭제. 심판관 모집은 해안 분류로.
+C.d(cat_coast, "inquisitor_recruits", "심판관 모집", "Recruit Inquisitors",
     ["TU_IBE_inq_template = yes",
      "capital_scope = { create_unit = { division = \"division_template = \\\"TU_IBE_inquisitors\\\" start_experience_factor = 0.5 start_equipment_factor = 1\" owner = IBE count = 2 } }"],
     cost=75, once=False, days_re_enable=240, visible=["has_completed_focus = TU_IBE_inquisitor_guard"], icon="GFX_decision_generic_military")
@@ -624,10 +617,6 @@ for sid, ko, en, pre, econ in (
 # (해변 방어 시설·철야 기도는 사양서 31에서 삭제: 위협을 깎는 반복 디시전이 너무 많아 등대 관리가 꺼졌다. 해안 요새 보강이 대신한다)
 C.d(cat_coast, "hunter_aid", "사냥꾼 지원", "Aid the Hunters", [THR(-15), "add_political_power = -25"], cost=50, once=False,
     days_re_enable=180, visible=[HAS("hunters_met")])
-C.d(cat_pol, "crown_marriage", "왕실 혼사", "Royal Marriage", [CROWN("0.1"), "add_stability = 0.02"], cost=75, once=True,
-    visible=["has_completed_focus = TU_IBE_royal_heir"])
-C.d(cat_pol, "inquisition_audit", "심판소 감사", "Audit the Inquisition", [CROWN("0.08"), "add_political_power = 40"], cost=50, once=False,
-    days_re_enable=240)
 C.ev(32, ("등대의 불빛", "The Lighthouse Shines"), ("복원된 등대에 불이 들어오자 마을 사람들이 몰려나와 박수를 쳤다.", "When the restored lighthouse was lit, villagers came out and cheered."),
      [("빛이 돌아왔다.", "The light is back.", ["add_stability = 0.03"], 1)],
      trigger=["original_tag = IBE", AT_LEAST("lighthouses", 3)], mtth=120)
