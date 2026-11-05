@@ -427,7 +427,7 @@ C.d(cat_coast, "lh_crumbling", "[FROM.GetName] 등대가 무너진다", "[FROM.G
 	clr_state_flag = TU_IBE_lighthouse
 	clr_state_flag = TU_IBE_lh_damaged
 	save_event_target_as = tu_ibe_lh_state
-}""", V("lighthouses", -1), THR(5), "country_event = { id = tu_ibe_ev.51 }"]},
+}""", V("lighthouses", -1), THR(5), FLAG("lighthouse_fell"), "country_event = { id = tu_ibe_ev.51 }"]},
     desc=("시테러에게 손상된 등대. 보수하거나 수비대로 토벌하지 않으면 시간이 다 됐을 때 무너진다 (등대 -1, 위협 +5).",
           "A lighthouse damaged by Sea Terrors. Unless repaired or cleared by a garrison, it collapses when time runs out (lighthouse -1, threat +5)."),
     icon="GFX_decision_generic_civil_support", ai=0)
@@ -622,29 +622,46 @@ f("coastal_rail", "해안 철도", "Coastal Railway", pre=["salt_works"])
 f("cannery_plants", "어물 통조림 공장", "Fish Cannery Plants", pre=["salt_works"], econ=True)
 f("laterano_accord", "라테라노 협약", "Laterano Accord", pre=["foreign_office"])
 
-# ------------------------------------------------------------------ 숨은 루트: 이샤믈라 (사양서 24)
-# 1098년 11월 11일 스카디의 고백 -> "그래, 나도 사랑해" -> 30일 뒤 "혈족이 되자" -> 지도자 이샤믈라 + 숨은 갈래가 열린다.
+# ------------------------------------------------------------------ 아비살 사냥꾼 루트 (사양서 24 개정): 끝에서 스카디가 지도자
+C.idea("hunter_rule", "사냥꾼의 이베리아", "Iberia of the Hunters",
+       {"army_attack_factor": 0.10, "army_org_factor": 0.10, "war_support_factor": 0.10, "stability_factor": -0.05},
+       "generic_army_war_college", ("아비살 사냥꾼이 이베리아를 이끈다. 그들은 바다를 알지만, 바다도 그들을 안다.",
+                                    "The Abyssal Hunters lead Iberia. They know the sea, and the sea knows them."))
+f("hunter_pact", "사냥꾼과의 맹약", "Pact with the Hunters", pre=["abyssal_rumours"], theme=False, available=[HAS("hunters_met")],
+  reward=["add_political_power = 50", THR(-5)],
+  desc=("아비살 사냥꾼과 손을 잡는다. (사냥꾼과 만난 뒤)", "Join hands with the Abyssal Hunters. (After meeting the hunters)"))
+f("hunter_drill", "사냥꾼의 훈련", "Abyssal Hunter Drill", pre=["hunter_pact"])
+f("hunter_blades", "사냥꾼의 대검", "Hunter Greatswords Weapons", pre=["hunter_pact"])
+f("hunter_deep_scouting", "심해 정찰", "Deep Sea Scouting", pre=["hunter_drill"])
+f("hunter_regiment", "아비살 사냥꾼 연대", "Abyssal Hunter Regiment", pre=["hunter_drill", "hunter_blades"],
+  reward=["add_manpower = 10000"])
+f("hunter_skadi", "스카디를 앞세우다", "Skadi Leads the Way", pre=["hunter_regiment", "hunter_deep_scouting"], cost=15, theme=False,
+  me=["inquisitor_state", "crown_restored", "sea_reconciliation"],
+  reward=[FLAG("hunter_rule"), "add_ideas = TU_IBE_hunter_rule", "army_experience = 50"],
+  desc=("사냥꾼 스카디가 이베리아의 지도자가 된다. 바다가 그녀를 부르는 소리는 아직 아무도 듣지 못했다.",
+        "The hunter Skadi becomes Iberia's leader. No one has yet heard the sea calling her."))
+
+# ------------------------------------------------------------------ 숨은 루트: 이샤믈라 (사양서 24 개정)
+# 스카디가 지도자인 상태에서 등대가 모두 무너지면 (한 번이라도 무너진 적이 있고 지금 0) "노랫소리" ->
+# "조금은 빠져들어도 되겠지.." -> 15일 뒤 "하나가...되는거야..." -> 지도자 이샤믈라 + 숨은 갈래.
 ISHAR = [HAS("ishar_route")]
-C.on_actions.append("""on_startup = {
-	effect = {
-		if = {
-			limit = { country_exists = IBE }
-			IBE = { country_event = { id = tu_ibe_ev.40 days = 679 } }
-		}
-	}
-}""")
-C.ev(40, ("11월 11일", "The Eleventh of November"),
-     ("해가 저무는 바닷가, 스카디가 한참을 말없이 파도를 보다가 고개를 돌렸다.\\n\\n\"박사 사랑해\"",
-      "On the shore at dusk, Skadi watches the waves in silence for a long while, then turns.\\n\\n\"Doctor, I love you.\""),
-     [("뭐...?", "What...?", [], 100),
-      ("그래, 나도 사랑해", "Yes. I love you too.", [FLAG("skadi_confession"), EV(41, 30)], 0)],
-     picture="GFX_report_event_generic_read_write")
-C.ev(41, ("혈족", "Kin"),
-     ("한 달 뒤, 스카디가 다시 바닷가에서 기다리고 있었다. 그런데 그 눈빛이 어딘가 달랐다.\\n\\n\"자, 박사...나와 혈족이 되자..\"",
-      "A month later Skadi waits on the shore again. Yet something in her eyes has changed.\\n\\n\"Come, Doctor... become my kin...\""),
+C.ev(40, ("노랫소리", "A Song"),
+     ("마지막 등대의 불빛이 꺼진 밤, 어디선가 노랫소리가 들려와..",
+      "On the night the last lighthouse went dark, a song drifts in from somewhere.."),
+     [("내 착각인것같다", "It must be my imagination", [], 100),
+      ("조금은 빠져들어도 되겠지..", "Surely I can lose myself a little..", [FLAG("ishar_song_heard"), EV(41, 15)], 0)],
+     picture="GFX_report_event_generic_read_write",
+     trigger=["original_tag = IBE", "has_completed_focus = TU_IBE_hunter_skadi",
+              "has_country_leader = { character = TU_IBE_skadi ruling_only = yes }",
+              "check_variable = { TU_IBE_lighthouses < 1 }", HAS("lighthouse_fell"), "NOT = { %s }" % HAS("ishar_route")],
+     mtth=20)
+C.ev(41, ("하나", "One"),
+     ("노래가 더 가까워졌다. 스카디의 목소리가 파도와 섞인다.\\n\\n\"하나가...되는거야...\"",
+      "The song draws closer. Skadi's voice blends with the waves.\\n\\n\"We will...become one...\""),
      [("파도가 발목을 적신다.", "The tide washes over your feet.",
        [FLAG("ishar_route"), "recruit_character = TU_IBE_ishar_mla",
         "promote_character = {\n\tcharacter = TU_IBE_ishar_mla\n\tideology = despotism\n}",
+        "remove_ideas = TU_IBE_hunter_rule",
         "set_variable = { TU_IBE_threat = 0 }", "add_ideas = TU_IBE_seaborn_kin", "mark_focus_tree_layout_dirty = yes"], 1)],
      picture="GFX_report_event_generic_read_write")
 C.idea("seaborn_kin", "바다의 혈족", "Kin of the Sea",
@@ -716,7 +733,7 @@ f("ishar_finale", "심해", "The Deep", pre=["ishar_great_tide", "ishar_song_of_
         "The name Iberia sleeps beneath the waves. Only the Deep remains. (Name 'The Deep', dark navy colour)"))
 for _f in C.focuses:     # 다른 결말과 서로 배타
     if _f["id"] in ("TU_IBE_inquisitor_state", "TU_IBE_crown_restored", "TU_IBE_sea_reconciliation"):
-        _f["me"].append("TU_IBE_ishar_finale")
+        _f["me"] += ["TU_IBE_ishar_finale", "TU_IBE_hunter_skadi"]
 
 if __name__ == "__main__":
     C.write()

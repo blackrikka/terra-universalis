@@ -108,6 +108,21 @@ ideas = {
 			}
 		}
 
+		TU_IBE_hunter_rule = {
+			picture = generic_army_war_college
+
+			allowed = {
+				original_tag = IBE
+			}
+
+			modifier = {
+				army_attack_factor = 0.1
+				army_org_factor = 0.1
+				war_support_factor = 0.1
+				stability_factor = -0.05
+			}
+		}
+
 		TU_IBE_seaborn_kin = {
 			picture = generic_morale_bonus
 

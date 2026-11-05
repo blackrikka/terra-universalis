@@ -170,7 +170,7 @@
 		icon = GFX_goal_generic_intelligence_exchange
 		prerequisite = { focus = TU_IBE_faith_laws focus = TU_IBE_tolerance }
 		prerequisite = { focus = TU_IBE_inquisitor_guard }
-		mutually_exclusive = { focus = TU_IBE_crown_restored focus = TU_IBE_sea_reconciliation focus = TU_IBE_ishar_finale }
+		mutually_exclusive = { focus = TU_IBE_crown_restored focus = TU_IBE_sea_reconciliation focus = TU_IBE_ishar_finale focus = TU_IBE_hunter_skadi }
 		x = 0
 		y = 0
 		cost = 15
@@ -361,7 +361,7 @@
 		id = TU_IBE_crown_restored
 		icon = GFX_goal_generic_political_pressure
 		prerequisite = { focus = TU_IBE_crown_charter }
-		mutually_exclusive = { focus = TU_IBE_inquisitor_state focus = TU_IBE_sea_reconciliation focus = TU_IBE_ishar_finale }
+		mutually_exclusive = { focus = TU_IBE_inquisitor_state focus = TU_IBE_sea_reconciliation focus = TU_IBE_ishar_finale focus = TU_IBE_hunter_skadi }
 		x = 0
 		y = 0
 		cost = 15
@@ -569,7 +569,7 @@
 		icon = GFX_goal_generic_trade
 		prerequisite = { focus = TU_IBE_abyssal_rumours }
 		prerequisite = { focus = TU_IBE_deep_sea_plan }
-		mutually_exclusive = { focus = TU_IBE_inquisitor_state focus = TU_IBE_crown_restored focus = TU_IBE_ishar_finale }
+		mutually_exclusive = { focus = TU_IBE_inquisitor_state focus = TU_IBE_crown_restored focus = TU_IBE_ishar_finale focus = TU_IBE_hunter_skadi }
 		x = 0
 		y = 0
 		cost = 15
@@ -2378,6 +2378,135 @@
 		completion_reward = {
 			add_political_power = 60
 			add_stability = 0.03
+		}
+	}
+
+	focus = {
+		id = TU_IBE_hunter_pact
+		icon = GFX_goal_generic_allies_build_infantry
+		prerequisite = { focus = TU_IBE_abyssal_rumours }
+		x = 0
+		y = 0
+		cost = 10
+
+		search_filters = { FOCUS_FILTER_POLITICAL }
+
+		available = {
+			has_country_flag = TU_IBE_hunters_met
+		}
+
+		ai_will_do = {
+			base = 1
+		}
+
+		completion_reward = {
+			add_political_power = 50
+			TU_IBE_threat_m5 = yes
+		}
+	}
+
+	focus = {
+		id = TU_IBE_hunter_drill
+		icon = GFX_goal_generic_army_doctrines
+		prerequisite = { focus = TU_IBE_hunter_pact }
+		x = 0
+		y = 0
+		cost = 10
+
+		search_filters = { FOCUS_FILTER_POLITICAL }
+
+		ai_will_do = {
+			base = 1
+		}
+
+		completion_reward = {
+			add_doctrine_cost_reduction = { name = TU_IBE_hunter_drill cost_reduction = 0.4 uses = 1 category = land_doctrine }
+			army_experience = 25
+		}
+	}
+
+	focus = {
+		id = TU_IBE_hunter_blades
+		icon = GFX_goal_generic_small_arms
+		prerequisite = { focus = TU_IBE_hunter_pact }
+		x = 0
+		y = 0
+		cost = 10
+
+		search_filters = { FOCUS_FILTER_POLITICAL }
+
+		ai_will_do = {
+			base = 1
+		}
+
+		completion_reward = {
+			add_tech_bonus = { name = TU_IBE_hunter_blades bonus = 0.75 uses = 1 category = infantry_weapons }
+			army_experience = 25
+		}
+	}
+
+	focus = {
+		id = TU_IBE_hunter_deep_scouting
+		icon = GFX_goal_generic_trade
+		prerequisite = { focus = TU_IBE_hunter_drill }
+		x = 0
+		y = 0
+		cost = 10
+
+		search_filters = { FOCUS_FILTER_POLITICAL }
+
+		ai_will_do = {
+			base = 1
+		}
+
+		completion_reward = {
+			add_political_power = 60
+			add_tech_bonus = { name = TU_IBE_hunter_deep_scouting bonus = 0.75 uses = 1 category = industry }
+		}
+	}
+
+	focus = {
+		id = TU_IBE_hunter_regiment
+		icon = GFX_goal_generic_allies_build_infantry
+		prerequisite = { focus = TU_IBE_hunter_drill }
+		prerequisite = { focus = TU_IBE_hunter_blades }
+		x = 0
+		y = 0
+		cost = 10
+
+		search_filters = { FOCUS_FILTER_POLITICAL }
+
+		ai_will_do = {
+			base = 1
+		}
+
+		completion_reward = {
+			add_manpower = 10000
+			add_manpower = 10000
+			army_experience = 25
+		}
+	}
+
+	focus = {
+		id = TU_IBE_hunter_skadi
+		icon = GFX_goal_generic_political_pressure
+		prerequisite = { focus = TU_IBE_hunter_regiment }
+		prerequisite = { focus = TU_IBE_hunter_deep_scouting }
+		mutually_exclusive = { focus = TU_IBE_inquisitor_state focus = TU_IBE_crown_restored focus = TU_IBE_sea_reconciliation }
+		x = 0
+		y = 0
+		cost = 15
+
+		search_filters = { FOCUS_FILTER_POLITICAL }
+
+		ai_will_do = {
+			base = 1
+		}
+
+		completion_reward = {
+			set_country_flag = TU_IBE_hunter_rule
+			add_ideas = TU_IBE_hunter_rule
+			army_experience = 50
 		}
 	}
 

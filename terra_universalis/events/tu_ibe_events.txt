@@ -447,7 +447,20 @@ country_event = {
 	title = tu_ibe_ev.40.t
 	desc = tu_ibe_ev.40.d
 	picture = GFX_report_event_generic_read_write
-	is_triggered_only = yes
+
+	trigger = {
+		original_tag = IBE
+		has_completed_focus = TU_IBE_hunter_skadi
+		has_country_leader = { character = TU_IBE_skadi ruling_only = yes }
+		check_variable = { TU_IBE_lighthouses < 1 }
+		has_country_flag = TU_IBE_lighthouse_fell
+		NOT = { has_country_flag = TU_IBE_ishar_route }
+	}
+	fire_only_once = yes
+
+	mean_time_to_happen = {
+		days = 20
+	}
 
 	option = {
 		name = tu_ibe_ev.40.a
@@ -461,8 +474,8 @@ country_event = {
 		ai_chance = {
 			factor = 0
 		}
-		set_country_flag = TU_IBE_skadi_confession
-		country_event = { id = tu_ibe_ev.41 days = 30 }
+		set_country_flag = TU_IBE_ishar_song_heard
+		country_event = { id = tu_ibe_ev.41 days = 15 }
 	}
 }
 
@@ -484,6 +497,7 @@ country_event = {
 			character = TU_IBE_ishar_mla
 			ideology = despotism
 		}
+		remove_ideas = TU_IBE_hunter_rule
 		set_variable = { TU_IBE_threat = 0 }
 		add_ideas = TU_IBE_seaborn_kin
 		mark_focus_tree_layout_dirty = yes

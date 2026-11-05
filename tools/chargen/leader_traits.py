@@ -25,6 +25,7 @@ LEADER_TRAITS = {
     "tu_lt_shogun": ("쇼군의 칼", "Shogun's Blade", {"army_attack_factor": 0.05, "war_support_factor": 0.05}),
     "tu_lt_wolf_blood": ("늑대의 피", "Blood of the Wolf", {"army_attack_factor": 0.08, "war_support_factor": 0.10}),
     "tu_lt_witch_king": ("마왕의 위엄", "Majesty of the Witch King", {"army_attack_factor": 0.10, "war_support_factor": 0.10, "stability_factor": -0.05}),
+    "tu_lt_abyssal_hunter": ("아비살 사냥꾼", "Abyssal Hunter", {"army_attack_factor": 0.10, "army_org_factor": 0.05, "war_support_factor": 0.10}),
     "tu_lt_corrupting_heart": ("타락한 심장", "The Corrupting Heart", {"army_attack_factor": 0.15, "army_defence_factor": 0.10, "army_org_factor": 0.15, "conscription_factor": 0.10, "war_support_factor": 0.20, "political_power_factor": 0.15, "stability_factor": -0.05}),
     "tu_lt_dragon_flame": ("용의 불꽃", "Dragon's Flame", {"army_attack_factor": 0.10, "stability_factor": -0.05}),
     "tu_lt_old_soldier": ("늙은 병사의 신념", "Old Soldier's Creed", {"army_defence_factor": 0.10, "war_support_factor": 0.05}),
@@ -101,6 +102,7 @@ ASSIGN = {
     "TU_IBE_king": ["tu_lt_restored_crown"],
     "TU_IBE_irene": ["tu_lt_sea_listener", "tu_lt_judge"],
     "TU_IBE_ishar_mla": ["tu_lt_corrupting_heart"],
+    "TU_IBE_skadi": ["tu_lt_abyssal_hunter"],
     # 사르곤
     "TU_SAR_padishah": ["tu_lt_padishah"],
     "TU_SAR_lords": ["tu_lt_lords_council"],

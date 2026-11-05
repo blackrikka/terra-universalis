@@ -68,6 +68,11 @@ characters = {
 
 	TU_IBE_skadi = {
 		name = TU_IBE_skadi
+		country_leader = { traits = { tu_lt_abyssal_hunter }
+			ideology = despotism
+			expire = "1200.1.1.1"
+			id = -1
+		}
 		corps_commander = {
 			traits = { }
 			skill = 3
