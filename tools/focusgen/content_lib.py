@@ -55,6 +55,7 @@ class Country:
         self.events = []
         self.ko, self.en = {}, {}
         self.effects = []
+        self.triggers = []
         self.on_actions = []
         self.bop = None
         self.history = []
@@ -109,14 +110,17 @@ class Country:
 
     def d(self, cat, sid, ko, en, effect, cost=25, visible=(), available=(), desc=("", ""),
           icon="GFX_decision_generic_political_discourse", once=True, days_re_enable=None, ai=1,
-          days_remove=None, remove_effect=None, target=None, state_target=False):
+          days_remove=None, remove_effect=None, target=None, state_target=False, modifier=None, mission=None):
         """target = FROM(대상) 조건. state_target=True 면 주 대상 디시전: 조건에 맞는 주마다 하나씩 생기고,
-        디시전 탭을 열면 지도에서 그 주 위에 버튼이 뜬다 (효과 안에서 FROM = 그 주)."""
+        디시전 탭을 열면 지도에서 그 주 위에 버튼이 뜬다 (효과 안에서 FROM = 그 주).
+        modifier = days_remove 동안 걸리는 모디파이어 {키: 값} (예: civilian_factory_use).
+        mission = 시간제한 미션 {"days": 일수, "timeout": [효과], "cancel": [조건], "good": False}.
+          activation 은 막아 두므로 효과에서 activate_mission / activate_targeted_decision 으로 켠다. cost=None 이면 비용 줄을 쓰지 않는다."""
         did = "TU_%s_%s" % (self.tag, sid)
         self.decisions[cat].append(dict(id=did, icon=icon, effect=list(effect), cost=cost, visible=list(visible),
                                         available=list(available), once=once, days_re_enable=days_re_enable,
                                         ai=ai, days_remove=days_remove, remove_effect=remove_effect,
-                                        target=target, state_target=state_target))
+                                        target=target, state_target=state_target, modifier=modifier, mission=mission))
         self.loc(did, ko, en)
         self.loc(did + "_desc", desc[0], desc[1])
         return did
@@ -236,17 +240,32 @@ class Country:
                         s += "\n\t\tstate_target = yes\n\t\ton_map_mode = map_and_decisions_view\n"
                     if d["target"]:
                         s += "\n\t\ttarget_trigger = {\n\t\t\tFROM = {\n%s\n\t\t\t}\n\t\t}\n" % ind(d["target"], 4)
+                    m = d["mission"]
+                    if m:
+                        s += "\n\t\tactivation = {\n\t\t\talways = no\n\t\t}\n"
                     for key in ("visible", "available"):
                         if d[key]:
                             s += "\n\t\t%s = {\n%s\n\t\t}\n" % (key, ind(d[key], 3))
-                    s += "\n\t\tcost = %d\n" % d["cost"]
-                    if d["once"]:
-                        s += "\t\tfire_only_once = yes\n"
+                        elif key == "available" and m:
+                            s += "\n\t\tavailable = {\n\t\t\talways = no\n\t\t}\n"
+                    s += "\n"
+                    if d["cost"] is not None:
+                        s += "\t\tcost = %d\n" % d["cost"]
+                    if m:
+                        s += "\t\tdays_mission_timeout = %d\n\t\tis_good = %s\n" % (m["days"], "yes" if m.get("good") else "no")
+                    s += "\t\tfire_only_once = %s\n" % ("yes" if d["once"] else "no") if d["once"] or m else ""
                     if d["days_re_enable"]:
                         s += "\t\tdays_re_enable = %d\n" % d["days_re_enable"]
                     if d["days_remove"]:
                         s += "\t\tdays_remove = %d\n" % d["days_remove"]
-                    s += "\n\t\tcomplete_effect = {\n%s\n\t\t}\n" % ind(d["effect"], 3)
+                    if d["modifier"]:
+                        s += "\n\t\tmodifier = {\n%s\n\t\t}\n" % ind(["%s = %s" % kv for kv in d["modifier"].items()], 3)
+                    if m and m.get("cancel"):
+                        s += "\n\t\tcancel_trigger = {\n%s\n\t\t}\n" % ind(m["cancel"], 3)
+                    if m and m.get("timeout"):
+                        s += "\n\t\ttimeout_effect = {\n%s\n\t\t}\n" % ind(m["timeout"], 3)
+                    if d["effect"]:
+                        s += "\n\t\tcomplete_effect = {\n%s\n\t\t}\n" % ind(d["effect"], 3)
                     if d["remove_effect"]:
                         s += "\n\t\tremove_effect = {\n%s\n\t\t}\n" % ind(d["remove_effect"], 3)
                     s += "\n\t\tai_will_do = {\n\t\t\tbase = %s\n\t\t}\n\t}\n\n" % d["ai"]
@@ -308,6 +327,8 @@ class Country:
 
         if self.effects:
             (MOD / ("common/scripted_effects/tu_%s_effects.txt" % low)).write_text("\n\n".join(self.effects) + "\n", encoding="utf-8")
+        if self.triggers:
+            (MOD / ("common/scripted_triggers/tu_%s_triggers.txt" % low)).write_text("\n\n".join(self.triggers) + "\n", encoding="utf-8")
         if self.on_actions:
             (MOD / ("common/on_actions/tu_%s_on_actions.txt" % low)).write_text(
                 "on_actions = {\n%s\n}\n" % ind(self.on_actions, 1), encoding="utf-8")
@@ -328,7 +349,7 @@ class Country:
 
         # localisation
         for lang, items in (("korean", self.ko), ("english", self.en)):
-            lines = ["l_%s:" % lang] + [' %s:0 "%s"' % (k, v.replace('"', '\\"')) for k, v in items.items()]
+            lines = ["l_%s:" % lang] + [' %s:0 "%s"' % (k, v.replace('"', '\\"').replace("\n", "\\n")) for k, v in items.items()]
             (MOD / "localisation" / lang / ("tu_%s_l_%s.yml" % (low, lang))).write_bytes(
                 ("\n".join(lines) + "\n").encode("utf-8-sig"))
             old = MOD / "localisation" / lang / ("tu_%s_concept_l_%s.yml" % (low, lang))

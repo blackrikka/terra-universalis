@@ -1,6 +1,8 @@
 TU_IBE_monthly = {
+	TU_IBE_lighthouse_monthly = yes
 	add_to_variable = { TU_IBE_threat = 2 }
 	set_temp_variable = { tu_ibe_lh = TU_IBE_lighthouses }
+	subtract_from_temp_variable = { tu_ibe_lh = TU_IBE_lh_damaged }
 	multiply_temp_variable = { tu_ibe_lh = -0.5 }
 	add_to_variable = { TU_IBE_threat = tu_ibe_lh }
 	clamp_variable = { var = TU_IBE_threat min = 0 max = 100 }
@@ -34,11 +36,282 @@ TU_IBE_threat_m5 = {
 	}
 }
 
+TU_IBE_raid_damage = {
+	if = {
+		limit = { state = 1 }
+		ROOT = { damage_units = { state = 1 org_damage = 0.3 str_damage = 0.05 ratio = yes army = yes } }
+	}
+	if = {
+		limit = { state = 30 }
+		ROOT = { damage_units = { state = 30 org_damage = 0.3 str_damage = 0.05 ratio = yes army = yes } }
+	}
+	if = {
+		limit = { state = 65 }
+		ROOT = { damage_units = { state = 65 org_damage = 0.3 str_damage = 0.05 ratio = yes army = yes } }
+	}
+	if = {
+		limit = { state = 69 }
+		ROOT = { damage_units = { state = 69 org_damage = 0.3 str_damage = 0.05 ratio = yes army = yes } }
+	}
+	if = {
+		limit = { state = 73 }
+		ROOT = { damage_units = { state = 73 org_damage = 0.3 str_damage = 0.05 ratio = yes army = yes } }
+	}
+	if = {
+		limit = { state = 74 }
+		ROOT = { damage_units = { state = 74 org_damage = 0.3 str_damage = 0.05 ratio = yes army = yes } }
+	}
+	if = {
+		limit = { state = 75 }
+		ROOT = { damage_units = { state = 75 org_damage = 0.3 str_damage = 0.05 ratio = yes army = yes } }
+	}
+	if = {
+		limit = { state = 76 }
+		ROOT = { damage_units = { state = 76 org_damage = 0.3 str_damage = 0.05 ratio = yes army = yes } }
+	}
+	if = {
+		limit = { state = 116 }
+		ROOT = { damage_units = { state = 116 org_damage = 0.3 str_damage = 0.05 ratio = yes army = yes } }
+	}
+	if = {
+		limit = { state = 119 }
+		ROOT = { damage_units = { state = 119 org_damage = 0.3 str_damage = 0.05 ratio = yes army = yes } }
+	}
+	if = {
+		limit = { state = 120 }
+		ROOT = { damage_units = { state = 120 org_damage = 0.3 str_damage = 0.05 ratio = yes army = yes } }
+	}
+	if = {
+		limit = { state = 121 }
+		ROOT = { damage_units = { state = 121 org_damage = 0.3 str_damage = 0.05 ratio = yes army = yes } }
+	}
+	if = {
+		limit = { state = 122 }
+		ROOT = { damage_units = { state = 122 org_damage = 0.3 str_damage = 0.05 ratio = yes army = yes } }
+	}
+	if = {
+		limit = { state = 123 }
+		ROOT = { damage_units = { state = 123 org_damage = 0.3 str_damage = 0.05 ratio = yes army = yes } }
+	}
+	if = {
+		limit = { state = 124 }
+		ROOT = { damage_units = { state = 124 org_damage = 0.3 str_damage = 0.05 ratio = yes army = yes } }
+	}
+	if = {
+		limit = { state = 125 }
+		ROOT = { damage_units = { state = 125 org_damage = 0.3 str_damage = 0.05 ratio = yes army = yes } }
+	}
+	if = {
+		limit = { state = 130 }
+		ROOT = { damage_units = { state = 130 org_damage = 0.3 str_damage = 0.05 ratio = yes army = yes } }
+	}
+	if = {
+		limit = { state = 131 }
+		ROOT = { damage_units = { state = 131 org_damage = 0.3 str_damage = 0.05 ratio = yes army = yes } }
+	}
+	if = {
+		limit = { state = 132 }
+		ROOT = { damage_units = { state = 132 org_damage = 0.3 str_damage = 0.05 ratio = yes army = yes } }
+	}
+	if = {
+		limit = { state = 133 }
+		ROOT = { damage_units = { state = 133 org_damage = 0.3 str_damage = 0.05 ratio = yes army = yes } }
+	}
+	if = {
+		limit = { state = 134 }
+		ROOT = { damage_units = { state = 134 org_damage = 0.3 str_damage = 0.05 ratio = yes army = yes } }
+	}
+	if = {
+		limit = { state = 177 }
+		ROOT = { damage_units = { state = 177 org_damage = 0.3 str_damage = 0.05 ratio = yes army = yes } }
+	}
+	if = {
+		limit = { state = 181 }
+		ROOT = { damage_units = { state = 181 org_damage = 0.3 str_damage = 0.05 ratio = yes army = yes } }
+	}
+	if = {
+		limit = { state = 199 }
+		ROOT = { damage_units = { state = 199 org_damage = 0.3 str_damage = 0.05 ratio = yes army = yes } }
+	}
+	if = {
+		limit = { state = 200 }
+		ROOT = { damage_units = { state = 200 org_damage = 0.3 str_damage = 0.05 ratio = yes army = yes } }
+	}
+	if = {
+		limit = { state = 202 }
+		ROOT = { damage_units = { state = 202 org_damage = 0.3 str_damage = 0.05 ratio = yes army = yes } }
+	}
+	if = {
+		limit = { state = 203 }
+		ROOT = { damage_units = { state = 203 org_damage = 0.3 str_damage = 0.05 ratio = yes army = yes } }
+	}
+	if = {
+		limit = { state = 205 }
+		ROOT = { damage_units = { state = 205 org_damage = 0.3 str_damage = 0.05 ratio = yes army = yes } }
+	}
+	if = {
+		limit = { state = 206 }
+		ROOT = { damage_units = { state = 206 org_damage = 0.3 str_damage = 0.05 ratio = yes army = yes } }
+	}
+	if = {
+		limit = { state = 207 }
+		ROOT = { damage_units = { state = 207 org_damage = 0.3 str_damage = 0.05 ratio = yes army = yes } }
+	}
+	if = {
+		limit = { state = 208 }
+		ROOT = { damage_units = { state = 208 org_damage = 0.3 str_damage = 0.05 ratio = yes army = yes } }
+	}
+	if = {
+		limit = { state = 209 }
+		ROOT = { damage_units = { state = 209 org_damage = 0.3 str_damage = 0.05 ratio = yes army = yes } }
+	}
+	if = {
+		limit = { state = 210 }
+		ROOT = { damage_units = { state = 210 org_damage = 0.3 str_damage = 0.05 ratio = yes army = yes } }
+	}
+	if = {
+		limit = { state = 211 }
+		ROOT = { damage_units = { state = 211 org_damage = 0.3 str_damage = 0.05 ratio = yes army = yes } }
+	}
+	if = {
+		limit = { state = 212 }
+		ROOT = { damage_units = { state = 212 org_damage = 0.3 str_damage = 0.05 ratio = yes army = yes } }
+	}
+	if = {
+		limit = { state = 213 }
+		ROOT = { damage_units = { state = 213 org_damage = 0.3 str_damage = 0.05 ratio = yes army = yes } }
+	}
+	if = {
+		limit = { state = 214 }
+		ROOT = { damage_units = { state = 214 org_damage = 0.3 str_damage = 0.05 ratio = yes army = yes } }
+	}
+	if = {
+		limit = { state = 215 }
+		ROOT = { damage_units = { state = 215 org_damage = 0.3 str_damage = 0.05 ratio = yes army = yes } }
+	}
+	if = {
+		limit = { state = 216 }
+		ROOT = { damage_units = { state = 216 org_damage = 0.3 str_damage = 0.05 ratio = yes army = yes } }
+	}
+	if = {
+		limit = { state = 217 }
+		ROOT = { damage_units = { state = 217 org_damage = 0.3 str_damage = 0.05 ratio = yes army = yes } }
+	}
+	if = {
+		limit = { state = 218 }
+		ROOT = { damage_units = { state = 218 org_damage = 0.3 str_damage = 0.05 ratio = yes army = yes } }
+	}
+	if = {
+		limit = { state = 219 }
+		ROOT = { damage_units = { state = 219 org_damage = 0.3 str_damage = 0.05 ratio = yes army = yes } }
+	}
+}
+
+TU_IBE_lh_update_risk = {
+	set_variable = { TU_IBE_lh_risk = ROOT.TU_IBE_threat }
+	divide_variable = { TU_IBE_lh_risk = 4 }
+	set_temp_variable = { tu_ibe_f = TU_IBE_lh_fort }
+	multiply_temp_variable = { tu_ibe_f = -0.25 }
+	add_to_temp_variable = { tu_ibe_f = 1 }
+	multiply_variable = { TU_IBE_lh_risk = tu_ibe_f }
+	if = {
+		limit = { TU_IBE_garrison_40k = yes }
+		multiply_variable = { TU_IBE_lh_risk = 0.45 }
+	}
+	else_if = {
+		limit = { TU_IBE_garrison_20k = yes }
+		multiply_variable = { TU_IBE_lh_risk = 0.6 }
+	}
+	else_if = {
+		limit = { TU_IBE_garrison_10k = yes }
+		multiply_variable = { TU_IBE_lh_risk = 0.8 }
+	}
+	if = {
+		limit = { ROOT = { has_country_flag = TU_IBE_ishar_route } }
+		set_variable = { TU_IBE_lh_risk = 0 }
+	}
+}
+
+TU_IBE_lighthouse_monthly = {
+	set_variable = { TU_IBE_lighthouses = 0 }
+	set_variable = { TU_IBE_lh_damaged = 0 }
+	every_owned_state = {
+		limit = { has_state_flag = TU_IBE_lighthouse }
+		ROOT = { add_to_variable = { TU_IBE_lighthouses = 1 } }
+		TU_IBE_lh_update_risk = yes
+		if = {
+			limit = { has_state_flag = TU_IBE_lh_damaged }
+			ROOT = { add_to_variable = { TU_IBE_lh_damaged = 1 } }
+		}
+		else_if = {
+			limit = { NOT = { has_state_flag = TU_IBE_lh_repairing } }
+			set_temp_variable_to_random = { var = tu_ibe_roll min = 0 max = 100 }
+			if = {
+				limit = { check_variable = { tu_ibe_roll < TU_IBE_lh_risk } }
+				TU_IBE_lh_damage = yes
+				ROOT = { add_to_variable = { TU_IBE_lh_damaged = 1 } }
+			}
+		}
+		# 해안 수비대 습격 (병력 1만 이상): 확률 = 손상 확률의 절반, 그 주 사단에 피해
+		if = {
+			limit = { TU_IBE_garrison_10k = yes }
+			set_temp_variable_to_random = { var = tu_ibe_roll min = 0 max = 200 }
+			if = {
+				limit = { check_variable = { tu_ibe_roll < TU_IBE_lh_risk } }
+				TU_IBE_raid_damage = yes
+				save_event_target_as = tu_ibe_raid_state
+				ROOT = { country_event = { id = tu_ibe_ev.52 } }
+			}
+		}
+	}
+}
+
+TU_IBE_lh_damage = {
+	set_state_flag = TU_IBE_lh_damaged
+	save_event_target_as = tu_ibe_lh_state
+	ROOT = {
+		activate_targeted_decision = { target = PREV decision = TU_IBE_lh_crumbling }
+		country_event = { id = tu_ibe_ev.50 }
+	}
+}
+
 TU_IBE_lighthouses_1 = {
 	custom_effect_tooltip = TU_IBE_lighthouses_1_tt
 	hidden_effect = {
 		add_to_variable = { TU_IBE_lighthouses = 1 }
 		clamp_variable = { var = TU_IBE_lighthouses min = 0 max = 5 }
+	}
+}
+
+TU_IBE_lighthouses_m1 = {
+	custom_effect_tooltip = TU_IBE_lighthouses_m1_tt
+	hidden_effect = {
+		add_to_variable = { TU_IBE_lighthouses = -1 }
+		clamp_variable = { var = TU_IBE_lighthouses min = 0 max = 5 }
+	}
+}
+
+TU_IBE_threat_5 = {
+	custom_effect_tooltip = TU_IBE_threat_5_tt
+	hidden_effect = {
+		add_to_variable = { TU_IBE_threat = 5 }
+		clamp_variable = { var = TU_IBE_threat min = 0 max = 100 }
+	}
+}
+
+TU_IBE_threat_m3 = {
+	custom_effect_tooltip = TU_IBE_threat_m3_tt
+	hidden_effect = {
+		add_to_variable = { TU_IBE_threat = -3 }
+		clamp_variable = { var = TU_IBE_threat min = 0 max = 100 }
+	}
+}
+
+TU_IBE_threat_m2 = {
+	custom_effect_tooltip = TU_IBE_threat_m2_tt
+	hidden_effect = {
+		add_to_variable = { TU_IBE_threat = -2 }
+		clamp_variable = { var = TU_IBE_threat min = 0 max = 100 }
 	}
 }
 
@@ -60,26 +333,10 @@ TU_IBE_inq_template = {
 	}
 }
 
-TU_IBE_threat_5 = {
-	custom_effect_tooltip = TU_IBE_threat_5_tt
-	hidden_effect = {
-		add_to_variable = { TU_IBE_threat = 5 }
-		clamp_variable = { var = TU_IBE_threat min = 0 max = 100 }
-	}
-}
-
 TU_IBE_threat_m15 = {
 	custom_effect_tooltip = TU_IBE_threat_m15_tt
 	hidden_effect = {
 		add_to_variable = { TU_IBE_threat = -15 }
-		clamp_variable = { var = TU_IBE_threat min = 0 max = 100 }
-	}
-}
-
-TU_IBE_threat_m3 = {
-	custom_effect_tooltip = TU_IBE_threat_m3_tt
-	hidden_effect = {
-		add_to_variable = { TU_IBE_threat = -3 }
 		clamp_variable = { var = TU_IBE_threat min = 0 max = 100 }
 	}
 }

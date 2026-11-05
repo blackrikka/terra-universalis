@@ -1,6 +1,53 @@
 add_namespace = tu_ibe_ev
 
 country_event = {
+	id = tu_ibe_ev.50
+	title = tu_ibe_ev.50.t
+	desc = tu_ibe_ev.50.d
+	picture = GFX_report_event_generic_read_write
+	is_triggered_only = yes
+
+	option = {
+		name = tu_ibe_ev.50.a
+		ai_chance = {
+			factor = 1
+		}
+	}
+}
+
+country_event = {
+	id = tu_ibe_ev.51
+	title = tu_ibe_ev.51.t
+	desc = tu_ibe_ev.51.d
+	picture = GFX_report_event_generic_read_write
+	is_triggered_only = yes
+
+	option = {
+		name = tu_ibe_ev.51.a
+		ai_chance = {
+			factor = 1
+		}
+	}
+}
+
+country_event = {
+	id = tu_ibe_ev.52
+	title = tu_ibe_ev.52.t
+	desc = tu_ibe_ev.52.d
+	picture = GFX_report_event_generic_read_write
+	is_triggered_only = yes
+
+	option = {
+		name = tu_ibe_ev.52.a
+		ai_chance = {
+			factor = 1
+		}
+		army_experience = 2
+		TU_IBE_threat_m2 = yes
+	}
+}
+
+country_event = {
 	id = tu_ibe_ev.1
 	title = tu_ibe_ev.1.t
 	desc = tu_ibe_ev.1.d
