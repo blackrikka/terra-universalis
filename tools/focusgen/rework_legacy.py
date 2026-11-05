@@ -19,7 +19,7 @@ DATA = {
         ("rw_guard_academy", "근위국 경찰 학교", "Guard Department Academy", ["guard_reform"], 10, []),
         ("rw_special_unit", "특수 작전 반", "Special Operations Unit", ["rw_guard_academy"], 10, []),
         ("rw_riot_shields", "진압 방패대", "Riot Shield Battalions", ["rw_guard_academy"], 10, []),
-        ("rw_ch_en_command", "근위국 사령부", "Guard Department Command", ["rw_special_unit", "rw_riot_shields"], 15, []),
+        ("rw_ch_en_command", "근위국 야전 사령부", "Guard Department Field Command", ["rw_special_unit", "rw_riot_shields"], 15, []),
         # 이동도시
         ("rw_city_engines", "도시 기관부 정비", "City Engine Overhaul", ["urban_planning"], 10, ["TU_build_infrastructure = yes"]),
         ("rw_mobile_city", "용문 이동도시 개조", "Lungmen Mobile City Refit", ["rw_city_engines"], 15, []),

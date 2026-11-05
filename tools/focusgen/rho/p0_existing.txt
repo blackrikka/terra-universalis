@@ -32,7 +32,7 @@
 	focus = {
 		id = TU_RHO_ark_mission
 		icon = GFX_goal_generic_improve_relations
-		cost = 5
+		cost = 9
 		x = -2
 		y = 2
 
@@ -43,33 +43,20 @@
 			country_event = { id = tu_rho_ev.1 }
 			add_political_power = 35
 			add_stability = 0.02
-		}
-	}
-
-	focus = {
-		id = TU_RHO_ark_charter
-		icon = GFX_goal_generic_national_unity
-		cost = 7
-		x = -2
-		y = 3
-
-		prerequisite = { focus = TU_RHO_ark_mission }
-
-		completion_reward = {
 			add_stability = 0.03
 			add_manpower = 10000
-			add_tech_bonus = { name = TU_RHO_ark_charter bonus = 0.75 uses = 1 category = tu_oripathy_tech }
+			add_tech_bonus = { name = TU_RHO_ark_mission bonus = 0.75 uses = 1 category = tu_oripathy_tech }
 		}
 	}
 
 	focus = {
 		id = TU_RHO_unlimited_volunteers
+		prerequisite = { focus = TU_RHO_ark_mission }
 		icon = GFX_goal_generic_construct_military
 		cost = 8
 		x = -2
 		y = 4
 
-		prerequisite = { focus = TU_RHO_ark_charter }
 
 		completion_reward = {
 			remove_ideas = TU_RHO_landship
@@ -83,7 +70,7 @@
 	focus = {
 		id = TU_RHO_ark_relief_office
 		icon = GFX_goal_generic_construct_civilian
-		cost = 6
+		cost = 9
 		x = -2
 		y = 5
 
@@ -95,56 +82,29 @@
 			add_stability = 0.03
 			add_manpower = 10000
 			add_tech_bonus = { name = TU_RHO_ark_relief_office bonus = 0.75 uses = 1 category = tu_oripathy_tech }
-		}
-	}
-
-	focus = {
-		id = TU_RHO_ark_refugees
-		icon = GFX_goal_generic_consumer_goods
-		cost = 6
-		x = -2
-		y = 6
-
-		prerequisite = { focus = TU_RHO_ark_relief_office }
-
-		completion_reward = {
 			add_stability = 0.03
 			add_manpower = 10000
-			add_tech_bonus = { name = TU_RHO_ark_refugees bonus = 0.75 uses = 1 category = tu_oripathy_tech }
+			add_tech_bonus = { name = TU_RHO_ark_relief_office bonus = 0.75 uses = 1 category = tu_oripathy_tech }
 		}
 	}
 
 	focus = {
 		id = TU_RHO_ark_speech
+		prerequisite = { focus = TU_RHO_ark_relief_office }
 		icon = GFX_goal_generic_propaganda
-		cost = 6
+		cost = 11
 		x = -2
 		y = 7
 
-		prerequisite = { focus = TU_RHO_ark_refugees }
 
 		completion_reward = {
 			add_war_support = 0.03
 			add_stability = 0.03
-		}
-	}
-
-	focus = {
-		id = TU_RHO_ark_final
-		icon = GFX_goal_generic_alliance
-		cost = 10
-		x = -2
-		y = 8
-
-		prerequisite = { focus = TU_RHO_ark_speech }
-
-		completion_reward = {
 			add_political_power = 60
 			add_stability = 0.03
 		}
 	}
 
-	#### ROUTE B: "CONTRACTORS OF TERRA" (PMC, neutral) ####
 	focus = {
 		id = TU_RHO_contractors
 		icon = GFX_goal_generic_trade
@@ -202,7 +162,7 @@
 	focus = {
 		id = TU_RHO_arms_dealing
 		icon = GFX_goal_generic_military_deal
-		cost = 7
+		cost = 10
 		x = 0
 		y = 5
 
@@ -212,19 +172,6 @@
 			add_to_variable = { TU_lmd = 1000 }
 			add_tech_bonus = { name = TU_RHO_arms_dealing bonus = 0.75 uses = 1 category = infantry_weapons }
 			army_experience = 25
-		}
-	}
-
-	focus = {
-		id = TU_RHO_neutral_pact
-		icon = GFX_goal_generic_neutrality_focus
-		cost = 6
-		x = 0
-		y = 6
-
-		prerequisite = { focus = TU_RHO_arms_dealing }
-
-		completion_reward = {
 			add_political_power = 60
 			add_stability = 0.03
 		}
@@ -232,12 +179,12 @@
 
 	focus = {
 		id = TU_RHO_mercenary_market
+		prerequisite = { focus = TU_RHO_arms_dealing }
 		icon = GFX_goal_generic_dangerous_deal
 		cost = 8
 		x = 0
 		y = 7
 
-		prerequisite = { focus = TU_RHO_neutral_pact }
 
 		completion_reward = {
 			set_country_flag = TU_RHO_pmc_market
@@ -283,7 +230,7 @@
 	focus = {
 		id = TU_RHO_kazdel_prep
 		icon = GFX_goal_generic_more_territorial_claims
-		cost = 8
+		cost = 11
 		x = 2
 		y = 4
 
@@ -298,32 +245,19 @@
 			army_experience = 25
 			add_war_support = 0.03
 			add_doctrine_cost_reduction = { name = TU_RHO_kazdel_prep cost_reduction = 0.4 uses = 1 category = land_doctrine }
-		}
-	}
-
-	focus = {
-		id = TU_RHO_tactical_doctrine
-		icon = GFX_goal_generic_army_tanks
-		cost = 6
-		x = 2
-		y = 5
-
-		prerequisite = { focus = TU_RHO_kazdel_prep }
-
-		completion_reward = {
-			add_doctrine_cost_reduction = { name = TU_RHO_tactical_doctrine cost_reduction = 0.4 uses = 1 category = land_doctrine }
+			add_doctrine_cost_reduction = { name = TU_RHO_kazdel_prep cost_reduction = 0.4 uses = 1 category = land_doctrine }
 			army_experience = 25
 		}
 	}
 
 	focus = {
 		id = TU_RHO_doctor_war
+		prerequisite = { focus = TU_RHO_kazdel_prep }
 		icon = GFX_goal_generic_major_war
 		cost = 8
 		x = 2
 		y = 6
 
-		prerequisite = { focus = TU_RHO_tactical_doctrine }
 
 		completion_reward = {
 			country_event = { id = tu_rho_ev.5 }

@@ -24,7 +24,7 @@
 		icon = GFX_goal_generic_improve_relations
 		x = 2
 		y = 2
-		cost = 10
+		cost = 16
 
 		search_filters = { FOCUS_FILTER_POLITICAL }
 
@@ -36,6 +36,10 @@
 			set_country_flag = TU_dip_relations_unlocked
 			add_political_power = 60
 			add_stability = 0.03
+			add_political_power = 35
+			add_tech_bonus = { name = TU_YAN_ex_foreign_office bonus = 0.5 uses = 1 category = industry }
+			add_political_power = 35
+			add_tech_bonus = { name = TU_YAN_ex_foreign_office bonus = 0.5 uses = 1 category = industry }
 		}
 	}
 
@@ -45,7 +49,7 @@
 		icon = GFX_goal_generic_trade
 		x = 2
 		y = 3
-		cost = 10
+		cost = 18
 
 		search_filters = { FOCUS_FILTER_POLITICAL }
 
@@ -56,6 +60,10 @@
 		completion_reward = {
 			add_ideas = TU_YAN_envoy_network
 			add_tech_bonus = { name = TU_YAN_ex_envoy_routes bonus = 0.75 uses = 1 category = industry category = construction_tech }
+			add_political_power = 35
+			add_stability = 0.02
+			add_political_power = 60
+			add_stability = 0.03
 		}
 	}
 
@@ -65,7 +73,7 @@
 		icon = GFX_goal_generic_more_territorial_claims
 		x = 4
 		y = 2
-		cost = 10
+		cost = 13
 
 		search_filters = { FOCUS_FILTER_POLITICAL }
 
@@ -76,6 +84,8 @@
 		completion_reward = {
 			add_tech_bonus = { name = TU_YAN_ex_frontier_survey bonus = 0.75 uses = 1 category = construction_tech }
 			army_experience = 25
+			add_tech_bonus = { name = TU_YAN_ex_frontier_survey bonus = 0.5 uses = 1 category = construction_tech }
+			army_experience = 15
 		}
 	}
 
@@ -85,7 +95,7 @@
 		icon = GFX_goal_generic_army_doctrines
 		x = 4
 		y = 3
-		cost = 10
+		cost = 20
 
 		search_filters = { FOCUS_FILTER_RESEARCH }
 
@@ -97,26 +107,11 @@
 			add_ideas = TU_YAN_expansion_doctrine
 			add_doctrine_cost_reduction = { name = TU_YAN_ex_expansion_doctrine cost_reduction = 0.4 uses = 1 category = land_doctrine }
 			army_experience = 25
-		}
-	}
-
-	focus = {
-		id = TU_YAN_ex_frontier_army
-		prerequisite = { focus = TU_YAN_ex_expansion_doctrine }
-		icon = GFX_goal_generic_allies_build_infantry
-		x = 2
-		y = 4
-		cost = 10
-
-		search_filters = { FOCUS_FILTER_MANPOWER }
-
-		ai_will_do = {
-			base = 1
-		}
-
-		completion_reward = {
-			add_tech_bonus = { name = TU_YAN_ex_frontier_army bonus = 0.75 uses = 1 category = construction_tech }
+			add_tech_bonus = { name = TU_YAN_ex_expansion_doctrine bonus = 0.75 uses = 1 category = construction_tech }
 			army_experience = 25
+			army_experience = 25
+			add_war_support = 0.03
+			add_doctrine_cost_reduction = { name = TU_YAN_ex_expansion_doctrine cost_reduction = 0.4 uses = 1 category = land_doctrine }
 		}
 	}
 
@@ -162,29 +157,8 @@
 	}
 
 	focus = {
-		id = TU_YAN_ex_war_council
-		prerequisite = { focus = TU_YAN_ex_expansion_doctrine }
-		icon = GFX_goal_generic_major_war
-		x = 6
-		y = 4
-		cost = 10
-
-		search_filters = { FOCUS_FILTER_POLITICAL }
-
-		ai_will_do = {
-			base = 1
-		}
-
-		completion_reward = {
-			army_experience = 25
-			add_war_support = 0.03
-			add_doctrine_cost_reduction = { name = TU_YAN_ex_war_council cost_reduction = 0.4 uses = 1 category = land_doctrine }
-		}
-	}
-
-	focus = {
 		id = TU_YAN_ex_supply_corps
-		prerequisite = { focus = TU_YAN_ex_frontier_army }
+		prerequisite = { focus = TU_YAN_ex_expansion_doctrine }
 		icon = GFX_goal_generic_construct_infrastructure
 		x = 4
 		y = 5
@@ -206,7 +180,7 @@
 
 	focus = {
 		id = TU_YAN_ex_grand_campaign
-		prerequisite = { focus = TU_YAN_ex_war_council }
+		prerequisite = { focus = TU_YAN_ex_expansion_doctrine }
 		prerequisite = { focus = TU_YAN_ex_supply_corps }
 		icon = GFX_goal_generic_army_tanks
 		x = 2
@@ -233,7 +207,7 @@
 		icon = GFX_goal_generic_military_deal
 		x = 4
 		y = 1
-		cost = 10
+		cost = 15
 
 		search_filters = { FOCUS_FILTER_POLITICAL }
 
@@ -249,24 +223,6 @@
 			country_event = { id = tu_yan_ev.12 }
 			add_political_power = 60
 			add_stability = 0.03
-		}
-	}
-
-	focus = {
-		id = TU_YAN_lgm_joint_council
-		prerequisite = { focus = TU_YAN_lgm_autonomy_charter }
-		icon = GFX_goal_generic_major_alliance
-		x = 6
-		y = 2
-		cost = 10
-
-		search_filters = { FOCUS_FILTER_POLITICAL }
-
-		ai_will_do = {
-			base = 1
-		}
-
-		completion_reward = {
 			add_political_power = 60
 			add_stability = 0.03
 		}
@@ -274,11 +230,11 @@
 
 	focus = {
 		id = TU_YAN_lgm_free_port
-		prerequisite = { focus = TU_YAN_lgm_joint_council }
+		prerequisite = { focus = TU_YAN_lgm_autonomy_charter }
 		icon = GFX_goal_generic_trade
 		x = 6
 		y = 3
-		cost = 10
+		cost = 19
 
 		search_filters = { FOCUS_FILTER_INDUSTRY }
 
@@ -291,44 +247,8 @@
 			TU_build_civ_factory = yes
 			add_political_power = 60
 			add_tech_bonus = { name = TU_YAN_lgm_free_port bonus = 0.75 uses = 1 category = industry }
-		}
-	}
-
-	focus = {
-		id = TU_YAN_lgm_shared_defense
-		prerequisite = { focus = TU_YAN_lgm_free_port }
-		icon = GFX_goal_generic_defence
-		x = 8
-		y = 4
-		cost = 10
-
-		search_filters = { FOCUS_FILTER_MANPOWER }
-
-		ai_will_do = {
-			base = 1
-		}
-
-		completion_reward = {
-			add_tech_bonus = { name = TU_YAN_lgm_shared_defense bonus = 0.75 uses = 1 category = construction_tech }
+			add_tech_bonus = { name = TU_YAN_lgm_free_port bonus = 0.75 uses = 1 category = construction_tech }
 			army_experience = 25
-		}
-	}
-
-	focus = {
-		id = TU_YAN_lgm_autonomy_pact
-		prerequisite = { focus = TU_YAN_lgm_shared_defense }
-		icon = GFX_goal_generic_forceful_treaty
-		x = 6
-		y = 5
-		cost = 15
-
-		search_filters = { FOCUS_FILTER_POLITICAL }
-
-		ai_will_do = {
-			base = 1
-		}
-
-		completion_reward = {
 			add_political_power = 100
 			add_stability = 0.05
 		}
@@ -364,7 +284,7 @@
 		icon = GFX_goal_generic_political_pressure
 		x = 8
 		y = 1
-		cost = 10
+		cost = 20
 
 		search_filters = { FOCUS_FILTER_POLITICAL }
 
@@ -375,74 +295,19 @@
 		completion_reward = {
 			add_political_power = 60
 			add_stability = 0.03
-		}
-	}
-
-	focus = {
-		id = TU_YAN_lgm_port_integration
-		prerequisite = { focus = TU_YAN_lgm_governor_office }
-		icon = GFX_goal_generic_construct_civ_factory
-		x = 8
-		y = 2
-		cost = 10
-
-		search_filters = { FOCUS_FILTER_INDUSTRY }
-
-		ai_will_do = {
-			base = 1
-		}
-
-		completion_reward = {
+			add_political_power = 60
+			add_tech_bonus = { name = TU_YAN_lgm_governor_office bonus = 0.75 uses = 1 category = industry }
 			TU_build_civ_factory = yes
 			add_political_power = 60
-			add_tech_bonus = { name = TU_YAN_lgm_port_integration bonus = 0.75 uses = 1 category = industry }
-		}
-	}
-
-	focus = {
-		id = TU_YAN_lgm_garrison_levy
-		prerequisite = { focus = TU_YAN_lgm_port_integration }
-		icon = GFX_goal_generic_allies_build_infantry
-		x = 8
-		y = 3
-		cost = 10
-
-		search_filters = { FOCUS_FILTER_MANPOWER }
-
-		ai_will_do = {
-			base = 1
-		}
-
-		completion_reward = {
-			add_tech_bonus = { name = TU_YAN_lgm_garrison_levy bonus = 0.75 uses = 1 category = construction_tech }
+			add_tech_bonus = { name = TU_YAN_lgm_governor_office bonus = 0.75 uses = 1 category = industry }
+			add_tech_bonus = { name = TU_YAN_lgm_governor_office bonus = 0.75 uses = 1 category = construction_tech }
 			army_experience = 25
 		}
 	}
 
 	focus = {
-		id = TU_YAN_lgm_tax_ledger
-		prerequisite = { focus = TU_YAN_lgm_governor_office }
-		icon = GFX_goal_generic_consumer_goods
-		x = 10
-		y = 2
-		cost = 10
-
-		search_filters = { FOCUS_FILTER_POLITICAL }
-
-		ai_will_do = {
-			base = 1
-		}
-
-		completion_reward = {
-			add_political_power = 60
-			add_tech_bonus = { name = TU_YAN_lgm_tax_ledger bonus = 0.75 uses = 1 category = industry }
-		}
-	}
-
-	focus = {
 		id = TU_YAN_lgm_full_integration
-		prerequisite = { focus = TU_YAN_lgm_garrison_levy }
-		prerequisite = { focus = TU_YAN_lgm_tax_ledger }
+		prerequisite = { focus = TU_YAN_lgm_governor_office }
 		icon = GFX_goal_generic_national_unity
 		x = 10
 		y = 4
@@ -481,32 +346,12 @@
 	}
 
 	focus = {
-		id = TU_YAN_hig_strait_survey
-		prerequisite = { focus = TU_YAN_ex_foreign_office }
-		icon = GFX_goal_generic_radar
-		x = 10
-		y = 3
-		cost = 5
-
-		search_filters = { FOCUS_FILTER_POLITICAL }
-
-		ai_will_do = {
-			base = 1
-		}
-
-		completion_reward = {
-			add_political_power = 35
-			add_tech_bonus = { name = TU_YAN_hig_strait_survey bonus = 0.5 uses = 1 category = industry }
-		}
-	}
-
-	focus = {
 		id = TU_YAN_hig_envoy_mission
-		prerequisite = { focus = TU_YAN_hig_strait_survey }
+		prerequisite = { focus = TU_YAN_ex_foreign_office }
 		icon = GFX_goal_generic_improve_relations
 		x = 12
 		y = 4
-		cost = 10
+		cost = 15
 
 		search_filters = { FOCUS_FILTER_POLITICAL }
 
@@ -517,6 +362,9 @@
 		completion_reward = {
 			add_political_power = 60
 			add_stability = 0.03
+			TU_build_civ_factory = yes
+			add_political_power = 60
+			add_tech_bonus = { name = TU_YAN_hig_envoy_mission bonus = 0.75 uses = 1 category = industry }
 		}
 	}
 
@@ -526,7 +374,7 @@
 		icon = GFX_goal_generic_more_territorial_claims
 		x = 8
 		y = 5
-		cost = 10
+		cost = 15
 
 		search_filters = { FOCUS_FILTER_POLITICAL }
 
@@ -537,37 +385,18 @@
 		completion_reward = {
 			add_tech_bonus = { name = TU_YAN_hig_claim_focus bonus = 0.75 uses = 1 category = construction_tech }
 			army_experience = 25
-		}
-	}
-
-	focus = {
-		id = TU_YAN_hig_trade_treaty
-		prerequisite = { focus = TU_YAN_hig_envoy_mission }
-		icon = GFX_goal_generic_positive_trade_relations
-		x = 10
-		y = 5
-		cost = 10
-
-		search_filters = { FOCUS_FILTER_INDUSTRY }
-
-		ai_will_do = {
-			base = 1
-		}
-
-		completion_reward = {
-			TU_build_civ_factory = yes
 			add_political_power = 60
-			add_tech_bonus = { name = TU_YAN_hig_trade_treaty bonus = 0.75 uses = 1 category = industry }
+			add_tech_bonus = { name = TU_YAN_hig_claim_focus bonus = 0.75 uses = 1 category = industry }
 		}
 	}
 
 	focus = {
 		id = TU_YAN_hig_non_aggression
-		prerequisite = { focus = TU_YAN_hig_trade_treaty }
+		prerequisite = { focus = TU_YAN_hig_envoy_mission }
 		icon = GFX_goal_generic_neutrality_focus
 		x = 6
 		y = 6
-		cost = 10
+		cost = 15
 
 		search_filters = { FOCUS_FILTER_POLITICAL }
 
@@ -576,6 +405,8 @@
 		}
 
 		completion_reward = {
+			add_political_power = 60
+			add_stability = 0.03
 			add_political_power = 60
 			add_stability = 0.03
 		}
@@ -587,7 +418,7 @@
 		icon = GFX_goal_generic_major_war
 		x = 2
 		y = 7
-		cost = 10
+		cost = 18
 
 		search_filters = { FOCUS_FILTER_POLITICAL }
 
@@ -599,32 +430,14 @@
 			army_experience = 25
 			add_war_support = 0.03
 			add_doctrine_cost_reduction = { name = TU_YAN_hig_war_plan cost_reduction = 0.4 uses = 1 category = land_doctrine }
-		}
-	}
-
-	focus = {
-		id = TU_YAN_hig_strait_seize
-		prerequisite = { focus = TU_YAN_hig_war_plan }
-		icon = GFX_goal_generic_amphibious_assault
-		x = 2
-		y = 8
-		cost = 15
-
-		search_filters = { FOCUS_FILTER_MANPOWER }
-
-		ai_will_do = {
-			base = 1
-		}
-
-		completion_reward = {
 			add_political_power = 100
-			add_tech_bonus = { name = TU_YAN_hig_strait_seize bonus = 1.0 uses = 1 category = industry }
+			add_tech_bonus = { name = TU_YAN_hig_war_plan bonus = 1.0 uses = 1 category = industry }
 		}
 	}
 
 	focus = {
 		id = TU_YAN_hig_harbour_levy
-		prerequisite = { focus = TU_YAN_hig_trade_treaty }
+		prerequisite = { focus = TU_YAN_hig_envoy_mission }
 		mutually_exclusive = { focus = TU_YAN_hig_harbour_levy_alt }
 		icon = GFX_goal_generic_consumer_goods
 		x = 10
@@ -645,7 +458,7 @@
 
 	focus = {
 		id = TU_YAN_hig_harbour_levy_alt
-		prerequisite = { focus = TU_YAN_hig_trade_treaty }
+		prerequisite = { focus = TU_YAN_hig_envoy_mission }
 		mutually_exclusive = { focus = TU_YAN_hig_harbour_levy }
 		icon = GFX_goal_generic_consumer_goods
 		x = 10
@@ -665,68 +478,8 @@
 	}
 
 	focus = {
-		id = TU_YAN_hig_coastal_guard
-		prerequisite = { focus = TU_YAN_hig_claim_focus }
-		icon = GFX_goal_generic_navy_anti_submarine
-		x = 4
-		y = 8
-		cost = 10
-
-		search_filters = { FOCUS_FILTER_MANPOWER }
-
-		ai_will_do = {
-			base = 1
-		}
-
-		completion_reward = {
-			add_political_power = 60
-			add_tech_bonus = { name = TU_YAN_hig_coastal_guard bonus = 0.75 uses = 1 category = industry }
-		}
-	}
-
-	focus = {
-		id = TU_YAN_hig_envoy_pact
-		prerequisite = { focus = TU_YAN_hig_non_aggression }
-		icon = GFX_goal_generic_major_alliance
-		x = 6
-		y = 7
-		cost = 10
-
-		search_filters = { FOCUS_FILTER_POLITICAL }
-
-		ai_will_do = {
-			base = 1
-		}
-
-		completion_reward = {
-			add_political_power = 60
-			add_stability = 0.03
-		}
-	}
-
-	focus = {
-		id = TU_YAN_urs_border_survey
-		prerequisite = { focus = TU_YAN_ex_frontier_survey }
-		icon = GFX_goal_generic_radar
-		x = 12
-		y = 3
-		cost = 5
-
-		search_filters = { FOCUS_FILTER_POLITICAL }
-
-		ai_will_do = {
-			base = 1
-		}
-
-		completion_reward = {
-			add_tech_bonus = { name = TU_YAN_urs_border_survey bonus = 0.5 uses = 1 category = construction_tech }
-			army_experience = 15
-		}
-	}
-
-	focus = {
 		id = TU_YAN_urs_envoy_court
-		prerequisite = { focus = TU_YAN_urs_border_survey }
+		prerequisite = { focus = TU_YAN_ex_frontier_survey }
 		icon = GFX_goal_generic_improve_relations
 		x = 14
 		y = 4
@@ -785,7 +538,7 @@
 
 	focus = {
 		id = TU_YAN_urs_claim_focus
-		prerequisite = { focus = TU_YAN_urs_border_survey }
+		prerequisite = { focus = TU_YAN_ex_frontier_survey }
 		icon = GFX_goal_generic_more_territorial_claims
 		x = 16
 		y = 4
@@ -831,7 +584,7 @@
 		icon = GFX_goal_generic_political_pressure
 		x = 16
 		y = 5
-		cost = 10
+		cost = 15
 
 		search_filters = { FOCUS_FILTER_POLITICAL }
 
@@ -842,32 +595,14 @@
 		completion_reward = {
 			add_tech_bonus = { name = TU_YAN_urs_pressure bonus = 0.75 uses = 1 category = construction_tech }
 			army_experience = 25
-		}
-	}
-
-	focus = {
-		id = TU_YAN_urs_frontier_drill
-		prerequisite = { focus = TU_YAN_urs_pressure }
-		icon = GFX_goal_generic_army_motorized
-		x = 14
-		y = 6
-		cost = 10
-
-		search_filters = { FOCUS_FILTER_MANPOWER }
-
-		ai_will_do = {
-			base = 1
-		}
-
-		completion_reward = {
-			add_doctrine_cost_reduction = { name = TU_YAN_urs_frontier_drill cost_reduction = 0.4 uses = 1 category = land_doctrine }
+			add_doctrine_cost_reduction = { name = TU_YAN_urs_pressure cost_reduction = 0.4 uses = 1 category = land_doctrine }
 			army_experience = 25
 		}
 	}
 
 	focus = {
 		id = TU_YAN_urs_steppe_cavalry
-		prerequisite = { focus = TU_YAN_urs_frontier_drill }
+		prerequisite = { focus = TU_YAN_urs_pressure }
 		icon = GFX_goal_generic_cavalry
 		x = 8
 		y = 7
@@ -892,7 +627,7 @@
 		icon = GFX_goal_generic_major_war
 		x = 8
 		y = 8
-		cost = 10
+		cost = 18
 
 		search_filters = { FOCUS_FILTER_POLITICAL }
 
@@ -904,27 +639,9 @@
 			army_experience = 25
 			add_war_support = 0.03
 			add_doctrine_cost_reduction = { name = TU_YAN_urs_war_plan cost_reduction = 0.4 uses = 1 category = land_doctrine }
-		}
-	}
-
-	focus = {
-		id = TU_YAN_urs_grand_march
-		prerequisite = { focus = TU_YAN_urs_war_plan }
-		icon = GFX_goal_generic_attack_allies
-		x = 2
-		y = 9
-		cost = 15
-
-		search_filters = { FOCUS_FILTER_POLITICAL }
-
-		ai_will_do = {
-			base = 1
-		}
-
-		completion_reward = {
 			army_experience = 40
 			add_war_support = 0.05
-			add_doctrine_cost_reduction = { name = TU_YAN_urs_grand_march cost_reduction = 0.5 uses = 1 category = land_doctrine }
+			add_doctrine_cost_reduction = { name = TU_YAN_urs_war_plan cost_reduction = 0.5 uses = 1 category = land_doctrine }
 		}
 	}
 
@@ -934,7 +651,7 @@
 		icon = GFX_goal_generic_alliance
 		x = 10
 		y = 7
-		cost = 10
+		cost = 15
 
 		search_filters = { FOCUS_FILTER_POLITICAL }
 
@@ -943,6 +660,8 @@
 		}
 
 		completion_reward = {
+			add_political_power = 60
+			add_stability = 0.03
 			add_political_power = 60
 			add_stability = 0.03
 		}
@@ -996,7 +715,7 @@
 		icon = GFX_goal_generic_construct_infrastructure
 		x = 16
 		y = 6
-		cost = 10
+		cost = 15
 
 		search_filters = { FOCUS_FILTER_INDUSTRY }
 
@@ -1007,24 +726,6 @@
 		completion_reward = {
 			TU_build_infrastructure = yes
 			add_tech_bonus = { name = TU_YAN_urs_supply_route bonus = 0.75 uses = 1 category = industry category = construction_tech }
-		}
-	}
-
-	focus = {
-		id = TU_YAN_urs_border_fort
-		prerequisite = { focus = TU_YAN_urs_supply_route }
-		icon = GFX_goal_generic_defence
-		x = 14
-		y = 7
-		cost = 10
-
-		search_filters = { FOCUS_FILTER_INDUSTRY }
-
-		ai_will_do = {
-			base = 1
-		}
-
-		completion_reward = {
 			TU_build_infrastructure = yes
 			TU_build_forts_2 = yes
 		}
@@ -1073,29 +774,9 @@
 	}
 
 	focus = {
-		id = TU_YAN_urs_peace_terms
-		prerequisite = { focus = TU_YAN_urs_pact }
-		icon = GFX_goal_generic_improve_relations
-		x = 10
-		y = 8
-		cost = 10
-
-		search_filters = { FOCUS_FILTER_POLITICAL }
-
-		ai_will_do = {
-			base = 1
-		}
-
-		completion_reward = {
-			add_political_power = 60
-			add_stability = 0.03
-		}
-	}
-
-	focus = {
 		id = TU_YAN_urs_occupation_plan
 		prerequisite = { focus = TU_YAN_urs_war_plan }
-		prerequisite = { focus = TU_YAN_urs_border_fort }
+		prerequisite = { focus = TU_YAN_urs_supply_route }
 		icon = GFX_goal_generic_occupy_states_ongoing_war
 		x = 4
 		y = 9
@@ -1181,7 +862,7 @@
 		icon = GFX_goal_generic_scientific_exchange
 		x = 16
 		y = 7
-		cost = 10
+		cost = 15
 
 		search_filters = { FOCUS_FILTER_RESEARCH }
 
@@ -1191,6 +872,8 @@
 
 		completion_reward = {
 			add_tech_bonus = { name = TU_YAN_sar_scholars bonus = 0.75 uses = 1 category = electronics category = tu_originium_tech }
+			add_political_power = 60
+			add_stability = 0.03
 		}
 	}
 
@@ -1221,7 +904,7 @@
 		icon = GFX_goal_generic_dangerous_deal
 		x = 20
 		y = 6
-		cost = 10
+		cost = 15
 
 		search_filters = { FOCUS_FILTER_POLITICAL }
 
@@ -1232,36 +915,18 @@
 		completion_reward = {
 			add_political_power = 60
 			add_stability = 0.03
-		}
-	}
-
-	focus = {
-		id = TU_YAN_sar_caravan_guard
-		prerequisite = { focus = TU_YAN_sar_pressure }
-		icon = GFX_goal_generic_army_artillery
-		x = 18
-		y = 7
-		cost = 10
-
-		search_filters = { FOCUS_FILTER_MANPOWER }
-
-		ai_will_do = {
-			base = 1
-		}
-
-		completion_reward = {
 			add_political_power = 60
-			add_tech_bonus = { name = TU_YAN_sar_caravan_guard bonus = 0.75 uses = 1 category = industry }
+			add_tech_bonus = { name = TU_YAN_sar_pressure bonus = 0.75 uses = 1 category = industry }
 		}
 	}
 
 	focus = {
 		id = TU_YAN_sar_war_plan
-		prerequisite = { focus = TU_YAN_sar_caravan_guard }
+		prerequisite = { focus = TU_YAN_sar_pressure }
 		icon = GFX_goal_generic_major_war
 		x = 12
 		y = 8
-		cost = 10
+		cost = 15
 
 		search_filters = { FOCUS_FILTER_POLITICAL }
 
@@ -1273,12 +938,15 @@
 			army_experience = 25
 			add_war_support = 0.03
 			add_doctrine_cost_reduction = { name = TU_YAN_sar_war_plan cost_reduction = 0.4 uses = 1 category = land_doctrine }
+			TU_build_mil_factory = yes
+			add_tech_bonus = { name = TU_YAN_sar_war_plan bonus = 0.75 uses = 1 category = artillery }
+			army_experience = 25
 		}
 	}
 
 	focus = {
 		id = TU_YAN_sar_desert_drill
-		prerequisite = { focus = TU_YAN_sar_caravan_guard }
+		prerequisite = { focus = TU_YAN_sar_pressure }
 		mutually_exclusive = { focus = TU_YAN_sar_desert_drill_alt }
 		icon = GFX_goal_generic_army_artillery2
 		x = 14
@@ -1299,7 +967,7 @@
 
 	focus = {
 		id = TU_YAN_sar_desert_drill_alt
-		prerequisite = { focus = TU_YAN_sar_caravan_guard }
+		prerequisite = { focus = TU_YAN_sar_pressure }
 		mutually_exclusive = { focus = TU_YAN_sar_desert_drill }
 		icon = GFX_goal_generic_army_artillery2
 		x = 14
@@ -1323,7 +991,7 @@
 		icon = GFX_goal_generic_fortify_city
 		x = 20
 		y = 7
-		cost = 10
+		cost = 15
 
 		search_filters = { FOCUS_FILTER_INDUSTRY }
 
@@ -1335,6 +1003,8 @@
 			TU_build_infrastructure = yes
 			add_political_power = 60
 			add_stability = 0.03
+			add_manpower = 10000
+			army_experience = 25
 		}
 	}
 
@@ -1355,26 +1025,6 @@
 		completion_reward = {
 			add_political_power = 60
 			add_stability = 0.03
-		}
-	}
-
-	focus = {
-		id = TU_YAN_sar_local_levy
-		prerequisite = { focus = TU_YAN_sar_oasis_post }
-		icon = GFX_goal_generic_allies_build_infantry
-		x = 18
-		y = 8
-		cost = 10
-
-		search_filters = { FOCUS_FILTER_MANPOWER }
-
-		ai_will_do = {
-			base = 1
-		}
-
-		completion_reward = {
-			add_manpower = 10000
-			army_experience = 25
 		}
 	}
 
@@ -1421,47 +1071,6 @@
 	}
 
 	focus = {
-		id = TU_YAN_sar_pact
-		prerequisite = { focus = TU_YAN_sar_scholars }
-		icon = GFX_goal_generic_alliance
-		x = 20
-		y = 8
-		cost = 10
-
-		search_filters = { FOCUS_FILTER_POLITICAL }
-
-		ai_will_do = {
-			base = 1
-		}
-
-		completion_reward = {
-			add_political_power = 60
-			add_stability = 0.03
-		}
-	}
-
-	focus = {
-		id = TU_YAN_sar_desert_sieges
-		prerequisite = { focus = TU_YAN_sar_war_plan }
-		icon = GFX_goal_generic_army_artillery
-		x = 6
-		y = 9
-		cost = 10
-
-		search_filters = { FOCUS_FILTER_INDUSTRY }
-
-		ai_will_do = {
-			base = 1
-		}
-
-		completion_reward = {
-			TU_build_mil_factory = yes
-			add_tech_bonus = { name = TU_YAN_sar_desert_sieges bonus = 0.75 uses = 1 category = artillery }
-			army_experience = 25
-		}
-	}
-
-	focus = {
 		id = TU_YAN_sar_grand_caravan
 		prerequisite = { focus = TU_YAN_sar_war_plan }
 		prerequisite = { focus = TU_YAN_sar_oasis_post }
@@ -1482,28 +1091,8 @@
 	}
 
 	focus = {
-		id = TU_YAN_rim_survey
-		prerequisite = { focus = TU_YAN_ex_foreign_office }
-		icon = GFX_goal_generic_radar
-		x = 14
-		y = 3
-		cost = 5
-
-		search_filters = { FOCUS_FILTER_POLITICAL }
-
-		ai_will_do = {
-			base = 1
-		}
-
-		completion_reward = {
-			add_political_power = 35
-			add_tech_bonus = { name = TU_YAN_rim_survey bonus = 0.5 uses = 1 category = industry }
-		}
-	}
-
-	focus = {
 		id = TU_YAN_rim_envoy
-		prerequisite = { focus = TU_YAN_rim_survey }
+		prerequisite = { focus = TU_YAN_ex_foreign_office }
 		icon = GFX_goal_generic_improve_relations
 		x = 20
 		y = 4
@@ -1528,7 +1117,7 @@
 		icon = GFX_goal_generic_production
 		x = 24
 		y = 5
-		cost = 10
+		cost = 20
 
 		search_filters = { FOCUS_FILTER_INDUSTRY }
 
@@ -1539,6 +1128,10 @@
 		completion_reward = {
 			TU_build_civ_factory = yes
 			add_tech_bonus = { name = TU_YAN_rim_mining_deal bonus = 0.75 uses = 1 category = industry category = construction_tech }
+			add_manpower = 10000
+			army_experience = 25
+			TU_build_infrastructure = yes
+			TU_build_coastal_forts_2 = yes
 		}
 	}
 
@@ -1548,7 +1141,7 @@
 		icon = GFX_goal_generic_defence
 		x = 26
 		y = 5
-		cost = 10
+		cost = 15
 
 		search_filters = { FOCUS_FILTER_POLITICAL }
 
@@ -1559,12 +1152,14 @@
 		completion_reward = {
 			add_political_power = 60
 			add_stability = 0.03
+			add_political_power = 60
+			add_stability = 0.03
 		}
 	}
 
 	focus = {
 		id = TU_YAN_rim_claim_focus
-		prerequisite = { focus = TU_YAN_rim_survey }
+		prerequisite = { focus = TU_YAN_ex_foreign_office }
 		icon = GFX_goal_generic_more_territorial_claims
 		x = 22
 		y = 4
@@ -1589,7 +1184,7 @@
 		icon = GFX_goal_generic_build_navy
 		x = 28
 		y = 5
-		cost = 10
+		cost = 15
 
 		search_filters = { FOCUS_FILTER_INDUSTRY }
 
@@ -1601,6 +1196,8 @@
 			TU_build_civ_factory = yes
 			add_political_power = 60
 			add_tech_bonus = { name = TU_YAN_rim_pressure bonus = 0.75 uses = 1 category = industry }
+			add_doctrine_cost_reduction = { name = TU_YAN_rim_pressure cost_reduction = 0.4 uses = 1 category = land_doctrine }
+			army_experience = 25
 		}
 	}
 
@@ -1610,7 +1207,7 @@
 		icon = GFX_goal_generic_major_war
 		x = 22
 		y = 8
-		cost = 10
+		cost = 18
 
 		search_filters = { FOCUS_FILTER_POLITICAL }
 
@@ -1622,86 +1219,8 @@
 			army_experience = 25
 			add_war_support = 0.03
 			add_doctrine_cost_reduction = { name = TU_YAN_rim_war_plan cost_reduction = 0.4 uses = 1 category = land_doctrine }
-		}
-	}
-
-	focus = {
-		id = TU_YAN_rim_island_seize
-		prerequisite = { focus = TU_YAN_rim_war_plan }
-		icon = GFX_goal_generic_occupy_states_coastal
-		x = 10
-		y = 9
-		cost = 15
-
-		search_filters = { FOCUS_FILTER_POLITICAL }
-
-		ai_will_do = {
-			base = 1
-		}
-
-		completion_reward = {
 			add_political_power = 100
-			add_tech_bonus = { name = TU_YAN_rim_island_seize bonus = 1.0 uses = 1 category = industry }
-		}
-	}
-
-	focus = {
-		id = TU_YAN_rim_mine_levy
-		prerequisite = { focus = TU_YAN_rim_mining_deal }
-		icon = GFX_goal_generic_consumer_goods
-		x = 26
-		y = 6
-		cost = 10
-
-		search_filters = { FOCUS_FILTER_POLITICAL }
-
-		ai_will_do = {
-			base = 1
-		}
-
-		completion_reward = {
-			add_manpower = 10000
-			army_experience = 25
-		}
-	}
-
-	focus = {
-		id = TU_YAN_rim_pact
-		prerequisite = { focus = TU_YAN_rim_guarantee_offer }
-		icon = GFX_goal_generic_major_alliance
-		x = 28
-		y = 6
-		cost = 10
-
-		search_filters = { FOCUS_FILTER_POLITICAL }
-
-		ai_will_do = {
-			base = 1
-		}
-
-		completion_reward = {
-			add_political_power = 60
-			add_stability = 0.03
-		}
-	}
-
-	focus = {
-		id = TU_YAN_rim_port_fort
-		prerequisite = { focus = TU_YAN_rim_mine_levy }
-		icon = GFX_goal_generic_fortify_city
-		x = 24
-		y = 7
-		cost = 10
-
-		search_filters = { FOCUS_FILTER_INDUSTRY }
-
-		ai_will_do = {
-			base = 1
-		}
-
-		completion_reward = {
-			TU_build_infrastructure = yes
-			TU_build_coastal_forts_2 = yes
+			add_tech_bonus = { name = TU_YAN_rim_war_plan bonus = 1.0 uses = 1 category = industry }
 		}
 	}
 
@@ -1748,29 +1267,9 @@
 	}
 
 	focus = {
-		id = TU_YAN_rim_storm_drill
-		prerequisite = { focus = TU_YAN_rim_pressure }
-		icon = GFX_goal_generic_navy_doctrines_tactics
-		x = 26
-		y = 7
-		cost = 10
-
-		search_filters = { FOCUS_FILTER_RESEARCH }
-
-		ai_will_do = {
-			base = 1
-		}
-
-		completion_reward = {
-			add_doctrine_cost_reduction = { name = TU_YAN_rim_storm_drill cost_reduction = 0.4 uses = 1 category = land_doctrine }
-			army_experience = 25
-		}
-	}
-
-	focus = {
 		id = TU_YAN_rim_grand_blockade
-		prerequisite = { focus = TU_YAN_rim_island_seize }
-		prerequisite = { focus = TU_YAN_rim_port_fort }
+		prerequisite = { focus = TU_YAN_rim_war_plan }
+		prerequisite = { focus = TU_YAN_rim_mining_deal }
 		icon = GFX_goal_generic_navy_carrier
 		x = 2
 		y = 10
@@ -1789,32 +1288,12 @@
 	}
 
 	focus = {
-		id = TU_YAN_kzd_envoy_hall
-		prerequisite = { focus = TU_YAN_ex_envoy_routes }
-		icon = GFX_goal_generic_improve_relations
-		x = 24
-		y = 4
-		cost = 5
-
-		search_filters = { FOCUS_FILTER_POLITICAL }
-
-		ai_will_do = {
-			base = 1
-		}
-
-		completion_reward = {
-			add_political_power = 35
-			add_stability = 0.02
-		}
-	}
-
-	focus = {
 		id = TU_YAN_kzd_mercenary_pact
-		prerequisite = { focus = TU_YAN_kzd_envoy_hall }
+		prerequisite = { focus = TU_YAN_ex_envoy_routes }
 		icon = GFX_goal_generic_military_deal
 		x = 32
 		y = 5
-		cost = 10
+		cost = 20
 
 		search_filters = { FOCUS_FILTER_POLITICAL }
 
@@ -1825,12 +1304,16 @@
 		completion_reward = {
 			add_manpower = 10000
 			army_experience = 25
+			TU_build_civ_factory = yes
+			add_tech_bonus = { name = TU_YAN_kzd_mercenary_pact bonus = 0.75 uses = 1 category = industry category = construction_tech }
+			TU_build_infrastructure = yes
+			TU_build_forts_2 = yes
 		}
 	}
 
 	focus = {
 		id = TU_YAN_kzd_trade_route
-		prerequisite = { focus = TU_YAN_kzd_envoy_hall }
+		prerequisite = { focus = TU_YAN_ex_envoy_routes }
 		mutually_exclusive = { focus = TU_YAN_kzd_claim_focus }
 		icon = GFX_goal_generic_trade
 		x = 34
@@ -1856,7 +1339,7 @@
 		icon = GFX_goal_generic_more_territorial_claims
 		x = 30
 		y = 6
-		cost = 10
+		cost = 18
 
 		search_filters = { FOCUS_FILTER_POLITICAL }
 
@@ -1867,76 +1350,20 @@
 		completion_reward = {
 			add_political_power = 60
 			add_stability = 0.03
-		}
-	}
-
-	focus = {
-		id = TU_YAN_kzd_pressure
-		prerequisite = { focus = TU_YAN_kzd_claim_focus }
-		icon = GFX_goal_generic_political_pressure
-		x = 28
-		y = 7
-		cost = 10
-
-		search_filters = { FOCUS_FILTER_POLITICAL }
-
-		ai_will_do = {
-			base = 1
-		}
-
-		completion_reward = {
-			add_tech_bonus = { name = TU_YAN_kzd_pressure bonus = 0.75 uses = 1 category = construction_tech }
+			add_tech_bonus = { name = TU_YAN_kzd_claim_focus bonus = 0.75 uses = 1 category = construction_tech }
 			army_experience = 25
-		}
-	}
-
-	focus = {
-		id = TU_YAN_kzd_mercenary_drill
-		prerequisite = { focus = TU_YAN_kzd_pressure }
-		icon = GFX_goal_generic_army_doctrines
-		x = 24
-		y = 8
-		cost = 10
-
-		search_filters = { FOCUS_FILTER_MANPOWER }
-
-		ai_will_do = {
-			base = 1
-		}
-
-		completion_reward = {
-			add_doctrine_cost_reduction = { name = TU_YAN_kzd_mercenary_drill cost_reduction = 0.4 uses = 1 category = land_doctrine }
+			add_doctrine_cost_reduction = { name = TU_YAN_kzd_claim_focus cost_reduction = 0.4 uses = 1 category = land_doctrine }
 			army_experience = 25
-		}
-	}
-
-	focus = {
-		id = TU_YAN_kzd_supply_contract
-		prerequisite = { focus = TU_YAN_kzd_mercenary_pact }
-		icon = GFX_goal_generic_consumer_goods
-		x = 32
-		y = 6
-		cost = 10
-
-		search_filters = { FOCUS_FILTER_INDUSTRY }
-
-		ai_will_do = {
-			base = 1
-		}
-
-		completion_reward = {
-			TU_build_civ_factory = yes
-			add_tech_bonus = { name = TU_YAN_kzd_supply_contract bonus = 0.75 uses = 1 category = industry category = construction_tech }
 		}
 	}
 
 	focus = {
 		id = TU_YAN_kzd_war_plan
-		prerequisite = { focus = TU_YAN_kzd_mercenary_drill }
+		prerequisite = { focus = TU_YAN_kzd_claim_focus }
 		icon = GFX_goal_generic_major_war
 		x = 12
 		y = 9
-		cost = 10
+		cost = 18
 
 		search_filters = { FOCUS_FILTER_POLITICAL }
 
@@ -1948,76 +1375,21 @@
 			army_experience = 25
 			add_war_support = 0.03
 			add_doctrine_cost_reduction = { name = TU_YAN_kzd_war_plan cost_reduction = 0.4 uses = 1 category = land_doctrine }
-		}
-	}
-
-	focus = {
-		id = TU_YAN_kzd_hired_guns
-		prerequisite = { focus = TU_YAN_kzd_war_plan }
-		icon = GFX_goal_generic_allies_build_infantry
-		x = 4
-		y = 10
-		cost = 10
-
-		search_filters = { FOCUS_FILTER_MANPOWER }
-
-		ai_will_do = {
-			base = 1
-		}
-
-		completion_reward = {
-			add_tech_bonus = { name = TU_YAN_kzd_hired_guns bonus = 0.75 uses = 1 category = artillery }
+			add_tech_bonus = { name = TU_YAN_kzd_war_plan bonus = 0.75 uses = 1 category = artillery }
 			army_experience = 25
-		}
-	}
-
-	focus = {
-		id = TU_YAN_kzd_wasteland_fort
-		prerequisite = { focus = TU_YAN_kzd_supply_contract }
-		icon = GFX_goal_generic_fortify_city
-		x = 30
-		y = 7
-		cost = 10
-
-		search_filters = { FOCUS_FILTER_INDUSTRY }
-
-		ai_will_do = {
-			base = 1
-		}
-
-		completion_reward = {
-			TU_build_infrastructure = yes
-			TU_build_forts_2 = yes
-		}
-	}
-
-	focus = {
-		id = TU_YAN_kzd_envoy_pact
-		prerequisite = { focus = TU_YAN_kzd_envoy_hall }
-		icon = GFX_goal_generic_positive_trade_relations
-		x = 36
-		y = 5
-		cost = 10
-
-		search_filters = { FOCUS_FILTER_POLITICAL }
-
-		ai_will_do = {
-			base = 1
-		}
-
-		completion_reward = {
-			add_political_power = 60
-			add_stability = 0.03
+			TU_build_mil_factory = yes
+			add_tech_bonus = { name = TU_YAN_kzd_war_plan bonus = 0.75 uses = 1 category = armor }
+			add_doctrine_cost_reduction = { name = TU_YAN_kzd_war_plan cost_reduction = 0.4 uses = 1 category = land_doctrine }
 		}
 	}
 
 	focus = {
 		id = TU_YAN_kzd_access_talks
-		prerequisite = { focus = TU_YAN_kzd_envoy_pact }
+		prerequisite = { focus = TU_YAN_ex_envoy_routes }
 		icon = GFX_goal_generic_military_deal
 		x = 34
 		y = 6
-		cost = 10
+		cost = 15
 
 		search_filters = { FOCUS_FILTER_POLITICAL }
 
@@ -2027,12 +1399,14 @@
 
 		completion_reward = {
 			add_tech_bonus = { name = TU_YAN_kzd_access_talks bonus = 0.75 uses = 1 category = industry category = construction_tech }
+			add_political_power = 60
+			add_stability = 0.03
 		}
 	}
 
 	focus = {
 		id = TU_YAN_kzd_debt_bond
-		prerequisite = { focus = TU_YAN_kzd_envoy_pact }
+		prerequisite = { focus = TU_YAN_ex_envoy_routes }
 		mutually_exclusive = { focus = TU_YAN_kzd_debt_bond_alt }
 		icon = GFX_goal_generic_dangerous_deal
 		x = 36
@@ -2053,7 +1427,7 @@
 
 	focus = {
 		id = TU_YAN_kzd_debt_bond_alt
-		prerequisite = { focus = TU_YAN_kzd_envoy_pact }
+		prerequisite = { focus = TU_YAN_ex_envoy_routes }
 		mutually_exclusive = { focus = TU_YAN_kzd_debt_bond }
 		icon = GFX_goal_generic_dangerous_deal
 		x = 36
@@ -2073,28 +1447,8 @@
 	}
 
 	focus = {
-		id = TU_YAN_kzd_peace_settlement
-		prerequisite = { focus = TU_YAN_kzd_access_talks }
-		icon = GFX_goal_generic_forceful_treaty
-		x = 32
-		y = 7
-		cost = 10
-
-		search_filters = { FOCUS_FILTER_POLITICAL }
-
-		ai_will_do = {
-			base = 1
-		}
-
-		completion_reward = {
-			add_political_power = 60
-			add_stability = 0.03
-		}
-	}
-
-	focus = {
 		id = TU_YAN_kzd_drill_grounds
-		prerequisite = { focus = TU_YAN_kzd_mercenary_drill }
+		prerequisite = { focus = TU_YAN_kzd_claim_focus }
 		mutually_exclusive = { focus = TU_YAN_kzd_drill_grounds_alt }
 		icon = GFX_goal_generic_army_artillery
 		x = 14
@@ -2115,7 +1469,7 @@
 
 	focus = {
 		id = TU_YAN_kzd_drill_grounds_alt
-		prerequisite = { focus = TU_YAN_kzd_mercenary_drill }
+		prerequisite = { focus = TU_YAN_kzd_claim_focus }
 		mutually_exclusive = { focus = TU_YAN_kzd_drill_grounds }
 		icon = GFX_goal_generic_army_artillery
 		x = 14
@@ -2136,7 +1490,7 @@
 
 	focus = {
 		id = TU_YAN_kzd_frontier_levy
-		prerequisite = { focus = TU_YAN_kzd_pressure }
+		prerequisite = { focus = TU_YAN_kzd_claim_focus }
 		mutually_exclusive = { focus = TU_YAN_kzd_frontier_levy_alt }
 		icon = GFX_goal_generic_allies_build_infantry
 		x = 26
@@ -2157,7 +1511,7 @@
 
 	focus = {
 		id = TU_YAN_kzd_frontier_levy_alt
-		prerequisite = { focus = TU_YAN_kzd_pressure }
+		prerequisite = { focus = TU_YAN_kzd_claim_focus }
 		mutually_exclusive = { focus = TU_YAN_kzd_frontier_levy }
 		icon = GFX_goal_generic_allies_build_infantry
 		x = 26
@@ -2177,29 +1531,8 @@
 	}
 
 	focus = {
-		id = TU_YAN_kzd_armour_wing
-		prerequisite = { focus = TU_YAN_kzd_hired_guns }
-		icon = GFX_goal_generic_army_tanks
-		x = 2
-		y = 11
-		cost = 10
-
-		search_filters = { FOCUS_FILTER_INDUSTRY }
-
-		ai_will_do = {
-			base = 1
-		}
-
-		completion_reward = {
-			TU_build_mil_factory = yes
-			add_tech_bonus = { name = TU_YAN_kzd_armour_wing bonus = 0.75 uses = 1 category = armor }
-			add_doctrine_cost_reduction = { name = TU_YAN_kzd_armour_wing cost_reduction = 0.4 uses = 1 category = land_doctrine }
-		}
-	}
-
-	focus = {
 		id = TU_YAN_kzd_war_council
-		prerequisite = { focus = TU_YAN_kzd_hired_guns }
+		prerequisite = { focus = TU_YAN_kzd_war_plan }
 		icon = GFX_goal_generic_major_war
 		x = 4
 		y = 11
@@ -2221,7 +1554,7 @@
 	focus = {
 		id = TU_YAN_kzd_coalition
 		prerequisite = { focus = TU_YAN_kzd_war_council }
-		prerequisite = { focus = TU_YAN_kzd_peace_settlement }
+		prerequisite = { focus = TU_YAN_kzd_access_talks }
 		icon = GFX_goal_generic_major_alliance
 		x = 2
 		y = 12
@@ -2240,7 +1573,7 @@
 
 	focus = {
 		id = TU_YAN_kzd_grand_campaign
-		prerequisite = { focus = TU_YAN_kzd_armour_wing }
+		prerequisite = { focus = TU_YAN_kzd_war_plan }
 		prerequisite = { focus = TU_YAN_kzd_coalition }
 		icon = GFX_goal_generic_attack_allies
 		x = 2

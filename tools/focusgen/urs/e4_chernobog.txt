@@ -7,7 +7,7 @@
 		icon = GFX_goal_generic_construct_civilian
 		x = 40
 		y = 1
-		cost = 10
+		cost = 15
 
 		search_filters = { FOCUS_FILTER_INDUSTRY }
 
@@ -18,26 +18,8 @@
 		completion_reward = {
 			TU_build_civ_factory = yes
 			add_tech_bonus = { name = TU_URS_forced_labour bonus = 0.75 uses = 1 category = industry category = construction_tech }
-		}
-	}
-
-	focus = {
-		id = TU_URS_labour_camps
-		prerequisite = { focus = TU_URS_forced_labour }
-		icon = GFX_goal_generic_construct_civilian
-		x = 40
-		y = 2
-		cost = 10
-
-		search_filters = { FOCUS_FILTER_INDUSTRY }
-
-		ai_will_do = {
-			base = 1
-		}
-
-		completion_reward = {
 			TU_build_civ_factory = yes
-			add_tech_bonus = { name = TU_URS_labour_camps bonus = 0.75 uses = 1 category = industry category = construction_tech }
+			add_tech_bonus = { name = TU_URS_forced_labour bonus = 0.75 uses = 1 category = industry category = construction_tech }
 		}
 	}
 
@@ -48,7 +30,7 @@
 		icon = GFX_goal_generic_fortify_city
 		x = 42
 		y = 1
-		cost = 10
+		cost = 18
 
 		search_filters = { FOCUS_FILTER_POLITICAL }
 
@@ -61,29 +43,12 @@
 			add_stability = 0.03
 			add_manpower = 10000
 			add_tech_bonus = { name = TU_URS_quarantine_zones bonus = 0.75 uses = 1 category = tu_oripathy_tech }
-		}
-	}
-
-	focus = {
-		id = TU_URS_quarantine_wall
-		prerequisite = { focus = TU_URS_quarantine_zones }
-		icon = GFX_goal_generic_defence
-		x = 42
-		y = 2
-		cost = 10
-
-		search_filters = { FOCUS_FILTER_POLITICAL }
-
-		ai_will_do = {
-			base = 1
-		}
-
-		completion_reward = {
 			TU_build_forts_2 = yes
+			add_stability = 0.03
+			add_manpower = 10000
+			add_tech_bonus = { name = TU_URS_quarantine_zones bonus = 0.75 uses = 1 category = tu_oripathy_tech }
 		}
 	}
-
-	#### CHERNOBOG DEVELOPMENT ####
 
 	focus = {
 		id = TU_URS_chernobog_garrison
@@ -117,7 +82,7 @@
 		icon = GFX_goal_generic_political_pressure
 		x = 38
 		y = 1
-		cost = 10
+		cost = 15
 
 		search_filters = { FOCUS_FILTER_POLITICAL }
 
@@ -142,6 +107,9 @@
 			}
 			add_political_power = 60
 			add_stability = 0.03
+			army_experience = 25
+			add_war_support = 0.03
+			add_doctrine_cost_reduction = { name = TU_URS_reu_suppression cost_reduction = 0.4 uses = 1 category = land_doctrine }
 		}
 	}
 
@@ -152,7 +120,7 @@
 		icon = GFX_goal_generic_improve_relations
 		x = 36
 		y = 1
-		cost = 10
+		cost = 15
 
 		search_filters = { FOCUS_FILTER_POLITICAL }
 
@@ -176,45 +144,6 @@
 			}
 			add_political_power = 60
 			add_stability = 0.03
-		}
-	}
-
-	focus = {
-		id = TU_URS_reu_front
-		prerequisite = { focus = TU_URS_reu_suppression }
-		icon = GFX_goal_generic_occupy_states_ongoing_war
-		x = 38
-		y = 2
-		cost = 10
-
-		search_filters = { FOCUS_FILTER_ARMY_XP }
-
-		ai_will_do = {
-			base = 1
-		}
-
-		completion_reward = {
-			army_experience = 25
-			add_war_support = 0.03
-			add_doctrine_cost_reduction = { name = TU_URS_reu_front cost_reduction = 0.4 uses = 1 category = land_doctrine }
-		}
-	}
-
-	focus = {
-		id = TU_URS_reu_talks
-		prerequisite = { focus = TU_URS_reu_negotiation }
-		icon = GFX_goal_generic_trade
-		x = 36
-		y = 2
-		cost = 10
-
-		search_filters = { FOCUS_FILTER_POLITICAL }
-
-		ai_will_do = {
-			base = 1
-		}
-
-		completion_reward = {
 			add_political_power = 60
 			add_stability = 0.03
 		}
@@ -222,7 +151,7 @@
 
 	focus = {
 		id = TU_URS_reu_occupation
-		prerequisite = { focus = TU_URS_reu_front }
+		prerequisite = { focus = TU_URS_reu_suppression }
 		icon = GFX_goal_generic_demand_territory
 		x = 38
 		y = 3
@@ -251,7 +180,7 @@
 
 	focus = {
 		id = TU_URS_reu_peace
-		prerequisite = { focus = TU_URS_reu_talks }
+		prerequisite = { focus = TU_URS_reu_negotiation }
 		icon = GFX_goal_generic_neutrality_focus
 		x = 36
 		y = 3
@@ -312,7 +241,7 @@
 		icon = GFX_goal_generic_major_war
 		x = 38
 		y = 4
-		cost = 10
+		cost = 18
 
 		search_filters = { FOCUS_FILTER_ARMY_XP }
 
@@ -335,37 +264,19 @@
 			}
 			add_tech_bonus = { name = TU_URS_reu_siege bonus = 0.75 uses = 1 category = artillery }
 			army_experience = 25
-		}
-	}
-
-	focus = {
-		id = TU_URS_reu_final
-		prerequisite = { focus = TU_URS_reu_siege }
-		icon = GFX_goal_generic_occupy_start_war
-		x = 38
-		y = 5
-		cost = 15
-
-		search_filters = { FOCUS_FILTER_ARMY_XP }
-
-		ai_will_do = {
-			base = 1
-		}
-
-		completion_reward = {
 			army_experience = 40
 			add_war_support = 0.05
-			add_doctrine_cost_reduction = { name = TU_URS_reu_final cost_reduction = 0.5 uses = 1 category = land_doctrine }
+			add_doctrine_cost_reduction = { name = TU_URS_reu_siege cost_reduction = 0.5 uses = 1 category = land_doctrine }
 		}
 	}
 
 	focus = {
 		id = TU_URS_labour_expansion
-		prerequisite = { focus = TU_URS_labour_camps }
+		prerequisite = { focus = TU_URS_forced_labour }
 		icon = GFX_goal_generic_construct_civilian
 		x = 40
 		y = 3
-		cost = 10
+		cost = 15
 
 		search_filters = { FOCUS_FILTER_INDUSTRY }
 
@@ -381,33 +292,16 @@
 			add_ideas = TU_URS_e4_labour_quota
 			TU_build_civ_factory = yes
 			add_tech_bonus = { name = TU_URS_labour_expansion bonus = 0.75 uses = 1 category = industry category = construction_tech }
-		}
-	}
-
-	focus = {
-		id = TU_URS_quarantine_patrol
-		prerequisite = { focus = TU_URS_quarantine_wall }
-		icon = GFX_goal_generic_intelligence_exchange
-		x = 42
-		y = 3
-		cost = 10
-
-		search_filters = { FOCUS_FILTER_POLITICAL }
-
-		ai_will_do = {
-			base = 1
-		}
-
-		completion_reward = {
+			TU_build_infrastructure = yes
 			add_stability = 0.03
 			add_manpower = 10000
-			add_tech_bonus = { name = TU_URS_quarantine_patrol bonus = 0.75 uses = 1 category = tu_oripathy_tech }
+			add_tech_bonus = { name = TU_URS_labour_expansion bonus = 0.75 uses = 1 category = tu_oripathy_tech }
 		}
 	}
 
 	focus = {
 		id = TU_URS_rho_cooperation
-		prerequisite = { focus = TU_URS_quarantine_patrol }
+		prerequisite = { focus = TU_URS_quarantine_zones }
 		icon = GFX_goal_generic_scientific_exchange
 		x = 42
 		y = 4
@@ -487,7 +381,7 @@
 		icon = GFX_goal_generic_radar
 		x = 44
 		y = 11
-		cost = 15
+		cost = 20
 
 		search_filters = { FOCUS_FILTER_ARMY_XP }
 
@@ -502,48 +396,9 @@
 		completion_reward = {
 			add_political_power = 100
 			add_stability = 0.05
-		}
-	}
-
-	#### END OF THE CHERNOBOG LINE ####
-	focus = {
-		id = TU_URS_chernobog_legacy
-		prerequisite = { focus = TU_URS_chernobog_seal }
-		icon = GFX_goal_generic_secret_weapon
-		x = 44
-		y = 18
-		cost = 15
-
-		search_filters = { FOCUS_FILTER_POLITICAL }
-
-		ai_will_do = {
-			base = 1
-		}
-
-		completion_reward = {
 			add_political_power = 100
 			add_stability = 0.05
 		}
 	}
 
-	focus = {
-		id = TU_URS_infected_quota
-		prerequisite = { focus = TU_URS_labour_expansion }
-		icon = GFX_goal_generic_construction
-		x = 40
-		y = 4
-		cost = 10
-
-		search_filters = { FOCUS_FILTER_INDUSTRY }
-
-		ai_will_do = {
-			base = 1
-		}
-
-		completion_reward = {
-			TU_build_infrastructure = yes
-			add_stability = 0.03
-			add_manpower = 10000
-			add_tech_bonus = { name = TU_URS_infected_quota bonus = 0.75 uses = 1 category = tu_oripathy_tech }
-		}
-	}
+	#### END OF THE CHERNOBOG LINE ####

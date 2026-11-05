@@ -9,7 +9,7 @@
 		y = 2
 		cost = 5
 
-		search_filters = { FOCUS_FILTER_BALANCE_OF_POWER }
+		search_filters = { FOCUS_FILTER_POLITICAL }
 
 		ai_will_do = {
 			base = 1
@@ -73,7 +73,7 @@
 		y = 5
 		cost = 10
 
-		search_filters = { FOCUS_FILTER_BALANCE_OF_POWER }
+		search_filters = { FOCUS_FILTER_POLITICAL }
 
 		ai_will_do = {
 			base = 1
@@ -186,27 +186,7 @@
 		icon = GFX_goal_generic_neutrality_focus
 		x = 124
 		y = 5
-		cost = 10
-
-		search_filters = { FOCUS_FILTER_BALANCE_OF_POWER }
-
-		ai_will_do = {
-			base = 1
-		}
-
-		completion_reward = {
-			add_political_power = 60
-			add_stability = 0.03
-		}
-	}
-
-	focus = {
-		id = TU_URS_reform_republic_assembly
-		prerequisite = { focus = TU_URS_reform_republic_path }
-		icon = GFX_goal_generic_improve_relations
-		x = 124
-		y = 6
-		cost = 10
+		cost = 20
 
 		search_filters = { FOCUS_FILTER_POLITICAL }
 
@@ -217,64 +197,12 @@
 		completion_reward = {
 			add_political_power = 60
 			add_stability = 0.03
-		}
-	}
-
-	focus = {
-		id = TU_URS_reform_republic_vote
-		prerequisite = { focus = TU_URS_reform_republic_assembly }
-		icon = GFX_goal_generic_propaganda
-		x = 124
-		y = 7
-		cost = 10
-
-		search_filters = { FOCUS_FILTER_STABILITY }
-
-		ai_will_do = {
-			base = 1
-		}
-
-		completion_reward = {
 			add_political_power = 60
 			add_stability = 0.03
-		}
-	}
-
-	focus = {
-		id = TU_URS_reform_republic_civil_service
-		prerequisite = { focus = TU_URS_reform_republic_vote }
-		icon = GFX_goal_generic_construction2
-		x = 124
-		y = 8
-		cost = 10
-
-		search_filters = { FOCUS_FILTER_RESEARCH }
-
-		ai_will_do = {
-			base = 1
-		}
-
-		completion_reward = {
 			add_political_power = 60
 			add_stability = 0.03
-		}
-	}
-
-	focus = {
-		id = TU_URS_reform_republic_legacy
-		prerequisite = { focus = TU_URS_reform_republic_civil_service }
-		icon = GFX_goal_generic_neutrality_focus
-		x = 124
-		y = 9
-		cost = 10
-
-		search_filters = { FOCUS_FILTER_BALANCE_OF_POWER }
-
-		ai_will_do = {
-			base = 1
-		}
-
-		completion_reward = {
+			add_political_power = 60
+			add_stability = 0.03
 			add_political_power = 60
 			add_stability = 0.03
 		}
@@ -282,11 +210,11 @@
 
 	focus = {
 		id = TU_URS_reform_democratic_party
-		prerequisite = { focus = TU_URS_reform_crown_councils focus = TU_URS_reform_republic_vote }
+		prerequisite = { focus = TU_URS_reform_crown_councils }
 		icon = GFX_goal_generic_political_pressure
 		x = 118
 		y = 7
-		cost = 10
+		cost = 20
 
 		search_filters = { FOCUS_FILTER_POLITICAL }
 
@@ -305,203 +233,23 @@
 			}
 			add_political_power = 60
 			add_stability = 0.03
-		}
-	}
-
-	focus = {
-		id = TU_URS_reform_elections
-		prerequisite = { focus = TU_URS_reform_democratic_party }
-		icon = GFX_goal_generic_propaganda
-		x = 118
-		y = 8
-		cost = 10
-
-		search_filters = { FOCUS_FILTER_POLITICAL }
-
-		ai_will_do = {
-			base = 1
-		}
-
-		completion_reward = {
 			add_political_power = 60
 			add_stability = 0.03
-		}
-	}
-
-	focus = {
-		id = TU_URS_reform_coalition_rule
-		prerequisite = { focus = TU_URS_reform_elections }
-		icon = GFX_goal_generic_improve_relations
-		x = 118
-		y = 9
-		cost = 10
-
-		search_filters = { FOCUS_FILTER_POLITICAL }
-
-		ai_will_do = {
-			base = 1
-		}
-
-		completion_reward = {
-			add_tech_bonus = { name = TU_URS_reform_coalition_rule bonus = 0.75 uses = 1 category = industry category = construction_tech }
-		}
-	}
-
-	focus = {
-		id = TU_URS_reform_civil_rights
-		prerequisite = { focus = TU_URS_reform_coalition_rule }
-		icon = GFX_goal_generic_improve_relations
-		x = 118
-		y = 10
-		cost = 10
-
-		search_filters = { FOCUS_FILTER_STABILITY }
-
-		ai_will_do = {
-			base = 1
-		}
-
-		completion_reward = {
+			add_tech_bonus = { name = TU_URS_reform_democratic_party bonus = 0.75 uses = 1 category = industry category = construction_tech }
 			add_political_power = 60
 			add_stability = 0.03
-		}
-	}
-
-	focus = {
-		id = TU_URS_reform_labour_law
-		prerequisite = { focus = TU_URS_reform_civil_rights }
-		icon = GFX_goal_generic_construct_civilian
-		x = 118
-		y = 11
-		cost = 10
-
-		search_filters = { FOCUS_FILTER_MANPOWER }
-
-		ai_will_do = {
-			base = 1
-		}
-
-		completion_reward = {
-			add_tech_bonus = { name = TU_URS_reform_labour_law bonus = 0.75 uses = 1 category = industry category = construction_tech }
-		}
-	}
-
-	focus = {
-		id = TU_URS_reform_welfare_state
-		prerequisite = { focus = TU_URS_reform_labour_law }
-		icon = GFX_goal_generic_consumer_goods
-		x = 118
-		y = 12
-		cost = 10
-
-		search_filters = { FOCUS_FILTER_STABILITY }
-
-		ai_will_do = {
-			base = 1
-		}
-
-		completion_reward = {
+			add_tech_bonus = { name = TU_URS_reform_democratic_party bonus = 0.75 uses = 1 category = industry category = construction_tech }
 			add_stability = 0.03
 			add_manpower = 10000
-			add_tech_bonus = { name = TU_URS_reform_welfare_state bonus = 0.75 uses = 1 category = tu_oripathy_tech }
-		}
-	}
-
-	focus = {
-		id = TU_URS_reform_national_dialogue
-		prerequisite = { focus = TU_URS_reform_welfare_state }
-		icon = GFX_goal_generic_intelligence_exchange
-		x = 118
-		y = 13
-		cost = 10
-
-		search_filters = { FOCUS_FILTER_POLITICAL }
-
-		ai_will_do = {
-			base = 1
-		}
-
-		completion_reward = {
+			add_tech_bonus = { name = TU_URS_reform_democratic_party bonus = 0.75 uses = 1 category = tu_oripathy_tech }
 			add_war_support = 0.03
 			add_stability = 0.03
-		}
-	}
-
-	focus = {
-		id = TU_URS_reform_constitutional_court
-		prerequisite = { focus = TU_URS_reform_national_dialogue }
-		icon = GFX_goal_generic_defence
-		x = 118
-		y = 14
-		cost = 10
-
-		search_filters = { FOCUS_FILTER_POLITICAL }
-
-		ai_will_do = {
-			base = 1
-		}
-
-		completion_reward = {
 			add_political_power = 60
 			add_stability = 0.03
-		}
-	}
-
-	focus = {
-		id = TU_URS_reform_anti_corruption
-		prerequisite = { focus = TU_URS_reform_constitutional_court }
-		icon = GFX_goal_generic_political_pressure
-		x = 118
-		y = 15
-		cost = 10
-
-		search_filters = { FOCUS_FILTER_POLITICAL }
-
-		ai_will_do = {
-			base = 1
-		}
-
-		completion_reward = {
 			add_political_power = 60
 			add_stability = 0.03
-		}
-	}
-
-	focus = {
-		id = TU_URS_reform_open_government
-		prerequisite = { focus = TU_URS_reform_anti_corruption }
-		icon = GFX_goal_generic_scientific_exchange
-		x = 118
-		y = 16
-		cost = 10
-
-		search_filters = { FOCUS_FILTER_POLITICAL }
-
-		ai_will_do = {
-			base = 1
-		}
-
-		completion_reward = {
 			add_political_power = 60
 			add_stability = 0.03
-		}
-	}
-
-	focus = {
-		id = TU_URS_reform_civil_society
-		prerequisite = { focus = TU_URS_reform_open_government }
-		icon = GFX_goal_generic_positive_trade_relations
-		x = 118
-		y = 17
-		cost = 10
-
-		search_filters = { FOCUS_FILTER_STABILITY }
-
-		ai_will_do = {
-			base = 1
-		}
-
-		completion_reward = {
 			add_political_power = 60
 			add_stability = 0.03
 		}
@@ -509,7 +257,7 @@
 
 	focus = {
 		id = TU_URS_reform_completion
-		prerequisite = { focus = TU_URS_reform_civil_society }
+		prerequisite = { focus = TU_URS_reform_democratic_party }
 		icon = GFX_goal_generic_national_unity
 		x = 118
 		y = 18
@@ -701,7 +449,7 @@
 		icon = GFX_goal_generic_scientific_exchange
 		x = 130
 		y = 5
-		cost = 10
+		cost = 20
 
 		search_filters = { FOCUS_FILTER_RESEARCH }
 
@@ -712,55 +460,19 @@
 		completion_reward = {
 			add_ideas = TU_URS_p4_modern_education
 			add_tech_bonus = { name = TU_URS_reform_modern_schools bonus = 0.75 uses = 1 category = electronics category = tu_originium_tech }
-		}
-	}
-
-	focus = {
-		id = TU_URS_reform_school_curriculum
-		prerequisite = { focus = TU_URS_reform_modern_schools }
-		icon = GFX_goal_generic_scientific_exchange
-		x = 130
-		y = 6
-		cost = 10
-
-		search_filters = { FOCUS_FILTER_RESEARCH }
-
-		ai_will_do = {
-			base = 1
-		}
-
-		completion_reward = {
 			add_political_power = 60
 			add_stability = 0.03
-		}
-	}
-
-	focus = {
-		id = TU_URS_reform_university
-		prerequisite = { focus = TU_URS_reform_school_curriculum }
-		icon = GFX_goal_generic_scientific_exchange
-		x = 130
-		y = 7
-		cost = 10
-
-		search_filters = { FOCUS_FILTER_POLITICAL }
-
-		ai_will_do = {
-			base = 1
-		}
-
-		completion_reward = {
-			add_tech_bonus = { name = TU_URS_reform_university bonus = 0.75 uses = 1 category = electronics category = tu_originium_tech }
+			add_tech_bonus = { name = TU_URS_reform_modern_schools bonus = 0.75 uses = 1 category = electronics category = tu_originium_tech }
 		}
 	}
 
 	focus = {
 		id = TU_URS_reform_press_freedom
-		prerequisite = { focus = TU_URS_reform_university }
+		prerequisite = { focus = TU_URS_reform_modern_schools }
 		icon = GFX_goal_generic_propaganda
 		x = 130
 		y = 8
-		cost = 10
+		cost = 20
 
 		search_filters = { FOCUS_FILTER_POLITICAL }
 
@@ -772,44 +484,8 @@
 			add_ideas = TU_URS_p4_free_press
 			add_political_power = 60
 			add_stability = 0.03
-		}
-	}
-
-	focus = {
-		id = TU_URS_reform_journalists
-		prerequisite = { focus = TU_URS_reform_press_freedom }
-		icon = GFX_goal_generic_intelligence_exchange
-		x = 130
-		y = 9
-		cost = 10
-
-		search_filters = { FOCUS_FILTER_POLITICAL }
-
-		ai_will_do = {
-			base = 1
-		}
-
-		completion_reward = {
 			add_political_power = 60
 			add_stability = 0.03
-		}
-	}
-
-	focus = {
-		id = TU_URS_reform_media_law
-		prerequisite = { focus = TU_URS_reform_journalists }
-		icon = GFX_goal_generic_political_pressure
-		x = 130
-		y = 10
-		cost = 10
-
-		search_filters = { FOCUS_FILTER_POLITICAL }
-
-		ai_will_do = {
-			base = 1
-		}
-
-		completion_reward = {
 			add_political_power = 60
 			add_stability = 0.03
 		}

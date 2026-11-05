@@ -876,7 +876,7 @@
 		icon = GFX_goal_generic_national_unity
 		x = 0
 		y = 0
-		cost = 10
+		cost = 18
 
 		search_filters = { FOCUS_FILTER_POLITICAL }
 
@@ -900,44 +900,8 @@
 			add_ideas = TU_YAN_idea_rule_chongyue
 			add_political_power = 60
 			add_stability = 0.03
-		}
-	}
-
-	focus = {
-		id = TU_YAN_p1_chongyue_way
-		prerequisite = { focus = TU_YAN_p1_rule_chongyue }
-		icon = GFX_goal_generic_army_doctrines
-		x = 0
-		y = 0
-		cost = 10
-
-		search_filters = { FOCUS_FILTER_POLITICAL }
-
-		ai_will_do = {
-			base = 1
-		}
-
-		completion_reward = {
-			add_doctrine_cost_reduction = { name = TU_YAN_p1_chongyue_way cost_reduction = 0.4 uses = 1 category = land_doctrine }
+			add_doctrine_cost_reduction = { name = TU_YAN_p1_rule_chongyue cost_reduction = 0.4 uses = 1 category = land_doctrine }
 			army_experience = 25
-		}
-	}
-
-	focus = {
-		id = TU_YAN_p1_chongyue_duty
-		prerequisite = { focus = TU_YAN_p1_chongyue_way }
-		icon = GFX_goal_generic_national_unity
-		x = 0
-		y = 0
-		cost = 10
-
-		search_filters = { FOCUS_FILTER_POLITICAL }
-
-		ai_will_do = {
-			base = 1
-		}
-
-		completion_reward = {
 			add_political_power = 60
 			add_stability = 0.03
 		}
@@ -950,7 +914,7 @@
 		icon = GFX_goal_support_fascism
 		x = 0
 		y = 0
-		cost = 10
+		cost = 18
 
 		search_filters = { FOCUS_FILTER_POLITICAL }
 
@@ -974,44 +938,8 @@
 			add_ideas = TU_YAN_idea_rule_ling
 			add_political_power = 60
 			add_stability = 0.03
-		}
-	}
-
-	focus = {
-		id = TU_YAN_p1_ling_poem
-		prerequisite = { focus = TU_YAN_p1_rule_ling }
-		icon = GFX_goal_generic_propaganda
-		x = 0
-		y = 0
-		cost = 10
-
-		search_filters = { FOCUS_FILTER_POLITICAL }
-
-		ai_will_do = {
-			base = 1
-		}
-
-		completion_reward = {
 			add_political_power = 60
 			add_stability = 0.03
-		}
-	}
-
-	focus = {
-		id = TU_YAN_p1_ling_dream
-		prerequisite = { focus = TU_YAN_p1_ling_poem }
-		icon = GFX_goal_generic_neutrality_focus
-		x = 0
-		y = 0
-		cost = 10
-
-		search_filters = { FOCUS_FILTER_POLITICAL }
-
-		ai_will_do = {
-			base = 1
-		}
-
-		completion_reward = {
 			add_political_power = 60
 			add_stability = 0.03
 		}
@@ -1024,7 +952,7 @@
 		icon = GFX_goal_support_fascism
 		x = 0
 		y = 0
-		cost = 10
+		cost = 18
 
 		search_filters = { FOCUS_FILTER_POLITICAL }
 
@@ -1048,44 +976,8 @@
 			add_ideas = TU_YAN_idea_rule_wang
 			add_political_power = 60
 			add_stability = 0.03
-		}
-	}
-
-	focus = {
-		id = TU_YAN_p1_wang_stars
-		prerequisite = { focus = TU_YAN_p1_rule_wang }
-		icon = GFX_focus_research
-		x = 0
-		y = 0
-		cost = 10
-
-		search_filters = { FOCUS_FILTER_POLITICAL }
-
-		ai_will_do = {
-			base = 1
-		}
-
-		completion_reward = {
 			add_political_power = 60
 			add_stability = 0.03
-		}
-	}
-
-	focus = {
-		id = TU_YAN_p1_wang_far
-		prerequisite = { focus = TU_YAN_p1_wang_stars }
-		icon = GFX_goal_generic_scientific_exchange
-		x = 0
-		y = 0
-		cost = 10
-
-		search_filters = { FOCUS_FILTER_POLITICAL }
-
-		ai_will_do = {
-			base = 1
-		}
-
-		completion_reward = {
 			add_political_power = 60
 			add_stability = 0.03
 		}
@@ -1098,7 +990,7 @@
 		icon = GFX_goal_support_fascism
 		x = 0
 		y = 0
-		cost = 10
+		cost = 18
 
 		search_filters = { FOCUS_FILTER_POLITICAL }
 
@@ -1122,44 +1014,8 @@
 			add_ideas = TU_YAN_idea_rule_dusk
 			add_political_power = 60
 			add_stability = 0.03
-		}
-	}
-
-	focus = {
-		id = TU_YAN_p1_dusk_painting
-		prerequisite = { focus = TU_YAN_p1_rule_dusk }
-		icon = GFX_goal_generic_propaganda
-		x = 0
-		y = 0
-		cost = 10
-
-		search_filters = { FOCUS_FILTER_POLITICAL }
-
-		ai_will_do = {
-			base = 1
-		}
-
-		completion_reward = {
 			add_political_power = 60
 			add_stability = 0.03
-		}
-	}
-
-	focus = {
-		id = TU_YAN_p1_dusk_canvas
-		prerequisite = { focus = TU_YAN_p1_dusk_painting }
-		icon = GFX_goal_generic_defence
-		x = 0
-		y = 0
-		cost = 10
-
-		search_filters = { FOCUS_FILTER_POLITICAL }
-
-		ai_will_do = {
-			base = 1
-		}
-
-		completion_reward = {
 			add_political_power = 60
 			add_stability = 0.03
 		}
@@ -1172,7 +1028,7 @@
 		icon = GFX_goal_support_fascism
 		x = 0
 		y = 0
-		cost = 10
+		cost = 20
 
 		search_filters = { FOCUS_FILTER_POLITICAL }
 
@@ -1196,44 +1052,8 @@
 			add_ideas = TU_YAN_idea_rule_shu
 			add_political_power = 60
 			add_stability = 0.03
-		}
-	}
-
-	focus = {
-		id = TU_YAN_p1_shu_fields
-		prerequisite = { focus = TU_YAN_p1_rule_shu }
-		icon = GFX_goal_generic_consumer_goods
-		x = 0
-		y = 0
-		cost = 10
-
-		search_filters = { FOCUS_FILTER_POLITICAL }
-
-		ai_will_do = {
-			base = 1
-		}
-
-		completion_reward = {
-			add_tech_bonus = { name = TU_YAN_p1_shu_fields bonus = 0.75 uses = 1 category = industry category = construction_tech }
-		}
-	}
-
-	focus = {
-		id = TU_YAN_p1_shu_harvest
-		prerequisite = { focus = TU_YAN_p1_shu_fields }
-		icon = GFX_goal_generic_construct_civilian
-		x = 0
-		y = 0
-		cost = 10
-
-		search_filters = { FOCUS_FILTER_POLITICAL }
-
-		ai_will_do = {
-			base = 1
-		}
-
-		completion_reward = {
-			add_tech_bonus = { name = TU_YAN_p1_shu_harvest bonus = 0.75 uses = 1 category = industry category = construction_tech }
+			add_tech_bonus = { name = TU_YAN_p1_rule_shu bonus = 0.75 uses = 1 category = industry category = construction_tech }
+			add_tech_bonus = { name = TU_YAN_p1_rule_shu bonus = 0.75 uses = 1 category = industry category = construction_tech }
 		}
 	}
 
@@ -1244,7 +1064,7 @@
 		icon = GFX_goal_support_fascism
 		x = 0
 		y = 0
-		cost = 10
+		cost = 18
 
 		search_filters = { FOCUS_FILTER_POLITICAL }
 
@@ -1268,44 +1088,8 @@
 			add_ideas = TU_YAN_idea_rule_nian
 			add_political_power = 60
 			add_stability = 0.03
-		}
-	}
-
-	focus = {
-		id = TU_YAN_p1_nian_forge
-		prerequisite = { focus = TU_YAN_p1_rule_nian }
-		icon = GFX_goal_generic_small_arms
-		x = 0
-		y = 0
-		cost = 10
-
-		search_filters = { FOCUS_FILTER_POLITICAL }
-
-		ai_will_do = {
-			base = 1
-		}
-
-		completion_reward = {
-			add_tech_bonus = { name = TU_YAN_p1_nian_forge bonus = 0.75 uses = 1 category = infantry_weapons }
+			add_tech_bonus = { name = TU_YAN_p1_rule_nian bonus = 0.75 uses = 1 category = infantry_weapons }
 			army_experience = 25
-		}
-	}
-
-	focus = {
-		id = TU_YAN_p1_nian_craft
-		prerequisite = { focus = TU_YAN_p1_nian_forge }
-		icon = GFX_goal_generic_army_artillery
-		x = 0
-		y = 0
-		cost = 10
-
-		search_filters = { FOCUS_FILTER_POLITICAL }
-
-		ai_will_do = {
-			base = 1
-		}
-
-		completion_reward = {
 			add_political_power = 60
 			add_stability = 0.03
 		}
@@ -1318,7 +1102,7 @@
 		icon = GFX_goal_support_fascism
 		x = 0
 		y = 0
-		cost = 10
+		cost = 20
 
 		search_filters = { FOCUS_FILTER_POLITICAL }
 
@@ -1342,45 +1126,9 @@
 			add_ideas = TU_YAN_idea_rule_jun
 			add_political_power = 60
 			add_stability = 0.03
-		}
-	}
-
-	focus = {
-		id = TU_YAN_p1_jun_coin
-		prerequisite = { focus = TU_YAN_p1_rule_jun }
-		icon = GFX_goal_generic_trade
-		x = 0
-		y = 0
-		cost = 10
-
-		search_filters = { FOCUS_FILTER_POLITICAL }
-
-		ai_will_do = {
-			base = 1
-		}
-
-		completion_reward = {
 			add_political_power = 60
-			add_tech_bonus = { name = TU_YAN_p1_jun_coin bonus = 0.75 uses = 1 category = industry }
-		}
-	}
-
-	focus = {
-		id = TU_YAN_p1_jun_merchant
-		prerequisite = { focus = TU_YAN_p1_jun_coin }
-		icon = GFX_goal_generic_positive_trade_relations
-		x = 0
-		y = 0
-		cost = 10
-
-		search_filters = { FOCUS_FILTER_POLITICAL }
-
-		ai_will_do = {
-			base = 1
-		}
-
-		completion_reward = {
-			add_tech_bonus = { name = TU_YAN_p1_jun_merchant bonus = 0.75 uses = 1 category = industry category = construction_tech }
+			add_tech_bonus = { name = TU_YAN_p1_rule_jun bonus = 0.75 uses = 1 category = industry }
+			add_tech_bonus = { name = TU_YAN_p1_rule_jun bonus = 0.75 uses = 1 category = industry category = construction_tech }
 		}
 	}
 
@@ -1391,7 +1139,7 @@
 		icon = GFX_goal_support_fascism
 		x = 0
 		y = 0
-		cost = 10
+		cost = 18
 
 		search_filters = { FOCUS_FILTER_POLITICAL }
 
@@ -1415,46 +1163,10 @@
 			add_ideas = TU_YAN_idea_rule_jie
 			add_political_power = 60
 			add_stability = 0.03
-		}
-	}
-
-	focus = {
-		id = TU_YAN_p1_jie_tide
-		prerequisite = { focus = TU_YAN_p1_rule_jie }
-		icon = GFX_goal_generic_navy_doctrines_tactics
-		x = 0
-		y = 0
-		cost = 10
-
-		search_filters = { FOCUS_FILTER_POLITICAL }
-
-		ai_will_do = {
-			base = 1
-		}
-
-		completion_reward = {
 			add_political_power = 60
-			add_tech_bonus = { name = TU_YAN_p1_jie_tide bonus = 0.75 uses = 1 category = industry }
-		}
-	}
-
-	focus = {
-		id = TU_YAN_p1_jie_harbor
-		prerequisite = { focus = TU_YAN_p1_jie_tide }
-		icon = GFX_goal_generic_build_navy
-		x = 0
-		y = 0
-		cost = 10
-
-		search_filters = { FOCUS_FILTER_POLITICAL }
-
-		ai_will_do = {
-			base = 1
-		}
-
-		completion_reward = {
+			add_tech_bonus = { name = TU_YAN_p1_rule_jie bonus = 0.75 uses = 1 category = industry }
 			add_political_power = 60
-			add_tech_bonus = { name = TU_YAN_p1_jie_harbor bonus = 0.75 uses = 1 category = industry }
+			add_tech_bonus = { name = TU_YAN_p1_rule_jie bonus = 0.75 uses = 1 category = industry }
 		}
 	}
 
@@ -1465,7 +1177,7 @@
 		icon = GFX_goal_support_fascism
 		x = 0
 		y = 0
-		cost = 10
+		cost = 18
 
 		search_filters = { FOCUS_FILTER_POLITICAL }
 
@@ -1489,44 +1201,8 @@
 			add_ideas = TU_YAN_idea_rule_ji
 			add_political_power = 60
 			add_stability = 0.03
-		}
-	}
-
-	focus = {
-		id = TU_YAN_p1_ji_wind
-		prerequisite = { focus = TU_YAN_p1_rule_ji }
-		icon = GFX_goal_generic_air_doctrine
-		x = 0
-		y = 0
-		cost = 10
-
-		search_filters = { FOCUS_FILTER_POLITICAL }
-
-		ai_will_do = {
-			base = 1
-		}
-
-		completion_reward = {
 			add_political_power = 60
 			add_stability = 0.03
-		}
-	}
-
-	focus = {
-		id = TU_YAN_p1_ji_cloud
-		prerequisite = { focus = TU_YAN_p1_ji_wind }
-		icon = GFX_goal_generic_air_fighter
-		x = 0
-		y = 0
-		cost = 10
-
-		search_filters = { FOCUS_FILTER_POLITICAL }
-
-		ai_will_do = {
-			base = 1
-		}
-
-		completion_reward = {
 			add_political_power = 60
 			add_stability = 0.03
 		}
@@ -1539,7 +1215,7 @@
 		icon = GFX_goal_support_fascism
 		x = 0
 		y = 0
-		cost = 10
+		cost = 20
 
 		search_filters = { FOCUS_FILTER_POLITICAL }
 
@@ -1563,44 +1239,8 @@
 			add_ideas = TU_YAN_idea_rule_yi
 			add_political_power = 60
 			add_stability = 0.03
-		}
-	}
-
-	focus = {
-		id = TU_YAN_p1_yi_envoy
-		prerequisite = { focus = TU_YAN_p1_rule_yi }
-		icon = GFX_goal_generic_improve_relations
-		x = 0
-		y = 0
-		cost = 10
-
-		search_filters = { FOCUS_FILTER_POLITICAL }
-
-		ai_will_do = {
-			base = 1
-		}
-
-		completion_reward = {
 			add_political_power = 60
 			add_stability = 0.03
-		}
-	}
-
-	focus = {
-		id = TU_YAN_p1_yi_guests
-		prerequisite = { focus = TU_YAN_p1_yi_envoy }
-		icon = GFX_goal_generic_alliance
-		x = 0
-		y = 0
-		cost = 10
-
-		search_filters = { FOCUS_FILTER_POLITICAL }
-
-		ai_will_do = {
-			base = 1
-		}
-
-		completion_reward = {
 			add_political_power = 60
 			add_stability = 0.03
 		}
@@ -1613,7 +1253,7 @@
 		icon = GFX_goal_support_fascism
 		x = 0
 		y = 0
-		cost = 10
+		cost = 18
 
 		search_filters = { FOCUS_FILTER_POLITICAL }
 
@@ -1637,43 +1277,7 @@
 			add_ideas = TU_YAN_idea_rule_fang
 			add_political_power = 60
 			add_stability = 0.03
-		}
-	}
-
-	focus = {
-		id = TU_YAN_p1_fang_walls
-		prerequisite = { focus = TU_YAN_p1_rule_fang }
-		icon = GFX_goal_generic_fortify_city
-		x = 0
-		y = 0
-		cost = 10
-
-		search_filters = { FOCUS_FILTER_POLITICAL }
-
-		ai_will_do = {
-			base = 1
-		}
-
-		completion_reward = {
 			TU_build_forts_2 = yes
-		}
-	}
-
-	focus = {
-		id = TU_YAN_p1_fang_stand
-		prerequisite = { focus = TU_YAN_p1_fang_walls }
-		icon = GFX_goal_generic_defence
-		x = 0
-		y = 0
-		cost = 10
-
-		search_filters = { FOCUS_FILTER_POLITICAL }
-
-		ai_will_do = {
-			base = 1
-		}
-
-		completion_reward = {
 			add_political_power = 60
 			add_stability = 0.03
 		}
@@ -1686,7 +1290,7 @@
 		icon = GFX_goal_support_fascism
 		x = 0
 		y = 0
-		cost = 10
+		cost = 20
 
 		search_filters = { FOCUS_FILTER_POLITICAL }
 
@@ -1710,44 +1314,8 @@
 			add_ideas = TU_YAN_idea_rule_yu
 			add_political_power = 60
 			add_stability = 0.03
-		}
-	}
-
-	focus = {
-		id = TU_YAN_p1_yu_kitchen
-		prerequisite = { focus = TU_YAN_p1_rule_yu }
-		icon = GFX_goal_generic_consumer_goods
-		x = 0
-		y = 0
-		cost = 10
-
-		search_filters = { FOCUS_FILTER_POLITICAL }
-
-		ai_will_do = {
-			base = 1
-		}
-
-		completion_reward = {
 			add_political_power = 60
 			add_stability = 0.03
-		}
-	}
-
-	focus = {
-		id = TU_YAN_p1_yu_table
-		prerequisite = { focus = TU_YAN_p1_yu_kitchen }
-		icon = GFX_goal_generic_national_unity
-		x = 0
-		y = 0
-		cost = 10
-
-		search_filters = { FOCUS_FILTER_POLITICAL }
-
-		ai_will_do = {
-			base = 1
-		}
-
-		completion_reward = {
 			add_political_power = 60
 			add_stability = 0.03
 		}
@@ -1788,7 +1356,7 @@
 		icon = GFX_goal_generic_occupy_start_war
 		x = 0
 		y = 0
-		cost = 10
+		cost = 15
 
 		search_filters = { FOCUS_FILTER_POLITICAL }
 
@@ -1800,24 +1368,6 @@
 			swap_ideas = { remove_idea = TU_YAN_idea_sui_awakening add_idea = TU_YAN_idea_sui_devour }
 			add_war_support = 0.03
 			add_stability = 0.03
-		}
-	}
-
-	focus = {
-		id = TU_YAN_p1_ruin_devour
-		prerequisite = { focus = TU_YAN_p1_ruin_awaken }
-		icon = GFX_goal_generic_major_war
-		x = 0
-		y = 0
-		cost = 10
-
-		search_filters = { FOCUS_FILTER_POLITICAL }
-
-		ai_will_do = {
-			base = 0
-		}
-
-		completion_reward = {
 			add_political_power = 60
 			add_stability = 0.03
 		}
@@ -1883,7 +1433,7 @@
 		icon = GFX_goal_generic_national_unity
 		x = 0
 		y = 0
-		cost = 10
+		cost = 15
 
 		search_filters = { FOCUS_FILTER_POLITICAL }
 
@@ -1906,6 +1456,10 @@
 			if = { limit = { has_idea = TU_YAN_idea_age_of_dragons } remove_ideas = TU_YAN_idea_age_of_dragons }
 			add_political_power = 60
 			add_stability = 0.03
+			TU_build_infrastructure = yes
+			TU_build_civ_factory = yes
+			TU_build_civ_factory = yes
+			add_tech_bonus = { name = TU_YAN_p1_dragons_end bonus = 0.75 uses = 1 category = industry category = construction_tech }
 		}
 	}
 
@@ -1927,27 +1481,5 @@
 			add_ideas = TU_YAN_idea_new_era
 			add_political_power = 60
 			add_stability = 0.03
-		}
-	}
-
-	focus = {
-		id = TU_YAN_p1_rebuild
-		prerequisite = { focus = TU_YAN_p1_dragons_end }
-		icon = GFX_goal_generic_construct_civilian
-		x = 0
-		y = 0
-		cost = 10
-
-		search_filters = { FOCUS_FILTER_INDUSTRY }
-
-		ai_will_do = {
-			base = 1
-		}
-
-		completion_reward = {
-			TU_build_infrastructure = yes
-			TU_build_civ_factory = yes
-			TU_build_civ_factory = yes
-			add_tech_bonus = { name = TU_YAN_p1_rebuild bonus = 0.75 uses = 1 category = industry category = construction_tech }
 		}
 	}

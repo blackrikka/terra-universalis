@@ -24,7 +24,7 @@
 		icon = GFX_goal_generic_major_war
 		x = -4
 		y = 1
-		cost = 10
+		cost = 15
 
 		search_filters = { FOCUS_FILTER_POLITICAL }
 
@@ -32,20 +32,6 @@
 			country_event = { id = tu_kzd_ev.1 }
 			add_political_power = 60
 			add_stability = 0.03
-		}
-	}
-
-	focus = {
-		id = TU_KZD_conscription_drive
-		prerequisite = { focus = TU_KZD_new_empire }
-		icon = GFX_goal_generic_allies_build_infantry
-		x = -4
-		y = 2
-		cost = 10
-
-		search_filters = { FOCUS_FILTER_RESEARCH }
-
-		completion_reward = {
 			add_manpower = 10000
 			army_experience = 25
 		}
@@ -53,17 +39,19 @@
 
 	focus = {
 		id = TU_KZD_mobile_army
-		prerequisite = { focus = TU_KZD_conscription_drive }
+		prerequisite = { focus = TU_KZD_new_empire }
 		icon = GFX_goal_generic_army_tanks
 		x = -4
 		y = 3
-		cost = 10
+		cost = 15
 
 		search_filters = { FOCUS_FILTER_ARMY_XP }
 
 		completion_reward = {
 			add_tech_bonus = { name = TU_KZD_mobile_army bonus = 0.75 uses = 1 category = motorized_equipment }
 			add_doctrine_cost_reduction = { name = TU_KZD_mobile_army cost_reduction = 0.4 uses = 1 category = land_doctrine }
+			add_tech_bonus = { name = TU_KZD_mobile_army bonus = 0.75 uses = 1 category = infantry_weapons }
+			army_experience = 25
 		}
 	}
 
@@ -73,7 +61,7 @@
 		icon = GFX_goal_generic_position_armies
 		x = -5
 		y = 4
-		cost = 10
+		cost = 15
 
 		search_filters = { FOCUS_FILTER_POLITICAL }
 
@@ -81,45 +69,15 @@
 			army_experience = 25
 			add_war_support = 0.03
 			add_doctrine_cost_reduction = { name = TU_KZD_war_council cost_reduction = 0.4 uses = 1 category = land_doctrine }
-		}
-	}
-
-	focus = {
-		id = TU_KZD_steel_doctrine
-		prerequisite = { focus = TU_KZD_mobile_army }
-		icon = GFX_goal_generic_army_doctrines
-		x = -3
-		y = 4
-		cost = 10
-
-		search_filters = { FOCUS_FILTER_ARMY_XP }
-
-		completion_reward = {
-			add_tech_bonus = { name = TU_KZD_steel_doctrine bonus = 0.75 uses = 1 category = infantry_weapons }
-			army_experience = 25
-		}
-	}
-
-	focus = {
-		id = TU_KZD_expansion_plan
-		prerequisite = { focus = TU_KZD_war_council }
-		icon = GFX_goal_generic_more_territorial_claims
-		x = -5
-		y = 5
-		cost = 10
-
-		search_filters = { FOCUS_FILTER_POLITICAL }
-
-		completion_reward = {
 			army_experience = 25
 			add_war_support = 0.03
-			add_doctrine_cost_reduction = { name = TU_KZD_expansion_plan cost_reduction = 0.4 uses = 1 category = land_doctrine }
+			add_doctrine_cost_reduction = { name = TU_KZD_war_council cost_reduction = 0.4 uses = 1 category = land_doctrine }
 		}
 	}
 
 	focus = {
 		id = TU_KZD_frontier_push
-		prerequisite = { focus = TU_KZD_expansion_plan }
+		prerequisite = { focus = TU_KZD_war_council }
 		icon = GFX_goal_generic_attack_allies
 		x = -5
 		y = 6
@@ -142,7 +100,7 @@
 		icon = GFX_goal_generic_defence
 		x = 0
 		y = 1
-		cost = 10
+		cost = 15
 
 		search_filters = { FOCUS_FILTER_POLITICAL }
 
@@ -150,20 +108,6 @@
 			country_event = { id = tu_kzd_ev.2 }
 			add_political_power = 60
 			add_stability = 0.03
-		}
-	}
-
-	focus = {
-		id = TU_KZD_royal_guard
-		prerequisite = { focus = TU_KZD_six_kings }
-		icon = GFX_goal_generic_special_forces
-		x = 0
-		y = 2
-		cost = 10
-
-		search_filters = { FOCUS_FILTER_POLITICAL }
-
-		completion_reward = {
 			add_manpower = 10000
 			army_experience = 25
 		}
@@ -171,11 +115,11 @@
 
 	focus = {
 		id = TU_KZD_elite_template
-		prerequisite = { focus = TU_KZD_royal_guard }
+		prerequisite = { focus = TU_KZD_six_kings }
 		icon = GFX_goal_generic_special_forces
 		x = 0
 		y = 3
-		cost = 10
+		cost = 15
 
 		search_filters = { FOCUS_FILTER_ARMY_XP }
 
@@ -186,6 +130,7 @@
 			}
 			add_doctrine_cost_reduction = { name = TU_KZD_elite_template cost_reduction = 0.4 uses = 1 category = land_doctrine }
 			army_experience = 25
+			TU_build_forts_2 = yes
 		}
 	}
 
@@ -206,53 +151,22 @@
 	}
 
 	focus = {
-		id = TU_KZD_fortified_frontier
-		prerequisite = { focus = TU_KZD_elite_template }
-		icon = GFX_goal_generic_defence
-		x = 1
-		y = 4
-		cost = 10
-
-		search_filters = { FOCUS_FILTER_POLITICAL }
-
-		completion_reward = {
-			TU_build_forts_2 = yes
-		}
-	}
-
-	focus = {
 		id = TU_KZD_six_kings_law
 		prerequisite = { focus = TU_KZD_mountain_defence }
 		icon = GFX_goal_generic_national_unity
 		x = -1
 		y = 5
-		cost = 10
+		cost = 15
 
 		search_filters = { FOCUS_FILTER_POLITICAL }
 
 		completion_reward = {
 			add_political_power = 60
 			add_stability = 0.03
-		}
-	}
-
-	focus = {
-		id = TU_KZD_elite_training
-		prerequisite = { focus = TU_KZD_six_kings_law }
-		icon = GFX_goal_generic_army_artillery2
-		x = -1
-		y = 6
-		cost = 10
-
-		search_filters = { FOCUS_FILTER_ARMY_XP }
-
-		completion_reward = {
-			add_doctrine_cost_reduction = { name = TU_KZD_elite_training cost_reduction = 0.4 uses = 1 category = land_doctrine }
+			add_doctrine_cost_reduction = { name = TU_KZD_six_kings_law cost_reduction = 0.4 uses = 1 category = land_doctrine }
 			army_experience = 25
 		}
 	}
-
-	#### FORK C: BABEL RESTORATION (relations with Rhodes, industry) ####
 
 	focus = {
 		id = TU_KZD_babel_restoration

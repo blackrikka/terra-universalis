@@ -27,7 +27,7 @@
 		icon = GFX_goal_generic_construction
 		x = 0
 		y = 0
-		cost = 10
+		cost = 15
 
 		search_filters = { FOCUS_FILTER_INDUSTRY }
 
@@ -36,6 +36,7 @@
 		}
 
 		completion_reward = {
+			TU_build_railway = yes
 			TU_build_railway = yes
 		}
 	}
@@ -70,7 +71,7 @@
 		icon = GFX_goal_generic_construct_infrastructure
 		x = 0
 		y = 0
-		cost = 5
+		cost = 10
 
 		search_filters = { FOCUS_FILTER_INDUSTRY }
 
@@ -80,6 +81,9 @@
 
 		completion_reward = {
 			TU_build_railway = yes
+			TU_build_civ_factory = yes
+			add_tech_bonus = { name = TU_YAN_express_rail bonus = 0.75 uses = 1 category = motorized_equipment }
+			add_doctrine_cost_reduction = { name = TU_YAN_express_rail cost_reduction = 0.4 uses = 1 category = land_doctrine }
 		}
 	}
 
@@ -109,7 +113,7 @@
 		icon = GFX_goal_generic_construction2
 		x = 0
 		y = 0
-		cost = 10
+		cost = 15
 
 		search_filters = { FOCUS_FILTER_INDUSTRY }
 
@@ -120,37 +124,19 @@
 		completion_reward = {
 			TU_build_civ_factory = yes
 			add_tech_bonus = { name = TU_YAN_canal_excavation bonus = 0.75 uses = 1 category = industry category = construction_tech }
-		}
-	}
-
-	focus = {
-		id = TU_YAN_canal_lock_gates
-		prerequisite = { focus = TU_YAN_canal_excavation }
-		icon = GFX_goal_generic_construction
-		x = 0
-		y = 0
-		cost = 10
-
-		search_filters = { FOCUS_FILTER_INDUSTRY }
-
-		ai_will_do = {
-			base = 1
-		}
-
-		completion_reward = {
 			TU_build_infrastructure = yes
-			add_tech_bonus = { name = TU_YAN_canal_lock_gates bonus = 0.75 uses = 1 category = construction_tech }
+			add_tech_bonus = { name = TU_YAN_canal_excavation bonus = 0.75 uses = 1 category = construction_tech }
 			army_experience = 25
 		}
 	}
 
 	focus = {
 		id = TU_YAN_grand_canal_core
-		prerequisite = { focus = TU_YAN_canal_lock_gates }
+		prerequisite = { focus = TU_YAN_canal_excavation }
 		icon = GFX_goal_generic_construct_infrastructure
 		x = 0
 		y = 0
-		cost = 15
+		cost = 20
 
 		search_filters = { FOCUS_FILTER_INDUSTRY }
 
@@ -162,6 +148,8 @@
 			add_ideas = TU_YAN_grand_canal_network
 			TU_build_infrastructure = yes
 			add_tech_bonus = { name = TU_YAN_grand_canal_core bonus = 1.0 uses = 1 category = industry category = construction_tech }
+			TU_build_infrastructure = yes
+			add_tech_bonus = { name = TU_YAN_grand_canal_core bonus = 0.75 uses = 1 category = industry category = construction_tech }
 		}
 	}
 
@@ -191,7 +179,7 @@
 		icon = GFX_goal_generic_construct_naval_dockyard
 		x = 0
 		y = 0
-		cost = 10
+		cost = 15
 
 		search_filters = { FOCUS_FILTER_INDUSTRY }
 
@@ -203,47 +191,9 @@
 			TU_build_civ_factory = yes
 			add_political_power = 60
 			add_tech_bonus = { name = TU_YAN_harbor_canal bonus = 0.75 uses = 1 category = industry }
-		}
-	}
-
-	focus = {
-		id = TU_YAN_river_patrol
-		prerequisite = { focus = TU_YAN_harbor_canal }
-		icon = GFX_goal_generic_navy_cruiser
-		x = 0
-		y = 0
-		cost = 10
-
-		search_filters = { FOCUS_FILTER_INDUSTRY }
-
-		ai_will_do = {
-			base = 1
-		}
-
-		completion_reward = {
 			TU_build_civ_factory = yes
-			add_tech_bonus = { name = TU_YAN_river_patrol bonus = 0.75 uses = 1 category = construction_tech }
+			add_tech_bonus = { name = TU_YAN_harbor_canal bonus = 0.75 uses = 1 category = construction_tech }
 			army_experience = 25
-		}
-	}
-
-	focus = {
-		id = TU_YAN_canal_cities
-		prerequisite = { focus = TU_YAN_grand_canal_core }
-		icon = GFX_goal_generic_construction
-		x = 0
-		y = 0
-		cost = 10
-
-		search_filters = { FOCUS_FILTER_INDUSTRY }
-
-		ai_will_do = {
-			base = 1
-		}
-
-		completion_reward = {
-			TU_build_infrastructure = yes
-			add_tech_bonus = { name = TU_YAN_canal_cities bonus = 0.75 uses = 1 category = industry category = construction_tech }
 		}
 	}
 
@@ -253,7 +203,7 @@
 		icon = GFX_goal_generic_construct_civilian
 		x = 0
 		y = 0
-		cost = 10
+		cost = 15
 
 		search_filters = { FOCUS_FILTER_INDUSTRY }
 
@@ -264,57 +214,18 @@
 		completion_reward = {
 			TU_build_civ_factory = yes
 			add_tech_bonus = { name = TU_YAN_canal_workers bonus = 0.75 uses = 1 category = industry category = construction_tech }
-		}
-	}
-
-	focus = {
-		id = TU_YAN_canal_engineers
-		prerequisite = { focus = TU_YAN_canal_workers }
-		icon = GFX_goal_generic_construction2
-		x = 0
-		y = 0
-		cost = 10
-
-		search_filters = { FOCUS_FILTER_INDUSTRY }
-
-		ai_will_do = {
-			base = 1
-		}
-
-		completion_reward = {
 			TU_build_civ_factory = yes
-			add_tech_bonus = { name = TU_YAN_canal_engineers bonus = 0.75 uses = 1 category = electronics category = tu_originium_tech }
-		}
-	}
-
-	focus = {
-		id = TU_YAN_express_survey
-		prerequisite = { focus = TU_YAN_express_rail }
-		icon = GFX_goal_generic_construction2
-		x = 0
-		y = 0
-		cost = 10
-
-		search_filters = { FOCUS_FILTER_INDUSTRY }
-
-		ai_will_do = {
-			base = 1
-		}
-
-		completion_reward = {
-			TU_build_civ_factory = yes
-			add_tech_bonus = { name = TU_YAN_express_survey bonus = 0.75 uses = 1 category = motorized_equipment }
-			add_doctrine_cost_reduction = { name = TU_YAN_express_survey cost_reduction = 0.4 uses = 1 category = land_doctrine }
+			add_tech_bonus = { name = TU_YAN_canal_workers bonus = 0.75 uses = 1 category = electronics category = tu_originium_tech }
 		}
 	}
 
 	focus = {
 		id = TU_YAN_express_bridges
-		prerequisite = { focus = TU_YAN_express_survey }
+		prerequisite = { focus = TU_YAN_express_rail }
 		icon = GFX_goal_generic_construct_infrastructure
 		x = 0
 		y = 0
-		cost = 10
+		cost = 15
 
 		search_filters = { FOCUS_FILTER_INDUSTRY }
 
@@ -326,24 +237,6 @@
 			TU_build_infrastructure = yes
 			add_tech_bonus = { name = TU_YAN_express_bridges bonus = 0.75 uses = 1 category = motorized_equipment }
 			add_doctrine_cost_reduction = { name = TU_YAN_express_bridges cost_reduction = 0.4 uses = 1 category = land_doctrine }
-		}
-	}
-
-	focus = {
-		id = TU_YAN_rail_electrification
-		prerequisite = { focus = TU_YAN_express_bridges }
-		icon = GFX_goal_generic_production
-		x = 0
-		y = 0
-		cost = 10
-
-		search_filters = { FOCUS_FILTER_INDUSTRY }
-
-		ai_will_do = {
-			base = 1
-		}
-
-		completion_reward = {
 			TU_build_civ_factory = yes
 			TU_build_railway = yes
 		}
@@ -351,7 +244,7 @@
 
 	focus = {
 		id = TU_YAN_express_core
-		prerequisite = { focus = TU_YAN_rail_electrification }
+		prerequisite = { focus = TU_YAN_express_bridges }
 		icon = GFX_goal_generic_construction
 		x = 0
 		y = 0
@@ -392,27 +285,8 @@
 	}
 
 	focus = {
-		id = TU_YAN_rail_bureau
-		prerequisite = { focus = TU_YAN_trunk_rail }
-		icon = GFX_goal_generic_political_pressure
-		x = 0
-		y = 0
-		cost = 10
-
-		search_filters = { FOCUS_FILTER_POLITICAL }
-
-		ai_will_do = {
-			base = 1
-		}
-
-		completion_reward = {
-			TU_build_railway = yes
-		}
-	}
-
-	focus = {
 		id = TU_YAN_rail_schedules
-		prerequisite = { focus = TU_YAN_rail_bureau }
+		prerequisite = { focus = TU_YAN_trunk_rail }
 		icon = GFX_goal_generic_production2
 		x = 0
 		y = 0
@@ -436,7 +310,7 @@
 		icon = GFX_goal_generic_defence
 		x = 0
 		y = 0
-		cost = 10
+		cost = 18
 
 		search_filters = { FOCUS_FILTER_POLITICAL }
 
@@ -447,24 +321,6 @@
 		completion_reward = {
 			add_manpower = 10000
 			army_experience = 25
-		}
-	}
-
-	focus = {
-		id = TU_YAN_rail_core
-		prerequisite = { focus = TU_YAN_rail_security }
-		icon = GFX_goal_generic_construct_infrastructure
-		x = 0
-		y = 0
-		cost = 15
-
-		search_filters = { FOCUS_FILTER_INDUSTRY }
-
-		ai_will_do = {
-			base = 1
-		}
-
-		completion_reward = {
 			TU_build_railway = yes
 			TU_build_railway = yes
 		}
@@ -472,7 +328,7 @@
 
 	focus = {
 		id = TU_YAN_lock_towns
-		prerequisite = { focus = TU_YAN_canal_cities }
+		prerequisite = { focus = TU_YAN_grand_canal_core }
 		icon = GFX_goal_generic_construct_civilian
 		x = 0
 		y = 0
@@ -499,7 +355,7 @@
 		icon = GFX_goal_generic_army_motorized
 		x = 0
 		y = 0
-		cost = 5
+		cost = 10
 
 		search_filters = { FOCUS_FILTER_INDUSTRY }
 
@@ -511,6 +367,8 @@
 			TU_build_mil_factory = yes
 			add_tech_bonus = { name = TU_YAN_mobile_city_survey bonus = 0.5 uses = 1 category = construction_tech }
 			add_tech_bonus = { name = TU_YAN_mobile_city_survey bonus = 0.5 uses = 1 category = motorized_equipment }
+			add_political_power = 60
+			add_stability = 0.03
 		}
 	}
 
@@ -563,7 +421,7 @@
 		icon = GFX_goal_generic_army_tanks
 		x = 0
 		y = 0
-		cost = 10
+		cost = 15
 
 		search_filters = { FOCUS_FILTER_INDUSTRY }
 
@@ -575,6 +433,8 @@
 			TU_build_mil_factory = yes
 			add_political_power = 60
 			add_stability = 0.03
+			TU_build_infrastructure = yes
+			TU_build_forts_2 = yes
 		}
 	}
 
@@ -599,32 +459,12 @@
 	}
 
 	focus = {
-		id = TU_YAN_wheeled_fortress
-		prerequisite = { focus = TU_YAN_mobile_city_wheels }
-		icon = GFX_goal_generic_fortify_city
-		x = 0
-		y = 0
-		cost = 10
-
-		search_filters = { FOCUS_FILTER_INDUSTRY }
-
-		ai_will_do = {
-			base = 1
-		}
-
-		completion_reward = {
-			TU_build_infrastructure = yes
-			TU_build_forts_2 = yes
-		}
-	}
-
-	focus = {
 		id = TU_YAN_rail_fortress
 		prerequisite = { focus = TU_YAN_mobile_city_rails }
 		icon = GFX_goal_generic_fortify_city
 		x = 0
 		y = 0
-		cost = 10
+		cost = 18
 
 		search_filters = { FOCUS_FILTER_INDUSTRY }
 
@@ -635,12 +475,15 @@
 		completion_reward = {
 			TU_build_infrastructure = yes
 			TU_build_forts_2 = yes
+			TU_build_civ_factory = yes
+			TU_build_railway = yes
+			TU_build_railway = yes
 		}
 	}
 
 	focus = {
 		id = TU_YAN_mobile_city_core
-		prerequisite = { focus = TU_YAN_wheeled_fortress }
+		prerequisite = { focus = TU_YAN_mobile_city_wheels }
 		icon = GFX_goal_generic_construct_civ_factory
 		x = 0
 		y = 0
@@ -661,33 +504,12 @@
 	}
 
 	focus = {
-		id = TU_YAN_rail_city
-		prerequisite = { focus = TU_YAN_rail_fortress }
-		icon = GFX_goal_generic_construct_civ_factory
-		x = 0
-		y = 0
-		cost = 15
-
-		search_filters = { FOCUS_FILTER_INDUSTRY }
-
-		ai_will_do = {
-			base = 1
-		}
-
-		completion_reward = {
-			TU_build_civ_factory = yes
-			TU_build_railway = yes
-			TU_build_railway = yes
-		}
-	}
-
-	focus = {
 		id = TU_YAN_mobile_supply
 		prerequisite = { focus = TU_YAN_mobile_city_core }
 		icon = GFX_goal_generic_consumer_goods
 		x = 0
 		y = 0
-		cost = 10
+		cost = 15
 
 		search_filters = { FOCUS_FILTER_INDUSTRY }
 
@@ -699,36 +521,18 @@
 			TU_build_civ_factory = yes
 			add_tech_bonus = { name = TU_YAN_mobile_supply bonus = 0.75 uses = 1 category = motorized_equipment }
 			add_doctrine_cost_reduction = { name = TU_YAN_mobile_supply cost_reduction = 0.4 uses = 1 category = land_doctrine }
-		}
-	}
-
-	focus = {
-		id = TU_YAN_mobile_defence
-		prerequisite = { focus = TU_YAN_mobile_supply }
-		icon = GFX_goal_generic_defence
-		x = 0
-		y = 0
-		cost = 10
-
-		search_filters = { FOCUS_FILTER_ARMY_XP }
-
-		ai_will_do = {
-			base = 1
-		}
-
-		completion_reward = {
-			add_tech_bonus = { name = TU_YAN_mobile_defence bonus = 0.75 uses = 1 category = motorized_equipment }
-			add_doctrine_cost_reduction = { name = TU_YAN_mobile_defence cost_reduction = 0.4 uses = 1 category = land_doctrine }
+			add_tech_bonus = { name = TU_YAN_mobile_supply bonus = 0.75 uses = 1 category = motorized_equipment }
+			add_doctrine_cost_reduction = { name = TU_YAN_mobile_supply cost_reduction = 0.4 uses = 1 category = land_doctrine }
 		}
 	}
 
 	focus = {
 		id = TU_YAN_mobile_capital
-		prerequisite = { focus = TU_YAN_mobile_defence }
+		prerequisite = { focus = TU_YAN_mobile_supply }
 		icon = GFX_goal_generic_national_unity
 		x = 0
 		y = 0
-		cost = 15
+		cost = 20
 
 		search_filters = { FOCUS_FILTER_POLITICAL }
 
@@ -739,36 +543,18 @@
 		completion_reward = {
 			add_tech_bonus = { name = TU_YAN_mobile_capital bonus = 1.0 uses = 1 category = motorized_equipment }
 			add_doctrine_cost_reduction = { name = TU_YAN_mobile_capital cost_reduction = 0.5 uses = 1 category = land_doctrine }
-		}
-	}
-
-	focus = {
-		id = TU_YAN_city_census
-		prerequisite = { focus = TU_YAN_mobile_city_survey }
-		icon = GFX_goal_generic_propaganda
-		x = 0
-		y = 0
-		cost = 10
-
-		search_filters = { FOCUS_FILTER_POLITICAL }
-
-		ai_will_do = {
-			base = 1
-		}
-
-		completion_reward = {
-			add_political_power = 60
-			add_stability = 0.03
+			add_tech_bonus = { name = TU_YAN_mobile_capital bonus = 1.0 uses = 1 category = construction_tech }
+			add_tech_bonus = { name = TU_YAN_mobile_capital bonus = 1.0 uses = 1 category = motorized_equipment }
 		}
 	}
 
 	focus = {
 		id = TU_YAN_mobile_relay
-		prerequisite = { focus = TU_YAN_city_census }
+		prerequisite = { focus = TU_YAN_mobile_city_survey }
 		icon = GFX_goal_generic_radar
 		x = 0
 		y = 0
-		cost = 10
+		cost = 15
 
 		search_filters = { FOCUS_FILTER_INDUSTRY }
 
@@ -780,74 +566,16 @@
 			TU_build_civ_factory = yes
 			add_tech_bonus = { name = TU_YAN_mobile_relay bonus = 0.75 uses = 1 category = motorized_equipment }
 			add_doctrine_cost_reduction = { name = TU_YAN_mobile_relay cost_reduction = 0.4 uses = 1 category = land_doctrine }
-		}
-	}
-
-	focus = {
-		id = TU_YAN_mobile_factory
-		prerequisite = { focus = TU_YAN_mobile_relay }
-		icon = GFX_goal_generic_production
-		x = 0
-		y = 0
-		cost = 10
-
-		search_filters = { FOCUS_FILTER_INDUSTRY }
-
-		ai_will_do = {
-			base = 1
-		}
-
-		completion_reward = {
 			TU_build_civ_factory = yes
-			add_tech_bonus = { name = TU_YAN_mobile_factory bonus = 0.75 uses = 1 category = motorized_equipment }
-			add_doctrine_cost_reduction = { name = TU_YAN_mobile_factory cost_reduction = 0.4 uses = 1 category = land_doctrine }
+			add_tech_bonus = { name = TU_YAN_mobile_relay bonus = 0.75 uses = 1 category = motorized_equipment }
+			add_doctrine_cost_reduction = { name = TU_YAN_mobile_relay cost_reduction = 0.4 uses = 1 category = land_doctrine }
 		}
 	}
 
 	focus = {
 		id = TU_YAN_mobile_hospital
-		prerequisite = { focus = TU_YAN_mobile_factory }
+		prerequisite = { focus = TU_YAN_mobile_relay }
 		icon = GFX_goal_generic_improve_relations
-		x = 0
-		y = 0
-		cost = 10
-
-		search_filters = { FOCUS_FILTER_POLITICAL }
-
-		ai_will_do = {
-			base = 1
-		}
-
-		completion_reward = {
-			add_tech_bonus = { name = TU_YAN_mobile_hospital bonus = 0.75 uses = 1 category = motorized_equipment }
-			add_doctrine_cost_reduction = { name = TU_YAN_mobile_hospital cost_reduction = 0.4 uses = 1 category = land_doctrine }
-		}
-	}
-
-	focus = {
-		id = TU_YAN_mobile_rest
-		prerequisite = { focus = TU_YAN_mobile_hospital }
-		icon = GFX_goal_generic_military_deal
-		x = 0
-		y = 0
-		cost = 10
-
-		search_filters = { FOCUS_FILTER_POLITICAL }
-
-		ai_will_do = {
-			base = 1
-		}
-
-		completion_reward = {
-			add_political_power = 60
-			add_stability = 0.03
-		}
-	}
-
-	focus = {
-		id = TU_YAN_mobile_network
-		prerequisite = { focus = TU_YAN_mobile_capital }
-		icon = GFX_goal_generic_construction2
 		x = 0
 		y = 0
 		cost = 15
@@ -859,12 +587,12 @@
 		}
 
 		completion_reward = {
-			add_tech_bonus = { name = TU_YAN_mobile_network bonus = 1.0 uses = 1 category = construction_tech }
-			add_tech_bonus = { name = TU_YAN_mobile_network bonus = 1.0 uses = 1 category = motorized_equipment }
+			add_tech_bonus = { name = TU_YAN_mobile_hospital bonus = 0.75 uses = 1 category = motorized_equipment }
+			add_doctrine_cost_reduction = { name = TU_YAN_mobile_hospital cost_reduction = 0.4 uses = 1 category = land_doctrine }
+			add_political_power = 60
+			add_stability = 0.03
 		}
 	}
-
-	#### ORIGINIUM (TUNGSTEN STAND-IN) ####
 
 	focus = {
 		id = TU_YAN_originium_survey
@@ -914,7 +642,7 @@
 		icon = GFX_goal_generic_production2
 		x = 0
 		y = 0
-		cost = 10
+		cost = 15
 
 		search_filters = { FOCUS_FILTER_INDUSTRY }
 
@@ -926,6 +654,7 @@
 			TU_build_mil_factory = yes
 			add_political_power = 60
 			add_stability = 0.03
+			add_tech_bonus = { name = TU_YAN_originium_deep bonus = 0.75 uses = 1 category = electronics category = tu_originium_tech }
 		}
 	}
 
@@ -935,7 +664,7 @@
 		icon = GFX_goal_generic_construction
 		x = 0
 		y = 0
-		cost = 10
+		cost = 15
 
 		search_filters = { FOCUS_FILTER_INDUSTRY }
 
@@ -946,31 +675,15 @@
 		completion_reward = {
 			TU_build_infrastructure = yes
 			add_tech_bonus = { name = TU_YAN_originium_grid bonus = 0.75 uses = 1 category = electronics category = tu_originium_tech }
-		}
-	}
-
-	focus = {
-		id = TU_YAN_originium_export
-		prerequisite = { focus = TU_YAN_originium_deep }
-		icon = GFX_goal_generic_trade
-		x = 0
-		y = 0
-		cost = 10
-
-		search_filters = { FOCUS_FILTER_POLITICAL }
-
-		ai_will_do = {
-			base = 1
-		}
-
-		completion_reward = {
-			add_tech_bonus = { name = TU_YAN_originium_export bonus = 0.75 uses = 1 category = electronics category = tu_originium_tech }
+			TU_build_civ_factory = yes
+			add_political_power = 60
+			add_tech_bonus = { name = TU_YAN_originium_grid bonus = 0.75 uses = 1 category = industry }
 		}
 	}
 
 	focus = {
 		id = TU_YAN_originium_monopoly
-		prerequisite = { focus = TU_YAN_originium_export }
+		prerequisite = { focus = TU_YAN_originium_deep }
 		mutually_exclusive = { focus = TU_YAN_originium_open_market }
 		icon = GFX_goal_generic_positive_trade_relations
 		x = 0
@@ -990,7 +703,7 @@
 
 	focus = {
 		id = TU_YAN_originium_open_market
-		prerequisite = { focus = TU_YAN_originium_export }
+		prerequisite = { focus = TU_YAN_originium_deep }
 		mutually_exclusive = { focus = TU_YAN_originium_monopoly }
 		icon = GFX_goal_generic_production
 		x = 0
@@ -1077,7 +790,7 @@
 		icon = GFX_goal_generic_construct_civilian
 		x = 0
 		y = 0
-		cost = 10
+		cost = 15
 
 		search_filters = { FOCUS_FILTER_INDUSTRY }
 
@@ -1088,35 +801,17 @@
 		completion_reward = {
 			TU_build_civ_factory = yes
 			add_tech_bonus = { name = TU_YAN_originium_stockpile bonus = 0.75 uses = 1 category = electronics category = tu_originium_tech }
-		}
-	}
-
-	focus = {
-		id = TU_YAN_originium_guard_supply
-		prerequisite = { focus = TU_YAN_originium_stockpile }
-		icon = GFX_goal_generic_army_doctrines
-		x = 0
-		y = 0
-		cost = 10
-
-		search_filters = { FOCUS_FILTER_ARMY_XP }
-
-		ai_will_do = {
-			base = 1
-		}
-
-		completion_reward = {
-			add_tech_bonus = { name = TU_YAN_originium_guard_supply bonus = 0.75 uses = 1 category = electronics category = tu_originium_tech }
+			add_tech_bonus = { name = TU_YAN_originium_stockpile bonus = 0.75 uses = 1 category = electronics category = tu_originium_tech }
 		}
 	}
 
 	focus = {
 		id = TU_YAN_originium_reserve
-		prerequisite = { focus = TU_YAN_originium_guard_supply }
+		prerequisite = { focus = TU_YAN_originium_stockpile }
 		icon = GFX_goal_generic_production
 		x = 0
 		y = 0
-		cost = 15
+		cost = 20
 
 		search_filters = { FOCUS_FILTER_INDUSTRY }
 
@@ -1127,52 +822,13 @@
 		completion_reward = {
 			TU_build_civ_factory = yes
 			add_tech_bonus = { name = TU_YAN_originium_reserve bonus = 1.0 uses = 1 category = electronics category = tu_originium_tech }
-		}
-	}
-
-	focus = {
-		id = TU_YAN_originium_dockyard
-		prerequisite = { focus = TU_YAN_originium_grid }
-		icon = GFX_goal_generic_construct_naval_dockyard
-		x = 0
-		y = 0
-		cost = 10
-
-		search_filters = { FOCUS_FILTER_INDUSTRY }
-
-		ai_will_do = {
-			base = 1
-		}
-
-		completion_reward = {
-			TU_build_civ_factory = yes
-			add_political_power = 60
-			add_tech_bonus = { name = TU_YAN_originium_dockyard bonus = 0.75 uses = 1 category = industry }
-		}
-	}
-
-	focus = {
-		id = TU_YAN_originium_fund
-		prerequisite = { focus = TU_YAN_originium_reserve }
-		icon = GFX_goal_generic_national_unity
-		x = 0
-		y = 0
-		cost = 15
-
-		search_filters = { FOCUS_FILTER_POLITICAL }
-
-		ai_will_do = {
-			base = 1
-		}
-
-		completion_reward = {
-			add_tech_bonus = { name = TU_YAN_originium_fund bonus = 1.0 uses = 1 category = electronics category = tu_originium_tech }
+			add_tech_bonus = { name = TU_YAN_originium_reserve bonus = 1.0 uses = 1 category = electronics category = tu_originium_tech }
 		}
 	}
 
 	focus = {
 		id = TU_YAN_originium_guild
-		prerequisite = { focus = TU_YAN_originium_dockyard }
+		prerequisite = { focus = TU_YAN_originium_grid }
 		icon = GFX_goal_generic_intelligence_exchange
 		x = 0
 		y = 0
@@ -1193,7 +849,7 @@
 
 	focus = {
 		id = TU_YAN_guard_charter
-		prerequisite = { focus = TU_YAN_grand_mobilization }
+		prerequisite = { focus = TU_YAN_industrial_awakening }
 		icon = GFX_goal_generic_army_doctrines
 		x = 0
 		y = 0
@@ -1217,7 +873,7 @@
 		icon = GFX_goal_generic_allies_build_infantry
 		x = 0
 		y = 0
-		cost = 10
+		cost = 15
 
 		search_filters = { FOCUS_FILTER_ARMY_XP }
 
@@ -1228,32 +884,14 @@
 		completion_reward = {
 			add_manpower = 10000
 			army_experience = 25
-		}
-	}
-
-	focus = {
-		id = TU_YAN_guard_training
-		prerequisite = { focus = TU_YAN_guard_recruiting }
-		icon = GFX_goal_generic_cavalry
-		x = 0
-		y = 0
-		cost = 10
-
-		search_filters = { FOCUS_FILTER_ARMY_XP }
-
-		ai_will_do = {
-			base = 1
-		}
-
-		completion_reward = {
-			add_doctrine_cost_reduction = { name = TU_YAN_guard_training cost_reduction = 0.4 uses = 1 category = land_doctrine }
+			add_doctrine_cost_reduction = { name = TU_YAN_guard_recruiting cost_reduction = 0.4 uses = 1 category = land_doctrine }
 			army_experience = 25
 		}
 	}
 
 	focus = {
 		id = TU_YAN_guard_arms
-		prerequisite = { focus = TU_YAN_guard_training }
+		prerequisite = { focus = TU_YAN_guard_recruiting }
 		icon = GFX_goal_generic_construct_mil_factory
 		x = 0
 		y = 0
@@ -1278,7 +916,7 @@
 		icon = GFX_goal_generic_special_forces
 		x = 0
 		y = 0
-		cost = 15
+		cost = 20
 
 		search_filters = { FOCUS_FILTER_ARMY_XP }
 
@@ -1290,6 +928,8 @@
 			add_ideas = TU_YAN_imperial_guard
 			add_manpower = 20000
 			army_experience = 40
+			add_doctrine_cost_reduction = { name = TU_YAN_guard_core cost_reduction = 0.4 uses = 1 category = land_doctrine }
+			army_experience = 25
 		}
 	}
 
@@ -1319,7 +959,7 @@
 		icon = GFX_goal_generic_army_artillery2
 		x = 0
 		y = 0
-		cost = 10
+		cost = 15
 
 		search_filters = { FOCUS_FILTER_ARMY_XP }
 
@@ -1329,6 +969,8 @@
 
 		completion_reward = {
 			add_tech_bonus = { name = TU_YAN_guard_artillery bonus = 0.75 uses = 1 category = artillery }
+			army_experience = 25
+			add_manpower = 10000
 			army_experience = 25
 		}
 	}
@@ -1354,28 +996,8 @@
 	}
 
 	focus = {
-		id = TU_YAN_mountain_guard
-		prerequisite = { focus = TU_YAN_guard_artillery }
-		icon = GFX_goal_generic_cavalry
-		x = 0
-		y = 0
-		cost = 10
-
-		search_filters = { FOCUS_FILTER_ARMY_XP }
-
-		ai_will_do = {
-			base = 1
-		}
-
-		completion_reward = {
-			add_manpower = 10000
-			army_experience = 25
-		}
-	}
-
-	focus = {
 		id = TU_YAN_guard_fortress
-		prerequisite = { focus = TU_YAN_mountain_guard }
+		prerequisite = { focus = TU_YAN_guard_artillery }
 		icon = GFX_goal_generic_fortify_city
 		x = 0
 		y = 0
@@ -1393,32 +1015,12 @@
 	}
 
 	focus = {
-		id = TU_YAN_chongyue_guard
-		prerequisite = { focus = TU_YAN_guard_core }
-		icon = GFX_goal_generic_defence
-		x = 0
-		y = 0
-		cost = 10
-
-		search_filters = { FOCUS_FILTER_ARMY_XP }
-
-		ai_will_do = {
-			base = 1
-		}
-
-		completion_reward = {
-			add_doctrine_cost_reduction = { name = TU_YAN_chongyue_guard cost_reduction = 0.4 uses = 1 category = land_doctrine }
-			army_experience = 25
-		}
-	}
-
-	focus = {
 		id = TU_YAN_guard_medics
-		prerequisite = { focus = TU_YAN_chongyue_guard }
+		prerequisite = { focus = TU_YAN_guard_core }
 		icon = GFX_goal_generic_consumer_goods
 		x = 0
 		y = 0
-		cost = 10
+		cost = 15
 
 		search_filters = { FOCUS_FILTER_ARMY_XP }
 
@@ -1429,24 +1031,6 @@
 		completion_reward = {
 			add_manpower = 10000
 			army_experience = 25
-		}
-	}
-
-	focus = {
-		id = TU_YAN_guard_parade
-		prerequisite = { focus = TU_YAN_guard_medics }
-		icon = GFX_goal_generic_political_pressure
-		x = 0
-		y = 0
-		cost = 10
-
-		search_filters = { FOCUS_FILTER_ARMY_XP }
-
-		ai_will_do = {
-			base = 1
-		}
-
-		completion_reward = {
 			add_manpower = 10000
 			army_experience = 25
 		}
@@ -1454,7 +1038,7 @@
 
 	focus = {
 		id = TU_YAN_guard_review
-		prerequisite = { focus = TU_YAN_guard_parade }
+		prerequisite = { focus = TU_YAN_guard_medics }
 		icon = GFX_goal_generic_special_forces
 		x = 0
 		y = 0
@@ -1522,7 +1106,7 @@
 		icon = GFX_goal_generic_air_fighter
 		x = 0
 		y = 0
-		cost = 10
+		cost = 15
 
 		search_filters = { FOCUS_FILTER_AIR_XP }
 
@@ -1532,33 +1116,15 @@
 
 		completion_reward = {
 			add_tech_bonus = { name = TU_YAN_pilot_school bonus = 0.75 uses = 1 category = electronics category = tu_originium_tech }
-		}
-	}
-
-	focus = {
-		id = TU_YAN_air_doctrine
-		prerequisite = { focus = TU_YAN_pilot_school }
-		icon = GFX_goal_generic_air_doctrine
-		x = 0
-		y = 0
-		cost = 10
-
-		search_filters = { FOCUS_FILTER_AIR_XP }
-
-		ai_will_do = {
-			base = 1
-		}
-
-		completion_reward = {
-			add_tech_bonus = { name = TU_YAN_air_doctrine bonus = 0.75 uses = 1 category = light_fighter category = tactical_bomber }
-			add_doctrine_cost_reduction = { name = TU_YAN_air_doctrine cost_reduction = 0.4 uses = 1 category = air_doctrine }
+			add_tech_bonus = { name = TU_YAN_pilot_school bonus = 0.75 uses = 1 category = light_fighter category = tactical_bomber }
+			add_doctrine_cost_reduction = { name = TU_YAN_pilot_school cost_reduction = 0.4 uses = 1 category = air_doctrine }
 			air_experience = 25
 		}
 	}
 
 	focus = {
 		id = TU_YAN_fighter_line
-		prerequisite = { focus = TU_YAN_air_doctrine }
+		prerequisite = { focus = TU_YAN_pilot_school }
 		mutually_exclusive = { focus = TU_YAN_bomber_line }
 		icon = GFX_goal_generic_air_fighter2
 		x = 0
@@ -1580,7 +1146,7 @@
 
 	focus = {
 		id = TU_YAN_bomber_line
-		prerequisite = { focus = TU_YAN_air_doctrine }
+		prerequisite = { focus = TU_YAN_pilot_school }
 		mutually_exclusive = { focus = TU_YAN_fighter_line }
 		icon = GFX_goal_generic_air_bomber
 		x = 0
@@ -1627,7 +1193,7 @@
 		icon = GFX_goal_generic_air_naval_bomber
 		x = 0
 		y = 0
-		cost = 15
+		cost = 20
 
 		search_filters = { FOCUS_FILTER_AIR_XP }
 
@@ -1639,6 +1205,7 @@
 			add_tech_bonus = { name = TU_YAN_bomber_core bonus = 1.0 uses = 1 category = light_fighter category = tactical_bomber }
 			add_doctrine_cost_reduction = { name = TU_YAN_bomber_core cost_reduction = 0.5 uses = 1 category = air_doctrine }
 			air_experience = 40
+			add_tech_bonus = { name = TU_YAN_bomber_core bonus = 0.75 uses = 1 category = electronics category = tu_originium_tech }
 		}
 	}
 
@@ -1648,7 +1215,7 @@
 		icon = GFX_goal_generic_defence
 		x = 0
 		y = 0
-		cost = 10
+		cost = 15
 
 		search_filters = { FOCUS_FILTER_POLITICAL }
 
@@ -1660,56 +1227,19 @@
 			add_tech_bonus = { name = TU_YAN_air_defence bonus = 0.75 uses = 1 category = light_fighter category = tactical_bomber }
 			add_doctrine_cost_reduction = { name = TU_YAN_air_defence cost_reduction = 0.4 uses = 1 category = air_doctrine }
 			air_experience = 25
-		}
-	}
-
-	focus = {
-		id = TU_YAN_radar_research
-		prerequisite = { focus = TU_YAN_bomber_core }
-		icon = GFX_goal_generic_radar
-		x = 0
-		y = 0
-		cost = 10
-
-		search_filters = { FOCUS_FILTER_RESEARCH }
-
-		ai_will_do = {
-			base = 1
-		}
-
-		completion_reward = {
-			add_tech_bonus = { name = TU_YAN_radar_research bonus = 0.75 uses = 1 category = electronics category = tu_originium_tech }
-		}
-	}
-
-	focus = {
-		id = TU_YAN_airborne_arts
-		prerequisite = { focus = TU_YAN_air_defence }
-		icon = GFX_goal_generic_special_forces
-		x = 0
-		y = 0
-		cost = 10
-
-		search_filters = { FOCUS_FILTER_AIR_XP }
-
-		ai_will_do = {
-			base = 1
-		}
-
-		completion_reward = {
-			add_tech_bonus = { name = TU_YAN_airborne_arts bonus = 0.75 uses = 1 category = light_fighter category = tactical_bomber }
-			add_doctrine_cost_reduction = { name = TU_YAN_airborne_arts cost_reduction = 0.4 uses = 1 category = air_doctrine }
+			add_tech_bonus = { name = TU_YAN_air_defence bonus = 0.75 uses = 1 category = light_fighter category = tactical_bomber }
+			add_doctrine_cost_reduction = { name = TU_YAN_air_defence cost_reduction = 0.4 uses = 1 category = air_doctrine }
 			air_experience = 25
 		}
 	}
 
 	focus = {
 		id = TU_YAN_air_union
-		prerequisite = { focus = TU_YAN_airborne_arts }
+		prerequisite = { focus = TU_YAN_air_defence }
 		icon = GFX_goal_generic_build_airforce
 		x = 0
 		y = 0
-		cost = 15
+		cost = 20
 
 		search_filters = { FOCUS_FILTER_POLITICAL }
 
@@ -1722,16 +1252,19 @@
 			add_tech_bonus = { name = TU_YAN_air_union bonus = 1.0 uses = 1 category = light_fighter category = tactical_bomber }
 			add_doctrine_cost_reduction = { name = TU_YAN_air_union cost_reduction = 0.5 uses = 1 category = air_doctrine }
 			air_experience = 40
+			add_tech_bonus = { name = TU_YAN_air_union bonus = 0.75 uses = 1 category = light_fighter category = tactical_bomber }
+			add_doctrine_cost_reduction = { name = TU_YAN_air_union cost_reduction = 0.4 uses = 1 category = air_doctrine }
+			air_experience = 25
 		}
 	}
 
 	focus = {
 		id = TU_YAN_air_logistics
-		prerequisite = { focus = TU_YAN_radar_research }
+		prerequisite = { focus = TU_YAN_bomber_core }
 		icon = GFX_goal_generic_production
 		x = 0
 		y = 0
-		cost = 10
+		cost = 15
 
 		search_filters = { FOCUS_FILTER_INDUSTRY }
 
@@ -1744,52 +1277,11 @@
 			add_tech_bonus = { name = TU_YAN_air_logistics bonus = 0.75 uses = 1 category = light_fighter category = tactical_bomber }
 			add_doctrine_cost_reduction = { name = TU_YAN_air_logistics cost_reduction = 0.4 uses = 1 category = air_doctrine }
 			air_experience = 25
-		}
-	}
-
-	focus = {
-		id = TU_YAN_air_ground_support
-		prerequisite = { focus = TU_YAN_air_logistics }
-		icon = GFX_goal_generic_army_artillery
-		x = 0
-		y = 0
-		cost = 10
-
-		search_filters = { FOCUS_FILTER_AIR_XP }
-
-		ai_will_do = {
-			base = 1
-		}
-
-		completion_reward = {
-			add_tech_bonus = { name = TU_YAN_air_ground_support bonus = 0.75 uses = 1 category = light_fighter category = tactical_bomber }
-			add_doctrine_cost_reduction = { name = TU_YAN_air_ground_support cost_reduction = 0.4 uses = 1 category = air_doctrine }
+			add_tech_bonus = { name = TU_YAN_air_logistics bonus = 0.75 uses = 1 category = light_fighter category = tactical_bomber }
+			add_doctrine_cost_reduction = { name = TU_YAN_air_logistics cost_reduction = 0.4 uses = 1 category = air_doctrine }
 			air_experience = 25
 		}
 	}
-
-	focus = {
-		id = TU_YAN_air_wing
-		prerequisite = { focus = TU_YAN_air_union }
-		icon = GFX_goal_generic_air_production
-		x = 0
-		y = 0
-		cost = 10
-
-		search_filters = { FOCUS_FILTER_AIR_XP }
-
-		ai_will_do = {
-			base = 1
-		}
-
-		completion_reward = {
-			add_tech_bonus = { name = TU_YAN_air_wing bonus = 0.75 uses = 1 category = light_fighter category = tactical_bomber }
-			add_doctrine_cost_reduction = { name = TU_YAN_air_wing cost_reduction = 0.4 uses = 1 category = air_doctrine }
-			air_experience = 25
-		}
-	}
-
-	#### RESEARCH ####
 
 	focus = {
 		id = TU_YAN_academy_survey
@@ -1837,7 +1329,7 @@
 		icon = GFX_goal_generic_scientific_exchange
 		x = 0
 		y = 0
-		cost = 10
+		cost = 15
 
 		search_filters = { FOCUS_FILTER_RESEARCH }
 
@@ -1847,36 +1339,18 @@
 
 		completion_reward = {
 			add_tech_bonus = { name = TU_YAN_sui_archive bonus = 0.75 uses = 1 category = electronics category = tu_originium_tech }
-		}
-	}
-
-	focus = {
-		id = TU_YAN_engineering_school
-		prerequisite = { focus = TU_YAN_sui_archive }
-		icon = GFX_goal_generic_construct_civ_factory
-		x = 0
-		y = 0
-		cost = 10
-
-		search_filters = { FOCUS_FILTER_RESEARCH }
-
-		ai_will_do = {
-			base = 1
-		}
-
-		completion_reward = {
-			add_tech_bonus = { name = TU_YAN_engineering_school bonus = 0.75 uses = 1 category = electronics category = tu_originium_tech }
+			add_tech_bonus = { name = TU_YAN_sui_archive bonus = 0.75 uses = 1 category = electronics category = tu_originium_tech }
 		}
 	}
 
 	focus = {
 		id = TU_YAN_industrial_research
-		prerequisite = { focus = TU_YAN_engineering_school }
+		prerequisite = { focus = TU_YAN_sui_archive }
 		mutually_exclusive = { focus = TU_YAN_military_research }
 		icon = GFX_goal_generic_production2
 		x = 0
 		y = 0
-		cost = 10
+		cost = 18
 
 		search_filters = { FOCUS_FILTER_RESEARCH }
 
@@ -1886,17 +1360,18 @@
 
 		completion_reward = {
 			add_tech_bonus = { name = TU_YAN_industrial_research bonus = 0.75 uses = 1 category = electronics category = tu_originium_tech }
+			add_tech_bonus = { name = TU_YAN_industrial_research bonus = 1.0 uses = 1 category = electronics category = tu_originium_tech }
 		}
 	}
 
 	focus = {
 		id = TU_YAN_military_research
-		prerequisite = { focus = TU_YAN_engineering_school }
+		prerequisite = { focus = TU_YAN_sui_archive }
 		mutually_exclusive = { focus = TU_YAN_industrial_research }
 		icon = GFX_goal_generic_army_doctrines
 		x = 0
 		y = 0
-		cost = 10
+		cost = 18
 
 		search_filters = { FOCUS_FILTER_RESEARCH }
 
@@ -1906,54 +1381,17 @@
 
 		completion_reward = {
 			add_tech_bonus = { name = TU_YAN_military_research bonus = 0.75 uses = 1 category = electronics category = tu_originium_tech }
-		}
-	}
-
-	focus = {
-		id = TU_YAN_industrial_core
-		prerequisite = { focus = TU_YAN_industrial_research }
-		icon = GFX_goal_generic_production
-		x = 0
-		y = 0
-		cost = 15
-
-		search_filters = { FOCUS_FILTER_RESEARCH }
-
-		ai_will_do = {
-			base = 1
-		}
-
-		completion_reward = {
-			add_tech_bonus = { name = TU_YAN_industrial_core bonus = 1.0 uses = 1 category = electronics category = tu_originium_tech }
-		}
-	}
-
-	focus = {
-		id = TU_YAN_military_core
-		prerequisite = { focus = TU_YAN_military_research }
-		icon = GFX_goal_generic_build_tank
-		x = 0
-		y = 0
-		cost = 15
-
-		search_filters = { FOCUS_FILTER_RESEARCH }
-
-		ai_will_do = {
-			base = 1
-		}
-
-		completion_reward = {
-			add_tech_bonus = { name = TU_YAN_military_core bonus = 1.0 uses = 1 category = electronics category = tu_originium_tech }
+			add_tech_bonus = { name = TU_YAN_military_research bonus = 1.0 uses = 1 category = electronics category = tu_originium_tech }
 		}
 	}
 
 	focus = {
 		id = TU_YAN_electronics_lab
-		prerequisite = { focus = TU_YAN_industrial_core }
+		prerequisite = { focus = TU_YAN_industrial_research }
 		icon = GFX_goal_generic_radar
 		x = 0
 		y = 0
-		cost = 10
+		cost = 18
 
 		search_filters = { FOCUS_FILTER_RESEARCH }
 
@@ -1964,12 +1402,13 @@
 		completion_reward = {
 			add_political_power = 60
 			add_stability = 0.03
+			add_tech_bonus = { name = TU_YAN_electronics_lab bonus = 1.0 uses = 1 category = electronics category = tu_originium_tech }
 		}
 	}
 
 	focus = {
 		id = TU_YAN_rocket_program
-		prerequisite = { focus = TU_YAN_military_core }
+		prerequisite = { focus = TU_YAN_military_research }
 		icon = GFX_goal_generic_secret_weapon
 		x = 0
 		y = 0
@@ -1984,25 +1423,6 @@
 		completion_reward = {
 			add_political_power = 60
 			add_stability = 0.03
-		}
-	}
-
-	focus = {
-		id = TU_YAN_arts_science
-		prerequisite = { focus = TU_YAN_electronics_lab }
-		icon = GFX_goal_generic_scientific_exchange
-		x = 0
-		y = 0
-		cost = 15
-
-		search_filters = { FOCUS_FILTER_RESEARCH }
-
-		ai_will_do = {
-			base = 1
-		}
-
-		completion_reward = {
-			add_tech_bonus = { name = TU_YAN_arts_science bonus = 1.0 uses = 1 category = electronics category = tu_originium_tech }
 		}
 	}
 
@@ -2028,11 +1448,11 @@
 
 	focus = {
 		id = TU_YAN_sui_legacy_revival
-		prerequisite = { focus = TU_YAN_arts_science }
+		prerequisite = { focus = TU_YAN_electronics_lab }
 		icon = GFX_goal_generic_scientific_exchange
 		x = 0
 		y = 0
-		cost = 10
+		cost = 15
 
 		search_filters = { FOCUS_FILTER_RESEARCH }
 
@@ -2041,6 +1461,8 @@
 		}
 
 		completion_reward = {
+			add_political_power = 60
+			add_stability = 0.03
 			add_political_power = 60
 			add_stability = 0.03
 		}
@@ -2052,7 +1474,7 @@
 		icon = GFX_goal_generic_improve_relations
 		x = 0
 		y = 0
-		cost = 10
+		cost = 15
 
 		search_filters = { FOCUS_FILTER_POLITICAL }
 
@@ -2063,44 +1485,6 @@
 		completion_reward = {
 			add_doctrine_cost_reduction = { name = TU_YAN_open_academy cost_reduction = 0.4 uses = 1 category = land_doctrine }
 			army_experience = 25
-		}
-	}
-
-	focus = {
-		id = TU_YAN_sui_study
-		prerequisite = { focus = TU_YAN_sui_legacy_revival }
-		icon = GFX_goal_generic_production2
-		x = 0
-		y = 0
-		cost = 10
-
-		search_filters = { FOCUS_FILTER_RESEARCH }
-
-		ai_will_do = {
-			base = 1
-		}
-
-		completion_reward = {
-			add_political_power = 60
-			add_stability = 0.03
-		}
-	}
-
-	focus = {
-		id = TU_YAN_academic_exchange
-		prerequisite = { focus = TU_YAN_open_academy }
-		icon = GFX_goal_generic_alliance
-		x = 0
-		y = 0
-		cost = 10
-
-		search_filters = { FOCUS_FILTER_POLITICAL }
-
-		ai_will_do = {
-			base = 1
-		}
-
-		completion_reward = {
 			add_political_power = 60
 			add_stability = 0.03
 		}

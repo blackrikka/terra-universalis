@@ -6,7 +6,7 @@
 		icon = GFX_goal_generic_national_unity
 		x = 0
 		y = 0
-		cost = 5
+		cost = 10
 
 		search_filters = { FOCUS_FILTER_POLITICAL }
 
@@ -14,32 +14,18 @@
 			country_event = { id = tu_vic_ev.13 }
 			add_political_power = 35
 			add_stability = 0.02
-		}
-	}
-
-	focus = {
-		id = TU_VIC_exp_survey
-		prerequisite = { focus = TU_VIC_exp_mandate }
-		icon = GFX_goal_generic_radar
-		x = 1
-		y = 1
-		cost = 10
-
-		search_filters = { FOCUS_FILTER_POLITICAL }
-
-		completion_reward = {
-			add_tech_bonus = { name = TU_VIC_exp_survey bonus = 0.75 uses = 1 category = construction_tech }
+			add_tech_bonus = { name = TU_VIC_exp_mandate bonus = 0.75 uses = 1 category = construction_tech }
 			army_experience = 25
 		}
 	}
 
 	focus = {
 		id = TU_VIC_exp_relations_open
-		prerequisite = { focus = TU_VIC_exp_survey }
+		prerequisite = { focus = TU_VIC_exp_mandate }
 		icon = GFX_goal_generic_improve_relations
 		x = 2
 		y = 2
-		cost = 10
+		cost = 20
 
 		search_filters = { FOCUS_FILTER_POLITICAL }
 
@@ -47,61 +33,19 @@
 			set_country_flag = TU_dip_relations_unlocked
 			add_political_power = 60
 			add_stability = 0.03
-		}
-	}
-
-	focus = {
-		id = TU_VIC_exp_envoys
-		prerequisite = { focus = TU_VIC_exp_relations_open }
-		icon = GFX_goal_generic_scientific_exchange
-		x = 3
-		y = 3
-		cost = 10
-
-		search_filters = { FOCUS_FILTER_POLITICAL }
-
-		completion_reward = {
 			add_political_power = 60
 			add_stability = 0.03
-		}
-	}
-
-	focus = {
-		id = TU_VIC_exp_intel
-		prerequisite = { focus = TU_VIC_exp_envoys }
-		icon = GFX_goal_generic_intelligence_exchange
-		x = 4
-		y = 4
-		cost = 10
-
-		search_filters = { FOCUS_FILTER_POLITICAL }
-
-		completion_reward = {
-			add_tech_bonus = { name = TU_VIC_exp_intel bonus = 0.75 uses = 1 category = radar_tech category = electronics }
+			add_tech_bonus = { name = TU_VIC_exp_relations_open bonus = 0.75 uses = 1 category = radar_tech category = electronics }
 			add_stability = 0.03
-		}
-	}
-
-	focus = {
-		id = TU_VIC_exp_war_council
-		prerequisite = { focus = TU_VIC_exp_intel }
-		icon = GFX_goal_generic_army_doctrines
-		x = 5
-		y = 5
-		cost = 10
-
-		search_filters = { FOCUS_FILTER_ARMY_XP }
-
-		completion_reward = {
 			army_experience = 25
 			add_war_support = 0.03
-			add_doctrine_cost_reduction = { name = TU_VIC_exp_war_council cost_reduction = 0.4 uses = 1 category = land_doctrine }
+			add_doctrine_cost_reduction = { name = TU_VIC_exp_relations_open cost_reduction = 0.4 uses = 1 category = land_doctrine }
 		}
 	}
 
 	focus = {
 		id = TU_VIC_exp_alliance_search
-		prerequisite = { focus = TU_VIC_exp_war_council }
+		prerequisite = { focus = TU_VIC_exp_relations_open }
 		icon = GFX_goal_generic_major_alliance
 		x = 6
 		y = 6
@@ -122,13 +66,16 @@
 		icon = GFX_goal_generic_position_armies
 		x = 7
 		y = 7
-		cost = 10
+		cost = 18
 
 		search_filters = { FOCUS_FILTER_POLITICAL }
 
 		completion_reward = {
 			add_doctrine_cost_reduction = { name = TU_VIC_exp_frontier_hub cost_reduction = 0.4 uses = 1 category = land_doctrine }
 			army_experience = 25
+			add_tech_bonus = { name = TU_VIC_exp_frontier_hub bonus = 0.5 uses = 1 category = industry category = construction_tech }
+			TU_build_civ_factory = yes
+			add_tech_bonus = { name = TU_VIC_exp_frontier_hub bonus = 0.75 uses = 1 category = industry category = construction_tech }
 		}
 	}
 
@@ -140,43 +87,15 @@
 		icon = GFX_goal_generic_cavalry
 		x = 100
 		y = 10
-		cost = 5
+		cost = 13
 
 		search_filters = { FOCUS_FILTER_POLITICAL }
 
 		completion_reward = {
 			add_tech_bonus = { name = TU_VIC_kzd_border_scouts bonus = 0.5 uses = 1 category = construction_tech }
 			army_experience = 15
-		}
-	}
-
-	focus = {
-		id = TU_VIC_kzd_thames_drills
-		prerequisite = { focus = TU_VIC_kzd_border_scouts }
-		icon = GFX_goal_generic_army_motorized
-		x = 101
-		y = 11
-		cost = 10
-
-		search_filters = { FOCUS_FILTER_ARMY_XP }
-
-		completion_reward = {
-			add_doctrine_cost_reduction = { name = TU_VIC_kzd_thames_drills cost_reduction = 0.4 uses = 1 category = land_doctrine }
+			add_doctrine_cost_reduction = { name = TU_VIC_kzd_border_scouts cost_reduction = 0.4 uses = 1 category = land_doctrine }
 			army_experience = 25
-		}
-	}
-
-	focus = {
-		id = TU_VIC_kzd_envoy_note
-		prerequisite = { focus = TU_VIC_kzd_thames_drills }
-		icon = GFX_goal_generic_forceful_treaty
-		x = 102
-		y = 12
-		cost = 10
-
-		search_filters = { FOCUS_FILTER_POLITICAL }
-
-		completion_reward = {
 			add_political_power = 60
 			add_stability = 0.03
 		}
@@ -184,11 +103,11 @@
 
 	focus = {
 		id = TU_VIC_kzd_claim_londinium
-		prerequisite = { focus = TU_VIC_kzd_envoy_note }
+		prerequisite = { focus = TU_VIC_kzd_border_scouts }
 		icon = GFX_goal_generic_more_territorial_claims
 		x = 103
 		y = 13
-		cost = 15
+		cost = 20
 
 		search_filters = { FOCUS_FILTER_POLITICAL }
 
@@ -197,42 +116,14 @@
 			army_experience = 40
 			add_war_support = 0.05
 			add_doctrine_cost_reduction = { name = TU_VIC_kzd_claim_londinium cost_reduction = 0.5 uses = 1 category = land_doctrine }
-		}
-	}
-
-	focus = {
-		id = TU_VIC_kzd_border_forts
-		prerequisite = { focus = TU_VIC_kzd_claim_londinium }
-		icon = GFX_goal_generic_fortify_city
-		x = 104
-		y = 14
-		cost = 10
-
-		search_filters = { FOCUS_FILTER_POLITICAL }
-
-		completion_reward = {
 			TU_build_forts_2 = yes
-		}
-	}
-
-	focus = {
-		id = TU_VIC_kzd_steam_rail
-		prerequisite = { focus = TU_VIC_kzd_border_forts }
-		icon = GFX_goal_generic_construct_infrastructure
-		x = 105
-		y = 15
-		cost = 10
-
-		search_filters = { FOCUS_FILTER_INDUSTRY }
-
-		completion_reward = {
 			TU_build_railway = yes
 		}
 	}
 
 	focus = {
 		id = TU_VIC_kzd_war_plans
-		prerequisite = { focus = TU_VIC_kzd_steam_rail }
+		prerequisite = { focus = TU_VIC_kzd_claim_londinium }
 		mutually_exclusive = { focus = TU_VIC_kzd_peace_talks }
 		icon = GFX_goal_generic_army_tanks
 		x = 106
@@ -254,67 +145,44 @@
 		icon = GFX_goal_generic_army_artillery
 		x = 107
 		y = 17
-		cost = 10
+		cost = 20
 
 		search_filters = { FOCUS_FILTER_ARMY_XP }
 
 		completion_reward = {
 			add_tech_bonus = { name = TU_VIC_kzd_siege_prep bonus = 0.75 uses = 1 category = artillery }
 			army_experience = 25
+			add_tech_bonus = { name = TU_VIC_kzd_siege_prep bonus = 0.75 uses = 1 category = construction_tech }
+			army_experience = 25
+			army_experience = 25
+			add_war_support = 0.03
+			add_doctrine_cost_reduction = { name = TU_VIC_kzd_siege_prep cost_reduction = 0.4 uses = 1 category = land_doctrine }
 		}
 	}
 
 	focus = {
 		id = TU_VIC_kzd_peace_talks
-		prerequisite = { focus = TU_VIC_kzd_envoy_note }
+		prerequisite = { focus = TU_VIC_kzd_border_scouts }
 		mutually_exclusive = { focus = TU_VIC_kzd_war_plans }
 		icon = GFX_goal_generic_military_deal
 		x = 108
 		y = 18
-		cost = 10
+		cost = 18
 
 		search_filters = { FOCUS_FILTER_POLITICAL }
 
 		completion_reward = {
 			add_political_power = 60
 			add_stability = 0.03
-		}
-	}
-
-	focus = {
-		id = TU_VIC_kzd_trade_route
-		prerequisite = { focus = TU_VIC_kzd_peace_talks }
-		icon = GFX_goal_generic_trade
-		x = 109
-		y = 19
-		cost = 10
-
-		search_filters = { FOCUS_FILTER_POLITICAL }
-
-		completion_reward = {
-			add_tech_bonus = { name = TU_VIC_kzd_trade_route bonus = 0.75 uses = 1 category = industry category = construction_tech }
-		}
-	}
-
-	focus = {
-		id = TU_VIC_kzd_intel_exchange
-		prerequisite = { focus = TU_VIC_kzd_trade_route }
-		icon = GFX_goal_generic_military_sphere
-		x = 110
-		y = 20
-		cost = 10
-
-		search_filters = { FOCUS_FILTER_POLITICAL }
-
-		completion_reward = {
-			add_tech_bonus = { name = TU_VIC_kzd_intel_exchange bonus = 0.75 uses = 1 category = radar_tech category = electronics }
+			add_tech_bonus = { name = TU_VIC_kzd_peace_talks bonus = 0.75 uses = 1 category = industry category = construction_tech }
+			add_tech_bonus = { name = TU_VIC_kzd_peace_talks bonus = 0.75 uses = 1 category = radar_tech category = electronics }
 			add_stability = 0.03
 		}
 	}
 
 	focus = {
 		id = TU_VIC_kzd_security_pledge
-		prerequisite = { focus = TU_VIC_kzd_intel_exchange }
+		prerequisite = { focus = TU_VIC_kzd_peace_talks }
 		icon = GFX_goal_generic_defence
 		x = 111
 		y = 21
@@ -345,41 +213,8 @@
 	}
 
 	focus = {
-		id = TU_VIC_kzd_garrison
-		prerequisite = { focus = TU_VIC_kzd_siege_prep }
-		icon = GFX_goal_generic_occupy_start_war
-		x = 113
-		y = 23
-		cost = 10
-
-		search_filters = { FOCUS_FILTER_ARMY_XP }
-
-		completion_reward = {
-			add_tech_bonus = { name = TU_VIC_kzd_garrison bonus = 0.75 uses = 1 category = construction_tech }
-			army_experience = 25
-		}
-	}
-
-	focus = {
-		id = TU_VIC_kzd_occupation_admin
-		prerequisite = { focus = TU_VIC_kzd_garrison }
-		icon = GFX_goal_generic_occupy_states_ongoing_war
-		x = 114
-		y = 24
-		cost = 10
-
-		search_filters = { FOCUS_FILTER_POLITICAL }
-
-		completion_reward = {
-			army_experience = 25
-			add_war_support = 0.03
-			add_doctrine_cost_reduction = { name = TU_VIC_kzd_occupation_admin cost_reduction = 0.4 uses = 1 category = land_doctrine }
-		}
-	}
-
-	focus = {
 		id = TU_VIC_kzd_victory_parade
-		prerequisite = { focus = TU_VIC_kzd_occupation_admin }
+		prerequisite = { focus = TU_VIC_kzd_siege_prep }
 		icon = GFX_goal_generic_propaganda
 		x = 115
 		y = 25
@@ -397,7 +232,7 @@
 
 	focus = {
 		id = TU_VIC_kzd_mercenaries
-		prerequisite = { focus = TU_VIC_kzd_garrison }
+		prerequisite = { focus = TU_VIC_kzd_siege_prep }
 		mutually_exclusive = { focus = TU_VIC_kzd_mercenaries_alt }
 		icon = GFX_goal_generic_small_arms
 		x = 116
@@ -414,7 +249,7 @@
 
 	focus = {
 		id = TU_VIC_kzd_mercenaries_alt
-		prerequisite = { focus = TU_VIC_kzd_garrison }
+		prerequisite = { focus = TU_VIC_kzd_siege_prep }
 		mutually_exclusive = { focus = TU_VIC_kzd_mercenaries }
 		icon = GFX_goal_generic_fortify_city
 		x = 0
@@ -459,42 +294,14 @@
 		icon = GFX_goal_generic_positive_trade_relations
 		x = 200
 		y = 10
-		cost = 5
+		cost = 15
 
 		search_filters = { FOCUS_FILTER_POLITICAL }
 
 		completion_reward = {
 			add_tech_bonus = { name = TU_VIC_lei_envoy_road bonus = 0.5 uses = 1 category = industry category = construction_tech }
-		}
-	}
-
-	focus = {
-		id = TU_VIC_lei_border_watch
-		prerequisite = { focus = TU_VIC_lei_envoy_road }
-		icon = GFX_goal_generic_cavalry
-		x = 201
-		y = 11
-		cost = 10
-
-		search_filters = { FOCUS_FILTER_POLITICAL }
-
-		completion_reward = {
-			add_tech_bonus = { name = TU_VIC_lei_border_watch bonus = 0.75 uses = 1 category = construction_tech }
+			add_tech_bonus = { name = TU_VIC_lei_envoy_road bonus = 0.75 uses = 1 category = construction_tech }
 			army_experience = 25
-		}
-	}
-
-	focus = {
-		id = TU_VIC_lei_culture_exchange
-		prerequisite = { focus = TU_VIC_lei_border_watch }
-		icon = GFX_goal_generic_scientific_exchange
-		x = 202
-		y = 12
-		cost = 10
-
-		search_filters = { FOCUS_FILTER_POLITICAL }
-
-		completion_reward = {
 			add_political_power = 60
 			add_stability = 0.03
 		}
@@ -502,54 +309,26 @@
 
 	focus = {
 		id = TU_VIC_lei_claim
-		prerequisite = { focus = TU_VIC_lei_culture_exchange }
+		prerequisite = { focus = TU_VIC_lei_envoy_road }
 		icon = GFX_goal_generic_more_territorial_claims
 		x = 203
 		y = 13
-		cost = 15
+		cost = 20
 
 		search_filters = { FOCUS_FILTER_POLITICAL }
 
 		completion_reward = {
 			add_political_power = 100
 			add_stability = 0.05
-		}
-	}
-
-	focus = {
-		id = TU_VIC_lei_mountain_fort
-		prerequisite = { focus = TU_VIC_lei_claim }
-		icon = GFX_goal_generic_fortify_city
-		x = 204
-		y = 14
-		cost = 10
-
-		search_filters = { FOCUS_FILTER_POLITICAL }
-
-		completion_reward = {
 			TU_build_forts_2 = yes
-		}
-	}
-
-	focus = {
-		id = TU_VIC_lei_grand_drill
-		prerequisite = { focus = TU_VIC_lei_mountain_fort }
-		icon = GFX_goal_generic_allies_build_infantry
-		x = 205
-		y = 15
-		cost = 10
-
-		search_filters = { FOCUS_FILTER_ARMY_XP }
-
-		completion_reward = {
-			add_doctrine_cost_reduction = { name = TU_VIC_lei_grand_drill cost_reduction = 0.4 uses = 1 category = land_doctrine }
+			add_doctrine_cost_reduction = { name = TU_VIC_lei_claim cost_reduction = 0.4 uses = 1 category = land_doctrine }
 			army_experience = 25
 		}
 	}
 
 	focus = {
 		id = TU_VIC_lei_war_plans
-		prerequisite = { focus = TU_VIC_lei_grand_drill }
+		prerequisite = { focus = TU_VIC_lei_claim }
 		mutually_exclusive = { focus = TU_VIC_lei_treaty_talks }
 		icon = GFX_goal_generic_demand_territory
 		x = 206
@@ -567,7 +346,7 @@
 
 	focus = {
 		id = TU_VIC_lei_treaty_talks
-		prerequisite = { focus = TU_VIC_lei_culture_exchange }
+		prerequisite = { focus = TU_VIC_lei_envoy_road }
 		mutually_exclusive = { focus = TU_VIC_lei_war_plans }
 		icon = GFX_goal_generic_improve_relations
 		x = 207
@@ -604,11 +383,17 @@
 		icon = GFX_goal_generic_neutrality_focus
 		x = 209
 		y = 19
-		cost = 10
+		cost = 20
 
 		search_filters = { FOCUS_FILTER_POLITICAL }
 
 		completion_reward = {
+			add_political_power = 60
+			add_stability = 0.03
+			add_war_support = 0.03
+			add_stability = 0.03
+			add_political_power = 60
+			add_stability = 0.03
 			add_political_power = 60
 			add_stability = 0.03
 		}
@@ -616,102 +401,24 @@
 
 	focus = {
 		id = TU_VIC_lei_supply_hub
-		prerequisite = { focus = TU_VIC_lei_mountain_fort }
+		prerequisite = { focus = TU_VIC_lei_claim }
 		icon = GFX_goal_generic_construct_infrastructure
 		x = 210
 		y = 20
-		cost = 10
+		cost = 18
 
 		search_filters = { FOCUS_FILTER_INDUSTRY }
 
 		completion_reward = {
 			TU_build_infrastructure = yes
 			add_tech_bonus = { name = TU_VIC_lei_supply_hub bonus = 0.75 uses = 1 category = industry category = construction_tech }
-		}
-	}
-
-	focus = {
-		id = TU_VIC_lei_march_route
-		prerequisite = { focus = TU_VIC_lei_supply_hub }
-		icon = GFX_goal_generic_army_motorized
-		x = 211
-		y = 21
-		cost = 10
-
-		search_filters = { FOCUS_FILTER_ARMY_XP }
-
-		completion_reward = {
 			army_experience = 25
 			add_war_support = 0.03
-			add_doctrine_cost_reduction = { name = TU_VIC_lei_march_route cost_reduction = 0.4 uses = 1 category = land_doctrine }
-		}
-	}
-
-	focus = {
-		id = TU_VIC_lei_iron_roads
-		prerequisite = { focus = TU_VIC_lei_march_route }
-		icon = GFX_goal_generic_construct_civilian
-		x = 212
-		y = 22
-		cost = 10
-
-		search_filters = { FOCUS_FILTER_INDUSTRY }
-
-		completion_reward = {
+			add_doctrine_cost_reduction = { name = TU_VIC_lei_supply_hub cost_reduction = 0.4 uses = 1 category = land_doctrine }
 			TU_build_civ_factory = yes
 			TU_build_railway = yes
 		}
 	}
-
-	focus = {
-		id = TU_VIC_lei_peace_festival
-		prerequisite = { focus = TU_VIC_lei_nonaggression }
-		icon = GFX_goal_generic_consumer_goods
-		x = 213
-		y = 23
-		cost = 10
-
-		search_filters = { FOCUS_FILTER_POLITICAL }
-
-		completion_reward = {
-			add_war_support = 0.03
-			add_stability = 0.03
-		}
-	}
-
-	focus = {
-		id = TU_VIC_lei_union_treaty
-		prerequisite = { focus = TU_VIC_lei_peace_festival }
-		icon = GFX_goal_generic_major_alliance
-		x = 214
-		y = 24
-		cost = 10
-
-		search_filters = { FOCUS_FILTER_POLITICAL }
-
-		completion_reward = {
-			add_political_power = 60
-			add_stability = 0.03
-		}
-	}
-
-	focus = {
-		id = TU_VIC_lei_summit
-		prerequisite = { focus = TU_VIC_lei_union_treaty }
-		icon = GFX_goal_generic_improve_relations
-		x = 215
-		y = 25
-		cost = 10
-
-		search_filters = { FOCUS_FILTER_POLITICAL }
-
-		completion_reward = {
-			add_political_power = 60
-			add_stability = 0.03
-		}
-	}
-
-	#### COLUMBIA COL - coastal and colonial ####
 
 	focus = {
 		id = TU_VIC_col_port_survey
@@ -719,51 +426,23 @@
 		icon = GFX_goal_generic_construct_naval_dockyard
 		x = 300
 		y = 10
-		cost = 5
+		cost = 13
 
 		search_filters = { FOCUS_FILTER_POLITICAL }
 
 		completion_reward = {
 			add_political_power = 35
 			add_tech_bonus = { name = TU_VIC_col_port_survey bonus = 0.5 uses = 1 category = industry }
-		}
-	}
-
-	focus = {
-		id = TU_VIC_col_shipping_lanes
-		prerequisite = { focus = TU_VIC_col_port_survey }
-		icon = GFX_goal_generic_navy_doctrines_tactics
-		x = 301
-		y = 11
-		cost = 10
-
-		search_filters = { FOCUS_FILTER_POLITICAL }
-
-		completion_reward = {
 			add_political_power = 60
-			add_tech_bonus = { name = TU_VIC_col_shipping_lanes bonus = 0.75 uses = 1 category = industry }
-		}
-	}
-
-	focus = {
-		id = TU_VIC_col_merchant_guilds
-		prerequisite = { focus = TU_VIC_col_shipping_lanes }
-		icon = GFX_goal_generic_trade
-		x = 302
-		y = 12
-		cost = 10
-
-		search_filters = { FOCUS_FILTER_POLITICAL }
-
-		completion_reward = {
+			add_tech_bonus = { name = TU_VIC_col_port_survey bonus = 0.75 uses = 1 category = industry }
 			add_political_power = 60
-			add_tech_bonus = { name = TU_VIC_col_merchant_guilds bonus = 0.75 uses = 1 category = industry }
+			add_tech_bonus = { name = TU_VIC_col_port_survey bonus = 0.75 uses = 1 category = industry }
 		}
 	}
 
 	focus = {
 		id = TU_VIC_col_claim
-		prerequisite = { focus = TU_VIC_col_merchant_guilds }
+		prerequisite = { focus = TU_VIC_col_port_survey }
 		icon = GFX_goal_generic_more_territorial_claims
 		x = 303
 		y = 13
@@ -796,7 +475,7 @@
 
 	focus = {
 		id = TU_VIC_col_trade_talks
-		prerequisite = { focus = TU_VIC_col_merchant_guilds }
+		prerequisite = { focus = TU_VIC_col_port_survey }
 		icon = GFX_goal_generic_positive_trade_relations
 		x = 307
 		y = 17
@@ -844,64 +523,22 @@
 
 	focus = {
 		id = TU_VIC_col_tariff_reform
-		prerequisite = { focus = TU_VIC_col_shipping_lanes }
+		prerequisite = { focus = TU_VIC_col_port_survey }
 		icon = GFX_goal_generic_dangerous_deal
 		x = 311
 		y = 21
-		cost = 10
+		cost = 20
 
 		search_filters = { FOCUS_FILTER_POLITICAL }
 
 		completion_reward = {
 			add_political_power = 60
 			add_tech_bonus = { name = TU_VIC_col_tariff_reform bonus = 0.75 uses = 1 category = industry }
-		}
-	}
-
-	focus = {
-		id = TU_VIC_col_trade_fair
-		prerequisite = { focus = TU_VIC_col_tariff_reform }
-		icon = GFX_goal_generic_construction
-		x = 312
-		y = 22
-		cost = 10
-
-		search_filters = { FOCUS_FILTER_POLITICAL }
-
-		completion_reward = {
 			add_political_power = 60
-			add_tech_bonus = { name = TU_VIC_col_trade_fair bonus = 0.75 uses = 1 category = industry }
-		}
-	}
-
-	focus = {
-		id = TU_VIC_col_expedition_fund
-		prerequisite = { focus = TU_VIC_col_trade_fair }
-		icon = GFX_goal_generic_production
-		x = 313
-		y = 23
-		cost = 10
-
-		search_filters = { FOCUS_FILTER_POLITICAL }
-
-		completion_reward = {
+			add_tech_bonus = { name = TU_VIC_col_tariff_reform bonus = 0.75 uses = 1 category = industry }
 			army_experience = 25
 			add_war_support = 0.03
-			add_doctrine_cost_reduction = { name = TU_VIC_col_expedition_fund cost_reduction = 0.4 uses = 1 category = land_doctrine }
-		}
-	}
-
-	focus = {
-		id = TU_VIC_col_colonial_war_ready
-		prerequisite = { focus = TU_VIC_col_expedition_fund }
-		icon = GFX_goal_generic_navy_doctrines_tactics
-		x = 314
-		y = 24
-		cost = 10
-
-		search_filters = { FOCUS_FILTER_ARMY_XP }
-
-		completion_reward = {
+			add_doctrine_cost_reduction = { name = TU_VIC_col_tariff_reform cost_reduction = 0.4 uses = 1 category = land_doctrine }
 			add_political_power = 60
 			add_stability = 0.03
 		}
@@ -909,7 +546,7 @@
 
 	focus = {
 		id = TU_VIC_col_harbour_legacy
-		prerequisite = { focus = TU_VIC_col_colonial_war_ready }
+		prerequisite = { focus = TU_VIC_col_tariff_reform }
 		icon = GFX_goal_generic_build_navy
 		x = 315
 		y = 25
@@ -926,86 +563,27 @@
 	#### BOLIVAR BOL - highlands and resources ####
 
 	focus = {
-		id = TU_VIC_bol_highland_survey
-		prerequisite = { focus = TU_VIC_exp_frontier_hub }
-		icon = GFX_goal_generic_radar
-		x = 400
-		y = 10
-		cost = 5
-
-		search_filters = { FOCUS_FILTER_POLITICAL }
-
-		completion_reward = {
-			add_tech_bonus = { name = TU_VIC_bol_highland_survey bonus = 0.5 uses = 1 category = industry category = construction_tech }
-		}
-	}
-
-	focus = {
-		id = TU_VIC_bol_mining_deal
-		prerequisite = { focus = TU_VIC_bol_highland_survey }
-		icon = GFX_goal_generic_oil_refinery
-		x = 401
-		y = 11
-		cost = 10
-
-		search_filters = { FOCUS_FILTER_INDUSTRY }
-
-		completion_reward = {
-			TU_build_civ_factory = yes
-			add_tech_bonus = { name = TU_VIC_bol_mining_deal bonus = 0.75 uses = 1 category = industry category = construction_tech }
-		}
-	}
-
-	focus = {
 		id = TU_VIC_bol_claim
-		prerequisite = { focus = TU_VIC_bol_mining_deal }
+		prerequisite = { focus = TU_VIC_exp_frontier_hub }
 		icon = GFX_goal_generic_more_territorial_claims
 		x = 402
 		y = 12
-		cost = 15
+		cost = 20
 
 		search_filters = { FOCUS_FILTER_POLITICAL }
 
 		completion_reward = {
 			add_tech_bonus = { name = TU_VIC_bol_claim bonus = 1.0 uses = 1 category = industry category = construction_tech }
-		}
-	}
-
-	focus = {
-		id = TU_VIC_bol_mountain_training
-		prerequisite = { focus = TU_VIC_bol_claim }
-		icon = GFX_goal_generic_cavalry
-		x = 403
-		y = 13
-		cost = 10
-
-		search_filters = { FOCUS_FILTER_ARMY_XP }
-
-		completion_reward = {
-			add_doctrine_cost_reduction = { name = TU_VIC_bol_mountain_training cost_reduction = 0.4 uses = 1 category = land_doctrine }
+			add_doctrine_cost_reduction = { name = TU_VIC_bol_claim cost_reduction = 0.4 uses = 1 category = land_doctrine }
 			army_experience = 25
-		}
-	}
-
-	focus = {
-		id = TU_VIC_bol_highway
-		prerequisite = { focus = TU_VIC_bol_mountain_training }
-		icon = GFX_goal_generic_construct_infrastructure
-		x = 404
-		y = 14
-		cost = 10
-
-		search_filters = { FOCUS_FILTER_INDUSTRY }
-
-		completion_reward = {
 			TU_build_infrastructure = yes
-			add_tech_bonus = { name = TU_VIC_bol_highway bonus = 0.75 uses = 1 category = industry category = construction_tech }
+			add_tech_bonus = { name = TU_VIC_bol_claim bonus = 0.75 uses = 1 category = industry category = construction_tech }
 		}
 	}
 
 	focus = {
 		id = TU_VIC_bol_war_plans
-		prerequisite = { focus = TU_VIC_bol_highway }
+		prerequisite = { focus = TU_VIC_bol_claim }
 		mutually_exclusive = { focus = TU_VIC_bol_envoy_talks }
 		icon = GFX_goal_generic_army_motorized
 		x = 405
@@ -1023,23 +601,25 @@
 
 	focus = {
 		id = TU_VIC_bol_supply_depot
-		prerequisite = { focus = TU_VIC_bol_highway }
+		prerequisite = { focus = TU_VIC_bol_claim }
 		icon = GFX_goal_generic_construct_military
 		x = 406
 		y = 16
-		cost = 10
+		cost = 15
 
 		search_filters = { FOCUS_FILTER_INDUSTRY }
 
 		completion_reward = {
 			TU_build_mil_factory = yes
 			add_tech_bonus = { name = TU_VIC_bol_supply_depot bonus = 0.75 uses = 1 category = industry category = construction_tech }
+			TU_build_civ_factory = yes
+			add_tech_bonus = { name = TU_VIC_bol_supply_depot bonus = 0.75 uses = 1 category = industry category = construction_tech }
 		}
 	}
 
 	focus = {
 		id = TU_VIC_bol_envoy_talks
-		prerequisite = { focus = TU_VIC_bol_mining_deal }
+		prerequisite = { focus = TU_VIC_exp_frontier_hub }
 		mutually_exclusive = { focus = TU_VIC_bol_war_plans }
 		icon = GFX_goal_generic_improve_relations
 		x = 407
@@ -1109,82 +689,22 @@
 		icon = GFX_goal_generic_trade
 		x = 411
 		y = 21
-		cost = 10
+		cost = 20
 
 		search_filters = { FOCUS_FILTER_POLITICAL }
 
 		completion_reward = {
 			add_political_power = 60
 			add_tech_bonus = { name = TU_VIC_bol_southern_fair bonus = 0.75 uses = 1 category = industry }
-		}
-	}
-
-	focus = {
-		id = TU_VIC_bol_highland_parade
-		prerequisite = { focus = TU_VIC_bol_southern_fair }
-		icon = GFX_goal_generic_consumer_goods
-		x = 412
-		y = 22
-		cost = 10
-
-		search_filters = { FOCUS_FILTER_POLITICAL }
-
-		completion_reward = {
 			army_experience = 25
 			add_war_support = 0.03
-			add_doctrine_cost_reduction = { name = TU_VIC_bol_highland_parade cost_reduction = 0.4 uses = 1 category = land_doctrine }
-		}
-	}
-
-	focus = {
-		id = TU_VIC_bol_solidarity
-		prerequisite = { focus = TU_VIC_bol_highland_parade }
-		icon = GFX_goal_generic_major_alliance
-		x = 413
-		y = 23
-		cost = 10
-
-		search_filters = { FOCUS_FILTER_POLITICAL }
-
-		completion_reward = {
+			add_doctrine_cost_reduction = { name = TU_VIC_bol_southern_fair cost_reduction = 0.4 uses = 1 category = land_doctrine }
+			add_political_power = 60
+			add_stability = 0.03
 			add_political_power = 60
 			add_stability = 0.03
 		}
 	}
-
-	focus = {
-		id = TU_VIC_bol_farm_development
-		prerequisite = { focus = TU_VIC_bol_supply_depot }
-		icon = GFX_goal_generic_production
-		x = 414
-		y = 24
-		cost = 10
-
-		search_filters = { FOCUS_FILTER_INDUSTRY }
-
-		completion_reward = {
-			TU_build_civ_factory = yes
-			add_tech_bonus = { name = TU_VIC_bol_farm_development bonus = 0.75 uses = 1 category = industry category = construction_tech }
-		}
-	}
-
-	focus = {
-		id = TU_VIC_bol_liberation_day
-		prerequisite = { focus = TU_VIC_bol_solidarity }
-		icon = GFX_goal_generic_construct_civilian
-		x = 415
-		y = 25
-		cost = 10
-
-		search_filters = { FOCUS_FILTER_POLITICAL }
-
-		completion_reward = {
-			add_political_power = 60
-			add_stability = 0.03
-		}
-	}
-
-	#### URSUS URS - northern bloc ####
 
 	focus = {
 		id = TU_VIC_urs_border_summit
@@ -1192,42 +712,14 @@
 		icon = GFX_goal_generic_dangerous_deal
 		x = 500
 		y = 10
-		cost = 5
+		cost = 13
 
 		search_filters = { FOCUS_FILTER_POLITICAL }
 
 		completion_reward = {
 			add_tech_bonus = { name = TU_VIC_urs_border_summit bonus = 0.5 uses = 1 category = construction_tech }
 			army_experience = 15
-		}
-	}
-
-	focus = {
-		id = TU_VIC_urs_winter_trade
-		prerequisite = { focus = TU_VIC_urs_border_summit }
-		icon = GFX_goal_generic_trade
-		x = 501
-		y = 11
-		cost = 10
-
-		search_filters = { FOCUS_FILTER_POLITICAL }
-
-		completion_reward = {
-			add_tech_bonus = { name = TU_VIC_urs_winter_trade bonus = 0.75 uses = 1 category = industry category = construction_tech }
-		}
-	}
-
-	focus = {
-		id = TU_VIC_urs_snow_regiments
-		prerequisite = { focus = TU_VIC_urs_winter_trade }
-		icon = GFX_goal_generic_allies_build_infantry
-		x = 502
-		y = 12
-		cost = 10
-
-		search_filters = { FOCUS_FILTER_ARMY_XP }
-
-		completion_reward = {
+			add_tech_bonus = { name = TU_VIC_urs_border_summit bonus = 0.75 uses = 1 category = industry category = construction_tech }
 			add_manpower = 10000
 			army_experience = 25
 		}
@@ -1235,58 +727,30 @@
 
 	focus = {
 		id = TU_VIC_urs_claim
-		prerequisite = { focus = TU_VIC_urs_snow_regiments }
+		prerequisite = { focus = TU_VIC_urs_border_summit }
 		icon = GFX_goal_generic_more_territorial_claims
 		x = 503
 		y = 13
-		cost = 15
+		cost = 20
 
 		search_filters = { FOCUS_FILTER_POLITICAL }
 
 		completion_reward = {
 			add_political_power = 100
 			add_stability = 0.05
-		}
-	}
-
-	focus = {
-		id = TU_VIC_urs_northern_wall
-		prerequisite = { focus = TU_VIC_urs_claim }
-		icon = GFX_goal_generic_fortify_city
-		x = 504
-		y = 14
-		cost = 10
-
-		search_filters = { FOCUS_FILTER_POLITICAL }
-
-		completion_reward = {
 			TU_build_forts_2 = yes
-		}
-	}
-
-	focus = {
-		id = TU_VIC_urs_north_rail
-		prerequisite = { focus = TU_VIC_urs_northern_wall }
-		icon = GFX_goal_generic_construct_infrastructure
-		x = 505
-		y = 15
-		cost = 10
-
-		search_filters = { FOCUS_FILTER_INDUSTRY }
-
-		completion_reward = {
 			TU_build_railway = yes
 		}
 	}
 
 	focus = {
 		id = TU_VIC_urs_offensive_plans
-		prerequisite = { focus = TU_VIC_urs_north_rail }
+		prerequisite = { focus = TU_VIC_urs_claim }
 		mutually_exclusive = { focus = TU_VIC_urs_peace_talks }
 		icon = GFX_goal_generic_army_tanks
 		x = 506
 		y = 16
-		cost = 10
+		cost = 20
 
 		search_filters = { FOCUS_FILTER_POLITICAL }
 
@@ -1294,45 +758,17 @@
 			army_experience = 25
 			add_war_support = 0.03
 			add_doctrine_cost_reduction = { name = TU_VIC_urs_offensive_plans cost_reduction = 0.4 uses = 1 category = land_doctrine }
-		}
-	}
-
-	focus = {
-		id = TU_VIC_urs_frozen_march
-		prerequisite = { focus = TU_VIC_urs_offensive_plans }
-		icon = GFX_goal_generic_army_motorized
-		x = 507
-		y = 17
-		cost = 10
-
-		search_filters = { FOCUS_FILTER_ARMY_XP }
-
-		completion_reward = {
 			army_experience = 25
 			add_war_support = 0.03
-			add_doctrine_cost_reduction = { name = TU_VIC_urs_frozen_march cost_reduction = 0.4 uses = 1 category = land_doctrine }
-		}
-	}
-
-	focus = {
-		id = TU_VIC_urs_siege_manual
-		prerequisite = { focus = TU_VIC_urs_frozen_march }
-		icon = GFX_goal_generic_army_artillery
-		x = 508
-		y = 18
-		cost = 10
-
-		search_filters = { FOCUS_FILTER_ARMY_XP }
-
-		completion_reward = {
-			add_tech_bonus = { name = TU_VIC_urs_siege_manual bonus = 0.75 uses = 1 category = artillery }
+			add_doctrine_cost_reduction = { name = TU_VIC_urs_offensive_plans cost_reduction = 0.4 uses = 1 category = land_doctrine }
+			add_tech_bonus = { name = TU_VIC_urs_offensive_plans bonus = 0.75 uses = 1 category = artillery }
 			army_experience = 25
 		}
 	}
 
 	focus = {
 		id = TU_VIC_urs_peace_talks
-		prerequisite = { focus = TU_VIC_urs_winter_trade }
+		prerequisite = { focus = TU_VIC_urs_border_summit }
 		mutually_exclusive = { focus = TU_VIC_urs_offensive_plans }
 		icon = GFX_goal_generic_improve_relations
 		x = 509
@@ -1369,27 +805,13 @@
 		icon = GFX_goal_generic_defence
 		x = 511
 		y = 21
-		cost = 10
+		cost = 15
 
 		search_filters = { FOCUS_FILTER_POLITICAL }
 
 		completion_reward = {
 			add_tech_bonus = { name = TU_VIC_urs_security_pledge bonus = 0.75 uses = 1 category = radar_tech category = electronics }
 			add_stability = 0.03
-		}
-	}
-
-	focus = {
-		id = TU_VIC_urs_cultural_bridge
-		prerequisite = { focus = TU_VIC_urs_security_pledge }
-		icon = GFX_goal_generic_scientific_exchange
-		x = 512
-		y = 22
-		cost = 10
-
-		search_filters = { FOCUS_FILTER_POLITICAL }
-
-		completion_reward = {
 			add_political_power = 60
 			add_stability = 0.03
 		}
@@ -1397,46 +819,18 @@
 
 	focus = {
 		id = TU_VIC_urs_scholars
-		prerequisite = { focus = TU_VIC_urs_cultural_bridge }
+		prerequisite = { focus = TU_VIC_urs_security_pledge }
 		icon = GFX_goal_generic_intelligence_exchange
 		x = 513
 		y = 23
-		cost = 10
+		cost = 18
 
 		search_filters = { FOCUS_FILTER_POLITICAL }
 
 		completion_reward = {
 			add_tech_bonus = { name = TU_VIC_urs_scholars bonus = 0.75 uses = 1 category = electronics category = tu_originium_tech }
-		}
-	}
-
-	focus = {
-		id = TU_VIC_urs_northern_council
-		prerequisite = { focus = TU_VIC_urs_scholars }
-		icon = GFX_goal_generic_national_unity
-		x = 514
-		y = 24
-		cost = 10
-
-		search_filters = { FOCUS_FILTER_POLITICAL }
-
-		completion_reward = {
 			add_political_power = 60
 			add_stability = 0.03
-		}
-	}
-
-	focus = {
-		id = TU_VIC_urs_envoy_summit
-		prerequisite = { focus = TU_VIC_urs_northern_council }
-		icon = GFX_goal_generic_improve_relations
-		x = 515
-		y = 25
-		cost = 10
-
-		search_filters = { FOCUS_FILTER_POLITICAL }
-
-		completion_reward = {
 			add_political_power = 60
 			add_stability = 0.03
 		}
@@ -1444,11 +838,11 @@
 
 	focus = {
 		id = TU_VIC_urs_northern_bloc
-		prerequisite = { focus = TU_VIC_urs_envoy_summit }
+		prerequisite = { focus = TU_VIC_urs_scholars }
 		icon = GFX_goal_generic_major_alliance
 		x = 516
 		y = 26
-		cost = 10
+		cost = 15
 
 		search_filters = { FOCUS_FILTER_POLITICAL }
 
@@ -1456,26 +850,10 @@
 			add_ideas = TU_VIC_exp_northern_bloc
 			add_political_power = 60
 			add_stability = 0.03
-		}
-	}
-
-	focus = {
-		id = TU_VIC_urs_frost_accord
-		prerequisite = { focus = TU_VIC_urs_northern_bloc }
-		icon = GFX_goal_generic_positive_trade_relations
-		x = 517
-		y = 27
-		cost = 10
-
-		search_filters = { FOCUS_FILTER_POLITICAL }
-
-		completion_reward = {
 			add_political_power = 60
 			add_stability = 0.03
 		}
 	}
-
-	#### KAZIMIERZ KAZ - eastern marches ####
 
 	focus = {
 		id = TU_VIC_kaz_frontier_survey
@@ -1483,7 +861,7 @@
 		icon = GFX_goal_generic_radar
 		x = 600
 		y = 10
-		cost = 5
+		cost = 13
 
 		search_filters = { FOCUS_FILTER_POLITICAL }
 
@@ -1491,80 +869,38 @@
 			army_experience = 15
 			add_war_support = 0.02
 			add_doctrine_cost_reduction = { name = TU_VIC_kaz_frontier_survey cost_reduction = 0.25 uses = 1 category = land_doctrine }
-		}
-	}
-
-	focus = {
-		id = TU_VIC_kaz_river_forts
-		prerequisite = { focus = TU_VIC_kaz_frontier_survey }
-		icon = GFX_goal_generic_fortify_city
-		x = 601
-		y = 11
-		cost = 10
-
-		search_filters = { FOCUS_FILTER_POLITICAL }
-
-		completion_reward = {
 			TU_build_forts_2 = yes
-		}
-	}
-
-	focus = {
-		id = TU_VIC_kaz_archive
-		prerequisite = { focus = TU_VIC_kaz_river_forts }
-		icon = GFX_goal_generic_construction
-		x = 602
-		y = 12
-		cost = 10
-
-		search_filters = { FOCUS_FILTER_POLITICAL }
-
-		completion_reward = {
-			add_tech_bonus = { name = TU_VIC_kaz_archive bonus = 0.75 uses = 1 category = electronics category = tu_originium_tech }
+			add_tech_bonus = { name = TU_VIC_kaz_frontier_survey bonus = 0.75 uses = 1 category = electronics category = tu_originium_tech }
 		}
 	}
 
 	focus = {
 		id = TU_VIC_kaz_claim
-		prerequisite = { focus = TU_VIC_kaz_archive }
+		prerequisite = { focus = TU_VIC_kaz_frontier_survey }
 		icon = GFX_goal_generic_more_territorial_claims
 		x = 603
 		y = 13
-		cost = 15
+		cost = 20
 
 		search_filters = { FOCUS_FILTER_POLITICAL }
 
 		completion_reward = {
 			add_political_power = 100
 			add_stability = 0.05
-		}
-	}
-
-	focus = {
-		id = TU_VIC_kaz_levies
-		prerequisite = { focus = TU_VIC_kaz_claim }
-		icon = GFX_goal_generic_allies_build_infantry
-		x = 604
-		y = 14
-		cost = 10
-
-		search_filters = { FOCUS_FILTER_ARMY_XP }
-
-		completion_reward = {
 			army_experience = 25
 			add_war_support = 0.03
-			add_doctrine_cost_reduction = { name = TU_VIC_kaz_levies cost_reduction = 0.4 uses = 1 category = land_doctrine }
+			add_doctrine_cost_reduction = { name = TU_VIC_kaz_claim cost_reduction = 0.4 uses = 1 category = land_doctrine }
 		}
 	}
 
 	focus = {
 		id = TU_VIC_kaz_war_plans
-		prerequisite = { focus = TU_VIC_kaz_levies }
+		prerequisite = { focus = TU_VIC_kaz_claim }
 		mutually_exclusive = { focus = TU_VIC_kaz_talks }
 		icon = GFX_goal_generic_army_tanks
 		x = 605
 		y = 15
-		cost = 10
+		cost = 15
 
 		search_filters = { FOCUS_FILTER_POLITICAL }
 
@@ -1572,29 +908,15 @@
 			army_experience = 25
 			add_war_support = 0.03
 			add_doctrine_cost_reduction = { name = TU_VIC_kaz_war_plans cost_reduction = 0.4 uses = 1 category = land_doctrine }
-		}
-	}
-
-	focus = {
-		id = TU_VIC_kaz_eastern_supply
-		prerequisite = { focus = TU_VIC_kaz_war_plans }
-		icon = GFX_goal_generic_construct_infrastructure
-		x = 606
-		y = 16
-		cost = 10
-
-		search_filters = { FOCUS_FILTER_INDUSTRY }
-
-		completion_reward = {
 			TU_build_infrastructure = yes
-			add_tech_bonus = { name = TU_VIC_kaz_eastern_supply bonus = 0.75 uses = 1 category = construction_tech }
+			add_tech_bonus = { name = TU_VIC_kaz_war_plans bonus = 0.75 uses = 1 category = construction_tech }
 			army_experience = 25
 		}
 	}
 
 	focus = {
 		id = TU_VIC_kaz_eastern_crusade
-		prerequisite = { focus = TU_VIC_kaz_eastern_supply }
+		prerequisite = { focus = TU_VIC_kaz_war_plans }
 		icon = GFX_goal_generic_army_doctrines
 		x = 607
 		y = 17
@@ -1612,7 +934,7 @@
 
 	focus = {
 		id = TU_VIC_kaz_talks
-		prerequisite = { focus = TU_VIC_kaz_river_forts }
+		prerequisite = { focus = TU_VIC_kaz_frontier_survey }
 		mutually_exclusive = { focus = TU_VIC_kaz_war_plans }
 		icon = GFX_goal_generic_military_deal
 		x = 608
@@ -1666,58 +988,16 @@
 		icon = GFX_goal_generic_defence
 		x = 611
 		y = 21
-		cost = 10
+		cost = 20
 
 		search_filters = { FOCUS_FILTER_POLITICAL }
 
 		completion_reward = {
 			add_tech_bonus = { name = TU_VIC_kaz_security_pledge bonus = 0.75 uses = 1 category = radar_tech category = electronics }
 			add_stability = 0.03
-		}
-	}
-
-	focus = {
-		id = TU_VIC_kaz_eastern_trade
-		prerequisite = { focus = TU_VIC_kaz_security_pledge }
-		icon = GFX_goal_generic_trade
-		x = 612
-		y = 22
-		cost = 10
-
-		search_filters = { FOCUS_FILTER_POLITICAL }
-
-		completion_reward = {
 			add_political_power = 60
-			add_tech_bonus = { name = TU_VIC_kaz_eastern_trade bonus = 0.75 uses = 1 category = industry }
-		}
-	}
-
-	focus = {
-		id = TU_VIC_kaz_harvest_festival
-		prerequisite = { focus = TU_VIC_kaz_eastern_trade }
-		icon = GFX_goal_generic_consumer_goods
-		x = 613
-		y = 23
-		cost = 10
-
-		search_filters = { FOCUS_FILTER_POLITICAL }
-
-		completion_reward = {
-			add_tech_bonus = { name = TU_VIC_kaz_harvest_festival bonus = 0.75 uses = 1 category = industry category = construction_tech }
-		}
-	}
-
-	focus = {
-		id = TU_VIC_kaz_eastern_pact
-		prerequisite = { focus = TU_VIC_kaz_harvest_festival }
-		icon = GFX_goal_generic_major_alliance
-		x = 614
-		y = 24
-		cost = 10
-
-		search_filters = { FOCUS_FILTER_POLITICAL }
-
-		completion_reward = {
+			add_tech_bonus = { name = TU_VIC_kaz_security_pledge bonus = 0.75 uses = 1 category = industry }
+			add_tech_bonus = { name = TU_VIC_kaz_security_pledge bonus = 0.75 uses = 1 category = industry category = construction_tech }
 			add_political_power = 60
 			add_stability = 0.03
 		}
@@ -1725,47 +1005,19 @@
 
 	focus = {
 		id = TU_VIC_kaz_settlers
-		prerequisite = { focus = TU_VIC_kaz_eastern_pact }
+		prerequisite = { focus = TU_VIC_kaz_security_pledge }
 		icon = GFX_goal_generic_construct_civilian
 		x = 615
 		y = 25
-		cost = 10
+		cost = 20
 
 		search_filters = { FOCUS_FILTER_POLITICAL }
 
 		completion_reward = {
 			add_political_power = 60
 			add_stability = 0.03
-		}
-	}
-
-	focus = {
-		id = TU_VIC_kaz_shared_memory
-		prerequisite = { focus = TU_VIC_kaz_settlers }
-		icon = GFX_goal_generic_propaganda
-		x = 616
-		y = 26
-		cost = 10
-
-		search_filters = { FOCUS_FILTER_POLITICAL }
-
-		completion_reward = {
 			add_political_power = 60
 			add_stability = 0.03
-		}
-	}
-
-	focus = {
-		id = TU_VIC_kaz_union_declaration
-		prerequisite = { focus = TU_VIC_kaz_shared_memory }
-		icon = GFX_goal_generic_major_alliance
-		x = 617
-		y = 27
-		cost = 10
-
-		search_filters = { FOCUS_FILTER_POLITICAL }
-
-		completion_reward = {
 			add_political_power = 60
 			add_stability = 0.03
 		}

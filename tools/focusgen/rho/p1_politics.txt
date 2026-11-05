@@ -66,7 +66,7 @@
 	focus = {
 		id = TU_RHO_cure_track
 		icon = GFX_goal_generic_improve_relations
-		cost = 10
+		cost = 15
 		x = 0
 		y = 0
 
@@ -75,6 +75,9 @@
 
 		completion_reward = {
 			set_country_flag = TU_RHO_cure_track
+			add_stability = 0.03
+			add_manpower = 10000
+			add_tech_bonus = { name = TU_RHO_cure_track bonus = 0.75 uses = 1 category = tu_oripathy_tech }
 			add_stability = 0.03
 			add_manpower = 10000
 			add_tech_bonus = { name = TU_RHO_cure_track bonus = 0.75 uses = 1 category = tu_oripathy_tech }
@@ -107,33 +110,13 @@
 	}
 
 	focus = {
-		id = TU_RHO_cure_prototype
-		icon = GFX_goal_generic_consumer_goods
-		cost = 10
-		x = 0
-		y = 0
-
-		prerequisite = { focus = TU_RHO_cure_track }
-
-		completion_reward = {
-			add_stability = 0.03
-			add_manpower = 10000
-			add_tech_bonus = { name = TU_RHO_cure_prototype bonus = 0.75 uses = 1 category = tu_oripathy_tech }
-		}
-
-		ai_will_do = {
-			base = 1
-		}
-	}
-
-	focus = {
 		id = TU_RHO_cure_trial
+		prerequisite = { focus = TU_RHO_cure_track }
 		icon = GFX_goal_generic_positive_trade_relations
 		cost = 10
 		x = 0
 		y = 0
 
-		prerequisite = { focus = TU_RHO_cure_prototype }
 
 		completion_reward = {
 			add_stability = 0.03
@@ -491,7 +474,7 @@
 	focus = {
 		id = TU_RHO_camp_build
 		icon = GFX_goal_generic_construction
-		cost = 10
+		cost = 15
 		x = 0
 		y = 0
 
@@ -499,6 +482,9 @@
 
 		completion_reward = {
 			TU_build_infrastructure = yes
+			add_stability = 0.03
+			add_manpower = 10000
+			add_tech_bonus = { name = TU_RHO_camp_build bonus = 0.75 uses = 1 category = tu_oripathy_tech }
 			add_stability = 0.03
 			add_manpower = 10000
 			add_tech_bonus = { name = TU_RHO_camp_build bonus = 0.75 uses = 1 category = tu_oripathy_tech }
@@ -510,33 +496,13 @@
 	}
 
 	focus = {
-		id = TU_RHO_camp_charter
-		icon = GFX_goal_generic_consumer_goods
-		cost = 10
-		x = 0
-		y = 0
-
-		prerequisite = { focus = TU_RHO_camp_build }
-
-		completion_reward = {
-			add_stability = 0.03
-			add_manpower = 10000
-			add_tech_bonus = { name = TU_RHO_camp_charter bonus = 0.75 uses = 1 category = tu_oripathy_tech }
-		}
-
-		ai_will_do = {
-			base = 1
-		}
-	}
-
-	focus = {
 		id = TU_RHO_camp_autonomy
+		prerequisite = { focus = TU_RHO_camp_build }
 		icon = GFX_goal_generic_national_unity
 		cost = 10
 		x = 0
 		y = 0
 
-		prerequisite = { focus = TU_RHO_camp_charter }
 		mutually_exclusive = { focus = TU_RHO_camp_guard }
 
 		completion_reward = {
@@ -551,12 +517,12 @@
 
 	focus = {
 		id = TU_RHO_camp_guard
+		prerequisite = { focus = TU_RHO_camp_build }
 		icon = GFX_goal_generic_fortify_city
 		cost = 10
 		x = 0
 		y = 0
 
-		prerequisite = { focus = TU_RHO_camp_charter }
 		mutually_exclusive = { focus = TU_RHO_camp_autonomy }
 
 		completion_reward = {
@@ -667,33 +633,16 @@
 
 	focus = {
 		id = TU_RHO_ark_council
+		prerequisite = { focus = TU_RHO_ark_speech }
 		icon = GFX_goal_generic_national_unity
-		cost = 5
-		x = 0
-		y = 0
-
-		prerequisite = { focus = TU_RHO_ark_final }
-
-		completion_reward = {
-			add_political_power = 35
-			add_stability = 0.02
-		}
-
-		ai_will_do = {
-			base = 1
-		}
-	}
-
-	focus = {
-		id = TU_RHO_ark_accord
-		icon = GFX_goal_generic_alliance
 		cost = 10
 		x = 0
 		y = 0
 
-		prerequisite = { focus = TU_RHO_ark_council }
 
 		completion_reward = {
+			add_political_power = 35
+			add_stability = 0.02
 			add_political_power = 60
 			add_stability = 0.03
 		}
@@ -705,34 +654,17 @@
 
 	focus = {
 		id = TU_RHO_terra_charter
+		prerequisite = { focus = TU_RHO_ark_council }
 		icon = GFX_goal_generic_major_alliance
-		cost = 15
+		cost = 20
 		x = 0
 		y = 0
 
-		prerequisite = { focus = TU_RHO_ark_accord }
 
 		completion_reward = {
 			country_event = { id = tu_rho_ev.2 }
 			add_political_power = 100
 			add_stability = 0.05
-		}
-
-		ai_will_do = {
-			base = 1
-		}
-	}
-
-	focus = {
-		id = TU_RHO_ark_envoy
-		icon = GFX_goal_generic_improve_relations
-		cost = 10
-		x = 0
-		y = 0
-
-		prerequisite = { focus = TU_RHO_terra_charter }
-
-		completion_reward = {
 			add_political_power = 60
 			add_stability = 0.03
 		}
@@ -744,12 +676,12 @@
 
 	focus = {
 		id = TU_RHO_ark_eternal
+		prerequisite = { focus = TU_RHO_terra_charter }
 		icon = GFX_goal_generic_positive_trade_relations
 		cost = 15
 		x = 0
 		y = 0
 
-		prerequisite = { focus = TU_RHO_ark_envoy }
 
 		completion_reward = {
 			every_country = { news_event = { id = tu_rho_ev.11 hours = 6 } }
@@ -843,12 +775,12 @@
 
 	focus = {
 		id = TU_RHO_ark_guard_pick
+		prerequisite = { focus = TU_RHO_ark_mission }
 		icon = GFX_goal_generic_special_forces
 		cost = 5
 		x = 0
 		y = 0
 
-		prerequisite = { focus = TU_RHO_ark_charter }
 
 		completion_reward = {
 			add_manpower = 5000
@@ -882,7 +814,7 @@
 	focus = {
 		id = TU_RHO_ark_guard_post
 		icon = GFX_goal_generic_army_doctrines
-		cost = 10
+		cost = 18
 		x = 0
 		y = 0
 
@@ -891,23 +823,6 @@
 		completion_reward = {
 			add_manpower = 10000
 			army_experience = 25
-		}
-
-		ai_will_do = {
-			base = 1
-		}
-	}
-
-	focus = {
-		id = TU_RHO_ark_guard_oath
-		icon = GFX_goal_generic_national_unity
-		cost = 15
-		x = 0
-		y = 0
-
-		prerequisite = { focus = TU_RHO_ark_guard_post }
-
-		completion_reward = {
 			add_manpower = 20000
 			army_experience = 40
 		}
@@ -919,12 +834,12 @@
 
 	focus = {
 		id = TU_RHO_ark_school
+		prerequisite = { focus = TU_RHO_ark_relief_office }
 		icon = GFX_goal_generic_construct_civilian
 		cost = 5
 		x = 0
 		y = 0
 
-		prerequisite = { focus = TU_RHO_ark_refugees }
 
 		completion_reward = {
 			TU_build_civ_factory = yes
@@ -941,7 +856,7 @@
 	focus = {
 		id = TU_RHO_ark_teachers
 		icon = GFX_goal_generic_scientific_exchange
-		cost = 10
+		cost = 15
 		x = 0
 		y = 0
 
@@ -949,24 +864,7 @@
 
 		completion_reward = {
 			add_tech_bonus = { name = TU_RHO_ark_teachers bonus = 0.75 uses = 1 category = electronics category = tu_originium_tech }
-		}
-
-		ai_will_do = {
-			base = 1
-		}
-	}
-
-	focus = {
-		id = TU_RHO_ark_academy
-		icon = GFX_goal_generic_propaganda
-		cost = 10
-		x = 0
-		y = 0
-
-		prerequisite = { focus = TU_RHO_ark_teachers }
-
-		completion_reward = {
-			add_doctrine_cost_reduction = { name = TU_RHO_ark_academy cost_reduction = 0.4 uses = 1 category = land_doctrine }
+			add_doctrine_cost_reduction = { name = TU_RHO_ark_teachers cost_reduction = 0.4 uses = 1 category = land_doctrine }
 			army_experience = 25
 		}
 
@@ -977,12 +875,12 @@
 
 	focus = {
 		id = TU_RHO_ark_scholars
+		prerequisite = { focus = TU_RHO_ark_teachers }
 		icon = GFX_goal_generic_scientific_exchange
 		cost = 15
 		x = 0
 		y = 0
 
-		prerequisite = { focus = TU_RHO_ark_academy }
 
 		completion_reward = {
 			add_tech_bonus = { name = TU_RHO_ark_scholars bonus = 1.0 uses = 1 category = electronics category = tu_originium_tech }
@@ -995,15 +893,16 @@
 
 	focus = {
 		id = TU_RHO_ark_convoy
+		prerequisite = { focus = TU_RHO_ark_council }
 		icon = GFX_goal_generic_trade
-		cost = 10
+		cost = 15
 		x = 0
 		y = 0
 
-		prerequisite = { focus = TU_RHO_ark_accord }
 
 		completion_reward = {
 			add_to_variable = { TU_lmd = 200 }
+			add_tech_bonus = { name = TU_RHO_ark_convoy bonus = 0.75 uses = 1 category = industry category = construction_tech }
 			add_tech_bonus = { name = TU_RHO_ark_convoy bonus = 0.75 uses = 1 category = industry category = construction_tech }
 		}
 
@@ -1013,31 +912,13 @@
 	}
 
 	focus = {
-		id = TU_RHO_ark_depot
-		icon = GFX_goal_generic_consumer_goods
-		cost = 10
-		x = 0
-		y = 0
-
-		prerequisite = { focus = TU_RHO_ark_convoy }
-
-		completion_reward = {
-			add_tech_bonus = { name = TU_RHO_ark_depot bonus = 0.75 uses = 1 category = industry category = construction_tech }
-		}
-
-		ai_will_do = {
-			base = 1
-		}
-	}
-
-	focus = {
 		id = TU_RHO_ark_mandate
+		prerequisite = { focus = TU_RHO_ark_convoy }
 		icon = GFX_goal_generic_national_unity
 		cost = 15
 		x = 0
 		y = 0
 
-		prerequisite = { focus = TU_RHO_ark_depot }
 
 		completion_reward = {
 			add_political_power = 100
@@ -1054,7 +935,7 @@
 	focus = {
 		id = TU_RHO_broker_office
 		icon = GFX_goal_generic_trade
-		cost = 5
+		cost = 10
 		x = 0
 		y = 0
 
@@ -1064,24 +945,7 @@
 			add_to_variable = { TU_lmd = 300 }
 			add_political_power = 35
 			add_tech_bonus = { name = TU_RHO_broker_office bonus = 0.5 uses = 1 category = industry }
-		}
-
-		ai_will_do = {
-			base = 1
-		}
-	}
-
-	focus = {
-		id = TU_RHO_broker_network
-		icon = GFX_goal_generic_intelligence_exchange
-		cost = 10
-		x = 0
-		y = 0
-
-		prerequisite = { focus = TU_RHO_broker_office }
-
-		completion_reward = {
-			add_tech_bonus = { name = TU_RHO_broker_network bonus = 0.75 uses = 1 category = radar_tech category = electronics }
+			add_tech_bonus = { name = TU_RHO_broker_office bonus = 0.75 uses = 1 category = radar_tech category = electronics }
 			add_stability = 0.03
 		}
 
@@ -1092,12 +956,12 @@
 
 	focus = {
 		id = TU_RHO_broker_fees
+		prerequisite = { focus = TU_RHO_broker_office }
 		icon = GFX_goal_generic_positive_trade_relations
 		cost = 10
 		x = 0
 		y = 0
 
-		prerequisite = { focus = TU_RHO_broker_network }
 		mutually_exclusive = { focus = TU_RHO_broker_discount }
 
 		completion_reward = {
@@ -1113,12 +977,12 @@
 
 	focus = {
 		id = TU_RHO_broker_discount
+		prerequisite = { focus = TU_RHO_broker_office }
 		icon = GFX_goal_generic_military_deal
 		cost = 10
 		x = 0
 		y = 0
 
-		prerequisite = { focus = TU_RHO_broker_network }
 		mutually_exclusive = { focus = TU_RHO_broker_fees }
 
 		completion_reward = {
@@ -1232,7 +1096,7 @@
 	focus = {
 		id = TU_RHO_contract_pick
 		icon = GFX_goal_generic_special_forces
-		cost = 5
+		cost = 10
 		x = 0
 		y = 0
 
@@ -1241,24 +1105,7 @@
 		completion_reward = {
 			add_doctrine_cost_reduction = { name = TU_RHO_contract_pick cost_reduction = 0.25 uses = 1 category = land_doctrine }
 			army_experience = 15
-		}
-
-		ai_will_do = {
-			base = 1
-		}
-	}
-
-	focus = {
-		id = TU_RHO_contract_train
-		icon = GFX_goal_generic_small_arms
-		cost = 10
-		x = 0
-		y = 0
-
-		prerequisite = { focus = TU_RHO_contract_pick }
-
-		completion_reward = {
-			add_doctrine_cost_reduction = { name = TU_RHO_contract_train cost_reduction = 0.4 uses = 1 category = land_doctrine }
+			add_doctrine_cost_reduction = { name = TU_RHO_contract_pick cost_reduction = 0.4 uses = 1 category = land_doctrine }
 			army_experience = 25
 		}
 
@@ -1269,34 +1116,17 @@
 
 	focus = {
 		id = TU_RHO_contract_escort
+		prerequisite = { focus = TU_RHO_contract_pick }
 		icon = GFX_goal_generic_defence
-		cost = 10
+		cost = 15
 		x = 0
 		y = 0
 
-		prerequisite = { focus = TU_RHO_contract_train }
 
 		completion_reward = {
 			add_political_power = 60
 			add_stability = 0.03
-		}
-
-		ai_will_do = {
-			base = 1
-		}
-	}
-
-	focus = {
-		id = TU_RHO_contract_elite
-		icon = GFX_goal_generic_army_tanks
-		cost = 10
-		x = 0
-		y = 0
-
-		prerequisite = { focus = TU_RHO_contract_escort }
-
-		completion_reward = {
-			add_doctrine_cost_reduction = { name = TU_RHO_contract_elite cost_reduction = 0.4 uses = 1 category = land_doctrine }
+			add_doctrine_cost_reduction = { name = TU_RHO_contract_escort cost_reduction = 0.4 uses = 1 category = land_doctrine }
 			army_experience = 25
 		}
 
@@ -1307,12 +1137,12 @@
 
 	focus = {
 		id = TU_RHO_contract_legion
+		prerequisite = { focus = TU_RHO_contract_escort }
 		icon = GFX_goal_generic_national_unity
 		cost = 15
 		x = 0
 		y = 0
 
-		prerequisite = { focus = TU_RHO_contract_elite }
 
 		completion_reward = {
 			set_country_flag = TU_RHO_contract_legion
@@ -1327,12 +1157,12 @@
 
 	focus = {
 		id = TU_RHO_market_stall
+		prerequisite = { focus = TU_RHO_arms_dealing }
 		icon = GFX_goal_generic_consumer_goods
 		cost = 5
 		x = 0
 		y = 0
 
-		prerequisite = { focus = TU_RHO_neutral_pact }
 
 		completion_reward = {
 			add_manpower = 5000
@@ -1541,7 +1371,7 @@
 	focus = {
 		id = TU_RHO_accord_writ
 		icon = GFX_goal_generic_neutrality_focus
-		cost = 5
+		cost = 10
 		x = 0
 		y = 0
 
@@ -1550,23 +1380,6 @@
 		completion_reward = {
 			add_political_power = 35
 			add_stability = 0.02
-		}
-
-		ai_will_do = {
-			base = 1
-		}
-	}
-
-	focus = {
-		id = TU_RHO_accord_seal
-		icon = GFX_goal_generic_military_deal
-		cost = 10
-		x = 0
-		y = 0
-
-		prerequisite = { focus = TU_RHO_accord_writ }
-
-		completion_reward = {
 			add_political_power = 60
 			add_stability = 0.03
 		}
@@ -1578,12 +1391,12 @@
 
 	focus = {
 		id = TU_RHO_accord_final
+		prerequisite = { focus = TU_RHO_accord_writ }
 		icon = GFX_goal_generic_trade
 		cost = 15
 		x = 0
 		y = 0
 
-		prerequisite = { focus = TU_RHO_accord_seal }
 
 		completion_reward = {
 			add_to_variable = { TU_lmd = 800 }
@@ -1601,34 +1414,17 @@
 
 	focus = {
 		id = TU_RHO_doctrine_draft
+		prerequisite = { focus = TU_RHO_kazdel_prep }
 		icon = GFX_goal_generic_army_doctrines
-		cost = 5
-		x = 0
-		y = 0
-
-		prerequisite = { focus = TU_RHO_tactical_doctrine }
-
-		completion_reward = {
-			add_doctrine_cost_reduction = { name = TU_RHO_doctrine_draft cost_reduction = 0.25 uses = 1 category = land_doctrine }
-			army_experience = 15
-		}
-
-		ai_will_do = {
-			base = 1
-		}
-	}
-
-	focus = {
-		id = TU_RHO_doctrine_drill
-		icon = GFX_goal_generic_army_artillery
 		cost = 10
 		x = 0
 		y = 0
 
-		prerequisite = { focus = TU_RHO_doctrine_draft }
 
 		completion_reward = {
-			add_doctrine_cost_reduction = { name = TU_RHO_doctrine_drill cost_reduction = 0.4 uses = 1 category = land_doctrine }
+			add_doctrine_cost_reduction = { name = TU_RHO_doctrine_draft cost_reduction = 0.25 uses = 1 category = land_doctrine }
+			army_experience = 15
+			add_doctrine_cost_reduction = { name = TU_RHO_doctrine_draft cost_reduction = 0.4 uses = 1 category = land_doctrine }
 			army_experience = 25
 		}
 
@@ -1639,12 +1435,12 @@
 
 	focus = {
 		id = TU_RHO_doctrine_strike
+		prerequisite = { focus = TU_RHO_doctrine_draft }
 		icon = GFX_goal_generic_army_tanks
 		cost = 10
 		x = 0
 		y = 0
 
-		prerequisite = { focus = TU_RHO_doctrine_drill }
 		mutually_exclusive = { focus = TU_RHO_doctrine_siege }
 
 		completion_reward = {
@@ -1660,12 +1456,12 @@
 
 	focus = {
 		id = TU_RHO_doctrine_siege
+		prerequisite = { focus = TU_RHO_doctrine_draft }
 		icon = GFX_goal_generic_fortify_city
 		cost = 10
 		x = 0
 		y = 0
 
-		prerequisite = { focus = TU_RHO_doctrine_drill }
 		mutually_exclusive = { focus = TU_RHO_doctrine_strike }
 
 		completion_reward = {
@@ -1681,7 +1477,7 @@
 	focus = {
 		id = TU_RHO_doctrine_codex
 		icon = GFX_goal_generic_army_motorized
-		cost = 15
+		cost = 20
 		x = 0
 		y = 0
 
@@ -1691,24 +1487,7 @@
 			add_ideas = TU_RHO_doctor_doctrine
 			add_political_power = 100
 			add_stability = 0.05
-		}
-
-		ai_will_do = {
-			base = 1
-		}
-	}
-
-	focus = {
-		id = TU_RHO_doctrine_archive
-		icon = GFX_goal_generic_scientific_exchange
-		cost = 10
-		x = 0
-		y = 0
-
-		prerequisite = { focus = TU_RHO_doctrine_codex }
-
-		completion_reward = {
-			add_tech_bonus = { name = TU_RHO_doctrine_archive bonus = 0.75 uses = 1 category = electronics category = tu_originium_tech }
+			add_tech_bonus = { name = TU_RHO_doctrine_codex bonus = 0.75 uses = 1 category = electronics category = tu_originium_tech }
 		}
 
 		ai_will_do = {
@@ -1953,7 +1732,7 @@
 	focus = {
 		id = TU_RHO_babel_library
 		icon = GFX_goal_generic_propaganda
-		cost = 10
+		cost = 18
 		x = 0
 		y = 0
 
@@ -1961,24 +1740,7 @@
 
 		completion_reward = {
 			add_tech_bonus = { name = TU_RHO_babel_library bonus = 0.75 uses = 1 category = electronics category = tu_originium_tech }
-		}
-
-		ai_will_do = {
-			base = 1
-		}
-	}
-
-	focus = {
-		id = TU_RHO_babel_council
-		icon = GFX_goal_generic_national_unity
-		cost = 15
-		x = 0
-		y = 0
-
-		prerequisite = { focus = TU_RHO_babel_library }
-
-		completion_reward = {
-			add_tech_bonus = { name = TU_RHO_babel_council bonus = 1.0 uses = 1 category = electronics category = tu_originium_tech }
+			add_tech_bonus = { name = TU_RHO_babel_library bonus = 1.0 uses = 1 category = electronics category = tu_originium_tech }
 		}
 
 		ai_will_do = {

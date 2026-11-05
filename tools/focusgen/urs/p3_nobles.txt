@@ -7,9 +7,9 @@
 		icon = GFX_goal_generic_consumer_goods
 		x = 100
 		y = 2
-		cost = 10
+		cost = 20
 
-		search_filters = { FOCUS_FILTER_BALANCE_OF_POWER }
+		search_filters = { FOCUS_FILTER_POLITICAL }
 
 		ai_will_do = {
 			base = 1
@@ -17,6 +17,12 @@
 
 		completion_reward = {
 			country_event = { id = tu_urs_ev.3 }
+			add_political_power = 60
+			add_stability = 0.03
+			add_tech_bonus = { name = TU_URS_noble_compromise bonus = 0.75 uses = 1 category = motorized_equipment }
+			add_doctrine_cost_reduction = { name = TU_URS_noble_compromise cost_reduction = 0.4 uses = 1 category = land_doctrine }
+			add_political_power = 60
+			add_stability = 0.03
 			add_political_power = 60
 			add_stability = 0.03
 		}
@@ -89,28 +95,8 @@
 	}
 
 	focus = {
-		id = TU_URS_noble_senate_summon
-		prerequisite = { focus = TU_URS_noble_compromise }
-		icon = GFX_goal_generic_national_unity
-		x = 92
-		y = 3
-		cost = 10
-
-		search_filters = { FOCUS_FILTER_POLITICAL }
-
-		ai_will_do = {
-			base = 1
-		}
-
-		completion_reward = {
-			add_political_power = 60
-			add_stability = 0.03
-		}
-	}
-
-	focus = {
 		id = TU_URS_noble_senate_law
-		prerequisite = { focus = TU_URS_noble_senate_summon }
+		prerequisite = { focus = TU_URS_noble_compromise }
 		icon = GFX_goal_generic_political_pressure
 		x = 92
 		y = 4
@@ -138,7 +124,7 @@
 		y = 5
 		cost = 10
 
-		search_filters = { FOCUS_FILTER_BALANCE_OF_POWER }
+		search_filters = { FOCUS_FILTER_POLITICAL }
 
 		ai_will_do = {
 			base = 1
@@ -157,7 +143,7 @@
 		icon = GFX_goal_generic_neutrality_focus
 		x = 94
 		y = 5
-		cost = 10
+		cost = 15
 
 		search_filters = { FOCUS_FILTER_POLITICAL }
 
@@ -169,24 +155,6 @@
 			add_ideas = TU_URS_p3_regency
 			add_political_power = 60
 			add_stability = 0.03
-		}
-	}
-
-	focus = {
-		id = TU_URS_noble_regent_council
-		prerequisite = { focus = TU_URS_noble_regency }
-		icon = GFX_goal_generic_improve_relations
-		x = 94
-		y = 6
-		cost = 10
-
-		search_filters = { FOCUS_FILTER_POLITICAL }
-
-		ai_will_do = {
-			base = 1
-		}
-
-		completion_reward = {
 			add_political_power = 60
 			add_stability = 0.03
 		}
@@ -198,7 +166,7 @@
 		icon = GFX_goal_generic_construction
 		x = 92
 		y = 6
-		cost = 10
+		cost = 20
 
 		search_filters = { FOCUS_FILTER_POLITICAL }
 
@@ -209,44 +177,8 @@
 		completion_reward = {
 			add_political_power = 60
 			add_stability = 0.03
-		}
-	}
-
-	focus = {
-		id = TU_URS_noble_senate_levy
-		prerequisite = { focus = TU_URS_noble_senate_chamber }
-		icon = GFX_goal_generic_allies_build_infantry
-		x = 92
-		y = 7
-		cost = 10
-
-		search_filters = { FOCUS_FILTER_MANPOWER }
-
-		ai_will_do = {
-			base = 1
-		}
-
-		completion_reward = {
 			add_manpower = 10000
 			army_experience = 25
-		}
-	}
-
-	focus = {
-		id = TU_URS_noble_senate_peace
-		prerequisite = { focus = TU_URS_noble_senate_levy }
-		icon = GFX_goal_generic_positive_trade_relations
-		x = 92
-		y = 8
-		cost = 10
-
-		search_filters = { FOCUS_FILTER_BALANCE_OF_POWER }
-
-		ai_will_do = {
-			base = 1
-		}
-
-		completion_reward = {
 			add_political_power = 60
 			add_stability = 0.03
 		}
@@ -282,7 +214,7 @@
 		y = 4
 		cost = 10
 
-		search_filters = { FOCUS_FILTER_BALANCE_OF_POWER }
+		search_filters = { FOCUS_FILTER_POLITICAL }
 
 		ai_will_do = {
 			base = 1
@@ -341,9 +273,9 @@
 		icon = GFX_goal_generic_major_alliance
 		x = 96
 		y = 7
-		cost = 10
+		cost = 15
 
-		search_filters = { FOCUS_FILTER_BALANCE_OF_POWER }
+		search_filters = { FOCUS_FILTER_POLITICAL }
 
 		ai_will_do = {
 			base = 1
@@ -356,24 +288,6 @@
 		completion_reward = {
 			add_political_power = 60
 			add_stability = 0.03
-		}
-	}
-
-	focus = {
-		id = TU_URS_noble_feudal_legacy
-		prerequisite = { focus = TU_URS_noble_decentral_union }
-		icon = GFX_goal_generic_army_doctrines
-		x = 96
-		y = 8
-		cost = 10
-
-		search_filters = { FOCUS_FILTER_ARMY_XP }
-
-		ai_will_do = {
-			base = 1
-		}
-
-		completion_reward = {
 			add_political_power = 60
 			add_stability = 0.03
 		}
@@ -450,7 +364,7 @@
 		icon = GFX_goal_generic_consumer_goods
 		x = 100
 		y = 8
-		cost = 10
+		cost = 20
 
 		search_filters = { FOCUS_FILTER_POLITICAL }
 
@@ -465,52 +379,16 @@
 		completion_reward = {
 			add_political_power = 60
 			add_tech_bonus = { name = TU_URS_noble_cartel_bank bonus = 0.75 uses = 1 category = industry }
-		}
-	}
-
-	focus = {
-		id = TU_URS_noble_cartel_exports
-		prerequisite = { focus = TU_URS_noble_cartel_bank }
-		icon = GFX_goal_generic_production2
-		x = 100
-		y = 9
-		cost = 10
-
-		search_filters = { FOCUS_FILTER_INDUSTRY }
-
-		ai_will_do = {
-			base = 1
-		}
-
-		completion_reward = {
 			TU_build_mil_factory = yes
 			add_political_power = 60
-			add_tech_bonus = { name = TU_URS_noble_cartel_exports bonus = 0.75 uses = 1 category = industry }
-		}
-	}
-
-	focus = {
-		id = TU_URS_noble_industrial_union
-		prerequisite = { focus = TU_URS_noble_cartel_exports }
-		icon = GFX_goal_generic_construction2
-		x = 100
-		y = 10
-		cost = 10
-
-		search_filters = { FOCUS_FILTER_BALANCE_OF_POWER }
-
-		ai_will_do = {
-			base = 1
-		}
-
-		completion_reward = {
-			add_tech_bonus = { name = TU_URS_noble_industrial_union bonus = 0.75 uses = 1 category = industry category = construction_tech }
+			add_tech_bonus = { name = TU_URS_noble_cartel_bank bonus = 0.75 uses = 1 category = industry }
+			add_tech_bonus = { name = TU_URS_noble_cartel_bank bonus = 0.75 uses = 1 category = industry category = construction_tech }
 		}
 	}
 
 	focus = {
 		id = TU_URS_noble_cartel_peak
-		prerequisite = { focus = TU_URS_noble_industrial_union }
+		prerequisite = { focus = TU_URS_noble_cartel_bank }
 		icon = GFX_goal_generic_national_unity
 		x = 100
 		y = 11
@@ -556,7 +434,7 @@
 		icon = GFX_goal_generic_political_pressure
 		x = 100
 		y = 14
-		cost = 10
+		cost = 15
 
 		search_filters = { FOCUS_FILTER_POLITICAL }
 
@@ -571,32 +449,14 @@
 		completion_reward = {
 			add_political_power = 60
 			add_tech_bonus = { name = TU_URS_noble_monopoly_law bonus = 0.75 uses = 1 category = industry }
-		}
-	}
-
-	focus = {
-		id = TU_URS_noble_cartel_empire
-		prerequisite = { focus = TU_URS_noble_monopoly_law }
-		icon = GFX_goal_generic_construct_infrastructure
-		x = 100
-		y = 15
-		cost = 10
-
-		search_filters = { FOCUS_FILTER_BALANCE_OF_POWER }
-
-		ai_will_do = {
-			base = 1
-		}
-
-		completion_reward = {
 			add_political_power = 60
-			add_tech_bonus = { name = TU_URS_noble_cartel_empire bonus = 0.75 uses = 1 category = industry }
+			add_tech_bonus = { name = TU_URS_noble_monopoly_law bonus = 0.75 uses = 1 category = industry }
 		}
 	}
 
 	focus = {
 		id = TU_URS_noble_cartel_legacy
-		prerequisite = { focus = TU_URS_noble_cartel_empire }
+		prerequisite = { focus = TU_URS_noble_monopoly_law }
 		icon = GFX_goal_generic_construction
 		x = 100
 		y = 16
@@ -615,28 +475,8 @@
 	}
 
 	focus = {
-		id = TU_URS_noble_private_armies
-		prerequisite = { focus = TU_URS_noble_compromise }
-		icon = GFX_goal_generic_cavalry
-		x = 104
-		y = 3
-		cost = 10
-
-		search_filters = { FOCUS_FILTER_ARMY_XP }
-
-		ai_will_do = {
-			base = 1
-		}
-
-		completion_reward = {
-			add_political_power = 60
-			add_stability = 0.03
-		}
-	}
-
-	focus = {
 		id = TU_URS_noble_estate_militia
-		prerequisite = { focus = TU_URS_noble_private_armies }
+		prerequisite = { focus = TU_URS_noble_compromise }
 		icon = GFX_goal_generic_allies_build_infantry
 		x = 104
 		y = 4
@@ -705,7 +545,7 @@
 		icon = GFX_goal_generic_army_doctrines
 		x = 104
 		y = 6
-		cost = 10
+		cost = 20
 
 		search_filters = { FOCUS_FILTER_MANPOWER }
 
@@ -716,72 +556,16 @@
 		completion_reward = {
 			add_manpower = 10000
 			army_experience = 25
-		}
-	}
-
-	focus = {
-		id = TU_URS_noble_armoured_retinue
-		prerequisite = { focus = TU_URS_noble_private_regiment }
-		icon = GFX_goal_generic_army_tanks
-		x = 104
-		y = 7
-		cost = 10
-
-		search_filters = { FOCUS_FILTER_ARMY_XP }
-
-		ai_will_do = {
-			base = 1
-		}
-
-		completion_reward = {
-			add_tech_bonus = { name = TU_URS_noble_armoured_retinue bonus = 0.75 uses = 1 category = armor }
-			add_doctrine_cost_reduction = { name = TU_URS_noble_armoured_retinue cost_reduction = 0.4 uses = 1 category = land_doctrine }
-		}
-	}
-
-	focus = {
-		id = TU_URS_noble_estate_defence
-		prerequisite = { focus = TU_URS_noble_armoured_retinue }
-		icon = GFX_goal_generic_fortify_city
-		x = 104
-		y = 8
-		cost = 10
-
-		search_filters = { FOCUS_FILTER_STABILITY }
-
-		ai_will_do = {
-			base = 1
-		}
-
-		completion_reward = {
-			add_tech_bonus = { name = TU_URS_noble_estate_defence bonus = 0.75 uses = 1 category = construction_tech }
+			add_tech_bonus = { name = TU_URS_noble_private_regiment bonus = 0.75 uses = 1 category = armor }
+			add_doctrine_cost_reduction = { name = TU_URS_noble_private_regiment cost_reduction = 0.4 uses = 1 category = land_doctrine }
+			add_tech_bonus = { name = TU_URS_noble_private_regiment bonus = 0.75 uses = 1 category = construction_tech }
 			army_experience = 25
 		}
 	}
 
 	focus = {
-		id = TU_URS_noble_mobile_estates
-		prerequisite = { focus = TU_URS_noble_compromise }
-		icon = GFX_goal_generic_construct_civilian
-		x = 108
-		y = 3
-		cost = 10
-
-		search_filters = { FOCUS_FILTER_POLITICAL }
-
-		ai_will_do = {
-			base = 1
-		}
-
-		completion_reward = {
-			add_tech_bonus = { name = TU_URS_noble_mobile_estates bonus = 0.75 uses = 1 category = motorized_equipment }
-			add_doctrine_cost_reduction = { name = TU_URS_noble_mobile_estates cost_reduction = 0.4 uses = 1 category = land_doctrine }
-		}
-	}
-
-	focus = {
 		id = TU_URS_noble_mobile_survey
-		prerequisite = { focus = TU_URS_noble_mobile_estates }
+		prerequisite = { focus = TU_URS_noble_compromise }
 		icon = GFX_goal_generic_radar
 		x = 108
 		y = 4

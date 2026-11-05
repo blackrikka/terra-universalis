@@ -1,6 +1,6 @@
 focus_tree = {
 	id = TU_URS_focus
-	continuous_focus_position = { x = 50 y = 6110 }
+	continuous_focus_position = { x = 50 y = 3770 }
 
 	country = {
 		factor = 0
@@ -368,7 +368,7 @@ focus_tree = {
 		icon = GFX_goal_generic_defence
 		x = -16
 		y = 4
-		cost = 10
+		cost = 15
 
 		search_filters = { FOCUS_FILTER_ARMY_XP }
 
@@ -383,6 +383,7 @@ focus_tree = {
 		completion_reward = {
 			add_tech_bonus = { name = TU_URS_northern_garrison bonus = 0.75 uses = 1 category = construction_tech }
 			army_experience = 25
+			TU_build_railway = yes
 		}
 	}
 
@@ -402,25 +403,6 @@ focus_tree = {
 
 		completion_reward = {
 			add_tech_bonus = { name = TU_URS_originium_export bonus = 0.75 uses = 1 category = electronics category = tu_originium_tech }
-		}
-	}
-
-	focus = {
-		id = TU_URS_frost_road2
-		prerequisite = { focus = TU_URS_northern_garrison }
-		icon = GFX_goal_generic_construct_infrastructure
-		x = -16
-		y = 5
-		cost = 10
-
-		search_filters = { FOCUS_FILTER_INDUSTRY }
-
-		ai_will_do = {
-			base = 1
-		}
-
-		completion_reward = {
-			TU_build_railway = yes
 		}
 	}
 
@@ -603,7 +585,7 @@ focus_tree = {
 		icon = GFX_goal_generic_construction2
 		x = -11
 		y = 6
-		cost = 15
+		cost = 20
 
 		search_filters = { FOCUS_FILTER_INDUSTRY }
 
@@ -620,6 +602,9 @@ focus_tree = {
 			TU_build_civ_factory = yes
 			add_tech_bonus = { name = TU_URS_mobile_core bonus = 1.0 uses = 1 category = construction_tech }
 			add_tech_bonus = { name = TU_URS_mobile_core bonus = 1.0 uses = 1 category = motorized_equipment }
+			TU_build_infrastructure = yes
+			add_tech_bonus = { name = TU_URS_mobile_core bonus = 1.0 uses = 1 category = construction_tech }
+			add_tech_bonus = { name = TU_URS_mobile_core bonus = 1.0 uses = 1 category = motorized_equipment }
 		}
 	}
 
@@ -629,7 +614,7 @@ focus_tree = {
 		icon = GFX_goal_generic_dangerous_deal
 		x = -7
 		y = 6
-		cost = 10
+		cost = 18
 
 		search_filters = { FOCUS_FILTER_POLITICAL }
 
@@ -640,48 +625,8 @@ focus_tree = {
 		completion_reward = {
 			add_ideas = TU_URS_e1_originium_monopoly
 			add_tech_bonus = { name = TU_URS_originium_secure bonus = 0.75 uses = 1 category = electronics category = tu_originium_tech }
-		}
-	}
-
-	focus = {
-		id = TU_URS_mobile_final
-		prerequisite = { focus = TU_URS_mobile_core }
-		icon = GFX_goal_generic_construction
-		x = -11
-		y = 7
-		cost = 15
-
-		search_filters = { FOCUS_FILTER_INDUSTRY }
-
-		ai_will_do = {
-			base = 1
-		}
-
-		completion_reward = {
-			TU_build_infrastructure = yes
-			add_tech_bonus = { name = TU_URS_mobile_final bonus = 1.0 uses = 1 category = construction_tech }
-			add_tech_bonus = { name = TU_URS_mobile_final bonus = 1.0 uses = 1 category = motorized_equipment }
-		}
-	}
-
-	#### END OF THE NORTHERN INDUSTRY LINE ####
-	focus = {
-		id = TU_URS_final_grid
-		prerequisite = { focus = TU_URS_mobile_final focus = TU_URS_originium_secure }
-		icon = GFX_goal_generic_construct_civ_factory
-		x = -11
-		y = 8
-		cost = 15
-
-		search_filters = { FOCUS_FILTER_INDUSTRY }
-
-		ai_will_do = {
-			base = 1
-		}
-
-		completion_reward = {
 			TU_build_civ_factory = yes
-			add_tech_bonus = { name = TU_URS_final_grid bonus = 1.0 uses = 1 category = industry category = construction_tech }
+			add_tech_bonus = { name = TU_URS_originium_secure bonus = 1.0 uses = 1 category = industry category = construction_tech }
 		}
 	}
 
@@ -691,7 +636,7 @@ focus_tree = {
 		prerequisite = { focus = TU_URS_army_root }
 		mutually_exclusive = { focus = TU_URS_army_elite_draft }
 		icon = GFX_goal_generic_allies_build_infantry
-		x = 2
+		x = 1
 		y = 1
 		cost = 10
 
@@ -717,9 +662,9 @@ focus_tree = {
 		prerequisite = { focus = TU_URS_army_root }
 		mutually_exclusive = { focus = TU_URS_army_mass_draft }
 		icon = GFX_goal_generic_special_forces
-		x = 4
+		x = 3
 		y = 1
-		cost = 10
+		cost = 18
 
 		search_filters = { FOCUS_FILTER_ARMY_XP }
 
@@ -734,6 +679,10 @@ focus_tree = {
 		completion_reward = {
 			add_doctrine_cost_reduction = { name = TU_URS_army_elite_draft cost_reduction = 0.4 uses = 1 category = land_doctrine }
 			army_experience = 25
+			add_manpower = 10000
+			army_experience = 25
+			add_tech_bonus = { name = TU_URS_army_elite_draft bonus = 0.75 uses = 1 category = armor }
+			add_doctrine_cost_reduction = { name = TU_URS_army_elite_draft cost_reduction = 0.4 uses = 1 category = land_doctrine }
 		}
 	}
 
@@ -763,9 +712,9 @@ focus_tree = {
 		id = TU_URS_army_arts_trials
 		prerequisite = { focus = TU_URS_army_root }
 		icon = GFX_goal_generic_secret_weapon
-		x = 0
+		x = -1
 		y = 1
-		cost = 10
+		cost = 20
 
 		search_filters = { FOCUS_FILTER_ARMY_XP }
 
@@ -776,6 +725,10 @@ focus_tree = {
 		completion_reward = {
 			add_ideas = TU_URS_e2_arts_units
 			add_tech_bonus = { name = TU_URS_army_arts_trials bonus = 0.75 uses = 1 category = electronics category = tu_originium_tech }
+			army_experience = 25
+			add_war_support = 0.03
+			add_doctrine_cost_reduction = { name = TU_URS_army_arts_trials cost_reduction = 0.4 uses = 1 category = land_doctrine }
+			add_tech_bonus = { name = TU_URS_army_arts_trials bonus = 0.75 uses = 1 category = electronics category = tu_originium_tech }
 		}
 	}
 
@@ -783,9 +736,9 @@ focus_tree = {
 		id = TU_URS_army_conscript_camps
 		prerequisite = { focus = TU_URS_army_mass_draft focus = TU_URS_army_elite_draft }
 		icon = GFX_goal_generic_allies_build_infantry
-		x = 6
+		x = 5
 		y = 2
-		cost = 10
+		cost = 15
 
 		search_filters = { FOCUS_FILTER_MANPOWER }
 
@@ -796,24 +749,6 @@ focus_tree = {
 		completion_reward = {
 			add_manpower = 10000
 			army_experience = 25
-		}
-	}
-
-	focus = {
-		id = TU_URS_army_guard_selection
-		prerequisite = { focus = TU_URS_army_elite_draft }
-		icon = GFX_goal_generic_special_forces
-		x = 4
-		y = 2
-		cost = 10
-
-		search_filters = { FOCUS_FILTER_ARMY_XP }
-
-		ai_will_do = {
-			base = 1
-		}
-
-		completion_reward = {
 			add_manpower = 10000
 			army_experience = 25
 		}
@@ -841,32 +776,10 @@ focus_tree = {
 	}
 
 	focus = {
-		id = TU_URS_army_arts_assault
-		prerequisite = { focus = TU_URS_army_arts_trials }
-		icon = GFX_goal_generic_secret_weapon
-		x = 0
-		y = 2
-		cost = 10
-
-		search_filters = { FOCUS_FILTER_ARMY_XP }
-
-		ai_will_do = {
-			base = 1
-		}
-
-		completion_reward = {
-			army_experience = 25
-			add_war_support = 0.03
-			add_doctrine_cost_reduction = { name = TU_URS_army_arts_assault cost_reduction = 0.4 uses = 1 category = land_doctrine }
-		}
-	}
-
-	#### ARTILLERY (x 24) ####
-	focus = {
 		id = TU_URS_army_artillery_school
 		prerequisite = { focus = TU_URS_army_root }
 		icon = GFX_goal_generic_army_artillery
-		x = 8
+		x = 7
 		y = 1
 		cost = 10
 
@@ -882,48 +795,6 @@ focus_tree = {
 		}
 	}
 
-	focus = {
-		id = TU_URS_army_conscript_levy
-		prerequisite = { focus = TU_URS_army_conscript_camps }
-		icon = GFX_goal_generic_allies_build_infantry
-		x = 6
-		y = 3
-		cost = 10
-
-		search_filters = { FOCUS_FILTER_MANPOWER }
-
-		ai_will_do = {
-			base = 1
-		}
-
-		completion_reward = {
-			add_manpower = 10000
-			army_experience = 25
-		}
-	}
-
-	#### ARMOUR (x 26) ####
-	focus = {
-		id = TU_URS_army_armour_school
-		prerequisite = { focus = TU_URS_army_guard_selection }
-		icon = GFX_goal_generic_army_tanks
-		x = 4
-		y = 3
-		cost = 10
-
-		search_filters = { FOCUS_FILTER_ARMY_XP }
-
-		ai_will_do = {
-			base = 1
-		}
-
-		completion_reward = {
-			add_tech_bonus = { name = TU_URS_army_armour_school bonus = 0.75 uses = 1 category = armor }
-			add_doctrine_cost_reduction = { name = TU_URS_army_armour_school cost_reduction = 0.4 uses = 1 category = land_doctrine }
-		}
-	}
-
-	#### FROZEN: ENTRENCH vs MOBILE (mutually exclusive) ####
 	focus = {
 		id = TU_URS_army_frost_entrench
 		prerequisite = { focus = TU_URS_army_winter_doctrine }
@@ -951,7 +822,7 @@ focus_tree = {
 		icon = GFX_goal_generic_army_motorized
 		x = -4
 		y = 3
-		cost = 10
+		cost = 15
 
 		search_filters = { FOCUS_FILTER_ARMY_XP }
 
@@ -962,25 +833,8 @@ focus_tree = {
 		completion_reward = {
 			add_tech_bonus = { name = TU_URS_army_frost_mobile bonus = 0.75 uses = 1 category = motorized_equipment }
 			add_doctrine_cost_reduction = { name = TU_URS_army_frost_mobile cost_reduction = 0.4 uses = 1 category = land_doctrine }
-		}
-	}
-
-	focus = {
-		id = TU_URS_army_arts_legion
-		prerequisite = { focus = TU_URS_army_arts_assault }
-		icon = GFX_goal_generic_secret_weapon
-		x = 0
-		y = 3
-		cost = 10
-
-		search_filters = { FOCUS_FILTER_ARMY_XP }
-
-		ai_will_do = {
-			base = 1
-		}
-
-		completion_reward = {
-			add_tech_bonus = { name = TU_URS_army_arts_legion bonus = 0.75 uses = 1 category = electronics category = tu_originium_tech }
+			add_tech_bonus = { name = TU_URS_army_frost_mobile bonus = 0.75 uses = 1 category = motorized_equipment }
+			add_doctrine_cost_reduction = { name = TU_URS_army_frost_mobile cost_reduction = 0.4 uses = 1 category = land_doctrine }
 		}
 	}
 
@@ -988,9 +842,9 @@ focus_tree = {
 		id = TU_URS_army_artillery_doctrine
 		prerequisite = { focus = TU_URS_army_artillery_school }
 		icon = GFX_goal_generic_army_artillery2
-		x = 8
+		x = 7
 		y = 2
-		cost = 10
+		cost = 20
 
 		search_filters = { FOCUS_FILTER_ARMY_XP }
 
@@ -1002,18 +856,24 @@ focus_tree = {
 			add_ideas = TU_URS_e2_artillery_doctrine
 			add_tech_bonus = { name = TU_URS_army_artillery_doctrine bonus = 0.75 uses = 1 category = artillery }
 			army_experience = 25
+			add_tech_bonus = { name = TU_URS_army_artillery_doctrine bonus = 0.75 uses = 1 category = artillery }
+			army_experience = 25
+			add_tech_bonus = { name = TU_URS_army_artillery_doctrine bonus = 1.0 uses = 1 category = artillery }
+			army_experience = 40
+			add_tech_bonus = { name = TU_URS_army_artillery_doctrine bonus = 1.0 uses = 1 category = infantry_weapons }
+			army_experience = 40
 		}
 	}
 
 	#### TOTAL MOBILISATION vs PROFESSIONAL ARMY (mutually exclusive) ####
 	focus = {
 		id = TU_URS_army_mass_mobilisation
-		prerequisite = { focus = TU_URS_army_conscript_levy }
+		prerequisite = { focus = TU_URS_army_conscript_camps }
 		mutually_exclusive = { focus = TU_URS_army_professional }
 		icon = GFX_goal_generic_national_unity
-		x = 6
-		y = 4
-		cost = 10
+		x = 5
+		y = 3
+		cost = 15
 
 		search_filters = { FOCUS_FILTER_WAR_SUPPORT }
 
@@ -1025,17 +885,19 @@ focus_tree = {
 			army_experience = 25
 			add_war_support = 0.03
 			add_doctrine_cost_reduction = { name = TU_URS_army_mass_mobilisation cost_reduction = 0.4 uses = 1 category = land_doctrine }
+			add_manpower = 10000
+			army_experience = 25
 		}
 	}
 
 	focus = {
 		id = TU_URS_army_professional
-		prerequisite = { focus = TU_URS_army_armour_school }
+		prerequisite = { focus = TU_URS_army_elite_draft }
 		mutually_exclusive = { focus = TU_URS_army_mass_mobilisation }
 		icon = GFX_goal_generic_army_doctrines
-		x = 4
-		y = 4
-		cost = 10
+		x = 3
+		y = 2
+		cost = 18
 
 		search_filters = { FOCUS_FILTER_ARMY_XP }
 
@@ -1046,136 +908,17 @@ focus_tree = {
 		completion_reward = {
 			add_manpower = 10000
 			army_experience = 25
-		}
-	}
-
-	focus = {
-		id = TU_URS_army_artillery_barrage
-		prerequisite = { focus = TU_URS_army_artillery_doctrine }
-		icon = GFX_goal_generic_army_artillery
-		x = 8
-		y = 3
-		cost = 10
-
-		search_filters = { FOCUS_FILTER_ARMY_XP }
-
-		ai_will_do = {
-			base = 1
-		}
-
-		completion_reward = {
-			add_tech_bonus = { name = TU_URS_army_artillery_barrage bonus = 0.75 uses = 1 category = artillery }
-			army_experience = 25
-		}
-	}
-
-	focus = {
-		id = TU_URS_army_frost_raid
-		prerequisite = { focus = TU_URS_army_frost_mobile }
-		icon = GFX_goal_generic_army_motorized
-		x = -4
-		y = 4
-		cost = 10
-
-		search_filters = { FOCUS_FILTER_ARMY_XP }
-
-		ai_will_do = {
-			base = 1
-		}
-
-		completion_reward = {
-			add_tech_bonus = { name = TU_URS_army_frost_raid bonus = 0.75 uses = 1 category = motorized_equipment }
-			add_doctrine_cost_reduction = { name = TU_URS_army_frost_raid cost_reduction = 0.4 uses = 1 category = land_doctrine }
-		}
-	}
-
-	focus = {
-		id = TU_URS_army_armour_division
-		prerequisite = { focus = TU_URS_army_professional }
-		icon = GFX_goal_generic_build_tank
-		x = 4
-		y = 5
-		cost = 15
-
-		search_filters = { FOCUS_FILTER_ARMY_XP }
-
-		ai_will_do = {
-			base = 1
-		}
-
-		completion_reward = {
-			add_tech_bonus = { name = TU_URS_army_armour_division bonus = 1.0 uses = 1 category = armor }
-			add_doctrine_cost_reduction = { name = TU_URS_army_armour_division cost_reduction = 0.5 uses = 1 category = land_doctrine }
-		}
-	}
-
-	focus = {
-		id = TU_URS_army_reserve
-		prerequisite = { focus = TU_URS_army_mass_mobilisation }
-		icon = GFX_goal_generic_army_doctrines
-		x = 6
-		y = 5
-		cost = 10
-
-		search_filters = { FOCUS_FILTER_MANPOWER }
-
-		ai_will_do = {
-			base = 1
-		}
-
-		completion_reward = {
-			add_manpower = 10000
-			army_experience = 25
-		}
-	}
-
-	focus = {
-		id = TU_URS_army_artillery_corps
-		prerequisite = { focus = TU_URS_army_artillery_barrage }
-		icon = GFX_goal_generic_army_artillery2
-		x = 8
-		y = 4
-		cost = 15
-
-		search_filters = { FOCUS_FILTER_ARMY_XP }
-
-		ai_will_do = {
-			base = 1
-		}
-
-		completion_reward = {
-			add_tech_bonus = { name = TU_URS_army_artillery_corps bonus = 1.0 uses = 1 category = artillery }
-			army_experience = 40
-		}
-	}
-
-	#### CONVERGENCE: COMBINED ARMS ####
-	focus = {
-		id = TU_URS_army_combined_arms
-		prerequisite = { focus = TU_URS_army_reserve focus = TU_URS_army_artillery_corps }
-		icon = GFX_goal_generic_army_doctrines
-		x = 6
-		y = 6
-		cost = 15
-
-		search_filters = { FOCUS_FILTER_ARMY_XP }
-
-		ai_will_do = {
-			base = 1
-		}
-
-		completion_reward = {
-			add_tech_bonus = { name = TU_URS_army_combined_arms bonus = 1.0 uses = 1 category = infantry_weapons }
-			army_experience = 40
+			add_tech_bonus = { name = TU_URS_army_professional bonus = 1.0 uses = 1 category = armor }
+			add_doctrine_cost_reduction = { name = TU_URS_army_professional cost_reduction = 0.5 uses = 1 category = land_doctrine }
 		}
 	}
 
 	focus = {
 		id = TU_URS_army_armour_doctrine
-		prerequisite = { focus = TU_URS_army_armour_division }
+		prerequisite = { focus = TU_URS_army_professional }
 		icon = GFX_goal_generic_army_tanks
-		x = 4
-		y = 6
+		x = 3
+		y = 3
 		cost = 10
 
 		search_filters = { FOCUS_FILTER_ARMY_XP }
@@ -1193,10 +936,10 @@ focus_tree = {
 
 	focus = {
 		id = TU_URS_army_general_staff
-		prerequisite = { focus = TU_URS_army_combined_arms }
+		prerequisite = { focus = TU_URS_army_artillery_doctrine }
 		icon = GFX_goal_generic_army_doctrines
-		x = 6
-		y = 7
+		x = 7
+		y = 3
 		cost = 10
 
 		search_filters = { FOCUS_FILTER_ARMY_XP }
@@ -1220,9 +963,9 @@ focus_tree = {
 		id = TU_URS_army_total_war
 		prerequisite = { focus = TU_URS_army_general_staff }
 		icon = GFX_goal_generic_construct_military
-		x = 6
-		y = 8
-		cost = 15
+		x = 7
+		y = 4
+		cost = 20
 
 		search_filters = { FOCUS_FILTER_MANPOWER }
 
@@ -1235,86 +978,13 @@ focus_tree = {
 			army_experience = 40
 			add_war_support = 0.05
 			add_doctrine_cost_reduction = { name = TU_URS_army_total_war cost_reduction = 0.5 uses = 1 category = land_doctrine }
-		}
-	}
-
-	focus = {
-		id = TU_URS_army_grand
-		prerequisite = { focus = TU_URS_army_total_war }
-		icon = GFX_goal_generic_army_motorized
-		x = 6
-		y = 9
-		cost = 15
-
-		search_filters = { FOCUS_FILTER_ARMY_XP }
-
-		ai_will_do = {
-			base = 1
-		}
-
-		completion_reward = {
 			add_manpower = 20000
 			army_experience = 40
-		}
-	}
-
-	focus = {
-		id = TU_URS_army_final
-		prerequisite = { focus = TU_URS_army_grand }
-		icon = GFX_goal_generic_army_tanks
-		x = 6
-		y = 10
-		cost = 15
-
-		search_filters = { FOCUS_FILTER_ARMY_XP }
-
-		ai_will_do = {
-			base = 1
-		}
-
-		completion_reward = {
 			army_experience = 40
 			add_war_support = 0.05
-			add_doctrine_cost_reduction = { name = TU_URS_army_final cost_reduction = 0.5 uses = 1 category = land_doctrine }
-		}
-	}
-
-	focus = {
-		id = TU_URS_army_supreme
-		prerequisite = { focus = TU_URS_army_final }
-		icon = GFX_goal_generic_army_doctrines
-		x = 6
-		y = 11
-		cost = 15
-
-		search_filters = { FOCUS_FILTER_ARMY_XP }
-
-		ai_will_do = {
-			base = 1
-		}
-
-		completion_reward = {
-			add_doctrine_cost_reduction = { name = TU_URS_army_supreme cost_reduction = 0.5 uses = 1 category = land_doctrine }
+			add_doctrine_cost_reduction = { name = TU_URS_army_total_war cost_reduction = 0.5 uses = 1 category = land_doctrine }
+			add_doctrine_cost_reduction = { name = TU_URS_army_total_war cost_reduction = 0.5 uses = 1 category = land_doctrine }
 			army_experience = 40
-		}
-	}
-
-	#### END OF THE ARMY LINE ####
-	focus = {
-		id = TU_URS_army_marshal
-		prerequisite = { focus = TU_URS_army_supreme }
-		icon = GFX_goal_generic_construct_military
-		x = 6
-		y = 12
-		cost = 15
-
-		search_filters = { FOCUS_FILTER_ARMY_XP }
-
-		ai_will_do = {
-			base = 1
-		}
-
-		completion_reward = {
 			add_political_power = 100
 			add_stability = 0.05
 		}
@@ -1326,7 +996,7 @@ focus_tree = {
 		prerequisite = { focus = TU_URS_arts_research_root }
 		mutually_exclusive = { focus = TU_URS_arts_conventional }
 		icon = GFX_goal_generic_scientific_exchange
-		x = 13
+		x = 12
 		y = 1
 		cost = 10
 
@@ -1346,7 +1016,7 @@ focus_tree = {
 		prerequisite = { focus = TU_URS_arts_research_root }
 		mutually_exclusive = { focus = TU_URS_arts_engineering }
 		icon = GFX_goal_generic_construction
-		x = 15
+		x = 14
 		y = 1
 		cost = 10
 
@@ -1367,7 +1037,7 @@ focus_tree = {
 		id = TU_URS_arts_lab
 		prerequisite = { focus = TU_URS_arts_engineering }
 		icon = GFX_goal_generic_scientific_exchange
-		x = 13
+		x = 12
 		y = 2
 		cost = 10
 
@@ -1392,7 +1062,7 @@ focus_tree = {
 		id = TU_URS_frozen_airfield
 		prerequisite = { focus = TU_URS_arts_research_root }
 		icon = GFX_goal_generic_build_airforce
-		x = 11
+		x = 10
 		y = 1
 		cost = 10
 
@@ -1413,9 +1083,9 @@ focus_tree = {
 		id = TU_URS_frozen_pilots
 		prerequisite = { focus = TU_URS_frozen_airfield }
 		icon = GFX_goal_generic_air_fighter
-		x = 11
+		x = 10
 		y = 2
-		cost = 10
+		cost = 18
 
 		search_filters = { FOCUS_FILTER_AIR_XP }
 
@@ -1432,57 +1102,21 @@ focus_tree = {
 			add_ideas = TU_URS_e3_frozen_air
 			add_doctrine_cost_reduction = { name = TU_URS_frozen_pilots cost_reduction = 0.4 uses = 1 category = land_doctrine }
 			army_experience = 25
-		}
-	}
-
-	focus = {
-		id = TU_URS_frozen_air_doctrine
-		prerequisite = { focus = TU_URS_frozen_pilots }
-		icon = GFX_goal_generic_air_doctrine
-		x = 11
-		y = 3
-		cost = 10
-
-		search_filters = { FOCUS_FILTER_RESEARCH }
-
-		ai_will_do = {
-			base = 1
-		}
-
-		completion_reward = {
-			add_tech_bonus = { name = TU_URS_frozen_air_doctrine bonus = 0.75 uses = 1 category = light_fighter category = tactical_bomber }
-			add_doctrine_cost_reduction = { name = TU_URS_frozen_air_doctrine cost_reduction = 0.4 uses = 1 category = air_doctrine }
+			add_tech_bonus = { name = TU_URS_frozen_pilots bonus = 0.75 uses = 1 category = light_fighter category = tactical_bomber }
+			add_doctrine_cost_reduction = { name = TU_URS_frozen_pilots cost_reduction = 0.4 uses = 1 category = air_doctrine }
 			air_experience = 25
-		}
-	}
-
-	focus = {
-		id = TU_URS_frost_interceptors
-		prerequisite = { focus = TU_URS_frozen_air_doctrine }
-		icon = GFX_goal_generic_air_fighter2
-		x = 11
-		y = 4
-		cost = 10
-
-		search_filters = { FOCUS_FILTER_AIR_XP }
-
-		ai_will_do = {
-			base = 1
-		}
-
-		completion_reward = {
-			add_tech_bonus = { name = TU_URS_frost_interceptors bonus = 0.75 uses = 1 category = construction_tech }
+			add_tech_bonus = { name = TU_URS_frozen_pilots bonus = 0.75 uses = 1 category = construction_tech }
 			army_experience = 25
 		}
 	}
 
 	focus = {
 		id = TU_URS_frost_supremacy
-		prerequisite = { focus = TU_URS_frost_interceptors }
+		prerequisite = { focus = TU_URS_frozen_pilots }
 		icon = GFX_goal_generic_CAS
-		x = 11
-		y = 5
-		cost = 15
+		x = 10
+		y = 3
+		cost = 20
 
 		search_filters = { FOCUS_FILTER_AIR_XP }
 
@@ -1495,60 +1129,22 @@ focus_tree = {
 			add_tech_bonus = { name = TU_URS_frost_supremacy bonus = 1.0 uses = 1 category = light_fighter category = tactical_bomber }
 			add_doctrine_cost_reduction = { name = TU_URS_frost_supremacy cost_reduction = 0.5 uses = 1 category = air_doctrine }
 			air_experience = 40
-		}
-	}
-
-	focus = {
-		id = TU_URS_frost_legacy
-		prerequisite = { focus = TU_URS_frost_supremacy }
-		icon = GFX_goal_generic_air_production
-		x = 11
-		y = 6
-		cost = 15
-
-		search_filters = { FOCUS_FILTER_RESEARCH }
-
-		ai_will_do = {
-			base = 1
-		}
-
-		completion_reward = {
-			add_tech_bonus = { name = TU_URS_frost_legacy bonus = 1.0 uses = 1 category = light_fighter category = tactical_bomber }
-			add_doctrine_cost_reduction = { name = TU_URS_frost_legacy cost_reduction = 0.5 uses = 1 category = air_doctrine }
+			add_tech_bonus = { name = TU_URS_frost_supremacy bonus = 1.0 uses = 1 category = light_fighter category = tactical_bomber }
+			add_doctrine_cost_reduction = { name = TU_URS_frost_supremacy cost_reduction = 0.5 uses = 1 category = air_doctrine }
+			air_experience = 40
+			add_tech_bonus = { name = TU_URS_frost_supremacy bonus = 1.0 uses = 1 category = light_fighter category = tactical_bomber }
+			add_doctrine_cost_reduction = { name = TU_URS_frost_supremacy cost_reduction = 0.5 uses = 1 category = air_doctrine }
 			air_experience = 40
 		}
 	}
 
-	#### END OF THE FROZEN AIR LINE ####
-	focus = {
-		id = TU_URS_frost_end
-		prerequisite = { focus = TU_URS_frost_legacy }
-		icon = GFX_goal_generic_air_bomber
-		x = 11
-		y = 7
-		cost = 15
-
-		search_filters = { FOCUS_FILTER_AIR_XP }
-
-		ai_will_do = {
-			base = 1
-		}
-
-		completion_reward = {
-			add_tech_bonus = { name = TU_URS_frost_end bonus = 1.0 uses = 1 category = light_fighter category = tactical_bomber }
-			add_doctrine_cost_reduction = { name = TU_URS_frost_end cost_reduction = 0.5 uses = 1 category = air_doctrine }
-			air_experience = 40
-		}
-	}
-
-	#### NORTHERN EXPEDITION RESEARCH (x 32-34) ####
 	focus = {
 		id = TU_URS_northern_expedition
 		prerequisite = { focus = TU_URS_arts_research_root }
 		icon = GFX_goal_generic_position_armies
-		x = 17
+		x = 16
 		y = 1
-		cost = 10
+		cost = 15
 
 		search_filters = { FOCUS_FILTER_RESEARCH }
 
@@ -1564,36 +1160,18 @@ focus_tree = {
 			army_experience = 25
 			add_war_support = 0.03
 			add_doctrine_cost_reduction = { name = TU_URS_northern_expedition cost_reduction = 0.4 uses = 1 category = land_doctrine }
-		}
-	}
-
-	focus = {
-		id = TU_URS_northern_recon
-		prerequisite = { focus = TU_URS_northern_expedition }
-		icon = GFX_goal_generic_radar
-		x = 17
-		y = 2
-		cost = 10
-
-		search_filters = { FOCUS_FILTER_RESEARCH }
-
-		ai_will_do = {
-			base = 1
-		}
-
-		completion_reward = {
-			add_tech_bonus = { name = TU_URS_northern_recon bonus = 0.75 uses = 1 category = radar_tech category = electronics }
+			add_tech_bonus = { name = TU_URS_northern_expedition bonus = 0.75 uses = 1 category = radar_tech category = electronics }
 			add_stability = 0.03
 		}
 	}
 
 	focus = {
 		id = TU_URS_northern_bomber
-		prerequisite = { focus = TU_URS_northern_recon }
+		prerequisite = { focus = TU_URS_northern_expedition }
 		mutually_exclusive = { focus = TU_URS_northern_fighter }
 		icon = GFX_goal_generic_air_bomber
-		x = 18
-		y = 3
+		x = 17
+		y = 2
 		cost = 10
 
 		search_filters = { FOCUS_FILTER_RESEARCH }
@@ -1611,11 +1189,11 @@ focus_tree = {
 
 	focus = {
 		id = TU_URS_northern_fighter
-		prerequisite = { focus = TU_URS_northern_recon }
+		prerequisite = { focus = TU_URS_northern_expedition }
 		mutually_exclusive = { focus = TU_URS_northern_bomber }
 		icon = GFX_goal_generic_air_fighter
-		x = 16
-		y = 3
+		x = 15
+		y = 2
 		cost = 10
 
 		search_filters = { FOCUS_FILTER_RESEARCH }
@@ -1639,9 +1217,9 @@ focus_tree = {
 		prerequisite = { focus = TU_URS_infection_policy }
 		mutually_exclusive = { focus = TU_URS_quarantine_zones }
 		icon = GFX_goal_generic_construct_civilian
-		x = 25
+		x = 24
 		y = 1
-		cost = 10
+		cost = 15
 
 		search_filters = { FOCUS_FILTER_INDUSTRY }
 
@@ -1652,26 +1230,8 @@ focus_tree = {
 		completion_reward = {
 			TU_build_civ_factory = yes
 			add_tech_bonus = { name = TU_URS_forced_labour bonus = 0.75 uses = 1 category = industry category = construction_tech }
-		}
-	}
-
-	focus = {
-		id = TU_URS_labour_camps
-		prerequisite = { focus = TU_URS_forced_labour }
-		icon = GFX_goal_generic_construct_civilian
-		x = 25
-		y = 2
-		cost = 10
-
-		search_filters = { FOCUS_FILTER_INDUSTRY }
-
-		ai_will_do = {
-			base = 1
-		}
-
-		completion_reward = {
 			TU_build_civ_factory = yes
-			add_tech_bonus = { name = TU_URS_labour_camps bonus = 0.75 uses = 1 category = industry category = construction_tech }
+			add_tech_bonus = { name = TU_URS_forced_labour bonus = 0.75 uses = 1 category = industry category = construction_tech }
 		}
 	}
 
@@ -1680,9 +1240,9 @@ focus_tree = {
 		prerequisite = { focus = TU_URS_infection_policy }
 		mutually_exclusive = { focus = TU_URS_forced_labour }
 		icon = GFX_goal_generic_fortify_city
-		x = 27
+		x = 26
 		y = 1
-		cost = 10
+		cost = 18
 
 		search_filters = { FOCUS_FILTER_POLITICAL }
 
@@ -1695,35 +1255,18 @@ focus_tree = {
 			add_stability = 0.03
 			add_manpower = 10000
 			add_tech_bonus = { name = TU_URS_quarantine_zones bonus = 0.75 uses = 1 category = tu_oripathy_tech }
-		}
-	}
-
-	focus = {
-		id = TU_URS_quarantine_wall
-		prerequisite = { focus = TU_URS_quarantine_zones }
-		icon = GFX_goal_generic_defence
-		x = 27
-		y = 2
-		cost = 10
-
-		search_filters = { FOCUS_FILTER_POLITICAL }
-
-		ai_will_do = {
-			base = 1
-		}
-
-		completion_reward = {
 			TU_build_forts_2 = yes
+			add_stability = 0.03
+			add_manpower = 10000
+			add_tech_bonus = { name = TU_URS_quarantine_zones bonus = 0.75 uses = 1 category = tu_oripathy_tech }
 		}
 	}
-
-	#### CHERNOBOG DEVELOPMENT ####
 
 	focus = {
 		id = TU_URS_chernobog_garrison
 		prerequisite = { focus = TU_URS_infection_policy }
 		icon = GFX_goal_generic_fortify_city
-		x = 29
+		x = 28
 		y = 1
 		cost = 10
 
@@ -1749,9 +1292,9 @@ focus_tree = {
 		prerequisite = { focus = TU_URS_infection_policy }
 		mutually_exclusive = { focus = TU_URS_reu_negotiation }
 		icon = GFX_goal_generic_political_pressure
-		x = 23
+		x = 22
 		y = 1
-		cost = 10
+		cost = 15
 
 		search_filters = { FOCUS_FILTER_POLITICAL }
 
@@ -1776,6 +1319,9 @@ focus_tree = {
 			}
 			add_political_power = 60
 			add_stability = 0.03
+			army_experience = 25
+			add_war_support = 0.03
+			add_doctrine_cost_reduction = { name = TU_URS_reu_suppression cost_reduction = 0.4 uses = 1 category = land_doctrine }
 		}
 	}
 
@@ -1784,9 +1330,9 @@ focus_tree = {
 		prerequisite = { focus = TU_URS_infection_policy }
 		mutually_exclusive = { focus = TU_URS_reu_suppression }
 		icon = GFX_goal_generic_improve_relations
-		x = 21
+		x = 20
 		y = 1
-		cost = 10
+		cost = 15
 
 		search_filters = { FOCUS_FILTER_POLITICAL }
 
@@ -1810,45 +1356,6 @@ focus_tree = {
 			}
 			add_political_power = 60
 			add_stability = 0.03
-		}
-	}
-
-	focus = {
-		id = TU_URS_reu_front
-		prerequisite = { focus = TU_URS_reu_suppression }
-		icon = GFX_goal_generic_occupy_states_ongoing_war
-		x = 23
-		y = 2
-		cost = 10
-
-		search_filters = { FOCUS_FILTER_ARMY_XP }
-
-		ai_will_do = {
-			base = 1
-		}
-
-		completion_reward = {
-			army_experience = 25
-			add_war_support = 0.03
-			add_doctrine_cost_reduction = { name = TU_URS_reu_front cost_reduction = 0.4 uses = 1 category = land_doctrine }
-		}
-	}
-
-	focus = {
-		id = TU_URS_reu_talks
-		prerequisite = { focus = TU_URS_reu_negotiation }
-		icon = GFX_goal_generic_trade
-		x = 21
-		y = 2
-		cost = 10
-
-		search_filters = { FOCUS_FILTER_POLITICAL }
-
-		ai_will_do = {
-			base = 1
-		}
-
-		completion_reward = {
 			add_political_power = 60
 			add_stability = 0.03
 		}
@@ -1856,10 +1363,10 @@ focus_tree = {
 
 	focus = {
 		id = TU_URS_reu_occupation
-		prerequisite = { focus = TU_URS_reu_front }
+		prerequisite = { focus = TU_URS_reu_suppression }
 		icon = GFX_goal_generic_demand_territory
-		x = 23
-		y = 3
+		x = 22
+		y = 2
 		cost = 15
 
 		search_filters = { FOCUS_FILTER_ARMY_XP }
@@ -1885,10 +1392,10 @@ focus_tree = {
 
 	focus = {
 		id = TU_URS_reu_peace
-		prerequisite = { focus = TU_URS_reu_talks }
+		prerequisite = { focus = TU_URS_reu_negotiation }
 		icon = GFX_goal_generic_neutrality_focus
-		x = 21
-		y = 3
+		x = 20
+		y = 2
 		cost = 10
 
 		search_filters = { FOCUS_FILTER_POLITICAL }
@@ -1911,8 +1418,8 @@ focus_tree = {
 		id = TU_URS_lungmen_aid
 		prerequisite = { focus = TU_URS_reu_peace }
 		icon = GFX_goal_generic_alliance
-		x = 21
-		y = 4
+		x = 20
+		y = 3
 		cost = 10
 
 		search_filters = { FOCUS_FILTER_POLITICAL }
@@ -1944,9 +1451,9 @@ focus_tree = {
 		id = TU_URS_reu_siege
 		prerequisite = { focus = TU_URS_reu_occupation }
 		icon = GFX_goal_generic_major_war
-		x = 23
-		y = 4
-		cost = 10
+		x = 22
+		y = 3
+		cost = 18
 
 		search_filters = { FOCUS_FILTER_ARMY_XP }
 
@@ -1969,37 +1476,19 @@ focus_tree = {
 			}
 			add_tech_bonus = { name = TU_URS_reu_siege bonus = 0.75 uses = 1 category = artillery }
 			army_experience = 25
-		}
-	}
-
-	focus = {
-		id = TU_URS_reu_final
-		prerequisite = { focus = TU_URS_reu_siege }
-		icon = GFX_goal_generic_occupy_start_war
-		x = 23
-		y = 5
-		cost = 15
-
-		search_filters = { FOCUS_FILTER_ARMY_XP }
-
-		ai_will_do = {
-			base = 1
-		}
-
-		completion_reward = {
 			army_experience = 40
 			add_war_support = 0.05
-			add_doctrine_cost_reduction = { name = TU_URS_reu_final cost_reduction = 0.5 uses = 1 category = land_doctrine }
+			add_doctrine_cost_reduction = { name = TU_URS_reu_siege cost_reduction = 0.5 uses = 1 category = land_doctrine }
 		}
 	}
 
 	focus = {
 		id = TU_URS_labour_expansion
-		prerequisite = { focus = TU_URS_labour_camps }
+		prerequisite = { focus = TU_URS_forced_labour }
 		icon = GFX_goal_generic_construct_civilian
-		x = 25
-		y = 3
-		cost = 10
+		x = 24
+		y = 2
+		cost = 15
 
 		search_filters = { FOCUS_FILTER_INDUSTRY }
 
@@ -2015,36 +1504,19 @@ focus_tree = {
 			add_ideas = TU_URS_e4_labour_quota
 			TU_build_civ_factory = yes
 			add_tech_bonus = { name = TU_URS_labour_expansion bonus = 0.75 uses = 1 category = industry category = construction_tech }
-		}
-	}
-
-	focus = {
-		id = TU_URS_quarantine_patrol
-		prerequisite = { focus = TU_URS_quarantine_wall }
-		icon = GFX_goal_generic_intelligence_exchange
-		x = 27
-		y = 3
-		cost = 10
-
-		search_filters = { FOCUS_FILTER_POLITICAL }
-
-		ai_will_do = {
-			base = 1
-		}
-
-		completion_reward = {
+			TU_build_infrastructure = yes
 			add_stability = 0.03
 			add_manpower = 10000
-			add_tech_bonus = { name = TU_URS_quarantine_patrol bonus = 0.75 uses = 1 category = tu_oripathy_tech }
+			add_tech_bonus = { name = TU_URS_labour_expansion bonus = 0.75 uses = 1 category = tu_oripathy_tech }
 		}
 	}
 
 	focus = {
 		id = TU_URS_rho_cooperation
-		prerequisite = { focus = TU_URS_quarantine_patrol }
+		prerequisite = { focus = TU_URS_quarantine_zones }
 		icon = GFX_goal_generic_scientific_exchange
-		x = 27
-		y = 4
+		x = 26
+		y = 2
 		cost = 10
 
 		search_filters = { FOCUS_FILTER_POLITICAL }
@@ -2077,7 +1549,7 @@ focus_tree = {
 		id = TU_URS_chernobog_defence
 		prerequisite = { focus = TU_URS_chernobog_garrison }
 		icon = GFX_goal_generic_defence
-		x = 29
+		x = 28
 		y = 2
 		cost = 10
 
@@ -2100,7 +1572,7 @@ focus_tree = {
 		id = TU_URS_chernobog_fortress
 		prerequisite = { focus = TU_URS_chernobog_defence }
 		icon = GFX_goal_generic_fortify_city
-		x = 29
+		x = 28
 		y = 3
 		cost = 10
 
@@ -2119,9 +1591,9 @@ focus_tree = {
 		id = TU_URS_chernobog_seal
 		prerequisite = { focus = TU_URS_chernobog_fortress }
 		icon = GFX_goal_generic_radar
-		x = 29
+		x = 28
 		y = 4
-		cost = 15
+		cost = 20
 
 		search_filters = { FOCUS_FILTER_ARMY_XP }
 
@@ -2136,57 +1608,18 @@ focus_tree = {
 		completion_reward = {
 			add_political_power = 100
 			add_stability = 0.05
-		}
-	}
-
-	#### END OF THE CHERNOBOG LINE ####
-	focus = {
-		id = TU_URS_chernobog_legacy
-		prerequisite = { focus = TU_URS_chernobog_seal }
-		icon = GFX_goal_generic_secret_weapon
-		x = 29
-		y = 5
-		cost = 15
-
-		search_filters = { FOCUS_FILTER_POLITICAL }
-
-		ai_will_do = {
-			base = 1
-		}
-
-		completion_reward = {
 			add_political_power = 100
 			add_stability = 0.05
 		}
 	}
 
-	focus = {
-		id = TU_URS_infected_quota
-		prerequisite = { focus = TU_URS_labour_expansion }
-		icon = GFX_goal_generic_construction
-		x = 25
-		y = 4
-		cost = 10
-
-		search_filters = { FOCUS_FILTER_INDUSTRY }
-
-		ai_will_do = {
-			base = 1
-		}
-
-		completion_reward = {
-			TU_build_infrastructure = yes
-			add_stability = 0.03
-			add_manpower = 10000
-			add_tech_bonus = { name = TU_URS_infected_quota bonus = 0.75 uses = 1 category = tu_oripathy_tech }
-		}
-	}
+	#### END OF THE CHERNOBOG LINE ####
 
 	focus = {
 		id = TU_URS_frozen_empire_focus
 		icon = GFX_goal_generic_national_unity
 		x = 0
-		y = 14
+		y = 8
 		cost = 5
 
 		search_filters = { FOCUS_FILTER_POLITICAL }
@@ -2205,7 +1638,7 @@ focus_tree = {
 		prerequisite = { focus = TU_URS_frozen_empire_focus }
 		icon = GFX_goal_generic_political_pressure
 		x = 0
-		y = 15
+		y = 9
 		cost = 5
 
 		search_filters = { FOCUS_FILTER_POLITICAL }
@@ -2223,7 +1656,7 @@ focus_tree = {
 	focus = {
 		id = TU_URS_railway_reform
 		icon = GFX_goal_generic_construct_infrastructure
-		x = -11
+		x = -13
 		y = 0
 		cost = 5
 
@@ -2242,7 +1675,7 @@ focus_tree = {
 	focus = {
 		id = TU_URS_army_root
 		icon = GFX_goal_generic_army_doctrines
-		x = 3
+		x = 2
 		y = 0
 		cost = 5
 
@@ -2261,7 +1694,7 @@ focus_tree = {
 	focus = {
 		id = TU_URS_arts_research_root
 		icon = GFX_goal_generic_air_doctrine
-		x = 11
+		x = 13
 		y = 0
 		cost = 5
 
@@ -2279,7 +1712,7 @@ focus_tree = {
 	focus = {
 		id = TU_URS_infection_policy
 		icon = GFX_goal_generic_propaganda
-		x = 25
+		x = 24
 		y = 0
 		cost = 5
 
@@ -2299,8 +1732,8 @@ focus_tree = {
 	focus = {
 		id = TU_URS_foreign_policy_root
 		icon = GFX_goal_generic_improve_relations
-		x = 10
-		y = 35
+		x = 0
+		y = 21
 		cost = 5
 
 		search_filters = { FOCUS_FILTER_POLITICAL }
@@ -2319,8 +1752,8 @@ focus_tree = {
 		id = TU_URS_foreign_ministry
 		prerequisite = { focus = TU_URS_foreign_policy_root }
 		icon = GFX_goal_generic_positive_trade_relations
-		x = 10
-		y = 36
+		x = 0
+		y = 22
 		cost = 10
 
 		search_filters = { FOCUS_FILTER_POLITICAL }
@@ -2345,11 +1778,11 @@ focus_tree = {
 		prerequisite = { focus = TU_URS_imperial_decree }
 		mutually_exclusive = { focus = TU_URS_noble_compromise focus = TU_URS_military_junta focus = TU_URS_reform_path }
 		icon = GFX_goal_generic_national_unity
-		x = -19
-		y = 16
-		cost = 10
+		x = -18
+		y = 10
+		cost = 20
 
-		search_filters = { FOCUS_FILTER_BALANCE_OF_POWER }
+		search_filters = { FOCUS_FILTER_POLITICAL }
 
 		ai_will_do = {
 			base = 1
@@ -2359,64 +1792,10 @@ focus_tree = {
 			country_event = { id = tu_urs_ev.1 }
 			add_political_power = 60
 			add_stability = 0.03
-		}
-	}
-
-	focus = {
-		id = TU_URS_central_administration
-		prerequisite = { focus = TU_URS_emperor_rule }
-		icon = GFX_goal_generic_construction
-		x = -19
-		y = 17
-		cost = 10
-
-		search_filters = { FOCUS_FILTER_POLITICAL }
-
-		ai_will_do = {
-			base = 1
-		}
-
-		completion_reward = {
 			add_political_power = 60
 			add_stability = 0.03
-		}
-	}
-
-	focus = {
-		id = TU_URS_secret_police
-		prerequisite = { focus = TU_URS_central_administration }
-		icon = GFX_goal_generic_political_pressure
-		x = -19
-		y = 18
-		cost = 10
-
-		search_filters = { FOCUS_FILTER_POLITICAL }
-
-		ai_will_do = {
-			base = 1
-		}
-
-		completion_reward = {
-			add_tech_bonus = { name = TU_URS_secret_police bonus = 0.75 uses = 1 category = radar_tech category = electronics }
+			add_tech_bonus = { name = TU_URS_emperor_rule bonus = 0.75 uses = 1 category = radar_tech category = electronics }
 			add_stability = 0.03
-		}
-	}
-
-	focus = {
-		id = TU_URS_absolute_throne
-		prerequisite = { focus = TU_URS_secret_police }
-		icon = GFX_goal_generic_national_unity
-		x = -19
-		y = 19
-		cost = 10
-
-		search_filters = { FOCUS_FILTER_POLITICAL }
-
-		ai_will_do = {
-			base = 1
-		}
-
-		completion_reward = {
 			add_political_power = 60
 			add_stability = 0.03
 		}
@@ -2424,10 +1803,10 @@ focus_tree = {
 
 	focus = {
 		id = TU_URS_imperial_court
-		prerequisite = { focus = TU_URS_absolute_throne }
+		prerequisite = { focus = TU_URS_emperor_rule }
 		icon = GFX_goal_generic_propaganda
-		x = -19
-		y = 20
+		x = -17
+		y = 11
 		cost = 10
 
 		search_filters = { FOCUS_FILTER_POLITICAL }
@@ -2447,9 +1826,9 @@ focus_tree = {
 		prerequisite = { focus = TU_URS_imperial_court }
 		mutually_exclusive = { focus = TU_URS_local_customs }
 		icon = GFX_goal_generic_construction2
-		x = -19
-		y = 21
-		cost = 10
+		x = -17
+		y = 12
+		cost = 20
 
 		search_filters = { FOCUS_FILTER_POLITICAL }
 
@@ -2460,44 +1839,8 @@ focus_tree = {
 		completion_reward = {
 			add_political_power = 60
 			add_stability = 0.03
-		}
-	}
-
-	focus = {
-		id = TU_URS_imperial_mandate
-		prerequisite = { focus = TU_URS_absolutism_codex }
-		icon = GFX_goal_generic_forceful_treaty
-		x = -19
-		y = 22
-		cost = 10
-
-		search_filters = { FOCUS_FILTER_POLITICAL }
-
-		ai_will_do = {
-			base = 1
-		}
-
-		completion_reward = {
 			add_political_power = 60
 			add_stability = 0.03
-		}
-	}
-
-	focus = {
-		id = TU_URS_throne_unity
-		prerequisite = { focus = TU_URS_imperial_mandate }
-		icon = GFX_goal_generic_military_sphere
-		x = -19
-		y = 23
-		cost = 10
-
-		search_filters = { FOCUS_FILTER_POLITICAL }
-
-		ai_will_do = {
-			base = 1
-		}
-
-		completion_reward = {
 			add_war_support = 0.03
 			add_stability = 0.03
 		}
@@ -2505,10 +1848,10 @@ focus_tree = {
 
 	focus = {
 		id = TU_URS_sovereign_seal
-		prerequisite = { focus = TU_URS_throne_unity }
+		prerequisite = { focus = TU_URS_absolutism_codex }
 		icon = GFX_goal_generic_national_unity
-		x = -19
-		y = 24
+		x = -17
+		y = 13
 		cost = 10
 
 		search_filters = { FOCUS_FILTER_POLITICAL }
@@ -2527,9 +1870,9 @@ focus_tree = {
 		id = TU_URS_absolute_crown
 		prerequisite = { focus = TU_URS_sovereign_seal }
 		icon = GFX_goal_generic_national_unity
-		x = -19
-		y = 25
-		cost = 15
+		x = -17
+		y = 14
+		cost = 20
 
 		search_filters = { FOCUS_FILTER_POLITICAL }
 
@@ -2546,124 +1889,16 @@ focus_tree = {
 			add_ideas = TU_URS_p1_absolute_crown
 			add_political_power = 100
 			add_stability = 0.05
-		}
-	}
-
-	focus = {
-		id = TU_URS_court_treasury
-		prerequisite = { focus = TU_URS_absolute_crown }
-		icon = GFX_goal_generic_production
-		x = -19
-		y = 26
-		cost = 10
-
-		search_filters = { FOCUS_FILTER_POLITICAL }
-
-		ai_will_do = {
-			base = 1
-		}
-
-		completion_reward = {
 			add_political_power = 60
-			add_tech_bonus = { name = TU_URS_court_treasury bonus = 0.75 uses = 1 category = industry }
-		}
-	}
-
-	focus = {
-		id = TU_URS_central_war_office
-		prerequisite = { focus = TU_URS_court_treasury }
-		icon = GFX_goal_generic_army_doctrines
-		x = -19
-		y = 27
-		cost = 10
-
-		search_filters = { FOCUS_FILTER_ARMY_XP }
-
-		ai_will_do = {
-			base = 1
-		}
-
-		completion_reward = {
+			add_tech_bonus = { name = TU_URS_absolute_crown bonus = 0.75 uses = 1 category = industry }
 			add_political_power = 60
 			add_stability = 0.03
-		}
-	}
-
-	focus = {
-		id = TU_URS_imperial_academy
-		prerequisite = { focus = TU_URS_central_war_office }
-		icon = GFX_goal_generic_scientific_exchange
-		x = -19
-		y = 28
-		cost = 10
-
-		search_filters = { FOCUS_FILTER_RESEARCH }
-
-		ai_will_do = {
-			base = 1
-		}
-
-		completion_reward = {
-			add_doctrine_cost_reduction = { name = TU_URS_imperial_academy cost_reduction = 0.4 uses = 1 category = land_doctrine }
+			add_doctrine_cost_reduction = { name = TU_URS_absolute_crown cost_reduction = 0.4 uses = 1 category = land_doctrine }
 			army_experience = 25
-		}
-	}
-
-	focus = {
-		id = TU_URS_civil_code
-		prerequisite = { focus = TU_URS_imperial_academy }
-		icon = GFX_goal_generic_construction
-		x = -19
-		y = 29
-		cost = 10
-
-		search_filters = { FOCUS_FILTER_POLITICAL }
-
-		ai_will_do = {
-			base = 1
-		}
-
-		completion_reward = {
 			add_political_power = 60
 			add_stability = 0.03
-		}
-	}
-
-	focus = {
-		id = TU_URS_clergy_reform
-		prerequisite = { focus = TU_URS_civil_code }
-		icon = GFX_goal_generic_propaganda
-		x = -19
-		y = 30
-		cost = 10
-
-		search_filters = { FOCUS_FILTER_POLITICAL }
-
-		ai_will_do = {
-			base = 1
-		}
-
-		completion_reward = {
 			add_political_power = 60
 			add_stability = 0.03
-		}
-	}
-
-	focus = {
-		id = TU_URS_imperial_progress
-		prerequisite = { focus = TU_URS_clergy_reform }
-		icon = GFX_goal_generic_improve_relations
-		x = -19
-		y = 31
-		cost = 10
-
-		search_filters = { FOCUS_FILTER_POLITICAL }
-
-		ai_will_do = {
-			base = 1
-		}
-
-		completion_reward = {
 			add_political_power = 60
 			add_stability = 0.03
 		}
@@ -2671,11 +1906,11 @@ focus_tree = {
 
 	focus = {
 		id = TU_URS_eternal_throne
-		prerequisite = { focus = TU_URS_imperial_progress }
+		prerequisite = { focus = TU_URS_absolute_crown }
 		icon = GFX_goal_generic_national_unity
-		x = -19
-		y = 32
-		cost = 15
+		x = -17
+		y = 15
+		cost = 20
 
 		search_filters = { FOCUS_FILTER_POLITICAL }
 
@@ -2688,38 +1923,17 @@ focus_tree = {
 			add_ideas = TU_URS_p1_eternal_throne
 			add_political_power = 100
 			add_stability = 0.05
+			add_tech_bonus = { name = TU_URS_eternal_throne bonus = 0.75 uses = 1 category = electronics category = tu_originium_tech }
 		}
 	}
-
-	focus = {
-		id = TU_URS_throne_archive
-		prerequisite = { focus = TU_URS_eternal_throne }
-		icon = GFX_goal_generic_intelligence_exchange
-		x = -19
-		y = 33
-		cost = 10
-
-		search_filters = { FOCUS_FILTER_POLITICAL }
-
-		ai_will_do = {
-			base = 1
-		}
-
-		completion_reward = {
-			add_tech_bonus = { name = TU_URS_throne_archive bonus = 0.75 uses = 1 category = electronics category = tu_originium_tech }
-		}
-	}
-
-
-	#### IMPERIAL GUARD BRANCH (x 58-60) ####
 
 	focus = {
 		id = TU_URS_imperial_guard
 		prerequisite = { focus = TU_URS_imperial_decree }
 		icon = GFX_goal_generic_army_doctrines
-		x = -31
-		y = 16
-		cost = 10
+		x = -30
+		y = 10
+		cost = 20
 
 		search_filters = { FOCUS_FILTER_ARMY_XP }
 
@@ -2735,95 +1949,23 @@ focus_tree = {
 			add_ideas = TU_URS_imperial_guard_idea
 			add_manpower = 10000
 			army_experience = 25
-		}
-	}
-
-	focus = {
-		id = TU_URS_guard_drill
-		prerequisite = { focus = TU_URS_imperial_guard }
-		icon = GFX_goal_generic_army_artillery
-		x = -31
-		y = 17
-		cost = 10
-
-		search_filters = { FOCUS_FILTER_ARMY_XP }
-
-		ai_will_do = {
-			base = 1
-		}
-
-		completion_reward = {
-			add_doctrine_cost_reduction = { name = TU_URS_guard_drill cost_reduction = 0.4 uses = 1 category = land_doctrine }
+			add_doctrine_cost_reduction = { name = TU_URS_imperial_guard cost_reduction = 0.4 uses = 1 category = land_doctrine }
 			army_experience = 25
-		}
-	}
-
-	focus = {
-		id = TU_URS_guard_expansion
-		prerequisite = { focus = TU_URS_guard_drill }
-		icon = GFX_goal_generic_allies_build_infantry
-		x = -31
-		y = 18
-		cost = 10
-
-		search_filters = { FOCUS_FILTER_ARMY_XP }
-
-		ai_will_do = {
-			base = 1
-		}
-
-		completion_reward = {
 			add_manpower = 10000
 			army_experience = 25
-		}
-	}
-
-	focus = {
-		id = TU_URS_guard_doctrine
-		prerequisite = { focus = TU_URS_guard_expansion }
-		icon = GFX_goal_generic_army_doctrines
-		x = -31
-		y = 19
-		cost = 10
-
-		search_filters = { FOCUS_FILTER_ARMY_XP }
-
-		ai_will_do = {
-			base = 1
-		}
-
-		completion_reward = {
-			add_doctrine_cost_reduction = { name = TU_URS_guard_doctrine cost_reduction = 0.4 uses = 1 category = land_doctrine }
+			add_doctrine_cost_reduction = { name = TU_URS_imperial_guard cost_reduction = 0.4 uses = 1 category = land_doctrine }
 			army_experience = 25
-		}
-	}
-
-	focus = {
-		id = TU_URS_guard_palace_watch
-		prerequisite = { focus = TU_URS_guard_doctrine }
-		icon = GFX_goal_generic_fortify_city
-		x = -31
-		y = 20
-		cost = 10
-
-		search_filters = { FOCUS_FILTER_ARMY_XP }
-
-		ai_will_do = {
-			base = 1
-		}
-
-		completion_reward = {
-			add_tech_bonus = { name = TU_URS_guard_palace_watch bonus = 0.75 uses = 1 category = construction_tech }
+			add_tech_bonus = { name = TU_URS_imperial_guard bonus = 0.75 uses = 1 category = construction_tech }
 			army_experience = 25
 		}
 	}
 
 	focus = {
 		id = TU_URS_imperial_blades
-		prerequisite = { focus = TU_URS_guard_palace_watch }
+		prerequisite = { focus = TU_URS_imperial_guard }
 		icon = GFX_goal_generic_small_arms
-		x = -31
-		y = 21
+		x = -30
+		y = 11
 		cost = 15
 
 		search_filters = { FOCUS_FILTER_ARMY_XP }
@@ -2846,8 +1988,8 @@ focus_tree = {
 		prerequisite = { focus = TU_URS_imperial_blades }
 		mutually_exclusive = { focus = TU_URS_guard_imperial_cavalry }
 		icon = GFX_goal_generic_army_motorized
-		x = -30
-		y = 22
+		x = -29
+		y = 12
 		cost = 10
 
 		search_filters = { FOCUS_FILTER_ARMY_XP }
@@ -2867,8 +2009,8 @@ focus_tree = {
 		prerequisite = { focus = TU_URS_imperial_blades }
 		mutually_exclusive = { focus = TU_URS_guard_elite_corps }
 		icon = GFX_goal_generic_cavalry
-		x = -32
-		y = 22
+		x = -31
+		y = 12
 		cost = 10
 
 		search_filters = { FOCUS_FILTER_ARMY_XP }
@@ -2887,9 +2029,9 @@ focus_tree = {
 		id = TU_URS_guard_bastion
 		prerequisite = { focus = TU_URS_guard_elite_corps focus = TU_URS_guard_imperial_cavalry }
 		icon = GFX_goal_generic_defence
-		x = -31
-		y = 23
-		cost = 10
+		x = -30
+		y = 13
+		cost = 20
 
 		search_filters = { FOCUS_FILTER_ARMY_XP }
 
@@ -2899,78 +2041,21 @@ focus_tree = {
 
 		completion_reward = {
 			TU_build_forts_2 = yes
-		}
-	}
-
-	focus = {
-		id = TU_URS_guard_last_bastion
-		prerequisite = { focus = TU_URS_guard_bastion }
-		icon = GFX_goal_generic_defence
-		x = -31
-		y = 24
-		cost = 10
-
-		search_filters = { FOCUS_FILTER_ARMY_XP }
-
-		ai_will_do = {
-			base = 1
-		}
-
-		completion_reward = {
 			TU_build_forts_2 = yes
-		}
-	}
-
-	focus = {
-		id = TU_URS_guard_royal_regiment
-		prerequisite = { focus = TU_URS_guard_last_bastion }
-		icon = GFX_goal_generic_army_motorized
-		x = -31
-		y = 25
-		cost = 10
-
-		search_filters = { FOCUS_FILTER_ARMY_XP }
-
-		ai_will_do = {
-			base = 1
-		}
-
-		completion_reward = {
 			add_manpower = 10000
 			army_experience = 25
-		}
-	}
-
-	focus = {
-		id = TU_URS_guard_dominion
-		prerequisite = { focus = TU_URS_guard_royal_regiment }
-		icon = GFX_goal_generic_military_sphere
-		x = -31
-		y = 26
-		cost = 15
-
-		search_filters = { FOCUS_FILTER_ARMY_XP }
-
-		ai_will_do = {
-			base = 1
-		}
-
-		completion_reward = {
 			add_manpower = 20000
 			army_experience = 40
 		}
 	}
 
-
-	#### SECRET POLICE BRANCH (x 66-68) ####
-
 	focus = {
 		id = TU_URS_surveillance_bureau
-		prerequisite = { focus = TU_URS_secret_police }
+		prerequisite = { focus = TU_URS_emperor_rule }
 		icon = GFX_goal_generic_political_pressure
-		x = -16
-		y = 19
-		cost = 10
+		x = -14
+		y = 11
+		cost = 15
 
 		search_filters = { FOCUS_FILTER_POLITICAL }
 
@@ -2982,36 +2067,18 @@ focus_tree = {
 			add_ideas = TU_URS_p1_surveillance_state
 			add_tech_bonus = { name = TU_URS_surveillance_bureau bonus = 0.75 uses = 1 category = radar_tech category = electronics }
 			add_stability = 0.03
-		}
-	}
-
-	focus = {
-		id = TU_URS_informant_network
-		prerequisite = { focus = TU_URS_surveillance_bureau }
-		icon = GFX_goal_generic_intelligence_exchange
-		x = -16
-		y = 20
-		cost = 10
-
-		search_filters = { FOCUS_FILTER_POLITICAL }
-
-		ai_will_do = {
-			base = 1
-		}
-
-		completion_reward = {
-			add_tech_bonus = { name = TU_URS_informant_network bonus = 0.75 uses = 1 category = radar_tech category = electronics }
+			add_tech_bonus = { name = TU_URS_surveillance_bureau bonus = 0.75 uses = 1 category = radar_tech category = electronics }
 			add_stability = 0.03
 		}
 	}
 
 	focus = {
 		id = TU_URS_censorship_regime
-		prerequisite = { focus = TU_URS_informant_network }
+		prerequisite = { focus = TU_URS_surveillance_bureau }
 		mutually_exclusive = { focus = TU_URS_public_trials }
 		icon = GFX_goal_generic_propaganda
-		x = -17
-		y = 21
+		x = -15
+		y = 12
 		cost = 10
 
 		search_filters = { FOCUS_FILTER_POLITICAL }
@@ -3028,12 +2095,12 @@ focus_tree = {
 
 	focus = {
 		id = TU_URS_public_trials
-		prerequisite = { focus = TU_URS_informant_network }
+		prerequisite = { focus = TU_URS_surveillance_bureau }
 		mutually_exclusive = { focus = TU_URS_censorship_regime }
 		icon = GFX_goal_generic_dangerous_deal
-		x = -15
-		y = 21
-		cost = 10
+		x = -13
+		y = 12
+		cost = 15
 
 		search_filters = { FOCUS_FILTER_POLITICAL }
 
@@ -3044,6 +2111,8 @@ focus_tree = {
 		completion_reward = {
 			add_political_power = 60
 			add_stability = 0.03
+			add_political_power = 60
+			add_stability = 0.03
 		}
 	}
 
@@ -3051,9 +2120,9 @@ focus_tree = {
 		id = TU_URS_purge_dissent
 		prerequisite = { focus = TU_URS_censorship_regime focus = TU_URS_public_trials }
 		icon = GFX_goal_generic_political_pressure
-		x = -13
-		y = 22
-		cost = 10
+		x = -14
+		y = 13
+		cost = 20
 
 		search_filters = { FOCUS_FILTER_POLITICAL }
 
@@ -3064,98 +2133,21 @@ focus_tree = {
 		completion_reward = {
 			add_manpower = 10000
 			army_experience = 25
-		}
-	}
-
-	focus = {
-		id = TU_URS_show_trials
-		prerequisite = { focus = TU_URS_public_trials }
-		icon = GFX_goal_generic_forceful_treaty
-		x = -15
-		y = 22
-		cost = 10
-
-		search_filters = { FOCUS_FILTER_POLITICAL }
-
-		ai_will_do = {
-			base = 1
-		}
-
-		completion_reward = {
+			add_tech_bonus = { name = TU_URS_purge_dissent bonus = 0.75 uses = 1 category = radar_tech category = electronics }
+			add_stability = 0.03
+			add_tech_bonus = { name = TU_URS_purge_dissent bonus = 0.75 uses = 1 category = electronics category = tu_originium_tech }
 			add_political_power = 60
 			add_stability = 0.03
 		}
 	}
-
-	focus = {
-		id = TU_URS_intel_network
-		prerequisite = { focus = TU_URS_purge_dissent }
-		icon = GFX_goal_generic_intelligence_exchange
-		x = -13
-		y = 23
-		cost = 10
-
-		search_filters = { FOCUS_FILTER_POLITICAL }
-
-		ai_will_do = {
-			base = 1
-		}
-
-		completion_reward = {
-			add_tech_bonus = { name = TU_URS_intel_network bonus = 0.75 uses = 1 category = radar_tech category = electronics }
-			add_stability = 0.03
-		}
-	}
-
-	focus = {
-		id = TU_URS_secret_archive
-		prerequisite = { focus = TU_URS_intel_network }
-		icon = GFX_goal_generic_construct_civilian
-		x = -13
-		y = 24
-		cost = 10
-
-		search_filters = { FOCUS_FILTER_POLITICAL }
-
-		ai_will_do = {
-			base = 1
-		}
-
-		completion_reward = {
-			add_tech_bonus = { name = TU_URS_secret_archive bonus = 0.75 uses = 1 category = electronics category = tu_originium_tech }
-		}
-	}
-
-	focus = {
-		id = TU_URS_political_prisons
-		prerequisite = { focus = TU_URS_secret_archive }
-		icon = GFX_goal_generic_political_pressure
-		x = -13
-		y = 25
-		cost = 10
-
-		search_filters = { FOCUS_FILTER_POLITICAL }
-
-		ai_will_do = {
-			base = 1
-		}
-
-		completion_reward = {
-			add_political_power = 60
-			add_stability = 0.03
-		}
-	}
-
-
-	#### GRAND DUKES BRANCH (x 54-58) ####
 
 	focus = {
 		id = TU_URS_grand_dukes_summons
-		prerequisite = { focus = TU_URS_central_administration }
+		prerequisite = { focus = TU_URS_emperor_rule }
 		icon = GFX_goal_generic_dangerous_deal
-		x = -28
-		y = 18
-		cost = 10
+		x = -26
+		y = 11
+		cost = 15
 
 		search_filters = { FOCUS_FILTER_POLITICAL }
 
@@ -3166,24 +2158,6 @@ focus_tree = {
 		completion_reward = {
 			add_political_power = 60
 			add_stability = 0.03
-		}
-	}
-
-	focus = {
-		id = TU_URS_grand_duke_audit
-		prerequisite = { focus = TU_URS_grand_dukes_summons }
-		icon = GFX_goal_generic_construction
-		x = -28
-		y = 19
-		cost = 10
-
-		search_filters = { FOCUS_FILTER_POLITICAL }
-
-		ai_will_do = {
-			base = 1
-		}
-
-		completion_reward = {
 			add_political_power = 60
 			add_stability = 0.03
 		}
@@ -3191,11 +2165,11 @@ focus_tree = {
 
 	focus = {
 		id = TU_URS_estate_seizure
-		prerequisite = { focus = TU_URS_grand_duke_audit }
+		prerequisite = { focus = TU_URS_grand_dukes_summons }
 		mutually_exclusive = { focus = TU_URS_grand_duke_appease }
 		icon = GFX_goal_generic_forceful_treaty
-		x = -29
-		y = 20
+		x = -27
+		y = 12
 		cost = 10
 
 		search_filters = { FOCUS_FILTER_POLITICAL }
@@ -3213,11 +2187,11 @@ focus_tree = {
 
 	focus = {
 		id = TU_URS_grand_duke_appease
-		prerequisite = { focus = TU_URS_grand_duke_audit }
+		prerequisite = { focus = TU_URS_grand_dukes_summons }
 		mutually_exclusive = { focus = TU_URS_estate_seizure }
 		icon = GFX_goal_generic_improve_relations
-		x = -27
-		y = 20
+		x = -25
+		y = 12
 		cost = 10
 
 		search_filters = { FOCUS_FILTER_POLITICAL }
@@ -3236,9 +2210,9 @@ focus_tree = {
 		id = TU_URS_ducal_courts
 		prerequisite = { focus = TU_URS_estate_seizure focus = TU_URS_grand_duke_appease }
 		icon = GFX_goal_generic_intelligence_exchange
-		x = -25
-		y = 21
-		cost = 10
+		x = -23
+		y = 13
+		cost = 20
 
 		search_filters = { FOCUS_FILTER_POLITICAL }
 
@@ -3247,6 +2221,10 @@ focus_tree = {
 		}
 
 		completion_reward = {
+			add_political_power = 60
+			add_stability = 0.03
+			add_manpower = 10000
+			army_experience = 25
 			add_political_power = 60
 			add_stability = 0.03
 		}
@@ -3257,9 +2235,9 @@ focus_tree = {
 		prerequisite = { focus = TU_URS_grand_duke_appease }
 		mutually_exclusive = { focus = TU_URS_absolutism_codex }
 		icon = GFX_goal_generic_positive_trade_relations
-		x = -27
-		y = 21
-		cost = 10
+		x = -25
+		y = 13
+		cost = 15
 
 		search_filters = { FOCUS_FILTER_POLITICAL }
 
@@ -3270,75 +2248,17 @@ focus_tree = {
 		completion_reward = {
 			add_political_power = 60
 			add_stability = 0.03
-		}
-	}
-
-	focus = {
-		id = TU_URS_feudal_levies_cut
-		prerequisite = { focus = TU_URS_ducal_courts }
-		icon = GFX_goal_generic_construct_military
-		x = -25
-		y = 22
-		cost = 10
-
-		search_filters = { FOCUS_FILTER_ARMY_XP }
-
-		ai_will_do = {
-			base = 1
-		}
-
-		completion_reward = {
-			add_manpower = 10000
-			army_experience = 25
-		}
-	}
-
-	focus = {
-		id = TU_URS_noble_estate_tax
-		prerequisite = { focus = TU_URS_local_customs }
-		icon = GFX_goal_generic_consumer_goods
-		x = -27
-		y = 22
-		cost = 10
-
-		search_filters = { FOCUS_FILTER_POLITICAL }
-
-		ai_will_do = {
-			base = 1
-		}
-
-		completion_reward = {
 			add_political_power = 60
-			add_tech_bonus = { name = TU_URS_noble_estate_tax bonus = 0.75 uses = 1 category = industry }
-		}
-	}
-
-	focus = {
-		id = TU_URS_grand_duke_exile
-		prerequisite = { focus = TU_URS_feudal_levies_cut }
-		icon = GFX_goal_generic_intelligence_exchange
-		x = -25
-		y = 23
-		cost = 10
-
-		search_filters = { FOCUS_FILTER_POLITICAL }
-
-		ai_will_do = {
-			base = 1
-		}
-
-		completion_reward = {
-			add_political_power = 60
-			add_stability = 0.03
+			add_tech_bonus = { name = TU_URS_local_customs bonus = 0.75 uses = 1 category = industry }
 		}
 	}
 
 	focus = {
 		id = TU_URS_direct_rule_lands
-		prerequisite = { focus = TU_URS_grand_duke_exile }
+		prerequisite = { focus = TU_URS_ducal_courts }
 		icon = GFX_goal_generic_construct_infrastructure
-		x = -25
-		y = 24
+		x = -23
+		y = 14
 		cost = 10
 
 		search_filters = { FOCUS_FILTER_POLITICAL }
@@ -3361,8 +2281,8 @@ focus_tree = {
 		id = TU_URS_unification_vision
 		prerequisite = { focus = TU_URS_imperial_court }
 		icon = GFX_goal_generic_major_war
-		x = -22
-		y = 21
+		x = -20
+		y = 12
 		cost = 10
 
 		search_filters = { FOCUS_FILTER_POLITICAL }
@@ -3382,8 +2302,8 @@ focus_tree = {
 		id = TU_URS_kazimir_diplomacy
 		prerequisite = { focus = TU_URS_unification_vision }
 		icon = GFX_goal_generic_trade
-		x = -23
-		y = 22
+		x = -21
+		y = 13
 		cost = 10
 
 		search_filters = { FOCUS_FILTER_POLITICAL }
@@ -3407,8 +2327,8 @@ focus_tree = {
 		id = TU_URS_unification_complete
 		prerequisite = { focus = TU_URS_unification_vision }
 		icon = GFX_goal_generic_national_unity
-		x = -21
-		y = 22
+		x = -19
+		y = 13
 		cost = 15
 
 		search_filters = { FOCUS_FILTER_POLITICAL }
@@ -3433,10 +2353,10 @@ focus_tree = {
 
 	focus = {
 		id = TU_URS_capital_railway_plan
-		prerequisite = { focus = TU_URS_central_administration }
+		prerequisite = { focus = TU_URS_emperor_rule }
 		icon = GFX_goal_generic_construct_infrastructure
-		x = -13
-		y = 18
+		x = -10
+		y = 11
 		cost = 10
 
 		search_filters = { FOCUS_FILTER_INDUSTRY }
@@ -3455,9 +2375,9 @@ focus_tree = {
 		prerequisite = { focus = TU_URS_capital_railway_plan }
 		mutually_exclusive = { focus = TU_URS_rail_heavy_industry }
 		icon = GFX_goal_generic_construct_civ_factory
-		x = -12
-		y = 19
-		cost = 10
+		x = -9
+		y = 12
+		cost = 15
 
 		search_filters = { FOCUS_FILTER_INDUSTRY }
 
@@ -3472,6 +2392,7 @@ focus_tree = {
 		completion_reward = {
 			TU_build_civ_factory = yes
 			TU_build_railway = yes
+			add_tech_bonus = { name = TU_URS_rail_gauge bonus = 0.75 uses = 1 category = industry category = construction_tech }
 		}
 	}
 
@@ -3480,8 +2401,8 @@ focus_tree = {
 		prerequisite = { focus = TU_URS_capital_railway_plan }
 		mutually_exclusive = { focus = TU_URS_rail_gauge }
 		icon = GFX_goal_generic_construct_mil_factory
-		x = -14
-		y = 19
+		x = -11
+		y = 12
 		cost = 10
 
 		search_filters = { FOCUS_FILTER_INDUSTRY }
@@ -3504,8 +2425,8 @@ focus_tree = {
 		id = TU_URS_imperial_express
 		prerequisite = { focus = TU_URS_rail_heavy_industry focus = TU_URS_rail_gauge }
 		icon = GFX_goal_generic_construction
-		x = -10
-		y = 20
+		x = -7
+		y = 13
 		cost = 10
 
 		search_filters = { FOCUS_FILTER_INDUSTRY }
@@ -3522,30 +2443,11 @@ focus_tree = {
 	}
 
 	focus = {
-		id = TU_URS_supply_trains
-		prerequisite = { focus = TU_URS_rail_gauge }
-		icon = GFX_goal_generic_army_artillery
-		x = -12
-		y = 20
-		cost = 10
-
-		search_filters = { FOCUS_FILTER_ARMY_XP }
-
-		ai_will_do = {
-			base = 1
-		}
-
-		completion_reward = {
-			add_tech_bonus = { name = TU_URS_supply_trains bonus = 0.75 uses = 1 category = industry category = construction_tech }
-		}
-	}
-
-	focus = {
 		id = TU_URS_frozen_supply_line
-		prerequisite = { focus = TU_URS_supply_trains }
+		prerequisite = { focus = TU_URS_rail_gauge }
 		icon = GFX_goal_generic_construct_infrastructure
-		x = -12
-		y = 21
+		x = -9
+		y = 13
 		cost = 10
 
 		search_filters = { FOCUS_FILTER_INDUSTRY }
@@ -3565,9 +2467,9 @@ focus_tree = {
 		id = TU_URS_steel_network
 		prerequisite = { focus = TU_URS_imperial_express }
 		icon = GFX_goal_generic_production
-		x = -10
-		y = 21
-		cost = 10
+		x = -7
+		y = 14
+		cost = 15
 
 		search_filters = { FOCUS_FILTER_INDUSTRY }
 
@@ -3583,24 +2485,6 @@ focus_tree = {
 			TU_build_civ_factory = yes
 			add_tech_bonus = { name = TU_URS_steel_network bonus = 0.75 uses = 1 category = infantry_weapons }
 			army_experience = 25
-		}
-	}
-
-	focus = {
-		id = TU_URS_capital_metro
-		prerequisite = { focus = TU_URS_steel_network }
-		icon = GFX_goal_generic_construct_civilian
-		x = -10
-		y = 22
-		cost = 10
-
-		search_filters = { FOCUS_FILTER_INDUSTRY }
-
-		ai_will_do = {
-			base = 1
-		}
-
-		completion_reward = {
 			TU_build_civ_factory = yes
 			add_political_power = 60
 			add_stability = 0.03
@@ -3609,10 +2493,10 @@ focus_tree = {
 
 	focus = {
 		id = TU_URS_capital_terminal
-		prerequisite = { focus = TU_URS_capital_metro }
+		prerequisite = { focus = TU_URS_steel_network }
 		icon = GFX_goal_generic_construction2
-		x = -10
-		y = 23
+		x = -7
+		y = 15
 		cost = 15
 
 		search_filters = { FOCUS_FILTER_INDUSTRY }
@@ -3639,11 +2523,11 @@ focus_tree = {
 		prerequisite = { focus = TU_URS_imperial_decree }
 		mutually_exclusive = { focus = TU_URS_emperor_rule focus = TU_URS_noble_compromise focus = TU_URS_reform_path }
 		icon = GFX_goal_generic_major_war
-		x = 6
-		y = 16
+		x = 7
+		y = 10
 		cost = 10
 
-		search_filters = { FOCUS_FILTER_BALANCE_OF_POWER }
+		search_filters = { FOCUS_FILTER_POLITICAL }
 
 		ai_will_do = {
 			base = 1
@@ -3660,9 +2544,9 @@ focus_tree = {
 		id = TU_URS_hardline_generals
 		prerequisite = { focus = TU_URS_military_junta }
 		icon = GFX_goal_generic_army_doctrines
-		x = 6
-		y = 17
-		cost = 10
+		x = 7
+		y = 11
+		cost = 20
 
 		search_filters = { FOCUS_FILTER_ARMY_XP }
 
@@ -3675,6 +2559,10 @@ focus_tree = {
 			recruit_character = TU_URS_p2_hardline_general
 			add_doctrine_cost_reduction = { name = TU_URS_hardline_generals cost_reduction = 0.4 uses = 1 category = land_doctrine }
 			army_experience = 25
+			add_tech_bonus = { name = TU_URS_hardline_generals bonus = 0.75 uses = 1 category = construction_tech }
+			add_tech_bonus = { name = TU_URS_hardline_generals bonus = 0.75 uses = 1 category = motorized_equipment }
+			add_tech_bonus = { name = TU_URS_hardline_generals bonus = 0.75 uses = 1 category = construction_tech }
+			add_tech_bonus = { name = TU_URS_hardline_generals bonus = 0.75 uses = 1 category = motorized_equipment }
 		}
 	}
 
@@ -3682,9 +2570,9 @@ focus_tree = {
 		id = TU_URS_chernobog_response
 		prerequisite = { focus = TU_URS_hardline_generals }
 		icon = GFX_goal_generic_defence
-		x = 6
-		y = 18
-		cost = 10
+		x = 7
+		y = 12
+		cost = 20
 
 		search_filters = { FOCUS_FILTER_POLITICAL }
 
@@ -3696,37 +2584,21 @@ focus_tree = {
 			country_event = { id = tu_urs_ev.6 }
 			add_political_power = 60
 			add_stability = 0.03
-		}
-	}
-
-	focus = {
-		id = TU_URS_war_mobilisation_law
-		prerequisite = { focus = TU_URS_chernobog_response }
-		icon = GFX_goal_generic_allies_build_infantry
-		x = 6
-		y = 19
-		cost = 10
-
-		search_filters = { FOCUS_FILTER_ARMY_XP }
-
-		ai_will_do = {
-			base = 1
-		}
-
-		completion_reward = {
+			add_political_power = 60
+			add_stability = 0.03
 			army_experience = 25
 			add_war_support = 0.03
-			add_doctrine_cost_reduction = { name = TU_URS_war_mobilisation_law cost_reduction = 0.4 uses = 1 category = land_doctrine }
+			add_doctrine_cost_reduction = { name = TU_URS_chernobog_response cost_reduction = 0.4 uses = 1 category = land_doctrine }
 		}
 	}
 
 	focus = {
 		id = TU_URS_fascist_turn
-		prerequisite = { focus = TU_URS_war_mobilisation_law }
+		prerequisite = { focus = TU_URS_chernobog_response }
 		mutually_exclusive = { focus = TU_URS_junta_caretaker }
 		icon = GFX_goal_generic_propaganda
-		x = 7
-		y = 20
+		x = 8
+		y = 13
 		cost = 10
 
 		search_filters = { FOCUS_FILTER_POLITICAL }
@@ -3753,8 +2625,8 @@ focus_tree = {
 		id = TU_URS_total_war_economy
 		prerequisite = { focus = TU_URS_fascist_turn focus = TU_URS_junta_caretaker }
 		icon = GFX_goal_generic_construct_mil_factory
-		x = 6
-		y = 21
+		x = 7
+		y = 14
 		cost = 10
 
 		search_filters = { FOCUS_FILTER_INDUSTRY }
@@ -3777,8 +2649,8 @@ focus_tree = {
 		prerequisite = { focus = TU_URS_total_war_economy }
 		mutually_exclusive = { focus = TU_URS_loyalty_oath }
 		icon = GFX_goal_generic_political_pressure
-		x = 5
-		y = 22
+		x = 6
+		y = 15
 		cost = 10
 
 		search_filters = { FOCUS_FILTER_POLITICAL }
@@ -3801,9 +2673,9 @@ focus_tree = {
 		id = TU_URS_total_mobilisation
 		prerequisite = { focus = TU_URS_purge_generals focus = TU_URS_loyalty_oath }
 		icon = GFX_goal_generic_construct_military
-		x = 6
-		y = 23
-		cost = 10
+		x = 7
+		y = 16
+		cost = 20
 
 		search_filters = { FOCUS_FILTER_ARMY_XP }
 
@@ -3815,76 +2687,22 @@ focus_tree = {
 			army_experience = 25
 			add_war_support = 0.03
 			add_doctrine_cost_reduction = { name = TU_URS_total_mobilisation cost_reduction = 0.4 uses = 1 category = land_doctrine }
-		}
-	}
-
-	focus = {
-		id = TU_URS_front_state
-		prerequisite = { focus = TU_URS_total_mobilisation }
-		icon = GFX_goal_generic_army_artillery2
-		x = 6
-		y = 24
-		cost = 10
-
-		search_filters = { FOCUS_FILTER_POLITICAL }
-
-		ai_will_do = {
-			base = 1
-		}
-
-		completion_reward = {
 			army_experience = 25
 			add_war_support = 0.03
-			add_doctrine_cost_reduction = { name = TU_URS_front_state cost_reduction = 0.4 uses = 1 category = land_doctrine }
-		}
-	}
-
-	focus = {
-		id = TU_URS_siege_doctrine
-		prerequisite = { focus = TU_URS_front_state }
-		icon = GFX_goal_generic_army_doctrines
-		x = 6
-		y = 25
-		cost = 10
-
-		search_filters = { FOCUS_FILTER_ARMY_XP }
-
-		ai_will_do = {
-			base = 1
-		}
-
-		completion_reward = {
-			add_tech_bonus = { name = TU_URS_siege_doctrine bonus = 0.75 uses = 1 category = artillery }
+			add_doctrine_cost_reduction = { name = TU_URS_total_mobilisation cost_reduction = 0.4 uses = 1 category = land_doctrine }
+			add_tech_bonus = { name = TU_URS_total_mobilisation bonus = 0.75 uses = 1 category = artillery }
 			army_experience = 25
-		}
-	}
-
-	focus = {
-		id = TU_URS_iron_march
-		prerequisite = { focus = TU_URS_siege_doctrine }
-		icon = GFX_goal_generic_army_tanks
-		x = 6
-		y = 26
-		cost = 10
-
-		search_filters = { FOCUS_FILTER_ARMY_XP }
-
-		ai_will_do = {
-			base = 1
-		}
-
-		completion_reward = {
-			add_tech_bonus = { name = TU_URS_iron_march bonus = 0.75 uses = 1 category = infantry_weapons }
+			add_tech_bonus = { name = TU_URS_total_mobilisation bonus = 0.75 uses = 1 category = infantry_weapons }
 			army_experience = 25
 		}
 	}
 
 	focus = {
 		id = TU_URS_iron_regime
-		prerequisite = { focus = TU_URS_iron_march }
+		prerequisite = { focus = TU_URS_total_mobilisation }
 		icon = GFX_goal_generic_military_sphere
-		x = 6
-		y = 27
+		x = 7
+		y = 17
 		cost = 15
 
 		search_filters = { FOCUS_FILTER_POLITICAL }
@@ -3912,8 +2730,8 @@ focus_tree = {
 		id = TU_URS_standing_junta
 		prerequisite = { focus = TU_URS_iron_regime }
 		icon = GFX_goal_generic_national_unity
-		x = 6
-		y = 28
+		x = 7
+		y = 18
 		cost = 10
 
 		search_filters = { FOCUS_FILTER_POLITICAL }
@@ -3932,8 +2750,8 @@ focus_tree = {
 		id = TU_URS_endless_junta
 		prerequisite = { focus = TU_URS_standing_junta }
 		icon = GFX_goal_generic_military_sphere
-		x = 6
-		y = 29
+		x = 7
+		y = 19
 		cost = 15
 
 		search_filters = { FOCUS_FILTER_POLITICAL }
@@ -3958,11 +2776,11 @@ focus_tree = {
 
 	focus = {
 		id = TU_URS_junta_caretaker
-		prerequisite = { focus = TU_URS_war_mobilisation_law }
+		prerequisite = { focus = TU_URS_chernobog_response }
 		mutually_exclusive = { focus = TU_URS_fascist_turn }
 		icon = GFX_goal_generic_neutrality_focus
-		x = 5
-		y = 20
+		x = 6
+		y = 13
 		cost = 10
 
 		search_filters = { FOCUS_FILTER_POLITICAL }
@@ -3979,11 +2797,11 @@ focus_tree = {
 
 	focus = {
 		id = TU_URS_frost_conscription
-		prerequisite = { focus = TU_URS_war_mobilisation_law }
+		prerequisite = { focus = TU_URS_chernobog_response }
 		icon = GFX_goal_generic_allies_build_infantry
-		x = 2
-		y = 20
-		cost = 10
+		x = 3
+		y = 13
+		cost = 15
 
 		search_filters = { FOCUS_FILTER_ARMY_XP }
 
@@ -3994,35 +2812,17 @@ focus_tree = {
 		completion_reward = {
 			add_manpower = 10000
 			army_experience = 25
-		}
-	}
-
-	focus = {
-		id = TU_URS_frontier_militia
-		prerequisite = { focus = TU_URS_frost_conscription }
-		icon = GFX_goal_generic_cavalry
-		x = 2
-		y = 21
-		cost = 10
-
-		search_filters = { FOCUS_FILTER_ARMY_XP }
-
-		ai_will_do = {
-			base = 1
-		}
-
-		completion_reward = {
-			add_tech_bonus = { name = TU_URS_frontier_militia bonus = 0.75 uses = 1 category = construction_tech }
+			add_tech_bonus = { name = TU_URS_frost_conscription bonus = 0.75 uses = 1 category = construction_tech }
 			army_experience = 25
 		}
 	}
 
 	focus = {
 		id = TU_URS_war_bonds
-		prerequisite = { focus = TU_URS_frontier_militia }
+		prerequisite = { focus = TU_URS_frost_conscription }
 		icon = GFX_goal_generic_consumer_goods
-		x = 2
-		y = 22
+		x = 3
+		y = 14
 		cost = 10
 
 		search_filters = { FOCUS_FILTER_POLITICAL }
@@ -4042,7 +2842,7 @@ focus_tree = {
 		prerequisite = { focus = TU_URS_war_bonds }
 		icon = GFX_goal_generic_consumer_goods
 		x = 4
-		y = 23
+		y = 15
 		cost = 10
 
 		search_filters = { FOCUS_FILTER_POLITICAL }
@@ -4066,8 +2866,8 @@ focus_tree = {
 		prerequisite = { focus = TU_URS_war_bonds }
 		icon = GFX_goal_generic_production
 		x = 2
-		y = 23
-		cost = 10
+		y = 15
+		cost = 18
 
 		search_filters = { FOCUS_FILTER_INDUSTRY }
 
@@ -4083,55 +2883,19 @@ focus_tree = {
 			TU_build_civ_factory = yes
 			add_tech_bonus = { name = TU_URS_steel_quota bonus = 0.75 uses = 1 category = infantry_weapons }
 			army_experience = 25
-		}
-	}
-
-	focus = {
-		id = TU_URS_artillery_push
-		prerequisite = { focus = TU_URS_steel_quota }
-		icon = GFX_goal_generic_army_artillery
-		x = 2
-		y = 24
-		cost = 10
-
-		search_filters = { FOCUS_FILTER_ARMY_XP }
-
-		ai_will_do = {
-			base = 1
-		}
-
-		completion_reward = {
-			add_tech_bonus = { name = TU_URS_artillery_push bonus = 0.75 uses = 1 category = artillery }
+			add_tech_bonus = { name = TU_URS_steel_quota bonus = 0.75 uses = 1 category = artillery }
 			army_experience = 25
-		}
-	}
-
-	focus = {
-		id = TU_URS_armor_corps
-		prerequisite = { focus = TU_URS_artillery_push }
-		icon = GFX_goal_generic_build_tank
-		x = 2
-		y = 25
-		cost = 10
-
-		search_filters = { FOCUS_FILTER_ARMY_XP }
-
-		ai_will_do = {
-			base = 1
-		}
-
-		completion_reward = {
-			add_tech_bonus = { name = TU_URS_armor_corps bonus = 0.75 uses = 1 category = armor }
-			add_doctrine_cost_reduction = { name = TU_URS_armor_corps cost_reduction = 0.4 uses = 1 category = land_doctrine }
+			add_tech_bonus = { name = TU_URS_steel_quota bonus = 0.75 uses = 1 category = armor }
+			add_doctrine_cost_reduction = { name = TU_URS_steel_quota cost_reduction = 0.4 uses = 1 category = land_doctrine }
 		}
 	}
 
 	focus = {
 		id = TU_URS_mobile_divisions
-		prerequisite = { focus = TU_URS_armor_corps }
+		prerequisite = { focus = TU_URS_steel_quota }
 		icon = GFX_goal_generic_army_motorized
 		x = 2
-		y = 26
+		y = 16
 		cost = 10
 
 		search_filters = { FOCUS_FILTER_ARMY_XP }
@@ -4152,52 +2916,12 @@ focus_tree = {
 	#### MILITARISED MOBILE CITIES BRANCH (x 80-82) ####
 
 	focus = {
-		id = TU_URS_mobile_city_plan
-		prerequisite = { focus = TU_URS_hardline_generals }
-		icon = GFX_goal_generic_construct_infrastructure
-		x = -7
-		y = 18
-		cost = 10
-
-		search_filters = { FOCUS_FILTER_POLITICAL }
-
-		ai_will_do = {
-			base = 1
-		}
-
-		completion_reward = {
-			add_tech_bonus = { name = TU_URS_mobile_city_plan bonus = 0.75 uses = 1 category = construction_tech }
-			add_tech_bonus = { name = TU_URS_mobile_city_plan bonus = 0.75 uses = 1 category = motorized_equipment }
-		}
-	}
-
-	focus = {
-		id = TU_URS_mobile_garrisons
-		prerequisite = { focus = TU_URS_mobile_city_plan }
-		icon = GFX_goal_generic_fortify_city
-		x = -7
-		y = 19
-		cost = 10
-
-		search_filters = { FOCUS_FILTER_ARMY_XP }
-
-		ai_will_do = {
-			base = 1
-		}
-
-		completion_reward = {
-			add_tech_bonus = { name = TU_URS_mobile_garrisons bonus = 0.75 uses = 1 category = construction_tech }
-			add_tech_bonus = { name = TU_URS_mobile_garrisons bonus = 0.75 uses = 1 category = motorized_equipment }
-		}
-	}
-
-	focus = {
 		id = TU_URS_armored_rail
-		prerequisite = { focus = TU_URS_mobile_garrisons }
+		prerequisite = { focus = TU_URS_hardline_generals }
 		mutually_exclusive = { focus = TU_URS_city_patrols }
 		icon = GFX_goal_generic_army_motorized
-		x = -8
-		y = 20
+		x = -5
+		y = 12
 		cost = 10
 
 		search_filters = { FOCUS_FILTER_INDUSTRY }
@@ -4215,12 +2939,12 @@ focus_tree = {
 
 	focus = {
 		id = TU_URS_city_patrols
-		prerequisite = { focus = TU_URS_mobile_garrisons }
+		prerequisite = { focus = TU_URS_hardline_generals }
 		mutually_exclusive = { focus = TU_URS_armored_rail }
 		icon = GFX_goal_generic_special_forces
-		x = -6
-		y = 20
-		cost = 10
+		x = -3
+		y = 12
+		cost = 15
 
 		search_filters = { FOCUS_FILTER_POLITICAL }
 
@@ -4231,6 +2955,8 @@ focus_tree = {
 		completion_reward = {
 			add_tech_bonus = { name = TU_URS_city_patrols bonus = 0.75 uses = 1 category = construction_tech }
 			army_experience = 25
+			add_tech_bonus = { name = TU_URS_city_patrols bonus = 0.75 uses = 1 category = motorized_equipment }
+			add_doctrine_cost_reduction = { name = TU_URS_city_patrols cost_reduction = 0.4 uses = 1 category = land_doctrine }
 		}
 	}
 
@@ -4238,8 +2964,8 @@ focus_tree = {
 		id = TU_URS_siege_engines
 		prerequisite = { focus = TU_URS_armored_rail }
 		icon = GFX_goal_generic_army_artillery2
-		x = -8
-		y = 21
+		x = -5
+		y = 13
 		cost = 10
 
 		search_filters = { FOCUS_FILTER_ARMY_XP }
@@ -4255,55 +2981,12 @@ focus_tree = {
 	}
 
 	focus = {
-		id = TU_URS_mobile_fortress
-		prerequisite = { focus = TU_URS_city_patrols }
-		icon = GFX_goal_generic_fortify_city
-		x = -6
-		y = 21
-		cost = 10
-
-		search_filters = { FOCUS_FILTER_POLITICAL }
-
-		ai_will_do = {
-			base = 1
-		}
-
-		completion_reward = {
-			add_tech_bonus = { name = TU_URS_mobile_fortress bonus = 0.75 uses = 1 category = motorized_equipment }
-			add_doctrine_cost_reduction = { name = TU_URS_mobile_fortress cost_reduction = 0.4 uses = 1 category = land_doctrine }
-		}
-	}
-
-
-	#### BORDER PURGE AND WAR PLANS BRANCH (x 76-78) ####
-
-	focus = {
-		id = TU_URS_special_military_courts
-		prerequisite = { focus = TU_URS_chernobog_response }
-		icon = GFX_goal_generic_forceful_treaty
-		x = -2
-		y = 19
-		cost = 10
-
-		search_filters = { FOCUS_FILTER_POLITICAL }
-
-		ai_will_do = {
-			base = 1
-		}
-
-		completion_reward = {
-			add_political_power = 60
-			add_stability = 0.03
-		}
-	}
-
-	focus = {
 		id = TU_URS_black_regiment
-		prerequisite = { focus = TU_URS_special_military_courts }
+		prerequisite = { focus = TU_URS_chernobog_response }
 		mutually_exclusive = { focus = TU_URS_black_regiment_alt }
 		icon = GFX_goal_generic_special_forces
-		x = -4
-		y = 20
+		x = -3
+		y = 13
 		cost = 10
 
 		search_filters = { FOCUS_FILTER_ARMY_XP }
@@ -4321,11 +3004,11 @@ focus_tree = {
 
 	focus = {
 		id = TU_URS_black_regiment_alt
-		prerequisite = { focus = TU_URS_special_military_courts }
+		prerequisite = { focus = TU_URS_chernobog_response }
 		mutually_exclusive = { focus = TU_URS_black_regiment }
 		icon = GFX_goal_generic_political_pressure
-		x = -2
-		y = 20
+		x = -1
+		y = 13
 		cost = 10
 
 		search_filters = { FOCUS_FILTER_POLITICAL }
@@ -4342,10 +3025,10 @@ focus_tree = {
 
 	focus = {
 		id = TU_URS_border_purge
-		prerequisite = { focus = TU_URS_special_military_courts }
+		prerequisite = { focus = TU_URS_chernobog_response }
 		icon = GFX_goal_generic_dangerous_deal
-		x = 0
-		y = 20
+		x = 1
+		y = 13
 		cost = 10
 
 		search_filters = { FOCUS_FILTER_POLITICAL }
@@ -4364,8 +3047,8 @@ focus_tree = {
 		id = TU_URS_lei_diplomacy
 		prerequisite = { focus = TU_URS_border_purge }
 		icon = GFX_goal_generic_improve_relations
-		x = 0
-		y = 21
+		x = 1
+		y = 14
 		cost = 10
 
 		search_filters = { FOCUS_FILTER_POLITICAL }
@@ -4392,8 +3075,8 @@ focus_tree = {
 		prerequisite = { focus = TU_URS_total_war_economy }
 		mutually_exclusive = { focus = TU_URS_purge_generals }
 		icon = GFX_goal_generic_national_unity
-		x = 7
-		y = 22
+		x = 8
+		y = 15
 		cost = 10
 
 		search_filters = { FOCUS_FILTER_POLITICAL }
@@ -4420,10 +3103,10 @@ focus_tree = {
 		mutually_exclusive = { focus = TU_URS_emperor_rule focus = TU_URS_military_junta focus = TU_URS_reform_path }
 		icon = GFX_goal_generic_consumer_goods
 		x = 17
-		y = 16
-		cost = 10
+		y = 10
+		cost = 20
 
-		search_filters = { FOCUS_FILTER_BALANCE_OF_POWER }
+		search_filters = { FOCUS_FILTER_POLITICAL }
 
 		ai_will_do = {
 			base = 1
@@ -4431,6 +3114,12 @@ focus_tree = {
 
 		completion_reward = {
 			country_event = { id = tu_urs_ev.3 }
+			add_political_power = 60
+			add_stability = 0.03
+			add_tech_bonus = { name = TU_URS_noble_compromise bonus = 0.75 uses = 1 category = motorized_equipment }
+			add_doctrine_cost_reduction = { name = TU_URS_noble_compromise cost_reduction = 0.4 uses = 1 category = land_doctrine }
+			add_political_power = 60
+			add_stability = 0.03
 			add_political_power = 60
 			add_stability = 0.03
 		}
@@ -4441,7 +3130,7 @@ focus_tree = {
 		prerequisite = { focus = TU_URS_noble_compromise }
 		icon = GFX_goal_generic_improve_relations
 		x = 17
-		y = 17
+		y = 11
 		cost = 10
 
 		search_filters = { FOCUS_FILTER_POLITICAL }
@@ -4466,7 +3155,7 @@ focus_tree = {
 		mutually_exclusive = { focus = TU_URS_noble_levies_alt }
 		icon = GFX_goal_generic_allies_build_infantry
 		x = 21
-		y = 17
+		y = 11
 		cost = 10
 
 		search_filters = { FOCUS_FILTER_RESEARCH }
@@ -4487,7 +3176,7 @@ focus_tree = {
 		mutually_exclusive = { focus = TU_URS_noble_levies }
 		icon = GFX_goal_generic_trade
 		x = 19
-		y = 17
+		y = 11
 		cost = 10
 
 		search_filters = { FOCUS_FILTER_POLITICAL }
@@ -4503,31 +3192,11 @@ focus_tree = {
 	}
 
 	focus = {
-		id = TU_URS_noble_senate_summon
-		prerequisite = { focus = TU_URS_noble_compromise }
-		icon = GFX_goal_generic_national_unity
-		x = 9
-		y = 17
-		cost = 10
-
-		search_filters = { FOCUS_FILTER_POLITICAL }
-
-		ai_will_do = {
-			base = 1
-		}
-
-		completion_reward = {
-			add_political_power = 60
-			add_stability = 0.03
-		}
-	}
-
-	focus = {
 		id = TU_URS_noble_senate_law
-		prerequisite = { focus = TU_URS_noble_senate_summon }
+		prerequisite = { focus = TU_URS_noble_compromise }
 		icon = GFX_goal_generic_political_pressure
-		x = 9
-		y = 18
+		x = 10
+		y = 11
 		cost = 10
 
 		search_filters = { FOCUS_FILTER_POLITICAL }
@@ -4548,11 +3217,11 @@ focus_tree = {
 		prerequisite = { focus = TU_URS_noble_senate_law }
 		mutually_exclusive = { focus = TU_URS_noble_regency }
 		icon = GFX_goal_generic_defence
-		x = 8
-		y = 19
+		x = 9
+		y = 12
 		cost = 10
 
-		search_filters = { FOCUS_FILTER_BALANCE_OF_POWER }
+		search_filters = { FOCUS_FILTER_POLITICAL }
 
 		ai_will_do = {
 			base = 1
@@ -4569,9 +3238,9 @@ focus_tree = {
 		prerequisite = { focus = TU_URS_noble_senate_law }
 		mutually_exclusive = { focus = TU_URS_noble_senate_veto }
 		icon = GFX_goal_generic_neutrality_focus
-		x = 10
-		y = 19
-		cost = 10
+		x = 11
+		y = 12
+		cost = 15
 
 		search_filters = { FOCUS_FILTER_POLITICAL }
 
@@ -4581,6 +3250,8 @@ focus_tree = {
 
 		completion_reward = {
 			add_ideas = TU_URS_p3_regency
+			add_political_power = 60
+			add_stability = 0.03
 			add_political_power = 60
 			add_stability = 0.03
 			# spec 23 hooks
@@ -4594,32 +3265,12 @@ focus_tree = {
 	}
 
 	focus = {
-		id = TU_URS_noble_regent_council
-		prerequisite = { focus = TU_URS_noble_regency }
-		icon = GFX_goal_generic_improve_relations
-		x = 10
-		y = 20
-		cost = 10
-
-		search_filters = { FOCUS_FILTER_POLITICAL }
-
-		ai_will_do = {
-			base = 1
-		}
-
-		completion_reward = {
-			add_political_power = 60
-			add_stability = 0.03
-		}
-	}
-
-	focus = {
 		id = TU_URS_noble_senate_chamber
 		prerequisite = { focus = TU_URS_noble_senate_veto focus = TU_URS_noble_regency }
 		icon = GFX_goal_generic_construction
-		x = 12
-		y = 20
-		cost = 10
+		x = 10
+		y = 13
+		cost = 20
 
 		search_filters = { FOCUS_FILTER_POLITICAL }
 
@@ -4630,44 +3281,8 @@ focus_tree = {
 		completion_reward = {
 			add_political_power = 60
 			add_stability = 0.03
-		}
-	}
-
-	focus = {
-		id = TU_URS_noble_senate_levy
-		prerequisite = { focus = TU_URS_noble_senate_chamber }
-		icon = GFX_goal_generic_allies_build_infantry
-		x = 12
-		y = 21
-		cost = 10
-
-		search_filters = { FOCUS_FILTER_MANPOWER }
-
-		ai_will_do = {
-			base = 1
-		}
-
-		completion_reward = {
 			add_manpower = 10000
 			army_experience = 25
-		}
-	}
-
-	focus = {
-		id = TU_URS_noble_senate_peace
-		prerequisite = { focus = TU_URS_noble_senate_levy }
-		icon = GFX_goal_generic_positive_trade_relations
-		x = 12
-		y = 22
-		cost = 10
-
-		search_filters = { FOCUS_FILTER_BALANCE_OF_POWER }
-
-		ai_will_do = {
-			base = 1
-		}
-
-		completion_reward = {
 			add_political_power = 60
 			add_stability = 0.03
 		}
@@ -4678,7 +3293,7 @@ focus_tree = {
 		prerequisite = { focus = TU_URS_noble_compromise }
 		icon = GFX_goal_generic_consumer_goods
 		x = 14
-		y = 17
+		y = 11
 		cost = 10
 
 		search_filters = { FOCUS_FILTER_POLITICAL }
@@ -4700,10 +3315,10 @@ focus_tree = {
 		mutually_exclusive = { focus = TU_URS_noble_local_taxes }
 		icon = GFX_goal_generic_military_sphere
 		x = 13
-		y = 18
+		y = 12
 		cost = 10
 
-		search_filters = { FOCUS_FILTER_BALANCE_OF_POWER }
+		search_filters = { FOCUS_FILTER_POLITICAL }
 
 		ai_will_do = {
 			base = 1
@@ -4721,7 +3336,7 @@ focus_tree = {
 		mutually_exclusive = { focus = TU_URS_noble_feudal_autonomy }
 		icon = GFX_goal_generic_trade
 		x = 15
-		y = 18
+		y = 12
 		cost = 10
 
 		search_filters = { FOCUS_FILTER_POLITICAL }
@@ -4741,7 +3356,7 @@ focus_tree = {
 		prerequisite = { focus = TU_URS_noble_feudal_autonomy focus = TU_URS_noble_local_taxes }
 		icon = GFX_goal_generic_political_pressure
 		x = 14
-		y = 19
+		y = 13
 		cost = 10
 
 		search_filters = { FOCUS_FILTER_POLITICAL }
@@ -4761,10 +3376,10 @@ focus_tree = {
 		prerequisite = { focus = TU_URS_noble_governors }
 		icon = GFX_goal_generic_major_alliance
 		x = 14
-		y = 20
-		cost = 10
+		y = 14
+		cost = 15
 
-		search_filters = { FOCUS_FILTER_BALANCE_OF_POWER }
+		search_filters = { FOCUS_FILTER_POLITICAL }
 
 		ai_will_do = {
 			base = 1
@@ -4777,24 +3392,6 @@ focus_tree = {
 		completion_reward = {
 			add_political_power = 60
 			add_stability = 0.03
-		}
-	}
-
-	focus = {
-		id = TU_URS_noble_feudal_legacy
-		prerequisite = { focus = TU_URS_noble_decentral_union }
-		icon = GFX_goal_generic_army_doctrines
-		x = 14
-		y = 21
-		cost = 10
-
-		search_filters = { FOCUS_FILTER_ARMY_XP }
-
-		ai_will_do = {
-			base = 1
-		}
-
-		completion_reward = {
 			add_political_power = 60
 			add_stability = 0.03
 		}
@@ -4805,7 +3402,7 @@ focus_tree = {
 		prerequisite = { focus = TU_URS_noble_council }
 		icon = GFX_goal_generic_construct_civ_factory
 		x = 17
-		y = 18
+		y = 12
 		cost = 10
 
 		search_filters = { FOCUS_FILTER_INDUSTRY }
@@ -4828,7 +3425,7 @@ focus_tree = {
 		mutually_exclusive = { focus = TU_URS_noble_free_trade }
 		icon = GFX_goal_generic_production
 		x = 16
-		y = 19
+		y = 13
 		cost = 10
 
 		search_filters = { FOCUS_FILTER_INDUSTRY }
@@ -4850,7 +3447,7 @@ focus_tree = {
 		mutually_exclusive = { focus = TU_URS_noble_cartel_monopoly }
 		icon = GFX_goal_generic_trade
 		x = 18
-		y = 19
+		y = 13
 		cost = 10
 
 		search_filters = { FOCUS_FILTER_INTERNATIONAL_TRADE }
@@ -4870,8 +3467,8 @@ focus_tree = {
 		prerequisite = { focus = TU_URS_noble_cartel_monopoly focus = TU_URS_noble_free_trade }
 		icon = GFX_goal_generic_consumer_goods
 		x = 17
-		y = 20
-		cost = 10
+		y = 14
+		cost = 20
 
 		search_filters = { FOCUS_FILTER_POLITICAL }
 
@@ -4886,55 +3483,19 @@ focus_tree = {
 		completion_reward = {
 			add_political_power = 60
 			add_tech_bonus = { name = TU_URS_noble_cartel_bank bonus = 0.75 uses = 1 category = industry }
-		}
-	}
-
-	focus = {
-		id = TU_URS_noble_cartel_exports
-		prerequisite = { focus = TU_URS_noble_cartel_bank }
-		icon = GFX_goal_generic_production2
-		x = 17
-		y = 21
-		cost = 10
-
-		search_filters = { FOCUS_FILTER_INDUSTRY }
-
-		ai_will_do = {
-			base = 1
-		}
-
-		completion_reward = {
 			TU_build_mil_factory = yes
 			add_political_power = 60
-			add_tech_bonus = { name = TU_URS_noble_cartel_exports bonus = 0.75 uses = 1 category = industry }
-		}
-	}
-
-	focus = {
-		id = TU_URS_noble_industrial_union
-		prerequisite = { focus = TU_URS_noble_cartel_exports }
-		icon = GFX_goal_generic_construction2
-		x = 17
-		y = 22
-		cost = 10
-
-		search_filters = { FOCUS_FILTER_BALANCE_OF_POWER }
-
-		ai_will_do = {
-			base = 1
-		}
-
-		completion_reward = {
-			add_tech_bonus = { name = TU_URS_noble_industrial_union bonus = 0.75 uses = 1 category = industry category = construction_tech }
+			add_tech_bonus = { name = TU_URS_noble_cartel_bank bonus = 0.75 uses = 1 category = industry }
+			add_tech_bonus = { name = TU_URS_noble_cartel_bank bonus = 0.75 uses = 1 category = industry category = construction_tech }
 		}
 	}
 
 	focus = {
 		id = TU_URS_noble_cartel_peak
-		prerequisite = { focus = TU_URS_noble_industrial_union }
+		prerequisite = { focus = TU_URS_noble_cartel_bank }
 		icon = GFX_goal_generic_national_unity
 		x = 17
-		y = 23
+		y = 15
 		cost = 15
 
 		search_filters = { FOCUS_FILTER_POLITICAL }
@@ -4956,7 +3517,7 @@ focus_tree = {
 		prerequisite = { focus = TU_URS_noble_cartel_peak }
 		icon = GFX_goal_generic_small_arms
 		x = 17
-		y = 24
+		y = 16
 		cost = 10
 
 		search_filters = { FOCUS_FILTER_RESEARCH }
@@ -4976,8 +3537,8 @@ focus_tree = {
 		prerequisite = { focus = TU_URS_noble_cartel_standard }
 		icon = GFX_goal_generic_political_pressure
 		x = 17
-		y = 25
-		cost = 10
+		y = 17
+		cost = 15
 
 		search_filters = { FOCUS_FILTER_POLITICAL }
 
@@ -4992,35 +3553,17 @@ focus_tree = {
 		completion_reward = {
 			add_political_power = 60
 			add_tech_bonus = { name = TU_URS_noble_monopoly_law bonus = 0.75 uses = 1 category = industry }
-		}
-	}
-
-	focus = {
-		id = TU_URS_noble_cartel_empire
-		prerequisite = { focus = TU_URS_noble_monopoly_law }
-		icon = GFX_goal_generic_construct_infrastructure
-		x = 17
-		y = 26
-		cost = 10
-
-		search_filters = { FOCUS_FILTER_BALANCE_OF_POWER }
-
-		ai_will_do = {
-			base = 1
-		}
-
-		completion_reward = {
 			add_political_power = 60
-			add_tech_bonus = { name = TU_URS_noble_cartel_empire bonus = 0.75 uses = 1 category = industry }
+			add_tech_bonus = { name = TU_URS_noble_monopoly_law bonus = 0.75 uses = 1 category = industry }
 		}
 	}
 
 	focus = {
 		id = TU_URS_noble_cartel_legacy
-		prerequisite = { focus = TU_URS_noble_cartel_empire }
+		prerequisite = { focus = TU_URS_noble_monopoly_law }
 		icon = GFX_goal_generic_construction
 		x = 17
-		y = 27
+		y = 18
 		cost = 15
 
 		search_filters = { FOCUS_FILTER_RESEARCH }
@@ -5036,31 +3579,11 @@ focus_tree = {
 	}
 
 	focus = {
-		id = TU_URS_noble_private_armies
-		prerequisite = { focus = TU_URS_noble_compromise }
-		icon = GFX_goal_generic_cavalry
-		x = 23
-		y = 17
-		cost = 10
-
-		search_filters = { FOCUS_FILTER_ARMY_XP }
-
-		ai_will_do = {
-			base = 1
-		}
-
-		completion_reward = {
-			add_political_power = 60
-			add_stability = 0.03
-		}
-	}
-
-	focus = {
 		id = TU_URS_noble_estate_militia
-		prerequisite = { focus = TU_URS_noble_private_armies }
+		prerequisite = { focus = TU_URS_noble_compromise }
 		icon = GFX_goal_generic_allies_build_infantry
 		x = 23
-		y = 18
+		y = 11
 		cost = 10
 
 		search_filters = { FOCUS_FILTER_MANPOWER }
@@ -5084,7 +3607,7 @@ focus_tree = {
 		mutually_exclusive = { focus = TU_URS_noble_oath_pledge }
 		icon = GFX_goal_generic_army_artillery
 		x = 22
-		y = 19
+		y = 12
 		cost = 10
 
 		search_filters = { FOCUS_FILTER_MANPOWER }
@@ -5105,7 +3628,7 @@ focus_tree = {
 		mutually_exclusive = { focus = TU_URS_noble_armed_retainers }
 		icon = GFX_goal_generic_propaganda
 		x = 24
-		y = 19
+		y = 12
 		cost = 10
 
 		search_filters = { FOCUS_FILTER_POLITICAL }
@@ -5125,8 +3648,8 @@ focus_tree = {
 		prerequisite = { focus = TU_URS_noble_armed_retainers focus = TU_URS_noble_oath_pledge }
 		icon = GFX_goal_generic_army_doctrines
 		x = 23
-		y = 20
-		cost = 10
+		y = 13
+		cost = 20
 
 		search_filters = { FOCUS_FILTER_MANPOWER }
 
@@ -5137,75 +3660,19 @@ focus_tree = {
 		completion_reward = {
 			add_manpower = 10000
 			army_experience = 25
-		}
-	}
-
-	focus = {
-		id = TU_URS_noble_armoured_retinue
-		prerequisite = { focus = TU_URS_noble_private_regiment }
-		icon = GFX_goal_generic_army_tanks
-		x = 23
-		y = 21
-		cost = 10
-
-		search_filters = { FOCUS_FILTER_ARMY_XP }
-
-		ai_will_do = {
-			base = 1
-		}
-
-		completion_reward = {
-			add_tech_bonus = { name = TU_URS_noble_armoured_retinue bonus = 0.75 uses = 1 category = armor }
-			add_doctrine_cost_reduction = { name = TU_URS_noble_armoured_retinue cost_reduction = 0.4 uses = 1 category = land_doctrine }
-		}
-	}
-
-	focus = {
-		id = TU_URS_noble_estate_defence
-		prerequisite = { focus = TU_URS_noble_armoured_retinue }
-		icon = GFX_goal_generic_fortify_city
-		x = 23
-		y = 22
-		cost = 10
-
-		search_filters = { FOCUS_FILTER_STABILITY }
-
-		ai_will_do = {
-			base = 1
-		}
-
-		completion_reward = {
-			add_tech_bonus = { name = TU_URS_noble_estate_defence bonus = 0.75 uses = 1 category = construction_tech }
+			add_tech_bonus = { name = TU_URS_noble_private_regiment bonus = 0.75 uses = 1 category = armor }
+			add_doctrine_cost_reduction = { name = TU_URS_noble_private_regiment cost_reduction = 0.4 uses = 1 category = land_doctrine }
+			add_tech_bonus = { name = TU_URS_noble_private_regiment bonus = 0.75 uses = 1 category = construction_tech }
 			army_experience = 25
 		}
 	}
 
 	focus = {
-		id = TU_URS_noble_mobile_estates
-		prerequisite = { focus = TU_URS_noble_compromise }
-		icon = GFX_goal_generic_construct_civilian
-		x = 26
-		y = 17
-		cost = 10
-
-		search_filters = { FOCUS_FILTER_POLITICAL }
-
-		ai_will_do = {
-			base = 1
-		}
-
-		completion_reward = {
-			add_tech_bonus = { name = TU_URS_noble_mobile_estates bonus = 0.75 uses = 1 category = motorized_equipment }
-			add_doctrine_cost_reduction = { name = TU_URS_noble_mobile_estates cost_reduction = 0.4 uses = 1 category = land_doctrine }
-		}
-	}
-
-	focus = {
 		id = TU_URS_noble_mobile_survey
-		prerequisite = { focus = TU_URS_noble_mobile_estates }
+		prerequisite = { focus = TU_URS_noble_compromise }
 		icon = GFX_goal_generic_radar
 		x = 26
-		y = 18
+		y = 11
 		cost = 10
 
 		search_filters = { FOCUS_FILTER_RESEARCH }
@@ -5225,7 +3692,7 @@ focus_tree = {
 		prerequisite = { focus = TU_URS_noble_mobile_survey }
 		icon = GFX_goal_generic_trade
 		x = 26
-		y = 19
+		y = 12
 		cost = 10
 
 		search_filters = { FOCUS_FILTER_POLITICAL }
@@ -5249,7 +3716,7 @@ focus_tree = {
 		prerequisite = { focus = TU_URS_noble_caravan_route focus = TU_URS_noble_mobile_survey }
 		icon = GFX_goal_generic_national_unity
 		x = 26
-		y = 20
+		y = 13
 		cost = 15
 
 		search_filters = { FOCUS_FILTER_POLITICAL }
@@ -5274,7 +3741,7 @@ focus_tree = {
 		prerequisite = { focus = TU_URS_noble_compromise }
 		icon = GFX_goal_generic_intelligence_exchange
 		x = 28
-		y = 17
+		y = 11
 		cost = 10
 
 		search_filters = { FOCUS_FILTER_POLITICAL }
@@ -5298,10 +3765,10 @@ focus_tree = {
 		mutually_exclusive = { focus = TU_URS_emperor_rule focus = TU_URS_military_junta focus = TU_URS_noble_compromise }
 		icon = GFX_goal_generic_national_unity
 		x = 31
-		y = 16
+		y = 10
 		cost = 5
 
-		search_filters = { FOCUS_FILTER_BALANCE_OF_POWER }
+		search_filters = { FOCUS_FILTER_POLITICAL }
 
 		ai_will_do = {
 			base = 1
@@ -5319,7 +3786,7 @@ focus_tree = {
 		prerequisite = { focus = TU_URS_reform_path }
 		icon = GFX_goal_generic_propaganda
 		x = 31
-		y = 17
+		y = 11
 		cost = 10
 
 		search_filters = { FOCUS_FILTER_POLITICAL }
@@ -5340,7 +3807,7 @@ focus_tree = {
 		prerequisite = { focus = TU_URS_reform_student_council }
 		icon = GFX_goal_generic_political_pressure
 		x = 31
-		y = 18
+		y = 12
 		cost = 10
 
 		search_filters = { FOCUS_FILTER_POLITICAL }
@@ -5362,10 +3829,10 @@ focus_tree = {
 		mutually_exclusive = { focus = TU_URS_reform_republic_path }
 		icon = GFX_goal_generic_national_unity
 		x = 30
-		y = 19
+		y = 13
 		cost = 10
 
-		search_filters = { FOCUS_FILTER_BALANCE_OF_POWER }
+		search_filters = { FOCUS_FILTER_POLITICAL }
 
 		ai_will_do = {
 			base = 1
@@ -5381,8 +3848,8 @@ focus_tree = {
 		id = TU_URS_reform_royal_charter
 		prerequisite = { focus = TU_URS_reform_constitutional_monarchy focus = TU_URS_reform_republic_path }
 		icon = GFX_goal_generic_political_pressure
-		x = 34
-		y = 20
+		x = 31
+		y = 14
 		cost = 10
 
 		search_filters = { FOCUS_FILTER_POLITICAL }
@@ -5401,8 +3868,8 @@ focus_tree = {
 		id = TU_URS_reform_crown_councils
 		prerequisite = { focus = TU_URS_reform_royal_charter }
 		icon = GFX_goal_generic_construction
-		x = 34
-		y = 21
+		x = 31
+		y = 15
 		cost = 10
 
 		search_filters = { FOCUS_FILTER_RESEARCH }
@@ -5422,8 +3889,8 @@ focus_tree = {
 		prerequisite = { focus = TU_URS_reform_crown_councils }
 		mutually_exclusive = { focus = TU_URS_reform_monarch_legacy_alt }
 		icon = GFX_goal_generic_national_unity
-		x = 36
-		y = 22
+		x = 31
+		y = 16
 		cost = 10
 
 		search_filters = { FOCUS_FILTER_POLITICAL }
@@ -5447,8 +3914,8 @@ focus_tree = {
 		prerequisite = { focus = TU_URS_reform_crown_councils }
 		mutually_exclusive = { focus = TU_URS_reform_monarch_legacy }
 		icon = GFX_goal_generic_propaganda
-		x = 38
-		y = 22
+		x = 33
+		y = 16
 		cost = 10
 
 		search_filters = { FOCUS_FILTER_POLITICAL }
@@ -5477,28 +3944,8 @@ focus_tree = {
 		mutually_exclusive = { focus = TU_URS_reform_constitutional_monarchy }
 		icon = GFX_goal_generic_neutrality_focus
 		x = 32
-		y = 19
-		cost = 10
-
-		search_filters = { FOCUS_FILTER_BALANCE_OF_POWER }
-
-		ai_will_do = {
-			base = 1
-		}
-
-		completion_reward = {
-			add_political_power = 60
-			add_stability = 0.03
-		}
-	}
-
-	focus = {
-		id = TU_URS_reform_republic_assembly
-		prerequisite = { focus = TU_URS_reform_republic_path }
-		icon = GFX_goal_generic_improve_relations
-		x = 32
-		y = 20
-		cost = 10
+		y = 13
+		cost = 20
 
 		search_filters = { FOCUS_FILTER_POLITICAL }
 
@@ -5509,64 +3956,12 @@ focus_tree = {
 		completion_reward = {
 			add_political_power = 60
 			add_stability = 0.03
-		}
-	}
-
-	focus = {
-		id = TU_URS_reform_republic_vote
-		prerequisite = { focus = TU_URS_reform_republic_assembly }
-		icon = GFX_goal_generic_propaganda
-		x = 32
-		y = 21
-		cost = 10
-
-		search_filters = { FOCUS_FILTER_STABILITY }
-
-		ai_will_do = {
-			base = 1
-		}
-
-		completion_reward = {
 			add_political_power = 60
 			add_stability = 0.03
-		}
-	}
-
-	focus = {
-		id = TU_URS_reform_republic_civil_service
-		prerequisite = { focus = TU_URS_reform_republic_vote }
-		icon = GFX_goal_generic_construction2
-		x = 32
-		y = 22
-		cost = 10
-
-		search_filters = { FOCUS_FILTER_RESEARCH }
-
-		ai_will_do = {
-			base = 1
-		}
-
-		completion_reward = {
 			add_political_power = 60
 			add_stability = 0.03
-		}
-	}
-
-	focus = {
-		id = TU_URS_reform_republic_legacy
-		prerequisite = { focus = TU_URS_reform_republic_civil_service }
-		icon = GFX_goal_generic_neutrality_focus
-		x = 32
-		y = 23
-		cost = 10
-
-		search_filters = { FOCUS_FILTER_BALANCE_OF_POWER }
-
-		ai_will_do = {
-			base = 1
-		}
-
-		completion_reward = {
+			add_political_power = 60
+			add_stability = 0.03
 			add_political_power = 60
 			add_stability = 0.03
 		}
@@ -5574,11 +3969,11 @@ focus_tree = {
 
 	focus = {
 		id = TU_URS_reform_democratic_party
-		prerequisite = { focus = TU_URS_reform_crown_councils focus = TU_URS_reform_republic_vote }
+		prerequisite = { focus = TU_URS_reform_crown_councils }
 		icon = GFX_goal_generic_political_pressure
-		x = 34
-		y = 22
-		cost = 10
+		x = 29
+		y = 16
+		cost = 20
 
 		search_filters = { FOCUS_FILTER_POLITICAL }
 
@@ -5597,6 +3992,25 @@ focus_tree = {
 			}
 			add_political_power = 60
 			add_stability = 0.03
+			add_political_power = 60
+			add_stability = 0.03
+			add_tech_bonus = { name = TU_URS_reform_democratic_party bonus = 0.75 uses = 1 category = industry category = construction_tech }
+			add_political_power = 60
+			add_stability = 0.03
+			add_tech_bonus = { name = TU_URS_reform_democratic_party bonus = 0.75 uses = 1 category = industry category = construction_tech }
+			add_stability = 0.03
+			add_manpower = 10000
+			add_tech_bonus = { name = TU_URS_reform_democratic_party bonus = 0.75 uses = 1 category = tu_oripathy_tech }
+			add_war_support = 0.03
+			add_stability = 0.03
+			add_political_power = 60
+			add_stability = 0.03
+			add_political_power = 60
+			add_stability = 0.03
+			add_political_power = 60
+			add_stability = 0.03
+			add_political_power = 60
+			add_stability = 0.03
 			# spec 23 hooks
 			recruit_character = TU_URS_democrat
 			promote_character = {
@@ -5608,210 +4022,11 @@ focus_tree = {
 	}
 
 	focus = {
-		id = TU_URS_reform_elections
-		prerequisite = { focus = TU_URS_reform_democratic_party }
-		icon = GFX_goal_generic_propaganda
-		x = 34
-		y = 23
-		cost = 10
-
-		search_filters = { FOCUS_FILTER_POLITICAL }
-
-		ai_will_do = {
-			base = 1
-		}
-
-		completion_reward = {
-			add_political_power = 60
-			add_stability = 0.03
-		}
-	}
-
-	focus = {
-		id = TU_URS_reform_coalition_rule
-		prerequisite = { focus = TU_URS_reform_elections }
-		icon = GFX_goal_generic_improve_relations
-		x = 34
-		y = 24
-		cost = 10
-
-		search_filters = { FOCUS_FILTER_POLITICAL }
-
-		ai_will_do = {
-			base = 1
-		}
-
-		completion_reward = {
-			add_tech_bonus = { name = TU_URS_reform_coalition_rule bonus = 0.75 uses = 1 category = industry category = construction_tech }
-		}
-	}
-
-	focus = {
-		id = TU_URS_reform_civil_rights
-		prerequisite = { focus = TU_URS_reform_coalition_rule }
-		icon = GFX_goal_generic_improve_relations
-		x = 34
-		y = 25
-		cost = 10
-
-		search_filters = { FOCUS_FILTER_STABILITY }
-
-		ai_will_do = {
-			base = 1
-		}
-
-		completion_reward = {
-			add_political_power = 60
-			add_stability = 0.03
-		}
-	}
-
-	focus = {
-		id = TU_URS_reform_labour_law
-		prerequisite = { focus = TU_URS_reform_civil_rights }
-		icon = GFX_goal_generic_construct_civilian
-		x = 34
-		y = 26
-		cost = 10
-
-		search_filters = { FOCUS_FILTER_MANPOWER }
-
-		ai_will_do = {
-			base = 1
-		}
-
-		completion_reward = {
-			add_tech_bonus = { name = TU_URS_reform_labour_law bonus = 0.75 uses = 1 category = industry category = construction_tech }
-		}
-	}
-
-	focus = {
-		id = TU_URS_reform_welfare_state
-		prerequisite = { focus = TU_URS_reform_labour_law }
-		icon = GFX_goal_generic_consumer_goods
-		x = 34
-		y = 27
-		cost = 10
-
-		search_filters = { FOCUS_FILTER_STABILITY }
-
-		ai_will_do = {
-			base = 1
-		}
-
-		completion_reward = {
-			add_stability = 0.03
-			add_manpower = 10000
-			add_tech_bonus = { name = TU_URS_reform_welfare_state bonus = 0.75 uses = 1 category = tu_oripathy_tech }
-		}
-	}
-
-	focus = {
-		id = TU_URS_reform_national_dialogue
-		prerequisite = { focus = TU_URS_reform_welfare_state }
-		icon = GFX_goal_generic_intelligence_exchange
-		x = 34
-		y = 28
-		cost = 10
-
-		search_filters = { FOCUS_FILTER_POLITICAL }
-
-		ai_will_do = {
-			base = 1
-		}
-
-		completion_reward = {
-			add_war_support = 0.03
-			add_stability = 0.03
-		}
-	}
-
-	focus = {
-		id = TU_URS_reform_constitutional_court
-		prerequisite = { focus = TU_URS_reform_national_dialogue }
-		icon = GFX_goal_generic_defence
-		x = 34
-		y = 29
-		cost = 10
-
-		search_filters = { FOCUS_FILTER_POLITICAL }
-
-		ai_will_do = {
-			base = 1
-		}
-
-		completion_reward = {
-			add_political_power = 60
-			add_stability = 0.03
-		}
-	}
-
-	focus = {
-		id = TU_URS_reform_anti_corruption
-		prerequisite = { focus = TU_URS_reform_constitutional_court }
-		icon = GFX_goal_generic_political_pressure
-		x = 34
-		y = 30
-		cost = 10
-
-		search_filters = { FOCUS_FILTER_POLITICAL }
-
-		ai_will_do = {
-			base = 1
-		}
-
-		completion_reward = {
-			add_political_power = 60
-			add_stability = 0.03
-		}
-	}
-
-	focus = {
-		id = TU_URS_reform_open_government
-		prerequisite = { focus = TU_URS_reform_anti_corruption }
-		icon = GFX_goal_generic_scientific_exchange
-		x = 34
-		y = 31
-		cost = 10
-
-		search_filters = { FOCUS_FILTER_POLITICAL }
-
-		ai_will_do = {
-			base = 1
-		}
-
-		completion_reward = {
-			add_political_power = 60
-			add_stability = 0.03
-		}
-	}
-
-	focus = {
-		id = TU_URS_reform_civil_society
-		prerequisite = { focus = TU_URS_reform_open_government }
-		icon = GFX_goal_generic_positive_trade_relations
-		x = 34
-		y = 32
-		cost = 10
-
-		search_filters = { FOCUS_FILTER_STABILITY }
-
-		ai_will_do = {
-			base = 1
-		}
-
-		completion_reward = {
-			add_political_power = 60
-			add_stability = 0.03
-		}
-	}
-
-	focus = {
 		id = TU_URS_reform_completion
-		prerequisite = { focus = TU_URS_reform_civil_society }
+		prerequisite = { focus = TU_URS_reform_democratic_party }
 		icon = GFX_goal_generic_national_unity
-		x = 34
-		y = 33
+		x = 29
+		y = 17
 		cost = 15
 
 		search_filters = { FOCUS_FILTER_POLITICAL }
@@ -5832,7 +4047,7 @@ focus_tree = {
 		prerequisite = { focus = TU_URS_reform_student_council }
 		icon = GFX_goal_generic_alliance
 		x = 28
-		y = 18
+		y = 12
 		cost = 10
 
 		search_filters = { FOCUS_FILTER_POLITICAL }
@@ -5858,7 +4073,7 @@ focus_tree = {
 		prerequisite = { focus = TU_URS_reform_reunion_treaty focus = TU_URS_reform_student_council }
 		icon = GFX_goal_generic_construct_civilian
 		x = 28
-		y = 19
+		y = 13
 		cost = 10
 
 		search_filters = { FOCUS_FILTER_STABILITY }
@@ -5885,8 +4100,8 @@ focus_tree = {
 		id = TU_URS_reform_infected_citizenship
 		prerequisite = { focus = TU_URS_reform_student_council }
 		icon = GFX_goal_generic_propaganda
-		x = 36
-		y = 18
+		x = 35
+		y = 12
 		cost = 10
 
 		search_filters = { FOCUS_FILTER_POLITICAL }
@@ -5908,8 +4123,8 @@ focus_tree = {
 		prerequisite = { focus = TU_URS_reform_infected_citizenship }
 		mutually_exclusive = { focus = TU_URS_reform_infected_guild }
 		icon = GFX_goal_generic_construction
-		x = 35
-		y = 19
+		x = 34
+		y = 13
 		cost = 10
 
 		search_filters = { FOCUS_FILTER_MANPOWER }
@@ -5930,8 +4145,8 @@ focus_tree = {
 		prerequisite = { focus = TU_URS_reform_infected_citizenship }
 		mutually_exclusive = { focus = TU_URS_reform_infected_labour_rights }
 		icon = GFX_goal_generic_trade
-		x = 37
-		y = 19
+		x = 36
+		y = 13
 		cost = 10
 
 		search_filters = { FOCUS_FILTER_POLITICAL }
@@ -5951,8 +4166,8 @@ focus_tree = {
 		id = TU_URS_reform_infected_representation
 		prerequisite = { focus = TU_URS_reform_infected_guild focus = TU_URS_reform_infected_labour_rights }
 		icon = GFX_goal_generic_political_pressure
-		x = 36
-		y = 20
+		x = 35
+		y = 14
 		cost = 10
 
 		search_filters = { FOCUS_FILTER_POLITICAL }
@@ -5976,8 +4191,8 @@ focus_tree = {
 		id = TU_URS_reform_citizenship_law
 		prerequisite = { focus = TU_URS_reform_infected_representation }
 		icon = GFX_goal_generic_national_unity
-		x = 36
-		y = 21
+		x = 35
+		y = 15
 		cost = 10
 
 		search_filters = { FOCUS_FILTER_POLITICAL }
@@ -5998,9 +4213,9 @@ focus_tree = {
 		id = TU_URS_reform_modern_schools
 		prerequisite = { focus = TU_URS_reform_student_council }
 		icon = GFX_goal_generic_scientific_exchange
-		x = 40
-		y = 18
-		cost = 10
+		x = 38
+		y = 12
+		cost = 20
 
 		search_filters = { FOCUS_FILTER_RESEARCH }
 
@@ -6011,55 +4226,19 @@ focus_tree = {
 		completion_reward = {
 			add_ideas = TU_URS_p4_modern_education
 			add_tech_bonus = { name = TU_URS_reform_modern_schools bonus = 0.75 uses = 1 category = electronics category = tu_originium_tech }
-		}
-	}
-
-	focus = {
-		id = TU_URS_reform_school_curriculum
-		prerequisite = { focus = TU_URS_reform_modern_schools }
-		icon = GFX_goal_generic_scientific_exchange
-		x = 40
-		y = 19
-		cost = 10
-
-		search_filters = { FOCUS_FILTER_RESEARCH }
-
-		ai_will_do = {
-			base = 1
-		}
-
-		completion_reward = {
 			add_political_power = 60
 			add_stability = 0.03
-		}
-	}
-
-	focus = {
-		id = TU_URS_reform_university
-		prerequisite = { focus = TU_URS_reform_school_curriculum }
-		icon = GFX_goal_generic_scientific_exchange
-		x = 40
-		y = 20
-		cost = 10
-
-		search_filters = { FOCUS_FILTER_POLITICAL }
-
-		ai_will_do = {
-			base = 1
-		}
-
-		completion_reward = {
-			add_tech_bonus = { name = TU_URS_reform_university bonus = 0.75 uses = 1 category = electronics category = tu_originium_tech }
+			add_tech_bonus = { name = TU_URS_reform_modern_schools bonus = 0.75 uses = 1 category = electronics category = tu_originium_tech }
 		}
 	}
 
 	focus = {
 		id = TU_URS_reform_press_freedom
-		prerequisite = { focus = TU_URS_reform_university }
+		prerequisite = { focus = TU_URS_reform_modern_schools }
 		icon = GFX_goal_generic_propaganda
-		x = 40
-		y = 21
-		cost = 10
+		x = 38
+		y = 13
+		cost = 20
 
 		search_filters = { FOCUS_FILTER_POLITICAL }
 
@@ -6071,44 +4250,8 @@ focus_tree = {
 			add_ideas = TU_URS_p4_free_press
 			add_political_power = 60
 			add_stability = 0.03
-		}
-	}
-
-	focus = {
-		id = TU_URS_reform_journalists
-		prerequisite = { focus = TU_URS_reform_press_freedom }
-		icon = GFX_goal_generic_intelligence_exchange
-		x = 40
-		y = 22
-		cost = 10
-
-		search_filters = { FOCUS_FILTER_POLITICAL }
-
-		ai_will_do = {
-			base = 1
-		}
-
-		completion_reward = {
 			add_political_power = 60
 			add_stability = 0.03
-		}
-	}
-
-	focus = {
-		id = TU_URS_reform_media_law
-		prerequisite = { focus = TU_URS_reform_journalists }
-		icon = GFX_goal_generic_political_pressure
-		x = 40
-		y = 23
-		cost = 10
-
-		search_filters = { FOCUS_FILTER_POLITICAL }
-
-		ai_will_do = {
-			base = 1
-		}
-
-		completion_reward = {
 			add_political_power = 60
 			add_stability = 0.03
 		}
@@ -6120,7 +4263,7 @@ focus_tree = {
 		id = TU_URS_serpent_whispers
 		icon = GFX_goal_generic_secret_weapon
 		x = 31
-		y = 25
+		y = 19
 		cost = 5
 
 		search_filters = { FOCUS_FILTER_POLITICAL }
@@ -6147,7 +4290,7 @@ focus_tree = {
 		prerequisite = { focus = TU_URS_serpent_whispers }
 		icon = GFX_goal_generic_secret_weapon
 		x = 29
-		y = 26
+		y = 20
 		cost = 10
 
 		search_filters = { FOCUS_FILTER_POLITICAL }
@@ -6171,7 +4314,7 @@ focus_tree = {
 		prerequisite = { focus = TU_URS_serpent_whispers }
 		icon = GFX_goal_generic_secret_weapon
 		x = 31
-		y = 26
+		y = 20
 		cost = 10
 
 		search_filters = { FOCUS_FILTER_POLITICAL }
@@ -6195,7 +4338,7 @@ focus_tree = {
 		prerequisite = { focus = TU_URS_serpent_guard }
 		icon = GFX_goal_generic_secret_weapon
 		x = 31
-		y = 27
+		y = 21
 		cost = 10
 
 		search_filters = { FOCUS_FILTER_POLITICAL }
@@ -6219,7 +4362,7 @@ focus_tree = {
 		prerequisite = { focus = TU_URS_serpent_purge }
 		icon = GFX_goal_generic_secret_weapon
 		x = 29
-		y = 27
+		y = 21
 		cost = 10
 
 		search_filters = { FOCUS_FILTER_POLITICAL }
@@ -6243,7 +4386,7 @@ focus_tree = {
 		prerequisite = { focus = TU_URS_serpent_arts }
 		icon = GFX_goal_generic_secret_weapon
 		x = 31
-		y = 28
+		y = 22
 		cost = 10
 
 		search_filters = { FOCUS_FILTER_POLITICAL }
@@ -6268,7 +4411,7 @@ focus_tree = {
 		prerequisite = { focus = TU_URS_serpent_war_machine }
 		icon = GFX_goal_generic_secret_weapon
 		x = 31
-		y = 29
+		y = 23
 		cost = 10
 
 		search_filters = { FOCUS_FILTER_POLITICAL }
@@ -6295,7 +4438,7 @@ focus_tree = {
 		prerequisite = { focus = TU_URS_serpent_crush }
 		icon = GFX_goal_generic_secret_weapon
 		x = 31
-		y = 30
+		y = 24
 		cost = 20
 
 		search_filters = { FOCUS_FILTER_POLITICAL }
@@ -6323,7 +4466,7 @@ focus_tree = {
 		prerequisite = { focus = TU_URS_foreign_ministry }
 		icon = GFX_goal_generic_construct_military
 		x = -24
-		y = 37
+		y = 23
 		cost = 10
 
 		search_filters = { FOCUS_FILTER_MANPOWER }
@@ -6348,7 +4491,7 @@ focus_tree = {
 		prerequisite = { focus = TU_URS_foreign_ministry }
 		icon = GFX_goal_generic_army_motorized
 		x = -22
-		y = 37
+		y = 23
 		cost = 10
 
 		search_filters = { FOCUS_FILTER_ARMY_XP }
@@ -6373,7 +4516,7 @@ focus_tree = {
 		prerequisite = { focus = TU_URS_w1_kzd_mobilization }
 		icon = GFX_goal_generic_army_artillery
 		x = -22
-		y = 38
+		y = 24
 		cost = 10
 
 		search_filters = { FOCUS_FILTER_ARMY_XP }
@@ -6394,7 +4537,7 @@ focus_tree = {
 		prerequisite = { focus = TU_URS_w1_kzd_border_buildup }
 		icon = GFX_goal_generic_allies_build_infantry
 		x = -24
-		y = 38
+		y = 24
 		cost = 10
 
 		available = {
@@ -6420,7 +4563,7 @@ focus_tree = {
 		prerequisite = { focus = TU_URS_w1_kzd_war_doctrine }
 		icon = GFX_goal_generic_occupy_states_ongoing_war
 		x = -22
-		y = 39
+		y = 25
 		cost = 10
 
 		search_filters = { FOCUS_FILTER_WAR_SUPPORT }
@@ -6446,7 +4589,7 @@ focus_tree = {
 		prerequisite = { focus = TU_URS_w1_kzd_occupation }
 		icon = GFX_goal_generic_construction
 		x = -22
-		y = 40
+		y = 26
 		cost = 10
 
 		search_filters = { FOCUS_FILTER_HISTORICAL }
@@ -6478,7 +4621,7 @@ focus_tree = {
 		prerequisite = { focus = TU_URS_foreign_ministry }
 		icon = GFX_goal_generic_construct_military
 		x = -20
-		y = 37
+		y = 23
 		cost = 10
 
 		search_filters = { FOCUS_FILTER_MANPOWER }
@@ -6502,7 +4645,7 @@ focus_tree = {
 		prerequisite = { focus = TU_URS_foreign_ministry }
 		icon = GFX_goal_generic_army_motorized
 		x = -18
-		y = 37
+		y = 23
 		cost = 10
 
 		search_filters = { FOCUS_FILTER_ARMY_XP }
@@ -6527,7 +4670,7 @@ focus_tree = {
 		prerequisite = { focus = TU_URS_w1_vic_mobilization }
 		icon = GFX_goal_generic_army_tanks
 		x = -18
-		y = 38
+		y = 24
 		cost = 10
 
 		search_filters = { FOCUS_FILTER_ARMY_XP }
@@ -6548,7 +4691,7 @@ focus_tree = {
 		prerequisite = { focus = TU_URS_w1_vic_border_buildup }
 		icon = GFX_goal_generic_political_pressure
 		x = -20
-		y = 38
+		y = 24
 		cost = 10
 
 		available = {
@@ -6573,7 +4716,7 @@ focus_tree = {
 		prerequisite = { focus = TU_URS_w1_vic_war_doctrine }
 		icon = GFX_goal_generic_occupy_states_ongoing_war
 		x = -18
-		y = 39
+		y = 25
 		cost = 10
 
 		search_filters = { FOCUS_FILTER_WAR_SUPPORT }
@@ -6599,7 +4742,7 @@ focus_tree = {
 		prerequisite = { focus = TU_URS_w1_vic_occupation }
 		icon = GFX_goal_generic_construction
 		x = -18
-		y = 40
+		y = 26
 		cost = 10
 
 		search_filters = { FOCUS_FILTER_HISTORICAL }
@@ -6631,7 +4774,7 @@ focus_tree = {
 		prerequisite = { focus = TU_URS_foreign_ministry }
 		icon = GFX_goal_generic_defence
 		x = -16
-		y = 37
+		y = 23
 		cost = 10
 
 		search_filters = { FOCUS_FILTER_MANPOWER }
@@ -6655,7 +4798,7 @@ focus_tree = {
 		prerequisite = { focus = TU_URS_foreign_ministry }
 		icon = GFX_goal_generic_army_motorized
 		x = -14
-		y = 37
+		y = 23
 		cost = 10
 
 		search_filters = { FOCUS_FILTER_ARMY_XP }
@@ -6680,7 +4823,7 @@ focus_tree = {
 		prerequisite = { focus = TU_URS_w1_lei_mobilization }
 		icon = GFX_goal_generic_army_artillery
 		x = -14
-		y = 38
+		y = 24
 		cost = 10
 
 		search_filters = { FOCUS_FILTER_ARMY_XP }
@@ -6701,7 +4844,7 @@ focus_tree = {
 		prerequisite = { focus = TU_URS_w1_lei_war_doctrine }
 		icon = GFX_goal_generic_occupy_states_ongoing_war
 		x = -14
-		y = 39
+		y = 25
 		cost = 10
 
 		search_filters = { FOCUS_FILTER_WAR_SUPPORT }
@@ -6727,7 +4870,7 @@ focus_tree = {
 		prerequisite = { focus = TU_URS_w1_lei_occupation }
 		icon = GFX_goal_generic_construction
 		x = -14
-		y = 40
+		y = 26
 		cost = 10
 
 		search_filters = { FOCUS_FILTER_HISTORICAL }
@@ -6759,7 +4902,7 @@ focus_tree = {
 		prerequisite = { focus = TU_URS_foreign_ministry }
 		icon = GFX_goal_generic_defence
 		x = -12
-		y = 37
+		y = 23
 		cost = 10
 
 		search_filters = { FOCUS_FILTER_MANPOWER }
@@ -6783,7 +4926,7 @@ focus_tree = {
 		prerequisite = { focus = TU_URS_foreign_ministry }
 		icon = GFX_goal_generic_army_motorized
 		x = -10
-		y = 37
+		y = 23
 		cost = 10
 
 		search_filters = { FOCUS_FILTER_ARMY_XP }
@@ -6808,7 +4951,7 @@ focus_tree = {
 		prerequisite = { focus = TU_URS_w2_yan_mobilization }
 		icon = GFX_goal_generic_army_tanks
 		x = -10
-		y = 38
+		y = 24
 		cost = 10
 
 		search_filters = { FOCUS_FILTER_ARMY_XP }
@@ -6828,7 +4971,7 @@ focus_tree = {
 		prerequisite = { focus = TU_URS_w2_yan_border_buildup }
 		icon = GFX_goal_generic_national_unity
 		x = -12
-		y = 38
+		y = 24
 		cost = 10
 
 		available = {
@@ -6854,7 +4997,7 @@ focus_tree = {
 		prerequisite = { focus = TU_URS_w2_yan_war_doctrine }
 		icon = GFX_goal_generic_occupy_states_ongoing_war
 		x = -10
-		y = 39
+		y = 25
 		cost = 10
 
 		search_filters = { FOCUS_FILTER_WAR_SUPPORT }
@@ -6880,7 +5023,7 @@ focus_tree = {
 		prerequisite = { focus = TU_URS_w2_yan_occupation }
 		icon = GFX_goal_generic_construction
 		x = -10
-		y = 40
+		y = 26
 		cost = 10
 
 		search_filters = { FOCUS_FILTER_HISTORICAL }
@@ -6911,7 +5054,7 @@ focus_tree = {
 		prerequisite = { focus = TU_URS_foreign_ministry }
 		icon = GFX_goal_generic_demand_territory
 		x = -8
-		y = 37
+		y = 23
 		cost = 10
 
 		search_filters = { FOCUS_FILTER_MANPOWER }
@@ -6937,7 +5080,7 @@ focus_tree = {
 		prerequisite = { focus = TU_URS_foreign_ministry }
 		icon = GFX_goal_generic_army_motorized
 		x = -6
-		y = 37
+		y = 23
 		cost = 10
 
 		search_filters = { FOCUS_FILTER_ARMY_XP }
@@ -6962,7 +5105,7 @@ focus_tree = {
 		prerequisite = { focus = TU_URS_w2_lgm_mobilization }
 		icon = GFX_goal_generic_army_artillery
 		x = -6
-		y = 38
+		y = 24
 		cost = 10
 
 		search_filters = { FOCUS_FILTER_ARMY_XP }
@@ -6982,7 +5125,7 @@ focus_tree = {
 		prerequisite = { focus = TU_URS_w2_lgm_reunion_pressure }
 		icon = GFX_goal_generic_consumer_goods
 		x = -8
-		y = 38
+		y = 24
 		cost = 10
 
 		available = {
@@ -7012,7 +5155,7 @@ focus_tree = {
 		prerequisite = { focus = TU_URS_w2_lgm_war_doctrine }
 		icon = GFX_goal_generic_construction
 		x = -6
-		y = 39
+		y = 25
 		cost = 10
 
 		search_filters = { FOCUS_FILTER_HISTORICAL }
@@ -7047,7 +5190,7 @@ focus_tree = {
 		prerequisite = { focus = TU_URS_foreign_ministry }
 		icon = GFX_goal_generic_construction
 		x = -4
-		y = 37
+		y = 23
 		cost = 10
 
 		search_filters = { FOCUS_FILTER_HISTORICAL }
@@ -7083,8 +5226,8 @@ focus_tree = {
 		id = TU_URS_w3_kaz_entry
 		prerequisite = { focus = TU_URS_foreign_ministry }
 		icon = GFX_goal_generic_improve_relations
-		x = 0
-		y = 37
+		x = -2
+		y = 23
 		cost = 5
 
 		search_filters = { FOCUS_FILTER_POLITICAL }
@@ -7104,8 +5247,8 @@ focus_tree = {
 		prerequisite = { focus = TU_URS_w3_kaz_entry }
 		icon = GFX_goal_generic_occupy_start_war
 		x = 0
-		y = 38
-		cost = 10
+		y = 24
+		cost = 15
 
 		search_filters = { FOCUS_FILTER_ARMY_XP }
 
@@ -7121,24 +5264,6 @@ focus_tree = {
 			add_tech_bonus = { name = TU_URS_w3_kaz_offensive bonus = 0.75 uses = 1 category = light_fighter category = tactical_bomber }
 			add_doctrine_cost_reduction = { name = TU_URS_w3_kaz_offensive cost_reduction = 0.4 uses = 1 category = air_doctrine }
 			air_experience = 25
-		}
-	}
-
-	focus = {
-		id = TU_URS_w3_kaz_annex
-		prerequisite = { focus = TU_URS_w3_kaz_offensive }
-		icon = GFX_goal_generic_forceful_treaty
-		x = 0
-		y = 39
-		cost = 10
-
-		search_filters = { FOCUS_FILTER_ANNEXATION }
-
-		ai_will_do = {
-			base = 1
-		}
-
-		completion_reward = {
 			add_political_power = 60
 			add_stability = 0.03
 		}
@@ -7150,7 +5275,7 @@ focus_tree = {
 		mutually_exclusive = { focus = TU_URS_w3_kaz_protectorate_alt }
 		icon = GFX_goal_generic_major_alliance
 		x = -4
-		y = 38
+		y = 24
 		cost = 15
 
 		search_filters = { FOCUS_FILTER_POLITICAL }
@@ -7176,7 +5301,7 @@ focus_tree = {
 		mutually_exclusive = { focus = TU_URS_w3_kaz_protectorate }
 		icon = GFX_goal_generic_military_sphere
 		x = -2
-		y = 38
+		y = 24
 		cost = 15
 
 		search_filters = { FOCUS_FILTER_ARMY_XP }
@@ -7197,10 +5322,10 @@ focus_tree = {
 
 	focus = {
 		id = TU_URS_w3_kaz_occupation
-		prerequisite = { focus = TU_URS_w3_kaz_annex }
+		prerequisite = { focus = TU_URS_w3_kaz_offensive }
 		icon = GFX_goal_generic_occupy_states_ongoing_war
 		x = 0
-		y = 40
+		y = 25
 		cost = 15
 
 		search_filters = { FOCUS_FILTER_ANNEXATION }
@@ -7224,7 +5349,7 @@ focus_tree = {
 		prerequisite = { focus = TU_URS_foreign_ministry }
 		icon = GFX_goal_generic_improve_relations
 		x = 3
-		y = 37
+		y = 23
 		cost = 5
 
 		search_filters = { FOCUS_FILTER_POLITICAL }
@@ -7244,7 +5369,7 @@ focus_tree = {
 		prerequisite = { focus = TU_URS_w3_kje_entry }
 		icon = GFX_goal_generic_positive_trade_relations
 		x = 2
-		y = 38
+		y = 24
 		cost = 10
 
 		search_filters = { FOCUS_FILTER_INDUSTRY }
@@ -7273,8 +5398,8 @@ focus_tree = {
 			has_country_flag = TU_DEC_TU_URS_w3_kje_wargoal
 		}
 		x = 4
-		y = 38
-		cost = 10
+		y = 24
+		cost = 18
 
 		search_filters = { FOCUS_FILTER_ARMY_XP }
 
@@ -7285,6 +5410,8 @@ focus_tree = {
 		completion_reward = {
 			add_political_power = 60
 			add_stability = 0.03
+			add_tech_bonus = { name = TU_URS_w3_kje_offensive bonus = 1.0 uses = 1 category = construction_tech }
+			army_experience = 40
 		}
 	}
 
@@ -7293,7 +5420,7 @@ focus_tree = {
 		prerequisite = { focus = TU_URS_w3_kje_trade }
 		icon = GFX_goal_generic_alliance
 		x = 2
-		y = 39
+		y = 25
 		cost = 15
 
 		search_filters = { FOCUS_FILTER_POLITICAL }
@@ -7322,33 +5449,11 @@ focus_tree = {
 	}
 
 	focus = {
-		id = TU_URS_w3_kje_occupation
-		prerequisite = { focus = TU_URS_w3_kje_offensive }
-		icon = GFX_goal_generic_fortify_city
-		x = 4
-		y = 39
-		cost = 15
-
-		search_filters = { FOCUS_FILTER_ARMY_XP }
-
-		ai_will_do = {
-			base = 1
-		}
-
-		completion_reward = {
-			add_tech_bonus = { name = TU_URS_w3_kje_occupation bonus = 1.0 uses = 1 category = construction_tech }
-			army_experience = 40
-		}
-	}
-
-	#### SAMI (SAM): aid vs annexation ####
-
-	focus = {
 		id = TU_URS_w3_sami_entry
 		prerequisite = { focus = TU_URS_foreign_ministry }
 		icon = GFX_goal_generic_improve_relations
 		x = 7
-		y = 37
+		y = 23
 		cost = 5
 
 		search_filters = { FOCUS_FILTER_POLITICAL }
@@ -7368,7 +5473,7 @@ focus_tree = {
 		prerequisite = { focus = TU_URS_w3_sami_entry }
 		icon = GFX_goal_generic_allies_build_infantry
 		x = 6
-		y = 38
+		y = 24
 		cost = 10
 
 		search_filters = { FOCUS_FILTER_ARMY_XP }
@@ -7393,7 +5498,7 @@ focus_tree = {
 		prerequisite = { focus = TU_URS_w3_sami_entry }
 		icon = GFX_goal_generic_occupy_states_ongoing_war
 		x = 8
-		y = 38
+		y = 24
 		cost = 10
 
 		search_filters = { FOCUS_FILTER_ANNEXATION }
@@ -7417,7 +5522,7 @@ focus_tree = {
 		prerequisite = { focus = TU_URS_w3_sami_control }
 		icon = GFX_goal_generic_political_pressure
 		x = 8
-		y = 39
+		y = 25
 		cost = 15
 
 		search_filters = { FOCUS_FILTER_ANNEXATION }
@@ -7440,7 +5545,7 @@ focus_tree = {
 		prerequisite = { focus = TU_URS_foreign_ministry }
 		icon = GFX_goal_generic_scientific_exchange
 		x = 10
-		y = 37
+		y = 23
 		cost = 5
 
 		search_filters = { FOCUS_FILTER_RESEARCH }
@@ -7459,7 +5564,7 @@ focus_tree = {
 		prerequisite = { focus = TU_URS_w3_infi_entry }
 		icon = GFX_goal_generic_radar
 		x = 10
-		y = 38
+		y = 24
 		cost = 10
 
 		search_filters = { FOCUS_FILTER_RESEARCH }
@@ -7482,7 +5587,7 @@ focus_tree = {
 		prerequisite = { focus = TU_URS_w3_infi_survey }
 		icon = GFX_goal_generic_secret_weapon
 		x = 10
-		y = 39
+		y = 25
 		cost = 10
 
 		search_filters = { FOCUS_FILTER_RESEARCH }
@@ -7503,8 +5608,8 @@ focus_tree = {
 		icon = GFX_goal_generic_small_arms
 		available = { has_completed_focus = TU_URS_reform_path }
 		x = 10
-		y = 40
-		cost = 10
+		y = 26
+		cost = 20
 
 		search_filters = { FOCUS_FILTER_ARMY_XP }
 
@@ -7516,6 +5621,14 @@ focus_tree = {
 			add_ideas = TU_URS_w3_idea_infi_frost_gear
 			add_political_power = 60
 			add_stability = 0.03
+			add_doctrine_cost_reduction = { name = TU_URS_w3_infi_frost_gear cost_reduction = 0.4 uses = 1 category = land_doctrine }
+			army_experience = 25
+			army_experience = 25
+			add_war_support = 0.03
+			add_doctrine_cost_reduction = { name = TU_URS_w3_infi_frost_gear cost_reduction = 0.4 uses = 1 category = land_doctrine }
+			add_tech_bonus = { name = TU_URS_w3_infi_frost_gear bonus = 0.75 uses = 1 category = electronics category = tu_originium_tech }
+			TU_build_forts_2 = yes
+			add_tech_bonus = { name = TU_URS_w3_infi_frost_gear bonus = 1.0 uses = 1 category = industry category = construction_tech }
 		}
 	}
 
@@ -7524,7 +5637,7 @@ focus_tree = {
 		prerequisite = { focus = TU_URS_w3_infi_entry }
 		icon = GFX_goal_generic_construct_infrastructure
 		x = 12
-		y = 38
+		y = 24
 		cost = 10
 
 		search_filters = { FOCUS_FILTER_INDUSTRY }
@@ -7544,104 +5657,6 @@ focus_tree = {
 		}
 	}
 
-	focus = {
-		id = TU_URS_w3_infi_polar_theory
-		prerequisite = { focus = TU_URS_w3_infi_frost_gear }
-		icon = GFX_goal_generic_construction2
-		x = 10
-		y = 41
-		cost = 10
-
-		search_filters = { FOCUS_FILTER_RESEARCH }
-
-		ai_will_do = {
-			base = 1
-		}
-
-		completion_reward = {
-			add_doctrine_cost_reduction = { name = TU_URS_w3_infi_polar_theory cost_reduction = 0.4 uses = 1 category = land_doctrine }
-			army_experience = 25
-		}
-	}
-
-	focus = {
-		id = TU_URS_w3_infi_arctic_expedition
-		prerequisite = { focus = TU_URS_w3_infi_polar_theory }
-		icon = GFX_goal_generic_special_forces
-		x = 10
-		y = 42
-		cost = 10
-
-		search_filters = { FOCUS_FILTER_ARMY_XP }
-
-		ai_will_do = {
-			base = 1
-		}
-
-		completion_reward = {
-			army_experience = 25
-			add_war_support = 0.03
-			add_doctrine_cost_reduction = { name = TU_URS_w3_infi_arctic_expedition cost_reduction = 0.4 uses = 1 category = land_doctrine }
-		}
-	}
-
-	focus = {
-		id = TU_URS_w3_infi_survey_station
-		prerequisite = { focus = TU_URS_w3_infi_arctic_expedition }
-		icon = GFX_goal_generic_construction
-		x = 10
-		y = 43
-		cost = 10
-
-		search_filters = { FOCUS_FILTER_RESEARCH }
-
-		ai_will_do = {
-			base = 1
-		}
-
-		completion_reward = {
-			add_tech_bonus = { name = TU_URS_w3_infi_survey_station bonus = 0.75 uses = 1 category = electronics category = tu_originium_tech }
-		}
-	}
-
-	focus = {
-		id = TU_URS_w3_infi_ice_wall
-		prerequisite = { focus = TU_URS_w3_infi_survey_station }
-		icon = GFX_goal_generic_defence
-		x = 10
-		y = 44
-		cost = 10
-
-		search_filters = { FOCUS_FILTER_ARMY_XP }
-
-		ai_will_do = {
-			base = 1
-		}
-
-		completion_reward = {
-			TU_build_forts_2 = yes
-		}
-	}
-
-	focus = {
-		id = TU_URS_w3_infi_final_report
-		prerequisite = { focus = TU_URS_w3_infi_ice_wall }
-		icon = GFX_goal_generic_intelligence_exchange
-		x = 10
-		y = 45
-		cost = 15
-
-		search_filters = { FOCUS_FILTER_RESEARCH }
-
-		ai_will_do = {
-			base = 1
-		}
-
-		completion_reward = {
-			add_tech_bonus = { name = TU_URS_w3_infi_final_report bonus = 1.0 uses = 1 category = industry category = construction_tech }
-		}
-	}
-
 	#### STEM: W4 WORLD (NORTHERN PACT / TERRA ORDER / RHODES / REUNION) ####
 
 	#### NORTHERN PACT: faction vs neutral security treaty ####
@@ -7651,7 +5666,7 @@ focus_tree = {
 		prerequisite = { focus = TU_URS_foreign_ministry }
 		icon = GFX_goal_generic_national_unity
 		x = 14
-		y = 37
+		y = 23
 		cost = 5
 
 		search_filters = { FOCUS_FILTER_POLITICAL }
@@ -7671,7 +5686,7 @@ focus_tree = {
 		prerequisite = { focus = TU_URS_w4_pact_entry }
 		icon = GFX_goal_generic_improve_relations
 		x = 14
-		y = 38
+		y = 24
 		cost = 10
 
 		search_filters = { FOCUS_FILTER_POLITICAL }
@@ -7696,8 +5711,8 @@ focus_tree = {
 			NOT = { has_country_flag = TU_DEC_TU_URS_w4_pact_neutral }
 		}
 		x = 14
-		y = 39
-		cost = 15
+		y = 25
+		cost = 20
 
 		search_filters = { FOCUS_FILTER_POLITICAL }
 
@@ -7731,6 +5746,11 @@ focus_tree = {
 			}
 			add_political_power = 100
 			add_stability = 0.05
+			add_political_power = 60
+			add_stability = 0.03
+			TU_build_civ_factory = yes
+			add_political_power = 60
+			add_tech_bonus = { name = TU_URS_w4_pact_charter bonus = 0.75 uses = 1 category = industry }
 		}
 	}
 
@@ -7739,8 +5759,8 @@ focus_tree = {
 		prerequisite = { focus = TU_URS_w4_pact_charter }
 		icon = GFX_goal_generic_defence
 		x = 13
-		y = 40
-		cost = 10
+		y = 26
+		cost = 15
 
 		search_filters = { FOCUS_FILTER_POLITICAL }
 
@@ -7751,77 +5771,18 @@ focus_tree = {
 		completion_reward = {
 			add_ideas = TU_URS_w4_idea_pact_unity
 			TU_build_forts_2 = yes
-		}
-	}
-
-	focus = {
-		id = TU_URS_w4_pact_army
-		prerequisite = { focus = TU_URS_w4_pact_charter }
-		icon = GFX_goal_generic_army_doctrines
-		x = 15
-		y = 40
-		cost = 10
-
-		search_filters = { FOCUS_FILTER_ARMY_XP }
-
-		ai_will_do = {
-			base = 1
-		}
-
-		completion_reward = {
 			add_political_power = 60
 			add_stability = 0.03
-		}
-	}
-
-	focus = {
-		id = TU_URS_w4_pact_summit
-		prerequisite = { focus = TU_URS_w4_pact_defence }
-		icon = GFX_goal_generic_improve_relations
-		x = 13
-		y = 41
-		cost = 10
-
-		search_filters = { FOCUS_FILTER_POLITICAL }
-
-		ai_will_do = {
-			base = 1
-		}
-
-		completion_reward = {
-			add_political_power = 60
-			add_stability = 0.03
-		}
-	}
-
-	focus = {
-		id = TU_URS_w4_pact_trade
-		prerequisite = { focus = TU_URS_w4_pact_army }
-		icon = GFX_goal_generic_positive_trade_relations
-		x = 15
-		y = 41
-		cost = 10
-
-		search_filters = { FOCUS_FILTER_INDUSTRY }
-
-		ai_will_do = {
-			base = 1
-		}
-
-		completion_reward = {
-			TU_build_civ_factory = yes
-			add_political_power = 60
-			add_tech_bonus = { name = TU_URS_w4_pact_trade bonus = 0.75 uses = 1 category = industry }
 		}
 	}
 
 	focus = {
 		id = TU_URS_w4_pact_common_army
-		prerequisite = { focus = TU_URS_w4_pact_summit }
+		prerequisite = { focus = TU_URS_w4_pact_defence }
 		icon = GFX_goal_generic_army_artillery
 		available = { has_completed_focus = TU_URS_military_junta }
 		x = 13
-		y = 42
+		y = 27
 		cost = 10
 
 		search_filters = { FOCUS_FILTER_ARMY_XP }
@@ -7838,11 +5799,11 @@ focus_tree = {
 
 	focus = {
 		id = TU_URS_w4_pact_secretariat
-		prerequisite = { focus = TU_URS_w4_pact_trade }
+		prerequisite = { focus = TU_URS_w4_pact_charter }
 		icon = GFX_goal_generic_political_pressure
 		available = { has_completed_focus = TU_URS_reform_path }
 		x = 15
-		y = 42
+		y = 26
 		cost = 10
 
 		search_filters = { FOCUS_FILTER_POLITICAL }
@@ -7864,7 +5825,7 @@ focus_tree = {
 		prerequisite = { focus = TU_URS_foreign_ministry }
 		icon = GFX_goal_generic_national_unity
 		x = 17
-		y = 37
+		y = 23
 		cost = 5
 
 		search_filters = { FOCUS_FILTER_POLITICAL }
@@ -7886,7 +5847,7 @@ focus_tree = {
 		icon = GFX_goal_generic_army_doctrines
 		available = { has_completed_focus = TU_URS_emperor_rule }
 		x = 16
-		y = 38
+		y = 24
 		cost = 10
 
 		search_filters = { FOCUS_FILTER_ARMY_XP }
@@ -7907,8 +5868,8 @@ focus_tree = {
 		mutually_exclusive = { focus = TU_URS_w4_order_doctrine }
 		icon = GFX_goal_generic_political_pressure
 		x = 18
-		y = 38
-		cost = 10
+		y = 24
+		cost = 20
 
 		search_filters = { FOCUS_FILTER_POLITICAL }
 
@@ -7919,6 +5880,11 @@ focus_tree = {
 		completion_reward = {
 			add_political_power = 60
 			add_stability = 0.03
+			add_political_power = 60
+			add_stability = 0.03
+			army_experience = 25
+			add_war_support = 0.03
+			add_doctrine_cost_reduction = { name = TU_URS_w4_order_council cost_reduction = 0.4 uses = 1 category = land_doctrine }
 		}
 	}
 
@@ -7927,7 +5893,7 @@ focus_tree = {
 		prerequisite = { focus = TU_URS_w4_order_doctrine }
 		icon = GFX_goal_generic_major_war
 		x = 16
-		y = 39
+		y = 25
 		cost = 10
 
 		search_filters = { FOCUS_FILTER_WAR_SUPPORT }
@@ -7944,54 +5910,11 @@ focus_tree = {
 	}
 
 	focus = {
-		id = TU_URS_w4_order_charter
-		prerequisite = { focus = TU_URS_w4_order_council }
-		icon = GFX_goal_generic_alliance
-		x = 18
-		y = 39
-		cost = 10
-
-		search_filters = { FOCUS_FILTER_POLITICAL }
-
-		ai_will_do = {
-			base = 1
-		}
-
-		completion_reward = {
-			add_political_power = 60
-			add_stability = 0.03
-		}
-	}
-
-	focus = {
-		id = TU_URS_w4_order_mobilization
-		prerequisite = { focus = TU_URS_w4_order_charter }
-		icon = GFX_goal_generic_production
-		x = 18
-		y = 40
-		cost = 10
-
-		search_filters = { FOCUS_FILTER_WAR_SUPPORT }
-
-		ai_will_do = {
-			base = 1
-		}
-
-		completion_reward = {
-			army_experience = 25
-			add_war_support = 0.03
-			add_doctrine_cost_reduction = { name = TU_URS_w4_order_mobilization cost_reduction = 0.4 uses = 1 category = land_doctrine }
-		}
-	}
-
-	#### RHODES ISLAND (RHO): cooperation vs hostility ####
-
-	focus = {
 		id = TU_URS_w4_rho_entry
 		prerequisite = { focus = TU_URS_foreign_ministry }
 		icon = GFX_goal_generic_improve_relations
 		x = 21
-		y = 37
+		y = 23
 		cost = 5
 
 		search_filters = { FOCUS_FILTER_POLITICAL }
@@ -8011,7 +5934,7 @@ focus_tree = {
 		prerequisite = { focus = TU_URS_w4_rho_entry }
 		icon = GFX_goal_generic_trade
 		x = 20
-		y = 38
+		y = 24
 		cost = 10
 
 		search_filters = { FOCUS_FILTER_INTERNATIONAL_TRADE }
@@ -8036,7 +5959,7 @@ focus_tree = {
 		prerequisite = { focus = TU_URS_w4_rho_entry }
 		icon = GFX_goal_generic_fortify_city
 		x = 22
-		y = 38
+		y = 24
 		cost = 10
 
 		search_filters = { FOCUS_FILTER_ARMY_XP }
@@ -8063,7 +5986,7 @@ focus_tree = {
 		icon = GFX_goal_generic_national_unity
 		available = { has_global_flag = TU_chernobog_incident_started }
 		x = 25
-		y = 37
+		y = 23
 		cost = 5
 
 		search_filters = { FOCUS_FILTER_POLITICAL }
@@ -8083,7 +6006,7 @@ focus_tree = {
 		prerequisite = { focus = TU_URS_w4_reu_entry }
 		icon = GFX_goal_generic_army_artillery
 		x = 24
-		y = 38
+		y = 24
 		cost = 10
 
 		search_filters = { FOCUS_FILTER_ARMY_XP }
@@ -8111,7 +6034,7 @@ focus_tree = {
 			has_country_flag = TU_DEC_TU_URS_w4_reu_negotiate
 		}
 		x = 26
-		y = 38
+		y = 24
 		cost = 10
 
 		search_filters = { FOCUS_FILTER_POLITICAL }
@@ -8133,7 +6056,7 @@ focus_tree = {
 		icon = GFX_goal_generic_construction2
 		available = { has_global_flag = TU_chernobog_incident_resolved }
 		x = 24
-		y = 39
+		y = 25
 		cost = 10
 
 		search_filters = { FOCUS_FILTER_INDUSTRY }

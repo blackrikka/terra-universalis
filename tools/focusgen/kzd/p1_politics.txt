@@ -6,7 +6,7 @@
 		icon = GFX_goal_generic_construct_civilian
 		x = 0
 		y = 0
-		cost = 10
+		cost = 15
 
 		search_filters = { FOCUS_FILTER_POLITICAL }
 
@@ -17,24 +17,6 @@
 		completion_reward = {
 			add_political_power = 60
 			add_stability = 0.03
-		}
-	}
-
-	focus = {
-		id = TU_KZD_empire_levy
-		prerequisite = { focus = TU_KZD_empire_census }
-		icon = GFX_goal_generic_consumer_goods
-		x = 0
-		y = 0
-		cost = 10
-
-		search_filters = { FOCUS_FILTER_POLITICAL }
-
-		ai_will_do = {
-			base = 1
-		}
-
-		completion_reward = {
 			add_manpower = 10000
 			army_experience = 25
 		}
@@ -42,7 +24,7 @@
 
 	focus = {
 		id = TU_KZD_empire_bureau
-		prerequisite = { focus = TU_KZD_empire_levy }
+		prerequisite = { focus = TU_KZD_empire_census }
 		icon = GFX_goal_generic_construct_infrastructure
 		x = 0
 		y = 0
@@ -108,7 +90,7 @@
 		icon = GFX_goal_generic_improve_relations
 		x = 0
 		y = 0
-		cost = 10
+		cost = 15
 
 		search_filters = { FOCUS_FILTER_POLITICAL }
 
@@ -117,6 +99,8 @@
 		}
 
 		completion_reward = {
+			add_political_power = 60
+			add_stability = 0.03
 			add_political_power = 60
 			add_stability = 0.03
 		}
@@ -143,28 +127,8 @@
 	}
 
 	focus = {
-		id = TU_KZD_gentle_council
-		prerequisite = { focus = TU_KZD_gentle_mandate }
-		icon = GFX_goal_generic_military_sphere
-		x = 0
-		y = 0
-		cost = 10
-
-		search_filters = { FOCUS_FILTER_POLITICAL }
-
-		ai_will_do = {
-			base = 1
-		}
-
-		completion_reward = {
-			add_political_power = 60
-			add_stability = 0.03
-		}
-	}
-
-	focus = {
 		id = TU_KZD_empire_treasury
-		prerequisite = { focus = TU_KZD_iron_enforcement focus = TU_KZD_gentle_council }
+		prerequisite = { focus = TU_KZD_iron_enforcement }
 		icon = GFX_goal_generic_trade
 		x = 0
 		y = 0
@@ -274,7 +238,7 @@
 		icon = GFX_goal_generic_position_armies
 		x = 0
 		y = 0
-		cost = 10
+		cost = 15
 
 		search_filters = { FOCUS_FILTER_POLITICAL }
 
@@ -284,25 +248,7 @@
 
 		completion_reward = {
 			add_tech_bonus = { name = TU_KZD_field_marshal_office bonus = 0.75 uses = 1 category = industry category = construction_tech }
-		}
-	}
-
-	focus = {
-		id = TU_KZD_breakthrough_tactics
-		prerequisite = { focus = TU_KZD_field_marshal_office }
-		icon = GFX_goal_generic_attack_allies
-		x = 0
-		y = 0
-		cost = 10
-
-		search_filters = { FOCUS_FILTER_ARMY_XP }
-
-		ai_will_do = {
-			base = 1
-		}
-
-		completion_reward = {
-			add_doctrine_cost_reduction = { name = TU_KZD_breakthrough_tactics cost_reduction = 0.4 uses = 1 category = land_doctrine }
+			add_doctrine_cost_reduction = { name = TU_KZD_field_marshal_office cost_reduction = 0.4 uses = 1 category = land_doctrine }
 			army_experience = 25
 		}
 	}
@@ -314,7 +260,7 @@
 		icon = GFX_goal_generic_construction2
 		x = 0
 		y = 0
-		cost = 10
+		cost = 15
 
 		search_filters = { FOCUS_FILTER_POLITICAL }
 
@@ -324,31 +270,13 @@
 
 		completion_reward = {
 			add_tech_bonus = { name = TU_KZD_supply_wagons bonus = 0.75 uses = 1 category = industry category = construction_tech }
-		}
-	}
-
-	focus = {
-		id = TU_KZD_logistic_convoy
-		prerequisite = { focus = TU_KZD_supply_wagons }
-		icon = GFX_goal_generic_production
-		x = 0
-		y = 0
-		cost = 10
-
-		search_filters = { FOCUS_FILTER_POLITICAL }
-
-		ai_will_do = {
-			base = 1
-		}
-
-		completion_reward = {
-			add_tech_bonus = { name = TU_KZD_logistic_convoy bonus = 0.75 uses = 1 category = industry category = construction_tech }
+			add_tech_bonus = { name = TU_KZD_supply_wagons bonus = 0.75 uses = 1 category = industry category = construction_tech }
 		}
 	}
 
 	focus = {
 		id = TU_KZD_war_economy_draft
-		prerequisite = { focus = TU_KZD_steel_doctrine }
+		prerequisite = { focus = TU_KZD_mobile_army }
 		icon = GFX_goal_generic_production2
 		x = 0
 		y = 0
@@ -368,7 +296,7 @@
 
 	focus = {
 		id = TU_KZD_steel_standards
-		prerequisite = { focus = TU_KZD_steel_doctrine }
+		prerequisite = { focus = TU_KZD_mobile_army }
 		icon = GFX_goal_generic_army_doctrines
 		x = 0
 		y = 0
@@ -392,7 +320,7 @@
 		icon = GFX_goal_generic_positive_trade_relations
 		x = 0
 		y = 0
-		cost = 10
+		cost = 15
 
 		search_filters = { FOCUS_FILTER_POLITICAL }
 
@@ -403,6 +331,8 @@
 		completion_reward = {
 			add_political_power = 60
 			add_tech_bonus = { name = TU_KZD_imperial_bank bonus = 0.75 uses = 1 category = industry }
+			add_political_power = 60
+			add_stability = 0.03
 		}
 	}
 
@@ -450,26 +380,6 @@
 	}
 
 	focus = {
-		id = TU_KZD_provincial_governors
-		prerequisite = { focus = TU_KZD_imperial_bank }
-		icon = GFX_goal_generic_political_pressure
-		x = 0
-		y = 0
-		cost = 10
-
-		search_filters = { FOCUS_FILTER_POLITICAL }
-
-		ai_will_do = {
-			base = 1
-		}
-
-		completion_reward = {
-			add_political_power = 60
-			add_stability = 0.03
-		}
-	}
-
-	focus = {
 		id = TU_KZD_imperial_guard_corps
 		prerequisite = { focus = TU_KZD_field_marshal_office }
 		mutually_exclusive = { focus = TU_KZD_imperial_guard_corps_alt }
@@ -513,7 +423,7 @@
 
 	focus = {
 		id = TU_KZD_veteran_cadres
-		prerequisite = { focus = TU_KZD_breakthrough_tactics }
+		prerequisite = { focus = TU_KZD_field_marshal_office }
 		icon = GFX_goal_generic_small_arms
 		x = 0
 		y = 0
@@ -534,11 +444,11 @@
 	focus = {
 		id = TU_KZD_empire_finale
 		prerequisite = { focus = TU_KZD_theresis_throne }
-		prerequisite = { focus = TU_KZD_breakthrough_tactics }
+		prerequisite = { focus = TU_KZD_field_marshal_office }
 		icon = GFX_goal_generic_major_war
 		x = 0
 		y = 0
-		cost = 15
+		cost = 20
 
 		search_filters = { FOCUS_FILTER_POLITICAL }
 
@@ -550,24 +460,6 @@
 			every_country = { news_event = { id = tu_kzd_ev.11 hours = 6 } }
 			add_political_power = 100
 			add_stability = 0.05
-		}
-	}
-
-	focus = {
-		id = TU_KZD_imperial_jubilee
-		prerequisite = { focus = TU_KZD_empire_finale }
-		icon = GFX_goal_generic_construct_civ_factory
-		x = 0
-		y = 0
-		cost = 10
-
-		search_filters = { FOCUS_FILTER_POLITICAL }
-
-		ai_will_do = {
-			base = 1
-		}
-
-		completion_reward = {
 			add_war_support = 0.03
 			add_stability = 0.03
 		}
@@ -575,7 +467,7 @@
 
 	focus = {
 		id = TU_KZD_theresis_legacy
-		prerequisite = { focus = TU_KZD_imperial_jubilee }
+		prerequisite = { focus = TU_KZD_empire_finale }
 		icon = GFX_goal_generic_intelligence_exchange
 		x = 0
 		y = 0
@@ -597,7 +489,7 @@
 
 	focus = {
 		id = TU_KZD_oath_of_six
-		prerequisite = { focus = TU_KZD_elite_training }
+		prerequisite = { focus = TU_KZD_six_kings_law }
 		mutually_exclusive = { focus = TU_KZD_war_drums }
 		icon = GFX_goal_generic_national_unity
 		x = 0
@@ -623,7 +515,7 @@
 		icon = GFX_goal_generic_fortify_city
 		x = 0
 		y = 0
-		cost = 10
+		cost = 15
 
 		search_filters = { FOCUS_FILTER_ARMY_XP }
 
@@ -634,6 +526,7 @@
 		completion_reward = {
 			add_tech_bonus = { name = TU_KZD_mountain_watch bonus = 0.75 uses = 1 category = construction_tech }
 			army_experience = 25
+			TU_build_forts_2 = yes
 		}
 	}
 
@@ -644,7 +537,7 @@
 		icon = GFX_goal_generic_army_motorized
 		x = 0
 		y = 0
-		cost = 10
+		cost = 15
 
 		search_filters = { FOCUS_FILTER_ARMY_XP }
 
@@ -655,16 +548,19 @@
 		completion_reward = {
 			add_tech_bonus = { name = TU_KZD_plains_mobility bonus = 0.75 uses = 1 category = motorized_equipment }
 			add_doctrine_cost_reduction = { name = TU_KZD_plains_mobility cost_reduction = 0.4 uses = 1 category = land_doctrine }
+			army_experience = 25
+			add_war_support = 0.03
+			add_doctrine_cost_reduction = { name = TU_KZD_plains_mobility cost_reduction = 0.4 uses = 1 category = land_doctrine }
 		}
 	}
 
 	focus = {
 		id = TU_KZD_frontier_walls
-		prerequisite = { focus = TU_KZD_fortified_frontier }
+		prerequisite = { focus = TU_KZD_elite_template }
 		icon = GFX_goal_generic_fortify_city
 		x = 0
 		y = 0
-		cost = 10
+		cost = 15
 
 		search_filters = { FOCUS_FILTER_POLITICAL }
 
@@ -674,17 +570,19 @@
 
 		completion_reward = {
 			TU_build_forts_2 = yes
+			add_tech_bonus = { name = TU_KZD_frontier_walls bonus = 0.75 uses = 1 category = construction_tech }
+			army_experience = 25
 		}
 	}
 
 	focus = {
 		id = TU_KZD_royal_treasure
-		prerequisite = { focus = TU_KZD_royal_guard }
+		prerequisite = { focus = TU_KZD_six_kings }
 		mutually_exclusive = { focus = TU_KZD_guard_discipline }
 		icon = GFX_goal_generic_trade
 		x = 0
 		y = 0
-		cost = 10
+		cost = 15
 
 		search_filters = { FOCUS_FILTER_POLITICAL }
 
@@ -695,12 +593,14 @@
 		completion_reward = {
 			add_political_power = 60
 			add_tech_bonus = { name = TU_KZD_royal_treasure bonus = 0.75 uses = 1 category = industry }
+			add_political_power = 60
+			add_stability = 0.03
 		}
 	}
 
 	focus = {
 		id = TU_KZD_guard_discipline
-		prerequisite = { focus = TU_KZD_royal_guard }
+		prerequisite = { focus = TU_KZD_six_kings }
 		mutually_exclusive = { focus = TU_KZD_royal_treasure }
 		icon = GFX_goal_generic_special_forces
 		x = 0
@@ -716,26 +616,6 @@
 		completion_reward = {
 			add_manpower = 10000
 			army_experience = 25
-		}
-	}
-
-	focus = {
-		id = TU_KZD_crown_tribunal
-		prerequisite = { focus = TU_KZD_royal_treasure }
-		icon = GFX_goal_generic_intelligence_exchange
-		x = 0
-		y = 0
-		cost = 10
-
-		search_filters = { FOCUS_FILTER_POLITICAL }
-
-		ai_will_do = {
-			base = 1
-		}
-
-		completion_reward = {
-			add_political_power = 60
-			add_stability = 0.03
 		}
 	}
 
@@ -805,7 +685,7 @@
 		icon = GFX_goal_generic_national_unity
 		x = 0
 		y = 0
-		cost = 15
+		cost = 20
 
 		search_filters = { FOCUS_FILTER_POLITICAL }
 
@@ -817,6 +697,8 @@
 			every_country = { news_event = { id = tu_kzd_ev.12 hours = 6 } }
 			add_political_power = 100
 			add_stability = 0.05
+			add_war_support = 0.03
+			add_stability = 0.03
 		}
 	}
 
@@ -826,7 +708,7 @@
 		icon = GFX_goal_generic_special_forces
 		x = 0
 		y = 0
-		cost = 10
+		cost = 15
 
 		search_filters = { FOCUS_FILTER_ARMY_XP }
 
@@ -837,32 +719,14 @@
 		completion_reward = {
 			add_doctrine_cost_reduction = { name = TU_KZD_elite_expansion cost_reduction = 0.4 uses = 1 category = land_doctrine }
 			army_experience = 25
-		}
-	}
-
-	focus = {
-		id = TU_KZD_elite_command
-		prerequisite = { focus = TU_KZD_elite_expansion }
-		icon = GFX_goal_generic_position_armies
-		x = 0
-		y = 0
-		cost = 10
-
-		search_filters = { FOCUS_FILTER_ARMY_XP }
-
-		ai_will_do = {
-			base = 1
-		}
-
-		completion_reward = {
-			add_doctrine_cost_reduction = { name = TU_KZD_elite_command cost_reduction = 0.4 uses = 1 category = land_doctrine }
+			add_doctrine_cost_reduction = { name = TU_KZD_elite_expansion cost_reduction = 0.4 uses = 1 category = land_doctrine }
 			army_experience = 25
 		}
 	}
 
 	focus = {
 		id = TU_KZD_elite_siege_drill
-		prerequisite = { focus = TU_KZD_elite_command }
+		prerequisite = { focus = TU_KZD_elite_expansion }
 		icon = GFX_goal_generic_army_artillery2
 		x = 0
 		y = 0
@@ -881,28 +745,8 @@
 	}
 
 	focus = {
-		id = TU_KZD_quartermaster_corps
-		prerequisite = { focus = TU_KZD_frontier_walls }
-		icon = GFX_goal_generic_construction
-		x = 0
-		y = 0
-		cost = 10
-
-		search_filters = { FOCUS_FILTER_POLITICAL }
-
-		ai_will_do = {
-			base = 1
-		}
-
-		completion_reward = {
-			add_tech_bonus = { name = TU_KZD_quartermaster_corps bonus = 0.75 uses = 1 category = construction_tech }
-			army_experience = 25
-		}
-	}
-
-	focus = {
 		id = TU_KZD_war_drums
-		prerequisite = { focus = TU_KZD_elite_training }
+		prerequisite = { focus = TU_KZD_six_kings_law }
 		mutually_exclusive = { focus = TU_KZD_oath_of_six }
 		icon = GFX_goal_generic_attack_allies
 		x = 0
@@ -943,48 +787,8 @@
 	}
 
 	focus = {
-		id = TU_KZD_mountain_citadel
-		prerequisite = { focus = TU_KZD_mountain_watch }
-		icon = GFX_goal_generic_fortify_city
-		x = 0
-		y = 0
-		cost = 10
-
-		search_filters = { FOCUS_FILTER_POLITICAL }
-
-		ai_will_do = {
-			base = 1
-		}
-
-		completion_reward = {
-			TU_build_forts_2 = yes
-		}
-	}
-
-	focus = {
-		id = TU_KZD_plains_charge
-		prerequisite = { focus = TU_KZD_plains_mobility }
-		icon = GFX_goal_generic_cavalry
-		x = 0
-		y = 0
-		cost = 10
-
-		search_filters = { FOCUS_FILTER_ARMY_XP }
-
-		ai_will_do = {
-			base = 1
-		}
-
-		completion_reward = {
-			army_experience = 25
-			add_war_support = 0.03
-			add_doctrine_cost_reduction = { name = TU_KZD_plains_charge cost_reduction = 0.4 uses = 1 category = land_doctrine }
-		}
-	}
-
-	focus = {
 		id = TU_KZD_six_kings_council
-		prerequisite = { focus = TU_KZD_crown_tribunal }
+		prerequisite = { focus = TU_KZD_royal_treasure }
 		icon = GFX_goal_generic_military_sphere
 		x = 0
 		y = 0
@@ -1024,7 +828,7 @@
 
 	focus = {
 		id = TU_KZD_pass_garrison
-		prerequisite = { focus = TU_KZD_mountain_citadel }
+		prerequisite = { focus = TU_KZD_mountain_watch }
 		icon = GFX_goal_generic_fortify_city
 		x = 0
 		y = 0
@@ -1043,32 +847,12 @@
 	}
 
 	focus = {
-		id = TU_KZD_royal_shrine
-		prerequisite = { focus = TU_KZD_royal_oath_final }
-		icon = GFX_goal_generic_propaganda
-		x = 0
-		y = 0
-		cost = 10
-
-		search_filters = { FOCUS_FILTER_POLITICAL }
-
-		ai_will_do = {
-			base = 1
-		}
-
-		completion_reward = {
-			add_war_support = 0.03
-			add_stability = 0.03
-		}
-	}
-
-	focus = {
 		id = TU_KZD_guardian_pledge
 		prerequisite = { focus = TU_KZD_sworn_shields }
 		icon = GFX_goal_generic_national_unity
 		x = 0
 		y = 0
-		cost = 10
+		cost = 15
 
 		search_filters = { FOCUS_FILTER_POLITICAL }
 
@@ -1079,12 +863,14 @@
 		completion_reward = {
 			add_manpower = 10000
 			army_experience = 25
+			add_tech_bonus = { name = TU_KZD_guardian_pledge bonus = 0.75 uses = 1 category = construction_tech }
+			army_experience = 25
 		}
 	}
 
 	focus = {
 		id = TU_KZD_plains_drill
-		prerequisite = { focus = TU_KZD_plains_charge }
+		prerequisite = { focus = TU_KZD_plains_mobility }
 		icon = GFX_goal_generic_army_doctrines
 		x = 0
 		y = 0
@@ -1103,34 +889,12 @@
 	}
 
 	focus = {
-		id = TU_KZD_gate_warden
-		prerequisite = { focus = TU_KZD_guardian_pledge }
-		icon = GFX_goal_generic_fortify_city
-		x = 0
-		y = 0
-		cost = 10
-
-		search_filters = { FOCUS_FILTER_POLITICAL }
-
-		ai_will_do = {
-			base = 1
-		}
-
-		completion_reward = {
-			add_tech_bonus = { name = TU_KZD_gate_warden bonus = 0.75 uses = 1 category = construction_tech }
-			army_experience = 25
-		}
-	}
-
-	#### ROUTE C: RESTORATION OF BABEL EXTENSION ####
-
-	focus = {
 		id = TU_KZD_babel_archive_search
 		prerequisite = { focus = TU_KZD_babel_restoration }
 		icon = GFX_goal_generic_scientific_exchange
 		x = 0
 		y = 0
-		cost = 10
+		cost = 15
 
 		search_filters = { FOCUS_FILTER_RESEARCH }
 
@@ -1141,31 +905,13 @@
 		completion_reward = {
 			add_ideas = TU_KZD_babel_archives
 			add_tech_bonus = { name = TU_KZD_babel_archive_search bonus = 0.75 uses = 1 category = electronics category = tu_originium_tech }
-		}
-	}
-
-	focus = {
-		id = TU_KZD_babel_scribes
-		prerequisite = { focus = TU_KZD_babel_archive_search }
-		icon = GFX_goal_generic_scientific_exchange
-		x = 0
-		y = 0
-		cost = 10
-
-		search_filters = { FOCUS_FILTER_RESEARCH }
-
-		ai_will_do = {
-			base = 1
-		}
-
-		completion_reward = {
-			add_tech_bonus = { name = TU_KZD_babel_scribes bonus = 0.75 uses = 1 category = electronics category = tu_originium_tech }
+			add_tech_bonus = { name = TU_KZD_babel_archive_search bonus = 0.75 uses = 1 category = electronics category = tu_originium_tech }
 		}
 	}
 
 	focus = {
 		id = TU_KZD_ancient_engineering
-		prerequisite = { focus = TU_KZD_babel_scribes }
+		prerequisite = { focus = TU_KZD_babel_archive_search }
 		mutually_exclusive = { focus = TU_KZD_arcane_survey }
 		icon = GFX_goal_generic_construct_mil_factory
 		x = 0
@@ -1186,7 +932,7 @@
 
 	focus = {
 		id = TU_KZD_arcane_survey
-		prerequisite = { focus = TU_KZD_babel_scribes }
+		prerequisite = { focus = TU_KZD_babel_archive_search }
 		mutually_exclusive = { focus = TU_KZD_ancient_engineering }
 		icon = GFX_goal_generic_secret_weapon
 		x = 0
@@ -1210,7 +956,7 @@
 		icon = GFX_goal_generic_improve_relations
 		x = 0
 		y = 0
-		cost = 10
+		cost = 15
 
 		search_filters = { FOCUS_FILTER_POLITICAL }
 
@@ -1219,6 +965,7 @@
 		}
 
 		completion_reward = {
+			add_tech_bonus = { name = TU_KZD_babel_council bonus = 0.75 uses = 1 category = electronics category = tu_originium_tech }
 			add_tech_bonus = { name = TU_KZD_babel_council bonus = 0.75 uses = 1 category = electronics category = tu_originium_tech }
 		}
 	}
@@ -1377,7 +1124,7 @@
 		icon = GFX_goal_generic_small_arms
 		x = 0
 		y = 0
-		cost = 10
+		cost = 15
 
 		search_filters = { FOCUS_FILTER_ARMY_XP }
 
@@ -1387,25 +1134,7 @@
 
 		completion_reward = {
 			add_tech_bonus = { name = TU_KZD_babel_cadets bonus = 0.75 uses = 1 category = electronics category = tu_originium_tech }
-		}
-	}
-
-	focus = {
-		id = TU_KZD_babel_war_college
-		prerequisite = { focus = TU_KZD_babel_cadets }
-		icon = GFX_goal_generic_army_doctrines
-		x = 0
-		y = 0
-		cost = 10
-
-		search_filters = { FOCUS_FILTER_ARMY_XP }
-
-		ai_will_do = {
-			base = 1
-		}
-
-		completion_reward = {
-			add_doctrine_cost_reduction = { name = TU_KZD_babel_war_college cost_reduction = 0.4 uses = 1 category = land_doctrine }
+			add_doctrine_cost_reduction = { name = TU_KZD_babel_cadets cost_reduction = 0.4 uses = 1 category = land_doctrine }
 			army_experience = 25
 		}
 	}
@@ -1431,28 +1160,9 @@
 	}
 
 	focus = {
-		id = TU_KZD_babel_bank
-		prerequisite = { focus = TU_KZD_babel_council }
-		icon = GFX_goal_generic_positive_trade_relations
-		x = 0
-		y = 0
-		cost = 10
-
-		search_filters = { FOCUS_FILTER_POLITICAL }
-
-		ai_will_do = {
-			base = 1
-		}
-
-		completion_reward = {
-			add_tech_bonus = { name = TU_KZD_babel_bank bonus = 0.75 uses = 1 category = electronics category = tu_originium_tech }
-		}
-	}
-
-	focus = {
 		id = TU_KZD_babel_reborn
 		prerequisite = { focus = TU_KZD_babel_ascension }
-		prerequisite = { focus = TU_KZD_babel_bank }
+		prerequisite = { focus = TU_KZD_babel_council }
 		icon = GFX_goal_generic_national_unity
 		x = 0
 		y = 0
@@ -1496,7 +1206,7 @@
 		icon = GFX_goal_generic_propaganda
 		x = 0
 		y = 0
-		cost = 10
+		cost = 15
 
 		search_filters = { FOCUS_FILTER_POLITICAL }
 
@@ -1506,12 +1216,13 @@
 
 		completion_reward = {
 			add_tech_bonus = { name = TU_KZD_babel_sanctum bonus = 0.75 uses = 1 category = electronics category = tu_originium_tech }
+			add_tech_bonus = { name = TU_KZD_babel_sanctum bonus = 0.75 uses = 1 category = electronics category = tu_originium_tech }
 		}
 	}
 
 	focus = {
 		id = TU_KZD_babel_mint
-		prerequisite = { focus = TU_KZD_babel_bank }
+		prerequisite = { focus = TU_KZD_babel_council }
 		icon = GFX_goal_generic_trade
 		x = 0
 		y = 0
@@ -1589,7 +1300,7 @@
 
 	focus = {
 		id = TU_KZD_records_vault
-		prerequisite = { focus = TU_KZD_babel_scribes }
+		prerequisite = { focus = TU_KZD_babel_archive_search }
 		mutually_exclusive = { focus = TU_KZD_records_vault_alt }
 		icon = GFX_goal_generic_scientific_exchange
 		x = 0
@@ -1609,7 +1320,7 @@
 
 	focus = {
 		id = TU_KZD_records_vault_alt
-		prerequisite = { focus = TU_KZD_babel_scribes }
+		prerequisite = { focus = TU_KZD_babel_archive_search }
 		mutually_exclusive = { focus = TU_KZD_records_vault }
 		icon = GFX_goal_generic_construction2
 		x = 0
@@ -1633,7 +1344,7 @@
 		icon = GFX_goal_generic_intelligence_exchange
 		x = 0
 		y = 0
-		cost = 10
+		cost = 15
 
 		search_filters = { FOCUS_FILTER_POLITICAL }
 
@@ -1643,48 +1354,9 @@
 
 		completion_reward = {
 			add_tech_bonus = { name = TU_KZD_cultural_relic bonus = 0.75 uses = 1 category = electronics category = tu_originium_tech }
+			add_tech_bonus = { name = TU_KZD_cultural_relic bonus = 0.75 uses = 1 category = electronics category = tu_originium_tech }
 		}
 	}
-
-	focus = {
-		id = TU_KZD_babel_legend
-		prerequisite = { focus = TU_KZD_babel_sanctum }
-		icon = GFX_goal_generic_national_unity
-		x = 0
-		y = 0
-		cost = 10
-
-		search_filters = { FOCUS_FILTER_POLITICAL }
-
-		ai_will_do = {
-			base = 1
-		}
-
-		completion_reward = {
-			add_tech_bonus = { name = TU_KZD_babel_legend bonus = 0.75 uses = 1 category = electronics category = tu_originium_tech }
-		}
-	}
-
-	focus = {
-		id = TU_KZD_babel_festival
-		prerequisite = { focus = TU_KZD_cultural_relic }
-		icon = GFX_goal_generic_propaganda
-		x = 0
-		y = 0
-		cost = 10
-
-		search_filters = { FOCUS_FILTER_POLITICAL }
-
-		ai_will_do = {
-			base = 1
-		}
-
-		completion_reward = {
-			add_tech_bonus = { name = TU_KZD_babel_festival bonus = 0.75 uses = 1 category = electronics category = tu_originium_tech }
-		}
-	}
-
-	#### ROUTE D: MERCENARY KINGDOM ECONOMY (NEW BRANCH, NOT EXCLUSIVE WITH THE THREE ROUTES) ####
 
 	focus = {
 		id = TU_KZD_merc_kingdom
@@ -1941,7 +1613,7 @@
 		icon = GFX_goal_generic_political_pressure
 		x = 0
 		y = 0
-		cost = 10
+		cost = 15
 
 		search_filters = { FOCUS_FILTER_POLITICAL }
 
@@ -1952,6 +1624,8 @@
 		completion_reward = {
 			add_political_power = 60
 			add_stability = 0.03
+			add_manpower = 10000
+			army_experience = 25
 		}
 	}
 
@@ -1976,32 +1650,12 @@
 	}
 
 	focus = {
-		id = TU_KZD_gold_standard
-		prerequisite = { focus = TU_KZD_arbiter_council }
-		icon = GFX_goal_generic_trade
-		x = 0
-		y = 0
-		cost = 10
-
-		search_filters = { FOCUS_FILTER_POLITICAL }
-
-		ai_will_do = {
-			base = 1
-		}
-
-		completion_reward = {
-			add_manpower = 10000
-			army_experience = 25
-		}
-	}
-
-	focus = {
 		id = TU_KZD_wartime_tariff
-		prerequisite = { focus = TU_KZD_gold_standard }
+		prerequisite = { focus = TU_KZD_arbiter_council }
 		icon = GFX_goal_generic_positive_trade_relations
 		x = 0
 		y = 0
-		cost = 10
+		cost = 15
 
 		search_filters = { FOCUS_FILTER_POLITICAL }
 
@@ -2012,12 +1666,14 @@
 		completion_reward = {
 			add_political_power = 60
 			add_tech_bonus = { name = TU_KZD_wartime_tariff bonus = 0.75 uses = 1 category = industry }
+			add_political_power = 60
+			add_tech_bonus = { name = TU_KZD_wartime_tariff bonus = 0.75 uses = 1 category = industry }
 		}
 	}
 
 	focus = {
 		id = TU_KZD_mercenary_bank
-		prerequisite = { focus = TU_KZD_gold_standard }
+		prerequisite = { focus = TU_KZD_arbiter_council }
 		mutually_exclusive = { focus = TU_KZD_private_vaults }
 		icon = GFX_goal_generic_production
 		x = 0
@@ -2038,7 +1694,7 @@
 
 	focus = {
 		id = TU_KZD_private_vaults
-		prerequisite = { focus = TU_KZD_gold_standard }
+		prerequisite = { focus = TU_KZD_arbiter_council }
 		mutually_exclusive = { focus = TU_KZD_mercenary_bank }
 		icon = GFX_goal_generic_intelligence_exchange
 		x = 0
@@ -2058,32 +1714,12 @@
 	}
 
 	focus = {
-		id = TU_KZD_contract_fleets_alt
-		prerequisite = { focus = TU_KZD_wartime_tariff }
-		icon = GFX_goal_generic_trade
-		x = 0
-		y = 0
-		cost = 10
-
-		search_filters = { FOCUS_FILTER_POLITICAL }
-
-		ai_will_do = {
-			base = 1
-		}
-
-		completion_reward = {
-			add_political_power = 60
-			add_tech_bonus = { name = TU_KZD_contract_fleets_alt bonus = 0.75 uses = 1 category = industry }
-		}
-	}
-
-	focus = {
 		id = TU_KZD_merc_pension
 		prerequisite = { focus = TU_KZD_veterans_fund }
 		icon = GFX_goal_generic_consumer_goods
 		x = 0
 		y = 0
-		cost = 10
+		cost = 15
 
 		search_filters = { FOCUS_FILTER_POLITICAL }
 
@@ -2094,32 +1730,14 @@
 		completion_reward = {
 			add_manpower = 10000
 			army_experience = 25
-		}
-	}
-
-	focus = {
-		id = TU_KZD_merc_academy
-		prerequisite = { focus = TU_KZD_merc_pension }
-		icon = GFX_goal_generic_scientific_exchange
-		x = 0
-		y = 0
-		cost = 10
-
-		search_filters = { FOCUS_FILTER_ARMY_XP }
-
-		ai_will_do = {
-			base = 1
-		}
-
-		completion_reward = {
-			add_doctrine_cost_reduction = { name = TU_KZD_merc_academy cost_reduction = 0.4 uses = 1 category = land_doctrine }
+			add_doctrine_cost_reduction = { name = TU_KZD_merc_pension cost_reduction = 0.4 uses = 1 category = land_doctrine }
 			army_experience = 25
 		}
 	}
 
 	focus = {
 		id = TU_KZD_sellsword_doctrine
-		prerequisite = { focus = TU_KZD_merc_academy }
+		prerequisite = { focus = TU_KZD_merc_pension }
 		icon = GFX_goal_generic_army_doctrines
 		x = 0
 		y = 0
@@ -2139,11 +1757,11 @@
 
 	focus = {
 		id = TU_KZD_kingdom_charter
-		prerequisite = { focus = TU_KZD_gold_standard }
+		prerequisite = { focus = TU_KZD_arbiter_council }
 		icon = GFX_goal_generic_national_unity
 		x = 0
 		y = 0
-		cost = 15
+		cost = 20
 
 		search_filters = { FOCUS_FILTER_POLITICAL }
 
@@ -2156,6 +1774,8 @@
 			country_event = { id = tu_kzd_ev.5 }
 			add_manpower = 20000
 			army_experience = 40
+			add_political_power = 60
+			add_tech_bonus = { name = TU_KZD_kingdom_charter bonus = 0.75 uses = 1 category = industry }
 		}
 	}
 
@@ -2165,7 +1785,7 @@
 		icon = GFX_goal_generic_trade
 		x = 0
 		y = 0
-		cost = 10
+		cost = 15
 
 		search_filters = { FOCUS_FILTER_POLITICAL }
 
@@ -2176,24 +1796,6 @@
 		completion_reward = {
 			add_political_power = 60
 			add_tech_bonus = { name = TU_KZD_harbor_levy bonus = 0.75 uses = 1 category = industry }
-		}
-	}
-
-	focus = {
-		id = TU_KZD_caravan_routes
-		prerequisite = { focus = TU_KZD_harbor_levy }
-		icon = GFX_goal_generic_trade
-		x = 0
-		y = 0
-		cost = 10
-
-		search_filters = { FOCUS_FILTER_INTERNATIONAL_TRADE }
-
-		ai_will_do = {
-			base = 1
-		}
-
-		completion_reward = {
 			add_manpower = 10000
 			army_experience = 25
 		}
@@ -2242,32 +1844,12 @@
 	}
 
 	focus = {
-		id = TU_KZD_contract_dividend
-		prerequisite = { focus = TU_KZD_kingdom_charter }
-		icon = GFX_goal_generic_trade
-		x = 0
-		y = 0
-		cost = 10
-
-		search_filters = { FOCUS_FILTER_POLITICAL }
-
-		ai_will_do = {
-			base = 1
-		}
-
-		completion_reward = {
-			add_political_power = 60
-			add_tech_bonus = { name = TU_KZD_contract_dividend bonus = 0.75 uses = 1 category = industry }
-		}
-	}
-
-	focus = {
 		id = TU_KZD_merc_capital
-		prerequisite = { focus = TU_KZD_contract_dividend }
+		prerequisite = { focus = TU_KZD_kingdom_charter }
 		icon = GFX_goal_generic_construct_civ_factory
 		x = 0
 		y = 0
-		cost = 10
+		cost = 15
 
 		search_filters = { FOCUS_FILTER_POLITICAL }
 
@@ -2278,24 +1860,6 @@
 		completion_reward = {
 			add_manpower = 10000
 			army_experience = 25
-		}
-	}
-
-	focus = {
-		id = TU_KZD_merc_seal
-		prerequisite = { focus = TU_KZD_merc_capital }
-		icon = GFX_goal_generic_national_unity
-		x = 0
-		y = 0
-		cost = 10
-
-		search_filters = { FOCUS_FILTER_POLITICAL }
-
-		ai_will_do = {
-			base = 1
-		}
-
-		completion_reward = {
 			add_manpower = 10000
 			army_experience = 25
 		}

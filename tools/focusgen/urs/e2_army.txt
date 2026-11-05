@@ -32,7 +32,7 @@
 		icon = GFX_goal_generic_special_forces
 		x = 26
 		y = 1
-		cost = 10
+		cost = 18
 
 		search_filters = { FOCUS_FILTER_ARMY_XP }
 
@@ -47,6 +47,10 @@
 		completion_reward = {
 			add_doctrine_cost_reduction = { name = TU_URS_army_elite_draft cost_reduction = 0.4 uses = 1 category = land_doctrine }
 			army_experience = 25
+			add_manpower = 10000
+			army_experience = 25
+			add_tech_bonus = { name = TU_URS_army_elite_draft bonus = 0.75 uses = 1 category = armor }
+			add_doctrine_cost_reduction = { name = TU_URS_army_elite_draft cost_reduction = 0.4 uses = 1 category = land_doctrine }
 		}
 	}
 
@@ -78,7 +82,7 @@
 		icon = GFX_goal_generic_secret_weapon
 		x = 20
 		y = 1
-		cost = 10
+		cost = 20
 
 		search_filters = { FOCUS_FILTER_ARMY_XP }
 
@@ -89,6 +93,10 @@
 		completion_reward = {
 			add_ideas = TU_URS_e2_arts_units
 			add_tech_bonus = { name = TU_URS_army_arts_trials bonus = 0.75 uses = 1 category = electronics category = tu_originium_tech }
+			army_experience = 25
+			add_war_support = 0.03
+			add_doctrine_cost_reduction = { name = TU_URS_army_arts_trials cost_reduction = 0.4 uses = 1 category = land_doctrine }
+			add_tech_bonus = { name = TU_URS_army_arts_trials bonus = 0.75 uses = 1 category = electronics category = tu_originium_tech }
 		}
 	}
 
@@ -98,7 +106,7 @@
 		icon = GFX_goal_generic_allies_build_infantry
 		x = 22
 		y = 2
-		cost = 10
+		cost = 15
 
 		search_filters = { FOCUS_FILTER_MANPOWER }
 
@@ -109,24 +117,6 @@
 		completion_reward = {
 			add_manpower = 10000
 			army_experience = 25
-		}
-	}
-
-	focus = {
-		id = TU_URS_army_guard_selection
-		prerequisite = { focus = TU_URS_army_elite_draft }
-		icon = GFX_goal_generic_special_forces
-		x = 26
-		y = 2
-		cost = 10
-
-		search_filters = { FOCUS_FILTER_ARMY_XP }
-
-		ai_will_do = {
-			base = 1
-		}
-
-		completion_reward = {
 			add_manpower = 10000
 			army_experience = 25
 		}
@@ -154,28 +144,6 @@
 	}
 
 	focus = {
-		id = TU_URS_army_arts_assault
-		prerequisite = { focus = TU_URS_army_arts_trials }
-		icon = GFX_goal_generic_secret_weapon
-		x = 20
-		y = 2
-		cost = 10
-
-		search_filters = { FOCUS_FILTER_ARMY_XP }
-
-		ai_will_do = {
-			base = 1
-		}
-
-		completion_reward = {
-			army_experience = 25
-			add_war_support = 0.03
-			add_doctrine_cost_reduction = { name = TU_URS_army_arts_assault cost_reduction = 0.4 uses = 1 category = land_doctrine }
-		}
-	}
-
-	#### ARTILLERY (x 24) ####
-	focus = {
 		id = TU_URS_army_artillery_school
 		prerequisite = { focus = TU_URS_army_root }
 		icon = GFX_goal_generic_army_artillery
@@ -195,48 +163,6 @@
 		}
 	}
 
-	focus = {
-		id = TU_URS_army_conscript_levy
-		prerequisite = { focus = TU_URS_army_conscript_camps }
-		icon = GFX_goal_generic_allies_build_infantry
-		x = 22
-		y = 3
-		cost = 10
-
-		search_filters = { FOCUS_FILTER_MANPOWER }
-
-		ai_will_do = {
-			base = 1
-		}
-
-		completion_reward = {
-			add_manpower = 10000
-			army_experience = 25
-		}
-	}
-
-	#### ARMOUR (x 26) ####
-	focus = {
-		id = TU_URS_army_armour_school
-		prerequisite = { focus = TU_URS_army_guard_selection }
-		icon = GFX_goal_generic_army_tanks
-		x = 26
-		y = 3
-		cost = 10
-
-		search_filters = { FOCUS_FILTER_ARMY_XP }
-
-		ai_will_do = {
-			base = 1
-		}
-
-		completion_reward = {
-			add_tech_bonus = { name = TU_URS_army_armour_school bonus = 0.75 uses = 1 category = armor }
-			add_doctrine_cost_reduction = { name = TU_URS_army_armour_school cost_reduction = 0.4 uses = 1 category = land_doctrine }
-		}
-	}
-
-	#### FROZEN: ENTRENCH vs MOBILE (mutually exclusive) ####
 	focus = {
 		id = TU_URS_army_frost_entrench
 		prerequisite = { focus = TU_URS_army_winter_doctrine }
@@ -264,7 +190,7 @@
 		icon = GFX_goal_generic_army_motorized
 		x = 16
 		y = 3
-		cost = 10
+		cost = 15
 
 		search_filters = { FOCUS_FILTER_ARMY_XP }
 
@@ -275,25 +201,8 @@
 		completion_reward = {
 			add_tech_bonus = { name = TU_URS_army_frost_mobile bonus = 0.75 uses = 1 category = motorized_equipment }
 			add_doctrine_cost_reduction = { name = TU_URS_army_frost_mobile cost_reduction = 0.4 uses = 1 category = land_doctrine }
-		}
-	}
-
-	focus = {
-		id = TU_URS_army_arts_legion
-		prerequisite = { focus = TU_URS_army_arts_assault }
-		icon = GFX_goal_generic_secret_weapon
-		x = 20
-		y = 3
-		cost = 10
-
-		search_filters = { FOCUS_FILTER_ARMY_XP }
-
-		ai_will_do = {
-			base = 1
-		}
-
-		completion_reward = {
-			add_tech_bonus = { name = TU_URS_army_arts_legion bonus = 0.75 uses = 1 category = electronics category = tu_originium_tech }
+			add_tech_bonus = { name = TU_URS_army_frost_mobile bonus = 0.75 uses = 1 category = motorized_equipment }
+			add_doctrine_cost_reduction = { name = TU_URS_army_frost_mobile cost_reduction = 0.4 uses = 1 category = land_doctrine }
 		}
 	}
 
@@ -303,7 +212,7 @@
 		icon = GFX_goal_generic_army_artillery2
 		x = 24
 		y = 3
-		cost = 10
+		cost = 20
 
 		search_filters = { FOCUS_FILTER_ARMY_XP }
 
@@ -315,18 +224,24 @@
 			add_ideas = TU_URS_e2_artillery_doctrine
 			add_tech_bonus = { name = TU_URS_army_artillery_doctrine bonus = 0.75 uses = 1 category = artillery }
 			army_experience = 25
+			add_tech_bonus = { name = TU_URS_army_artillery_doctrine bonus = 0.75 uses = 1 category = artillery }
+			army_experience = 25
+			add_tech_bonus = { name = TU_URS_army_artillery_doctrine bonus = 1.0 uses = 1 category = artillery }
+			army_experience = 40
+			add_tech_bonus = { name = TU_URS_army_artillery_doctrine bonus = 1.0 uses = 1 category = infantry_weapons }
+			army_experience = 40
 		}
 	}
 
 	#### TOTAL MOBILISATION vs PROFESSIONAL ARMY (mutually exclusive) ####
 	focus = {
 		id = TU_URS_army_mass_mobilisation
-		prerequisite = { focus = TU_URS_army_conscript_levy }
+		prerequisite = { focus = TU_URS_army_conscript_camps }
 		mutually_exclusive = { focus = TU_URS_army_professional }
 		icon = GFX_goal_generic_national_unity
 		x = 22
 		y = 4
-		cost = 10
+		cost = 15
 
 		search_filters = { FOCUS_FILTER_WAR_SUPPORT }
 
@@ -338,17 +253,19 @@
 			army_experience = 25
 			add_war_support = 0.03
 			add_doctrine_cost_reduction = { name = TU_URS_army_mass_mobilisation cost_reduction = 0.4 uses = 1 category = land_doctrine }
+			add_manpower = 10000
+			army_experience = 25
 		}
 	}
 
 	focus = {
 		id = TU_URS_army_professional
-		prerequisite = { focus = TU_URS_army_armour_school }
+		prerequisite = { focus = TU_URS_army_elite_draft }
 		mutually_exclusive = { focus = TU_URS_army_mass_mobilisation }
 		icon = GFX_goal_generic_army_doctrines
 		x = 26
 		y = 4
-		cost = 10
+		cost = 18
 
 		search_filters = { FOCUS_FILTER_ARMY_XP }
 
@@ -359,133 +276,14 @@
 		completion_reward = {
 			add_manpower = 10000
 			army_experience = 25
-		}
-	}
-
-	focus = {
-		id = TU_URS_army_artillery_barrage
-		prerequisite = { focus = TU_URS_army_artillery_doctrine }
-		icon = GFX_goal_generic_army_artillery
-		x = 24
-		y = 4
-		cost = 10
-
-		search_filters = { FOCUS_FILTER_ARMY_XP }
-
-		ai_will_do = {
-			base = 1
-		}
-
-		completion_reward = {
-			add_tech_bonus = { name = TU_URS_army_artillery_barrage bonus = 0.75 uses = 1 category = artillery }
-			army_experience = 25
-		}
-	}
-
-	focus = {
-		id = TU_URS_army_frost_raid
-		prerequisite = { focus = TU_URS_army_frost_mobile }
-		icon = GFX_goal_generic_army_motorized
-		x = 16
-		y = 4
-		cost = 10
-
-		search_filters = { FOCUS_FILTER_ARMY_XP }
-
-		ai_will_do = {
-			base = 1
-		}
-
-		completion_reward = {
-			add_tech_bonus = { name = TU_URS_army_frost_raid bonus = 0.75 uses = 1 category = motorized_equipment }
-			add_doctrine_cost_reduction = { name = TU_URS_army_frost_raid cost_reduction = 0.4 uses = 1 category = land_doctrine }
-		}
-	}
-
-	focus = {
-		id = TU_URS_army_armour_division
-		prerequisite = { focus = TU_URS_army_professional }
-		icon = GFX_goal_generic_build_tank
-		x = 26
-		y = 5
-		cost = 15
-
-		search_filters = { FOCUS_FILTER_ARMY_XP }
-
-		ai_will_do = {
-			base = 1
-		}
-
-		completion_reward = {
-			add_tech_bonus = { name = TU_URS_army_armour_division bonus = 1.0 uses = 1 category = armor }
-			add_doctrine_cost_reduction = { name = TU_URS_army_armour_division cost_reduction = 0.5 uses = 1 category = land_doctrine }
-		}
-	}
-
-	focus = {
-		id = TU_URS_army_reserve
-		prerequisite = { focus = TU_URS_army_mass_mobilisation }
-		icon = GFX_goal_generic_army_doctrines
-		x = 22
-		y = 5
-		cost = 10
-
-		search_filters = { FOCUS_FILTER_MANPOWER }
-
-		ai_will_do = {
-			base = 1
-		}
-
-		completion_reward = {
-			add_manpower = 10000
-			army_experience = 25
-		}
-	}
-
-	focus = {
-		id = TU_URS_army_artillery_corps
-		prerequisite = { focus = TU_URS_army_artillery_barrage }
-		icon = GFX_goal_generic_army_artillery2
-		x = 24
-		y = 5
-		cost = 15
-
-		search_filters = { FOCUS_FILTER_ARMY_XP }
-
-		ai_will_do = {
-			base = 1
-		}
-
-		completion_reward = {
-			add_tech_bonus = { name = TU_URS_army_artillery_corps bonus = 1.0 uses = 1 category = artillery }
-			army_experience = 40
-		}
-	}
-
-	#### CONVERGENCE: COMBINED ARMS ####
-	focus = {
-		id = TU_URS_army_combined_arms
-		prerequisite = { focus = TU_URS_army_reserve focus = TU_URS_army_artillery_corps }
-		icon = GFX_goal_generic_army_doctrines
-		x = 22
-		y = 6
-		cost = 15
-
-		search_filters = { FOCUS_FILTER_ARMY_XP }
-
-		ai_will_do = {
-			base = 1
-		}
-
-		completion_reward = {
-			add_tech_bonus = { name = TU_URS_army_combined_arms bonus = 1.0 uses = 1 category = infantry_weapons }
-			army_experience = 40
+			add_tech_bonus = { name = TU_URS_army_professional bonus = 1.0 uses = 1 category = armor }
+			add_doctrine_cost_reduction = { name = TU_URS_army_professional cost_reduction = 0.5 uses = 1 category = land_doctrine }
 		}
 	}
 
 	focus = {
 		id = TU_URS_army_armour_doctrine
-		prerequisite = { focus = TU_URS_army_armour_division }
+		prerequisite = { focus = TU_URS_army_professional }
 		icon = GFX_goal_generic_army_tanks
 		x = 26
 		y = 6
@@ -506,7 +304,7 @@
 
 	focus = {
 		id = TU_URS_army_general_staff
-		prerequisite = { focus = TU_URS_army_combined_arms }
+		prerequisite = { focus = TU_URS_army_artillery_doctrine }
 		icon = GFX_goal_generic_army_doctrines
 		x = 22
 		y = 7
@@ -535,7 +333,7 @@
 		icon = GFX_goal_generic_construct_military
 		x = 22
 		y = 9
-		cost = 15
+		cost = 20
 
 		search_filters = { FOCUS_FILTER_MANPOWER }
 
@@ -548,86 +346,13 @@
 			army_experience = 40
 			add_war_support = 0.05
 			add_doctrine_cost_reduction = { name = TU_URS_army_total_war cost_reduction = 0.5 uses = 1 category = land_doctrine }
-		}
-	}
-
-	focus = {
-		id = TU_URS_army_grand
-		prerequisite = { focus = TU_URS_army_total_war }
-		icon = GFX_goal_generic_army_motorized
-		x = 22
-		y = 11
-		cost = 15
-
-		search_filters = { FOCUS_FILTER_ARMY_XP }
-
-		ai_will_do = {
-			base = 1
-		}
-
-		completion_reward = {
 			add_manpower = 20000
 			army_experience = 40
-		}
-	}
-
-	focus = {
-		id = TU_URS_army_final
-		prerequisite = { focus = TU_URS_army_grand }
-		icon = GFX_goal_generic_army_tanks
-		x = 22
-		y = 13
-		cost = 15
-
-		search_filters = { FOCUS_FILTER_ARMY_XP }
-
-		ai_will_do = {
-			base = 1
-		}
-
-		completion_reward = {
 			army_experience = 40
 			add_war_support = 0.05
-			add_doctrine_cost_reduction = { name = TU_URS_army_final cost_reduction = 0.5 uses = 1 category = land_doctrine }
-		}
-	}
-
-	focus = {
-		id = TU_URS_army_supreme
-		prerequisite = { focus = TU_URS_army_final }
-		icon = GFX_goal_generic_army_doctrines
-		x = 22
-		y = 15
-		cost = 15
-
-		search_filters = { FOCUS_FILTER_ARMY_XP }
-
-		ai_will_do = {
-			base = 1
-		}
-
-		completion_reward = {
-			add_doctrine_cost_reduction = { name = TU_URS_army_supreme cost_reduction = 0.5 uses = 1 category = land_doctrine }
+			add_doctrine_cost_reduction = { name = TU_URS_army_total_war cost_reduction = 0.5 uses = 1 category = land_doctrine }
+			add_doctrine_cost_reduction = { name = TU_URS_army_total_war cost_reduction = 0.5 uses = 1 category = land_doctrine }
 			army_experience = 40
-		}
-	}
-
-	#### END OF THE ARMY LINE ####
-	focus = {
-		id = TU_URS_army_marshal
-		prerequisite = { focus = TU_URS_army_supreme }
-		icon = GFX_goal_generic_construct_military
-		x = 22
-		y = 18
-		cost = 15
-
-		search_filters = { FOCUS_FILTER_ARMY_XP }
-
-		ai_will_do = {
-			base = 1
-		}
-
-		completion_reward = {
 			add_political_power = 100
 			add_stability = 0.05
 		}

@@ -1,6 +1,6 @@
 focus_tree = {
 	id = TU_RHO_focus
-	continuous_focus_position = { x = 50 y = 3770 }
+	continuous_focus_position = { x = 50 y = 3120 }
 
 	country = {
 		factor = 0
@@ -31,7 +31,7 @@ focus_tree = {
 		id = TU_RHO_chernobog_rescue
 		icon = GFX_goal_generic_special_forces
 		cost = 7
-		x = 2
+		x = 21
 		y = 1
 
 		prerequisite = { focus = TU_RHO_prts_online }
@@ -48,8 +48,8 @@ focus_tree = {
 	focus = {
 		id = TU_RHO_ark_mission
 		icon = GFX_goal_generic_improve_relations
-		cost = 5
-		x = -20
+		cost = 9
+		x = -17
 		y = 2
 
 		prerequisite = { focus = TU_RHO_chernobog_rescue }
@@ -59,35 +59,22 @@ focus_tree = {
 			country_event = { id = tu_rho_ev.1 }
 			add_political_power = 35
 			add_stability = 0.02
+			add_stability = 0.03
+			add_manpower = 10000
+			add_tech_bonus = { name = TU_RHO_ark_mission bonus = 0.75 uses = 1 category = tu_oripathy_tech }
 			# spec 23 hooks
 			set_cosmetic_tag = TU_RHO_ARK
 		}
 	}
 
 	focus = {
-		id = TU_RHO_ark_charter
-		icon = GFX_goal_generic_national_unity
-		cost = 7
-		x = -20
-		y = 3
-
-		prerequisite = { focus = TU_RHO_ark_mission }
-
-		completion_reward = {
-			add_stability = 0.03
-			add_manpower = 10000
-			add_tech_bonus = { name = TU_RHO_ark_charter bonus = 0.75 uses = 1 category = tu_oripathy_tech }
-		}
-	}
-
-	focus = {
 		id = TU_RHO_unlimited_volunteers
+		prerequisite = { focus = TU_RHO_ark_mission }
 		icon = GFX_goal_generic_construct_military
 		cost = 8
-		x = -20
-		y = 4
+		x = -17
+		y = 3
 
-		prerequisite = { focus = TU_RHO_ark_charter }
 
 		completion_reward = {
 			remove_ideas = TU_RHO_landship
@@ -101,9 +88,9 @@ focus_tree = {
 	focus = {
 		id = TU_RHO_ark_relief_office
 		icon = GFX_goal_generic_construct_civilian
-		cost = 6
-		x = -20
-		y = 5
+		cost = 9
+		x = -17
+		y = 4
 
 		prerequisite = { focus = TU_RHO_unlimited_volunteers }
 
@@ -113,61 +100,34 @@ focus_tree = {
 			add_stability = 0.03
 			add_manpower = 10000
 			add_tech_bonus = { name = TU_RHO_ark_relief_office bonus = 0.75 uses = 1 category = tu_oripathy_tech }
-		}
-	}
-
-	focus = {
-		id = TU_RHO_ark_refugees
-		icon = GFX_goal_generic_consumer_goods
-		cost = 6
-		x = -20
-		y = 6
-
-		prerequisite = { focus = TU_RHO_ark_relief_office }
-
-		completion_reward = {
 			add_stability = 0.03
 			add_manpower = 10000
-			add_tech_bonus = { name = TU_RHO_ark_refugees bonus = 0.75 uses = 1 category = tu_oripathy_tech }
+			add_tech_bonus = { name = TU_RHO_ark_relief_office bonus = 0.75 uses = 1 category = tu_oripathy_tech }
 		}
 	}
 
 	focus = {
 		id = TU_RHO_ark_speech
+		prerequisite = { focus = TU_RHO_ark_relief_office }
 		icon = GFX_goal_generic_propaganda
-		cost = 6
-		x = -20
-		y = 7
+		cost = 11
+		x = -21
+		y = 5
 
-		prerequisite = { focus = TU_RHO_ark_refugees }
 
 		completion_reward = {
 			add_war_support = 0.03
 			add_stability = 0.03
-		}
-	}
-
-	focus = {
-		id = TU_RHO_ark_final
-		icon = GFX_goal_generic_alliance
-		cost = 10
-		x = -20
-		y = 8
-
-		prerequisite = { focus = TU_RHO_ark_speech }
-
-		completion_reward = {
 			add_political_power = 60
 			add_stability = 0.03
 		}
 	}
 
-	#### ROUTE B: "CONTRACTORS OF TERRA" (PMC, neutral) ####
 	focus = {
 		id = TU_RHO_contractors
 		icon = GFX_goal_generic_trade
 		cost = 5
-		x = -3
+		x = -5
 		y = 2
 
 		prerequisite = { focus = TU_RHO_chernobog_rescue }
@@ -185,7 +145,7 @@ focus_tree = {
 		id = TU_RHO_lmd_reward
 		icon = GFX_goal_generic_positive_trade_relations
 		cost = 6
-		x = -3
+		x = -5
 		y = 3
 
 		prerequisite = { focus = TU_RHO_contractors }
@@ -201,7 +161,7 @@ focus_tree = {
 		id = TU_RHO_pmc_bonus
 		icon = GFX_goal_generic_small_arms
 		cost = 6
-		x = -3
+		x = -5
 		y = 4
 
 		prerequisite = { focus = TU_RHO_lmd_reward }
@@ -220,8 +180,8 @@ focus_tree = {
 	focus = {
 		id = TU_RHO_arms_dealing
 		icon = GFX_goal_generic_military_deal
-		cost = 7
-		x = -3
+		cost = 10
+		x = -5
 		y = 5
 
 		prerequisite = { focus = TU_RHO_pmc_bonus }
@@ -230,19 +190,6 @@ focus_tree = {
 			add_to_variable = { TU_lmd = 1000 }
 			add_tech_bonus = { name = TU_RHO_arms_dealing bonus = 0.75 uses = 1 category = infantry_weapons }
 			army_experience = 25
-		}
-	}
-
-	focus = {
-		id = TU_RHO_neutral_pact
-		icon = GFX_goal_generic_neutrality_focus
-		cost = 6
-		x = -5
-		y = 6
-
-		prerequisite = { focus = TU_RHO_arms_dealing }
-
-		completion_reward = {
 			add_political_power = 60
 			add_stability = 0.03
 		}
@@ -250,12 +197,12 @@ focus_tree = {
 
 	focus = {
 		id = TU_RHO_mercenary_market
+		prerequisite = { focus = TU_RHO_arms_dealing }
 		icon = GFX_goal_generic_dangerous_deal
 		cost = 8
-		x = -6
-		y = 7
+		x = -8
+		y = 6
 
-		prerequisite = { focus = TU_RHO_neutral_pact }
 
 		completion_reward = {
 			set_country_flag = TU_RHO_pmc_market
@@ -269,7 +216,7 @@ focus_tree = {
 		id = TU_RHO_demon_return
 		icon = GFX_goal_generic_army_doctrines
 		cost = 5
-		x = 15
+		x = 16
 		y = 2
 
 		prerequisite = { focus = TU_RHO_chernobog_rescue }
@@ -286,7 +233,7 @@ focus_tree = {
 		id = TU_RHO_regular_army
 		icon = GFX_goal_generic_army_motorized
 		cost = 7
-		x = 15
+		x = 16
 		y = 3
 
 		prerequisite = { focus = TU_RHO_demon_return }
@@ -301,8 +248,8 @@ focus_tree = {
 	focus = {
 		id = TU_RHO_kazdel_prep
 		icon = GFX_goal_generic_more_territorial_claims
-		cost = 8
-		x = 15
+		cost = 11
+		x = 16
 		y = 4
 
 		prerequisite = { focus = TU_RHO_regular_army }
@@ -316,32 +263,19 @@ focus_tree = {
 			army_experience = 25
 			add_war_support = 0.03
 			add_doctrine_cost_reduction = { name = TU_RHO_kazdel_prep cost_reduction = 0.4 uses = 1 category = land_doctrine }
-		}
-	}
-
-	focus = {
-		id = TU_RHO_tactical_doctrine
-		icon = GFX_goal_generic_army_tanks
-		cost = 6
-		x = 15
-		y = 5
-
-		prerequisite = { focus = TU_RHO_kazdel_prep }
-
-		completion_reward = {
-			add_doctrine_cost_reduction = { name = TU_RHO_tactical_doctrine cost_reduction = 0.4 uses = 1 category = land_doctrine }
+			add_doctrine_cost_reduction = { name = TU_RHO_kazdel_prep cost_reduction = 0.4 uses = 1 category = land_doctrine }
 			army_experience = 25
 		}
 	}
 
 	focus = {
 		id = TU_RHO_doctor_war
+		prerequisite = { focus = TU_RHO_kazdel_prep }
 		icon = GFX_goal_generic_major_war
 		cost = 8
-		x = 17
-		y = 6
+		x = 16
+		y = 5
 
-		prerequisite = { focus = TU_RHO_tactical_doctrine }
 
 		completion_reward = {
 			country_event = { id = tu_rho_ev.5 }
@@ -355,8 +289,8 @@ focus_tree = {
 		id = TU_RHO_babel_restoration
 		icon = GFX_goal_generic_construct_infrastructure
 		cost = 10
-		x = 18
-		y = 7
+		x = 17
+		y = 6
 
 		prerequisite = { focus = TU_RHO_doctor_war }
 
@@ -376,7 +310,7 @@ focus_tree = {
 		id = TU_RHO_med_start
 		icon = GFX_goal_generic_scientific_exchange
 		cost = 5
-		x = 20
+		x = 21
 		y = 2
 
 		prerequisite = { focus = TU_RHO_chernobog_rescue }
@@ -397,7 +331,7 @@ focus_tree = {
 		id = TU_RHO_med_sample
 		icon = GFX_goal_generic_intelligence_exchange
 		cost = 10
-		x = 20
+		x = 21
 		y = 3
 
 		prerequisite = { focus = TU_RHO_med_start }
@@ -417,7 +351,7 @@ focus_tree = {
 		id = TU_RHO_med_crystal
 		icon = GFX_goal_generic_scientific_exchange
 		cost = 10
-		x = 20
+		x = 21
 		y = 4
 
 		prerequisite = { focus = TU_RHO_med_sample }
@@ -435,8 +369,8 @@ focus_tree = {
 	focus = {
 		id = TU_RHO_cure_track
 		icon = GFX_goal_generic_improve_relations
-		cost = 10
-		x = 20
+		cost = 15
+		x = 19
 		y = 5
 
 		prerequisite = { focus = TU_RHO_med_crystal }
@@ -444,6 +378,9 @@ focus_tree = {
 
 		completion_reward = {
 			set_country_flag = TU_RHO_cure_track
+			add_stability = 0.03
+			add_manpower = 10000
+			add_tech_bonus = { name = TU_RHO_cure_track bonus = 0.75 uses = 1 category = tu_oripathy_tech }
 			add_stability = 0.03
 			add_manpower = 10000
 			add_tech_bonus = { name = TU_RHO_cure_track bonus = 0.75 uses = 1 category = tu_oripathy_tech }
@@ -458,7 +395,7 @@ focus_tree = {
 		id = TU_RHO_enh_track
 		icon = GFX_goal_generic_dangerous_deal
 		cost = 10
-		x = 22
+		x = 21
 		y = 5
 
 		prerequisite = { focus = TU_RHO_med_crystal }
@@ -476,33 +413,13 @@ focus_tree = {
 	}
 
 	focus = {
-		id = TU_RHO_cure_prototype
-		icon = GFX_goal_generic_consumer_goods
-		cost = 10
-		x = 20
-		y = 6
-
-		prerequisite = { focus = TU_RHO_cure_track }
-
-		completion_reward = {
-			add_stability = 0.03
-			add_manpower = 10000
-			add_tech_bonus = { name = TU_RHO_cure_prototype bonus = 0.75 uses = 1 category = tu_oripathy_tech }
-		}
-
-		ai_will_do = {
-			base = 1
-		}
-	}
-
-	focus = {
 		id = TU_RHO_cure_trial
+		prerequisite = { focus = TU_RHO_cure_track }
 		icon = GFX_goal_generic_positive_trade_relations
 		cost = 10
-		x = 20
-		y = 7
+		x = 19
+		y = 6
 
-		prerequisite = { focus = TU_RHO_cure_prototype }
 
 		completion_reward = {
 			add_stability = 0.03
@@ -519,8 +436,8 @@ focus_tree = {
 		id = TU_RHO_cure_mass
 		icon = GFX_goal_generic_production
 		cost = 10
-		x = 20
-		y = 8
+		x = 19
+		y = 7
 
 		prerequisite = { focus = TU_RHO_cure_trial }
 
@@ -540,8 +457,8 @@ focus_tree = {
 		id = TU_RHO_cure_clinic
 		icon = GFX_goal_generic_construct_civilian
 		cost = 15
-		x = 20
-		y = 9
+		x = 19
+		y = 8
 
 		prerequisite = { focus = TU_RHO_cure_mass }
 
@@ -562,7 +479,7 @@ focus_tree = {
 		id = TU_RHO_enh_lab
 		icon = GFX_goal_generic_secret_weapon
 		cost = 10
-		x = 22
+		x = 21
 		y = 6
 
 		prerequisite = { focus = TU_RHO_enh_track }
@@ -580,7 +497,7 @@ focus_tree = {
 		id = TU_RHO_enh_serum
 		icon = GFX_goal_generic_army_doctrines
 		cost = 10
-		x = 22
+		x = 21
 		y = 7
 
 		prerequisite = { focus = TU_RHO_enh_lab }
@@ -598,7 +515,7 @@ focus_tree = {
 		id = TU_RHO_enh_squad
 		icon = GFX_goal_generic_special_forces
 		cost = 10
-		x = 22
+		x = 21
 		y = 8
 
 		prerequisite = { focus = TU_RHO_enh_serum }
@@ -618,7 +535,7 @@ focus_tree = {
 		id = TU_RHO_enh_ethics
 		icon = GFX_goal_generic_political_pressure
 		cost = 15
-		x = 22
+		x = 21
 		y = 9
 
 		prerequisite = { focus = TU_RHO_enh_squad }
@@ -638,7 +555,7 @@ focus_tree = {
 		id = TU_RHO_med_research_hall
 		icon = GFX_goal_generic_scientific_exchange
 		cost = 10
-		x = 20
+		x = 21
 		y = 10
 
 		prerequisite = { focus = TU_RHO_cure_clinic focus = TU_RHO_enh_ethics }
@@ -658,7 +575,7 @@ focus_tree = {
 		id = TU_RHO_med_peer_review
 		icon = GFX_goal_generic_propaganda
 		cost = 10
-		x = 20
+		x = 21
 		y = 11
 
 		prerequisite = { focus = TU_RHO_med_research_hall }
@@ -677,7 +594,7 @@ focus_tree = {
 		id = TU_RHO_med_patent
 		icon = GFX_goal_generic_trade
 		cost = 10
-		x = 20
+		x = 21
 		y = 12
 
 		prerequisite = { focus = TU_RHO_med_peer_review }
@@ -696,7 +613,7 @@ focus_tree = {
 		id = TU_RHO_med_global_cure
 		icon = GFX_goal_generic_national_unity
 		cost = 15
-		x = 20
+		x = 21
 		y = 13
 
 		prerequisite = { focus = TU_RHO_med_patent }
@@ -719,7 +636,7 @@ focus_tree = {
 		id = TU_RHO_elite_selection
 		icon = GFX_goal_generic_special_forces
 		cost = 5
-		x = 24
+		x = 23
 		y = 2
 
 		prerequisite = { focus = TU_RHO_chernobog_rescue }
@@ -739,7 +656,7 @@ focus_tree = {
 		id = TU_RHO_elite_training
 		icon = GFX_goal_generic_army_doctrines
 		cost = 10
-		x = 24
+		x = 23
 		y = 3
 
 		prerequisite = { focus = TU_RHO_elite_selection }
@@ -758,7 +675,7 @@ focus_tree = {
 		id = TU_RHO_elite_equip
 		icon = GFX_goal_generic_army_tanks
 		cost = 10
-		x = 24
+		x = 23
 		y = 4
 
 		prerequisite = { focus = TU_RHO_elite_training }
@@ -778,7 +695,7 @@ focus_tree = {
 		id = TU_RHO_elite_squads
 		icon = GFX_goal_generic_small_arms
 		cost = 10
-		x = 24
+		x = 23
 		y = 5
 
 		prerequisite = { focus = TU_RHO_elite_equip }
@@ -798,7 +715,7 @@ focus_tree = {
 		id = TU_RHO_elite_command
 		icon = GFX_goal_generic_army_motorized
 		cost = 10
-		x = 24
+		x = 23
 		y = 6
 
 		prerequisite = { focus = TU_RHO_elite_squads }
@@ -817,7 +734,7 @@ focus_tree = {
 		id = TU_RHO_elite_legend
 		icon = GFX_goal_generic_national_unity
 		cost = 15
-		x = 24
+		x = 23
 		y = 7
 
 		prerequisite = { focus = TU_RHO_elite_command }
@@ -840,8 +757,8 @@ focus_tree = {
 		id = TU_RHO_camp_survey
 		icon = GFX_goal_generic_construct_civilian
 		cost = 5
-		x = -12
-		y = 6
+		x = -15
+		y = 5
 
 		prerequisite = { focus = TU_RHO_ark_relief_office }
 
@@ -860,14 +777,17 @@ focus_tree = {
 	focus = {
 		id = TU_RHO_camp_build
 		icon = GFX_goal_generic_construction
-		cost = 10
-		x = -12
-		y = 7
+		cost = 15
+		x = -15
+		y = 6
 
 		prerequisite = { focus = TU_RHO_camp_survey }
 
 		completion_reward = {
 			TU_build_infrastructure = yes
+			add_stability = 0.03
+			add_manpower = 10000
+			add_tech_bonus = { name = TU_RHO_camp_build bonus = 0.75 uses = 1 category = tu_oripathy_tech }
 			add_stability = 0.03
 			add_manpower = 10000
 			add_tech_bonus = { name = TU_RHO_camp_build bonus = 0.75 uses = 1 category = tu_oripathy_tech }
@@ -879,33 +799,13 @@ focus_tree = {
 	}
 
 	focus = {
-		id = TU_RHO_camp_charter
-		icon = GFX_goal_generic_consumer_goods
-		cost = 10
-		x = -12
-		y = 8
-
-		prerequisite = { focus = TU_RHO_camp_build }
-
-		completion_reward = {
-			add_stability = 0.03
-			add_manpower = 10000
-			add_tech_bonus = { name = TU_RHO_camp_charter bonus = 0.75 uses = 1 category = tu_oripathy_tech }
-		}
-
-		ai_will_do = {
-			base = 1
-		}
-	}
-
-	focus = {
 		id = TU_RHO_camp_autonomy
+		prerequisite = { focus = TU_RHO_camp_build }
 		icon = GFX_goal_generic_national_unity
 		cost = 10
-		x = -13
-		y = 9
+		x = -16
+		y = 7
 
-		prerequisite = { focus = TU_RHO_camp_charter }
 		mutually_exclusive = { focus = TU_RHO_camp_guard }
 
 		completion_reward = {
@@ -920,12 +820,12 @@ focus_tree = {
 
 	focus = {
 		id = TU_RHO_camp_guard
+		prerequisite = { focus = TU_RHO_camp_build }
 		icon = GFX_goal_generic_fortify_city
 		cost = 10
-		x = -11
-		y = 9
+		x = -14
+		y = 7
 
-		prerequisite = { focus = TU_RHO_camp_charter }
 		mutually_exclusive = { focus = TU_RHO_camp_autonomy }
 
 		completion_reward = {
@@ -942,8 +842,8 @@ focus_tree = {
 		id = TU_RHO_camp_gate
 		icon = GFX_goal_generic_propaganda
 		cost = 15
-		x = -12
-		y = 10
+		x = -15
+		y = 8
 
 		prerequisite = { focus = TU_RHO_camp_autonomy focus = TU_RHO_camp_guard }
 
@@ -961,8 +861,8 @@ focus_tree = {
 		id = TU_RHO_speech_tour
 		icon = GFX_goal_generic_propaganda
 		cost = 5
-		x = -17
-		y = 8
+		x = -22
+		y = 6
 
 		prerequisite = { focus = TU_RHO_ark_speech }
 
@@ -980,8 +880,8 @@ focus_tree = {
 		id = TU_RHO_petition
 		icon = GFX_goal_generic_political_pressure
 		cost = 10
-		x = -17
-		y = 9
+		x = -22
+		y = 7
 
 		prerequisite = { focus = TU_RHO_speech_tour }
 
@@ -1000,8 +900,8 @@ focus_tree = {
 		id = TU_RHO_public_rally
 		icon = GFX_goal_generic_national_unity
 		cost = 10
-		x = -17
-		y = 10
+		x = -22
+		y = 8
 
 		prerequisite = { focus = TU_RHO_petition }
 
@@ -1020,8 +920,8 @@ focus_tree = {
 		id = TU_RHO_ark_broadcast
 		icon = GFX_goal_generic_radar
 		cost = 15
-		x = -17
-		y = 11
+		x = -22
+		y = 9
 
 		prerequisite = { focus = TU_RHO_public_rally }
 
@@ -1036,33 +936,16 @@ focus_tree = {
 
 	focus = {
 		id = TU_RHO_ark_council
+		prerequisite = { focus = TU_RHO_ark_speech }
 		icon = GFX_goal_generic_national_unity
-		cost = 5
-		x = -20
-		y = 9
+		cost = 10
+		x = -19
+		y = 6
 
-		prerequisite = { focus = TU_RHO_ark_final }
 
 		completion_reward = {
 			add_political_power = 35
 			add_stability = 0.02
-		}
-
-		ai_will_do = {
-			base = 1
-		}
-	}
-
-	focus = {
-		id = TU_RHO_ark_accord
-		icon = GFX_goal_generic_alliance
-		cost = 10
-		x = -20
-		y = 10
-
-		prerequisite = { focus = TU_RHO_ark_council }
-
-		completion_reward = {
 			add_political_power = 60
 			add_stability = 0.03
 		}
@@ -1074,34 +957,17 @@ focus_tree = {
 
 	focus = {
 		id = TU_RHO_terra_charter
+		prerequisite = { focus = TU_RHO_ark_council }
 		icon = GFX_goal_generic_major_alliance
-		cost = 15
-		x = -21
-		y = 11
+		cost = 20
+		x = -20
+		y = 7
 
-		prerequisite = { focus = TU_RHO_ark_accord }
 
 		completion_reward = {
 			country_event = { id = tu_rho_ev.2 }
 			add_political_power = 100
 			add_stability = 0.05
-		}
-
-		ai_will_do = {
-			base = 1
-		}
-	}
-
-	focus = {
-		id = TU_RHO_ark_envoy
-		icon = GFX_goal_generic_improve_relations
-		cost = 10
-		x = -21
-		y = 12
-
-		prerequisite = { focus = TU_RHO_terra_charter }
-
-		completion_reward = {
 			add_political_power = 60
 			add_stability = 0.03
 		}
@@ -1113,12 +979,12 @@ focus_tree = {
 
 	focus = {
 		id = TU_RHO_ark_eternal
+		prerequisite = { focus = TU_RHO_terra_charter }
 		icon = GFX_goal_generic_positive_trade_relations
 		cost = 15
-		x = -21
-		y = 13
+		x = -20
+		y = 8
 
-		prerequisite = { focus = TU_RHO_ark_envoy }
 
 		completion_reward = {
 			every_country = { news_event = { id = tu_rho_ev.11 hours = 6 } }
@@ -1136,7 +1002,7 @@ focus_tree = {
 		icon = GFX_goal_generic_construct_military
 		cost = 5
 		x = -10
-		y = 5
+		y = 4
 
 		prerequisite = { focus = TU_RHO_unlimited_volunteers }
 
@@ -1156,7 +1022,7 @@ focus_tree = {
 		icon = GFX_goal_generic_army_artillery
 		cost = 10
 		x = -10
-		y = 6
+		y = 5
 
 		prerequisite = { focus = TU_RHO_volunteer_camp }
 
@@ -1175,7 +1041,7 @@ focus_tree = {
 		icon = GFX_goal_generic_defence
 		cost = 10
 		x = -10
-		y = 7
+		y = 6
 
 		prerequisite = { focus = TU_RHO_volunteer_drill }
 
@@ -1195,7 +1061,7 @@ focus_tree = {
 		icon = GFX_goal_generic_construct_mil_factory
 		cost = 15
 		x = -10
-		y = 8
+		y = 7
 
 		prerequisite = { focus = TU_RHO_volunteer_front }
 
@@ -1212,12 +1078,12 @@ focus_tree = {
 
 	focus = {
 		id = TU_RHO_ark_guard_pick
+		prerequisite = { focus = TU_RHO_ark_mission }
 		icon = GFX_goal_generic_special_forces
 		cost = 5
 		x = -8
-		y = 4
+		y = 3
 
-		prerequisite = { focus = TU_RHO_ark_charter }
 
 		completion_reward = {
 			add_manpower = 5000
@@ -1234,7 +1100,7 @@ focus_tree = {
 		icon = GFX_goal_generic_small_arms
 		cost = 10
 		x = -8
-		y = 5
+		y = 4
 
 		prerequisite = { focus = TU_RHO_ark_guard_pick }
 
@@ -1251,32 +1117,15 @@ focus_tree = {
 	focus = {
 		id = TU_RHO_ark_guard_post
 		icon = GFX_goal_generic_army_doctrines
-		cost = 10
+		cost = 18
 		x = -8
-		y = 6
+		y = 5
 
 		prerequisite = { focus = TU_RHO_ark_guard_train }
 
 		completion_reward = {
 			add_manpower = 10000
 			army_experience = 25
-		}
-
-		ai_will_do = {
-			base = 1
-		}
-	}
-
-	focus = {
-		id = TU_RHO_ark_guard_oath
-		icon = GFX_goal_generic_national_unity
-		cost = 15
-		x = -8
-		y = 7
-
-		prerequisite = { focus = TU_RHO_ark_guard_post }
-
-		completion_reward = {
 			add_manpower = 20000
 			army_experience = 40
 		}
@@ -1288,12 +1137,12 @@ focus_tree = {
 
 	focus = {
 		id = TU_RHO_ark_school
+		prerequisite = { focus = TU_RHO_ark_relief_office }
 		icon = GFX_goal_generic_construct_civilian
 		cost = 5
-		x = -15
-		y = 7
+		x = -12
+		y = 5
 
-		prerequisite = { focus = TU_RHO_ark_refugees }
 
 		completion_reward = {
 			TU_build_civ_factory = yes
@@ -1310,32 +1159,15 @@ focus_tree = {
 	focus = {
 		id = TU_RHO_ark_teachers
 		icon = GFX_goal_generic_scientific_exchange
-		cost = 10
-		x = -15
-		y = 8
+		cost = 15
+		x = -12
+		y = 6
 
 		prerequisite = { focus = TU_RHO_ark_school }
 
 		completion_reward = {
 			add_tech_bonus = { name = TU_RHO_ark_teachers bonus = 0.75 uses = 1 category = electronics category = tu_originium_tech }
-		}
-
-		ai_will_do = {
-			base = 1
-		}
-	}
-
-	focus = {
-		id = TU_RHO_ark_academy
-		icon = GFX_goal_generic_propaganda
-		cost = 10
-		x = -15
-		y = 9
-
-		prerequisite = { focus = TU_RHO_ark_teachers }
-
-		completion_reward = {
-			add_doctrine_cost_reduction = { name = TU_RHO_ark_academy cost_reduction = 0.4 uses = 1 category = land_doctrine }
+			add_doctrine_cost_reduction = { name = TU_RHO_ark_teachers cost_reduction = 0.4 uses = 1 category = land_doctrine }
 			army_experience = 25
 		}
 
@@ -1346,12 +1178,12 @@ focus_tree = {
 
 	focus = {
 		id = TU_RHO_ark_scholars
+		prerequisite = { focus = TU_RHO_ark_teachers }
 		icon = GFX_goal_generic_scientific_exchange
 		cost = 15
-		x = -15
-		y = 10
+		x = -12
+		y = 7
 
-		prerequisite = { focus = TU_RHO_ark_academy }
 
 		completion_reward = {
 			add_tech_bonus = { name = TU_RHO_ark_scholars bonus = 1.0 uses = 1 category = electronics category = tu_originium_tech }
@@ -1364,15 +1196,16 @@ focus_tree = {
 
 	focus = {
 		id = TU_RHO_ark_convoy
+		prerequisite = { focus = TU_RHO_ark_council }
 		icon = GFX_goal_generic_trade
-		cost = 10
-		x = -19
-		y = 11
+		cost = 15
+		x = -18
+		y = 7
 
-		prerequisite = { focus = TU_RHO_ark_accord }
 
 		completion_reward = {
 			add_to_variable = { TU_lmd = 200 }
+			add_tech_bonus = { name = TU_RHO_ark_convoy bonus = 0.75 uses = 1 category = industry category = construction_tech }
 			add_tech_bonus = { name = TU_RHO_ark_convoy bonus = 0.75 uses = 1 category = industry category = construction_tech }
 		}
 
@@ -1382,31 +1215,13 @@ focus_tree = {
 	}
 
 	focus = {
-		id = TU_RHO_ark_depot
-		icon = GFX_goal_generic_consumer_goods
-		cost = 10
-		x = -19
-		y = 12
-
-		prerequisite = { focus = TU_RHO_ark_convoy }
-
-		completion_reward = {
-			add_tech_bonus = { name = TU_RHO_ark_depot bonus = 0.75 uses = 1 category = industry category = construction_tech }
-		}
-
-		ai_will_do = {
-			base = 1
-		}
-	}
-
-	focus = {
 		id = TU_RHO_ark_mandate
+		prerequisite = { focus = TU_RHO_ark_convoy }
 		icon = GFX_goal_generic_national_unity
 		cost = 15
-		x = -19
-		y = 13
+		x = -18
+		y = 8
 
-		prerequisite = { focus = TU_RHO_ark_depot }
 
 		completion_reward = {
 			add_political_power = 100
@@ -1423,9 +1238,9 @@ focus_tree = {
 	focus = {
 		id = TU_RHO_broker_office
 		icon = GFX_goal_generic_trade
-		cost = 5
-		x = -6
-		y = 8
+		cost = 10
+		x = -8
+		y = 7
 
 		prerequisite = { focus = TU_RHO_mercenary_market }
 
@@ -1433,24 +1248,7 @@ focus_tree = {
 			add_to_variable = { TU_lmd = 300 }
 			add_political_power = 35
 			add_tech_bonus = { name = TU_RHO_broker_office bonus = 0.5 uses = 1 category = industry }
-		}
-
-		ai_will_do = {
-			base = 1
-		}
-	}
-
-	focus = {
-		id = TU_RHO_broker_network
-		icon = GFX_goal_generic_intelligence_exchange
-		cost = 10
-		x = -6
-		y = 9
-
-		prerequisite = { focus = TU_RHO_broker_office }
-
-		completion_reward = {
-			add_tech_bonus = { name = TU_RHO_broker_network bonus = 0.75 uses = 1 category = radar_tech category = electronics }
+			add_tech_bonus = { name = TU_RHO_broker_office bonus = 0.75 uses = 1 category = radar_tech category = electronics }
 			add_stability = 0.03
 		}
 
@@ -1461,12 +1259,12 @@ focus_tree = {
 
 	focus = {
 		id = TU_RHO_broker_fees
+		prerequisite = { focus = TU_RHO_broker_office }
 		icon = GFX_goal_generic_positive_trade_relations
 		cost = 10
-		x = -7
-		y = 10
+		x = -9
+		y = 8
 
-		prerequisite = { focus = TU_RHO_broker_network }
 		mutually_exclusive = { focus = TU_RHO_broker_discount }
 
 		completion_reward = {
@@ -1482,12 +1280,12 @@ focus_tree = {
 
 	focus = {
 		id = TU_RHO_broker_discount
+		prerequisite = { focus = TU_RHO_broker_office }
 		icon = GFX_goal_generic_military_deal
 		cost = 10
-		x = -5
-		y = 10
+		x = -7
+		y = 8
 
-		prerequisite = { focus = TU_RHO_broker_network }
 		mutually_exclusive = { focus = TU_RHO_broker_fees }
 
 		completion_reward = {
@@ -1504,8 +1302,8 @@ focus_tree = {
 		id = TU_RHO_broker_guild
 		icon = GFX_goal_generic_dangerous_deal
 		cost = 15
-		x = -6
-		y = 11
+		x = -8
+		y = 9
 
 		prerequisite = { focus = TU_RHO_broker_fees focus = TU_RHO_broker_discount }
 
@@ -1524,7 +1322,7 @@ focus_tree = {
 		id = TU_RHO_gold_vault
 		icon = GFX_goal_generic_trade
 		cost = 5
-		x = -1
+		x = -5
 		y = 6
 
 		prerequisite = { focus = TU_RHO_arms_dealing }
@@ -1544,7 +1342,7 @@ focus_tree = {
 		id = TU_RHO_gold_hedge
 		icon = GFX_goal_generic_positive_trade_relations
 		cost = 10
-		x = -1
+		x = -5
 		y = 7
 
 		prerequisite = { focus = TU_RHO_gold_vault }
@@ -1563,7 +1361,7 @@ focus_tree = {
 		id = TU_RHO_gold_insurance
 		icon = GFX_goal_generic_neutrality_focus
 		cost = 10
-		x = -1
+		x = -5
 		y = 8
 
 		prerequisite = { focus = TU_RHO_gold_hedge }
@@ -1582,7 +1380,7 @@ focus_tree = {
 		id = TU_RHO_gold_fund
 		icon = GFX_goal_generic_national_unity
 		cost = 15
-		x = -1
+		x = -5
 		y = 9
 
 		prerequisite = { focus = TU_RHO_gold_insurance }
@@ -1601,8 +1399,8 @@ focus_tree = {
 	focus = {
 		id = TU_RHO_contract_pick
 		icon = GFX_goal_generic_special_forces
-		cost = 5
-		x = 5
+		cost = 10
+		x = 3
 		y = 3
 
 		prerequisite = { focus = TU_RHO_contractors }
@@ -1610,24 +1408,7 @@ focus_tree = {
 		completion_reward = {
 			add_doctrine_cost_reduction = { name = TU_RHO_contract_pick cost_reduction = 0.25 uses = 1 category = land_doctrine }
 			army_experience = 15
-		}
-
-		ai_will_do = {
-			base = 1
-		}
-	}
-
-	focus = {
-		id = TU_RHO_contract_train
-		icon = GFX_goal_generic_small_arms
-		cost = 10
-		x = 5
-		y = 4
-
-		prerequisite = { focus = TU_RHO_contract_pick }
-
-		completion_reward = {
-			add_doctrine_cost_reduction = { name = TU_RHO_contract_train cost_reduction = 0.4 uses = 1 category = land_doctrine }
+			add_doctrine_cost_reduction = { name = TU_RHO_contract_pick cost_reduction = 0.4 uses = 1 category = land_doctrine }
 			army_experience = 25
 		}
 
@@ -1638,34 +1419,17 @@ focus_tree = {
 
 	focus = {
 		id = TU_RHO_contract_escort
+		prerequisite = { focus = TU_RHO_contract_pick }
 		icon = GFX_goal_generic_defence
-		cost = 10
-		x = 5
-		y = 5
+		cost = 15
+		x = 3
+		y = 4
 
-		prerequisite = { focus = TU_RHO_contract_train }
 
 		completion_reward = {
 			add_political_power = 60
 			add_stability = 0.03
-		}
-
-		ai_will_do = {
-			base = 1
-		}
-	}
-
-	focus = {
-		id = TU_RHO_contract_elite
-		icon = GFX_goal_generic_army_tanks
-		cost = 10
-		x = 5
-		y = 6
-
-		prerequisite = { focus = TU_RHO_contract_escort }
-
-		completion_reward = {
-			add_doctrine_cost_reduction = { name = TU_RHO_contract_elite cost_reduction = 0.4 uses = 1 category = land_doctrine }
+			add_doctrine_cost_reduction = { name = TU_RHO_contract_escort cost_reduction = 0.4 uses = 1 category = land_doctrine }
 			army_experience = 25
 		}
 
@@ -1676,12 +1440,12 @@ focus_tree = {
 
 	focus = {
 		id = TU_RHO_contract_legion
+		prerequisite = { focus = TU_RHO_contract_escort }
 		icon = GFX_goal_generic_national_unity
 		cost = 15
-		x = 5
-		y = 7
+		x = 3
+		y = 5
 
-		prerequisite = { focus = TU_RHO_contract_elite }
 
 		completion_reward = {
 			set_country_flag = TU_RHO_contract_legion
@@ -1696,12 +1460,12 @@ focus_tree = {
 
 	focus = {
 		id = TU_RHO_market_stall
+		prerequisite = { focus = TU_RHO_arms_dealing }
 		icon = GFX_goal_generic_consumer_goods
 		cost = 5
 		x = -3
-		y = 7
+		y = 6
 
-		prerequisite = { focus = TU_RHO_neutral_pact }
 
 		completion_reward = {
 			add_manpower = 5000
@@ -1718,7 +1482,7 @@ focus_tree = {
 		icon = GFX_goal_generic_trade
 		cost = 10
 		x = -3
-		y = 8
+		y = 7
 
 		prerequisite = { focus = TU_RHO_market_stall }
 
@@ -1738,7 +1502,7 @@ focus_tree = {
 		icon = GFX_goal_generic_improve_relations
 		cost = 10
 		x = -3
-		y = 9
+		y = 8
 
 		prerequisite = { focus = TU_RHO_market_hub }
 
@@ -1757,7 +1521,7 @@ focus_tree = {
 		icon = GFX_goal_generic_construct_infrastructure
 		cost = 15
 		x = -3
-		y = 10
+		y = 9
 
 		prerequisite = { focus = TU_RHO_market_open }
 
@@ -1776,7 +1540,7 @@ focus_tree = {
 		id = TU_RHO_lmd_audit
 		icon = GFX_goal_generic_trade
 		cost = 5
-		x = 3
+		x = 1
 		y = 4
 
 		prerequisite = { focus = TU_RHO_lmd_reward }
@@ -1795,7 +1559,7 @@ focus_tree = {
 		id = TU_RHO_lmd_bank
 		icon = GFX_goal_generic_production2
 		cost = 10
-		x = 3
+		x = 1
 		y = 5
 
 		prerequisite = { focus = TU_RHO_lmd_audit }
@@ -1815,7 +1579,7 @@ focus_tree = {
 		id = TU_RHO_lmd_shield
 		icon = GFX_goal_generic_defence
 		cost = 15
-		x = 3
+		x = 1
 		y = 6
 
 		prerequisite = { focus = TU_RHO_lmd_bank }
@@ -1834,7 +1598,7 @@ focus_tree = {
 		id = TU_RHO_pmc_escort
 		icon = GFX_goal_generic_defence
 		cost = 5
-		x = 1
+		x = -1
 		y = 5
 
 		prerequisite = { focus = TU_RHO_pmc_bonus }
@@ -1853,7 +1617,7 @@ focus_tree = {
 		id = TU_RHO_pmc_guard
 		icon = GFX_goal_generic_fortify_city
 		cost = 10
-		x = 1
+		x = -1
 		y = 6
 
 		prerequisite = { focus = TU_RHO_pmc_escort }
@@ -1872,7 +1636,7 @@ focus_tree = {
 		id = TU_RHO_pmc_board
 		icon = GFX_goal_generic_military_deal
 		cost = 10
-		x = 1
+		x = -1
 		y = 7
 
 		prerequisite = { focus = TU_RHO_pmc_guard }
@@ -1892,7 +1656,7 @@ focus_tree = {
 		id = TU_RHO_pmc_union
 		icon = GFX_goal_generic_national_unity
 		cost = 15
-		x = 1
+		x = -1
 		y = 8
 
 		prerequisite = { focus = TU_RHO_pmc_board }
@@ -1910,8 +1674,8 @@ focus_tree = {
 	focus = {
 		id = TU_RHO_accord_writ
 		icon = GFX_goal_generic_neutrality_focus
-		cost = 5
-		x = -1
+		cost = 10
+		x = -5
 		y = 10
 
 		prerequisite = { focus = TU_RHO_gold_fund }
@@ -1919,23 +1683,6 @@ focus_tree = {
 		completion_reward = {
 			add_political_power = 35
 			add_stability = 0.02
-		}
-
-		ai_will_do = {
-			base = 1
-		}
-	}
-
-	focus = {
-		id = TU_RHO_accord_seal
-		icon = GFX_goal_generic_military_deal
-		cost = 10
-		x = -1
-		y = 11
-
-		prerequisite = { focus = TU_RHO_accord_writ }
-
-		completion_reward = {
 			add_political_power = 60
 			add_stability = 0.03
 		}
@@ -1947,12 +1694,12 @@ focus_tree = {
 
 	focus = {
 		id = TU_RHO_accord_final
+		prerequisite = { focus = TU_RHO_accord_writ }
 		icon = GFX_goal_generic_trade
 		cost = 15
-		x = -1
-		y = 12
+		x = -5
+		y = 11
 
-		prerequisite = { focus = TU_RHO_accord_seal }
 
 		completion_reward = {
 			add_to_variable = { TU_lmd = 800 }
@@ -1970,34 +1717,17 @@ focus_tree = {
 
 	focus = {
 		id = TU_RHO_doctrine_draft
+		prerequisite = { focus = TU_RHO_kazdel_prep }
 		icon = GFX_goal_generic_army_doctrines
-		cost = 5
-		x = 13
-		y = 6
+		cost = 10
+		x = 10
+		y = 5
 
-		prerequisite = { focus = TU_RHO_tactical_doctrine }
 
 		completion_reward = {
 			add_doctrine_cost_reduction = { name = TU_RHO_doctrine_draft cost_reduction = 0.25 uses = 1 category = land_doctrine }
 			army_experience = 15
-		}
-
-		ai_will_do = {
-			base = 1
-		}
-	}
-
-	focus = {
-		id = TU_RHO_doctrine_drill
-		icon = GFX_goal_generic_army_artillery
-		cost = 10
-		x = 13
-		y = 7
-
-		prerequisite = { focus = TU_RHO_doctrine_draft }
-
-		completion_reward = {
-			add_doctrine_cost_reduction = { name = TU_RHO_doctrine_drill cost_reduction = 0.4 uses = 1 category = land_doctrine }
+			add_doctrine_cost_reduction = { name = TU_RHO_doctrine_draft cost_reduction = 0.4 uses = 1 category = land_doctrine }
 			army_experience = 25
 		}
 
@@ -2008,12 +1738,12 @@ focus_tree = {
 
 	focus = {
 		id = TU_RHO_doctrine_strike
+		prerequisite = { focus = TU_RHO_doctrine_draft }
 		icon = GFX_goal_generic_army_tanks
 		cost = 10
-		x = 12
-		y = 8
+		x = 9
+		y = 6
 
-		prerequisite = { focus = TU_RHO_doctrine_drill }
 		mutually_exclusive = { focus = TU_RHO_doctrine_siege }
 
 		completion_reward = {
@@ -2029,12 +1759,12 @@ focus_tree = {
 
 	focus = {
 		id = TU_RHO_doctrine_siege
+		prerequisite = { focus = TU_RHO_doctrine_draft }
 		icon = GFX_goal_generic_fortify_city
 		cost = 10
-		x = 14
-		y = 8
+		x = 11
+		y = 6
 
-		prerequisite = { focus = TU_RHO_doctrine_drill }
 		mutually_exclusive = { focus = TU_RHO_doctrine_strike }
 
 		completion_reward = {
@@ -2050,9 +1780,9 @@ focus_tree = {
 	focus = {
 		id = TU_RHO_doctrine_codex
 		icon = GFX_goal_generic_army_motorized
-		cost = 15
-		x = 13
-		y = 9
+		cost = 20
+		x = 10
+		y = 7
 
 		prerequisite = { focus = TU_RHO_doctrine_strike focus = TU_RHO_doctrine_siege }
 
@@ -2060,24 +1790,7 @@ focus_tree = {
 			add_ideas = TU_RHO_doctor_doctrine
 			add_political_power = 100
 			add_stability = 0.05
-		}
-
-		ai_will_do = {
-			base = 1
-		}
-	}
-
-	focus = {
-		id = TU_RHO_doctrine_archive
-		icon = GFX_goal_generic_scientific_exchange
-		cost = 10
-		x = 13
-		y = 10
-
-		prerequisite = { focus = TU_RHO_doctrine_codex }
-
-		completion_reward = {
-			add_tech_bonus = { name = TU_RHO_doctrine_archive bonus = 0.75 uses = 1 category = electronics category = tu_originium_tech }
+			add_tech_bonus = { name = TU_RHO_doctrine_codex bonus = 0.75 uses = 1 category = electronics category = tu_originium_tech }
 		}
 
 		ai_will_do = {
@@ -2089,8 +1802,8 @@ focus_tree = {
 		id = TU_RHO_front_mobilize
 		icon = GFX_goal_generic_construct_military
 		cost = 5
-		x = 16
-		y = 7
+		x = 15
+		y = 6
 
 		prerequisite = { focus = TU_RHO_doctor_war }
 
@@ -2110,8 +1823,8 @@ focus_tree = {
 		id = TU_RHO_front_assault
 		icon = GFX_goal_generic_major_war
 		cost = 10
-		x = 16
-		y = 8
+		x = 15
+		y = 7
 
 		prerequisite = { focus = TU_RHO_front_mobilize }
 
@@ -2130,8 +1843,8 @@ focus_tree = {
 		id = TU_RHO_front_siege
 		icon = GFX_goal_generic_defence
 		cost = 10
-		x = 16
-		y = 9
+		x = 15
+		y = 8
 
 		prerequisite = { focus = TU_RHO_front_assault }
 
@@ -2149,8 +1862,8 @@ focus_tree = {
 		id = TU_RHO_front_victory
 		icon = GFX_goal_generic_national_unity
 		cost = 15
-		x = 16
-		y = 10
+		x = 15
+		y = 9
 
 		prerequisite = { focus = TU_RHO_front_siege }
 
@@ -2169,7 +1882,7 @@ focus_tree = {
 		id = TU_RHO_regular_barracks
 		icon = GFX_goal_generic_construct_military
 		cost = 5
-		x = 9
+		x = 7
 		y = 4
 
 		prerequisite = { focus = TU_RHO_regular_army }
@@ -2189,7 +1902,7 @@ focus_tree = {
 		id = TU_RHO_regular_academy
 		icon = GFX_goal_generic_scientific_exchange
 		cost = 10
-		x = 9
+		x = 7
 		y = 5
 
 		prerequisite = { focus = TU_RHO_regular_barracks }
@@ -2208,7 +1921,7 @@ focus_tree = {
 		id = TU_RHO_regular_pay
 		icon = GFX_goal_generic_consumer_goods
 		cost = 10
-		x = 9
+		x = 7
 		y = 6
 
 		prerequisite = { focus = TU_RHO_regular_academy }
@@ -2227,7 +1940,7 @@ focus_tree = {
 		id = TU_RHO_regular_command
 		icon = GFX_goal_generic_cavalry
 		cost = 15
-		x = 9
+		x = 7
 		y = 7
 
 		prerequisite = { focus = TU_RHO_regular_pay }
@@ -2246,7 +1959,7 @@ focus_tree = {
 		id = TU_RHO_kazdel_scouts
 		icon = GFX_goal_generic_radar
 		cost = 5
-		x = 11
+		x = 13
 		y = 5
 
 		prerequisite = { focus = TU_RHO_kazdel_prep }
@@ -2265,7 +1978,7 @@ focus_tree = {
 		id = TU_RHO_kazdel_plans
 		icon = GFX_goal_generic_intelligence_exchange
 		cost = 10
-		x = 11
+		x = 13
 		y = 6
 
 		prerequisite = { focus = TU_RHO_kazdel_scouts }
@@ -2285,7 +1998,7 @@ focus_tree = {
 		id = TU_RHO_kazdel_return
 		icon = GFX_goal_generic_national_unity
 		cost = 15
-		x = 11
+		x = 13
 		y = 7
 
 		prerequisite = { focus = TU_RHO_kazdel_plans }
@@ -2305,8 +2018,8 @@ focus_tree = {
 		id = TU_RHO_babel_archive
 		icon = GFX_goal_generic_scientific_exchange
 		cost = 5
-		x = 18
-		y = 8
+		x = 17
+		y = 7
 
 		prerequisite = { focus = TU_RHO_babel_restoration }
 
@@ -2322,32 +2035,15 @@ focus_tree = {
 	focus = {
 		id = TU_RHO_babel_library
 		icon = GFX_goal_generic_propaganda
-		cost = 10
-		x = 18
-		y = 9
+		cost = 18
+		x = 17
+		y = 8
 
 		prerequisite = { focus = TU_RHO_babel_archive }
 
 		completion_reward = {
 			add_tech_bonus = { name = TU_RHO_babel_library bonus = 0.75 uses = 1 category = electronics category = tu_originium_tech }
-		}
-
-		ai_will_do = {
-			base = 1
-		}
-	}
-
-	focus = {
-		id = TU_RHO_babel_council
-		icon = GFX_goal_generic_national_unity
-		cost = 15
-		x = 18
-		y = 10
-
-		prerequisite = { focus = TU_RHO_babel_library }
-
-		completion_reward = {
-			add_tech_bonus = { name = TU_RHO_babel_council bonus = 1.0 uses = 1 category = electronics category = tu_originium_tech }
+			add_tech_bonus = { name = TU_RHO_babel_library bonus = 1.0 uses = 1 category = electronics category = tu_originium_tech }
 		}
 
 		ai_will_do = {
@@ -2359,7 +2055,7 @@ focus_tree = {
 		id = TU_RHO_shadow_cell
 		icon = GFX_goal_generic_intelligence_exchange
 		cost = 5
-		x = 7
+		x = 5
 		y = 3
 
 		prerequisite = { focus = TU_RHO_demon_return }
@@ -2378,7 +2074,7 @@ focus_tree = {
 		id = TU_RHO_shadow_ops
 		icon = GFX_goal_generic_special_forces
 		cost = 10
-		x = 7
+		x = 5
 		y = 4
 
 		prerequisite = { focus = TU_RHO_shadow_cell }
@@ -2398,7 +2094,7 @@ focus_tree = {
 		id = TU_RHO_shadow_pact
 		icon = GFX_goal_generic_dangerous_deal
 		cost = 10
-		x = 7
+		x = 5
 		y = 5
 
 		prerequisite = { focus = TU_RHO_shadow_ops }
@@ -2417,7 +2113,7 @@ focus_tree = {
 		id = TU_RHO_shadow_crown
 		icon = GFX_goal_generic_national_unity
 		cost = 15
-		x = 7
+		x = 5
 		y = 6
 
 		prerequisite = { focus = TU_RHO_shadow_pact }
@@ -2438,8 +2134,8 @@ focus_tree = {
 		id = TU_RHO_prts_link
 		icon = GFX_goal_generic_radar
 		cost = 5
-		x = -22
-		y = 15
+		x = -23
+		y = 11
 
 		prerequisite = { focus = TU_RHO_prts_online }
 
@@ -2456,8 +2152,8 @@ focus_tree = {
 		id = TU_RHO_prts_archive
 		icon = GFX_goal_generic_scientific_exchange
 		cost = 10
-		x = -22
-		y = 16
+		x = -23
+		y = 12
 
 		prerequisite = { focus = TU_RHO_prts_link }
 
@@ -2474,8 +2170,8 @@ focus_tree = {
 		id = TU_RHO_prts_analysis
 		icon = GFX_goal_generic_intelligence_exchange
 		cost = 10
-		x = -22
-		y = 17
+		x = -23
+		y = 13
 
 		prerequisite = { focus = TU_RHO_prts_archive }
 
@@ -2493,8 +2189,8 @@ focus_tree = {
 		id = TU_RHO_prts_global
 		icon = GFX_goal_generic_national_unity
 		cost = 15
-		x = -22
-		y = 18
+		x = -23
+		y = 14
 
 		prerequisite = { focus = TU_RHO_prts_analysis }
 
@@ -2513,8 +2209,8 @@ focus_tree = {
 		id = TU_RHO_ops_ls_start
 		icon = GFX_goal_generic_army_motorized
 		cost = 5
-		x = -16
-		y = 15
+		x = -13
+		y = 10
 
 		prerequisite = { focus = TU_RHO_prts_online }
 
@@ -2533,8 +2229,8 @@ focus_tree = {
 		id = TU_RHO_ops_ls_engine
 		icon = GFX_goal_generic_construct_military
 		cost = 10
-		x = -16
-		y = 16
+		x = -13
+		y = 11
 
 		prerequisite = { focus = TU_RHO_ops_ls_start }
 
@@ -2553,8 +2249,8 @@ focus_tree = {
 		id = TU_RHO_ops_ls_survey
 		icon = GFX_goal_generic_radar
 		cost = 10
-		x = -16
-		y = 17
+		x = -13
+		y = 12
 
 		prerequisite = { focus = TU_RHO_ops_ls_engine }
 
@@ -2572,8 +2268,8 @@ focus_tree = {
 		id = TU_RHO_ops_ls_fuel
 		icon = GFX_goal_generic_oil_refinery
 		cost = 10
-		x = -16
-		y = 18
+		x = -13
+		y = 13
 
 		prerequisite = { focus = TU_RHO_ops_ls_survey }
 
@@ -2592,8 +2288,8 @@ focus_tree = {
 		id = TU_RHO_ops_ls_crew
 		icon = GFX_goal_generic_army_doctrines
 		cost = 10
-		x = -16
-		y = 19
+		x = -13
+		y = 14
 
 		prerequisite = { focus = TU_RHO_ops_ls_fuel }
 
@@ -2611,8 +2307,8 @@ focus_tree = {
 		id = TU_RHO_ops_ls_sprint
 		icon = GFX_goal_generic_army_tanks
 		cost = 10
-		x = -17
-		y = 20
+		x = -14
+		y = 15
 
 		prerequisite = { focus = TU_RHO_ops_ls_crew }
 		mutually_exclusive = { focus = TU_RHO_ops_ls_stable }
@@ -2633,8 +2329,8 @@ focus_tree = {
 		id = TU_RHO_ops_ls_stable
 		icon = GFX_goal_generic_fortify_city
 		cost = 10
-		x = -14
-		y = 20
+		x = -11
+		y = 15
 
 		prerequisite = { focus = TU_RHO_ops_ls_crew }
 		mutually_exclusive = { focus = TU_RHO_ops_ls_sprint }
@@ -2654,8 +2350,8 @@ focus_tree = {
 		id = TU_RHO_ops_ls_sprint_drill
 		icon = GFX_goal_generic_special_forces
 		cost = 10
-		x = -17
-		y = 21
+		x = -14
+		y = 16
 
 		prerequisite = { focus = TU_RHO_ops_ls_sprint }
 
@@ -2674,8 +2370,8 @@ focus_tree = {
 		id = TU_RHO_ops_ls_jump_route
 		icon = GFX_goal_generic_construct_infrastructure
 		cost = 10
-		x = -17
-		y = 22
+		x = -14
+		y = 17
 
 		prerequisite = { focus = TU_RHO_ops_ls_sprint_drill }
 
@@ -2696,8 +2392,8 @@ focus_tree = {
 		id = TU_RHO_ops_ls_dock_plan
 		icon = GFX_goal_generic_construct_naval_dockyard
 		cost = 10
-		x = -14
-		y = 21
+		x = -11
+		y = 16
 
 		prerequisite = { focus = TU_RHO_ops_ls_stable }
 
@@ -2717,8 +2413,8 @@ focus_tree = {
 		id = TU_RHO_ops_ls_crew_rotate
 		icon = GFX_goal_generic_construct_civilian
 		cost = 10
-		x = -14
-		y = 22
+		x = -11
+		y = 17
 
 		prerequisite = { focus = TU_RHO_ops_ls_dock_plan }
 
@@ -2737,8 +2433,8 @@ focus_tree = {
 		id = TU_RHO_ops_ls_fleet
 		icon = GFX_goal_generic_army_motorized
 		cost = 10
-		x = -17
-		y = 23
+		x = -14
+		y = 18
 
 		prerequisite = { focus = TU_RHO_ops_ls_jump_route }
 
@@ -2758,8 +2454,8 @@ focus_tree = {
 		id = TU_RHO_ops_ls_ready
 		icon = GFX_goal_generic_secret_weapon
 		cost = 10
-		x = -17
-		y = 24
+		x = -14
+		y = 19
 
 		prerequisite = { focus = TU_RHO_ops_ls_fleet }
 
@@ -2779,8 +2475,8 @@ focus_tree = {
 		id = TU_RHO_ops_ls_mobile_bay
 		icon = GFX_goal_generic_construct_mil_factory
 		cost = 10
-		x = -14
-		y = 23
+		x = -11
+		y = 18
 
 		prerequisite = { focus = TU_RHO_ops_ls_crew_rotate }
 
@@ -2800,8 +2496,8 @@ focus_tree = {
 		id = TU_RHO_ops_ls_sortie_plan
 		icon = GFX_goal_generic_major_war
 		cost = 10
-		x = -18
-		y = 25
+		x = -15
+		y = 20
 
 		prerequisite = { focus = TU_RHO_ops_ls_ready }
 
@@ -2821,8 +2517,8 @@ focus_tree = {
 		id = TU_RHO_ops_ls_command
 		icon = GFX_goal_generic_defence
 		cost = 10
-		x = -18
-		y = 26
+		x = -15
+		y = 21
 
 		prerequisite = { focus = TU_RHO_ops_ls_sortie_plan }
 
@@ -2841,8 +2537,8 @@ focus_tree = {
 		id = TU_RHO_ops_ls_finale
 		icon = GFX_goal_generic_national_unity
 		cost = 15
-		x = -18
-		y = 27
+		x = -15
+		y = 22
 
 		prerequisite = { focus = TU_RHO_ops_ls_command }
 
@@ -2863,8 +2559,8 @@ focus_tree = {
 		id = TU_RHO_ops_ls_jump_shield
 		icon = GFX_goal_generic_construction
 		cost = 10
-		x = -16
-		y = 25
+		x = -13
+		y = 20
 
 		prerequisite = { focus = TU_RHO_ops_ls_ready }
 
@@ -2884,8 +2580,8 @@ focus_tree = {
 		id = TU_RHO_ops_ls_shield_test
 		icon = GFX_goal_generic_defence
 		cost = 10
-		x = -16
-		y = 26
+		x = -13
+		y = 21
 
 		prerequisite = { focus = TU_RHO_ops_ls_jump_shield }
 
@@ -2903,8 +2599,8 @@ focus_tree = {
 		id = TU_RHO_ops_ls_medical_bay
 		icon = GFX_goal_generic_consumer_goods
 		cost = 10
-		x = -14
-		y = 24
+		x = -11
+		y = 19
 
 		prerequisite = { focus = TU_RHO_ops_ls_mobile_bay }
 
@@ -2923,8 +2619,8 @@ focus_tree = {
 		id = TU_RHO_ops_ls_repair_contract
 		icon = GFX_goal_generic_trade
 		cost = 10
-		x = -14
-		y = 25
+		x = -11
+		y = 20
 
 		prerequisite = { focus = TU_RHO_ops_ls_medical_bay }
 
@@ -2942,8 +2638,8 @@ focus_tree = {
 		id = TU_RHO_ops_ls_hangar
 		icon = GFX_goal_generic_construction2
 		cost = 10
-		x = -14
-		y = 26
+		x = -11
+		y = 21
 
 		prerequisite = { focus = TU_RHO_ops_ls_repair_contract }
 
@@ -2965,7 +2661,7 @@ focus_tree = {
 		icon = GFX_goal_generic_construct_civ_factory
 		cost = 5
 		x = -4
-		y = 14
+		y = 13
 
 		prerequisite = { focus = TU_RHO_prts_online }
 
@@ -2985,7 +2681,7 @@ focus_tree = {
 		icon = GFX_goal_generic_construction
 		cost = 10
 		x = -4
-		y = 15
+		y = 14
 
 		prerequisite = { focus = TU_RHO_ops_riic_start }
 
@@ -3004,7 +2700,7 @@ focus_tree = {
 		icon = GFX_goal_generic_construct_mil_factory
 		cost = 10
 		x = -7
-		y = 16
+		y = 15
 
 		prerequisite = { focus = TU_RHO_ops_riic_survey }
 
@@ -3025,7 +2721,7 @@ focus_tree = {
 		icon = GFX_goal_generic_production
 		cost = 10
 		x = -4
-		y = 16
+		y = 15
 
 		prerequisite = { focus = TU_RHO_ops_riic_survey }
 
@@ -3045,7 +2741,7 @@ focus_tree = {
 		icon = GFX_goal_generic_construct_infrastructure
 		cost = 10
 		x = -7
-		y = 17
+		y = 16
 
 		prerequisite = { focus = TU_RHO_ops_riic_arms_line }
 
@@ -3065,7 +2761,7 @@ focus_tree = {
 		icon = GFX_goal_generic_consumer_goods
 		cost = 10
 		x = -4
-		y = 17
+		y = 16
 
 		prerequisite = { focus = TU_RHO_ops_riic_industry_line }
 
@@ -3085,7 +2781,7 @@ focus_tree = {
 		icon = GFX_goal_generic_production2
 		cost = 10
 		x = -7
-		y = 18
+		y = 17
 
 		prerequisite = { focus = TU_RHO_ops_riic_power }
 
@@ -3105,7 +2801,7 @@ focus_tree = {
 		icon = GFX_goal_generic_production2
 		cost = 10
 		x = -4
-		y = 18
+		y = 17
 
 		prerequisite = { focus = TU_RHO_ops_riic_water }
 
@@ -3126,7 +2822,7 @@ focus_tree = {
 		icon = GFX_goal_generic_construct_naval_dockyard
 		cost = 10
 		x = -8
-		y = 19
+		y = 18
 
 		prerequisite = { focus = TU_RHO_ops_riic_arms_plan }
 
@@ -3147,7 +2843,7 @@ focus_tree = {
 		icon = GFX_goal_generic_construct_civilian
 		cost = 10
 		x = -4
-		y = 19
+		y = 18
 
 		prerequisite = { focus = TU_RHO_ops_riic_industry_plan }
 
@@ -3169,7 +2865,7 @@ focus_tree = {
 		icon = GFX_goal_generic_construction2
 		cost = 10
 		x = -8
-		y = 20
+		y = 19
 
 		prerequisite = { focus = TU_RHO_ops_riic_dock_plan }
 
@@ -3189,7 +2885,7 @@ focus_tree = {
 		icon = GFX_goal_generic_construct_infrastructure
 		cost = 10
 		x = -4
-		y = 20
+		y = 19
 
 		prerequisite = { focus = TU_RHO_ops_riic_dorm_plan }
 
@@ -3211,7 +2907,7 @@ focus_tree = {
 		icon = GFX_goal_generic_construct_civ_factory
 		cost = 10
 		x = -6
-		y = 19
+		y = 18
 
 		prerequisite = { focus = TU_RHO_ops_riic_arms_plan }
 
@@ -3232,7 +2928,7 @@ focus_tree = {
 		icon = GFX_goal_generic_construct_civ_factory
 		cost = 10
 		x = -2
-		y = 19
+		y = 18
 
 		prerequisite = { focus = TU_RHO_ops_riic_industry_plan }
 
@@ -3252,7 +2948,7 @@ focus_tree = {
 		icon = GFX_goal_generic_construct_naval_dockyard
 		cost = 10
 		x = -6
-		y = 20
+		y = 19
 
 		prerequisite = { focus = TU_RHO_ops_riic_arms_build }
 
@@ -3273,7 +2969,7 @@ focus_tree = {
 		icon = GFX_goal_generic_construct_civilian
 		cost = 10
 		x = -2
-		y = 20
+		y = 19
 
 		prerequisite = { focus = TU_RHO_ops_riic_industry_build }
 
@@ -3294,7 +2990,7 @@ focus_tree = {
 		icon = GFX_goal_generic_construct_infrastructure
 		cost = 10
 		x = -4
-		y = 21
+		y = 20
 
 		prerequisite = { focus = TU_RHO_ops_riic_power_plan }
 
@@ -3313,7 +3009,7 @@ focus_tree = {
 		icon = GFX_goal_generic_positive_trade_relations
 		cost = 10
 		x = -8
-		y = 21
+		y = 20
 
 		prerequisite = { focus = TU_RHO_ops_riic_logistics }
 
@@ -3332,7 +3028,7 @@ focus_tree = {
 		icon = GFX_goal_generic_production
 		cost = 10
 		x = -6
-		y = 21
+		y = 20
 
 		prerequisite = { focus = TU_RHO_ops_riic_dock_build }
 
@@ -3351,7 +3047,7 @@ focus_tree = {
 		icon = GFX_goal_generic_trade
 		cost = 10
 		x = -2
-		y = 21
+		y = 20
 
 		prerequisite = { focus = TU_RHO_ops_riic_dorm_build }
 
@@ -3370,7 +3066,7 @@ focus_tree = {
 		icon = GFX_goal_generic_construction
 		cost = 10
 		x = -4
-		y = 22
+		y = 21
 
 		prerequisite = { focus = TU_RHO_ops_riic_power_build }
 
@@ -3390,7 +3086,7 @@ focus_tree = {
 		icon = GFX_goal_generic_construct_civ_factory
 		cost = 15
 		x = -4
-		y = 23
+		y = 22
 
 		prerequisite = { focus = TU_RHO_ops_riic_efficiency }
 
@@ -3414,7 +3110,7 @@ focus_tree = {
 		icon = GFX_goal_generic_construct_civilian
 		cost = 5
 		x = 4
-		y = 10
+		y = 9
 
 		prerequisite = { focus = TU_RHO_prts_online }
 
@@ -3436,7 +3132,7 @@ focus_tree = {
 		icon = GFX_goal_generic_national_unity
 		cost = 10
 		x = 4
-		y = 11
+		y = 10
 
 		prerequisite = { focus = TU_RHO_ops_relief_start }
 
@@ -3455,7 +3151,7 @@ focus_tree = {
 		icon = GFX_goal_generic_construct_civilian
 		cost = 10
 		x = 4
-		y = 12
+		y = 11
 
 		prerequisite = { focus = TU_RHO_ops_relief_bylaw }
 
@@ -3475,7 +3171,7 @@ focus_tree = {
 		icon = GFX_goal_generic_consumer_goods
 		cost = 10
 		x = 6
-		y = 12
+		y = 11
 
 		prerequisite = { focus = TU_RHO_ops_relief_bylaw }
 
@@ -3495,7 +3191,7 @@ focus_tree = {
 		icon = GFX_goal_generic_improve_relations
 		cost = 10
 		x = 2
-		y = 13
+		y = 12
 
 		prerequisite = { focus = TU_RHO_ops_relief_staff }
 
@@ -3516,7 +3212,7 @@ focus_tree = {
 		icon = GFX_goal_generic_improve_relations
 		cost = 10
 		x = 4
-		y = 13
+		y = 12
 
 		prerequisite = { focus = TU_RHO_ops_relief_staff }
 
@@ -3537,7 +3233,7 @@ focus_tree = {
 		icon = GFX_goal_generic_improve_relations
 		cost = 10
 		x = 6
-		y = 13
+		y = 12
 
 		prerequisite = { focus = TU_RHO_ops_relief_medical }
 
@@ -3558,7 +3254,7 @@ focus_tree = {
 		icon = GFX_goal_generic_improve_relations
 		cost = 10
 		x = 2
-		y = 14
+		y = 13
 
 		prerequisite = { focus = TU_RHO_ops_relief_urs }
 
@@ -3579,7 +3275,7 @@ focus_tree = {
 		icon = GFX_goal_generic_improve_relations
 		cost = 10
 		x = 4
-		y = 14
+		y = 13
 
 		prerequisite = { focus = TU_RHO_ops_relief_kzd }
 
@@ -3600,7 +3296,7 @@ focus_tree = {
 		icon = GFX_goal_generic_improve_relations
 		cost = 10
 		x = 6
-		y = 14
+		y = 13
 
 		prerequisite = { focus = TU_RHO_ops_relief_yan }
 
@@ -3621,7 +3317,7 @@ focus_tree = {
 		icon = GFX_goal_generic_improve_relations
 		cost = 10
 		x = 2
-		y = 15
+		y = 14
 
 		prerequisite = { focus = TU_RHO_ops_relief_vic }
 
@@ -3642,7 +3338,7 @@ focus_tree = {
 		icon = GFX_goal_generic_construct_infrastructure
 		cost = 10
 		x = 4
-		y = 15
+		y = 14
 
 		prerequisite = { focus = TU_RHO_ops_relief_col }
 
@@ -3663,7 +3359,7 @@ focus_tree = {
 		icon = GFX_goal_generic_consumer_goods
 		cost = 10
 		x = 4
-		y = 16
+		y = 15
 
 		prerequisite = { focus = TU_RHO_ops_relief_hub }
 
@@ -3683,7 +3379,7 @@ focus_tree = {
 		icon = GFX_goal_generic_scientific_exchange
 		cost = 10
 		x = 6
-		y = 15
+		y = 14
 
 		prerequisite = { focus = TU_RHO_ops_relief_lat }
 
@@ -3702,7 +3398,7 @@ focus_tree = {
 		icon = GFX_goal_generic_propaganda
 		cost = 10
 		x = 6
-		y = 16
+		y = 15
 
 		prerequisite = { focus = TU_RHO_ops_relief_nurse }
 
@@ -3722,7 +3418,7 @@ focus_tree = {
 		icon = GFX_goal_generic_intelligence_exchange
 		cost = 10
 		x = 4
-		y = 17
+		y = 16
 
 		prerequisite = { focus = TU_RHO_ops_relief_supply }
 
@@ -3743,7 +3439,7 @@ focus_tree = {
 		icon = GFX_goal_generic_construction
 		cost = 10
 		x = 4
-		y = 18
+		y = 17
 
 		prerequisite = { focus = TU_RHO_ops_relief_network }
 
@@ -3763,7 +3459,7 @@ focus_tree = {
 		icon = GFX_goal_generic_national_unity
 		cost = 15
 		x = 4
-		y = 19
+		y = 18
 
 		prerequisite = { focus = TU_RHO_ops_relief_sustain }
 
@@ -3785,8 +3481,8 @@ focus_tree = {
 		id = TU_RHO_ops_proj_start
 		icon = GFX_goal_generic_intelligence_exchange
 		cost = 5
-		x = 10
-		y = 12
+		x = 12
+		y = 11
 
 		prerequisite = { focus = TU_RHO_prts_online }
 
@@ -3806,8 +3502,8 @@ focus_tree = {
 		id = TU_RHO_ops_proj_intel
 		icon = GFX_goal_generic_radar
 		cost = 10
-		x = 10
-		y = 13
+		x = 12
+		y = 12
 
 		prerequisite = { focus = TU_RHO_ops_proj_start }
 
@@ -3826,8 +3522,8 @@ focus_tree = {
 		id = TU_RHO_ops_proj_rescue_plan
 		icon = GFX_goal_generic_special_forces
 		cost = 10
-		x = 10
-		y = 14
+		x = 12
+		y = 13
 
 		prerequisite = { focus = TU_RHO_ops_proj_intel }
 
@@ -3848,8 +3544,8 @@ focus_tree = {
 		id = TU_RHO_ops_proj_supply_plan
 		icon = GFX_goal_generic_small_arms
 		cost = 10
-		x = 12
-		y = 14
+		x = 14
+		y = 13
 
 		prerequisite = { focus = TU_RHO_ops_proj_intel }
 
@@ -3870,8 +3566,8 @@ focus_tree = {
 		id = TU_RHO_ops_proj_strike_plan
 		icon = GFX_goal_generic_amphibious_assault
 		cost = 10
-		x = 10
-		y = 15
+		x = 12
+		y = 14
 
 		prerequisite = { focus = TU_RHO_ops_proj_rescue_plan }
 
@@ -3891,8 +3587,8 @@ focus_tree = {
 		id = TU_RHO_ops_proj_evac_plan
 		icon = GFX_goal_generic_defence
 		cost = 10
-		x = 12
-		y = 15
+		x = 14
+		y = 14
 
 		prerequisite = { focus = TU_RHO_ops_proj_supply_plan }
 
@@ -3912,8 +3608,8 @@ focus_tree = {
 		id = TU_RHO_ops_proj_budget
 		icon = GFX_goal_generic_political_pressure
 		cost = 10
-		x = 10
-		y = 16
+		x = 12
+		y = 15
 
 		prerequisite = { focus = TU_RHO_ops_proj_strike_plan }
 
@@ -3932,8 +3628,8 @@ focus_tree = {
 		id = TU_RHO_ops_proj_training
 		icon = GFX_goal_generic_cavalry
 		cost = 10
-		x = 12
-		y = 16
+		x = 14
+		y = 15
 
 		prerequisite = { focus = TU_RHO_ops_proj_evac_plan }
 
@@ -3951,8 +3647,8 @@ focus_tree = {
 		id = TU_RHO_ops_proj_chernobog_aid
 		icon = GFX_goal_generic_military_sphere
 		cost = 10
-		x = 10
-		y = 17
+		x = 12
+		y = 16
 
 		prerequisite = { focus = TU_RHO_ops_proj_budget }
 
@@ -3972,8 +3668,8 @@ focus_tree = {
 		id = TU_RHO_ops_proj_dossier
 		icon = GFX_goal_generic_intelligence_exchange
 		cost = 10
-		x = 12
-		y = 17
+		x = 14
+		y = 16
 
 		prerequisite = { focus = TU_RHO_ops_proj_training }
 
@@ -3992,8 +3688,8 @@ focus_tree = {
 		id = TU_RHO_ops_proj_medical_op
 		icon = GFX_goal_generic_consumer_goods
 		cost = 10
-		x = 10
-		y = 18
+		x = 12
+		y = 17
 
 		prerequisite = { focus = TU_RHO_ops_proj_chernobog_aid }
 
@@ -4012,8 +3708,8 @@ focus_tree = {
 		id = TU_RHO_ops_proj_command_hub
 		icon = GFX_goal_generic_fortify_city
 		cost = 10
-		x = 12
-		y = 18
+		x = 14
+		y = 17
 
 		prerequisite = { focus = TU_RHO_ops_proj_dossier }
 
@@ -4032,8 +3728,8 @@ focus_tree = {
 		id = TU_RHO_ops_proj_double_ops
 		icon = GFX_goal_generic_army_artillery
 		cost = 10
-		x = 10
-		y = 19
+		x = 12
+		y = 18
 
 		prerequisite = { focus = TU_RHO_ops_proj_medical_op }
 
@@ -4053,8 +3749,8 @@ focus_tree = {
 		id = TU_RHO_ops_proj_joint
 		icon = GFX_goal_generic_alliance
 		cost = 10
-		x = 12
-		y = 19
+		x = 14
+		y = 18
 
 		prerequisite = { focus = TU_RHO_ops_proj_command_hub }
 
@@ -4073,8 +3769,8 @@ focus_tree = {
 		id = TU_RHO_ops_proj_review
 		icon = GFX_goal_generic_scientific_exchange
 		cost = 10
-		x = 10
-		y = 20
+		x = 12
+		y = 19
 
 		prerequisite = { focus = TU_RHO_ops_proj_double_ops }
 
@@ -4093,8 +3789,8 @@ focus_tree = {
 		id = TU_RHO_ops_proj_finale
 		icon = GFX_goal_generic_army_doctrines
 		cost = 15
-		x = 10
-		y = 21
+		x = 12
+		y = 20
 
 		prerequisite = { focus = TU_RHO_ops_proj_review }
 
@@ -4117,7 +3813,7 @@ focus_tree = {
 		id = TU_RHO_ops_dip_envoy
 		icon = GFX_goal_generic_improve_relations
 		cost = 5
-		x = 19
+		x = 18
 		y = 15
 
 		prerequisite = { focus = TU_RHO_prts_online }
@@ -4137,7 +3833,7 @@ focus_tree = {
 		id = TU_RHO_ops_dip_relations
 		icon = GFX_goal_generic_improve_relations
 		cost = 10
-		x = 19
+		x = 18
 		y = 16
 
 		prerequisite = { focus = TU_RHO_ops_dip_envoy }
@@ -4157,7 +3853,7 @@ focus_tree = {
 		id = TU_RHO_ops_dip_kzd
 		icon = GFX_goal_generic_improve_relations
 		cost = 10
-		x = 19
+		x = 18
 		y = 17
 
 		prerequisite = { focus = TU_RHO_ops_dip_relations }
@@ -4177,7 +3873,7 @@ focus_tree = {
 		id = TU_RHO_ops_dip_yan
 		icon = GFX_goal_generic_trade
 		cost = 10
-		x = 21
+		x = 20
 		y = 17
 
 		prerequisite = { focus = TU_RHO_ops_dip_relations }
@@ -4197,7 +3893,7 @@ focus_tree = {
 		id = TU_RHO_ops_dip_urs
 		icon = GFX_goal_generic_positive_trade_relations
 		cost = 10
-		x = 23
+		x = 22
 		y = 17
 
 		prerequisite = { focus = TU_RHO_ops_dip_relations }
@@ -4217,7 +3913,7 @@ focus_tree = {
 		id = TU_RHO_ops_dip_vic
 		icon = GFX_goal_generic_scientific_exchange
 		cost = 10
-		x = 19
+		x = 18
 		y = 18
 
 		prerequisite = { focus = TU_RHO_ops_dip_kzd }
@@ -4238,7 +3934,7 @@ focus_tree = {
 		id = TU_RHO_ops_dip_col
 		icon = GFX_goal_generic_neutrality_focus
 		cost = 10
-		x = 21
+		x = 20
 		y = 18
 
 		prerequisite = { focus = TU_RHO_ops_dip_yan }
@@ -4259,7 +3955,7 @@ focus_tree = {
 		id = TU_RHO_ops_dip_kaz
 		icon = GFX_goal_generic_military_deal
 		cost = 10
-		x = 23
+		x = 22
 		y = 18
 
 		prerequisite = { focus = TU_RHO_ops_dip_urs }
@@ -4279,7 +3975,7 @@ focus_tree = {
 		id = TU_RHO_ops_dip_alliance
 		icon = GFX_goal_generic_major_alliance
 		cost = 10
-		x = 19
+		x = 18
 		y = 19
 
 		prerequisite = { focus = TU_RHO_ops_dip_vic }
@@ -4299,7 +3995,7 @@ focus_tree = {
 		id = TU_RHO_ops_dip_guarantee
 		icon = GFX_goal_generic_forceful_treaty
 		cost = 10
-		x = 19
+		x = 18
 		y = 20
 
 		prerequisite = { focus = TU_RHO_ops_dip_alliance }
@@ -4319,7 +4015,7 @@ focus_tree = {
 		id = TU_RHO_ops_dip_neutral
 		icon = GFX_goal_generic_neutrality_focus
 		cost = 10
-		x = 19
+		x = 18
 		y = 21
 
 		prerequisite = { focus = TU_RHO_ops_dip_guarantee }
@@ -4338,7 +4034,7 @@ focus_tree = {
 		id = TU_RHO_ops_dip_finale
 		icon = GFX_goal_generic_national_unity
 		cost = 15
-		x = 19
+		x = 18
 		y = 22
 
 		prerequisite = { focus = TU_RHO_ops_dip_neutral }

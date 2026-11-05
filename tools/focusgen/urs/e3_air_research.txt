@@ -93,7 +93,7 @@
 		icon = GFX_goal_generic_air_fighter
 		x = 28
 		y = 3
-		cost = 10
+		cost = 18
 
 		search_filters = { FOCUS_FILTER_AIR_XP }
 
@@ -110,57 +110,21 @@
 			add_ideas = TU_URS_e3_frozen_air
 			add_doctrine_cost_reduction = { name = TU_URS_frozen_pilots cost_reduction = 0.4 uses = 1 category = land_doctrine }
 			army_experience = 25
-		}
-	}
-
-	focus = {
-		id = TU_URS_frozen_air_doctrine
-		prerequisite = { focus = TU_URS_frozen_pilots }
-		icon = GFX_goal_generic_air_doctrine
-		x = 28
-		y = 4
-		cost = 10
-
-		search_filters = { FOCUS_FILTER_RESEARCH }
-
-		ai_will_do = {
-			base = 1
-		}
-
-		completion_reward = {
-			add_tech_bonus = { name = TU_URS_frozen_air_doctrine bonus = 0.75 uses = 1 category = light_fighter category = tactical_bomber }
-			add_doctrine_cost_reduction = { name = TU_URS_frozen_air_doctrine cost_reduction = 0.4 uses = 1 category = air_doctrine }
+			add_tech_bonus = { name = TU_URS_frozen_pilots bonus = 0.75 uses = 1 category = light_fighter category = tactical_bomber }
+			add_doctrine_cost_reduction = { name = TU_URS_frozen_pilots cost_reduction = 0.4 uses = 1 category = air_doctrine }
 			air_experience = 25
-		}
-	}
-
-	focus = {
-		id = TU_URS_frost_interceptors
-		prerequisite = { focus = TU_URS_frozen_air_doctrine }
-		icon = GFX_goal_generic_air_fighter2
-		x = 28
-		y = 5
-		cost = 10
-
-		search_filters = { FOCUS_FILTER_AIR_XP }
-
-		ai_will_do = {
-			base = 1
-		}
-
-		completion_reward = {
-			add_tech_bonus = { name = TU_URS_frost_interceptors bonus = 0.75 uses = 1 category = construction_tech }
+			add_tech_bonus = { name = TU_URS_frozen_pilots bonus = 0.75 uses = 1 category = construction_tech }
 			army_experience = 25
 		}
 	}
 
 	focus = {
 		id = TU_URS_frost_supremacy
-		prerequisite = { focus = TU_URS_frost_interceptors }
+		prerequisite = { focus = TU_URS_frozen_pilots }
 		icon = GFX_goal_generic_CAS
 		x = 28
 		y = 7
-		cost = 15
+		cost = 20
 
 		search_filters = { FOCUS_FILTER_AIR_XP }
 
@@ -173,60 +137,22 @@
 			add_tech_bonus = { name = TU_URS_frost_supremacy bonus = 1.0 uses = 1 category = light_fighter category = tactical_bomber }
 			add_doctrine_cost_reduction = { name = TU_URS_frost_supremacy cost_reduction = 0.5 uses = 1 category = air_doctrine }
 			air_experience = 40
-		}
-	}
-
-	focus = {
-		id = TU_URS_frost_legacy
-		prerequisite = { focus = TU_URS_frost_supremacy }
-		icon = GFX_goal_generic_air_production
-		x = 28
-		y = 10
-		cost = 15
-
-		search_filters = { FOCUS_FILTER_RESEARCH }
-
-		ai_will_do = {
-			base = 1
-		}
-
-		completion_reward = {
-			add_tech_bonus = { name = TU_URS_frost_legacy bonus = 1.0 uses = 1 category = light_fighter category = tactical_bomber }
-			add_doctrine_cost_reduction = { name = TU_URS_frost_legacy cost_reduction = 0.5 uses = 1 category = air_doctrine }
+			add_tech_bonus = { name = TU_URS_frost_supremacy bonus = 1.0 uses = 1 category = light_fighter category = tactical_bomber }
+			add_doctrine_cost_reduction = { name = TU_URS_frost_supremacy cost_reduction = 0.5 uses = 1 category = air_doctrine }
+			air_experience = 40
+			add_tech_bonus = { name = TU_URS_frost_supremacy bonus = 1.0 uses = 1 category = light_fighter category = tactical_bomber }
+			add_doctrine_cost_reduction = { name = TU_URS_frost_supremacy cost_reduction = 0.5 uses = 1 category = air_doctrine }
 			air_experience = 40
 		}
 	}
 
-	#### END OF THE FROZEN AIR LINE ####
-	focus = {
-		id = TU_URS_frost_end
-		prerequisite = { focus = TU_URS_frost_legacy }
-		icon = GFX_goal_generic_air_bomber
-		x = 28
-		y = 18
-		cost = 15
-
-		search_filters = { FOCUS_FILTER_AIR_XP }
-
-		ai_will_do = {
-			base = 1
-		}
-
-		completion_reward = {
-			add_tech_bonus = { name = TU_URS_frost_end bonus = 1.0 uses = 1 category = light_fighter category = tactical_bomber }
-			add_doctrine_cost_reduction = { name = TU_URS_frost_end cost_reduction = 0.5 uses = 1 category = air_doctrine }
-			air_experience = 40
-		}
-	}
-
-	#### NORTHERN EXPEDITION RESEARCH (x 32-34) ####
 	focus = {
 		id = TU_URS_northern_expedition
 		prerequisite = { focus = TU_URS_arts_research_root }
 		icon = GFX_goal_generic_position_armies
 		x = 34
 		y = 2
-		cost = 10
+		cost = 15
 
 		search_filters = { FOCUS_FILTER_RESEARCH }
 
@@ -242,32 +168,14 @@
 			army_experience = 25
 			add_war_support = 0.03
 			add_doctrine_cost_reduction = { name = TU_URS_northern_expedition cost_reduction = 0.4 uses = 1 category = land_doctrine }
-		}
-	}
-
-	focus = {
-		id = TU_URS_northern_recon
-		prerequisite = { focus = TU_URS_northern_expedition }
-		icon = GFX_goal_generic_radar
-		x = 34
-		y = 3
-		cost = 10
-
-		search_filters = { FOCUS_FILTER_RESEARCH }
-
-		ai_will_do = {
-			base = 1
-		}
-
-		completion_reward = {
-			add_tech_bonus = { name = TU_URS_northern_recon bonus = 0.75 uses = 1 category = radar_tech category = electronics }
+			add_tech_bonus = { name = TU_URS_northern_expedition bonus = 0.75 uses = 1 category = radar_tech category = electronics }
 			add_stability = 0.03
 		}
 	}
 
 	focus = {
 		id = TU_URS_northern_bomber
-		prerequisite = { focus = TU_URS_northern_recon }
+		prerequisite = { focus = TU_URS_northern_expedition }
 		mutually_exclusive = { focus = TU_URS_northern_fighter }
 		icon = GFX_goal_generic_air_bomber
 		x = 34
@@ -289,7 +197,7 @@
 
 	focus = {
 		id = TU_URS_northern_fighter
-		prerequisite = { focus = TU_URS_northern_recon }
+		prerequisite = { focus = TU_URS_northern_expedition }
 		mutually_exclusive = { focus = TU_URS_northern_bomber }
 		icon = GFX_goal_generic_air_fighter
 		x = 32

@@ -114,7 +114,7 @@
 		y = 4
 		cost = 10
 
-		search_filters = { FOCUS_FILTER_BALANCE_OF_POWER }
+		search_filters = { FOCUS_FILTER_POLITICAL }
 
 		completion_reward = {
 			add_political_power = 60
@@ -130,13 +130,15 @@
 		icon = GFX_goal_generic_demand_territory
 		x = -4
 		y = 2
-		cost = 10
+		cost = 15
 
 		search_filters = { FOCUS_FILTER_POLITICAL }
 
 		completion_reward = {
 			country_event = { id = tu_vic_ev.8 }
 			add_political_power = 60
+			add_stability = 0.03
+			add_war_support = 0.03
 			add_stability = 0.03
 		}
 	}
@@ -180,30 +182,14 @@
 	}
 
 	focus = {
-		id = TU_VIC_rally_dukes
-		prerequisite = { focus = TU_VIC_glasgow_return }
-		icon = GFX_goal_generic_improve_relations
-		x = -3
-		y = 3
-		cost = 10
-
-		search_filters = { FOCUS_FILTER_POLITICAL }
-
-		completion_reward = {
-			add_war_support = 0.03
-			add_stability = 0.03
-		}
-	}
-
-	focus = {
 		id = TU_VIC_siege_crowned
-		prerequisite = { focus = TU_VIC_rally_dukes }
+		prerequisite = { focus = TU_VIC_glasgow_return }
 		icon = GFX_goal_generic_major_alliance
 		x = -3
 		y = 4
 		cost = 10
 
-		search_filters = { FOCUS_FILTER_BALANCE_OF_POWER }
+		search_filters = { FOCUS_FILTER_POLITICAL }
 
 		completion_reward = {
 			recruit_character = TU_VIC_siege_leader
@@ -261,43 +247,15 @@
 		icon = GFX_goal_generic_special_forces
 		x = 3
 		y = 3
-		cost = 10
+		cost = 18
 
 		search_filters = { FOCUS_FILTER_POLITICAL }
 
 		completion_reward = {
 			add_political_power = 60
 			add_stability = 0.03
-		}
-	}
-
-	focus = {
-		id = TU_VIC_suppression_garrison
-		prerequisite = { focus = TU_VIC_dublinn_suppression }
-		icon = GFX_goal_generic_fortify_city
-		x = 3
-		y = 4
-		cost = 10
-
-		search_filters = { FOCUS_FILTER_ARMY_XP }
-
-		completion_reward = {
-			add_tech_bonus = { name = TU_VIC_suppression_garrison bonus = 0.75 uses = 1 category = construction_tech }
+			add_tech_bonus = { name = TU_VIC_dublinn_suppression bonus = 0.75 uses = 1 category = construction_tech }
 			army_experience = 25
-		}
-	}
-
-	focus = {
-		id = TU_VIC_public_order
-		prerequisite = { focus = TU_VIC_suppression_garrison }
-		icon = GFX_goal_generic_political_pressure
-		x = 3
-		y = 5
-		cost = 10
-
-		search_filters = { FOCUS_FILTER_POLITICAL }
-
-		completion_reward = {
 			add_political_power = 60
 			add_stability = 0.03
 		}
@@ -310,7 +268,7 @@
 		icon = GFX_goal_generic_trade
 		x = 5
 		y = 3
-		cost = 10
+		cost = 15
 
 		search_filters = { FOCUS_FILTER_POLITICAL }
 
@@ -318,20 +276,6 @@
 			recruit_character = TU_VIC_dublinn_leader
 			add_political_power = 60
 			add_stability = 0.03
-		}
-	}
-
-	focus = {
-		id = TU_VIC_dublinn_charter
-		prerequisite = { focus = TU_VIC_dublinn_talks }
-		icon = GFX_goal_generic_consumer_goods
-		x = 5
-		y = 4
-		cost = 10
-
-		search_filters = { FOCUS_FILTER_POLITICAL }
-
-		completion_reward = {
 			add_political_power = 60
 			add_stability = 0.03
 		}
@@ -339,11 +283,11 @@
 
 	focus = {
 		id = TU_VIC_steam_knight_formation
-		prerequisite = { focus = TU_VIC_dublinn_charter }
+		prerequisite = { focus = TU_VIC_dublinn_talks }
 		icon = GFX_goal_generic_army_tanks
 		x = 5
 		y = 5
-		cost = 10
+		cost = 15
 
 		search_filters = { FOCUS_FILTER_ARMY_XP }
 
@@ -359,21 +303,7 @@
 			country_event = { id = tu_vic_ev.7 }
 			add_doctrine_cost_reduction = { name = TU_VIC_steam_knight_formation cost_reduction = 0.4 uses = 1 category = land_doctrine }
 			army_experience = 25
-		}
-	}
-
-	focus = {
-		id = TU_VIC_steam_knight_training
-		prerequisite = { focus = TU_VIC_steam_knight_formation }
-		icon = GFX_goal_generic_army_doctrines
-		x = 5
-		y = 6
-		cost = 10
-
-		search_filters = { FOCUS_FILTER_ARMY_XP }
-
-		completion_reward = {
-			add_doctrine_cost_reduction = { name = TU_VIC_steam_knight_training cost_reduction = 0.4 uses = 1 category = land_doctrine }
+			add_doctrine_cost_reduction = { name = TU_VIC_steam_knight_formation cost_reduction = 0.4 uses = 1 category = land_doctrine }
 			army_experience = 25
 		}
 	}

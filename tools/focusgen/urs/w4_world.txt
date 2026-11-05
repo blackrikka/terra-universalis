@@ -53,7 +53,7 @@
 		}
 		x = 188
 		y = 3
-		cost = 15
+		cost = 20
 
 		search_filters = { FOCUS_FILTER_POLITICAL }
 
@@ -87,6 +87,11 @@
 			}
 			add_political_power = 100
 			add_stability = 0.05
+			add_political_power = 60
+			add_stability = 0.03
+			TU_build_civ_factory = yes
+			add_political_power = 60
+			add_tech_bonus = { name = TU_URS_w4_pact_charter bonus = 0.75 uses = 1 category = industry }
 		}
 	}
 
@@ -96,7 +101,7 @@
 		icon = GFX_goal_generic_defence
 		x = 188
 		y = 4
-		cost = 10
+		cost = 15
 
 		search_filters = { FOCUS_FILTER_POLITICAL }
 
@@ -107,73 +112,14 @@
 		completion_reward = {
 			add_ideas = TU_URS_w4_idea_pact_unity
 			TU_build_forts_2 = yes
-		}
-	}
-
-	focus = {
-		id = TU_URS_w4_pact_army
-		prerequisite = { focus = TU_URS_w4_pact_charter }
-		icon = GFX_goal_generic_army_doctrines
-		x = 190
-		y = 4
-		cost = 10
-
-		search_filters = { FOCUS_FILTER_ARMY_XP }
-
-		ai_will_do = {
-			base = 1
-		}
-
-		completion_reward = {
 			add_political_power = 60
 			add_stability = 0.03
-		}
-	}
-
-	focus = {
-		id = TU_URS_w4_pact_summit
-		prerequisite = { focus = TU_URS_w4_pact_defence }
-		icon = GFX_goal_generic_improve_relations
-		x = 188
-		y = 6
-		cost = 10
-
-		search_filters = { FOCUS_FILTER_POLITICAL }
-
-		ai_will_do = {
-			base = 1
-		}
-
-		completion_reward = {
-			add_political_power = 60
-			add_stability = 0.03
-		}
-	}
-
-	focus = {
-		id = TU_URS_w4_pact_trade
-		prerequisite = { focus = TU_URS_w4_pact_army }
-		icon = GFX_goal_generic_positive_trade_relations
-		x = 190
-		y = 6
-		cost = 10
-
-		search_filters = { FOCUS_FILTER_INDUSTRY }
-
-		ai_will_do = {
-			base = 1
-		}
-
-		completion_reward = {
-			TU_build_civ_factory = yes
-			add_political_power = 60
-			add_tech_bonus = { name = TU_URS_w4_pact_trade bonus = 0.75 uses = 1 category = industry }
 		}
 	}
 
 	focus = {
 		id = TU_URS_w4_pact_common_army
-		prerequisite = { focus = TU_URS_w4_pact_summit }
+		prerequisite = { focus = TU_URS_w4_pact_defence }
 		icon = GFX_goal_generic_army_artillery
 		available = { has_completed_focus = TU_URS_military_junta }
 		x = 188
@@ -194,7 +140,7 @@
 
 	focus = {
 		id = TU_URS_w4_pact_secretariat
-		prerequisite = { focus = TU_URS_w4_pact_trade }
+		prerequisite = { focus = TU_URS_w4_pact_charter }
 		icon = GFX_goal_generic_political_pressure
 		available = { has_completed_focus = TU_URS_reform_path }
 		x = 190
@@ -264,7 +210,7 @@
 		icon = GFX_goal_generic_political_pressure
 		x = 194
 		y = 4
-		cost = 10
+		cost = 20
 
 		search_filters = { FOCUS_FILTER_POLITICAL }
 
@@ -275,6 +221,11 @@
 		completion_reward = {
 			add_political_power = 60
 			add_stability = 0.03
+			add_political_power = 60
+			add_stability = 0.03
+			army_experience = 25
+			add_war_support = 0.03
+			add_doctrine_cost_reduction = { name = TU_URS_w4_order_council cost_reduction = 0.4 uses = 1 category = land_doctrine }
 		}
 	}
 
@@ -298,49 +249,6 @@
 			add_stability = 0.03
 		}
 	}
-
-	focus = {
-		id = TU_URS_w4_order_charter
-		prerequisite = { focus = TU_URS_w4_order_council }
-		icon = GFX_goal_generic_alliance
-		x = 194
-		y = 6
-		cost = 10
-
-		search_filters = { FOCUS_FILTER_POLITICAL }
-
-		ai_will_do = {
-			base = 1
-		}
-
-		completion_reward = {
-			add_political_power = 60
-			add_stability = 0.03
-		}
-	}
-
-	focus = {
-		id = TU_URS_w4_order_mobilization
-		prerequisite = { focus = TU_URS_w4_order_charter }
-		icon = GFX_goal_generic_production
-		x = 194
-		y = 8
-		cost = 10
-
-		search_filters = { FOCUS_FILTER_WAR_SUPPORT }
-
-		ai_will_do = {
-			base = 1
-		}
-
-		completion_reward = {
-			army_experience = 25
-			add_war_support = 0.03
-			add_doctrine_cost_reduction = { name = TU_URS_w4_order_mobilization cost_reduction = 0.4 uses = 1 category = land_doctrine }
-		}
-	}
-
-	#### RHODES ISLAND (RHO): cooperation vs hostility ####
 
 	focus = {
 		id = TU_URS_w4_rho_entry

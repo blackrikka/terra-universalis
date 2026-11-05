@@ -348,7 +348,7 @@
 		icon = GFX_goal_generic_defence
 		x = 4
 		y = 5
-		cost = 10
+		cost = 15
 
 		search_filters = { FOCUS_FILTER_ARMY_XP }
 
@@ -363,6 +363,7 @@
 		completion_reward = {
 			add_tech_bonus = { name = TU_URS_northern_garrison bonus = 0.75 uses = 1 category = construction_tech }
 			army_experience = 25
+			TU_build_railway = yes
 		}
 	}
 
@@ -382,25 +383,6 @@
 
 		completion_reward = {
 			add_tech_bonus = { name = TU_URS_originium_export bonus = 0.75 uses = 1 category = electronics category = tu_originium_tech }
-		}
-	}
-
-	focus = {
-		id = TU_URS_frost_road2
-		prerequisite = { focus = TU_URS_northern_garrison }
-		icon = GFX_goal_generic_construct_infrastructure
-		x = 4
-		y = 6
-		cost = 10
-
-		search_filters = { FOCUS_FILTER_INDUSTRY }
-
-		ai_will_do = {
-			base = 1
-		}
-
-		completion_reward = {
-			TU_build_railway = yes
 		}
 	}
 
@@ -583,7 +565,7 @@
 		icon = GFX_goal_generic_construction2
 		x = 10
 		y = 13
-		cost = 15
+		cost = 20
 
 		search_filters = { FOCUS_FILTER_INDUSTRY }
 
@@ -600,6 +582,9 @@
 			TU_build_civ_factory = yes
 			add_tech_bonus = { name = TU_URS_mobile_core bonus = 1.0 uses = 1 category = construction_tech }
 			add_tech_bonus = { name = TU_URS_mobile_core bonus = 1.0 uses = 1 category = motorized_equipment }
+			TU_build_infrastructure = yes
+			add_tech_bonus = { name = TU_URS_mobile_core bonus = 1.0 uses = 1 category = construction_tech }
+			add_tech_bonus = { name = TU_URS_mobile_core bonus = 1.0 uses = 1 category = motorized_equipment }
 		}
 	}
 
@@ -609,7 +594,7 @@
 		icon = GFX_goal_generic_dangerous_deal
 		x = 14
 		y = 15
-		cost = 10
+		cost = 18
 
 		search_filters = { FOCUS_FILTER_POLITICAL }
 
@@ -620,47 +605,7 @@
 		completion_reward = {
 			add_ideas = TU_URS_e1_originium_monopoly
 			add_tech_bonus = { name = TU_URS_originium_secure bonus = 0.75 uses = 1 category = electronics category = tu_originium_tech }
-		}
-	}
-
-	focus = {
-		id = TU_URS_mobile_final
-		prerequisite = { focus = TU_URS_mobile_core }
-		icon = GFX_goal_generic_construction
-		x = 10
-		y = 15
-		cost = 15
-
-		search_filters = { FOCUS_FILTER_INDUSTRY }
-
-		ai_will_do = {
-			base = 1
-		}
-
-		completion_reward = {
-			TU_build_infrastructure = yes
-			add_tech_bonus = { name = TU_URS_mobile_final bonus = 1.0 uses = 1 category = construction_tech }
-			add_tech_bonus = { name = TU_URS_mobile_final bonus = 1.0 uses = 1 category = motorized_equipment }
-		}
-	}
-
-	#### END OF THE NORTHERN INDUSTRY LINE ####
-	focus = {
-		id = TU_URS_final_grid
-		prerequisite = { focus = TU_URS_mobile_final focus = TU_URS_originium_secure }
-		icon = GFX_goal_generic_construct_civ_factory
-		x = 12
-		y = 17
-		cost = 15
-
-		search_filters = { FOCUS_FILTER_INDUSTRY }
-
-		ai_will_do = {
-			base = 1
-		}
-
-		completion_reward = {
 			TU_build_civ_factory = yes
-			add_tech_bonus = { name = TU_URS_final_grid bonus = 1.0 uses = 1 category = industry category = construction_tech }
+			add_tech_bonus = { name = TU_URS_originium_secure bonus = 1.0 uses = 1 category = industry category = construction_tech }
 		}
 	}

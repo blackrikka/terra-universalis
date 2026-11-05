@@ -136,7 +136,7 @@ f("sponsorship_rules", "기업 후원 규정", "Corporate Sponsorship Rules", pr
   theme=False, reward=[U("0.1"), "add_political_power = 75"],
   desc=("기업이 기사를 후원하고 이름을 붙일 수 있게 한다.", "Allow corporations to sponsor knights and put their names on them."))
 f("free_entry", "기사 자율 출전", "Free Entry for Knights", pre=["live_broadcast"], me=["sponsorship_rules"],
-  theme=False, reward=[K("0.1"), FAME(10)],
+  theme=False, reward=[FAME(10), "add_war_support = 0.03"],
   desc=("후원 없이도 누구나 실력으로 출전할 수 있게 한다.", "Let anyone enter on merit alone, sponsor or not."))
 f("major_annual", "메이저 정례화", "The Annual Major", pre=[["sponsorship_rules", "free_entry"]], theme=False,
   reward=["add_ideas = TU_KAZ_major_spirit", FLAG("major_annual"), FAME(5)],
@@ -166,7 +166,7 @@ f("media_control", "언론 장악", "Media Broadcast Control", pre=["corporate_c
   reward=[U("0.05"), "add_stability = 0.03", EV(23, 10)])
 f("stock_controls", "주가 관리", "Stock Market Controls", pre=["media_control"], reward=[U("0.03")])
 f("knight_contracts", "기사 고용 계약제", "Knight Employment Contracts", pre=["media_control"], theme=False,
-  reward=[U("0.05"), FLAG("corp_knights")],
+  reward=[FLAG("corp_knights"), "add_political_power = 30"],
   desc=("기업이 기사를 직원처럼 고용한다. '기업 기사 계약' 디시전이 열린다.",
         "Corporations hire knights like employees. Unlocks the Corporate Knight Contract decision."))
 f("union_monopoly", "독점 체제", "Monopoly System", pre=["knight_contracts"], me=["fair_competition"], theme=False,

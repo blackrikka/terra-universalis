@@ -28,7 +28,7 @@
 		icon = GFX_goal_generic_occupy_start_war
 		x = 172
 		y = 5
-		cost = 10
+		cost = 15
 
 		search_filters = { FOCUS_FILTER_ARMY_XP }
 
@@ -44,24 +44,6 @@
 			add_tech_bonus = { name = TU_URS_w3_kaz_offensive bonus = 0.75 uses = 1 category = light_fighter category = tactical_bomber }
 			add_doctrine_cost_reduction = { name = TU_URS_w3_kaz_offensive cost_reduction = 0.4 uses = 1 category = air_doctrine }
 			air_experience = 25
-		}
-	}
-
-	focus = {
-		id = TU_URS_w3_kaz_annex
-		prerequisite = { focus = TU_URS_w3_kaz_offensive }
-		icon = GFX_goal_generic_forceful_treaty
-		x = 172
-		y = 6
-		cost = 10
-
-		search_filters = { FOCUS_FILTER_ANNEXATION }
-
-		ai_will_do = {
-			base = 1
-		}
-
-		completion_reward = {
 			add_political_power = 60
 			add_stability = 0.03
 		}
@@ -120,7 +102,7 @@
 
 	focus = {
 		id = TU_URS_w3_kaz_occupation
-		prerequisite = { focus = TU_URS_w3_kaz_annex }
+		prerequisite = { focus = TU_URS_w3_kaz_offensive }
 		icon = GFX_goal_generic_occupy_states_ongoing_war
 		x = 172
 		y = 7
@@ -197,7 +179,7 @@
 		}
 		x = 176
 		y = 5
-		cost = 10
+		cost = 18
 
 		search_filters = { FOCUS_FILTER_ARMY_XP }
 
@@ -208,6 +190,8 @@
 		completion_reward = {
 			add_political_power = 60
 			add_stability = 0.03
+			add_tech_bonus = { name = TU_URS_w3_kje_offensive bonus = 1.0 uses = 1 category = construction_tech }
+			army_experience = 40
 		}
 	}
 
@@ -243,28 +227,6 @@
 			army_experience = 40
 		}
 	}
-
-	focus = {
-		id = TU_URS_w3_kje_occupation
-		prerequisite = { focus = TU_URS_w3_kje_offensive }
-		icon = GFX_goal_generic_fortify_city
-		x = 176
-		y = 6
-		cost = 15
-
-		search_filters = { FOCUS_FILTER_ARMY_XP }
-
-		ai_will_do = {
-			base = 1
-		}
-
-		completion_reward = {
-			add_tech_bonus = { name = TU_URS_w3_kje_occupation bonus = 1.0 uses = 1 category = construction_tech }
-			army_experience = 40
-		}
-	}
-
-	#### SAMI (SAM): aid vs annexation ####
 
 	focus = {
 		id = TU_URS_w3_sami_entry
@@ -427,7 +389,7 @@
 		available = { has_completed_focus = TU_URS_reform_path }
 		x = 182
 		y = 8
-		cost = 10
+		cost = 20
 
 		search_filters = { FOCUS_FILTER_ARMY_XP }
 
@@ -439,6 +401,14 @@
 			add_ideas = TU_URS_w3_idea_infi_frost_gear
 			add_political_power = 60
 			add_stability = 0.03
+			add_doctrine_cost_reduction = { name = TU_URS_w3_infi_frost_gear cost_reduction = 0.4 uses = 1 category = land_doctrine }
+			army_experience = 25
+			army_experience = 25
+			add_war_support = 0.03
+			add_doctrine_cost_reduction = { name = TU_URS_w3_infi_frost_gear cost_reduction = 0.4 uses = 1 category = land_doctrine }
+			add_tech_bonus = { name = TU_URS_w3_infi_frost_gear bonus = 0.75 uses = 1 category = electronics category = tu_originium_tech }
+			TU_build_forts_2 = yes
+			add_tech_bonus = { name = TU_URS_w3_infi_frost_gear bonus = 1.0 uses = 1 category = industry category = construction_tech }
 		}
 	}
 
@@ -464,103 +434,5 @@
 			add_ideas = TU_URS_w3_idea_infi_supply_road
 			TU_build_infrastructure = yes
 			add_tech_bonus = { name = TU_URS_w3_infi_pipeline bonus = 0.75 uses = 1 category = industry category = construction_tech }
-		}
-	}
-
-	focus = {
-		id = TU_URS_w3_infi_polar_theory
-		prerequisite = { focus = TU_URS_w3_infi_frost_gear }
-		icon = GFX_goal_generic_construction2
-		x = 182
-		y = 10
-		cost = 10
-
-		search_filters = { FOCUS_FILTER_RESEARCH }
-
-		ai_will_do = {
-			base = 1
-		}
-
-		completion_reward = {
-			add_doctrine_cost_reduction = { name = TU_URS_w3_infi_polar_theory cost_reduction = 0.4 uses = 1 category = land_doctrine }
-			army_experience = 25
-		}
-	}
-
-	focus = {
-		id = TU_URS_w3_infi_arctic_expedition
-		prerequisite = { focus = TU_URS_w3_infi_polar_theory }
-		icon = GFX_goal_generic_special_forces
-		x = 182
-		y = 12
-		cost = 10
-
-		search_filters = { FOCUS_FILTER_ARMY_XP }
-
-		ai_will_do = {
-			base = 1
-		}
-
-		completion_reward = {
-			army_experience = 25
-			add_war_support = 0.03
-			add_doctrine_cost_reduction = { name = TU_URS_w3_infi_arctic_expedition cost_reduction = 0.4 uses = 1 category = land_doctrine }
-		}
-	}
-
-	focus = {
-		id = TU_URS_w3_infi_survey_station
-		prerequisite = { focus = TU_URS_w3_infi_arctic_expedition }
-		icon = GFX_goal_generic_construction
-		x = 182
-		y = 14
-		cost = 10
-
-		search_filters = { FOCUS_FILTER_RESEARCH }
-
-		ai_will_do = {
-			base = 1
-		}
-
-		completion_reward = {
-			add_tech_bonus = { name = TU_URS_w3_infi_survey_station bonus = 0.75 uses = 1 category = electronics category = tu_originium_tech }
-		}
-	}
-
-	focus = {
-		id = TU_URS_w3_infi_ice_wall
-		prerequisite = { focus = TU_URS_w3_infi_survey_station }
-		icon = GFX_goal_generic_defence
-		x = 182
-		y = 16
-		cost = 10
-
-		search_filters = { FOCUS_FILTER_ARMY_XP }
-
-		ai_will_do = {
-			base = 1
-		}
-
-		completion_reward = {
-			TU_build_forts_2 = yes
-		}
-	}
-
-	focus = {
-		id = TU_URS_w3_infi_final_report
-		prerequisite = { focus = TU_URS_w3_infi_ice_wall }
-		icon = GFX_goal_generic_intelligence_exchange
-		x = 182
-		y = 18
-		cost = 15
-
-		search_filters = { FOCUS_FILTER_RESEARCH }
-
-		ai_will_do = {
-			base = 1
-		}
-
-		completion_reward = {
-			add_tech_bonus = { name = TU_URS_w3_infi_final_report bonus = 1.0 uses = 1 category = industry category = construction_tech }
 		}
 	}
