@@ -55,6 +55,10 @@ characters = {
 
 	TU_HIG_akafuyu = {
 		name = TU_HIG_akafuyu
+		portraits = {
+			civilian = { large = "GFX_TU_ak_926cd4e74a" small = "GFX_TU_ak_926cd4e74a_small" }
+			army = { large = "GFX_TU_ak_926cd4e74a" small = "GFX_TU_ak_926cd4e74a_small" }
+		}
 		advisor = {
 			slot = high_command
 			idea_token = TU_HIG_akafuyu_adv

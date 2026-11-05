@@ -86,6 +86,56 @@ def patch_existing_leaders():
     return found
 
 
+def apply_cast_portraits():
+    """사양서 39: tools/portraits/cast_portraits.json 의 캐릭터에 명일방주 일러스트 초상화를 건다 (모든 캐릭터 파일).
+    portraits 블록을 바꾸거나 name 줄 뒤에 넣는다. 반환: 바꾼 캐릭터 수."""
+    sys.path.insert(0, str(REPO / "tools" / "portraits"))
+    from build_cast_portraits import sprite  # noqa: E402
+    cast = json.loads((REPO / "tools" / "portraits" / "cast_portraits.json").read_text(encoding="utf-8"))["cast"]
+    done = set()
+    for f in (MOD / "common" / "characters").glob("*.txt"):
+        s = f.read_text(encoding="utf-8-sig")
+        orig = s
+        for cid_, art in cast.items():
+            m = re.search(r"\n\t%s = \{\n\t\tname = \S+\n" % re.escape(cid_), s)
+            if not m:
+                continue
+            g = sprite(art)
+            block = ('\t\tportraits = {\n\t\t\tcivilian = { large = "%s" small = "%s_small" }\n'
+                     '\t\t\tarmy = { large = "%s" small = "%s_small" }\n\t\t}\n' % (g, g, g, g))
+            # 이 캐릭터 블록의 끝
+            j, d = s.index("{", m.start()), 0
+            k = j
+            while True:
+                d += {"{": 1, "}": -1}.get(s[k], 0)
+                if d == 0:
+                    break
+                k += 1
+            body = s[m.end():k]
+            pm = re.search(r"\t\tportraits\s*=\s*\{", body)
+            if pm:
+                a = m.end() + pm.start()
+                b, d = s.index("{", a), 0
+                e = b
+                while True:
+                    d += {"{": 1, "}": -1}.get(s[e], 0)
+                    if d == 0:
+                        break
+                    e += 1
+                e += 1
+                if s[e:e + 1] == "\n":
+                    e += 1
+                s = s[:a] + block + s[e:]
+            else:
+                s = s[:m.end()] + block + s[m.end():]
+            done.add(cid_)
+        if s != orig:
+            f.write_text(s, encoding="utf-8")
+    missing = sorted(set(cast) - done)
+    assert not missing, "portraits: character not found %s" % missing
+    return len(done)
+
+
 def main():
     ko, en = [], []
     cj_path = REPO / "tools" / "mapgen" / "terra" / "countries.json"
@@ -149,6 +199,7 @@ def main():
     lt.append("}")
     (cl / "tu_leader_traits.txt").write_text("\n".join(lt) + "\n", encoding="utf-8")
     patched = patch_existing_leaders()
+    nport = apply_cast_portraits()
 
     for lang, items in (("korean", ko), ("english", en)):
         body = "l_%s:\n" % lang + "".join(' %s:0 "%s"\n' % (k, v.replace('"', '\\"')) for k, v in items)
@@ -158,8 +209,8 @@ def main():
         assert s.count("{") == s.count("}"), p
     missing = [c for c in ASSIGN if c not in patched]
     assert not missing, "leader traits: character not found %s" % missing
-    print("CAST countries=%d characters=%d advisor traits=%d leader traits=%d (assigned %d)"
-          % (len(COUNTRIES), nchar, len(TRAITS), len(LEADER_TRAITS), len(ASSIGN)))
+    print("CAST countries=%d characters=%d advisor traits=%d leader traits=%d (assigned %d) portraits=%d"
+          % (len(COUNTRIES), nchar, len(TRAITS), len(LEADER_TRAITS), len(ASSIGN), nport))
     return 0
 
 

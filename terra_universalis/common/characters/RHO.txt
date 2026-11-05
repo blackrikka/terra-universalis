@@ -1,7 +1,10 @@
 characters = {
 	TU_RHO_amiya = {
 		name = TU_RHO_amiya
-		portraits = { civilian = { large = "GFX_TU_portrait_amiya" } }
+		portraits = {
+			civilian = { large = "GFX_TU_ak_60822e6f59" small = "GFX_TU_ak_60822e6f59_small" }
+			army = { large = "GFX_TU_ak_60822e6f59" small = "GFX_TU_ak_60822e6f59_small" }
+		}
 		country_leader = { traits = { tu_lt_rhodes_leader tu_lt_infected_champion } ideology = moderatism expire = "1200.1.1.1" id = -1 }
 	}
 	TU_RHO_doctor = {

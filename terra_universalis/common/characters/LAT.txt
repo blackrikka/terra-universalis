@@ -53,6 +53,10 @@ characters = {
 
 	TU_LAT_exusiai = {
 		name = TU_LAT_exusiai
+		portraits = {
+			civilian = { large = "GFX_TU_ak_fa0365520a" small = "GFX_TU_ak_fa0365520a_small" }
+			army = { large = "GFX_TU_ak_fa0365520a" small = "GFX_TU_ak_fa0365520a_small" }
+		}
 		corps_commander = {
 			traits = { }
 			skill = 3
@@ -66,6 +70,10 @@ characters = {
 
 	TU_LAT_fiammetta = {
 		name = TU_LAT_fiammetta
+		portraits = {
+			civilian = { large = "GFX_TU_ak_ebee68684b" small = "GFX_TU_ak_ebee68684b_small" }
+			army = { large = "GFX_TU_ak_ebee68684b" small = "GFX_TU_ak_ebee68684b_small" }
+		}
 		advisor = {
 			slot = high_command
 			idea_token = TU_LAT_fiammetta_adv
@@ -92,6 +100,10 @@ characters = {
 
 	TU_LAT_lemuen = {
 		name = TU_LAT_lemuen
+		portraits = {
+			civilian = { large = "GFX_TU_ak_9a979d51cd" small = "GFX_TU_ak_9a979d51cd_small" }
+			army = { large = "GFX_TU_ak_9a979d51cd" small = "GFX_TU_ak_9a979d51cd_small" }
+		}
 		corps_commander = {
 			traits = { }
 			skill = 4

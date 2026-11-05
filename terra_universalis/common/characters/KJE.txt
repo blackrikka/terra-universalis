@@ -12,6 +12,10 @@ characters = {
 
 	TU_KJE_silverash = {
 		name = TU_KJE_silverash
+		portraits = {
+			civilian = { large = "GFX_TU_ak_2763df0fe4" small = "GFX_TU_ak_2763df0fe4_small" }
+			army = { large = "GFX_TU_ak_2763df0fe4" small = "GFX_TU_ak_2763df0fe4_small" }
+		}
 		country_leader = { traits = { tu_lt_karlan_magnate tu_lt_reformer }
 			ideology = centrism
 			expire = "1200.1.1.1"
@@ -33,6 +37,10 @@ characters = {
 
 	TU_KJE_pramanix = {
 		name = TU_KJE_pramanix
+		portraits = {
+			civilian = { large = "GFX_TU_ak_2816facb4a" small = "GFX_TU_ak_2816facb4a_small" }
+			army = { large = "GFX_TU_ak_2816facb4a" small = "GFX_TU_ak_2816facb4a_small" }
+		}
 		country_leader = { traits = { tu_lt_saintess }
 			ideology = despotism
 			expire = "1200.1.1.1"
@@ -51,6 +59,10 @@ characters = {
 
 	TU_KJE_cliffheart = {
 		name = TU_KJE_cliffheart
+		portraits = {
+			civilian = { large = "GFX_TU_ak_0d5159bf4c" small = "GFX_TU_ak_0d5159bf4c_small" }
+			army = { large = "GFX_TU_ak_0d5159bf4c" small = "GFX_TU_ak_0d5159bf4c_small" }
+		}
 		corps_commander = {
 			traits = { }
 			skill = 3
@@ -64,6 +76,10 @@ characters = {
 
 	TU_KJE_courier = {
 		name = TU_KJE_courier
+		portraits = {
+			civilian = { large = "GFX_TU_ak_5915e7f30d" small = "GFX_TU_ak_5915e7f30d_small" }
+			army = { large = "GFX_TU_ak_5915e7f30d" small = "GFX_TU_ak_5915e7f30d_small" }
+		}
 		advisor = {
 			slot = high_command
 			idea_token = TU_KJE_courier_adv

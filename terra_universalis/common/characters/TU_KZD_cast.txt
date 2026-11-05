@@ -22,8 +22,8 @@ characters = {
 	TU_KZD_w_leader = {
 		name = TU_KZD_w_leader
 		portraits = {
-			civilian = { large = "GFX_TU_portrait_w" }
-			army = { large = "GFX_TU_portrait_w" }
+			civilian = { large = "GFX_TU_ak_44416c0197" small = "GFX_TU_ak_44416c0197_small" }
+			army = { large = "GFX_TU_ak_44416c0197" small = "GFX_TU_ak_44416c0197_small" }
 		}
 		country_leader = { traits = { tu_lt_mercenary_king }
 			ideology = despotism
@@ -67,6 +67,10 @@ characters = {
 
 	TU_KZD_mudrock = {
 		name = TU_KZD_mudrock
+		portraits = {
+			civilian = { large = "GFX_TU_ak_5f08a5c626" small = "GFX_TU_ak_5f08a5c626_small" }
+			army = { large = "GFX_TU_ak_5f08a5c626" small = "GFX_TU_ak_5f08a5c626_small" }
+		}
 		corps_commander = {
 			traits = { }
 			skill = 4

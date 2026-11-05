@@ -3,9 +3,8 @@ characters = {
 	TU_REU_talulah = {
 		name = TU_REU_talulah
 		portraits = {
-			civilian = {
-				large = "GFX_TU_portrait_talulah"
-			}
+			civilian = { large = "GFX_TU_ak_b67b4c592f" small = "GFX_TU_ak_b67b4c592f_small" }
+			army = { large = "GFX_TU_ak_b67b4c592f" small = "GFX_TU_ak_b67b4c592f_small" }
 		}
 		country_leader = { traits = { tu_lt_dragon_flame tu_lt_infected_champion }
 			ideology = despotism

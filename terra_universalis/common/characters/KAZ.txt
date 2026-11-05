@@ -30,6 +30,10 @@ characters = {
 
 	TU_KAZ_margaret = {
 		name = TU_KAZ_margaret
+		portraits = {
+			civilian = { large = "GFX_TU_ak_5eedf8af31" small = "GFX_TU_ak_5eedf8af31_small" }
+			army = { large = "GFX_TU_ak_5eedf8af31" small = "GFX_TU_ak_5eedf8af31_small" }
+		}
 		country_leader = { traits = { tu_lt_radiant_knight tu_lt_infected_champion }
 			ideology = moderatism
 			expire = "1200.1.1.1"
@@ -90,6 +94,10 @@ characters = {
 
 	TU_KAZ_fartooth = {
 		name = TU_KAZ_fartooth
+		portraits = {
+			civilian = { large = "GFX_TU_ak_e392b313bb" small = "GFX_TU_ak_e392b313bb_small" }
+			army = { large = "GFX_TU_ak_e392b313bb" small = "GFX_TU_ak_e392b313bb_small" }
+		}
 		corps_commander = {
 			traits = { }
 			skill = 3
@@ -103,6 +111,10 @@ characters = {
 
 	TU_KAZ_ashlock = {
 		name = TU_KAZ_ashlock
+		portraits = {
+			civilian = { large = "GFX_TU_ak_c0bffc8b49" small = "GFX_TU_ak_c0bffc8b49_small" }
+			army = { large = "GFX_TU_ak_c0bffc8b49" small = "GFX_TU_ak_c0bffc8b49_small" }
+		}
 		corps_commander = {
 			traits = { }
 			skill = 3

@@ -674,7 +674,7 @@ def main(argv=None):
 
     # 17. 국가 지도자 (수정1 C): GFX 정의, 캐릭터 파일, recruit_character, 로컬라이제이션
     gfx_defined = set()
-    for g in glob.glob(str(vanilla / "interface" / "*.gfx")):
+    for g in glob.glob(str(vanilla / "interface" / "*.gfx")) + glob.glob(str(mod / "interface" / "*.gfx")):   # 모드 초상화 (사양서 39)
         text = Path(g).read_bytes().decode("utf-8-sig", errors="replace")
         gfx_defined.update(x.lower() for x in re.findall(r'name\s*=\s*"([^"]+)"', text))
     loc_text = {}
@@ -699,7 +699,7 @@ def main(argv=None):
                 if not large:
                     chk.err("17", "%s: civilian large 초상화 GFX 없음" % tag)
                 elif large.lower() not in gfx_defined:
-                    chk.err("17", "%s: 초상화 GFX %s가 바닐라 interface/*.gfx에 정의되지 않음" % (tag, large))
+                    chk.err("17", "%s: 초상화 GFX %s가 바닐라·모드 interface/*.gfx에 정의되지 않음" % (tag, large))
         hist_files = glob.glob(str(mod / "history" / "countries" / ("%s - *.txt" % tag)))
         recruits = []
         for hf in hist_files:

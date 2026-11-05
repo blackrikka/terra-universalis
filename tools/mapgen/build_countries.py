@@ -511,6 +511,10 @@ def main(argv=None):
             "}",
         ]
         write_ascii(mod / "common" / "characters" / ("%s.txt" % t), "\n".join(leader) + "\n")
+    # 명일방주 일러스트 초상화 (사양서 39): 방금 쓴 기본 지도자(YCH_leader 등)에도 다시 건다
+    sys.path.insert(0, str(PROJECT_DIR / "tools" / "chargen"))
+    from build_characters import apply_cast_portraits  # noqa: E402
+    apply_cast_portraits()
 
     # history/countries: 기본 줄 + (custom_characters가 아니면 지도자) + tools/mapgen/country_history/<TAG>.txt 내용 그대로
     for c in countries:

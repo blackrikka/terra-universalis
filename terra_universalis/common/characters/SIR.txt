@@ -21,6 +21,10 @@ characters = {
 
 	TU_SIR_penance = {
 		name = TU_SIR_penance
+		portraits = {
+			civilian = { large = "GFX_TU_ak_0007a4b8d2" small = "GFX_TU_ak_0007a4b8d2_small" }
+			army = { large = "GFX_TU_ak_0007a4b8d2" small = "GFX_TU_ak_0007a4b8d2_small" }
+		}
 		country_leader = { traits = { tu_lt_judge }
 			ideology = moderatism
 			expire = "1200.1.1.1"
@@ -51,6 +55,10 @@ characters = {
 
 	TU_SIR_texas = {
 		name = TU_SIR_texas
+		portraits = {
+			civilian = { large = "GFX_TU_ak_87f843c2ac" small = "GFX_TU_ak_87f843c2ac_small" }
+			army = { large = "GFX_TU_ak_87f843c2ac" small = "GFX_TU_ak_87f843c2ac_small" }
+		}
 		advisor = {
 			slot = high_command
 			idea_token = TU_SIR_texas_adv
@@ -77,6 +85,10 @@ characters = {
 
 	TU_SIR_lappland = {
 		name = TU_SIR_lappland
+		portraits = {
+			civilian = { large = "GFX_TU_ak_d4468972aa" small = "GFX_TU_ak_d4468972aa_small" }
+			army = { large = "GFX_TU_ak_d4468972aa" small = "GFX_TU_ak_d4468972aa_small" }
+		}
 		corps_commander = {
 			traits = { }
 			skill = 3

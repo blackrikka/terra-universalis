@@ -63,6 +63,10 @@ characters = {
 
 	TU_LEI_viviana = {
 		name = TU_LEI_viviana
+		portraits = {
+			civilian = { large = "GFX_TU_ak_137dd1e495" small = "GFX_TU_ak_137dd1e495_small" }
+			army = { large = "GFX_TU_ak_137dd1e495" small = "GFX_TU_ak_137dd1e495_small" }
+		}
 		advisor = {
 			slot = high_command
 			idea_token = TU_LEI_viviana_adv

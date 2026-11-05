@@ -3,9 +3,8 @@ characters = {
 	TU_YAN_wang = {
 		name = TU_YAN_wang
 		portraits = {
-			civilian = {
-				large = "GFX_Portrait_Europe_Generic_1"
-			}
+			civilian = { large = "GFX_TU_ak_1ca4c9cf28" small = "GFX_TU_ak_1ca4c9cf28_small" }
+			army = { large = "GFX_TU_ak_1ca4c9cf28" small = "GFX_TU_ak_1ca4c9cf28_small" }
 		}
 		country_leader = { traits = { tu_lt_sui_sibling }
 			ideology = tu_sui_rule
@@ -17,9 +16,8 @@ characters = {
 	TU_YAN_shu = {
 		name = TU_YAN_shu
 		portraits = {
-			civilian = {
-				large = "GFX_Portrait_Europe_Generic_4"
-			}
+			civilian = { large = "GFX_TU_ak_feac420cfe" small = "GFX_TU_ak_feac420cfe_small" }
+			army = { large = "GFX_TU_ak_feac420cfe" small = "GFX_TU_ak_feac420cfe_small" }
 		}
 		country_leader = { traits = { tu_lt_sui_sibling }
 			ideology = tu_sui_rule
@@ -101,9 +99,8 @@ characters = {
 	TU_YAN_yu = {
 		name = TU_YAN_yu
 		portraits = {
-			civilian = {
-				large = "GFX_Portrait_Europe_Generic_4"
-			}
+			civilian = { large = "GFX_TU_ak_6ef9a33e10" small = "GFX_TU_ak_6ef9a33e10_small" }
+			army = { large = "GFX_TU_ak_6ef9a33e10" small = "GFX_TU_ak_6ef9a33e10_small" }
 		}
 		country_leader = { traits = { tu_lt_sui_sibling }
 			ideology = tu_sui_rule
