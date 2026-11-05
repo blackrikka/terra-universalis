@@ -2311,7 +2311,7 @@ focus_tree = {
 	focus = {
 		id = TU_URS_foreign_policy_root
 		icon = GFX_goal_generic_improve_relations
-		x = 13
+		x = 10
 		y = 35
 		cost = 5
 
@@ -2331,7 +2331,7 @@ focus_tree = {
 		id = TU_URS_foreign_ministry
 		prerequisite = { focus = TU_URS_foreign_policy_root }
 		icon = GFX_goal_generic_positive_trade_relations
-		x = 13
+		x = 10
 		y = 36
 		cost = 10
 
@@ -6298,13 +6298,215 @@ focus_tree = {
 		}
 	}
 
+	#### URS hidden route (tools/focusgen/hidden_routes.py, spec 30) ####
+
+	focus = {
+		id = TU_URS_serpent_whispers
+		icon = GFX_goal_generic_secret_weapon
+		x = 31
+		y = 25
+		cost = 5
+
+		search_filters = { FOCUS_FILTER_POLITICAL }
+
+		allow_branch = {
+			has_country_flag = TU_URS_serpent_route
+		}
+
+		available = {
+			has_country_flag = TU_URS_serpent_route
+		}
+
+		ai_will_do = {
+			base = 1
+		}
+
+		completion_reward = {
+			add_political_power = 75
+		}
+	}
+
+	focus = {
+		id = TU_URS_serpent_purge
+		prerequisite = { focus = TU_URS_serpent_whispers }
+		icon = GFX_goal_generic_secret_weapon
+		x = 29
+		y = 26
+		cost = 10
+
+		search_filters = { FOCUS_FILTER_POLITICAL }
+
+		allow_branch = {
+			has_country_flag = TU_URS_serpent_route
+		}
+
+		ai_will_do = {
+			base = 1
+		}
+
+		completion_reward = {
+			add_stability = 0.05
+			add_political_power = 50
+		}
+	}
+
+	focus = {
+		id = TU_URS_serpent_guard
+		prerequisite = { focus = TU_URS_serpent_whispers }
+		icon = GFX_goal_generic_secret_weapon
+		x = 31
+		y = 26
+		cost = 10
+
+		search_filters = { FOCUS_FILTER_POLITICAL }
+
+		allow_branch = {
+			has_country_flag = TU_URS_serpent_route
+		}
+
+		ai_will_do = {
+			base = 1
+		}
+
+		completion_reward = {
+			army_experience = 40
+			add_manpower = 20000
+		}
+	}
+
+	focus = {
+		id = TU_URS_serpent_infected_army
+		prerequisite = { focus = TU_URS_serpent_guard }
+		icon = GFX_goal_generic_secret_weapon
+		x = 31
+		y = 27
+		cost = 10
+
+		search_filters = { FOCUS_FILTER_POLITICAL }
+
+		allow_branch = {
+			has_country_flag = TU_URS_serpent_route
+		}
+
+		ai_will_do = {
+			base = 1
+		}
+
+		completion_reward = {
+			add_manpower = 50000
+			add_stability = -0.05
+		}
+	}
+
+	focus = {
+		id = TU_URS_serpent_arts
+		prerequisite = { focus = TU_URS_serpent_purge }
+		icon = GFX_goal_generic_secret_weapon
+		x = 29
+		y = 27
+		cost = 10
+
+		search_filters = { FOCUS_FILTER_POLITICAL }
+
+		allow_branch = {
+			has_country_flag = TU_URS_serpent_route
+		}
+
+		ai_will_do = {
+			base = 1
+		}
+
+		completion_reward = {
+			add_tech_bonus = { name = TU_URS_serpent_arts bonus = 1.0 uses = 2 category = tu_originium_tech category = infantry_weapons }
+		}
+	}
+
+	focus = {
+		id = TU_URS_serpent_war_machine
+		prerequisite = { focus = TU_URS_serpent_infected_army }
+		prerequisite = { focus = TU_URS_serpent_arts }
+		icon = GFX_goal_generic_secret_weapon
+		x = 31
+		y = 28
+		cost = 10
+
+		search_filters = { FOCUS_FILTER_POLITICAL }
+
+		allow_branch = {
+			has_country_flag = TU_URS_serpent_route
+		}
+
+		ai_will_do = {
+			base = 1
+		}
+
+		completion_reward = {
+			TU_build_mil_factory = yes
+			TU_build_mil_factory = yes
+			TU_build_mil_factory = yes
+		}
+	}
+
+	focus = {
+		id = TU_URS_serpent_crush
+		prerequisite = { focus = TU_URS_serpent_war_machine }
+		icon = GFX_goal_generic_secret_weapon
+		x = 31
+		y = 29
+		cost = 10
+
+		search_filters = { FOCUS_FILTER_POLITICAL }
+
+		allow_branch = {
+			has_country_flag = TU_URS_serpent_route
+		}
+
+		ai_will_do = {
+			base = 1
+		}
+
+		completion_reward = {
+			if = {
+				limit = { country_exists = REU }
+				create_wargoal = { type = annex_everything target = REU }
+			}
+			army_experience = 50
+		}
+	}
+
+	focus = {
+		id = TU_URS_serpent_finale
+		prerequisite = { focus = TU_URS_serpent_crush }
+		icon = GFX_goal_generic_secret_weapon
+		x = 31
+		y = 30
+		cost = 20
+
+		search_filters = { FOCUS_FILTER_POLITICAL }
+
+		allow_branch = {
+			has_country_flag = TU_URS_serpent_route
+		}
+
+		ai_will_do = {
+			base = 1
+		}
+
+		completion_reward = {
+			swap_ideas = { remove_idea = TU_URS_serpent_shadow add_idea = TU_URS_serpent_empire }
+			add_political_power = 200
+			# spec 23 hooks
+			set_cosmetic_tag = TU_URS_SERPENT
+		}
+	}
+
 	#### WEST: KAZDEL (KZD) - diplomacy x132 / border x134 / war x136 ####
 
 	focus = {
 		id = TU_URS_w1_kzd_border_buildup
 		prerequisite = { focus = TU_URS_foreign_ministry }
 		icon = GFX_goal_generic_construct_military
-		x = -21
+		x = -24
 		y = 37
 		cost = 10
 
@@ -6329,7 +6531,7 @@ focus_tree = {
 		id = TU_URS_w1_kzd_mobilization
 		prerequisite = { focus = TU_URS_foreign_ministry }
 		icon = GFX_goal_generic_army_motorized
-		x = -19
+		x = -22
 		y = 37
 		cost = 10
 
@@ -6354,7 +6556,7 @@ focus_tree = {
 		id = TU_URS_w1_kzd_war_doctrine
 		prerequisite = { focus = TU_URS_w1_kzd_mobilization }
 		icon = GFX_goal_generic_army_artillery
-		x = -19
+		x = -22
 		y = 38
 		cost = 10
 
@@ -6375,7 +6577,7 @@ focus_tree = {
 		id = TU_URS_w1_kzd_imperial_levy
 		prerequisite = { focus = TU_URS_w1_kzd_border_buildup }
 		icon = GFX_goal_generic_allies_build_infantry
-		x = -21
+		x = -24
 		y = 38
 		cost = 10
 
@@ -6401,7 +6603,7 @@ focus_tree = {
 		id = TU_URS_w1_kzd_occupation
 		prerequisite = { focus = TU_URS_w1_kzd_war_doctrine }
 		icon = GFX_goal_generic_occupy_states_ongoing_war
-		x = -19
+		x = -22
 		y = 39
 		cost = 10
 
@@ -6427,7 +6629,7 @@ focus_tree = {
 		id = TU_URS_w1_kzd_core_integration
 		prerequisite = { focus = TU_URS_w1_kzd_occupation }
 		icon = GFX_goal_generic_construction
-		x = -19
+		x = -22
 		y = 40
 		cost = 10
 
@@ -6459,7 +6661,7 @@ focus_tree = {
 		id = TU_URS_w1_vic_border_buildup
 		prerequisite = { focus = TU_URS_foreign_ministry }
 		icon = GFX_goal_generic_construct_military
-		x = -17
+		x = -20
 		y = 37
 		cost = 10
 
@@ -6483,7 +6685,7 @@ focus_tree = {
 		id = TU_URS_w1_vic_mobilization
 		prerequisite = { focus = TU_URS_foreign_ministry }
 		icon = GFX_goal_generic_army_motorized
-		x = -15
+		x = -18
 		y = 37
 		cost = 10
 
@@ -6508,7 +6710,7 @@ focus_tree = {
 		id = TU_URS_w1_vic_war_doctrine
 		prerequisite = { focus = TU_URS_w1_vic_mobilization }
 		icon = GFX_goal_generic_army_tanks
-		x = -15
+		x = -18
 		y = 38
 		cost = 10
 
@@ -6529,7 +6731,7 @@ focus_tree = {
 		id = TU_URS_w1_vic_junta_intervention
 		prerequisite = { focus = TU_URS_w1_vic_border_buildup }
 		icon = GFX_goal_generic_political_pressure
-		x = -17
+		x = -20
 		y = 38
 		cost = 10
 
@@ -6554,7 +6756,7 @@ focus_tree = {
 		id = TU_URS_w1_vic_occupation
 		prerequisite = { focus = TU_URS_w1_vic_war_doctrine }
 		icon = GFX_goal_generic_occupy_states_ongoing_war
-		x = -15
+		x = -18
 		y = 39
 		cost = 10
 
@@ -6580,7 +6782,7 @@ focus_tree = {
 		id = TU_URS_w1_vic_core_integration
 		prerequisite = { focus = TU_URS_w1_vic_occupation }
 		icon = GFX_goal_generic_construction
-		x = -15
+		x = -18
 		y = 40
 		cost = 10
 
@@ -6612,7 +6814,7 @@ focus_tree = {
 		id = TU_URS_w1_lei_border_buildup
 		prerequisite = { focus = TU_URS_foreign_ministry }
 		icon = GFX_goal_generic_defence
-		x = -13
+		x = -16
 		y = 37
 		cost = 10
 
@@ -6636,7 +6838,7 @@ focus_tree = {
 		id = TU_URS_w1_lei_mobilization
 		prerequisite = { focus = TU_URS_foreign_ministry }
 		icon = GFX_goal_generic_army_motorized
-		x = -11
+		x = -14
 		y = 37
 		cost = 10
 
@@ -6661,7 +6863,7 @@ focus_tree = {
 		id = TU_URS_w1_lei_war_doctrine
 		prerequisite = { focus = TU_URS_w1_lei_mobilization }
 		icon = GFX_goal_generic_army_artillery
-		x = -11
+		x = -14
 		y = 38
 		cost = 10
 
@@ -6682,7 +6884,7 @@ focus_tree = {
 		id = TU_URS_w1_lei_occupation
 		prerequisite = { focus = TU_URS_w1_lei_war_doctrine }
 		icon = GFX_goal_generic_occupy_states_ongoing_war
-		x = -11
+		x = -14
 		y = 39
 		cost = 10
 
@@ -6708,7 +6910,7 @@ focus_tree = {
 		id = TU_URS_w1_lei_core_integration
 		prerequisite = { focus = TU_URS_w1_lei_occupation }
 		icon = GFX_goal_generic_construction
-		x = -11
+		x = -14
 		y = 40
 		cost = 10
 
@@ -6740,7 +6942,7 @@ focus_tree = {
 		id = TU_URS_w2_yan_border_buildup
 		prerequisite = { focus = TU_URS_foreign_ministry }
 		icon = GFX_goal_generic_defence
-		x = -9
+		x = -12
 		y = 37
 		cost = 10
 
@@ -6764,7 +6966,7 @@ focus_tree = {
 		id = TU_URS_w2_yan_mobilization
 		prerequisite = { focus = TU_URS_foreign_ministry }
 		icon = GFX_goal_generic_army_motorized
-		x = -7
+		x = -10
 		y = 37
 		cost = 10
 
@@ -6789,7 +6991,7 @@ focus_tree = {
 		id = TU_URS_w2_yan_war_doctrine
 		prerequisite = { focus = TU_URS_w2_yan_mobilization }
 		icon = GFX_goal_generic_army_tanks
-		x = -7
+		x = -10
 		y = 38
 		cost = 10
 
@@ -6809,7 +7011,7 @@ focus_tree = {
 		id = TU_URS_w2_yan_awakening
 		prerequisite = { focus = TU_URS_w2_yan_border_buildup }
 		icon = GFX_goal_generic_national_unity
-		x = -9
+		x = -12
 		y = 38
 		cost = 10
 
@@ -6835,7 +7037,7 @@ focus_tree = {
 		id = TU_URS_w2_yan_occupation
 		prerequisite = { focus = TU_URS_w2_yan_war_doctrine }
 		icon = GFX_goal_generic_occupy_states_ongoing_war
-		x = -7
+		x = -10
 		y = 39
 		cost = 10
 
@@ -6861,7 +7063,7 @@ focus_tree = {
 		id = TU_URS_w2_yan_core_integration
 		prerequisite = { focus = TU_URS_w2_yan_occupation }
 		icon = GFX_goal_generic_construction
-		x = -7
+		x = -10
 		y = 40
 		cost = 10
 
@@ -6892,7 +7094,7 @@ focus_tree = {
 		id = TU_URS_w2_lgm_reunion_pressure
 		prerequisite = { focus = TU_URS_foreign_ministry }
 		icon = GFX_goal_generic_demand_territory
-		x = -5
+		x = -8
 		y = 37
 		cost = 10
 
@@ -6918,7 +7120,7 @@ focus_tree = {
 		id = TU_URS_w2_lgm_mobilization
 		prerequisite = { focus = TU_URS_foreign_ministry }
 		icon = GFX_goal_generic_army_motorized
-		x = -3
+		x = -6
 		y = 37
 		cost = 10
 
@@ -6943,7 +7145,7 @@ focus_tree = {
 		id = TU_URS_w2_lgm_war_doctrine
 		prerequisite = { focus = TU_URS_w2_lgm_mobilization }
 		icon = GFX_goal_generic_army_artillery
-		x = -3
+		x = -6
 		y = 38
 		cost = 10
 
@@ -6963,7 +7165,7 @@ focus_tree = {
 		id = TU_URS_w2_lgm_noble_gate
 		prerequisite = { focus = TU_URS_w2_lgm_reunion_pressure }
 		icon = GFX_goal_generic_consumer_goods
-		x = -5
+		x = -8
 		y = 38
 		cost = 10
 
@@ -6993,7 +7195,7 @@ focus_tree = {
 		id = TU_URS_w2_lgm_core_integration
 		prerequisite = { focus = TU_URS_w2_lgm_war_doctrine }
 		icon = GFX_goal_generic_construction
-		x = -3
+		x = -6
 		y = 39
 		cost = 10
 
@@ -7028,7 +7230,7 @@ focus_tree = {
 		id = TU_URS_w2_hig_core_integration
 		prerequisite = { focus = TU_URS_foreign_ministry }
 		icon = GFX_goal_generic_construction
-		x = -1
+		x = -4
 		y = 37
 		cost = 10
 
@@ -7065,7 +7267,7 @@ focus_tree = {
 		id = TU_URS_w3_kaz_entry
 		prerequisite = { focus = TU_URS_foreign_ministry }
 		icon = GFX_goal_generic_improve_relations
-		x = 3
+		x = 0
 		y = 37
 		cost = 5
 
@@ -7085,7 +7287,7 @@ focus_tree = {
 		id = TU_URS_w3_kaz_offensive
 		prerequisite = { focus = TU_URS_w3_kaz_entry }
 		icon = GFX_goal_generic_occupy_start_war
-		x = 3
+		x = 0
 		y = 38
 		cost = 10
 
@@ -7110,7 +7312,7 @@ focus_tree = {
 		id = TU_URS_w3_kaz_annex
 		prerequisite = { focus = TU_URS_w3_kaz_offensive }
 		icon = GFX_goal_generic_forceful_treaty
-		x = 3
+		x = 0
 		y = 39
 		cost = 10
 
@@ -7131,7 +7333,7 @@ focus_tree = {
 		prerequisite = { focus = TU_URS_w3_kaz_entry }
 		mutually_exclusive = { focus = TU_URS_w3_kaz_protectorate_alt }
 		icon = GFX_goal_generic_major_alliance
-		x = -1
+		x = -4
 		y = 38
 		cost = 15
 
@@ -7157,7 +7359,7 @@ focus_tree = {
 		prerequisite = { focus = TU_URS_w3_kaz_entry }
 		mutually_exclusive = { focus = TU_URS_w3_kaz_protectorate }
 		icon = GFX_goal_generic_military_sphere
-		x = 1
+		x = -2
 		y = 38
 		cost = 15
 
@@ -7181,7 +7383,7 @@ focus_tree = {
 		id = TU_URS_w3_kaz_occupation
 		prerequisite = { focus = TU_URS_w3_kaz_annex }
 		icon = GFX_goal_generic_occupy_states_ongoing_war
-		x = 3
+		x = 0
 		y = 40
 		cost = 15
 
@@ -7205,7 +7407,7 @@ focus_tree = {
 		id = TU_URS_w3_kje_entry
 		prerequisite = { focus = TU_URS_foreign_ministry }
 		icon = GFX_goal_generic_improve_relations
-		x = 6
+		x = 3
 		y = 37
 		cost = 5
 
@@ -7225,7 +7427,7 @@ focus_tree = {
 		id = TU_URS_w3_kje_trade
 		prerequisite = { focus = TU_URS_w3_kje_entry }
 		icon = GFX_goal_generic_positive_trade_relations
-		x = 5
+		x = 2
 		y = 38
 		cost = 10
 
@@ -7254,7 +7456,7 @@ focus_tree = {
 			has_completed_focus = TU_URS_military_junta
 			has_country_flag = TU_DEC_TU_URS_w3_kje_wargoal
 		}
-		x = 7
+		x = 4
 		y = 38
 		cost = 10
 
@@ -7274,7 +7476,7 @@ focus_tree = {
 		id = TU_URS_w3_kje_union
 		prerequisite = { focus = TU_URS_w3_kje_trade }
 		icon = GFX_goal_generic_alliance
-		x = 5
+		x = 2
 		y = 39
 		cost = 15
 
@@ -7307,7 +7509,7 @@ focus_tree = {
 		id = TU_URS_w3_kje_occupation
 		prerequisite = { focus = TU_URS_w3_kje_offensive }
 		icon = GFX_goal_generic_fortify_city
-		x = 7
+		x = 4
 		y = 39
 		cost = 15
 
@@ -7329,7 +7531,7 @@ focus_tree = {
 		id = TU_URS_w3_sami_entry
 		prerequisite = { focus = TU_URS_foreign_ministry }
 		icon = GFX_goal_generic_improve_relations
-		x = 10
+		x = 7
 		y = 37
 		cost = 5
 
@@ -7349,7 +7551,7 @@ focus_tree = {
 		id = TU_URS_w3_sami_ski
 		prerequisite = { focus = TU_URS_w3_sami_entry }
 		icon = GFX_goal_generic_allies_build_infantry
-		x = 9
+		x = 6
 		y = 38
 		cost = 10
 
@@ -7374,7 +7576,7 @@ focus_tree = {
 		id = TU_URS_w3_sami_control
 		prerequisite = { focus = TU_URS_w3_sami_entry }
 		icon = GFX_goal_generic_occupy_states_ongoing_war
-		x = 11
+		x = 8
 		y = 38
 		cost = 10
 
@@ -7398,7 +7600,7 @@ focus_tree = {
 		id = TU_URS_w3_sami_administration
 		prerequisite = { focus = TU_URS_w3_sami_control }
 		icon = GFX_goal_generic_political_pressure
-		x = 11
+		x = 8
 		y = 39
 		cost = 15
 
@@ -7421,7 +7623,7 @@ focus_tree = {
 		id = TU_URS_w3_infi_entry
 		prerequisite = { focus = TU_URS_foreign_ministry }
 		icon = GFX_goal_generic_scientific_exchange
-		x = 13
+		x = 10
 		y = 37
 		cost = 5
 
@@ -7440,7 +7642,7 @@ focus_tree = {
 		id = TU_URS_w3_infi_survey
 		prerequisite = { focus = TU_URS_w3_infi_entry }
 		icon = GFX_goal_generic_radar
-		x = 13
+		x = 10
 		y = 38
 		cost = 10
 
@@ -7463,7 +7665,7 @@ focus_tree = {
 		id = TU_URS_w3_infi_cold_lab
 		prerequisite = { focus = TU_URS_w3_infi_survey }
 		icon = GFX_goal_generic_secret_weapon
-		x = 13
+		x = 10
 		y = 39
 		cost = 10
 
@@ -7484,7 +7686,7 @@ focus_tree = {
 		prerequisite = { focus = TU_URS_w3_infi_cold_lab }
 		icon = GFX_goal_generic_small_arms
 		available = { has_completed_focus = TU_URS_reform_path }
-		x = 13
+		x = 10
 		y = 40
 		cost = 10
 
@@ -7505,7 +7707,7 @@ focus_tree = {
 		id = TU_URS_w3_infi_pipeline
 		prerequisite = { focus = TU_URS_w3_infi_entry }
 		icon = GFX_goal_generic_construct_infrastructure
-		x = 15
+		x = 12
 		y = 38
 		cost = 10
 
@@ -7530,7 +7732,7 @@ focus_tree = {
 		id = TU_URS_w3_infi_polar_theory
 		prerequisite = { focus = TU_URS_w3_infi_frost_gear }
 		icon = GFX_goal_generic_construction2
-		x = 13
+		x = 10
 		y = 41
 		cost = 10
 
@@ -7550,7 +7752,7 @@ focus_tree = {
 		id = TU_URS_w3_infi_arctic_expedition
 		prerequisite = { focus = TU_URS_w3_infi_polar_theory }
 		icon = GFX_goal_generic_special_forces
-		x = 13
+		x = 10
 		y = 42
 		cost = 10
 
@@ -7571,7 +7773,7 @@ focus_tree = {
 		id = TU_URS_w3_infi_survey_station
 		prerequisite = { focus = TU_URS_w3_infi_arctic_expedition }
 		icon = GFX_goal_generic_construction
-		x = 13
+		x = 10
 		y = 43
 		cost = 10
 
@@ -7590,7 +7792,7 @@ focus_tree = {
 		id = TU_URS_w3_infi_ice_wall
 		prerequisite = { focus = TU_URS_w3_infi_survey_station }
 		icon = GFX_goal_generic_defence
-		x = 13
+		x = 10
 		y = 44
 		cost = 10
 
@@ -7609,7 +7811,7 @@ focus_tree = {
 		id = TU_URS_w3_infi_final_report
 		prerequisite = { focus = TU_URS_w3_infi_ice_wall }
 		icon = GFX_goal_generic_intelligence_exchange
-		x = 13
+		x = 10
 		y = 45
 		cost = 15
 
@@ -7632,7 +7834,7 @@ focus_tree = {
 		id = TU_URS_w4_pact_entry
 		prerequisite = { focus = TU_URS_foreign_ministry }
 		icon = GFX_goal_generic_national_unity
-		x = 17
+		x = 14
 		y = 37
 		cost = 5
 
@@ -7652,7 +7854,7 @@ focus_tree = {
 		id = TU_URS_alliance_search
 		prerequisite = { focus = TU_URS_w4_pact_entry }
 		icon = GFX_goal_generic_improve_relations
-		x = 17
+		x = 14
 		y = 38
 		cost = 10
 
@@ -7677,7 +7879,7 @@ focus_tree = {
 			NOT = { is_in_faction = yes }
 			NOT = { has_country_flag = TU_DEC_TU_URS_w4_pact_neutral }
 		}
-		x = 17
+		x = 14
 		y = 39
 		cost = 15
 
@@ -7720,7 +7922,7 @@ focus_tree = {
 		id = TU_URS_w4_pact_defence
 		prerequisite = { focus = TU_URS_w4_pact_charter }
 		icon = GFX_goal_generic_defence
-		x = 16
+		x = 13
 		y = 40
 		cost = 10
 
@@ -7740,7 +7942,7 @@ focus_tree = {
 		id = TU_URS_w4_pact_army
 		prerequisite = { focus = TU_URS_w4_pact_charter }
 		icon = GFX_goal_generic_army_doctrines
-		x = 18
+		x = 15
 		y = 40
 		cost = 10
 
@@ -7760,7 +7962,7 @@ focus_tree = {
 		id = TU_URS_w4_pact_summit
 		prerequisite = { focus = TU_URS_w4_pact_defence }
 		icon = GFX_goal_generic_improve_relations
-		x = 16
+		x = 13
 		y = 41
 		cost = 10
 
@@ -7780,7 +7982,7 @@ focus_tree = {
 		id = TU_URS_w4_pact_trade
 		prerequisite = { focus = TU_URS_w4_pact_army }
 		icon = GFX_goal_generic_positive_trade_relations
-		x = 18
+		x = 15
 		y = 41
 		cost = 10
 
@@ -7802,7 +8004,7 @@ focus_tree = {
 		prerequisite = { focus = TU_URS_w4_pact_summit }
 		icon = GFX_goal_generic_army_artillery
 		available = { has_completed_focus = TU_URS_military_junta }
-		x = 16
+		x = 13
 		y = 42
 		cost = 10
 
@@ -7823,7 +8025,7 @@ focus_tree = {
 		prerequisite = { focus = TU_URS_w4_pact_trade }
 		icon = GFX_goal_generic_political_pressure
 		available = { has_completed_focus = TU_URS_reform_path }
-		x = 18
+		x = 15
 		y = 42
 		cost = 10
 
@@ -7845,7 +8047,7 @@ focus_tree = {
 		id = TU_URS_w4_order_entry
 		prerequisite = { focus = TU_URS_foreign_ministry }
 		icon = GFX_goal_generic_national_unity
-		x = 20
+		x = 17
 		y = 37
 		cost = 5
 
@@ -7867,7 +8069,7 @@ focus_tree = {
 		mutually_exclusive = { focus = TU_URS_w4_order_council }
 		icon = GFX_goal_generic_army_doctrines
 		available = { has_completed_focus = TU_URS_emperor_rule }
-		x = 19
+		x = 16
 		y = 38
 		cost = 10
 
@@ -7888,7 +8090,7 @@ focus_tree = {
 		prerequisite = { focus = TU_URS_w4_order_entry }
 		mutually_exclusive = { focus = TU_URS_w4_order_doctrine }
 		icon = GFX_goal_generic_political_pressure
-		x = 21
+		x = 18
 		y = 38
 		cost = 10
 
@@ -7908,7 +8110,7 @@ focus_tree = {
 		id = TU_URS_w4_order_mandate
 		prerequisite = { focus = TU_URS_w4_order_doctrine }
 		icon = GFX_goal_generic_major_war
-		x = 19
+		x = 16
 		y = 39
 		cost = 10
 
@@ -7929,7 +8131,7 @@ focus_tree = {
 		id = TU_URS_w4_order_charter
 		prerequisite = { focus = TU_URS_w4_order_council }
 		icon = GFX_goal_generic_alliance
-		x = 21
+		x = 18
 		y = 39
 		cost = 10
 
@@ -7949,7 +8151,7 @@ focus_tree = {
 		id = TU_URS_w4_order_mobilization
 		prerequisite = { focus = TU_URS_w4_order_charter }
 		icon = GFX_goal_generic_production
-		x = 21
+		x = 18
 		y = 40
 		cost = 10
 
@@ -7972,7 +8174,7 @@ focus_tree = {
 		id = TU_URS_w4_rho_entry
 		prerequisite = { focus = TU_URS_foreign_ministry }
 		icon = GFX_goal_generic_improve_relations
-		x = 24
+		x = 21
 		y = 37
 		cost = 5
 
@@ -7992,7 +8194,7 @@ focus_tree = {
 		id = TU_URS_w4_rho_trade_pact
 		prerequisite = { focus = TU_URS_w4_rho_entry }
 		icon = GFX_goal_generic_trade
-		x = 23
+		x = 20
 		y = 38
 		cost = 10
 
@@ -8017,7 +8219,7 @@ focus_tree = {
 		id = TU_URS_w4_rho_blockade
 		prerequisite = { focus = TU_URS_w4_rho_entry }
 		icon = GFX_goal_generic_fortify_city
-		x = 25
+		x = 22
 		y = 38
 		cost = 10
 
@@ -8044,7 +8246,7 @@ focus_tree = {
 		prerequisite = { focus = TU_URS_foreign_ministry }
 		icon = GFX_goal_generic_national_unity
 		available = { has_global_flag = TU_chernobog_incident_started }
-		x = 28
+		x = 25
 		y = 37
 		cost = 5
 
@@ -8064,7 +8266,7 @@ focus_tree = {
 		id = TU_URS_w4_reu_army
 		prerequisite = { focus = TU_URS_w4_reu_entry }
 		icon = GFX_goal_generic_army_artillery
-		x = 27
+		x = 24
 		y = 38
 		cost = 10
 
@@ -8092,7 +8294,7 @@ focus_tree = {
 			has_completed_focus = TU_URS_reform_path
 			has_country_flag = TU_DEC_TU_URS_w4_reu_negotiate
 		}
-		x = 29
+		x = 26
 		y = 38
 		cost = 10
 
@@ -8114,7 +8316,7 @@ focus_tree = {
 		prerequisite = { focus = TU_URS_w4_reu_army }
 		icon = GFX_goal_generic_construction2
 		available = { has_global_flag = TU_chernobog_incident_resolved }
-		x = 27
+		x = 24
 		y = 39
 		cost = 10
 

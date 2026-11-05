@@ -100,4 +100,13 @@ characters = {
 			legacy_id = -1
 		}
 	}
+
+	TU_SAM_forest_will = {
+		name = TU_SAM_forest_will
+		country_leader = { traits = { tu_lt_living_forest }
+			ideology = despotism
+			expire = "1200.1.1.1"
+			id = -1
+		}
+	}
 }

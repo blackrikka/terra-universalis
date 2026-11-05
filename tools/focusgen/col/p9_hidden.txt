@@ -1,0 +1,192 @@
+	#### COL hidden route (tools/focusgen/hidden_routes.py, spec 30) ####
+
+	focus = {
+		id = TU_COL_rhine_directive
+		prerequisite = { focus = TU_COL_root }
+		icon = GFX_goal_generic_secret_weapon
+		x = 202
+		y = 0
+		cost = 5
+
+		search_filters = { FOCUS_FILTER_POLITICAL }
+
+		allow_branch = {
+			has_country_flag = TU_COL_rhine_route
+		}
+
+		available = {
+			has_country_flag = TU_COL_rhine_route
+		}
+
+		ai_will_do = {
+			base = 1
+		}
+
+		completion_reward = {
+			add_political_power = 50
+		}
+	}
+
+	focus = {
+		id = TU_COL_rhine_departments
+		prerequisite = { focus = TU_COL_rhine_directive }
+		icon = GFX_goal_generic_secret_weapon
+		x = 204
+		y = 0
+		cost = 10
+
+		search_filters = { FOCUS_FILTER_POLITICAL }
+
+		allow_branch = {
+			has_country_flag = TU_COL_rhine_route
+		}
+
+		ai_will_do = {
+			base = 1
+		}
+
+		completion_reward = {
+			add_stability = 0.05
+		}
+	}
+
+	focus = {
+		id = TU_COL_rhine_defense_dept
+		prerequisite = { focus = TU_COL_rhine_directive }
+		icon = GFX_goal_generic_secret_weapon
+		x = 206
+		y = 0
+		cost = 10
+
+		search_filters = { FOCUS_FILTER_POLITICAL }
+
+		allow_branch = {
+			has_country_flag = TU_COL_rhine_route
+		}
+
+		ai_will_do = {
+			base = 1
+		}
+
+		completion_reward = {
+			army_experience = 30
+		}
+	}
+
+	focus = {
+		id = TU_COL_rhine_ecology
+		prerequisite = { focus = TU_COL_rhine_departments }
+		icon = GFX_goal_generic_secret_weapon
+		x = 208
+		y = 0
+		cost = 10
+
+		search_filters = { FOCUS_FILTER_POLITICAL }
+
+		allow_branch = {
+			has_country_flag = TU_COL_rhine_route
+		}
+
+		ai_will_do = {
+			base = 1
+		}
+
+		completion_reward = {
+			add_tech_bonus = { name = TU_COL_rhine_ecology bonus = 1.0 uses = 2 category = tu_oripathy_tech category = industry }
+		}
+	}
+
+	focus = {
+		id = TU_COL_rhine_engineering
+		prerequisite = { focus = TU_COL_rhine_defense_dept }
+		icon = GFX_goal_generic_secret_weapon
+		x = 210
+		y = 0
+		cost = 10
+
+		search_filters = { FOCUS_FILTER_POLITICAL }
+
+		allow_branch = {
+			has_country_flag = TU_COL_rhine_route
+		}
+
+		ai_will_do = {
+			base = 1
+		}
+
+		completion_reward = {
+			TU_build_civ_factory = yes
+			TU_build_mil_factory = yes
+		}
+	}
+
+	focus = {
+		id = TU_COL_rhine_ferns
+		prerequisite = { focus = TU_COL_rhine_engineering }
+		icon = GFX_goal_generic_secret_weapon
+		x = 212
+		y = 0
+		cost = 10
+
+		search_filters = { FOCUS_FILTER_POLITICAL }
+
+		allow_branch = {
+			has_country_flag = TU_COL_rhine_route
+		}
+
+		ai_will_do = {
+			base = 1
+		}
+
+		completion_reward = {
+			add_tech_bonus = { name = TU_COL_rhine_ferns bonus = 1.0 uses = 2 category = armor category = air_equipment }
+		}
+	}
+
+	focus = {
+		id = TU_COL_rhine_total_research
+		prerequisite = { focus = TU_COL_rhine_ecology }
+		prerequisite = { focus = TU_COL_rhine_ferns }
+		icon = GFX_goal_generic_secret_weapon
+		x = 214
+		y = 0
+		cost = 15
+
+		search_filters = { FOCUS_FILTER_POLITICAL }
+
+		allow_branch = {
+			has_country_flag = TU_COL_rhine_route
+		}
+
+		ai_will_do = {
+			base = 1
+		}
+
+		completion_reward = {
+			add_research_slot = 1
+		}
+	}
+
+	focus = {
+		id = TU_COL_rhine_finale
+		prerequisite = { focus = TU_COL_rhine_total_research }
+		icon = GFX_goal_generic_secret_weapon
+		x = 216
+		y = 0
+		cost = 20
+
+		search_filters = { FOCUS_FILTER_POLITICAL }
+
+		allow_branch = {
+			has_country_flag = TU_COL_rhine_route
+		}
+
+		ai_will_do = {
+			base = 1
+		}
+
+		completion_reward = {
+			swap_ideas = { remove_idea = TU_COL_rhine_directorate add_idea = TU_COL_rhine_republic }
+			add_political_power = 150
+		}
+	}

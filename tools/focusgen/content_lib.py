@@ -201,7 +201,7 @@ class Country:
         body += "".join(self._focus_text(f) for f in self.focuses)
         (folder / "p1_all.txt").write_text(body.rstrip("\n") + "\n", encoding="utf-8")
         for old in folder.glob("*.txt"):
-            if old.name not in ("_header.txt", "p1_all.txt"):
+            if old.name not in ("_header.txt", "p1_all.txt") and not old.name.startswith("p9_"):   # p9_: hidden_routes.py
                 old.unlink()
         self.loc("TU_%s_focus" % t, "%s 중점" % self.name_ko, "%s Focus" % self.name_en)
 

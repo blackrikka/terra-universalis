@@ -1,0 +1,193 @@
+	#### KJE hidden route (tools/focusgen/hidden_routes.py, spec 30) ####
+
+	focus = {
+		id = TU_KJE_frozen_gates
+		prerequisite = { focus = TU_KJE_root }
+		icon = GFX_goal_generic_secret_weapon
+		x = 202
+		y = 0
+		cost = 5
+
+		search_filters = { FOCUS_FILTER_POLITICAL }
+
+		allow_branch = {
+			has_country_flag = TU_KJE_frozen_route
+		}
+
+		available = {
+			has_country_flag = TU_KJE_frozen_route
+		}
+
+		ai_will_do = {
+			base = 1
+		}
+
+		completion_reward = {
+			add_stability = 0.05
+		}
+	}
+
+	focus = {
+		id = TU_KJE_frozen_passes
+		prerequisite = { focus = TU_KJE_frozen_gates }
+		icon = GFX_goal_generic_secret_weapon
+		x = 204
+		y = 0
+		cost = 10
+
+		search_filters = { FOCUS_FILTER_POLITICAL }
+
+		allow_branch = {
+			has_country_flag = TU_KJE_frozen_route
+		}
+
+		ai_will_do = {
+			base = 1
+		}
+
+		completion_reward = {
+			TU_build_forts_2 = yes
+		}
+	}
+
+	focus = {
+		id = TU_KJE_frozen_granaries
+		prerequisite = { focus = TU_KJE_frozen_gates }
+		icon = GFX_goal_generic_secret_weapon
+		x = 206
+		y = 0
+		cost = 10
+
+		search_filters = { FOCUS_FILTER_POLITICAL }
+
+		allow_branch = {
+			has_country_flag = TU_KJE_frozen_route
+		}
+
+		ai_will_do = {
+			base = 1
+		}
+
+		completion_reward = {
+			add_stability = 0.05
+			add_manpower = 10000
+		}
+	}
+
+	focus = {
+		id = TU_KJE_frozen_ice_forts
+		prerequisite = { focus = TU_KJE_frozen_passes }
+		icon = GFX_goal_generic_secret_weapon
+		x = 208
+		y = 0
+		cost = 10
+
+		search_filters = { FOCUS_FILTER_POLITICAL }
+
+		allow_branch = {
+			has_country_flag = TU_KJE_frozen_route
+		}
+
+		ai_will_do = {
+			base = 1
+		}
+
+		completion_reward = {
+			TU_build_forts_3 = yes
+		}
+	}
+
+	focus = {
+		id = TU_KJE_frozen_saintess
+		prerequisite = { focus = TU_KJE_frozen_granaries }
+		icon = GFX_goal_generic_secret_weapon
+		x = 210
+		y = 0
+		cost = 10
+
+		search_filters = { FOCUS_FILTER_POLITICAL }
+
+		allow_branch = {
+			has_country_flag = TU_KJE_frozen_route
+		}
+
+		ai_will_do = {
+			base = 1
+		}
+
+		completion_reward = {
+			add_political_power = 100
+		}
+	}
+
+	focus = {
+		id = TU_KJE_frozen_guardians
+		prerequisite = { focus = TU_KJE_frozen_ice_forts }
+		icon = GFX_goal_generic_secret_weapon
+		x = 212
+		y = 0
+		cost = 10
+
+		search_filters = { FOCUS_FILTER_POLITICAL }
+
+		allow_branch = {
+			has_country_flag = TU_KJE_frozen_route
+		}
+
+		ai_will_do = {
+			base = 1
+		}
+
+		completion_reward = {
+			army_experience = 40
+			add_manpower = 15000
+		}
+	}
+
+	focus = {
+		id = TU_KJE_frozen_eternal_winter
+		prerequisite = { focus = TU_KJE_frozen_guardians }
+		prerequisite = { focus = TU_KJE_frozen_saintess }
+		icon = GFX_goal_generic_secret_weapon
+		x = 214
+		y = 0
+		cost = 15
+
+		search_filters = { FOCUS_FILTER_POLITICAL }
+
+		allow_branch = {
+			has_country_flag = TU_KJE_frozen_route
+		}
+
+		ai_will_do = {
+			base = 1
+		}
+
+		completion_reward = {
+			add_war_support = 0.10
+		}
+	}
+
+	focus = {
+		id = TU_KJE_frozen_finale
+		prerequisite = { focus = TU_KJE_frozen_eternal_winter }
+		icon = GFX_goal_generic_secret_weapon
+		x = 216
+		y = 0
+		cost = 20
+
+		search_filters = { FOCUS_FILTER_POLITICAL }
+
+		allow_branch = {
+			has_country_flag = TU_KJE_frozen_route
+		}
+
+		ai_will_do = {
+			base = 1
+		}
+
+		completion_reward = {
+			swap_ideas = { remove_idea = TU_KJE_closed_gates add_idea = TU_KJE_frozen_kingdom }
+			add_political_power = 150
+		}
+	}

@@ -1,0 +1,199 @@
+	#### URS hidden route (tools/focusgen/hidden_routes.py, spec 30) ####
+
+	focus = {
+		id = TU_URS_serpent_whispers
+		icon = GFX_goal_generic_secret_weapon
+		x = 202
+		y = 0
+		cost = 5
+
+		search_filters = { FOCUS_FILTER_POLITICAL }
+
+		allow_branch = {
+			has_country_flag = TU_URS_serpent_route
+		}
+
+		available = {
+			has_country_flag = TU_URS_serpent_route
+		}
+
+		ai_will_do = {
+			base = 1
+		}
+
+		completion_reward = {
+			add_political_power = 75
+		}
+	}
+
+	focus = {
+		id = TU_URS_serpent_purge
+		prerequisite = { focus = TU_URS_serpent_whispers }
+		icon = GFX_goal_generic_secret_weapon
+		x = 204
+		y = 0
+		cost = 10
+
+		search_filters = { FOCUS_FILTER_POLITICAL }
+
+		allow_branch = {
+			has_country_flag = TU_URS_serpent_route
+		}
+
+		ai_will_do = {
+			base = 1
+		}
+
+		completion_reward = {
+			add_stability = 0.05
+			add_political_power = 50
+		}
+	}
+
+	focus = {
+		id = TU_URS_serpent_guard
+		prerequisite = { focus = TU_URS_serpent_whispers }
+		icon = GFX_goal_generic_secret_weapon
+		x = 206
+		y = 0
+		cost = 10
+
+		search_filters = { FOCUS_FILTER_POLITICAL }
+
+		allow_branch = {
+			has_country_flag = TU_URS_serpent_route
+		}
+
+		ai_will_do = {
+			base = 1
+		}
+
+		completion_reward = {
+			army_experience = 40
+			add_manpower = 20000
+		}
+	}
+
+	focus = {
+		id = TU_URS_serpent_infected_army
+		prerequisite = { focus = TU_URS_serpent_guard }
+		icon = GFX_goal_generic_secret_weapon
+		x = 208
+		y = 0
+		cost = 10
+
+		search_filters = { FOCUS_FILTER_POLITICAL }
+
+		allow_branch = {
+			has_country_flag = TU_URS_serpent_route
+		}
+
+		ai_will_do = {
+			base = 1
+		}
+
+		completion_reward = {
+			add_manpower = 50000
+			add_stability = -0.05
+		}
+	}
+
+	focus = {
+		id = TU_URS_serpent_arts
+		prerequisite = { focus = TU_URS_serpent_purge }
+		icon = GFX_goal_generic_secret_weapon
+		x = 210
+		y = 0
+		cost = 10
+
+		search_filters = { FOCUS_FILTER_POLITICAL }
+
+		allow_branch = {
+			has_country_flag = TU_URS_serpent_route
+		}
+
+		ai_will_do = {
+			base = 1
+		}
+
+		completion_reward = {
+			add_tech_bonus = { name = TU_URS_serpent_arts bonus = 1.0 uses = 2 category = tu_originium_tech category = infantry_weapons }
+		}
+	}
+
+	focus = {
+		id = TU_URS_serpent_war_machine
+		prerequisite = { focus = TU_URS_serpent_infected_army }
+		prerequisite = { focus = TU_URS_serpent_arts }
+		icon = GFX_goal_generic_secret_weapon
+		x = 212
+		y = 0
+		cost = 10
+
+		search_filters = { FOCUS_FILTER_POLITICAL }
+
+		allow_branch = {
+			has_country_flag = TU_URS_serpent_route
+		}
+
+		ai_will_do = {
+			base = 1
+		}
+
+		completion_reward = {
+			TU_build_mil_factory = yes
+			TU_build_mil_factory = yes
+			TU_build_mil_factory = yes
+		}
+	}
+
+	focus = {
+		id = TU_URS_serpent_crush
+		prerequisite = { focus = TU_URS_serpent_war_machine }
+		icon = GFX_goal_generic_secret_weapon
+		x = 214
+		y = 0
+		cost = 10
+
+		search_filters = { FOCUS_FILTER_POLITICAL }
+
+		allow_branch = {
+			has_country_flag = TU_URS_serpent_route
+		}
+
+		ai_will_do = {
+			base = 1
+		}
+
+		completion_reward = {
+			if = {
+				limit = { country_exists = REU }
+				create_wargoal = { type = annex_everything target = REU }
+			}
+			army_experience = 50
+		}
+	}
+
+	focus = {
+		id = TU_URS_serpent_finale
+		prerequisite = { focus = TU_URS_serpent_crush }
+		icon = GFX_goal_generic_secret_weapon
+		x = 216
+		y = 0
+		cost = 20
+
+		search_filters = { FOCUS_FILTER_POLITICAL }
+
+		allow_branch = {
+			has_country_flag = TU_URS_serpent_route
+		}
+
+		ai_will_do = {
+			base = 1
+		}
+
+		completion_reward = {
+			swap_ideas = { remove_idea = TU_URS_serpent_shadow add_idea = TU_URS_serpent_empire }
+			add_political_power = 200
+		}
+	}

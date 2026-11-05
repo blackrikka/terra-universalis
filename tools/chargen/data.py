@@ -305,3 +305,34 @@ TRAITS = {
     "tu_theorist_tactics": ("전술 이론가", "Tactics Theorist", 2, {"experience_gain_army": 0.15}),
     "tu_theorist_arts": ("아츠 전술가", "Arts Tactician", 2, {"research_speed_factor": 0.03, "experience_gain_army": 0.10}),
 }
+
+# ------------------------------------------------------------------ 숨은 루트 (사양서 30, tools/focusgen/hidden_routes.py)
+COUNTRIES["URS"]["chars"].append(("kashchey", "코셰이", "Kashchey", [("L", "despotism")], None))
+COUNTRIES["KZD"]["chars"].append(("babel_assembly", "바벨 평의회", "Council of Babel", [("L", "oligarchism")], None))
+COUNTRIES["SAM"]["chars"].append(("forest_will", "숲의 의지", "Will of the Forest", [("L", "despotism")], None))
+_HIDDEN = {
+    "URS": {"serpent_finale": [("name", "SERPENT", "검은 뱀의 제국", "Empire of the Black Serpent", "우르수스의", "Ursine")]},
+    "REU": {"patriot_finale": [("name", "PATRIOT", "감염자 공화국", "Republic of the Infected", "감염자의", "Infected")]},
+    "KZD": {"babel_finale": [("name", "BABEL", "새 바벨", "New Babel", "바벨의", "Babel"),
+                             ("me", ["theresis_throne", "sixfold_throne", "merc_kingdom"])]},
+    "SAM": {"forest_finale": [("name", "LIVING", "살아 있는 숲", "The Living Forest", "숲의", "Forest"),
+                              ("me", ["forest_theocracy", "tribal_federation", "open_sami"])]},
+    "COL": {"rhine_finale": [("name", "RHINE", "라인 공화국", "The Rhine Republic", "라인의", "Rhine"),
+                             ("me", ["republic_guard", "corporate_republic", "frontier_federation"])]},
+    "KJE": {"frozen_finale": [("name", "FROZEN", "얼어붙은 왕국", "The Frozen Kingdom", "얼어붙은", "Frozen"),
+                              ("me", ["modern_kjerag", "saintess_theocracy", "houses_united"])]},
+    "LGM": {"guard_finale": [("name", "GUARD", "용문 근위국", "Lungmen Guard State", "용문의", "Lungmen")]},
+    "YAN": {"sui_dream_finale": [("name", "SUI", "세", "Sui", "세의", "Sui")]},
+}
+for _t, _h in _HIDDEN.items():
+    COUNTRIES.setdefault(_t, dict(cast=False, chars=[], start=[], hooks={}))["hooks"].update(_h)
+COSMETIC_COLORS.update({
+    "TU_URS_SERPENT": ((38, 12, 16), (110, 40, 50)),
+    "TU_REU_PATRIOT": ((150, 40, 40), (190, 80, 80)),
+    "TU_KZD_BABEL": ((214, 200, 160), (214, 200, 160)),
+    "TU_SAM_LIVING": ((18, 72, 34), (60, 130, 80)),
+    "TU_COL_RHINE": ((40, 170, 170), (80, 200, 200)),
+    "TU_KJE_FROZEN": ((205, 228, 245), (205, 228, 245)),
+    "TU_LGM_GUARD": ((40, 70, 130), (80, 110, 170)),
+    "TU_YAN_SUI": ((140, 20, 30), (190, 60, 60)),
+})
