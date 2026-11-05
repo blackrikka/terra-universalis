@@ -93,4 +93,13 @@ characters = {
 			}
 		}
 	}
+
+	TU_KZD_babel_assembly = {
+		name = TU_KZD_babel_assembly
+		country_leader = { traits = { tu_lt_babel }
+			ideology = oligarchism
+			expire = "1200.1.1.1"
+			id = -1
+		}
+	}
 }

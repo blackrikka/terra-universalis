@@ -28,13 +28,38 @@ def lines_for(tag, actions):
     return out
 
 
+def add_mutex(text, fid, others):
+    """중점 fid 블록의 id 줄 바로 뒤에 mutually_exclusive 를 넣는다 (숨은 결말과 기존 결말, 사양서 30)."""
+    m = re.search(r"(\n\tfocus = \{\r?\n\t\tid = %s)(\r?\n)" % re.escape(fid), text)
+    if not m:
+        return text, False
+    nl = m.group(2)
+    line = nl + "\t\tmutually_exclusive = { %s }" % " ".join("focus = %s" % o for o in others)
+    return text[:m.end(1)] + line + text[m.end(1):], True
+
+
 def apply(path, tag):
     d = COUNTRIES.get(tag)
     if not d or not d["hooks"]:
         return 0, []
     text = Path(path).read_text(encoding="utf-8")
     done, missing = 0, []
+    # ("me", 다른 중점들): 이 중점과 서로 배타 (양쪽 모두에 넣는다)
     for sid, actions in d["hooks"].items():
+        for a in actions:
+            if a[0] == "me":
+                fid = "TU_%s_%s" % (tag, sid)
+                others = ["TU_%s_%s" % (tag, o) for o in a[1]]
+                text, ok = add_mutex(text, fid, others)
+                if not ok:
+                    missing.append(fid)
+                for o in others:
+                    text, ok = add_mutex(text, o, [fid])
+                    if not ok:
+                        missing.append(o)
+    for sid, actions in d["hooks"].items():
+        if not lines_for(tag, actions):
+            continue
         fid = "TU_%s_%s" % (tag, sid)
         m = re.search(r"\n\tfocus = \{\r?\n\t\tid = %s\r?\n" % re.escape(fid), text)
         if not m:

@@ -6525,4 +6525,156 @@ focus_tree = {
 			add_stability = 0.03
 		}
 	}
+
+	#### YAN hidden route (tools/focusgen/hidden_routes.py, spec 30) ####
+
+	focus = {
+		id = TU_YAN_sui_dream_names
+		prerequisite = { focus = TU_YAN_p1_ruin_devour }
+		icon = GFX_goal_generic_secret_weapon
+		x = 42
+		y = 8
+		cost = 10
+
+		search_filters = { FOCUS_FILTER_POLITICAL }
+
+		allow_branch = {
+			has_country_flag = TU_YAN_ruler_sui_true
+		}
+
+		available = {
+			has_country_flag = TU_YAN_ruler_sui_true
+		}
+
+		ai_will_do = {
+			base = 1
+		}
+
+		completion_reward = {
+			add_political_power = 100
+		}
+	}
+
+	focus = {
+		id = TU_YAN_sui_dream_mountains
+		prerequisite = { focus = TU_YAN_sui_dream_names }
+		icon = GFX_goal_generic_secret_weapon
+		x = 41
+		y = 9
+		cost = 10
+
+		search_filters = { FOCUS_FILTER_POLITICAL }
+
+		allow_branch = {
+			has_country_flag = TU_YAN_ruler_sui_true
+		}
+
+		ai_will_do = {
+			base = 1
+		}
+
+		completion_reward = {
+			every_neighbor_country = {
+				limit = { NOT = { is_in_faction_with = ROOT } }
+				ROOT = { create_wargoal = { type = annex_everything target = PREV } }
+			}
+		}
+	}
+
+	focus = {
+		id = TU_YAN_sui_dream_dragon_court
+		prerequisite = { focus = TU_YAN_sui_dream_names }
+		icon = GFX_goal_generic_secret_weapon
+		x = 43
+		y = 9
+		cost = 10
+
+		search_filters = { FOCUS_FILTER_POLITICAL }
+
+		allow_branch = {
+			has_country_flag = TU_YAN_ruler_sui_true
+		}
+
+		ai_will_do = {
+			base = 1
+		}
+
+		completion_reward = {
+			add_stability = 0.10
+		}
+	}
+
+	focus = {
+		id = TU_YAN_sui_dream_legions
+		prerequisite = { focus = TU_YAN_sui_dream_mountains }
+		icon = GFX_goal_generic_secret_weapon
+		x = 41
+		y = 10
+		cost = 10
+
+		search_filters = { FOCUS_FILTER_POLITICAL }
+
+		allow_branch = {
+			has_country_flag = TU_YAN_ruler_sui_true
+		}
+
+		ai_will_do = {
+			base = 1
+		}
+
+		completion_reward = {
+			add_manpower = 50000
+			army_experience = 50
+		}
+	}
+
+	focus = {
+		id = TU_YAN_sui_dream_arts
+		prerequisite = { focus = TU_YAN_sui_dream_dragon_court }
+		icon = GFX_goal_generic_secret_weapon
+		x = 43
+		y = 10
+		cost = 10
+
+		search_filters = { FOCUS_FILTER_POLITICAL }
+
+		allow_branch = {
+			has_country_flag = TU_YAN_ruler_sui_true
+		}
+
+		ai_will_do = {
+			base = 1
+		}
+
+		completion_reward = {
+			add_tech_bonus = { name = TU_YAN_sui_dream_arts bonus = 1.0 uses = 3 category = tu_originium_tech category = infantry_weapons category = artillery }
+		}
+	}
+
+	focus = {
+		id = TU_YAN_sui_dream_finale
+		prerequisite = { focus = TU_YAN_sui_dream_legions }
+		prerequisite = { focus = TU_YAN_sui_dream_arts }
+		icon = GFX_goal_generic_secret_weapon
+		x = 41
+		y = 11
+		cost = 20
+
+		search_filters = { FOCUS_FILTER_POLITICAL }
+
+		allow_branch = {
+			has_country_flag = TU_YAN_ruler_sui_true
+		}
+
+		ai_will_do = {
+			base = 1
+		}
+
+		completion_reward = {
+			add_ideas = TU_YAN_sui_dream
+			add_political_power = 200
+			# spec 23 hooks
+			set_cosmetic_tag = TU_YAN_SUI
+		}
+	}
 }

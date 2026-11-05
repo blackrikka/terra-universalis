@@ -1,0 +1,199 @@
+	#### KZD hidden route (tools/focusgen/hidden_routes.py, spec 30) ####
+
+	focus = {
+		id = TU_KZD_babel_letter
+		prerequisite = { focus = TU_KZD_military_commission_focus }
+		icon = GFX_goal_generic_secret_weapon
+		x = 202
+		y = 0
+		cost = 5
+
+		search_filters = { FOCUS_FILTER_POLITICAL }
+
+		allow_branch = {
+			has_country_flag = TU_KZD_babel_route
+		}
+
+		available = {
+			has_country_flag = TU_KZD_babel_route
+		}
+
+		ai_will_do = {
+			base = 1
+		}
+
+		completion_reward = {
+			add_political_power = 75
+		}
+	}
+
+	focus = {
+		id = TU_KZD_babel_no_crown
+		prerequisite = { focus = TU_KZD_babel_letter }
+		icon = GFX_goal_generic_secret_weapon
+		x = 204
+		y = 0
+		cost = 10
+
+		search_filters = { FOCUS_FILTER_POLITICAL }
+
+		allow_branch = {
+			has_country_flag = TU_KZD_babel_route
+		}
+
+		ai_will_do = {
+			base = 1
+		}
+
+		completion_reward = {
+			add_stability = 0.10
+		}
+	}
+
+	focus = {
+		id = TU_KZD_babel_rhodes
+		prerequisite = { focus = TU_KZD_babel_letter }
+		icon = GFX_goal_generic_secret_weapon
+		x = 206
+		y = 0
+		cost = 10
+
+		search_filters = { FOCUS_FILTER_POLITICAL }
+
+		allow_branch = {
+			has_country_flag = TU_KZD_babel_route
+		}
+
+		ai_will_do = {
+			base = 1
+		}
+
+		completion_reward = {
+			if = {
+				limit = { country_exists = RHO }
+				RHO = { add_opinion_modifier = { target = ROOT modifier = TU_hidden_friendship } }
+			}
+			add_political_power = 50
+		}
+	}
+
+	focus = {
+		id = TU_KZD_babel_clinics
+		prerequisite = { focus = TU_KZD_babel_rhodes }
+		icon = GFX_goal_generic_secret_weapon
+		x = 208
+		y = 0
+		cost = 10
+
+		search_filters = { FOCUS_FILTER_POLITICAL }
+
+		allow_branch = {
+			has_country_flag = TU_KZD_babel_route
+		}
+
+		ai_will_do = {
+			base = 1
+		}
+
+		completion_reward = {
+			add_stability = 0.05
+			add_manpower = 15000
+		}
+	}
+
+	focus = {
+		id = TU_KZD_babel_scholars
+		prerequisite = { focus = TU_KZD_babel_no_crown }
+		icon = GFX_goal_generic_secret_weapon
+		x = 210
+		y = 0
+		cost = 10
+
+		search_filters = { FOCUS_FILTER_POLITICAL }
+
+		allow_branch = {
+			has_country_flag = TU_KZD_babel_route
+		}
+
+		ai_will_do = {
+			base = 1
+		}
+
+		completion_reward = {
+			add_tech_bonus = { name = TU_KZD_babel_scholars bonus = 1.0 uses = 2 category = tu_originium_tech category = electronics }
+		}
+	}
+
+	focus = {
+		id = TU_KZD_babel_peace
+		prerequisite = { focus = TU_KZD_babel_no_crown }
+		icon = GFX_goal_generic_secret_weapon
+		x = 212
+		y = 0
+		cost = 10
+
+		search_filters = { FOCUS_FILTER_POLITICAL }
+
+		allow_branch = {
+			has_country_flag = TU_KZD_babel_route
+		}
+
+		ai_will_do = {
+			base = 1
+		}
+
+		completion_reward = {
+			add_stability = 0.05
+			add_war_support = 0.05
+		}
+	}
+
+	focus = {
+		id = TU_KZD_babel_homeland
+		prerequisite = { focus = TU_KZD_babel_clinics }
+		prerequisite = { focus = TU_KZD_babel_scholars }
+		prerequisite = { focus = TU_KZD_babel_peace }
+		icon = GFX_goal_generic_secret_weapon
+		x = 214
+		y = 0
+		cost = 15
+
+		search_filters = { FOCUS_FILTER_POLITICAL }
+
+		allow_branch = {
+			has_country_flag = TU_KZD_babel_route
+		}
+
+		ai_will_do = {
+			base = 1
+		}
+
+		completion_reward = {
+			TU_build_civ_factory = yes
+			TU_build_civ_factory = yes
+		}
+	}
+
+	focus = {
+		id = TU_KZD_babel_finale
+		prerequisite = { focus = TU_KZD_babel_homeland }
+		icon = GFX_goal_generic_secret_weapon
+		x = 216
+		y = 0
+		cost = 20
+
+		search_filters = { FOCUS_FILTER_POLITICAL }
+
+		allow_branch = {
+			has_country_flag = TU_KZD_babel_route
+		}
+
+		ai_will_do = {
+			base = 1
+		}
+
+		completion_reward = {
+			swap_ideas = { remove_idea = TU_KZD_babel_hope add_idea = TU_KZD_new_babel }
+			add_political_power = 150
+		}
+	}

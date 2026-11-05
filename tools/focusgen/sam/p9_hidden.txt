@@ -1,0 +1,197 @@
+	#### SAM hidden route (tools/focusgen/hidden_routes.py, spec 30) ####
+
+	focus = {
+		id = TU_SAM_forest_roots
+		prerequisite = { focus = TU_SAM_root }
+		icon = GFX_goal_generic_secret_weapon
+		x = 202
+		y = 0
+		cost = 5
+
+		search_filters = { FOCUS_FILTER_POLITICAL }
+
+		allow_branch = {
+			has_country_flag = TU_SAM_forest_route
+		}
+
+		available = {
+			has_country_flag = TU_SAM_forest_route
+		}
+
+		ai_will_do = {
+			base = 1
+		}
+
+		completion_reward = {
+			add_stability = 0.05
+		}
+	}
+
+	focus = {
+		id = TU_SAM_forest_paths
+		prerequisite = { focus = TU_SAM_forest_roots }
+		icon = GFX_goal_generic_secret_weapon
+		x = 204
+		y = 0
+		cost = 10
+
+		search_filters = { FOCUS_FILTER_POLITICAL }
+
+		allow_branch = {
+			has_country_flag = TU_SAM_forest_route
+		}
+
+		ai_will_do = {
+			base = 1
+		}
+
+		completion_reward = {
+			army_experience = 30
+		}
+	}
+
+	focus = {
+		id = TU_SAM_forest_spirits
+		prerequisite = { focus = TU_SAM_forest_roots }
+		icon = GFX_goal_generic_secret_weapon
+		x = 206
+		y = 0
+		cost = 10
+
+		search_filters = { FOCUS_FILTER_POLITICAL }
+
+		allow_branch = {
+			has_country_flag = TU_SAM_forest_route
+		}
+
+		ai_will_do = {
+			base = 1
+		}
+
+		completion_reward = {
+			add_political_power = 75
+		}
+	}
+
+	focus = {
+		id = TU_SAM_forest_walls
+		prerequisite = { focus = TU_SAM_forest_paths }
+		icon = GFX_goal_generic_secret_weapon
+		x = 208
+		y = 0
+		cost = 10
+
+		search_filters = { FOCUS_FILTER_POLITICAL }
+
+		allow_branch = {
+			has_country_flag = TU_SAM_forest_route
+		}
+
+		ai_will_do = {
+			base = 1
+		}
+
+		completion_reward = {
+			TU_build_forts_2 = yes
+		}
+	}
+
+	focus = {
+		id = TU_SAM_forest_hunters
+		prerequisite = { focus = TU_SAM_forest_paths }
+		icon = GFX_goal_generic_secret_weapon
+		x = 210
+		y = 0
+		cost = 10
+
+		search_filters = { FOCUS_FILTER_POLITICAL }
+
+		allow_branch = {
+			has_country_flag = TU_SAM_forest_route
+		}
+
+		ai_will_do = {
+			base = 1
+		}
+
+		completion_reward = {
+			add_manpower = 15000
+			army_experience = 25
+		}
+	}
+
+	focus = {
+		id = TU_SAM_forest_tree_arts
+		prerequisite = { focus = TU_SAM_forest_spirits }
+		icon = GFX_goal_generic_secret_weapon
+		x = 212
+		y = 0
+		cost = 10
+
+		search_filters = { FOCUS_FILTER_POLITICAL }
+
+		allow_branch = {
+			has_country_flag = TU_SAM_forest_route
+		}
+
+		ai_will_do = {
+			base = 1
+		}
+
+		completion_reward = {
+			add_tech_bonus = { name = TU_SAM_forest_tree_arts bonus = 1.0 uses = 2 category = tu_originium_tech category = tu_oripathy_tech }
+		}
+	}
+
+	focus = {
+		id = TU_SAM_forest_spread
+		prerequisite = { focus = TU_SAM_forest_walls }
+		prerequisite = { focus = TU_SAM_forest_hunters }
+		prerequisite = { focus = TU_SAM_forest_tree_arts }
+		icon = GFX_goal_generic_secret_weapon
+		x = 214
+		y = 0
+		cost = 15
+
+		search_filters = { FOCUS_FILTER_POLITICAL }
+
+		allow_branch = {
+			has_country_flag = TU_SAM_forest_route
+		}
+
+		ai_will_do = {
+			base = 1
+		}
+
+		completion_reward = {
+			every_neighbor_country = {
+				limit = { NOT = { is_in_faction_with = ROOT } }
+				capital_scope = { add_claim_by = ROOT }
+			}
+			add_war_support = 0.10
+		}
+	}
+
+	focus = {
+		id = TU_SAM_forest_finale
+		prerequisite = { focus = TU_SAM_forest_spread }
+		icon = GFX_goal_generic_secret_weapon
+		x = 216
+		y = 0
+		cost = 20
+
+		search_filters = { FOCUS_FILTER_POLITICAL }
+
+		allow_branch = {
+			has_country_flag = TU_SAM_forest_route
+		}
+
+		ai_will_do = {
+			base = 1
+		}
+
+		completion_reward = {
+			swap_ideas = { remove_idea = TU_SAM_waking_forest add_idea = TU_SAM_living_forest }
+			add_political_power = 150
+		}
+	}

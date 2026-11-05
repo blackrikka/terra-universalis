@@ -1,0 +1,193 @@
+	#### LGM hidden route (tools/focusgen/hidden_routes.py, spec 30) ####
+
+	focus = {
+		id = TU_LGM_guard_mandate_focus
+		prerequisite = { focus = TU_LGM_guard_regency }
+		icon = GFX_goal_generic_secret_weapon
+		x = 202
+		y = 0
+		cost = 5
+
+		search_filters = { FOCUS_FILTER_POLITICAL }
+
+		allow_branch = {
+			has_country_flag = TU_LGM_guard_state_route
+		}
+
+		available = {
+			has_country_flag = TU_LGM_guard_state_route
+		}
+
+		ai_will_do = {
+			base = 1
+		}
+
+		completion_reward = {
+			add_political_power = 75
+		}
+	}
+
+	focus = {
+		id = TU_LGM_guard_hoshiguma
+		prerequisite = { focus = TU_LGM_guard_mandate_focus }
+		icon = GFX_goal_generic_secret_weapon
+		x = 204
+		y = 0
+		cost = 10
+
+		search_filters = { FOCUS_FILTER_POLITICAL }
+
+		allow_branch = {
+			has_country_flag = TU_LGM_guard_state_route
+		}
+
+		ai_will_do = {
+			base = 1
+		}
+
+		completion_reward = {
+			army_experience = 30
+		}
+	}
+
+	focus = {
+		id = TU_LGM_guard_swire
+		prerequisite = { focus = TU_LGM_guard_mandate_focus }
+		icon = GFX_goal_generic_secret_weapon
+		x = 206
+		y = 0
+		cost = 10
+
+		search_filters = { FOCUS_FILTER_POLITICAL }
+
+		allow_branch = {
+			has_country_flag = TU_LGM_guard_state_route
+		}
+
+		ai_will_do = {
+			base = 1
+		}
+
+		completion_reward = {
+			add_stability = 0.05
+		}
+	}
+
+	focus = {
+		id = TU_LGM_guard_red_sword
+		prerequisite = { focus = TU_LGM_guard_hoshiguma }
+		icon = GFX_goal_generic_secret_weapon
+		x = 208
+		y = 0
+		cost = 10
+
+		search_filters = { FOCUS_FILTER_POLITICAL }
+
+		allow_branch = {
+			has_country_flag = TU_LGM_guard_state_route
+		}
+
+		ai_will_do = {
+			base = 1
+		}
+
+		completion_reward = {
+			add_doctrine_cost_reduction = { name = TU_LGM_guard_red_sword cost_reduction = 0.5 uses = 2 category = land_doctrine }
+		}
+	}
+
+	focus = {
+		id = TU_LGM_guard_city_core
+		prerequisite = { focus = TU_LGM_guard_hoshiguma }
+		icon = GFX_goal_generic_secret_weapon
+		x = 210
+		y = 0
+		cost = 10
+
+		search_filters = { FOCUS_FILTER_POLITICAL }
+
+		allow_branch = {
+			has_country_flag = TU_LGM_guard_state_route
+		}
+
+		ai_will_do = {
+			base = 1
+		}
+
+		completion_reward = {
+			TU_build_forts_2 = yes
+		}
+	}
+
+	focus = {
+		id = TU_LGM_guard_trade_law
+		prerequisite = { focus = TU_LGM_guard_swire }
+		icon = GFX_goal_generic_secret_weapon
+		x = 212
+		y = 0
+		cost = 10
+
+		search_filters = { FOCUS_FILTER_POLITICAL }
+
+		allow_branch = {
+			has_country_flag = TU_LGM_guard_state_route
+		}
+
+		ai_will_do = {
+			base = 1
+		}
+
+		completion_reward = {
+			TU_build_civ_factory = yes
+		}
+	}
+
+	focus = {
+		id = TU_LGM_guard_lungmen_army
+		prerequisite = { focus = TU_LGM_guard_red_sword }
+		prerequisite = { focus = TU_LGM_guard_city_core }
+		prerequisite = { focus = TU_LGM_guard_trade_law }
+		icon = GFX_goal_generic_secret_weapon
+		x = 214
+		y = 0
+		cost = 15
+
+		search_filters = { FOCUS_FILTER_POLITICAL }
+
+		allow_branch = {
+			has_country_flag = TU_LGM_guard_state_route
+		}
+
+		ai_will_do = {
+			base = 1
+		}
+
+		completion_reward = {
+			add_manpower = 20000
+			army_experience = 50
+		}
+	}
+
+	focus = {
+		id = TU_LGM_guard_finale
+		prerequisite = { focus = TU_LGM_guard_lungmen_army }
+		icon = GFX_goal_generic_secret_weapon
+		x = 216
+		y = 0
+		cost = 20
+
+		search_filters = { FOCUS_FILTER_POLITICAL }
+
+		allow_branch = {
+			has_country_flag = TU_LGM_guard_state_route
+		}
+
+		ai_will_do = {
+			base = 1
+		}
+
+		completion_reward = {
+			swap_ideas = { remove_idea = TU_LGM_guard_mandate add_idea = TU_LGM_guard_state }
+			add_political_power = 150
+		}
+	}

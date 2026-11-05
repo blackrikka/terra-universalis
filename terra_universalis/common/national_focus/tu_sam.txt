@@ -1,6 +1,6 @@
 focus_tree = {
 	id = TU_SAM_focus
-	continuous_focus_position = { x = 50 y = 2730 }
+	continuous_focus_position = { x = 50 y = 2210 }
 
 	country = {
 		factor = 0
@@ -41,7 +41,7 @@ focus_tree = {
 		id = TU_SAM_forest_rites
 		icon = GFX_goal_generic_propaganda
 		prerequisite = { focus = TU_SAM_root }
-		x = -27
+		x = -25
 		y = 1
 		cost = 10
 
@@ -62,7 +62,7 @@ focus_tree = {
 		id = TU_SAM_shaman_council
 		icon = GFX_goal_generic_political_pressure
 		prerequisite = { focus = TU_SAM_forest_rites }
-		x = -31
+		x = -29
 		y = 2
 		cost = 10
 
@@ -83,7 +83,7 @@ focus_tree = {
 		id = TU_SAM_spirit_lore
 		icon = GFX_focus_research
 		prerequisite = { focus = TU_SAM_forest_rites }
-		x = -27
+		x = -25
 		y = 2
 		cost = 10
 
@@ -102,7 +102,7 @@ focus_tree = {
 		id = TU_SAM_spirit_arts
 		icon = GFX_focus_research
 		prerequisite = { focus = TU_SAM_spirit_lore }
-		x = -27
+		x = -25
 		y = 3
 		cost = 10
 
@@ -122,7 +122,7 @@ focus_tree = {
 		icon = GFX_focus_research
 		prerequisite = { focus = TU_SAM_spirit_arts }
 		mutually_exclusive = { focus = TU_SAM_forest_arts }
-		x = -27
+		x = -25
 		y = 4
 		cost = 10
 
@@ -142,7 +142,7 @@ focus_tree = {
 		icon = GFX_focus_research
 		prerequisite = { focus = TU_SAM_spirit_arts }
 		mutually_exclusive = { focus = TU_SAM_ice_arts }
-		x = -19
+		x = -17
 		y = 4
 		cost = 10
 
@@ -162,7 +162,7 @@ focus_tree = {
 		icon = GFX_goal_generic_propaganda
 		prerequisite = { focus = TU_SAM_ice_arts focus = TU_SAM_forest_arts }
 		prerequisite = { focus = TU_SAM_shaman_council }
-		x = -27
+		x = -25
 		y = 5
 		cost = 10
 
@@ -179,10 +179,11 @@ focus_tree = {
 
 	focus = {
 		id = TU_SAM_forest_theocracy
+		mutually_exclusive = { focus = TU_SAM_forest_finale }
 		icon = GFX_goal_generic_propaganda
 		prerequisite = { focus = TU_SAM_great_rite }
 		mutually_exclusive = { focus = TU_SAM_tribal_federation focus = TU_SAM_open_sami }
-		x = -27
+		x = -25
 		y = 6
 		cost = 15
 
@@ -214,7 +215,7 @@ focus_tree = {
 		id = TU_SAM_world_tree
 		icon = GFX_goal_generic_political_pressure
 		prerequisite = { focus = TU_SAM_forest_theocracy }
-		x = -27
+		x = -25
 		y = 7
 		cost = 10
 
@@ -234,7 +235,7 @@ focus_tree = {
 		id = TU_SAM_spirit_guard
 		icon = GFX_goal_generic_allies_build_infantry
 		prerequisite = { focus = TU_SAM_forest_theocracy }
-		x = -25
+		x = -23
 		y = 7
 		cost = 10
 
@@ -254,7 +255,7 @@ focus_tree = {
 		id = TU_SAM_tribal_gathering
 		icon = GFX_goal_generic_political_pressure
 		prerequisite = { focus = TU_SAM_root }
-		x = -10
+		x = -8
 		y = 1
 		cost = 10
 
@@ -273,7 +274,7 @@ focus_tree = {
 		id = TU_SAM_reindeer_herders
 		icon = GFX_goal_generic_production
 		prerequisite = { focus = TU_SAM_tribal_gathering }
-		x = -11
+		x = -9
 		y = 2
 		cost = 10
 
@@ -293,7 +294,7 @@ focus_tree = {
 		id = TU_SAM_tribal_law
 		icon = GFX_goal_generic_political_pressure
 		prerequisite = { focus = TU_SAM_tribal_gathering }
-		x = -8
+		x = -6
 		y = 2
 		cost = 10
 
@@ -314,7 +315,7 @@ focus_tree = {
 		icon = GFX_goal_generic_improve_relations
 		prerequisite = { focus = TU_SAM_tribal_law }
 		prerequisite = { focus = TU_SAM_reindeer_herders }
-		x = -5
+		x = -3
 		y = 3
 		cost = 10
 
@@ -332,10 +333,11 @@ focus_tree = {
 
 	focus = {
 		id = TU_SAM_tribal_federation
+		mutually_exclusive = { focus = TU_SAM_forest_finale }
 		icon = GFX_goal_generic_improve_relations
 		prerequisite = { focus = TU_SAM_tribal_federation_charter }
 		mutually_exclusive = { focus = TU_SAM_forest_theocracy focus = TU_SAM_open_sami }
-		x = -5
+		x = -3
 		y = 4
 		cost = 15
 
@@ -367,7 +369,7 @@ focus_tree = {
 		id = TU_SAM_federal_hunters
 		icon = GFX_goal_generic_allies_build_infantry
 		prerequisite = { focus = TU_SAM_tribal_federation }
-		x = -6
+		x = -4
 		y = 5
 		cost = 10
 
@@ -387,7 +389,7 @@ focus_tree = {
 		id = TU_SAM_winter_roads
 		icon = GFX_goal_generic_production
 		prerequisite = { focus = TU_SAM_tribal_federation }
-		x = -3
+		x = -1
 		y = 5
 		cost = 10
 
@@ -407,7 +409,7 @@ focus_tree = {
 		id = TU_SAM_open_contact
 		icon = GFX_goal_generic_improve_relations
 		prerequisite = { focus = TU_SAM_root }
-		x = 3
+		x = 5
 		y = 1
 		cost = 10
 
@@ -427,7 +429,7 @@ focus_tree = {
 		id = TU_SAM_trading_posts
 		icon = GFX_goal_generic_political_pressure
 		prerequisite = { focus = TU_SAM_open_contact }
-		x = 3
+		x = 5
 		y = 2
 		cost = 10
 
@@ -448,7 +450,7 @@ focus_tree = {
 		id = TU_SAM_fur_trade
 		icon = GFX_goal_generic_trade
 		prerequisite = { focus = TU_SAM_trading_posts }
-		x = 1
+		x = 3
 		y = 3
 		cost = 10
 
@@ -469,7 +471,7 @@ focus_tree = {
 		id = TU_SAM_foreign_teachers
 		icon = GFX_focus_research
 		prerequisite = { focus = TU_SAM_trading_posts }
-		x = 5
+		x = 7
 		y = 3
 		cost = 10
 
@@ -487,11 +489,12 @@ focus_tree = {
 
 	focus = {
 		id = TU_SAM_open_sami
+		mutually_exclusive = { focus = TU_SAM_forest_finale }
 		icon = GFX_goal_generic_political_pressure
 		prerequisite = { focus = TU_SAM_fur_trade }
 		prerequisite = { focus = TU_SAM_foreign_teachers }
 		mutually_exclusive = { focus = TU_SAM_forest_theocracy focus = TU_SAM_tribal_federation }
-		x = 10
+		x = 12
 		y = 4
 		cost = 15
 
@@ -523,7 +526,7 @@ focus_tree = {
 		id = TU_SAM_railway_north
 		icon = GFX_goal_generic_construct_infrastructure
 		prerequisite = { focus = TU_SAM_open_sami }
-		x = 9
+		x = 11
 		y = 5
 		cost = 10
 
@@ -542,7 +545,7 @@ focus_tree = {
 		id = TU_SAM_research_slot
 		icon = GFX_focus_research
 		prerequisite = { focus = TU_SAM_open_sami }
-		x = 11
+		x = 13
 		y = 5
 		cost = 10
 
@@ -561,7 +564,7 @@ focus_tree = {
 		id = TU_SAM_snow_hunters
 		icon = GFX_goal_generic_allies_build_infantry
 		prerequisite = { focus = TU_SAM_root }
-		x = -12
+		x = -2
 		y = 9
 		cost = 10
 
@@ -581,7 +584,7 @@ focus_tree = {
 		id = TU_SAM_ski_raiders
 		icon = GFX_goal_generic_army_motorized
 		prerequisite = { focus = TU_SAM_snow_hunters }
-		x = -17
+		x = -7
 		y = 10
 		cost = 10
 
@@ -601,7 +604,7 @@ focus_tree = {
 		id = TU_SAM_ambush_tactics
 		icon = GFX_goal_generic_army_doctrines
 		prerequisite = { focus = TU_SAM_snow_hunters }
-		x = -12
+		x = -2
 		y = 10
 		cost = 10
 
@@ -622,7 +625,7 @@ focus_tree = {
 		icon = GFX_goal_generic_defence
 		prerequisite = { focus = TU_SAM_ambush_tactics }
 		mutually_exclusive = { focus = TU_SAM_mobile_hunters }
-		x = -12
+		x = -2
 		y = 11
 		cost = 10
 
@@ -642,7 +645,7 @@ focus_tree = {
 		icon = GFX_goal_generic_army_motorized
 		prerequisite = { focus = TU_SAM_ambush_tactics }
 		mutually_exclusive = { focus = TU_SAM_snow_forts }
-		x = -8
+		x = 2
 		y = 11
 		cost = 10
 
@@ -662,7 +665,7 @@ focus_tree = {
 		id = TU_SAM_bow_smiths
 		icon = GFX_goal_generic_small_arms
 		prerequisite = { focus = TU_SAM_ski_raiders }
-		x = -17
+		x = -7
 		y = 11
 		cost = 10
 
@@ -683,7 +686,7 @@ focus_tree = {
 		icon = GFX_goal_generic_army_doctrines
 		prerequisite = { focus = TU_SAM_snow_forts focus = TU_SAM_mobile_hunters }
 		prerequisite = { focus = TU_SAM_bow_smiths }
-		x = -12
+		x = -2
 		y = 12
 		cost = 10
 
@@ -703,7 +706,7 @@ focus_tree = {
 		id = TU_SAM_ursus_watch
 		icon = GFX_goal_generic_defence
 		prerequisite = { focus = TU_SAM_snow_hunters }
-		x = -2
+		x = 8
 		y = 10
 		cost = 10
 
@@ -723,8 +726,8 @@ focus_tree = {
 		id = TU_SAM_timber
 		icon = GFX_goal_generic_production
 		prerequisite = { focus = TU_SAM_root }
-		x = 0
-		y = 15
+		x = -18
+		y = 11
 		cost = 10
 
 		search_filters = { FOCUS_FILTER_INDUSTRY }
@@ -744,8 +747,8 @@ focus_tree = {
 		id = TU_SAM_road_network
 		icon = GFX_goal_generic_production
 		prerequisite = { focus = TU_SAM_timber }
-		x = -6
-		y = 16
+		x = -24
+		y = 12
 		cost = 10
 
 		search_filters = { FOCUS_FILTER_INDUSTRY }
@@ -764,8 +767,8 @@ focus_tree = {
 		id = TU_SAM_industrial_district
 		icon = GFX_goal_generic_production
 		prerequisite = { focus = TU_SAM_timber }
-		x = -1
-		y = 16
+		x = -19
+		y = 12
 		cost = 10
 
 		search_filters = { FOCUS_FILTER_INDUSTRY }
@@ -786,8 +789,8 @@ focus_tree = {
 		icon = GFX_goal_generic_production
 		prerequisite = { focus = TU_SAM_industrial_district }
 		mutually_exclusive = { focus = TU_SAM_arms_program }
-		x = -3
-		y = 17
+		x = -21
+		y = 13
 		cost = 10
 
 		search_filters = { FOCUS_FILTER_INDUSTRY }
@@ -807,8 +810,8 @@ focus_tree = {
 		icon = GFX_goal_generic_small_arms
 		prerequisite = { focus = TU_SAM_industrial_district }
 		mutually_exclusive = { focus = TU_SAM_civ_program }
-		x = -1
-		y = 17
+		x = -19
+		y = 13
 		cost = 10
 
 		search_filters = { FOCUS_FILTER_INDUSTRY }
@@ -829,8 +832,8 @@ focus_tree = {
 		icon = GFX_goal_generic_production
 		prerequisite = { focus = TU_SAM_civ_program focus = TU_SAM_arms_program }
 		prerequisite = { focus = TU_SAM_road_network }
-		x = -3
-		y = 18
+		x = -21
+		y = 14
 		cost = 10
 
 		search_filters = { FOCUS_FILTER_INDUSTRY }
@@ -849,7 +852,7 @@ focus_tree = {
 		id = TU_SAM_drum_rites
 		icon = GFX_goal_generic_propaganda
 		prerequisite = { focus = TU_SAM_shaman_council }
-		x = -31
+		x = -29
 		y = 3
 		cost = 10
 
@@ -869,7 +872,7 @@ focus_tree = {
 		id = TU_SAM_spirit_stones
 		icon = GFX_focus_research
 		prerequisite = { focus = TU_SAM_spirit_lore }
-		x = -15
+		x = -13
 		y = 3
 		cost = 10
 
@@ -888,7 +891,7 @@ focus_tree = {
 		id = TU_SAM_herbal_medicine
 		icon = GFX_goal_generic_consumer_goods
 		prerequisite = { focus = TU_SAM_spirit_lore }
-		x = -13
+		x = -11
 		y = 3
 		cost = 10
 
@@ -909,7 +912,7 @@ focus_tree = {
 		id = TU_SAM_ancient_runestones
 		icon = GFX_focus_research
 		prerequisite = { focus = TU_SAM_spirit_arts }
-		x = -17
+		x = -15
 		y = 4
 		cost = 10
 
@@ -928,7 +931,7 @@ focus_tree = {
 		id = TU_SAM_aurora_watch
 		icon = GFX_focus_research
 		prerequisite = { focus = TU_SAM_ice_arts }
-		x = -21
+		x = -19
 		y = 5
 		cost = 10
 
@@ -947,7 +950,7 @@ focus_tree = {
 		id = TU_SAM_tree_shrines
 		icon = GFX_goal_generic_propaganda
 		prerequisite = { focus = TU_SAM_forest_arts }
-		x = -19
+		x = -17
 		y = 5
 		cost = 10
 
@@ -967,7 +970,7 @@ focus_tree = {
 		id = TU_SAM_shaman_schools
 		icon = GFX_focus_research
 		prerequisite = { focus = TU_SAM_great_rite }
-		x = -23
+		x = -21
 		y = 6
 		cost = 10
 
@@ -986,7 +989,7 @@ focus_tree = {
 		id = TU_SAM_sacred_groves
 		icon = GFX_goal_generic_political_pressure
 		prerequisite = { focus = TU_SAM_world_tree }
-		x = -28
+		x = -26
 		y = 8
 		cost = 10
 
@@ -1006,7 +1009,7 @@ focus_tree = {
 		id = TU_SAM_spirit_pilgrimage
 		icon = GFX_goal_generic_propaganda
 		prerequisite = { focus = TU_SAM_world_tree }
-		x = -26
+		x = -24
 		y = 8
 		cost = 10
 
@@ -1026,7 +1029,7 @@ focus_tree = {
 		id = TU_SAM_reindeer_cavalry
 		icon = GFX_goal_generic_army_motorized
 		prerequisite = { focus = TU_SAM_reindeer_herders }
-		x = -11
+		x = -9
 		y = 3
 		cost = 10
 
@@ -1046,7 +1049,7 @@ focus_tree = {
 		id = TU_SAM_tribal_courts
 		icon = GFX_goal_generic_political_pressure
 		prerequisite = { focus = TU_SAM_tribal_law }
-		x = -9
+		x = -7
 		y = 3
 		cost = 10
 
@@ -1066,7 +1069,7 @@ focus_tree = {
 		id = TU_SAM_clan_feasts
 		icon = GFX_goal_generic_allies_build_infantry
 		prerequisite = { focus = TU_SAM_tribal_gathering }
-		x = -3
+		x = -1
 		y = 2
 		cost = 10
 
@@ -1086,7 +1089,7 @@ focus_tree = {
 		id = TU_SAM_elder_council
 		icon = GFX_goal_generic_political_pressure
 		prerequisite = { focus = TU_SAM_tribal_law }
-		x = -7
+		x = -5
 		y = 3
 		cost = 10
 
@@ -1106,7 +1109,7 @@ focus_tree = {
 		id = TU_SAM_federal_markets
 		icon = GFX_goal_generic_trade
 		prerequisite = { focus = TU_SAM_federal_hunters }
-		x = -7
+		x = -5
 		y = 6
 		cost = 10
 
@@ -1126,7 +1129,7 @@ focus_tree = {
 		id = TU_SAM_tribal_messengers
 		icon = GFX_goal_generic_production
 		prerequisite = { focus = TU_SAM_tribal_gathering }
-		x = -1
+		x = 1
 		y = 2
 		cost = 10
 
@@ -1145,7 +1148,7 @@ focus_tree = {
 		id = TU_SAM_kazimierz_merchants
 		icon = GFX_goal_generic_trade
 		prerequisite = { focus = TU_SAM_trading_posts }
-		x = 12
+		x = 14
 		y = 3
 		cost = 10
 
@@ -1165,7 +1168,7 @@ focus_tree = {
 		id = TU_SAM_ursus_settlers
 		icon = GFX_goal_generic_political_pressure
 		prerequisite = { focus = TU_SAM_open_contact }
-		x = 15
+		x = 17
 		y = 2
 		cost = 10
 
@@ -1185,7 +1188,7 @@ focus_tree = {
 		id = TU_SAM_translators
 		icon = GFX_goal_generic_improve_relations
 		prerequisite = { focus = TU_SAM_foreign_teachers }
-		x = 4
+		x = 6
 		y = 4
 		cost = 10
 
@@ -1205,7 +1208,7 @@ focus_tree = {
 		id = TU_SAM_foreign_medicine
 		icon = GFX_goal_generic_consumer_goods
 		prerequisite = { focus = TU_SAM_foreign_teachers }
-		x = 7
+		x = 9
 		y = 4
 		cost = 10
 
@@ -1226,7 +1229,7 @@ focus_tree = {
 		id = TU_SAM_steam_sleds
 		icon = GFX_goal_generic_army_motorized
 		prerequisite = { focus = TU_SAM_railway_north }
-		x = 8
+		x = 10
 		y = 6
 		cost = 10
 
@@ -1246,7 +1249,7 @@ focus_tree = {
 		id = TU_SAM_kjerag_ties
 		icon = GFX_goal_generic_improve_relations
 		prerequisite = { focus = TU_SAM_open_contact }
-		x = 18
+		x = 20
 		y = 2
 		cost = 10
 
@@ -1266,7 +1269,7 @@ focus_tree = {
 		id = TU_SAM_leithanien_ties
 		icon = GFX_goal_generic_improve_relations
 		prerequisite = { focus = TU_SAM_kjerag_ties }
-		x = 18
+		x = 20
 		y = 3
 		cost = 10
 
@@ -1286,7 +1289,7 @@ focus_tree = {
 		id = TU_SAM_snow_camouflage
 		icon = GFX_goal_generic_army_doctrines
 		prerequisite = { focus = TU_SAM_ski_raiders }
-		x = -15
+		x = -5
 		y = 11
 		cost = 10
 
@@ -1306,7 +1309,7 @@ focus_tree = {
 		id = TU_SAM_trap_lines
 		icon = GFX_goal_generic_army_doctrines
 		prerequisite = { focus = TU_SAM_ambush_tactics }
-		x = -6
+		x = 4
 		y = 11
 		cost = 10
 
@@ -1326,7 +1329,7 @@ focus_tree = {
 		id = TU_SAM_ice_bunkers
 		icon = GFX_goal_generic_defence
 		prerequisite = { focus = TU_SAM_snow_forts }
-		x = -10
+		x = 0
 		y = 12
 		cost = 10
 
@@ -1345,7 +1348,7 @@ focus_tree = {
 		id = TU_SAM_ski_cavalry
 		icon = GFX_goal_generic_army_motorized
 		prerequisite = { focus = TU_SAM_mobile_hunters }
-		x = -8
+		x = 2
 		y = 12
 		cost = 10
 
@@ -1365,7 +1368,7 @@ focus_tree = {
 		id = TU_SAM_rifle_trade
 		icon = GFX_goal_generic_small_arms
 		prerequisite = { focus = TU_SAM_bow_smiths }
-		x = -17
+		x = -7
 		y = 12
 		cost = 10
 
@@ -1385,7 +1388,7 @@ focus_tree = {
 		id = TU_SAM_field_shamans
 		icon = GFX_goal_generic_consumer_goods
 		prerequisite = { focus = TU_SAM_spirit_warriors }
-		x = -14
+		x = -4
 		y = 13
 		cost = 10
 
@@ -1406,7 +1409,7 @@ focus_tree = {
 		id = TU_SAM_border_scouts
 		icon = GFX_goal_generic_defence
 		prerequisite = { focus = TU_SAM_ursus_watch }
-		x = -2
+		x = 8
 		y = 11
 		cost = 10
 
@@ -1426,7 +1429,7 @@ focus_tree = {
 		id = TU_SAM_winter_war
 		icon = GFX_goal_generic_army_doctrines
 		prerequisite = { focus = TU_SAM_spirit_warriors }
-		x = -12
+		x = -2
 		y = 13
 		cost = 10
 
@@ -1446,8 +1449,8 @@ focus_tree = {
 		id = TU_SAM_fishing_villages
 		icon = GFX_goal_generic_trade
 		prerequisite = { focus = TU_SAM_timber }
-		x = 3
-		y = 16
+		x = -15
+		y = 12
 		cost = 10
 
 		search_filters = { FOCUS_FILTER_INDUSTRY }
@@ -1467,8 +1470,8 @@ focus_tree = {
 		id = TU_SAM_iron_mines
 		icon = GFX_goal_generic_small_arms
 		prerequisite = { focus = TU_SAM_industrial_district }
-		x = 1
-		y = 17
+		x = -17
+		y = 13
 		cost = 10
 
 		search_filters = { FOCUS_FILTER_INDUSTRY }
@@ -1488,8 +1491,8 @@ focus_tree = {
 		id = TU_SAM_sawmills
 		icon = GFX_goal_generic_political_pressure
 		prerequisite = { focus = TU_SAM_timber }
-		x = 6
-		y = 16
+		x = -12
+		y = 12
 		cost = 10
 
 		search_filters = { FOCUS_FILTER_INDUSTRY }
@@ -1509,7 +1512,7 @@ focus_tree = {
 		id = TU_SAM_fur_workshops
 		icon = GFX_goal_generic_production
 		prerequisite = { focus = TU_SAM_fur_trade }
-		x = 1
+		x = 3
 		y = 4
 		cost = 10
 
@@ -1529,8 +1532,8 @@ focus_tree = {
 		id = TU_SAM_hydro_power
 		icon = GFX_goal_generic_production
 		prerequisite = { focus = TU_SAM_road_network }
-		x = -7
-		y = 17
+		x = -25
+		y = 13
 		cost = 10
 
 		search_filters = { FOCUS_FILTER_INDUSTRY }
@@ -1549,8 +1552,8 @@ focus_tree = {
 		id = TU_SAM_rail_network
 		icon = GFX_goal_generic_construct_infrastructure
 		prerequisite = { focus = TU_SAM_road_network }
-		x = -5
-		y = 17
+		x = -23
+		y = 13
 		cost = 10
 
 		search_filters = { FOCUS_FILTER_INDUSTRY }
@@ -1568,8 +1571,8 @@ focus_tree = {
 		id = TU_SAM_steel_works
 		icon = GFX_goal_generic_small_arms
 		prerequisite = { focus = TU_SAM_iron_mines }
-		x = 0
-		y = 18
+		x = -18
+		y = 14
 		cost = 10
 
 		search_filters = { FOCUS_FILTER_INDUSTRY }
@@ -1589,7 +1592,7 @@ focus_tree = {
 		id = TU_SAM_air_scouts
 		icon = GFX_goal_generic_air_doctrine
 		prerequisite = { focus = TU_SAM_winter_war }
-		x = -13
+		x = -3
 		y = 14
 		cost = 10
 
@@ -1610,7 +1613,7 @@ focus_tree = {
 		id = TU_SAM_forest_rangers
 		icon = GFX_goal_generic_propaganda
 		prerequisite = { focus = TU_SAM_ambush_tactics }
-		x = -4
+		x = 6
 		y = 11
 		cost = 10
 
@@ -1630,7 +1633,7 @@ focus_tree = {
 		id = TU_SAM_spirit_festival
 		icon = GFX_goal_generic_propaganda
 		prerequisite = { focus = TU_SAM_drum_rites }
-		x = -33
+		x = -31
 		y = 4
 		cost = 10
 
@@ -1650,7 +1653,7 @@ focus_tree = {
 		id = TU_SAM_snow_shelters
 		icon = GFX_goal_generic_consumer_goods
 		prerequisite = { focus = TU_SAM_winter_roads }
-		x = -3
+		x = -1
 		y = 6
 		cost = 10
 
@@ -1671,8 +1674,8 @@ focus_tree = {
 		id = TU_SAM_chemical_works
 		icon = GFX_goal_generic_production
 		prerequisite = { focus = TU_SAM_steel_works }
-		x = 0
-		y = 19
+		x = -18
+		y = 15
 		cost = 10
 
 		search_filters = { FOCUS_FILTER_INDUSTRY }
@@ -1691,8 +1694,8 @@ focus_tree = {
 		id = TU_SAM_power_lines
 		icon = GFX_goal_generic_defence
 		prerequisite = { focus = TU_SAM_hydro_power }
-		x = -7
-		y = 18
+		x = -25
+		y = 14
 		cost = 10
 
 		search_filters = { FOCUS_FILTER_INDUSTRY }
@@ -1712,7 +1715,7 @@ focus_tree = {
 		id = TU_SAM_ursus_treaty
 		icon = GFX_goal_generic_improve_relations
 		prerequisite = { focus = TU_SAM_ursus_settlers }
-		x = 14
+		x = 16
 		y = 3
 		cost = 10
 
@@ -1732,7 +1735,7 @@ focus_tree = {
 		id = TU_SAM_northern_alliance
 		icon = GFX_goal_generic_improve_relations
 		prerequisite = { focus = TU_SAM_leithanien_ties }
-		x = 18
+		x = 20
 		y = 4
 		cost = 10
 
@@ -1752,7 +1755,7 @@ focus_tree = {
 		id = TU_SAM_bear_totem
 		icon = GFX_goal_generic_propaganda
 		prerequisite = { focus = TU_SAM_drum_rites }
-		x = -31
+		x = -29
 		y = 4
 		cost = 10
 
@@ -1772,7 +1775,7 @@ focus_tree = {
 		id = TU_SAM_wolf_totem
 		icon = GFX_goal_generic_propaganda
 		prerequisite = { focus = TU_SAM_drum_rites }
-		x = -29
+		x = -27
 		y = 4
 		cost = 10
 
@@ -1792,7 +1795,7 @@ focus_tree = {
 		id = TU_SAM_raven_totem
 		icon = GFX_focus_research
 		prerequisite = { focus = TU_SAM_spirit_stones }
-		x = -15
+		x = -13
 		y = 4
 		cost = 10
 
@@ -1811,7 +1814,7 @@ focus_tree = {
 		id = TU_SAM_reindeer_totem
 		icon = GFX_goal_generic_propaganda
 		prerequisite = { focus = TU_SAM_herbal_medicine }
-		x = -13
+		x = -11
 		y = 4
 		cost = 10
 
@@ -1831,7 +1834,7 @@ focus_tree = {
 		id = TU_SAM_dream_walkers
 		icon = GFX_focus_research
 		prerequisite = { focus = TU_SAM_ancient_runestones }
-		x = -17
+		x = -15
 		y = 5
 		cost = 10
 
@@ -1850,7 +1853,7 @@ focus_tree = {
 		id = TU_SAM_frost_shield
 		icon = GFX_goal_generic_defence
 		prerequisite = { focus = TU_SAM_aurora_watch }
-		x = -21
+		x = -19
 		y = 6
 		cost = 10
 
@@ -1869,7 +1872,7 @@ focus_tree = {
 		id = TU_SAM_living_walls
 		icon = GFX_goal_generic_defence
 		prerequisite = { focus = TU_SAM_tree_shrines }
-		x = -19
+		x = -17
 		y = 6
 		cost = 10
 
@@ -1888,7 +1891,7 @@ focus_tree = {
 		id = TU_SAM_shaman_army
 		icon = GFX_goal_generic_allies_build_infantry
 		prerequisite = { focus = TU_SAM_shaman_schools }
-		x = -23
+		x = -21
 		y = 7
 		cost = 10
 
@@ -1908,7 +1911,7 @@ focus_tree = {
 		id = TU_SAM_sacred_springs
 		icon = GFX_goal_generic_consumer_goods
 		prerequisite = { focus = TU_SAM_sacred_groves }
-		x = -28
+		x = -26
 		y = 9
 		cost = 10
 
@@ -1929,7 +1932,7 @@ focus_tree = {
 		id = TU_SAM_spirit_messengers
 		icon = GFX_goal_generic_production
 		prerequisite = { focus = TU_SAM_spirit_pilgrimage }
-		x = -26
+		x = -24
 		y = 9
 		cost = 10
 
@@ -1948,7 +1951,7 @@ focus_tree = {
 		id = TU_SAM_reindeer_sleds
 		icon = GFX_goal_generic_production
 		prerequisite = { focus = TU_SAM_reindeer_cavalry }
-		x = -11
+		x = -9
 		y = 4
 		cost = 10
 
@@ -1967,7 +1970,7 @@ focus_tree = {
 		id = TU_SAM_tribal_banners
 		icon = GFX_goal_generic_propaganda
 		prerequisite = { focus = TU_SAM_clan_feasts }
-		x = -3
+		x = -1
 		y = 3
 		cost = 10
 
@@ -1987,7 +1990,7 @@ focus_tree = {
 		id = TU_SAM_elders_wisdom
 		icon = GFX_focus_research
 		prerequisite = { focus = TU_SAM_elder_council }
-		x = -7
+		x = -5
 		y = 4
 		cost = 10
 
@@ -2006,7 +2009,7 @@ focus_tree = {
 		id = TU_SAM_federal_assembly
 		icon = GFX_goal_generic_political_pressure
 		prerequisite = { focus = TU_SAM_federal_markets }
-		x = -7
+		x = -5
 		y = 7
 		cost = 10
 
@@ -2026,7 +2029,7 @@ focus_tree = {
 		id = TU_SAM_message_drums
 		icon = GFX_goal_generic_intelligence_exchange
 		prerequisite = { focus = TU_SAM_tribal_messengers }
-		x = -1
+		x = 1
 		y = 3
 		cost = 10
 
@@ -2046,7 +2049,7 @@ focus_tree = {
 		id = TU_SAM_federal_army
 		icon = GFX_goal_generic_allies_build_infantry
 		prerequisite = { focus = TU_SAM_federal_hunters }
-		x = -5
+		x = -3
 		y = 6
 		cost = 10
 
@@ -2066,7 +2069,7 @@ focus_tree = {
 		id = TU_SAM_merchant_lodges
 		icon = GFX_goal_generic_trade
 		prerequisite = { focus = TU_SAM_kazimierz_merchants }
-		x = 12
+		x = 14
 		y = 4
 		cost = 10
 
@@ -2086,7 +2089,7 @@ focus_tree = {
 		id = TU_SAM_settler_treaty
 		icon = GFX_goal_generic_improve_relations
 		prerequisite = { focus = TU_SAM_ursus_settlers }
-		x = 16
+		x = 18
 		y = 3
 		cost = 10
 
@@ -2106,7 +2109,7 @@ focus_tree = {
 		id = TU_SAM_foreign_schools
 		icon = GFX_focus_research
 		prerequisite = { focus = TU_SAM_translators }
-		x = 3
+		x = 5
 		y = 5
 		cost = 10
 
@@ -2125,7 +2128,7 @@ focus_tree = {
 		id = TU_SAM_vaccines
 		icon = GFX_goal_generic_consumer_goods
 		prerequisite = { focus = TU_SAM_foreign_medicine }
-		x = 7
+		x = 9
 		y = 5
 		cost = 10
 
@@ -2146,7 +2149,7 @@ focus_tree = {
 		id = TU_SAM_northern_ports
 		icon = GFX_goal_generic_trade
 		prerequisite = { focus = TU_SAM_railway_north }
-		x = 10
+		x = 12
 		y = 6
 		cost = 10
 
@@ -2167,7 +2170,7 @@ focus_tree = {
 		id = TU_SAM_snow_ambush
 		icon = GFX_goal_generic_army_doctrines
 		prerequisite = { focus = TU_SAM_trap_lines }
-		x = -6
+		x = 4
 		y = 12
 		cost = 10
 
@@ -2187,7 +2190,7 @@ focus_tree = {
 		id = TU_SAM_ice_fortress
 		icon = GFX_goal_generic_defence
 		prerequisite = { focus = TU_SAM_ice_bunkers }
-		x = -10
+		x = 0
 		y = 13
 		cost = 10
 
@@ -2206,7 +2209,7 @@ focus_tree = {
 		id = TU_SAM_hunter_marksmen
 		icon = GFX_goal_generic_army_doctrines
 		prerequisite = { focus = TU_SAM_rifle_trade }
-		x = -18
+		x = -8
 		y = 13
 		cost = 10
 
@@ -2226,7 +2229,7 @@ focus_tree = {
 		id = TU_SAM_frost_artillery
 		icon = GFX_goal_generic_army_artillery
 		prerequisite = { focus = TU_SAM_rifle_trade }
-		x = -16
+		x = -6
 		y = 13
 		cost = 10
 
@@ -2246,7 +2249,7 @@ focus_tree = {
 		id = TU_SAM_motor_sleds
 		icon = GFX_goal_generic_political_pressure
 		prerequisite = { focus = TU_SAM_ski_cavalry }
-		x = -8
+		x = 2
 		y = 13
 		cost = 10
 
@@ -2266,7 +2269,7 @@ focus_tree = {
 		id = TU_SAM_arctic_doctrine
 		icon = GFX_goal_generic_army_doctrines
 		prerequisite = { focus = TU_SAM_winter_war }
-		x = -11
+		x = -1
 		y = 14
 		cost = 10
 
@@ -2286,7 +2289,7 @@ focus_tree = {
 		id = TU_SAM_bomber_scouts
 		icon = GFX_goal_generic_air_doctrine
 		prerequisite = { focus = TU_SAM_air_scouts }
-		x = -13
+		x = -3
 		y = 15
 		cost = 10
 
@@ -2307,8 +2310,8 @@ focus_tree = {
 		id = TU_SAM_resin_works
 		icon = GFX_goal_generic_production
 		prerequisite = { focus = TU_SAM_sawmills }
-		x = 5
-		y = 17
+		x = -13
+		y = 13
 		cost = 10
 
 		search_filters = { FOCUS_FILTER_INDUSTRY }
@@ -2327,7 +2330,7 @@ focus_tree = {
 		id = TU_SAM_amber_trade
 		icon = GFX_goal_generic_trade
 		prerequisite = { focus = TU_SAM_fur_workshops }
-		x = 1
+		x = 3
 		y = 5
 		cost = 10
 
@@ -2347,8 +2350,8 @@ focus_tree = {
 		id = TU_SAM_salmon_canneries
 		icon = GFX_goal_generic_production
 		prerequisite = { focus = TU_SAM_fishing_villages }
-		x = 3
-		y = 17
+		x = -15
+		y = 13
 		cost = 10
 
 		search_filters = { FOCUS_FILTER_INDUSTRY }
@@ -2367,8 +2370,8 @@ focus_tree = {
 		id = TU_SAM_copper_mines
 		icon = GFX_goal_generic_production
 		prerequisite = { focus = TU_SAM_iron_mines }
-		x = 2
-		y = 18
+		x = -16
+		y = 14
 		cost = 10
 
 		search_filters = { FOCUS_FILTER_INDUSTRY }
@@ -2387,8 +2390,8 @@ focus_tree = {
 		id = TU_SAM_timber_rail
 		icon = GFX_goal_generic_construct_infrastructure
 		prerequisite = { focus = TU_SAM_rail_network }
-		x = -5
-		y = 18
+		x = -23
+		y = 14
 		cost = 10
 
 		search_filters = { FOCUS_FILTER_INDUSTRY }
@@ -2406,8 +2409,8 @@ focus_tree = {
 		id = TU_SAM_paper_mills
 		icon = GFX_goal_generic_political_pressure
 		prerequisite = { focus = TU_SAM_sawmills }
-		x = 7
-		y = 17
+		x = -11
+		y = 13
 		cost = 10
 
 		search_filters = { FOCUS_FILTER_INDUSTRY }
@@ -2427,8 +2430,8 @@ focus_tree = {
 		id = TU_SAM_power_stations
 		icon = GFX_goal_generic_political_pressure
 		prerequisite = { focus = TU_SAM_power_lines }
-		x = -7
-		y = 19
+		x = -25
+		y = 15
 		cost = 10
 
 		search_filters = { FOCUS_FILTER_INDUSTRY }
@@ -2448,7 +2451,7 @@ focus_tree = {
 		id = TU_SAM_laterano_contact
 		icon = GFX_goal_generic_improve_relations
 		prerequisite = { focus = TU_SAM_translators }
-		x = 5
+		x = 7
 		y = 5
 		cost = 10
 
@@ -2461,6 +2464,207 @@ focus_tree = {
 		completion_reward = {
 			add_political_power = 60
 			add_stability = 0.03
+		}
+	}
+
+	#### SAM hidden route (tools/focusgen/hidden_routes.py, spec 30) ####
+
+	focus = {
+		id = TU_SAM_forest_roots
+		prerequisite = { focus = TU_SAM_root }
+		icon = GFX_goal_generic_secret_weapon
+		x = 24
+		y = 1
+		cost = 5
+
+		search_filters = { FOCUS_FILTER_POLITICAL }
+
+		allow_branch = {
+			has_country_flag = TU_SAM_forest_route
+		}
+
+		available = {
+			has_country_flag = TU_SAM_forest_route
+		}
+
+		ai_will_do = {
+			base = 1
+		}
+
+		completion_reward = {
+			add_stability = 0.05
+		}
+	}
+
+	focus = {
+		id = TU_SAM_forest_paths
+		prerequisite = { focus = TU_SAM_forest_roots }
+		icon = GFX_goal_generic_secret_weapon
+		x = 24
+		y = 2
+		cost = 10
+
+		search_filters = { FOCUS_FILTER_POLITICAL }
+
+		allow_branch = {
+			has_country_flag = TU_SAM_forest_route
+		}
+
+		ai_will_do = {
+			base = 1
+		}
+
+		completion_reward = {
+			army_experience = 30
+		}
+	}
+
+	focus = {
+		id = TU_SAM_forest_spirits
+		prerequisite = { focus = TU_SAM_forest_roots }
+		icon = GFX_goal_generic_secret_weapon
+		x = 26
+		y = 2
+		cost = 10
+
+		search_filters = { FOCUS_FILTER_POLITICAL }
+
+		allow_branch = {
+			has_country_flag = TU_SAM_forest_route
+		}
+
+		ai_will_do = {
+			base = 1
+		}
+
+		completion_reward = {
+			add_political_power = 75
+		}
+	}
+
+	focus = {
+		id = TU_SAM_forest_walls
+		prerequisite = { focus = TU_SAM_forest_paths }
+		icon = GFX_goal_generic_secret_weapon
+		x = 22
+		y = 3
+		cost = 10
+
+		search_filters = { FOCUS_FILTER_POLITICAL }
+
+		allow_branch = {
+			has_country_flag = TU_SAM_forest_route
+		}
+
+		ai_will_do = {
+			base = 1
+		}
+
+		completion_reward = {
+			TU_build_forts_2 = yes
+		}
+	}
+
+	focus = {
+		id = TU_SAM_forest_hunters
+		prerequisite = { focus = TU_SAM_forest_paths }
+		icon = GFX_goal_generic_secret_weapon
+		x = 24
+		y = 3
+		cost = 10
+
+		search_filters = { FOCUS_FILTER_POLITICAL }
+
+		allow_branch = {
+			has_country_flag = TU_SAM_forest_route
+		}
+
+		ai_will_do = {
+			base = 1
+		}
+
+		completion_reward = {
+			add_manpower = 15000
+			army_experience = 25
+		}
+	}
+
+	focus = {
+		id = TU_SAM_forest_tree_arts
+		prerequisite = { focus = TU_SAM_forest_spirits }
+		icon = GFX_goal_generic_secret_weapon
+		x = 26
+		y = 3
+		cost = 10
+
+		search_filters = { FOCUS_FILTER_POLITICAL }
+
+		allow_branch = {
+			has_country_flag = TU_SAM_forest_route
+		}
+
+		ai_will_do = {
+			base = 1
+		}
+
+		completion_reward = {
+			add_tech_bonus = { name = TU_SAM_forest_tree_arts bonus = 1.0 uses = 2 category = tu_originium_tech category = tu_oripathy_tech }
+		}
+	}
+
+	focus = {
+		id = TU_SAM_forest_spread
+		prerequisite = { focus = TU_SAM_forest_walls }
+		prerequisite = { focus = TU_SAM_forest_hunters }
+		prerequisite = { focus = TU_SAM_forest_tree_arts }
+		icon = GFX_goal_generic_secret_weapon
+		x = 24
+		y = 4
+		cost = 15
+
+		search_filters = { FOCUS_FILTER_POLITICAL }
+
+		allow_branch = {
+			has_country_flag = TU_SAM_forest_route
+		}
+
+		ai_will_do = {
+			base = 1
+		}
+
+		completion_reward = {
+			every_neighbor_country = {
+				limit = { NOT = { is_in_faction_with = ROOT } }
+				capital_scope = { add_claim_by = ROOT }
+			}
+			add_war_support = 0.10
+		}
+	}
+
+	focus = {
+		id = TU_SAM_forest_finale
+		mutually_exclusive = { focus = TU_SAM_forest_theocracy focus = TU_SAM_tribal_federation focus = TU_SAM_open_sami }
+		prerequisite = { focus = TU_SAM_forest_spread }
+		icon = GFX_goal_generic_secret_weapon
+		x = 24
+		y = 5
+		cost = 20
+
+		search_filters = { FOCUS_FILTER_POLITICAL }
+
+		allow_branch = {
+			has_country_flag = TU_SAM_forest_route
+		}
+
+		ai_will_do = {
+			base = 1
+		}
+
+		completion_reward = {
+			swap_ideas = { remove_idea = TU_SAM_waking_forest add_idea = TU_SAM_living_forest }
+			add_political_power = 150
+			# spec 23 hooks
+			set_cosmetic_tag = TU_SAM_LIVING
 		}
 	}
 }

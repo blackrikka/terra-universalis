@@ -110,9 +110,13 @@ leader_traits = {
 	}
 	tu_lt_corrupting_heart = {
 		random = no
-		army_org_factor = 0.1
-		army_attack_factor = 0.1
-		stability_factor = -0.1
+		army_attack_factor = 0.15
+		army_defence_factor = 0.1
+		army_org_factor = 0.15
+		conscription_factor = 0.1
+		war_support_factor = 0.2
+		political_power_factor = 0.15
+		stability_factor = -0.05
 		ai_will_do = { factor = 1 }
 	}
 	tu_lt_dragon_flame = {
@@ -385,6 +389,29 @@ leader_traits = {
 		random = no
 		stability_factor = 0.05
 		political_power_factor = 0.05
+		ai_will_do = { factor = 1 }
+	}
+	tu_lt_black_serpent = {
+		random = no
+		army_attack_factor = 0.15
+		army_org_factor = 0.1
+		war_support_factor = 0.2
+		political_power_factor = 0.15
+		stability_factor = -0.1
+		ai_will_do = { factor = 1 }
+	}
+	tu_lt_babel = {
+		random = no
+		stability_factor = 0.1
+		research_speed_factor = 0.1
+		political_power_factor = 0.1
+		ai_will_do = { factor = 1 }
+	}
+	tu_lt_living_forest = {
+		random = no
+		army_defence_factor = 0.2
+		attrition = -0.15
+		war_support_factor = 0.1
 		ai_will_do = { factor = 1 }
 	}
 	tu_lt_sui_awakened = {

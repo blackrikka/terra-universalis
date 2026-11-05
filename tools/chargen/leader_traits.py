@@ -25,7 +25,7 @@ LEADER_TRAITS = {
     "tu_lt_shogun": ("쇼군의 칼", "Shogun's Blade", {"army_attack_factor": 0.05, "war_support_factor": 0.05}),
     "tu_lt_wolf_blood": ("늑대의 피", "Blood of the Wolf", {"army_attack_factor": 0.08, "war_support_factor": 0.10}),
     "tu_lt_witch_king": ("마왕의 위엄", "Majesty of the Witch King", {"army_attack_factor": 0.10, "war_support_factor": 0.10, "stability_factor": -0.05}),
-    "tu_lt_corrupting_heart": ("타락한 심장", "The Corrupting Heart", {"army_org_factor": 0.10, "army_attack_factor": 0.10, "stability_factor": -0.10}),
+    "tu_lt_corrupting_heart": ("타락한 심장", "The Corrupting Heart", {"army_attack_factor": 0.15, "army_defence_factor": 0.10, "army_org_factor": 0.15, "conscription_factor": 0.10, "war_support_factor": 0.20, "political_power_factor": 0.15, "stability_factor": -0.05}),
     "tu_lt_dragon_flame": ("용의 불꽃", "Dragon's Flame", {"army_attack_factor": 0.10, "stability_factor": -0.05}),
     "tu_lt_old_soldier": ("늙은 병사의 신념", "Old Soldier's Creed", {"army_defence_factor": 0.10, "war_support_factor": 0.05}),
     "tu_lt_lion_heir": ("사자의 후계자", "Heir of the Lion", {"stability_factor": 0.05, "war_support_factor": 0.10}),
@@ -74,6 +74,9 @@ LEADER_TRAITS = {
     "tu_lt_painter": ("그림 속의 세계", "World in a Painting", {"research_speed_factor": 0.05, "stability_factor": 0.03}),
     "tu_lt_dreamer": ("술과 꿈", "Wine and Dreams", {"war_support_factor": 0.05, "stability_factor": 0.05}),
     "tu_lt_sibling_council": ("형제 평의회", "Council of Siblings", {"stability_factor": 0.05, "political_power_factor": 0.05}),
+    "tu_lt_black_serpent": ("불사의 검은 뱀", "The Undying Black Serpent", {"army_attack_factor": 0.15, "army_org_factor": 0.10, "war_support_factor": 0.20, "political_power_factor": 0.15, "stability_factor": -0.10}),
+    "tu_lt_babel": ("바벨의 계승자", "Heir of Babel", {"stability_factor": 0.10, "research_speed_factor": 0.10, "political_power_factor": 0.10}),
+    "tu_lt_living_forest": ("숲의 의지", "Will of the Forest", {"army_defence_factor": 0.20, "attrition": -0.15, "war_support_factor": 0.10}),
     "tu_lt_sui_awakened": ("깨어난 세", "The Awakened Sui", {"research_speed_factor": 0.05, "army_attack_factor": 0.05, "stability_factor": 0.05}),
 }
 
@@ -176,4 +179,7 @@ ASSIGN = {
     "TU_YAN_yu": ["tu_lt_sui_sibling"],
     "TU_YAN_sibling_council": ["tu_lt_sibling_council"],
     "TU_YAN_sui_true": ["tu_lt_sui_awakened"],
+    "TU_URS_kashchey": ["tu_lt_black_serpent"],
+    "TU_KZD_babel_assembly": ["tu_lt_babel"],
+    "TU_SAM_forest_will": ["tu_lt_living_forest"],
 }

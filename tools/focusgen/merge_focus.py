@@ -57,6 +57,7 @@ PART_BANDS = {
     "e2_army": [(16, 26)],
     "e3_air_research": [(28, 34)],
     "e4_chernobog": [(36, 44)],
+    "p9_hidden": [(202, 240)],      # hidden_routes.py (사양서 30)
 }
 
 # 좌표 밴드 검사를 하는 태그. 여기 없는 태그는 F5~F7 을 하지 않는다.

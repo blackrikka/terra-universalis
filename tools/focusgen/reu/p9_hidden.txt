@@ -1,0 +1,198 @@
+	#### REU hidden route (tools/focusgen/hidden_routes.py, spec 30) ####
+
+	focus = {
+		id = TU_REU_patriot_spear
+		prerequisite = { focus = TU_REU_uprising }
+		icon = GFX_goal_generic_secret_weapon
+		x = 202
+		y = 0
+		cost = 5
+
+		search_filters = { FOCUS_FILTER_POLITICAL }
+
+		allow_branch = {
+			has_country_flag = TU_REU_patriot_route
+		}
+
+		available = {
+			has_country_flag = TU_REU_patriot_route
+		}
+
+		ai_will_do = {
+			base = 1
+		}
+
+		completion_reward = {
+			add_stability = 0.05
+			army_experience = 25
+		}
+	}
+
+	focus = {
+		id = TU_REU_patriot_discipline
+		prerequisite = { focus = TU_REU_patriot_spear }
+		icon = GFX_goal_generic_secret_weapon
+		x = 204
+		y = 0
+		cost = 10
+
+		search_filters = { FOCUS_FILTER_POLITICAL }
+
+		allow_branch = {
+			has_country_flag = TU_REU_patriot_route
+		}
+
+		ai_will_do = {
+			base = 1
+		}
+
+		completion_reward = {
+			add_stability = 0.05
+			add_war_support = 0.05
+		}
+	}
+
+	focus = {
+		id = TU_REU_patriot_shield_guard
+		prerequisite = { focus = TU_REU_patriot_spear }
+		icon = GFX_goal_generic_secret_weapon
+		x = 206
+		y = 0
+		cost = 10
+
+		search_filters = { FOCUS_FILTER_POLITICAL }
+
+		allow_branch = {
+			has_country_flag = TU_REU_patriot_route
+		}
+
+		ai_will_do = {
+			base = 1
+		}
+
+		completion_reward = {
+			army_experience = 30
+			add_manpower = 15000
+		}
+	}
+
+	focus = {
+		id = TU_REU_patriot_refuge
+		prerequisite = { focus = TU_REU_patriot_discipline }
+		icon = GFX_goal_generic_secret_weapon
+		x = 208
+		y = 0
+		cost = 10
+
+		search_filters = { FOCUS_FILTER_POLITICAL }
+
+		allow_branch = {
+			has_country_flag = TU_REU_patriot_route
+		}
+
+		ai_will_do = {
+			base = 1
+		}
+
+		completion_reward = {
+			add_manpower = 20000
+			add_stability = 0.05
+		}
+	}
+
+	focus = {
+		id = TU_REU_patriot_north
+		prerequisite = { focus = TU_REU_patriot_shield_guard }
+		icon = GFX_goal_generic_secret_weapon
+		x = 210
+		y = 0
+		cost = 10
+
+		search_filters = { FOCUS_FILTER_POLITICAL }
+
+		allow_branch = {
+			has_country_flag = TU_REU_patriot_route
+		}
+
+		ai_will_do = {
+			base = 1
+		}
+
+		completion_reward = {
+			if = {
+				limit = { country_exists = URS }
+				create_wargoal = { type = annex_everything target = URS }
+			}
+		}
+	}
+
+	focus = {
+		id = TU_REU_patriot_councils
+		prerequisite = { focus = TU_REU_patriot_refuge }
+		icon = GFX_goal_generic_secret_weapon
+		x = 212
+		y = 0
+		cost = 10
+
+		search_filters = { FOCUS_FILTER_POLITICAL }
+
+		allow_branch = {
+			has_country_flag = TU_REU_patriot_route
+		}
+
+		ai_will_do = {
+			base = 1
+		}
+
+		completion_reward = {
+			add_political_power = 100
+		}
+	}
+
+	focus = {
+		id = TU_REU_patriot_charter
+		prerequisite = { focus = TU_REU_patriot_councils }
+		prerequisite = { focus = TU_REU_patriot_north }
+		icon = GFX_goal_generic_secret_weapon
+		x = 214
+		y = 0
+		cost = 15
+
+		search_filters = { FOCUS_FILTER_POLITICAL }
+
+		allow_branch = {
+			has_country_flag = TU_REU_patriot_route
+		}
+
+		ai_will_do = {
+			base = 1
+		}
+
+		completion_reward = {
+			add_stability = 0.10
+		}
+	}
+
+	focus = {
+		id = TU_REU_patriot_finale
+		prerequisite = { focus = TU_REU_patriot_charter }
+		icon = GFX_goal_generic_secret_weapon
+		x = 216
+		y = 0
+		cost = 20
+
+		search_filters = { FOCUS_FILTER_POLITICAL }
+
+		allow_branch = {
+			has_country_flag = TU_REU_patriot_route
+		}
+
+		ai_will_do = {
+			base = 1
+		}
+
+		completion_reward = {
+			swap_ideas = { remove_idea = TU_REU_patriot_oath add_idea = TU_REU_infected_republic }
+			add_political_power = 150
+		}
+	}
