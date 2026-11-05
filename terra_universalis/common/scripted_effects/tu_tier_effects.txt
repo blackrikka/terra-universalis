@@ -22,8 +22,8 @@ TU_tier_URS = {
 		}
 	}
 	if = {
-		limit = { 2 = { is_owned_and_controlled_by = ROOT } }
-		2 = {
+		limit = { 4 = { is_owned_and_controlled_by = ROOT } }
+		4 = {
 			add_extra_state_shared_building_slots = 7
 			add_building_construction = { type = industrial_complex level = 4 instant_build = yes }
 			add_building_construction = { type = arms_factory level = 3 instant_build = yes }
@@ -31,8 +31,8 @@ TU_tier_URS = {
 		}
 	}
 	if = {
-		limit = { 3 = { is_owned_and_controlled_by = ROOT } }
-		3 = {
+		limit = { 24 = { is_owned_and_controlled_by = ROOT } }
+		24 = {
 			add_extra_state_shared_building_slots = 6
 			add_building_construction = { type = industrial_complex level = 4 instant_build = yes }
 			add_building_construction = { type = arms_factory level = 2 instant_build = yes }
@@ -53,8 +53,8 @@ TU_tier_VIC = {
 		}
 	}
 	if = {
-		limit = { 111 = { is_owned_and_controlled_by = ROOT } }
-		111 = {
+		limit = { 112 = { is_owned_and_controlled_by = ROOT } }
+		112 = {
 			add_extra_state_shared_building_slots = 8
 			add_building_construction = { type = industrial_complex level = 5 instant_build = yes }
 			add_building_construction = { type = arms_factory level = 3 instant_build = yes }
@@ -62,8 +62,8 @@ TU_tier_VIC = {
 		}
 	}
 	if = {
-		limit = { 112 = { is_owned_and_controlled_by = ROOT } }
-		112 = {
+		limit = { 115 = { is_owned_and_controlled_by = ROOT } }
+		115 = {
 			add_extra_state_shared_building_slots = 7
 			add_building_construction = { type = industrial_complex level = 5 instant_build = yes }
 			add_building_construction = { type = arms_factory level = 2 instant_build = yes }
@@ -71,8 +71,8 @@ TU_tier_VIC = {
 		}
 	}
 	if = {
-		limit = { 113 = { is_owned_and_controlled_by = ROOT } }
-		113 = {
+		limit = { 121 = { is_owned_and_controlled_by = ROOT } }
+		121 = {
 			add_extra_state_shared_building_slots = 6
 			add_building_construction = { type = industrial_complex level = 4 instant_build = yes }
 			add_building_construction = { type = arms_factory level = 2 instant_build = yes }
@@ -93,8 +93,8 @@ TU_tier_YAN = {
 		}
 	}
 	if = {
-		limit = { 56 = { is_owned_and_controlled_by = ROOT } }
-		56 = {
+		limit = { 57 = { is_owned_and_controlled_by = ROOT } }
+		57 = {
 			add_extra_state_shared_building_slots = 8
 			add_building_construction = { type = industrial_complex level = 5 instant_build = yes }
 			add_building_construction = { type = arms_factory level = 3 instant_build = yes }
@@ -102,8 +102,8 @@ TU_tier_YAN = {
 		}
 	}
 	if = {
-		limit = { 57 = { is_owned_and_controlled_by = ROOT } }
-		57 = {
+		limit = { 66 = { is_owned_and_controlled_by = ROOT } }
+		66 = {
 			add_extra_state_shared_building_slots = 7
 			add_building_construction = { type = industrial_complex level = 5 instant_build = yes }
 			add_building_construction = { type = arms_factory level = 2 instant_build = yes }
@@ -111,8 +111,8 @@ TU_tier_YAN = {
 		}
 	}
 	if = {
-		limit = { 58 = { is_owned_and_controlled_by = ROOT } }
-		58 = {
+		limit = { 72 = { is_owned_and_controlled_by = ROOT } }
+		72 = {
 			add_extra_state_shared_building_slots = 6
 			add_building_construction = { type = industrial_complex level = 4 instant_build = yes }
 			add_building_construction = { type = arms_factory level = 2 instant_build = yes }
@@ -142,8 +142,8 @@ TU_tier_COL = {
 		}
 	}
 	if = {
-		limit = { 87 = { is_owned_and_controlled_by = ROOT } }
-		87 = {
+		limit = { 102 = { is_owned_and_controlled_by = ROOT } }
+		102 = {
 			add_extra_state_shared_building_slots = 7
 			add_building_construction = { type = industrial_complex level = 5 instant_build = yes }
 			add_building_construction = { type = arms_factory level = 2 instant_build = yes }
@@ -151,8 +151,8 @@ TU_tier_COL = {
 		}
 	}
 	if = {
-		limit = { 88 = { is_owned_and_controlled_by = ROOT } }
-		88 = {
+		limit = { 103 = { is_owned_and_controlled_by = ROOT } }
+		103 = {
 			add_extra_state_shared_building_slots = 7
 			add_building_construction = { type = industrial_complex level = 5 instant_build = yes }
 			add_building_construction = { type = arms_factory level = 2 instant_build = yes }
@@ -175,10 +175,28 @@ TU_tier_LAT = {
 	if = {
 		limit = { 151 = { is_owned_and_controlled_by = ROOT } }
 		151 = {
-			add_extra_state_shared_building_slots = 10
-			add_building_construction = { type = industrial_complex level = 7 instant_build = yes }
-			add_building_construction = { type = arms_factory level = 3 instant_build = yes }
-			create_unit = { division = "division_template = \"TU_LAT_line_infantry\" start_experience_factor = 0.3 start_equipment_factor = 0.8" owner = LAT count = 7 }
+			add_extra_state_shared_building_slots = 4
+			add_building_construction = { type = industrial_complex level = 3 instant_build = yes }
+			add_building_construction = { type = arms_factory level = 1 instant_build = yes }
+			create_unit = { division = "division_template = \"TU_LAT_line_infantry\" start_experience_factor = 0.3 start_equipment_factor = 0.8" owner = LAT count = 3 }
+		}
+	}
+	if = {
+		limit = { 1021 = { is_owned_and_controlled_by = ROOT } }
+		1021 = {
+			add_extra_state_shared_building_slots = 3
+			add_building_construction = { type = industrial_complex level = 2 instant_build = yes }
+			add_building_construction = { type = arms_factory level = 1 instant_build = yes }
+			create_unit = { division = "division_template = \"TU_LAT_line_infantry\" start_experience_factor = 0.3 start_equipment_factor = 0.8" owner = LAT count = 2 }
+		}
+	}
+	if = {
+		limit = { 1019 = { is_owned_and_controlled_by = ROOT } }
+		1019 = {
+			add_extra_state_shared_building_slots = 3
+			add_building_construction = { type = industrial_complex level = 2 instant_build = yes }
+			add_building_construction = { type = arms_factory level = 1 instant_build = yes }
+			create_unit = { division = "division_template = \"TU_LAT_line_infantry\" start_experience_factor = 0.3 start_equipment_factor = 0.8" owner = LAT count = 2 }
 		}
 	}
 }
@@ -204,8 +222,8 @@ TU_tier_KAZ = {
 		}
 	}
 	if = {
-		limit = { 42 = { is_owned_and_controlled_by = ROOT } }
-		42 = {
+		limit = { 45 = { is_owned_and_controlled_by = ROOT } }
+		45 = {
 			add_extra_state_shared_building_slots = 4
 			add_building_construction = { type = industrial_complex level = 3 instant_build = yes }
 			add_building_construction = { type = arms_factory level = 1 instant_build = yes }
@@ -213,8 +231,8 @@ TU_tier_KAZ = {
 		}
 	}
 	if = {
-		limit = { 44 = { is_owned_and_controlled_by = ROOT } }
-		44 = {
+		limit = { 47 = { is_owned_and_controlled_by = ROOT } }
+		47 = {
 			add_extra_state_shared_building_slots = 3
 			add_building_construction = { type = industrial_complex level = 2 instant_build = yes }
 			add_building_construction = { type = arms_factory level = 1 instant_build = yes }
@@ -244,8 +262,8 @@ TU_tier_LEI = {
 		}
 	}
 	if = {
-		limit = { 137 = { is_owned_and_controlled_by = ROOT } }
-		137 = {
+		limit = { 141 = { is_owned_and_controlled_by = ROOT } }
+		141 = {
 			add_extra_state_shared_building_slots = 3
 			add_building_construction = { type = industrial_complex level = 2 instant_build = yes }
 			add_building_construction = { type = arms_factory level = 1 instant_build = yes }
@@ -253,8 +271,8 @@ TU_tier_LEI = {
 		}
 	}
 	if = {
-		limit = { 139 = { is_owned_and_controlled_by = ROOT } }
-		139 = {
+		limit = { 981 = { is_owned_and_controlled_by = ROOT } }
+		981 = {
 			add_extra_state_shared_building_slots = 3
 			add_building_construction = { type = industrial_complex level = 2 instant_build = yes }
 			add_building_construction = { type = arms_factory level = 1 instant_build = yes }
@@ -315,26 +333,26 @@ TU_tier_KZD = {
 		}
 	}
 	if = {
-		limit = { 145 = { is_owned_and_controlled_by = ROOT } }
-		145 = {
-			add_extra_state_shared_building_slots = 3
-			add_building_construction = { type = industrial_complex level = 1 instant_build = yes }
-			add_building_construction = { type = arms_factory level = 2 instant_build = yes }
-			create_unit = { division = "division_template = \"TU_KZD_infantry\" start_experience_factor = 0.3 start_equipment_factor = 0.8" owner = KZD count = 2 }
-		}
-	}
-	if = {
-		limit = { 147 = { is_owned_and_controlled_by = ROOT } }
-		147 = {
-			add_extra_state_shared_building_slots = 3
-			add_building_construction = { type = industrial_complex level = 1 instant_build = yes }
-			add_building_construction = { type = arms_factory level = 2 instant_build = yes }
-			create_unit = { division = "division_template = \"TU_KZD_infantry\" start_experience_factor = 0.3 start_equipment_factor = 0.8" owner = KZD count = 2 }
-		}
-	}
-	if = {
 		limit = { 149 = { is_owned_and_controlled_by = ROOT } }
 		149 = {
+			add_extra_state_shared_building_slots = 3
+			add_building_construction = { type = industrial_complex level = 1 instant_build = yes }
+			add_building_construction = { type = arms_factory level = 2 instant_build = yes }
+			create_unit = { division = "division_template = \"TU_KZD_infantry\" start_experience_factor = 0.3 start_equipment_factor = 0.8" owner = KZD count = 2 }
+		}
+	}
+	if = {
+		limit = { 1018 = { is_owned_and_controlled_by = ROOT } }
+		1018 = {
+			add_extra_state_shared_building_slots = 3
+			add_building_construction = { type = industrial_complex level = 1 instant_build = yes }
+			add_building_construction = { type = arms_factory level = 2 instant_build = yes }
+			create_unit = { division = "division_template = \"TU_KZD_infantry\" start_experience_factor = 0.3 start_equipment_factor = 0.8" owner = KZD count = 2 }
+		}
+	}
+	if = {
+		limit = { 145 = { is_owned_and_controlled_by = ROOT } }
+		145 = {
 			add_extra_state_shared_building_slots = 2
 			add_building_construction = { type = industrial_complex level = 1 instant_build = yes }
 			add_building_construction = { type = arms_factory level = 1 instant_build = yes }
@@ -355,8 +373,8 @@ TU_tier_IBE = {
 		}
 	}
 	if = {
-		limit = { 199 = { is_owned_and_controlled_by = ROOT } }
-		199 = {
+		limit = { 202 = { is_owned_and_controlled_by = ROOT } }
+		202 = {
 			add_extra_state_shared_building_slots = 3
 			add_building_construction = { type = industrial_complex level = 2 instant_build = yes }
 			add_building_construction = { type = arms_factory level = 1 instant_build = yes }
@@ -364,16 +382,16 @@ TU_tier_IBE = {
 		}
 	}
 	if = {
-		limit = { 200 = { is_owned_and_controlled_by = ROOT } }
-		200 = {
+		limit = { 205 = { is_owned_and_controlled_by = ROOT } }
+		205 = {
 			add_extra_state_shared_building_slots = 1
 			add_building_construction = { type = industrial_complex level = 1 instant_build = yes }
 			create_unit = { division = "division_template = \"TU_IBE_line_infantry\" start_experience_factor = 0.2 start_equipment_factor = 0.8" owner = IBE count = 1 }
 		}
 	}
 	if = {
-		limit = { 202 = { is_owned_and_controlled_by = ROOT } }
-		202 = {
+		limit = { 206 = { is_owned_and_controlled_by = ROOT } }
+		206 = {
 			add_extra_state_shared_building_slots = 1
 			add_building_construction = { type = industrial_complex level = 1 instant_build = yes }
 			create_unit = { division = "division_template = \"TU_IBE_line_infantry\" start_experience_factor = 0.2 start_equipment_factor = 0.8" owner = IBE count = 1 }
@@ -393,8 +411,8 @@ TU_tier_SIR = {
 		}
 	}
 	if = {
-		limit = { 143 = { is_owned_and_controlled_by = ROOT } }
-		143 = {
+		limit = { 144 = { is_owned_and_controlled_by = ROOT } }
+		144 = {
 			add_extra_state_shared_building_slots = 3
 			add_building_construction = { type = industrial_complex level = 2 instant_build = yes }
 			add_building_construction = { type = arms_factory level = 1 instant_build = yes }
@@ -402,11 +420,19 @@ TU_tier_SIR = {
 		}
 	}
 	if = {
-		limit = { 144 = { is_owned_and_controlled_by = ROOT } }
-		144 = {
-			add_extra_state_shared_building_slots = 2
-			add_building_construction = { type = industrial_complex level = 2 instant_build = yes }
-			create_unit = { division = "division_template = \"TU_SIR_line_infantry\" start_experience_factor = 0.2 start_equipment_factor = 0.8" owner = SIR count = 2 }
+		limit = { 143 = { is_owned_and_controlled_by = ROOT } }
+		143 = {
+			add_extra_state_shared_building_slots = 1
+			add_building_construction = { type = industrial_complex level = 1 instant_build = yes }
+			create_unit = { division = "division_template = \"TU_SIR_line_infantry\" start_experience_factor = 0.2 start_equipment_factor = 0.8" owner = SIR count = 1 }
+		}
+	}
+	if = {
+		limit = { 1007 = { is_owned_and_controlled_by = ROOT } }
+		1007 = {
+			add_extra_state_shared_building_slots = 1
+			add_building_construction = { type = industrial_complex level = 1 instant_build = yes }
+			create_unit = { division = "division_template = \"TU_SIR_line_infantry\" start_experience_factor = 0.2 start_equipment_factor = 0.8" owner = SIR count = 1 }
 		}
 	}
 }
@@ -425,10 +451,10 @@ TU_tier_HIG = {
 	if = {
 		limit = { 54 = { is_owned_and_controlled_by = ROOT } }
 		54 = {
-			add_extra_state_shared_building_slots = 3
-			add_building_construction = { type = industrial_complex level = 2 instant_build = yes }
+			add_extra_state_shared_building_slots = 2
+			add_building_construction = { type = industrial_complex level = 1 instant_build = yes }
 			add_building_construction = { type = arms_factory level = 1 instant_build = yes }
-			create_unit = { division = "division_template = \"TU_HIG_line_infantry\" start_experience_factor = 0.2 start_equipment_factor = 0.8" owner = HIG count = 3 }
+			create_unit = { division = "division_template = \"TU_HIG_line_infantry\" start_experience_factor = 0.2 start_equipment_factor = 0.8" owner = HIG count = 2 }
 		}
 	}
 	if = {
@@ -438,6 +464,14 @@ TU_tier_HIG = {
 			add_building_construction = { type = industrial_complex level = 1 instant_build = yes }
 			add_building_construction = { type = arms_factory level = 1 instant_build = yes }
 			create_unit = { division = "division_template = \"TU_HIG_line_infantry\" start_experience_factor = 0.2 start_equipment_factor = 0.8" owner = HIG count = 2 }
+		}
+	}
+	if = {
+		limit = { 785 = { is_owned_and_controlled_by = ROOT } }
+		785 = {
+			add_extra_state_shared_building_slots = 1
+			add_building_construction = { type = industrial_complex level = 1 instant_build = yes }
+			create_unit = { division = "division_template = \"TU_HIG_line_infantry\" start_experience_factor = 0.2 start_equipment_factor = 0.8" owner = HIG count = 1 }
 		}
 	}
 }
@@ -456,10 +490,26 @@ TU_tier_MIN = {
 	if = {
 		limit = { 153 = { is_owned_and_controlled_by = ROOT } }
 		153 = {
-			add_extra_state_shared_building_slots = 4
-			add_building_construction = { type = industrial_complex level = 3 instant_build = yes }
+			add_extra_state_shared_building_slots = 2
+			add_building_construction = { type = industrial_complex level = 1 instant_build = yes }
 			add_building_construction = { type = arms_factory level = 1 instant_build = yes }
-			create_unit = { division = "division_template = \"TU_MIN_line_infantry\" start_experience_factor = 0.2 start_equipment_factor = 0.8" owner = MIN count = 3 }
+			create_unit = { division = "division_template = \"TU_MIN_line_infantry\" start_experience_factor = 0.2 start_equipment_factor = 0.8" owner = MIN count = 1 }
+		}
+	}
+	if = {
+		limit = { 1022 = { is_owned_and_controlled_by = ROOT } }
+		1022 = {
+			add_extra_state_shared_building_slots = 1
+			add_building_construction = { type = industrial_complex level = 1 instant_build = yes }
+			create_unit = { division = "division_template = \"TU_MIN_line_infantry\" start_experience_factor = 0.2 start_equipment_factor = 0.8" owner = MIN count = 1 }
+		}
+	}
+	if = {
+		limit = { 1023 = { is_owned_and_controlled_by = ROOT } }
+		1023 = {
+			add_extra_state_shared_building_slots = 1
+			add_building_construction = { type = industrial_complex level = 1 instant_build = yes }
+			create_unit = { division = "division_template = \"TU_MIN_line_infantry\" start_experience_factor = 0.2 start_equipment_factor = 0.8" owner = MIN count = 1 }
 		}
 	}
 }
@@ -521,16 +571,16 @@ TU_tier_RIM = {
 		}
 	}
 	if = {
-		limit = { 155 = { is_owned_and_controlled_by = ROOT } }
-		155 = {
+		limit = { 163 = { is_owned_and_controlled_by = ROOT } }
+		163 = {
 			add_extra_state_shared_building_slots = 1
 			add_building_construction = { type = industrial_complex level = 1 instant_build = yes }
 			create_unit = { division = "division_template = \"TU_RIM_line_infantry\" start_experience_factor = 0.2 start_equipment_factor = 0.8" owner = RIM count = 1 }
 		}
 	}
 	if = {
-		limit = { 156 = { is_owned_and_controlled_by = ROOT } }
-		156 = {
+		limit = { 162 = { is_owned_and_controlled_by = ROOT } }
+		162 = {
 			add_extra_state_shared_building_slots = 1
 			add_building_construction = { type = industrial_complex level = 1 instant_build = yes }
 			create_unit = { division = "division_template = \"TU_RIM_line_infantry\" start_experience_factor = 0.2 start_equipment_factor = 0.8" owner = RIM count = 1 }
@@ -552,10 +602,24 @@ TU_tier_KJE = {
 	if = {
 		limit = { 109 = { is_owned_and_controlled_by = ROOT } }
 		109 = {
-			add_extra_state_shared_building_slots = 3
-			add_building_construction = { type = industrial_complex level = 2 instant_build = yes }
+			add_extra_state_shared_building_slots = 2
+			add_building_construction = { type = industrial_complex level = 1 instant_build = yes }
 			add_building_construction = { type = arms_factory level = 1 instant_build = yes }
-			create_unit = { division = "division_template = \"TU_KJE_line_infantry\" start_experience_factor = 0.2 start_equipment_factor = 0.8" owner = KJE count = 3 }
+			create_unit = { division = "division_template = \"TU_KJE_line_infantry\" start_experience_factor = 0.2 start_equipment_factor = 0.8" owner = KJE count = 1 }
+		}
+	}
+	if = {
+		limit = { 937 = { is_owned_and_controlled_by = ROOT } }
+		937 = {
+			add_extra_state_shared_building_slots = 1
+			add_building_construction = { type = industrial_complex level = 1 instant_build = yes }
+			create_unit = { division = "division_template = \"TU_KJE_line_infantry\" start_experience_factor = 0.2 start_equipment_factor = 0.8" owner = KJE count = 1 }
+		}
+	}
+	if = {
+		limit = { 938 = { is_owned_and_controlled_by = ROOT } }
+		938 = {
+			create_unit = { division = "division_template = \"TU_KJE_line_infantry\" start_experience_factor = 0.2 start_equipment_factor = 0.8" owner = KJE count = 1 }
 		}
 	}
 }
@@ -587,7 +651,13 @@ TU_tier_SAM = {
 	if = {
 		limit = { 51 = { is_owned_and_controlled_by = ROOT } }
 		51 = {
-			create_unit = { division = "division_template = \"TU_SAM_line_infantry\" start_experience_factor = 0.2 start_equipment_factor = 0.8" owner = SAM count = 2 }
+			create_unit = { division = "division_template = \"TU_SAM_line_infantry\" start_experience_factor = 0.2 start_equipment_factor = 0.8" owner = SAM count = 1 }
+		}
+	}
+	if = {
+		limit = { 775 = { is_owned_and_controlled_by = ROOT } }
+		775 = {
+			create_unit = { division = "division_template = \"TU_SAM_line_infantry\" start_experience_factor = 0.2 start_equipment_factor = 0.8" owner = SAM count = 1 }
 		}
 	}
 }

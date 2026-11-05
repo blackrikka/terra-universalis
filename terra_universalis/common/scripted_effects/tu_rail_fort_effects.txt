@@ -31,16 +31,16 @@ TU_build_railway = {
 				build_railway = { level = 1 start_state = 92 target_state = 86 build_only_on_allied = yes }
 			}
 			if = {
-				limit = { 87 = { is_controlled_by = ROOT } }
-				build_railway = { level = 1 start_state = 92 target_state = 87 build_only_on_allied = yes }
+				limit = { 102 = { is_controlled_by = ROOT } }
+				build_railway = { level = 1 start_state = 92 target_state = 102 build_only_on_allied = yes }
 			}
 			if = {
-				limit = { 88 = { is_controlled_by = ROOT } }
-				build_railway = { level = 1 start_state = 92 target_state = 88 build_only_on_allied = yes }
+				limit = { 103 = { is_controlled_by = ROOT } }
+				build_railway = { level = 1 start_state = 92 target_state = 103 build_only_on_allied = yes }
 			}
 			if = {
-				limit = { 89 = { is_controlled_by = ROOT } }
-				build_railway = { level = 1 start_state = 92 target_state = 89 build_only_on_allied = yes }
+				limit = { 100 = { is_controlled_by = ROOT } }
+				build_railway = { level = 1 start_state = 92 target_state = 100 build_only_on_allied = yes }
 			}
 		}
 		else_if = {
@@ -53,24 +53,32 @@ TU_build_railway = {
 				limit = { 55 = { is_controlled_by = ROOT } }
 				build_railway = { level = 1 start_state = 53 target_state = 55 build_only_on_allied = yes }
 			}
+			if = {
+				limit = { 785 = { is_controlled_by = ROOT } }
+				build_railway = { level = 1 start_state = 53 target_state = 785 build_only_on_allied = yes }
+			}
+			if = {
+				limit = { 786 = { is_controlled_by = ROOT } }
+				build_railway = { level = 1 start_state = 53 target_state = 786 build_only_on_allied = yes }
+			}
 		}
 		else_if = {
 			limit = { capital_scope = { state = 207 } 207 = { is_controlled_by = ROOT } }
-			if = {
-				limit = { 199 = { is_controlled_by = ROOT } }
-				build_railway = { level = 1 start_state = 207 target_state = 199 build_only_on_allied = yes }
-			}
-			if = {
-				limit = { 200 = { is_controlled_by = ROOT } }
-				build_railway = { level = 1 start_state = 207 target_state = 200 build_only_on_allied = yes }
-			}
 			if = {
 				limit = { 202 = { is_controlled_by = ROOT } }
 				build_railway = { level = 1 start_state = 207 target_state = 202 build_only_on_allied = yes }
 			}
 			if = {
-				limit = { 203 = { is_controlled_by = ROOT } }
-				build_railway = { level = 1 start_state = 207 target_state = 203 build_only_on_allied = yes }
+				limit = { 205 = { is_controlled_by = ROOT } }
+				build_railway = { level = 1 start_state = 207 target_state = 205 build_only_on_allied = yes }
+			}
+			if = {
+				limit = { 206 = { is_controlled_by = ROOT } }
+				build_railway = { level = 1 start_state = 207 target_state = 206 build_only_on_allied = yes }
+			}
+			if = {
+				limit = { 208 = { is_controlled_by = ROOT } }
+				build_railway = { level = 1 start_state = 207 target_state = 208 build_only_on_allied = yes }
 			}
 		}
 		else_if = {
@@ -80,16 +88,16 @@ TU_build_railway = {
 				build_railway = { level = 1 start_state = 40 target_state = 41 build_only_on_allied = yes }
 			}
 			if = {
-				limit = { 42 = { is_controlled_by = ROOT } }
-				build_railway = { level = 1 start_state = 40 target_state = 42 build_only_on_allied = yes }
-			}
-			if = {
-				limit = { 44 = { is_controlled_by = ROOT } }
-				build_railway = { level = 1 start_state = 40 target_state = 44 build_only_on_allied = yes }
-			}
-			if = {
 				limit = { 45 = { is_controlled_by = ROOT } }
 				build_railway = { level = 1 start_state = 40 target_state = 45 build_only_on_allied = yes }
+			}
+			if = {
+				limit = { 47 = { is_controlled_by = ROOT } }
+				build_railway = { level = 1 start_state = 40 target_state = 47 build_only_on_allied = yes }
+			}
+			if = {
+				limit = { 50 = { is_controlled_by = ROOT } }
+				build_railway = { level = 1 start_state = 40 target_state = 50 build_only_on_allied = yes }
 			}
 		}
 		else_if = {
@@ -98,9 +106,25 @@ TU_build_railway = {
 				limit = { 109 = { is_controlled_by = ROOT } }
 				build_railway = { level = 1 start_state = 110 target_state = 109 build_only_on_allied = yes }
 			}
+			if = {
+				limit = { 937 = { is_controlled_by = ROOT } }
+				build_railway = { level = 1 start_state = 110 target_state = 937 build_only_on_allied = yes }
+			}
+			if = {
+				limit = { 938 = { is_controlled_by = ROOT } }
+				build_railway = { level = 1 start_state = 110 target_state = 938 build_only_on_allied = yes }
+			}
+			if = {
+				limit = { 939 = { is_controlled_by = ROOT } }
+				build_railway = { level = 1 start_state = 110 target_state = 939 build_only_on_allied = yes }
+			}
 		}
 		else_if = {
 			limit = { capital_scope = { state = 148 } 148 = { is_controlled_by = ROOT } }
+			if = {
+				limit = { 149 = { is_controlled_by = ROOT } }
+				build_railway = { level = 1 start_state = 148 target_state = 149 build_only_on_allied = yes }
+			}
 			if = {
 				limit = { 145 = { is_controlled_by = ROOT } }
 				build_railway = { level = 1 start_state = 148 target_state = 145 build_only_on_allied = yes }
@@ -108,10 +132,6 @@ TU_build_railway = {
 			if = {
 				limit = { 147 = { is_controlled_by = ROOT } }
 				build_railway = { level = 1 start_state = 148 target_state = 147 build_only_on_allied = yes }
-			}
-			if = {
-				limit = { 149 = { is_controlled_by = ROOT } }
-				build_railway = { level = 1 start_state = 148 target_state = 149 build_only_on_allied = yes }
 			}
 			if = {
 				limit = { 146 = { is_controlled_by = ROOT } }
@@ -124,12 +144,28 @@ TU_build_railway = {
 				limit = { 151 = { is_controlled_by = ROOT } }
 				build_railway = { level = 1 start_state = 150 target_state = 151 build_only_on_allied = yes }
 			}
+			if = {
+				limit = { 1021 = { is_controlled_by = ROOT } }
+				build_railway = { level = 1 start_state = 150 target_state = 1021 build_only_on_allied = yes }
+			}
+			if = {
+				limit = { 1019 = { is_controlled_by = ROOT } }
+				build_railway = { level = 1 start_state = 150 target_state = 1019 build_only_on_allied = yes }
+			}
+			if = {
+				limit = { 1020 = { is_controlled_by = ROOT } }
+				build_railway = { level = 1 start_state = 150 target_state = 1020 build_only_on_allied = yes }
+			}
 		}
 		else_if = {
 			limit = { capital_scope = { state = 138 } 138 = { is_controlled_by = ROOT } }
 			if = {
 				limit = { 136 = { is_controlled_by = ROOT } }
 				build_railway = { level = 1 start_state = 138 target_state = 136 build_only_on_allied = yes }
+			}
+			if = {
+				limit = { 141 = { is_controlled_by = ROOT } }
+				build_railway = { level = 1 start_state = 138 target_state = 141 build_only_on_allied = yes }
 			}
 			if = {
 				limit = { 137 = { is_controlled_by = ROOT } }
@@ -139,16 +175,24 @@ TU_build_railway = {
 				limit = { 139 = { is_controlled_by = ROOT } }
 				build_railway = { level = 1 start_state = 138 target_state = 139 build_only_on_allied = yes }
 			}
-			if = {
-				limit = { 140 = { is_controlled_by = ROOT } }
-				build_railway = { level = 1 start_state = 138 target_state = 140 build_only_on_allied = yes }
-			}
 		}
 		else_if = {
 			limit = { capital_scope = { state = 152 } 152 = { is_controlled_by = ROOT } }
 			if = {
 				limit = { 153 = { is_controlled_by = ROOT } }
 				build_railway = { level = 1 start_state = 152 target_state = 153 build_only_on_allied = yes }
+			}
+			if = {
+				limit = { 1022 = { is_controlled_by = ROOT } }
+				build_railway = { level = 1 start_state = 152 target_state = 1022 build_only_on_allied = yes }
+			}
+			if = {
+				limit = { 1023 = { is_controlled_by = ROOT } }
+				build_railway = { level = 1 start_state = 152 target_state = 1023 build_only_on_allied = yes }
+			}
+			if = {
+				limit = { 1024 = { is_controlled_by = ROOT } }
+				build_railway = { level = 1 start_state = 152 target_state = 1024 build_only_on_allied = yes }
 			}
 		}
 		else_if = {
@@ -158,16 +202,16 @@ TU_build_railway = {
 				build_railway = { level = 1 start_state = 24 target_state = 1 build_only_on_allied = yes }
 			}
 			if = {
-				limit = { 2 = { is_controlled_by = ROOT } }
-				build_railway = { level = 1 start_state = 24 target_state = 2 build_only_on_allied = yes }
-			}
-			if = {
-				limit = { 3 = { is_controlled_by = ROOT } }
-				build_railway = { level = 1 start_state = 24 target_state = 3 build_only_on_allied = yes }
-			}
-			if = {
 				limit = { 4 = { is_controlled_by = ROOT } }
 				build_railway = { level = 1 start_state = 24 target_state = 4 build_only_on_allied = yes }
+			}
+			if = {
+				limit = { 37 = { is_controlled_by = ROOT } }
+				build_railway = { level = 1 start_state = 24 target_state = 37 build_only_on_allied = yes }
+			}
+			if = {
+				limit = { 39 = { is_controlled_by = ROOT } }
+				build_railway = { level = 1 start_state = 24 target_state = 39 build_only_on_allied = yes }
 			}
 		}
 		else_if = {
@@ -177,16 +221,16 @@ TU_build_railway = {
 				build_railway = { level = 1 start_state = 157 target_state = 154 build_only_on_allied = yes }
 			}
 			if = {
-				limit = { 155 = { is_controlled_by = ROOT } }
-				build_railway = { level = 1 start_state = 157 target_state = 155 build_only_on_allied = yes }
+				limit = { 163 = { is_controlled_by = ROOT } }
+				build_railway = { level = 1 start_state = 157 target_state = 163 build_only_on_allied = yes }
 			}
 			if = {
-				limit = { 156 = { is_controlled_by = ROOT } }
-				build_railway = { level = 1 start_state = 157 target_state = 156 build_only_on_allied = yes }
+				limit = { 162 = { is_controlled_by = ROOT } }
+				build_railway = { level = 1 start_state = 157 target_state = 162 build_only_on_allied = yes }
 			}
 			if = {
-				limit = { 159 = { is_controlled_by = ROOT } }
-				build_railway = { level = 1 start_state = 157 target_state = 159 build_only_on_allied = yes }
+				limit = { 164 = { is_controlled_by = ROOT } }
+				build_railway = { level = 1 start_state = 157 target_state = 164 build_only_on_allied = yes }
 			}
 		}
 		else_if = {
@@ -194,6 +238,18 @@ TU_build_railway = {
 			if = {
 				limit = { 51 = { is_controlled_by = ROOT } }
 				build_railway = { level = 1 start_state = 52 target_state = 51 build_only_on_allied = yes }
+			}
+			if = {
+				limit = { 775 = { is_controlled_by = ROOT } }
+				build_railway = { level = 1 start_state = 52 target_state = 775 build_only_on_allied = yes }
+			}
+			if = {
+				limit = { 776 = { is_controlled_by = ROOT } }
+				build_railway = { level = 1 start_state = 52 target_state = 776 build_only_on_allied = yes }
+			}
+			if = {
+				limit = { 777 = { is_controlled_by = ROOT } }
+				build_railway = { level = 1 start_state = 52 target_state = 777 build_only_on_allied = yes }
 			}
 		}
 		else_if = {
@@ -211,19 +267,27 @@ TU_build_railway = {
 				build_railway = { level = 1 start_state = 196 target_state = 167 build_only_on_allied = yes }
 			}
 			if = {
-				limit = { 168 = { is_controlled_by = ROOT } }
-				build_railway = { level = 1 start_state = 196 target_state = 168 build_only_on_allied = yes }
+				limit = { 170 = { is_controlled_by = ROOT } }
+				build_railway = { level = 1 start_state = 196 target_state = 170 build_only_on_allied = yes }
 			}
 		}
 		else_if = {
 			limit = { capital_scope = { state = 142 } 142 = { is_controlled_by = ROOT } }
 			if = {
+				limit = { 144 = { is_controlled_by = ROOT } }
+				build_railway = { level = 1 start_state = 142 target_state = 144 build_only_on_allied = yes }
+			}
+			if = {
 				limit = { 143 = { is_controlled_by = ROOT } }
 				build_railway = { level = 1 start_state = 142 target_state = 143 build_only_on_allied = yes }
 			}
 			if = {
-				limit = { 144 = { is_controlled_by = ROOT } }
-				build_railway = { level = 1 start_state = 142 target_state = 144 build_only_on_allied = yes }
+				limit = { 1007 = { is_controlled_by = ROOT } }
+				build_railway = { level = 1 start_state = 142 target_state = 1007 build_only_on_allied = yes }
+			}
+			if = {
+				limit = { 1008 = { is_controlled_by = ROOT } }
+				build_railway = { level = 1 start_state = 142 target_state = 1008 build_only_on_allied = yes }
 			}
 		}
 		else_if = {
@@ -237,50 +301,50 @@ TU_build_railway = {
 				build_railway = { level = 1 start_state = 39 target_state = 1 build_only_on_allied = yes }
 			}
 			if = {
-				limit = { 2 = { is_controlled_by = ROOT } }
-				build_railway = { level = 1 start_state = 39 target_state = 2 build_only_on_allied = yes }
+				limit = { 4 = { is_controlled_by = ROOT } }
+				build_railway = { level = 1 start_state = 39 target_state = 4 build_only_on_allied = yes }
 			}
 			if = {
-				limit = { 3 = { is_controlled_by = ROOT } }
-				build_railway = { level = 1 start_state = 39 target_state = 3 build_only_on_allied = yes }
+				limit = { 37 = { is_controlled_by = ROOT } }
+				build_railway = { level = 1 start_state = 39 target_state = 37 build_only_on_allied = yes }
 			}
 		}
 		else_if = {
 			limit = { capital_scope = { state = 117 } 117 = { is_controlled_by = ROOT } }
 			if = {
-				limit = { 111 = { is_controlled_by = ROOT } }
-				build_railway = { level = 1 start_state = 117 target_state = 111 build_only_on_allied = yes }
-			}
-			if = {
 				limit = { 112 = { is_controlled_by = ROOT } }
 				build_railway = { level = 1 start_state = 117 target_state = 112 build_only_on_allied = yes }
-			}
-			if = {
-				limit = { 113 = { is_controlled_by = ROOT } }
-				build_railway = { level = 1 start_state = 117 target_state = 113 build_only_on_allied = yes }
 			}
 			if = {
 				limit = { 115 = { is_controlled_by = ROOT } }
 				build_railway = { level = 1 start_state = 117 target_state = 115 build_only_on_allied = yes }
 			}
+			if = {
+				limit = { 121 = { is_controlled_by = ROOT } }
+				build_railway = { level = 1 start_state = 117 target_state = 121 build_only_on_allied = yes }
+			}
+			if = {
+				limit = { 124 = { is_controlled_by = ROOT } }
+				build_railway = { level = 1 start_state = 117 target_state = 124 build_only_on_allied = yes }
+			}
 		}
 		else_if = {
 			limit = { capital_scope = { state = 64 } 64 = { is_controlled_by = ROOT } }
-			if = {
-				limit = { 56 = { is_controlled_by = ROOT } }
-				build_railway = { level = 1 start_state = 64 target_state = 56 build_only_on_allied = yes }
-			}
 			if = {
 				limit = { 57 = { is_controlled_by = ROOT } }
 				build_railway = { level = 1 start_state = 64 target_state = 57 build_only_on_allied = yes }
 			}
 			if = {
-				limit = { 58 = { is_controlled_by = ROOT } }
-				build_railway = { level = 1 start_state = 64 target_state = 58 build_only_on_allied = yes }
+				limit = { 66 = { is_controlled_by = ROOT } }
+				build_railway = { level = 1 start_state = 64 target_state = 66 build_only_on_allied = yes }
 			}
 			if = {
-				limit = { 59 = { is_controlled_by = ROOT } }
-				build_railway = { level = 1 start_state = 64 target_state = 59 build_only_on_allied = yes }
+				limit = { 72 = { is_controlled_by = ROOT } }
+				build_railway = { level = 1 start_state = 64 target_state = 72 build_only_on_allied = yes }
+			}
+			if = {
+				limit = { 73 = { is_controlled_by = ROOT } }
+				build_railway = { level = 1 start_state = 64 target_state = 73 build_only_on_allied = yes }
 			}
 		}
 		else = {

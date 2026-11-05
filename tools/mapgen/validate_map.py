@@ -538,6 +538,8 @@ def main(argv=None):
             vals[k] = v
         if info["impassable"]:
             infra = "0"
+        elif info["category"] == "tu_hex":
+            infra = vals.get("infrastructure")      # 나뉜 주 (사양서 41): 원래 주의 인프라를 그대로 쓴다
         elif info["category"] == "pastoral":
             infra = "1"
         elif info["category"] == "town":
@@ -567,7 +569,7 @@ def main(argv=None):
 
     # 수도 주 슬롯 검사: 바닐라 state_category별 슬롯 수 안에 공장·기지·조선소가 들어가야 한다 (빌드 중 "too many buildings" 방지)
     VANILLA_SLOTS = {"city": 6, "large_city": 8, "large_town": 5, "town": 4, "rural": 2, "pastoral": 1,
-                     "small_island": 1, "large_island": 3, "tiny_island": 0, "wasteland": 0, "enclave": 0,
+                     "small_island": 1, "tu_hex": 1, "large_island": 3, "tiny_island": 0, "wasteland": 0, "enclave": 0,
                      "metropolis": 10, "megalopolis": 12}
     SLOT_BUILDINGS = {"industrial_complex", "arms_factory", "dockyard"}
     for sid in sorted(capital_by_state):

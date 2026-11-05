@@ -1,0 +1,20 @@
+state={
+	id=1100
+	name="STATE_1100"
+	manpower = 12500
+
+	state_category = tu_hex
+
+	history={
+		owner = SAR
+		buildings = {
+			infrastructure = 2
+		}
+		add_core_of = SAR
+	}
+
+	provinces={
+		2403
+	}
+	local_supplies=0.0
+}

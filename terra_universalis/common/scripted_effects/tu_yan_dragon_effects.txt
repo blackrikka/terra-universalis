@@ -3,7 +3,7 @@
 # breaks away with a block of Yan states as its own country (YCH..YYU) and declares war on Yan.
 # On the road to ruin (TU_YAN_chosen_ruin) all twelve break away.
 # States: each breakaway sibling takes one seed state (not the capital; preferably not next to the capital or
-# another faction), then grows once into a neighbouring Yan state. Whatever is left stays with Yan.
+# another faction), then grows five times into neighbouring Yan states (one province each). Whatever is left stays with Yan.
 TU_YAN_split_realms = {
 	set_country_flag = TU_YAN_age_of_dragons
 	# major = yes: fire once from Yan and every player sees it once (firing it for every country repeated it ~30 times)
@@ -450,6 +450,631 @@ TU_YAN_split_realms = {
 				set_state_flag = TU_YAN_faction_state
 				set_state_flag = TU_YAN_fs_YYU
 			}
+		}
+	}
+	# Grow 5 rounds (spec 41: states are one province each since the state split)
+	if = {
+		limit = { NOT = { has_country_flag = TU_YAN_chosen_chongyue } }
+		random_state = {
+			limit = {
+				is_owned_by = ROOT
+				is_capital = no
+				NOT = { has_state_flag = TU_YAN_faction_state }
+				any_neighbor_state = { has_state_flag = TU_YAN_fs_YCH }
+			}
+			set_state_flag = TU_YAN_faction_state
+			set_state_flag = TU_YAN_fs_YCH
+		}
+	}
+	if = {
+		limit = { NOT = { has_country_flag = TU_YAN_chosen_ling } }
+		random_state = {
+			limit = {
+				is_owned_by = ROOT
+				is_capital = no
+				NOT = { has_state_flag = TU_YAN_faction_state }
+				any_neighbor_state = { has_state_flag = TU_YAN_fs_YLI }
+			}
+			set_state_flag = TU_YAN_faction_state
+			set_state_flag = TU_YAN_fs_YLI
+		}
+	}
+	if = {
+		limit = { NOT = { has_country_flag = TU_YAN_chosen_wang } }
+		random_state = {
+			limit = {
+				is_owned_by = ROOT
+				is_capital = no
+				NOT = { has_state_flag = TU_YAN_faction_state }
+				any_neighbor_state = { has_state_flag = TU_YAN_fs_YWA }
+			}
+			set_state_flag = TU_YAN_faction_state
+			set_state_flag = TU_YAN_fs_YWA
+		}
+	}
+	if = {
+		limit = { NOT = { has_country_flag = TU_YAN_chosen_dusk } }
+		random_state = {
+			limit = {
+				is_owned_by = ROOT
+				is_capital = no
+				NOT = { has_state_flag = TU_YAN_faction_state }
+				any_neighbor_state = { has_state_flag = TU_YAN_fs_YDU }
+			}
+			set_state_flag = TU_YAN_faction_state
+			set_state_flag = TU_YAN_fs_YDU
+		}
+	}
+	if = {
+		limit = { NOT = { has_country_flag = TU_YAN_chosen_shu } }
+		random_state = {
+			limit = {
+				is_owned_by = ROOT
+				is_capital = no
+				NOT = { has_state_flag = TU_YAN_faction_state }
+				any_neighbor_state = { has_state_flag = TU_YAN_fs_YSH }
+			}
+			set_state_flag = TU_YAN_faction_state
+			set_state_flag = TU_YAN_fs_YSH
+		}
+	}
+	if = {
+		limit = { NOT = { has_country_flag = TU_YAN_chosen_nian } }
+		random_state = {
+			limit = {
+				is_owned_by = ROOT
+				is_capital = no
+				NOT = { has_state_flag = TU_YAN_faction_state }
+				any_neighbor_state = { has_state_flag = TU_YAN_fs_YNI }
+			}
+			set_state_flag = TU_YAN_faction_state
+			set_state_flag = TU_YAN_fs_YNI
+		}
+	}
+	if = {
+		limit = { NOT = { has_country_flag = TU_YAN_chosen_jun } }
+		random_state = {
+			limit = {
+				is_owned_by = ROOT
+				is_capital = no
+				NOT = { has_state_flag = TU_YAN_faction_state }
+				any_neighbor_state = { has_state_flag = TU_YAN_fs_YJN }
+			}
+			set_state_flag = TU_YAN_faction_state
+			set_state_flag = TU_YAN_fs_YJN
+		}
+	}
+	if = {
+		limit = { NOT = { has_country_flag = TU_YAN_chosen_jie } }
+		random_state = {
+			limit = {
+				is_owned_by = ROOT
+				is_capital = no
+				NOT = { has_state_flag = TU_YAN_faction_state }
+				any_neighbor_state = { has_state_flag = TU_YAN_fs_YJE }
+			}
+			set_state_flag = TU_YAN_faction_state
+			set_state_flag = TU_YAN_fs_YJE
+		}
+	}
+	if = {
+		limit = { NOT = { has_country_flag = TU_YAN_chosen_ji } }
+		random_state = {
+			limit = {
+				is_owned_by = ROOT
+				is_capital = no
+				NOT = { has_state_flag = TU_YAN_faction_state }
+				any_neighbor_state = { has_state_flag = TU_YAN_fs_YJI }
+			}
+			set_state_flag = TU_YAN_faction_state
+			set_state_flag = TU_YAN_fs_YJI
+		}
+	}
+	if = {
+		limit = { NOT = { has_country_flag = TU_YAN_chosen_yi } }
+		random_state = {
+			limit = {
+				is_owned_by = ROOT
+				is_capital = no
+				NOT = { has_state_flag = TU_YAN_faction_state }
+				any_neighbor_state = { has_state_flag = TU_YAN_fs_YYI }
+			}
+			set_state_flag = TU_YAN_faction_state
+			set_state_flag = TU_YAN_fs_YYI
+		}
+	}
+	if = {
+		limit = { NOT = { has_country_flag = TU_YAN_chosen_fang } }
+		random_state = {
+			limit = {
+				is_owned_by = ROOT
+				is_capital = no
+				NOT = { has_state_flag = TU_YAN_faction_state }
+				any_neighbor_state = { has_state_flag = TU_YAN_fs_YFA }
+			}
+			set_state_flag = TU_YAN_faction_state
+			set_state_flag = TU_YAN_fs_YFA
+		}
+	}
+	if = {
+		limit = { NOT = { has_country_flag = TU_YAN_chosen_yu } }
+		random_state = {
+			limit = {
+				is_owned_by = ROOT
+				is_capital = no
+				NOT = { has_state_flag = TU_YAN_faction_state }
+				any_neighbor_state = { has_state_flag = TU_YAN_fs_YYU }
+			}
+			set_state_flag = TU_YAN_faction_state
+			set_state_flag = TU_YAN_fs_YYU
+		}
+	}
+	if = {
+		limit = { NOT = { has_country_flag = TU_YAN_chosen_chongyue } }
+		random_state = {
+			limit = {
+				is_owned_by = ROOT
+				is_capital = no
+				NOT = { has_state_flag = TU_YAN_faction_state }
+				any_neighbor_state = { has_state_flag = TU_YAN_fs_YCH }
+			}
+			set_state_flag = TU_YAN_faction_state
+			set_state_flag = TU_YAN_fs_YCH
+		}
+	}
+	if = {
+		limit = { NOT = { has_country_flag = TU_YAN_chosen_ling } }
+		random_state = {
+			limit = {
+				is_owned_by = ROOT
+				is_capital = no
+				NOT = { has_state_flag = TU_YAN_faction_state }
+				any_neighbor_state = { has_state_flag = TU_YAN_fs_YLI }
+			}
+			set_state_flag = TU_YAN_faction_state
+			set_state_flag = TU_YAN_fs_YLI
+		}
+	}
+	if = {
+		limit = { NOT = { has_country_flag = TU_YAN_chosen_wang } }
+		random_state = {
+			limit = {
+				is_owned_by = ROOT
+				is_capital = no
+				NOT = { has_state_flag = TU_YAN_faction_state }
+				any_neighbor_state = { has_state_flag = TU_YAN_fs_YWA }
+			}
+			set_state_flag = TU_YAN_faction_state
+			set_state_flag = TU_YAN_fs_YWA
+		}
+	}
+	if = {
+		limit = { NOT = { has_country_flag = TU_YAN_chosen_dusk } }
+		random_state = {
+			limit = {
+				is_owned_by = ROOT
+				is_capital = no
+				NOT = { has_state_flag = TU_YAN_faction_state }
+				any_neighbor_state = { has_state_flag = TU_YAN_fs_YDU }
+			}
+			set_state_flag = TU_YAN_faction_state
+			set_state_flag = TU_YAN_fs_YDU
+		}
+	}
+	if = {
+		limit = { NOT = { has_country_flag = TU_YAN_chosen_shu } }
+		random_state = {
+			limit = {
+				is_owned_by = ROOT
+				is_capital = no
+				NOT = { has_state_flag = TU_YAN_faction_state }
+				any_neighbor_state = { has_state_flag = TU_YAN_fs_YSH }
+			}
+			set_state_flag = TU_YAN_faction_state
+			set_state_flag = TU_YAN_fs_YSH
+		}
+	}
+	if = {
+		limit = { NOT = { has_country_flag = TU_YAN_chosen_nian } }
+		random_state = {
+			limit = {
+				is_owned_by = ROOT
+				is_capital = no
+				NOT = { has_state_flag = TU_YAN_faction_state }
+				any_neighbor_state = { has_state_flag = TU_YAN_fs_YNI }
+			}
+			set_state_flag = TU_YAN_faction_state
+			set_state_flag = TU_YAN_fs_YNI
+		}
+	}
+	if = {
+		limit = { NOT = { has_country_flag = TU_YAN_chosen_jun } }
+		random_state = {
+			limit = {
+				is_owned_by = ROOT
+				is_capital = no
+				NOT = { has_state_flag = TU_YAN_faction_state }
+				any_neighbor_state = { has_state_flag = TU_YAN_fs_YJN }
+			}
+			set_state_flag = TU_YAN_faction_state
+			set_state_flag = TU_YAN_fs_YJN
+		}
+	}
+	if = {
+		limit = { NOT = { has_country_flag = TU_YAN_chosen_jie } }
+		random_state = {
+			limit = {
+				is_owned_by = ROOT
+				is_capital = no
+				NOT = { has_state_flag = TU_YAN_faction_state }
+				any_neighbor_state = { has_state_flag = TU_YAN_fs_YJE }
+			}
+			set_state_flag = TU_YAN_faction_state
+			set_state_flag = TU_YAN_fs_YJE
+		}
+	}
+	if = {
+		limit = { NOT = { has_country_flag = TU_YAN_chosen_ji } }
+		random_state = {
+			limit = {
+				is_owned_by = ROOT
+				is_capital = no
+				NOT = { has_state_flag = TU_YAN_faction_state }
+				any_neighbor_state = { has_state_flag = TU_YAN_fs_YJI }
+			}
+			set_state_flag = TU_YAN_faction_state
+			set_state_flag = TU_YAN_fs_YJI
+		}
+	}
+	if = {
+		limit = { NOT = { has_country_flag = TU_YAN_chosen_yi } }
+		random_state = {
+			limit = {
+				is_owned_by = ROOT
+				is_capital = no
+				NOT = { has_state_flag = TU_YAN_faction_state }
+				any_neighbor_state = { has_state_flag = TU_YAN_fs_YYI }
+			}
+			set_state_flag = TU_YAN_faction_state
+			set_state_flag = TU_YAN_fs_YYI
+		}
+	}
+	if = {
+		limit = { NOT = { has_country_flag = TU_YAN_chosen_fang } }
+		random_state = {
+			limit = {
+				is_owned_by = ROOT
+				is_capital = no
+				NOT = { has_state_flag = TU_YAN_faction_state }
+				any_neighbor_state = { has_state_flag = TU_YAN_fs_YFA }
+			}
+			set_state_flag = TU_YAN_faction_state
+			set_state_flag = TU_YAN_fs_YFA
+		}
+	}
+	if = {
+		limit = { NOT = { has_country_flag = TU_YAN_chosen_yu } }
+		random_state = {
+			limit = {
+				is_owned_by = ROOT
+				is_capital = no
+				NOT = { has_state_flag = TU_YAN_faction_state }
+				any_neighbor_state = { has_state_flag = TU_YAN_fs_YYU }
+			}
+			set_state_flag = TU_YAN_faction_state
+			set_state_flag = TU_YAN_fs_YYU
+		}
+	}
+	if = {
+		limit = { NOT = { has_country_flag = TU_YAN_chosen_chongyue } }
+		random_state = {
+			limit = {
+				is_owned_by = ROOT
+				is_capital = no
+				NOT = { has_state_flag = TU_YAN_faction_state }
+				any_neighbor_state = { has_state_flag = TU_YAN_fs_YCH }
+			}
+			set_state_flag = TU_YAN_faction_state
+			set_state_flag = TU_YAN_fs_YCH
+		}
+	}
+	if = {
+		limit = { NOT = { has_country_flag = TU_YAN_chosen_ling } }
+		random_state = {
+			limit = {
+				is_owned_by = ROOT
+				is_capital = no
+				NOT = { has_state_flag = TU_YAN_faction_state }
+				any_neighbor_state = { has_state_flag = TU_YAN_fs_YLI }
+			}
+			set_state_flag = TU_YAN_faction_state
+			set_state_flag = TU_YAN_fs_YLI
+		}
+	}
+	if = {
+		limit = { NOT = { has_country_flag = TU_YAN_chosen_wang } }
+		random_state = {
+			limit = {
+				is_owned_by = ROOT
+				is_capital = no
+				NOT = { has_state_flag = TU_YAN_faction_state }
+				any_neighbor_state = { has_state_flag = TU_YAN_fs_YWA }
+			}
+			set_state_flag = TU_YAN_faction_state
+			set_state_flag = TU_YAN_fs_YWA
+		}
+	}
+	if = {
+		limit = { NOT = { has_country_flag = TU_YAN_chosen_dusk } }
+		random_state = {
+			limit = {
+				is_owned_by = ROOT
+				is_capital = no
+				NOT = { has_state_flag = TU_YAN_faction_state }
+				any_neighbor_state = { has_state_flag = TU_YAN_fs_YDU }
+			}
+			set_state_flag = TU_YAN_faction_state
+			set_state_flag = TU_YAN_fs_YDU
+		}
+	}
+	if = {
+		limit = { NOT = { has_country_flag = TU_YAN_chosen_shu } }
+		random_state = {
+			limit = {
+				is_owned_by = ROOT
+				is_capital = no
+				NOT = { has_state_flag = TU_YAN_faction_state }
+				any_neighbor_state = { has_state_flag = TU_YAN_fs_YSH }
+			}
+			set_state_flag = TU_YAN_faction_state
+			set_state_flag = TU_YAN_fs_YSH
+		}
+	}
+	if = {
+		limit = { NOT = { has_country_flag = TU_YAN_chosen_nian } }
+		random_state = {
+			limit = {
+				is_owned_by = ROOT
+				is_capital = no
+				NOT = { has_state_flag = TU_YAN_faction_state }
+				any_neighbor_state = { has_state_flag = TU_YAN_fs_YNI }
+			}
+			set_state_flag = TU_YAN_faction_state
+			set_state_flag = TU_YAN_fs_YNI
+		}
+	}
+	if = {
+		limit = { NOT = { has_country_flag = TU_YAN_chosen_jun } }
+		random_state = {
+			limit = {
+				is_owned_by = ROOT
+				is_capital = no
+				NOT = { has_state_flag = TU_YAN_faction_state }
+				any_neighbor_state = { has_state_flag = TU_YAN_fs_YJN }
+			}
+			set_state_flag = TU_YAN_faction_state
+			set_state_flag = TU_YAN_fs_YJN
+		}
+	}
+	if = {
+		limit = { NOT = { has_country_flag = TU_YAN_chosen_jie } }
+		random_state = {
+			limit = {
+				is_owned_by = ROOT
+				is_capital = no
+				NOT = { has_state_flag = TU_YAN_faction_state }
+				any_neighbor_state = { has_state_flag = TU_YAN_fs_YJE }
+			}
+			set_state_flag = TU_YAN_faction_state
+			set_state_flag = TU_YAN_fs_YJE
+		}
+	}
+	if = {
+		limit = { NOT = { has_country_flag = TU_YAN_chosen_ji } }
+		random_state = {
+			limit = {
+				is_owned_by = ROOT
+				is_capital = no
+				NOT = { has_state_flag = TU_YAN_faction_state }
+				any_neighbor_state = { has_state_flag = TU_YAN_fs_YJI }
+			}
+			set_state_flag = TU_YAN_faction_state
+			set_state_flag = TU_YAN_fs_YJI
+		}
+	}
+	if = {
+		limit = { NOT = { has_country_flag = TU_YAN_chosen_yi } }
+		random_state = {
+			limit = {
+				is_owned_by = ROOT
+				is_capital = no
+				NOT = { has_state_flag = TU_YAN_faction_state }
+				any_neighbor_state = { has_state_flag = TU_YAN_fs_YYI }
+			}
+			set_state_flag = TU_YAN_faction_state
+			set_state_flag = TU_YAN_fs_YYI
+		}
+	}
+	if = {
+		limit = { NOT = { has_country_flag = TU_YAN_chosen_fang } }
+		random_state = {
+			limit = {
+				is_owned_by = ROOT
+				is_capital = no
+				NOT = { has_state_flag = TU_YAN_faction_state }
+				any_neighbor_state = { has_state_flag = TU_YAN_fs_YFA }
+			}
+			set_state_flag = TU_YAN_faction_state
+			set_state_flag = TU_YAN_fs_YFA
+		}
+	}
+	if = {
+		limit = { NOT = { has_country_flag = TU_YAN_chosen_yu } }
+		random_state = {
+			limit = {
+				is_owned_by = ROOT
+				is_capital = no
+				NOT = { has_state_flag = TU_YAN_faction_state }
+				any_neighbor_state = { has_state_flag = TU_YAN_fs_YYU }
+			}
+			set_state_flag = TU_YAN_faction_state
+			set_state_flag = TU_YAN_fs_YYU
+		}
+	}
+	if = {
+		limit = { NOT = { has_country_flag = TU_YAN_chosen_chongyue } }
+		random_state = {
+			limit = {
+				is_owned_by = ROOT
+				is_capital = no
+				NOT = { has_state_flag = TU_YAN_faction_state }
+				any_neighbor_state = { has_state_flag = TU_YAN_fs_YCH }
+			}
+			set_state_flag = TU_YAN_faction_state
+			set_state_flag = TU_YAN_fs_YCH
+		}
+	}
+	if = {
+		limit = { NOT = { has_country_flag = TU_YAN_chosen_ling } }
+		random_state = {
+			limit = {
+				is_owned_by = ROOT
+				is_capital = no
+				NOT = { has_state_flag = TU_YAN_faction_state }
+				any_neighbor_state = { has_state_flag = TU_YAN_fs_YLI }
+			}
+			set_state_flag = TU_YAN_faction_state
+			set_state_flag = TU_YAN_fs_YLI
+		}
+	}
+	if = {
+		limit = { NOT = { has_country_flag = TU_YAN_chosen_wang } }
+		random_state = {
+			limit = {
+				is_owned_by = ROOT
+				is_capital = no
+				NOT = { has_state_flag = TU_YAN_faction_state }
+				any_neighbor_state = { has_state_flag = TU_YAN_fs_YWA }
+			}
+			set_state_flag = TU_YAN_faction_state
+			set_state_flag = TU_YAN_fs_YWA
+		}
+	}
+	if = {
+		limit = { NOT = { has_country_flag = TU_YAN_chosen_dusk } }
+		random_state = {
+			limit = {
+				is_owned_by = ROOT
+				is_capital = no
+				NOT = { has_state_flag = TU_YAN_faction_state }
+				any_neighbor_state = { has_state_flag = TU_YAN_fs_YDU }
+			}
+			set_state_flag = TU_YAN_faction_state
+			set_state_flag = TU_YAN_fs_YDU
+		}
+	}
+	if = {
+		limit = { NOT = { has_country_flag = TU_YAN_chosen_shu } }
+		random_state = {
+			limit = {
+				is_owned_by = ROOT
+				is_capital = no
+				NOT = { has_state_flag = TU_YAN_faction_state }
+				any_neighbor_state = { has_state_flag = TU_YAN_fs_YSH }
+			}
+			set_state_flag = TU_YAN_faction_state
+			set_state_flag = TU_YAN_fs_YSH
+		}
+	}
+	if = {
+		limit = { NOT = { has_country_flag = TU_YAN_chosen_nian } }
+		random_state = {
+			limit = {
+				is_owned_by = ROOT
+				is_capital = no
+				NOT = { has_state_flag = TU_YAN_faction_state }
+				any_neighbor_state = { has_state_flag = TU_YAN_fs_YNI }
+			}
+			set_state_flag = TU_YAN_faction_state
+			set_state_flag = TU_YAN_fs_YNI
+		}
+	}
+	if = {
+		limit = { NOT = { has_country_flag = TU_YAN_chosen_jun } }
+		random_state = {
+			limit = {
+				is_owned_by = ROOT
+				is_capital = no
+				NOT = { has_state_flag = TU_YAN_faction_state }
+				any_neighbor_state = { has_state_flag = TU_YAN_fs_YJN }
+			}
+			set_state_flag = TU_YAN_faction_state
+			set_state_flag = TU_YAN_fs_YJN
+		}
+	}
+	if = {
+		limit = { NOT = { has_country_flag = TU_YAN_chosen_jie } }
+		random_state = {
+			limit = {
+				is_owned_by = ROOT
+				is_capital = no
+				NOT = { has_state_flag = TU_YAN_faction_state }
+				any_neighbor_state = { has_state_flag = TU_YAN_fs_YJE }
+			}
+			set_state_flag = TU_YAN_faction_state
+			set_state_flag = TU_YAN_fs_YJE
+		}
+	}
+	if = {
+		limit = { NOT = { has_country_flag = TU_YAN_chosen_ji } }
+		random_state = {
+			limit = {
+				is_owned_by = ROOT
+				is_capital = no
+				NOT = { has_state_flag = TU_YAN_faction_state }
+				any_neighbor_state = { has_state_flag = TU_YAN_fs_YJI }
+			}
+			set_state_flag = TU_YAN_faction_state
+			set_state_flag = TU_YAN_fs_YJI
+		}
+	}
+	if = {
+		limit = { NOT = { has_country_flag = TU_YAN_chosen_yi } }
+		random_state = {
+			limit = {
+				is_owned_by = ROOT
+				is_capital = no
+				NOT = { has_state_flag = TU_YAN_faction_state }
+				any_neighbor_state = { has_state_flag = TU_YAN_fs_YYI }
+			}
+			set_state_flag = TU_YAN_faction_state
+			set_state_flag = TU_YAN_fs_YYI
+		}
+	}
+	if = {
+		limit = { NOT = { has_country_flag = TU_YAN_chosen_fang } }
+		random_state = {
+			limit = {
+				is_owned_by = ROOT
+				is_capital = no
+				NOT = { has_state_flag = TU_YAN_faction_state }
+				any_neighbor_state = { has_state_flag = TU_YAN_fs_YFA }
+			}
+			set_state_flag = TU_YAN_faction_state
+			set_state_flag = TU_YAN_fs_YFA
+		}
+	}
+	if = {
+		limit = { NOT = { has_country_flag = TU_YAN_chosen_yu } }
+		random_state = {
+			limit = {
+				is_owned_by = ROOT
+				is_capital = no
+				NOT = { has_state_flag = TU_YAN_faction_state }
+				any_neighbor_state = { has_state_flag = TU_YAN_fs_YYU }
+			}
+			set_state_flag = TU_YAN_faction_state
+			set_state_flag = TU_YAN_fs_YYU
 		}
 	}
 	if = {

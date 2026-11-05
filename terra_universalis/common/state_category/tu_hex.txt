@@ -1,0 +1,7 @@
+# Terra hex state (tools/mapgen/split_states.py, spec 41): one province, one building slot.
+state_categories = {
+	tu_hex = {
+		color = { 150 170 120 }
+		local_building_slots = 1
+	}
+}
