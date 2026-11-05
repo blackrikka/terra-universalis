@@ -1,0 +1,14 @@
+# Chernobog uprising countdown (spec 29): mission timer like Poland's Sanation crisis.
+TU_URS_uprising_category = {
+	icon = GFX_decision_category_generic_political_actions
+
+	allowed = {
+		original_tag = URS
+	}
+
+	visible = {
+		NOT = { has_global_flag = TU_chernobog_incident_started }
+	}
+
+	priority = 120
+}

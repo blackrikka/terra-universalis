@@ -1,0 +1,102 @@
+# Chernobog uprising countdown (spec 29).
+# The mission starts on startup (tu_crisis_on_actions.txt). When the timer runs out, tu_crisis.1 fires (Reunion rises).
+# Martial law decisions push the timer back; losing Chernobog cancels it.
+
+TU_URS_uprising_category = {
+
+	TU_URS_uprising_mission = {
+		icon = GFX_decision_generic_civil_support
+
+		allowed = {
+			original_tag = URS
+		}
+
+		activation = {
+			always = no
+		}
+
+		available = {
+			always = no
+		}
+
+		days_mission_timeout = 75
+		is_good = no
+		fire_only_once = yes
+
+		cancel_trigger = {
+			NOT = { 24 = { is_owned_and_controlled_by = ROOT } }
+		}
+
+		timeout_effect = {
+			country_event = { id = tu_crisis.1 }
+		}
+
+		ai_will_do = {
+			base = 0
+		}
+	}
+
+	TU_URS_uprising_martial_law = {
+		icon = GFX_decision_generic_police_action
+
+		allowed = {
+			original_tag = URS
+		}
+
+		visible = {
+			has_active_mission = TU_URS_uprising_mission
+		}
+
+		available = {
+			has_active_mission = TU_URS_uprising_mission
+		}
+
+		cost = 50
+		fire_only_once = no
+		days_re_enable = 30
+
+		complete_effect = {
+			add_days_mission_timeout = {
+				mission = TU_URS_uprising_mission
+				days = 20
+			}
+			add_stability = -0.03
+		}
+
+		ai_will_do = {
+			base = 1
+		}
+	}
+
+	TU_URS_uprising_arrests = {
+		icon = GFX_decision_generic_political_discourse
+
+		allowed = {
+			original_tag = URS
+		}
+
+		visible = {
+			has_active_mission = TU_URS_uprising_mission
+		}
+
+		available = {
+			has_active_mission = TU_URS_uprising_mission
+		}
+
+		cost = 75
+		fire_only_once = yes
+
+		complete_effect = {
+			add_days_mission_timeout = {
+				mission = TU_URS_uprising_mission
+				days = 40
+			}
+			add_war_support = -0.05
+			add_stability = -0.05
+		}
+
+		ai_will_do = {
+			base = 0
+		}
+	}
+}
