@@ -25,7 +25,7 @@ LEADER_TRAITS = {
     "tu_lt_shogun": ("쇼군의 칼", "Shogun's Blade", {"army_attack_factor": 0.05, "war_support_factor": 0.05}),
     "tu_lt_wolf_blood": ("늑대의 피", "Blood of the Wolf", {"army_attack_factor": 0.08, "war_support_factor": 0.10}),
     "tu_lt_witch_king": ("마왕의 위엄", "Majesty of the Witch King", {"army_attack_factor": 0.10, "war_support_factor": 0.10, "stability_factor": -0.05}),
-    "tu_lt_abyssal_hunter": ("아비살 사냥꾼", "Abyssal Hunter", {"army_attack_factor": 0.10, "army_org_factor": 0.05, "war_support_factor": 0.10}),
+    "tu_lt_abyssal_hunter": ("어비셜 헌터스", "Abyssal Hunter", {"army_attack_factor": 0.10, "army_org_factor": 0.05, "war_support_factor": 0.10}),
     "tu_lt_hunter_captain": ("사냥꾼의 대장", "Captain of the Hunters", {"army_org_factor": 0.08, "planning_speed": 0.10, "political_power_factor": 0.05}),
     "tu_lt_silent_blade": ("말 없는 칼날", "The Silent Blade", {"army_attack_factor": 0.08, "army_morale_factor": 0.08, "stability_factor": -0.03}),
     "tu_lt_old_captain": ("옛 대장의 귀환", "Return of the Old Captain", {"army_defence_factor": 0.10, "stability_factor": 0.05, "war_support_factor": 0.05}),

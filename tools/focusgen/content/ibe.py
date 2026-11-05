@@ -6,7 +6,7 @@
      이벤트(해안 마을 피해)가 반복된다. 해안 감시·정화 작전 디시전과 중점으로 낮춘다.
   2. 등대 복원 TU_IBE_lighthouses (0~5): 디시전으로 하나씩 복원 (기반시설 + 위협 감소).
   3. (세력 균형 "심판소 대 왕관"은 사양서 34에서 삭제)
-정치 결말 셋 (서로 배타): 심판관의 나라(심판소 2단계) / 왕관의 부활(왕관 2단계) / 바다와의 화해(위협 20 이하 + 아비살 사냥꾼 접촉).
+정치 결말 셋 (서로 배타): 심판관의 나라(심판소 2단계) / 왕관의 부활(왕관 2단계) / 바다와의 화해(위협 20 이하 + 어비셜 헌터스 접촉).
 
 실행: python -I tools/focusgen/content/ibe.py && python -I tools/focusgen/merge_focus.py --tag IBE
 """
@@ -152,7 +152,7 @@ f("coastal_watch", "해안 감시", "Coastal Watch", pre=["root"], theme=False, 
   desc=("'해안' 디시전이 열린다 (등대 복원, 해안 순찰, 정화 작전).", "Unlocks the Coast decisions (lighthouses, patrols, purification)."))
 f("sea_studies", "바다의 위협 연구", "Study of the Sea Threat", pre=["coastal_watch"], reward=[THR(-5)])
 f("tide_charts", "조류 기록", "Tide Charts Records", pre=["coastal_watch"])
-f("abyssal_rumours", "심해 사냥꾼의 소문", "Rumours of the Abyssal Hunters", pre=["sea_studies"], theme=False, reward=[EV(23, 15)])
+f("abyssal_rumours", "어비셜 헌터스의 소문", "Rumours of the Abyssal Hunters", pre=["sea_studies"], theme=False, reward=[EV(23, 15)])
 f("coastal_forts", "해안 요새", "Coastal Fortress Line", pre=["tide_charts"], me=["fleet_rebuild"])
 f("fleet_rebuild", "함대 재건", "Fleet Reconstruction", pre=["tide_charts"], me=["coastal_forts"])
 f("watchful_coast", "깨어 있는 해안", "The Watchful Coast", pre=[["coastal_forts", "fleet_rebuild"]], theme=False,
@@ -161,7 +161,7 @@ f("deep_sea_plan", "심해 대비 계획", "Deep Sea Defence Plan", pre=["watchf
 f("sea_reconciliation", "바다와의 화해", "Reconciliation with the Sea", pre=["abyssal_rumours", "deep_sea_plan"],
   me=["inquisitor_state", "crown_restored"], cost=15, theme=False, available=[AT_MOST("threat", 20), HAS("hunters_met")],
   reward=[FLAG("path_sea"), "add_ideas = TU_IBE_sea_reconciliation", "remove_ideas = TU_IBE_great_silence", EV(30)],
-  desc=("바다의 것들과 공존할 길을 찾는다. (위협 20 이하, 아비살 사냥꾼과 만나야 함)",
+  desc=("바다의 것들과 공존할 길을 찾는다. (위협 20 이하, 어비셜 헌터스와 만나야 함)",
         "Find a way to live alongside what lies in the sea. (Threat 20 or less, must have met the Abyssal Hunters)"))
 f("aegir_contact", "에기르와의 접촉", "Contact with Aegir Envoys", pre=["sea_reconciliation"])
 f("deep_sea_trade", "심해 교역", "Deep Sea Trade", pre=["aegir_contact"])
@@ -501,7 +501,7 @@ C.d(cat_coast, "purification", "정화 작전", "Purification Operation", [THR(-
     days_re_enable=240, icon="GFX_decision_generic_operation")
 C.d(cat_coast, "evacuate_town", "해안 마을 소개", "Evacuate a Coastal Town", ["add_stability = 0.03", "add_manpower = -2000"], cost=25,
     once=False, days_re_enable=180, available=[AT_LEAST("threat", 50)])
-C.d(cat_coast, "hunters_contact", "심해 사냥꾼 수소문", "Seek the Abyssal Hunters", [EV(25)], cost=75, once=True,
+C.d(cat_coast, "hunters_contact", "어비셜 헌터스 수소문", "Seek the Abyssal Hunters", [EV(25)], cost=75, once=True,
     visible=["has_completed_focus = TU_IBE_abyssal_rumours"], available=["NOT = { %s }" % HAS("hunters_met")])
 C.d(cat_coast, "sea_research", "심해 연구 지원", "Fund Deep Sea Research",
     ["add_tech_bonus = { name = TU_IBE_sea_research bonus = 0.75 uses = 1 category = electronics }"],
@@ -557,8 +557,8 @@ C.ev(23, ("바닷가의 이방인", "Strangers by the Sea"),
      ("바닷가에서 이상한 차림의 사냥꾼들을 봤다는 보고가 들어왔다. 그들은 바다의 것들을 사냥한다고 한다.",
       "There are reports of oddly dressed hunters by the shore. They are said to hunt the things from the sea."),
      [("찾아본다.", "Look for them.", [], 1)])
-C.ev(25, ("아비살 사냥꾼", "The Abyssal Hunters"),
-     ("에기르의 사냥꾼들과 만났다. 그들은 바다에서 올라오는 것들과 싸워 왔다고 했다.",
+C.ev(25, ("어비셜 헌터스", "The Abyssal Hunters"),
+     ("에기르에서 온 어비셜 헌터스와 만났다. 그들은 바다에서 올라오는 것들과 싸워 왔다고 했다.",
       "We met the hunters from Aegir. They say they have fought the things rising from the sea for a long time."),
      [("협력한다.", "Cooperate.", [FLAG("hunters_met"), THR(-15)], 70), ("의심한다.", "Distrust them.", [FLAG("hunters_met"), INQ("0.05")], 30)])
 C.ev(24, ("라테라노와의 분열", "The Laterano Schism"),
@@ -639,23 +639,23 @@ f("coastal_rail", "해안 철도", "Coastal Railway", pre=["salt_works"])
 f("cannery_plants", "어물 통조림 공장", "Fish Cannery Plants", pre=["salt_works"], econ=True)
 f("laterano_accord", "라테라노 협약", "Laterano Accord", pre=["foreign_office"])
 
-# ------------------------------------------------------------------ 아비살 사냥꾼 루트 (사양서 24 개정): 끝에서 스카디가 지도자
+# ------------------------------------------------------------------ 어비셜 헌터스 루트 (사양서 24 개정): 끝에서 스카디가 지도자
 C.idea("hunter_rule", "사냥꾼의 이베리아", "Iberia of the Hunters",
        {"army_attack_factor": 0.10, "army_org_factor": 0.10, "war_support_factor": 0.10, "stability_factor": -0.05},
-       "generic_army_war_college", ("아비살 사냥꾼이 이베리아를 이끈다. 그들은 바다를 알지만, 바다도 그들을 안다.",
+       "generic_army_war_college", ("어비셜 헌터스가 이베리아를 이끈다. 그들은 바다를 알지만, 바다도 그들을 안다.",
                                     "The Abyssal Hunters lead Iberia. They know the sea, and the sea knows them."))
 f("hunter_pact", "사냥꾼과의 맹약", "Pact with the Hunters", pre=["abyssal_rumours"], theme=False, available=[HAS("hunters_met")],
   reward=["add_political_power = 50", THR(-5)],
-  desc=("아비살 사냥꾼과 손을 잡는다. (사냥꾼과 만난 뒤)", "Join hands with the Abyssal Hunters. (After meeting the hunters)"))
+  desc=("어비셜 헌터스와 손을 잡는다. (어비셜 헌터스와 만난 뒤)", "Join hands with the Abyssal Hunters. (After meeting the hunters)"))
 f("hunter_drill", "사냥꾼의 훈련", "Abyssal Hunter Drill", pre=["hunter_pact"])
 f("hunter_blades", "사냥꾼의 대검", "Hunter Greatswords Weapons", pre=["hunter_pact"])
 f("hunter_deep_scouting", "심해 정찰", "Deep Sea Scouting", pre=["hunter_drill"])
-f("hunter_regiment", "아비살 사냥꾼 연대", "Abyssal Hunter Regiment", pre=["hunter_drill", "hunter_blades"],
+f("hunter_regiment", "어비셜 헌터스 연대", "Abyssal Hunter Regiment", pre=["hunter_drill", "hunter_blades"],
   reward=["add_manpower = 10000"])
 f("hunter_skadi", "사냥꾼의 지도자", "A Leader Among the Hunters", pre=["hunter_regiment", "hunter_deep_scouting"], cost=15, theme=False,
   me=["inquisitor_state", "crown_restored", "sea_reconciliation"],
   reward=[FLAG("hunter_rule"), "add_ideas = TU_IBE_hunter_rule", "army_experience = 50", EV(42)],
-  desc=("아비살 사냥꾼 가운데 누가 이베리아를 이끌지 정한다. (이벤트로 지도자 선택)",
+  desc=("어비셜 헌터스 가운데 누가 이베리아를 이끌지 정한다. (이벤트로 지도자 선택)",
         "Decide which of the Abyssal Hunters will lead Iberia. (Leader chosen by event)"))
 
 
@@ -729,7 +729,7 @@ f("ishar_call", "심해의 부름", "Call of the Deep", pre=["root"], cost=5, th
         "Ishar-mla points to the sea. Iberia no longer fears it."))
 f("ishar_song", "심해의 노래", "Song of the Deep", pre=["ishar_call"], allow_branch=ISHAR, theme=False,
   reward=["add_war_support = 0.10", "add_political_power = 75"])
-f("ishar_hunters", "아비살 사냥꾼의 침묵", "Silence of the Abyssal Hunters", pre=["ishar_call"], allow_branch=ISHAR, theme=False,
+f("ishar_hunters", "어비셜 헌터스의 침묵", "Silence of the Abyssal Hunters", pre=["ishar_call"], allow_branch=ISHAR, theme=False,
   reward=["add_manpower = 15000", "army_experience = 25"],
   desc=("사냥꾼들은 등을 돌리거나, 바다에 녹아든다.", "The hunters either turn away or dissolve into the sea."))
 f("ishar_tide", "밀물의 군세", "Host of the Tide", pre=["ishar_song", "ishar_hunters"], allow_branch=ISHAR, theme=False, cost=10,
