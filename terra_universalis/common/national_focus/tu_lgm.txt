@@ -36,7 +36,7 @@ focus_tree = {
 		id = TU_LGM_defence_plan
 		prerequisite = { focus = TU_LGM_trade_hub_focus }
 		icon = GFX_goal_generic_defence
-		x = -4
+		x = -9
 		y = 1
 		cost = 5
 
@@ -52,7 +52,7 @@ focus_tree = {
 		id = TU_LGM_refugee_camps
 		prerequisite = { focus = TU_LGM_defence_plan }
 		icon = GFX_goal_generic_construct_civilian
-		x = -4
+		x = -6
 		y = 2
 		cost = 10
 
@@ -70,7 +70,7 @@ focus_tree = {
 		id = TU_LGM_sanction_relief
 		prerequisite = { focus = TU_LGM_refugee_camps }
 		icon = GFX_goal_generic_trade
-		x = -6
+		x = -8
 		y = 3
 		cost = 10
 
@@ -89,7 +89,7 @@ focus_tree = {
 		id = TU_LGM_city_charter
 		prerequisite = { focus = TU_LGM_trade_hub_focus }
 		icon = GFX_goal_generic_neutrality_focus
-		x = 5
+		x = 3
 		y = 1
 		cost = 10
 
@@ -109,7 +109,7 @@ focus_tree = {
 		id = TU_LGM_autonomy_talks
 		prerequisite = { focus = TU_LGM_city_charter }
 		icon = GFX_goal_generic_improve_relations
-		x = 5
+		x = 3
 		y = 2
 		cost = 10
 
@@ -139,7 +139,7 @@ focus_tree = {
 		prerequisite = { focus = TU_LGM_autonomy_talks }
 		mutually_exclusive = { focus = TU_LGM_chen_coup }
 		icon = GFX_goal_generic_political_pressure
-		x = 7
+		x = 5
 		y = 3
 		cost = 10
 
@@ -159,7 +159,7 @@ focus_tree = {
 		id = TU_LGM_guard_reform
 		prerequisite = { focus = TU_LGM_trade_hub_focus }
 		icon = GFX_goal_generic_army_doctrines
-		x = 9
+		x = 7
 		y = 1
 		cost = 5
 
@@ -175,7 +175,7 @@ focus_tree = {
 		id = TU_LGM_chen_plan
 		prerequisite = { focus = TU_LGM_guard_reform }
 		icon = GFX_goal_generic_intelligence_exchange
-		x = 9
+		x = 7
 		y = 2
 		cost = 10
 
@@ -193,7 +193,7 @@ focus_tree = {
 		prerequisite = { focus = TU_LGM_chen_plan }
 		mutually_exclusive = { focus = TU_LGM_independence }
 		icon = GFX_goal_generic_political_pressure
-		x = 9
+		x = 7
 		y = 3
 		cost = 10
 
@@ -216,7 +216,7 @@ focus_tree = {
 		id = TU_LGM_guard_drill
 		prerequisite = { focus = TU_LGM_guard_reform }
 		icon = GFX_goal_generic_army_artillery
-		x = 23
+		x = 25
 		y = 2
 		cost = 10
 
@@ -232,7 +232,7 @@ focus_tree = {
 		id = TU_LGM_border_watch
 		prerequisite = { focus = TU_LGM_chen_coup }
 		icon = GFX_goal_generic_fortify_city
-		x = 9
+		x = 7
 		y = 4
 		cost = 10
 
@@ -251,8 +251,8 @@ focus_tree = {
 		id = TU_LGM_dip_relations
 		prerequisite = { focus = TU_LGM_trade_hub_focus }
 		icon = GFX_goal_generic_improve_relations
-		x = -9
-		y = 6
+		x = -18
+		y = 5
 		cost = 10
 
 		search_filters = { FOCUS_FILTER_POLITICAL }
@@ -274,7 +274,7 @@ focus_tree = {
 		id = TU_LGM_customs_union
 		prerequisite = { focus = TU_LGM_trade_hub_focus }
 		icon = GFX_goal_generic_trade
-		x = 2
+		x = -3
 		y = 11
 		cost = 10
 
@@ -294,7 +294,7 @@ focus_tree = {
 		id = TU_LGM_merchant_guilds
 		prerequisite = { focus = TU_LGM_customs_union }
 		icon = GFX_goal_generic_positive_trade_relations
-		x = 2
+		x = -3
 		y = 12
 		cost = 10
 
@@ -314,7 +314,7 @@ focus_tree = {
 		id = TU_LGM_banking_house
 		prerequisite = { focus = TU_LGM_merchant_guilds }
 		icon = GFX_goal_generic_production
-		x = 2
+		x = -3
 		y = 13
 		cost = 10
 
@@ -334,7 +334,7 @@ focus_tree = {
 		id = TU_LGM_free_port_zone
 		prerequisite = { focus = TU_LGM_customs_union }
 		icon = GFX_goal_generic_trade
-		x = 8
+		x = 3
 		y = 12
 		cost = 10
 
@@ -354,7 +354,7 @@ focus_tree = {
 		id = TU_LGM_warehouse_district
 		prerequisite = { focus = TU_LGM_merchant_guilds }
 		icon = GFX_goal_generic_construct_civilian
-		x = -2
+		x = -7
 		y = 13
 		cost = 10
 
@@ -375,7 +375,7 @@ focus_tree = {
 		prerequisite = { focus = TU_LGM_customs_union }
 		mutually_exclusive = { focus = TU_LGM_smuggler_crackdown }
 		icon = GFX_goal_generic_consumer_goods
-		x = 6
+		x = 1
 		y = 12
 		cost = 5
 
@@ -397,7 +397,7 @@ focus_tree = {
 		id = TU_LGM_industrial_loans
 		prerequisite = { focus = TU_LGM_banking_house }
 		icon = GFX_goal_generic_production2
-		x = 0
+		x = -5
 		y = 14
 		cost = 10
 
@@ -417,7 +417,7 @@ focus_tree = {
 		id = TU_LGM_tax_reform
 		prerequisite = { focus = TU_LGM_banking_house }
 		icon = GFX_goal_generic_political_pressure
-		x = 4
+		x = -1
 		y = 14
 		cost = 10
 
@@ -437,7 +437,7 @@ focus_tree = {
 		id = TU_LGM_stock_exchange
 		prerequisite = { focus = TU_LGM_industrial_loans }
 		icon = GFX_goal_generic_production
-		x = -2
+		x = -7
 		y = 15
 		cost = 15
 
@@ -459,7 +459,7 @@ focus_tree = {
 		id = TU_LGM_trade_fair
 		prerequisite = { focus = TU_LGM_free_port_zone }
 		icon = GFX_goal_generic_positive_trade_relations
-		x = 8
+		x = 3
 		y = 13
 		cost = 10
 
@@ -479,7 +479,7 @@ focus_tree = {
 		id = TU_LGM_consumer_boom
 		prerequisite = { focus = TU_LGM_warehouse_district }
 		icon = GFX_goal_generic_consumer_goods
-		x = -2
+		x = -7
 		y = 14
 		cost = 10
 
@@ -500,7 +500,7 @@ focus_tree = {
 		id = TU_LGM_port_taxes
 		prerequisite = { focus = TU_LGM_tax_reform }
 		icon = GFX_goal_generic_trade
-		x = 4
+		x = -1
 		y = 15
 		cost = 10
 
@@ -520,7 +520,7 @@ focus_tree = {
 		id = TU_LGM_free_trade_treaty
 		prerequisite = { focus = TU_LGM_trade_fair }
 		icon = GFX_goal_generic_positive_trade_relations
-		x = 10
+		x = 5
 		y = 14
 		cost = 10
 
@@ -540,7 +540,7 @@ focus_tree = {
 		id = TU_LGM_trade_monopoly
 		prerequisite = { focus = TU_LGM_stock_exchange }
 		icon = GFX_goal_generic_dangerous_deal
-		x = -2
+		x = -7
 		y = 16
 		cost = 15
 
@@ -560,7 +560,7 @@ focus_tree = {
 		id = TU_LGM_city_treasury
 		prerequisite = { focus = TU_LGM_port_taxes }
 		icon = GFX_goal_generic_production
-		x = 4
+		x = -1
 		y = 16
 		cost = 10
 
@@ -581,7 +581,7 @@ focus_tree = {
 		prerequisite = { focus = TU_LGM_industrial_loans }
 		mutually_exclusive = { focus = TU_LGM_central_bank_alt }
 		icon = GFX_goal_generic_production2
-		x = 0
+		x = -5
 		y = 15
 		cost = 10
 
@@ -603,7 +603,7 @@ focus_tree = {
 		prerequisite = { focus = TU_LGM_industrial_loans }
 		mutually_exclusive = { focus = TU_LGM_central_bank }
 		icon = GFX_goal_generic_production2
-		x = 2
+		x = -3
 		y = 15
 		cost = 10
 
@@ -623,7 +623,7 @@ focus_tree = {
 		id = TU_LGM_harbor_toll
 		prerequisite = { focus = TU_LGM_free_trade_treaty }
 		icon = GFX_goal_generic_trade
-		x = 10
+		x = 5
 		y = 15
 		cost = 10
 
@@ -643,7 +643,7 @@ focus_tree = {
 		id = TU_LGM_debt_restructuring
 		prerequisite = { focus = TU_LGM_city_treasury }
 		icon = GFX_goal_generic_consumer_goods
-		x = 4
+		x = -1
 		y = 17
 		cost = 10
 
@@ -664,7 +664,7 @@ focus_tree = {
 		prerequisite = { focus = TU_LGM_customs_union }
 		mutually_exclusive = { focus = TU_LGM_grain_import }
 		icon = GFX_goal_generic_political_pressure
-		x = 4
+		x = -1
 		y = 12
 		cost = 5
 
@@ -684,7 +684,7 @@ focus_tree = {
 		id = TU_LGM_port_expansion_bid
 		prerequisite = { focus = TU_LGM_harbor_works }
 		icon = GFX_goal_generic_construct_naval_dockyard
-		x = 17
+		x = 19
 		y = 14
 		cost = 10
 
@@ -705,7 +705,7 @@ focus_tree = {
 		id = TU_LGM_urban_planning
 		prerequisite = { focus = TU_LGM_trade_hub_focus }
 		icon = GFX_goal_generic_construction
-		x = 22
+		x = 24
 		y = 12
 		cost = 10
 
@@ -725,7 +725,7 @@ focus_tree = {
 		id = TU_LGM_harbor_works
 		prerequisite = { focus = TU_LGM_urban_planning }
 		icon = GFX_goal_generic_construct_naval_dockyard
-		x = 17
+		x = 19
 		y = 13
 		cost = 10
 
@@ -746,7 +746,7 @@ focus_tree = {
 		id = TU_LGM_factory_zone
 		prerequisite = { focus = TU_LGM_urban_planning }
 		icon = GFX_goal_generic_construct_civ_factory
-		x = 14
+		x = 12
 		y = 13
 		cost = 10
 
@@ -766,7 +766,7 @@ focus_tree = {
 		id = TU_LGM_fortified_districts
 		prerequisite = { focus = TU_LGM_factory_zone }
 		icon = GFX_goal_generic_fortify_city
-		x = 15
+		x = 13
 		y = 14
 		cost = 10
 
@@ -785,7 +785,7 @@ focus_tree = {
 		id = TU_LGM_housing_project
 		prerequisite = { focus = TU_LGM_urban_planning }
 		icon = GFX_goal_generic_construct_civilian
-		x = 22
+		x = 24
 		y = 13
 		cost = 10
 
@@ -806,7 +806,7 @@ focus_tree = {
 		id = TU_LGM_transit_network
 		prerequisite = { focus = TU_LGM_housing_project }
 		icon = GFX_goal_generic_construct_infrastructure
-		x = 19
+		x = 21
 		y = 14
 		cost = 10
 
@@ -826,7 +826,7 @@ focus_tree = {
 		id = TU_LGM_radar_grid
 		prerequisite = { focus = TU_LGM_transit_network }
 		icon = GFX_goal_generic_radar
-		x = 20
+		x = 22
 		y = 15
 		cost = 10
 
@@ -845,7 +845,7 @@ focus_tree = {
 		id = TU_LGM_city_wall
 		prerequisite = { focus = TU_LGM_fortified_districts }
 		icon = GFX_goal_generic_fortify_city
-		x = 15
+		x = 13
 		y = 15
 		cost = 10
 
@@ -864,7 +864,7 @@ focus_tree = {
 		id = TU_LGM_industrial_park
 		prerequisite = { focus = TU_LGM_factory_zone }
 		icon = GFX_goal_generic_construct_mil_factory
-		x = 13
+		x = 11
 		y = 14
 		cost = 15
 
@@ -884,7 +884,7 @@ focus_tree = {
 		id = TU_LGM_power_plant
 		prerequisite = { focus = TU_LGM_industrial_park }
 		icon = GFX_goal_generic_production
-		x = 13
+		x = 11
 		y = 15
 		cost = 10
 
@@ -904,7 +904,7 @@ focus_tree = {
 		id = TU_LGM_airfield_survey
 		prerequisite = { focus = TU_LGM_transit_network }
 		icon = GFX_goal_generic_build_airforce
-		x = 18
+		x = 20
 		y = 15
 		cost = 10
 
@@ -925,7 +925,7 @@ focus_tree = {
 		id = TU_LGM_border_engineers
 		prerequisite = { focus = TU_LGM_frontier_roads }
 		icon = GFX_goal_generic_construction2
-		x = 18
+		x = 16
 		y = 8
 		cost = 10
 
@@ -948,7 +948,7 @@ focus_tree = {
 		id = TU_LGM_city_census
 		prerequisite = { focus = TU_LGM_housing_project }
 		icon = GFX_goal_generic_national_unity
-		x = 22
+		x = 24
 		y = 14
 		cost = 5
 
@@ -968,7 +968,7 @@ focus_tree = {
 		id = TU_LGM_public_health
 		prerequisite = { focus = TU_LGM_city_census }
 		icon = GFX_goal_generic_construct_civilian
-		x = 22
+		x = 24
 		y = 15
 		cost = 10
 
@@ -989,7 +989,7 @@ focus_tree = {
 		id = TU_LGM_sanitation
 		prerequisite = { focus = TU_LGM_public_health }
 		icon = GFX_goal_generic_construct_civilian
-		x = 22
+		x = 24
 		y = 16
 		cost = 10
 
@@ -1011,7 +1011,7 @@ focus_tree = {
 		prerequisite = { focus = TU_LGM_city_census }
 		mutually_exclusive = { focus = TU_LGM_education_reform_alt }
 		icon = GFX_goal_generic_scientific_exchange
-		x = 24
+		x = 26
 		y = 15
 		cost = 10
 
@@ -1032,7 +1032,7 @@ focus_tree = {
 		prerequisite = { focus = TU_LGM_city_census }
 		mutually_exclusive = { focus = TU_LGM_education_reform }
 		icon = GFX_goal_generic_scientific_exchange
-		x = 26
+		x = 28
 		y = 15
 		cost = 10
 
@@ -1051,7 +1051,7 @@ focus_tree = {
 		id = TU_LGM_police_reform
 		prerequisite = { focus = TU_LGM_sanitation }
 		icon = GFX_goal_generic_political_pressure
-		x = 22
+		x = 24
 		y = 17
 		cost = 10
 
@@ -1072,7 +1072,7 @@ focus_tree = {
 		prerequisite = { focus = TU_LGM_refugee_camps }
 		mutually_exclusive = { focus = TU_LGM_refugee_census_alt }
 		icon = GFX_goal_generic_national_unity
-		x = -4
+		x = -6
 		y = 3
 		cost = 10
 
@@ -1094,7 +1094,7 @@ focus_tree = {
 		prerequisite = { focus = TU_LGM_refugee_camps }
 		mutually_exclusive = { focus = TU_LGM_refugee_census }
 		icon = GFX_goal_generic_national_unity
-		x = -2
+		x = -4
 		y = 3
 		cost = 10
 
@@ -1114,7 +1114,7 @@ focus_tree = {
 		id = TU_LGM_sanction_talks
 		prerequisite = { focus = TU_LGM_sanction_relief }
 		icon = GFX_goal_generic_positive_trade_relations
-		x = -6
+		x = -8
 		y = 4
 		cost = 10
 
@@ -1136,7 +1136,7 @@ focus_tree = {
 		id = TU_LGM_guard_expansion
 		prerequisite = { focus = TU_LGM_guard_reform }
 		icon = GFX_goal_generic_allies_build_infantry
-		x = 18
+		x = 16
 		y = 2
 		cost = 10
 
@@ -1157,7 +1157,7 @@ focus_tree = {
 		id = TU_LGM_guard_quartermaster
 		prerequisite = { focus = TU_LGM_guard_expansion }
 		icon = GFX_goal_generic_construct_military
-		x = 15
+		x = 13
 		y = 3
 		cost = 10
 
@@ -1177,7 +1177,7 @@ focus_tree = {
 		id = TU_LGM_guard_academy
 		prerequisite = { focus = TU_LGM_guard_drill }
 		icon = GFX_goal_generic_army_doctrines
-		x = 23
+		x = 25
 		y = 3
 		cost = 10
 
@@ -1197,7 +1197,7 @@ focus_tree = {
 		id = TU_LGM_guard_reserve
 		prerequisite = { focus = TU_LGM_guard_expansion }
 		icon = GFX_goal_generic_allies_build_infantry
-		x = 21
+		x = 19
 		y = 3
 		cost = 10
 
@@ -1217,7 +1217,7 @@ focus_tree = {
 		id = TU_LGM_guard_armour
 		prerequisite = { focus = TU_LGM_guard_quartermaster }
 		icon = GFX_goal_generic_army_tanks
-		x = 15
+		x = 13
 		y = 4
 		cost = 10
 
@@ -1237,7 +1237,7 @@ focus_tree = {
 		id = TU_LGM_guard_militia
 		prerequisite = { focus = TU_LGM_guard_reserve }
 		icon = GFX_goal_generic_small_arms
-		x = 21
+		x = 19
 		y = 4
 		cost = 10
 
@@ -1257,7 +1257,7 @@ focus_tree = {
 		id = TU_LGM_guard_doctrine
 		prerequisite = { focus = TU_LGM_guard_academy }
 		icon = GFX_goal_generic_army_doctrines
-		x = 23
+		x = 25
 		y = 4
 		cost = 10
 
@@ -1278,7 +1278,7 @@ focus_tree = {
 		id = TU_LGM_guard_hq
 		prerequisite = { focus = TU_LGM_guard_armour }
 		icon = GFX_goal_generic_position_armies
-		x = 17
+		x = 15
 		y = 5
 		cost = 15
 
@@ -1299,7 +1299,7 @@ focus_tree = {
 		prerequisite = { focus = TU_LGM_guard_armour }
 		mutually_exclusive = { focus = TU_LGM_guard_air_cover_alt }
 		icon = GFX_goal_generic_build_airforce
-		x = 13
+		x = 11
 		y = 5
 		cost = 10
 
@@ -1321,7 +1321,7 @@ focus_tree = {
 		prerequisite = { focus = TU_LGM_guard_armour }
 		mutually_exclusive = { focus = TU_LGM_guard_air_cover }
 		icon = GFX_goal_generic_build_airforce
-		x = 15
+		x = 13
 		y = 5
 		cost = 10
 
@@ -1341,7 +1341,7 @@ focus_tree = {
 		id = TU_LGM_guard_mobile_corps
 		prerequisite = { focus = TU_LGM_guard_hq }
 		icon = GFX_goal_generic_army_motorized
-		x = 17
+		x = 15
 		y = 6
 		cost = 15
 
@@ -1361,7 +1361,7 @@ focus_tree = {
 		id = TU_LGM_guard_pay_raise
 		prerequisite = { focus = TU_LGM_guard_militia }
 		icon = GFX_goal_generic_national_unity
-		x = 21
+		x = 19
 		y = 5
 		cost = 5
 
@@ -1381,7 +1381,7 @@ focus_tree = {
 		id = TU_LGM_guard_loyalty_oath
 		prerequisite = { focus = TU_LGM_guard_pay_raise }
 		icon = GFX_goal_generic_propaganda
-		x = 21
+		x = 19
 		y = 6
 		cost = 10
 
@@ -1401,7 +1401,7 @@ focus_tree = {
 		id = TU_LGM_guard_general_staff
 		prerequisite = { focus = TU_LGM_guard_doctrine }
 		icon = GFX_goal_generic_army_doctrines
-		x = 23
+		x = 25
 		y = 5
 		cost = 10
 
@@ -1422,7 +1422,7 @@ focus_tree = {
 		prerequisite = { focus = TU_LGM_guard_quartermaster }
 		mutually_exclusive = { focus = TU_LGM_guard_supply_depot_alt }
 		icon = GFX_goal_generic_construct_military
-		x = 17
+		x = 15
 		y = 4
 		cost = 10
 
@@ -1444,7 +1444,7 @@ focus_tree = {
 		prerequisite = { focus = TU_LGM_guard_quartermaster }
 		mutually_exclusive = { focus = TU_LGM_guard_supply_depot }
 		icon = GFX_goal_generic_construct_military
-		x = 19
+		x = 17
 		y = 4
 		cost = 10
 
@@ -1467,7 +1467,7 @@ focus_tree = {
 		id = TU_LGM_border_survey
 		prerequisite = { focus = TU_LGM_border_watch }
 		icon = GFX_goal_generic_position_armies
-		x = 9
+		x = 7
 		y = 5
 		cost = 5
 
@@ -1487,7 +1487,7 @@ focus_tree = {
 		id = TU_LGM_border_patrols
 		prerequisite = { focus = TU_LGM_border_survey }
 		icon = GFX_goal_generic_special_forces
-		x = 6
+		x = 4
 		y = 6
 		cost = 10
 
@@ -1511,7 +1511,7 @@ focus_tree = {
 		id = TU_LGM_chernobog_watch
 		prerequisite = { focus = TU_LGM_border_patrols }
 		icon = GFX_goal_generic_intelligence_exchange
-		x = 6
+		x = 4
 		y = 7
 		cost = 10
 
@@ -1535,7 +1535,7 @@ focus_tree = {
 		id = TU_LGM_fortify_border
 		prerequisite = { focus = TU_LGM_border_survey }
 		icon = GFX_goal_generic_fortify_city
-		x = 12
+		x = 10
 		y = 6
 		cost = 10
 
@@ -1555,7 +1555,7 @@ focus_tree = {
 		prerequisite = { focus = TU_LGM_border_patrols }
 		mutually_exclusive = { focus = TU_LGM_reunion_intel_alt }
 		icon = GFX_goal_generic_intelligence_exchange
-		x = 8
+		x = 6
 		y = 7
 		cost = 10
 
@@ -1576,7 +1576,7 @@ focus_tree = {
 		prerequisite = { focus = TU_LGM_border_patrols }
 		mutually_exclusive = { focus = TU_LGM_reunion_intel }
 		icon = GFX_goal_generic_intelligence_exchange
-		x = 10
+		x = 8
 		y = 7
 		cost = 10
 
@@ -1597,7 +1597,7 @@ focus_tree = {
 		id = TU_LGM_defence_line
 		prerequisite = { focus = TU_LGM_fortify_border }
 		icon = GFX_goal_generic_defence
-		x = 12
+		x = 10
 		y = 7
 		cost = 10
 
@@ -1622,7 +1622,7 @@ focus_tree = {
 		id = TU_LGM_border_conflict_plan
 		prerequisite = { focus = TU_LGM_chernobog_watch }
 		icon = GFX_goal_generic_major_war
-		x = 4
+		x = 2
 		y = 8
 		cost = 10
 
@@ -1646,7 +1646,7 @@ focus_tree = {
 		id = TU_LGM_siege_drill
 		prerequisite = { focus = TU_LGM_defence_line }
 		icon = GFX_goal_generic_army_artillery
-		x = 12
+		x = 10
 		y = 8
 		cost = 10
 
@@ -1666,7 +1666,7 @@ focus_tree = {
 		id = TU_LGM_survival_pact
 		prerequisite = { focus = TU_LGM_siege_drill }
 		icon = GFX_goal_generic_national_unity
-		x = 12
+		x = 10
 		y = 9
 		cost = 15
 
@@ -1692,7 +1692,7 @@ focus_tree = {
 		id = TU_LGM_refugee_return
 		prerequisite = { focus = TU_LGM_survival_pact }
 		icon = GFX_goal_generic_construct_civilian
-		x = 12
+		x = 10
 		y = 10
 		cost = 10
 
@@ -1713,7 +1713,7 @@ focus_tree = {
 		id = TU_LGM_reunion_truce
 		prerequisite = { focus = TU_LGM_border_conflict_plan }
 		icon = GFX_goal_generic_neutrality_focus
-		x = 4
+		x = 2
 		y = 9
 		cost = 10
 
@@ -1739,7 +1739,7 @@ focus_tree = {
 		prerequisite = { focus = TU_LGM_defence_line }
 		mutually_exclusive = { focus = TU_LGM_mobile_city_drills_alt }
 		icon = GFX_goal_generic_army_artillery2
-		x = 14
+		x = 12
 		y = 8
 		cost = 5
 
@@ -1760,7 +1760,7 @@ focus_tree = {
 		prerequisite = { focus = TU_LGM_defence_line }
 		mutually_exclusive = { focus = TU_LGM_mobile_city_drills }
 		icon = GFX_goal_generic_army_artillery2
-		x = 16
+		x = 14
 		y = 8
 		cost = 5
 
@@ -1781,7 +1781,7 @@ focus_tree = {
 		prerequisite = { focus = TU_LGM_chernobog_watch }
 		mutually_exclusive = { focus = TU_LGM_chernobog_aftermath_alt }
 		icon = GFX_goal_generic_political_pressure
-		x = 6
+		x = 4
 		y = 8
 		cost = 10
 
@@ -1806,7 +1806,7 @@ focus_tree = {
 		prerequisite = { focus = TU_LGM_chernobog_watch }
 		mutually_exclusive = { focus = TU_LGM_chernobog_aftermath }
 		icon = GFX_goal_generic_political_pressure
-		x = 8
+		x = 6
 		y = 8
 		cost = 10
 
@@ -1830,7 +1830,7 @@ focus_tree = {
 		id = TU_LGM_frontier_roads
 		prerequisite = { focus = TU_LGM_fortify_border }
 		icon = GFX_goal_generic_construct_infrastructure
-		x = 18
+		x = 16
 		y = 7
 		cost = 10
 
@@ -1853,8 +1853,8 @@ focus_tree = {
 		id = TU_LGM_yan_envoy
 		prerequisite = { focus = TU_LGM_dip_relations }
 		icon = GFX_goal_generic_improve_relations
-		x = -9
-		y = 7
+		x = -18
+		y = 6
 		cost = 10
 
 		search_filters = { FOCUS_FILTER_POLITICAL }
@@ -1884,8 +1884,8 @@ focus_tree = {
 		id = TU_LGM_envoy_kzd
 		prerequisite = { focus = TU_LGM_dip_relations }
 		icon = GFX_goal_generic_improve_relations
-		x = -7
-		y = 7
+		x = -16
+		y = 6
 		cost = 10
 
 		search_filters = { FOCUS_FILTER_POLITICAL }
@@ -1915,8 +1915,8 @@ focus_tree = {
 		id = TU_LGM_envoy_rhodes
 		prerequisite = { focus = TU_LGM_dip_relations }
 		icon = GFX_goal_generic_positive_trade_relations
-		x = -5
-		y = 7
+		x = -14
+		y = 6
 		cost = 10
 
 		search_filters = { FOCUS_FILTER_POLITICAL }
@@ -1946,8 +1946,8 @@ focus_tree = {
 		id = TU_LGM_yan_tribute
 		prerequisite = { focus = TU_LGM_yan_envoy }
 		icon = GFX_goal_generic_forceful_treaty
-		x = -9
-		y = 8
+		x = -18
+		y = 7
 		cost = 10
 
 		search_filters = { FOCUS_FILTER_POLITICAL }
@@ -1972,7 +1972,7 @@ focus_tree = {
 		id = TU_LGM_autonomy_council
 		prerequisite = { focus = TU_LGM_autonomy_talks }
 		icon = GFX_goal_generic_neutrality_focus
-		x = 3
+		x = 1
 		y = 3
 		cost = 10
 
@@ -1993,7 +1993,7 @@ focus_tree = {
 		id = TU_LGM_autonomy_budget
 		prerequisite = { focus = TU_LGM_autonomy_council }
 		icon = GFX_goal_generic_production
-		x = 1
+		x = -1
 		y = 4
 		cost = 10
 
@@ -2014,7 +2014,7 @@ focus_tree = {
 		prerequisite = { focus = TU_LGM_autonomy_council }
 		mutually_exclusive = { focus = TU_LGM_autonomy_police_alt }
 		icon = GFX_goal_generic_special_forces
-		x = 3
+		x = 1
 		y = 4
 		cost = 10
 
@@ -2035,7 +2035,7 @@ focus_tree = {
 		prerequisite = { focus = TU_LGM_autonomy_council }
 		mutually_exclusive = { focus = TU_LGM_autonomy_police }
 		icon = GFX_goal_generic_special_forces
-		x = 5
+		x = 3
 		y = 4
 		cost = 10
 
@@ -2055,8 +2055,8 @@ focus_tree = {
 		id = TU_LGM_yan_loyalty
 		prerequisite = { focus = TU_LGM_yan_tribute }
 		icon = GFX_goal_generic_national_unity
-		x = -9
-		y = 9
+		x = -18
+		y = 8
 		cost = 10
 
 		search_filters = { FOCUS_FILTER_POLITICAL }
@@ -2079,8 +2079,8 @@ focus_tree = {
 		id = TU_LGM_yan_reconciliation
 		prerequisite = { focus = TU_LGM_yan_loyalty }
 		icon = GFX_goal_generic_improve_relations
-		x = -9
-		y = 10
+		x = -18
+		y = 9
 		cost = 10
 
 		search_filters = { FOCUS_FILTER_POLITICAL }
@@ -2099,7 +2099,7 @@ focus_tree = {
 		id = TU_LGM_yan_border_talks
 		prerequisite = { focus = TU_LGM_autonomy_budget }
 		icon = GFX_goal_generic_improve_relations
-		x = 1
+		x = -1
 		y = 5
 		cost = 10
 
@@ -2119,8 +2119,8 @@ focus_tree = {
 		id = TU_LGM_autonomy_treaty
 		prerequisite = { focus = TU_LGM_yan_reconciliation }
 		icon = GFX_goal_generic_forceful_treaty
-		x = -9
-		y = 11
+		x = -18
+		y = 10
 		cost = 10
 
 		search_filters = { FOCUS_FILTER_POLITICAL }
@@ -2139,7 +2139,7 @@ focus_tree = {
 		id = TU_LGM_independence_war_plan
 		prerequisite = { focus = TU_LGM_independence }
 		icon = GFX_goal_generic_major_war
-		x = 7
+		x = 5
 		y = 4
 		cost = 10
 
@@ -2160,7 +2160,7 @@ focus_tree = {
 		id = TU_LGM_free_city_declaration
 		prerequisite = { focus = TU_LGM_independence_war_plan }
 		icon = GFX_goal_generic_neutrality_focus
-		x = 7
+		x = 5
 		y = 5
 		cost = 15
 
@@ -2185,7 +2185,7 @@ focus_tree = {
 		id = TU_LGM_guard_regency
 		prerequisite = { focus = TU_LGM_chen_coup }
 		icon = GFX_goal_generic_political_pressure
-		x = 11
+		x = 9
 		y = 4
 		cost = 10
 
@@ -2205,7 +2205,7 @@ focus_tree = {
 		id = TU_LGM_guard_loyalty_council
 		prerequisite = { focus = TU_LGM_guard_regency }
 		icon = GFX_goal_generic_national_unity
-		x = 11
+		x = 9
 		y = 5
 		cost = 10
 
@@ -2228,7 +2228,7 @@ focus_tree = {
 		prerequisite = { focus = TU_LGM_trade_fair }
 		mutually_exclusive = { focus = TU_LGM_dip_alliance_alt }
 		icon = GFX_goal_generic_alliance
-		x = 6
+		x = 1
 		y = 14
 		cost = 10
 
@@ -2250,7 +2250,7 @@ focus_tree = {
 		prerequisite = { focus = TU_LGM_trade_fair }
 		mutually_exclusive = { focus = TU_LGM_dip_alliance }
 		icon = GFX_goal_generic_alliance
-		x = 8
+		x = 3
 		y = 14
 		cost = 10
 
@@ -2264,6 +2264,394 @@ focus_tree = {
 			set_country_flag = TU_dip_alliance_unlocked
 			add_tech_bonus = { name = TU_LGM_dip_alliance_alt bonus = 0.75 uses = 1 category = construction_tech }
 			army_experience = 25
+		}
+	}
+
+	#### LGM rework (tools/focusgen/rework_legacy.py, spec 27) ####
+
+	focus = {
+		id = TU_LGM_rw_guard_academy
+		prerequisite = { focus = TU_LGM_guard_reform }
+		icon = GFX_goal_generic_political_pressure
+		x = 22
+		y = 2
+		cost = 10
+
+		search_filters = { FOCUS_FILTER_POLITICAL }
+
+		ai_will_do = {
+			base = 1
+		}
+
+		completion_reward = {
+			add_doctrine_cost_reduction = { name = TU_LGM_rw_guard_academy cost_reduction = 0.4 uses = 1 category = land_doctrine }
+			army_experience = 25
+		}
+	}
+
+	focus = {
+		id = TU_LGM_rw_special_unit
+		prerequisite = { focus = TU_LGM_rw_guard_academy }
+		icon = GFX_goal_generic_political_pressure
+		x = 21
+		y = 3
+		cost = 10
+
+		search_filters = { FOCUS_FILTER_POLITICAL }
+
+		ai_will_do = {
+			base = 1
+		}
+
+		completion_reward = {
+			army_experience = 25
+			add_war_support = 0.03
+			add_doctrine_cost_reduction = { name = TU_LGM_rw_special_unit cost_reduction = 0.4 uses = 1 category = land_doctrine }
+		}
+	}
+
+	focus = {
+		id = TU_LGM_rw_riot_shields
+		prerequisite = { focus = TU_LGM_rw_guard_academy }
+		icon = GFX_goal_generic_political_pressure
+		x = 23
+		y = 3
+		cost = 10
+
+		search_filters = { FOCUS_FILTER_POLITICAL }
+
+		ai_will_do = {
+			base = 1
+		}
+
+		completion_reward = {
+			add_tech_bonus = { name = TU_LGM_rw_riot_shields bonus = 0.75 uses = 1 category = construction_tech }
+			army_experience = 25
+		}
+	}
+
+	focus = {
+		id = TU_LGM_rw_ch_en_command
+		prerequisite = { focus = TU_LGM_rw_special_unit }
+		prerequisite = { focus = TU_LGM_rw_riot_shields }
+		icon = GFX_goal_generic_political_pressure
+		x = 22
+		y = 4
+		cost = 15
+
+		search_filters = { FOCUS_FILTER_POLITICAL }
+
+		ai_will_do = {
+			base = 1
+		}
+
+		completion_reward = {
+			add_doctrine_cost_reduction = { name = TU_LGM_rw_ch_en_command cost_reduction = 0.5 uses = 1 category = land_doctrine }
+			army_experience = 40
+		}
+	}
+
+	focus = {
+		id = TU_LGM_rw_city_engines
+		prerequisite = { focus = TU_LGM_urban_planning }
+		icon = GFX_goal_generic_political_pressure
+		x = 15
+		y = 13
+		cost = 10
+
+		search_filters = { FOCUS_FILTER_POLITICAL }
+
+		ai_will_do = {
+			base = 1
+		}
+
+		completion_reward = {
+			TU_build_infrastructure = yes
+			add_tech_bonus = { name = TU_LGM_rw_city_engines bonus = 0.75 uses = 1 category = industry category = construction_tech }
+		}
+	}
+
+	focus = {
+		id = TU_LGM_rw_mobile_city
+		prerequisite = { focus = TU_LGM_rw_city_engines }
+		icon = GFX_goal_generic_political_pressure
+		x = 15
+		y = 14
+		cost = 15
+
+		search_filters = { FOCUS_FILTER_POLITICAL }
+
+		ai_will_do = {
+			base = 1
+		}
+
+		completion_reward = {
+			add_tech_bonus = { name = TU_LGM_rw_mobile_city bonus = 1.0 uses = 1 category = construction_tech }
+			add_tech_bonus = { name = TU_LGM_rw_mobile_city bonus = 1.0 uses = 1 category = motorized_equipment }
+		}
+	}
+
+	focus = {
+		id = TU_LGM_rw_lower_ring
+		prerequisite = { focus = TU_LGM_urban_planning }
+		icon = GFX_goal_generic_political_pressure
+		x = 17
+		y = 13
+		cost = 10
+
+		search_filters = { FOCUS_FILTER_POLITICAL }
+
+		ai_will_do = {
+			base = 1
+		}
+
+		completion_reward = {
+			TU_build_civ_factory = yes
+			add_political_power = 60
+			add_stability = 0.03
+		}
+	}
+
+	focus = {
+		id = TU_LGM_rw_slum_clinics
+		prerequisite = { focus = TU_LGM_rw_lower_ring }
+		icon = GFX_goal_generic_political_pressure
+		x = 17
+		y = 14
+		cost = 10
+
+		search_filters = { FOCUS_FILTER_POLITICAL }
+
+		ai_will_do = {
+			base = 1
+		}
+
+		completion_reward = {
+			add_stability = 0.03
+			add_manpower = 10000
+			add_tech_bonus = { name = TU_LGM_rw_slum_clinics bonus = 0.75 uses = 1 category = tu_oripathy_tech }
+		}
+	}
+
+	focus = {
+		id = TU_LGM_rw_infected_quarter
+		prerequisite = { focus = TU_LGM_rw_slum_clinics }
+		icon = GFX_goal_generic_political_pressure
+		x = 17
+		y = 15
+		cost = 10
+
+		search_filters = { FOCUS_FILTER_POLITICAL }
+
+		ai_will_do = {
+			base = 1
+		}
+
+		completion_reward = {
+			add_stability = 0.03
+			add_manpower = 10000
+			add_tech_bonus = { name = TU_LGM_rw_infected_quarter bonus = 0.75 uses = 1 category = tu_oripathy_tech }
+		}
+	}
+
+	focus = {
+		id = TU_LGM_rw_trade_offices
+		prerequisite = { focus = TU_LGM_customs_union }
+		icon = GFX_goal_generic_political_pressure
+		x = 7
+		y = 12
+		cost = 10
+
+		search_filters = { FOCUS_FILTER_POLITICAL }
+
+		ai_will_do = {
+			base = 1
+		}
+
+		completion_reward = {
+			add_political_power = 60
+			add_tech_bonus = { name = TU_LGM_rw_trade_offices bonus = 0.75 uses = 1 category = industry }
+		}
+	}
+
+	focus = {
+		id = TU_LGM_rw_yan_market
+		prerequisite = { focus = TU_LGM_rw_trade_offices }
+		icon = GFX_goal_generic_political_pressure
+		x = 6
+		y = 13
+		cost = 10
+
+		search_filters = { FOCUS_FILTER_POLITICAL }
+
+		ai_will_do = {
+			base = 1
+		}
+
+		completion_reward = {
+			add_political_power = 60
+			add_tech_bonus = { name = TU_LGM_rw_yan_market bonus = 0.75 uses = 1 category = industry }
+		}
+	}
+
+	focus = {
+		id = TU_LGM_rw_originium_exchange
+		prerequisite = { focus = TU_LGM_rw_trade_offices }
+		icon = GFX_goal_generic_political_pressure
+		x = 8
+		y = 13
+		cost = 10
+
+		search_filters = { FOCUS_FILTER_POLITICAL }
+
+		ai_will_do = {
+			base = 1
+		}
+
+		completion_reward = {
+			TU_build_civ_factory = yes
+			add_tech_bonus = { name = TU_LGM_rw_originium_exchange bonus = 0.75 uses = 1 category = electronics category = tu_originium_tech }
+		}
+	}
+
+	focus = {
+		id = TU_LGM_rw_free_trade_zone
+		prerequisite = { focus = TU_LGM_rw_yan_market }
+		prerequisite = { focus = TU_LGM_rw_originium_exchange }
+		icon = GFX_goal_generic_political_pressure
+		x = 7
+		y = 14
+		cost = 15
+
+		search_filters = { FOCUS_FILTER_POLITICAL }
+
+		ai_will_do = {
+			base = 1
+		}
+
+		completion_reward = {
+			add_political_power = 100
+			add_tech_bonus = { name = TU_LGM_rw_free_trade_zone bonus = 1.0 uses = 1 category = industry }
+		}
+	}
+
+	focus = {
+		id = TU_LGM_rw_city_walls
+		prerequisite = { focus = TU_LGM_defence_plan }
+		icon = GFX_goal_generic_political_pressure
+		x = -11
+		y = 2
+		cost = 10
+
+		search_filters = { FOCUS_FILTER_POLITICAL }
+
+		ai_will_do = {
+			base = 1
+		}
+
+		completion_reward = {
+			TU_build_forts_2 = yes
+		}
+	}
+
+	focus = {
+		id = TU_LGM_rw_artillery_towers
+		prerequisite = { focus = TU_LGM_rw_city_walls }
+		icon = GFX_goal_generic_political_pressure
+		x = -12
+		y = 3
+		cost = 10
+
+		search_filters = { FOCUS_FILTER_POLITICAL }
+
+		ai_will_do = {
+			base = 1
+		}
+
+		completion_reward = {
+			add_tech_bonus = { name = TU_LGM_rw_artillery_towers bonus = 0.75 uses = 1 category = artillery }
+			army_experience = 25
+		}
+	}
+
+	focus = {
+		id = TU_LGM_rw_drone_net
+		prerequisite = { focus = TU_LGM_rw_city_walls }
+		icon = GFX_goal_generic_political_pressure
+		x = -10
+		y = 3
+		cost = 10
+
+		search_filters = { FOCUS_FILTER_POLITICAL }
+
+		ai_will_do = {
+			base = 1
+		}
+
+		completion_reward = {
+			add_tech_bonus = { name = TU_LGM_rw_drone_net bonus = 0.75 uses = 1 category = light_fighter category = tactical_bomber }
+			add_doctrine_cost_reduction = { name = TU_LGM_rw_drone_net cost_reduction = 0.4 uses = 1 category = air_doctrine }
+			air_experience = 25
+		}
+	}
+
+	focus = {
+		id = TU_LGM_rw_penguin_logistics
+		prerequisite = { focus = TU_LGM_dip_relations }
+		icon = GFX_goal_generic_political_pressure
+		x = -12
+		y = 6
+		cost = 10
+
+		search_filters = { FOCUS_FILTER_POLITICAL }
+
+		ai_will_do = {
+			base = 1
+		}
+
+		completion_reward = {
+			add_tech_bonus = { name = TU_LGM_rw_penguin_logistics bonus = 0.75 uses = 1 category = industry category = construction_tech }
+		}
+	}
+
+	focus = {
+		id = TU_LGM_rw_rhodes_liaison
+		prerequisite = { focus = TU_LGM_dip_relations }
+		icon = GFX_goal_generic_political_pressure
+		x = -10
+		y = 6
+		cost = 10
+
+		search_filters = { FOCUS_FILTER_POLITICAL }
+
+		ai_will_do = {
+			base = 1
+		}
+
+		completion_reward = {
+			add_political_power = 60
+			add_stability = 0.03
+		}
+	}
+
+	focus = {
+		id = TU_LGM_rw_neutral_city
+		prerequisite = { focus = TU_LGM_rw_penguin_logistics }
+		prerequisite = { focus = TU_LGM_rw_rhodes_liaison }
+		icon = GFX_goal_generic_political_pressure
+		x = -11
+		y = 7
+		cost = 15
+
+		search_filters = { FOCUS_FILTER_POLITICAL }
+
+		ai_will_do = {
+			base = 1
+		}
+
+		completion_reward = {
+			add_political_power = 100
+			add_stability = 0.05
 		}
 	}
 }

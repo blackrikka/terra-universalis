@@ -404,5 +404,20 @@ C.ev(34, ("달밤의 울음", "Howling at Night"), ("달밤마다 성채 쪽에�
      [("조사단을 보낸다.", "Send investigators.", ["add_political_power = -15", "add_war_support = 0.02"], 1)],
      trigger=["original_tag = SIR", HAS("rites")], mtth=240)
 
+# ------------------------------------------------------------------ 리워크 (사양서 27): 패밀리 전쟁 · 검찰 · 늑대 · 경제
+f("inland_smuggling", "내륙 밀수로", "Inland Smuggling Routes", pre=["harbour_cities"])
+f("hitman_contracts", "청부 계약", "Hitman Contracts", pre=["family_bodyguards"])
+f("limousines", "방탄 차량", "Armoured Limousines", pre=["family_bodyguards"])
+f("street_tactics", "패밀리 시가전 교리", "Family Street War Tactics", pre=["hitman_contracts", "limousines"])
+f("family_militias", "패밀리 민병대", "Family Militias", pre=["street_tactics"])
+f("prosecutors", "반마피아 검찰", "Anti-Mafia Prosecutors", pre=["court_reform"], reward=[LAW(5)])
+f("witness_security", "증인 보호 제도", "Witness Security Programme", pre=["prosecutors"], reward=[LAW(5)])
+f("lawyers_guild", "변호사 길드", "Lawyers' Guild", pre=["prosecutors"])
+f("wolf_hunters", "늑대 무리 사냥꾼", "Wolf Pack Hunters", pre=["wolf_legacy"])
+f("wolf_howl", "늑대들의 울부짖음", "Howl of the Wolves Rally", pre=["wolf_hunters"])
+f("casino_tax", "카지노 세금", "Casino Tax", pre=["casino_trade"])
+f("wine_exports", "포도주 수출 계약", "Wine Export Contracts", pre=["wine_olive"])
+f("siracusa_rail", "시라쿠사 철도", "Siracusan Railway", pre=["wine_exports"])
+
 if __name__ == "__main__":
     C.write()

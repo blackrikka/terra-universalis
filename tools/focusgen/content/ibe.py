@@ -404,6 +404,18 @@ C.ev(34, ("귀족들의 불만", "Grumbling Nobles"), ("귀족들이 심판소�
      [("귀족 편을 든다.", "Side with the nobles.", [CROWN("0.05"), "add_stability = -0.02"], 50), ("무시한다.", "Ignore them.", [INQ("0.03")], 50)],
      trigger=["original_tag = IBE", "has_completed_focus = TU_IBE_nobles_return"], mtth=300)
 
+# ------------------------------------------------------------------ 리워크 (사양서 27): 해안 방어 · 심판관 군단 · 고원 · 경제 · 외교
+f("coastal_ring", "해안 요새선", "Coastal Fortress Ring", pre=["lighthouse_keepers"])
+f("anti_seaborn_weapons", "대해사 무기", "Anti-Seaborn Weapons", pre=["lighthouse_keepers"])
+f("inquisitor_legions", "심판관 군단", "Holy Legions", pre=["inquisition_reform"])
+f("heresy_tribunals", "이단 심문소", "Heresy Tribunals", pre=["inquisitor_legions"], reward=[INQ("0.05")])
+f("highland_forts", "고원 요새", "Highland Fortresses", pre=["mountain_infantry"])
+f("mountain_scouts", "산악 정찰대", "Mountain Scouts", pre=["mountain_infantry"])
+f("salt_works", "염전", "Salt Works", pre=["harbour_rebuild"], econ=True)
+f("coastal_rail", "해안 철도", "Coastal Railway", pre=["salt_works"])
+f("cannery_plants", "어물 통조림 공장", "Fish Cannery Plants", pre=["salt_works"], econ=True)
+f("laterano_accord", "라테라노 협약", "Laterano Accord", pre=["foreign_office"])
+
 # ------------------------------------------------------------------ 숨은 루트: 이샤믈라 (사양서 24)
 # 1098년 11월 11일 스카디의 고백 -> "그래, 나도 사랑해" -> 30일 뒤 "혈족이 되자" -> 지도자 이샤믈라 + 숨은 갈래가 열린다.
 ISHAR = [HAS("ishar_route")]

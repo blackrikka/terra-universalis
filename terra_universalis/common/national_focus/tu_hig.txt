@@ -41,7 +41,7 @@ focus_tree = {
 		id = TU_HIG_shogun_council
 		icon = GFX_goal_generic_political_pressure
 		prerequisite = { focus = TU_HIG_root }
-		x = -12
+		x = -18
 		y = 1
 		cost = 10
 
@@ -61,7 +61,7 @@ focus_tree = {
 		id = TU_HIG_daimyo_council
 		icon = GFX_goal_generic_political_pressure
 		prerequisite = { focus = TU_HIG_shogun_council }
-		x = -15
+		x = -21
 		y = 2
 		cost = 10
 
@@ -81,7 +81,7 @@ focus_tree = {
 		id = TU_HIG_border_checks
 		icon = GFX_goal_generic_defence
 		prerequisite = { focus = TU_HIG_shogun_council }
-		x = -12
+		x = -18
 		y = 2
 		cost = 10
 
@@ -102,7 +102,7 @@ focus_tree = {
 		id = TU_HIG_isolation_edict
 		icon = GFX_goal_generic_political_pressure
 		prerequisite = { focus = TU_HIG_border_checks }
-		x = -12
+		x = -18
 		y = 3
 		cost = 10
 
@@ -122,7 +122,7 @@ focus_tree = {
 		id = TU_HIG_alternate_attendance
 		icon = GFX_goal_generic_political_pressure
 		prerequisite = { focus = TU_HIG_daimyo_council }
-		x = -16
+		x = -22
 		y = 3
 		cost = 10
 
@@ -143,7 +143,7 @@ focus_tree = {
 		icon = GFX_goal_generic_political_pressure
 		prerequisite = { focus = TU_HIG_alternate_attendance }
 		prerequisite = { focus = TU_HIG_isolation_edict }
-		x = -12
+		x = -18
 		y = 4
 		cost = 10
 
@@ -164,7 +164,7 @@ focus_tree = {
 		icon = GFX_goal_generic_political_pressure
 		prerequisite = { focus = TU_HIG_domain_control }
 		mutually_exclusive = { focus = TU_HIG_open_far_east focus = TU_HIG_imperial_restoration }
-		x = -12
+		x = -18
 		y = 5
 		cost = 15
 
@@ -196,7 +196,7 @@ focus_tree = {
 		id = TU_HIG_castle_towns
 		icon = GFX_goal_generic_production
 		prerequisite = { focus = TU_HIG_shogunate }
-		x = -13
+		x = -19
 		y = 6
 		cost = 10
 
@@ -216,7 +216,7 @@ focus_tree = {
 		id = TU_HIG_hatamoto
 		icon = GFX_goal_generic_allies_build_infantry
 		prerequisite = { focus = TU_HIG_shogunate }
-		x = -11
+		x = -17
 		y = 6
 		cost = 10
 
@@ -237,7 +237,7 @@ focus_tree = {
 		icon = GFX_goal_generic_political_pressure
 		prerequisite = { focus = TU_HIG_castle_towns }
 		prerequisite = { focus = TU_HIG_hatamoto }
-		x = -9
+		x = -15
 		y = 7
 		cost = 10
 
@@ -257,7 +257,7 @@ focus_tree = {
 		id = TU_HIG_foreign_ships
 		icon = GFX_goal_generic_trade
 		prerequisite = { focus = TU_HIG_root }
-		x = -7
+		x = -13
 		y = 1
 		cost = 10
 
@@ -278,7 +278,7 @@ focus_tree = {
 		id = TU_HIG_open_harbours
 		icon = GFX_goal_generic_trade
 		prerequisite = { focus = TU_HIG_foreign_ships }
-		x = -7
+		x = -13
 		y = 2
 		cost = 10
 
@@ -299,7 +299,7 @@ focus_tree = {
 		id = TU_HIG_foreign_advisors
 		icon = GFX_goal_generic_political_pressure
 		prerequisite = { focus = TU_HIG_open_harbours }
-		x = -7
+		x = -13
 		y = 3
 		cost = 10
 
@@ -320,7 +320,7 @@ focus_tree = {
 		id = TU_HIG_western_studies
 		icon = GFX_focus_research
 		prerequisite = { focus = TU_HIG_foreign_advisors }
-		x = -7
+		x = -13
 		y = 4
 		cost = 10
 
@@ -340,7 +340,7 @@ focus_tree = {
 		id = TU_HIG_trade_treaties
 		icon = GFX_goal_generic_trade
 		prerequisite = { focus = TU_HIG_open_harbours }
-		x = -1
+		x = -7
 		y = 3
 		cost = 10
 
@@ -361,7 +361,7 @@ focus_tree = {
 		id = TU_HIG_modern_schools
 		icon = GFX_focus_research
 		prerequisite = { focus = TU_HIG_western_studies }
-		x = -7
+		x = -13
 		y = 5
 		cost = 10
 
@@ -382,7 +382,7 @@ focus_tree = {
 		prerequisite = { focus = TU_HIG_modern_schools }
 		prerequisite = { focus = TU_HIG_trade_treaties }
 		mutually_exclusive = { focus = TU_HIG_shogunate focus = TU_HIG_imperial_restoration }
-		x = -7
+		x = -13
 		y = 6
 		cost = 15
 
@@ -414,7 +414,7 @@ focus_tree = {
 		id = TU_HIG_industrial_cities
 		icon = GFX_goal_generic_production
 		prerequisite = { focus = TU_HIG_open_far_east }
-		x = -7
+		x = -13
 		y = 7
 		cost = 10
 
@@ -434,7 +434,7 @@ focus_tree = {
 		id = TU_HIG_research_slot
 		icon = GFX_focus_research
 		prerequisite = { focus = TU_HIG_open_far_east }
-		x = -5
+		x = -11
 		y = 7
 		cost = 10
 
@@ -453,7 +453,7 @@ focus_tree = {
 		id = TU_HIG_world_expo
 		icon = GFX_goal_generic_trade
 		prerequisite = { focus = TU_HIG_industrial_cities }
-		x = -7
+		x = -13
 		y = 8
 		cost = 10
 
@@ -473,7 +473,7 @@ focus_tree = {
 		id = TU_HIG_imperial_court
 		icon = GFX_goal_generic_political_pressure
 		prerequisite = { focus = TU_HIG_root }
-		x = 7
+		x = 3
 		y = 1
 		cost = 10
 
@@ -493,7 +493,7 @@ focus_tree = {
 		id = TU_HIG_court_nobles
 		icon = GFX_goal_generic_political_pressure
 		prerequisite = { focus = TU_HIG_imperial_court }
-		x = 7
+		x = 3
 		y = 2
 		cost = 10
 
@@ -513,7 +513,7 @@ focus_tree = {
 		id = TU_HIG_expel_barbarians
 		icon = GFX_goal_generic_political_pressure
 		prerequisite = { focus = TU_HIG_court_nobles }
-		x = 7
+		x = 3
 		y = 3
 		cost = 10
 
@@ -533,7 +533,7 @@ focus_tree = {
 		id = TU_HIG_loyalist_samurai
 		icon = GFX_goal_generic_allies_build_infantry
 		prerequisite = { focus = TU_HIG_expel_barbarians }
-		x = 7
+		x = 3
 		y = 4
 		cost = 10
 
@@ -553,7 +553,7 @@ focus_tree = {
 		id = TU_HIG_imperial_edict
 		icon = GFX_goal_generic_political_pressure
 		prerequisite = { focus = TU_HIG_loyalist_samurai }
-		x = 7
+		x = 3
 		y = 5
 		cost = 10
 
@@ -573,7 +573,7 @@ focus_tree = {
 		icon = GFX_goal_generic_political_pressure
 		prerequisite = { focus = TU_HIG_imperial_edict }
 		mutually_exclusive = { focus = TU_HIG_shogunate focus = TU_HIG_open_far_east }
-		x = 7
+		x = 3
 		y = 6
 		cost = 15
 
@@ -606,7 +606,7 @@ focus_tree = {
 		id = TU_HIG_new_capital
 		icon = GFX_goal_generic_production
 		prerequisite = { focus = TU_HIG_imperial_restoration }
-		x = 6
+		x = 2
 		y = 7
 		cost = 10
 
@@ -626,7 +626,7 @@ focus_tree = {
 		id = TU_HIG_imperial_army
 		icon = GFX_goal_generic_allies_build_infantry
 		prerequisite = { focus = TU_HIG_imperial_restoration }
-		x = 8
+		x = 4
 		y = 7
 		cost = 10
 
@@ -647,7 +647,7 @@ focus_tree = {
 		icon = GFX_goal_generic_allies_build_infantry
 		prerequisite = { focus = TU_HIG_new_capital }
 		prerequisite = { focus = TU_HIG_imperial_army }
-		x = 11
+		x = 7
 		y = 8
 		cost = 10
 
@@ -667,7 +667,7 @@ focus_tree = {
 		id = TU_HIG_shinobi_villages
 		icon = GFX_goal_generic_political_pressure
 		prerequisite = { focus = TU_HIG_root }
-		x = 16
+		x = 12
 		y = 1
 		cost = 10
 
@@ -687,7 +687,7 @@ focus_tree = {
 		id = TU_HIG_shinobi_training
 		icon = GFX_goal_generic_army_doctrines
 		prerequisite = { focus = TU_HIG_shinobi_villages }
-		x = 15
+		x = 11
 		y = 2
 		cost = 10
 
@@ -708,7 +708,7 @@ focus_tree = {
 		id = TU_HIG_courier_network
 		icon = GFX_goal_generic_intelligence_exchange
 		prerequisite = { focus = TU_HIG_shinobi_villages }
-		x = 18
+		x = 14
 		y = 2
 		cost = 10
 
@@ -729,7 +729,7 @@ focus_tree = {
 		icon = GFX_goal_generic_intelligence_exchange
 		prerequisite = { focus = TU_HIG_shinobi_training }
 		prerequisite = { focus = TU_HIG_courier_network }
-		x = 20
+		x = 16
 		y = 3
 		cost = 10
 
@@ -749,7 +749,7 @@ focus_tree = {
 		id = TU_HIG_shinobi_masters
 		icon = GFX_goal_generic_political_pressure
 		prerequisite = { focus = TU_HIG_shadow_network }
-		x = 20
+		x = 16
 		y = 4
 		cost = 10
 
@@ -770,7 +770,7 @@ focus_tree = {
 		id = TU_HIG_samurai_regiments
 		icon = GFX_goal_generic_allies_build_infantry
 		prerequisite = { focus = TU_HIG_root }
-		x = -8
+		x = -14
 		y = 11
 		cost = 10
 
@@ -790,7 +790,7 @@ focus_tree = {
 		id = TU_HIG_swordsmanship
 		icon = GFX_goal_generic_small_arms
 		prerequisite = { focus = TU_HIG_samurai_regiments }
-		x = -12
+		x = -18
 		y = 12
 		cost = 10
 
@@ -810,7 +810,7 @@ focus_tree = {
 		id = TU_HIG_bushido
 		icon = GFX_goal_generic_propaganda
 		prerequisite = { focus = TU_HIG_swordsmanship }
-		x = -12
+		x = -18
 		y = 13
 		cost = 10
 
@@ -831,7 +831,7 @@ focus_tree = {
 		icon = GFX_goal_generic_army_motorized
 		prerequisite = { focus = TU_HIG_bushido }
 		mutually_exclusive = { focus = TU_HIG_defensive_tactics }
-		x = -13
+		x = -19
 		y = 14
 		cost = 10
 
@@ -852,7 +852,7 @@ focus_tree = {
 		icon = GFX_goal_generic_army_doctrines
 		prerequisite = { focus = TU_HIG_bushido }
 		mutually_exclusive = { focus = TU_HIG_raid_tactics }
-		x = -11
+		x = -17
 		y = 14
 		cost = 10
 
@@ -872,7 +872,7 @@ focus_tree = {
 		id = TU_HIG_mountain_castles
 		icon = GFX_goal_generic_defence
 		prerequisite = { focus = TU_HIG_samurai_regiments }
-		x = -7
+		x = -13
 		y = 12
 		cost = 10
 
@@ -891,7 +891,7 @@ focus_tree = {
 		id = TU_HIG_artillery_battalions
 		icon = GFX_goal_generic_army_artillery
 		prerequisite = { focus = TU_HIG_mountain_castles }
-		x = -7
+		x = -13
 		y = 13
 		cost = 10
 
@@ -911,7 +911,7 @@ focus_tree = {
 		id = TU_HIG_rifle_corps
 		icon = GFX_goal_generic_small_arms
 		prerequisite = { focus = TU_HIG_samurai_regiments }
-		x = -3
+		x = -9
 		y = 12
 		cost = 10
 
@@ -932,7 +932,7 @@ focus_tree = {
 		icon = GFX_goal_generic_allies_build_infantry
 		prerequisite = { focus = TU_HIG_raid_tactics focus = TU_HIG_defensive_tactics }
 		prerequisite = { focus = TU_HIG_rifle_corps }
-		x = -11
+		x = -17
 		y = 15
 		cost = 10
 
@@ -952,7 +952,7 @@ focus_tree = {
 		id = TU_HIG_fishing_ports
 		icon = GFX_goal_generic_trade
 		prerequisite = { focus = TU_HIG_root }
-		x = 2
+		x = -2
 		y = 7
 		cost = 10
 
@@ -972,7 +972,7 @@ focus_tree = {
 		id = TU_HIG_rice_harvest
 		icon = GFX_goal_generic_production
 		prerequisite = { focus = TU_HIG_root }
-		x = 12
+		x = 9
 		y = 10
 		cost = 10
 
@@ -992,7 +992,7 @@ focus_tree = {
 		id = TU_HIG_road_network
 		icon = GFX_goal_generic_production
 		prerequisite = { focus = TU_HIG_rice_harvest }
-		x = 7
+		x = 3
 		y = 11
 		cost = 10
 
@@ -1012,7 +1012,7 @@ focus_tree = {
 		id = TU_HIG_industrial_district
 		icon = GFX_goal_generic_production
 		prerequisite = { focus = TU_HIG_rice_harvest }
-		x = 11
+		x = 7
 		y = 11
 		cost = 10
 
@@ -1033,7 +1033,7 @@ focus_tree = {
 		icon = GFX_goal_generic_production
 		prerequisite = { focus = TU_HIG_industrial_district }
 		mutually_exclusive = { focus = TU_HIG_arms_program }
-		x = 9
+		x = 5
 		y = 12
 		cost = 10
 
@@ -1054,7 +1054,7 @@ focus_tree = {
 		icon = GFX_goal_generic_small_arms
 		prerequisite = { focus = TU_HIG_industrial_district }
 		mutually_exclusive = { focus = TU_HIG_civ_program }
-		x = 11
+		x = 7
 		y = 12
 		cost = 10
 
@@ -1075,7 +1075,7 @@ focus_tree = {
 		id = TU_HIG_rail_network
 		icon = GFX_goal_generic_construct_infrastructure
 		prerequisite = { focus = TU_HIG_road_network }
-		x = 7
+		x = 3
 		y = 12
 		cost = 10
 
@@ -1094,7 +1094,7 @@ focus_tree = {
 		id = TU_HIG_silk_mills
 		icon = GFX_goal_generic_political_pressure
 		prerequisite = { focus = TU_HIG_rail_network }
-		x = 6
+		x = 2
 		y = 13
 		cost = 10
 
@@ -1116,7 +1116,7 @@ focus_tree = {
 		icon = GFX_goal_generic_production
 		prerequisite = { focus = TU_HIG_civ_program focus = TU_HIG_arms_program }
 		prerequisite = { focus = TU_HIG_silk_mills }
-		x = 9
+		x = 5
 		y = 14
 		cost = 10
 
@@ -1136,7 +1136,7 @@ focus_tree = {
 		id = TU_HIG_tea_ceremony
 		icon = GFX_goal_generic_propaganda
 		prerequisite = { focus = TU_HIG_shogun_council }
-		x = -10
+		x = -16
 		y = 2
 		cost = 10
 
@@ -1156,7 +1156,7 @@ focus_tree = {
 		id = TU_HIG_sword_hunt
 		icon = GFX_goal_generic_small_arms
 		prerequisite = { focus = TU_HIG_domain_control }
-		x = -10
+		x = -16
 		y = 5
 		cost = 10
 
@@ -1176,7 +1176,7 @@ focus_tree = {
 		id = TU_HIG_rice_tax
 		icon = GFX_goal_generic_trade
 		prerequisite = { focus = TU_HIG_daimyo_council }
-		x = -14
+		x = -20
 		y = 3
 		cost = 10
 
@@ -1196,7 +1196,7 @@ focus_tree = {
 		id = TU_HIG_ninja_guards
 		icon = GFX_goal_generic_production
 		prerequisite = { focus = TU_HIG_isolation_edict }
-		x = -10
+		x = -16
 		y = 4
 		cost = 10
 
@@ -1215,7 +1215,7 @@ focus_tree = {
 		id = TU_HIG_dutch_quarter
 		icon = GFX_goal_generic_production
 		prerequisite = { focus = TU_HIG_open_harbours }
-		x = 1
+		x = -5
 		y = 3
 		cost = 10
 
@@ -1235,7 +1235,7 @@ focus_tree = {
 		id = TU_HIG_telegraph
 		icon = GFX_goal_generic_intelligence_exchange
 		prerequisite = { focus = TU_HIG_foreign_advisors }
-		x = -5
+		x = -11
 		y = 4
 		cost = 10
 
@@ -1255,7 +1255,7 @@ focus_tree = {
 		id = TU_HIG_mint_reform
 		icon = GFX_goal_generic_trade
 		prerequisite = { focus = TU_HIG_trade_treaties }
-		x = -3
+		x = -9
 		y = 4
 		cost = 10
 
@@ -1275,7 +1275,7 @@ focus_tree = {
 		id = TU_HIG_railway_line
 		icon = GFX_goal_generic_construct_infrastructure
 		prerequisite = { focus = TU_HIG_trade_treaties }
-		x = -1
+		x = -7
 		y = 4
 		cost = 10
 
@@ -1295,7 +1295,7 @@ focus_tree = {
 		id = TU_HIG_military_academy
 		icon = GFX_goal_generic_army_doctrines
 		prerequisite = { focus = TU_HIG_modern_schools }
-		x = -5
+		x = -11
 		y = 6
 		cost = 10
 
@@ -1315,7 +1315,7 @@ focus_tree = {
 		id = TU_HIG_national_shrine
 		icon = GFX_goal_generic_propaganda
 		prerequisite = { focus = TU_HIG_court_nobles }
-		x = 11
+		x = 7
 		y = 3
 		cost = 10
 
@@ -1335,7 +1335,7 @@ focus_tree = {
 		id = TU_HIG_imperial_seal
 		icon = GFX_goal_generic_propaganda
 		prerequisite = { focus = TU_HIG_imperial_court }
-		x = 9
+		x = 5
 		y = 2
 		cost = 10
 
@@ -1355,7 +1355,7 @@ focus_tree = {
 		id = TU_HIG_restoration_war
 		icon = GFX_goal_generic_occupy_start_war
 		prerequisite = { focus = TU_HIG_loyalist_samurai }
-		x = 9
+		x = 5
 		y = 5
 		cost = 10
 
@@ -1376,7 +1376,7 @@ focus_tree = {
 		id = TU_HIG_poison_studies
 		icon = GFX_focus_research
 		prerequisite = { focus = TU_HIG_shinobi_training }
-		x = 14
+		x = 10
 		y = 3
 		cost = 10
 
@@ -1395,7 +1395,7 @@ focus_tree = {
 		id = TU_HIG_smoke_bombs
 		icon = GFX_goal_generic_small_arms
 		prerequisite = { focus = TU_HIG_shinobi_training }
-		x = 16
+		x = 12
 		y = 3
 		cost = 10
 
@@ -1415,7 +1415,7 @@ focus_tree = {
 		id = TU_HIG_infiltrators
 		icon = GFX_goal_generic_allies_build_infantry
 		prerequisite = { focus = TU_HIG_courier_network }
-		x = 18
+		x = 14
 		y = 3
 		cost = 10
 
@@ -1435,7 +1435,7 @@ focus_tree = {
 		id = TU_HIG_spy_school
 		icon = GFX_focus_research
 		prerequisite = { focus = TU_HIG_shinobi_masters }
-		x = 20
+		x = 16
 		y = 5
 		cost = 10
 
@@ -1454,7 +1454,7 @@ focus_tree = {
 		id = TU_HIG_archers
 		icon = GFX_goal_generic_allies_build_infantry
 		prerequisite = { focus = TU_HIG_swordsmanship }
-		x = -9
+		x = -15
 		y = 13
 		cost = 10
 
@@ -1474,7 +1474,7 @@ focus_tree = {
 		id = TU_HIG_cavalry
 		icon = GFX_goal_generic_army_motorized
 		prerequisite = { focus = TU_HIG_raid_tactics }
-		x = -13
+		x = -19
 		y = 15
 		cost = 10
 
@@ -1494,7 +1494,7 @@ focus_tree = {
 		id = TU_HIG_castle_cannons
 		icon = GFX_goal_generic_army_artillery
 		prerequisite = { focus = TU_HIG_artillery_battalions }
-		x = -7
+		x = -13
 		y = 14
 		cost = 10
 
@@ -1514,7 +1514,7 @@ focus_tree = {
 		id = TU_HIG_field_medics
 		icon = GFX_goal_generic_consumer_goods
 		prerequisite = { focus = TU_HIG_rifle_corps }
-		x = -3
+		x = -9
 		y = 13
 		cost = 10
 
@@ -1535,7 +1535,7 @@ focus_tree = {
 		id = TU_HIG_tank_trials
 		icon = GFX_goal_generic_army_tanks
 		prerequisite = { focus = TU_HIG_modern_army }
-		x = -12
+		x = -18
 		y = 16
 		cost = 10
 
@@ -1555,7 +1555,7 @@ focus_tree = {
 		id = TU_HIG_air_corps
 		icon = GFX_goal_generic_air_doctrine
 		prerequisite = { focus = TU_HIG_modern_army }
-		x = -10
+		x = -16
 		y = 16
 		cost = 10
 
@@ -1576,7 +1576,7 @@ focus_tree = {
 		id = TU_HIG_coastal_batteries
 		icon = GFX_goal_generic_trade
 		prerequisite = { focus = TU_HIG_fishing_ports }
-		x = 1
+		x = -6
 		y = 8
 		cost = 10
 
@@ -1596,7 +1596,7 @@ focus_tree = {
 		id = TU_HIG_whaling
 		icon = GFX_goal_generic_production
 		prerequisite = { focus = TU_HIG_fishing_ports }
-		x = 3
+		x = -4
 		y = 8
 		cost = 10
 
@@ -1616,7 +1616,7 @@ focus_tree = {
 		id = TU_HIG_porcelain
 		icon = GFX_goal_generic_production
 		prerequisite = { focus = TU_HIG_rice_harvest }
-		x = 15
+		x = 11
 		y = 11
 		cost = 10
 
@@ -1636,7 +1636,7 @@ focus_tree = {
 		id = TU_HIG_coal_mines
 		icon = GFX_goal_generic_production
 		prerequisite = { focus = TU_HIG_industrial_district }
-		x = 13
+		x = 9
 		y = 12
 		cost = 10
 
@@ -1656,7 +1656,7 @@ focus_tree = {
 		id = TU_HIG_steel_works
 		icon = GFX_goal_generic_small_arms
 		prerequisite = { focus = TU_HIG_coal_mines }
-		x = 13
+		x = 9
 		y = 13
 		cost = 10
 
@@ -1677,7 +1677,7 @@ focus_tree = {
 		id = TU_HIG_yan_relations
 		icon = GFX_goal_generic_improve_relations
 		prerequisite = { focus = TU_HIG_foreign_ships }
-		x = 3
+		x = -3
 		y = 2
 		cost = 10
 
@@ -1697,7 +1697,7 @@ focus_tree = {
 		id = TU_HIG_lungmen_trade
 		icon = GFX_goal_generic_trade
 		prerequisite = { focus = TU_HIG_yan_relations }
-		x = 3
+		x = -3
 		y = 3
 		cost = 10
 
@@ -1717,7 +1717,7 @@ focus_tree = {
 		id = TU_HIG_rhodes_contact
 		icon = GFX_goal_generic_improve_relations
 		prerequisite = { focus = TU_HIG_foreign_ships }
-		x = 5
+		x = -1
 		y = 2
 		cost = 10
 
@@ -1737,7 +1737,7 @@ focus_tree = {
 		id = TU_HIG_columbia_treaty
 		icon = GFX_goal_generic_improve_relations
 		prerequisite = { focus = TU_HIG_trade_treaties }
-		x = 1
+		x = -5
 		y = 4
 		cost = 10
 
@@ -1757,7 +1757,7 @@ focus_tree = {
 		id = TU_HIG_asian_league
 		icon = GFX_goal_generic_improve_relations
 		prerequisite = { focus = TU_HIG_lungmen_trade }
-		x = 3
+		x = -3
 		y = 4
 		cost = 10
 
@@ -1777,7 +1777,7 @@ focus_tree = {
 		id = TU_HIG_shogun_guard
 		icon = GFX_goal_generic_allies_build_infantry
 		prerequisite = { focus = TU_HIG_hatamoto }
-		x = -11
+		x = -17
 		y = 7
 		cost = 10
 
@@ -1797,7 +1797,7 @@ focus_tree = {
 		id = TU_HIG_edo_markets
 		icon = GFX_goal_generic_trade
 		prerequisite = { focus = TU_HIG_castle_towns }
-		x = -13
+		x = -19
 		y = 7
 		cost = 10
 
@@ -1817,7 +1817,7 @@ focus_tree = {
 		id = TU_HIG_han_schools
 		icon = GFX_focus_research
 		prerequisite = { focus = TU_HIG_alternate_attendance }
-		x = -16
+		x = -22
 		y = 4
 		cost = 10
 
@@ -1836,7 +1836,7 @@ focus_tree = {
 		id = TU_HIG_foreign_doctors
 		icon = GFX_goal_generic_consumer_goods
 		prerequisite = { focus = TU_HIG_western_studies }
-		x = -5
+		x = -11
 		y = 5
 		cost = 10
 
@@ -1857,7 +1857,7 @@ focus_tree = {
 		id = TU_HIG_steam_engines
 		icon = GFX_goal_generic_production
 		prerequisite = { focus = TU_HIG_railway_line }
-		x = -1
+		x = -7
 		y = 5
 		cost = 10
 
@@ -1877,7 +1877,7 @@ focus_tree = {
 		id = TU_HIG_newspapers
 		icon = GFX_goal_generic_propaganda
 		prerequisite = { focus = TU_HIG_modern_schools }
-		x = -3
+		x = -9
 		y = 6
 		cost = 10
 
@@ -1897,7 +1897,7 @@ focus_tree = {
 		id = TU_HIG_expo_pavilion
 		icon = GFX_goal_generic_production
 		prerequisite = { focus = TU_HIG_world_expo }
-		x = -7
+		x = -13
 		y = 9
 		cost = 10
 
@@ -1917,7 +1917,7 @@ focus_tree = {
 		id = TU_HIG_loyalist_schools
 		icon = GFX_goal_generic_army_doctrines
 		prerequisite = { focus = TU_HIG_expel_barbarians }
-		x = 9
+		x = 5
 		y = 4
 		cost = 10
 
@@ -1937,7 +1937,7 @@ focus_tree = {
 		id = TU_HIG_imperial_guard
 		icon = GFX_goal_generic_allies_build_infantry
 		prerequisite = { focus = TU_HIG_imperial_army }
-		x = 7
+		x = 3
 		y = 8
 		cost = 10
 
@@ -1957,7 +1957,7 @@ focus_tree = {
 		id = TU_HIG_conscription_law
 		icon = GFX_goal_generic_allies_build_infantry
 		prerequisite = { focus = TU_HIG_imperial_army }
-		x = 9
+		x = 5
 		y = 8
 		cost = 10
 
@@ -1977,7 +1977,7 @@ focus_tree = {
 		id = TU_HIG_shrine_unity
 		icon = GFX_goal_generic_propaganda
 		prerequisite = { focus = TU_HIG_national_shrine }
-		x = 11
+		x = 7
 		y = 4
 		cost = 10
 
@@ -1997,7 +1997,7 @@ focus_tree = {
 		id = TU_HIG_kunoichi
 		icon = GFX_goal_generic_intelligence_exchange
 		prerequisite = { focus = TU_HIG_infiltrators }
-		x = 18
+		x = 14
 		y = 4
 		cost = 10
 
@@ -2017,7 +2017,7 @@ focus_tree = {
 		id = TU_HIG_shadow_courts
 		icon = GFX_goal_generic_intelligence_exchange
 		prerequisite = { focus = TU_HIG_spy_school }
-		x = 20
+		x = 16
 		y = 6
 		cost = 10
 
@@ -2037,7 +2037,7 @@ focus_tree = {
 		id = TU_HIG_ninja_tools
 		icon = GFX_goal_generic_production
 		prerequisite = { focus = TU_HIG_smoke_bombs }
-		x = 16
+		x = 12
 		y = 4
 		cost = 10
 
@@ -2056,7 +2056,7 @@ focus_tree = {
 		id = TU_HIG_spear_corps
 		icon = GFX_goal_generic_allies_build_infantry
 		prerequisite = { focus = TU_HIG_archers }
-		x = -9
+		x = -15
 		y = 14
 		cost = 10
 
@@ -2076,7 +2076,7 @@ focus_tree = {
 		id = TU_HIG_castle_sieges
 		icon = GFX_goal_generic_army_artillery
 		prerequisite = { focus = TU_HIG_castle_cannons }
-		x = -7
+		x = -13
 		y = 15
 		cost = 10
 
@@ -2096,7 +2096,7 @@ focus_tree = {
 		id = TU_HIG_mountain_warfare
 		icon = GFX_goal_generic_army_doctrines
 		prerequisite = { focus = TU_HIG_mountain_castles }
-		x = -5
+		x = -11
 		y = 13
 		cost = 10
 
@@ -2116,7 +2116,7 @@ focus_tree = {
 		id = TU_HIG_tea_trade
 		icon = GFX_goal_generic_trade
 		prerequisite = { focus = TU_HIG_rice_harvest }
-		x = 17
+		x = 13
 		y = 11
 		cost = 10
 
@@ -2136,7 +2136,7 @@ focus_tree = {
 		id = TU_HIG_lacquer_works
 		icon = GFX_goal_generic_production
 		prerequisite = { focus = TU_HIG_porcelain }
-		x = 15
+		x = 11
 		y = 12
 		cost = 10
 
@@ -2156,7 +2156,7 @@ focus_tree = {
 		id = TU_HIG_power_plants
 		icon = GFX_goal_generic_production
 		prerequisite = { focus = TU_HIG_rail_network }
-		x = 8
+		x = 4
 		y = 13
 		cost = 10
 
@@ -2176,7 +2176,7 @@ focus_tree = {
 		id = TU_HIG_sargon_trade
 		icon = GFX_goal_generic_trade
 		prerequisite = { focus = TU_HIG_columbia_treaty }
-		x = 1
+		x = -5
 		y = 5
 		cost = 10
 
@@ -2189,6 +2189,385 @@ focus_tree = {
 		completion_reward = {
 			add_political_power = 60
 			add_tech_bonus = { name = TU_HIG_sargon_trade bonus = 0.75 uses = 1 category = industry }
+		}
+	}
+
+	focus = {
+		id = TU_HIG_western_drill
+		icon = GFX_goal_generic_army_doctrines
+		prerequisite = { focus = TU_HIG_root }
+		x = 20
+		y = 6
+		cost = 10
+
+		search_filters = { FOCUS_FILTER_POLITICAL }
+
+		ai_will_do = {
+			base = 1
+		}
+
+		completion_reward = {
+			add_doctrine_cost_reduction = { name = TU_HIG_western_drill cost_reduction = 0.4 uses = 1 category = land_doctrine }
+			army_experience = 25
+		}
+	}
+
+	focus = {
+		id = TU_HIG_conscript_army
+		icon = GFX_goal_generic_allies_build_infantry
+		prerequisite = { focus = TU_HIG_western_drill }
+		x = 19
+		y = 7
+		cost = 10
+
+		search_filters = { FOCUS_FILTER_POLITICAL }
+
+		ai_will_do = {
+			base = 1
+		}
+
+		completion_reward = {
+			add_manpower = 10000
+			army_experience = 25
+		}
+	}
+
+	focus = {
+		id = TU_HIG_crossbow_arsenal
+		icon = GFX_goal_generic_small_arms
+		prerequisite = { focus = TU_HIG_western_drill }
+		x = 21
+		y = 7
+		cost = 10
+
+		search_filters = { FOCUS_FILTER_POLITICAL }
+
+		ai_will_do = {
+			base = 1
+		}
+
+		completion_reward = {
+			add_tech_bonus = { name = TU_HIG_crossbow_arsenal bonus = 0.75 uses = 1 category = infantry_weapons }
+			army_experience = 25
+		}
+	}
+
+	focus = {
+		id = TU_HIG_field_artillery
+		icon = GFX_goal_generic_army_artillery
+		prerequisite = { focus = TU_HIG_conscript_army }
+		prerequisite = { focus = TU_HIG_crossbow_arsenal }
+		x = 20
+		y = 8
+		cost = 10
+
+		search_filters = { FOCUS_FILTER_POLITICAL }
+
+		ai_will_do = {
+			base = 1
+		}
+
+		completion_reward = {
+			add_tech_bonus = { name = TU_HIG_field_artillery bonus = 0.75 uses = 1 category = artillery }
+			army_experience = 25
+		}
+	}
+
+	focus = {
+		id = TU_HIG_staff_college
+		icon = GFX_goal_generic_army_doctrines
+		prerequisite = { focus = TU_HIG_field_artillery }
+		x = 20
+		y = 9
+		cost = 10
+
+		search_filters = { FOCUS_FILTER_POLITICAL }
+
+		ai_will_do = {
+			base = 1
+		}
+
+		completion_reward = {
+			add_doctrine_cost_reduction = { name = TU_HIG_staff_college cost_reduction = 0.4 uses = 1 category = land_doctrine }
+			army_experience = 25
+		}
+	}
+
+	focus = {
+		id = TU_HIG_army_founding
+		icon = GFX_goal_generic_allies_build_infantry
+		prerequisite = { focus = TU_HIG_staff_college }
+		x = 20
+		y = 10
+		cost = 15
+
+		search_filters = { FOCUS_FILTER_POLITICAL }
+
+		ai_will_do = {
+			base = 1
+		}
+
+		completion_reward = {
+			add_manpower = 20000
+			army_experience = 40
+		}
+	}
+
+	focus = {
+		id = TU_HIG_shore_defence
+		icon = GFX_goal_generic_defence
+		prerequisite = { focus = TU_HIG_fishing_ports }
+		x = -2
+		y = 8
+		cost = 10
+
+		search_filters = { FOCUS_FILTER_POLITICAL }
+
+		ai_will_do = {
+			base = 1
+		}
+
+		completion_reward = {
+			TU_build_forts_2 = yes
+		}
+	}
+
+	focus = {
+		id = TU_HIG_coastal_watchtowers
+		icon = GFX_goal_generic_trade
+		prerequisite = { focus = TU_HIG_shore_defence }
+		x = -3
+		y = 9
+		cost = 10
+
+		search_filters = { FOCUS_FILTER_POLITICAL }
+
+		ai_will_do = {
+			base = 1
+		}
+
+		completion_reward = {
+			add_political_power = 60
+			add_tech_bonus = { name = TU_HIG_coastal_watchtowers bonus = 0.75 uses = 1 category = industry }
+		}
+	}
+
+	focus = {
+		id = TU_HIG_harbour_forts
+		icon = GFX_goal_generic_defence
+		prerequisite = { focus = TU_HIG_shore_defence }
+		x = -1
+		y = 9
+		cost = 10
+
+		search_filters = { FOCUS_FILTER_POLITICAL }
+
+		ai_will_do = {
+			base = 1
+		}
+
+		completion_reward = {
+			TU_build_coastal_forts_2 = yes
+		}
+	}
+
+	focus = {
+		id = TU_HIG_sea_terror_wardens
+		icon = GFX_goal_generic_trade
+		prerequisite = { focus = TU_HIG_coastal_watchtowers }
+		prerequisite = { focus = TU_HIG_harbour_forts }
+		x = -2
+		y = 10
+		cost = 10
+
+		search_filters = { FOCUS_FILTER_POLITICAL }
+
+		ai_will_do = {
+			base = 1
+		}
+
+		completion_reward = {
+			add_political_power = 60
+			add_tech_bonus = { name = TU_HIG_sea_terror_wardens bonus = 0.75 uses = 1 category = industry }
+		}
+	}
+
+	focus = {
+		id = TU_HIG_engine_studies
+		icon = GFX_focus_research
+		prerequisite = { focus = TU_HIG_foreign_ships }
+		x = 1
+		y = 2
+		cost = 10
+
+		search_filters = { FOCUS_FILTER_POLITICAL }
+
+		ai_will_do = {
+			base = 1
+		}
+
+		completion_reward = {
+			add_tech_bonus = { name = TU_HIG_engine_studies bonus = 0.75 uses = 1 category = electronics category = tu_originium_tech }
+		}
+	}
+
+	focus = {
+		id = TU_HIG_landship_workshops
+		icon = GFX_goal_generic_construct_infrastructure
+		prerequisite = { focus = TU_HIG_engine_studies }
+		x = 1
+		y = 3
+		cost = 10
+
+		search_filters = { FOCUS_FILTER_INDUSTRY }
+
+		ai_will_do = {
+			base = 1
+		}
+
+		completion_reward = {
+			add_tech_bonus = { name = TU_HIG_landship_workshops bonus = 0.75 uses = 1 category = construction_tech }
+			add_tech_bonus = { name = TU_HIG_landship_workshops bonus = 0.75 uses = 1 category = motorized_equipment }
+			TU_build_civ_factory = yes
+		}
+	}
+
+	focus = {
+		id = TU_HIG_landship_cavalry
+		icon = GFX_goal_generic_army_motorized
+		prerequisite = { focus = TU_HIG_landship_workshops }
+		x = 1
+		y = 4
+		cost = 10
+
+		search_filters = { FOCUS_FILTER_POLITICAL }
+
+		ai_will_do = {
+			base = 1
+		}
+
+		completion_reward = {
+			add_tech_bonus = { name = TU_HIG_landship_cavalry bonus = 0.75 uses = 1 category = motorized_equipment }
+			add_doctrine_cost_reduction = { name = TU_HIG_landship_cavalry cost_reduction = 0.4 uses = 1 category = land_doctrine }
+		}
+	}
+
+	focus = {
+		id = TU_HIG_shadow_couriers
+		icon = GFX_goal_generic_intelligence_exchange
+		prerequisite = { focus = TU_HIG_shinobi_villages }
+		x = 18
+		y = 2
+		cost = 10
+
+		search_filters = { FOCUS_FILTER_POLITICAL }
+
+		ai_will_do = {
+			base = 1
+		}
+
+		completion_reward = {
+			add_tech_bonus = { name = TU_HIG_shadow_couriers bonus = 0.75 uses = 1 category = radar_tech category = electronics }
+			add_stability = 0.03
+		}
+	}
+
+	focus = {
+		id = TU_HIG_secret_school
+		icon = GFX_focus_research
+		prerequisite = { focus = TU_HIG_shadow_couriers }
+		x = 18
+		y = 3
+		cost = 10
+
+		search_filters = { FOCUS_FILTER_POLITICAL }
+
+		ai_will_do = {
+			base = 1
+		}
+
+		completion_reward = {
+			add_tech_bonus = { name = TU_HIG_secret_school bonus = 0.75 uses = 1 category = electronics category = tu_originium_tech }
+		}
+	}
+
+	focus = {
+		id = TU_HIG_twin_villages
+		icon = GFX_goal_generic_improve_relations
+		prerequisite = { focus = TU_HIG_secret_school }
+		x = 18
+		y = 4
+		cost = 10
+
+		search_filters = { FOCUS_FILTER_POLITICAL }
+
+		ai_will_do = {
+			base = 1
+		}
+
+		completion_reward = {
+			TU_HIG_shinobi_2 = yes
+			add_political_power = 60
+			add_stability = 0.03
+		}
+	}
+
+	focus = {
+		id = TU_HIG_silk_workshops
+		icon = GFX_goal_generic_production
+		prerequisite = { focus = TU_HIG_rice_harvest }
+		x = 15
+		y = 11
+		cost = 10
+
+		search_filters = { FOCUS_FILTER_INDUSTRY }
+
+		ai_will_do = {
+			base = 1
+		}
+
+		completion_reward = {
+			add_tech_bonus = { name = TU_HIG_silk_workshops bonus = 0.75 uses = 1 category = industry category = construction_tech }
+			TU_build_civ_factory = yes
+		}
+	}
+
+	focus = {
+		id = TU_HIG_copper_mines
+		icon = GFX_goal_generic_production
+		prerequisite = { focus = TU_HIG_silk_workshops }
+		x = 14
+		y = 12
+		cost = 10
+
+		search_filters = { FOCUS_FILTER_INDUSTRY }
+
+		ai_will_do = {
+			base = 1
+		}
+
+		completion_reward = {
+			add_tech_bonus = { name = TU_HIG_copper_mines bonus = 0.75 uses = 1 category = industry category = construction_tech }
+			TU_build_civ_factory = yes
+		}
+	}
+
+	focus = {
+		id = TU_HIG_capital_railway
+		icon = GFX_goal_generic_construct_infrastructure
+		prerequisite = { focus = TU_HIG_silk_workshops }
+		x = 16
+		y = 12
+		cost = 10
+
+		search_filters = { FOCUS_FILTER_POLITICAL }
+
+		ai_will_do = {
+			base = 1
+		}
+
+		completion_reward = {
+			TU_build_railway = yes
 		}
 	}
 }

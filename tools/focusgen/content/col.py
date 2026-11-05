@@ -453,5 +453,26 @@ C.ev(29, ("기업 공화국", "The Corporate Republic"), ("기업 대표들이 �
 C.ev(30, ("개척자 연방", "The Frontier Federation"), ("개척지의 보안관과 장군들이 수도에 들어왔다.", "The sheriffs and generals of the frontier have come to the capital."),
      [("서부의 방식대로.", "The western way.", ["add_war_support = 0.05"], 1)])
 
+# ------------------------------------------------------------------ 리워크 (사양서 27): 해군 위원회 자리에 육상함 · 항공 · 개척지 · 과학 · 산업
+f("landship_board", "육상함 위원회", "Landship Board", pre=["root"])
+f("rhine_engines", "라인 생명 기관", "Rhine Landship Engines", pre=["landship_board"])
+f("armoured_landships", "장갑 육상함", "Armoured Hull Plating", pre=["rhine_engines"])
+f("landship_artillery", "육상함 포대", "Hull-Mounted Artillery", pre=["rhine_engines"])
+f("landship_rapid", "육상함 기동대", "Rapid Assault Corps", pre=["armoured_landships"])
+f("trimounts_city", "트라이마운츠 이동도시", "Trimounts Mobile City", pre=["landship_artillery"], cost=15)
+f("landship_doctrine", "육상함 교리", "Overland Warfare Doctrine", pre=["landship_rapid", "trimounts_city"], cost=15)
+f("drone_swarms", "드론 편대", "Drone Wings", pre=["air_force"])
+f("airship_command", "비행선 사령부", "Airship Command", pre=["drone_swarms"])
+f("weather_arts", "기상 조작 아츠", "Weather Control Arts", pre=["airship_command"], reward=[SCI(10)])
+f("ranger_patrols", "개척지 순찰대", "Frontier Ranger Patrols", pre=["army_reform"])
+f("sheriff_militia", "보안관 민병대", "Sheriff Militias", pre=["ranger_patrols"])
+f("western_rail", "서부 철도", "Western Railway", pre=["ranger_patrols"])
+f("bounty_contracts", "현상금 계약", "Outlaw Bounty Contracts", pre=["sheriff_militia"])
+f("originium_lab", "원석 공학 연구소", "Originium Engineering Laboratory", pre=["rhine_pact"], reward=[SCI(10)])
+f("patent_office", "특허청", "Federal Patent Office", pre=["originium_lab"], reward=[SCI(5)])
+f("refinery_belt", "정유 벨트", "Refinery Belt", pre=["oil_industry"], econ=True)
+f("continental_highway", "대륙 고속도로", "Continental Highway Network", pre=["refinery_belt"])
+f("assembly_plants", "조립 공장 단지", "Assembly Plant Complex", pre=["refinery_belt"], econ="TU_build_mil_factory = yes")
+
 if __name__ == "__main__":
     C.write()

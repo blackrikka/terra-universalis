@@ -368,5 +368,26 @@ C.ev(34, ("닌자의 공훈", "A Shinobi's Triumph"), ("닌자가 외국 육상�
      [("훌륭하다.", "Excellent.", ["add_tech_bonus = { name = TU_HIG_plans bonus = 0.75 uses = 1 category = industry }"], 1)],
      trigger=["original_tag = HIG", AT_LEAST("shinobi", 5)], mtth=300)
 
+# ------------------------------------------------------------------ 리워크 (사양서 27): 해군 갈래 자리에 근대 육군 · 해안 방어 · 육상함 · 닌자 · 산업
+f("western_drill", "양식 훈련", "Western-Style Drill", pre=["root"])
+f("conscript_army", "징병제 군대", "Conscript Army", pre=["western_drill"])
+f("crossbow_arsenal", "노궁 병기창", "Crossbow Arsenal", pre=["western_drill"])
+f("field_artillery", "야포대", "Field Artillery", pre=["conscript_army", "crossbow_arsenal"])
+f("staff_college", "육군 참모 학교", "Army Staff College", pre=["field_artillery"])
+f("army_founding", "황군 창설", "Founding of the Imperial Army", pre=["staff_college"], cost=15)
+f("shore_defence", "해안 방어선", "Shore Defence Line", pre=["fishing_ports"])
+f("coastal_watchtowers", "해안 망루", "Coastal Watchtowers", pre=["shore_defence"])
+f("harbour_forts", "항구 요새", "Harbour Forts", pre=["shore_defence"])
+f("sea_terror_wardens", "해사 감시대", "Sea Terror Wardens", pre=["coastal_watchtowers", "harbour_forts"])
+f("engine_studies", "증기 기관 연구", "Steam Engine Studies", pre=["foreign_ships"])
+f("landship_workshops", "육상함 공방", "Landship Workshops", pre=["engine_studies"], econ=True)
+f("landship_cavalry", "육상함 기동대", "Steam Cavalry Corps", pre=["landship_workshops"])
+f("shadow_couriers", "그림자 전령", "Shadow Couriers", pre=["shinobi_villages"])
+f("secret_school", "비밀 닌자 학당", "Secret Shinobi School", pre=["shadow_couriers"])
+f("twin_villages", "두 마을의 맹약", "Twin Villages Pact", pre=["secret_school"], reward=[NIN(2)])
+f("silk_workshops", "비단 공방", "Silk Workshops", pre=["rice_harvest"], econ=True)
+f("copper_mines", "구리 광산", "Copper Mines", pre=["silk_workshops"], econ=True)
+f("capital_railway", "수도 철도", "Capital Railway", pre=["silk_workshops"])
+
 if __name__ == "__main__":
     C.write()

@@ -2261,3 +2261,384 @@
 			add_stability = 0.03
 		}
 	}
+
+	focus = {
+		id = TU_COL_landship_board
+		icon = GFX_goal_generic_construct_infrastructure
+		prerequisite = { focus = TU_COL_root }
+		x = 0
+		y = 0
+		cost = 10
+
+		search_filters = { FOCUS_FILTER_POLITICAL }
+
+		ai_will_do = {
+			base = 1
+		}
+
+		completion_reward = {
+			add_tech_bonus = { name = TU_COL_landship_board bonus = 0.75 uses = 1 category = construction_tech }
+			add_tech_bonus = { name = TU_COL_landship_board bonus = 0.75 uses = 1 category = motorized_equipment }
+		}
+	}
+
+	focus = {
+		id = TU_COL_rhine_engines
+		icon = GFX_goal_generic_construct_infrastructure
+		prerequisite = { focus = TU_COL_landship_board }
+		x = 0
+		y = 0
+		cost = 10
+
+		search_filters = { FOCUS_FILTER_POLITICAL }
+
+		ai_will_do = {
+			base = 1
+		}
+
+		completion_reward = {
+			add_tech_bonus = { name = TU_COL_rhine_engines bonus = 0.75 uses = 1 category = construction_tech }
+			add_tech_bonus = { name = TU_COL_rhine_engines bonus = 0.75 uses = 1 category = motorized_equipment }
+		}
+	}
+
+	focus = {
+		id = TU_COL_armoured_landships
+		icon = GFX_goal_generic_army_tanks
+		prerequisite = { focus = TU_COL_rhine_engines }
+		x = 0
+		y = 0
+		cost = 10
+
+		search_filters = { FOCUS_FILTER_POLITICAL }
+
+		ai_will_do = {
+			base = 1
+		}
+
+		completion_reward = {
+			add_tech_bonus = { name = TU_COL_armoured_landships bonus = 0.75 uses = 1 category = armor }
+			add_doctrine_cost_reduction = { name = TU_COL_armoured_landships cost_reduction = 0.4 uses = 1 category = land_doctrine }
+		}
+	}
+
+	focus = {
+		id = TU_COL_landship_artillery
+		icon = GFX_goal_generic_army_artillery
+		prerequisite = { focus = TU_COL_rhine_engines }
+		x = 0
+		y = 0
+		cost = 10
+
+		search_filters = { FOCUS_FILTER_POLITICAL }
+
+		ai_will_do = {
+			base = 1
+		}
+
+		completion_reward = {
+			add_tech_bonus = { name = TU_COL_landship_artillery bonus = 0.75 uses = 1 category = artillery }
+			army_experience = 25
+		}
+	}
+
+	focus = {
+		id = TU_COL_landship_rapid
+		icon = GFX_goal_generic_army_motorized
+		prerequisite = { focus = TU_COL_armoured_landships }
+		x = 0
+		y = 0
+		cost = 10
+
+		search_filters = { FOCUS_FILTER_POLITICAL }
+
+		ai_will_do = {
+			base = 1
+		}
+
+		completion_reward = {
+			add_tech_bonus = { name = TU_COL_landship_rapid bonus = 0.75 uses = 1 category = motorized_equipment }
+			add_doctrine_cost_reduction = { name = TU_COL_landship_rapid cost_reduction = 0.4 uses = 1 category = land_doctrine }
+		}
+	}
+
+	focus = {
+		id = TU_COL_trimounts_city
+		icon = GFX_goal_generic_construct_infrastructure
+		prerequisite = { focus = TU_COL_landship_artillery }
+		x = 0
+		y = 0
+		cost = 15
+
+		search_filters = { FOCUS_FILTER_POLITICAL }
+
+		ai_will_do = {
+			base = 1
+		}
+
+		completion_reward = {
+			add_tech_bonus = { name = TU_COL_trimounts_city bonus = 1.0 uses = 1 category = construction_tech }
+			add_tech_bonus = { name = TU_COL_trimounts_city bonus = 1.0 uses = 1 category = motorized_equipment }
+		}
+	}
+
+	focus = {
+		id = TU_COL_landship_doctrine
+		icon = GFX_goal_generic_army_doctrines
+		prerequisite = { focus = TU_COL_landship_rapid }
+		prerequisite = { focus = TU_COL_trimounts_city }
+		x = 0
+		y = 0
+		cost = 15
+
+		search_filters = { FOCUS_FILTER_POLITICAL }
+
+		ai_will_do = {
+			base = 1
+		}
+
+		completion_reward = {
+			add_doctrine_cost_reduction = { name = TU_COL_landship_doctrine cost_reduction = 0.5 uses = 1 category = land_doctrine }
+			army_experience = 40
+		}
+	}
+
+	focus = {
+		id = TU_COL_drone_swarms
+		icon = GFX_goal_generic_air_doctrine
+		prerequisite = { focus = TU_COL_air_force }
+		x = 0
+		y = 0
+		cost = 10
+
+		search_filters = { FOCUS_FILTER_POLITICAL }
+
+		ai_will_do = {
+			base = 1
+		}
+
+		completion_reward = {
+			add_tech_bonus = { name = TU_COL_drone_swarms bonus = 0.75 uses = 1 category = light_fighter category = tactical_bomber }
+			add_doctrine_cost_reduction = { name = TU_COL_drone_swarms cost_reduction = 0.4 uses = 1 category = air_doctrine }
+			air_experience = 25
+		}
+	}
+
+	focus = {
+		id = TU_COL_airship_command
+		icon = GFX_goal_generic_air_doctrine
+		prerequisite = { focus = TU_COL_drone_swarms }
+		x = 0
+		y = 0
+		cost = 10
+
+		search_filters = { FOCUS_FILTER_POLITICAL }
+
+		ai_will_do = {
+			base = 1
+		}
+
+		completion_reward = {
+			add_tech_bonus = { name = TU_COL_airship_command bonus = 0.75 uses = 1 category = light_fighter category = tactical_bomber }
+			add_doctrine_cost_reduction = { name = TU_COL_airship_command cost_reduction = 0.4 uses = 1 category = air_doctrine }
+			air_experience = 25
+		}
+	}
+
+	focus = {
+		id = TU_COL_weather_arts
+		icon = GFX_focus_research
+		prerequisite = { focus = TU_COL_airship_command }
+		x = 0
+		y = 0
+		cost = 10
+
+		search_filters = { FOCUS_FILTER_POLITICAL }
+
+		ai_will_do = {
+			base = 1
+		}
+
+		completion_reward = {
+			TU_COL_science_10 = yes
+			add_tech_bonus = { name = TU_COL_weather_arts bonus = 0.75 uses = 1 category = electronics category = tu_originium_tech }
+		}
+	}
+
+	focus = {
+		id = TU_COL_ranger_patrols
+		icon = GFX_goal_generic_defence
+		prerequisite = { focus = TU_COL_army_reform }
+		x = 0
+		y = 0
+		cost = 10
+
+		search_filters = { FOCUS_FILTER_POLITICAL }
+
+		ai_will_do = {
+			base = 1
+		}
+
+		completion_reward = {
+			add_tech_bonus = { name = TU_COL_ranger_patrols bonus = 0.75 uses = 1 category = construction_tech }
+			army_experience = 25
+		}
+	}
+
+	focus = {
+		id = TU_COL_sheriff_militia
+		icon = GFX_goal_generic_allies_build_infantry
+		prerequisite = { focus = TU_COL_ranger_patrols }
+		x = 0
+		y = 0
+		cost = 10
+
+		search_filters = { FOCUS_FILTER_POLITICAL }
+
+		ai_will_do = {
+			base = 1
+		}
+
+		completion_reward = {
+			add_manpower = 10000
+			army_experience = 25
+		}
+	}
+
+	focus = {
+		id = TU_COL_western_rail
+		icon = GFX_goal_generic_construct_infrastructure
+		prerequisite = { focus = TU_COL_ranger_patrols }
+		x = 0
+		y = 0
+		cost = 10
+
+		search_filters = { FOCUS_FILTER_POLITICAL }
+
+		ai_will_do = {
+			base = 1
+		}
+
+		completion_reward = {
+			TU_build_railway = yes
+		}
+	}
+
+	focus = {
+		id = TU_COL_bounty_contracts
+		icon = GFX_goal_generic_trade
+		prerequisite = { focus = TU_COL_sheriff_militia }
+		x = 0
+		y = 0
+		cost = 10
+
+		search_filters = { FOCUS_FILTER_POLITICAL }
+
+		ai_will_do = {
+			base = 1
+		}
+
+		completion_reward = {
+			add_political_power = 60
+			add_tech_bonus = { name = TU_COL_bounty_contracts bonus = 0.75 uses = 1 category = industry }
+		}
+	}
+
+	focus = {
+		id = TU_COL_originium_lab
+		icon = GFX_focus_research
+		prerequisite = { focus = TU_COL_rhine_pact }
+		x = 0
+		y = 0
+		cost = 10
+
+		search_filters = { FOCUS_FILTER_POLITICAL }
+
+		ai_will_do = {
+			base = 1
+		}
+
+		completion_reward = {
+			TU_COL_science_10 = yes
+			add_tech_bonus = { name = TU_COL_originium_lab bonus = 0.75 uses = 1 category = electronics category = tu_originium_tech }
+		}
+	}
+
+	focus = {
+		id = TU_COL_patent_office
+		icon = GFX_focus_research
+		prerequisite = { focus = TU_COL_originium_lab }
+		x = 0
+		y = 0
+		cost = 10
+
+		search_filters = { FOCUS_FILTER_POLITICAL }
+
+		ai_will_do = {
+			base = 1
+		}
+
+		completion_reward = {
+			TU_COL_science_5 = yes
+			add_tech_bonus = { name = TU_COL_patent_office bonus = 0.75 uses = 1 category = electronics category = tu_originium_tech }
+		}
+	}
+
+	focus = {
+		id = TU_COL_refinery_belt
+		icon = GFX_goal_generic_production
+		prerequisite = { focus = TU_COL_oil_industry }
+		x = 0
+		y = 0
+		cost = 10
+
+		search_filters = { FOCUS_FILTER_INDUSTRY }
+
+		ai_will_do = {
+			base = 1
+		}
+
+		completion_reward = {
+			add_tech_bonus = { name = TU_COL_refinery_belt bonus = 0.75 uses = 1 category = industry category = construction_tech }
+			TU_build_civ_factory = yes
+		}
+	}
+
+	focus = {
+		id = TU_COL_continental_highway
+		icon = GFX_goal_generic_production
+		prerequisite = { focus = TU_COL_refinery_belt }
+		x = 0
+		y = 0
+		cost = 10
+
+		search_filters = { FOCUS_FILTER_POLITICAL }
+
+		ai_will_do = {
+			base = 1
+		}
+
+		completion_reward = {
+			add_tech_bonus = { name = TU_COL_continental_highway bonus = 0.75 uses = 1 category = industry category = construction_tech }
+		}
+	}
+
+	focus = {
+		id = TU_COL_assembly_plants
+		icon = GFX_goal_generic_production
+		prerequisite = { focus = TU_COL_refinery_belt }
+		x = 0
+		y = 0
+		cost = 10
+
+		search_filters = { FOCUS_FILTER_INDUSTRY }
+
+		ai_will_do = {
+			base = 1
+		}
+
+		completion_reward = {
+			add_tech_bonus = { name = TU_COL_assembly_plants bonus = 0.75 uses = 1 category = industry category = construction_tech }
+			TU_build_mil_factory = yes
+		}
+	}

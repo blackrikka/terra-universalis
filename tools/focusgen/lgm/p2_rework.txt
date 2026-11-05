@@ -1,0 +1,387 @@
+	#### LGM rework (tools/focusgen/rework_legacy.py, spec 27) ####
+
+	focus = {
+		id = TU_LGM_rw_guard_academy
+		prerequisite = { focus = TU_LGM_guard_reform }
+		icon = GFX_goal_generic_political_pressure
+		x = 0
+		y = 0
+		cost = 10
+
+		search_filters = { FOCUS_FILTER_POLITICAL }
+
+		ai_will_do = {
+			base = 1
+		}
+
+		completion_reward = {
+			add_doctrine_cost_reduction = { name = TU_LGM_rw_guard_academy cost_reduction = 0.4 uses = 1 category = land_doctrine }
+			army_experience = 25
+		}
+	}
+
+	focus = {
+		id = TU_LGM_rw_special_unit
+		prerequisite = { focus = TU_LGM_rw_guard_academy }
+		icon = GFX_goal_generic_political_pressure
+		x = 0
+		y = 0
+		cost = 10
+
+		search_filters = { FOCUS_FILTER_POLITICAL }
+
+		ai_will_do = {
+			base = 1
+		}
+
+		completion_reward = {
+			army_experience = 25
+			add_war_support = 0.03
+			add_doctrine_cost_reduction = { name = TU_LGM_rw_special_unit cost_reduction = 0.4 uses = 1 category = land_doctrine }
+		}
+	}
+
+	focus = {
+		id = TU_LGM_rw_riot_shields
+		prerequisite = { focus = TU_LGM_rw_guard_academy }
+		icon = GFX_goal_generic_political_pressure
+		x = 0
+		y = 0
+		cost = 10
+
+		search_filters = { FOCUS_FILTER_POLITICAL }
+
+		ai_will_do = {
+			base = 1
+		}
+
+		completion_reward = {
+			add_tech_bonus = { name = TU_LGM_rw_riot_shields bonus = 0.75 uses = 1 category = construction_tech }
+			army_experience = 25
+		}
+	}
+
+	focus = {
+		id = TU_LGM_rw_ch_en_command
+		prerequisite = { focus = TU_LGM_rw_special_unit }
+		prerequisite = { focus = TU_LGM_rw_riot_shields }
+		icon = GFX_goal_generic_political_pressure
+		x = 0
+		y = 0
+		cost = 15
+
+		search_filters = { FOCUS_FILTER_POLITICAL }
+
+		ai_will_do = {
+			base = 1
+		}
+
+		completion_reward = {
+			add_doctrine_cost_reduction = { name = TU_LGM_rw_ch_en_command cost_reduction = 0.5 uses = 1 category = land_doctrine }
+			army_experience = 40
+		}
+	}
+
+	focus = {
+		id = TU_LGM_rw_city_engines
+		prerequisite = { focus = TU_LGM_urban_planning }
+		icon = GFX_goal_generic_political_pressure
+		x = 0
+		y = 0
+		cost = 10
+
+		search_filters = { FOCUS_FILTER_POLITICAL }
+
+		ai_will_do = {
+			base = 1
+		}
+
+		completion_reward = {
+			TU_build_infrastructure = yes
+			add_tech_bonus = { name = TU_LGM_rw_city_engines bonus = 0.75 uses = 1 category = industry category = construction_tech }
+		}
+	}
+
+	focus = {
+		id = TU_LGM_rw_mobile_city
+		prerequisite = { focus = TU_LGM_rw_city_engines }
+		icon = GFX_goal_generic_political_pressure
+		x = 0
+		y = 0
+		cost = 15
+
+		search_filters = { FOCUS_FILTER_POLITICAL }
+
+		ai_will_do = {
+			base = 1
+		}
+
+		completion_reward = {
+			add_tech_bonus = { name = TU_LGM_rw_mobile_city bonus = 1.0 uses = 1 category = construction_tech }
+			add_tech_bonus = { name = TU_LGM_rw_mobile_city bonus = 1.0 uses = 1 category = motorized_equipment }
+		}
+	}
+
+	focus = {
+		id = TU_LGM_rw_lower_ring
+		prerequisite = { focus = TU_LGM_urban_planning }
+		icon = GFX_goal_generic_political_pressure
+		x = 0
+		y = 0
+		cost = 10
+
+		search_filters = { FOCUS_FILTER_POLITICAL }
+
+		ai_will_do = {
+			base = 1
+		}
+
+		completion_reward = {
+			TU_build_civ_factory = yes
+			add_political_power = 60
+			add_stability = 0.03
+		}
+	}
+
+	focus = {
+		id = TU_LGM_rw_slum_clinics
+		prerequisite = { focus = TU_LGM_rw_lower_ring }
+		icon = GFX_goal_generic_political_pressure
+		x = 0
+		y = 0
+		cost = 10
+
+		search_filters = { FOCUS_FILTER_POLITICAL }
+
+		ai_will_do = {
+			base = 1
+		}
+
+		completion_reward = {
+			add_stability = 0.03
+			add_manpower = 10000
+			add_tech_bonus = { name = TU_LGM_rw_slum_clinics bonus = 0.75 uses = 1 category = tu_oripathy_tech }
+		}
+	}
+
+	focus = {
+		id = TU_LGM_rw_infected_quarter
+		prerequisite = { focus = TU_LGM_rw_slum_clinics }
+		icon = GFX_goal_generic_political_pressure
+		x = 0
+		y = 0
+		cost = 10
+
+		search_filters = { FOCUS_FILTER_POLITICAL }
+
+		ai_will_do = {
+			base = 1
+		}
+
+		completion_reward = {
+			add_stability = 0.03
+			add_manpower = 10000
+			add_tech_bonus = { name = TU_LGM_rw_infected_quarter bonus = 0.75 uses = 1 category = tu_oripathy_tech }
+		}
+	}
+
+	focus = {
+		id = TU_LGM_rw_trade_offices
+		prerequisite = { focus = TU_LGM_customs_union }
+		icon = GFX_goal_generic_political_pressure
+		x = 0
+		y = 0
+		cost = 10
+
+		search_filters = { FOCUS_FILTER_POLITICAL }
+
+		ai_will_do = {
+			base = 1
+		}
+
+		completion_reward = {
+			add_political_power = 60
+			add_tech_bonus = { name = TU_LGM_rw_trade_offices bonus = 0.75 uses = 1 category = industry }
+		}
+	}
+
+	focus = {
+		id = TU_LGM_rw_yan_market
+		prerequisite = { focus = TU_LGM_rw_trade_offices }
+		icon = GFX_goal_generic_political_pressure
+		x = 0
+		y = 0
+		cost = 10
+
+		search_filters = { FOCUS_FILTER_POLITICAL }
+
+		ai_will_do = {
+			base = 1
+		}
+
+		completion_reward = {
+			add_political_power = 60
+			add_tech_bonus = { name = TU_LGM_rw_yan_market bonus = 0.75 uses = 1 category = industry }
+		}
+	}
+
+	focus = {
+		id = TU_LGM_rw_originium_exchange
+		prerequisite = { focus = TU_LGM_rw_trade_offices }
+		icon = GFX_goal_generic_political_pressure
+		x = 0
+		y = 0
+		cost = 10
+
+		search_filters = { FOCUS_FILTER_POLITICAL }
+
+		ai_will_do = {
+			base = 1
+		}
+
+		completion_reward = {
+			TU_build_civ_factory = yes
+			add_tech_bonus = { name = TU_LGM_rw_originium_exchange bonus = 0.75 uses = 1 category = electronics category = tu_originium_tech }
+		}
+	}
+
+	focus = {
+		id = TU_LGM_rw_free_trade_zone
+		prerequisite = { focus = TU_LGM_rw_yan_market }
+		prerequisite = { focus = TU_LGM_rw_originium_exchange }
+		icon = GFX_goal_generic_political_pressure
+		x = 0
+		y = 0
+		cost = 15
+
+		search_filters = { FOCUS_FILTER_POLITICAL }
+
+		ai_will_do = {
+			base = 1
+		}
+
+		completion_reward = {
+			add_political_power = 100
+			add_tech_bonus = { name = TU_LGM_rw_free_trade_zone bonus = 1.0 uses = 1 category = industry }
+		}
+	}
+
+	focus = {
+		id = TU_LGM_rw_city_walls
+		prerequisite = { focus = TU_LGM_defence_plan }
+		icon = GFX_goal_generic_political_pressure
+		x = 0
+		y = 0
+		cost = 10
+
+		search_filters = { FOCUS_FILTER_POLITICAL }
+
+		ai_will_do = {
+			base = 1
+		}
+
+		completion_reward = {
+			TU_build_forts_2 = yes
+		}
+	}
+
+	focus = {
+		id = TU_LGM_rw_artillery_towers
+		prerequisite = { focus = TU_LGM_rw_city_walls }
+		icon = GFX_goal_generic_political_pressure
+		x = 0
+		y = 0
+		cost = 10
+
+		search_filters = { FOCUS_FILTER_POLITICAL }
+
+		ai_will_do = {
+			base = 1
+		}
+
+		completion_reward = {
+			add_tech_bonus = { name = TU_LGM_rw_artillery_towers bonus = 0.75 uses = 1 category = artillery }
+			army_experience = 25
+		}
+	}
+
+	focus = {
+		id = TU_LGM_rw_drone_net
+		prerequisite = { focus = TU_LGM_rw_city_walls }
+		icon = GFX_goal_generic_political_pressure
+		x = 0
+		y = 0
+		cost = 10
+
+		search_filters = { FOCUS_FILTER_POLITICAL }
+
+		ai_will_do = {
+			base = 1
+		}
+
+		completion_reward = {
+			add_tech_bonus = { name = TU_LGM_rw_drone_net bonus = 0.75 uses = 1 category = light_fighter category = tactical_bomber }
+			add_doctrine_cost_reduction = { name = TU_LGM_rw_drone_net cost_reduction = 0.4 uses = 1 category = air_doctrine }
+			air_experience = 25
+		}
+	}
+
+	focus = {
+		id = TU_LGM_rw_penguin_logistics
+		prerequisite = { focus = TU_LGM_dip_relations }
+		icon = GFX_goal_generic_political_pressure
+		x = 0
+		y = 0
+		cost = 10
+
+		search_filters = { FOCUS_FILTER_POLITICAL }
+
+		ai_will_do = {
+			base = 1
+		}
+
+		completion_reward = {
+			add_tech_bonus = { name = TU_LGM_rw_penguin_logistics bonus = 0.75 uses = 1 category = industry category = construction_tech }
+		}
+	}
+
+	focus = {
+		id = TU_LGM_rw_rhodes_liaison
+		prerequisite = { focus = TU_LGM_dip_relations }
+		icon = GFX_goal_generic_political_pressure
+		x = 0
+		y = 0
+		cost = 10
+
+		search_filters = { FOCUS_FILTER_POLITICAL }
+
+		ai_will_do = {
+			base = 1
+		}
+
+		completion_reward = {
+			add_political_power = 60
+			add_stability = 0.03
+		}
+	}
+
+	focus = {
+		id = TU_LGM_rw_neutral_city
+		prerequisite = { focus = TU_LGM_rw_penguin_logistics }
+		prerequisite = { focus = TU_LGM_rw_rhodes_liaison }
+		icon = GFX_goal_generic_political_pressure
+		x = 0
+		y = 0
+		cost = 15
+
+		search_filters = { FOCUS_FILTER_POLITICAL }
+
+		ai_will_do = {
+			base = 1
+		}
+
+		completion_reward = {
+			add_political_power = 100
+			add_stability = 0.05
+		}
+	}

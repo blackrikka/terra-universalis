@@ -315,5 +315,29 @@ C.d(cat_s, "caravan_escort", "상단 호위대 파견", "Dispatch Caravan Guards
 C.ev(34, ("해적의 투항", "Pirates Surrender"), ("해적 한 무리가 투항하며 미노스 군에 들어오기를 청했다.", "A pirate band surrendered and asked to join Minos's army."),
      [("받아들인다.", "Accept.", ["army_experience = 25", "add_manpower = 2000"], 1)], trigger=["original_tag = MIN", "has_completed_focus = TU_MIN_pirate_hunt"], mtth=300)
 
+# ------------------------------------------------------------------ 리워크 (사양서 27): 해군 갈래 자리에 육상 교역로 · 팔랑크스 · 학문 · 공방
+f("overland_routes", "육상 교역로 개척", "Open Overland Trade Roads", pre=["root"], reward=[RT(1)])
+f("caravan_guilds", "상단 길드", "Caravan Guilds", pre=["overland_routes"])
+f("inland_markets", "내륙 시장 도시", "Inland Market Towns", pre=["caravan_guilds"], econ=True)
+f("landship_merchants", "육상함 상단", "Landship Merchant Houses", pre=["caravan_guilds"], reward=[RT(1)])
+f("landship_escorts", "육상함 호위대", "Landship Escort Corps", pre=["landship_merchants"])
+f("sargon_road", "사르곤 가도", "The Sargon Road", pre=["landship_merchants"], reward=[RT(1)])
+f("trade_league", "교역 동맹 헌장", "Trade League Charter", pre=["sargon_road", "inland_markets"], cost=15, reward=[RT(1)])
+f("market_city", "이동 시장 도시", "Market Mobile City", pre=["trade_league"], cost=15)
+f("phalanx_drill", "팔랑크스 훈련", "Phalanx Drill", pre=["hoplite_training"])
+f("citizen_levies", "시민 징집", "Hoplite Levies", pre=["phalanx_drill"])
+f("bronze_forges", "청동 대장간", "Bronze Forges", pre=["phalanx_drill"])
+f("aspis_tactics", "아스피스 방패 전술", "Aspis Shield Tactics", pre=["citizen_levies", "bronze_forges"])
+f("polis_walls", "폴리스 성벽", "Polis Walls", pre=["aspis_tactics"])
+f("strategos_academy", "스트라테고스 학당", "Strategos Academy", pre=["aspis_tactics"], cost=15)
+f("arts_lyceum", "아츠 리케이온", "Arts Lyceum Research", pre=["philosophers"])
+f("arts_archive", "아츠 기록 보관소", "Arts Archive Records", pre=["arts_lyceum"], cost=15)
+f("originium_physics", "원석 자연학", "Originium Natural Philosophy", pre=["arts_lyceum"])
+f("oracle_informants", "신탁의 정보원", "Oracle Informants", pre=["temple_rites"])
+f("olive_oil_works", "올리브유 압착소", "Olive Oil Works", pre=["olive_farms"], econ=True)
+f("sculptor_workshops", "조각가 공방", "Sculptor Workshops", pre=["olive_oil_works"], econ=True)
+f("amphora_workshops", "암포라 공방", "Amphora Workshops", pre=["olive_oil_works"], econ=True)
+f("agora_markets", "아고라 시장", "Agora Markets", pre=["agora"])
+
 if __name__ == "__main__":
     C.write()

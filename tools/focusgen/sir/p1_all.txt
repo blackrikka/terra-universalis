@@ -2320,3 +2320,265 @@
 			add_stability = 0.03
 		}
 	}
+
+	focus = {
+		id = TU_SIR_inland_smuggling
+		icon = GFX_goal_generic_intelligence_exchange
+		prerequisite = { focus = TU_SIR_harbour_cities }
+		x = 0
+		y = 0
+		cost = 10
+
+		search_filters = { FOCUS_FILTER_POLITICAL }
+
+		ai_will_do = {
+			base = 1
+		}
+
+		completion_reward = {
+			add_tech_bonus = { name = TU_SIR_inland_smuggling bonus = 0.75 uses = 1 category = radar_tech category = electronics }
+			add_stability = 0.03
+		}
+	}
+
+	focus = {
+		id = TU_SIR_hitman_contracts
+		icon = GFX_goal_generic_trade
+		prerequisite = { focus = TU_SIR_family_bodyguards }
+		x = 0
+		y = 0
+		cost = 10
+
+		search_filters = { FOCUS_FILTER_POLITICAL }
+
+		ai_will_do = {
+			base = 1
+		}
+
+		completion_reward = {
+			add_political_power = 60
+			add_tech_bonus = { name = TU_SIR_hitman_contracts bonus = 0.75 uses = 1 category = industry }
+		}
+	}
+
+	focus = {
+		id = TU_SIR_limousines
+		icon = GFX_goal_generic_army_tanks
+		prerequisite = { focus = TU_SIR_family_bodyguards }
+		x = 0
+		y = 0
+		cost = 10
+
+		search_filters = { FOCUS_FILTER_POLITICAL }
+
+		ai_will_do = {
+			base = 1
+		}
+
+		completion_reward = {
+			add_tech_bonus = { name = TU_SIR_limousines bonus = 0.75 uses = 1 category = armor }
+			add_doctrine_cost_reduction = { name = TU_SIR_limousines cost_reduction = 0.4 uses = 1 category = land_doctrine }
+		}
+	}
+
+	focus = {
+		id = TU_SIR_street_tactics
+		icon = GFX_goal_generic_army_doctrines
+		prerequisite = { focus = TU_SIR_hitman_contracts }
+		prerequisite = { focus = TU_SIR_limousines }
+		x = 0
+		y = 0
+		cost = 10
+
+		search_filters = { FOCUS_FILTER_POLITICAL }
+
+		ai_will_do = {
+			base = 1
+		}
+
+		completion_reward = {
+			add_doctrine_cost_reduction = { name = TU_SIR_street_tactics cost_reduction = 0.4 uses = 1 category = land_doctrine }
+			army_experience = 25
+		}
+	}
+
+	focus = {
+		id = TU_SIR_family_militias
+		icon = GFX_goal_generic_allies_build_infantry
+		prerequisite = { focus = TU_SIR_street_tactics }
+		x = 0
+		y = 0
+		cost = 10
+
+		search_filters = { FOCUS_FILTER_POLITICAL }
+
+		ai_will_do = {
+			base = 1
+		}
+
+		completion_reward = {
+			add_manpower = 10000
+			army_experience = 25
+		}
+	}
+
+	focus = {
+		id = TU_SIR_prosecutors
+		icon = GFX_goal_generic_political_pressure
+		prerequisite = { focus = TU_SIR_court_reform }
+		x = 0
+		y = 0
+		cost = 10
+
+		search_filters = { FOCUS_FILTER_POLITICAL }
+
+		ai_will_do = {
+			base = 1
+		}
+
+		completion_reward = {
+			TU_SIR_law_5 = yes
+			add_political_power = 60
+			add_stability = 0.03
+		}
+	}
+
+	focus = {
+		id = TU_SIR_witness_security
+		icon = GFX_goal_generic_intelligence_exchange
+		prerequisite = { focus = TU_SIR_prosecutors }
+		x = 0
+		y = 0
+		cost = 10
+
+		search_filters = { FOCUS_FILTER_POLITICAL }
+
+		ai_will_do = {
+			base = 1
+		}
+
+		completion_reward = {
+			TU_SIR_law_5 = yes
+			add_tech_bonus = { name = TU_SIR_witness_security bonus = 0.75 uses = 1 category = radar_tech category = electronics }
+			add_stability = 0.03
+		}
+	}
+
+	focus = {
+		id = TU_SIR_lawyers_guild
+		icon = GFX_goal_generic_trade
+		prerequisite = { focus = TU_SIR_prosecutors }
+		x = 0
+		y = 0
+		cost = 10
+
+		search_filters = { FOCUS_FILTER_POLITICAL }
+
+		ai_will_do = {
+			base = 1
+		}
+
+		completion_reward = {
+			add_political_power = 60
+			add_tech_bonus = { name = TU_SIR_lawyers_guild bonus = 0.75 uses = 1 category = industry }
+		}
+	}
+
+	focus = {
+		id = TU_SIR_wolf_hunters
+		icon = GFX_goal_generic_allies_build_infantry
+		prerequisite = { focus = TU_SIR_wolf_legacy }
+		x = 0
+		y = 0
+		cost = 10
+
+		search_filters = { FOCUS_FILTER_POLITICAL }
+
+		ai_will_do = {
+			base = 1
+		}
+
+		completion_reward = {
+			add_manpower = 10000
+			army_experience = 25
+		}
+	}
+
+	focus = {
+		id = TU_SIR_wolf_howl
+		icon = GFX_goal_generic_propaganda
+		prerequisite = { focus = TU_SIR_wolf_hunters }
+		x = 0
+		y = 0
+		cost = 10
+
+		search_filters = { FOCUS_FILTER_POLITICAL }
+
+		ai_will_do = {
+			base = 1
+		}
+
+		completion_reward = {
+			add_war_support = 0.03
+			add_stability = 0.03
+		}
+	}
+
+	focus = {
+		id = TU_SIR_casino_tax
+		icon = GFX_goal_generic_trade
+		prerequisite = { focus = TU_SIR_casino_trade }
+		x = 0
+		y = 0
+		cost = 10
+
+		search_filters = { FOCUS_FILTER_POLITICAL }
+
+		ai_will_do = {
+			base = 1
+		}
+
+		completion_reward = {
+			add_political_power = 60
+			add_tech_bonus = { name = TU_SIR_casino_tax bonus = 0.75 uses = 1 category = industry }
+		}
+	}
+
+	focus = {
+		id = TU_SIR_wine_exports
+		icon = GFX_goal_generic_trade
+		prerequisite = { focus = TU_SIR_wine_olive }
+		x = 0
+		y = 0
+		cost = 10
+
+		search_filters = { FOCUS_FILTER_POLITICAL }
+
+		ai_will_do = {
+			base = 1
+		}
+
+		completion_reward = {
+			add_political_power = 60
+			add_tech_bonus = { name = TU_SIR_wine_exports bonus = 0.75 uses = 1 category = industry }
+		}
+	}
+
+	focus = {
+		id = TU_SIR_siracusa_rail
+		icon = GFX_goal_generic_construct_infrastructure
+		prerequisite = { focus = TU_SIR_wine_exports }
+		x = 0
+		y = 0
+		cost = 10
+
+		search_filters = { FOCUS_FILTER_POLITICAL }
+
+		ai_will_do = {
+			base = 1
+		}
+
+		completion_reward = {
+			TU_build_railway = yes
+		}
+	}

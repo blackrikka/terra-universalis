@@ -2184,6 +2184,204 @@
 	}
 
 	focus = {
+		id = TU_IBE_coastal_ring
+		icon = GFX_goal_generic_defence
+		prerequisite = { focus = TU_IBE_lighthouse_keepers }
+		x = 0
+		y = 0
+		cost = 10
+
+		search_filters = { FOCUS_FILTER_POLITICAL }
+
+		ai_will_do = {
+			base = 1
+		}
+
+		completion_reward = {
+			TU_build_coastal_forts_2 = yes
+		}
+	}
+
+	focus = {
+		id = TU_IBE_anti_seaborn_weapons
+		icon = GFX_goal_generic_small_arms
+		prerequisite = { focus = TU_IBE_lighthouse_keepers }
+		x = 0
+		y = 0
+		cost = 10
+
+		search_filters = { FOCUS_FILTER_POLITICAL }
+
+		ai_will_do = {
+			base = 1
+		}
+
+		completion_reward = {
+			add_tech_bonus = { name = TU_IBE_anti_seaborn_weapons bonus = 0.75 uses = 1 category = infantry_weapons }
+			army_experience = 25
+		}
+	}
+
+	focus = {
+		id = TU_IBE_inquisitor_legions
+		icon = GFX_goal_generic_allies_build_infantry
+		prerequisite = { focus = TU_IBE_inquisition_reform }
+		x = 0
+		y = 0
+		cost = 10
+
+		search_filters = { FOCUS_FILTER_POLITICAL }
+
+		ai_will_do = {
+			base = 1
+		}
+
+		completion_reward = {
+			add_manpower = 10000
+			army_experience = 25
+		}
+	}
+
+	focus = {
+		id = TU_IBE_heresy_tribunals
+		icon = GFX_goal_generic_political_pressure
+		prerequisite = { focus = TU_IBE_inquisitor_legions }
+		x = 0
+		y = 0
+		cost = 10
+
+		search_filters = { FOCUS_FILTER_POLITICAL }
+
+		ai_will_do = {
+			base = 1
+		}
+
+		completion_reward = {
+			add_power_balance_value = { id = TU_IBE_bop value = -0.05 }
+			add_political_power = 60
+			add_stability = 0.03
+		}
+	}
+
+	focus = {
+		id = TU_IBE_highland_forts
+		icon = GFX_goal_generic_defence
+		prerequisite = { focus = TU_IBE_mountain_infantry }
+		x = 0
+		y = 0
+		cost = 10
+
+		search_filters = { FOCUS_FILTER_POLITICAL }
+
+		ai_will_do = {
+			base = 1
+		}
+
+		completion_reward = {
+			TU_build_forts_2 = yes
+		}
+	}
+
+	focus = {
+		id = TU_IBE_mountain_scouts
+		icon = GFX_goal_generic_intelligence_exchange
+		prerequisite = { focus = TU_IBE_mountain_infantry }
+		x = 0
+		y = 0
+		cost = 10
+
+		search_filters = { FOCUS_FILTER_POLITICAL }
+
+		ai_will_do = {
+			base = 1
+		}
+
+		completion_reward = {
+			add_tech_bonus = { name = TU_IBE_mountain_scouts bonus = 0.75 uses = 1 category = radar_tech category = electronics }
+			add_stability = 0.03
+		}
+	}
+
+	focus = {
+		id = TU_IBE_salt_works
+		icon = GFX_goal_generic_production
+		prerequisite = { focus = TU_IBE_harbour_rebuild }
+		x = 0
+		y = 0
+		cost = 10
+
+		search_filters = { FOCUS_FILTER_INDUSTRY }
+
+		ai_will_do = {
+			base = 1
+		}
+
+		completion_reward = {
+			add_tech_bonus = { name = TU_IBE_salt_works bonus = 0.75 uses = 1 category = industry category = construction_tech }
+			TU_build_civ_factory = yes
+		}
+	}
+
+	focus = {
+		id = TU_IBE_coastal_rail
+		icon = GFX_goal_generic_construct_infrastructure
+		prerequisite = { focus = TU_IBE_salt_works }
+		x = 0
+		y = 0
+		cost = 10
+
+		search_filters = { FOCUS_FILTER_POLITICAL }
+
+		ai_will_do = {
+			base = 1
+		}
+
+		completion_reward = {
+			TU_build_railway = yes
+		}
+	}
+
+	focus = {
+		id = TU_IBE_cannery_plants
+		icon = GFX_goal_generic_production
+		prerequisite = { focus = TU_IBE_salt_works }
+		x = 0
+		y = 0
+		cost = 10
+
+		search_filters = { FOCUS_FILTER_INDUSTRY }
+
+		ai_will_do = {
+			base = 1
+		}
+
+		completion_reward = {
+			add_tech_bonus = { name = TU_IBE_cannery_plants bonus = 0.75 uses = 1 category = industry category = construction_tech }
+			TU_build_civ_factory = yes
+		}
+	}
+
+	focus = {
+		id = TU_IBE_laterano_accord
+		icon = GFX_goal_generic_improve_relations
+		prerequisite = { focus = TU_IBE_foreign_office }
+		x = 0
+		y = 0
+		cost = 10
+
+		search_filters = { FOCUS_FILTER_POLITICAL }
+
+		ai_will_do = {
+			base = 1
+		}
+
+		completion_reward = {
+			add_political_power = 60
+			add_stability = 0.03
+		}
+	}
+
+	focus = {
 		id = TU_IBE_ishar_call
 		icon = GFX_goal_generic_political_pressure
 		prerequisite = { focus = TU_IBE_root }

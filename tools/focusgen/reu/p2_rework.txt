@@ -1,0 +1,368 @@
+	#### REU rework (tools/focusgen/rework_legacy.py, spec 27) ####
+
+	focus = {
+		id = TU_REU_rw_infected_rally
+		prerequisite = { focus = TU_REU_militia_call }
+		icon = GFX_goal_generic_political_pressure
+		x = 0
+		y = 0
+		cost = 10
+
+		search_filters = { FOCUS_FILTER_POLITICAL }
+
+		ai_will_do = {
+			base = 1
+		}
+
+		completion_reward = {
+			add_stability = 0.03
+			add_manpower = 10000
+			add_tech_bonus = { name = TU_REU_rw_infected_rally bonus = 0.75 uses = 1 category = tu_oripathy_tech }
+		}
+	}
+
+	focus = {
+		id = TU_REU_rw_liberate_camps
+		prerequisite = { focus = TU_REU_rw_infected_rally }
+		icon = GFX_goal_generic_political_pressure
+		x = 0
+		y = 0
+		cost = 10
+
+		search_filters = { FOCUS_FILTER_POLITICAL }
+
+		ai_will_do = {
+			base = 1
+		}
+
+		completion_reward = {
+			add_political_power = 60
+			add_stability = 0.03
+		}
+	}
+
+	focus = {
+		id = TU_REU_rw_arts_squads
+		prerequisite = { focus = TU_REU_rw_infected_rally }
+		icon = GFX_goal_generic_political_pressure
+		x = 0
+		y = 0
+		cost = 10
+
+		search_filters = { FOCUS_FILTER_POLITICAL }
+
+		ai_will_do = {
+			base = 1
+		}
+
+		completion_reward = {
+			add_doctrine_cost_reduction = { name = TU_REU_rw_arts_squads cost_reduction = 0.4 uses = 1 category = land_doctrine }
+			army_experience = 25
+		}
+	}
+
+	focus = {
+		id = TU_REU_rw_crossbow_squads
+		prerequisite = { focus = TU_REU_rw_arts_squads }
+		icon = GFX_goal_generic_political_pressure
+		x = 0
+		y = 0
+		cost = 10
+
+		search_filters = { FOCUS_FILTER_POLITICAL }
+
+		ai_will_do = {
+			base = 1
+		}
+
+		completion_reward = {
+			add_tech_bonus = { name = TU_REU_rw_crossbow_squads bonus = 0.75 uses = 1 category = infantry_weapons }
+			army_experience = 25
+		}
+	}
+
+	focus = {
+		id = TU_REU_rw_infected_army
+		prerequisite = { focus = TU_REU_rw_liberate_camps }
+		prerequisite = { focus = TU_REU_rw_crossbow_squads }
+		icon = GFX_goal_generic_political_pressure
+		x = 0
+		y = 0
+		cost = 15
+
+		search_filters = { FOCUS_FILTER_POLITICAL }
+
+		ai_will_do = {
+			base = 1
+		}
+
+		completion_reward = {
+			add_stability = 0.05
+			add_manpower = 20000
+			add_tech_bonus = { name = TU_REU_rw_infected_army bonus = 1.0 uses = 1 category = tu_oripathy_tech }
+		}
+	}
+
+	focus = {
+		id = TU_REU_rw_chernobog_factories
+		prerequisite = { focus = TU_REU_chernobog_root }
+		icon = GFX_goal_generic_political_pressure
+		x = 0
+		y = 0
+		cost = 10
+
+		search_filters = { FOCUS_FILTER_POLITICAL }
+
+		ai_will_do = {
+			base = 1
+		}
+
+		completion_reward = {
+			TU_build_mil_factory = yes
+			add_tech_bonus = { name = TU_REU_rw_chernobog_factories bonus = 0.75 uses = 1 category = industry category = construction_tech }
+		}
+	}
+
+	focus = {
+		id = TU_REU_rw_chernobog_core
+		prerequisite = { focus = TU_REU_rw_chernobog_factories }
+		icon = GFX_goal_generic_political_pressure
+		x = 0
+		y = 0
+		cost = 10
+
+		search_filters = { FOCUS_FILTER_POLITICAL }
+
+		ai_will_do = {
+			base = 1
+		}
+
+		completion_reward = {
+			add_stability = 0.03
+			add_manpower = 10000
+			add_tech_bonus = { name = TU_REU_rw_chernobog_core bonus = 0.75 uses = 1 category = tu_oripathy_tech }
+		}
+	}
+
+	focus = {
+		id = TU_REU_rw_mobile_fortress
+		prerequisite = { focus = TU_REU_rw_chernobog_core }
+		icon = GFX_goal_generic_political_pressure
+		x = 0
+		y = 0
+		cost = 15
+
+		search_filters = { FOCUS_FILTER_POLITICAL }
+
+		ai_will_do = {
+			base = 1
+		}
+
+		completion_reward = {
+			TU_build_forts_3 = yes
+		}
+	}
+
+	focus = {
+		id = TU_REU_rw_sarkaz_contracts
+		prerequisite = { focus = TU_REU_black_serpent }
+		icon = GFX_goal_generic_political_pressure
+		x = 0
+		y = 0
+		cost = 10
+
+		search_filters = { FOCUS_FILTER_POLITICAL }
+
+		ai_will_do = {
+			base = 1
+		}
+
+		completion_reward = {
+			add_manpower = 10000
+			army_experience = 25
+		}
+	}
+
+	focus = {
+		id = TU_REU_rw_w_company
+		prerequisite = { focus = TU_REU_rw_sarkaz_contracts }
+		icon = GFX_goal_generic_political_pressure
+		x = 0
+		y = 0
+		cost = 10
+
+		search_filters = { FOCUS_FILTER_POLITICAL }
+
+		ai_will_do = {
+			base = 1
+		}
+
+		completion_reward = {
+			add_manpower = 10000
+			army_experience = 25
+		}
+	}
+
+	focus = {
+		id = TU_REU_rw_sabotage_cells
+		prerequisite = { focus = TU_REU_rw_sarkaz_contracts }
+		icon = GFX_goal_generic_political_pressure
+		x = 0
+		y = 0
+		cost = 10
+
+		search_filters = { FOCUS_FILTER_POLITICAL }
+
+		ai_will_do = {
+			base = 1
+		}
+
+		completion_reward = {
+			army_experience = 25
+			add_war_support = 0.03
+			add_doctrine_cost_reduction = { name = TU_REU_rw_sabotage_cells cost_reduction = 0.4 uses = 1 category = land_doctrine }
+		}
+	}
+
+	focus = {
+		id = TU_REU_rw_snowdevils
+		prerequisite = { focus = TU_REU_frost_nova }
+		icon = GFX_goal_generic_political_pressure
+		x = 0
+		y = 0
+		cost = 10
+
+		search_filters = { FOCUS_FILTER_POLITICAL }
+
+		ai_will_do = {
+			base = 1
+		}
+
+		completion_reward = {
+			add_manpower = 10000
+			army_experience = 25
+		}
+	}
+
+	focus = {
+		id = TU_REU_rw_winter_warfare
+		prerequisite = { focus = TU_REU_rw_snowdevils }
+		icon = GFX_goal_generic_political_pressure
+		x = 0
+		y = 0
+		cost = 10
+
+		search_filters = { FOCUS_FILTER_POLITICAL }
+
+		ai_will_do = {
+			base = 1
+		}
+
+		completion_reward = {
+			add_doctrine_cost_reduction = { name = TU_REU_rw_winter_warfare cost_reduction = 0.4 uses = 1 category = land_doctrine }
+			army_experience = 25
+		}
+	}
+
+	focus = {
+		id = TU_REU_rw_frost_shelters
+		prerequisite = { focus = TU_REU_rw_snowdevils }
+		icon = GFX_goal_generic_political_pressure
+		x = 0
+		y = 0
+		cost = 10
+
+		search_filters = { FOCUS_FILTER_POLITICAL }
+
+		ai_will_do = {
+			base = 1
+		}
+
+		completion_reward = {
+			add_stability = 0.03
+			add_manpower = 10000
+			add_tech_bonus = { name = TU_REU_rw_frost_shelters bonus = 0.75 uses = 1 category = tu_oripathy_tech }
+		}
+	}
+
+	focus = {
+		id = TU_REU_rw_underground_press
+		prerequisite = { focus = TU_REU_dip_envoys }
+		icon = GFX_goal_generic_political_pressure
+		x = 0
+		y = 0
+		cost = 10
+
+		search_filters = { FOCUS_FILTER_POLITICAL }
+
+		ai_will_do = {
+			base = 1
+		}
+
+		completion_reward = {
+			add_war_support = 0.03
+			add_stability = 0.03
+		}
+	}
+
+	focus = {
+		id = TU_REU_rw_infected_voice
+		prerequisite = { focus = TU_REU_rw_underground_press }
+		icon = GFX_goal_generic_political_pressure
+		x = 0
+		y = 0
+		cost = 10
+
+		search_filters = { FOCUS_FILTER_POLITICAL }
+
+		ai_will_do = {
+			base = 1
+		}
+
+		completion_reward = {
+			add_stability = 0.03
+			add_manpower = 10000
+			add_tech_bonus = { name = TU_REU_rw_infected_voice bonus = 0.75 uses = 1 category = tu_oripathy_tech }
+		}
+	}
+
+	focus = {
+		id = TU_REU_rw_ursus_infected
+		prerequisite = { focus = TU_REU_rw_infected_voice }
+		icon = GFX_goal_generic_political_pressure
+		x = 0
+		y = 0
+		cost = 10
+
+		search_filters = { FOCUS_FILTER_POLITICAL }
+
+		ai_will_do = {
+			base = 1
+		}
+
+		completion_reward = {
+			add_stability = 0.03
+			add_manpower = 10000
+			add_tech_bonus = { name = TU_REU_rw_ursus_infected bonus = 0.75 uses = 1 category = tu_oripathy_tech }
+		}
+	}
+
+	focus = {
+		id = TU_REU_rw_supply_caches
+		prerequisite = { focus = TU_REU_dip_envoys }
+		icon = GFX_goal_generic_political_pressure
+		x = 0
+		y = 0
+		cost = 10
+
+		search_filters = { FOCUS_FILTER_POLITICAL }
+
+		ai_will_do = {
+			base = 1
+		}
+
+		completion_reward = {
+			add_tech_bonus = { name = TU_REU_rw_supply_caches bonus = 0.75 uses = 1 category = radar_tech category = electronics }
+			add_stability = 0.03
+		}
+	}

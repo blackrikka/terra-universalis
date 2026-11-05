@@ -2086,3 +2086,444 @@
 			TU_build_civ_factory = yes
 		}
 	}
+
+	focus = {
+		id = TU_MIN_overland_routes
+		icon = GFX_goal_generic_production
+		prerequisite = { focus = TU_MIN_root }
+		x = 0
+		y = 0
+		cost = 10
+
+		search_filters = { FOCUS_FILTER_POLITICAL }
+
+		ai_will_do = {
+			base = 1
+		}
+
+		completion_reward = {
+			TU_MIN_routes_1 = yes
+			add_tech_bonus = { name = TU_MIN_overland_routes bonus = 0.75 uses = 1 category = industry category = construction_tech }
+		}
+	}
+
+	focus = {
+		id = TU_MIN_caravan_guilds
+		icon = GFX_goal_generic_trade
+		prerequisite = { focus = TU_MIN_overland_routes }
+		x = 0
+		y = 0
+		cost = 10
+
+		search_filters = { FOCUS_FILTER_POLITICAL }
+
+		ai_will_do = {
+			base = 1
+		}
+
+		completion_reward = {
+			add_political_power = 60
+			add_tech_bonus = { name = TU_MIN_caravan_guilds bonus = 0.75 uses = 1 category = industry }
+		}
+	}
+
+	focus = {
+		id = TU_MIN_inland_markets
+		icon = GFX_goal_generic_trade
+		prerequisite = { focus = TU_MIN_caravan_guilds }
+		x = 0
+		y = 0
+		cost = 10
+
+		search_filters = { FOCUS_FILTER_INDUSTRY }
+
+		ai_will_do = {
+			base = 1
+		}
+
+		completion_reward = {
+			add_political_power = 60
+			add_tech_bonus = { name = TU_MIN_inland_markets bonus = 0.75 uses = 1 category = industry }
+			TU_build_civ_factory = yes
+		}
+	}
+
+	focus = {
+		id = TU_MIN_landship_merchants
+		icon = GFX_goal_generic_construct_infrastructure
+		prerequisite = { focus = TU_MIN_caravan_guilds }
+		x = 0
+		y = 0
+		cost = 10
+
+		search_filters = { FOCUS_FILTER_POLITICAL }
+
+		ai_will_do = {
+			base = 1
+		}
+
+		completion_reward = {
+			TU_MIN_routes_1 = yes
+			add_tech_bonus = { name = TU_MIN_landship_merchants bonus = 0.75 uses = 1 category = construction_tech }
+			add_tech_bonus = { name = TU_MIN_landship_merchants bonus = 0.75 uses = 1 category = motorized_equipment }
+		}
+	}
+
+	focus = {
+		id = TU_MIN_landship_escorts
+		icon = GFX_goal_generic_construct_infrastructure
+		prerequisite = { focus = TU_MIN_landship_merchants }
+		x = 0
+		y = 0
+		cost = 10
+
+		search_filters = { FOCUS_FILTER_POLITICAL }
+
+		ai_will_do = {
+			base = 1
+		}
+
+		completion_reward = {
+			add_tech_bonus = { name = TU_MIN_landship_escorts bonus = 0.75 uses = 1 category = construction_tech }
+			add_tech_bonus = { name = TU_MIN_landship_escorts bonus = 0.75 uses = 1 category = motorized_equipment }
+		}
+	}
+
+	focus = {
+		id = TU_MIN_sargon_road
+		icon = GFX_goal_generic_production
+		prerequisite = { focus = TU_MIN_landship_merchants }
+		x = 0
+		y = 0
+		cost = 10
+
+		search_filters = { FOCUS_FILTER_POLITICAL }
+
+		ai_will_do = {
+			base = 1
+		}
+
+		completion_reward = {
+			TU_MIN_routes_1 = yes
+			add_tech_bonus = { name = TU_MIN_sargon_road bonus = 0.75 uses = 1 category = industry category = construction_tech }
+		}
+	}
+
+	focus = {
+		id = TU_MIN_trade_league
+		icon = GFX_goal_generic_trade
+		prerequisite = { focus = TU_MIN_sargon_road }
+		prerequisite = { focus = TU_MIN_inland_markets }
+		x = 0
+		y = 0
+		cost = 15
+
+		search_filters = { FOCUS_FILTER_POLITICAL }
+
+		ai_will_do = {
+			base = 1
+		}
+
+		completion_reward = {
+			TU_MIN_routes_1 = yes
+			add_political_power = 100
+			add_tech_bonus = { name = TU_MIN_trade_league bonus = 1.0 uses = 1 category = industry }
+		}
+	}
+
+	focus = {
+		id = TU_MIN_market_city
+		icon = GFX_goal_generic_construct_infrastructure
+		prerequisite = { focus = TU_MIN_trade_league }
+		x = 0
+		y = 0
+		cost = 15
+
+		search_filters = { FOCUS_FILTER_POLITICAL }
+
+		ai_will_do = {
+			base = 1
+		}
+
+		completion_reward = {
+			add_tech_bonus = { name = TU_MIN_market_city bonus = 1.0 uses = 1 category = construction_tech }
+			add_tech_bonus = { name = TU_MIN_market_city bonus = 1.0 uses = 1 category = motorized_equipment }
+		}
+	}
+
+	focus = {
+		id = TU_MIN_phalanx_drill
+		icon = GFX_goal_generic_army_doctrines
+		prerequisite = { focus = TU_MIN_hoplite_training }
+		x = 0
+		y = 0
+		cost = 10
+
+		search_filters = { FOCUS_FILTER_POLITICAL }
+
+		ai_will_do = {
+			base = 1
+		}
+
+		completion_reward = {
+			add_doctrine_cost_reduction = { name = TU_MIN_phalanx_drill cost_reduction = 0.4 uses = 1 category = land_doctrine }
+			army_experience = 25
+		}
+	}
+
+	focus = {
+		id = TU_MIN_citizen_levies
+		icon = GFX_goal_generic_allies_build_infantry
+		prerequisite = { focus = TU_MIN_phalanx_drill }
+		x = 0
+		y = 0
+		cost = 10
+
+		search_filters = { FOCUS_FILTER_POLITICAL }
+
+		ai_will_do = {
+			base = 1
+		}
+
+		completion_reward = {
+			add_manpower = 10000
+			army_experience = 25
+		}
+	}
+
+	focus = {
+		id = TU_MIN_bronze_forges
+		icon = GFX_goal_generic_small_arms
+		prerequisite = { focus = TU_MIN_phalanx_drill }
+		x = 0
+		y = 0
+		cost = 10
+
+		search_filters = { FOCUS_FILTER_POLITICAL }
+
+		ai_will_do = {
+			base = 1
+		}
+
+		completion_reward = {
+			add_tech_bonus = { name = TU_MIN_bronze_forges bonus = 0.75 uses = 1 category = infantry_weapons }
+			army_experience = 25
+		}
+	}
+
+	focus = {
+		id = TU_MIN_aspis_tactics
+		icon = GFX_goal_generic_army_doctrines
+		prerequisite = { focus = TU_MIN_citizen_levies }
+		prerequisite = { focus = TU_MIN_bronze_forges }
+		x = 0
+		y = 0
+		cost = 10
+
+		search_filters = { FOCUS_FILTER_POLITICAL }
+
+		ai_will_do = {
+			base = 1
+		}
+
+		completion_reward = {
+			add_doctrine_cost_reduction = { name = TU_MIN_aspis_tactics cost_reduction = 0.4 uses = 1 category = land_doctrine }
+			army_experience = 25
+		}
+	}
+
+	focus = {
+		id = TU_MIN_polis_walls
+		icon = GFX_goal_generic_defence
+		prerequisite = { focus = TU_MIN_aspis_tactics }
+		x = 0
+		y = 0
+		cost = 10
+
+		search_filters = { FOCUS_FILTER_POLITICAL }
+
+		ai_will_do = {
+			base = 1
+		}
+
+		completion_reward = {
+			TU_build_forts_2 = yes
+		}
+	}
+
+	focus = {
+		id = TU_MIN_strategos_academy
+		icon = GFX_goal_generic_army_doctrines
+		prerequisite = { focus = TU_MIN_aspis_tactics }
+		x = 0
+		y = 0
+		cost = 15
+
+		search_filters = { FOCUS_FILTER_POLITICAL }
+
+		ai_will_do = {
+			base = 1
+		}
+
+		completion_reward = {
+			add_doctrine_cost_reduction = { name = TU_MIN_strategos_academy cost_reduction = 0.5 uses = 1 category = land_doctrine }
+			army_experience = 40
+		}
+	}
+
+	focus = {
+		id = TU_MIN_arts_lyceum
+		icon = GFX_focus_research
+		prerequisite = { focus = TU_MIN_philosophers }
+		x = 0
+		y = 0
+		cost = 10
+
+		search_filters = { FOCUS_FILTER_POLITICAL }
+
+		ai_will_do = {
+			base = 1
+		}
+
+		completion_reward = {
+			add_tech_bonus = { name = TU_MIN_arts_lyceum bonus = 0.75 uses = 1 category = electronics category = tu_originium_tech }
+		}
+	}
+
+	focus = {
+		id = TU_MIN_arts_archive
+		icon = GFX_focus_research
+		prerequisite = { focus = TU_MIN_arts_lyceum }
+		x = 0
+		y = 0
+		cost = 15
+
+		search_filters = { FOCUS_FILTER_POLITICAL }
+
+		ai_will_do = {
+			base = 1
+		}
+
+		completion_reward = {
+			add_tech_bonus = { name = TU_MIN_arts_archive bonus = 1.0 uses = 1 category = electronics category = tu_originium_tech }
+		}
+	}
+
+	focus = {
+		id = TU_MIN_originium_physics
+		icon = GFX_focus_research
+		prerequisite = { focus = TU_MIN_arts_lyceum }
+		x = 0
+		y = 0
+		cost = 10
+
+		search_filters = { FOCUS_FILTER_POLITICAL }
+
+		ai_will_do = {
+			base = 1
+		}
+
+		completion_reward = {
+			add_tech_bonus = { name = TU_MIN_originium_physics bonus = 0.75 uses = 1 category = electronics category = tu_originium_tech }
+		}
+	}
+
+	focus = {
+		id = TU_MIN_oracle_informants
+		icon = GFX_goal_generic_intelligence_exchange
+		prerequisite = { focus = TU_MIN_temple_rites }
+		x = 0
+		y = 0
+		cost = 10
+
+		search_filters = { FOCUS_FILTER_POLITICAL }
+
+		ai_will_do = {
+			base = 1
+		}
+
+		completion_reward = {
+			add_tech_bonus = { name = TU_MIN_oracle_informants bonus = 0.75 uses = 1 category = radar_tech category = electronics }
+			add_stability = 0.03
+		}
+	}
+
+	focus = {
+		id = TU_MIN_olive_oil_works
+		icon = GFX_goal_generic_production
+		prerequisite = { focus = TU_MIN_olive_farms }
+		x = 0
+		y = 0
+		cost = 10
+
+		search_filters = { FOCUS_FILTER_INDUSTRY }
+
+		ai_will_do = {
+			base = 1
+		}
+
+		completion_reward = {
+			add_tech_bonus = { name = TU_MIN_olive_oil_works bonus = 0.75 uses = 1 category = industry category = construction_tech }
+			TU_build_civ_factory = yes
+		}
+	}
+
+	focus = {
+		id = TU_MIN_sculptor_workshops
+		icon = GFX_goal_generic_production
+		prerequisite = { focus = TU_MIN_olive_oil_works }
+		x = 0
+		y = 0
+		cost = 10
+
+		search_filters = { FOCUS_FILTER_INDUSTRY }
+
+		ai_will_do = {
+			base = 1
+		}
+
+		completion_reward = {
+			add_tech_bonus = { name = TU_MIN_sculptor_workshops bonus = 0.75 uses = 1 category = industry category = construction_tech }
+			TU_build_civ_factory = yes
+		}
+	}
+
+	focus = {
+		id = TU_MIN_amphora_workshops
+		icon = GFX_goal_generic_production
+		prerequisite = { focus = TU_MIN_olive_oil_works }
+		x = 0
+		y = 0
+		cost = 10
+
+		search_filters = { FOCUS_FILTER_INDUSTRY }
+
+		ai_will_do = {
+			base = 1
+		}
+
+		completion_reward = {
+			add_tech_bonus = { name = TU_MIN_amphora_workshops bonus = 0.75 uses = 1 category = industry category = construction_tech }
+			TU_build_civ_factory = yes
+		}
+	}
+
+	focus = {
+		id = TU_MIN_agora_markets
+		icon = GFX_goal_generic_trade
+		prerequisite = { focus = TU_MIN_agora }
+		x = 0
+		y = 0
+		cost = 10
+
+		search_filters = { FOCUS_FILTER_POLITICAL }
+
+		ai_will_do = {
+			base = 1
+		}
+
+		completion_reward = {
+			add_political_power = 60
+			add_tech_bonus = { name = TU_MIN_agora_markets bonus = 0.75 uses = 1 category = industry }
+		}
+	}
