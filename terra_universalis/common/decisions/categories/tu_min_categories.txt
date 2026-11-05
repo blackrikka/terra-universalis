@@ -1,13 +1,10 @@
 TU_MIN_assembly_category = {
 	icon = GFX_decision_category_generic_political_actions
-	scripted_gui = TU_MIN_panel
+	scripted_gui = TU_MIN_assembly_status_ui
+	visible_when_empty = yes
 
 	allowed = {
 		original_tag = MIN
-	}
-
-	visible = {
-		has_country_flag = TU_MIN_assembly
 	}
 
 	priority = 100
@@ -29,13 +26,11 @@ TU_MIN_oracle_category = {
 
 TU_MIN_sea_category = {
 	icon = GFX_decision_category_generic_industry
+	scripted_gui = TU_MIN_sea_status_ui
+	visible_when_empty = yes
 
 	allowed = {
 		original_tag = MIN
-	}
-
-	visible = {
-		has_country_flag = TU_MIN_routes
 	}
 
 	priority = 100

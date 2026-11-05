@@ -6,6 +6,10 @@ TU_LEI_electors_category = {
 			original_tag = LEI
 		}
 
+		visible = {
+			has_country_flag = TU_LEI_electors
+		}
+
 		available = {
 			check_variable = { TU_LEI_electors < 7 }
 		}
@@ -27,6 +31,10 @@ TU_LEI_electors_category = {
 
 		allowed = {
 			original_tag = LEI
+		}
+
+		visible = {
+			has_country_flag = TU_LEI_electors
 		}
 
 		available = {
@@ -54,6 +62,10 @@ TU_LEI_electors_category = {
 			original_tag = LEI
 		}
 
+		visible = {
+			has_country_flag = TU_LEI_electors
+		}
+
 		cost = 0
 		days_re_enable = 180
 
@@ -72,6 +84,10 @@ TU_LEI_electors_category = {
 
 		allowed = {
 			original_tag = LEI
+		}
+
+		visible = {
+			has_country_flag = TU_LEI_electors
 		}
 
 		available = {
@@ -102,6 +118,10 @@ TU_LEI_electors_category = {
 			original_tag = LEI
 		}
 
+		visible = {
+			has_country_flag = TU_LEI_electors
+		}
+
 		cost = 25
 		days_re_enable = 240
 
@@ -120,6 +140,10 @@ TU_LEI_electors_category = {
 
 		allowed = {
 			original_tag = LEI
+		}
+
+		visible = {
+			has_country_flag = TU_LEI_electors
 		}
 
 		available = {
@@ -143,6 +167,10 @@ TU_LEI_electors_category = {
 
 		allowed = {
 			original_tag = LEI
+		}
+
+		visible = {
+			has_country_flag = TU_LEI_electors
 		}
 
 		cost = 25
@@ -171,6 +199,10 @@ TU_LEI_arts_category = {
 			original_tag = LEI
 		}
 
+		visible = {
+			has_country_flag = TU_LEI_concerts
+		}
+
 		cost = 25
 		days_re_enable = 60
 
@@ -191,6 +223,7 @@ TU_LEI_arts_category = {
 		}
 
 		visible = {
+			has_country_flag = TU_LEI_concerts
 			has_completed_focus = TU_LEI_opera_house
 		}
 
@@ -212,6 +245,10 @@ TU_LEI_arts_category = {
 
 		allowed = {
 			original_tag = LEI
+		}
+
+		visible = {
+			has_country_flag = TU_LEI_concerts
 		}
 
 		available = {
@@ -247,6 +284,10 @@ TU_LEI_arts_category = {
 			original_tag = LEI
 		}
 
+		visible = {
+			has_country_flag = TU_LEI_concerts
+		}
+
 		available = {
 			check_variable = { TU_LEI_resonance > 29 }
 			NOT = { has_idea = TU_LEI_battle_symphony }
@@ -278,6 +319,10 @@ TU_LEI_arts_category = {
 
 		allowed = {
 			original_tag = LEI
+		}
+
+		visible = {
+			has_country_flag = TU_LEI_concerts
 		}
 
 		available = {
@@ -313,6 +358,10 @@ TU_LEI_arts_category = {
 			original_tag = LEI
 		}
 
+		visible = {
+			has_country_flag = TU_LEI_concerts
+		}
+
 		cost = 10
 		days_re_enable = 90
 
@@ -334,6 +383,10 @@ TU_LEI_relics_category = {
 
 		allowed = {
 			original_tag = LEI
+		}
+
+		visible = {
+			has_country_flag = TU_LEI_relic_hunt
 		}
 
 		available = {
@@ -366,6 +419,10 @@ TU_LEI_relics_category = {
 			original_tag = LEI
 		}
 
+		visible = {
+			has_country_flag = TU_LEI_relic_hunt
+		}
+
 		available = {
 			check_variable = { TU_LEI_relics > 0 }
 		}
@@ -388,6 +445,10 @@ TU_LEI_relics_category = {
 
 		allowed = {
 			original_tag = LEI
+		}
+
+		visible = {
+			has_country_flag = TU_LEI_relic_hunt
 		}
 
 		available = {
@@ -415,6 +476,7 @@ TU_LEI_relics_category = {
 		}
 
 		visible = {
+			has_country_flag = TU_LEI_relic_hunt
 			has_completed_focus = TU_LEI_witch_hunters
 		}
 

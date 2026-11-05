@@ -1,13 +1,10 @@
 TU_SAR_court_category = {
 	icon = GFX_decision_category_generic_political_actions
-	scripted_gui = TU_SAR_panel
+	scripted_gui = TU_SAR_court_status_ui
+	visible_when_empty = yes
 
 	allowed = {
 		original_tag = SAR
-	}
-
-	visible = {
-		has_country_flag = TU_SAR_court
 	}
 
 	priority = 100
@@ -15,18 +12,11 @@ TU_SAR_court_category = {
 
 TU_SAR_caravans_category = {
 	icon = GFX_decision_category_generic_industry
+	scripted_gui = TU_SAR_caravans_status_ui
+	visible_when_empty = yes
 
 	allowed = {
 		original_tag = SAR
-	}
-
-	visible = {
-		OR = {
-			has_country_flag = TU_SAR_caravans
-			has_country_flag = TU_SAR_expeditions
-			has_country_flag = TU_SAR_mercs
-			has_country_flag = TU_SAR_alliance
-		}
 	}
 
 	priority = 100

@@ -1,6 +1,5 @@
 TU_KJE_winter_category = {
 	icon = GFX_decision_category_generic_political_actions
-	scripted_gui = TU_KJE_panel
 
 	allowed = {
 		original_tag = KJE
@@ -15,6 +14,8 @@ TU_KJE_winter_category = {
 
 TU_KJE_modern_category = {
 	icon = GFX_decision_category_generic_political_actions
+	scripted_gui = TU_KJE_modern_status_ui
+	visible_when_empty = yes
 
 	allowed = {
 		original_tag = KJE

@@ -1,13 +1,10 @@
 TU_COL_rhine_category = {
 	icon = GFX_decision_category_generic_industry
-	scripted_gui = TU_COL_panel
+	scripted_gui = TU_COL_rhine_status_ui
+	visible_when_empty = yes
 
 	allowed = {
 		original_tag = COL
-	}
-
-	visible = {
-		has_country_flag = TU_COL_projects
 	}
 
 	priority = 100

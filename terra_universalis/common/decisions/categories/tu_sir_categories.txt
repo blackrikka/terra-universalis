@@ -1,13 +1,10 @@
 TU_SIR_families_category = {
 	icon = GFX_decision_category_generic_political_actions
-	scripted_gui = TU_SIR_panel
+	scripted_gui = TU_SIR_families_status_ui
+	visible_when_empty = yes
 
 	allowed = {
 		original_tag = SIR
-	}
-
-	visible = {
-		has_country_flag = TU_SIR_families
 	}
 
 	priority = 100

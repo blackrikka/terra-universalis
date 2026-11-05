@@ -1,13 +1,10 @@
 TU_RIM_mines_category = {
 	icon = GFX_decision_category_generic_political_actions
-	scripted_gui = TU_RIM_panel
+	scripted_gui = TU_RIM_mines_status_ui
+	visible_when_empty = yes
 
 	allowed = {
 		original_tag = RIM
-	}
-
-	visible = {
-		has_country_flag = TU_RIM_mines
 	}
 
 	priority = 100
@@ -15,6 +12,8 @@ TU_RIM_mines_category = {
 
 TU_RIM_health_category = {
 	icon = GFX_decision_category_generic_political_actions
+	scripted_gui = TU_RIM_health_status_ui
+	visible_when_empty = yes
 
 	allowed = {
 		original_tag = RIM
@@ -25,13 +24,11 @@ TU_RIM_health_category = {
 
 TU_RIM_settle_category = {
 	icon = GFX_decision_category_generic_political_actions
+	scripted_gui = TU_RIM_settle_status_ui
+	visible_when_empty = yes
 
 	allowed = {
 		original_tag = RIM
-	}
-
-	visible = {
-		has_country_flag = TU_RIM_settle
 	}
 
 	priority = 100

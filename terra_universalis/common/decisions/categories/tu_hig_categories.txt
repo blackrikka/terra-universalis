@@ -1,16 +1,10 @@
 TU_HIG_ports_category = {
 	icon = GFX_decision_category_generic_political_actions
-	scripted_gui = TU_HIG_panel
+	scripted_gui = TU_HIG_ports_status_ui
+	visible_when_empty = yes
 
 	allowed = {
 		original_tag = HIG
-	}
-
-	visible = {
-		OR = {
-			has_country_flag = TU_HIG_ports
-			has_country_flag = TU_HIG_close
-		}
 	}
 
 	priority = 100
@@ -18,13 +12,11 @@ TU_HIG_ports_category = {
 
 TU_HIG_shinobi_category = {
 	icon = GFX_decision_category_military_operation
+	scripted_gui = TU_HIG_shinobi_status_ui
+	visible_when_empty = yes
 
 	allowed = {
 		original_tag = HIG
-	}
-
-	visible = {
-		has_country_flag = TU_HIG_shinobi
 	}
 
 	priority = 100

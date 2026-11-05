@@ -6,6 +6,10 @@ TU_SAR_court_category = {
 			original_tag = SAR
 		}
 
+		visible = {
+			has_country_flag = TU_SAR_court
+		}
+
 		cost = 50
 		days_re_enable = 120
 
@@ -24,6 +28,10 @@ TU_SAR_court_category = {
 
 		allowed = {
 			original_tag = SAR
+		}
+
+		visible = {
+			has_country_flag = TU_SAR_court
 		}
 
 		cost = 0
@@ -45,6 +53,10 @@ TU_SAR_court_category = {
 
 		allowed = {
 			original_tag = SAR
+		}
+
+		visible = {
+			has_country_flag = TU_SAR_court
 		}
 
 		available = {
@@ -72,6 +84,10 @@ TU_SAR_court_category = {
 			original_tag = SAR
 		}
 
+		visible = {
+			has_country_flag = TU_SAR_court
+		}
+
 		available = {
 			check_variable = { TU_SAR_gold > 29 }
 		}
@@ -96,6 +112,10 @@ TU_SAR_court_category = {
 			original_tag = SAR
 		}
 
+		visible = {
+			has_country_flag = TU_SAR_court
+		}
+
 		cost = 25
 		days_re_enable = 240
 
@@ -116,6 +136,10 @@ TU_SAR_court_category = {
 			original_tag = SAR
 		}
 
+		visible = {
+			has_country_flag = TU_SAR_court
+		}
+
 		cost = 25
 		days_re_enable = 240
 
@@ -134,6 +158,10 @@ TU_SAR_court_category = {
 
 		allowed = {
 			original_tag = SAR
+		}
+
+		visible = {
+			has_country_flag = TU_SAR_court
 		}
 
 		cost = 50
@@ -157,6 +185,7 @@ TU_SAR_court_category = {
 		}
 
 		visible = {
+			has_country_flag = TU_SAR_court
 			has_completed_focus = TU_SAR_royal_spies
 		}
 
@@ -184,6 +213,12 @@ TU_SAR_caravans_category = {
 		}
 
 		visible = {
+			OR = {
+				has_country_flag = TU_SAR_caravans
+				has_country_flag = TU_SAR_expeditions
+				has_country_flag = TU_SAR_mercs
+				has_country_flag = TU_SAR_alliance
+			}
 			has_country_flag = TU_SAR_caravans
 		}
 
@@ -218,6 +253,12 @@ TU_SAR_caravans_category = {
 		}
 
 		visible = {
+			OR = {
+				has_country_flag = TU_SAR_caravans
+				has_country_flag = TU_SAR_expeditions
+				has_country_flag = TU_SAR_mercs
+				has_country_flag = TU_SAR_alliance
+			}
 			has_country_flag = TU_SAR_caravans
 		}
 
@@ -252,6 +293,12 @@ TU_SAR_caravans_category = {
 		}
 
 		visible = {
+			OR = {
+				has_country_flag = TU_SAR_caravans
+				has_country_flag = TU_SAR_expeditions
+				has_country_flag = TU_SAR_mercs
+				has_country_flag = TU_SAR_alliance
+			}
 			has_country_flag = TU_SAR_expeditions
 		}
 
@@ -285,6 +332,12 @@ TU_SAR_caravans_category = {
 		}
 
 		visible = {
+			OR = {
+				has_country_flag = TU_SAR_caravans
+				has_country_flag = TU_SAR_expeditions
+				has_country_flag = TU_SAR_mercs
+				has_country_flag = TU_SAR_alliance
+			}
 			has_country_flag = TU_SAR_mercs
 		}
 
@@ -314,6 +367,12 @@ TU_SAR_caravans_category = {
 		}
 
 		visible = {
+			OR = {
+				has_country_flag = TU_SAR_caravans
+				has_country_flag = TU_SAR_expeditions
+				has_country_flag = TU_SAR_mercs
+				has_country_flag = TU_SAR_alliance
+			}
 			has_country_flag = TU_SAR_caravans
 		}
 
@@ -342,6 +401,12 @@ TU_SAR_caravans_category = {
 		}
 
 		visible = {
+			OR = {
+				has_country_flag = TU_SAR_caravans
+				has_country_flag = TU_SAR_expeditions
+				has_country_flag = TU_SAR_mercs
+				has_country_flag = TU_SAR_alliance
+			}
 			has_country_flag = TU_SAR_alliance
 		}
 
@@ -378,6 +443,12 @@ TU_SAR_caravans_category = {
 		}
 
 		visible = {
+			OR = {
+				has_country_flag = TU_SAR_caravans
+				has_country_flag = TU_SAR_expeditions
+				has_country_flag = TU_SAR_mercs
+				has_country_flag = TU_SAR_alliance
+			}
 			has_country_flag = TU_SAR_alliance
 			is_faction_leader = yes
 		}
@@ -407,6 +478,12 @@ TU_SAR_caravans_category = {
 		}
 
 		visible = {
+			OR = {
+				has_country_flag = TU_SAR_caravans
+				has_country_flag = TU_SAR_expeditions
+				has_country_flag = TU_SAR_mercs
+				has_country_flag = TU_SAR_alliance
+			}
 			has_completed_focus = TU_SAR_salt_trade
 		}
 
@@ -440,6 +517,12 @@ TU_SAR_caravans_category = {
 		}
 
 		visible = {
+			OR = {
+				has_country_flag = TU_SAR_caravans
+				has_country_flag = TU_SAR_expeditions
+				has_country_flag = TU_SAR_mercs
+				has_country_flag = TU_SAR_alliance
+			}
 			has_country_flag = TU_SAR_caravans
 		}
 
@@ -468,6 +551,12 @@ TU_SAR_caravans_category = {
 		}
 
 		visible = {
+			OR = {
+				has_country_flag = TU_SAR_caravans
+				has_country_flag = TU_SAR_expeditions
+				has_country_flag = TU_SAR_mercs
+				has_country_flag = TU_SAR_alliance
+			}
 			has_country_flag = TU_SAR_caravans
 		}
 
@@ -496,6 +585,12 @@ TU_SAR_caravans_category = {
 		}
 
 		visible = {
+			OR = {
+				has_country_flag = TU_SAR_caravans
+				has_country_flag = TU_SAR_expeditions
+				has_country_flag = TU_SAR_mercs
+				has_country_flag = TU_SAR_alliance
+			}
 			has_country_flag = TU_SAR_found_ruins
 		}
 
@@ -519,6 +614,12 @@ TU_SAR_caravans_category = {
 		}
 
 		visible = {
+			OR = {
+				has_country_flag = TU_SAR_caravans
+				has_country_flag = TU_SAR_expeditions
+				has_country_flag = TU_SAR_mercs
+				has_country_flag = TU_SAR_alliance
+			}
 			has_completed_focus = TU_SAR_jungle_lords
 		}
 

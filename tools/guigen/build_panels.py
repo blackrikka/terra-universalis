@@ -26,44 +26,11 @@ COLORS = {"green": (92, 184, 92), "red": (210, 72, 60), "gold": (230, 180, 60), 
           "purple": (160, 100, 200)}
 SEG_W, SEG_H, SEG_GAP = 24, 12, 3
 ROW_H, TOP = 28, 12
-LABEL_X, BAR_X, VAL_X = 14, 210, 500
-WIDTH = 590
+LABEL_X, BAR_X, VAL_X = 14, 170, 350
+WIDTH = 470          # 디시전 칸 너비에 맞춘다 (넘치면 오른쪽이 잘린다)
 
-# 패널 id: (분류 연결 태그 또는 None, [(변수, 최대, 색, 한국어, 영어)])
+# 패널 id: [(변수, 최대, 색, 한국어, 영어)]. 나라별 수치는 디시전 탭 패널로 옮겼다 (tools/gauges, 사양서 39)
 PANELS = {
-    "KAZ": [("TU_KAZ_fame", 100, "gold", "기사 명성", "Knight Fame")],
-    "COL": [("TU_COL_science", 200, "blue", "과학 성과", "Scientific Output")],
-    "LAT": [("TU_LAT_influence", 100, "gold", "교황청 영향력", "Papal Influence"),
-            ("TU_LAT_pilgrims", 200, "blue", "순례자", "Pilgrims")],
-    "SIR": [("TU_SIR_law", 100, "blue", "법과 질서", "Law and Order"),
-            ("TU_SIR_bellone", 100, "purple", "벨로네 패밀리", "Bellone Family"),
-            ("TU_SIR_gambino", 100, "red", "감비노 패밀리", "Gambino Family"),
-            ("TU_SIR_saluzzo", 100, "gold", "살루초 패밀리", "Saluzzo Family")],
-    "SAR": [("TU_SAR_loyalty", 100, "green", "영주 충성", "Lords' Loyalty"),
-            ("TU_SAR_gold", 200, "gold", "황금", "Gold")],
-    "IBE": [("TU_IBE_threat", 100, "red", "바다의 위협", "Sea Threat"),
-            ("TU_IBE_lighthouses", 5, "blue", "등대", "Lighthouses")],
-    "LEI": [("TU_LEI_electors", 7, "purple", "선제후 지지", "Electors"),
-            ("TU_LEI_resonance", 100, "blue", "공명", "Resonance"),
-            ("TU_LEI_relics", 3, "red", "마왕 유물", "Witch King Relics")],
-    "KJE": [("TU_KJE_modern", 100, "green", "근대화", "Modernisation")],
-    "HIG": [("TU_HIG_ports", 4, "blue", "개항장", "Treaty Ports"),
-            ("TU_HIG_foreign", 100, "red", "외세 영향", "Foreign Influence"),
-            ("TU_HIG_shinobi", 10, "purple", "닌자", "Shinobi")],
-    "MIN": [("TU_MIN_assembly", 100, "green", "민회 지지", "Assembly Support"),
-            ("TU_MIN_routes", 6, "blue", "교역 항로", "Trade Routes")],
-    "RIM": [("TU_RIM_shafts", 8, "gold", "갱도", "Mine Shafts"),
-            ("TU_RIM_ore", 500, "gold", "광석 비축", "Ore Stockpile"),
-            ("TU_RIM_infection", 100, "red", "광석병 감염률", "Oripathy Rate"),
-            ("TU_RIM_settlements", 5, "green", "정착지", "Settlements")],
-    "SAM": [("TU_SAM_grace", 100, "green", "숲의 은총", "Forest Grace"),
-            ("TU_SAM_pacts", 2, "purple", "정령 계약", "Spirit Pacts"),
-            ("TU_SAM_councils", 3, "blue", "부족 회의", "Tribal Councils"),
-            ("TU_SAM_contact", 100, "gold", "외부 접촉", "Outside Contact")],
-    "BOL": [("TU_BOL_control", 100, "green", "장악도", "Control"),
-            ("TU_BOL_weariness", 100, "red", "전쟁 피로", "War Weariness"),
-            ("TU_BOL_columbia", 100, "blue", "컬럼비아 의존", "Columbian Dependence"),
-            ("TU_BOL_victoria", 100, "purple", "빅토리아 의존", "Victorian Dependence")],
     "LANDSHIP": [("TU_landships", 6, "gold", "취역한 육상함", "Landships Commissioned")],
 }
 
@@ -117,16 +84,16 @@ def dragon_war(gui, sg, ko, en):
 			position = { x = 14 y = %d }
 			font = "hoi_16mbs"
 			text = "TU_DW_NAME_%s"
-			maxWidth = 200
+			maxWidth = 150
 			maxHeight = 20
 			format = left
 		}
 		instantTextBoxType = {
 			name = "tu_dw_leader_%d"
-			position = { x = 220 y = %d }
+			position = { x = 170 y = %d }
 			font = "hoi_16mbs"
 			text = "TU_DW_LEADER_%s"
-			maxWidth = 200
+			maxWidth = 170
 			maxHeight = 20
 			format = left
 		}""" % (i, y, tag, i, y, tag))
@@ -137,14 +104,14 @@ def dragon_war(gui, sg, ko, en):
             elems.append("""		iconType = {
 			name = "tu_dw_%s_icon_%d"
 			spriteType = "GFX_tu_seg_%s"
-			position = { x = 430 y = %d }
+			position = { x = 345 y = %d }
 		}
 		instantTextBoxType = {
 			name = "tu_dw_%s_text_%d"
-			position = { x = 462 y = %d }
+			position = { x = 377 y = %d }
 			font = "hoi_16mbs"
 			text = "TU_DW_STATE_%s"
-			maxWidth = 110
+			maxWidth = 85
 			maxHeight = 20
 			format = left
 		}""" % (st, i, col, y + 3, st, i, y, st.upper()))

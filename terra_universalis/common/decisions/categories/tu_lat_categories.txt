@@ -1,13 +1,10 @@
 TU_LAT_pilgrims_category = {
 	icon = GFX_decision_category_generic_political_actions
-	scripted_gui = TU_LAT_panel
+	scripted_gui = TU_LAT_pilgrims_status_ui
+	visible_when_empty = yes
 
 	allowed = {
 		original_tag = LAT
-	}
-
-	visible = {
-		has_country_flag = TU_LAT_pilgrims
 	}
 
 	priority = 100
@@ -29,13 +26,11 @@ TU_LAT_arms_category = {
 
 TU_LAT_covenant_category = {
 	icon = GFX_decision_category_generic_foreign_policy
+	scripted_gui = TU_LAT_covenant_status_ui
+	visible_when_empty = yes
 
 	allowed = {
 		original_tag = LAT
-	}
-
-	visible = {
-		has_country_flag = TU_LAT_covenant
 	}
 
 	priority = 100

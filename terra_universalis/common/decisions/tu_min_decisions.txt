@@ -6,6 +6,10 @@ TU_MIN_assembly_category = {
 			original_tag = MIN
 		}
 
+		visible = {
+			has_country_flag = TU_MIN_assembly
+		}
+
 		available = {
 			check_variable = { TU_MIN_assembly > 9 }
 		}
@@ -30,6 +34,10 @@ TU_MIN_assembly_category = {
 			original_tag = MIN
 		}
 
+		visible = {
+			has_country_flag = TU_MIN_assembly
+		}
+
 		available = {
 			check_variable = { TU_MIN_assembly > 14 }
 		}
@@ -52,6 +60,10 @@ TU_MIN_assembly_category = {
 
 		allowed = {
 			original_tag = MIN
+		}
+
+		visible = {
+			has_country_flag = TU_MIN_assembly
 		}
 
 		available = {
@@ -79,6 +91,10 @@ TU_MIN_assembly_category = {
 			original_tag = MIN
 		}
 
+		visible = {
+			has_country_flag = TU_MIN_assembly
+		}
+
 		available = {
 			check_variable = { TU_MIN_assembly > 14 }
 		}
@@ -101,6 +117,10 @@ TU_MIN_assembly_category = {
 
 		allowed = {
 			original_tag = MIN
+		}
+
+		visible = {
+			has_country_flag = TU_MIN_assembly
 		}
 
 		available = {
@@ -127,6 +147,10 @@ TU_MIN_assembly_category = {
 			original_tag = MIN
 		}
 
+		visible = {
+			has_country_flag = TU_MIN_assembly
+		}
+
 		cost = 25
 		days_re_enable = 120
 
@@ -147,6 +171,10 @@ TU_MIN_assembly_category = {
 			original_tag = MIN
 		}
 
+		visible = {
+			has_country_flag = TU_MIN_assembly
+		}
+
 		cost = 0
 		days_re_enable = 180
 
@@ -165,6 +193,10 @@ TU_MIN_assembly_category = {
 
 		allowed = {
 			original_tag = MIN
+		}
+
+		visible = {
+			has_country_flag = TU_MIN_assembly
 		}
 
 		available = {
@@ -191,6 +223,10 @@ TU_MIN_assembly_category = {
 
 		allowed = {
 			original_tag = MIN
+		}
+
+		visible = {
+			has_country_flag = TU_MIN_assembly
 		}
 
 		cost = 10
@@ -331,6 +367,10 @@ TU_MIN_sea_category = {
 			original_tag = MIN
 		}
 
+		visible = {
+			has_country_flag = TU_MIN_routes
+		}
+
 		available = {
 			check_variable = { TU_MIN_routes < 6 }
 		}
@@ -354,6 +394,10 @@ TU_MIN_sea_category = {
 			original_tag = MIN
 		}
 
+		visible = {
+			has_country_flag = TU_MIN_routes
+		}
+
 		cost = 25
 		days_re_enable = 180
 
@@ -372,6 +416,10 @@ TU_MIN_sea_category = {
 
 		allowed = {
 			original_tag = MIN
+		}
+
+		visible = {
+			has_country_flag = TU_MIN_routes
 		}
 
 		available = {
@@ -398,6 +446,7 @@ TU_MIN_sea_category = {
 		}
 
 		visible = {
+			has_country_flag = TU_MIN_routes
 			has_completed_focus = TU_MIN_league_pact
 		}
 
@@ -434,6 +483,7 @@ TU_MIN_sea_category = {
 		}
 
 		visible = {
+			has_country_flag = TU_MIN_routes
 			has_completed_focus = TU_MIN_league_pact
 			is_faction_leader = yes
 		}
@@ -458,6 +508,7 @@ TU_MIN_sea_category = {
 		}
 
 		visible = {
+			has_country_flag = TU_MIN_routes
 			has_completed_focus = TU_MIN_trade_routes
 		}
 

@@ -34,7 +34,7 @@ python -I tools/mapgen/terra/build_terra.py      # 지도·주·국가·국기 �
 python -I tools/vanilla_cleanup.py               # 바닐라 정리(튜토리얼·습격 덮어쓰기 등)
 python -I tools/focusgen/merge_focus.py --tag VIC   # 중점 트리 조각 합치기 + 자동 배치 (태그별)
 python -I tools/portraits/build_portraits.py     # 초상화
-python -I tools/gauges/build_gauges.py           # 디시전 창 '국가 현황' 수치 막대 (변수 범위·기준값이 바뀌면 다시 실행)
+python -I tools/gauges/build_gauges.py           # 디시전 탭의 수치 막대 (변수 범위·기준값이 바뀌면 다시 실행)
 python -I tools/lint/tu_lint.py                  # 정적 검사
 python -I tools/editor/server.py                 # 모드 편집기 (브라우저에서 중점·디시전·국민정신·캐릭터·이벤트 편집)
 ```

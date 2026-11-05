@@ -10,6 +10,7 @@ TU_RHO_landship_category = {
 
 TU_RHO_riic_category = {
 	icon = GFX_decision_category_generic_industry
+	scripted_gui = TU_RHO_riic_status_ui
 
 	allowed = {
 		original_tag = RHO
@@ -20,6 +21,7 @@ TU_RHO_riic_category = {
 
 TU_RHO_operations_category = {
 	icon = GFX_decision_category_power_struggle
+	scripted_gui = TU_RHO_operations_status_ui
 
 	allowed = {
 		original_tag = RHO

@@ -26,6 +26,9 @@ from pathlib import Path
 HERE = Path(__file__).resolve().parent
 sys.path.insert(0, str(HERE))
 from theme_effects import theme_of, reward_lines, FOCUS_ICON, is_warship  # noqa: E402
+
+sys.path.insert(0, str(Path(__file__).resolve().parents[1] / "gauges"))
+from countries import PANEL_TABS, status_ui  # noqa: E402  (수치 패널을 놓는 탭, tools/gauges/countries.py)
 import focus_drop  # noqa: E402
 
 REPO = HERE.parents[1]
@@ -112,9 +115,11 @@ class Country:
 
     def d(self, cat, sid, ko, en, effect, cost=25, visible=(), available=(), desc=("", ""),
           icon="GFX_decision_generic_political_discourse", once=True, days_re_enable=None, ai=1,
-          days_remove=None, remove_effect=None, target=None, state_target=False, modifier=None, mission=None):
+          days_remove=None, remove_effect=None, target=None, state_target=False, modifier=None, mission=None,
+          map_only=False):
         """target = FROM(대상) 조건. state_target=True 면 주 대상 디시전: 조건에 맞는 주마다 하나씩 생기고,
         디시전 탭을 열면 지도에서 그 주 위에 버튼이 뜬다 (효과 안에서 FROM = 그 주).
+        map_only=True 면 탭 목록에는 안 나오고 지도 버튼으로만 뜬다.
         modifier = days_remove 동안 걸리는 모디파이어 {키: 값} (예: civilian_factory_use).
         mission = 시간제한 미션 {"days": 일수, "timeout": [효과], "cancel": [조건], "good": False}.
           activation 은 막아 두므로 효과에서 activate_mission / activate_targeted_decision 으로 켠다. cost=None 이면 비용 줄을 쓰지 않는다."""
@@ -122,7 +127,8 @@ class Country:
         self.decisions[cat].append(dict(id=did, icon=icon, effect=list(effect), cost=cost, visible=list(visible),
                                         available=list(available), once=once, days_re_enable=days_re_enable,
                                         ai=ai, days_remove=days_remove, remove_effect=remove_effect,
-                                        target=target, state_target=state_target, modifier=modifier, mission=mission))
+                                        target=target, state_target=state_target, modifier=modifier, mission=mission,
+                                        map_only=map_only))
         self.loc(did, ko, en)
         self.loc(did + "_desc", desc[0], desc[1])
         return did
@@ -224,10 +230,15 @@ class Country:
         # decisions
         if self.categories:
             cats = []
-            for n, (cid, icon, vis) in enumerate(self.categories):
+            for cid, icon, vis in self.categories:
                 v = "\n\tvisible = {\n%s\n\t}\n" % ind(vis, 2) if vis else ""
-                # 첫 분류에 나라 장치 패널 (tools/guigen/build_panels.py)
-                g = "\tscripted_gui = TU_%s_panel\n" % t if n == 0 else ""
+                g = ""
+                if cid in PANEL_TABS:
+                    # 수치 패널이 있는 탭은 항상 보인다 (사양서 39). 탭의 조건은 안의 디시전이 물려받는다
+                    g = "\tscripted_gui = %s\n\tvisible_when_empty = yes\n" % status_ui(cid)
+                    v = ""
+                    for d in self.decisions[cid]:
+                        d["visible"] = list(vis) + d["visible"]
                 cats.append("%s = {\n\ticon = %s\n%s\n\tallowed = {\n\t\toriginal_tag = %s\n\t}\n%s\n\tpriority = 100\n}\n"
                             % (cid, icon, g, t, v))
             (MOD / ("common/decisions/categories/tu_%s_categories.txt" % low)).write_text("\n".join(cats), encoding="utf-8")
@@ -237,7 +248,7 @@ class Country:
                 for d in self.decisions[cid]:
                     s = "\t%s = {\n\t\ticon = %s\n\n\t\tallowed = {\n\t\t\toriginal_tag = %s\n\t\t}\n" % (d["id"], d["icon"], t)
                     if d["state_target"]:
-                        s += "\n\t\tstate_target = yes\n\t\ton_map_mode = map_and_decisions_view\n"
+                        s += "\n\t\tstate_target = yes\n\t\ton_map_mode = %s\n" % ("map_only" if d["map_only"] else "map_and_decisions_view")
                     if d["target"]:
                         s += "\n\t\ttarget_trigger = {\n\t\t\tFROM = {\n%s\n\t\t\t}\n\t\t}\n" % ind(d["target"], 4)
                     m = d["mission"]

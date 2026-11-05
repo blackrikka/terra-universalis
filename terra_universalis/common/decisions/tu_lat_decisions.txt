@@ -6,6 +6,10 @@ TU_LAT_pilgrims_category = {
 			original_tag = LAT
 		}
 
+		visible = {
+			has_country_flag = TU_LAT_pilgrims
+		}
+
 		available = {
 			check_variable = { TU_LAT_pilgrims > 19 }
 		}
@@ -31,6 +35,7 @@ TU_LAT_pilgrims_category = {
 		}
 
 		visible = {
+			has_country_flag = TU_LAT_pilgrims
 			has_country_flag = TU_LAT_volunteers
 		}
 
@@ -58,6 +63,10 @@ TU_LAT_pilgrims_category = {
 			original_tag = LAT
 		}
 
+		visible = {
+			has_country_flag = TU_LAT_pilgrims
+		}
+
 		available = {
 			check_variable = { TU_LAT_pilgrims > 9 }
 		}
@@ -81,6 +90,10 @@ TU_LAT_pilgrims_category = {
 
 		allowed = {
 			original_tag = LAT
+		}
+
+		visible = {
+			has_country_flag = TU_LAT_pilgrims
 		}
 
 		available = {
@@ -109,6 +122,7 @@ TU_LAT_pilgrims_category = {
 		}
 
 		visible = {
+			has_country_flag = TU_LAT_pilgrims
 			has_completed_focus = TU_LAT_relic_trade
 		}
 
@@ -130,6 +144,10 @@ TU_LAT_pilgrims_category = {
 
 		allowed = {
 			original_tag = LAT
+		}
+
+		visible = {
+			has_country_flag = TU_LAT_pilgrims
 		}
 
 		cost = 50
@@ -232,6 +250,10 @@ TU_LAT_covenant_category = {
 			original_tag = LAT
 		}
 
+		visible = {
+			has_country_flag = TU_LAT_covenant
+		}
+
 		available = {
 			is_in_faction = no
 			check_variable = { TU_LAT_influence > 29 }
@@ -267,6 +289,7 @@ TU_LAT_covenant_category = {
 		}
 
 		visible = {
+			has_country_flag = TU_LAT_covenant
 			is_faction_leader = yes
 		}
 
@@ -294,6 +317,10 @@ TU_LAT_covenant_category = {
 			original_tag = LAT
 		}
 
+		visible = {
+			has_country_flag = TU_LAT_covenant
+		}
+
 		cost = 25
 		days_re_enable = 180
 
@@ -313,6 +340,10 @@ TU_LAT_covenant_category = {
 
 		allowed = {
 			original_tag = LAT
+		}
+
+		visible = {
+			has_country_flag = TU_LAT_covenant
 		}
 
 		cost = 50

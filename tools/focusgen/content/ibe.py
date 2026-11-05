@@ -245,10 +245,12 @@ for sid, ko, en, pre, econ in (
 cat_coast = C.category("coast", "해안", "The Coast",
                        ("바다의 위협은 매달 오르고, 온전한 등대 하나마다 덜 오른다. 70 이상이면 해안 마을이 침식된다.\n"
                         "등대는 매달 시테러에게 손상될 수 있다. 지도에서 등대마다 위협 수준을 확인하고, 해안 요새와 수비대로 지켜라. "
-                        "등대를 지키는 수비대는 가끔 습격을 받아 조직력과 병력을 잃고, 등대가 손상된 동안에는 습격이 잦아진다.",
+                        "등대를 지키는 수비대는 가끔 습격을 받아 조직력과 병력을 잃고, 등대가 손상된 동안에는 습격이 잦아진다.\n"
+                        "등대 복원은 이 창을 연 채 지도의 해안 주에 뜨는 버튼으로 한다.",
                         "The sea threat rises every month, less for each intact lighthouse. At 70+ coastal towns are eroded.\n"
                         "Lighthouses can be damaged by Sea Terrors each month. Check each lighthouse's threat on the map and guard it with "
-                        "coastal forts and garrisons. Lighthouse garrisons are sometimes ambushed and lose organisation and strength, more often while the lighthouse is damaged."),
+                        "coastal forts and garrisons. Lighthouse garrisons are sometimes ambushed and lose organisation and strength, more often while the lighthouse is damaged.\n"
+                        "Restore lighthouses with the buttons on coastal states on the map while this window is open."),
                        visible=[HAS("coast")])
 # ------------------------------------------------------------------ 등대 (사양서 29·31)
 # 주 대상 디시전: 디시전 탭을 열면 지도에서 해당 주 위에 버튼이 뜬다. 주 깃발:
@@ -404,7 +406,7 @@ C.d(cat_coast, "restore_lighthouse", "등대 복원", "Restore a Lighthouse",
 	}
 	TU_IBE_lh_update_risk = yes
 }""", V("lighthouses", 1), THR(-5), "set_country_flag = { flag = TU_IBE_lighthouse_cooldown days = 120 value = 1 }"],
-    cost=50, once=False, state_target=True,
+    cost=50, once=False, state_target=True, map_only=True,
     target=["is_coastal = yes", "is_owned_and_controlled_by = ROOT", "NOT = { has_state_flag = TU_IBE_lighthouse }"],
     available=[AT_MOST("lighthouses", 4), "NOT = { has_country_flag = TU_IBE_lighthouse_cooldown }"],
     desc=("이 해안 주의 등대를 복원한다: 등대 +1 (최대 5), 위협 -5, 이 주의 기반시설 +1. 복원 사이 120일.\n복원한 등대는 시테러에게 손상될 수 있다. 해안 요새와 수비대로 위험을 줄인다.",

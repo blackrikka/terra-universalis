@@ -7,7 +7,7 @@ TU_IBE_coast_category = {
 		}
 
 		state_target = yes
-		on_map_mode = map_and_decisions_view
+		on_map_mode = map_only
 
 		target_trigger = {
 			FROM = {
@@ -15,6 +15,10 @@ TU_IBE_coast_category = {
 				is_owned_and_controlled_by = ROOT
 				NOT = { has_state_flag = TU_IBE_lighthouse }
 			}
+		}
+
+		visible = {
+			has_country_flag = TU_IBE_coast
 		}
 
 		available = {
@@ -61,6 +65,10 @@ TU_IBE_coast_category = {
 			}
 		}
 
+		visible = {
+			has_country_flag = TU_IBE_coast
+		}
+
 		available = {
 			always = no
 		}
@@ -89,6 +97,10 @@ TU_IBE_coast_category = {
 				check_variable = { TU_IBE_lh_risk > 8.999 }
 				check_variable = { TU_IBE_lh_risk < 15 }
 			}
+		}
+
+		visible = {
+			has_country_flag = TU_IBE_coast
 		}
 
 		available = {
@@ -121,6 +133,10 @@ TU_IBE_coast_category = {
 			}
 		}
 
+		visible = {
+			has_country_flag = TU_IBE_coast
+		}
+
 		available = {
 			always = no
 		}
@@ -149,6 +165,10 @@ TU_IBE_coast_category = {
 				check_variable = { TU_IBE_lh_risk > 2.009 }
 				check_variable = { TU_IBE_lh_risk < 4 }
 			}
+		}
+
+		visible = {
+			has_country_flag = TU_IBE_coast
 		}
 
 		available = {
@@ -180,6 +200,10 @@ TU_IBE_coast_category = {
 			}
 		}
 
+		visible = {
+			has_country_flag = TU_IBE_coast
+		}
+
 		available = {
 			always = no
 		}
@@ -206,6 +230,10 @@ TU_IBE_coast_category = {
 				is_owned_and_controlled_by = ROOT
 				OR = { has_state_flag = TU_IBE_lighthouse has_state_flag = TU_IBE_lh_fort_building }
 			}
+		}
+
+		visible = {
+			has_country_flag = TU_IBE_coast
 		}
 
 		available = {
@@ -255,6 +283,10 @@ TU_IBE_coast_category = {
 
 		activation = {
 			always = no
+		}
+
+		visible = {
+			has_country_flag = TU_IBE_coast
 		}
 
 		available = {
@@ -309,6 +341,10 @@ TU_IBE_coast_category = {
 			}
 		}
 
+		visible = {
+			has_country_flag = TU_IBE_coast
+		}
+
 		available = {
 			FROM = { NOT = { has_state_flag = TU_IBE_lh_repairing } }
 		}
@@ -354,6 +390,10 @@ TU_IBE_coast_category = {
 			}
 		}
 
+		visible = {
+			has_country_flag = TU_IBE_coast
+		}
+
 		available = {
 			FROM = { TU_IBE_garrison_30k = yes }
 		}
@@ -378,6 +418,10 @@ TU_IBE_coast_category = {
 			original_tag = IBE
 		}
 
+		visible = {
+			has_country_flag = TU_IBE_coast
+		}
+
 		cost = 25
 		days_re_enable = 90
 
@@ -398,6 +442,10 @@ TU_IBE_coast_category = {
 			original_tag = IBE
 		}
 
+		visible = {
+			has_country_flag = TU_IBE_coast
+		}
+
 		cost = 75
 		days_re_enable = 240
 
@@ -416,6 +464,10 @@ TU_IBE_coast_category = {
 
 		allowed = {
 			original_tag = IBE
+		}
+
+		visible = {
+			has_country_flag = TU_IBE_coast
 		}
 
 		available = {
@@ -443,6 +495,7 @@ TU_IBE_coast_category = {
 		}
 
 		visible = {
+			has_country_flag = TU_IBE_coast
 			has_completed_focus = TU_IBE_abyssal_rumours
 		}
 
@@ -470,6 +523,7 @@ TU_IBE_coast_category = {
 		}
 
 		visible = {
+			has_country_flag = TU_IBE_coast
 			has_completed_focus = TU_IBE_sea_studies
 		}
 
@@ -493,6 +547,7 @@ TU_IBE_coast_category = {
 		}
 
 		visible = {
+			has_country_flag = TU_IBE_coast
 			has_completed_focus = TU_IBE_inquisitor_guard
 		}
 
@@ -517,6 +572,7 @@ TU_IBE_coast_category = {
 		}
 
 		visible = {
+			has_country_flag = TU_IBE_coast
 			has_country_flag = TU_IBE_hunters_met
 		}
 

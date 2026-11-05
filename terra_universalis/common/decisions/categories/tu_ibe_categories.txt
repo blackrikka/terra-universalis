@@ -1,13 +1,10 @@
 TU_IBE_coast_category = {
 	icon = GFX_decision_category_generic_political_actions
-	scripted_gui = TU_IBE_panel
+	scripted_gui = TU_IBE_coast_status_ui
+	visible_when_empty = yes
 
 	allowed = {
 		original_tag = IBE
-	}
-
-	visible = {
-		has_country_flag = TU_IBE_coast
 	}
 
 	priority = 100

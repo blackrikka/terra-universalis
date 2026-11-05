@@ -6,6 +6,10 @@ TU_SAM_spirits_category = {
 			original_tag = SAM
 		}
 
+		visible = {
+			has_country_flag = TU_SAM_spirits
+		}
+
 		available = {
 			check_variable = { TU_SAM_grace > 19 }
 			check_variable = { TU_SAM_pacts < 2 }
@@ -34,6 +38,7 @@ TU_SAM_spirits_category = {
 		}
 
 		visible = {
+			has_country_flag = TU_SAM_spirits
 			has_idea = TU_SAM_spirit_bear
 		}
 
@@ -56,6 +61,10 @@ TU_SAM_spirits_category = {
 
 		allowed = {
 			original_tag = SAM
+		}
+
+		visible = {
+			has_country_flag = TU_SAM_spirits
 		}
 
 		available = {
@@ -86,6 +95,7 @@ TU_SAM_spirits_category = {
 		}
 
 		visible = {
+			has_country_flag = TU_SAM_spirits
 			has_idea = TU_SAM_spirit_wolf
 		}
 
@@ -108,6 +118,10 @@ TU_SAM_spirits_category = {
 
 		allowed = {
 			original_tag = SAM
+		}
+
+		visible = {
+			has_country_flag = TU_SAM_spirits
 		}
 
 		available = {
@@ -138,6 +152,7 @@ TU_SAM_spirits_category = {
 		}
 
 		visible = {
+			has_country_flag = TU_SAM_spirits
 			has_idea = TU_SAM_spirit_raven
 		}
 
@@ -160,6 +175,10 @@ TU_SAM_spirits_category = {
 
 		allowed = {
 			original_tag = SAM
+		}
+
+		visible = {
+			has_country_flag = TU_SAM_spirits
 		}
 
 		available = {
@@ -190,6 +209,7 @@ TU_SAM_spirits_category = {
 		}
 
 		visible = {
+			has_country_flag = TU_SAM_spirits
 			has_idea = TU_SAM_spirit_reindeer
 		}
 
@@ -214,6 +234,10 @@ TU_SAM_spirits_category = {
 			original_tag = SAM
 		}
 
+		visible = {
+			has_country_flag = TU_SAM_spirits
+		}
+
 		cost = 25
 		days_re_enable = 90
 
@@ -231,6 +255,10 @@ TU_SAM_spirits_category = {
 
 		allowed = {
 			original_tag = SAM
+		}
+
+		visible = {
+			has_country_flag = TU_SAM_spirits
 		}
 
 		cost = 75
@@ -254,6 +282,10 @@ TU_SAM_tribes_category = {
 
 		allowed = {
 			original_tag = SAM
+		}
+
+		visible = {
+			has_country_flag = TU_SAM_tribes
 		}
 
 		available = {
@@ -280,6 +312,10 @@ TU_SAM_tribes_category = {
 			original_tag = SAM
 		}
 
+		visible = {
+			has_country_flag = TU_SAM_tribes
+		}
+
 		cost = 25
 		days_re_enable = 180
 
@@ -299,6 +335,10 @@ TU_SAM_tribes_category = {
 			original_tag = SAM
 		}
 
+		visible = {
+			has_country_flag = TU_SAM_tribes
+		}
+
 		cost = 0
 		days_re_enable = 180
 
@@ -316,6 +356,10 @@ TU_SAM_tribes_category = {
 
 		allowed = {
 			original_tag = SAM
+		}
+
+		visible = {
+			has_country_flag = TU_SAM_tribes
 		}
 
 		cost = 25
@@ -339,6 +383,7 @@ TU_SAM_tribes_category = {
 		}
 
 		visible = {
+			has_country_flag = TU_SAM_tribes
 			has_completed_focus = TU_SAM_elder_council
 		}
 
@@ -364,6 +409,10 @@ TU_SAM_outside_category = {
 			original_tag = SAM
 		}
 
+		visible = {
+			has_country_flag = TU_SAM_outside
+		}
+
 		cost = 0
 		days_re_enable = 240
 
@@ -386,6 +435,7 @@ TU_SAM_outside_category = {
 		}
 
 		visible = {
+			has_country_flag = TU_SAM_outside
 			has_country_flag = TU_SAM_logging
 		}
 
@@ -407,6 +457,10 @@ TU_SAM_outside_category = {
 
 		allowed = {
 			original_tag = SAM
+		}
+
+		visible = {
+			has_country_flag = TU_SAM_outside
 		}
 
 		cost = 50
@@ -431,6 +485,7 @@ TU_SAM_outside_category = {
 		}
 
 		visible = {
+			has_country_flag = TU_SAM_outside
 			has_completed_focus = TU_SAM_northern_alliance
 		}
 
@@ -458,6 +513,7 @@ TU_SAM_outside_category = {
 		}
 
 		visible = {
+			has_country_flag = TU_SAM_outside
 			has_completed_focus = TU_SAM_fur_trade
 		}
 
