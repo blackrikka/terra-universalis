@@ -261,7 +261,7 @@ cat_coast = C.category("coast", "해안", "The Coast",
                         "Lighthouses can be damaged by Sea Terrors each month. Check each lighthouse's threat on the map and guard it with "
                         "coastal forts and garrisons. Garrisons are sometimes ambushed and lose organisation and strength."),
                        visible=[HAS("coast")])
-# ------------------------------------------------------------------ 등대 (사양서 29·30)
+# ------------------------------------------------------------------ 등대 (사양서 29·31)
 # 주 대상 디시전: 디시전 탭을 열면 지도에서 해당 주 위에 버튼이 뜬다. 주 깃발:
 #   TU_IBE_lighthouse 등대 있음 / TU_IBE_lh_damaged 손상 / TU_IBE_lh_repairing 보수 중 / TU_IBE_lh_fort_building 요새 공사 중
 # 주 변수: TU_IBE_lh_risk 월간 손상 확률(%) / TU_IBE_lh_fort 해안 요새 단계(0~3)
