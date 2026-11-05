@@ -95,7 +95,7 @@ COUNTRIES = {
                            ("name", "KINGDOM", "이베리아 왕국", "Kingdom of Iberia", "이베리아의", "Iberian")],
         "sea_reconciliation": [("leader", "irene", "moderatism"),
                                ("name", "NEW", "새 이베리아", "New Iberia", "이베리아의", "Iberian")],
-        "ishar_finale": [("name", "DEEP", "이샤믈라의 심해 왕국", "Ishar-mla's Kingdom of the Deep", "심해의", "Deep")],
+        "ishar_finale": [("name", "DEEP", "심해", "The Deep", "심해의", "Deep")],
     }),
     # ------------------------------------------------------------------ 사르곤
     "SAR": dict(cast=True, chars=[
@@ -279,6 +279,11 @@ COUNTRIES = {
         ("crownslayer", "크라운슬레이어", "Crownslayer", [("G", 5, 2, 3, 3)], None),
         ("mephisto", "메피스토", "Mephisto", [("A", "political_advisor", "tu_oripathy_physician")], None),
     ], start=["crownslayer", "mephisto"], hooks={}),
+}
+
+# 코스메틱 태그 나라 색 (common/countries/cosmetic.txt): 국호 키 -> (지도 색 RGB, UI 색 RGB)
+COSMETIC_COLORS = {
+    "TU_IBE_DEEP": ((14, 22, 58), (40, 60, 120)),
 }
 
 # 테라 참모 특성 (common/country_leader/tu_advisor_traits.txt)

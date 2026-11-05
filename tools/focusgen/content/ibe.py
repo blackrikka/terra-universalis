@@ -453,35 +453,72 @@ C.ev(41, ("혈족", "Kin"),
         "set_variable = { TU_IBE_threat = 0 }", "add_ideas = TU_IBE_seaborn_kin", "mark_focus_tree_layout_dirty = yes"], 1)],
      picture="GFX_report_event_generic_read_write")
 C.idea("seaborn_kin", "바다의 혈족", "Kin of the Sea",
-       {"army_org_factor": 0.10, "army_attack_factor": 0.05, "stability_factor": -0.10, "monthly_population": -0.05},
-       "generic_morale_bonus", ("이샤믈라가 이베리아를 이끈다. 바다는 더 이상 위협이 아니라 고향이다.",
-                                "Ishar-mla leads Iberia. The sea is no longer a threat but a home."))
-C.idea("tide_host", "밀물의 군세", "Host of the Tide", {"army_attack_factor": 0.08, "army_defence_factor": 0.05, "attrition": -0.05},
+       {"army_org_factor": 0.15, "army_attack_factor": 0.10, "army_defence_factor": 0.05, "war_support_factor": 0.10,
+        "stability_factor": -0.05}, "generic_morale_bonus",
+       ("이샤믈라가 이베리아를 이끈다. 바다는 더 이상 위협이 아니라 고향이다.",
+        "Ishar-mla leads Iberia. The sea is no longer a threat but a home."))
+C.idea("tide_host", "밀물의 군세", "Host of the Tide",
+       {"army_attack_factor": 0.12, "army_defence_factor": 0.08, "attrition": -0.10, "land_reinforce_rate": 0.03},
        "generic_army_war_college")
-C.idea("deep_kingdom", "이샤믈라의 심해 왕국", "Ishar-mla's Kingdom of the Deep",
-       {"army_org_factor": 0.10, "war_support_factor": 0.15, "conscription_factor": 0.05, "stability_factor": -0.05},
-       "generic_morale_bonus")
+C.idea("deep_kingdom", "심해 왕국", "Kingdom of the Deep",
+       {"army_attack_factor": 0.15, "army_defence_factor": 0.15, "army_org_factor": 0.15, "conscription_factor": 0.10,
+        "war_support_factor": 0.20, "attrition": -0.15, "political_power_factor": 0.10},
+       "generic_morale_bonus", ("파도 아래에 왕국이 섰다. 이샤믈라의 혈족은 지치지 않는다.",
+                                "A kingdom stands beneath the waves. Ishar-mla's kin never tire."))
+C.idea("the_deep", "심해", "The Deep",
+       {"army_attack_factor": 0.25, "army_defence_factor": 0.25, "army_org_factor": 0.25, "conscription_factor": 0.20,
+        "war_support_factor": 0.30, "stability_factor": 0.15, "political_power_factor": 0.20, "attrition": -0.25,
+        "production_factory_max_efficiency_factor": 0.15, "industrial_capacity_factory": 0.15, "monthly_population": 0.20},
+       "generic_morale_bonus", ("모든 것은 바다에서 왔고, 모든 것은 바다로 돌아간다. 이베리아라는 이름은 이제 파도 아래에 잠들었다.",
+                                "All came from the sea, and all returns to it. The name Iberia now sleeps beneath the waves."))
 f("ishar_call", "심해의 부름", "Call of the Deep", pre=["root"], cost=5, theme=False, allow_branch=ISHAR, available=ISHAR,
   reward=["add_political_power = 50", "set_variable = { TU_IBE_threat = 0 }"],
   desc=("이샤믈라가 바다 쪽을 가리킨다. 이베리아는 더 이상 바다를 두려워하지 않는다.",
         "Ishar-mla points to the sea. Iberia no longer fears it."))
 f("ishar_song", "심해의 노래", "Song of the Deep", pre=["ishar_call"], allow_branch=ISHAR, theme=False,
-  reward=["add_war_support = 0.10", "add_stability = -0.05", "add_political_power = 75"])
+  reward=["add_war_support = 0.10", "add_political_power = 75"])
 f("ishar_hunters", "아비살 사냥꾼의 침묵", "Silence of the Abyssal Hunters", pre=["ishar_call"], allow_branch=ISHAR, theme=False,
-  reward=["add_manpower = 10000", "army_experience = 25"],
+  reward=["add_manpower = 15000", "army_experience = 25"],
   desc=("사냥꾼들은 등을 돌리거나, 바다에 녹아든다.", "The hunters either turn away or dissolve into the sea."))
 f("ishar_tide", "밀물의 군세", "Host of the Tide", pre=["ishar_song", "ishar_hunters"], allow_branch=ISHAR, theme=False, cost=10,
-  reward=["add_ideas = TU_IBE_tide_host", "army_experience = 25"])
+  reward=["add_ideas = TU_IBE_tide_host", "army_experience = 30"])
 f("ishar_inquisition", "심판소 해체", "Dissolve the Inquisition", pre=["ishar_song"], allow_branch=ISHAR, theme=False,
   reward=["add_stability = 0.05", "add_political_power = 50"])
 f("ishar_coast", "해안의 동화", "Assimilate the Coast", pre=["ishar_tide"], allow_branch=ISHAR, theme=False,
   reward=["TU_build_infrastructure = yes", "add_manpower = 10000"])
 f("ishar_cathedral", "바다에 잠긴 대성당", "The Drowned Cathedral", pre=["ishar_inquisition", "ishar_coast"], allow_branch=ISHAR,
   theme=False, reward=["add_war_support = 0.05", "add_stability = 0.05"])
-f("ishar_finale", "이샤믈라의 바다", "Ishar-mla's Sea", pre=["ishar_cathedral"], allow_branch=ISHAR, theme=False, cost=15,
+f("ishar_bloodline", "혈족의 확장", "Spread the Kinship", pre=["ishar_cathedral"], allow_branch=ISHAR, theme=False,
+  reward=["add_manpower = 30000", "add_war_support = 0.05"],
+  desc=("바닷가 마을들이 하나둘 혈족이 된다.", "One by one the coastal villages become kin."))
+f("ishar_coral_cities", "산호의 도시", "Coral Cities", pre=["ishar_cathedral"], allow_branch=ISHAR, theme=False,
+  reward=["TU_build_civ_factory = yes", "TU_build_civ_factory = yes", "TU_build_mil_factory = yes"])
+f("ishar_abyss_arts", "심연의 아츠", "Arts of the Abyss", pre=["ishar_cathedral"], allow_branch=ISHAR, theme=False,
+  reward=["add_tech_bonus = { name = TU_IBE_ishar_abyss_arts bonus = 1.0 uses = 2 category = tu_originium_tech category = infantry_weapons }"])
+f("ishar_tidal_legion", "해일 군단", "Tidal Legions", pre=["ishar_bloodline"], allow_branch=ISHAR, theme=False, cost=10,
+  reward=["army_experience = 50", "add_manpower = 20000",
+          "add_doctrine_cost_reduction = { name = TU_IBE_ishar_tidal_legion cost_reduction = 0.5 uses = 2 category = land_doctrine }"])
+f("ishar_drowned_crown", "잠긴 왕관", "The Drowned Crown", pre=["ishar_coral_cities", "ishar_abyss_arts"], allow_branch=ISHAR,
+  theme=False, cost=10, reward=["add_political_power = 150", "add_stability = 0.10"],
+  desc=("왕관은 바다 밑에서 다시 빛난다. 그것을 쓴 것은 왕이 아니다.", "The crown shines again beneath the sea. It is not a king who wears it."))
+f("ishar_deep_kingdom", "심해 왕국 선포", "Proclaim the Kingdom of the Deep", pre=["ishar_tidal_legion", "ishar_drowned_crown"],
+  allow_branch=ISHAR, theme=False, cost=15,
+  reward=["swap_ideas = { remove_idea = TU_IBE_seaborn_kin add_idea = TU_IBE_deep_kingdom }", "add_war_support = 0.10"])
+f("ishar_great_tide", "대해일", "The Great Tide", pre=["ishar_deep_kingdom"], allow_branch=ISHAR, theme=False, cost=10,
+  reward=["""every_neighbor_country = {
+	limit = { NOT = { is_in_faction_with = ROOT } }
+	ROOT = { create_wargoal = { type = annex_everything target = PREV } }
+}""", "army_experience = 50"],
+  desc=("파도는 국경을 모른다. 이웃 나라 모두에 대한 병합 전쟁 명분을 얻는다.",
+        "The tide knows no borders. Gain an annexation war goal against every neighbour."))
+f("ishar_song_of_ishar", "이샤의 노래", "Song of Ishar", pre=["ishar_deep_kingdom"], allow_branch=ISHAR, theme=False, cost=10,
+  reward=["add_stability = 0.10", "add_war_support = 0.10", "add_political_power = 100"])
+f("ishar_finale", "심해", "The Deep", pre=["ishar_great_tide", "ishar_song_of_ishar"], allow_branch=ISHAR, theme=False, cost=20,
   me=["inquisitor_state", "crown_restored", "sea_reconciliation"],
-  reward=["swap_ideas = { remove_idea = TU_IBE_seaborn_kin add_idea = TU_IBE_deep_kingdom }"],
-  desc=("이베리아는 심해의 왕국이 된다.", "Iberia becomes a kingdom of the deep."))
+  reward=["swap_ideas = { remove_idea = TU_IBE_deep_kingdom add_idea = TU_IBE_the_deep }", "army_experience = 100",
+          "add_political_power = 200"],
+  desc=("이베리아라는 이름은 파도 아래에 잠든다. 남은 것은 심해뿐이다. (국호 '심해', 나라 색 어두운 남색)",
+        "The name Iberia sleeps beneath the waves. Only the Deep remains. (Name 'The Deep', dark navy colour)"))
 for _f in C.focuses:     # 다른 결말과 서로 배타
     if _f["id"] in ("TU_IBE_inquisitor_state", "TU_IBE_crown_restored", "TU_IBE_sea_reconciliation"):
         _f["me"].append("TU_IBE_ishar_finale")
