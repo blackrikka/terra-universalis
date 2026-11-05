@@ -374,6 +374,26 @@ def main(argv=None):
     multi_sr = [(sid, sorted({sr_of[p] for p in info["provs"]})) for sid, info in sorted(state_info.items())
                 if len({sr_of[p] for p in info["provs"]}) > 1]
     chk.many("6", multi_sr, lambda t: "주 %d가 전략 지역 여러 개에 걸침: %s" % t)
+    # 바다 전략 지역은 한 덩어리여야 한다 (끊어지면 일반 모드에서 로딩 중 강제 종료, -debug 에서는 "is fractioned")
+    fractioned = []
+    for rid, provs in sorted(sr_info.items()):
+        seas = {p for p in provs if ptype[p] == "sea"}
+        if not seas:
+            continue
+        seen, stack = set(), [min(seas)]
+        while stack:
+            u = stack.pop()
+            if u in seen:
+                continue
+            seen.add(u)
+            stack.extend(v for v in adj.get(u, ()) if v in seas and v not in seen)
+        if seen != seas:
+            fractioned.append((rid, sorted(seas - seen)[:6]))
+    chk.many("6", fractioned, lambda t: "바다 전략 지역 %d가 끊어짐: %s" % t)
+    # 게임은 8픽셀 이하 프로빈스에 경고를 낸다
+    px_count = np.bincount(id_map.ravel(), minlength=N + 1)
+    chk.many("6", [p for p in range(1, N + 1) if 0 < px_count[p] <= 8],
+             lambda p: "프로빈스 %d가 %d픽셀 (9 이상이어야 함)" % (p, px_count[p]))
 
     # 7. coastal 플래그
     bad_coast = []

@@ -18,7 +18,7 @@ mapgen 은 육지 안의 경계(국경·주·프로빈스)는 헥스 칸을 따�
 5. 고치는 파일: provinces.bmp, definition.csv(해안 플래그), terrain.bmp, heightmap.bmp, world_normal.bmp, rivers.bmp,
    trees.bmp, terrain/colormap_rgb_cityemissivemask_a.dds, history/states, strategicregions, buildings.txt, unitstacks.txt,
    weatherpositions.txt, supply_nodes.txt, railways.txt, adjacencies.csv, out/state_index.json, out/named_states.json.
-그다음 fix_exclaves.py (해협·회랑 다시 계산) → rail_effects / tiers / build_countries → validate_map.
+그다음 seal_sea_pockets.py (끊어진 바다 지역·작은 프로빈스, 사양서 37) → fix_exclaves.py (해협·회랑 다시 계산) → rail_effects / tiers / build_countries → validate_map.
 """
 
 import argparse
