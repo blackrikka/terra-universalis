@@ -138,7 +138,7 @@ f("gambino_soldiers", "감비노 행동대", "Gambino Soldier Regiments", pre=["
 f("gambino_arsenal", "감비노 무기고", "Gambino Arsenal", pre=["gambino_soldiers"])
 f("saluzzo_bank", "살루초 은행", "Saluzzo Bank", pre=["saluzzo_court"])
 f("saluzzo_trade", "살루초 교역망", "Saluzzo Trade Network", pre=["saluzzo_bank"])
-f("family_peace", "패밀리 평화 협정", "Family Peace Pact", pre=["family_ledgers"])
+f("family_peace", "패밀리 평화 협정", "Family Peace Pact", pre=["family_ledgers"], reward=[EV(35, 10)])   # 이스터에그 (사양서 32)
 f("family_council", "패밀리 연합 정부", "Family Council Government", pre=["family_peace"],
   me=["rule_of_law", "wolf_lord"], cost=15, theme=False, available=TWO_FAMILIES_50,
   reward=[FLAG("path_family"), "swap_ideas = { remove_idea = TU_SIR_family_cities add_idea = TU_SIR_family_council }", EV(28)],
@@ -418,6 +418,23 @@ f("wolf_howl", "늑대들의 울부짖음", "Howl of the Wolves Rally", pre=["wo
 f("casino_tax", "카지노 세금", "Casino Tax", pre=["casino_trade"])
 f("wine_exports", "포도주 수출 계약", "Wine Export Contracts", pre=["wine_olive"])
 f("siracusa_rail", "시라쿠사 철도", "Siracusan Railway", pre=["wine_exports"])
+
+# ------------------------------------------------------------------ 이스터에그: 엄지 패밀리와 발렌치나 (사양서 32)
+# 패밀리 평화 협정 10일 뒤 -> 처음 듣는 패밀리 -> 7일 뒤 엄지 -> 받아들이면 발렌치나가 장군으로 합류.
+C.ev(35, ("처음 듣는 패밀리", "An Unknown Family"),
+     ("통합 협상장 명부에 낯선 이름이 하나 끼어 있다.\\n\\n\"이 패밀리는 뭐지? 엄...뭐..? 처음들어보는군..\"",
+      "A strange name has slipped onto the roster at the unification talks.\\n\\n\"What family is this? Thu...what..? Never heard of them..\""),
+     [("좀 더 알아봐라.", "Look into it.", [EV(36, 7)], 1)])
+C.ev(36, ("엄지", "The Thumb"),
+     ("조사 보고서가 올라왔다. 규율이 엄격하고, 명령에 절대 복종하며, 탄환 하나 허투루 쓰지 않는다고.\\n\\n\"엄지..? 괜찮은 패밀리 같아보이는군\"",
+      "The report is in: strict discipline, absolute obedience, not a single bullet wasted.\\n\\n\"The Thumb..? Looks like a decent family\""),
+     [("패밀리로 받아들인다", "Welcome them as a family", [FLAG("thumb_accepted"), EV(37, 3)], 50),
+      ("다른 패밀리를 알아본다", "Look for another family", [], 50)])
+C.ev(37, ("발렌치나", "Valencina"),
+     ("엄지에서 보낸 지휘관이 회의실 문을 걷어차고 들어왔다. 그녀는 아무에게도 고개를 숙이지 않았다.\\n\\n\"지긋지긋해, 너도 패밀리도, 모두 다!!!\"",
+      "The commander sent by the Thumb kicks the meeting-room door open. She bows to no one.\\n\\n\"I'm sick of it. You, the family, all of it!!!\""),
+     [("...잘 부탁한다, 발렌치나.", "...Welcome aboard, Valencina.", ["recruit_character = TU_SIR_valencina", "army_experience = 25"], 1)],
+     picture="GFX_report_event_generic_battle")
 
 if __name__ == "__main__":
     C.write()

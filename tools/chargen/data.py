@@ -124,6 +124,7 @@ COUNTRIES = {
         ("texas", "텍사스", "Texas", [("A", "high_command", "tu_chief_logistics"), ("G", 4, 3, 3, 4)], None),
         ("lappland", "라플란드", "Lappland", [("G", 6, 2, 2, 2)], None),
         ("consigliere", "패밀리 고문", "Family Consigliere", [("A", "political_advisor", "tu_spymaster")], None),
+        ("valencina", "발렌치나", "Valencina", [("G", 6, 3, 3, 4)], None),     # 이스터에그 (sir.py tu_sir_ev.37)
     ], start=["elder_don", "penance", "consigliere", "texas", "lappland"], hooks={
         "family_council": [("leader", "family_head", "oligarchism"),
                            ("name", "FAMILIES", "시라쿠사 패밀리 연합", "Siracusan Family Union", "시라쿠사의", "Siracusan")],
