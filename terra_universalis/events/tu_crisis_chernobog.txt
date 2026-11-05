@@ -90,6 +90,36 @@ country_event = {
 
 	option = {
 		name = tu_crisis.1.a
+		ai_chance = { factor = 100 }
+	}
+
+	# Player choice (spec 28): a human Ursus player may take over the Reunion uprising instead.
+	option = {
+		name = tu_crisis.1.b
+		trigger = {
+			is_ai = no
+			country_exists = REU
+		}
+		ai_chance = { factor = 0 }
+		REU = {
+			change_tag_from = ROOT
+			country_event = { id = tu_crisis.20 }
+		}
+	}
+}
+
+# 20. REU: the player has joined the uprising (spec 28).
+country_event = {
+	id = tu_crisis.20
+	title = tu_crisis.20.t
+	desc = tu_crisis.20.d
+	picture = GFX_report_event_generic_battle
+	is_triggered_only = yes
+
+	option = {
+		name = tu_crisis.20.a
+		add_political_power = 50
+		add_war_support = 0.05
 	}
 }
 
