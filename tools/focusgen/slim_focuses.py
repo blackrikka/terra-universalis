@@ -1,12 +1,12 @@
 #!/usr/bin/env python3
-"""큰 중점 트리 줄이기: 사슬 중간의 일반 중점을 부모 중점에 합친다 (사양서 35).
+"""큰 중점 트리 줄이기: 사슬 중간의 일반 중점을 부모 중점에 합친다 (사양서 35, 36).
 
 사용법 (python -I):
     python -I tools/focusgen/slim_focuses.py --tag URS --target 220 [--dry]
     그다음 python -I tools/focusgen/merge_focus.py --tag URS
 
 합칠 수 있는 중점 (일반 중점)
-- 숨은 루트(p9_) 조각이 아니고, 뿌리가 아니다.
+- 숨은 루트(p9_) 조각이 아니고, 뿌리가 아니다. allow_branch 로 숨겨진 갈래 아래에 있지 않다.
 - 보상이 국민정신·깃발·이벤트·캐릭터·국호·변수·전쟁·영토·디시전 같은 특별 효과 없이,
   정치력·안정도·연구 보너스·교리·건설(TU_build_*)·인력 같은 일반 효과뿐이다.
 - available / bypass / allow_branch / mutually_exclusive / select_effect 가 없다 (노선 분기가 아님).
@@ -79,12 +79,24 @@ def candidates(tag, blocks, big, hook_sids):
         pre_of[fid] = [re.findall(r"focus = (\S+)", g) for g in re.findall(r"\n\t\tprerequisite = \{([^}\n]*)\}", b)]
         strip[fid] = re.sub(r"\n\t\t(prerequisite|mutually_exclusive|id|relative_position_id) = [^\n]*", "", b)
     joined = "\n".join(strip.values())
+    # allow_branch 로 숨겨진 갈래(지도자 집권 갈래 등) 아래의 중점은 합치지 않는다 (사양서 36)
+    gated = {fid for fid, (f, b) in blocks.items() if "\n\t\tallow_branch" in b}
+    memo = {}
+
+    def under_gate(x, seen=()):
+        if x in memo:
+            return memo[x]
+        r = x in gated or any(under_gate(p, seen + (x,)) for g in pre_of.get(x, []) for p in g if p in blocks and p not in seen)
+        memo[x] = r
+        return r
     pfx = "TU_%s_" % tag
     out = []
     for fid, (f, b) in blocks.items():
         if f.name.startswith("p9") or len(pre_of[fid]) != 1 or len(pre_of[fid][0]) != 1:
             continue
         parent = pre_of[fid][0][0]
+        if under_gate(fid):
+            continue
         if parent not in blocks or blocks[parent][0] != f:
             continue
         m = reward_of(b)

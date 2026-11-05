@@ -1,0 +1,987 @@
+	#### YAN sui rulers: B / C1|C2 / F under each sibling's rule branch (tools/focusgen/yan_sui_rulers.py, spec 36) ####
+
+	focus = {
+		id = TU_YAN_p1_chongyue_halls
+		prerequisite = { focus = TU_YAN_p1_chongyue_duty }
+		icon = GFX_goal_generic_army_doctrines
+		x = 0
+		y = 0
+		cost = 10
+
+		search_filters = { FOCUS_FILTER_POLITICAL }
+
+		ai_will_do = {
+			base = 1
+		}
+
+		completion_reward = {
+			army_experience = 30
+			add_manpower = 10000
+		}
+	}
+
+	focus = {
+		id = TU_YAN_p1_chongyue_spear
+		prerequisite = { focus = TU_YAN_p1_chongyue_halls }
+		mutually_exclusive = { focus = TU_YAN_p1_chongyue_open_hand }
+		icon = GFX_goal_generic_defence
+		x = 0
+		y = 0
+		cost = 10
+
+		search_filters = { FOCUS_FILTER_POLITICAL }
+
+		ai_will_do = {
+			base = 1
+		}
+
+		completion_reward = {
+			TU_build_forts_2 = yes
+			add_doctrine_cost_reduction = { name = TU_YAN_p1_chongyue_spear cost_reduction = 0.5 uses = 1 category = land_doctrine }
+		}
+	}
+
+	focus = {
+		id = TU_YAN_p1_chongyue_open_hand
+		prerequisite = { focus = TU_YAN_p1_chongyue_halls }
+		mutually_exclusive = { focus = TU_YAN_p1_chongyue_spear }
+		icon = GFX_goal_generic_improve_relations
+		x = 0
+		y = 0
+		cost = 10
+
+		search_filters = { FOCUS_FILTER_POLITICAL }
+
+		ai_will_do = {
+			base = 1
+		}
+
+		completion_reward = {
+			add_stability = 0.05
+			add_political_power = 100
+		}
+	}
+
+	focus = {
+		id = TU_YAN_p1_chongyue_reign
+		prerequisite = { focus = TU_YAN_p1_chongyue_spear focus = TU_YAN_p1_chongyue_open_hand }
+		icon = GFX_goal_generic_special_forces
+		x = 0
+		y = 0
+		cost = 15
+
+		search_filters = { FOCUS_FILTER_POLITICAL }
+
+		ai_will_do = {
+			base = 1
+		}
+
+		completion_reward = {
+			if = { limit = { has_idea = TU_YAN_idea_rule_chongyue } swap_ideas = { remove_idea = TU_YAN_idea_rule_chongyue add_idea = TU_YAN_idea_rule_chongyue_2 } }
+			else = { add_ideas = TU_YAN_idea_rule_chongyue_2 }
+			add_political_power = 50
+		}
+	}
+
+	focus = {
+		id = TU_YAN_p1_ling_tavern
+		prerequisite = { focus = TU_YAN_p1_ling_dream }
+		icon = GFX_goal_generic_propaganda
+		x = 0
+		y = 0
+		cost = 10
+
+		search_filters = { FOCUS_FILTER_POLITICAL }
+
+		ai_will_do = {
+			base = 1
+		}
+
+		completion_reward = {
+			add_political_power = 80
+			add_war_support = 0.03
+		}
+	}
+
+	focus = {
+		id = TU_YAN_p1_ling_wanderer
+		prerequisite = { focus = TU_YAN_p1_ling_tavern }
+		mutually_exclusive = { focus = TU_YAN_p1_ling_dream_army }
+		icon = GFX_goal_generic_neutrality_focus
+		x = 0
+		y = 0
+		cost = 10
+
+		search_filters = { FOCUS_FILTER_POLITICAL }
+
+		ai_will_do = {
+			base = 1
+		}
+
+		completion_reward = {
+			add_stability = 0.06
+			add_political_power = 40
+		}
+	}
+
+	focus = {
+		id = TU_YAN_p1_ling_dream_army
+		prerequisite = { focus = TU_YAN_p1_ling_tavern }
+		mutually_exclusive = { focus = TU_YAN_p1_ling_wanderer }
+		icon = GFX_goal_generic_allies_build_infantry
+		x = 0
+		y = 0
+		cost = 10
+
+		search_filters = { FOCUS_FILTER_POLITICAL }
+
+		ai_will_do = {
+			base = 1
+		}
+
+		completion_reward = {
+			add_manpower = 20000
+			add_war_support = 0.04
+		}
+	}
+
+	focus = {
+		id = TU_YAN_p1_ling_reign
+		prerequisite = { focus = TU_YAN_p1_ling_wanderer focus = TU_YAN_p1_ling_dream_army }
+		icon = GFX_goal_generic_national_unity
+		x = 0
+		y = 0
+		cost = 15
+
+		search_filters = { FOCUS_FILTER_POLITICAL }
+
+		ai_will_do = {
+			base = 1
+		}
+
+		completion_reward = {
+			if = { limit = { has_idea = TU_YAN_idea_rule_ling } swap_ideas = { remove_idea = TU_YAN_idea_rule_ling add_idea = TU_YAN_idea_rule_ling_2 } }
+			else = { add_ideas = TU_YAN_idea_rule_ling_2 }
+			add_political_power = 50
+		}
+	}
+
+	focus = {
+		id = TU_YAN_p1_wang_board
+		prerequisite = { focus = TU_YAN_p1_wang_far }
+		icon = GFX_goal_generic_intelligence_exchange
+		x = 0
+		y = 0
+		cost = 10
+
+		search_filters = { FOCUS_FILTER_POLITICAL }
+
+		ai_will_do = {
+			base = 1
+		}
+
+		completion_reward = {
+			add_tech_bonus = { name = TU_YAN_p1_wang_board bonus = 0.75 uses = 1 category = industry category = construction_tech }
+		}
+	}
+
+	focus = {
+		id = TU_YAN_p1_wang_academy
+		prerequisite = { focus = TU_YAN_p1_wang_board }
+		mutually_exclusive = { focus = TU_YAN_p1_wang_records }
+		icon = GFX_goal_generic_scientific_exchange
+		x = 0
+		y = 0
+		cost = 10
+
+		search_filters = { FOCUS_FILTER_POLITICAL }
+
+		ai_will_do = {
+			base = 1
+		}
+
+		completion_reward = {
+			add_tech_bonus = { name = TU_YAN_p1_wang_academy bonus = 0.75 uses = 1 category = tu_originium_tech category = electronics }
+		}
+	}
+
+	focus = {
+		id = TU_YAN_p1_wang_records
+		prerequisite = { focus = TU_YAN_p1_wang_board }
+		mutually_exclusive = { focus = TU_YAN_p1_wang_academy }
+		icon = GFX_goal_generic_army_doctrines
+		x = 0
+		y = 0
+		cost = 10
+
+		search_filters = { FOCUS_FILTER_POLITICAL }
+
+		ai_will_do = {
+			base = 1
+		}
+
+		completion_reward = {
+			add_doctrine_cost_reduction = { name = TU_YAN_p1_wang_records cost_reduction = 0.5 uses = 1 category = land_doctrine }
+			army_experience = 25
+		}
+	}
+
+	focus = {
+		id = TU_YAN_p1_wang_reign
+		prerequisite = { focus = TU_YAN_p1_wang_academy focus = TU_YAN_p1_wang_records }
+		icon = GFX_goal_generic_radar
+		x = 0
+		y = 0
+		cost = 15
+
+		search_filters = { FOCUS_FILTER_POLITICAL }
+
+		ai_will_do = {
+			base = 1
+		}
+
+		completion_reward = {
+			if = { limit = { has_idea = TU_YAN_idea_rule_wang } swap_ideas = { remove_idea = TU_YAN_idea_rule_wang add_idea = TU_YAN_idea_rule_wang_2 } }
+			else = { add_ideas = TU_YAN_idea_rule_wang_2 }
+			add_political_power = 50
+		}
+	}
+
+	focus = {
+		id = TU_YAN_p1_dusk_studio
+		prerequisite = { focus = TU_YAN_p1_dusk_canvas }
+		icon = GFX_goal_generic_propaganda
+		x = 0
+		y = 0
+		cost = 10
+
+		search_filters = { FOCUS_FILTER_POLITICAL }
+
+		ai_will_do = {
+			base = 1
+		}
+
+		completion_reward = {
+			add_political_power = 60
+			add_war_support = 0.04
+		}
+	}
+
+	focus = {
+		id = TU_YAN_p1_dusk_soldiers
+		prerequisite = { focus = TU_YAN_p1_dusk_studio }
+		mutually_exclusive = { focus = TU_YAN_p1_dusk_retreat }
+		icon = GFX_goal_generic_allies_build_infantry
+		x = 0
+		y = 0
+		cost = 10
+
+		search_filters = { FOCUS_FILTER_POLITICAL }
+
+		ai_will_do = {
+			base = 1
+		}
+
+		completion_reward = {
+			add_manpower = 20000
+			army_experience = 20
+		}
+	}
+
+	focus = {
+		id = TU_YAN_p1_dusk_retreat
+		prerequisite = { focus = TU_YAN_p1_dusk_studio }
+		mutually_exclusive = { focus = TU_YAN_p1_dusk_soldiers }
+		icon = GFX_goal_generic_neutrality_focus
+		x = 0
+		y = 0
+		cost = 10
+
+		search_filters = { FOCUS_FILTER_POLITICAL }
+
+		ai_will_do = {
+			base = 1
+		}
+
+		completion_reward = {
+			add_stability = 0.08
+		}
+	}
+
+	focus = {
+		id = TU_YAN_p1_dusk_reign
+		prerequisite = { focus = TU_YAN_p1_dusk_soldiers focus = TU_YAN_p1_dusk_retreat }
+		icon = GFX_goal_generic_national_unity
+		x = 0
+		y = 0
+		cost = 15
+
+		search_filters = { FOCUS_FILTER_POLITICAL }
+
+		ai_will_do = {
+			base = 1
+		}
+
+		completion_reward = {
+			if = { limit = { has_idea = TU_YAN_idea_rule_dusk } swap_ideas = { remove_idea = TU_YAN_idea_rule_dusk add_idea = TU_YAN_idea_rule_dusk_2 } }
+			else = { add_ideas = TU_YAN_idea_rule_dusk_2 }
+			add_political_power = 50
+		}
+	}
+
+	focus = {
+		id = TU_YAN_p1_shu_canals
+		prerequisite = { focus = TU_YAN_p1_shu_harvest }
+		icon = GFX_goal_generic_construct_infrastructure
+		x = 0
+		y = 0
+		cost = 10
+
+		search_filters = { FOCUS_FILTER_POLITICAL }
+
+		ai_will_do = {
+			base = 1
+		}
+
+		completion_reward = {
+			TU_build_infrastructure = yes
+			add_stability = 0.03
+		}
+	}
+
+	focus = {
+		id = TU_YAN_p1_shu_farmer_soldiers
+		prerequisite = { focus = TU_YAN_p1_shu_canals }
+		mutually_exclusive = { focus = TU_YAN_p1_shu_granaries }
+		icon = GFX_goal_generic_allies_build_infantry
+		x = 0
+		y = 0
+		cost = 10
+
+		search_filters = { FOCUS_FILTER_POLITICAL }
+
+		ai_will_do = {
+			base = 1
+		}
+
+		completion_reward = {
+			add_manpower = 25000
+		}
+	}
+
+	focus = {
+		id = TU_YAN_p1_shu_granaries
+		prerequisite = { focus = TU_YAN_p1_shu_canals }
+		mutually_exclusive = { focus = TU_YAN_p1_shu_farmer_soldiers }
+		icon = GFX_goal_generic_consumer_goods
+		x = 0
+		y = 0
+		cost = 10
+
+		search_filters = { FOCUS_FILTER_POLITICAL }
+
+		ai_will_do = {
+			base = 1
+		}
+
+		completion_reward = {
+			TU_build_civ_factory = yes
+			add_political_power = 50
+		}
+	}
+
+	focus = {
+		id = TU_YAN_p1_shu_reign
+		prerequisite = { focus = TU_YAN_p1_shu_farmer_soldiers focus = TU_YAN_p1_shu_granaries }
+		icon = GFX_goal_generic_national_unity
+		x = 0
+		y = 0
+		cost = 15
+
+		search_filters = { FOCUS_FILTER_POLITICAL }
+
+		ai_will_do = {
+			base = 1
+		}
+
+		completion_reward = {
+			if = { limit = { has_idea = TU_YAN_idea_rule_shu } swap_ideas = { remove_idea = TU_YAN_idea_rule_shu add_idea = TU_YAN_idea_rule_shu_2 } }
+			else = { add_ideas = TU_YAN_idea_rule_shu_2 }
+			add_political_power = 50
+		}
+	}
+
+	focus = {
+		id = TU_YAN_p1_nian_alloys
+		prerequisite = { focus = TU_YAN_p1_nian_craft }
+		icon = GFX_goal_generic_secret_weapon
+		x = 0
+		y = 0
+		cost = 10
+
+		search_filters = { FOCUS_FILTER_POLITICAL }
+
+		ai_will_do = {
+			base = 1
+		}
+
+		completion_reward = {
+			add_tech_bonus = { name = TU_YAN_p1_nian_alloys bonus = 0.75 uses = 1 category = industry category = tu_originium_tech }
+		}
+	}
+
+	focus = {
+		id = TU_YAN_p1_nian_arsenal
+		prerequisite = { focus = TU_YAN_p1_nian_alloys }
+		mutually_exclusive = { focus = TU_YAN_p1_nian_modern }
+		icon = GFX_goal_generic_construct_mil_factory
+		x = 0
+		y = 0
+		cost = 10
+
+		search_filters = { FOCUS_FILTER_POLITICAL }
+
+		ai_will_do = {
+			base = 1
+		}
+
+		completion_reward = {
+			TU_build_mil_factory = yes
+			add_tech_bonus = { name = TU_YAN_p1_nian_arsenal bonus = 0.75 uses = 1 category = artillery }
+		}
+	}
+
+	focus = {
+		id = TU_YAN_p1_nian_modern
+		prerequisite = { focus = TU_YAN_p1_nian_alloys }
+		mutually_exclusive = { focus = TU_YAN_p1_nian_arsenal }
+		icon = GFX_goal_generic_construct_civ_factory
+		x = 0
+		y = 0
+		cost = 10
+
+		search_filters = { FOCUS_FILTER_POLITICAL }
+
+		ai_will_do = {
+			base = 1
+		}
+
+		completion_reward = {
+			TU_build_civ_factory = yes
+			add_tech_bonus = { name = TU_YAN_p1_nian_modern bonus = 0.75 uses = 1 category = construction_tech }
+		}
+	}
+
+	focus = {
+		id = TU_YAN_p1_nian_reign
+		prerequisite = { focus = TU_YAN_p1_nian_arsenal focus = TU_YAN_p1_nian_modern }
+		icon = GFX_goal_generic_production2
+		x = 0
+		y = 0
+		cost = 15
+
+		search_filters = { FOCUS_FILTER_POLITICAL }
+
+		ai_will_do = {
+			base = 1
+		}
+
+		completion_reward = {
+			if = { limit = { has_idea = TU_YAN_idea_rule_nian } swap_ideas = { remove_idea = TU_YAN_idea_rule_nian add_idea = TU_YAN_idea_rule_nian_2 } }
+			else = { add_ideas = TU_YAN_idea_rule_nian_2 }
+			add_political_power = 50
+		}
+	}
+
+	focus = {
+		id = TU_YAN_p1_jun_works
+		prerequisite = { focus = TU_YAN_p1_jun_merchant }
+		icon = GFX_goal_generic_construction
+		x = 0
+		y = 0
+		cost = 10
+
+		search_filters = { FOCUS_FILTER_POLITICAL }
+
+		ai_will_do = {
+			base = 1
+		}
+
+		completion_reward = {
+			TU_build_infrastructure = yes
+			TU_build_civ_factory = yes
+		}
+	}
+
+	focus = {
+		id = TU_YAN_p1_jun_canal
+		prerequisite = { focus = TU_YAN_p1_jun_works }
+		mutually_exclusive = { focus = TU_YAN_p1_jun_tax }
+		icon = GFX_goal_generic_construct_infrastructure
+		x = 0
+		y = 0
+		cost = 10
+
+		search_filters = { FOCUS_FILTER_POLITICAL }
+
+		ai_will_do = {
+			base = 1
+		}
+
+		completion_reward = {
+			TU_build_railway = yes
+			add_political_power = 40
+		}
+	}
+
+	focus = {
+		id = TU_YAN_p1_jun_tax
+		prerequisite = { focus = TU_YAN_p1_jun_works }
+		mutually_exclusive = { focus = TU_YAN_p1_jun_canal }
+		icon = GFX_goal_generic_trade
+		x = 0
+		y = 0
+		cost = 10
+
+		search_filters = { FOCUS_FILTER_POLITICAL }
+
+		ai_will_do = {
+			base = 1
+		}
+
+		completion_reward = {
+			add_political_power = 100
+		}
+	}
+
+	focus = {
+		id = TU_YAN_p1_jun_reign
+		prerequisite = { focus = TU_YAN_p1_jun_canal focus = TU_YAN_p1_jun_tax }
+		icon = GFX_goal_generic_positive_trade_relations
+		x = 0
+		y = 0
+		cost = 15
+
+		search_filters = { FOCUS_FILTER_POLITICAL }
+
+		ai_will_do = {
+			base = 1
+		}
+
+		completion_reward = {
+			if = { limit = { has_idea = TU_YAN_idea_rule_jun } swap_ideas = { remove_idea = TU_YAN_idea_rule_jun add_idea = TU_YAN_idea_rule_jun_2 } }
+			else = { add_ideas = TU_YAN_idea_rule_jun_2 }
+			add_political_power = 50
+		}
+	}
+
+	focus = {
+		id = TU_YAN_p1_jie_march
+		prerequisite = { focus = TU_YAN_p1_jie_harbor }
+		icon = GFX_goal_generic_army_motorized
+		x = 0
+		y = 0
+		cost = 10
+
+		search_filters = { FOCUS_FILTER_POLITICAL }
+
+		ai_will_do = {
+			base = 1
+		}
+
+		completion_reward = {
+			army_experience = 20
+			TU_build_infrastructure = yes
+		}
+	}
+
+	focus = {
+		id = TU_YAN_p1_jie_mobile
+		prerequisite = { focus = TU_YAN_p1_jie_march }
+		mutually_exclusive = { focus = TU_YAN_p1_jie_cities }
+		icon = GFX_goal_generic_army_motorized
+		x = 0
+		y = 0
+		cost = 10
+
+		search_filters = { FOCUS_FILTER_POLITICAL }
+
+		ai_will_do = {
+			base = 1
+		}
+
+		completion_reward = {
+			add_tech_bonus = { name = TU_YAN_p1_jie_mobile bonus = 0.75 uses = 1 category = motorized_equipment }
+			add_doctrine_cost_reduction = { name = TU_YAN_p1_jie_mobile cost_reduction = 0.5 uses = 1 category = land_doctrine }
+		}
+	}
+
+	focus = {
+		id = TU_YAN_p1_jie_cities
+		prerequisite = { focus = TU_YAN_p1_jie_march }
+		mutually_exclusive = { focus = TU_YAN_p1_jie_mobile }
+		icon = GFX_goal_generic_army_tanks
+		x = 0
+		y = 0
+		cost = 10
+
+		search_filters = { FOCUS_FILTER_POLITICAL }
+
+		ai_will_do = {
+			base = 1
+		}
+
+		completion_reward = {
+			add_tech_bonus = { name = TU_YAN_p1_jie_cities bonus = 0.75 uses = 1 category = motorized_equipment category = armor }
+		}
+	}
+
+	focus = {
+		id = TU_YAN_p1_jie_reign
+		prerequisite = { focus = TU_YAN_p1_jie_mobile focus = TU_YAN_p1_jie_cities }
+		icon = GFX_goal_generic_army_motorized
+		x = 0
+		y = 0
+		cost = 15
+
+		search_filters = { FOCUS_FILTER_POLITICAL }
+
+		ai_will_do = {
+			base = 1
+		}
+
+		completion_reward = {
+			if = { limit = { has_idea = TU_YAN_idea_rule_jie } swap_ideas = { remove_idea = TU_YAN_idea_rule_jie add_idea = TU_YAN_idea_rule_jie_2 } }
+			else = { add_ideas = TU_YAN_idea_rule_jie_2 }
+			add_political_power = 50
+		}
+	}
+
+	focus = {
+		id = TU_YAN_p1_ji_airfields
+		prerequisite = { focus = TU_YAN_p1_ji_cloud }
+		icon = GFX_goal_generic_build_airforce
+		x = 0
+		y = 0
+		cost = 10
+
+		search_filters = { FOCUS_FILTER_POLITICAL }
+
+		ai_will_do = {
+			base = 1
+		}
+
+		completion_reward = {
+			add_doctrine_cost_reduction = { name = TU_YAN_p1_ji_airfields cost_reduction = 0.5 uses = 1 category = air_doctrine }
+			air_experience = 20
+		}
+	}
+
+	focus = {
+		id = TU_YAN_p1_ji_fighters
+		prerequisite = { focus = TU_YAN_p1_ji_airfields }
+		mutually_exclusive = { focus = TU_YAN_p1_ji_bombers }
+		icon = GFX_goal_generic_air_fighter
+		x = 0
+		y = 0
+		cost = 10
+
+		search_filters = { FOCUS_FILTER_POLITICAL }
+
+		ai_will_do = {
+			base = 1
+		}
+
+		completion_reward = {
+			add_tech_bonus = { name = TU_YAN_p1_ji_fighters bonus = 1.0 uses = 1 category = light_fighter }
+		}
+	}
+
+	focus = {
+		id = TU_YAN_p1_ji_bombers
+		prerequisite = { focus = TU_YAN_p1_ji_airfields }
+		mutually_exclusive = { focus = TU_YAN_p1_ji_fighters }
+		icon = GFX_goal_generic_build_airforce
+		x = 0
+		y = 0
+		cost = 10
+
+		search_filters = { FOCUS_FILTER_POLITICAL }
+
+		ai_will_do = {
+			base = 1
+		}
+
+		completion_reward = {
+			add_tech_bonus = { name = TU_YAN_p1_ji_bombers bonus = 1.0 uses = 1 category = tactical_bomber }
+		}
+	}
+
+	focus = {
+		id = TU_YAN_p1_ji_reign
+		prerequisite = { focus = TU_YAN_p1_ji_fighters focus = TU_YAN_p1_ji_bombers }
+		icon = GFX_goal_generic_air_fighter
+		x = 0
+		y = 0
+		cost = 15
+
+		search_filters = { FOCUS_FILTER_POLITICAL }
+
+		ai_will_do = {
+			base = 1
+		}
+
+		completion_reward = {
+			if = { limit = { has_idea = TU_YAN_idea_rule_ji } swap_ideas = { remove_idea = TU_YAN_idea_rule_ji add_idea = TU_YAN_idea_rule_ji_2 } }
+			else = { add_ideas = TU_YAN_idea_rule_ji_2 }
+			add_political_power = 50
+		}
+	}
+
+	focus = {
+		id = TU_YAN_p1_yi_talks
+		prerequisite = { focus = TU_YAN_p1_yi_guests }
+		icon = GFX_goal_generic_improve_relations
+		x = 0
+		y = 0
+		cost = 10
+
+		search_filters = { FOCUS_FILTER_POLITICAL }
+
+		ai_will_do = {
+			base = 1
+		}
+
+		completion_reward = {
+			add_political_power = 75
+			add_stability = 0.03
+		}
+	}
+
+	focus = {
+		id = TU_YAN_p1_yi_horizontal
+		prerequisite = { focus = TU_YAN_p1_yi_talks }
+		mutually_exclusive = { focus = TU_YAN_p1_yi_vertical }
+		icon = GFX_goal_generic_military_deal
+		x = 0
+		y = 0
+		cost = 10
+
+		search_filters = { FOCUS_FILTER_POLITICAL }
+
+		ai_will_do = {
+			base = 1
+		}
+
+		completion_reward = {
+			add_war_support = 0.05
+			add_political_power = 40
+		}
+	}
+
+	focus = {
+		id = TU_YAN_p1_yi_vertical
+		prerequisite = { focus = TU_YAN_p1_yi_talks }
+		mutually_exclusive = { focus = TU_YAN_p1_yi_horizontal }
+		icon = GFX_goal_generic_alliance
+		x = 0
+		y = 0
+		cost = 10
+
+		search_filters = { FOCUS_FILTER_POLITICAL }
+
+		ai_will_do = {
+			base = 1
+		}
+
+		completion_reward = {
+			add_stability = 0.05
+			add_political_power = 40
+		}
+	}
+
+	focus = {
+		id = TU_YAN_p1_yi_reign
+		prerequisite = { focus = TU_YAN_p1_yi_horizontal focus = TU_YAN_p1_yi_vertical }
+		icon = GFX_goal_generic_positive_trade_relations
+		x = 0
+		y = 0
+		cost = 15
+
+		search_filters = { FOCUS_FILTER_POLITICAL }
+
+		ai_will_do = {
+			base = 1
+		}
+
+		completion_reward = {
+			if = { limit = { has_idea = TU_YAN_idea_rule_yi } swap_ideas = { remove_idea = TU_YAN_idea_rule_yi add_idea = TU_YAN_idea_rule_yi_2 } }
+			else = { add_ideas = TU_YAN_idea_rule_yi_2 }
+			add_political_power = 50
+		}
+	}
+
+	focus = {
+		id = TU_YAN_p1_fang_passes
+		prerequisite = { focus = TU_YAN_p1_fang_stand }
+		icon = GFX_goal_generic_fortify_city
+		x = 0
+		y = 0
+		cost = 10
+
+		search_filters = { FOCUS_FILTER_POLITICAL }
+
+		ai_will_do = {
+			base = 1
+		}
+
+		completion_reward = {
+			TU_build_forts_2 = yes
+			add_stability = 0.03
+		}
+	}
+
+	focus = {
+		id = TU_YAN_p1_fang_engineers
+		prerequisite = { focus = TU_YAN_p1_fang_passes }
+		mutually_exclusive = { focus = TU_YAN_p1_fang_militia }
+		icon = GFX_goal_generic_defence
+		x = 0
+		y = 0
+		cost = 10
+
+		search_filters = { FOCUS_FILTER_POLITICAL }
+
+		ai_will_do = {
+			base = 1
+		}
+
+		completion_reward = {
+			add_tech_bonus = { name = TU_YAN_p1_fang_engineers bonus = 0.75 uses = 1 category = construction_tech }
+			army_experience = 15
+		}
+	}
+
+	focus = {
+		id = TU_YAN_p1_fang_militia
+		prerequisite = { focus = TU_YAN_p1_fang_passes }
+		mutually_exclusive = { focus = TU_YAN_p1_fang_engineers }
+		icon = GFX_goal_generic_allies_build_infantry
+		x = 0
+		y = 0
+		cost = 10
+
+		search_filters = { FOCUS_FILTER_POLITICAL }
+
+		ai_will_do = {
+			base = 1
+		}
+
+		completion_reward = {
+			add_manpower = 20000
+		}
+	}
+
+	focus = {
+		id = TU_YAN_p1_fang_reign
+		prerequisite = { focus = TU_YAN_p1_fang_engineers focus = TU_YAN_p1_fang_militia }
+		icon = GFX_goal_generic_fortify_city
+		x = 0
+		y = 0
+		cost = 15
+
+		search_filters = { FOCUS_FILTER_POLITICAL }
+
+		ai_will_do = {
+			base = 1
+		}
+
+		completion_reward = {
+			if = { limit = { has_idea = TU_YAN_idea_rule_fang } swap_ideas = { remove_idea = TU_YAN_idea_rule_fang add_idea = TU_YAN_idea_rule_fang_2 } }
+			else = { add_ideas = TU_YAN_idea_rule_fang_2 }
+			add_political_power = 50
+		}
+	}
+
+	focus = {
+		id = TU_YAN_p1_yu_field_kitchens
+		prerequisite = { focus = TU_YAN_p1_yu_table }
+		icon = GFX_goal_generic_consumer_goods
+		x = 0
+		y = 0
+		cost = 10
+
+		search_filters = { FOCUS_FILTER_POLITICAL }
+
+		ai_will_do = {
+			base = 1
+		}
+
+		completion_reward = {
+			army_experience = 15
+			add_war_support = 0.03
+		}
+	}
+
+	focus = {
+		id = TU_YAN_p1_yu_supply
+		prerequisite = { focus = TU_YAN_p1_yu_field_kitchens }
+		mutually_exclusive = { focus = TU_YAN_p1_yu_feast }
+		icon = GFX_goal_generic_army_motorized
+		x = 0
+		y = 0
+		cost = 10
+
+		search_filters = { FOCUS_FILTER_POLITICAL }
+
+		ai_will_do = {
+			base = 1
+		}
+
+		completion_reward = {
+			add_tech_bonus = { name = TU_YAN_p1_yu_supply bonus = 0.75 uses = 1 category = motorized_equipment }
+			TU_build_infrastructure = yes
+		}
+	}
+
+	focus = {
+		id = TU_YAN_p1_yu_feast
+		prerequisite = { focus = TU_YAN_p1_yu_field_kitchens }
+		mutually_exclusive = { focus = TU_YAN_p1_yu_supply }
+		icon = GFX_goal_generic_national_unity
+		x = 0
+		y = 0
+		cost = 10
+
+		search_filters = { FOCUS_FILTER_POLITICAL }
+
+		ai_will_do = {
+			base = 1
+		}
+
+		completion_reward = {
+			add_stability = 0.06
+			add_political_power = 50
+		}
+	}
+
+	focus = {
+		id = TU_YAN_p1_yu_reign
+		prerequisite = { focus = TU_YAN_p1_yu_supply focus = TU_YAN_p1_yu_feast }
+		icon = GFX_goal_generic_consumer_goods
+		x = 0
+		y = 0
+		cost = 15
+
+		search_filters = { FOCUS_FILTER_POLITICAL }
+
+		ai_will_do = {
+			base = 1
+		}
+
+		completion_reward = {
+			if = { limit = { has_idea = TU_YAN_idea_rule_yu } swap_ideas = { remove_idea = TU_YAN_idea_rule_yu add_idea = TU_YAN_idea_rule_yu_2 } }
+			else = { add_ideas = TU_YAN_idea_rule_yu_2 }
+			add_political_power = 50
+		}
+	}
