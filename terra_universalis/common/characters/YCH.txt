@@ -1,7 +1,10 @@
 characters = {
 	YCH_leader = {
 		name = YCH_leader
-		portraits = { civilian = { large = "GFX_Portrait_Europe_Generic_1" } }
+		portraits = {
+			civilian = { large = "GFX_TU_ak_5a96e422e9" small = "GFX_TU_ak_5a96e422e9_small" }
+			army = { large = "GFX_TU_ak_5a96e422e9" small = "GFX_TU_ak_5a96e422e9_small" }
+		}
 		country_leader = { ideology = despotism expire = "1200.1.1.1" id = -1 }
 	}
 }

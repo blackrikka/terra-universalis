@@ -17,10 +17,8 @@ characters = {
 	TU_VIC_siege = {
 		name = TU_VIC_siege
 		portraits = {
-			army = {
-				large = "GFX_TU_portrait_siege"
-				small = "GFX_TU_portrait_siege_small"
-			}
+			civilian = { large = "GFX_TU_ak_1d13132fa6" small = "GFX_TU_ak_1d13132fa6_small" }
+			army = { large = "GFX_TU_ak_1d13132fa6" small = "GFX_TU_ak_1d13132fa6_small" }
 		}
 		corps_commander = {
 			traits = { politically_connected }
@@ -36,9 +34,8 @@ characters = {
 	TU_VIC_siege_leader = {
 		name = TU_VIC_siege_leader
 		portraits = {
-			civilian = {
-				large = "GFX_TU_portrait_siege"
-			}
+			civilian = { large = "GFX_TU_ak_ab709da5a3" small = "GFX_TU_ak_ab709da5a3_small" }
+			army = { large = "GFX_TU_ak_ab709da5a3" small = "GFX_TU_ak_ab709da5a3_small" }
 		}
 		country_leader = { traits = { tu_lt_lion_heir }
 			ideology = despotism

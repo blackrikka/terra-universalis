@@ -17,10 +17,8 @@ characters = {
 	TU_LGM_chen = {
 		name = TU_LGM_chen
 		portraits = {
-			army = {
-				large = "GFX_TU_portrait_chen"
-				small = "GFX_TU_portrait_chen_small"
-			}
+			civilian = { large = "GFX_TU_ak_99b0bf5c84" small = "GFX_TU_ak_99b0bf5c84_small" }
+			army = { large = "GFX_TU_ak_99b0bf5c84" small = "GFX_TU_ak_99b0bf5c84_small" }
 		}
 		corps_commander = {
 			traits = { }
@@ -36,9 +34,8 @@ characters = {
 	TU_LGM_chen_leader = {
 		name = TU_LGM_chen_leader
 		portraits = {
-			civilian = {
-				large = "GFX_TU_portrait_chen"
-			}
+			civilian = { large = "GFX_TU_ak_99b0bf5c84" small = "GFX_TU_ak_99b0bf5c84_small" }
+			army = { large = "GFX_TU_ak_99b0bf5c84" small = "GFX_TU_ak_99b0bf5c84_small" }
 		}
 		country_leader = { traits = { tu_lt_dragon_blade }
 			ideology = despotism

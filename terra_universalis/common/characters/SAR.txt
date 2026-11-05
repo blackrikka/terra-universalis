@@ -62,6 +62,10 @@ characters = {
 
 	TU_SAR_carnelian = {
 		name = TU_SAR_carnelian
+		portraits = {
+			civilian = { large = "GFX_TU_ak_f8ecc4a2df" small = "GFX_TU_ak_f8ecc4a2df_small" }
+			army = { large = "GFX_TU_ak_f8ecc4a2df" small = "GFX_TU_ak_f8ecc4a2df_small" }
+		}
 		advisor = {
 			slot = high_command
 			idea_token = TU_SAR_carnelian_adv
@@ -88,6 +92,10 @@ characters = {
 
 	TU_SAR_ifrit = {
 		name = TU_SAR_ifrit
+		portraits = {
+			civilian = { large = "GFX_TU_ak_3619a7d051" small = "GFX_TU_ak_3619a7d051_small" }
+			army = { large = "GFX_TU_ak_3619a7d051" small = "GFX_TU_ak_3619a7d051_small" }
+		}
 		corps_commander = {
 			traits = { }
 			skill = 3

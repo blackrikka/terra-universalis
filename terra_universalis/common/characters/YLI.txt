@@ -1,7 +1,10 @@
 characters = {
 	YLI_leader = {
 		name = YLI_leader
-		portraits = { civilian = { large = "GFX_Portrait_Europe_Generic_1" } }
+		portraits = {
+			civilian = { large = "GFX_TU_ak_d970e88101" small = "GFX_TU_ak_d970e88101_small" }
+			army = { large = "GFX_TU_ak_d970e88101" small = "GFX_TU_ak_d970e88101_small" }
+		}
 		country_leader = { ideology = despotism expire = "1200.1.1.1" id = -1 }
 	}
 }

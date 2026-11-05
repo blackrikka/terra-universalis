@@ -63,6 +63,10 @@ characters = {
 
 	TU_COL_saria = {
 		name = TU_COL_saria
+		portraits = {
+			civilian = { large = "GFX_TU_ak_04ebd9de41" small = "GFX_TU_ak_04ebd9de41_small" }
+			army = { large = "GFX_TU_ak_04ebd9de41" small = "GFX_TU_ak_04ebd9de41_small" }
+		}
 		advisor = {
 			slot = high_command
 			idea_token = TU_COL_saria_adv
