@@ -1,9 +1,14 @@
 on_actions = {
 	on_startup = {
 		effect = {
+			# Once only (spec 40): on_startup can run again in multiplayer or on load
 			if = {
-				limit = { country_exists = RHO }
-				RHO = { TU_RHO_startup = yes }
+				limit = { NOT = { has_global_flag = TU_RHO_startup_done } }
+				set_global_flag = TU_RHO_startup_done
+				if = {
+					limit = { country_exists = RHO }
+					RHO = { TU_RHO_startup = yes }
+				}
 			}
 		}
 	}

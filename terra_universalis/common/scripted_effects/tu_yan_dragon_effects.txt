@@ -6,10 +6,8 @@
 # another faction), then grows once into a neighbouring Yan state. Whatever is left stays with Yan.
 TU_YAN_split_realms = {
 	set_country_flag = TU_YAN_age_of_dragons
-	every_country = {
-		limit = { NOT = { tag = YAN } }
-		news_event = { id = tu_yan_dragon.2 days = 1 }
-	}
+	# major = yes: fire once from Yan and every player sees it once (firing it for every country repeated it ~30 times)
+	news_event = { id = tu_yan_dragon.2 days = 1 }
 	if = {
 		limit = { NOT = { has_country_flag = TU_YAN_chosen_chongyue } }
 		set_country_flag = TU_YAN_sib_chongyue_defected

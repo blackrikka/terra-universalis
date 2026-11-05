@@ -69,7 +69,8 @@ C.effects.append("""TU_COL_clear_admin = {
 C.on_actions.append("""on_startup = {
 	effect = {
 		if = {
-			limit = { country_exists = COL }
+			limit = { country_exists = COL NOT = { has_global_flag = TU_COL_first_election_scheduled } }
+			set_global_flag = TU_COL_first_election_scheduled	# once only (spec 40)
 			COL = { country_event = { id = tu_col_ev.10 days = 365 } }
 		}
 	}

@@ -684,7 +684,7 @@
 
 
 		completion_reward = {
-			every_country = { news_event = { id = tu_rho_ev.11 hours = 6 } }
+			news_event = { id = tu_rho_ev.11 hours = 6 }
 			add_political_power = 100
 			add_stability = 0.05
 		}
@@ -1400,7 +1400,7 @@
 
 		completion_reward = {
 			add_to_variable = { TU_lmd = 800 }
-			every_country = { news_event = { id = tu_rho_ev.12 hours = 6 } }
+			news_event = { id = tu_rho_ev.12 hours = 6 }
 			add_political_power = 100
 			add_stability = 0.05
 		}
@@ -1701,7 +1701,7 @@
 		prerequisite = { focus = TU_RHO_kazdel_plans }
 
 		completion_reward = {
-			every_country = { news_event = { id = tu_rho_ev.13 hours = 6 } }
+			news_event = { id = tu_rho_ev.13 hours = 6 }
 			add_political_power = 100
 			add_stability = 0.05
 		}

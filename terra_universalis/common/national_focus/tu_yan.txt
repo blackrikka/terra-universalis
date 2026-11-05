@@ -788,7 +788,7 @@ focus_tree = {
 		completion_reward = {
 			add_ideas = TU_YAN_p1_idea_throne_seal
 			set_country_flag = TU_YAN_route_throne_done
-			every_country = { news_event = { id = tu_yan_ev.16 } }
+			news_event = { id = tu_yan_ev.16 }
 			add_political_power = 100
 			add_stability = 0.05
 		}

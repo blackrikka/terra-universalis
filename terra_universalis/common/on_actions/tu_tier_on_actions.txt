@@ -2,25 +2,30 @@
 on_actions = {
 	on_startup = {
 		effect = {
-			if = { limit = { country_exists = URS } URS = { TU_tier_URS = yes } }
-			if = { limit = { country_exists = VIC } VIC = { TU_tier_VIC = yes } }
-			if = { limit = { country_exists = YAN } YAN = { TU_tier_YAN = yes } }
-			if = { limit = { country_exists = COL } COL = { TU_tier_COL = yes } }
-			if = { limit = { country_exists = LAT } LAT = { TU_tier_LAT = yes } }
-			if = { limit = { country_exists = KAZ } KAZ = { TU_tier_KAZ = yes } }
-			if = { limit = { country_exists = LEI } LEI = { TU_tier_LEI = yes } }
-			if = { limit = { country_exists = SAR } SAR = { TU_tier_SAR = yes } }
-			if = { limit = { country_exists = KZD } KZD = { TU_tier_KZD = yes } }
-			if = { limit = { country_exists = IBE } IBE = { TU_tier_IBE = yes } }
-			if = { limit = { country_exists = SIR } SIR = { TU_tier_SIR = yes } }
-			if = { limit = { country_exists = HIG } HIG = { TU_tier_HIG = yes } }
-			if = { limit = { country_exists = MIN } MIN = { TU_tier_MIN = yes } }
-			if = { limit = { country_exists = BOL } BOL = { TU_tier_BOL = yes } }
-			if = { limit = { country_exists = RIM } RIM = { TU_tier_RIM = yes } }
-			if = { limit = { country_exists = KJE } KJE = { TU_tier_KJE = yes } }
-			if = { limit = { country_exists = LGM } LGM = { TU_tier_LGM = yes } }
-			if = { limit = { country_exists = SAM } SAM = { TU_tier_SAM = yes } }
-			if = { limit = { country_exists = RHO } RHO = { TU_tier_RHO = yes } }
+			# Once only (spec 40): on_startup can run again in multiplayer or on load; do not stack factories and divisions
+			if = {
+				limit = { NOT = { has_global_flag = TU_tiers_applied } }
+				set_global_flag = TU_tiers_applied
+					if = { limit = { country_exists = URS } URS = { TU_tier_URS = yes } }
+					if = { limit = { country_exists = VIC } VIC = { TU_tier_VIC = yes } }
+					if = { limit = { country_exists = YAN } YAN = { TU_tier_YAN = yes } }
+					if = { limit = { country_exists = COL } COL = { TU_tier_COL = yes } }
+					if = { limit = { country_exists = LAT } LAT = { TU_tier_LAT = yes } }
+					if = { limit = { country_exists = KAZ } KAZ = { TU_tier_KAZ = yes } }
+					if = { limit = { country_exists = LEI } LEI = { TU_tier_LEI = yes } }
+					if = { limit = { country_exists = SAR } SAR = { TU_tier_SAR = yes } }
+					if = { limit = { country_exists = KZD } KZD = { TU_tier_KZD = yes } }
+					if = { limit = { country_exists = IBE } IBE = { TU_tier_IBE = yes } }
+					if = { limit = { country_exists = SIR } SIR = { TU_tier_SIR = yes } }
+					if = { limit = { country_exists = HIG } HIG = { TU_tier_HIG = yes } }
+					if = { limit = { country_exists = MIN } MIN = { TU_tier_MIN = yes } }
+					if = { limit = { country_exists = BOL } BOL = { TU_tier_BOL = yes } }
+					if = { limit = { country_exists = RIM } RIM = { TU_tier_RIM = yes } }
+					if = { limit = { country_exists = KJE } KJE = { TU_tier_KJE = yes } }
+					if = { limit = { country_exists = LGM } LGM = { TU_tier_LGM = yes } }
+					if = { limit = { country_exists = SAM } SAM = { TU_tier_SAM = yes } }
+					if = { limit = { country_exists = RHO } RHO = { TU_tier_RHO = yes } }
+			}
 		}
 	}
 }
