@@ -6,17 +6,35 @@ TU_IBE_coast_category = {
 			original_tag = IBE
 		}
 
+		state_target = yes
+		on_map_mode = map_and_decisions_view
+
+		target_trigger = {
+			FROM = {
+				is_coastal = yes
+				is_owned_and_controlled_by = ROOT
+				NOT = { has_state_flag = TU_IBE_lighthouse }
+			}
+		}
+
 		available = {
 			check_variable = { TU_IBE_lighthouses < 5 }
+			NOT = { has_country_flag = TU_IBE_lighthouse_cooldown }
 		}
 
 		cost = 50
-		days_re_enable = 120
 
 		complete_effect = {
+			FROM = {
+				set_state_flag = TU_IBE_lighthouse
+				if = {
+					limit = { infrastructure < 5 }
+					add_building_construction = { type = infrastructure level = 1 instant_build = yes }
+				}
+			}
 			TU_IBE_lighthouses_1 = yes
 			TU_IBE_threat_m5 = yes
-			TU_build_infrastructure = yes
+			set_country_flag = { flag = TU_IBE_lighthouse_cooldown days = 120 value = 1 }
 		}
 
 		ai_will_do = {

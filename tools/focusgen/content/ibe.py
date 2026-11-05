@@ -255,9 +255,20 @@ cat_coast = C.category("coast", "해안", "The Coast",
                        ("바다의 위협은 매달 오르고, 등대 하나마다 덜 오른다. 70 이상이면 해안 마을이 침식된다.",
                         "The sea threat rises every month, less for each lighthouse. At 70+ coastal towns are eroded."),
                        visible=[HAS("coast")])
+# 주 대상: 디시전 탭을 열면 등대가 없는 해안 주마다 지도에 버튼이 뜬다. 주당 하나, 나라 전체 5개, 복원 사이 120일.
 C.d(cat_coast, "restore_lighthouse", "등대 복원", "Restore a Lighthouse",
-    [V("lighthouses", 1), THR(-5), "TU_build_infrastructure = yes"], cost=50, once=False, days_re_enable=120,
-    available=[AT_MOST("lighthouses", 4)], desc=("등대 +1 (최대 5), 위협 -5, 기반시설", "Lighthouse +1 (max 5), threat -5, infrastructure"),
+    ["""FROM = {
+	set_state_flag = TU_IBE_lighthouse
+	if = {
+		limit = { infrastructure < 5 }
+		add_building_construction = { type = infrastructure level = 1 instant_build = yes }
+	}
+}""", V("lighthouses", 1), THR(-5), "set_country_flag = { flag = TU_IBE_lighthouse_cooldown days = 120 value = 1 }"],
+    cost=50, once=False, state_target=True,
+    target=["is_coastal = yes", "is_owned_and_controlled_by = ROOT", "NOT = { has_state_flag = TU_IBE_lighthouse }"],
+    available=[AT_MOST("lighthouses", 4), "NOT = { has_country_flag = TU_IBE_lighthouse_cooldown }"],
+    desc=("이 해안 주의 등대를 복원한다: 등대 +1 (최대 5), 위협 -5, 이 주의 기반시설 +1. 복원 사이 120일.",
+          "Restore this coastal state's lighthouse: lighthouse +1 (max 5), threat -5, +1 infrastructure here. 120 days between restorations."),
     icon="GFX_decision_generic_construction")
 C.d(cat_coast, "coastal_patrol", "해안 순찰", "Coastal Patrol", [THR(-10), "army_experience = 5"], cost=25, once=False, days_re_enable=90,
     icon="GFX_decision_generic_naval")

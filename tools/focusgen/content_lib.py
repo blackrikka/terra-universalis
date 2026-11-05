@@ -109,12 +109,14 @@ class Country:
 
     def d(self, cat, sid, ko, en, effect, cost=25, visible=(), available=(), desc=("", ""),
           icon="GFX_decision_generic_political_discourse", once=True, days_re_enable=None, ai=1,
-          days_remove=None, remove_effect=None, target=None):
+          days_remove=None, remove_effect=None, target=None, state_target=False):
+        """target = FROM(대상) 조건. state_target=True 면 주 대상 디시전: 조건에 맞는 주마다 하나씩 생기고,
+        디시전 탭을 열면 지도에서 그 주 위에 버튼이 뜬다 (효과 안에서 FROM = 그 주)."""
         did = "TU_%s_%s" % (self.tag, sid)
         self.decisions[cat].append(dict(id=did, icon=icon, effect=list(effect), cost=cost, visible=list(visible),
                                         available=list(available), once=once, days_re_enable=days_re_enable,
                                         ai=ai, days_remove=days_remove, remove_effect=remove_effect,
-                                        target=target))
+                                        target=target, state_target=state_target))
         self.loc(did, ko, en)
         self.loc(did + "_desc", desc[0], desc[1])
         return did
@@ -230,6 +232,8 @@ class Country:
                 out.append("%s = {\n" % cid)
                 for d in self.decisions[cid]:
                     s = "\t%s = {\n\t\ticon = %s\n\n\t\tallowed = {\n\t\t\toriginal_tag = %s\n\t\t}\n" % (d["id"], d["icon"], t)
+                    if d["state_target"]:
+                        s += "\n\t\tstate_target = yes\n\t\ton_map_mode = map_and_decisions_view\n"
                     if d["target"]:
                         s += "\n\t\ttarget_trigger = {\n\t\t\tFROM = {\n%s\n\t\t\t}\n\t\t}\n" % ind(d["target"], 4)
                     for key in ("visible", "available"):
