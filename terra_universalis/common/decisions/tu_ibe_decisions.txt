@@ -24,22 +24,36 @@ TU_IBE_coast_category = {
 		available = {
 			check_variable = { TU_IBE_lighthouses < 5 }
 			NOT = { has_country_flag = TU_IBE_lighthouse_cooldown }
+			FROM = { NOT = { has_state_flag = TU_IBE_lh_building } }
 		}
 
 		cost = 50
+		days_remove = 60
+
+		modifier = {
+			civilian_factory_use = 2
+		}
 
 		complete_effect = {
-			FROM = {
-				set_state_flag = TU_IBE_lighthouse
-				if = {
-					limit = { infrastructure < 5 }
-					add_building_construction = { type = infrastructure level = 1 instant_build = yes }
-				}
-				TU_IBE_lh_update_risk = yes
-			}
-			TU_IBE_lighthouses_1 = yes
-			TU_IBE_threat_m5 = yes
+			FROM = { set_state_flag = { flag = TU_IBE_lh_building days = 70 value = 1 } }
 			set_country_flag = { flag = TU_IBE_lighthouse_cooldown days = 120 value = 1 }
+		}
+
+		remove_effect = {
+			FROM = { clr_state_flag = TU_IBE_lh_building }
+			if = {
+				limit = { FROM = { is_owned_and_controlled_by = ROOT } }
+				FROM = {
+					set_state_flag = TU_IBE_lighthouse
+					if = {
+						limit = { infrastructure < 5 }
+						add_building_construction = { type = infrastructure level = 1 instant_build = yes }
+					}
+					TU_IBE_lh_update_risk = yes
+				}
+				TU_IBE_lighthouses_1 = yes
+				TU_IBE_threat_m5 = yes
+			}
 		}
 
 		ai_will_do = {
@@ -61,6 +75,7 @@ TU_IBE_coast_category = {
 			FROM = {
 				is_owned_and_controlled_by = ROOT
 				has_state_flag = TU_IBE_lighthouse
+				NOT = { has_state_flag = TU_IBE_lh_damaged }
 				check_variable = { TU_IBE_lh_risk > 14.999 }
 			}
 		}
@@ -94,6 +109,7 @@ TU_IBE_coast_category = {
 			FROM = {
 				is_owned_and_controlled_by = ROOT
 				has_state_flag = TU_IBE_lighthouse
+				NOT = { has_state_flag = TU_IBE_lh_damaged }
 				check_variable = { TU_IBE_lh_risk > 8.999 }
 				check_variable = { TU_IBE_lh_risk < 15 }
 			}
@@ -128,6 +144,7 @@ TU_IBE_coast_category = {
 			FROM = {
 				is_owned_and_controlled_by = ROOT
 				has_state_flag = TU_IBE_lighthouse
+				NOT = { has_state_flag = TU_IBE_lh_damaged }
 				check_variable = { TU_IBE_lh_risk > 3.999 }
 				check_variable = { TU_IBE_lh_risk < 9 }
 			}
@@ -162,6 +179,7 @@ TU_IBE_coast_category = {
 			FROM = {
 				is_owned_and_controlled_by = ROOT
 				has_state_flag = TU_IBE_lighthouse
+				NOT = { has_state_flag = TU_IBE_lh_damaged }
 				check_variable = { TU_IBE_lh_risk > 2.009 }
 				check_variable = { TU_IBE_lh_risk < 4 }
 			}
@@ -196,6 +214,7 @@ TU_IBE_coast_category = {
 			FROM = {
 				is_owned_and_controlled_by = ROOT
 				has_state_flag = TU_IBE_lighthouse
+				NOT = { has_state_flag = TU_IBE_lh_damaged }
 				check_variable = { TU_IBE_lh_risk < 2.01 }
 			}
 		}
@@ -265,7 +284,7 @@ TU_IBE_coast_category = {
 		}
 	}
 
-	TU_IBE_lh_crumbling = {
+	TU_IBE_lh_stage1 = {
 		icon = GFX_decision_generic_civil_support
 
 		allowed = {
@@ -277,12 +296,12 @@ TU_IBE_coast_category = {
 
 		target_trigger = {
 			FROM = {
+				is_owned_and_controlled_by = ROOT
 				has_state_flag = TU_IBE_lighthouse
+				has_state_flag = TU_IBE_lh_damaged
+				NOT = { has_state_flag = TU_IBE_lh_repairing }
+				NOT = { has_state_flag = TU_IBE_lh_severe }
 			}
-		}
-
-		activation = {
-			always = no
 		}
 
 		visible = {
@@ -293,31 +312,42 @@ TU_IBE_coast_category = {
 			always = no
 		}
 
-		days_mission_timeout = 90
-		is_good = no
-		fire_only_once = no
+		cost = 0
 
-		cancel_trigger = {
+		ai_will_do = {
+			base = 0
+		}
+	}
+
+	TU_IBE_lh_stage2 = {
+		icon = GFX_decision_generic_civil_support
+
+		allowed = {
+			original_tag = IBE
+		}
+
+		state_target = yes
+		on_map_mode = map_and_decisions_view
+
+		target_trigger = {
 			FROM = {
-				OR = {
-					NOT = { has_state_flag = TU_IBE_lh_damaged }
-					has_state_flag = TU_IBE_lh_repairing
-					NOT = { is_owned_and_controlled_by = ROOT }
-				}
+				is_owned_and_controlled_by = ROOT
+				has_state_flag = TU_IBE_lighthouse
+				has_state_flag = TU_IBE_lh_damaged
+				NOT = { has_state_flag = TU_IBE_lh_repairing }
+				has_state_flag = TU_IBE_lh_severe
 			}
 		}
 
-		timeout_effect = {
-			FROM = {
-				clr_state_flag = TU_IBE_lighthouse
-				clr_state_flag = TU_IBE_lh_damaged
-				save_event_target_as = tu_ibe_lh_state
-			}
-			TU_IBE_lighthouses_m1 = yes
-			TU_IBE_threat_5 = yes
-			set_country_flag = TU_IBE_lighthouse_fell
-			country_event = { id = tu_ibe_ev.51 }
+		visible = {
+			has_country_flag = TU_IBE_coast
 		}
+
+		available = {
+			always = no
+		}
+
+		cost = 0
 
 		ai_will_do = {
 			base = 0
@@ -363,6 +393,7 @@ TU_IBE_coast_category = {
 		remove_effect = {
 			FROM = {
 				clr_state_flag = TU_IBE_lh_damaged
+				clr_state_flag = TU_IBE_lh_severe
 				clr_state_flag = TU_IBE_lh_repairing
 			}
 		}
@@ -401,7 +432,10 @@ TU_IBE_coast_category = {
 		cost = 10
 
 		complete_effect = {
-			FROM = { clr_state_flag = TU_IBE_lh_damaged }
+			FROM = {
+				clr_state_flag = TU_IBE_lh_damaged
+				clr_state_flag = TU_IBE_lh_severe
+			}
 			TU_IBE_threat_m3 = yes
 			army_experience = 2
 		}

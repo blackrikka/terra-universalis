@@ -1,4 +1,9 @@
 on_actions = {
+	on_daily_IBE = {
+		effect = {
+			TU_IBE_lighthouse_daily = yes
+		}
+	}
 	on_monthly = {
 		effect = {
 			if = {

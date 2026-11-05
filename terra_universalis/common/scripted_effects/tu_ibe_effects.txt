@@ -1017,19 +1017,17 @@ TU_IBE_lighthouse_monthly = {
 
 TU_IBE_lh_damage = {
 	set_state_flag = TU_IBE_lh_damaged
+	clr_state_flag = TU_IBE_lh_severe
+	set_variable = { TU_IBE_lh_days = 45 }
 	save_event_target_as = tu_ibe_lh_state
-	ROOT = {
-		activate_targeted_decision = { target = PREV decision = TU_IBE_lh_crumbling }
-		country_event = { id = tu_ibe_ev.50 }
-	}
+	ROOT = { country_event = { id = tu_ibe_ev.50 } }
 }
 
-TU_IBE_lighthouses_1 = {
-	custom_effect_tooltip = TU_IBE_lighthouses_1_tt
-	hidden_effect = {
-		add_to_variable = { TU_IBE_lighthouses = 1 }
-		clamp_variable = { var = TU_IBE_lighthouses min = 0 max = 5 }
-	}
+TU_IBE_lh_worsen = {
+	set_state_flag = TU_IBE_lh_severe
+	set_variable = { TU_IBE_lh_days = 45 }
+	save_event_target_as = tu_ibe_lh_state
+	ROOT = { country_event = { id = tu_ibe_ev.53 } }
 }
 
 TU_IBE_lighthouses_m1 = {
@@ -1045,6 +1043,51 @@ TU_IBE_threat_5 = {
 	hidden_effect = {
 		add_to_variable = { TU_IBE_threat = 5 }
 		clamp_variable = { var = TU_IBE_threat min = 0 max = 100 }
+	}
+}
+
+TU_IBE_lh_collapse = {
+	clr_state_flag = TU_IBE_lighthouse
+	clr_state_flag = TU_IBE_lh_damaged
+	clr_state_flag = TU_IBE_lh_severe
+	save_event_target_as = tu_ibe_lh_state
+	ROOT = {
+		TU_IBE_lighthouses_m1 = yes
+		TU_IBE_threat_5 = yes
+		set_country_flag = TU_IBE_lighthouse_fell
+		country_event = { id = tu_ibe_ev.51 }
+	}
+}
+
+TU_IBE_lighthouse_daily = {
+	if = {
+		limit = { check_variable = { TU_IBE_lh_damaged > 0 } }
+		every_owned_state = {
+			limit = {
+				has_state_flag = TU_IBE_lh_damaged
+				NOT = { has_state_flag = TU_IBE_lh_repairing }
+				is_owned_and_controlled_by = ROOT
+			}
+			subtract_from_variable = { TU_IBE_lh_days = 1 }
+			if = {
+				limit = { check_variable = { TU_IBE_lh_days < 1 } }
+				if = {
+					limit = { has_state_flag = TU_IBE_lh_severe }
+					TU_IBE_lh_collapse = yes
+				}
+				else = {
+					TU_IBE_lh_worsen = yes
+				}
+			}
+		}
+	}
+}
+
+TU_IBE_lighthouses_1 = {
+	custom_effect_tooltip = TU_IBE_lighthouses_1_tt
+	hidden_effect = {
+		add_to_variable = { TU_IBE_lighthouses = 1 }
+		clamp_variable = { var = TU_IBE_lighthouses min = 0 max = 5 }
 	}
 }
 
