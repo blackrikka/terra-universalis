@@ -5,7 +5,7 @@
   1. 바다의 위협 TU_IBE_threat (0~100, 시작 40): 매달 +2 (복원한 등대 하나마다 -0.5 덜 오름). 70 이상이면 '심해의 침식'
      이벤트(해안 마을 피해)가 반복된다. 해안 감시·정화 작전 디시전과 중점으로 낮춘다.
   2. 등대 복원 TU_IBE_lighthouses (0~5): 디시전으로 하나씩 복원 (기반시설 + 위협 감소).
-  3. 세력 균형 "심판소 대 왕관" (TU_IBE_bop): 왼쪽 = 심판소, 오른쪽 = 왕관. 2단계부터 깃발.
+  3. (세력 균형 "심판소 대 왕관"은 사양서 34에서 삭제)
 정치 결말 셋 (서로 배타): 심판관의 나라(심판소 2단계) / 왕관의 부활(왕관 2단계) / 바다와의 화해(위협 20 이하 + 아비살 사냥꾼 접촉).
 
 실행: python -I tools/focusgen/content/ibe.py && python -I tools/focusgen/merge_focus.py --tag IBE
@@ -51,12 +51,12 @@ def AT_MOST(var, n):
     return "check_variable = { TU_IBE_%s < %d }" % (var, n + 1)
 
 
-def INQ(v):
-    return "add_power_balance_value = { id = %s value = -%s }" % (BOP, v)
+def INQ(v):   # 세력 균형 삭제 (사양서 34): 효과 없음
+    return ""
 
 
 def CROWN(v):
-    return "add_power_balance_value = { id = %s value = %s }" % (BOP, v)
+    return ""
 
 
 def FLAG(x):
@@ -71,17 +71,6 @@ def EV(n, days=0):
     return "country_event = { id = tu_ibe_ev.%d%s }" % (n, " days = %d" % days if days else "")
 
 
-C.set_bop(("inquisition", "심판소", "The Inquisition", "GFX_bop_ETH_centralisation_side"),
-          ("crown", "왕관", "The Crown", "GFX_bop_ITA_king_vittorio_side"), -0.3,
-          [(0, 0.3, {"stability_factor": 0.03}),
-           (0.3, 0.6, {"stability_factor": 0.05, "political_power_gain": -0.05}, "TU_IBE_inquisition_strong"),
-           (0.6, 1, {"stability_factor": 0.08, "political_power_gain": -0.1, "consumer_goods_factor": 0.03}, "TU_IBE_inquisition_strong")],
-          [(0, 0.3, {"political_power_gain": 0.05}),
-           (0.3, 0.6, {"political_power_gain": 0.1, "stability_factor": -0.03}, "TU_IBE_crown_strong"),
-           (0.6, 1, {"political_power_gain": 0.15, "war_support_factor": 0.05, "stability_factor": -0.05}, "TU_IBE_crown_strong")])
-C.loc(BOP, "심판소 대 왕관", "Inquisition vs Crown")
-C.loc(BOP + "_desc", "대침묵 이후 이베리아를 쥔 것은 심판소다. 잊혀 가던 왕관이 다시 목소리를 낸다.",
-      "Since the Great Silence the Inquisition has held Iberia. The half-forgotten Crown speaks up again.")
 C.history += ["set_variable = { TU_IBE_threat = 40 }", "set_variable = { TU_IBE_lighthouses = 0 }",
               "add_ideas = { TU_IBE_great_silence TU_IBE_fear_of_the_sea }"]
 C.effects.append("""TU_IBE_monthly = {
@@ -134,9 +123,9 @@ f("purge_cults", "심해 숭배 단속", "Purge the Deep-Sea Cults", pre=["heres
 f("faith_laws", "신앙 법", "Faith Laws", pre=["purge_cults"], me=["tolerance"], reward=[INQ("0.05")])
 f("tolerance", "관용령", "Edict of Tolerance", pre=["purge_cults"], me=["faith_laws"], reward=[CROWN("0.05")])
 f("inquisitor_state", "심판관의 나라", "State of the Inquisitors", pre=[["faith_laws", "tolerance"], "inquisitor_guard"],
-  me=["crown_restored", "sea_reconciliation"], cost=15, theme=False, available=[HAS("inquisition_strong")],
+  me=["crown_restored", "sea_reconciliation"], cost=15, theme=False,
   reward=[FLAG("path_inq"), "add_ideas = TU_IBE_inquisitor_state", EV(28)],
-  desc=("심판소가 이베리아를 영원히 지킨다. (심판소 쪽 세력 균형 2단계 이상)", "The Inquisition guards Iberia forever. (Inquisition stage 2+)"))
+  desc=("심판소가 이베리아를 영원히 지킨다.", "The Inquisition guards Iberia forever."))
 f("eternal_vigil", "영원한 경계", "Eternal Vigil Watch", pre=["inquisitor_state"])
 f("inquisition_navy", "심판소 함대", "Inquisition Fleet", pre=["inquisitor_state"])
 f("judgement_day", "심판의 날", "Day of Judgement Campaign", pre=["eternal_vigil", "inquisition_navy"], theme=False,
@@ -150,9 +139,9 @@ f("royal_treasury", "왕실 재정", "Royal Treasury", pre=["nobles_return"])
 f("royal_army", "왕립군", "Royal Army Regiments", pre=["royal_heir"])
 f("crown_charter", "왕관 헌장", "Crown Charter", pre=["royal_treasury", "royal_army"], reward=[CROWN("0.05")])
 f("crown_restored", "왕관의 부활", "The Crown Restored", pre=["crown_charter"], me=["inquisitor_state", "sea_reconciliation"],
-  cost=15, theme=False, available=[HAS("crown_strong")],
+  cost=15, theme=False,
   reward=[FLAG("path_crown"), "add_ideas = TU_IBE_crown_restored", EV(29)],
-  desc=("왕이 다시 이베리아를 다스린다. (왕관 쪽 세력 균형 2단계 이상)", "A king rules Iberia again. (Crown stage 2+)"))
+  desc=("왕이 다시 이베리아를 다스린다.", "A king rules Iberia again."))
 f("royal_reconstruction", "왕실 재건 사업", "Royal Reconstruction Works", pre=["crown_restored"], econ=True)
 f("royal_navy", "왕립 해군", "Royal Navy", pre=["crown_restored"])
 f("golden_age", "새로운 황금기", "A New Golden Age", pre=["royal_reconstruction", "royal_navy"], theme=False,
@@ -570,7 +559,7 @@ C.ev(21, ("숭배자들의 지하실", "The Cultists' Cellar"),
      [("모두 체포한다.", "Arrest them all.", [INQ("0.05"), "add_stability = 0.02"], 60), ("감시만 한다.", "Only watch them.", [THR(5), "add_political_power = 25"], 40)])
 C.ev(22, ("왕실의 후계자", "The Royal Heir"),
      ("오랫동안 숨어 지내던 왕가의 후계자가 모습을 드러냈다.", "The long-hidden heir of the royal house has stepped into the light."),
-     [("왕관을 지지한다.", "Support the Crown.", [CROWN("0.1")], 50), ("심판소의 판단을 따른다.", "Defer to the Inquisition.", [INQ("0.05")], 50)])
+     [("왕관을 지지한다.", "Support the Crown.", ["add_political_power = 25"], 50), ("심판소의 판단을 따른다.", "Defer to the Inquisition.", ["add_stability = 0.02"], 50)])
 C.ev(23, ("바닷가의 이방인", "Strangers by the Sea"),
      ("바닷가에서 이상한 차림의 사냥꾼들을 봤다는 보고가 들어왔다. 그들은 바다의 것들을 사냥한다고 한다.",
       "There are reports of oddly dressed hunters by the shore. They are said to hunt the things from the sea."),
@@ -582,7 +571,7 @@ C.ev(25, ("아비살 사냥꾼", "The Abyssal Hunters"),
 C.ev(24, ("라테라노와의 분열", "The Laterano Schism"),
      ("라테라노 교회는 이베리아 심판소의 방식을 오래전부터 비판해 왔다. 라테라노의 사절이 대화를 청했다.",
       "The Laterano church has long criticised Iberia's Inquisition. A Laterano envoy asks for talks."),
-     [("대화에 응한다.", "Agree to talk.", [CROWN("0.03"), "add_political_power = 25"], 50), ("거절한다.", "Refuse.", [INQ("0.05")], 50)])
+     [("대화에 응한다.", "Agree to talk.", [CROWN("0.03"), "add_political_power = 25"], 50), ("거절한다.", "Refuse.", ["add_stability = 0.02"], 50)])
 C.ev(26, ("밀려온 표류물", "Washed Ashore"), ("해변에 정체를 알 수 없는 생물의 사체가 밀려왔다.", "The carcass of an unknown creature washed ashore."),
      [("연구한다.", "Study it.", ["add_tech_bonus = { name = TU_IBE_carcass bonus = 0.5 uses = 1 category = electronics }"], 50),
       ("태워 버린다.", "Burn it.", [THR(-5), "add_stability = 0.02"], 50)],
@@ -598,7 +587,7 @@ C.ev(30, ("바다와의 화해", "Reconciliation with the Sea"), ("이베리아�
      [("바다를 향해.", "Toward the sea.", ["add_stability = 0.05"], 1)])
 C.ev(31, ("심판관의 과잉 진압", "Inquisitorial Excess"), ("심판관들이 무고한 어민들을 이단으로 몰았다는 원성이 높다.", "There is outrage that inquisitors branded innocent fishermen heretics."),
      [("심판관을 문책한다.", "Discipline the inquisitors.", [CROWN("0.05"), "add_stability = 0.02"], 50), ("심판은 옳았다.", "The judgement was right.", [INQ("0.05"), "add_stability = -0.03"], 50)],
-     trigger=["original_tag = IBE", HAS("inquisition_strong")], mtth=300)
+     trigger=["original_tag = IBE", "has_completed_focus = TU_IBE_faith_laws"], mtth=300)
 
 # 추가 (목표 분량)
 for sid, ko, en, pre, econ in (
@@ -646,7 +635,7 @@ C.ev(33, ("심판관 아이린", "Inquisitor Irene"), ("젊은 심판관 아이�
      [("그녀를 승진시킨다.", "Promote her.", ["army_experience = 15", THR(-5)], 1)],
      trigger=["original_tag = IBE", "has_completed_focus = TU_IBE_inquisitor_academy"], mtth=300)
 C.ev(34, ("귀족들의 불만", "Grumbling Nobles"), ("귀족들이 심판소의 간섭에 불만을 터뜨렸다.", "The nobles complain loudly about the Inquisition's meddling."),
-     [("귀족 편을 든다.", "Side with the nobles.", [CROWN("0.05"), "add_stability = -0.02"], 50), ("무시한다.", "Ignore them.", [INQ("0.03")], 50)],
+     [("귀족 편을 든다.", "Side with the nobles.", [CROWN("0.05"), "add_stability = -0.02"], 50), ("무시한다.", "Ignore them.", ["add_stability = 0.01"], 50)],
      trigger=["original_tag = IBE", "has_completed_focus = TU_IBE_nobles_return"], mtth=300)
 
 # ------------------------------------------------------------------ 리워크 (사양서 27): 해안 방어 · 심판관 군단 · 고원 · 경제 · 외교

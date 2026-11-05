@@ -11,10 +11,7 @@ TU_VIC_crown_category = {
 		fire_only_once = yes
 
 		complete_effect = {
-			add_power_balance_value = {
-				id = TU_VIC_bop
-				value = 0.05
-			}
+			add_stability = 0.03
 		}
 
 		ai_will_do = {
@@ -33,10 +30,7 @@ TU_VIC_crown_category = {
 		fire_only_once = yes
 
 		complete_effect = {
-			add_power_balance_value = {
-				id = TU_VIC_bop
-				value = 0.05
-			}
+			add_stability = 0.03
 		}
 
 		ai_will_do = {
@@ -55,10 +49,7 @@ TU_VIC_crown_category = {
 		fire_only_once = yes
 
 		complete_effect = {
-			add_power_balance_value = {
-				id = TU_VIC_bop
-				value = -0.05
-			}
+			add_war_support = 0.03
 		}
 
 		ai_will_do = {

@@ -76,7 +76,6 @@
 		}
 
 		completion_reward = {
-			add_power_balance_value = { id = TU_KAZ_bop value = -0.05 }
 			add_political_power = 60
 			set_country_flag = TU_KAZ_broadcast
 		}
@@ -97,7 +96,6 @@
 		}
 
 		completion_reward = {
-			add_power_balance_value = { id = TU_KAZ_bop value = -0.03 }
 			add_tech_bonus = { name = TU_KAZ_betting_industry bonus = 0.75 uses = 1 category = industry category = construction_tech }
 		}
 	}
@@ -118,7 +116,6 @@
 		}
 
 		completion_reward = {
-			add_power_balance_value = { id = TU_KAZ_bop value = -0.1 }
 			add_political_power = 75
 		}
 	}
@@ -139,7 +136,6 @@
 		}
 
 		completion_reward = {
-			add_power_balance_value = { id = TU_KAZ_bop value = 0.1 }
 			TU_KAZ_fame_10 = yes
 		}
 	}
@@ -288,7 +284,6 @@
 		}
 
 		completion_reward = {
-			add_power_balance_value = { id = TU_KAZ_bop value = -0.05 }
 			add_political_power = 60
 			add_stability = 0.03
 		}
@@ -309,7 +304,6 @@
 		}
 
 		completion_reward = {
-			add_power_balance_value = { id = TU_KAZ_bop value = -0.05 }
 			add_political_power = 60
 			add_stability = 0.03
 		}
@@ -330,7 +324,6 @@
 		}
 
 		completion_reward = {
-			add_power_balance_value = { id = TU_KAZ_bop value = -0.03 }
 			add_political_power = 60
 			add_stability = 0.03
 		}
@@ -351,7 +344,6 @@
 		}
 
 		completion_reward = {
-			add_power_balance_value = { id = TU_KAZ_bop value = -0.05 }
 			add_stability = 0.03
 			country_event = { id = tu_kaz_ev.23 days = 10 }
 		}
@@ -372,7 +364,6 @@
 		}
 
 		completion_reward = {
-			add_power_balance_value = { id = TU_KAZ_bop value = -0.03 }
 			add_political_power = 60
 			add_tech_bonus = { name = TU_KAZ_stock_controls bonus = 0.75 uses = 1 category = industry }
 		}
@@ -393,7 +384,6 @@
 		}
 
 		completion_reward = {
-			add_power_balance_value = { id = TU_KAZ_bop value = -0.05 }
 			set_country_flag = TU_KAZ_corp_knights
 		}
 	}
@@ -414,7 +404,6 @@
 		}
 
 		completion_reward = {
-			add_power_balance_value = { id = TU_KAZ_bop value = -0.1 }
 			swap_ideas = { remove_idea = TU_KAZ_union_grip add_idea = TU_KAZ_union_monopoly }
 		}
 	}
@@ -435,7 +424,6 @@
 		}
 
 		completion_reward = {
-			add_power_balance_value = { id = TU_KAZ_bop value = 0.05 }
 			swap_ideas = { remove_idea = TU_KAZ_union_grip add_idea = TU_KAZ_fair_market }
 		}
 	}
@@ -450,10 +438,6 @@
 		cost = 15
 
 		search_filters = { FOCUS_FILTER_POLITICAL }
-
-		available = {
-			has_country_flag = TU_KAZ_union_strong
-		}
 
 		ai_will_do = {
 			base = 1
@@ -582,7 +566,6 @@
 		}
 
 		completion_reward = {
-			add_power_balance_value = { id = TU_KAZ_bop value = 0.05 }
 			add_doctrine_cost_reduction = { name = TU_KAZ_knights_assoc cost_reduction = 0.4 uses = 1 category = land_doctrine }
 			army_experience = 25
 		}
@@ -603,7 +586,6 @@
 		}
 
 		completion_reward = {
-			add_power_balance_value = { id = TU_KAZ_bop value = 0.05 }
 			TU_KAZ_fame_5 = yes
 			add_political_power = 40
 		}
@@ -624,7 +606,6 @@
 		}
 
 		completion_reward = {
-			add_power_balance_value = { id = TU_KAZ_bop value = 0.03 }
 			add_doctrine_cost_reduction = { name = TU_KAZ_knight_houses cost_reduction = 0.4 uses = 1 category = land_doctrine }
 			army_experience = 25
 		}
@@ -645,7 +626,6 @@
 		}
 
 		completion_reward = {
-			add_power_balance_value = { id = TU_KAZ_bop value = 0.05 }
 			add_political_power = 60
 			add_stability = 0.03
 		}
@@ -687,7 +667,6 @@
 
 		completion_reward = {
 			swap_ideas = { remove_idea = TU_KAZ_fading_knighthood add_idea = TU_KAZ_knightly_code }
-			add_power_balance_value = { id = TU_KAZ_bop value = 0.05 }
 		}
 	}
 
@@ -729,7 +708,6 @@
 		}
 
 		completion_reward = {
-			add_power_balance_value = { id = TU_KAZ_bop value = 0.05 }
 			add_stability = 0.05
 		}
 	}
@@ -744,10 +722,6 @@
 		cost = 15
 
 		search_filters = { FOCUS_FILTER_POLITICAL }
-
-		available = {
-			has_country_flag = TU_KAZ_knights_strong
-		}
 
 		ai_will_do = {
 			base = 1
@@ -980,7 +954,6 @@
 		completion_reward = {
 			TU_KAZ_fame_10 = yes
 			add_stability = -0.03
-			add_power_balance_value = { id = TU_KAZ_bop value = 0.05 }
 		}
 	}
 
@@ -1923,7 +1896,6 @@
 		}
 
 		completion_reward = {
-			add_power_balance_value = { id = TU_KAZ_bop value = -0.03 }
 			add_tech_bonus = { name = TU_KAZ_ad_industry bonus = 0.75 uses = 1 category = industry category = construction_tech }
 			TU_build_civ_factory = yes
 		}
@@ -2305,7 +2277,6 @@
 		}
 
 		completion_reward = {
-			add_power_balance_value = { id = TU_KAZ_bop value = 0.03 }
 			add_doctrine_cost_reduction = { name = TU_KAZ_rule_reform cost_reduction = 0.4 uses = 1 category = land_doctrine }
 			army_experience = 25
 		}
@@ -2365,7 +2336,6 @@
 		}
 
 		completion_reward = {
-			add_power_balance_value = { id = TU_KAZ_bop value = 0.03 }
 			TU_KAZ_fame_5 = yes
 			add_doctrine_cost_reduction = { name = TU_KAZ_oath_ceremony cost_reduction = 0.4 uses = 1 category = land_doctrine }
 			army_experience = 25

@@ -84,7 +84,6 @@ country_event = {
 			factor = 50
 		}
 		add_stability = -0.03
-		add_power_balance_value = { id = TU_IBE_bop value = -0.05 }
 		TU_IBE_threat_m5 = yes
 	}
 
@@ -110,7 +109,6 @@ country_event = {
 		ai_chance = {
 			factor = 60
 		}
-		add_power_balance_value = { id = TU_IBE_bop value = -0.05 }
 		add_stability = 0.02
 	}
 
@@ -136,7 +134,7 @@ country_event = {
 		ai_chance = {
 			factor = 50
 		}
-		add_power_balance_value = { id = TU_IBE_bop value = 0.1 }
+		add_political_power = 25
 	}
 
 	option = {
@@ -144,7 +142,7 @@ country_event = {
 		ai_chance = {
 			factor = 50
 		}
-		add_power_balance_value = { id = TU_IBE_bop value = -0.05 }
+		add_stability = 0.02
 	}
 }
 
@@ -185,7 +183,6 @@ country_event = {
 			factor = 30
 		}
 		set_country_flag = TU_IBE_hunters_met
-		add_power_balance_value = { id = TU_IBE_bop value = -0.05 }
 	}
 }
 
@@ -201,7 +198,6 @@ country_event = {
 		ai_chance = {
 			factor = 50
 		}
-		add_power_balance_value = { id = TU_IBE_bop value = 0.03 }
 		add_political_power = 25
 	}
 
@@ -210,7 +206,7 @@ country_event = {
 		ai_chance = {
 			factor = 50
 		}
-		add_power_balance_value = { id = TU_IBE_bop value = -0.05 }
+		add_stability = 0.02
 	}
 }
 
@@ -330,7 +326,7 @@ country_event = {
 
 	trigger = {
 		original_tag = IBE
-		has_country_flag = TU_IBE_inquisition_strong
+		has_completed_focus = TU_IBE_faith_laws
 	}
 	fire_only_once = yes
 
@@ -343,7 +339,6 @@ country_event = {
 		ai_chance = {
 			factor = 50
 		}
-		add_power_balance_value = { id = TU_IBE_bop value = 0.05 }
 		add_stability = 0.02
 	}
 
@@ -352,7 +347,6 @@ country_event = {
 		ai_chance = {
 			factor = 50
 		}
-		add_power_balance_value = { id = TU_IBE_bop value = -0.05 }
 		add_stability = -0.03
 	}
 }
@@ -429,7 +423,6 @@ country_event = {
 		ai_chance = {
 			factor = 50
 		}
-		add_power_balance_value = { id = TU_IBE_bop value = 0.05 }
 		add_stability = -0.02
 	}
 
@@ -438,7 +431,7 @@ country_event = {
 		ai_chance = {
 			factor = 50
 		}
-		add_power_balance_value = { id = TU_IBE_bop value = -0.03 }
+		add_stability = 0.01
 	}
 }
 

@@ -675,7 +675,6 @@
 		prerequisite = { focus = TU_RHO_ark_final }
 
 		completion_reward = {
-			add_power_balance_value = { id = TU_RHO_bop value = -0.1 }
 			add_political_power = 35
 			add_stability = 0.02
 		}
@@ -695,7 +694,6 @@
 		prerequisite = { focus = TU_RHO_ark_council }
 
 		completion_reward = {
-			add_power_balance_value = { id = TU_RHO_bop value = -0.1 }
 			add_political_power = 60
 			add_stability = 0.03
 		}
@@ -715,7 +713,6 @@
 		prerequisite = { focus = TU_RHO_ark_accord }
 
 		completion_reward = {
-			add_power_balance_value = { id = TU_RHO_bop value = -0.15 }
 			country_event = { id = tu_rho_ev.2 }
 			add_political_power = 100
 			add_stability = 0.05
@@ -755,7 +752,6 @@
 		prerequisite = { focus = TU_RHO_ark_envoy }
 
 		completion_reward = {
-			add_power_balance_value = { id = TU_RHO_bop value = -0.05 }
 			every_country = { news_event = { id = tu_rho_ev.11 hours = 6 } }
 			add_political_power = 100
 			add_stability = 0.05
@@ -1751,7 +1747,6 @@
 		prerequisite = { focus = TU_RHO_front_mobilize }
 
 		completion_reward = {
-			add_power_balance_value = { id = TU_RHO_bop value = 0.05 }
 			army_experience = 25
 			add_war_support = 0.03
 			add_doctrine_cost_reduction = { name = TU_RHO_front_assault cost_reduction = 0.4 uses = 1 category = land_doctrine }
@@ -1791,7 +1786,6 @@
 		prerequisite = { focus = TU_RHO_front_siege }
 
 		completion_reward = {
-			add_power_balance_value = { id = TU_RHO_bop value = 0.1 }
 			army_experience = 40
 			add_war_support = 0.05
 			add_doctrine_cost_reduction = { name = TU_RHO_front_victory cost_reduction = 0.5 uses = 1 category = land_doctrine }
@@ -1984,7 +1978,6 @@
 		prerequisite = { focus = TU_RHO_babel_library }
 
 		completion_reward = {
-			add_power_balance_value = { id = TU_RHO_bop value = 0.05 }
 			add_tech_bonus = { name = TU_RHO_babel_council bonus = 1.0 uses = 1 category = electronics category = tu_originium_tech }
 		}
 
@@ -2022,7 +2015,6 @@
 		prerequisite = { focus = TU_RHO_shadow_cell }
 
 		completion_reward = {
-			add_power_balance_value = { id = TU_RHO_bop value = 0.05 }
 			army_experience = 25
 			add_war_support = 0.03
 			add_doctrine_cost_reduction = { name = TU_RHO_shadow_ops cost_reduction = 0.4 uses = 1 category = land_doctrine }
@@ -2062,7 +2054,6 @@
 		prerequisite = { focus = TU_RHO_shadow_pact }
 
 		completion_reward = {
-			add_power_balance_value = { id = TU_RHO_bop value = 0.1 }
 			add_tech_bonus = { name = TU_RHO_shadow_crown bonus = 1.0 uses = 1 category = radar_tech category = electronics }
 			add_stability = 0.05
 		}

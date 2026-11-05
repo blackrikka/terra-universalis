@@ -23,10 +23,6 @@ country_event = {
 		}
 		add_political_power = 30
 		add_stability = 0.02
-		add_power_balance_value = {
-			id = TU_URS_bop
-			value = -0.05
-		}
 	}
 
 	option = {
@@ -35,10 +31,6 @@ country_event = {
 			factor = 30
 		}
 		add_political_power = 15
-		add_power_balance_value = {
-			id = TU_URS_bop
-			value = 0.05
-		}
 	}
 
 	option = {
@@ -66,10 +58,6 @@ country_event = {
 		}
 		add_war_support = 0.03
 		add_political_power = 20
-		add_power_balance_value = {
-			id = TU_URS_bop
-			value = -0.05
-		}
 	}
 
 	option = {
@@ -112,10 +100,6 @@ country_event = {
 		ai_chance = {
 			factor = 40
 		}
-		add_power_balance_value = {
-			id = TU_URS_bop
-			value = 0.05
-		}
 		add_stability = 0.02
 	}
 
@@ -143,10 +127,6 @@ country_event = {
 		}
 		add_political_power = 30
 		add_stability = 0.02
-		add_power_balance_value = {
-			id = TU_URS_bop
-			value = 0.05
-		}
 	}
 
 	option = {
@@ -293,10 +273,6 @@ country_event = {
 			factor = 40
 		}
 		add_stability = 0.02
-		add_power_balance_value = {
-			id = TU_URS_bop
-			value = 0.05
-		}
 	}
 
 	option = {
@@ -404,12 +380,9 @@ country_event = {
 
 	option = {
 		name = tu_urs_ev.13.b
+		add_political_power = 15
 		ai_chance = {
 			factor = 30
-		}
-		add_power_balance_value = {
-			id = TU_URS_bop
-			value = 0.05
 		}
 	}
 }
@@ -461,10 +434,6 @@ country_event = {
 			factor = 30
 		}
 		add_stability = -0.01
-		add_power_balance_value = {
-			id = TU_URS_bop
-			value = 0.05
-		}
 	}
 }
 
@@ -566,10 +535,6 @@ country_event = {
 		}
 		add_political_power = 40
 		add_stability = -0.02
-		add_power_balance_value = {
-			id = TU_URS_bop
-			value = -0.05
-		}
 	}
 
 	option = {
@@ -758,10 +723,6 @@ country_event = {
 			factor = 40
 		}
 		add_political_power = 20
-		add_power_balance_value = {
-			id = TU_URS_bop
-			value = 0.05
-		}
 	}
 }
 
@@ -790,10 +751,6 @@ country_event = {
 			factor = 40
 		}
 		add_political_power = -10
-		add_power_balance_value = {
-			id = TU_URS_bop
-			value = 0.05
-		}
 	}
 
 	option = {
@@ -815,6 +772,7 @@ country_event = {
 
 	option = {
 		name = tu_urs_ev.25.c
+		add_political_power = 10
 		ai_chance = {
 			factor = 20
 		}
@@ -937,10 +895,6 @@ country_event = {
 		}
 		add_political_power = 20
 		add_stability = 0.02
-		add_power_balance_value = {
-			id = TU_URS_bop
-			value = 0.05
-		}
 	}
 
 	option = {

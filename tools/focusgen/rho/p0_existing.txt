@@ -40,7 +40,6 @@
 		mutually_exclusive = { focus = TU_RHO_contractors focus = TU_RHO_demon_return }
 
 		completion_reward = {
-			add_power_balance_value = { id = TU_RHO_bop value = -0.25 }
 			country_event = { id = tu_rho_ev.1 }
 			add_political_power = 35
 			add_stability = 0.02
@@ -140,7 +139,6 @@
 		prerequisite = { focus = TU_RHO_ark_speech }
 
 		completion_reward = {
-			add_power_balance_value = { id = TU_RHO_bop value = -0.25 }
 			add_political_power = 60
 			add_stability = 0.03
 		}
@@ -260,7 +258,6 @@
 		mutually_exclusive = { focus = TU_RHO_ark_mission focus = TU_RHO_contractors }
 
 		completion_reward = {
-			add_power_balance_value = { id = TU_RHO_bop value = 0.25 }
 			country_event = { id = tu_rho_ev.4 }
 			add_political_power = 35
 			add_stability = 0.02
@@ -329,7 +326,6 @@
 		prerequisite = { focus = TU_RHO_tactical_doctrine }
 
 		completion_reward = {
-			add_power_balance_value = { id = TU_RHO_bop value = 0.2 }
 			country_event = { id = tu_rho_ev.5 }
 			add_stability = 0.03
 			add_manpower = 10000

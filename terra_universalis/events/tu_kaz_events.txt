@@ -12,7 +12,7 @@ country_event = {
 		ai_chance = {
 			factor = 50
 		}
-		add_power_balance_value = { id = TU_KAZ_bop value = -0.05 }
+		add_political_power = 20
 	}
 
 	option = {
@@ -20,7 +20,7 @@ country_event = {
 		ai_chance = {
 			factor = 50
 		}
-		add_power_balance_value = { id = TU_KAZ_bop value = 0.05 }
+		add_war_support = 0.02
 	}
 }
 
@@ -36,7 +36,6 @@ country_event = {
 		ai_chance = {
 			factor = 50
 		}
-		add_power_balance_value = { id = TU_KAZ_bop value = -0.05 }
 		add_political_power = 40
 		country_event = { id = tu_kaz_ev.11 days = 20 }
 	}
@@ -46,7 +45,6 @@ country_event = {
 		ai_chance = {
 			factor = 50
 		}
-		add_power_balance_value = { id = TU_KAZ_bop value = 0.05 }
 		TU_KAZ_fame_5 = yes
 		country_event = { id = tu_kaz_ev.11 days = 20 }
 	}
@@ -75,7 +73,6 @@ country_event = {
 		ai_chance = {
 			factor = 40
 		}
-		add_power_balance_value = { id = TU_KAZ_bop value = -0.03 }
 		add_stability = 0.02
 		country_event = { id = tu_kaz_ev.12 days = 10 }
 	}
@@ -86,7 +83,6 @@ country_event = {
 			factor = 30
 		}
 		add_political_power = -25
-		add_power_balance_value = { id = TU_KAZ_bop value = 0.05 }
 		country_event = { id = tu_kaz_ev.12 days = 10 }
 	}
 }
@@ -120,7 +116,6 @@ country_event = {
 			factor = 1
 		}
 		trigger = { has_country_flag = TU_KAZ_winner_corp }
-		add_power_balance_value = { id = TU_KAZ_bop value = -0.05 }
 		add_political_power = 50
 		TU_KAZ_fame_5 = yes
 	}
@@ -131,7 +126,6 @@ country_event = {
 			factor = 1
 		}
 		trigger = { has_country_flag = TU_KAZ_winner_knight }
-		add_power_balance_value = { id = TU_KAZ_bop value = 0.05 }
 		TU_KAZ_fame_10 = yes
 		army_experience = 20
 	}
@@ -142,7 +136,6 @@ country_event = {
 			factor = 1
 		}
 		trigger = { has_country_flag = TU_KAZ_winner_noble }
-		add_power_balance_value = { id = TU_KAZ_bop value = 0.08 }
 		add_war_support = 0.05
 		TU_KAZ_fame_5 = yes
 	}
@@ -200,7 +193,6 @@ country_event = {
 			factor = 50
 		}
 		add_stability = 0.02
-		add_power_balance_value = { id = TU_KAZ_bop value = -0.03 }
 	}
 }
 
@@ -217,7 +209,6 @@ country_event = {
 			factor = 50
 		}
 		TU_KAZ_fame_10 = yes
-		add_power_balance_value = { id = TU_KAZ_bop value = 0.05 }
 	}
 
 	option = {
@@ -266,7 +257,6 @@ country_event = {
 		ai_chance = {
 			factor = 50
 		}
-		add_power_balance_value = { id = TU_KAZ_bop value = -0.03 }
 		add_stability = -0.02
 	}
 
@@ -275,7 +265,6 @@ country_event = {
 		ai_chance = {
 			factor = 50
 		}
-		add_power_balance_value = { id = TU_KAZ_bop value = 0.03 }
 		add_political_power = -20
 	}
 }
@@ -326,7 +315,6 @@ country_event = {
 		ai_chance = {
 			factor = 50
 		}
-		add_power_balance_value = { id = TU_KAZ_bop value = 0.05 }
 		add_political_power = -25
 	}
 
@@ -335,7 +323,6 @@ country_event = {
 		ai_chance = {
 			factor = 50
 		}
-		add_power_balance_value = { id = TU_KAZ_bop value = -0.05 }
 		add_stability = -0.02
 	}
 }

@@ -122,10 +122,6 @@ focus_tree = {
 		}
 
 		completion_reward = {
-			add_power_balance_value = {
-				id = TU_URS_bop
-				value = -0.05
-			}
 			add_ideas = TU_URS_e1_state_planning
 			TU_build_civ_factory = yes
 			add_tech_bonus = { name = TU_URS_state_planning bonus = 0.75 uses = 1 category = industry category = construction_tech }
@@ -153,10 +149,6 @@ focus_tree = {
 		}
 
 		completion_reward = {
-			add_power_balance_value = {
-				id = TU_URS_bop
-				value = 0.05
-			}
 			add_ideas = TU_URS_e1_market_economy
 			TU_build_civ_factory = yes
 			add_political_power = 60
@@ -282,10 +274,6 @@ focus_tree = {
 		}
 
 		completion_reward = {
-			add_power_balance_value = {
-				id = TU_URS_bop
-				value = -0.05
-			}
 			add_ideas = TU_URS_e1_war_economy
 			TU_build_mil_factory = yes
 			add_political_power = 60
@@ -2369,10 +2357,6 @@ focus_tree = {
 
 		completion_reward = {
 			country_event = { id = tu_urs_ev.1 }
-			add_power_balance_value = {
-				id = TU_URS_bop
-				value = -0.25
-			}
 			add_political_power = 60
 			add_stability = 0.03
 		}
@@ -2393,10 +2377,6 @@ focus_tree = {
 		}
 
 		completion_reward = {
-			add_power_balance_value = {
-				id = TU_URS_bop
-				value = -0.1
-			}
 			add_political_power = 60
 			add_stability = 0.03
 		}
@@ -2437,10 +2417,6 @@ focus_tree = {
 		}
 
 		completion_reward = {
-			add_power_balance_value = {
-				id = TU_URS_bop
-				value = -0.05
-			}
 			add_political_power = 60
 			add_stability = 0.03
 		}
@@ -2522,10 +2498,6 @@ focus_tree = {
 		}
 
 		completion_reward = {
-			add_power_balance_value = {
-				id = TU_URS_bop
-				value = -0.05
-			}
 			add_war_support = 0.03
 			add_stability = 0.03
 		}
@@ -2572,10 +2544,6 @@ focus_tree = {
 		completion_reward = {
 			country_event = { id = tu_urs_ev.8 }
 			add_ideas = TU_URS_p1_absolute_crown
-			add_power_balance_value = {
-				id = TU_URS_bop
-				value = -0.15
-			}
 			add_political_power = 100
 			add_stability = 0.05
 		}
@@ -2718,10 +2686,6 @@ focus_tree = {
 		completion_reward = {
 			country_event = { id = tu_urs_ev.9 }
 			add_ideas = TU_URS_p1_eternal_throne
-			add_power_balance_value = {
-				id = TU_URS_bop
-				value = -0.1
-			}
 			add_political_power = 100
 			add_stability = 0.05
 		}
@@ -3078,10 +3042,6 @@ focus_tree = {
 		}
 
 		completion_reward = {
-			add_power_balance_value = {
-				id = TU_URS_bop
-				value = -0.05
-			}
 			add_political_power = 60
 			add_stability = 0.03
 		}
@@ -3162,10 +3122,6 @@ focus_tree = {
 		}
 
 		completion_reward = {
-			add_power_balance_value = {
-				id = TU_URS_bop
-				value = -0.05
-			}
 			add_tech_bonus = { name = TU_URS_secret_archive bonus = 0.75 uses = 1 category = electronics category = tu_originium_tech }
 		}
 	}
@@ -3208,10 +3164,6 @@ focus_tree = {
 		}
 
 		completion_reward = {
-			add_power_balance_value = {
-				id = TU_URS_bop
-				value = -0.05
-			}
 			add_political_power = 60
 			add_stability = 0.03
 		}
@@ -3254,10 +3206,6 @@ focus_tree = {
 
 		completion_reward = {
 			add_ideas = TU_URS_p1_grand_duke_fear
-			add_power_balance_value = {
-				id = TU_URS_bop
-				value = -0.1
-			}
 			add_political_power = 60
 			add_stability = 0.03
 		}
@@ -3279,10 +3227,6 @@ focus_tree = {
 		}
 
 		completion_reward = {
-			add_power_balance_value = {
-				id = TU_URS_bop
-				value = 0.05
-			}
 			add_political_power = 60
 			add_stability = 0.03
 		}
@@ -3384,10 +3328,6 @@ focus_tree = {
 		}
 
 		completion_reward = {
-			add_power_balance_value = {
-				id = TU_URS_bop
-				value = -0.05
-			}
 			add_political_power = 60
 			add_stability = 0.03
 		}
@@ -3409,10 +3349,6 @@ focus_tree = {
 
 		completion_reward = {
 			add_ideas = TU_URS_p1_crown_lands
-			add_power_balance_value = {
-				id = TU_URS_bop
-				value = -0.1
-			}
 			add_political_power = 60
 			add_stability = 0.03
 		}
@@ -3462,10 +3398,6 @@ focus_tree = {
 		}
 
 		completion_reward = {
-			add_power_balance_value = {
-				id = TU_URS_bop
-				value = 0.05
-			}
 			add_political_power = 60
 			add_tech_bonus = { name = TU_URS_kazimir_diplomacy bonus = 0.75 uses = 1 category = industry }
 		}
@@ -3491,10 +3423,6 @@ focus_tree = {
 
 		completion_reward = {
 			every_country = { news_event = { id = tu_urs_ev.16 } }
-			add_power_balance_value = {
-				id = TU_URS_bop
-				value = -0.1
-			}
 			add_political_power = 100
 			add_stability = 0.05
 		}
@@ -3723,10 +3651,6 @@ focus_tree = {
 
 		completion_reward = {
 			country_event = { id = tu_urs_ev.2 }
-			add_power_balance_value = {
-				id = TU_URS_bop
-				value = -0.2
-			}
 			add_political_power = 60
 			add_stability = 0.03
 		}
@@ -3819,10 +3743,6 @@ focus_tree = {
 			add_popularity = {
 				ideology = fascism
 				popularity = 0.1
-			}
-			add_power_balance_value = {
-				id = TU_URS_bop
-				value = -0.1
 			}
 			add_political_power = 60
 			add_stability = 0.03
@@ -3976,10 +3896,6 @@ focus_tree = {
 		completion_reward = {
 			every_country = { news_event = { id = tu_urs_ev.19 } }
 			add_ideas = TU_URS_p2_iron_regime
-			add_power_balance_value = {
-				id = TU_URS_bop
-				value = -0.1
-			}
 			add_tech_bonus = { name = TU_URS_iron_regime bonus = 1.0 uses = 1 category = infantry_weapons }
 			army_experience = 40
 			# spec 23 hooks
@@ -4032,10 +3948,6 @@ focus_tree = {
 
 		completion_reward = {
 			country_event = { id = tu_urs_ev.11 }
-			add_power_balance_value = {
-				id = TU_URS_bop
-				value = -0.05
-			}
 			add_political_power = 100
 			add_stability = 0.05
 		}
@@ -4060,10 +3972,6 @@ focus_tree = {
 		}
 
 		completion_reward = {
-			add_power_balance_value = {
-				id = TU_URS_bop
-				value = -0.05
-			}
 			add_political_power = 60
 			add_stability = 0.03
 		}
@@ -4523,10 +4431,6 @@ focus_tree = {
 
 		completion_reward = {
 			country_event = { id = tu_urs_ev.3 }
-			add_power_balance_value = {
-				id = TU_URS_bop
-				value = 0.25
-			}
 			add_political_power = 60
 			add_stability = 0.03
 		}
@@ -4551,10 +4455,6 @@ focus_tree = {
 		}
 
 		completion_reward = {
-			add_power_balance_value = {
-				id = TU_URS_bop
-				value = 0.1
-			}
 			add_political_power = 60
 			add_stability = 0.03
 		}
@@ -4597,10 +4497,6 @@ focus_tree = {
 		}
 
 		completion_reward = {
-			add_power_balance_value = {
-				id = TU_URS_bop
-				value = 0.05
-			}
 			add_political_power = 60
 			add_tech_bonus = { name = TU_URS_noble_levies_alt bonus = 0.75 uses = 1 category = industry }
 		}
@@ -4663,10 +4559,6 @@ focus_tree = {
 		}
 
 		completion_reward = {
-			add_power_balance_value = {
-				id = TU_URS_bop
-				value = 0.1
-			}
 			add_political_power = 60
 			add_stability = 0.03
 		}
@@ -4776,10 +4668,6 @@ focus_tree = {
 		}
 
 		completion_reward = {
-			add_power_balance_value = {
-				id = TU_URS_bop
-				value = 0.05
-			}
 			add_political_power = 60
 			add_stability = 0.03
 		}
@@ -4822,10 +4710,6 @@ focus_tree = {
 		}
 
 		completion_reward = {
-			add_power_balance_value = {
-				id = TU_URS_bop
-				value = 0.05
-			}
 			add_political_power = 60
 			add_stability = 0.03
 		}
@@ -4891,10 +4775,6 @@ focus_tree = {
 		}
 
 		completion_reward = {
-			add_power_balance_value = {
-				id = TU_URS_bop
-				value = 0.05
-			}
 			add_political_power = 60
 			add_stability = 0.03
 		}
@@ -5045,10 +4925,6 @@ focus_tree = {
 		}
 
 		completion_reward = {
-			add_power_balance_value = {
-				id = TU_URS_bop
-				value = 0.05
-			}
 			add_tech_bonus = { name = TU_URS_noble_industrial_union bonus = 0.75 uses = 1 category = industry category = construction_tech }
 		}
 	}
@@ -5114,10 +4990,6 @@ focus_tree = {
 		}
 
 		completion_reward = {
-			add_power_balance_value = {
-				id = TU_URS_bop
-				value = 0.05
-			}
 			add_political_power = 60
 			add_tech_bonus = { name = TU_URS_noble_monopoly_law bonus = 0.75 uses = 1 category = industry }
 		}
@@ -5138,10 +5010,6 @@ focus_tree = {
 		}
 
 		completion_reward = {
-			add_power_balance_value = {
-				id = TU_URS_bop
-				value = 0.05
-			}
 			add_political_power = 60
 			add_tech_bonus = { name = TU_URS_noble_cartel_empire bonus = 0.75 uses = 1 category = industry }
 		}
@@ -5307,10 +5175,6 @@ focus_tree = {
 		}
 
 		completion_reward = {
-			add_power_balance_value = {
-				id = TU_URS_bop
-				value = 0.05
-			}
 			add_tech_bonus = { name = TU_URS_noble_estate_defence bonus = 0.75 uses = 1 category = construction_tech }
 			army_experience = 25
 		}
@@ -5400,10 +5264,6 @@ focus_tree = {
 
 		completion_reward = {
 			country_event = { id = tu_urs_ev.13 }
-			add_power_balance_value = {
-				id = TU_URS_bop
-				value = 0.05
-			}
 			add_tech_bonus = { name = TU_URS_noble_mobile_capital bonus = 1.0 uses = 1 category = motorized_equipment }
 			add_doctrine_cost_reduction = { name = TU_URS_noble_mobile_capital cost_reduction = 0.5 uses = 1 category = land_doctrine }
 		}
@@ -5449,10 +5309,6 @@ focus_tree = {
 
 		completion_reward = {
 			country_event = { id = tu_urs_ev.4 }
-			add_power_balance_value = {
-				id = TU_URS_bop
-				value = 0.1
-			}
 			add_political_power = 35
 			add_stability = 0.02
 		}
@@ -5516,10 +5372,6 @@ focus_tree = {
 		}
 
 		completion_reward = {
-			add_power_balance_value = {
-				id = TU_URS_bop
-				value = 0.1
-			}
 			add_political_power = 60
 			add_stability = 0.03
 		}
@@ -5635,10 +5487,6 @@ focus_tree = {
 		}
 
 		completion_reward = {
-			add_power_balance_value = {
-				id = TU_URS_bop
-				value = 0.15
-			}
 			add_political_power = 60
 			add_stability = 0.03
 		}
@@ -5719,10 +5567,6 @@ focus_tree = {
 		}
 
 		completion_reward = {
-			add_power_balance_value = {
-				id = TU_URS_bop
-				value = 0.1
-			}
 			add_political_power = 60
 			add_stability = 0.03
 		}
@@ -5817,10 +5661,6 @@ focus_tree = {
 		}
 
 		completion_reward = {
-			add_power_balance_value = {
-				id = TU_URS_bop
-				value = 0.05
-			}
 			add_political_power = 60
 			add_stability = 0.03
 		}
@@ -5881,10 +5721,6 @@ focus_tree = {
 		}
 
 		completion_reward = {
-			add_power_balance_value = {
-				id = TU_URS_bop
-				value = 0.05
-			}
 			add_war_support = 0.03
 			add_stability = 0.03
 		}
@@ -5945,10 +5781,6 @@ focus_tree = {
 		}
 
 		completion_reward = {
-			add_power_balance_value = {
-				id = TU_URS_bop
-				value = 0.05
-			}
 			add_political_power = 60
 			add_stability = 0.03
 		}
@@ -5990,10 +5822,6 @@ focus_tree = {
 
 		completion_reward = {
 			every_country = { news_event = { id = tu_urs_ev.17 } }
-			add_power_balance_value = {
-				id = TU_URS_bop
-				value = 0.1
-			}
 			add_political_power = 100
 			add_stability = 0.05
 		}
@@ -6113,10 +5941,6 @@ focus_tree = {
 		}
 
 		completion_reward = {
-			add_power_balance_value = {
-				id = TU_URS_bop
-				value = 0.05
-			}
 			add_stability = 0.03
 			add_manpower = 10000
 			add_tech_bonus = { name = TU_URS_reform_infected_guild bonus = 0.75 uses = 1 category = tu_oripathy_tech }
@@ -6142,10 +5966,6 @@ focus_tree = {
 		}
 
 		completion_reward = {
-			add_power_balance_value = {
-				id = TU_URS_bop
-				value = 0.05
-			}
 			add_stability = 0.03
 			add_manpower = 10000
 			add_tech_bonus = { name = TU_URS_reform_infected_representation bonus = 0.75 uses = 1 category = tu_oripathy_tech }
@@ -6269,10 +6089,6 @@ focus_tree = {
 		}
 
 		completion_reward = {
-			add_power_balance_value = {
-				id = TU_URS_bop
-				value = 0.05
-			}
 			add_political_power = 60
 			add_stability = 0.03
 		}

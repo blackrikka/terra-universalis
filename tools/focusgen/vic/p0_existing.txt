@@ -42,10 +42,6 @@
 		search_filters = { FOCUS_FILTER_POLITICAL }
 
 		completion_reward = {
-			add_power_balance_value = {
-				id = TU_VIC_bop
-				value = 0.1
-			}
 			add_political_power = 60
 			add_stability = 0.03
 		}
@@ -121,10 +117,6 @@
 		search_filters = { FOCUS_FILTER_BALANCE_OF_POWER }
 
 		completion_reward = {
-			add_power_balance_value = {
-				id = TU_VIC_bop
-				value = 0.25
-			}
 			add_political_power = 60
 			add_stability = 0.03
 		}
@@ -143,10 +135,6 @@
 		search_filters = { FOCUS_FILTER_POLITICAL }
 
 		completion_reward = {
-			add_power_balance_value = {
-				id = TU_VIC_bop
-				value = -0.05
-			}
 			country_event = { id = tu_vic_ev.8 }
 			add_political_power = 60
 			add_stability = 0.03
@@ -202,10 +190,6 @@
 		search_filters = { FOCUS_FILTER_POLITICAL }
 
 		completion_reward = {
-			add_power_balance_value = {
-				id = TU_VIC_bop
-				value = -0.1
-			}
 			add_war_support = 0.03
 			add_stability = 0.03
 		}
@@ -228,10 +212,6 @@
 				ideology = despotism
 			}
 			remove_ideas = TU_VIC_vacant_throne
-			add_power_balance_value = {
-				id = TU_VIC_bop
-				value = -0.25
-			}
 			every_country = { news_event = { id = tu_vic_ev.16 days = 0 } }
 			add_tech_bonus = { name = TU_VIC_siege_crowned bonus = 0.75 uses = 1 category = artillery }
 			army_experience = 25

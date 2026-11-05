@@ -2,8 +2,7 @@
 """카시미어(KAZ) 고유 콘텐츠 (사양서 17).
 
 장치
-  1. 세력 균형 "상업 연합회 대 기사의 명예" (TU_KAZ_bop): 왼쪽 = 연합회, 오른쪽 = 기사.
-     2·3단계가 켜져 있는 동안 깃발 TU_KAZ_union_strong / TU_KAZ_knights_strong.
+  1. (세력 균형은 사양서 34에서 삭제)
   2. 기사 명성 변수 TU_KAZ_fame (0~100): 메이저 기사 경기·기사 중점·디시전으로 오르고, 정예 기사 중점·디시전을 연다.
   3. 카시미어 메이저: 디시전으로 1년에 한 번 개최 → 개막·준결승·결승 이벤트 (우승자 유형에 따라 결과가 다름).
   4. 기사 계약: 유목 기사·기업 기사·용병을 디시전으로 고용, 기사를 외국에 파견해 정치력을 번다.
@@ -22,12 +21,12 @@ C = Country("KAZ", "카시미어", "Kazimierz")
 BOP = "TU_KAZ_bop"
 
 
-def U(v):   # 상업 연합회 쪽으로
-    return "add_power_balance_value = { id = %s value = -%s }" % (BOP, v)
+def U(v):   # 상업 연합회 쪽으로. 세력 균형 삭제 (사양서 34): 효과 없음
+    return ""
 
 
-def K(v):   # 기사 쪽으로
-    return "add_power_balance_value = { id = %s value = %s }" % (BOP, v)
+def K(v):   # 기사 쪽으로. 세력 균형 삭제: 효과 없음
+    return ""
 
 
 def FAME(n):
@@ -50,22 +49,7 @@ def EV(n, days=0):
     return "country_event = { id = tu_kaz_ev.%d%s }" % (n, " days = %d" % days if days else "")
 
 
-# ------------------------------------------------------------------ 시작 상태 · 세력 균형 · 명성
-C.set_bop(("union", "상업 연합회", "Commercial Union", "GFX_bop_ITA_grand_council_side"),
-          ("knights", "기사의 명예", "Knightly Honour", "GFX_bop_DEN_warfare_side"),
-          -0.35,
-          [(0, 0.3, {"production_speed_buildings_factor": 0.05, "political_power_gain": 0.05}),
-           (0.3, 0.6, {"production_speed_buildings_factor": 0.1, "consumer_goods_factor": -0.03,
-                       "stability_factor": -0.03}, "TU_KAZ_union_strong"),
-           (0.6, 1, {"production_speed_buildings_factor": 0.15, "political_power_gain": 0.1,
-                     "stability_factor": -0.08, "war_support_factor": -0.05}, "TU_KAZ_union_strong")],
-          [(0, 0.3, {"army_org_factor": 0.03}),
-           (0.3, 0.6, {"army_org_factor": 0.05, "war_support_factor": 0.05}, "TU_KAZ_knights_strong"),
-           (0.6, 1, {"army_attack_factor": 0.08, "war_support_factor": 0.1, "political_power_gain": -0.1},
-            "TU_KAZ_knights_strong")])
-C.loc(BOP, "상업 연합회 대 기사의 명예", "Commercial Union vs Knightly Honour")
-C.loc(BOP + "_desc", "카시미어는 기업이 기사를 후원하고 광고판에 세우는 나라가 되었다. 기사들은 잃어버린 명예를 되찾으려 한다.",
-      "Kazimierz has become a land where corporations sponsor knights and put them on billboards. The knights want their lost honour back.")
+# ------------------------------------------------------------------ 시작 상태 · 명성
 C.history += ["set_variable = { TU_KAZ_fame = 10 }", "add_ideas = { TU_KAZ_union_grip TU_KAZ_fading_knighthood }"]
 
 for n in (5, 10, 15, 20):
@@ -191,10 +175,9 @@ f("fair_competition", "공정 경쟁법", "Fair Competition Act", pre=["knight_c
   reward=[K("0.05"), "swap_ideas = { remove_idea = TU_KAZ_union_grip add_idea = TU_KAZ_fair_market }"])
 f("shareholder_state", "주주의 나라", "The Shareholder State", pre=[["union_monopoly", "fair_competition"]],
   me=["knight_kingdom", "knights_for_all"], cost=15, theme=False,
-  available=[HAS("union_strong")],
   reward=[FLAG("path_union"), "add_ideas = TU_KAZ_shareholder_state", "add_political_power = 100", EV(28)],
-  desc=("카시미어는 하나의 거대한 회사가 된다. (상업 연합회 쪽 세력 균형 2단계 이상)",
-        "Kazimierz becomes one great company. (Balance of power at Commercial Union stage 2 or more)"))
+  desc=("카시미어는 하나의 거대한 회사가 된다.",
+        "Kazimierz becomes one great company."))
 f("corporate_army", "기업 사병 통합", "Integrate the Corporate Militias", pre=["shareholder_state"])
 f("security_companies", "보안 회사", "Security Companies", pre=["shareholder_state"])
 f("export_knights", "기사 수출", "Knight Export Trade", pre=["corporate_army"])
@@ -218,10 +201,9 @@ f("knight_courts", "기사 재판소", "Knightly Courts", pre=["knight_code"], m
   reward=[K("0.05"), "add_stability = 0.05"])
 f("knight_kingdom", "기사의 나라", "Kingdom of Knights", pre=[["honor_duels", "knight_courts"]],
   me=["shareholder_state", "knights_for_all"], cost=15, theme=False,
-  available=[HAS("knights_strong")],
   reward=[FLAG("path_knights"), "add_ideas = TU_KAZ_knight_kingdom", "add_political_power = 100", EV(29)],
-  desc=("기사가 다시 카시미어를 이끈다. (기사 쪽 세력 균형 2단계 이상)",
-        "Knights lead Kazimierz once more. (Balance of power at Knightly Honour stage 2 or more)"))
+  desc=("기사가 다시 카시미어를 이끈다.",
+        "Knights lead Kazimierz once more."))
 f("noble_estates", "기사 영지 회복", "Restore the Knightly Estates", pre=["knight_kingdom"])
 f("chivalry_schools", "기사도 학교", "Chivalry Schools", pre=["knight_kingdom"])
 f("restore_citadels", "성채 복원", "Restore the Citadels", pre=["noble_estates"])
@@ -466,8 +448,8 @@ C.d(cat_for, "leithanien_exchange", "라이타니엔 아츠 교류", "Leithanien
 C.ev(1, ("카시미어의 아침", "Morning in Kazimierz"),
      ("수도의 대형 전광판에는 기사 경기 광고와 새 음료 광고가 번갈아 뜬다. 옛 기사단의 문장은 기념품 가게에서 팔린다. 그래도 아직 맹세를 기억하는 기사들이 있다.",
       "The giant screens of the capital alternate between tournament ads and soft drink ads. Old order crests are sold in souvenir shops. Yet some knights still remember their oaths."),
-     [("연합회가 이 나라를 굴린다.", "The Union keeps this country running.", [U("0.05")], 50),
-      ("기사도는 아직 죽지 않았다.", "Knighthood is not dead yet.", [K("0.05")], 50)])
+     [("연합회가 이 나라를 굴린다.", "The Union keeps this country running.", ["add_political_power = 20"], 50),
+      ("기사도는 아직 죽지 않았다.", "Knighthood is not dead yet.", ["add_war_support = 0.02"], 50)])
 C.ev(10, ("메이저 개막", "The Major Opens"),
      ("대경기장이 관중으로 가득 찼다. 기업 로고를 단 기사와 낡은 갑옷의 기사가 같은 대진표에 올랐다. 이번 대회를 어떻게 꾸릴 것인가?",
       "The grand arena is packed. Knights wearing corporate logos and knights in worn armour share the same bracket. How shall this Major be run?"),

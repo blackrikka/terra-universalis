@@ -19,19 +19,11 @@ country_event = {
 		name = tu_vic_ev.1.a
 		ai_chance = { factor = 40 }
 		add_political_power = 25
-		add_power_balance_value = {
-			id = TU_VIC_bop
-			value = 0.03
-		}
 	}
 
 	option = {
 		name = tu_vic_ev.1.b
 		ai_chance = { factor = 30 }
-		add_power_balance_value = {
-			id = TU_VIC_bop
-			value = -0.03
-		}
 		add_stability = 0.01
 	}
 
@@ -86,10 +78,6 @@ country_event = {
 		ai_chance = { factor = 50 }
 		add_war_support = 0.03
 		add_stability = -0.01
-		add_power_balance_value = {
-			id = TU_VIC_bop
-			value = -0.02
-		}
 	}
 }
 
@@ -135,10 +123,6 @@ country_event = {
 		name = tu_vic_ev.5.b
 		ai_chance = { factor = 50 }
 		add_stability = 0.02
-		add_power_balance_value = {
-			id = TU_VIC_bop
-			value = 0.02
-		}
 	}
 }
 
@@ -206,10 +190,6 @@ country_event = {
 		ai_chance = { factor = 40 }
 		add_political_power = 25
 		add_stability = -0.01
-		add_power_balance_value = {
-			id = TU_VIC_bop
-			value = -0.02
-		}
 	}
 
 	option = {
@@ -297,10 +277,6 @@ country_event = {
 		name = tu_vic_ev.11.b
 		ai_chance = { factor = 60 }
 		add_stability = 0.02
-		add_power_balance_value = {
-			id = TU_VIC_bop
-			value = 0.02
-		}
 	}
 }
 
@@ -363,10 +339,6 @@ country_event = {
 		name = tu_vic_ev.14.a
 		ai_chance = { factor = 60 }
 		add_stability = 0.02
-		add_power_balance_value = {
-			id = TU_VIC_bop
-			value = -0.02
-		}
 	}
 
 	option = {
@@ -397,10 +369,6 @@ country_event = {
 		name = tu_vic_ev.15.b
 		ai_chance = { factor = 50 }
 		add_stability = 0.02
-		add_power_balance_value = {
-			id = TU_VIC_bop
-			value = 0.02
-		}
 	}
 }
 
@@ -494,10 +462,6 @@ country_event = {
 		name = tu_vic_ev.20.c
 		ai_chance = { factor = 20 }
 		add_stability = -0.01
-		add_power_balance_value = {
-			id = TU_VIC_bop
-			value = 0.02
-		}
 	}
 }
 
@@ -550,10 +514,6 @@ country_event = {
 		name = tu_vic_ev.22.a
 		ai_chance = { factor = 50 }
 		add_stability = 0.02
-		add_power_balance_value = {
-			id = TU_VIC_bop
-			value = 0.01
-		}
 	}
 
 	option = {
@@ -586,10 +546,6 @@ country_event = {
 		name = tu_vic_ev.23.a
 		ai_chance = { factor = 50 }
 		add_stability = 0.02
-		add_power_balance_value = {
-			id = TU_VIC_bop
-			value = 0.02
-		}
 	}
 
 	option = {
@@ -622,10 +578,6 @@ country_event = {
 		ai_chance = { factor = 50 }
 		add_political_power = 15
 		add_stability = -0.01
-		add_power_balance_value = {
-			id = TU_VIC_bop
-			value = -0.01
-		}
 	}
 
 	option = {
@@ -699,10 +651,6 @@ country_event = {
 		name = tu_vic_ev.26.b
 		ai_chance = { factor = 50 }
 		add_stability = -0.01
-		add_power_balance_value = {
-			id = TU_VIC_bop
-			value = 0.01
-		}
 	}
 }
 
@@ -751,10 +699,6 @@ country_event = {
 		ai_chance = { factor = 50 }
 		add_stability = -0.01
 		add_political_power = 15
-		add_power_balance_value = {
-			id = TU_VIC_bop
-			value = -0.02
-		}
 	}
 
 	option = {

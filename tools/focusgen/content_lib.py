@@ -38,6 +38,8 @@ def ind(lines, n):
         lines = lines.split("\n")
     out = []
     for block in lines:
+        if block == "":          # 빈 효과 (예: 없어진 세력 균형) 는 건너뛴다
+            continue
         for l in block.split("\n"):
             out.append("\t" * n + l if l.strip() else "")
     return "\n".join(out)
@@ -141,10 +143,8 @@ class Country:
     # ---------- 세력 균형
     def set_bop(self, left, right, initial, left_ranges, right_ranges):
         """left/right = (sid, ko, en, icon). ranges = [(min, max, {modifier})] 크기 순."""
-        self.bop = dict(left=left, right=right, initial=initial, lr=left_ranges, rr=right_ranges)
-        bid = "TU_%s_bop" % self.tag
-        self.history.append("set_power_balance = { id = %s set_default = yes }" % bid)
-        return bid
+        """세력 균형(힘의 균형)은 모드 전체에서 없앴다 (사양서 34). 호출해도 아무것도 만들지 않는다."""
+        return "TU_%s_bop" % self.tag
 
     # ---------- 쓰기
     def _focus_text(self, f):

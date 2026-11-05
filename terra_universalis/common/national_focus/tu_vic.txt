@@ -62,10 +62,6 @@ focus_tree = {
 		search_filters = { FOCUS_FILTER_POLITICAL }
 
 		completion_reward = {
-			add_power_balance_value = {
-				id = TU_VIC_bop
-				value = 0.1
-			}
 			add_political_power = 60
 			add_stability = 0.03
 		}
@@ -141,10 +137,6 @@ focus_tree = {
 		search_filters = { FOCUS_FILTER_BALANCE_OF_POWER }
 
 		completion_reward = {
-			add_power_balance_value = {
-				id = TU_VIC_bop
-				value = 0.25
-			}
 			add_political_power = 60
 			add_stability = 0.03
 		}
@@ -163,10 +155,6 @@ focus_tree = {
 		search_filters = { FOCUS_FILTER_POLITICAL }
 
 		completion_reward = {
-			add_power_balance_value = {
-				id = TU_VIC_bop
-				value = -0.05
-			}
 			country_event = { id = tu_vic_ev.8 }
 			add_political_power = 60
 			add_stability = 0.03
@@ -222,10 +210,6 @@ focus_tree = {
 		search_filters = { FOCUS_FILTER_POLITICAL }
 
 		completion_reward = {
-			add_power_balance_value = {
-				id = TU_VIC_bop
-				value = -0.1
-			}
 			add_war_support = 0.03
 			add_stability = 0.03
 		}
@@ -248,10 +232,6 @@ focus_tree = {
 				ideology = despotism
 			}
 			remove_ideas = TU_VIC_vacant_throne
-			add_power_balance_value = {
-				id = TU_VIC_bop
-				value = -0.25
-			}
 			every_country = { news_event = { id = tu_vic_ev.16 days = 0 } }
 			add_tech_bonus = { name = TU_VIC_siege_crowned bonus = 0.75 uses = 1 category = artillery }
 			army_experience = 25
@@ -435,10 +415,6 @@ focus_tree = {
 
 		completion_reward = {
 			add_political_power = 50
-			add_power_balance_value = {
-				id = TU_VIC_bop
-				value = 0.05
-			}
 			add_ideas = TU_VIC_oligarchic_council
 			country_event = { id = tu_vic_ev.2 }
 		}
@@ -642,10 +618,6 @@ focus_tree = {
 		}
 
 		completion_reward = {
-			add_power_balance_value = {
-				id = TU_VIC_bop
-				value = 0.05
-			}
 			add_tech_bonus = { name = TU_VIC_duk_tax_farming bonus = 0.75 uses = 1 category = industry category = construction_tech }
 		}
 	}
@@ -705,10 +677,6 @@ focus_tree = {
 		}
 
 		completion_reward = {
-			add_power_balance_value = {
-				id = TU_VIC_bop
-				value = 0.1
-			}
 			add_political_power = 100
 			add_stability = 0.05
 		}
@@ -750,10 +718,6 @@ focus_tree = {
 		}
 
 		completion_reward = {
-			add_power_balance_value = {
-				id = TU_VIC_bop
-				value = 0.05
-			}
 			add_political_power = 60
 			add_stability = 0.03
 		}
@@ -775,10 +739,6 @@ focus_tree = {
 		}
 
 		completion_reward = {
-			add_power_balance_value = {
-				id = TU_VIC_bop
-				value = -0.03
-			}
 			add_political_power = 60
 			add_stability = 0.03
 		}
@@ -800,10 +760,6 @@ focus_tree = {
 		}
 
 		completion_reward = {
-			add_power_balance_value = {
-				id = TU_VIC_bop
-				value = 0.03
-			}
 			add_political_power = 60
 			add_stability = 0.03
 		}
@@ -992,10 +948,6 @@ focus_tree = {
 		}
 
 		completion_reward = {
-			add_power_balance_value = {
-				id = TU_VIC_bop
-				value = 0.05
-			}
 			add_political_power = 60
 			add_stability = 0.03
 		}
@@ -1164,10 +1116,6 @@ focus_tree = {
 		}
 
 		completion_reward = {
-			add_power_balance_value = {
-				id = TU_VIC_bop
-				value = -0.05
-			}
 			add_ideas = TU_VIC_aslan_heir
 			country_event = { id = tu_vic_ev.3 }
 			add_political_power = 35
@@ -1393,10 +1341,6 @@ focus_tree = {
 		}
 
 		completion_reward = {
-			add_power_balance_value = {
-				id = TU_VIC_bop
-				value = -0.05
-			}
 			add_political_power = 60
 			add_stability = 0.03
 		}
@@ -1417,10 +1361,6 @@ focus_tree = {
 		}
 
 		completion_reward = {
-			add_power_balance_value = {
-				id = TU_VIC_bop
-				value = -0.05
-			}
 			add_political_power = 60
 			add_stability = 0.03
 		}
@@ -1482,10 +1422,6 @@ focus_tree = {
 		}
 
 		completion_reward = {
-			add_power_balance_value = {
-				id = TU_VIC_bop
-				value = -0.1
-			}
 			every_country = { news_event = { id = tu_vic_ev.17 days = 0 } }
 			add_war_support = 0.05
 			add_stability = 0.05
@@ -1507,10 +1443,6 @@ focus_tree = {
 		}
 
 		completion_reward = {
-			add_power_balance_value = {
-				id = TU_VIC_bop
-				value = -0.03
-			}
 			add_political_power = 60
 			add_stability = 0.03
 		}
@@ -1553,10 +1485,6 @@ focus_tree = {
 		}
 
 		completion_reward = {
-			add_power_balance_value = {
-				id = TU_VIC_bop
-				value = -0.05
-			}
 			add_political_power = 60
 			add_stability = 0.03
 		}
@@ -1662,10 +1590,6 @@ focus_tree = {
 		}
 
 		completion_reward = {
-			add_power_balance_value = {
-				id = TU_VIC_bop
-				value = -0.03
-			}
 			add_political_power = 60
 			add_stability = 0.03
 		}
@@ -1771,10 +1695,6 @@ focus_tree = {
 		}
 
 		completion_reward = {
-			add_power_balance_value = {
-				id = TU_VIC_bop
-				value = -0.03
-			}
 			add_political_power = 60
 			add_stability = 0.03
 		}
@@ -1940,10 +1860,6 @@ focus_tree = {
 		}
 
 		completion_reward = {
-			add_power_balance_value = {
-				id = TU_VIC_bop
-				value = 0.05
-			}
 			add_ideas = TU_VIC_tara_flame
 			country_event = { id = tu_vic_ev.4 }
 			add_political_power = 35
@@ -2149,10 +2065,6 @@ focus_tree = {
 		}
 
 		completion_reward = {
-			add_power_balance_value = {
-				id = TU_VIC_bop
-				value = 0.05
-			}
 			TU_build_civ_factory = yes
 			add_political_power = 60
 			add_tech_bonus = { name = TU_VIC_drc_war_economy bonus = 0.75 uses = 1 category = industry }
@@ -2215,10 +2127,6 @@ focus_tree = {
 		}
 
 		completion_reward = {
-			add_power_balance_value = {
-				id = TU_VIC_bop
-				value = 0.05
-			}
 			country_event = { id = tu_vic_ev.15 }
 			add_political_power = 60
 			add_stability = 0.03
@@ -2962,10 +2870,6 @@ focus_tree = {
 		}
 
 		completion_reward = {
-			add_power_balance_value = {
-				id = TU_VIC_bop
-				value = 0.05
-			}
 			add_ideas = TU_VIC_london_exchange
 			add_political_power = 60
 			add_stability = 0.03
@@ -2987,10 +2891,6 @@ focus_tree = {
 		}
 
 		completion_reward = {
-			add_power_balance_value = {
-				id = TU_VIC_bop
-				value = -0.05
-			}
 			add_political_power = 60
 			add_stability = 0.03
 		}
@@ -3201,10 +3101,6 @@ focus_tree = {
 		}
 
 		completion_reward = {
-			add_power_balance_value = {
-				id = TU_VIC_bop
-				value = 0.05
-			}
 			TU_build_civ_factory = yes
 			add_political_power = 60
 			add_tech_bonus = { name = TU_VIC_par_guild_charter bonus = 0.75 uses = 1 category = industry }
@@ -3267,10 +3163,6 @@ focus_tree = {
 		}
 
 		completion_reward = {
-			add_power_balance_value = {
-				id = TU_VIC_bop
-				value = -0.03
-			}
 			add_political_power = 60
 			add_tech_bonus = { name = TU_VIC_par_free_trade bonus = 0.75 uses = 1 category = industry }
 		}
@@ -3292,10 +3184,6 @@ focus_tree = {
 		}
 
 		completion_reward = {
-			add_power_balance_value = {
-				id = TU_VIC_bop
-				value = 0.03
-			}
 			add_political_power = 60
 			add_tech_bonus = { name = TU_VIC_par_tariffs bonus = 0.75 uses = 1 category = industry }
 		}
@@ -3510,10 +3398,6 @@ focus_tree = {
 		}
 
 		completion_reward = {
-			add_power_balance_value = {
-				id = TU_VIC_bop
-				value = -0.05
-			}
 			add_political_power = 60
 			add_stability = 0.03
 		}

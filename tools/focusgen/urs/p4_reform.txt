@@ -17,10 +17,6 @@
 
 		completion_reward = {
 			country_event = { id = tu_urs_ev.4 }
-			add_power_balance_value = {
-				id = TU_URS_bop
-				value = 0.1
-			}
 			add_political_power = 35
 			add_stability = 0.02
 		}
@@ -84,10 +80,6 @@
 		}
 
 		completion_reward = {
-			add_power_balance_value = {
-				id = TU_URS_bop
-				value = 0.1
-			}
 			add_political_power = 60
 			add_stability = 0.03
 		}
@@ -203,10 +195,6 @@
 		}
 
 		completion_reward = {
-			add_power_balance_value = {
-				id = TU_URS_bop
-				value = 0.15
-			}
 			add_political_power = 60
 			add_stability = 0.03
 		}
@@ -287,10 +275,6 @@
 		}
 
 		completion_reward = {
-			add_power_balance_value = {
-				id = TU_URS_bop
-				value = 0.1
-			}
 			add_political_power = 60
 			add_stability = 0.03
 		}
@@ -378,10 +362,6 @@
 		}
 
 		completion_reward = {
-			add_power_balance_value = {
-				id = TU_URS_bop
-				value = 0.05
-			}
 			add_political_power = 60
 			add_stability = 0.03
 		}
@@ -442,10 +422,6 @@
 		}
 
 		completion_reward = {
-			add_power_balance_value = {
-				id = TU_URS_bop
-				value = 0.05
-			}
 			add_war_support = 0.03
 			add_stability = 0.03
 		}
@@ -506,10 +482,6 @@
 		}
 
 		completion_reward = {
-			add_power_balance_value = {
-				id = TU_URS_bop
-				value = 0.05
-			}
 			add_political_power = 60
 			add_stability = 0.03
 		}
@@ -551,10 +523,6 @@
 
 		completion_reward = {
 			every_country = { news_event = { id = tu_urs_ev.17 } }
-			add_power_balance_value = {
-				id = TU_URS_bop
-				value = 0.1
-			}
 			add_political_power = 100
 			add_stability = 0.05
 		}
@@ -674,10 +642,6 @@
 		}
 
 		completion_reward = {
-			add_power_balance_value = {
-				id = TU_URS_bop
-				value = 0.05
-			}
 			add_stability = 0.03
 			add_manpower = 10000
 			add_tech_bonus = { name = TU_URS_reform_infected_guild bonus = 0.75 uses = 1 category = tu_oripathy_tech }
@@ -703,10 +667,6 @@
 		}
 
 		completion_reward = {
-			add_power_balance_value = {
-				id = TU_URS_bop
-				value = 0.05
-			}
 			add_stability = 0.03
 			add_manpower = 10000
 			add_tech_bonus = { name = TU_URS_reform_infected_representation bonus = 0.75 uses = 1 category = tu_oripathy_tech }
@@ -830,10 +790,6 @@
 		}
 
 		completion_reward = {
-			add_power_balance_value = {
-				id = TU_URS_bop
-				value = 0.05
-			}
 			add_political_power = 60
 			add_stability = 0.03
 		}

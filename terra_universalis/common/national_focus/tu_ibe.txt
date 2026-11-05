@@ -52,7 +52,6 @@ focus_tree = {
 		}
 
 		completion_reward = {
-			add_power_balance_value = { id = TU_IBE_bop value = -0.05 }
 			add_tech_bonus = { name = TU_IBE_inquisition_reform bonus = 0.75 uses = 1 category = radar_tech category = electronics }
 			add_stability = 0.03
 		}
@@ -93,7 +92,6 @@ focus_tree = {
 		}
 
 		completion_reward = {
-			add_power_balance_value = { id = TU_IBE_bop value = -0.03 }
 			add_tech_bonus = { name = TU_IBE_heresy_files bonus = 0.75 uses = 1 category = electronics category = tu_originium_tech }
 		}
 	}
@@ -133,7 +131,6 @@ focus_tree = {
 		}
 
 		completion_reward = {
-			add_power_balance_value = { id = TU_IBE_bop value = -0.05 }
 			TU_IBE_threat_m10 = yes
 			country_event = { id = tu_ibe_ev.21 days = 10 }
 		}
@@ -155,7 +152,6 @@ focus_tree = {
 		}
 
 		completion_reward = {
-			add_power_balance_value = { id = TU_IBE_bop value = -0.05 }
 			add_war_support = 0.03
 			add_stability = 0.03
 		}
@@ -177,7 +173,6 @@ focus_tree = {
 		}
 
 		completion_reward = {
-			add_power_balance_value = { id = TU_IBE_bop value = 0.05 }
 			add_political_power = 60
 			add_stability = 0.03
 		}
@@ -194,10 +189,6 @@ focus_tree = {
 		cost = 15
 
 		search_filters = { FOCUS_FILTER_POLITICAL }
-
-		available = {
-			has_country_flag = TU_IBE_inquisition_strong
-		}
 
 		ai_will_do = {
 			base = 1
@@ -268,7 +259,6 @@ focus_tree = {
 		}
 
 		completion_reward = {
-			add_power_balance_value = { id = TU_IBE_bop value = 0.05 }
 			add_political_power = 60
 			add_stability = 0.03
 		}
@@ -289,7 +279,6 @@ focus_tree = {
 		}
 
 		completion_reward = {
-			add_power_balance_value = { id = TU_IBE_bop value = 0.05 }
 			country_event = { id = tu_ibe_ev.22 }
 		}
 	}
@@ -309,7 +298,6 @@ focus_tree = {
 		}
 
 		completion_reward = {
-			add_power_balance_value = { id = TU_IBE_bop value = 0.05 }
 			add_political_power = 60
 			add_stability = 0.03
 		}
@@ -371,7 +359,6 @@ focus_tree = {
 		}
 
 		completion_reward = {
-			add_power_balance_value = { id = TU_IBE_bop value = 0.05 }
 			add_political_power = 60
 			add_stability = 0.03
 		}
@@ -387,10 +374,6 @@ focus_tree = {
 		cost = 15
 
 		search_filters = { FOCUS_FILTER_POLITICAL }
-
-		available = {
-			has_country_flag = TU_IBE_crown_strong
-		}
 
 		ai_will_do = {
 			base = 1
@@ -2291,7 +2274,6 @@ focus_tree = {
 		}
 
 		completion_reward = {
-			add_power_balance_value = { id = TU_IBE_bop value = -0.05 }
 			add_political_power = 60
 			add_stability = 0.03
 		}
