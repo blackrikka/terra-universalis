@@ -38,7 +38,7 @@ FACES = HERE / "cast_faces.json"
 
 HEAD_TO_CROP = 3.0      # 큰 초상화 세로 = 얼굴 크기 x 이 값 (머리와 어깨)
 FACE_Y = 0.36           # 큰 초상화에서 얼굴 중심의 세로 위치
-SMALL_TO_FACE = 1.7     # 작은 초상화 한 변 = 얼굴 크기 x 이 값
+SMALL_OF_LARGE = 0.78   # 작은 초상화 한 변 = 큰 초상화 너비 x 이 값 (얼굴 중심 기준)
 
 
 def key_of(art):
@@ -66,10 +66,15 @@ def render(path, face):
     canvas = Image.new("RGBA", (w + 2 * pad, h + 2 * pad), (0, 0, 0, 0))
     canvas.alpha_composite(im, (pad, pad))
     lbox = (int(hx - cw / 2) + pad, int(top) + pad, int(hx + cw / 2) + pad, int(top + ch) + pad)
-    large = composite_opaque(canvas.crop(lbox).resize(LARGE_SIZE, Image.Resampling.LANCZOS))
-    side = F * SMALL_TO_FACE
-    sbox = crop_box(hx + pad, hy + pad + 0.08 * side, side, side)
-    small = composite_opaque(canvas.crop(sbox).resize(SMALL_SIZE, Image.Resampling.LANCZOS))
+    big = canvas.crop(lbox).resize((LARGE_SIZE[0] * 4, LARGE_SIZE[1] * 4), Image.Resampling.LANCZOS)
+    large = composite_opaque(big.resize(LARGE_SIZE, Image.Resampling.LANCZOS))
+    # 작은 초상화(참모·장군 칸 65x67)는 큰 초상화의 얼굴 부분에서 자른다: 큰 초상화와 틀이 항상 같다
+    # (사용자 보고: 따로 계산하던 때 글래디아는 모자만, 울피아누스는 얼굴이 잘려 나왔다)
+    W4, H4 = big.size
+    side = W4 * SMALL_OF_LARGE
+    cy = H4 * FACE_Y
+    sbox = (int(W4 / 2 - side / 2), int(cy - 0.45 * side), int(W4 / 2 + side / 2), int(cy + 0.55 * side))
+    small = composite_opaque(big.crop(sbox).resize(SMALL_SIZE, Image.Resampling.LANCZOS))
     return large, small
 
 
