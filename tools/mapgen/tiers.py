@@ -180,8 +180,10 @@ def main():
                 lines.append('create_unit = { division = "division_template = \\"%s\\" start_experience_factor = %s '
                              'start_equipment_factor = 0.8" owner = %s count = %d }' % (tmpl, EXP[tier], tag, d))
             inner = "\n".join("\t\t\t" + l for l in lines)
-            body.append("\tif = {\n\t\tlimit = { %d = { is_owned_and_controlled_by = ROOT } }\n\t\t%d = {\n%s\n\t\t}\n\t}"
-                        % (s, s, inner))
+            # ROOT 이 아니라 태그를 직접 쓴다: on_startup 에서 "TAG = { TU_tier_TAG = yes }" 로 불러도 ROOT 는 그 나라가 아니라
+            # on_startup 을 일으킨 나라로 남아, 다른 나라의 공장·사단이 지어지지 않았다 (사용자 보고, 사양서 55)
+            body.append("\tif = {\n\t\tlimit = { %d = { is_owned_and_controlled_by = %s } }\n\t\t%d = {\n%s\n\t\t}\n\t}"
+                        % (s, tag, s, inner))
         effects.append("# tier %s: %d civ, %d mil, %d divisions\nTU_tier_%s = {\n%s\n}\n" % (tier, civ, mil, divs, tag, "\n".join(body)))
         calls.append("\t\t\tif = { limit = { country_exists = %s } %s = { TU_tier_%s = yes } }" % (tag, tag, tag))
 

@@ -4,7 +4,7 @@
 # tier S: 32 civ, 18 mil, 28 divisions
 TU_tier_YAN = {
 	if = {
-		limit = { 64 = { is_owned_and_controlled_by = ROOT } }
+		limit = { 64 = { is_owned_and_controlled_by = YAN } }
 		64 = {
 			add_extra_state_shared_building_slots = 24
 			add_building_construction = { type = industrial_complex level = 15 instant_build = yes }
@@ -13,7 +13,7 @@ TU_tier_YAN = {
 		}
 	}
 	if = {
-		limit = { 56 = { is_owned_and_controlled_by = ROOT } }
+		limit = { 56 = { is_owned_and_controlled_by = YAN } }
 		56 = {
 			add_extra_state_shared_building_slots = 8
 			add_building_construction = { type = industrial_complex level = 5 instant_build = yes }
@@ -22,7 +22,7 @@ TU_tier_YAN = {
 		}
 	}
 	if = {
-		limit = { 57 = { is_owned_and_controlled_by = ROOT } }
+		limit = { 57 = { is_owned_and_controlled_by = YAN } }
 		57 = {
 			add_extra_state_shared_building_slots = 8
 			add_building_construction = { type = industrial_complex level = 5 instant_build = yes }
@@ -31,7 +31,7 @@ TU_tier_YAN = {
 		}
 	}
 	if = {
-		limit = { 58 = { is_owned_and_controlled_by = ROOT } }
+		limit = { 58 = { is_owned_and_controlled_by = YAN } }
 		58 = {
 			add_extra_state_shared_building_slots = 7
 			add_building_construction = { type = industrial_complex level = 5 instant_build = yes }
@@ -44,7 +44,7 @@ TU_tier_YAN = {
 # tier S: 28 civ, 22 mil, 32 divisions
 TU_tier_URS = {
 	if = {
-		limit = { 39 = { is_owned_and_controlled_by = ROOT } }
+		limit = { 39 = { is_owned_and_controlled_by = URS } }
 		39 = {
 			add_extra_state_shared_building_slots = 24
 			add_building_construction = { type = industrial_complex level = 13 instant_build = yes }
@@ -53,7 +53,7 @@ TU_tier_URS = {
 		}
 	}
 	if = {
-		limit = { 1 = { is_owned_and_controlled_by = ROOT } }
+		limit = { 1 = { is_owned_and_controlled_by = URS } }
 		1 = {
 			add_extra_state_shared_building_slots = 9
 			add_building_construction = { type = industrial_complex level = 5 instant_build = yes }
@@ -62,7 +62,7 @@ TU_tier_URS = {
 		}
 	}
 	if = {
-		limit = { 2 = { is_owned_and_controlled_by = ROOT } }
+		limit = { 2 = { is_owned_and_controlled_by = URS } }
 		2 = {
 			add_extra_state_shared_building_slots = 7
 			add_building_construction = { type = industrial_complex level = 4 instant_build = yes }
@@ -71,7 +71,7 @@ TU_tier_URS = {
 		}
 	}
 	if = {
-		limit = { 3 = { is_owned_and_controlled_by = ROOT } }
+		limit = { 3 = { is_owned_and_controlled_by = URS } }
 		3 = {
 			add_extra_state_shared_building_slots = 7
 			add_building_construction = { type = industrial_complex level = 4 instant_build = yes }
@@ -84,7 +84,7 @@ TU_tier_URS = {
 # tier S: 32 civ, 18 mil, 26 divisions
 TU_tier_VIC = {
 	if = {
-		limit = { 117 = { is_owned_and_controlled_by = ROOT } }
+		limit = { 117 = { is_owned_and_controlled_by = VIC } }
 		117 = {
 			add_extra_state_shared_building_slots = 24
 			add_building_construction = { type = industrial_complex level = 15 instant_build = yes }
@@ -93,7 +93,7 @@ TU_tier_VIC = {
 		}
 	}
 	if = {
-		limit = { 111 = { is_owned_and_controlled_by = ROOT } }
+		limit = { 111 = { is_owned_and_controlled_by = VIC } }
 		111 = {
 			add_extra_state_shared_building_slots = 8
 			add_building_construction = { type = industrial_complex level = 5 instant_build = yes }
@@ -102,7 +102,7 @@ TU_tier_VIC = {
 		}
 	}
 	if = {
-		limit = { 112 = { is_owned_and_controlled_by = ROOT } }
+		limit = { 112 = { is_owned_and_controlled_by = VIC } }
 		112 = {
 			add_extra_state_shared_building_slots = 8
 			add_building_construction = { type = industrial_complex level = 5 instant_build = yes }
@@ -111,7 +111,7 @@ TU_tier_VIC = {
 		}
 	}
 	if = {
-		limit = { 113 = { is_owned_and_controlled_by = ROOT } }
+		limit = { 113 = { is_owned_and_controlled_by = VIC } }
 		113 = {
 			add_extra_state_shared_building_slots = 7
 			add_building_construction = { type = industrial_complex level = 5 instant_build = yes }
@@ -124,7 +124,7 @@ TU_tier_VIC = {
 # tier S: 36 civ, 14 mil, 20 divisions
 TU_tier_COL = {
 	if = {
-		limit = { 92 = { is_owned_and_controlled_by = ROOT } }
+		limit = { 92 = { is_owned_and_controlled_by = COL } }
 		92 = {
 			add_extra_state_shared_building_slots = 24
 			add_building_construction = { type = industrial_complex level = 17 instant_build = yes }
@@ -133,7 +133,7 @@ TU_tier_COL = {
 		}
 	}
 	if = {
-		limit = { 86 = { is_owned_and_controlled_by = ROOT } }
+		limit = { 86 = { is_owned_and_controlled_by = COL } }
 		86 = {
 			add_extra_state_shared_building_slots = 8
 			add_building_construction = { type = industrial_complex level = 6 instant_build = yes }
@@ -142,7 +142,7 @@ TU_tier_COL = {
 		}
 	}
 	if = {
-		limit = { 87 = { is_owned_and_controlled_by = ROOT } }
+		limit = { 87 = { is_owned_and_controlled_by = COL } }
 		87 = {
 			add_extra_state_shared_building_slots = 8
 			add_building_construction = { type = industrial_complex level = 6 instant_build = yes }
@@ -151,7 +151,7 @@ TU_tier_COL = {
 		}
 	}
 	if = {
-		limit = { 88 = { is_owned_and_controlled_by = ROOT } }
+		limit = { 88 = { is_owned_and_controlled_by = COL } }
 		88 = {
 			add_extra_state_shared_building_slots = 7
 			add_building_construction = { type = industrial_complex level = 5 instant_build = yes }
@@ -164,7 +164,7 @@ TU_tier_COL = {
 # tier A: 14 civ, 10 mil, 20 divisions
 TU_tier_SAR = {
 	if = {
-		limit = { 196 = { is_owned_and_controlled_by = ROOT } }
+		limit = { 196 = { is_owned_and_controlled_by = SAR } }
 		196 = {
 			add_extra_state_shared_building_slots = 11
 			add_building_construction = { type = industrial_complex level = 6 instant_build = yes }
@@ -173,7 +173,7 @@ TU_tier_SAR = {
 		}
 	}
 	if = {
-		limit = { 165 = { is_owned_and_controlled_by = ROOT } }
+		limit = { 165 = { is_owned_and_controlled_by = SAR } }
 		165 = {
 			add_extra_state_shared_building_slots = 4
 			add_building_construction = { type = industrial_complex level = 2 instant_build = yes }
@@ -182,7 +182,7 @@ TU_tier_SAR = {
 		}
 	}
 	if = {
-		limit = { 166 = { is_owned_and_controlled_by = ROOT } }
+		limit = { 166 = { is_owned_and_controlled_by = SAR } }
 		166 = {
 			add_extra_state_shared_building_slots = 3
 			add_building_construction = { type = industrial_complex level = 2 instant_build = yes }
@@ -191,7 +191,7 @@ TU_tier_SAR = {
 		}
 	}
 	if = {
-		limit = { 167 = { is_owned_and_controlled_by = ROOT } }
+		limit = { 167 = { is_owned_and_controlled_by = SAR } }
 		167 = {
 			add_extra_state_shared_building_slots = 3
 			add_building_construction = { type = industrial_complex level = 2 instant_build = yes }
@@ -204,7 +204,7 @@ TU_tier_SAR = {
 # tier A: 20 civ, 8 mil, 14 divisions
 TU_tier_KAZ = {
 	if = {
-		limit = { 40 = { is_owned_and_controlled_by = ROOT } }
+		limit = { 40 = { is_owned_and_controlled_by = KAZ } }
 		40 = {
 			add_extra_state_shared_building_slots = 13
 			add_building_construction = { type = industrial_complex level = 9 instant_build = yes }
@@ -213,7 +213,7 @@ TU_tier_KAZ = {
 		}
 	}
 	if = {
-		limit = { 41 = { is_owned_and_controlled_by = ROOT } }
+		limit = { 41 = { is_owned_and_controlled_by = KAZ } }
 		41 = {
 			add_extra_state_shared_building_slots = 4
 			add_building_construction = { type = industrial_complex level = 3 instant_build = yes }
@@ -222,7 +222,7 @@ TU_tier_KAZ = {
 		}
 	}
 	if = {
-		limit = { 42 = { is_owned_and_controlled_by = ROOT } }
+		limit = { 42 = { is_owned_and_controlled_by = KAZ } }
 		42 = {
 			add_extra_state_shared_building_slots = 4
 			add_building_construction = { type = industrial_complex level = 3 instant_build = yes }
@@ -231,7 +231,7 @@ TU_tier_KAZ = {
 		}
 	}
 	if = {
-		limit = { 43 = { is_owned_and_controlled_by = ROOT } }
+		limit = { 43 = { is_owned_and_controlled_by = KAZ } }
 		43 = {
 			add_extra_state_shared_building_slots = 4
 			add_building_construction = { type = industrial_complex level = 3 instant_build = yes }
@@ -244,7 +244,7 @@ TU_tier_KAZ = {
 # tier A: 16 civ, 9 mil, 12 divisions
 TU_tier_LEI = {
 	if = {
-		limit = { 138 = { is_owned_and_controlled_by = ROOT } }
+		limit = { 138 = { is_owned_and_controlled_by = LEI } }
 		138 = {
 			add_extra_state_shared_building_slots = 11
 			add_building_construction = { type = industrial_complex level = 7 instant_build = yes }
@@ -253,7 +253,7 @@ TU_tier_LEI = {
 		}
 	}
 	if = {
-		limit = { 136 = { is_owned_and_controlled_by = ROOT } }
+		limit = { 136 = { is_owned_and_controlled_by = LEI } }
 		136 = {
 			add_extra_state_shared_building_slots = 5
 			add_building_construction = { type = industrial_complex level = 3 instant_build = yes }
@@ -262,7 +262,7 @@ TU_tier_LEI = {
 		}
 	}
 	if = {
-		limit = { 137 = { is_owned_and_controlled_by = ROOT } }
+		limit = { 137 = { is_owned_and_controlled_by = LEI } }
 		137 = {
 			add_extra_state_shared_building_slots = 3
 			add_building_construction = { type = industrial_complex level = 2 instant_build = yes }
@@ -271,7 +271,7 @@ TU_tier_LEI = {
 		}
 	}
 	if = {
-		limit = { 139 = { is_owned_and_controlled_by = ROOT } }
+		limit = { 139 = { is_owned_and_controlled_by = LEI } }
 		139 = {
 			add_extra_state_shared_building_slots = 3
 			add_building_construction = { type = industrial_complex level = 2 instant_build = yes }
@@ -284,7 +284,7 @@ TU_tier_LEI = {
 # tier A: 8 civ, 12 mil, 18 divisions
 TU_tier_KZD = {
 	if = {
-		limit = { 148 = { is_owned_and_controlled_by = ROOT } }
+		limit = { 148 = { is_owned_and_controlled_by = KZD } }
 		148 = {
 			add_extra_state_shared_building_slots = 9
 			add_building_construction = { type = industrial_complex level = 3 instant_build = yes }
@@ -293,7 +293,7 @@ TU_tier_KZD = {
 		}
 	}
 	if = {
-		limit = { 145 = { is_owned_and_controlled_by = ROOT } }
+		limit = { 145 = { is_owned_and_controlled_by = KZD } }
 		145 = {
 			add_extra_state_shared_building_slots = 3
 			add_building_construction = { type = industrial_complex level = 1 instant_build = yes }
@@ -302,7 +302,7 @@ TU_tier_KZD = {
 		}
 	}
 	if = {
-		limit = { 146 = { is_owned_and_controlled_by = ROOT } }
+		limit = { 146 = { is_owned_and_controlled_by = KZD } }
 		146 = {
 			add_extra_state_shared_building_slots = 3
 			add_building_construction = { type = industrial_complex level = 1 instant_build = yes }
@@ -311,7 +311,7 @@ TU_tier_KZD = {
 		}
 	}
 	if = {
-		limit = { 147 = { is_owned_and_controlled_by = ROOT } }
+		limit = { 147 = { is_owned_and_controlled_by = KZD } }
 		147 = {
 			add_extra_state_shared_building_slots = 2
 			add_building_construction = { type = industrial_complex level = 1 instant_build = yes }
@@ -324,7 +324,7 @@ TU_tier_KZD = {
 # tier A: 14 civ, 8 mil, 10 divisions
 TU_tier_LAT = {
 	if = {
-		limit = { 150 = { is_owned_and_controlled_by = ROOT } }
+		limit = { 150 = { is_owned_and_controlled_by = LAT } }
 		150 = {
 			add_extra_state_shared_building_slots = 10
 			add_building_construction = { type = industrial_complex level = 6 instant_build = yes }
@@ -333,7 +333,7 @@ TU_tier_LAT = {
 		}
 	}
 	if = {
-		limit = { 151 = { is_owned_and_controlled_by = ROOT } }
+		limit = { 151 = { is_owned_and_controlled_by = LAT } }
 		151 = {
 			add_extra_state_shared_building_slots = 3
 			add_building_construction = { type = industrial_complex level = 2 instant_build = yes }
@@ -342,7 +342,7 @@ TU_tier_LAT = {
 		}
 	}
 	if = {
-		limit = { 1019 = { is_owned_and_controlled_by = ROOT } }
+		limit = { 1019 = { is_owned_and_controlled_by = LAT } }
 		1019 = {
 			add_extra_state_shared_building_slots = 3
 			add_building_construction = { type = industrial_complex level = 2 instant_build = yes }
@@ -351,7 +351,7 @@ TU_tier_LAT = {
 		}
 	}
 	if = {
-		limit = { 1020 = { is_owned_and_controlled_by = ROOT } }
+		limit = { 1020 = { is_owned_and_controlled_by = LAT } }
 		1020 = {
 			add_extra_state_shared_building_slots = 3
 			add_building_construction = { type = industrial_complex level = 2 instant_build = yes }
@@ -364,7 +364,7 @@ TU_tier_LAT = {
 # tier B: 10 civ, 5 mil, 10 divisions
 TU_tier_IBE = {
 	if = {
-		limit = { 207 = { is_owned_and_controlled_by = ROOT } }
+		limit = { 207 = { is_owned_and_controlled_by = IBE } }
 		207 = {
 			add_extra_state_shared_building_slots = 6
 			add_building_construction = { type = industrial_complex level = 4 instant_build = yes }
@@ -373,7 +373,7 @@ TU_tier_IBE = {
 		}
 	}
 	if = {
-		limit = { 199 = { is_owned_and_controlled_by = ROOT } }
+		limit = { 199 = { is_owned_and_controlled_by = IBE } }
 		199 = {
 			add_extra_state_shared_building_slots = 3
 			add_building_construction = { type = industrial_complex level = 2 instant_build = yes }
@@ -382,7 +382,7 @@ TU_tier_IBE = {
 		}
 	}
 	if = {
-		limit = { 200 = { is_owned_and_controlled_by = ROOT } }
+		limit = { 200 = { is_owned_and_controlled_by = IBE } }
 		200 = {
 			add_extra_state_shared_building_slots = 2
 			add_building_construction = { type = industrial_complex level = 1 instant_build = yes }
@@ -391,7 +391,7 @@ TU_tier_IBE = {
 		}
 	}
 	if = {
-		limit = { 201 = { is_owned_and_controlled_by = ROOT } }
+		limit = { 201 = { is_owned_and_controlled_by = IBE } }
 		201 = {
 			add_extra_state_shared_building_slots = 1
 			add_building_construction = { type = industrial_complex level = 1 instant_build = yes }
@@ -403,7 +403,7 @@ TU_tier_IBE = {
 # tier B: 14 civ, 4 mil, 8 divisions
 TU_tier_LGM = {
 	if = {
-		limit = { 621 = { is_owned_and_controlled_by = ROOT } }
+		limit = { 621 = { is_owned_and_controlled_by = LGM } }
 		621 = {
 			add_extra_state_shared_building_slots = 15
 			add_building_construction = { type = industrial_complex level = 12 instant_build = yes }
@@ -416,7 +416,7 @@ TU_tier_LGM = {
 # tier B: 8 civ, 6 mil, 12 divisions
 TU_tier_HIG = {
 	if = {
-		limit = { 53 = { is_owned_and_controlled_by = ROOT } }
+		limit = { 53 = { is_owned_and_controlled_by = HIG } }
 		53 = {
 			add_extra_state_shared_building_slots = 6
 			add_building_construction = { type = industrial_complex level = 3 instant_build = yes }
@@ -425,7 +425,7 @@ TU_tier_HIG = {
 		}
 	}
 	if = {
-		limit = { 54 = { is_owned_and_controlled_by = ROOT } }
+		limit = { 54 = { is_owned_and_controlled_by = HIG } }
 		54 = {
 			add_extra_state_shared_building_slots = 2
 			add_building_construction = { type = industrial_complex level = 1 instant_build = yes }
@@ -434,7 +434,7 @@ TU_tier_HIG = {
 		}
 	}
 	if = {
-		limit = { 55 = { is_owned_and_controlled_by = ROOT } }
+		limit = { 55 = { is_owned_and_controlled_by = HIG } }
 		55 = {
 			add_extra_state_shared_building_slots = 2
 			add_building_construction = { type = industrial_complex level = 1 instant_build = yes }
@@ -443,7 +443,7 @@ TU_tier_HIG = {
 		}
 	}
 	if = {
-		limit = { 782 = { is_owned_and_controlled_by = ROOT } }
+		limit = { 782 = { is_owned_and_controlled_by = HIG } }
 		782 = {
 			add_extra_state_shared_building_slots = 1
 			add_building_construction = { type = industrial_complex level = 1 instant_build = yes }
@@ -455,7 +455,7 @@ TU_tier_HIG = {
 # tier B: 10 civ, 5 mil, 10 divisions
 TU_tier_SIR = {
 	if = {
-		limit = { 142 = { is_owned_and_controlled_by = ROOT } }
+		limit = { 142 = { is_owned_and_controlled_by = SIR } }
 		142 = {
 			add_extra_state_shared_building_slots = 6
 			add_building_construction = { type = industrial_complex level = 4 instant_build = yes }
@@ -464,7 +464,7 @@ TU_tier_SIR = {
 		}
 	}
 	if = {
-		limit = { 143 = { is_owned_and_controlled_by = ROOT } }
+		limit = { 143 = { is_owned_and_controlled_by = SIR } }
 		143 = {
 			add_extra_state_shared_building_slots = 3
 			add_building_construction = { type = industrial_complex level = 2 instant_build = yes }
@@ -473,7 +473,7 @@ TU_tier_SIR = {
 		}
 	}
 	if = {
-		limit = { 144 = { is_owned_and_controlled_by = ROOT } }
+		limit = { 144 = { is_owned_and_controlled_by = SIR } }
 		144 = {
 			add_extra_state_shared_building_slots = 2
 			add_building_construction = { type = industrial_complex level = 1 instant_build = yes }
@@ -482,7 +482,7 @@ TU_tier_SIR = {
 		}
 	}
 	if = {
-		limit = { 1001 = { is_owned_and_controlled_by = ROOT } }
+		limit = { 1001 = { is_owned_and_controlled_by = SIR } }
 		1001 = {
 			add_extra_state_shared_building_slots = 1
 			add_building_construction = { type = industrial_complex level = 1 instant_build = yes }
@@ -494,7 +494,7 @@ TU_tier_SIR = {
 # tier B: 6 civ, 4 mil, 10 divisions
 TU_tier_BOL = {
 	if = {
-		limit = { 106 = { is_owned_and_controlled_by = ROOT } }
+		limit = { 106 = { is_owned_and_controlled_by = BOL } }
 		106 = {
 			add_extra_state_shared_building_slots = 4
 			add_building_construction = { type = industrial_complex level = 2 instant_build = yes }
@@ -503,7 +503,7 @@ TU_tier_BOL = {
 		}
 	}
 	if = {
-		limit = { 104 = { is_owned_and_controlled_by = ROOT } }
+		limit = { 104 = { is_owned_and_controlled_by = BOL } }
 		104 = {
 			add_extra_state_shared_building_slots = 2
 			add_building_construction = { type = industrial_complex level = 1 instant_build = yes }
@@ -512,7 +512,7 @@ TU_tier_BOL = {
 		}
 	}
 	if = {
-		limit = { 105 = { is_owned_and_controlled_by = ROOT } }
+		limit = { 105 = { is_owned_and_controlled_by = BOL } }
 		105 = {
 			add_extra_state_shared_building_slots = 1
 			add_building_construction = { type = industrial_complex level = 1 instant_build = yes }
@@ -520,7 +520,7 @@ TU_tier_BOL = {
 		}
 	}
 	if = {
-		limit = { 107 = { is_owned_and_controlled_by = ROOT } }
+		limit = { 107 = { is_owned_and_controlled_by = BOL } }
 		107 = {
 			create_unit = { division = "division_template = \"TU_BOL_line_infantry\" start_experience_factor = 0.2 start_equipment_factor = 0.8" owner = BOL count = 1 }
 		}
@@ -530,7 +530,7 @@ TU_tier_BOL = {
 # tier B: 12 civ, 4 mil, 6 divisions
 TU_tier_RIM = {
 	if = {
-		limit = { 157 = { is_owned_and_controlled_by = ROOT } }
+		limit = { 157 = { is_owned_and_controlled_by = RIM } }
 		157 = {
 			add_extra_state_shared_building_slots = 7
 			add_building_construction = { type = industrial_complex level = 5 instant_build = yes }
@@ -539,7 +539,7 @@ TU_tier_RIM = {
 		}
 	}
 	if = {
-		limit = { 154 = { is_owned_and_controlled_by = ROOT } }
+		limit = { 154 = { is_owned_and_controlled_by = RIM } }
 		154 = {
 			add_extra_state_shared_building_slots = 3
 			add_building_construction = { type = industrial_complex level = 2 instant_build = yes }
@@ -548,7 +548,7 @@ TU_tier_RIM = {
 		}
 	}
 	if = {
-		limit = { 155 = { is_owned_and_controlled_by = ROOT } }
+		limit = { 155 = { is_owned_and_controlled_by = RIM } }
 		155 = {
 			add_extra_state_shared_building_slots = 2
 			add_building_construction = { type = industrial_complex level = 2 instant_build = yes }
@@ -556,7 +556,7 @@ TU_tier_RIM = {
 		}
 	}
 	if = {
-		limit = { 156 = { is_owned_and_controlled_by = ROOT } }
+		limit = { 156 = { is_owned_and_controlled_by = RIM } }
 		156 = {
 			add_extra_state_shared_building_slots = 1
 			add_building_construction = { type = industrial_complex level = 1 instant_build = yes }
@@ -568,7 +568,7 @@ TU_tier_RIM = {
 # tier B: 8 civ, 3 mil, 6 divisions
 TU_tier_MIN = {
 	if = {
-		limit = { 152 = { is_owned_and_controlled_by = ROOT } }
+		limit = { 152 = { is_owned_and_controlled_by = MIN } }
 		152 = {
 			add_extra_state_shared_building_slots = 4
 			add_building_construction = { type = industrial_complex level = 3 instant_build = yes }
@@ -577,7 +577,7 @@ TU_tier_MIN = {
 		}
 	}
 	if = {
-		limit = { 153 = { is_owned_and_controlled_by = ROOT } }
+		limit = { 153 = { is_owned_and_controlled_by = MIN } }
 		153 = {
 			add_extra_state_shared_building_slots = 2
 			add_building_construction = { type = industrial_complex level = 1 instant_build = yes }
@@ -586,7 +586,7 @@ TU_tier_MIN = {
 		}
 	}
 	if = {
-		limit = { 1022 = { is_owned_and_controlled_by = ROOT } }
+		limit = { 1022 = { is_owned_and_controlled_by = MIN } }
 		1022 = {
 			add_extra_state_shared_building_slots = 1
 			add_building_construction = { type = industrial_complex level = 1 instant_build = yes }
@@ -594,7 +594,7 @@ TU_tier_MIN = {
 		}
 	}
 	if = {
-		limit = { 1023 = { is_owned_and_controlled_by = ROOT } }
+		limit = { 1023 = { is_owned_and_controlled_by = MIN } }
 		1023 = {
 			add_extra_state_shared_building_slots = 1
 			add_building_construction = { type = industrial_complex level = 1 instant_build = yes }
@@ -606,7 +606,7 @@ TU_tier_MIN = {
 # tier B: 6 civ, 3 mil, 6 divisions
 TU_tier_KJE = {
 	if = {
-		limit = { 110 = { is_owned_and_controlled_by = ROOT } }
+		limit = { 110 = { is_owned_and_controlled_by = KJE } }
 		110 = {
 			add_extra_state_shared_building_slots = 3
 			add_building_construction = { type = industrial_complex level = 2 instant_build = yes }
@@ -615,7 +615,7 @@ TU_tier_KJE = {
 		}
 	}
 	if = {
-		limit = { 109 = { is_owned_and_controlled_by = ROOT } }
+		limit = { 109 = { is_owned_and_controlled_by = KJE } }
 		109 = {
 			add_extra_state_shared_building_slots = 2
 			add_building_construction = { type = industrial_complex level = 1 instant_build = yes }
@@ -624,7 +624,7 @@ TU_tier_KJE = {
 		}
 	}
 	if = {
-		limit = { 937 = { is_owned_and_controlled_by = ROOT } }
+		limit = { 937 = { is_owned_and_controlled_by = KJE } }
 		937 = {
 			add_extra_state_shared_building_slots = 1
 			add_building_construction = { type = industrial_complex level = 1 instant_build = yes }
@@ -632,7 +632,7 @@ TU_tier_KJE = {
 		}
 	}
 	if = {
-		limit = { 938 = { is_owned_and_controlled_by = ROOT } }
+		limit = { 938 = { is_owned_and_controlled_by = KJE } }
 		938 = {
 			create_unit = { division = "division_template = \"TU_KJE_line_infantry\" start_experience_factor = 0.2 start_equipment_factor = 0.8" owner = KJE count = 1 }
 		}
@@ -642,7 +642,7 @@ TU_tier_KJE = {
 # tier C: 3 civ, 2 mil, 6 divisions
 TU_tier_SAM = {
 	if = {
-		limit = { 52 = { is_owned_and_controlled_by = ROOT } }
+		limit = { 52 = { is_owned_and_controlled_by = SAM } }
 		52 = {
 			add_extra_state_shared_building_slots = 2
 			add_building_construction = { type = industrial_complex level = 1 instant_build = yes }
@@ -651,19 +651,19 @@ TU_tier_SAM = {
 		}
 	}
 	if = {
-		limit = { 51 = { is_owned_and_controlled_by = ROOT } }
+		limit = { 51 = { is_owned_and_controlled_by = SAM } }
 		51 = {
 			create_unit = { division = "division_template = \"TU_SAM_line_infantry\" start_experience_factor = 0.2 start_equipment_factor = 0.8" owner = SAM count = 1 }
 		}
 	}
 	if = {
-		limit = { 775 = { is_owned_and_controlled_by = ROOT } }
+		limit = { 775 = { is_owned_and_controlled_by = SAM } }
 		775 = {
 			create_unit = { division = "division_template = \"TU_SAM_line_infantry\" start_experience_factor = 0.2 start_equipment_factor = 0.8" owner = SAM count = 1 }
 		}
 	}
 	if = {
-		limit = { 776 = { is_owned_and_controlled_by = ROOT } }
+		limit = { 776 = { is_owned_and_controlled_by = SAM } }
 		776 = {
 			create_unit = { division = "division_template = \"TU_SAM_line_infantry\" start_experience_factor = 0.2 start_equipment_factor = 0.8" owner = SAM count = 1 }
 		}
@@ -673,7 +673,7 @@ TU_tier_SAM = {
 # tier C: 4 civ, 3 mil, 5 divisions
 TU_tier_RHO = {
 	if = {
-		limit = { 62 = { is_owned_and_controlled_by = ROOT } }
+		limit = { 62 = { is_owned_and_controlled_by = RHO } }
 		62 = {
 			add_extra_state_shared_building_slots = 4
 			add_building_construction = { type = industrial_complex level = 2 instant_build = yes }

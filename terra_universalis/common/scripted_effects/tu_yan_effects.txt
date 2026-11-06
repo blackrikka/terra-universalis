@@ -15,7 +15,7 @@ TU_YAN_startup = {
 	}
 	if = {
 		limit = {
-			71 = { is_owned_by = ROOT }
+			71 = { is_owned_by = YAN }
 		}
 		71 = {
 			create_unit = {
@@ -27,7 +27,7 @@ TU_YAN_startup = {
 	}
 	if = {
 		limit = {
-			61 = { is_owned_by = ROOT }
+			61 = { is_owned_by = YAN }
 		}
 		61 = {
 			create_unit = {
