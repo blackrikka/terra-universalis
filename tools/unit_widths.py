@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""대대 기본 전투 폭 바꾸기 (사양서 45).
+"""대대 기본 전투 폭 바꾸기 (사양서 53).
 
 사용자 요구: 보병 1, 기병 1, 포병 4, 전차 4 (계열 포함).
 원본: reference/vanilla_units/*.txt (사용자가 올린 바닐라 common/units 파일).

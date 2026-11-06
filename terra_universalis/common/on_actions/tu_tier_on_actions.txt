@@ -2,7 +2,7 @@
 on_actions = {
 	on_startup = {
 		effect = {
-			# Once only (spec 40): on_startup can run again in multiplayer or on load; do not stack factories and divisions
+			# Once only (spec 48): on_startup can run again in multiplayer or on load; do not stack factories and divisions
 			if = {
 				limit = { NOT = { has_global_flag = TU_tiers_applied } }
 				set_global_flag = TU_tiers_applied

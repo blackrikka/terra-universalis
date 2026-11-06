@@ -539,7 +539,7 @@ def main(argv=None):
         if info["impassable"]:
             infra = "0"
         elif info["category"] == "tu_hex":
-            infra = vals.get("infrastructure")      # 나뉜 주 (사양서 41): 원래 주의 인프라를 그대로 쓴다
+            infra = vals.get("infrastructure")      # 나뉜 주 (사양서 49): 원래 주의 인프라를 그대로 쓴다
         elif info["category"] == "pastoral":
             infra = "1"
         elif info["category"] == "town":
@@ -676,7 +676,7 @@ def main(argv=None):
 
     # 17. 국가 지도자 (수정1 C): GFX 정의, 캐릭터 파일, recruit_character, 로컬라이제이션
     gfx_defined = set()
-    for g in glob.glob(str(vanilla / "interface" / "*.gfx")) + glob.glob(str(mod / "interface" / "*.gfx")):   # 모드 초상화 (사양서 39)
+    for g in glob.glob(str(vanilla / "interface" / "*.gfx")) + glob.glob(str(mod / "interface" / "*.gfx")):   # 모드 초상화 (사양서 47)
         text = Path(g).read_bytes().decode("utf-8-sig", errors="replace")
         gfx_defined.update(x.lower() for x in re.findall(r'name\s*=\s*"([^"]+)"', text))
     loc_text = {}

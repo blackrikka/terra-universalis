@@ -411,7 +411,7 @@ def main(argv=None):
     import focus_hooks      # 사양서 23: 결말 지도자 교체 · 국호 변경
     hooked, missing = focus_hooks.apply(out_path, tag)
     sys.path.insert(0, str(REPO / "tools"))
-    import ruling_party  # 지도자 교체 = 집권당 교체 (사양서 42)
+    import ruling_party  # 지도자 교체 = 집권당 교체 (사양서 50)
     ruling_party.fix_file(out_path)
     if hooked or missing:
         print(f"focus hooks: {hooked}" + (f", missing focus {missing}" if missing else ""))

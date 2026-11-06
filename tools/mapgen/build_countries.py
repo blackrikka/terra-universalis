@@ -521,7 +521,7 @@ def main(argv=None):
             "}",
         ]
         write_ascii(mod / "common" / "characters" / ("%s.txt" % t), "\n".join(leader) + "\n")
-    # 명일방주 일러스트 초상화 (사양서 39): 방금 쓴 기본 지도자(YCH_leader 등)에도 다시 건다
+    # 명일방주 일러스트 초상화 (사양서 47): 방금 쓴 기본 지도자(YCH_leader 등)에도 다시 건다
     sys.path.insert(0, str(PROJECT_DIR / "tools" / "chargen"))
     from build_characters import apply_cast_portraits  # noqa: E402
     apply_cast_portraits()
@@ -538,7 +538,7 @@ def main(argv=None):
             "capital = %d" % capital_of[tag],
             "set_research_slots = 3",
             'set_politics = { ruling_party = %s last_election = "1096.1.1" '
-            'election_frequency = 48 elections_allowed = %s }' % (party, "yes" if party == "democratic" else "no"),   # 사양서 42
+            'election_frequency = 48 elections_allowed = %s }' % (party, "yes" if party == "democratic" else "no"),   # 사양서 50
             "set_popularities = { %s }" % " ".join("%s = %d" % kv for kv in pops.items()),
             "add_ideas = TU_sea_terror",     # 해군 없음 (사양서 18): 조선소·해군 기지 건설 불가
         ]
@@ -590,7 +590,7 @@ def main(argv=None):
                 'NDefines.NGame.START_DATE = "%s"\nNDefines.NGame.END_DATE = "%s"\n' % (START_DATE, END_DATE))
 
     # 깃발
-    # 이념별 국기 (사양서 46): <TAG>_<이념>.tga 가 있으면 게임이 그것을 먼저 쓴다. KAZ·COL·BOL·LAT 처럼 바닐라 태그와 겹치면
+    # 이념별 국기 (사양서 54): <TAG>_<이념>.tga 가 있으면 게임이 그것을 먼저 쓴다. KAZ·COL·BOL·LAT 처럼 바닐라 태그와 겹치면
     # 바닐라의 이념별 국기(카자흐스탄 등)가 나오므로 모든 이념에 같은 국기를 써서 덮는다
     for c in countries:
         for suf in IDEOLOGY_SUFFIXES:
@@ -609,10 +609,10 @@ def main(argv=None):
     en = []
     for c in countries:
         t = c["tag"]
-        for suf in IDEOLOGY_SUFFIXES:     # 사양서 46: 이념마다 이름 (바닐라 KAZ_democratic = 카자흐스탄 등을 덮는다)
+        for suf in IDEOLOGY_SUFFIXES:     # 사양서 54: 이념마다 이름 (바닐라 KAZ_democratic = 카자흐스탄 등을 덮는다)
             ko += [(t + suf, c["name_ko"]), (t + suf + "_DEF", c["name_ko"]), (t + suf + "_ADJ", c["adj_ko"])]
             en += [(t + suf, c["name_en"]), (t + suf + "_DEF", "the " + c["name_en"]), (t + suf + "_ADJ", c["adj_en"])]
-        if t not in CUSTOM_PARTY_TAGS:     # 사양서 46: 정당 이름 (바닐라 태그와 겹치면 바닐라 정당 이름이 나온다)
+        if t not in CUSTOM_PARTY_TAGS:     # 사양서 54: 정당 이름 (바닐라 태그와 겹치면 바닐라 정당 이름이 나온다)
             for ide, (pko, pen) in PARTY_NAMES.items():
                 ko += [("%s_%s_party" % (t, ide), pko % c["name_ko"]), ("%s_%s_party_long" % (t, ide), pko % c["name_ko"])]
                 en += [("%s_%s_party" % (t, ide), pen % c["name_en"]), ("%s_%s_party_long" % (t, ide), pen % c["name_en"])]

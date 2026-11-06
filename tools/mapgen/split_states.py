@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""통행 가능한 주를 프로빈스 하나짜리 주로 나눈다 (사양서 41). 지도 후처리 맨 끝(fix_exclaves 뒤)에 돌린다.
+"""통행 가능한 주를 프로빈스 하나짜리 주로 나눈다 (사양서 49). 지도 후처리 맨 끝(fix_exclaves 뒤)에 돌린다.
 
 사용법:  python -I tools/mapgen/split_states.py [--dry]
 그다음:  rail_effects.py → tiers.py → content/ibe.py + merge_focus IBE → build_countries.py → validate_map.py
@@ -123,7 +123,7 @@ def main(argv=None):
     # ---- 범주 tu_hex
     cat = MOD / "common" / "state_category" / "tu_hex.txt"
     cat.parent.mkdir(parents=True, exist_ok=True)
-    cat.write_text("# Terra hex state (tools/mapgen/split_states.py, spec 41): one province, one building slot.\n"
+    cat.write_text("# Terra hex state (tools/mapgen/split_states.py, spec 49): one province, one building slot.\n"
                    "state_categories = {\n\t%s = {\n\t\tcolor = { 150 170 120 }\n\t\tlocal_building_slots = 1\n\t}\n}\n"
                    % PIECE_CATEGORY, encoding="utf-8")
     for lang, name in (("korean", "헥스 지역"), ("english", "Hex Region")):

@@ -26,7 +26,7 @@ from pathlib import Path
 HERE = Path(__file__).resolve().parent
 sys.path.insert(0, str(HERE))
 sys.path.insert(0, str(Path(__file__).resolve().parents[1]))
-import ruling_party as _ruling_party  # noqa: E402  (사양서 42)
+import ruling_party as _ruling_party  # noqa: E402  (사양서 50)
 from theme_effects import theme_of, reward_lines, FOCUS_ICON, is_warship  # noqa: E402
 
 sys.path.insert(0, str(Path(__file__).resolve().parents[1] / "gauges"))
@@ -342,7 +342,7 @@ class Country:
 
         if self.effects:
             (MOD / ("common/scripted_effects/tu_%s_effects.txt" % low)).write_text("\n\n".join(self.effects) + "\n", encoding="utf-8")
-            import templates as _templates  # 기본 편제 통일 (사양서 44)
+            import templates as _templates  # 기본 편제 통일 (사양서 52)
             _templates.apply_file(MOD / ("common/scripted_effects/tu_%s_effects.txt" % low))
         if self.triggers:
             (MOD / ("common/scripted_triggers/tu_%s_triggers.txt" % low)).write_text("\n\n".join(self.triggers) + "\n", encoding="utf-8")

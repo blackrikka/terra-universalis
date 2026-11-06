@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
-"""기본 편제(사단 틀) 통일 (사양서 44).
+"""기본 편제(사단 틀) 통일 (사양서 52).
 
-전투 폭을 네 단계로 맞춘다 (사양서 45의 대대 폭: 보병·기병 1, 포병·전차 4):
+전투 폭을 네 단계로 맞춘다 (사양서 53의 대대 폭: 보병·기병 1, 포병·전차 4):
     10폭  정예·특수 (근위대, 오퍼레이터, 심판관, 기사, 용병, 분파 근위대)
     20폭  주력 보병 (모든 나라의 기본 보병 사단)
     30폭  중육상함 전대 / 40폭 도시급 육상함
@@ -17,7 +17,7 @@ import re
 import sys
 from pathlib import Path
 
-WIDTH = {"infantry": 1, "cavalry": 1, "light_armor": 4, "artillery_brigade": 4, "motorized": 1}   # 사양서 45 (tools/unit_widths.py)
+WIDTH = {"infantry": 1, "cavalry": 1, "light_armor": 4, "artillery_brigade": 4, "motorized": 1}   # 사양서 53 (tools/unit_widths.py)
 
 LINE = ([("infantry", 12), ("artillery_brigade", 2)], ["engineer", "recon"])              # 20폭
 TEMPLATES = {

@@ -339,7 +339,7 @@ COSMETIC_COLORS.update({
     "TU_YAN_SUI": ((140, 20, 30), (190, 60, 60)),
 })
 
-# 손으로 만든 캐릭터 파일의 지도자 이념 덮어쓰기 (사양서 42: 나라마다 시작 이념이 다르다). build_characters 가 적용한다.
+# 손으로 만든 캐릭터 파일의 지도자 이념 덮어쓰기 (사양서 50: 나라마다 시작 이념이 다르다). build_characters 가 적용한다.
 LEADER_IDEOLOGY = {
     "TU_URS_emperor": "fascism_ideology",       # 우르수스 제국 (파시즘)
     "TU_VIC_dukes_council": "conservatism",      # 빅토리아 대공 의회 (민주)

@@ -452,7 +452,7 @@ TU_YAN_split_realms = {
 			}
 		}
 	}
-	# Grow 5 rounds (spec 41: states are one province each since the state split)
+	# Grow 5 rounds (spec 49: states are one province each since the state split)
 	if = {
 		limit = { NOT = { has_country_flag = TU_YAN_chosen_chongyue } }
 		random_state = {

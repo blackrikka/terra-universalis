@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""명일방주 공식 일러스트 → 지도자·장군·원수 초상화 (사양서 39).
+"""명일방주 공식 일러스트 → 지도자·장군·원수 초상화 (사양서 47).
 
 사용법 (python -I):
     python -I tools/portraits/build_cast_portraits.py [--art-dir ../terrauniverse] [--sheet <대조표.png>]

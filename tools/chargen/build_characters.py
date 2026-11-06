@@ -87,7 +87,7 @@ def patch_existing_leaders():
 
 
 def patch_leader_ideology():
-    """사양서 42: LEADER_IDEOLOGY 의 캐릭터(손으로 만든 파일 포함) country_leader 이념을 바꾼다."""
+    """사양서 50: LEADER_IDEOLOGY 의 캐릭터(손으로 만든 파일 포함) country_leader 이념을 바꾼다."""
     done = set()
     for f in (MOD / "common" / "characters").glob("*.txt"):
         s = f.read_text(encoding="utf-8-sig")
@@ -113,7 +113,7 @@ def patch_leader_ideology():
 
 
 def apply_cast_portraits():
-    """사양서 39: tools/portraits/cast_portraits.json 의 캐릭터에 명일방주 일러스트 초상화를 건다 (모든 캐릭터 파일).
+    """사양서 47: tools/portraits/cast_portraits.json 의 캐릭터에 명일방주 일러스트 초상화를 건다 (모든 캐릭터 파일).
     portraits 블록을 바꾸거나 name 줄 뒤에 넣는다. 반환: 바꾼 캐릭터 수."""
     sys.path.insert(0, str(REPO / "tools" / "portraits"))
     from build_cast_portraits import sprite  # noqa: E402
