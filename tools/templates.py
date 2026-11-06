@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 """기본 편제(사단 틀) 통일 (사양서 44).
 
-전투 폭을 네 단계로 맞춘다 (보병·기병·경전차 2, 포병 3):
+전투 폭을 네 단계로 맞춘다 (사양서 45의 대대 폭: 보병·기병 1, 포병·전차 4):
     10폭  정예·특수 (근위대, 오퍼레이터, 심판관, 기사, 용병, 분파 근위대)
     20폭  주력 보병 (모든 나라의 기본 보병 사단)
     30폭  중육상함 전대 / 40폭 도시급 육상함
@@ -17,29 +17,29 @@ import re
 import sys
 from pathlib import Path
 
-WIDTH = {"infantry": 2, "cavalry": 2, "light_armor": 2, "artillery_brigade": 3, "motorized": 2}
+WIDTH = {"infantry": 1, "cavalry": 1, "light_armor": 4, "artillery_brigade": 4, "motorized": 1}   # 사양서 45 (tools/unit_widths.py)
 
-LINE = ([("infantry", 7), ("artillery_brigade", 2)], ["engineer", "recon"])               # 20폭
+LINE = ([("infantry", 12), ("artillery_brigade", 2)], ["engineer", "recon"])              # 20폭
 TEMPLATES = {
     # 나라별 주력 보병 (손으로 만든 OOB) — 20폭
-    "TU_URS_infantry": ([("infantry", 7), ("artillery_brigade", 2)], ["engineer", "artillery"]),
-    "TU_VIC_line_infantry": ([("infantry", 7), ("artillery_brigade", 2)], ["engineer", "artillery"]),
-    "TU_YAN_infantry": ([("infantry", 7), ("artillery_brigade", 2)], ["engineer", "recon"]),
-    "TU_KZD_infantry": ([("infantry", 7), ("artillery_brigade", 2)], ["recon"]),
+    "TU_URS_infantry": ([("infantry", 12), ("artillery_brigade", 2)], ["engineer", "artillery"]),
+    "TU_VIC_line_infantry": ([("infantry", 12), ("artillery_brigade", 2)], ["engineer", "artillery"]),
+    "TU_YAN_infantry": ([("infantry", 12), ("artillery_brigade", 2)], ["engineer", "recon"]),
+    "TU_KZD_infantry": ([("infantry", 12), ("artillery_brigade", 2)], ["recon"]),
     # 정예 — 20폭
-    "TU_URS_guard_division": ([("infantry", 4), ("cavalry", 2), ("light_armor", 1), ("artillery_brigade", 2)], ["engineer", "recon"]),
-    "TU_KZD_elite_guard": ([("infantry", 5), ("cavalry", 2), ("artillery_brigade", 2)], ["recon"]),
+    "TU_URS_guard_division": ([("infantry", 6), ("cavalry", 2), ("light_armor", 1), ("artillery_brigade", 2)], ["engineer", "recon"]),
+    "TU_KZD_elite_guard": ([("infantry", 10), ("cavalry", 2), ("artillery_brigade", 2)], ["recon"]),
     # 정예·특수 — 10폭
-    "TU_VIC_steam_knight": ([("infantry", 2), ("light_armor", 3)], ["engineer"]),
-    "TU_LGM_guard": ([("infantry", 5)], ["engineer"]),
-    "TU_RHO_operator_squad": ([("infantry", 5)], ["recon"]),
-    "TU_RHO_escort": ([("infantry", 5)], []),
-    "TU_COL_blacksteel": ([("infantry", 5)], []),
-    "TU_IBE_inquisitors": ([("infantry", 5)], []),
-    "TU_KAZ_knights": ([("cavalry", 4), ("infantry", 1)], []),
-    "TU_LAT_guard": ([("infantry", 5)], []),
-    "TU_SAR_mercs": ([("infantry", 3), ("cavalry", 2)], []),
-    "TU_YAN_faction_guard": ([("infantry", 5)], []),
+    "TU_VIC_steam_knight": ([("infantry", 2), ("light_armor", 2)], ["engineer"]),
+    "TU_LGM_guard": ([("infantry", 6), ("artillery_brigade", 1)], ["engineer"]),
+    "TU_RHO_operator_squad": ([("infantry", 6), ("artillery_brigade", 1)], ["recon"]),
+    "TU_RHO_escort": ([("infantry", 6), ("artillery_brigade", 1)], []),
+    "TU_COL_blacksteel": ([("infantry", 6), ("artillery_brigade", 1)], []),
+    "TU_IBE_inquisitors": ([("infantry", 6), ("artillery_brigade", 1)], []),
+    "TU_KAZ_knights": ([("cavalry", 6), ("artillery_brigade", 1)], []),
+    "TU_LAT_guard": ([("infantry", 6), ("artillery_brigade", 1)], []),
+    "TU_SAR_mercs": ([("infantry", 4), ("cavalry", 2), ("artillery_brigade", 1)], []),
+    "TU_YAN_faction_guard": ([("infantry", 6), ("artillery_brigade", 1)], []),
     # 육상함 — 20 / 30 / 40폭
     "Light Landship Squadron": ([("infantry", 4), ("artillery_brigade", 4)], ["engineer", "recon"]),
     "Heavy Landship Squadron": ([("infantry", 6), ("artillery_brigade", 6)], ["engineer", "recon"]),
