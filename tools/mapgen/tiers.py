@@ -236,6 +236,9 @@ def main():
                 MOD / "common" / "on_actions" / "tu_tier_on_actions.txt"):
         if old.is_file():
             old.unlink()
+    sys.path.insert(0, str(Path(__file__).resolve().parent))
+    import resources                       # 사양서 57: 전략 자원 6종 산지
+    resources.main()
     calls = [t for t in TIERS]
     print("tiers: factories added %d, divisions %d" % (n_fac, n_units))
     print("tiers:", len(calls), "countries")
