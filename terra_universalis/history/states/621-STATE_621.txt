@@ -8,10 +8,11 @@ state={
 	history={
 		owner = LGM
 		victory_points = { 262 15 }
+		add_extra_state_shared_building_slots = 15
 		buildings = {
+			industrial_complex = 14
+			arms_factory = 4
 			infrastructure = 4
-			industrial_complex = 2
-			arms_factory = 1
 			air_base = 1
 		}
 		add_core_of = LGM

@@ -8,10 +8,11 @@ state={
 	history={
 		owner = MIN
 		victory_points = { 541 1 }
+		add_extra_state_shared_building_slots = 4
 		buildings = {
+			industrial_complex = 5
+			arms_factory = 2
 			infrastructure = 2
-			industrial_complex = 2
-			arms_factory = 1
 			air_base = 1
 		}
 		add_core_of = MIN

@@ -557,13 +557,16 @@ def main(argv=None):
             chk.err("9", "주 파일 %s: infrastructure %s (기대 %s)" % (
                 info["file"], vals.get("infrastructure"), infra))
         if sid in capital_by_state:
+            # 사양서 56: 체급 공장(tiers.py)이 주 히스토리에 들어가므로 수도는 기본값 이상이면 된다
             for k, v in CAPITAL_BUILDINGS.items():
-                if vals.get(k) != v:
-                    chk.err("9", "수도 주 %d (%s): %s %s (기대 %s)" % (
-                        sid, capital_by_state[sid], k, vals.get(k), v))
+                got = vals.get(k)
+                ok = got == v if k == "air_base" else (got is not None and got.isdigit() and int(got) >= int(v))
+                if not ok:
+                    chk.err("9", "수도 주 %d (%s): %s %s (기대 %s%s)" % (
+                        sid, capital_by_state[sid], k, got, v, "" if k == "air_base" else " 이상"))
             extra = set(vals) - {"infrastructure"} - set(CAPITAL_BUILDINGS)
         else:
-            extra = set(vals) - {"infrastructure"}
+            extra = set(vals) - {"infrastructure", "industrial_complex", "arms_factory"}
         if extra:
             chk.err("9", "주 파일 %s: 건물 %s는 이 주에 허용되지 않음" % (info["file"], sorted(extra)))
 
@@ -572,9 +575,13 @@ def main(argv=None):
                      "small_island": 1, "tu_hex": 1, "large_island": 3, "tiny_island": 0, "wasteland": 0, "enclave": 0,
                      "metropolis": 10, "megalopolis": 12}
     SLOT_BUILDINGS = {"industrial_complex", "arms_factory", "dockyard"}
-    for sid in sorted(capital_by_state):
+    for sid in sorted(state_info):     # 사양서 56: 모든 주 (체급 공장이 수도 밖에도 들어간다)
         info = state_info[sid]
         slots = VANILLA_SLOTS.get(info["category"])
+        if slots is not None:
+            m_extra = re.search(r"add_extra_state_shared_building_slots\s*=\s*(\d+)",
+                                (mod / "history" / "states" / info["file"]).read_text(encoding="utf-8-sig"))
+            slots += int(m_extra.group(1)) if m_extra else 0
         if slots is None:
             chk.err("9", "수도 주 %d (%s): state_category %s의 슬롯 수를 알 수 없음" % (
                 sid, info["file"], info["category"]))

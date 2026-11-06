@@ -8,10 +8,11 @@ state={
 	history={
 		owner = URS
 		victory_points = { 167 1 }
+		add_extra_state_shared_building_slots = 24
 		buildings = {
+			industrial_complex = 15
+			arms_factory = 12
 			infrastructure = 2
-			industrial_complex = 2
-			arms_factory = 1
 			air_base = 1
 		}
 		add_core_of = URS

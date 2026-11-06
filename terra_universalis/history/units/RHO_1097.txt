@@ -31,3 +31,39 @@ division_template = {
 		artillery_brigade = { x = 2 y = 0 }
 	}
 }
+
+units = {
+	division = {
+		name = "Rhodes Island Escort 1"
+		location = 236
+		division_template = "TU_RHO_escort"
+		start_experience_factor = 0.2
+		start_equipment_factor = 0.8
+	}
+	division = {
+		name = "Rhodes Island Escort 2"
+		location = 236
+		division_template = "TU_RHO_escort"
+		start_experience_factor = 0.2
+		start_equipment_factor = 0.8
+	}
+	division = {
+		name = "Rhodes Island Operator Squad"
+		location = 236
+		division_template = "TU_RHO_operator_squad"
+		start_experience_factor = 0.2
+		start_equipment_factor = 0.8
+	}
+	division = {
+		location = 236
+		division_template = "TU_RHO_escort"
+		start_experience_factor = 0.2
+		start_equipment_factor = 0.8
+	}
+	division = {
+		location = 236
+		division_template = "TU_RHO_escort"
+		start_experience_factor = 0.2
+		start_equipment_factor = 0.8
+	}
+}

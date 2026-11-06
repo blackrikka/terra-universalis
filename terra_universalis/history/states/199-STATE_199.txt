@@ -8,7 +8,10 @@ state={
 	history={
 		owner = IBE
 		victory_points = { 720 1 }
+		add_extra_state_shared_building_slots = 3
 		buildings = {
+			industrial_complex = 2
+			arms_factory = 1
 			infrastructure = 2
 		}
 		add_core_of = IBE
