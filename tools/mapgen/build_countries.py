@@ -161,6 +161,16 @@ def write_owner_preview(mod, countries, index):
 
 
 SHAPES = ("circle", "diamond", "cross")
+PARTY_NAMES = {"neutrality": ("%s 집권층", "%s Establishment"), "democratic": ("%s 의회파", "%s Parliamentarians"),
+               "fascism": ("%s 국가주의파", "%s Nationalists"), "communism": ("%s 혁명파", "%s Revolutionaries"),
+               "imperial_house": ("%s 황실파", "%s Imperial Loyalists"), "sui": ("%s 쉐이파", "%s Sui Faction")}
+CUSTOM_PARTY_TAGS = {"YAN"}        # 정당 이름을 따로 쓴 나라 (localisation/*/tu_ideologies_l_*.yml)
+IDEOLOGY_SUFFIXES = ["", "_neutrality", "_democratic", "_fascism", "_communism", "_imperial_house", "_sui"]
+# 외형 태그 국기: 쉐이 형제를 고른 염국 (set_cosmetic_tag = TU_YAN_FAC_<형제>) -> 그 형제 분파 국기. SUI = 깨어난 쉐이
+COSMETIC_FLAGS = {"TU_YAN_FAC_CHONGYUE": "YCH", "TU_YAN_FAC_LING": "YLI", "TU_YAN_FAC_WANG": "YWA",
+                  "TU_YAN_FAC_DUSK": "YDU", "TU_YAN_FAC_SHU": "YSH", "TU_YAN_FAC_NIAN": "YNI", "TU_YAN_FAC_JUN": "YJN",
+                  "TU_YAN_FAC_JIE": "YJE", "TU_YAN_FAC_JI": "YJI", "TU_YAN_FAC_YI": "YYI", "TU_YAN_FAC_FANG": "YFA",
+                  "TU_YAN_FAC_YU": "YYU", "TU_YAN_FAC_SUI": ([45, 35, 70], "YAN")}
 
 
 def flag_rgb(w, h, c):
@@ -271,7 +281,7 @@ def add_outline(im):
 
 def flag_pixels(w, h, c):
     """reference/flags/<TAG>.png가 있으면 공식 엠블럼 깃발, 없으면 기존 절차 깃발."""
-    emblem = REF_FLAG_DIR / ("%s.png" % c["tag"])
+    emblem = REF_FLAG_DIR / ("%s.png" % c.get("flag_emblem", c["tag"]))     # flag_emblem: 다른 나라 문양을 빌린다 (쉐이 분파 → 염국)
     if emblem.is_file():
         return emblem_flag_rgb(w, h, c, emblem)
     return flag_rgb(w, h, c)
@@ -580,10 +590,18 @@ def main(argv=None):
                 'NDefines.NGame.START_DATE = "%s"\nNDefines.NGame.END_DATE = "%s"\n' % (START_DATE, END_DATE))
 
     # 깃발
+    # 이념별 국기 (사양서 46): <TAG>_<이념>.tga 가 있으면 게임이 그것을 먼저 쓴다. KAZ·COL·BOL·LAT 처럼 바닐라 태그와 겹치면
+    # 바닐라의 이념별 국기(카자흐스탄 등)가 나오므로 모든 이념에 같은 국기를 써서 덮는다
     for c in countries:
+        for suf in IDEOLOGY_SUFFIXES:
+            for pattern, (w, h) in FLAG_SIZES:
+                write_flag(mod / (pattern % (c["tag"] + suf)), w, h, c)
+    by_tag = {c["tag"]: c for c in countries}
+    for cos, src in COSMETIC_FLAGS.items():
+        c = dict(by_tag[src]) if isinstance(src, str) else {"tag": cos, "color": src[0], "flag_emblem": src[1]}
         for pattern, (w, h) in FLAG_SIZES:
-            write_flag(mod / (pattern % c["tag"]), w, h, c)
-    n_emblem = sum(1 for c in countries if (REF_FLAG_DIR / ("%s.png" % c["tag"])).is_file())
+            write_flag(mod / (pattern % cos), w, h, c)
+    n_emblem = sum(1 for c in countries if (REF_FLAG_DIR / ("%s.png" % c.get("flag_emblem", c["tag"]))).is_file())
     print("flags: emblem=%d fallback=%d" % (n_emblem, len(countries) - n_emblem))
 
     # 로컬라이제이션
@@ -591,12 +609,13 @@ def main(argv=None):
     en = []
     for c in countries:
         t = c["tag"]
-        ko += [(t, c["name_ko"]), (t + "_DEF", c["name_ko"]), (t + "_ADJ", c["adj_ko"]),
-               (t + "_neutrality", c["name_ko"]), (t + "_neutrality_DEF", c["name_ko"]),
-               (t + "_neutrality_ADJ", c["adj_ko"])]
-        en += [(t, c["name_en"]), (t + "_DEF", "the " + c["name_en"]), (t + "_ADJ", c["adj_en"]),
-               (t + "_neutrality", c["name_en"]), (t + "_neutrality_DEF", "the " + c["name_en"]),
-               (t + "_neutrality_ADJ", c["adj_en"])]
+        for suf in IDEOLOGY_SUFFIXES:     # 사양서 46: 이념마다 이름 (바닐라 KAZ_democratic = 카자흐스탄 등을 덮는다)
+            ko += [(t + suf, c["name_ko"]), (t + suf + "_DEF", c["name_ko"]), (t + suf + "_ADJ", c["adj_ko"])]
+            en += [(t + suf, c["name_en"]), (t + suf + "_DEF", "the " + c["name_en"]), (t + suf + "_ADJ", c["adj_en"])]
+        if t not in CUSTOM_PARTY_TAGS:     # 사양서 46: 정당 이름 (바닐라 태그와 겹치면 바닐라 정당 이름이 나온다)
+            for ide, (pko, pen) in PARTY_NAMES.items():
+                ko += [("%s_%s_party" % (t, ide), pko % c["name_ko"]), ("%s_%s_party_long" % (t, ide), pko % c["name_ko"])]
+                en += [("%s_%s_party" % (t, ide), pen % c["name_en"]), ("%s_%s_party_long" % (t, ide), pen % c["name_en"])]
         ko.append(("OVERVIEW_%s" % t, "%s 개요" % c["name_ko"]))
         en.append(("OVERVIEW_%s" % t, "%s Overview" % c["name_en"]))
         if not (c.get("custom_characters") or c.get("cast")):
