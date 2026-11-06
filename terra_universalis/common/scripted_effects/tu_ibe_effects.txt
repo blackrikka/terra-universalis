@@ -1241,7 +1241,7 @@ TU_IBE_lh_update_risk = {
 	set_variable = { TU_IBE_lh_risk = ROOT.TU_IBE_threat }
 	divide_variable = { TU_IBE_lh_risk = 4 }
 	set_temp_variable = { tu_ibe_f = TU_IBE_lh_fort }
-	multiply_temp_variable = { tu_ibe_f = -0.25 }
+	multiply_temp_variable = { tu_ibe_f = -0.15 }
 	add_to_temp_variable = { tu_ibe_f = 1 }
 	multiply_variable = { TU_IBE_lh_risk = tu_ibe_f }
 	if = {

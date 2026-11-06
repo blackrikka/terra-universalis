@@ -257,10 +257,11 @@ cat_coast = C.category("coast", "해안", "The Coast",
 #   TU_IBE_lighthouse 등대 있음 / TU_IBE_lh_building 복원 공사 중 / TU_IBE_lh_damaged 손상 / TU_IBE_lh_severe 손상 2단계
 #   TU_IBE_lh_repairing 보수 중 / TU_IBE_lh_fort_building 요새 공사 중
 # 주 변수: TU_IBE_lh_risk 월간 손상 확률(%) / TU_IBE_lh_fort 해안 요새 단계(0~3)
-# 손상 확률 = 위협/4 x (1 - 0.25 x 요새) x 수비대 병력 보정 (LH_GARRISON), 최소 LH_MIN_RISK. 이샤믈라 루트는 0.
+# 손상 확률 = 위협/4 x (1 - 0.15 x 요새) x 수비대 병력 보정 (LH_GARRISON), 최소 LH_MIN_RISK. 이샤믈라 루트는 0.
 LH_FORT_MAX = 3
 LH_STAGE_DAYS = 45          # 손상 1단계 -> 2단계 -> 붕괴 사이의 일수 (사양서 40)
 LH_RESTORE_DAYS = 60        # 등대 복원 공사 일수
+LH_FACTORIES = "num_of_civilian_factories_available_for_projects > 1"     # 공장 2개를 쓰는 디시전의 바닐라 조건
 LH_MIN_RISK = 2             # 최소 월간 손상 확률 % (이샤믈라 루트만 0)
 LH_RAID_DAMAGED_MULT = 3    # 등대가 손상된 동안 습격 확률 배율 (평소 = 손상 확률의 절반)
 # (id, 한, 영, 색, 하한 %(이상), 상한 %(미만), 설명에 쓰는 구간 한/영). 숨은 루트(이샤믈라)의 0% 는 "매우 적음"에 들어간다 (화면에 언급하지 않음)
@@ -328,7 +329,7 @@ C.effects.append("""TU_IBE_lh_update_risk = {
 	set_variable = { TU_IBE_lh_risk = ROOT.TU_IBE_threat }
 	divide_variable = { TU_IBE_lh_risk = 4 }
 	set_temp_variable = { tu_ibe_f = TU_IBE_lh_fort }
-	multiply_temp_variable = { tu_ibe_f = -0.25 }
+	multiply_temp_variable = { tu_ibe_f = -0.15 }
 	add_to_temp_variable = { tu_ibe_f = 1 }
 	multiply_variable = { TU_IBE_lh_risk = tu_ibe_f }
 %s
@@ -486,7 +487,7 @@ C.d(cat_coast, "restore_lighthouse", "등대 복원", "Restore a Lighthouse",
 	%s
 }""" % (V("lighthouses", 1), THR(-5))],
     target=["is_coastal = yes", "is_owned_and_controlled_by = ROOT", "NOT = { has_state_flag = TU_IBE_lighthouse }"],
-    available=[AT_MOST("lighthouses", 4), "NOT = { has_country_flag = TU_IBE_lighthouse_cooldown }",
+    available=[LH_FACTORIES, AT_MOST("lighthouses", 4), "NOT = { has_country_flag = TU_IBE_lighthouse_cooldown }",
                "FROM = { NOT = { has_state_flag = TU_IBE_lh_building } }"],
     desc=("이 해안 주의 등대를 복원한다: 정치력 50, %d일 동안 민간 공장 2개 사용. 공사가 끝나면 등대 +1 (최대 5), 위협 -5, 이 주의 기반시설 +1. 복원 사이 120일.\n복원한 등대는 시테러에게 손상될 수 있다. 해안 요새와 수비대로 위험을 줄인다." % LH_RESTORE_DAYS,
           "Restore this coastal state's lighthouse: 50 political power, 2 civilian factories for %d days. When work ends: lighthouse +1 (max 5), threat -5, +1 infrastructure here. 120 days between restorations.\nRestored lighthouses can be damaged by Sea Terrors. Coastal forts and garrisons lower the risk." % LH_RESTORE_DAYS),
@@ -494,9 +495,9 @@ C.d(cat_coast, "restore_lighthouse", "등대 복원", "Restore a Lighthouse",
 
 # 위협 표시: 등대가 있는 주마다 위협 구간에 맞는 하나만 보인다 (누를 수 없음, 이름에 구간이 나온다).
 # 기간이 있는 디시전(요새·보수)은 진행 중에 대상 조건이 거짓이 되면 취소될 수 있어, 매달 바뀌는 구간은 표시 전용으로 뗀다.
-LH_WHY = ("손상 확률 = 바다의 위협 ÷ 4 × 요새 보정(해안 요새 평균 단계마다 -25%%%%) × 수비대 보정(이 주의 병력 1만 ×0.8 / 2만 ×0.6 / 4만 ×0.45), "
+LH_WHY = ("손상 확률 = 바다의 위협 ÷ 4 × 요새 보정(해안 요새 평균 단계마다 -15%%%%) × 수비대 보정(이 주의 병력 1만 ×0.8 / 2만 ×0.6 / 4만 ×0.45), "
           "최소 %d%%%%. 매달 다시 계산한다." % LH_MIN_RISK,
-          "Damage chance = Sea Threat ÷ 4 × fort factor (-25%%%% per average coastal fort level) × garrison factor (manpower here 10k x0.8 / 20k x0.6 / 40k x0.45), "
+          "Damage chance = Sea Threat ÷ 4 × fort factor (-15%%%% per average coastal fort level) × garrison factor (manpower here 10k x0.8 / 20k x0.6 / 40k x0.45), "
           "at least %d%%%%. Recalculated monthly." % LH_MIN_RISK)
 for bid, ko, en, col, lo, hi, rng_ko, rng_en in LH_BANDS:
     band = ["check_variable = { TU_IBE_lh_risk > %s }" % (lo - 0.001) if lo is not None else "",
@@ -518,14 +519,14 @@ C.d(cat_coast, "lh_fort", "[FROM.GetName] 등대 해안 요새 보강", "Fortify
 	TU_IBE_lh_update_risk = yes
 }"""],
     target=["is_owned_and_controlled_by = ROOT", "OR = { has_state_flag = TU_IBE_lighthouse has_state_flag = TU_IBE_lh_fort_building }"],
-    available=["FROM = { check_variable = { TU_IBE_lh_fort < %d } }" % LH_FORT_MAX,
+    available=[LH_FACTORIES, "FROM = { check_variable = { TU_IBE_lh_fort < %d } }" % LH_FORT_MAX,
                "FROM = { NOT = { has_state_flag = TU_IBE_lh_fort_building } }"],
     desc=("정치력 40, 45일 동안 민간 공장 2개 사용, 끝나면 이 주의 모든 해안 프로빈스에 해안 요새 +1.\n"
-          "등대의 손상 확률은 이 주 해안 프로빈스들의 해안 요새 §Y평균§! 단계로 정해진다: 평균 1단계마다 -25%, 최대 3단계 "
+          "등대의 손상 확률은 이 주 해안 프로빈스들의 해안 요새 §Y평균§! 단계로 정해진다: 평균 1단계마다 -15%, 최대 3단계 "
           "(한 프로빈스는 3단계까지만 센다). 해안 요새는 시테러에게 가끔 파손되고, 파손된 요새는 건설로 수리된다.",
           "40 political power, 2 civilian factories for 45 days, then +1 coastal fort in every coastal province of this state.\n"
           "This lighthouse's damage chance depends on the §Yaverage§! coastal fort level across the state's coastal provinces: "
-          "-25% per average level, up to 3 (each province counts at most 3 levels). Sea Terrors sometimes damage coastal forts, "
+          "-15% per average level, up to 3 (each province counts at most 3 levels). Sea Terrors sometimes damage coastal forts, "
           "which are repaired through construction."),
     icon="GFX_decision_generic_fortification", ai=2)
 
@@ -569,7 +570,7 @@ C.d(cat_coast, "lh_repair", "[FROM.GetName] 등대 보수", "Repair the [FROM.Ge
     modifier={"civilian_factory_use": 2},
     remove_effect=["FROM = {\n\tTU_IBE_lh_clear_damage = yes\n\tclr_state_flag = TU_IBE_lh_repairing\n}"],
     target=["is_owned_and_controlled_by = ROOT", "has_state_flag = TU_IBE_lh_damaged"],     # 손상 깃발은 보수가 끝날 때 지운다
-    available=["FROM = { NOT = { has_state_flag = TU_IBE_lh_repairing } }"],
+    available=[LH_FACTORIES, "FROM = { NOT = { has_state_flag = TU_IBE_lh_repairing } }"],
     desc=("손상된 등대를 고친다: 정치력 25, 30일 동안 민간 공장 2개 사용. 보수를 시작하면 악화가 멈춘다.",
           "Fix the damaged lighthouse: 25 political power, 2 civilian factories for 30 days. Starting repairs stops it worsening."),
     icon="GFX_decision_generic_construction", ai=10)
@@ -605,10 +606,10 @@ C.ev(52, ("해안 수비대 습격", "Coastal Garrison Ambushed"),
       "Divisions in that state lost 30% organisation and 5% strength."),
      [("전사자들을 기린다.", "Honour the fallen.",
        ["army_experience = 2", THR(-1)], 1)])
-C.d(cat_coast, "coastal_patrol", "해안 순찰", "Coastal Patrol", [THR(-10), "army_experience = 5"], cost=25, once=False, days_re_enable=90,
+C.d(cat_coast, "coastal_patrol", "해안 순찰", "Coastal Patrol", [THR(-10), "army_experience = 5"], cost=25, once=False, days_re_enable=180,
     icon="GFX_decision_generic_naval")
 C.d(cat_coast, "purification", "정화 작전", "Purification Operation", [THR(-20), "add_stability = -0.02", INQ("0.05")], cost=75, once=False,
-    days_re_enable=240, icon="GFX_decision_generic_operation")
+    days_re_enable=365, icon="GFX_decision_generic_operation")
 C.d(cat_coast, "evacuate_town", "해안 마을 소개", "Evacuate a Coastal Town", ["add_stability = 0.03", "add_manpower = -2000"], cost=25,
     once=False, days_re_enable=180, available=[AT_LEAST("threat", 50)])
 C.d(cat_coast, "hunters_contact", "어비셜 헌터스 수소문", "Seek the Abyssal Hunters", [EV(25)], cost=75, once=True,
@@ -726,7 +727,7 @@ for sid, ko, en, pre, econ in (
     f(sid, ko, en, pre=[pre], econ=econ)
 # (해변 방어 시설·철야 기도는 사양서 31에서 삭제: 위협을 깎는 반복 디시전이 너무 많아 등대 관리가 꺼졌다. 해안 요새 보강이 대신한다)
 C.d(cat_coast, "hunter_aid", "사냥꾼 지원", "Aid the Hunters", [THR(-15), "add_political_power = -25"], cost=50, once=False,
-    days_re_enable=180, visible=[HAS("hunters_met")])
+    days_re_enable=365, visible=[HAS("hunters_met")])
 C.ev(32, ("등대의 불빛", "The Lighthouse Shines"), ("복원된 등대에 불이 들어오자 마을 사람들이 몰려나와 박수를 쳤다.", "When the restored lighthouse was lit, villagers came out and cheered."),
      [("빛이 돌아왔다.", "The light is back.", ["add_stability = 0.03"], 1)],
      trigger=["original_tag = IBE", AT_LEAST("lighthouses", 3)], mtth=120)

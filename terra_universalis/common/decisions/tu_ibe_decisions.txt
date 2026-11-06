@@ -22,6 +22,7 @@ TU_IBE_coast_category = {
 		}
 
 		available = {
+			num_of_civilian_factories_available_for_projects > 1
 			check_variable = { TU_IBE_lighthouses < 5 }
 			NOT = { has_country_flag = TU_IBE_lighthouse_cooldown }
 			FROM = { NOT = { has_state_flag = TU_IBE_lh_building } }
@@ -256,6 +257,7 @@ TU_IBE_coast_category = {
 		}
 
 		available = {
+			num_of_civilian_factories_available_for_projects > 1
 			FROM = { check_variable = { TU_IBE_lh_fort < 3 } }
 			FROM = { NOT = { has_state_flag = TU_IBE_lh_fort_building } }
 		}
@@ -422,6 +424,7 @@ TU_IBE_coast_category = {
 		}
 
 		available = {
+			num_of_civilian_factories_available_for_projects > 1
 			FROM = { NOT = { has_state_flag = TU_IBE_lh_repairing } }
 		}
 
@@ -502,7 +505,7 @@ TU_IBE_coast_category = {
 		}
 
 		cost = 25
-		days_re_enable = 90
+		days_re_enable = 180
 
 		complete_effect = {
 			TU_IBE_threat_m10 = yes
@@ -526,7 +529,7 @@ TU_IBE_coast_category = {
 		}
 
 		cost = 75
-		days_re_enable = 240
+		days_re_enable = 365
 
 		complete_effect = {
 			TU_IBE_threat_m20 = yes
@@ -656,7 +659,7 @@ TU_IBE_coast_category = {
 		}
 
 		cost = 50
-		days_re_enable = 180
+		days_re_enable = 365
 
 		complete_effect = {
 			TU_IBE_threat_m15 = yes
