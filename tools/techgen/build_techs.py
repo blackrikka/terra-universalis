@@ -299,7 +299,7 @@ T("tu_ori_mobile_cities", ORI, 2, 6, "이동도시 동력", "Mobile City Power",
 T("tu_arts_theory", ORI, 4, 1, "아츠 이론", "Arts Theory", leads=["tu_arts_units"], mods={"research_speed_factor": 0.02},
   cats=ORIC + ["electronics"], ai=8, vanilla=False, icon="atomic_research",
   desc=("원석을 매개로 한 아츠는 테라의 과학이자 무기다.", "Arts channelled through originium are both Terra's science and its weapon."))
-T("tu_arts_units", ORI, 4, 3, "술사 부대 교리", "Caster Unit Doctrine", cost=2, leads=["tu_arts_amplifier"],
+T("tu_arts_units", ORI, 4, 3, "술사 부대 교리", "Caster Unit Doctrine", cost=2, leads=["tu_arts_amplifier"], sub=["tu_arts_caster"],
   unit={"category_all_infantry": {"soft_attack": 0.05}}, cats=ORIC, ai=6, vanilla=False, icon="night_vision")
 T("tu_arts_amplifier", ORI, 4, 5, "아츠 증폭기", "Arts Amplifiers", cost=2.5,
   unit={"category_all_infantry": {"soft_attack": 0.05}, "artillery_brigade": {"soft_attack": 0.05}}, cats=ORIC, ai=4,

@@ -195,6 +195,10 @@ technologies = {
 		}
 	}
 	tu_arts_units = {
+		enable_subunits = {
+			tu_arts_caster
+		}
+
 		category_all_infantry = {
 			soft_attack = 0.05
 		}
