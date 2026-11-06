@@ -20,8 +20,9 @@ from content_lib import Country  # noqa: E402
 C = Country("IBE", "이베리아", "Iberia")
 f = C.f
 BOP = "TU_IBE_bop"
-MAXV = {"threat": 100, "lighthouses": 5}
-NAMES = {"threat": ("§R바다의 위협§!", "§RSea Threat§!"), "lighthouses": ("§Y복원한 등대§!", "§YLighthouses Restored§!")}
+MAXV = {"threat": 100, "lighthouses": 5, "cult": 100}
+MINV = {"cult": 10}     # 심해교단은 없앨 수 없다 (사양서 62)
+NAMES = {"threat": ("§R바다의 위협§!", "§RSea Threat§!"), "cult": ("§R심해교단 세력§!", "§RDeep Sea Cult§!"), "lighthouses": ("§Y복원한 등대§!", "§YLighthouses Restored§!")}
 
 
 def V(var, n):
@@ -31,9 +32,9 @@ def V(var, n):
 	custom_effect_tooltip = %s_tt
 	hidden_effect = {
 		add_to_variable = { TU_IBE_%s = %d }
-		clamp_variable = { var = TU_IBE_%s min = 0 max = %d }
+		clamp_variable = { var = TU_IBE_%s min = %d max = %d }
 	}
-}""" % (name, name, var, n, var, MAXV[var]))
+}""" % (name, name, var, n, var, MINV.get(var, 0), MAXV[var]))
         ko, en = NAMES[var]
         C.loc(name + "_tt", "%s %s%d" % (ko, "+" if n > 0 else "", n), "%s %s%d" % (en, "+" if n > 0 else "", n))
     return "%s = yes" % name
@@ -41,6 +42,10 @@ def V(var, n):
 
 def THR(n):
     return V("threat", n)
+
+
+def CULT(n):
+    return V("cult", n)
 
 
 def AT_LEAST(var, n):
@@ -71,7 +76,7 @@ def EV(n, days=0):
     return "country_event = { id = tu_ibe_ev.%d%s }" % (n, " days = %d" % days if days else "")
 
 
-C.history += ["set_variable = { TU_IBE_threat = 40 }", "set_variable = { TU_IBE_lighthouses = 0 }",
+C.history += ["set_variable = { TU_IBE_threat = 40 }", "set_variable = { TU_IBE_cult = 40 }", "set_variable = { TU_IBE_lighthouses = 0 }",
               "add_ideas = { TU_IBE_great_silence TU_IBE_fear_of_the_sea }"]
 C.effects.append("""TU_IBE_monthly = {
 	TU_IBE_lighthouse_monthly = yes
@@ -80,10 +85,96 @@ C.effects.append("""TU_IBE_monthly = {
 	subtract_from_temp_variable = { tu_ibe_lh = TU_IBE_lh_damaged }
 	multiply_temp_variable = { tu_ibe_lh = -1 }
 	add_to_variable = { TU_IBE_threat = tu_ibe_lh }
+	TU_IBE_cult_monthly = yes
 	clamp_variable = { var = TU_IBE_threat min = 0 max = 100 }
 	if = {
 		limit = { has_country_flag = TU_IBE_ishar_route }
 		set_variable = { TU_IBE_threat = 0 }
+	}
+}""")
+# 심해교단 (사양서 62): 매달 자라고, 세력만큼 바다의 위협을 더 올린다. 이샤믈라 루트에서는 신도가 힘이 된다
+C.loc("TU_IBE_cult_boon", "심해의 신도들", "Followers of the Deep")
+C.loc("TU_IBE_cult_bane", "퍼져 가는 심해교단", "The Spreading Cult")
+C.effects.append("""TU_IBE_cult_modifiers = {
+	# 이샤믈라: 세력 1당 공격력·조직력 +0.3%. 평시: 세력 40부터 20마다 안정도 -5%, 일일 정치력 -0.05
+	set_variable = { TU_IBE_cult_power = TU_IBE_cult }
+	multiply_variable = { TU_IBE_cult_power = 0.003 }
+	set_variable = { TU_IBE_cult_stability = 0 }
+	set_variable = { TU_IBE_cult_pp = 0 }
+	if = {
+		limit = { check_variable = { TU_IBE_cult > 99 } }
+		set_variable = { TU_IBE_cult_stability = -0.20 }
+		set_variable = { TU_IBE_cult_pp = -0.20 }
+	}
+	else_if = {
+		limit = { check_variable = { TU_IBE_cult > 79 } }
+		set_variable = { TU_IBE_cult_stability = -0.15 }
+		set_variable = { TU_IBE_cult_pp = -0.15 }
+	}
+	else_if = {
+		limit = { check_variable = { TU_IBE_cult > 59 } }
+		set_variable = { TU_IBE_cult_stability = -0.10 }
+		set_variable = { TU_IBE_cult_pp = -0.10 }
+	}
+	else_if = {
+		limit = { check_variable = { TU_IBE_cult > 39 } }
+		set_variable = { TU_IBE_cult_stability = -0.05 }
+		set_variable = { TU_IBE_cult_pp = -0.05 }
+	}
+	if = {
+		limit = { NOT = { has_dynamic_modifier = { modifier = TU_IBE_cult_boon } } }
+		add_dynamic_modifier = { modifier = TU_IBE_cult_boon }
+	}
+	if = {
+		limit = { NOT = { has_dynamic_modifier = { modifier = TU_IBE_cult_bane } } }
+		add_dynamic_modifier = { modifier = TU_IBE_cult_bane }
+	}
+}""")
+C.effects.append("""TU_IBE_cult_monthly = {
+	add_to_variable = { TU_IBE_cult = 2 }
+	if = {
+		limit = { check_variable = { TU_IBE_threat > 49 } }
+		add_to_variable = { TU_IBE_cult = 1 }
+	}
+	if = {
+		limit = { has_completed_focus = TU_IBE_faith_laws }
+		add_to_variable = { TU_IBE_cult = -1 }
+	}
+	clamp_variable = { var = TU_IBE_cult min = 10 max = 100 }
+	TU_IBE_cult_modifiers = yes
+	if = {
+		limit = { has_country_flag = TU_IBE_ishar_route }
+		if = {
+			limit = { check_variable = { TU_IBE_cult > 79 } }
+			add_political_power = 20
+			add_manpower = 2000
+		}
+		else_if = {
+			limit = { check_variable = { TU_IBE_cult > 49 } }
+			add_political_power = 10
+			add_manpower = 1000
+		}
+		else_if = {
+			limit = { check_variable = { TU_IBE_cult > 19 } }
+			add_political_power = 5
+			add_manpower = 500
+		}
+	}
+	else_if = {
+		limit = { check_variable = { TU_IBE_cult > 79 } }
+		add_to_variable = { TU_IBE_threat = 8 }
+	}
+	else_if = {
+		limit = { check_variable = { TU_IBE_cult > 59 } }
+		add_to_variable = { TU_IBE_threat = 5 }
+	}
+	else_if = {
+		limit = { check_variable = { TU_IBE_cult > 39 } }
+		add_to_variable = { TU_IBE_threat = 3 }
+	}
+	else_if = {
+		limit = { check_variable = { TU_IBE_cult > 19 } }
+		add_to_variable = { TU_IBE_threat = 1 }
 	}
 }""")
 C.on_actions.append("""on_monthly = {
@@ -119,7 +210,7 @@ f("inquisition_reform", "심판소 재편", "Inquisition Court Reform", pre=["ro
 f("inquisitor_academy", "심판관 학교", "Inquisitor Academy", pre=["inquisition_reform"])
 f("heresy_files", "이단 기록", "Heresy Files Archive", pre=["inquisition_reform"], reward=[INQ("0.03")])
 f("inquisitor_guard", "심판관 근위대", "Inquisitor Guard", pre=["inquisitor_academy"])
-f("purge_cults", "심해 숭배 단속", "Purge the Deep-Sea Cults", pre=["heresy_files"], theme=False, reward=[INQ("0.05"), THR(-5), EV(21, 10)])
+f("purge_cults", "심해 숭배 단속", "Purge the Deep-Sea Cults", pre=["heresy_files"], theme=False, reward=[INQ("0.05"), THR(-5), CULT(-10), EV(21, 10)])
 f("faith_laws", "신앙 법", "Faith Laws", pre=["purge_cults"], me=["tolerance"], reward=[INQ("0.05")])
 f("tolerance", "관용령", "Edict of Tolerance", pre=["purge_cults"], me=["faith_laws"], reward=[CROWN("0.05")])
 f("inquisitor_state", "심판관의 나라", "State of the Inquisitors", pre=[["faith_laws", "tolerance"], "inquisitor_guard"],
@@ -244,10 +335,12 @@ for sid, ko, en, pre, econ in (
 # ------------------------------------------------------------------ 디시전
 cat_coast = C.category("coast", "해안", "The Coast",
                        ("바다의 위협은 매달 오르고, 온전한 등대 하나마다 덜 오른다. 70 이상이면 해안 마을이 침식된다.\n"
+                        "심해교단은 매달 자라며 세력이 클수록 위협을 더 빠르게 올린다. 완전히 뿌리 뽑을 수는 없다.\n"
                         "등대는 매달 시테러에게 손상될 수 있다. 손상은 45일마다 1단계, 2단계, 붕괴 순으로 악화되며, 지도에서 등대마다 위협 수준과 손상 단계를 확인할 수 있다. 해안 요새와 수비대로 지켜라. "
                         "등대를 지키는 수비대는 가끔 습격을 받아 조직력과 병력을 잃고, 등대가 손상된 동안에는 습격이 잦아진다.\n"
                         "등대 복원은 이 창을 연 채 지도의 해안 주에 뜨는 버튼으로 한다.",
                         "The sea threat rises every month, less for each intact lighthouse. At 70+ coastal towns are eroded.\n"
+                        "The Deep Sea Cult grows every month, and the stronger it is the faster the threat climbs. It can never be fully rooted out.\n"
                         "Lighthouses can be damaged by Sea Terrors each month. Damage worsens every 45 days from stage 1 to stage 2 to collapse. Check each lighthouse's threat and damage on the map and guard it with "
                         "coastal forts and garrisons. Lighthouse garrisons are sometimes ambushed and lose organisation and strength, more often while the lighthouse is damaged.\n"
                         "Restore lighthouses with the buttons on coastal states on the map while this window is open."),
@@ -485,12 +578,12 @@ C.d(cat_coast, "restore_lighthouse", "등대 복원", "Restore a Lighthouse",
 	}
 	%s
 	%s
-}""" % (V("lighthouses", 1), THR(-5))],
+}""" % (V("lighthouses", 1), THR(-2))],
     target=["is_coastal = yes", "is_owned_and_controlled_by = ROOT", "NOT = { has_state_flag = TU_IBE_lighthouse }"],
     available=[LH_FACTORIES, AT_MOST("lighthouses", 4), "NOT = { has_country_flag = TU_IBE_lighthouse_cooldown }",
                "FROM = { NOT = { has_state_flag = TU_IBE_lh_building } }"],
-    desc=("이 해안 주의 등대를 복원한다: 정치력 50, %d일 동안 민간 공장 2개 사용. 공사가 끝나면 등대 +1 (최대 5), 위협 -5, 이 주의 기반시설 +1. 복원 사이 120일.\n복원한 등대는 시테러에게 손상될 수 있다. 해안 요새와 수비대로 위험을 줄인다." % LH_RESTORE_DAYS,
-          "Restore this coastal state's lighthouse: 50 political power, 2 civilian factories for %d days. When work ends: lighthouse +1 (max 5), threat -5, +1 infrastructure here. 120 days between restorations.\nRestored lighthouses can be damaged by Sea Terrors. Coastal forts and garrisons lower the risk." % LH_RESTORE_DAYS),
+    desc=("이 해안 주의 등대를 복원한다: 정치력 50, %d일 동안 민간 공장 2개 사용. 공사가 끝나면 등대 +1 (최대 5), 위협 -2, 이 주의 기반시설 +1. 복원 사이 120일.\n복원한 등대는 시테러에게 손상될 수 있다. 해안 요새와 수비대로 위험을 줄인다." % LH_RESTORE_DAYS,
+          "Restore this coastal state's lighthouse: 50 political power, 2 civilian factories for %d days. When work ends: lighthouse +1 (max 5), threat -2, +1 infrastructure here. 120 days between restorations.\nRestored lighthouses can be damaged by Sea Terrors. Coastal forts and garrisons lower the risk." % LH_RESTORE_DAYS),
     icon="GFX_decision_generic_construction")
 
 # 위협 표시: 등대가 있는 주마다 위협 구간에 맞는 하나만 보인다 (누를 수 없음, 이름에 구간이 나온다).
@@ -589,6 +682,34 @@ C.ev(50, ("등대 손상", "Lighthouse Damaged"),
       "The lighthouse at [tu_ibe_lh_state.GetName] has been damaged by a Sea Terror attack. Something is crawling up the darkened shore.\n\n"
       "This is damage stage 1. Unless it is repaired or cleared by a garrison within %d days it worsens to stage 2, and %d days after that it collapses." % (LH_STAGE_DAYS, LH_STAGE_DAYS)),
      [("보수를 서두르라.", "Hurry the repairs.", [], 1)])
+CULT_TRIGGER = ["original_tag = IBE", "NOT = { %s }" % HAS("ishar_route")]
+C.idea("cult_unrest", "교단 소요", "Cult Unrest", {"stability_factor": -0.05, "political_power_gain": -0.1}, "generic_central_management",
+       ("심해교단의 소요가 해안을 뒤흔듭니다.", "Cult unrest is shaking the coast."))
+C.ev(54, ("퍼져 가는 포교", "The Preaching Spreads"),
+     ("심해를 찬양하는 설교가 어촌마다 퍼지고 있다. 사람들은 밤마다 바다 쪽을 바라본다.",
+      "Sermons praising the deep are spreading through the fishing towns. At night, people stare out to sea."),
+     [("단속을 늘려라.", "Step up the crackdown.", ["add_stability = -0.02"], 1), ("두려움이 번지게 둘 수 없다.", "We cannot let fear spread.", ["add_war_support = -0.02"], 1)],
+     trigger=CULT_TRIGGER + [AT_LEAST("cult", 40)], mtth=120, fire_once=False)
+C.ev(55, ("등대 파괴 공작", "Lighthouse Sabotage"),
+     ("교단의 신도들이 등대에 숨어들어 불을 꺼뜨렸다. 등대 하나가 손상되었다.",
+      "Cultists slipped into a lighthouse and put out its light. A lighthouse has been damaged."),
+     [("어떻게 들어온 거지?", "How did they get in?", ["""hidden_effect = {
+	random_owned_state = {
+		limit = {
+			has_state_flag = TU_IBE_lighthouse
+			NOT = { has_state_flag = TU_IBE_lh_damaged }
+			NOT = { has_state_flag = TU_IBE_lh_repairing }
+		}
+		TU_IBE_lh_damage = yes
+	}
+}"""], 1)],
+     trigger=CULT_TRIGGER + [AT_LEAST("cult", 60), "any_owned_state = { has_state_flag = TU_IBE_lighthouse NOT = { has_state_flag = TU_IBE_lh_damaged } }"],
+     mtth=150, fire_once=False)
+C.ev(56, ("해안 봉기", "Coastal Uprising"),
+     ("교단의 깃발이 해안 마을에 걸렸다. 신도들이 공공연히 무기를 들고 있다.",
+      "Cult banners hang over the coastal towns. Worshippers openly carry arms."),
+     [("질서를 되찾아야 한다.", "Order must be restored.", ["add_timed_idea = { idea = TU_IBE_cult_unrest days = 180 }", "add_stability = -0.03"], 1)],
+     trigger=CULT_TRIGGER + [AT_LEAST("cult", 80), "NOT = { has_idea = TU_IBE_cult_unrest }"], mtth=120, fire_once=False)
 C.ev(53, ("등대 손상 악화", "Lighthouse Damage Worsens"),
      ("[tu_ibe_lh_state.GetName]의 등대가 손상 2단계로 악화되었다. 등탑 곳곳이 갈라지고 불빛은 거의 보이지 않는다.\n\n"
       "%d일 안에 보수하거나 수비대로 토벌하지 않으면 등대는 무너진다." % LH_STAGE_DAYS,
@@ -606,9 +727,27 @@ C.ev(52, ("해안 수비대 습격", "Coastal Garrison Ambushed"),
       "Divisions in that state lost 30% organisation and 5% strength."),
      [("전사자들을 기린다.", "Honour the fallen.",
        ["army_experience = 2", THR(-1)], 1)])
-C.d(cat_coast, "coastal_patrol", "해안 순찰", "Coastal Patrol", [THR(-10), "army_experience = 5"], cost=25, once=False, days_re_enable=180,
+NOT_ISHAR = "NOT = { %s }" % HAS("ishar_route")
+C.d(cat_coast, "cult_inquiry", "이단 심문", "Heresy Inquiry", [CULT(-5)], cost=50, once=False, days_re_enable=180,
+    visible=[NOT_ISHAR], icon="GFX_decision_generic_police_action",
+    desc=("마을마다 심문관을 보내 숭배자를 찾습니다. 교단의 뿌리까지 닿지는 못합니다.",
+          "Inquisitors go from village to village looking for worshippers. They cannot reach the cult's roots."))
+C.d(cat_coast, "cult_raid", "지하실 급습", "Raid the Cellars", [CULT(-15)], cost=50, once=False, days_re_enable=240,
+    visible=[NOT_ISHAR, "has_completed_focus = TU_IBE_elite_inquisitors"], icon="GFX_decision_generic_military",
+    desc=("정예 심판관들이 교단의 집회 장소를 덮칩니다.", "Elite inquisitors storm the cult's meeting places."))
+C.d(cat_coast, "cult_tribunal", "대심문", "The Grand Inquisition", [CULT(-30), "add_stability = -0.03"], cost=75, once=False, days_re_enable=365,
+    visible=[NOT_ISHAR, "has_completed_focus = TU_IBE_judgement_day"], icon="GFX_decision_generic_operation",
+    desc=("온 나라를 뒤져 교단의 지도자들을 끌어냅니다. 민심의 대가가 따릅니다.",
+          "The whole country is turned over to drag out the cult's leaders, at a cost to public trust."))
+C.d(cat_coast, "coast_sweep", "해안 일제 소탕", "Sweep the Coast", [THR(-15)], cost=50, once=False, days_re_enable=240,
+    visible=["has_completed_focus = TU_IBE_anti_creature"], icon="GFX_decision_generic_naval",
+    desc=("대괴물 전술을 익힌 부대가 해안을 따라 시테러를 몰아냅니다.", "Troops trained in anti-creature tactics drive the Sea Terrors along the coast."))
+C.d(cat_coast, "deep_purge", "심해 대비 작전", "Deep Sea Defence Operation", [THR(-30)], cost=100, once=False, days_re_enable=365,
+    visible=["has_completed_focus = TU_IBE_deep_sea_plan"], icon="GFX_decision_generic_operation",
+    desc=("심해 대비 계획에 따라 해안 전체를 정리합니다.", "Clears the whole coast under the Deep Sea Defence Plan."))
+C.d(cat_coast, "coastal_patrol", "해안 순찰", "Coastal Patrol", [THR(-4), "army_experience = 5"], cost=25, once=False, days_re_enable=180,
     icon="GFX_decision_generic_naval")
-C.d(cat_coast, "purification", "정화 작전", "Purification Operation", [THR(-20), "add_stability = -0.02", INQ("0.05")], cost=75, once=False,
+C.d(cat_coast, "purification", "정화 작전", "Purification Operation", [THR(-8), "add_stability = -0.02", INQ("0.05")], cost=75, once=False,
     days_re_enable=365, icon="GFX_decision_generic_operation")
 C.d(cat_coast, "evacuate_town", "해안 마을 소개", "Evacuate a Coastal Town", ["add_stability = 0.03", "add_manpower = -2000"], cost=25,
     once=False, days_re_enable=180, available=[AT_LEAST("threat", 50)])
@@ -645,7 +784,7 @@ C.loc("TU_IBE_league", "해안 연맹", "Coastal League")
 C.d(cat_for, "invite_league", "연맹 초청", "Invite to the League", ["add_to_faction = FROM"], cost=50, once=False, days_re_enable=90,
     visible=["is_faction_leader = yes"],
     target=["NOT = { tag = ROOT }", "is_in_faction = no", "NOT = { has_war_with = ROOT }", "OR = { tag = SAR tag = MIN tag = SIR tag = VIC }"])
-C.d(cat_for, "share_warnings", "바다의 경고 공유", "Share Warnings of the Sea", ["add_political_power = 40", THR(-5)], cost=25, once=True)
+C.d(cat_for, "share_warnings", "바다의 경고 공유", "Share Warnings of the Sea", ["add_political_power = 40", THR(-2)], cost=25, once=True)
 
 # ------------------------------------------------------------------ 이벤트
 C.ev(1, ("침묵한 해안", "The Silent Coast"),
@@ -726,7 +865,7 @@ for sid, ko, en, pre, econ in (
         ("sargon_caravans", "사르곤 대상 교역", "Sargon Caravan Trade", "sargon_border", False)):
     f(sid, ko, en, pre=[pre], econ=econ)
 # (해변 방어 시설·철야 기도는 사양서 31에서 삭제: 위협을 깎는 반복 디시전이 너무 많아 등대 관리가 꺼졌다. 해안 요새 보강이 대신한다)
-C.d(cat_coast, "hunter_aid", "사냥꾼 지원", "Aid the Hunters", [THR(-15), "add_political_power = -25"], cost=50, once=False,
+C.d(cat_coast, "hunter_aid", "사냥꾼 지원", "Aid the Hunters", [THR(-6), "add_political_power = -25"], cost=50, once=False,
     days_re_enable=365, visible=[HAS("hunters_met")])
 C.ev(32, ("등대의 불빛", "The Lighthouse Shines"), ("복원된 등대에 불이 들어오자 마을 사람들이 몰려나와 박수를 쳤다.", "When the restored lighthouse was lit, villagers came out and cheered."),
      [("빛이 돌아왔다.", "The light is back.", ["add_stability = 0.03"], 1)],
@@ -816,7 +955,7 @@ C.ev(41, ("하나", "One"),
         "set_variable = { TU_IBE_threat = 0 }", "add_ideas = TU_IBE_seaborn_kin", "mark_focus_tree_layout_dirty = yes"], 1)],
      picture="GFX_report_event_generic_read_write")
 C.idea("seaborn_kin", "바다의 혈족", "Kin of the Sea",
-       {"army_org_factor": 0.15, "army_attack_factor": 0.10, "army_defence_factor": 0.05, "war_support_factor": 0.10,
+       {"army_defence_factor": 0.05, "war_support_factor": 0.10,
         "stability_factor": -0.05}, "generic_morale_bonus",
        ("이샤믈라가 이베리아를 이끈다. 바다는 더 이상 위협이 아니라 고향이다.",
         "Ishar-mla leads Iberia. The sea is no longer a threat but a home."))
@@ -824,12 +963,12 @@ C.idea("tide_host", "밀물의 군세", "Host of the Tide",
        {"army_attack_factor": 0.12, "army_defence_factor": 0.08, "attrition": -0.10, "land_reinforce_rate": 0.03},
        "generic_army_war_college")
 C.idea("deep_kingdom", "심해 왕국", "Kingdom of the Deep",
-       {"army_attack_factor": 0.15, "army_defence_factor": 0.15, "army_org_factor": 0.15, "conscription_factor": 0.10,
+       {"army_defence_factor": 0.15, "conscription_factor": 0.10,
         "war_support_factor": 0.20, "attrition": -0.15, "political_power_factor": 0.10},
        "generic_morale_bonus", ("파도 아래에 왕국이 섰다. 이샤믈라의 혈족은 지치지 않는다.",
                                 "A kingdom stands beneath the waves. Ishar-mla's kin never tire."))
 C.idea("the_deep", "심해", "The Deep",
-       {"army_attack_factor": 0.25, "army_defence_factor": 0.25, "army_org_factor": 0.25, "conscription_factor": 0.20,
+       {"army_defence_factor": 0.25, "conscription_factor": 0.20,
         "war_support_factor": 0.30, "stability_factor": 0.15, "political_power_factor": 0.20, "attrition": -0.25,
         "production_factory_max_efficiency_factor": 0.15, "industrial_capacity_factory": 0.15, "monthly_population": 0.20},
        "generic_morale_bonus", ("모든 것은 바다에서 왔고, 모든 것은 바다로 돌아간다. 이베리아라는 이름은 이제 파도 아래에 잠들었다.",

@@ -2024,7 +2024,7 @@ guiTypes = {
 	containerWindowType = {
 		name = "TU_IBE_coast_status_window"
 		position = { x = 0 y = 0 }
-		size = { width = 100% height = 88 }
+		size = { width = 100% height = 130 }
 
 		iconType = {
 			name = "tu_st_ibe_coast_tu_ibe_threat_bg"
@@ -2331,13 +2331,312 @@ guiTypes = {
 		}
 
 		iconType = {
-			name = "tu_st_ibe_coast_tu_ibe_lighthouses_bg"
+			name = "tu_st_ibe_coast_tu_ibe_cult_bg"
 			spriteType = "GFX_tu_status_row_full"
 			position = { x = 18 y = 42 }
 		}
 		instantTextBoxType = {
-			name = "tu_st_ibe_coast_tu_ibe_lighthouses_label"
+			name = "tu_st_ibe_coast_tu_ibe_cult_label"
 			position = { x = 26 y = 46 }
+			font = "hoi_16mbs"
+			maxWidth = 350
+			maxHeight = 18
+			text = "TU_STATUS_TU_IBE_cult_label"
+			format = left
+			fixedsize = yes
+		}
+		instantTextBoxType = {
+			name = "tu_st_ibe_coast_tu_ibe_cult_value"
+			position = { x = 380 y = 46 }
+			font = "hoi_16mbs"
+			maxWidth = 100
+			maxHeight = 18
+			text = "TU_STATUS_TU_IBE_cult_value"
+			format = right
+			fixedsize = yes
+		}
+		iconType = {
+			name = "tu_st_ibe_coast_tu_ibe_cult_e01"
+			spriteType = "GFX_tu_status_seg_20"
+			frame = 1
+			position = { x = 26 y = 65 }
+		}
+		iconType = {
+			name = "tu_st_ibe_coast_tu_ibe_cult_f01"
+			spriteType = "GFX_tu_status_seg_20"
+			frame = 4
+			position = { x = 26 y = 65 }
+		}
+		iconType = {
+			name = "tu_st_ibe_coast_tu_ibe_cult_e02"
+			spriteType = "GFX_tu_status_seg_20"
+			frame = 1
+			position = { x = 48 y = 65 }
+		}
+		iconType = {
+			name = "tu_st_ibe_coast_tu_ibe_cult_f02"
+			spriteType = "GFX_tu_status_seg_20"
+			frame = 4
+			position = { x = 48 y = 65 }
+		}
+		iconType = {
+			name = "tu_st_ibe_coast_tu_ibe_cult_e03"
+			spriteType = "GFX_tu_status_seg_20"
+			frame = 1
+			position = { x = 70 y = 65 }
+		}
+		iconType = {
+			name = "tu_st_ibe_coast_tu_ibe_cult_f03"
+			spriteType = "GFX_tu_status_seg_20"
+			frame = 4
+			position = { x = 70 y = 65 }
+		}
+		iconType = {
+			name = "tu_st_ibe_coast_tu_ibe_cult_e04"
+			spriteType = "GFX_tu_status_seg_20"
+			frame = 1
+			position = { x = 92 y = 65 }
+		}
+		iconType = {
+			name = "tu_st_ibe_coast_tu_ibe_cult_f04"
+			spriteType = "GFX_tu_status_seg_20"
+			frame = 4
+			position = { x = 92 y = 65 }
+		}
+		iconType = {
+			name = "tu_st_ibe_coast_tu_ibe_cult_e05"
+			spriteType = "GFX_tu_status_seg_20"
+			frame = 1
+			position = { x = 114 y = 65 }
+		}
+		iconType = {
+			name = "tu_st_ibe_coast_tu_ibe_cult_f05"
+			spriteType = "GFX_tu_status_seg_20"
+			frame = 4
+			position = { x = 114 y = 65 }
+		}
+		iconType = {
+			name = "tu_st_ibe_coast_tu_ibe_cult_e06"
+			spriteType = "GFX_tu_status_seg_20"
+			frame = 1
+			position = { x = 136 y = 65 }
+		}
+		iconType = {
+			name = "tu_st_ibe_coast_tu_ibe_cult_f06"
+			spriteType = "GFX_tu_status_seg_20"
+			frame = 4
+			position = { x = 136 y = 65 }
+		}
+		iconType = {
+			name = "tu_st_ibe_coast_tu_ibe_cult_e07"
+			spriteType = "GFX_tu_status_seg_20"
+			frame = 1
+			position = { x = 158 y = 65 }
+		}
+		iconType = {
+			name = "tu_st_ibe_coast_tu_ibe_cult_f07"
+			spriteType = "GFX_tu_status_seg_20"
+			frame = 4
+			position = { x = 158 y = 65 }
+		}
+		iconType = {
+			name = "tu_st_ibe_coast_tu_ibe_cult_e08"
+			spriteType = "GFX_tu_status_seg_20"
+			frame = 1
+			position = { x = 180 y = 65 }
+		}
+		iconType = {
+			name = "tu_st_ibe_coast_tu_ibe_cult_f08"
+			spriteType = "GFX_tu_status_seg_20"
+			frame = 4
+			position = { x = 180 y = 65 }
+		}
+		iconType = {
+			name = "tu_st_ibe_coast_tu_ibe_cult_e09"
+			spriteType = "GFX_tu_status_seg_20"
+			frame = 1
+			position = { x = 202 y = 65 }
+		}
+		iconType = {
+			name = "tu_st_ibe_coast_tu_ibe_cult_f09"
+			spriteType = "GFX_tu_status_seg_20"
+			frame = 4
+			position = { x = 202 y = 65 }
+		}
+		iconType = {
+			name = "tu_st_ibe_coast_tu_ibe_cult_e10"
+			spriteType = "GFX_tu_status_seg_20"
+			frame = 1
+			position = { x = 224 y = 65 }
+		}
+		iconType = {
+			name = "tu_st_ibe_coast_tu_ibe_cult_f10"
+			spriteType = "GFX_tu_status_seg_20"
+			frame = 4
+			position = { x = 224 y = 65 }
+		}
+		iconType = {
+			name = "tu_st_ibe_coast_tu_ibe_cult_e11"
+			spriteType = "GFX_tu_status_seg_20"
+			frame = 1
+			position = { x = 246 y = 65 }
+		}
+		iconType = {
+			name = "tu_st_ibe_coast_tu_ibe_cult_f11"
+			spriteType = "GFX_tu_status_seg_20"
+			frame = 4
+			position = { x = 246 y = 65 }
+		}
+		iconType = {
+			name = "tu_st_ibe_coast_tu_ibe_cult_e12"
+			spriteType = "GFX_tu_status_seg_20"
+			frame = 1
+			position = { x = 268 y = 65 }
+		}
+		iconType = {
+			name = "tu_st_ibe_coast_tu_ibe_cult_f12"
+			spriteType = "GFX_tu_status_seg_20"
+			frame = 4
+			position = { x = 268 y = 65 }
+		}
+		iconType = {
+			name = "tu_st_ibe_coast_tu_ibe_cult_e13"
+			spriteType = "GFX_tu_status_seg_20"
+			frame = 1
+			position = { x = 290 y = 65 }
+		}
+		iconType = {
+			name = "tu_st_ibe_coast_tu_ibe_cult_f13"
+			spriteType = "GFX_tu_status_seg_20"
+			frame = 4
+			position = { x = 290 y = 65 }
+		}
+		iconType = {
+			name = "tu_st_ibe_coast_tu_ibe_cult_e14"
+			spriteType = "GFX_tu_status_seg_20"
+			frame = 1
+			position = { x = 312 y = 65 }
+		}
+		iconType = {
+			name = "tu_st_ibe_coast_tu_ibe_cult_f14"
+			spriteType = "GFX_tu_status_seg_20"
+			frame = 4
+			position = { x = 312 y = 65 }
+		}
+		iconType = {
+			name = "tu_st_ibe_coast_tu_ibe_cult_e15"
+			spriteType = "GFX_tu_status_seg_20"
+			frame = 1
+			position = { x = 334 y = 65 }
+		}
+		iconType = {
+			name = "tu_st_ibe_coast_tu_ibe_cult_f15"
+			spriteType = "GFX_tu_status_seg_20"
+			frame = 4
+			position = { x = 334 y = 65 }
+		}
+		iconType = {
+			name = "tu_st_ibe_coast_tu_ibe_cult_e16"
+			spriteType = "GFX_tu_status_seg_20"
+			frame = 1
+			position = { x = 356 y = 65 }
+		}
+		iconType = {
+			name = "tu_st_ibe_coast_tu_ibe_cult_f16"
+			spriteType = "GFX_tu_status_seg_20"
+			frame = 4
+			position = { x = 356 y = 65 }
+		}
+		iconType = {
+			name = "tu_st_ibe_coast_tu_ibe_cult_e17"
+			spriteType = "GFX_tu_status_seg_20"
+			frame = 1
+			position = { x = 378 y = 65 }
+		}
+		iconType = {
+			name = "tu_st_ibe_coast_tu_ibe_cult_f17"
+			spriteType = "GFX_tu_status_seg_20"
+			frame = 4
+			position = { x = 378 y = 65 }
+		}
+		iconType = {
+			name = "tu_st_ibe_coast_tu_ibe_cult_e18"
+			spriteType = "GFX_tu_status_seg_20"
+			frame = 1
+			position = { x = 400 y = 65 }
+		}
+		iconType = {
+			name = "tu_st_ibe_coast_tu_ibe_cult_f18"
+			spriteType = "GFX_tu_status_seg_20"
+			frame = 4
+			position = { x = 400 y = 65 }
+		}
+		iconType = {
+			name = "tu_st_ibe_coast_tu_ibe_cult_e19"
+			spriteType = "GFX_tu_status_seg_20"
+			frame = 1
+			position = { x = 422 y = 65 }
+		}
+		iconType = {
+			name = "tu_st_ibe_coast_tu_ibe_cult_f19"
+			spriteType = "GFX_tu_status_seg_20"
+			frame = 4
+			position = { x = 422 y = 65 }
+		}
+		iconType = {
+			name = "tu_st_ibe_coast_tu_ibe_cult_e20"
+			spriteType = "GFX_tu_status_seg_20"
+			frame = 1
+			position = { x = 444 y = 65 }
+		}
+		iconType = {
+			name = "tu_st_ibe_coast_tu_ibe_cult_f20"
+			spriteType = "GFX_tu_status_seg_20"
+			frame = 4
+			position = { x = 444 y = 65 }
+		}
+		iconType = {
+			name = "tu_st_ibe_coast_tu_ibe_cult_t20"
+			spriteType = "GFX_tu_status_tick"
+			position = { x = 113 y = 62 }
+		}
+		iconType = {
+			name = "tu_st_ibe_coast_tu_ibe_cult_t40"
+			spriteType = "GFX_tu_status_tick"
+			position = { x = 200 y = 62 }
+		}
+		iconType = {
+			name = "tu_st_ibe_coast_tu_ibe_cult_t50"
+			spriteType = "GFX_tu_status_tick"
+			position = { x = 244 y = 62 }
+		}
+		iconType = {
+			name = "tu_st_ibe_coast_tu_ibe_cult_t60"
+			spriteType = "GFX_tu_status_tick"
+			position = { x = 288 y = 62 }
+		}
+		iconType = {
+			name = "tu_st_ibe_coast_tu_ibe_cult_t80"
+			spriteType = "GFX_tu_status_tick"
+			position = { x = 375 y = 62 }
+		}
+		instantTextBoxType = {
+			name = "tu_st_ibe_coast_tu_ibe_cult_tip"
+			position = { x = 18 y = 42 }
+			maxWidth = 470
+			maxHeight = 38
+			text = ""
+			pdx_tooltip = TU_STATUS_TU_IBE_cult_tt
+		}
+
+		iconType = {
+			name = "tu_st_ibe_coast_tu_ibe_lighthouses_bg"
+			spriteType = "GFX_tu_status_row_full"
+			position = { x = 18 y = 84 }
+		}
+		instantTextBoxType = {
+			name = "tu_st_ibe_coast_tu_ibe_lighthouses_label"
+			position = { x = 26 y = 88 }
 			font = "hoi_16mbs"
 			maxWidth = 110
 			maxHeight = 18
@@ -2347,7 +2646,7 @@ guiTypes = {
 		}
 		instantTextBoxType = {
 			name = "tu_st_ibe_coast_tu_ibe_lighthouses_value"
-			position = { x = 140 y = 46 }
+			position = { x = 140 y = 88 }
 			font = "hoi_16mbs"
 			maxWidth = 340
 			maxHeight = 18
@@ -2359,125 +2658,125 @@ guiTypes = {
 			name = "tu_st_ibe_coast_tu_ibe_lighthouses_e01"
 			spriteType = "GFX_tu_status_seg_89"
 			frame = 1
-			position = { x = 26 y = 65 }
+			position = { x = 26 y = 107 }
 		}
 		iconType = {
 			name = "tu_st_ibe_coast_tu_ibe_lighthouses_f01"
 			spriteType = "GFX_tu_status_seg_89"
 			frame = 2
-			position = { x = 26 y = 65 }
+			position = { x = 26 y = 107 }
 		}
 		iconType = {
 			name = "tu_st_ibe_coast_tu_ibe_lighthouses_l0_01"
 			spriteType = "GFX_tu_status_seg_89"
 			frame = 6
-			position = { x = 26 y = 65 }
+			position = { x = 26 y = 107 }
 		}
 		iconType = {
 			name = "tu_st_ibe_coast_tu_ibe_lighthouses_l1_01"
 			spriteType = "GFX_tu_status_seg_89"
 			frame = 4
-			position = { x = 26 y = 65 }
+			position = { x = 26 y = 107 }
 		}
 		iconType = {
 			name = "tu_st_ibe_coast_tu_ibe_lighthouses_e02"
 			spriteType = "GFX_tu_status_seg_89"
 			frame = 1
-			position = { x = 117 y = 65 }
+			position = { x = 117 y = 107 }
 		}
 		iconType = {
 			name = "tu_st_ibe_coast_tu_ibe_lighthouses_f02"
 			spriteType = "GFX_tu_status_seg_89"
 			frame = 2
-			position = { x = 117 y = 65 }
+			position = { x = 117 y = 107 }
 		}
 		iconType = {
 			name = "tu_st_ibe_coast_tu_ibe_lighthouses_l0_02"
 			spriteType = "GFX_tu_status_seg_89"
 			frame = 6
-			position = { x = 117 y = 65 }
+			position = { x = 117 y = 107 }
 		}
 		iconType = {
 			name = "tu_st_ibe_coast_tu_ibe_lighthouses_l1_02"
 			spriteType = "GFX_tu_status_seg_89"
 			frame = 4
-			position = { x = 117 y = 65 }
+			position = { x = 117 y = 107 }
 		}
 		iconType = {
 			name = "tu_st_ibe_coast_tu_ibe_lighthouses_e03"
 			spriteType = "GFX_tu_status_seg_89"
 			frame = 1
-			position = { x = 208 y = 65 }
+			position = { x = 208 y = 107 }
 		}
 		iconType = {
 			name = "tu_st_ibe_coast_tu_ibe_lighthouses_f03"
 			spriteType = "GFX_tu_status_seg_89"
 			frame = 2
-			position = { x = 208 y = 65 }
+			position = { x = 208 y = 107 }
 		}
 		iconType = {
 			name = "tu_st_ibe_coast_tu_ibe_lighthouses_l0_03"
 			spriteType = "GFX_tu_status_seg_89"
 			frame = 6
-			position = { x = 208 y = 65 }
+			position = { x = 208 y = 107 }
 		}
 		iconType = {
 			name = "tu_st_ibe_coast_tu_ibe_lighthouses_l1_03"
 			spriteType = "GFX_tu_status_seg_89"
 			frame = 4
-			position = { x = 208 y = 65 }
+			position = { x = 208 y = 107 }
 		}
 		iconType = {
 			name = "tu_st_ibe_coast_tu_ibe_lighthouses_e04"
 			spriteType = "GFX_tu_status_seg_89"
 			frame = 1
-			position = { x = 299 y = 65 }
+			position = { x = 299 y = 107 }
 		}
 		iconType = {
 			name = "tu_st_ibe_coast_tu_ibe_lighthouses_f04"
 			spriteType = "GFX_tu_status_seg_89"
 			frame = 2
-			position = { x = 299 y = 65 }
+			position = { x = 299 y = 107 }
 		}
 		iconType = {
 			name = "tu_st_ibe_coast_tu_ibe_lighthouses_l0_04"
 			spriteType = "GFX_tu_status_seg_89"
 			frame = 6
-			position = { x = 299 y = 65 }
+			position = { x = 299 y = 107 }
 		}
 		iconType = {
 			name = "tu_st_ibe_coast_tu_ibe_lighthouses_l1_04"
 			spriteType = "GFX_tu_status_seg_89"
 			frame = 4
-			position = { x = 299 y = 65 }
+			position = { x = 299 y = 107 }
 		}
 		iconType = {
 			name = "tu_st_ibe_coast_tu_ibe_lighthouses_e05"
 			spriteType = "GFX_tu_status_seg_89"
 			frame = 1
-			position = { x = 390 y = 65 }
+			position = { x = 390 y = 107 }
 		}
 		iconType = {
 			name = "tu_st_ibe_coast_tu_ibe_lighthouses_f05"
 			spriteType = "GFX_tu_status_seg_89"
 			frame = 2
-			position = { x = 390 y = 65 }
+			position = { x = 390 y = 107 }
 		}
 		iconType = {
 			name = "tu_st_ibe_coast_tu_ibe_lighthouses_l0_05"
 			spriteType = "GFX_tu_status_seg_89"
 			frame = 6
-			position = { x = 390 y = 65 }
+			position = { x = 390 y = 107 }
 		}
 		iconType = {
 			name = "tu_st_ibe_coast_tu_ibe_lighthouses_l1_05"
 			spriteType = "GFX_tu_status_seg_89"
 			frame = 4
-			position = { x = 390 y = 65 }
+			position = { x = 390 y = 107 }
 		}
 		instantTextBoxType = {
 			name = "tu_st_ibe_coast_tu_ibe_lighthouses_tip"
-			position = { x = 18 y = 42 }
+			position = { x = 18 y = 84 }
 			maxWidth = 470
 			maxHeight = 38
 			text = ""

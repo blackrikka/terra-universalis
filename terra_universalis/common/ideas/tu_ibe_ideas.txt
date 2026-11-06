@@ -108,6 +108,19 @@ ideas = {
 			}
 		}
 
+		TU_IBE_cult_unrest = {
+			picture = generic_central_management
+
+			allowed = {
+				original_tag = IBE
+			}
+
+			modifier = {
+				stability_factor = -0.05
+				political_power_gain = -0.1
+			}
+		}
+
 		TU_IBE_hunter_rule = {
 			picture = generic_army_war_college
 
@@ -131,8 +144,6 @@ ideas = {
 			}
 
 			modifier = {
-				army_org_factor = 0.15
-				army_attack_factor = 0.1
 				army_defence_factor = 0.05
 				war_support_factor = 0.1
 				stability_factor = -0.05
@@ -162,9 +173,7 @@ ideas = {
 			}
 
 			modifier = {
-				army_attack_factor = 0.15
 				army_defence_factor = 0.15
-				army_org_factor = 0.15
 				conscription_factor = 0.1
 				war_support_factor = 0.2
 				attrition = -0.15
@@ -180,9 +189,7 @@ ideas = {
 			}
 
 			modifier = {
-				army_attack_factor = 0.25
 				army_defence_factor = 0.25
-				army_org_factor = 0.25
 				conscription_factor = 0.2
 				war_support_factor = 0.3
 				stability_factor = 0.15

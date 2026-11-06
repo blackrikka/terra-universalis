@@ -1,0 +1,19 @@
+# Deep Sea Cult (spec 62). Values come from country variables set in TU_IBE_cult_modifiers every month.
+TU_IBE_cult_boon = {
+	icon = GFX_modifiers_generic_military_plans
+	enable = { has_country_flag = TU_IBE_ishar_route }
+
+	army_attack_factor = TU_IBE_cult_power
+	army_org_factor = TU_IBE_cult_power
+}
+
+TU_IBE_cult_bane = {
+	icon = GFX_modifiers_generic_military_plans
+	enable = {
+		NOT = { has_country_flag = TU_IBE_ishar_route }
+		check_variable = { TU_IBE_cult > 39 }
+	}
+
+	stability_factor = TU_IBE_cult_stability
+	political_power_gain = TU_IBE_cult_pp
+}

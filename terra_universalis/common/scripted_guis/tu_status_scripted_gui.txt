@@ -189,6 +189,26 @@ scripted_gui = {
 			tu_st_ibe_coast_tu_ibe_threat_f18_visible = { check_variable = { TU_IBE_threat > 87.5 } }
 			tu_st_ibe_coast_tu_ibe_threat_f19_visible = { check_variable = { TU_IBE_threat > 92.5 } }
 			tu_st_ibe_coast_tu_ibe_threat_f20_visible = { check_variable = { TU_IBE_threat > 97.5 } }
+			tu_st_ibe_coast_tu_ibe_cult_f01_visible = { check_variable = { TU_IBE_cult > 2.5 } }
+			tu_st_ibe_coast_tu_ibe_cult_f02_visible = { check_variable = { TU_IBE_cult > 7.5 } }
+			tu_st_ibe_coast_tu_ibe_cult_f03_visible = { check_variable = { TU_IBE_cult > 12.5 } }
+			tu_st_ibe_coast_tu_ibe_cult_f04_visible = { check_variable = { TU_IBE_cult > 17.5 } }
+			tu_st_ibe_coast_tu_ibe_cult_f05_visible = { check_variable = { TU_IBE_cult > 22.5 } }
+			tu_st_ibe_coast_tu_ibe_cult_f06_visible = { check_variable = { TU_IBE_cult > 27.5 } }
+			tu_st_ibe_coast_tu_ibe_cult_f07_visible = { check_variable = { TU_IBE_cult > 32.5 } }
+			tu_st_ibe_coast_tu_ibe_cult_f08_visible = { check_variable = { TU_IBE_cult > 37.5 } }
+			tu_st_ibe_coast_tu_ibe_cult_f09_visible = { check_variable = { TU_IBE_cult > 42.5 } }
+			tu_st_ibe_coast_tu_ibe_cult_f10_visible = { check_variable = { TU_IBE_cult > 47.5 } }
+			tu_st_ibe_coast_tu_ibe_cult_f11_visible = { check_variable = { TU_IBE_cult > 52.5 } }
+			tu_st_ibe_coast_tu_ibe_cult_f12_visible = { check_variable = { TU_IBE_cult > 57.5 } }
+			tu_st_ibe_coast_tu_ibe_cult_f13_visible = { check_variable = { TU_IBE_cult > 62.5 } }
+			tu_st_ibe_coast_tu_ibe_cult_f14_visible = { check_variable = { TU_IBE_cult > 67.5 } }
+			tu_st_ibe_coast_tu_ibe_cult_f15_visible = { check_variable = { TU_IBE_cult > 72.5 } }
+			tu_st_ibe_coast_tu_ibe_cult_f16_visible = { check_variable = { TU_IBE_cult > 77.5 } }
+			tu_st_ibe_coast_tu_ibe_cult_f17_visible = { check_variable = { TU_IBE_cult > 82.5 } }
+			tu_st_ibe_coast_tu_ibe_cult_f18_visible = { check_variable = { TU_IBE_cult > 87.5 } }
+			tu_st_ibe_coast_tu_ibe_cult_f19_visible = { check_variable = { TU_IBE_cult > 92.5 } }
+			tu_st_ibe_coast_tu_ibe_cult_f20_visible = { check_variable = { TU_IBE_cult > 97.5 } }
 			tu_st_ibe_coast_tu_ibe_lighthouses_f01_visible = { check_variable = { TU_IBE_lighthouses > 0.5 } }
 			tu_st_ibe_coast_tu_ibe_lighthouses_l0_01_visible = { OR = { AND = { check_variable = { TU_IBE_lighthouses = 1 } check_variable = { TU_IBE_lh_damaged > 0 } } AND = { check_variable = { TU_IBE_lighthouses = 2 } check_variable = { TU_IBE_lh_damaged > 1 } } AND = { check_variable = { TU_IBE_lighthouses = 3 } check_variable = { TU_IBE_lh_damaged > 2 } } AND = { check_variable = { TU_IBE_lighthouses = 4 } check_variable = { TU_IBE_lh_damaged > 3 } } AND = { check_variable = { TU_IBE_lighthouses = 5 } check_variable = { TU_IBE_lh_damaged > 4 } } } }
 			tu_st_ibe_coast_tu_ibe_lighthouses_l1_01_visible = { OR = { AND = { check_variable = { TU_IBE_lighthouses = 1 } check_variable = { TU_IBE_lh_severe > 0 } } AND = { check_variable = { TU_IBE_lighthouses = 2 } check_variable = { TU_IBE_lh_severe > 1 } } AND = { check_variable = { TU_IBE_lighthouses = 3 } check_variable = { TU_IBE_lh_severe > 2 } } AND = { check_variable = { TU_IBE_lighthouses = 4 } check_variable = { TU_IBE_lh_severe > 3 } } AND = { check_variable = { TU_IBE_lighthouses = 5 } check_variable = { TU_IBE_lh_severe > 4 } } } }

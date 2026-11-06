@@ -16,6 +16,101 @@ country_event = {
 }
 
 country_event = {
+	id = tu_ibe_ev.54
+	title = tu_ibe_ev.54.t
+	desc = tu_ibe_ev.54.d
+	picture = GFX_report_event_generic_read_write
+
+	trigger = {
+		original_tag = IBE
+		NOT = { has_country_flag = TU_IBE_ishar_route }
+		check_variable = { TU_IBE_cult > 39 }
+	}
+
+	mean_time_to_happen = {
+		days = 120
+	}
+
+	option = {
+		name = tu_ibe_ev.54.a
+		ai_chance = {
+			factor = 1
+		}
+		add_stability = -0.02
+	}
+
+	option = {
+		name = tu_ibe_ev.54.b
+		ai_chance = {
+			factor = 1
+		}
+		add_war_support = -0.02
+	}
+}
+
+country_event = {
+	id = tu_ibe_ev.55
+	title = tu_ibe_ev.55.t
+	desc = tu_ibe_ev.55.d
+	picture = GFX_report_event_generic_read_write
+
+	trigger = {
+		original_tag = IBE
+		NOT = { has_country_flag = TU_IBE_ishar_route }
+		check_variable = { TU_IBE_cult > 59 }
+		any_owned_state = { has_state_flag = TU_IBE_lighthouse NOT = { has_state_flag = TU_IBE_lh_damaged } }
+	}
+
+	mean_time_to_happen = {
+		days = 150
+	}
+
+	option = {
+		name = tu_ibe_ev.55.a
+		ai_chance = {
+			factor = 1
+		}
+		hidden_effect = {
+			random_owned_state = {
+				limit = {
+					has_state_flag = TU_IBE_lighthouse
+					NOT = { has_state_flag = TU_IBE_lh_damaged }
+					NOT = { has_state_flag = TU_IBE_lh_repairing }
+				}
+				TU_IBE_lh_damage = yes
+			}
+		}
+	}
+}
+
+country_event = {
+	id = tu_ibe_ev.56
+	title = tu_ibe_ev.56.t
+	desc = tu_ibe_ev.56.d
+	picture = GFX_report_event_generic_read_write
+
+	trigger = {
+		original_tag = IBE
+		NOT = { has_country_flag = TU_IBE_ishar_route }
+		check_variable = { TU_IBE_cult > 79 }
+		NOT = { has_idea = TU_IBE_cult_unrest }
+	}
+
+	mean_time_to_happen = {
+		days = 120
+	}
+
+	option = {
+		name = tu_ibe_ev.56.a
+		ai_chance = {
+			factor = 1
+		}
+		add_timed_idea = { idea = TU_IBE_cult_unrest days = 180 }
+		add_stability = -0.03
+	}
+}
+
+country_event = {
 	id = tu_ibe_ev.53
 	title = tu_ibe_ev.53.t
 	desc = tu_ibe_ev.53.d

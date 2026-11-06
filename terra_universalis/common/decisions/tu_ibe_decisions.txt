@@ -53,7 +53,7 @@ TU_IBE_coast_category = {
 					TU_IBE_lh_update_risk = yes
 				}
 				TU_IBE_lighthouses_1 = yes
-				TU_IBE_threat_m5 = yes
+				TU_IBE_threat_m2 = yes
 			}
 		}
 
@@ -493,6 +493,129 @@ TU_IBE_coast_category = {
 		}
 	}
 
+	TU_IBE_cult_inquiry = {
+		icon = GFX_decision_generic_police_action
+
+		allowed = {
+			original_tag = IBE
+		}
+
+		visible = {
+			has_country_flag = TU_IBE_coast
+			NOT = { has_country_flag = TU_IBE_ishar_route }
+		}
+
+		cost = 50
+		days_re_enable = 180
+
+		complete_effect = {
+			TU_IBE_cult_m5 = yes
+		}
+
+		ai_will_do = {
+			base = 1
+		}
+	}
+
+	TU_IBE_cult_raid = {
+		icon = GFX_decision_generic_military
+
+		allowed = {
+			original_tag = IBE
+		}
+
+		visible = {
+			has_country_flag = TU_IBE_coast
+			NOT = { has_country_flag = TU_IBE_ishar_route }
+			has_completed_focus = TU_IBE_elite_inquisitors
+		}
+
+		cost = 50
+		days_re_enable = 240
+
+		complete_effect = {
+			TU_IBE_cult_m15 = yes
+		}
+
+		ai_will_do = {
+			base = 1
+		}
+	}
+
+	TU_IBE_cult_tribunal = {
+		icon = GFX_decision_generic_operation
+
+		allowed = {
+			original_tag = IBE
+		}
+
+		visible = {
+			has_country_flag = TU_IBE_coast
+			NOT = { has_country_flag = TU_IBE_ishar_route }
+			has_completed_focus = TU_IBE_judgement_day
+		}
+
+		cost = 75
+		days_re_enable = 365
+
+		complete_effect = {
+			TU_IBE_cult_m30 = yes
+			add_stability = -0.03
+		}
+
+		ai_will_do = {
+			base = 1
+		}
+	}
+
+	TU_IBE_coast_sweep = {
+		icon = GFX_decision_generic_naval
+
+		allowed = {
+			original_tag = IBE
+		}
+
+		visible = {
+			has_country_flag = TU_IBE_coast
+			has_completed_focus = TU_IBE_anti_creature
+		}
+
+		cost = 50
+		days_re_enable = 240
+
+		complete_effect = {
+			TU_IBE_threat_m15 = yes
+		}
+
+		ai_will_do = {
+			base = 1
+		}
+	}
+
+	TU_IBE_deep_purge = {
+		icon = GFX_decision_generic_operation
+
+		allowed = {
+			original_tag = IBE
+		}
+
+		visible = {
+			has_country_flag = TU_IBE_coast
+			has_completed_focus = TU_IBE_deep_sea_plan
+		}
+
+		cost = 100
+		days_re_enable = 365
+
+		complete_effect = {
+			TU_IBE_threat_m30 = yes
+		}
+
+		ai_will_do = {
+			base = 1
+		}
+	}
+
 	TU_IBE_coastal_patrol = {
 		icon = GFX_decision_generic_naval
 
@@ -508,7 +631,7 @@ TU_IBE_coast_category = {
 		days_re_enable = 180
 
 		complete_effect = {
-			TU_IBE_threat_m10 = yes
+			TU_IBE_threat_m4 = yes
 			army_experience = 5
 		}
 
@@ -532,7 +655,7 @@ TU_IBE_coast_category = {
 		days_re_enable = 365
 
 		complete_effect = {
-			TU_IBE_threat_m20 = yes
+			TU_IBE_threat_m8 = yes
 			add_stability = -0.02
 		}
 
@@ -662,7 +785,7 @@ TU_IBE_coast_category = {
 		days_re_enable = 365
 
 		complete_effect = {
-			TU_IBE_threat_m15 = yes
+			TU_IBE_threat_m6 = yes
 			add_political_power = -25
 		}
 
@@ -741,7 +864,7 @@ TU_IBE_foreign_category = {
 
 		complete_effect = {
 			add_political_power = 40
-			TU_IBE_threat_m5 = yes
+			TU_IBE_threat_m2 = yes
 		}
 
 		ai_will_do = {
