@@ -86,7 +86,7 @@ ROUTES = [
                     desc=("로도스 아일랜드에서 온 편지에는 오래전 바벨의 문장이 찍혀 있었다. 왕관 없이 살카즈를 하나로 묶을 길이 있다고.",
                           "A letter from Rhodes Island bears the old seal of Babel. There may be a way to unite the Sarkaz without a crown."),
                     trigger=["original_tag = KZD", "country_exists = RHO", "NOT = { has_completed_focus = TU_KZD_theresis_throne }",
-                             "date > 1098.1.1"], mtth=200, ai=20,
+                             "date > 1097.4.1"], mtth=45, ai=20,
                     accept=("바벨의 길을 걷는다", "Walk the path of Babel"), decline=("살카즈에게는 왕이 필요하다", "The Sarkaz need a king"),
                     effects=["recruit_character = TU_KZD_babel_assembly",
                              "promote_character = {\n\tcharacter = TU_KZD_babel_assembly\n\tideology = oligarchism\n}",
