@@ -94,7 +94,10 @@ def main(argv=None):
     items = []
     lines = ["spriteTypes = {"]
     for art in arts:
-        large, small = render(art_dir / art, faces[art])
+        src = art_dir / art
+        if not src.is_file():
+            src = PROJECT / "reference" / "portraits_extra" / art      # 사용자가 따로 준 그림 (예: 발렌치나)
+        large, small = render(src, faces[art])
         k = key_of(art)
         write_tga(LARGE_DIR / ("%s.tga" % k), large)
         write_tga(SMALL_DIR / ("%s_small.tga" % k), small)
