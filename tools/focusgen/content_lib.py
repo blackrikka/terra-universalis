@@ -342,6 +342,8 @@ class Country:
 
         if self.effects:
             (MOD / ("common/scripted_effects/tu_%s_effects.txt" % low)).write_text("\n\n".join(self.effects) + "\n", encoding="utf-8")
+            import templates as _templates  # 기본 편제 통일 (사양서 44)
+            _templates.apply_file(MOD / ("common/scripted_effects/tu_%s_effects.txt" % low))
         if self.triggers:
             (MOD / ("common/scripted_triggers/tu_%s_triggers.txt" % low)).write_text("\n\n".join(self.triggers) + "\n", encoding="utf-8")
         if self.on_actions:

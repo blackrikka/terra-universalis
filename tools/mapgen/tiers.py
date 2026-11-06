@@ -27,6 +27,8 @@ import sys
 from pathlib import Path
 
 REPO = Path(__file__).resolve().parents[2]
+sys.path.insert(0, str(REPO / "tools"))
+import templates  # noqa: E402
 MOD = REPO / "terra_universalis"
 HIST = REPO / "tools" / "mapgen" / "tier_history"
 
@@ -189,6 +191,7 @@ def main():
         hist.append("set_technology = {\n%s\n}" % "\n".join("\t%s = 1" % t for t in TECHS[tier] + EXTRA_TECHS.get(tag, [])))
         if tag not in EXISTING:
             oob.write_text(template_text(tag, tier), encoding="utf-8")
+            templates.apply_file(oob)     # 기본 편제 통일 (사양서 44): 20폭 주력 보병
             hist.append('oob = "%s_1097"' % tag)
         (HIST / ("%s.txt" % tag)).write_text("\n".join(hist) + "\n", encoding="utf-8")
 
