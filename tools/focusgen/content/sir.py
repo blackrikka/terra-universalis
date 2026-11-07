@@ -171,8 +171,13 @@ C.idea("urban_warfare", "시가전 전문가", "Urban Warfare Experts", {"army_d
 C.idea("wine_and_olive", "포도주와 올리브", "Wine and Olives", {"consumer_goods_factor": -0.03, "stability_factor": 0.03},
        "generic_agrarian_society")
 
-ROUTE_GUIDE = "\\n".join("§Y%s§!: %s — %s" % (ko, LEADER_KO[k], d[0]) for k, ko, _, _, _, d in ROUTES)
-ROUTE_GUIDE_EN = "\\n".join("§Y%s§!: %s — %s" % (en, LEADER_EN[k], d[1]) for k, _, en, _, _, d in ROUTES)
+# 이벤트 본문은 양피지 배경이라 색 글씨(§Y)가 안 보인다: 색 없이 쓴다
+ROUTE_GUIDE = "\\n".join("[%s] %s — %s" % (ko, LEADER_KO[k], d[0]) for k, ko, _, _, _, d in ROUTES)
+ROUTE_GUIDE_EN = "\\n".join("[%s] %s — %s" % (en, LEADER_EN[k], d[1]) for k, _, en, _, _, d in ROUTES)
+# 선택지는 한 줄에 들어가게 짧게 (선택지 5개가 화면 아래로 넘치지 않게)
+SHORT = {"bellone": ("벨로네 — 건설·산업", "Bellone — industry"), "gambino": ("감비노 — 군사·동원", "Gambino — army"),
+         "saluzzo": ("살루초 — 돈·외교", "Saluzzo — money"), "law": ("페넌스 — 법치·안정", "Penance — law"),
+         "wolf": ("라플란드 — 늑대·정복", "Lappland — conquest")}
 
 # ------------------------------------------------------------------ 중점: 뿌리
 f("root", "늑대의 땅", "Land of Wolves", cost=5, theme=False, reward=["add_political_power = 50", FLAG("families"), EV(1)],
@@ -414,11 +419,11 @@ C.d(cat_eco, "invite_league", "연맹 초청", "Invite to the League", ["add_to_
 # ------------------------------------------------------------------ 이벤트
 C.ev(1, ("시라쿠사의 갈림길", "Crossroads of Siracusa"),
      ("시라쿠사의 거리는 조용하다. 조용한 데는 이유가 있다. 패밀리가 보고 있기 때문이다.\\n"
-      "이제 누가 이 도시들을 이끌지 정해야 한다. 고른 루트의 중점만 트리에 나타나고, 지도자가 바로 바뀐다.\\n\\n" + ROUTE_GUIDE,
+      "누가 이 도시들을 이끌 것인가. 고른 루트의 중점만 트리에 나타나고 지도자가 바로 바뀐다.\\n\\n" + ROUTE_GUIDE,
       "The streets of Siracusa are quiet, because the families are watching.\\n"
       "Now decide who will lead these cities. Only the chosen route appears in the focus tree, and the leader changes at once.\\n\\n"
       + ROUTE_GUIDE_EN),
-     [("%s — %s" % (LEADER_KO[k], d[0]), "%s — %s" % (LEADER_EN[k], d[1]), choose(k, leader, ideo),
+     [(SHORT[k][0], SHORT[k][1], choose(k, leader, ideo),
        {"bellone": 25, "gambino": 25, "saluzzo": 20, "law": 20, "wolf": 10}[k])
       for k, ko, en, leader, ideo, d in ROUTES])
 C.ev(20, ("늑대 군주의 이야기", "Tale of the Wolf Lord"),
