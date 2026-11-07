@@ -34,16 +34,17 @@ HIST = REPO / "tools" / "mapgen" / "tier_history"
 
 # 태그: (체급, 민간 공장, 군수 공장, 사단, 인구(만 명))   사양서 51: 원작 비중 + 땅 크기(주 분할 뒤 프로빈스 수)로 다시 맞춤
 TIERS = {
-    "YAN": ("S", 32, 18, 28, 2500), "URS": ("S", 28, 22, 32, 2200), "VIC": ("S", 32, 18, 26, 1600),
-    "COL": ("S", 36, 14, 20, 1400),
-    "SAR": ("A", 14, 10, 20, 1200), "KAZ": ("A", 20, 8, 14, 600), "LEI": ("A", 16, 9, 12, 500),
-    "KZD": ("A", 8, 12, 18, 300), "LAT": ("A", 14, 8, 10, 200),
-    "IBE": ("B", 10, 5, 10, 400), "LGM": ("B", 14, 4, 8, 300), "HIG": ("B", 8, 6, 12, 300),
-    "SIR": ("B", 10, 5, 10, 250), "BOL": ("B", 6, 4, 10, 250), "RIM": ("B", 12, 4, 6, 200),
-    "MIN": ("B", 8, 3, 6, 150), "KJE": ("B", 6, 3, 6, 100),
-    "SAM": ("C", 3, 2, 6, 60), "RHO": ("C", 4, 3, 5, 30),
+    # 인구(만 명, 사양서 65): 설정 비중 추정. 염국·우르수스·빅토리아·컬럼비아 > 사르곤 > 카시미어·라이타니엔 >
+    # 극동·용문(대도시)·볼리바르·시라쿠사 > 이베리아(쇠락)·카즈델(흩어진 살카즈)·라테라노(도시국가)·미노스·림 빌리튼 > 쉐라그 > 사미·로도스
+    "YAN": ("S", 32, 18, 28, 3500), "URS": ("S", 28, 22, 32, 2800), "VIC": ("S", 32, 18, 26, 2000),
+    "COL": ("S", 36, 14, 20, 1800),
+    "SAR": ("A", 14, 10, 20, 1500), "KAZ": ("A", 20, 8, 14, 800), "LEI": ("A", 16, 9, 12, 700),
+    "KZD": ("A", 8, 12, 18, 300), "LAT": ("A", 14, 8, 10, 250),
+    "IBE": ("B", 10, 5, 10, 300), "LGM": ("B", 14, 4, 8, 450), "HIG": ("B", 8, 6, 12, 500),
+    "SIR": ("B", 10, 5, 10, 400), "BOL": ("B", 6, 4, 10, 450), "RIM": ("B", 12, 4, 6, 200),
+    "MIN": ("B", 8, 3, 6, 250), "KJE": ("B", 6, 3, 6, 120),
+    "SAM": ("C", 3, 2, 6, 40), "RHO": ("C", 4, 3, 5, 30),
 }
-CAPITAL_WEIGHT = 4                 # 인구를 주에 나눌 때 수도 몫 (나머지 주는 1)
 BASE_CIV, BASE_MIL = 2, 1          # mapgen 이 모든 수도에 넣은 공장
 # 손으로 만든 OOB 가 있는 나라: 주력 사단 틀 (예전 시작 효과 TU_<TAG>_startup 이 만들던 사단도 이제 OOB 에 넣는다)
 EXISTING = {"URS": "TU_URS_infantry", "VIC": "TU_VIC_line_infantry", "KZD": "TU_KZD_infantry",
@@ -168,15 +169,58 @@ def set_state_factories(f, civ, mil, extra):
     f.write_text(s, encoding="utf-8")
 
 
+# 사양서 65: 명일방주 설정 비중으로 정한 나라 인구 (만 명). TIERS 의 다섯째 값이 이것이다.
+# 프로빈스(=주)마다 지형과 수도에서의 거리로 나눈다: 수도는 대도시, 수도 둘레는 도시권, 사막·산은 드문드문.
+TERRAIN_WEIGHT = {"plains": 1.0, "forest": 0.6, "jungle": 0.4, "desert": 0.25, "mountain": 0.2}
+CAPITAL_POP_WEIGHT = 8.0       # 수도 프로빈스
+NEAR_CAPITAL = [(80, 2.0), (160, 1.4)]   # 수도 중심에서 이 거리(픽셀, 육각형 한 칸 약 37) 안이면 곱한다
+
+
+def province_geo():
+    """프로빈스 id -> (지형, 중심 x, 중심 y)."""
+    import numpy as np
+    from PIL import Image
+    col, terr = {}, {}
+    for line in (MOD / "map" / "definition.csv").read_text(encoding="utf-8-sig").splitlines():
+        q = line.split(";")
+        if len(q) > 6 and q[0].isdigit():
+            col[(int(q[1]) << 16) | (int(q[2]) << 8) | int(q[3])] = int(q[0])
+            terr[int(q[0])] = q[6]
+    a = np.asarray(Image.open(MOD / "map" / "provinces.bmp").convert("RGB")).astype(np.int64)
+    c = (a[..., 0] << 16) | (a[..., 1] << 8) | a[..., 2]
+    u, inv = np.unique(c, return_inverse=True)
+    inv = inv.ravel()
+    ys, xs = np.indices(c.shape)
+    n = np.bincount(inv)
+    cx = np.bincount(inv, xs.ravel()) / n
+    cy = np.bincount(inv, ys.ravel()) / n
+    return {col[int(k)]: (terr[col[int(k)]], cx[i], cy[i]) for i, k in enumerate(u) if int(k) in col}
+
+
+def pop_weight(st, s, cap, geo):
+    t, x, y = geo[st[s]["prov"]]
+    w = TERRAIN_WEIGHT.get(t, 0.5)
+    if s == cap:
+        return w * CAPITAL_POP_WEIGHT
+    if cap is not None:
+        _, cx, cy = geo[st[cap]["prov"]]
+        d = ((x - cx) ** 2 + (y - cy) ** 2) ** 0.5
+        for r, m in NEAR_CAPITAL:
+            if d <= r:
+                return w * m
+    return w
+
+
 def set_population(st, caps):
-    """사양서 51: 나라 인구(만 명)를 통행 가능한 주에 나눈다. 수도 CAPITAL_WEIGHT, 나머지 1 (다시 돌려도 같다).
-    HOI4 는 인구의 약 2.5% 만 징집할 수 있어, 예전 인구(카즈델 20만 등)로는 시작 사단을 보충할 수 없었다."""
+    """사양서 51·65: 나라 인구(만 명)를 통행 가능한 주에 나눈다 (다시 돌려도 같다).
+    HOI4 는 인구의 약 2.5% 만 징집할 수 있어, 인구가 너무 적으면 시작 사단을 보충할 수 없다."""
+    geo = province_geo()
     for tag, t in TIERS.items():
         pop = t[4] * 10000
         own = [s for s, d in st.items() if d["owner"] == tag and not d["impassable"]]
         if not own:
             continue
-        w = {s: (CAPITAL_WEIGHT if s == caps.get(tag) else 1) for s in own}
+        w = {s: pop_weight(st, s, caps.get(tag), geo) for s in own}
         tot = sum(w.values())
         for s in own:
             mp = max(1000, int(round(pop * w[s] / tot, -2)))

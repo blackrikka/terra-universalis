@@ -47,12 +47,6 @@ units = {
 		start_equipment_factor = 0.8
 	}
 	division = {
-		location = 544
-		division_template = "TU_MIN_line_infantry"
-		start_experience_factor = 0.2
-		start_equipment_factor = 0.8
-	}
-	division = {
 		location = 540
 		division_template = "TU_MIN_line_infantry"
 		start_experience_factor = 0.2
@@ -60,6 +54,12 @@ units = {
 	}
 	division = {
 		location = 542
+		division_template = "TU_MIN_line_infantry"
+		start_experience_factor = 0.2
+		start_equipment_factor = 0.8
+	}
+	division = {
+		location = 543
 		division_template = "TU_MIN_line_infantry"
 		start_experience_factor = 0.2
 		start_equipment_factor = 0.8

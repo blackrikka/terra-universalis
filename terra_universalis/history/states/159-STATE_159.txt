@@ -1,14 +1,16 @@
 state={
 	id=159
 	name="STATE_159"
-	manpower = 40800
+	manpower = 55900
 
 	state_category = town
 
 	history={
 		owner = RIM
 		victory_points = { 567 1 }
+		add_extra_state_shared_building_slots = 2
 		buildings = {
+			industrial_complex = 2
 			infrastructure = 2
 		}
 		add_core_of = RIM

@@ -1,0 +1,20 @@
+# 사양서 65: 리유니온이 봉기 전쟁을 끝내면 (우르수스와 더 이상 전쟁 중이 아니면) 가진 모든 주를 핵심주로 만든다. 한 번만.
+on_actions = {
+	on_monthly = {
+		effect = {
+			if = {
+				limit = {
+					original_tag = REU
+					has_global_flag = TU_chernobog_incident_started
+					NOT = { has_country_flag = TU_REU_homeland_cored }
+					NOT = { has_war_with = URS }
+				}
+				set_country_flag = TU_REU_homeland_cored
+				every_owned_state = {
+					add_core_of = ROOT
+				}
+				country_event = { id = tu_crisis.40 }
+			}
+		}
+	}
+}

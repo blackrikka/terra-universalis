@@ -1,13 +1,16 @@
 state={
 	id=793
 	name="STATE_793"
-	manpower = 247500
+	manpower = 649800
 
 	state_category = tu_hex
 
 	history={
 		owner = YAN
+		add_extra_state_shared_building_slots = 8
 		buildings = {
+			industrial_complex = 5
+			arms_factory = 3
 			infrastructure = 2
 		}
 		add_core_of = YAN

@@ -22,6 +22,17 @@ country_event = {
 			# Dynamic REU: it exists only after it owns a state. Order matters below.
 			24 = { transfer_state_to = REU }
 
+			# 핵심주 (사양서 65): 체르노보그와 그 주변 감염자 거주지는 핵심주, 그 바깥은 영유권.
+			# 전쟁이 끝나면 tu_reu_core_on_actions.txt 가 리유니온이 가진 모든 주를 핵심주로 만든다.
+			every_state = {
+				limit = { OR = { state = 24 state = 696 state = 21 state = 694 state = 695 state = 692 state = 635 state = 693 } }
+				add_core_of = REU
+			}
+			every_state = {
+				limit = { OR = { state = 658 state = 690 state = 657 state = 634 state = 656 state = 632 state = 691 state = 631 state = 14 state = 689 state = 713 state = 20 } }
+				add_claim_by = REU
+			}
+
 			REU = {
 				set_capital = {
 					state = 24
@@ -360,5 +371,20 @@ news_event = {
 
 	option = {
 		name = tu_crisis.8.a
+	}
+}
+
+# 40. REU: the uprising war is over; every owned state becomes a core (spec 65).
+country_event = {
+	id = tu_crisis.40
+	title = tu_crisis.40.t
+	desc = tu_crisis.40.d
+	picture = GFX_report_event_generic_rally
+	is_triggered_only = yes
+
+	option = {
+		name = tu_crisis.40.a
+		add_stability = 0.05
+		add_war_support = 0.05
 	}
 }

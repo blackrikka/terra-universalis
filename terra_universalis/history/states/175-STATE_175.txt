@@ -1,14 +1,17 @@
 state={
 	id=175
 	name="STATE_175"
-	manpower = 83900
+	manpower = 343800
 
 	state_category = town
 
 	history={
 		owner = SAR
 		victory_points = { 622 1 }
+		add_extra_state_shared_building_slots = 4
 		buildings = {
+			industrial_complex = 2
+			arms_factory = 2
 			infrastructure = 2
 		}
 		add_core_of = SAR

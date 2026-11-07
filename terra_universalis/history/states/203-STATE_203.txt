@@ -1,14 +1,17 @@
 state={
 	id=203
 	name="STATE_203"
-	manpower = 60600
+	manpower = 68500
 
 	state_category = town
 
 	history={
 		owner = IBE
 		victory_points = { 740 1 }
+		add_extra_state_shared_building_slots = 3
 		buildings = {
+			industrial_complex = 2
+			arms_factory = 1
 			infrastructure = 2
 		}
 		add_core_of = IBE
