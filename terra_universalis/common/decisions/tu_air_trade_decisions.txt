@@ -25,4 +25,129 @@ TU_air_trade_category = {
 			}
 		}
 	}
+
+	TU_cargo_build_1 = {
+		icon = GFX_decision_generic_construction
+		allowed = { always = yes }
+
+		cost = 10
+		fire_only_once = no
+		days_remove = 90
+
+		modifier = {
+			civilian_factory_use = 1
+		}
+
+		remove_effect = {
+			add_equipment_to_stockpile = { type = convoy_1 amount = 1 }
+		}
+
+		ai_will_do = {
+			base = 1
+			modifier = {
+				factor = 0
+				has_equipment = { convoy > 20 }
+			}
+		}
+	}
+
+	TU_cargo_build_2 = {
+		icon = GFX_decision_generic_construction
+		allowed = { always = yes }
+
+		cost = 10
+		fire_only_once = no
+		days_remove = 90
+
+		modifier = {
+			civilian_factory_use = 1
+		}
+
+		remove_effect = {
+			add_equipment_to_stockpile = { type = convoy_1 amount = 1 }
+		}
+
+		ai_will_do = {
+			base = 1
+			modifier = {
+				factor = 0
+				has_equipment = { convoy > 20 }
+			}
+		}
+	}
+
+	TU_cargo_build_3 = {
+		icon = GFX_decision_generic_construction
+		allowed = { always = yes }
+
+		cost = 10
+		fire_only_once = no
+		days_remove = 90
+
+		modifier = {
+			civilian_factory_use = 1
+		}
+
+		remove_effect = {
+			add_equipment_to_stockpile = { type = convoy_1 amount = 1 }
+		}
+
+		ai_will_do = {
+			base = 1
+			modifier = {
+				factor = 0
+				has_equipment = { convoy > 20 }
+			}
+		}
+	}
+
+	TU_cargo_build_4 = {
+		icon = GFX_decision_generic_construction
+		allowed = { always = yes }
+
+		cost = 10
+		fire_only_once = no
+		days_remove = 90
+
+		modifier = {
+			civilian_factory_use = 1
+		}
+
+		remove_effect = {
+			add_equipment_to_stockpile = { type = convoy_1 amount = 1 }
+		}
+
+		ai_will_do = {
+			base = 1
+			modifier = {
+				factor = 0
+				has_equipment = { convoy > 20 }
+			}
+		}
+	}
+
+	TU_cargo_build_5 = {
+		icon = GFX_decision_generic_construction
+		allowed = { always = yes }
+
+		cost = 10
+		fire_only_once = no
+		days_remove = 90
+
+		modifier = {
+			civilian_factory_use = 1
+		}
+
+		remove_effect = {
+			add_equipment_to_stockpile = { type = convoy_1 amount = 1 }
+		}
+
+		ai_will_do = {
+			base = 1
+			modifier = {
+				factor = 0
+				has_equipment = { convoy > 20 }
+			}
+		}
+	}
 }

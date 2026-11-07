@@ -6,7 +6,9 @@
 
     1) 이름: 호송선 장비 -> 화물 비행선 (localisation/*/replace/tu_cargo_l_*.yml)
     2) 시작 화물 비행선: tools/mapgen/tiers.py 가 체급별로 history 에 넣는다 (CARGO_START)
-    3) 늘리는 법: 디시전 '화물 비행선 개조' — 수송 비행선 PLANES 대 -> 화물 비행선 CARGO 척 (조선소가 막혀 있어 호송선은 만들 수 없다)
+    3) 늘리는 법 (조선소가 막혀 있어 생산 화면에서는 만들 수 없다):
+       디시전 '화물 비행선 개조' — 수송 비행선 PLANES 대 -> 화물 비행선 CARGO 대
+       디시전 '화물 비행선 건조 (조선대 1~5)' — BUILD_DAYS 일, 민간 공장 BUILD_FACTORIES 개 -> BUILD_AMOUNT 대 (사양서 67)
 예전(사양서 64)의 '항공 수입' 디시전은 이 방식으로 대체되어 지웠다.
 
 사용법 (python -I):  python -I tools/air_trade.py
@@ -19,8 +21,42 @@ REPO = Path(__file__).resolve().parents[1]
 MOD = REPO / "terra_universalis"
 
 PLANES, CARGO, COST, DAYS = 5, 10, 10, 30
+# 건조 (사양서 67): 조선대 BUILD_SLOTS 곳에서 동시에. 한 곳에서 BUILD_DAYS 일 동안 민간 공장 BUILD_FACTORIES 개를 써서 BUILD_AMOUNT 대
+BUILD_SLOTS, BUILD_DAYS, BUILD_FACTORIES, BUILD_AMOUNT, BUILD_COST = 5, 90, 1, 1, 10
 CARGO_START = {"S": 60, "A": 40, "B": 25, "C": 10}     # tiers.py 가 읽는다
 CAT = "TU_air_trade_category"
+
+
+def build_text():
+    out = []
+    for i in range(1, BUILD_SLOTS + 1):
+        out.append("""
+	TU_cargo_build_%(i)d = {
+		icon = GFX_decision_generic_construction
+		allowed = { always = yes }
+
+		cost = %(cost)d
+		fire_only_once = no
+		days_remove = %(days)d
+
+		modifier = {
+			civilian_factory_use = %(fac)d
+		}
+
+		remove_effect = {
+			add_equipment_to_stockpile = { type = convoy_1 amount = %(amount)d }
+		}
+
+		ai_will_do = {
+			base = 1
+			modifier = {
+				factor = 0
+				has_equipment = { convoy > 20 }
+			}
+		}
+	}
+""" % dict(i=i, cost=BUILD_COST, days=BUILD_DAYS, fac=BUILD_FACTORIES, amount=BUILD_AMOUNT))
+    return "".join(out)
 
 
 def main():
@@ -54,23 +90,29 @@ def main():
 			}
 		}
 	}
-}
-""" % dict(cat=CAT, pm1=PLANES - 1, cost=COST, days=DAYS, planes=PLANES, cargo=CARGO), encoding="utf-8")
+%(build)s}
+""" % dict(cat=CAT, pm1=PLANES - 1, cost=COST, days=DAYS, planes=PLANES, cargo=CARGO, build=build_text()), encoding="utf-8")
     ko = ["l_korean:",
           ' %s:0 "항공 화물"' % CAT,
           ' %s_desc:0 "바다를 건너는 무역은 화물 비행선이 나른다. 무역 화면에서 바다 건너 나라와 무역하려면 화물 비행선이 필요하다."' % CAT,
           ' TU_cargo_refit:0 "화물 비행선 개조"',
-          ' TU_cargo_refit_desc:0 "수송 비행선 §Y%d§!대를 화물 비행선 §G%d§!척으로 개조한다. 화물 비행선은 무역 물자를 나른다."' % (PLANES, CARGO)]
+          ' TU_cargo_refit_desc:0 "수송 비행선 §Y%d§!대를 화물 비행선 §G%d§!대로 개조한다. 화물 비행선은 무역 물자를 나른다."' % (PLANES, CARGO)] + [
+          ' TU_cargo_build_%d:0 "화물 비행선 건조 (조선대 %d)"' % (i, i) for i in range(1, BUILD_SLOTS + 1)] + [
+          ' TU_cargo_build_%d_desc:0 "%d일 동안 민간 공장 §Y%d§!개를 써서 화물 비행선 §G%d§!대를 만든다. 조선대 %d곳에서 동시에 지을 수 있다."'
+          % (i, BUILD_DAYS, BUILD_FACTORIES, BUILD_AMOUNT, BUILD_SLOTS) for i in range(1, BUILD_SLOTS + 1)]
     en = ["l_english:",
           ' %s:0 "Air Cargo"' % CAT,
           ' %s_desc:0 "Overseas trade is carried by cargo airships. You need them to trade with countries across the sea."' % CAT,
           ' TU_cargo_refit:0 "Refit Cargo Airships"',
-          ' TU_cargo_refit_desc:0 "Refit §Y%d§! transport airships into §G%d§! cargo airships, which carry trade."' % (PLANES, CARGO)]
+          ' TU_cargo_refit_desc:0 "Refit §Y%d§! transport airships into §G%d§! cargo airships, which carry trade."' % (PLANES, CARGO)] + [
+          ' TU_cargo_build_%d:0 "Build a Cargo Airship (Slip %d)"' % (i, i) for i in range(1, BUILD_SLOTS + 1)] + [
+          ' TU_cargo_build_%d_desc:0 "Use §Y%d§! civilian factory for %d days to build §G%d§! cargo airship. Up to %d can be built at once."'
+          % (i, BUILD_FACTORIES, BUILD_DAYS, BUILD_AMOUNT, BUILD_SLOTS) for i in range(1, BUILD_SLOTS + 1)]
     for lang, lines in (("korean", ko), ("english", en)):
         (MOD / "localisation" / lang / ("tu_air_trade_l_%s.yml" % lang)).write_bytes(("\n".join(lines) + "\n").encode("utf-8-sig"))
     # 호송선 장비 이름 (바닐라 키를 덮어쓴다)
-    names = {"korean": ("화물 비행선", "바다 위를 나는 화물 비행선. 무역 물자를 나른다. 수송 비행선을 개조해서 얻는다."),
-             "english": ("Cargo Airship", "A cargo airship flying over the sea. Carries trade. Refitted from transport airships.")}
+    names = {"korean": ("화물 비행선", "바다 위를 나는 화물 비행선. 무역 물자를 나른다. 디시전으로 건조하거나 수송 비행선을 개조해서 얻는다."),
+             "english": ("Cargo Airship", "A cargo airship flying over the sea. Carries trade. Built or refitted from transport airships by decision.")}
     for lang, (n, d) in names.items():
         lines = ["l_%s:" % lang, " # 사양서 66: 호송선 = 화물 비행선 (tools/air_trade.py)"]
         for k in ("convoy", "convoy_1", "convoy_equipment"):
