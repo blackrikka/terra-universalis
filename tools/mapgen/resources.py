@@ -85,7 +85,8 @@ def order(tag, key, states, st, py):
 
 def write_resources(path, res):
     s = path.read_text(encoding="utf-8-sig")
-    s = re.sub(r"\n[ \t]*resources\s*=\s*\{[^}]*\}[ \t]*", "", s)
+    s = re.sub(r"\n(?:[ \t]*\n)*[ \t]*resources\s*=\s*\{[^}]*\}[ \t]*", "", s)   # 앞의 빈 줄도 (다시 돌려도 같게)
+    s = re.sub(r"\n[ \t]*\n([ \t]*\n)+", "\n\n", s)                               # 빈 줄이 겹치면 하나로
     if res:
         body = "".join("\t\t%s = %d\n" % (k, res[k]) for k in KEYS if res.get(k))
         s, n = re.subn(r"(\n[ \t]*state_category\s*=\s*\w+)", r"\1\n\n\tresources = {\n%s\t}" % body.replace("\\", "\\\\"), s, count=1)

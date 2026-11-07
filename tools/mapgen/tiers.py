@@ -52,7 +52,8 @@ EXISTING = {"URS": "TU_URS_infantry", "VIC": "TU_VIC_line_infantry", "KZD": "TU_
 SPECIAL_UNITS = {"RHO": [("Rhodes Island Escort 1", "TU_RHO_escort"), ("Rhodes Island Escort 2", "TU_RHO_escort"),
                          ("Rhodes Island Operator Squad", "TU_RHO_operator_squad")]}
 RESEARCH_SLOTS = {"S": 4, "A": 3, "B": 3, "C": 2}
-BASIC = ["infantry_weapons", "tech_support", "gw_artillery", "basic_train", "tu_oripathy_research"]
+BASIC = ["infantry_weapons", "tech_support", "gw_artillery", "basic_train", "tu_oripathy_research",
+         "early_transport_plane"]    # 사양서 64: 항공 수입에 수송 비행선이 필요하다
 TECHS = {   # tools/techgen/build_techs.py 의 기술 id
     "C": BASIC + ["tech_engineers", "tech_recon"],
     "B": BASIC + ["infantry_weapons1", "tech_engineers", "tech_recon", "tech_field_hospital", "basic_machine_tools",
