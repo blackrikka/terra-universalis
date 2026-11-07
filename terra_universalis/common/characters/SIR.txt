@@ -10,9 +10,31 @@ characters = {
 		}
 	}
 
-	TU_SIR_family_head = {
-		name = TU_SIR_family_head
-		country_leader = { traits = { tu_lt_omerta tu_lt_merchant_prince }
+	TU_SIR_bellone = {
+		name = TU_SIR_bellone
+		portraits = {
+			civilian = { large = "GFX_TU_ak_7ce9724f9c" small = "GFX_TU_ak_7ce9724f9c_small" }
+			army = { large = "GFX_TU_ak_7ce9724f9c" small = "GFX_TU_ak_7ce9724f9c_small" }
+		}
+		country_leader = { traits = { tu_lt_merchant_prince }
+			ideology = oligarchism
+			expire = "1200.1.1.1"
+			id = -1
+		}
+	}
+
+	TU_SIR_gambino_don = {
+		name = TU_SIR_gambino_don
+		country_leader = { traits = { tu_lt_omerta }
+			ideology = fascism_ideology
+			expire = "1200.1.1.1"
+			id = -1
+		}
+	}
+
+	TU_SIR_saluzzo_don = {
+		name = TU_SIR_saluzzo_don
+		country_leader = { traits = { tu_lt_merchant_prince }
 			ideology = oligarchism
 			expire = "1200.1.1.1"
 			id = -1
@@ -26,7 +48,7 @@ characters = {
 			army = { large = "GFX_TU_ak_0007a4b8d2" small = "GFX_TU_ak_0007a4b8d2_small" }
 		}
 		country_leader = { traits = { tu_lt_judge }
-			ideology = moderatism
+			ideology = conservatism
 			expire = "1200.1.1.1"
 			id = -1
 		}
@@ -44,8 +66,12 @@ characters = {
 		}
 	}
 
-	TU_SIR_wolf_heir = {
-		name = TU_SIR_wolf_heir
+	TU_SIR_lappland_decadenza = {
+		name = TU_SIR_lappland_decadenza
+		portraits = {
+			civilian = { large = "GFX_TU_ak_e1510cebb5" small = "GFX_TU_ak_e1510cebb5_small" }
+			army = { large = "GFX_TU_ak_e1510cebb5" small = "GFX_TU_ak_e1510cebb5_small" }
+		}
 		country_leader = { traits = { tu_lt_wolf_blood }
 			ideology = despotism
 			expire = "1200.1.1.1"

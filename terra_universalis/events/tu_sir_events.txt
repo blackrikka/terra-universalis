@@ -10,9 +10,86 @@ country_event = {
 	option = {
 		name = tu_sir_ev.1.a
 		ai_chance = {
-			factor = 1
+			factor = 25
 		}
-		add_stability = 0.02
+		set_country_flag = TU_SIR_route_bellone
+		set_country_flag = TU_SIR_route_chosen
+		recruit_character = TU_SIR_bellone
+		set_politics = { ruling_party = neutrality elections_allowed = no }
+		promote_character = {
+			character = TU_SIR_bellone
+			ideology = oligarchism
+		}
+		add_ideas = TU_SIR_bellone_start
+		mark_focus_tree_layout_dirty = yes
+	}
+
+	option = {
+		name = tu_sir_ev.1.b
+		ai_chance = {
+			factor = 25
+		}
+		set_country_flag = TU_SIR_route_gambino
+		set_country_flag = TU_SIR_route_chosen
+		recruit_character = TU_SIR_gambino_don
+		set_politics = { ruling_party = fascism elections_allowed = no }
+		promote_character = {
+			character = TU_SIR_gambino_don
+			ideology = fascism_ideology
+		}
+		add_ideas = TU_SIR_gambino_start
+		mark_focus_tree_layout_dirty = yes
+	}
+
+	option = {
+		name = tu_sir_ev.1.c
+		ai_chance = {
+			factor = 20
+		}
+		set_country_flag = TU_SIR_route_saluzzo
+		set_country_flag = TU_SIR_route_chosen
+		recruit_character = TU_SIR_saluzzo_don
+		set_politics = { ruling_party = neutrality elections_allowed = no }
+		promote_character = {
+			character = TU_SIR_saluzzo_don
+			ideology = oligarchism
+		}
+		add_ideas = TU_SIR_saluzzo_start
+		mark_focus_tree_layout_dirty = yes
+	}
+
+	option = {
+		name = tu_sir_ev.1.e
+		ai_chance = {
+			factor = 20
+		}
+		set_country_flag = TU_SIR_route_law
+		set_country_flag = TU_SIR_route_chosen
+		recruit_character = TU_SIR_penance
+		set_politics = { ruling_party = democratic elections_allowed = yes }
+		promote_character = {
+			character = TU_SIR_penance
+			ideology = conservatism
+		}
+		add_ideas = TU_SIR_law_start
+		mark_focus_tree_layout_dirty = yes
+	}
+
+	option = {
+		name = tu_sir_ev.1.f
+		ai_chance = {
+			factor = 10
+		}
+		set_country_flag = TU_SIR_route_wolf
+		set_country_flag = TU_SIR_route_chosen
+		recruit_character = TU_SIR_lappland_decadenza
+		set_politics = { ruling_party = neutrality elections_allowed = no }
+		promote_character = {
+			character = TU_SIR_lappland_decadenza
+			ideology = despotism
+		}
+		add_ideas = TU_SIR_wolf_start
+		mark_focus_tree_layout_dirty = yes
 	}
 }
 
@@ -26,15 +103,7 @@ country_event = {
 	option = {
 		name = tu_sir_ev.20.a
 		ai_chance = {
-			factor = 50
-		}
-		add_political_power = 15
-	}
-
-	option = {
-		name = tu_sir_ev.20.b
-		ai_chance = {
-			factor = 50
+			factor = 1
 		}
 		add_war_support = 0.02
 	}
@@ -67,16 +136,9 @@ country_event = {
 	option = {
 		name = tu_sir_ev.22.a
 		ai_chance = {
-			factor = 50
+			factor = 1
 		}
-		add_political_power = -25
-	}
-
-	option = {
-		name = tu_sir_ev.22.b
-		ai_chance = {
-			factor = 50
-		}
+		army_experience = 20
 	}
 }
 
@@ -126,7 +188,6 @@ country_event = {
 		ai_chance = {
 			factor = 1
 		}
-		set_country_flag = TU_SIR_wolf_sign
 		add_war_support = 0.05
 	}
 }
@@ -186,7 +247,7 @@ country_event = {
 
 	trigger = {
 		original_tag = SIR
-		has_completed_focus = TU_SIR_family_summit
+		has_completed_focus = TU_SIR_root
 	}
 	fire_only_once = yes
 
@@ -261,40 +322,6 @@ country_event = {
 }
 
 country_event = {
-	id = tu_sir_ev.31
-	title = tu_sir_ev.31.t
-	desc = tu_sir_ev.31.d
-	picture = GFX_report_event_generic_read_write
-
-	trigger = {
-		original_tag = SIR
-		has_completed_focus = TU_SIR_harbour_cities
-	}
-	fire_only_once = yes
-
-	mean_time_to_happen = {
-		days = 300
-	}
-
-	option = {
-		name = tu_sir_ev.31.a
-		ai_chance = {
-			factor = 50
-		}
-		TU_SIR_law_5 = yes
-		add_stability = -0.02
-	}
-
-	option = {
-		name = tu_sir_ev.31.b
-		ai_chance = {
-			factor = 50
-		}
-		TU_SIR_bellone_5 = yes
-	}
-}
-
-country_event = {
 	id = tu_sir_ev.32
 	title = tu_sir_ev.32.t
 	desc = tu_sir_ev.32.d
@@ -336,7 +363,7 @@ country_event = {
 
 	trigger = {
 		original_tag = SIR
-		has_completed_focus = TU_SIR_tourism
+		has_country_flag = TU_SIR_casinos
 	}
 	fire_only_once = yes
 

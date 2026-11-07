@@ -423,6 +423,10 @@ def main(argv=None):
         print(f"{label} errors=1")
         return 1
     autolayout.describe(out_path, stats, changed, write=True)
+    import block_layout      # 사양서 63: 한 번에 하나만 보이는 갈래를 같은 자리에 겹친다
+    bl = block_layout.apply(tag)
+    if bl:
+        print(f"block layout: {bl}")
     import place_continuous
     placed = place_continuous.place_file(out_path)
     if placed["error"] is not None:

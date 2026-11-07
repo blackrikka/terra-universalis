@@ -210,6 +210,7 @@ TU_SIR_families_category = {
 
 		visible = {
 			has_country_flag = TU_SIR_families
+			has_country_flag = TU_SIR_route_law
 		}
 
 		available = {
@@ -253,31 +254,6 @@ TU_SIR_families_category = {
 			TU_SIR_bellone_3 = yes
 			TU_SIR_gambino_3 = yes
 			TU_SIR_saluzzo_3 = yes
-		}
-
-		ai_will_do = {
-			base = 1
-		}
-	}
-
-	TU_SIR_witness_campaign = {
-		icon = GFX_decision_generic_political_discourse
-
-		allowed = {
-			original_tag = SIR
-		}
-
-		visible = {
-			has_country_flag = TU_SIR_families
-			has_country_flag = TU_SIR_witness
-		}
-
-		cost = 50
-		days_re_enable = 180
-
-		complete_effect = {
-			TU_SIR_law_10 = yes
-			add_stability = -0.02
 		}
 
 		ai_will_do = {
@@ -336,31 +312,6 @@ TU_SIR_street_category = {
 		}
 	}
 
-	TU_SIR_protection_racket = {
-		icon = GFX_decision_generic_political_discourse
-
-		allowed = {
-			original_tag = SIR
-		}
-
-		visible = {
-			has_country_flag = TU_SIR_smuggling
-		}
-
-		cost = 50
-		days_re_enable = 240
-
-		complete_effect = {
-			add_stability = 0.04
-			TU_SIR_law_5 = yes
-			TU_SIR_bellone_m5 = yes
-		}
-
-		ai_will_do = {
-			base = 1
-		}
-	}
-
 	TU_SIR_wolf_rite = {
 		icon = GFX_decision_generic_political_discourse
 
@@ -385,7 +336,7 @@ TU_SIR_street_category = {
 		}
 	}
 
-	TU_SIR_wolf_search = {
+	TU_SIR_olive_harvest = {
 		icon = GFX_decision_generic_political_discourse
 
 		allowed = {
@@ -393,18 +344,15 @@ TU_SIR_street_category = {
 		}
 
 		visible = {
-			has_country_flag = TU_SIR_rites
+			has_idea = TU_SIR_wine_and_olive
 		}
 
-		available = {
-			NOT = { has_country_flag = TU_SIR_wolf_sign }
-		}
-
-		cost = 75
-		fire_only_once = yes
+		cost = 25
+		days_re_enable = 365
 
 		complete_effect = {
-			country_event = { id = tu_sir_ev.25 }
+			add_stability = 0.03
+			add_political_power = 25
 		}
 
 		ai_will_do = {
@@ -465,54 +413,6 @@ TU_SIR_street_category = {
 
 		complete_effect = {
 			add_to_faction = FROM
-		}
-
-		ai_will_do = {
-			base = 1
-		}
-	}
-
-	TU_SIR_olive_harvest = {
-		icon = GFX_decision_generic_political_discourse
-
-		allowed = {
-			original_tag = SIR
-		}
-
-		visible = {
-			has_idea = TU_SIR_wine_and_olive
-		}
-
-		cost = 25
-		days_re_enable = 365
-
-		complete_effect = {
-			add_stability = 0.03
-			add_political_power = 25
-		}
-
-		ai_will_do = {
-			base = 1
-		}
-	}
-
-	TU_SIR_naval_patrol = {
-		icon = GFX_decision_generic_political_discourse
-
-		allowed = {
-			original_tag = SIR
-		}
-
-		visible = {
-			has_country_flag = TU_SIR_smuggling
-		}
-
-		cost = 50
-		days_re_enable = 180
-
-		complete_effect = {
-			TU_SIR_law_5 = yes
-			army_experience = 15
 		}
 
 		ai_will_do = {

@@ -29,7 +29,7 @@ ideas = {
 			}
 		}
 
-		TU_SIR_bellone_ties = {
+		TU_SIR_bellone_start = {
 			picture = generic_industrial_concern_1
 
 			allowed = {
@@ -38,11 +38,11 @@ ideas = {
 
 			modifier = {
 				production_speed_buildings_factor = 0.1
-				political_power_gain = 0.05
+				industrial_capacity_factory = 0.05
 			}
 		}
 
-		TU_SIR_gambino_ties = {
+		TU_SIR_gambino_start = {
 			picture = generic_manpower_bonus
 
 			allowed = {
@@ -51,11 +51,11 @@ ideas = {
 
 			modifier = {
 				army_attack_factor = 0.05
-				conscription_factor = 0.05
+				conscription_factor = 0.1
 			}
 		}
 
-		TU_SIR_saluzzo_ties = {
+		TU_SIR_saluzzo_start = {
 			picture = generic_economic_increase
 
 			allowed = {
@@ -63,26 +63,83 @@ ideas = {
 			}
 
 			modifier = {
-				consumer_goods_factor = -0.03
-				political_power_gain = 0.1
+				political_power_gain = 0.15
+				consumer_goods_factor = -0.02
 			}
 		}
 
-		TU_SIR_family_council = {
-			picture = generic_foreign_capital
+		TU_SIR_law_start = {
+			picture = constitutional_guarantees
 
 			allowed = {
 				original_tag = SIR
 			}
 
 			modifier = {
-				political_power_gain = 0.15
-				production_speed_buildings_factor = 0.1
-				stability_factor = -0.03
+				stability_factor = 0.05
+				research_speed_factor = 0.03
 			}
 		}
 
-		TU_SIR_rule_of_law = {
+		TU_SIR_wolf_start = {
+			picture = generic_war_preparation
+
+			allowed = {
+				original_tag = SIR
+			}
+
+			modifier = {
+				army_attack_factor = 0.05
+				war_support_factor = 0.1
+				army_morale_factor = 0.05
+			}
+		}
+
+		TU_SIR_bellone_end = {
+			picture = generic_industrial_concern_1
+
+			allowed = {
+				original_tag = SIR
+			}
+
+			modifier = {
+				production_speed_buildings_factor = 0.2
+				industrial_capacity_factory = 0.1
+				political_power_gain = 0.1
+			}
+		}
+
+		TU_SIR_gambino_end = {
+			picture = generic_manpower_bonus
+
+			allowed = {
+				original_tag = SIR
+			}
+
+			modifier = {
+				army_attack_factor = 0.12
+				army_org_factor = 0.08
+				conscription_factor = 0.15
+				training_time_factor = -0.15
+			}
+		}
+
+		TU_SIR_saluzzo_end = {
+			picture = generic_economic_increase
+
+			allowed = {
+				original_tag = SIR
+			}
+
+			modifier = {
+				political_power_gain = 0.25
+				consumer_goods_factor = -0.05
+				research_speed_factor = 0.08
+				trade_opinion_factor = 0.25
+			}
+		}
+
+		TU_SIR_law_end = {
 			picture = constitutional_guarantees
 
 			allowed = {
@@ -91,11 +148,12 @@ ideas = {
 
 			modifier = {
 				stability_factor = 0.15
+				research_speed_factor = 0.1
 				production_speed_buildings_factor = 0.1
 			}
 		}
 
-		TU_SIR_wolf_lord = {
+		TU_SIR_wolf_end = {
 			picture = generic_war_preparation
 
 			allowed = {
@@ -103,22 +161,10 @@ ideas = {
 			}
 
 			modifier = {
-				army_attack_factor = 0.1
-				war_support_factor = 0.15
+				army_attack_factor = 0.15
 				army_morale_factor = 0.1
-			}
-		}
-
-		TU_SIR_harbour_cities = {
-			picture = generic_economic_increase
-
-			allowed = {
-				original_tag = SIR
-			}
-
-			modifier = {
-				political_power_gain = 0.05
-				consumer_goods_factor = -0.02
+				war_support_factor = 0.15
+				army_speed_factor = 0.05
 			}
 		}
 

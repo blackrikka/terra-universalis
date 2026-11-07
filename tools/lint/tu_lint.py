@@ -367,6 +367,41 @@ def check_focus_tree(path, rel_path, out):
             continue
         f["abs"] = xy
         placed.append(f)
+    seen = set()
+    for world in visible_worlds(path, text, placed):
+        for fd in _check_xy(world, rel_path):
+            key = (fd.line, fd.msg)
+            if key not in seen:
+                seen.add(key)
+                out.append(fd)
+
+
+def visible_worlds(path, text, placed):
+    """한 번에 하나만 보이는 갈래(tools/focusgen/block_layout.py 의 ORDER, 사양서 63)는 겹쳐 있어도 된다.
+    겹친 칸이 있으면 '보이는 경우' 마다 (겹친 갈래 하나씩) 따로 검사한다."""
+    tag = path.stem[3:].upper() if path.stem.startswith("tu_") else None
+    try:
+        sys.path.insert(0, str(Path(__file__).resolve().parents[1] / "focusgen"))
+        import block_layout
+    except ImportError:
+        return [placed]
+    cfg = block_layout.ORDER.get(tag)
+    if not cfg:
+        return [placed]
+    fs = block_layout.parse(text)
+    alts = [[block_layout.block_of(h, fs, cfg["root"]) for h in slot] for slot in cfg["slots"] if len(slot) > 1]
+    if not alts:
+        return [placed]
+    hidden_all = set().union(*[m for slot in alts for m in slot])
+    worlds = []
+    for slot in alts:
+        for mem in slot:
+            worlds.append([f for f in placed if f["id"] not in hidden_all or f["id"] in mem])
+    return worlds
+
+
+def _check_xy(placed, rel_path):
+    out = []
     seen_xy = {}
     for f in placed:
         if f["abs"] in seen_xy:
@@ -387,6 +422,7 @@ def check_focus_tree(path, rel_path, out):
                 out.append(Finding(
                     "ERROR", rel_path, b["line"],
                     "C3 같은 y(%d)에서 간격 부족 (dx=%d): %s 와 %s" % (y, dx, a["id"], b["id"])))
+    return out
 
 
 def check_focus_trees(root, out):

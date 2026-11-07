@@ -33,18 +33,18 @@ TU_SIR_saluzzo_10 = {
 	}
 }
 
-TU_SIR_law_5 = {
-	custom_effect_tooltip = TU_SIR_law_5_tt
-	hidden_effect = {
-		add_to_variable = { TU_SIR_law = 5 }
-		clamp_variable = { var = TU_SIR_law min = 0 max = 100 }
-	}
-}
-
 TU_SIR_law_10 = {
 	custom_effect_tooltip = TU_SIR_law_10_tt
 	hidden_effect = {
 		add_to_variable = { TU_SIR_law = 10 }
+		clamp_variable = { var = TU_SIR_law min = 0 max = 100 }
+	}
+}
+
+TU_SIR_law_5 = {
+	custom_effect_tooltip = TU_SIR_law_5_tt
+	hidden_effect = {
+		add_to_variable = { TU_SIR_law = 5 }
 		clamp_variable = { var = TU_SIR_law min = 0 max = 100 }
 	}
 }
@@ -145,22 +145,6 @@ TU_SIR_law_15 = {
 	}
 }
 
-TU_SIR_saluzzo_5 = {
-	custom_effect_tooltip = TU_SIR_saluzzo_5_tt
-	hidden_effect = {
-		add_to_variable = { TU_SIR_saluzzo = 5 }
-		clamp_variable = { var = TU_SIR_saluzzo min = 0 max = 100 }
-	}
-}
-
-TU_SIR_bellone_m5 = {
-	custom_effect_tooltip = TU_SIR_bellone_m5_tt
-	hidden_effect = {
-		add_to_variable = { TU_SIR_bellone = -5 }
-		clamp_variable = { var = TU_SIR_bellone min = 0 max = 100 }
-	}
-}
-
 TU_SIR_bellone_3 = {
 	custom_effect_tooltip = TU_SIR_bellone_3_tt
 	hidden_effect = {
@@ -185,10 +169,10 @@ TU_SIR_saluzzo_3 = {
 	}
 }
 
-TU_SIR_bellone_5 = {
-	custom_effect_tooltip = TU_SIR_bellone_5_tt
+TU_SIR_saluzzo_5 = {
+	custom_effect_tooltip = TU_SIR_saluzzo_5_tt
 	hidden_effect = {
-		add_to_variable = { TU_SIR_bellone = 5 }
-		clamp_variable = { var = TU_SIR_bellone min = 0 max = 100 }
+		add_to_variable = { TU_SIR_saluzzo = 5 }
+		clamp_variable = { var = TU_SIR_saluzzo min = 0 max = 100 }
 	}
 }

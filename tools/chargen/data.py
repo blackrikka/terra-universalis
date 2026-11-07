@@ -118,20 +118,22 @@ COUNTRIES = {
     # ------------------------------------------------------------------ 시라쿠사
     "SIR": dict(cast=True, chars=[
         ("elder_don", "원로 대부", "The Elder Don", [("L", "oligarchism")], None),
-        ("family_head", "패밀리 평의회", "The Family Council", [("L", "oligarchism")], None),
-        ("penance", "라비니아", "Lavinia", [("L", "moderatism"), ("A", "political_advisor", "tu_inquisitor")], None),
-        ("wolf_heir", "늑대 군주", "The Wolf Lord", [("L", "despotism")], None),
+        # 루트 지도자 (사양서 63): 이벤트 tu_sir_ev.1 '시라쿠사의 갈림길'에서 고르면 바로 지도자가 된다
+        ("bellone", "벨로네", "Bellone", [("L", "oligarchism")], None),
+        ("gambino_don", "감비노 대부", "Don Gambino", [("L", "fascism_ideology")], None),
+        ("saluzzo_don", "살루초 대부", "Don Saluzzo", [("L", "oligarchism")], None),
+        ("penance", "페넌스", "Penance", [("L", "conservatism"), ("A", "political_advisor", "tu_inquisitor")], None),
+        ("lappland_decadenza", "라플란드 더 데카덴차", "Lappland the Decadenza", [("L", "despotism")], None),
         ("texas", "텍사스", "Texas", [("A", "high_command", "tu_chief_logistics"), ("G", 4, 3, 3, 4)], None),
         ("lappland", "라플란드", "Lappland", [("G", 6, 2, 2, 2)], None),
         ("consigliere", "패밀리 고문", "Family Consigliere", [("A", "political_advisor", "tu_spymaster")], None),
         ("valencina", "발렌치나", "Valencina", [("G", 6, 3, 3, 4)], None),     # 이스터에그 (sir.py tu_sir_ev.37)
     ], start=["elder_don", "penance", "consigliere", "texas", "lappland"], hooks={
-        "family_council": [("leader", "family_head", "oligarchism"),
-                           ("name", "FAMILIES", "시라쿠사 패밀리 연합", "Siracusan Family Union", "시라쿠사의", "Siracusan")],
-        "rule_of_law": [("leader", "penance", "moderatism"),
-                        ("name", "LAW", "법의 시라쿠사", "Siracusa of Law", "시라쿠사의", "Siracusan")],
-        "wolf_lord": [("leader", "wolf_heir", "despotism"),
-                      ("name", "WOLF", "늑대 군주의 시라쿠사", "Siracusa of the Wolf Lord", "시라쿠사의", "Siracusan")],
+        "bellone_end": [("name", "BELLONE", "벨로네의 시라쿠사", "Bellone's Siracusa", "시라쿠사의", "Siracusan")],
+        "gambino_end": [("name", "GAMBINO", "감비노의 시라쿠사", "Gambino's Siracusa", "시라쿠사의", "Siracusan")],
+        "saluzzo_end": [("name", "SALUZZO", "살루초의 시라쿠사", "Saluzzo's Siracusa", "시라쿠사의", "Siracusan")],
+        "law_end": [("name", "LAW", "법의 시라쿠사", "Siracusa of Law", "시라쿠사의", "Siracusan")],
+        "wolf_end": [("name", "WOLF", "늑대 군주의 시라쿠사", "Siracusa of the Wolf Lord", "시라쿠사의", "Siracusan")],
     }),
     # ------------------------------------------------------------------ 쉐라그
     "KJE": dict(cast=True, chars=[

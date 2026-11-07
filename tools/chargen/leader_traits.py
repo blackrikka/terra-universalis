@@ -115,9 +115,11 @@ ASSIGN = {
     "TU_SAR_guildmaster": ["tu_lt_golden_purse", "tu_lt_merchant_prince"],
     # 시라쿠사
     "TU_SIR_elder_don": ["tu_lt_omerta"],
-    "TU_SIR_family_head": ["tu_lt_omerta", "tu_lt_merchant_prince"],
+    "TU_SIR_bellone": ["tu_lt_merchant_prince"],          # 사양서 63: 시라쿠사 루트 지도자
+    "TU_SIR_gambino_don": ["tu_lt_omerta"],
+    "TU_SIR_saluzzo_don": ["tu_lt_merchant_prince"],
     "TU_SIR_penance": ["tu_lt_judge"],
-    "TU_SIR_wolf_heir": ["tu_lt_wolf_blood"],
+    "TU_SIR_lappland_decadenza": ["tu_lt_wolf_blood"],
     # 쉐라그
     "TU_KJE_elders": ["tu_lt_snow_elders"],
     "TU_KJE_silverash": ["tu_lt_karlan_magnate", "tu_lt_reformer"],

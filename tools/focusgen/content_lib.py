@@ -50,6 +50,10 @@ def ind(lines, n):
     return "\n".join(out)
 
 
+# 선택지 키: .d 는 이벤트 설명(desc) 키라서 건너뛴다 (네 번째 선택지가 설명을 덮어쓰던 버그, 사양서 63)
+OPT = "abcefghij"
+
+
 class Country:
     def __init__(self, tag, name_ko, name_en):
         self.tag = tag
@@ -145,7 +149,7 @@ class Country:
         self.loc(eid + ".t", title[0], title[1])
         self.loc(eid + ".d", desc[0], desc[1])
         for i, o in enumerate(options):
-            self.loc("%s.%s" % (eid, "abcdefgh"[i]), o[0], o[1])
+            self.loc("%s.%s" % (eid, OPT[i]), o[0], o[1])
         return eid
 
     # ---------- 세력 균형
@@ -305,7 +309,7 @@ class Country:
                 if e["immediate"]:
                     s += "\n\timmediate = {\n%s\n\t}\n" % ind(e["immediate"], 2)
                 for i, (_, _, eff, ai) in enumerate(e["options"]):
-                    s += "\n\toption = {\n\t\tname = %s.%s\n\t\tai_chance = {\n\t\t\tfactor = %d\n\t\t}\n" % (e["id"], "abcdefgh"[i], ai)
+                    s += "\n\toption = {\n\t\tname = %s.%s\n\t\tai_chance = {\n\t\t\tfactor = %d\n\t\t}\n" % (e["id"], OPT[i], ai)
                     if eff:
                         s += ind(eff, 2) + "\n"
                     s += "\t}\n"
@@ -372,5 +376,7 @@ class Country:
             old = MOD / "localisation" / lang / ("tu_%s_concept_l_%s.yml" % (low, lang))
             if old.exists():
                 old.unlink()
+        import resource_names     # 사양서 57: 옛 자원 이름(Steel, 석유 …)을 테라 자원 이름으로
+        resource_names.main()
         print("CONTENT %s focuses=%d ideas=%d decisions=%d events=%d" % (
             t, len(self.focuses), len(self.ideas), sum(len(v) for v in self.decisions.values()), len(self.events)))
