@@ -7,11 +7,14 @@ state={
 
 	resources = {
 		steel = 8
+		tungsten = 2
+		chromium = 2
 	}
 
 	history={
 		owner = SIR
 		buildings = {
+			518 = { bunker = 2 }
 			infrastructure = 2
 		}
 		add_core_of = SIR

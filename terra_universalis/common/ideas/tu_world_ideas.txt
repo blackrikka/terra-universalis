@@ -24,5 +24,24 @@ ideas = {
 				industrial_capacity_dockyard = -1
 			}
 		}
+		# 사양서 68: 육각형 지도의 한 칸 전선. 버티는 쪽의 참호가 더 빨리, 더 깊게 쌓인다.
+		TU_hex_front = {
+			picture = generic_fortify_the_borders
+
+			allowed = {
+				always = yes
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+
+			modifier = {
+				dig_in_speed_factor = 0.5
+				max_dig_in = 5
+			}
+		}
 	}
 }

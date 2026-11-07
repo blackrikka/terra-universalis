@@ -6,14 +6,15 @@ state={
 	state_category = tu_hex
 
 	resources = {
-		steel = 2
+		steel = 8
 	}
 
 	history={
 		owner = SIR
-		add_extra_state_shared_building_slots = 1
+		add_extra_state_shared_building_slots = 3
 		buildings = {
-			industrial_complex = 1
+			industrial_complex = 2
+			arms_factory = 1
 			infrastructure = 2
 		}
 		add_core_of = SIR

@@ -531,7 +531,9 @@ def main(argv=None):
             if k is None:
                 continue
             if isinstance(v, list):
-                chk.err("9", "주 파일 %s: 프로빈스 단위 건물 블록 %s는 허용되지 않음" % (info["file"], k))
+                # 사양서 68: 국경 요새 <프로빈스> = { bunker = N } 만 허용
+                if not (k.isdigit() and all(kk == "bunker" for kk, _ in v)):
+                    chk.err("9", "주 파일 %s: 프로빈스 단위 건물 블록 %s는 허용되지 않음" % (info["file"], k))
                 continue
             if k not in HISTORY_KEYS:
                 chk.err("9", "주 파일 %s: 허용되지 않은 건물 키 %s" % (info["file"], k))

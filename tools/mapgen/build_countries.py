@@ -541,6 +541,7 @@ def main(argv=None):
             'election_frequency = 48 elections_allowed = %s }' % (party, "yes" if party == "democratic" else "no"),   # 사양서 50
             "set_popularities = { %s }" % " ".join("%s = %d" % kv for kv in pops.items()),
             "add_ideas = TU_sea_terror",     # 해군 없음 (사양서 18): 조선소·해군 기지 건설 불가
+            "add_ideas = TU_hex_front",      # 한 칸 전선 참호 보너스 (사양서 68)
         ]
         if not (c.get("custom_characters") or c.get("cast")):
             lines.append("recruit_character = %s_leader" % tag)
