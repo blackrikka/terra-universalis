@@ -198,6 +198,7 @@ focus_tree = {
 		completion_reward = {
 			set_country_flag = TU_IBE_path_inq
 			add_ideas = TU_IBE_inquisitor_state
+			TU_IBE_cult_m15 = yes
 			country_event = { id = tu_ibe_ev.28 }
 			# spec 23 hooks
 			set_cosmetic_tag = TU_IBE_INQUISITION
@@ -319,6 +320,10 @@ focus_tree = {
 		}
 
 		completion_reward = {
+			if = {
+				limit = { has_idea = TU_IBE_great_silence }
+				swap_ideas = { remove_idea = TU_IBE_great_silence add_idea = TU_IBE_great_silence_eased }
+			}
 			add_political_power = 60
 			add_tech_bonus = { name = TU_IBE_royal_treasury bonus = 0.75 uses = 1 category = industry }
 		}
@@ -339,6 +344,10 @@ focus_tree = {
 		}
 
 		completion_reward = {
+			if = {
+				limit = { has_idea = TU_IBE_fear_of_the_sea }
+				swap_ideas = { remove_idea = TU_IBE_fear_of_the_sea add_idea = TU_IBE_fear_of_the_sea_eased }
+			}
 			add_manpower = 10000
 			army_experience = 25
 		}
@@ -360,6 +369,14 @@ focus_tree = {
 		}
 
 		completion_reward = {
+			if = {
+				limit = { has_idea = TU_IBE_fear_of_the_sea_eased }
+				swap_ideas = { remove_idea = TU_IBE_fear_of_the_sea_eased add_idea = TU_IBE_fear_of_the_sea_calmed }
+			}
+			else_if = {
+				limit = { has_idea = TU_IBE_fear_of_the_sea }
+				swap_ideas = { remove_idea = TU_IBE_fear_of_the_sea add_idea = TU_IBE_fear_of_the_sea_calmed }
+			}
 			add_political_power = 60
 			add_stability = 0.03
 		}
@@ -550,7 +567,21 @@ focus_tree = {
 		}
 
 		completion_reward = {
-			swap_ideas = { remove_idea = TU_IBE_fear_of_the_sea add_idea = TU_IBE_watchful_coast }
+			if = {
+				limit = { has_idea = TU_IBE_fear_of_the_sea }
+				swap_ideas = { remove_idea = TU_IBE_fear_of_the_sea add_idea = TU_IBE_watchful_coast }
+			}
+			else_if = {
+				limit = { has_idea = TU_IBE_fear_of_the_sea_eased }
+				swap_ideas = { remove_idea = TU_IBE_fear_of_the_sea_eased add_idea = TU_IBE_watchful_coast }
+			}
+			else_if = {
+				limit = { has_idea = TU_IBE_fear_of_the_sea_calmed }
+				swap_ideas = { remove_idea = TU_IBE_fear_of_the_sea_calmed add_idea = TU_IBE_watchful_coast }
+			}
+			else = {
+				add_ideas = TU_IBE_watchful_coast
+			}
 			TU_IBE_threat_m5 = yes
 		}
 	}
@@ -600,7 +631,14 @@ focus_tree = {
 		completion_reward = {
 			set_country_flag = TU_IBE_path_sea
 			add_ideas = TU_IBE_sea_reconciliation
-			remove_ideas = TU_IBE_great_silence
+			if = {
+				limit = { has_idea = TU_IBE_great_silence }
+				remove_ideas = TU_IBE_great_silence
+			}
+			if = {
+				limit = { has_idea = TU_IBE_great_silence_eased }
+				remove_ideas = TU_IBE_great_silence_eased
+			}
 			country_event = { id = tu_ibe_ev.30 }
 			# spec 23 hooks
 			recruit_character = TU_IBE_irene
@@ -1084,7 +1122,14 @@ focus_tree = {
 
 		completion_reward = {
 			add_ideas = TU_IBE_purified_coast
-			remove_ideas = TU_IBE_great_silence
+			if = {
+				limit = { has_idea = TU_IBE_great_silence }
+				remove_ideas = TU_IBE_great_silence
+			}
+			if = {
+				limit = { has_idea = TU_IBE_great_silence_eased }
+				remove_ideas = TU_IBE_great_silence_eased
+			}
 		}
 	}
 

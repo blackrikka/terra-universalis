@@ -180,6 +180,7 @@
 		completion_reward = {
 			set_country_flag = TU_IBE_path_inq
 			add_ideas = TU_IBE_inquisitor_state
+			TU_IBE_cult_m15 = yes
 			country_event = { id = tu_ibe_ev.28 }
 		}
 	}
@@ -299,6 +300,10 @@
 		}
 
 		completion_reward = {
+			if = {
+				limit = { has_idea = TU_IBE_great_silence }
+				swap_ideas = { remove_idea = TU_IBE_great_silence add_idea = TU_IBE_great_silence_eased }
+			}
 			add_political_power = 60
 			add_tech_bonus = { name = TU_IBE_royal_treasury bonus = 0.75 uses = 1 category = industry }
 		}
@@ -319,6 +324,10 @@
 		}
 
 		completion_reward = {
+			if = {
+				limit = { has_idea = TU_IBE_fear_of_the_sea }
+				swap_ideas = { remove_idea = TU_IBE_fear_of_the_sea add_idea = TU_IBE_fear_of_the_sea_eased }
+			}
 			add_manpower = 10000
 			army_experience = 25
 		}
@@ -340,6 +349,14 @@
 		}
 
 		completion_reward = {
+			if = {
+				limit = { has_idea = TU_IBE_fear_of_the_sea_eased }
+				swap_ideas = { remove_idea = TU_IBE_fear_of_the_sea_eased add_idea = TU_IBE_fear_of_the_sea_calmed }
+			}
+			else_if = {
+				limit = { has_idea = TU_IBE_fear_of_the_sea }
+				swap_ideas = { remove_idea = TU_IBE_fear_of_the_sea add_idea = TU_IBE_fear_of_the_sea_calmed }
+			}
 			add_political_power = 60
 			add_stability = 0.03
 		}
@@ -522,7 +539,21 @@
 		}
 
 		completion_reward = {
-			swap_ideas = { remove_idea = TU_IBE_fear_of_the_sea add_idea = TU_IBE_watchful_coast }
+			if = {
+				limit = { has_idea = TU_IBE_fear_of_the_sea }
+				swap_ideas = { remove_idea = TU_IBE_fear_of_the_sea add_idea = TU_IBE_watchful_coast }
+			}
+			else_if = {
+				limit = { has_idea = TU_IBE_fear_of_the_sea_eased }
+				swap_ideas = { remove_idea = TU_IBE_fear_of_the_sea_eased add_idea = TU_IBE_watchful_coast }
+			}
+			else_if = {
+				limit = { has_idea = TU_IBE_fear_of_the_sea_calmed }
+				swap_ideas = { remove_idea = TU_IBE_fear_of_the_sea_calmed add_idea = TU_IBE_watchful_coast }
+			}
+			else = {
+				add_ideas = TU_IBE_watchful_coast
+			}
 			TU_IBE_threat_m5 = yes
 		}
 	}
@@ -572,7 +603,14 @@
 		completion_reward = {
 			set_country_flag = TU_IBE_path_sea
 			add_ideas = TU_IBE_sea_reconciliation
-			remove_ideas = TU_IBE_great_silence
+			if = {
+				limit = { has_idea = TU_IBE_great_silence }
+				remove_ideas = TU_IBE_great_silence
+			}
+			if = {
+				limit = { has_idea = TU_IBE_great_silence_eased }
+				remove_ideas = TU_IBE_great_silence_eased
+			}
 			country_event = { id = tu_ibe_ev.30 }
 		}
 	}
@@ -1048,7 +1086,14 @@
 
 		completion_reward = {
 			add_ideas = TU_IBE_purified_coast
-			remove_ideas = TU_IBE_great_silence
+			if = {
+				limit = { has_idea = TU_IBE_great_silence }
+				remove_ideas = TU_IBE_great_silence
+			}
+			if = {
+				limit = { has_idea = TU_IBE_great_silence_eased }
+				remove_ideas = TU_IBE_great_silence_eased
+			}
 		}
 	}
 

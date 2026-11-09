@@ -493,6 +493,31 @@ TU_IBE_coast_category = {
 		}
 	}
 
+	TU_IBE_cult_hunt = {
+		icon = GFX_decision_generic_police_action
+
+		allowed = {
+			original_tag = IBE
+		}
+
+		visible = {
+			has_country_flag = TU_IBE_coast
+			has_country_flag = TU_IBE_path_inq
+			NOT = { has_country_flag = TU_IBE_ishar_route }
+		}
+
+		cost = 40
+		days_re_enable = 90
+
+		complete_effect = {
+			TU_IBE_cult_m12 = yes
+		}
+
+		ai_will_do = {
+			base = 1
+		}
+	}
+
 	TU_IBE_cult_inquiry = {
 		icon = GFX_decision_generic_police_action
 

@@ -76,10 +76,99 @@ def EV(n, days=0):
     return "country_event = { id = tu_ibe_ev.%d%s }" % (n, " days = %d" % days if days else "")
 
 
-C.history += ["set_variable = { TU_IBE_threat = 40 }", "set_variable = { TU_IBE_cult = 40 }", "set_variable = { TU_IBE_lighthouses = 0 }",
+C.history += ["set_variable = { TU_IBE_threat = 30 }", "set_variable = { TU_IBE_cult = 45 }", "set_variable = { TU_IBE_calm_months = 0 }", "set_variable = { TU_IBE_lighthouses = 0 }",
               "add_ideas = { TU_IBE_great_silence TU_IBE_fear_of_the_sea }"]
+# 상흔은 산업 중점 10개 중 9개를 찍으면, 공포는 바다의 위협이 25 아래로 12개월 이어지면 걷힌다 (사양서 62 6절)
+C.effects.append("""TU_IBE_scars_check = {
+	if = {
+		limit = { OR = { has_idea = TU_IBE_great_silence has_idea = TU_IBE_great_silence_eased } }
+		set_temp_variable = { tu_ibe_ind = 0 }
+		if = {
+			limit = { has_completed_focus = TU_IBE_harbour_rebuild }
+			add_to_temp_variable = { tu_ibe_ind = 1 }
+		}
+		if = {
+			limit = { has_completed_focus = TU_IBE_industrial_district }
+			add_to_temp_variable = { tu_ibe_ind = 1 }
+		}
+		if = {
+			limit = { has_completed_focus = TU_IBE_road_network }
+			add_to_temp_variable = { tu_ibe_ind = 1 }
+		}
+		if = {
+			limit = { has_completed_focus = TU_IBE_arms_program }
+			add_to_temp_variable = { tu_ibe_ind = 1 }
+		}
+		if = {
+			limit = { has_completed_focus = TU_IBE_civ_program }
+			add_to_temp_variable = { tu_ibe_ind = 1 }
+		}
+		if = {
+			limit = { has_completed_focus = TU_IBE_copper_mines }
+			add_to_temp_variable = { tu_ibe_ind = 1 }
+		}
+		if = {
+			limit = { has_completed_focus = TU_IBE_rail_network }
+			add_to_temp_variable = { tu_ibe_ind = 1 }
+		}
+		if = {
+			limit = { has_completed_focus = TU_IBE_power_plants }
+			add_to_temp_variable = { tu_ibe_ind = 1 }
+		}
+		if = {
+			limit = { has_completed_focus = TU_IBE_steel_mills }
+			add_to_temp_variable = { tu_ibe_ind = 1 }
+		}
+		if = {
+			limit = { has_completed_focus = TU_IBE_industrial_revival }
+			add_to_temp_variable = { tu_ibe_ind = 1 }
+		}
+		if = {
+			limit = { check_variable = { tu_ibe_ind > 8 } }
+			if = {
+				limit = { has_idea = TU_IBE_great_silence }
+				remove_ideas = TU_IBE_great_silence
+			}
+			if = {
+				limit = { has_idea = TU_IBE_great_silence_eased }
+				remove_ideas = TU_IBE_great_silence_eased
+			}
+			country_event = { id = tu_ibe_ev.57 }
+		}
+	}
+}""")
+C.effects.append("""TU_IBE_fear_check = {
+	if = {
+		limit = { OR = { has_idea = TU_IBE_fear_of_the_sea has_idea = TU_IBE_fear_of_the_sea_eased has_idea = TU_IBE_fear_of_the_sea_calmed } }
+		if = {
+			limit = { check_variable = { TU_IBE_threat < 25 } }
+			add_to_variable = { TU_IBE_calm_months = 1 }
+		}
+		else = {
+			set_variable = { TU_IBE_calm_months = 0 }
+		}
+		if = {
+			limit = { check_variable = { TU_IBE_calm_months > 11 } }
+			if = {
+				limit = { has_idea = TU_IBE_fear_of_the_sea }
+				remove_ideas = TU_IBE_fear_of_the_sea
+			}
+			if = {
+				limit = { has_idea = TU_IBE_fear_of_the_sea_eased }
+				remove_ideas = TU_IBE_fear_of_the_sea_eased
+			}
+			if = {
+				limit = { has_idea = TU_IBE_fear_of_the_sea_calmed }
+				remove_ideas = TU_IBE_fear_of_the_sea_calmed
+			}
+			country_event = { id = tu_ibe_ev.58 }
+		}
+	}
+}""")
 C.effects.append("""TU_IBE_monthly = {
 	TU_IBE_lighthouse_monthly = yes
+	TU_IBE_scars_check = yes
+	TU_IBE_fear_check = yes
 	add_to_variable = { TU_IBE_threat = 4 }
 	set_temp_variable = { tu_ibe_lh = TU_IBE_lighthouses }
 	subtract_from_temp_variable = { tu_ibe_lh = TU_IBE_lh_damaged }
@@ -140,6 +229,10 @@ C.effects.append("""TU_IBE_cult_monthly = {
 		limit = { has_completed_focus = TU_IBE_faith_laws }
 		add_to_variable = { TU_IBE_cult = -1 }
 	}
+	if = {
+		limit = { has_country_flag = TU_IBE_path_inq }
+		add_to_variable = { TU_IBE_cult = -1 }
+	}
 	clamp_variable = { var = TU_IBE_cult min = 10 max = 100 }
 	TU_IBE_cult_modifiers = yes
 	if = {
@@ -187,13 +280,29 @@ C.on_actions.append("""on_monthly = {
 }""")
 
 # ------------------------------------------------------------------ 국민정신
-C.idea("great_silence", "대침묵의 상흔", "Scars of the Great Silence", {"production_speed_buildings_factor": -0.1, "monthly_population": -0.1},
-       "generic_army_problems", ("바다에서 무언가가 올라왔고, 이베리아의 해안은 침묵했다.", "Something rose from the sea, and Iberia's coast fell silent."))
-C.idea("fear_of_the_sea", "바다의 공포", "Fear of the Sea", {"political_power_gain": -0.1, "stability_factor": -0.03}, "generic_economic_increase",
-       ("어부들은 더 이상 먼바다로 나가지 않는다.", "Fishermen no longer sail into deep waters."))
+# 대침묵의 상흔: 바닐라 미국 대공황(great_depression)을 본뜬 페널티. 왕관 헌장을 찍으면 아물어 간다 (great_silence_eased)
+C.idea("great_silence", "대침묵의 상흔", "Scars of the Great Silence",
+       {"production_speed_buildings_factor": -0.25, "industrial_capacity_factory": -0.15, "monthly_population": -0.1,
+        "consumer_goods_factor": 0.60, "conscription_factor": -0.5, "local_resources_factor": -0.2, "political_power_cost": 0.5},
+       "generic_army_problems", ("바다에서 무언가가 올라왔고, 이베리아의 해안은 침묵했다.\\n산업 중점을 거의 다 찍으면 상흔이 아문다. 왕실 재정을 찍으면 일부 누그러진다.",
+                                "Something rose from the sea, and Iberia's coast fell silent.\\nThe scars heal once nearly all industry focuses are done. The Royal Treasury eases them in part."))
+# 바다의 공포: 안정도 페널티를 크게 올렸다. 왕실 회의를 열면 누그러진다 (fear_of_the_sea_eased)
+C.idea("fear_of_the_sea", "바다의 공포", "Fear of the Sea", {"political_power_gain": -0.1, "stability_factor": -0.40}, "generic_economic_increase",
+       ("어부들은 더 이상 먼바다로 나가지 않는다.\\n바다의 위협이 25 아래로 12개월 이어지면 공포가 걷힌다. 왕립군과 왕관 헌장이 단계적으로 누그러뜨린다.",
+        "Fishermen no longer sail into deep waters.\\nThe fear lifts when the sea threat stays below 25 for 12 months. The Royal Army and the Crown Charter ease it in stages."))
+C.idea("great_silence_eased", "아물어 가는 대침묵의 상흔", "Healing Scars of the Great Silence",
+       {"production_speed_buildings_factor": -0.10, "industrial_capacity_factory": -0.05, "monthly_population": -0.05,
+        "consumer_goods_factor": 0.25, "conscription_factor": -0.2, "local_resources_factor": -0.1, "political_power_cost": 0.15}, "generic_army_problems",
+       ("왕관의 이름으로 공장 문이 다시 열리기 시작했다. 상처는 아직 남아 있다.", "In the Crown's name the factory doors are opening again. The scars remain."))
+C.idea("fear_of_the_sea_eased", "누그러진 바다의 공포", "Eased Fear of the Sea", {"political_power_gain": -0.08, "stability_factor": -0.28}, "generic_economic_increase",
+       ("왕립군이 해안을 지키자 어부들의 두려움이 조금 덜어졌다.", "With the Royal Army on the coast, the fishermen's fear has eased a little."))
+C.idea("fear_of_the_sea_calmed", "잦아든 바다의 공포", "Calmed Fear of the Sea", {"political_power_gain": -0.05, "stability_factor": -0.15}, "generic_economic_increase",
+       ("왕관의 헌장이 사람들에게 돌아갈 곳이 있다는 믿음을 주었다.", "The Crown's charter has given people faith that they have somewhere to return to."))
 C.idea("watchful_coast", "깨어 있는 해안", "The Watchful Coast", {"army_defence_factor": 0.05, "stability_factor": 0.03}, "generic_fortify_the_borders")
 C.idea("inquisitor_state", "심판관의 나라", "State of the Inquisitors", {"stability_factor": 0.1, "army_org_factor": 0.05, "political_power_gain": 0.05},
-       "generic_secret_police")
+       "generic_secret_police",
+       ("심판소가 교단을 쉬지 않고 추적한다. 심해교단 세력이 매달 줄어들고, 심판관 토벌대를 보낼 수 있다.",
+        "The Inquisition hunts the cult without rest. Its strength falls every month, and hunting parties can be sent out."))
 C.idea("crown_restored", "왕관의 부활", "The Crown Restored", {"political_power_gain": 0.15, "production_speed_buildings_factor": 0.1}, "generic_central_management")
 C.idea("sea_reconciliation", "바다와의 화해", "Reconciliation with the Sea", {"political_power_gain": 0.1, "army_org_factor": 0.05, "stability_factor": 0.05},
        "generic_economic_increase")
@@ -215,7 +324,7 @@ f("faith_laws", "신앙 법", "Faith Laws", pre=["purge_cults"], me=["tolerance"
 f("tolerance", "관용령", "Edict of Tolerance", pre=["purge_cults"], me=["faith_laws"], reward=[CROWN("0.05")])
 f("inquisitor_state", "심판관의 나라", "State of the Inquisitors", pre=[["faith_laws", "tolerance"], "inquisitor_guard"],
   me=["crown_restored", "sea_reconciliation"], cost=15, theme=False,
-  reward=[FLAG("path_inq"), "add_ideas = TU_IBE_inquisitor_state", EV(28)],
+  reward=[FLAG("path_inq"), "add_ideas = TU_IBE_inquisitor_state", CULT(-15), EV(28)],
   desc=("심판소가 이베리아를 영원히 지킨다.", "The Inquisition guards Iberia forever."))
 f("eternal_vigil", "영원한 경계", "Eternal Vigil Watch", pre=["inquisitor_state"])
 f("inquisition_navy", "심판소 함대", "Inquisition Fleet", pre=["inquisitor_state"])
@@ -226,9 +335,14 @@ f("judgement_day", "심판의 날", "Day of Judgement Campaign", pre=["eternal_v
 f("crown_council", "왕실 회의", "Crown Council", pre=["root"], reward=[CROWN("0.05")])
 f("royal_heir", "왕실의 후계자", "The Royal Heir", pre=["crown_council"], theme=False, reward=[CROWN("0.05"), EV(22)])
 f("nobles_return", "귀족의 귀환", "Return of the Nobles", pre=["crown_council"], reward=[CROWN("0.05")])
-f("royal_treasury", "왕실 재정", "Royal Treasury", pre=["nobles_return"])
-f("royal_army", "왕립군", "Royal Army Regiments", pre=["royal_heir"])
-f("crown_charter", "왕관 헌장", "Crown Charter", pre=["royal_treasury", "royal_army"], reward=[CROWN("0.05")])
+# 왕실 완화는 깊이에 따라 나뉜다 (사양서 62 6절): 재정은 산업의 상흔을, 왕립군은 공포를 한 단계, 헌장은 한 단계 더 덜어 준다
+f("royal_treasury", "왕실 재정", "Royal Treasury", pre=["nobles_return"],
+  reward=["if = {\n\tlimit = { has_idea = TU_IBE_great_silence }\n\tswap_ideas = { remove_idea = TU_IBE_great_silence add_idea = TU_IBE_great_silence_eased }\n}"])
+f("royal_army", "왕립군", "Royal Army Regiments", pre=["royal_heir"],
+  reward=["if = {\n\tlimit = { has_idea = TU_IBE_fear_of_the_sea }\n\tswap_ideas = { remove_idea = TU_IBE_fear_of_the_sea add_idea = TU_IBE_fear_of_the_sea_eased }\n}"])
+f("crown_charter", "왕관 헌장", "Crown Charter", pre=["royal_treasury", "royal_army"],
+  reward=[CROWN("0.05"), "if = {\n\tlimit = { has_idea = TU_IBE_fear_of_the_sea_eased }\n\tswap_ideas = { remove_idea = TU_IBE_fear_of_the_sea_eased add_idea = TU_IBE_fear_of_the_sea_calmed }\n}\n"
+                         "else_if = {\n\tlimit = { has_idea = TU_IBE_fear_of_the_sea }\n\tswap_ideas = { remove_idea = TU_IBE_fear_of_the_sea add_idea = TU_IBE_fear_of_the_sea_calmed }\n}"])
 f("crown_restored", "왕관의 부활", "The Crown Restored", pre=["crown_charter"], me=["inquisitor_state", "sea_reconciliation"],
   cost=15, theme=False,
   reward=[FLAG("path_crown"), "add_ideas = TU_IBE_crown_restored", EV(29)],
@@ -247,11 +361,14 @@ f("abyssal_rumours", "어비셜 헌터스의 소문", "Rumours of the Abyssal Hu
 f("coastal_forts", "해안 요새", "Coastal Fortress Line", pre=["tide_charts"], me=["fleet_rebuild"])
 f("fleet_rebuild", "함대 재건", "Fleet Reconstruction", pre=["tide_charts"], me=["coastal_forts"])
 f("watchful_coast", "깨어 있는 해안", "The Watchful Coast", pre=[["coastal_forts", "fleet_rebuild"]], theme=False,
-  reward=["swap_ideas = { remove_idea = TU_IBE_fear_of_the_sea add_idea = TU_IBE_watchful_coast }", THR(-5)])
+  reward=["if = {\n\tlimit = { has_idea = TU_IBE_fear_of_the_sea }\n\tswap_ideas = { remove_idea = TU_IBE_fear_of_the_sea add_idea = TU_IBE_watchful_coast }\n}\n"
+          "else_if = {\n\tlimit = { has_idea = TU_IBE_fear_of_the_sea_eased }\n\tswap_ideas = { remove_idea = TU_IBE_fear_of_the_sea_eased add_idea = TU_IBE_watchful_coast }\n}\n"
+          "else_if = {\n\tlimit = { has_idea = TU_IBE_fear_of_the_sea_calmed }\n\tswap_ideas = { remove_idea = TU_IBE_fear_of_the_sea_calmed add_idea = TU_IBE_watchful_coast }\n}\n"
+          "else = {\n\tadd_ideas = TU_IBE_watchful_coast\n}", THR(-5)])
 f("deep_sea_plan", "심해 대비 계획", "Deep Sea Defence Plan", pre=["watchful_coast"], reward=[THR(-3)])
 f("sea_reconciliation", "바다와의 화해", "Reconciliation with the Sea", pre=["abyssal_rumours", "deep_sea_plan"],
   me=["inquisitor_state", "crown_restored"], cost=15, theme=False, available=[AT_MOST("threat", 20), HAS("hunters_met")],
-  reward=[FLAG("path_sea"), "add_ideas = TU_IBE_sea_reconciliation", "remove_ideas = TU_IBE_great_silence", EV(30)],
+  reward=[FLAG("path_sea"), "add_ideas = TU_IBE_sea_reconciliation", "if = {\n\tlimit = { has_idea = TU_IBE_great_silence }\n\tremove_ideas = TU_IBE_great_silence\n}\nif = {\n\tlimit = { has_idea = TU_IBE_great_silence_eased }\n\tremove_ideas = TU_IBE_great_silence_eased\n}", EV(30)],
   desc=("바다의 것들과 공존할 길을 찾는다. (위협 20 이하, 어비셜 헌터스와 만나야 함)",
         "Find a way to live alongside what lies in the sea. (Threat 20 or less, must have met the Abyssal Hunters)"))
 f("aegir_contact", "에기르와의 접촉", "Contact with Aegir Envoys", pre=["sea_reconciliation"])
@@ -290,7 +407,7 @@ f("rail_network", "철도 연결", "Rail Network Expansion", pre=["road_network"
 f("resettle_coast", "해안 재정착", "Resettle the Coast Housing", pre=["rail_network"], theme=False, available=[AT_MOST("threat", 50)],
   reward=["TU_build_civ_factory = yes", "add_manpower = 10000"], desc=("바다의 위협 50 이하.", "Sea threat 50 or less."), filt="FOCUS_FILTER_INDUSTRY")
 f("purified_coast", "정화된 해안", "The Purified Coast", pre=["resettle_coast"], theme=False, available=[AT_MOST("threat", 30)],
-  reward=["add_ideas = TU_IBE_purified_coast", "remove_ideas = TU_IBE_great_silence"], desc=("바다의 위협 30 이하. 대침묵의 상흔을 없앤다.", "Sea threat 30 or less. Removes Scars of the Great Silence."))
+  reward=["add_ideas = TU_IBE_purified_coast", "if = {\n\tlimit = { has_idea = TU_IBE_great_silence }\n\tremove_ideas = TU_IBE_great_silence\n}\nif = {\n\tlimit = { has_idea = TU_IBE_great_silence_eased }\n\tremove_ideas = TU_IBE_great_silence_eased\n}"], desc=("바다의 위협 30 이하. 대침묵의 상흔을 없앤다.", "Sea threat 30 or less. Removes Scars of the Great Silence."))
 f("fishing_guild", "어업 조합", "Fishing Guild Trade", pre=["harbour_rebuild"])
 f("wine_trade", "포도주 교역", "Wine Trade", pre=["fishing_guild"])
 f("industrial_revival", "이베리아 산업 부흥", "Iberian Industrialisation", pre=[["civ_program", "arms_program"], "rail_network"], econ=True)
@@ -710,6 +827,14 @@ C.ev(56, ("해안 봉기", "Coastal Uprising"),
       "Cult banners hang over the coastal towns. Worshippers openly carry arms."),
      [("질서를 되찾아야 한다.", "Order must be restored.", ["add_timed_idea = { idea = TU_IBE_cult_unrest days = 180 }", "add_stability = -0.03"], 1)],
      trigger=CULT_TRIGGER + [AT_LEAST("cult", 80), "NOT = { has_idea = TU_IBE_cult_unrest }"], mtth=120, fire_once=False)
+C.ev(57, ("상흔이 아물다", "The Scars Heal"),
+     ("공장 굴뚝에서 다시 연기가 오른다. 대침묵 이후 처음으로, 이베리아의 산업이 제 속도를 되찾았다.",
+      "Smoke rises from the factory chimneys again. For the first time since the Great Silence, Iberia's industry has found its pace."),
+     [("이제야 숨을 쉰다.", "At last we can breathe.", [], 1)])
+C.ev(58, ("공포가 걷히다", "The Fear Lifts"),
+     ("바다가 오래 잠잠하자 어부들이 다시 먼바다로 배를 띄운다. 해안 마을에 밤새 불이 켜져 있다.",
+      "With the sea quiet for so long, the fishermen sail into deep water again. Lights burn all night in the coastal towns."),
+     [("이 평온이 오래가길.", "May this calm last.", [], 1)])
 C.ev(53, ("등대 손상 악화", "Lighthouse Damage Worsens"),
      ("[tu_ibe_lh_state.GetName]의 등대가 손상 2단계로 악화되었다. 등탑 곳곳이 갈라지고 불빛은 거의 보이지 않는다.\n\n"
       "%d일 안에 보수하거나 수비대로 토벌하지 않으면 등대는 무너진다." % LH_STAGE_DAYS,
@@ -728,6 +853,10 @@ C.ev(52, ("해안 수비대 습격", "Coastal Garrison Ambushed"),
      [("전사자들을 기린다.", "Honour the fallen.",
        ["army_experience = 2", THR(-1)], 1)])
 NOT_ISHAR = "NOT = { %s }" % HAS("ishar_route")
+C.d(cat_coast, "cult_hunt", "심판관 토벌대", "Inquisitor Hunting Parties", [CULT(-12)], cost=40, once=False, days_re_enable=90,
+    visible=[HAS("path_inq"), NOT_ISHAR], icon="GFX_decision_generic_police_action",
+    desc=("심판관의 나라만이 보낼 수 있는 토벌대가 교단의 거점을 쫓습니다.",
+          "Hunting parties that only the State of the Inquisitors can send chase the cult to its strongholds."))
 C.d(cat_coast, "cult_inquiry", "이단 심문", "Heresy Inquiry", [CULT(-5)], cost=50, once=False, days_re_enable=180,
     visible=[NOT_ISHAR], icon="GFX_decision_generic_police_action",
     desc=("마을마다 심문관을 보내 숭배자를 찾습니다. 교단의 뿌리까지 닿지는 못합니다.",

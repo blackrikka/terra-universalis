@@ -111,6 +111,36 @@ country_event = {
 }
 
 country_event = {
+	id = tu_ibe_ev.57
+	title = tu_ibe_ev.57.t
+	desc = tu_ibe_ev.57.d
+	picture = GFX_report_event_generic_read_write
+	is_triggered_only = yes
+
+	option = {
+		name = tu_ibe_ev.57.a
+		ai_chance = {
+			factor = 1
+		}
+	}
+}
+
+country_event = {
+	id = tu_ibe_ev.58
+	title = tu_ibe_ev.58.t
+	desc = tu_ibe_ev.58.d
+	picture = GFX_report_event_generic_read_write
+	is_triggered_only = yes
+
+	option = {
+		name = tu_ibe_ev.58.a
+		ai_chance = {
+			factor = 1
+		}
+	}
+}
+
+country_event = {
 	id = tu_ibe_ev.53
 	title = tu_ibe_ev.53.t
 	desc = tu_ibe_ev.53.d

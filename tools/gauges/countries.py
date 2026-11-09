@@ -2,7 +2,7 @@
 
 나라: (태그, [수치…]) / 어느 탭에 놓을지는 아래 TABS 에 적는다 (그 수치를 가장 많이 다루는 탭)
 수치: G(변수, 이름 ko, 이름 en, 색, tip=(설명 ko, en), …)
-  색: gold(보통) green(좋음) red(나쁨) blue(중립)
+  색: gold(보통) green(좋음) red(나쁨) blue(중립) orange(손상) teal(심해, 짙은 청록)
   kind="number": 막대 없이 숫자만 / max=: clamp_variable 이 없을 때 최댓값 / cap=: 상한이 변수일 때
   value=(ko, en): 값 글자를 바꿀 때. {v} 자리에 변수값이 들어간다
   full=True: 작은 칸 수치도 한 줄 전체를 쓴다
@@ -51,9 +51,9 @@ COUNTRIES = [
         G("TU_IBE_threat", "바다의 위협", "Threat from the Sea", "red",
           tip=("심연에서 올라오는 것들의 기척입니다. 매달 오르며, 온전한 등대가 많을수록 덜 오릅니다. §Y70§! 이상이면 해안 마을이 침식됩니다.",
                "Signs of what rises from the deep. It grows every month, more slowly with each intact lighthouse. At §Y70§! or more, coastal towns are eroded.")),
-        G("TU_IBE_cult", "심해교단 세력", "Deep Sea Cult", "red",
-          tip=("심해를 숭배하는 교단입니다. 매달 자라며, §Y20§!부터 바다의 위협을 더 올립니다. §Y40§!·§Y60§!·§Y80§!부터 포교, 등대 파괴, 봉기가 일어납니다. §Y40§!부터 안정도와 정치력도 깎입니다. 완전히 없앨 수 없습니다.",
-               "The cult that worships the deep. It grows every month and adds to the sea threat from §Y20§!. Preaching, sabotage and uprisings start at §Y40§!, §Y60§! and §Y80§!. From §Y40§! it also drains stability and political power. It can never be wiped out.")),
+        G("TU_IBE_cult", "심해교단 세력", "Deep Sea Cult", "teal",
+          tip=("심해를 숭배하는 교단입니다. 매달 자라며, §Y20§!부터 바다의 위협을 더 올립니다. §Y40§!·§Y60§!·§Y80§!부터 포교, 등대 파괴, 봉기가 일어납니다. §Y40§!부터 안정도와 정치력도 깎입니다. 심판관의 나라 루트는 매달 세력을 깎습니다. 완전히 없앨 수 없습니다.",
+               "The cult that worships the deep. It grows every month and adds to the sea threat from §Y20§!. Preaching, sabotage and uprisings start at §Y40§!, §Y60§! and §Y80§!. From §Y40§! it also drains stability and political power. The State of the Inquisitors wears it down every month. It can never be wiped out.")),
         G("TU_IBE_lighthouses", "해안의 등대", "Coastal Lighthouses", full=True,
           value=("불 밝힌 등대 [?TU_IBE_lighthouses|Y0]기 · §O꺼져 가는 등대 [?TU_IBE_lh_damaged|0]기§!",
                  "[?TU_IBE_lighthouses|Y0] lit · §O[?TU_IBE_lh_damaged|0] failing§!"),

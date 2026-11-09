@@ -1,5 +1,95 @@
+TU_IBE_scars_check = {
+	if = {
+		limit = { OR = { has_idea = TU_IBE_great_silence has_idea = TU_IBE_great_silence_eased } }
+		set_temp_variable = { tu_ibe_ind = 0 }
+		if = {
+			limit = { has_completed_focus = TU_IBE_harbour_rebuild }
+			add_to_temp_variable = { tu_ibe_ind = 1 }
+		}
+		if = {
+			limit = { has_completed_focus = TU_IBE_industrial_district }
+			add_to_temp_variable = { tu_ibe_ind = 1 }
+		}
+		if = {
+			limit = { has_completed_focus = TU_IBE_road_network }
+			add_to_temp_variable = { tu_ibe_ind = 1 }
+		}
+		if = {
+			limit = { has_completed_focus = TU_IBE_arms_program }
+			add_to_temp_variable = { tu_ibe_ind = 1 }
+		}
+		if = {
+			limit = { has_completed_focus = TU_IBE_civ_program }
+			add_to_temp_variable = { tu_ibe_ind = 1 }
+		}
+		if = {
+			limit = { has_completed_focus = TU_IBE_copper_mines }
+			add_to_temp_variable = { tu_ibe_ind = 1 }
+		}
+		if = {
+			limit = { has_completed_focus = TU_IBE_rail_network }
+			add_to_temp_variable = { tu_ibe_ind = 1 }
+		}
+		if = {
+			limit = { has_completed_focus = TU_IBE_power_plants }
+			add_to_temp_variable = { tu_ibe_ind = 1 }
+		}
+		if = {
+			limit = { has_completed_focus = TU_IBE_steel_mills }
+			add_to_temp_variable = { tu_ibe_ind = 1 }
+		}
+		if = {
+			limit = { has_completed_focus = TU_IBE_industrial_revival }
+			add_to_temp_variable = { tu_ibe_ind = 1 }
+		}
+		if = {
+			limit = { check_variable = { tu_ibe_ind > 8 } }
+			if = {
+				limit = { has_idea = TU_IBE_great_silence }
+				remove_ideas = TU_IBE_great_silence
+			}
+			if = {
+				limit = { has_idea = TU_IBE_great_silence_eased }
+				remove_ideas = TU_IBE_great_silence_eased
+			}
+			country_event = { id = tu_ibe_ev.57 }
+		}
+	}
+}
+
+TU_IBE_fear_check = {
+	if = {
+		limit = { OR = { has_idea = TU_IBE_fear_of_the_sea has_idea = TU_IBE_fear_of_the_sea_eased has_idea = TU_IBE_fear_of_the_sea_calmed } }
+		if = {
+			limit = { check_variable = { TU_IBE_threat < 25 } }
+			add_to_variable = { TU_IBE_calm_months = 1 }
+		}
+		else = {
+			set_variable = { TU_IBE_calm_months = 0 }
+		}
+		if = {
+			limit = { check_variable = { TU_IBE_calm_months > 11 } }
+			if = {
+				limit = { has_idea = TU_IBE_fear_of_the_sea }
+				remove_ideas = TU_IBE_fear_of_the_sea
+			}
+			if = {
+				limit = { has_idea = TU_IBE_fear_of_the_sea_eased }
+				remove_ideas = TU_IBE_fear_of_the_sea_eased
+			}
+			if = {
+				limit = { has_idea = TU_IBE_fear_of_the_sea_calmed }
+				remove_ideas = TU_IBE_fear_of_the_sea_calmed
+			}
+			country_event = { id = tu_ibe_ev.58 }
+		}
+	}
+}
+
 TU_IBE_monthly = {
 	TU_IBE_lighthouse_monthly = yes
+	TU_IBE_scars_check = yes
+	TU_IBE_fear_check = yes
 	add_to_variable = { TU_IBE_threat = 4 }
 	set_temp_variable = { tu_ibe_lh = TU_IBE_lighthouses }
 	subtract_from_temp_variable = { tu_ibe_lh = TU_IBE_lh_damaged }
@@ -59,6 +149,10 @@ TU_IBE_cult_monthly = {
 		limit = { has_completed_focus = TU_IBE_faith_laws }
 		add_to_variable = { TU_IBE_cult = -1 }
 	}
+	if = {
+		limit = { has_country_flag = TU_IBE_path_inq }
+		add_to_variable = { TU_IBE_cult = -1 }
+	}
 	clamp_variable = { var = TU_IBE_cult min = 10 max = 100 }
 	TU_IBE_cult_modifiers = yes
 	if = {
@@ -109,6 +203,14 @@ TU_IBE_cult_m10 = {
 	custom_effect_tooltip = TU_IBE_cult_m10_tt
 	hidden_effect = {
 		add_to_variable = { TU_IBE_cult = -10 }
+		clamp_variable = { var = TU_IBE_cult min = 10 max = 100 }
+	}
+}
+
+TU_IBE_cult_m15 = {
+	custom_effect_tooltip = TU_IBE_cult_m15_tt
+	hidden_effect = {
+		add_to_variable = { TU_IBE_cult = -15 }
 		clamp_variable = { var = TU_IBE_cult min = 10 max = 100 }
 	}
 }
@@ -1524,18 +1626,18 @@ TU_IBE_threat_m1 = {
 	}
 }
 
-TU_IBE_cult_m5 = {
-	custom_effect_tooltip = TU_IBE_cult_m5_tt
+TU_IBE_cult_m12 = {
+	custom_effect_tooltip = TU_IBE_cult_m12_tt
 	hidden_effect = {
-		add_to_variable = { TU_IBE_cult = -5 }
+		add_to_variable = { TU_IBE_cult = -12 }
 		clamp_variable = { var = TU_IBE_cult min = 10 max = 100 }
 	}
 }
 
-TU_IBE_cult_m15 = {
-	custom_effect_tooltip = TU_IBE_cult_m15_tt
+TU_IBE_cult_m5 = {
+	custom_effect_tooltip = TU_IBE_cult_m5_tt
 	hidden_effect = {
-		add_to_variable = { TU_IBE_cult = -15 }
+		add_to_variable = { TU_IBE_cult = -5 }
 		clamp_variable = { var = TU_IBE_cult min = 10 max = 100 }
 	}
 }
