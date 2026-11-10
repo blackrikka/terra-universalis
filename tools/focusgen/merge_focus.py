@@ -413,6 +413,10 @@ def main(argv=None):
     sys.path.insert(0, str(REPO / "tools"))
     import ruling_party  # 지도자 교체 = 집권당 교체 (사양서 50)
     ruling_party.fix_file(out_path)
+    import claim_focuses  # 영유권·국경 분쟁·국경 조약 중점 (사양서 76)
+    claimed = claim_focuses.apply(out_path, tag)
+    if claimed:
+        print(f"claim focuses: {claimed}")
     if hooked or missing:
         print(f"focus hooks: {hooked}" + (f", missing focus {missing}" if missing else ""))
     import autolayout

@@ -1641,6 +1641,9 @@ focus_tree = {
 		completion_reward = {
 			add_tech_bonus = { name = TU_LGM_border_conflict_plan bonus = 0.75 uses = 1 category = construction_tech }
 			army_experience = 25
+			custom_effect_tooltip = TU_LGM_border_conflict_plan_claim_tt
+			hidden_effect = { every_state = { limit = { OR = { state = 24 state = 696 state = 21 state = 694 state = 695 state = 692 state = 635 state = 693 } NOT = { is_owned_by = ROOT } } add_claim_by = ROOT } }
+			if = { limit = { country_exists = REU } REU = { add_opinion_modifier = { target = ROOT modifier = TU_terr_claim_op } } add_named_threat = { threat = 2 name = TU_terr_claim_op } }
 		}
 	}
 
@@ -2114,6 +2117,9 @@ focus_tree = {
 		completion_reward = {
 			add_tech_bonus = { name = TU_LGM_yan_border_talks bonus = 0.75 uses = 1 category = construction_tech }
 			army_experience = 25
+			custom_effect_tooltip = TU_LGM_yan_border_talks_claim_tt
+			hidden_effect = { every_state = { limit = { is_owned_by = YAN is_claimed_by = ROOT NOT = { is_core_of = ROOT } } remove_claim_by = ROOT } }
+			if = { limit = { country_exists = YAN } add_opinion_modifier = { target = YAN modifier = TU_terr_treaty_op } YAN = { add_opinion_modifier = { target = ROOT modifier = TU_terr_treaty_op } } }
 		}
 	}
 

@@ -3504,6 +3504,8 @@ focus_tree = {
 			army_experience = 25
 			add_political_power = 60
 			add_tech_bonus = { name = TU_YAN_hig_claim_focus bonus = 0.75 uses = 1 category = industry }
+			custom_effect_tooltip = TU_YAN_hig_claim_focus_claim_tt
+			hidden_effect = { every_state = { limit = { OR = { state = 784 state = 54 state = 53 state = 785 state = 783 state = 782 } NOT = { is_owned_by = ROOT } } add_claim_by = ROOT } }
 		}
 	}
 
@@ -3670,6 +3672,8 @@ focus_tree = {
 		completion_reward = {
 			add_tech_bonus = { name = TU_YAN_urs_claim_focus bonus = 0.75 uses = 1 category = construction_tech }
 			army_experience = 25
+			custom_effect_tooltip = TU_YAN_urs_claim_focus_claim_tt
+			hidden_effect = { every_state = { limit = { OR = { state = 658 state = 657 state = 652 state = 13 state = 655 state = 650 } NOT = { is_owned_by = ROOT } } add_claim_by = ROOT } }
 		}
 	}
 
@@ -3714,6 +3718,9 @@ focus_tree = {
 			army_experience = 25
 			add_doctrine_cost_reduction = { name = TU_YAN_urs_pressure cost_reduction = 0.4 uses = 1 category = land_doctrine }
 			army_experience = 25
+			custom_effect_tooltip = TU_YAN_urs_pressure_claim_tt
+			hidden_effect = { every_state = { limit = { OR = { state = 658 state = 657 state = 652 state = 13 state = 655 state = 650 } NOT = { is_owned_by = ROOT } } add_claim_by = ROOT } }
+			if = { limit = { country_exists = URS } URS = { add_opinion_modifier = { target = ROOT modifier = TU_terr_claim_op } } add_named_threat = { threat = 2 name = TU_terr_claim_op } }
 		}
 	}
 

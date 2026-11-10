@@ -74,7 +74,7 @@ TU_territory_category = {
 				}
 			}
 			FROM = { add_opinion_modifier = { target = ROOT modifier = TU_terr_claim_op } }
-			add_threat = 2
+			add_named_threat = { threat = 2 name = TU_terr_claim_op }
 		}
 
 		ai_will_do = {
@@ -114,7 +114,7 @@ TU_territory_category = {
 				add_opinion_modifier = { target = ROOT modifier = TU_terr_dispute_op }
 				country_event = { id = tu_terr.2 }
 			}
-			add_threat = 4
+			add_named_threat = { threat = 4 name = TU_terr_dispute_op }
 		}
 
 		ai_will_do = {

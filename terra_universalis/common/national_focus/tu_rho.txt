@@ -265,6 +265,8 @@ focus_tree = {
 			add_doctrine_cost_reduction = { name = TU_RHO_kazdel_prep cost_reduction = 0.4 uses = 1 category = land_doctrine }
 			add_doctrine_cost_reduction = { name = TU_RHO_kazdel_prep cost_reduction = 0.4 uses = 1 category = land_doctrine }
 			army_experience = 25
+			custom_effect_tooltip = TU_RHO_kazdel_prep_claim_tt
+			hidden_effect = { every_state = { limit = { OR = { state = 146 state = 1012 state = 1009 state = 1011 state = 147 state = 1016 } NOT = { is_owned_by = ROOT } } add_claim_by = ROOT } }
 		}
 	}
 

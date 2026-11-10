@@ -2613,6 +2613,8 @@ focus_tree = {
 		completion_reward = {
 			add_political_power = 60
 			add_stability = 0.03
+			custom_effect_tooltip = TU_KZD_vic_claims_claim_tt
+			hidden_effect = { every_state = { limit = { OR = { state = 117 state = 965 state = 114 state = 964 state = 955 state = 946 } NOT = { is_owned_by = ROOT } } add_claim_by = ROOT } }
 		}
 
 		ai_will_do = {
@@ -2841,6 +2843,9 @@ focus_tree = {
 			army_experience = 25
 			add_war_support = 0.03
 			add_doctrine_cost_reduction = { name = TU_KZD_vic_march_on_london cost_reduction = 0.4 uses = 1 category = land_doctrine }
+			custom_effect_tooltip = TU_KZD_vic_march_on_london_claim_tt
+			hidden_effect = { every_state = { limit = { OR = { state = 117 state = 965 state = 114 state = 964 state = 955 state = 946 } NOT = { is_owned_by = ROOT } } add_claim_by = ROOT } }
+			if = { limit = { country_exists = VIC } create_wargoal = { type = take_claimed_state target = VIC } }
 		}
 
 		ai_will_do = {
@@ -2883,6 +2888,8 @@ focus_tree = {
 		completion_reward = {
 			add_political_power = 60
 			add_stability = 0.03
+			custom_effect_tooltip = TU_KZD_ursus_claims_claim_tt
+			hidden_effect = { every_state = { limit = { OR = { state = 27 state = 28 state = 713 state = 701 state = 658 state = 691 } NOT = { is_owned_by = ROOT } } add_claim_by = ROOT } }
 		}
 
 		ai_will_do = {
@@ -2965,6 +2972,9 @@ focus_tree = {
 		completion_reward = {
 			add_tech_bonus = { name = TU_KZD_ursus_frontier_pact bonus = 0.75 uses = 1 category = construction_tech }
 			army_experience = 25
+			custom_effect_tooltip = TU_KZD_ursus_frontier_pact_claim_tt
+			hidden_effect = { every_state = { limit = { is_owned_by = URS is_claimed_by = ROOT NOT = { is_core_of = ROOT } } remove_claim_by = ROOT } }
+			if = { limit = { country_exists = URS } add_opinion_modifier = { target = URS modifier = TU_terr_treaty_op } URS = { add_opinion_modifier = { target = ROOT modifier = TU_terr_treaty_op } } }
 		}
 
 		ai_will_do = {
@@ -2986,6 +2996,9 @@ focus_tree = {
 		completion_reward = {
 			add_tech_bonus = { name = TU_KZD_ursus_border_treaty bonus = 0.75 uses = 1 category = construction_tech }
 			army_experience = 25
+			custom_effect_tooltip = TU_KZD_ursus_border_treaty_claim_tt
+			hidden_effect = { every_state = { limit = { is_owned_by = URS is_claimed_by = ROOT NOT = { is_core_of = ROOT } } remove_claim_by = ROOT } }
+			if = { limit = { country_exists = URS } add_opinion_modifier = { target = URS modifier = TU_terr_treaty_op } URS = { add_opinion_modifier = { target = ROOT modifier = TU_terr_treaty_op } } }
 		}
 
 		ai_will_do = {
@@ -3130,6 +3143,8 @@ focus_tree = {
 		completion_reward = {
 			add_tech_bonus = { name = TU_KZD_lei_claims bonus = 0.75 uses = 1 category = construction_tech }
 			army_experience = 25
+			custom_effect_tooltip = TU_KZD_lei_claims_claim_tt
+			hidden_effect = { every_state = { limit = { OR = { state = 990 state = 992 state = 991 state = 139 state = 994 state = 993 } NOT = { is_owned_by = ROOT } } add_claim_by = ROOT } }
 		}
 
 		ai_will_do = {
@@ -3317,6 +3332,8 @@ focus_tree = {
 		completion_reward = {
 			add_political_power = 60
 			add_stability = 0.03
+			custom_effect_tooltip = TU_KZD_reu_claims_claim_tt
+			hidden_effect = { every_state = { limit = { OR = { state = 24 state = 696 state = 21 state = 694 state = 695 state = 692 state = 635 state = 693 } NOT = { is_owned_by = ROOT } } add_claim_by = ROOT } }
 		}
 
 		ai_will_do = {

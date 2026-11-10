@@ -2751,6 +2751,8 @@ focus_tree = {
 			add_doctrine_cost_reduction = { name = TU_VIC_kzd_claim_londinium cost_reduction = 0.5 uses = 1 category = land_doctrine }
 			TU_build_forts_2 = yes
 			TU_build_railway = yes
+			custom_effect_tooltip = TU_VIC_kzd_claim_londinium_claim_tt
+			hidden_effect = { every_state = { limit = { OR = { state = 117 state = 149 state = 1017 state = 1018 state = 1013 state = 1010 } NOT = { is_owned_by = ROOT } } add_claim_by = ROOT } }
 		}
 	}
 
@@ -2956,6 +2958,8 @@ focus_tree = {
 			TU_build_forts_2 = yes
 			add_doctrine_cost_reduction = { name = TU_VIC_lei_claim cost_reduction = 0.4 uses = 1 category = land_doctrine }
 			army_experience = 25
+			custom_effect_tooltip = TU_VIC_lei_claim_claim_tt
+			hidden_effect = { every_state = { limit = { OR = { state = 982 state = 983 state = 999 state = 141 state = 1000 state = 997 } NOT = { is_owned_by = ROOT } } add_claim_by = ROOT } }
 		}
 	}
 
@@ -3086,6 +3090,8 @@ focus_tree = {
 		completion_reward = {
 			add_political_power = 100
 			add_tech_bonus = { name = TU_VIC_col_claim bonus = 1.0 uses = 1 category = industry }
+			custom_effect_tooltip = TU_VIC_col_claim_claim_tt
+			hidden_effect = { every_state = { limit = { OR = { state = 908 state = 907 state = 102 state = 912 state = 909 state = 911 } NOT = { is_owned_by = ROOT } } add_claim_by = ROOT } }
 		}
 	}
 
@@ -3212,6 +3218,8 @@ focus_tree = {
 			army_experience = 25
 			TU_build_infrastructure = yes
 			add_tech_bonus = { name = TU_VIC_bol_claim bonus = 0.75 uses = 1 category = industry category = construction_tech }
+			custom_effect_tooltip = TU_VIC_bol_claim_claim_tt
+			hidden_effect = { every_state = { limit = { OR = { state = 933 state = 935 state = 936 state = 932 state = 108 state = 931 } NOT = { is_owned_by = ROOT } } add_claim_by = ROOT } }
 		}
 	}
 
@@ -3357,6 +3365,9 @@ focus_tree = {
 			add_tech_bonus = { name = TU_VIC_urs_border_summit bonus = 0.75 uses = 1 category = industry category = construction_tech }
 			add_manpower = 10000
 			army_experience = 25
+			custom_effect_tooltip = TU_VIC_urs_border_summit_claim_tt
+			hidden_effect = { every_state = { limit = { is_owned_by = URS is_claimed_by = ROOT NOT = { is_core_of = ROOT } } remove_claim_by = ROOT } }
+			if = { limit = { country_exists = URS } add_opinion_modifier = { target = URS modifier = TU_terr_treaty_op } URS = { add_opinion_modifier = { target = ROOT modifier = TU_terr_treaty_op } } }
 		}
 	}
 
@@ -3375,6 +3386,8 @@ focus_tree = {
 			add_stability = 0.05
 			TU_build_forts_2 = yes
 			TU_build_railway = yes
+			custom_effect_tooltip = TU_VIC_urs_claim_claim_tt
+			hidden_effect = { every_state = { limit = { OR = { state = 641 state = 644 state = 11 state = 10 state = 642 state = 643 } NOT = { is_owned_by = ROOT } } add_claim_by = ROOT } }
 		}
 	}
 
@@ -3525,6 +3538,8 @@ focus_tree = {
 			army_experience = 25
 			add_war_support = 0.03
 			add_doctrine_cost_reduction = { name = TU_VIC_kaz_claim cost_reduction = 0.4 uses = 1 category = land_doctrine }
+			custom_effect_tooltip = TU_VIC_kaz_claim_claim_tt
+			hidden_effect = { every_state = { limit = { OR = { state = 772 state = 771 state = 44 state = 46 state = 770 state = 768 } NOT = { is_owned_by = ROOT } } add_claim_by = ROOT } }
 		}
 	}
 
@@ -3546,6 +3561,9 @@ focus_tree = {
 			TU_build_infrastructure = yes
 			add_tech_bonus = { name = TU_VIC_kaz_war_plans bonus = 0.75 uses = 1 category = construction_tech }
 			army_experience = 25
+			custom_effect_tooltip = TU_VIC_kaz_war_plans_claim_tt
+			hidden_effect = { every_state = { limit = { OR = { state = 772 state = 771 state = 44 state = 46 state = 770 state = 768 } NOT = { is_owned_by = ROOT } } add_claim_by = ROOT } }
+			if = { limit = { country_exists = KAZ } create_wargoal = { type = take_claimed_state target = KAZ } }
 		}
 	}
 
