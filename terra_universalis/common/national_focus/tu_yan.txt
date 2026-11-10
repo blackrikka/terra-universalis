@@ -3118,7 +3118,7 @@ focus_tree = {
 		id = TU_YAN_ex_tribute_court
 		icon = GFX_goal_generic_positive_trade_relations
 		prerequisite = { focus = TU_YAN_imperial_reform }
-		x = -21
+		x = -26
 		y = 21
 		cost = 5
 
@@ -3138,7 +3138,7 @@ focus_tree = {
 		id = TU_YAN_ex_foreign_office
 		prerequisite = { focus = TU_YAN_ex_tribute_court }
 		icon = GFX_goal_generic_improve_relations
-		x = -21
+		x = -26
 		y = 22
 		cost = 16
 
@@ -3163,7 +3163,7 @@ focus_tree = {
 		id = TU_YAN_ex_envoy_routes
 		prerequisite = { focus = TU_YAN_ex_foreign_office }
 		icon = GFX_goal_generic_trade
-		x = -21
+		x = -26
 		y = 23
 		cost = 18
 
@@ -3187,7 +3187,7 @@ focus_tree = {
 		id = TU_YAN_ex_frontier_survey
 		prerequisite = { focus = TU_YAN_ex_tribute_court }
 		icon = GFX_goal_generic_more_territorial_claims
-		x = 14
+		x = 9
 		y = 22
 		cost = 13
 
@@ -3209,7 +3209,7 @@ focus_tree = {
 		id = TU_YAN_ex_expansion_doctrine
 		prerequisite = { focus = TU_YAN_ex_frontier_survey }
 		icon = GFX_goal_generic_army_doctrines
-		x = 9
+		x = 4
 		y = 23
 		cost = 20
 
@@ -3235,7 +3235,7 @@ focus_tree = {
 		id = TU_YAN_ex_mandate_edict
 		prerequisite = { focus = TU_YAN_ex_envoy_routes }
 		icon = GFX_goal_generic_propaganda
-		x = -31
+		x = -35
 		y = 24
 		cost = 10
 
@@ -3255,7 +3255,7 @@ focus_tree = {
 		id = TU_YAN_ex_alliance_search
 		prerequisite = { focus = TU_YAN_ex_mandate_edict }
 		icon = GFX_goal_generic_alliance
-		x = -31
+		x = -35
 		y = 25
 		cost = 10
 
@@ -3276,7 +3276,7 @@ focus_tree = {
 		id = TU_YAN_ex_supply_corps
 		prerequisite = { focus = TU_YAN_ex_expansion_doctrine }
 		icon = GFX_goal_generic_construct_infrastructure
-		x = 9
+		x = 4
 		y = 24
 		cost = 10
 
@@ -3299,7 +3299,7 @@ focus_tree = {
 		prerequisite = { focus = TU_YAN_ex_expansion_doctrine }
 		prerequisite = { focus = TU_YAN_ex_supply_corps }
 		icon = GFX_goal_generic_army_tanks
-		x = 9
+		x = 4
 		y = 25
 		cost = 15
 
@@ -3376,7 +3376,7 @@ focus_tree = {
 		mutually_exclusive = { focus = TU_YAN_lgm_autonomy_charter }
 		icon = GFX_goal_generic_more_territorial_claims
 		x = -12
-		y = 2
+		y = 3
 		cost = 10
 
 		search_filters = { FOCUS_FILTER_POLITICAL }
@@ -3465,7 +3465,7 @@ focus_tree = {
 		id = TU_YAN_hig_envoy_mission
 		prerequisite = { focus = TU_YAN_ex_foreign_office }
 		icon = GFX_goal_generic_improve_relations
-		x = -6
+		x = -11
 		y = 23
 		cost = 15
 
@@ -3488,7 +3488,7 @@ focus_tree = {
 		id = TU_YAN_hig_claim_focus
 		prerequisite = { focus = TU_YAN_hig_envoy_mission }
 		icon = GFX_goal_generic_more_territorial_claims
-		x = -7
+		x = -12
 		y = 24
 		cost = 15
 
@@ -3510,7 +3510,7 @@ focus_tree = {
 		id = TU_YAN_hig_non_aggression
 		prerequisite = { focus = TU_YAN_hig_envoy_mission }
 		icon = GFX_goal_generic_neutrality_focus
-		x = -9
+		x = -14
 		y = 24
 		cost = 15
 
@@ -3532,7 +3532,7 @@ focus_tree = {
 		id = TU_YAN_hig_war_plan
 		prerequisite = { focus = TU_YAN_hig_claim_focus }
 		icon = GFX_goal_generic_major_war
-		x = -7
+		x = -12
 		y = 25
 		cost = 18
 
@@ -3556,7 +3556,7 @@ focus_tree = {
 		prerequisite = { focus = TU_YAN_hig_envoy_mission }
 		mutually_exclusive = { focus = TU_YAN_hig_harbour_levy_alt }
 		icon = GFX_goal_generic_consumer_goods
-		x = -5
+		x = -10
 		y = 24
 		cost = 10
 
@@ -3577,7 +3577,7 @@ focus_tree = {
 		prerequisite = { focus = TU_YAN_hig_envoy_mission }
 		mutually_exclusive = { focus = TU_YAN_hig_harbour_levy }
 		icon = GFX_goal_generic_consumer_goods
-		x = -3
+		x = -8
 		y = 24
 		cost = 10
 
@@ -3597,7 +3597,7 @@ focus_tree = {
 		id = TU_YAN_urs_envoy_court
 		prerequisite = { focus = TU_YAN_ex_frontier_survey }
 		icon = GFX_goal_generic_improve_relations
-		x = 14
+		x = 9
 		y = 23
 		cost = 10
 
@@ -3617,7 +3617,7 @@ focus_tree = {
 		id = TU_YAN_urs_attache_exchange
 		prerequisite = { focus = TU_YAN_urs_envoy_court }
 		icon = GFX_goal_generic_intelligence_exchange
-		x = 11
+		x = 6
 		y = 24
 		cost = 10
 
@@ -3637,7 +3637,7 @@ focus_tree = {
 		id = TU_YAN_urs_military_access
 		prerequisite = { focus = TU_YAN_urs_attache_exchange }
 		icon = GFX_goal_generic_military_deal
-		x = 11
+		x = 6
 		y = 25
 		cost = 10
 
@@ -3656,7 +3656,7 @@ focus_tree = {
 		id = TU_YAN_urs_claim_focus
 		prerequisite = { focus = TU_YAN_ex_frontier_survey }
 		icon = GFX_goal_generic_more_territorial_claims
-		x = 19
+		x = 14
 		y = 23
 		cost = 10
 
@@ -3677,7 +3677,7 @@ focus_tree = {
 		prerequisite = { focus = TU_YAN_urs_envoy_court }
 		mutually_exclusive = { focus = TU_YAN_urs_pressure }
 		icon = GFX_goal_generic_trade
-		x = 13
+		x = 8
 		y = 24
 		cost = 10
 
@@ -3698,7 +3698,7 @@ focus_tree = {
 		prerequisite = { focus = TU_YAN_urs_claim_focus }
 		mutually_exclusive = { focus = TU_YAN_urs_trade_route }
 		icon = GFX_goal_generic_political_pressure
-		x = 19
+		x = 14
 		y = 24
 		cost = 15
 
@@ -3720,7 +3720,7 @@ focus_tree = {
 		id = TU_YAN_urs_steppe_cavalry
 		prerequisite = { focus = TU_YAN_urs_pressure }
 		icon = GFX_goal_generic_cavalry
-		x = 19
+		x = 14
 		y = 25
 		cost = 10
 
@@ -3741,7 +3741,7 @@ focus_tree = {
 		id = TU_YAN_urs_war_plan
 		prerequisite = { focus = TU_YAN_urs_steppe_cavalry }
 		icon = GFX_goal_generic_major_war
-		x = 19
+		x = 14
 		y = 26
 		cost = 18
 
@@ -3765,7 +3765,7 @@ focus_tree = {
 		id = TU_YAN_urs_pact
 		prerequisite = { focus = TU_YAN_urs_military_access }
 		icon = GFX_goal_generic_alliance
-		x = 9
+		x = 4
 		y = 26
 		cost = 15
 
@@ -3788,7 +3788,7 @@ focus_tree = {
 		prerequisite = { focus = TU_YAN_urs_military_access }
 		mutually_exclusive = { focus = TU_YAN_urs_eastern_guard_alt }
 		icon = GFX_goal_generic_fortify_city
-		x = 11
+		x = 6
 		y = 26
 		cost = 10
 
@@ -3809,7 +3809,7 @@ focus_tree = {
 		prerequisite = { focus = TU_YAN_urs_military_access }
 		mutually_exclusive = { focus = TU_YAN_urs_eastern_guard }
 		icon = GFX_goal_generic_fortify_city
-		x = 13
+		x = 8
 		y = 26
 		cost = 10
 
@@ -3829,7 +3829,7 @@ focus_tree = {
 		id = TU_YAN_urs_supply_route
 		prerequisite = { focus = TU_YAN_urs_trade_route }
 		icon = GFX_goal_generic_construct_infrastructure
-		x = 13
+		x = 8
 		y = 25
 		cost = 15
 
@@ -3852,7 +3852,7 @@ focus_tree = {
 		prerequisite = { focus = TU_YAN_urs_envoy_court }
 		mutually_exclusive = { focus = TU_YAN_urs_debt_ledger_alt }
 		icon = GFX_goal_generic_dangerous_deal
-		x = 15
+		x = 10
 		y = 24
 		cost = 10
 
@@ -3873,7 +3873,7 @@ focus_tree = {
 		prerequisite = { focus = TU_YAN_urs_envoy_court }
 		mutually_exclusive = { focus = TU_YAN_urs_debt_ledger }
 		icon = GFX_goal_generic_dangerous_deal
-		x = 17
+		x = 12
 		y = 24
 		cost = 10
 
@@ -3894,7 +3894,7 @@ focus_tree = {
 		prerequisite = { focus = TU_YAN_urs_war_plan }
 		prerequisite = { focus = TU_YAN_urs_supply_route }
 		icon = GFX_goal_generic_occupy_states_ongoing_war
-		x = 19
+		x = 14
 		y = 27
 		cost = 15
 
@@ -3915,7 +3915,7 @@ focus_tree = {
 		id = TU_YAN_sar_desert_survey
 		prerequisite = { focus = TU_YAN_ex_envoy_routes }
 		icon = GFX_goal_generic_special_forces
-		x = -26
+		x = -30
 		y = 24
 		cost = 5
 
@@ -3934,7 +3934,7 @@ focus_tree = {
 		id = TU_YAN_sar_envoy_court
 		prerequisite = { focus = TU_YAN_sar_desert_survey }
 		icon = GFX_goal_generic_improve_relations
-		x = -29
+		x = -33
 		y = 25
 		cost = 10
 
@@ -3955,7 +3955,7 @@ focus_tree = {
 		prerequisite = { focus = TU_YAN_sar_envoy_court }
 		mutually_exclusive = { focus = TU_YAN_sar_pressure }
 		icon = GFX_goal_generic_positive_trade_relations
-		x = -29
+		x = -33
 		y = 26
 		cost = 10
 
@@ -3976,7 +3976,7 @@ focus_tree = {
 		id = TU_YAN_sar_scholars
 		prerequisite = { focus = TU_YAN_sar_trade_pact }
 		icon = GFX_goal_generic_scientific_exchange
-		x = -30
+		x = -34
 		y = 27
 		cost = 15
 
@@ -3997,7 +3997,7 @@ focus_tree = {
 		id = TU_YAN_sar_claim_focus
 		prerequisite = { focus = TU_YAN_sar_desert_survey }
 		icon = GFX_goal_generic_more_territorial_claims
-		x = -23
+		x = -27
 		y = 25
 		cost = 10
 
@@ -4018,7 +4018,7 @@ focus_tree = {
 		prerequisite = { focus = TU_YAN_sar_claim_focus }
 		mutually_exclusive = { focus = TU_YAN_sar_trade_pact }
 		icon = GFX_goal_generic_dangerous_deal
-		x = -23
+		x = -27
 		y = 26
 		cost = 15
 
@@ -4040,7 +4040,7 @@ focus_tree = {
 		id = TU_YAN_sar_war_plan
 		prerequisite = { focus = TU_YAN_sar_pressure }
 		icon = GFX_goal_generic_major_war
-		x = -25
+		x = -29
 		y = 27
 		cost = 15
 
@@ -4065,7 +4065,7 @@ focus_tree = {
 		prerequisite = { focus = TU_YAN_sar_pressure }
 		mutually_exclusive = { focus = TU_YAN_sar_desert_drill_alt }
 		icon = GFX_goal_generic_army_artillery2
-		x = -23
+		x = -27
 		y = 27
 		cost = 10
 
@@ -4086,7 +4086,7 @@ focus_tree = {
 		prerequisite = { focus = TU_YAN_sar_pressure }
 		mutually_exclusive = { focus = TU_YAN_sar_desert_drill }
 		icon = GFX_goal_generic_army_artillery2
-		x = -21
+		x = -25
 		y = 27
 		cost = 10
 
@@ -4105,7 +4105,7 @@ focus_tree = {
 		id = TU_YAN_sar_oasis_post
 		prerequisite = { focus = TU_YAN_sar_trade_pact }
 		icon = GFX_goal_generic_fortify_city
-		x = -28
+		x = -32
 		y = 27
 		cost = 15
 
@@ -4128,7 +4128,7 @@ focus_tree = {
 		id = TU_YAN_sar_oasis_treaty
 		prerequisite = { focus = TU_YAN_sar_oasis_post }
 		icon = GFX_goal_generic_neutrality_focus
-		x = -28
+		x = -32
 		y = 28
 		cost = 10
 
@@ -4149,7 +4149,7 @@ focus_tree = {
 		prerequisite = { focus = TU_YAN_sar_envoy_court }
 		mutually_exclusive = { focus = TU_YAN_sar_envoy_gifts_alt }
 		icon = GFX_goal_generic_improve_relations
-		x = -27
+		x = -31
 		y = 26
 		cost = 10
 
@@ -4170,7 +4170,7 @@ focus_tree = {
 		prerequisite = { focus = TU_YAN_sar_envoy_court }
 		mutually_exclusive = { focus = TU_YAN_sar_envoy_gifts }
 		icon = GFX_goal_generic_improve_relations
-		x = -25
+		x = -29
 		y = 26
 		cost = 10
 
@@ -4191,7 +4191,7 @@ focus_tree = {
 		prerequisite = { focus = TU_YAN_sar_war_plan }
 		prerequisite = { focus = TU_YAN_sar_oasis_post }
 		icon = GFX_goal_generic_territory_or_war
-		x = -25
+		x = -29
 		y = 28
 		cost = 15
 
@@ -4210,7 +4210,7 @@ focus_tree = {
 		id = TU_YAN_rim_envoy
 		prerequisite = { focus = TU_YAN_ex_foreign_office }
 		icon = GFX_goal_generic_improve_relations
-		x = 2
+		x = -3
 		y = 23
 		cost = 10
 
@@ -4231,7 +4231,7 @@ focus_tree = {
 		prerequisite = { focus = TU_YAN_rim_envoy }
 		mutually_exclusive = { focus = TU_YAN_rim_pressure }
 		icon = GFX_goal_generic_production
-		x = -1
+		x = -6
 		y = 24
 		cost = 20
 
@@ -4255,7 +4255,7 @@ focus_tree = {
 		id = TU_YAN_rim_guarantee_offer
 		prerequisite = { focus = TU_YAN_rim_envoy }
 		icon = GFX_goal_generic_defence
-		x = 1
+		x = -4
 		y = 24
 		cost = 15
 
@@ -4277,7 +4277,7 @@ focus_tree = {
 		id = TU_YAN_rim_claim_focus
 		prerequisite = { focus = TU_YAN_ex_foreign_office }
 		icon = GFX_goal_generic_more_territorial_claims
-		x = 7
+		x = 2
 		y = 23
 		cost = 10
 
@@ -4298,7 +4298,7 @@ focus_tree = {
 		prerequisite = { focus = TU_YAN_rim_claim_focus }
 		mutually_exclusive = { focus = TU_YAN_rim_mining_deal }
 		icon = GFX_goal_generic_build_navy
-		x = 7
+		x = 2
 		y = 24
 		cost = 15
 
@@ -4321,7 +4321,7 @@ focus_tree = {
 		id = TU_YAN_rim_war_plan
 		prerequisite = { focus = TU_YAN_rim_pressure }
 		icon = GFX_goal_generic_major_war
-		x = 7
+		x = 2
 		y = 25
 		cost = 18
 
@@ -4345,7 +4345,7 @@ focus_tree = {
 		prerequisite = { focus = TU_YAN_rim_envoy }
 		mutually_exclusive = { focus = TU_YAN_rim_local_sailors_alt }
 		icon = GFX_goal_generic_navy_anti_submarine
-		x = 3
+		x = -2
 		y = 24
 		cost = 10
 
@@ -4366,7 +4366,7 @@ focus_tree = {
 		prerequisite = { focus = TU_YAN_rim_envoy }
 		mutually_exclusive = { focus = TU_YAN_rim_local_sailors }
 		icon = GFX_goal_generic_navy_anti_submarine
-		x = 5
+		x = 0
 		y = 24
 		cost = 10
 
@@ -4387,7 +4387,7 @@ focus_tree = {
 		prerequisite = { focus = TU_YAN_rim_war_plan }
 		prerequisite = { focus = TU_YAN_rim_mining_deal }
 		icon = GFX_goal_generic_navy_carrier
-		x = 7
+		x = 2
 		y = 26
 		cost = 15
 
@@ -4407,7 +4407,7 @@ focus_tree = {
 		id = TU_YAN_kzd_mercenary_pact
 		prerequisite = { focus = TU_YAN_ex_envoy_routes }
 		icon = GFX_goal_generic_military_deal
-		x = -19
+		x = -23
 		y = 24
 		cost = 20
 
@@ -4432,8 +4432,8 @@ focus_tree = {
 		prerequisite = { focus = TU_YAN_ex_envoy_routes }
 		mutually_exclusive = { focus = TU_YAN_kzd_claim_focus }
 		icon = GFX_goal_generic_trade
-		x = -17
-		y = 24
+		x = -21
+		y = 25
 		cost = 10
 
 		search_filters = { FOCUS_FILTER_INDUSTRY }
@@ -4453,7 +4453,7 @@ focus_tree = {
 		prerequisite = { focus = TU_YAN_kzd_mercenary_pact }
 		mutually_exclusive = { focus = TU_YAN_kzd_trade_route }
 		icon = GFX_goal_generic_more_territorial_claims
-		x = -19
+		x = -23
 		y = 25
 		cost = 18
 
@@ -4477,7 +4477,7 @@ focus_tree = {
 		id = TU_YAN_kzd_war_plan
 		prerequisite = { focus = TU_YAN_kzd_claim_focus }
 		icon = GFX_goal_generic_major_war
-		x = -19
+		x = -23
 		y = 26
 		cost = 18
 
@@ -4503,7 +4503,7 @@ focus_tree = {
 		id = TU_YAN_kzd_access_talks
 		prerequisite = { focus = TU_YAN_ex_envoy_routes }
 		icon = GFX_goal_generic_military_deal
-		x = -15
+		x = -20
 		y = 24
 		cost = 15
 
@@ -4525,7 +4525,7 @@ focus_tree = {
 		prerequisite = { focus = TU_YAN_ex_envoy_routes }
 		mutually_exclusive = { focus = TU_YAN_kzd_debt_bond_alt }
 		icon = GFX_goal_generic_dangerous_deal
-		x = -13
+		x = -18
 		y = 24
 		cost = 10
 
@@ -4546,7 +4546,7 @@ focus_tree = {
 		prerequisite = { focus = TU_YAN_ex_envoy_routes }
 		mutually_exclusive = { focus = TU_YAN_kzd_debt_bond }
 		icon = GFX_goal_generic_dangerous_deal
-		x = -11
+		x = -16
 		y = 24
 		cost = 10
 
@@ -4567,7 +4567,7 @@ focus_tree = {
 		prerequisite = { focus = TU_YAN_kzd_claim_focus }
 		mutually_exclusive = { focus = TU_YAN_kzd_drill_grounds_alt }
 		icon = GFX_goal_generic_army_artillery
-		x = -17
+		x = -21
 		y = 26
 		cost = 10
 
@@ -4588,7 +4588,7 @@ focus_tree = {
 		prerequisite = { focus = TU_YAN_kzd_claim_focus }
 		mutually_exclusive = { focus = TU_YAN_kzd_drill_grounds }
 		icon = GFX_goal_generic_army_artillery
-		x = -15
+		x = -19
 		y = 26
 		cost = 10
 
@@ -4609,7 +4609,7 @@ focus_tree = {
 		prerequisite = { focus = TU_YAN_kzd_claim_focus }
 		mutually_exclusive = { focus = TU_YAN_kzd_frontier_levy_alt }
 		icon = GFX_goal_generic_allies_build_infantry
-		x = -13
+		x = -17
 		y = 26
 		cost = 10
 
@@ -4630,7 +4630,7 @@ focus_tree = {
 		prerequisite = { focus = TU_YAN_kzd_claim_focus }
 		mutually_exclusive = { focus = TU_YAN_kzd_frontier_levy }
 		icon = GFX_goal_generic_allies_build_infantry
-		x = -11
+		x = -15
 		y = 26
 		cost = 10
 
@@ -4650,7 +4650,7 @@ focus_tree = {
 		id = TU_YAN_kzd_war_council
 		prerequisite = { focus = TU_YAN_kzd_war_plan }
 		icon = GFX_goal_generic_major_war
-		x = -19
+		x = -23
 		y = 27
 		cost = 10
 
@@ -4672,7 +4672,7 @@ focus_tree = {
 		prerequisite = { focus = TU_YAN_kzd_war_council }
 		prerequisite = { focus = TU_YAN_kzd_access_talks }
 		icon = GFX_goal_generic_major_alliance
-		x = -19
+		x = -23
 		y = 28
 		cost = 15
 
@@ -4692,7 +4692,7 @@ focus_tree = {
 		prerequisite = { focus = TU_YAN_kzd_war_plan }
 		prerequisite = { focus = TU_YAN_kzd_coalition }
 		icon = GFX_goal_generic_attack_allies
-		x = -19
+		x = -23
 		y = 29
 		cost = 15
 

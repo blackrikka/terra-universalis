@@ -696,7 +696,7 @@ focus_tree = {
 		prerequisite = { focus = TU_MIN_sea_supremacy }
 		mutually_exclusive = { focus = TU_MIN_democratic_polis focus = TU_MIN_rule_of_elders }
 		x = 16
-		y = 4
+		y = 5
 		cost = 15
 
 		search_filters = { FOCUS_FILTER_POLITICAL }
@@ -729,7 +729,7 @@ focus_tree = {
 		icon = GFX_goal_generic_political_pressure
 		prerequisite = { focus = TU_MIN_thalassocracy }
 		x = 16
-		y = 5
+		y = 6
 		cost = 10
 
 		search_filters = { FOCUS_FILTER_POLITICAL }
@@ -749,7 +749,7 @@ focus_tree = {
 		icon = GFX_goal_generic_trade
 		prerequisite = { focus = TU_MIN_colonies }
 		x = 15
-		y = 6
+		y = 7
 		cost = 10
 
 		search_filters = { FOCUS_FILTER_POLITICAL }
@@ -2007,7 +2007,7 @@ focus_tree = {
 		icon = GFX_goal_generic_trade
 		prerequisite = { focus = TU_MIN_colonies }
 		x = 17
-		y = 6
+		y = 7
 		cost = 10
 
 		search_filters = { FOCUS_FILTER_POLITICAL }

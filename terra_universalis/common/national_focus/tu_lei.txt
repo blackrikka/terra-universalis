@@ -1,6 +1,6 @@
 focus_tree = {
 	id = TU_LEI_focus
-	continuous_focus_position = { x = 50 y = 2470 }
+	continuous_focus_position = { x = 50 y = 2340 }
 
 	country = {
 		factor = 0
@@ -592,7 +592,7 @@ focus_tree = {
 		id = TU_LEI_witch_king_legacy
 		icon = GFX_goal_generic_political_pressure
 		prerequisite = { focus = TU_LEI_root }
-		x = -3
+		x = -2
 		y = 1
 		cost = 10
 
@@ -611,7 +611,7 @@ focus_tree = {
 		id = TU_LEI_sealed_archives
 		icon = GFX_focus_research
 		prerequisite = { focus = TU_LEI_witch_king_legacy }
-		x = -3
+		x = -2
 		y = 2
 		cost = 10
 
@@ -670,7 +670,7 @@ focus_tree = {
 		id = TU_LEI_forbidden_studies
 		icon = GFX_focus_research
 		prerequisite = { focus = TU_LEI_sealed_archives }
-		x = -3
+		x = -2
 		y = 3
 		cost = 10
 
@@ -690,8 +690,8 @@ focus_tree = {
 		icon = GFX_goal_generic_political_pressure
 		prerequisite = { focus = TU_LEI_forbidden_studies }
 		mutually_exclusive = { focus = TU_LEI_twin_empresses focus = TU_LEI_electoral_federation }
-		x = -3
-		y = 4
+		x = -2
+		y = 6
 		cost = 15
 
 		search_filters = { FOCUS_FILTER_POLITICAL }
@@ -724,8 +724,8 @@ focus_tree = {
 		id = TU_LEI_dark_court
 		icon = GFX_goal_generic_political_pressure
 		prerequisite = { focus = TU_LEI_witch_king_return }
-		x = -3
-		y = 5
+		x = -2
+		y = 7
 		cost = 10
 
 		search_filters = { FOCUS_FILTER_POLITICAL }
@@ -744,8 +744,8 @@ focus_tree = {
 		id = TU_LEI_arts_terror
 		icon = GFX_focus_research
 		prerequisite = { focus = TU_LEI_dark_court }
-		x = -4
-		y = 6
+		x = -3
+		y = 8
 		cost = 10
 
 		search_filters = { FOCUS_FILTER_POLITICAL }
@@ -763,8 +763,8 @@ focus_tree = {
 		id = TU_LEI_guard_regiments
 		icon = GFX_goal_generic_allies_build_infantry
 		prerequisite = { focus = TU_LEI_root }
-		x = -18
-		y = 11
+		x = -25
+		y = 10
 		cost = 10
 
 		search_filters = { FOCUS_FILTER_POLITICAL }
@@ -783,8 +783,8 @@ focus_tree = {
 		id = TU_LEI_arts_artillery
 		icon = GFX_goal_generic_army_artillery
 		prerequisite = { focus = TU_LEI_guard_regiments }
-		x = -20
-		y = 12
+		x = -27
+		y = 11
 		cost = 10
 
 		search_filters = { FOCUS_FILTER_POLITICAL }
@@ -803,8 +803,8 @@ focus_tree = {
 		id = TU_LEI_mountain_line
 		icon = GFX_goal_generic_defence
 		prerequisite = { focus = TU_LEI_guard_regiments }
-		x = -16
-		y = 12
+		x = -23
+		y = 11
 		cost = 10
 
 		search_filters = { FOCUS_FILTER_POLITICAL }
@@ -824,8 +824,8 @@ focus_tree = {
 		prerequisite = { focus = TU_LEI_arts_artillery }
 		prerequisite = { focus = TU_LEI_mountain_line }
 		mutually_exclusive = { focus = TU_LEI_defensive_doctrine }
-		x = -12
-		y = 13
+		x = -19
+		y = 12
 		cost = 10
 
 		search_filters = { FOCUS_FILTER_POLITICAL }
@@ -846,8 +846,8 @@ focus_tree = {
 		prerequisite = { focus = TU_LEI_arts_artillery }
 		prerequisite = { focus = TU_LEI_mountain_line }
 		mutually_exclusive = { focus = TU_LEI_mobile_doctrine }
-		x = -7
-		y = 13
+		x = -14
+		y = 12
 		cost = 10
 
 		search_filters = { FOCUS_FILTER_POLITICAL }
@@ -866,8 +866,8 @@ focus_tree = {
 		id = TU_LEI_officer_school
 		icon = GFX_goal_generic_army_doctrines
 		prerequisite = { focus = TU_LEI_mobile_doctrine focus = TU_LEI_defensive_doctrine }
-		x = -14
-		y = 14
+		x = -21
+		y = 13
 		cost = 10
 
 		search_filters = { FOCUS_FILTER_POLITICAL }
@@ -886,8 +886,8 @@ focus_tree = {
 		id = TU_LEI_caster_corps
 		icon = GFX_goal_generic_army_doctrines
 		prerequisite = { focus = TU_LEI_officer_school }
-		x = -17
-		y = 15
+		x = -24
+		y = 14
 		cost = 10
 
 		search_filters = { FOCUS_FILTER_POLITICAL }
@@ -906,8 +906,8 @@ focus_tree = {
 		id = TU_LEI_ursus_border
 		icon = GFX_goal_generic_defence
 		prerequisite = { focus = TU_LEI_mountain_line }
-		x = -18
-		y = 13
+		x = -25
+		y = 12
 		cost = 10
 
 		search_filters = { FOCUS_FILTER_POLITICAL }
@@ -926,8 +926,8 @@ focus_tree = {
 		id = TU_LEI_kazimierz_border
 		icon = GFX_goal_generic_defence
 		prerequisite = { focus = TU_LEI_mountain_line }
-		x = -16
-		y = 13
+		x = -23
+		y = 12
 		cost = 10
 
 		search_filters = { FOCUS_FILTER_POLITICAL }
@@ -945,8 +945,8 @@ focus_tree = {
 		id = TU_LEI_mining
 		icon = GFX_goal_generic_production
 		prerequisite = { focus = TU_LEI_root }
-		x = 6
-		y = 8
+		x = -4
+		y = 11
 		cost = 10
 
 		search_filters = { FOCUS_FILTER_INDUSTRY }
@@ -965,8 +965,8 @@ focus_tree = {
 		id = TU_LEI_road_network
 		icon = GFX_goal_generic_production
 		prerequisite = { focus = TU_LEI_mining }
-		x = 1
-		y = 9
+		x = -9
+		y = 12
 		cost = 10
 
 		search_filters = { FOCUS_FILTER_INDUSTRY }
@@ -985,8 +985,8 @@ focus_tree = {
 		id = TU_LEI_industrial_district
 		icon = GFX_goal_generic_production
 		prerequisite = { focus = TU_LEI_mining }
-		x = 7
-		y = 9
+		x = -3
+		y = 12
 		cost = 10
 
 		search_filters = { FOCUS_FILTER_INDUSTRY }
@@ -1006,8 +1006,8 @@ focus_tree = {
 		icon = GFX_goal_generic_production
 		prerequisite = { focus = TU_LEI_industrial_district }
 		mutually_exclusive = { focus = TU_LEI_arms_program }
-		x = 5
-		y = 10
+		x = -5
+		y = 13
 		cost = 10
 
 		search_filters = { FOCUS_FILTER_INDUSTRY }
@@ -1027,8 +1027,8 @@ focus_tree = {
 		icon = GFX_goal_generic_small_arms
 		prerequisite = { focus = TU_LEI_industrial_district }
 		mutually_exclusive = { focus = TU_LEI_civ_program }
-		x = 7
-		y = 10
+		x = -3
+		y = 13
 		cost = 10
 
 		search_filters = { FOCUS_FILTER_INDUSTRY }
@@ -1048,8 +1048,8 @@ focus_tree = {
 		id = TU_LEI_rail_network
 		icon = GFX_goal_generic_construct_infrastructure
 		prerequisite = { focus = TU_LEI_road_network }
-		x = 1
-		y = 10
+		x = -9
+		y = 13
 		cost = 10
 
 		search_filters = { FOCUS_FILTER_INDUSTRY }
@@ -1067,8 +1067,8 @@ focus_tree = {
 		id = TU_LEI_instrument_workshops
 		icon = GFX_goal_generic_production
 		prerequisite = { focus = TU_LEI_rail_network }
-		x = 0
-		y = 11
+		x = -10
+		y = 14
 		cost = 10
 
 		search_filters = { FOCUS_FILTER_INDUSTRY }
@@ -1088,8 +1088,8 @@ focus_tree = {
 		id = TU_LEI_arts_power
 		icon = GFX_focus_research
 		prerequisite = { focus = TU_LEI_instrument_workshops }
-		x = -1
-		y = 12
+		x = -11
+		y = 15
 		cost = 10
 
 		search_filters = { FOCUS_FILTER_INDUSTRY }
@@ -1109,8 +1109,8 @@ focus_tree = {
 		icon = GFX_goal_generic_production
 		prerequisite = { focus = TU_LEI_civ_program focus = TU_LEI_arms_program }
 		prerequisite = { focus = TU_LEI_arts_power }
-		x = 5
-		y = 13
+		x = -5
+		y = 16
 		cost = 10
 
 		search_filters = { FOCUS_FILTER_INDUSTRY }
@@ -1129,7 +1129,7 @@ focus_tree = {
 		id = TU_LEI_foreign_office
 		icon = GFX_goal_generic_political_pressure
 		prerequisite = { focus = TU_LEI_root }
-		x = 16
+		x = 6
 		y = 10
 		cost = 10
 
@@ -1149,7 +1149,7 @@ focus_tree = {
 		id = TU_LEI_kazimierz_exchange
 		icon = GFX_goal_generic_improve_relations
 		prerequisite = { focus = TU_LEI_foreign_office }
-		x = 16
+		x = 6
 		y = 11
 		cost = 10
 
@@ -1169,7 +1169,7 @@ focus_tree = {
 		id = TU_LEI_ursus_question
 		icon = GFX_goal_generic_political_pressure
 		prerequisite = { focus = TU_LEI_foreign_office }
-		x = 19
+		x = 9
 		y = 11
 		cost = 10
 
@@ -1188,7 +1188,7 @@ focus_tree = {
 		id = TU_LEI_siracusa_ties
 		icon = GFX_goal_generic_improve_relations
 		prerequisite = { focus = TU_LEI_kazimierz_exchange }
-		x = 15
+		x = 5
 		y = 12
 		cost = 10
 
@@ -1208,7 +1208,7 @@ focus_tree = {
 		id = TU_LEI_arts_diplomacy
 		icon = GFX_focus_research
 		prerequisite = { focus = TU_LEI_siracusa_ties }
-		x = 15
+		x = 5
 		y = 13
 		cost = 10
 
@@ -1229,7 +1229,7 @@ focus_tree = {
 		icon = GFX_goal_generic_improve_relations
 		prerequisite = { focus = TU_LEI_arts_diplomacy }
 		prerequisite = { focus = TU_LEI_ursus_question }
-		x = 14
+		x = 4
 		y = 14
 		cost = 10
 
@@ -1544,8 +1544,8 @@ focus_tree = {
 		id = TU_LEI_caster_training
 		icon = GFX_goal_generic_army_doctrines
 		prerequisite = { focus = TU_LEI_guard_regiments }
-		x = -14
-		y = 12
+		x = -21
+		y = 11
 		cost = 10
 
 		search_filters = { FOCUS_FILTER_POLITICAL }
@@ -1564,8 +1564,8 @@ focus_tree = {
 		id = TU_LEI_rifle_regiments
 		icon = GFX_goal_generic_small_arms
 		prerequisite = { focus = TU_LEI_guard_regiments }
-		x = -12
-		y = 12
+		x = -19
+		y = 11
 		cost = 10
 
 		search_filters = { FOCUS_FILTER_POLITICAL }
@@ -1584,8 +1584,8 @@ focus_tree = {
 		id = TU_LEI_field_hospitals
 		icon = GFX_goal_generic_consumer_goods
 		prerequisite = { focus = TU_LEI_officer_school }
-		x = -15
-		y = 15
+		x = -22
+		y = 14
 		cost = 10
 
 		search_filters = { FOCUS_FILTER_POLITICAL }
@@ -1605,8 +1605,8 @@ focus_tree = {
 		id = TU_LEI_motor_columns
 		icon = GFX_goal_generic_army_motorized
 		prerequisite = { focus = TU_LEI_mobile_doctrine }
-		x = -9
-		y = 14
+		x = -16
+		y = 13
 		cost = 10
 
 		search_filters = { FOCUS_FILTER_POLITICAL }
@@ -1625,8 +1625,8 @@ focus_tree = {
 		id = TU_LEI_tank_corps
 		icon = GFX_goal_generic_army_tanks
 		prerequisite = { focus = TU_LEI_motor_columns }
-		x = -9
-		y = 15
+		x = -16
+		y = 14
 		cost = 10
 
 		search_filters = { FOCUS_FILTER_POLITICAL }
@@ -1645,8 +1645,8 @@ focus_tree = {
 		id = TU_LEI_bunkers
 		icon = GFX_goal_generic_defence
 		prerequisite = { focus = TU_LEI_defensive_doctrine }
-		x = -7
-		y = 14
+		x = -14
+		y = 13
 		cost = 10
 
 		search_filters = { FOCUS_FILTER_POLITICAL }
@@ -1664,8 +1664,8 @@ focus_tree = {
 		id = TU_LEI_air_squadrons
 		icon = GFX_goal_generic_air_doctrine
 		prerequisite = { focus = TU_LEI_officer_school }
-		x = -13
-		y = 15
+		x = -20
+		y = 14
 		cost = 10
 
 		search_filters = { FOCUS_FILTER_POLITICAL }
@@ -1685,8 +1685,8 @@ focus_tree = {
 		id = TU_LEI_bomber_wing
 		icon = GFX_goal_generic_air_doctrine
 		prerequisite = { focus = TU_LEI_air_squadrons }
-		x = -13
-		y = 16
+		x = -20
+		y = 15
 		cost = 10
 
 		search_filters = { FOCUS_FILTER_POLITICAL }
@@ -1706,8 +1706,8 @@ focus_tree = {
 		id = TU_LEI_supply_depots
 		icon = GFX_goal_generic_production
 		prerequisite = { focus = TU_LEI_officer_school }
-		x = -11
-		y = 15
+		x = -18
+		y = 14
 		cost = 10
 
 		search_filters = { FOCUS_FILTER_POLITICAL }
@@ -1725,8 +1725,8 @@ focus_tree = {
 		id = TU_LEI_timber_industry
 		icon = GFX_goal_generic_production
 		prerequisite = { focus = TU_LEI_mining }
-		x = 9
-		y = 9
+		x = -1
+		y = 12
 		cost = 10
 
 		search_filters = { FOCUS_FILTER_INDUSTRY }
@@ -1745,8 +1745,8 @@ focus_tree = {
 		id = TU_LEI_steel_works
 		icon = GFX_goal_generic_small_arms
 		prerequisite = { focus = TU_LEI_industrial_district }
-		x = 9
-		y = 10
+		x = -1
+		y = 13
 		cost = 10
 
 		search_filters = { FOCUS_FILTER_INDUSTRY }
@@ -1766,8 +1766,8 @@ focus_tree = {
 		id = TU_LEI_glass_works
 		icon = GFX_goal_generic_production
 		prerequisite = { focus = TU_LEI_instrument_workshops }
-		x = 1
-		y = 12
+		x = -9
+		y = 15
 		cost = 10
 
 		search_filters = { FOCUS_FILTER_INDUSTRY }
@@ -1786,8 +1786,8 @@ focus_tree = {
 		id = TU_LEI_river_canals
 		icon = GFX_goal_generic_production
 		prerequisite = { focus = TU_LEI_road_network }
-		x = 3
-		y = 10
+		x = -7
+		y = 13
 		cost = 10
 
 		search_filters = { FOCUS_FILTER_INDUSTRY }
@@ -1806,8 +1806,8 @@ focus_tree = {
 		id = TU_LEI_power_plants
 		icon = GFX_goal_generic_production
 		prerequisite = { focus = TU_LEI_rail_network }
-		x = 2
-		y = 11
+		x = -8
+		y = 14
 		cost = 10
 
 		search_filters = { FOCUS_FILTER_INDUSTRY }
@@ -1826,7 +1826,7 @@ focus_tree = {
 		id = TU_LEI_lateran_ties
 		icon = GFX_goal_generic_improve_relations
 		prerequisite = { focus = TU_LEI_foreign_office }
-		x = 21
+		x = 11
 		y = 11
 		cost = 10
 
@@ -1846,7 +1846,7 @@ focus_tree = {
 		id = TU_LEI_rhodes_office
 		icon = GFX_goal_generic_improve_relations
 		prerequisite = { focus = TU_LEI_foreign_office }
-		x = 23
+		x = 13
 		y = 11
 		cost = 10
 
@@ -1866,7 +1866,7 @@ focus_tree = {
 		id = TU_LEI_victoria_trade
 		icon = GFX_goal_generic_trade
 		prerequisite = { focus = TU_LEI_kazimierz_exchange }
-		x = 17
+		x = 7
 		y = 12
 		cost = 10
 
@@ -1886,7 +1886,7 @@ focus_tree = {
 		id = TU_LEI_columbia_ties
 		icon = GFX_goal_generic_improve_relations
 		prerequisite = { focus = TU_LEI_victoria_trade }
-		x = 17
+		x = 7
 		y = 13
 		cost = 10
 
@@ -1906,7 +1906,7 @@ focus_tree = {
 		id = TU_LEI_arts_tour
 		icon = GFX_focus_research
 		prerequisite = { focus = TU_LEI_arts_diplomacy }
-		x = 16
+		x = 6
 		y = 14
 		cost = 10
 
@@ -1925,8 +1925,8 @@ focus_tree = {
 		id = TU_LEI_caster_reserve
 		icon = GFX_goal_generic_allies_build_infantry
 		prerequisite = { focus = TU_LEI_caster_corps }
-		x = -17
-		y = 16
+		x = -24
+		y = 15
 		cost = 10
 
 		search_filters = { FOCUS_FILTER_POLITICAL }
@@ -2004,8 +2004,8 @@ focus_tree = {
 		id = TU_LEI_dark_legion
 		icon = GFX_goal_generic_allies_build_infantry
 		prerequisite = { focus = TU_LEI_dark_court }
-		x = -2
-		y = 6
+		x = -1
+		y = 8
 		cost = 10
 
 		search_filters = { FOCUS_FILTER_POLITICAL }
@@ -2024,8 +2024,8 @@ focus_tree = {
 		id = TU_LEI_arts_supremacy
 		icon = GFX_focus_research
 		prerequisite = { focus = TU_LEI_arts_terror }
-		x = -4
-		y = 7
+		x = -3
+		y = 9
 		cost = 10
 
 		search_filters = { FOCUS_FILTER_POLITICAL }
@@ -2283,8 +2283,8 @@ focus_tree = {
 		id = TU_LEI_mountain_rangers
 		icon = GFX_goal_generic_intelligence_exchange
 		prerequisite = { focus = TU_LEI_mountain_line }
-		x = -14
-		y = 13
+		x = -21
+		y = 12
 		cost = 10
 
 		search_filters = { FOCUS_FILTER_POLITICAL }
@@ -2303,8 +2303,8 @@ focus_tree = {
 		id = TU_LEI_heavy_artillery
 		icon = GFX_goal_generic_army_artillery
 		prerequisite = { focus = TU_LEI_arts_artillery }
-		x = -20
-		y = 13
+		x = -27
+		y = 12
 		cost = 10
 
 		search_filters = { FOCUS_FILTER_POLITICAL }
@@ -2323,8 +2323,8 @@ focus_tree = {
 		id = TU_LEI_armoured_casters
 		icon = GFX_goal_generic_army_tanks
 		prerequisite = { focus = TU_LEI_tank_corps }
-		x = -9
-		y = 16
+		x = -16
+		y = 15
 		cost = 10
 
 		search_filters = { FOCUS_FILTER_POLITICAL }
@@ -2343,8 +2343,8 @@ focus_tree = {
 		id = TU_LEI_air_defence
 		icon = GFX_goal_generic_air_doctrine
 		prerequisite = { focus = TU_LEI_bomber_wing }
-		x = -13
-		y = 17
+		x = -20
+		y = 16
 		cost = 10
 
 		search_filters = { FOCUS_FILTER_POLITICAL }
@@ -2364,8 +2364,8 @@ focus_tree = {
 		id = TU_LEI_chemical_plants
 		icon = GFX_goal_generic_production
 		prerequisite = { focus = TU_LEI_steel_works }
-		x = 9
-		y = 11
+		x = -1
+		y = 14
 		cost = 10
 
 		search_filters = { FOCUS_FILTER_INDUSTRY }
@@ -2384,8 +2384,8 @@ focus_tree = {
 		id = TU_LEI_arts_crystal_mines
 		icon = GFX_focus_research
 		prerequisite = { focus = TU_LEI_mining }
-		x = 11
-		y = 9
+		x = 1
+		y = 12
 		cost = 10
 
 		search_filters = { FOCUS_FILTER_INDUSTRY }
@@ -2423,7 +2423,7 @@ focus_tree = {
 		id = TU_LEI_yan_trade
 		icon = GFX_goal_generic_trade
 		prerequisite = { focus = TU_LEI_foreign_office }
-		x = 25
+		x = 15
 		y = 11
 		cost = 10
 
@@ -2443,7 +2443,7 @@ focus_tree = {
 		id = TU_LEI_sami_contact
 		icon = GFX_goal_generic_improve_relations
 		prerequisite = { focus = TU_LEI_ursus_question }
-		x = 19
+		x = 9
 		y = 12
 		cost = 10
 

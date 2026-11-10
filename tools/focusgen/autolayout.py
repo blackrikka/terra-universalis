@@ -11,6 +11,7 @@
     부모      중점의 prerequisite 블록 안 모든 focus id (mutually_exclusive 는 부모가 아님)
     뿌리      부모가 없는 중점
     y         뿌리 0, 나머지 1 + max(부모 y)  -> 비는 줄이 없다
+              대립(mutually_exclusive) 중점은 같은 줄: 짝의 얕은 쪽을 깊은 쪽 줄로 내린다 (사양서 72)
     주 부모   부모가 하나면 그 부모. 여럿이면 (1) 부모들의 주 부모가 모두 같은 형제 줄이면 묶음으로 본다.
               (2) 아니면 y 가 가장 큰 것 (같으면 파일에서 먼저 나온 것). (2) 는 배치 뒤
               다른 부모들의 가운데에 가장 가까운 부모로 바꿀 수 있다 (검사가 통과할 때만).
@@ -202,6 +203,7 @@ def parse(text):
             "rel_span": (o + 1 + rm.start(), o + 1 + rm.end()) if rm else None,
             "parents": parents,
             "mutex": mutex,
+            "gated": any(bname == "allow_branch" for bname, _, _ in blocks),
         })
     return {"tree": t_id.group(1) if t_id else "?", "init": init, "focuses": focuses}
 
@@ -663,6 +665,32 @@ def layout(tree):
         if parents[i]:
             Y[i] = 1 + max(Y[j] for j in parents[i])
 
+    # 대립(mutually_exclusive) 중점은 같은 줄에 둔다 (사양서 72): 줄이 다르면 게임에서 대립 표시가 보이지 않는다.
+    # 짝 가운데 얕은 쪽을 깊은 쪽 줄로 내리고 그 아래 중점을 다시 계산한다. 조상-자손 사이의 대립은 맞출 수 없어 건너뛴다.
+    # 숨은 갈래(allow_branch 로 가려진 중점과 그 아래)와 보이는 중점 사이의 대립은 맞추지 않는다:
+    # 숨은 갈래가 길면 평소에 보이는 결말들이 그만큼 아래로 끌려 내려간다.
+    anc = [0] * n
+    hidden = [bool(f.get("gated")) for f in fs]
+    for i in topo:
+        for j in parents[i]:
+            anc[i] |= anc[j] | (1 << j)
+            hidden[i] = hidden[i] or hidden[j]
+    floor = [0] * n
+    base_y = list(Y)
+    for _ in range(60):
+        moved = False
+        for i in range(n):
+            for j in adj[i]:
+                if Y[j] > Y[i] and hidden[i] == hidden[j] and not (anc[i] >> j) & 1 and not (anc[j] >> i) & 1:
+                    floor[i] = max(floor[i], Y[j])
+                    moved = True
+        if not moved:
+            break
+        for i in topo:
+            Y[i] = max(floor[i], 1 + max(Y[j] for j in parents[i]) if parents[i] else 0)
+    else:
+        Y = base_y          # 수렴하지 않으면 (대립이 서로 물려 있으면) 원래 줄을 쓴다
+
     # 가운데 기준: initial_show_position 의 focus, 없으면 가운데 뿌리
     if tree["init"] is not None:
         if tree["init"] not in index:
@@ -730,6 +758,7 @@ def layout(tree):
                 f = fs[i]
                 sub.append({"id": f["id"], "line": f["line"], "x": orig[i][0], "y": orig[i][1],
                             "x_span": None, "y_span": None, "rel": None, "rel_span": None,
+                            "gated": f.get("gated", False),
                             "parents": [p for p in f["parents"] if index[p] in keep],
                             "mutex": [m for m in f["mutex"] if index[m] in keep]})
             st = layout({"tree": tree["tree"], "init": None, "focuses": sub, "no_band": True})

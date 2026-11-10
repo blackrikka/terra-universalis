@@ -140,8 +140,9 @@ def choose(key, leader, ideology):
 
 
 def R(key, sid, ko, en, pre, reward, cost=10, me=(), desc=("", ""), available=()):
-    """루트 안 중점. 루트 머리(pre=['root'])에는 allow_branch 를 단다."""
-    ab = [HAS("route_%s" % key)] if pre == ["root"] else []
+    """루트 안 중점. 모든 중점에 allow_branch 를 단다: 다섯 루트가 같은 자리에 겹쳐 있으므로
+    고르지 않은 루트의 중점이 하나라도 보이면 겹쳐 보인다 (머리에만 달고 아래가 따라 숨는 것에 기대지 않는다, 사양서 72)."""
+    ab = [HAS("route_%s" % key)]
     return f(sid, ko, en, pre=pre, me=me, cost=cost, theme=False, reward=reward, desc=desc, available=available, allow_branch=ab)
 
 

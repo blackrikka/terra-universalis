@@ -1,6 +1,6 @@
 focus_tree = {
 	id = TU_BOL_focus
-	continuous_focus_position = { x = 50 y = 3250 }
+	continuous_focus_position = { x = 50 y = 2080 }
 
 	country = {
 		factor = 0
@@ -41,7 +41,7 @@ focus_tree = {
 		id = TU_BOL_war_council
 		icon = GFX_goal_generic_occupy_start_war
 		prerequisite = { focus = TU_BOL_root }
-		x = 4
+		x = -27
 		y = 1
 		cost = 10
 
@@ -61,7 +61,7 @@ focus_tree = {
 		id = TU_BOL_militia_levy
 		icon = GFX_goal_generic_allies_build_infantry
 		prerequisite = { focus = TU_BOL_war_council }
-		x = 4
+		x = -27
 		y = 2
 		cost = 10
 
@@ -81,7 +81,7 @@ focus_tree = {
 		id = TU_BOL_guerrilla_doctrine
 		icon = GFX_goal_generic_army_doctrines
 		prerequisite = { focus = TU_BOL_war_council }
-		x = 20
+		x = -11
 		y = 2
 		cost = 10
 
@@ -101,7 +101,7 @@ focus_tree = {
 		id = TU_BOL_jungle_forts
 		icon = GFX_goal_generic_defence
 		prerequisite = { focus = TU_BOL_guerrilla_doctrine }
-		x = 19
+		x = -12
 		y = 3
 		cost = 10
 
@@ -121,7 +121,7 @@ focus_tree = {
 		icon = GFX_goal_generic_allies_build_infantry
 		prerequisite = { focus = TU_BOL_militia_levy }
 		mutually_exclusive = { focus = TU_BOL_national_army }
-		x = 3
+		x = -28
 		y = 3
 		cost = 10
 
@@ -144,7 +144,7 @@ focus_tree = {
 		icon = GFX_goal_generic_allies_build_infantry
 		prerequisite = { focus = TU_BOL_militia_levy }
 		mutually_exclusive = { focus = TU_BOL_foreign_mercs }
-		x = 6
+		x = -25
 		y = 3
 		cost = 10
 
@@ -165,7 +165,7 @@ focus_tree = {
 		id = TU_BOL_arms_smuggling
 		icon = GFX_goal_generic_small_arms
 		prerequisite = { focus = TU_BOL_foreign_mercs focus = TU_BOL_national_army }
-		x = 8
+		x = -23
 		y = 4
 		cost = 10
 
@@ -186,7 +186,7 @@ focus_tree = {
 		icon = GFX_goal_generic_occupy_start_war
 		prerequisite = { focus = TU_BOL_jungle_forts }
 		prerequisite = { focus = TU_BOL_arms_smuggling }
-		x = 8
+		x = -23
 		y = 5
 		cost = 10
 
@@ -206,7 +206,7 @@ focus_tree = {
 		id = TU_BOL_final_offensive
 		icon = GFX_goal_generic_occupy_start_war
 		prerequisite = { focus = TU_BOL_guerrilla_masters }
-		x = 8
+		x = -23
 		y = 6
 		cost = 10
 
@@ -231,7 +231,7 @@ focus_tree = {
 		id = TU_BOL_veteran_army
 		icon = GFX_goal_generic_army_doctrines
 		prerequisite = { focus = TU_BOL_final_offensive }
-		x = 6
+		x = -25
 		y = 7
 		cost = 10
 
@@ -251,7 +251,7 @@ focus_tree = {
 		icon = GFX_goal_generic_improve_relations
 		prerequisite = { focus = TU_BOL_root }
 		x = -1
-		y = 10
+		y = 1
 		cost = 10
 
 		search_filters = { FOCUS_FILTER_POLITICAL }
@@ -270,7 +270,7 @@ focus_tree = {
 		icon = GFX_goal_generic_political_pressure
 		prerequisite = { focus = TU_BOL_ceasefire_talks }
 		x = -3
-		y = 11
+		y = 2
 		cost = 10
 
 		search_filters = { FOCUS_FILTER_POLITICAL }
@@ -291,7 +291,7 @@ focus_tree = {
 		icon = GFX_goal_generic_improve_relations
 		prerequisite = { focus = TU_BOL_ceasefire_talks }
 		x = -1
-		y = 11
+		y = 2
 		cost = 10
 
 		search_filters = { FOCUS_FILTER_POLITICAL }
@@ -312,7 +312,7 @@ focus_tree = {
 		icon = GFX_goal_generic_army_doctrines
 		prerequisite = { focus = TU_BOL_reconciliation }
 		x = -1
-		y = 12
+		y = 3
 		cost = 10
 
 		search_filters = { FOCUS_FILTER_POLITICAL }
@@ -334,7 +334,7 @@ focus_tree = {
 		prerequisite = { focus = TU_BOL_warlord_unity }
 		prerequisite = { focus = TU_BOL_amnesty }
 		x = -1
-		y = 13
+		y = 4
 		cost = 10
 
 		search_filters = { FOCUS_FILTER_POLITICAL }
@@ -355,7 +355,7 @@ focus_tree = {
 		prerequisite = { focus = TU_BOL_new_government }
 		mutually_exclusive = { focus = TU_BOL_columbian_protectorate focus = TU_BOL_victorian_protectorate }
 		x = -3
-		y = 14
+		y = 5
 		cost = 15
 
 		search_filters = { FOCUS_FILTER_POLITICAL }
@@ -390,7 +390,7 @@ focus_tree = {
 		icon = GFX_goal_generic_political_pressure
 		prerequisite = { focus = TU_BOL_bolivar_republic }
 		x = -4
-		y = 15
+		y = 6
 		cost = 10
 
 		search_filters = { FOCUS_FILTER_POLITICAL }
@@ -410,7 +410,7 @@ focus_tree = {
 		icon = GFX_goal_generic_propaganda
 		prerequisite = { focus = TU_BOL_bolivar_republic }
 		x = -2
-		y = 15
+		y = 6
 		cost = 10
 
 		search_filters = { FOCUS_FILTER_POLITICAL }
@@ -429,8 +429,8 @@ focus_tree = {
 		id = TU_BOL_foreign_patrons
 		icon = GFX_goal_generic_political_pressure
 		prerequisite = { focus = TU_BOL_root }
-		x = 23
-		y = 10
+		x = 20
+		y = 1
 		cost = 10
 
 		search_filters = { FOCUS_FILTER_POLITICAL }
@@ -449,8 +449,8 @@ focus_tree = {
 		icon = GFX_goal_generic_improve_relations
 		prerequisite = { focus = TU_BOL_foreign_patrons }
 		mutually_exclusive = { focus = TU_BOL_victorian_alliance }
-		x = 15
-		y = 11
+		x = 14
+		y = 2
 		cost = 10
 
 		search_filters = { FOCUS_FILTER_POLITICAL }
@@ -471,8 +471,8 @@ focus_tree = {
 		icon = GFX_goal_generic_improve_relations
 		prerequisite = { focus = TU_BOL_foreign_patrons }
 		mutually_exclusive = { focus = TU_BOL_columbian_alliance }
-		x = 21
-		y = 11
+		x = 18
+		y = 2
 		cost = 10
 
 		search_filters = { FOCUS_FILTER_POLITICAL }
@@ -493,8 +493,8 @@ focus_tree = {
 		icon = GFX_goal_generic_political_pressure
 		prerequisite = { focus = TU_BOL_columbian_alliance }
 		mutually_exclusive = { focus = TU_BOL_bolivar_republic focus = TU_BOL_victorian_protectorate }
-		x = 15
-		y = 12
+		x = 14
+		y = 5
 		cost = 15
 
 		search_filters = { FOCUS_FILTER_POLITICAL }
@@ -528,8 +528,8 @@ focus_tree = {
 		icon = GFX_goal_generic_political_pressure
 		prerequisite = { focus = TU_BOL_victorian_alliance }
 		mutually_exclusive = { focus = TU_BOL_bolivar_republic focus = TU_BOL_columbian_protectorate }
-		x = 21
-		y = 12
+		x = 18
+		y = 5
 		cost = 15
 
 		search_filters = { FOCUS_FILTER_POLITICAL }
@@ -562,8 +562,8 @@ focus_tree = {
 		id = TU_BOL_columbian_factories
 		icon = GFX_goal_generic_production
 		prerequisite = { focus = TU_BOL_columbian_protectorate }
-		x = 15
-		y = 13
+		x = 14
+		y = 6
 		cost = 10
 
 		search_filters = { FOCUS_FILTER_INDUSTRY }
@@ -582,8 +582,8 @@ focus_tree = {
 		id = TU_BOL_victorian_garrisons
 		icon = GFX_goal_generic_defence
 		prerequisite = { focus = TU_BOL_victorian_protectorate }
-		x = 21
-		y = 13
+		x = 18
+		y = 6
 		cost = 10
 
 		search_filters = { FOCUS_FILTER_POLITICAL }
@@ -602,8 +602,8 @@ focus_tree = {
 		id = TU_BOL_refugee_relief
 		icon = GFX_goal_generic_consumer_goods
 		prerequisite = { focus = TU_BOL_root }
-		x = 0
-		y = 19
+		x = -8
+		y = 10
 		cost = 10
 
 		search_filters = { FOCUS_FILTER_POLITICAL }
@@ -624,8 +624,8 @@ focus_tree = {
 		id = TU_BOL_hospital_rebuild
 		icon = GFX_goal_generic_consumer_goods
 		prerequisite = { focus = TU_BOL_refugee_relief }
-		x = -4
-		y = 20
+		x = -12
+		y = 11
 		cost = 10
 
 		search_filters = { FOCUS_FILTER_POLITICAL }
@@ -645,8 +645,8 @@ focus_tree = {
 		id = TU_BOL_grain_rationing
 		icon = GFX_goal_generic_consumer_goods
 		prerequisite = { focus = TU_BOL_refugee_relief }
-		x = 2
-		y = 20
+		x = -6
+		y = 11
 		cost = 10
 
 		search_filters = { FOCUS_FILTER_POLITICAL }
@@ -668,8 +668,8 @@ focus_tree = {
 		icon = GFX_focus_research
 		prerequisite = { focus = TU_BOL_hospital_rebuild }
 		mutually_exclusive = { focus = TU_BOL_housing_rebuild }
-		x = -8
-		y = 21
+		x = -16
+		y = 12
 		cost = 10
 
 		search_filters = { FOCUS_FILTER_POLITICAL }
@@ -688,8 +688,8 @@ focus_tree = {
 		icon = GFX_goal_generic_consumer_goods
 		prerequisite = { focus = TU_BOL_hospital_rebuild }
 		mutually_exclusive = { focus = TU_BOL_education_reform }
-		x = -4
-		y = 21
+		x = -12
+		y = 12
 		cost = 10
 
 		search_filters = { FOCUS_FILTER_POLITICAL }
@@ -710,8 +710,8 @@ focus_tree = {
 		icon = GFX_goal_generic_consumer_goods
 		prerequisite = { focus = TU_BOL_education_reform focus = TU_BOL_housing_rebuild }
 		prerequisite = { focus = TU_BOL_grain_rationing }
-		x = -5
-		y = 22
+		x = -13
+		y = 13
 		cost = 10
 
 		search_filters = { FOCUS_FILTER_POLITICAL }
@@ -732,8 +732,8 @@ focus_tree = {
 		id = TU_BOL_peace_dividend
 		icon = GFX_goal_generic_political_pressure
 		prerequisite = { focus = TU_BOL_war_orphans }
-		x = -6
-		y = 23
+		x = -14
+		y = 14
 		cost = 10
 
 		search_filters = { FOCUS_FILTER_POLITICAL }
@@ -755,8 +755,8 @@ focus_tree = {
 		id = TU_BOL_coffee_farms
 		icon = GFX_goal_generic_production
 		prerequisite = { focus = TU_BOL_root }
-		x = 26
-		y = 16
+		x = 8
+		y = 9
 		cost = 10
 
 		search_filters = { FOCUS_FILTER_INDUSTRY }
@@ -775,8 +775,8 @@ focus_tree = {
 		id = TU_BOL_road_network
 		icon = GFX_goal_generic_production
 		prerequisite = { focus = TU_BOL_coffee_farms }
-		x = 19
-		y = 17
+		x = 1
+		y = 10
 		cost = 10
 
 		search_filters = { FOCUS_FILTER_INDUSTRY }
@@ -795,8 +795,8 @@ focus_tree = {
 		id = TU_BOL_industrial_district
 		icon = GFX_goal_generic_production
 		prerequisite = { focus = TU_BOL_coffee_farms }
-		x = 24
-		y = 17
+		x = 6
+		y = 10
 		cost = 10
 
 		search_filters = { FOCUS_FILTER_INDUSTRY }
@@ -816,8 +816,8 @@ focus_tree = {
 		icon = GFX_goal_generic_production
 		prerequisite = { focus = TU_BOL_industrial_district }
 		mutually_exclusive = { focus = TU_BOL_arms_program }
-		x = 22
-		y = 18
+		x = 4
+		y = 11
 		cost = 10
 
 		search_filters = { FOCUS_FILTER_INDUSTRY }
@@ -837,8 +837,8 @@ focus_tree = {
 		icon = GFX_goal_generic_small_arms
 		prerequisite = { focus = TU_BOL_industrial_district }
 		mutually_exclusive = { focus = TU_BOL_civ_program }
-		x = 24
-		y = 18
+		x = 6
+		y = 11
 		cost = 10
 
 		search_filters = { FOCUS_FILTER_INDUSTRY }
@@ -858,8 +858,8 @@ focus_tree = {
 		id = TU_BOL_foreign_investment
 		icon = GFX_goal_generic_trade
 		prerequisite = { focus = TU_BOL_road_network }
-		x = 17
-		y = 18
+		x = -1
+		y = 11
 		cost = 10
 
 		search_filters = { FOCUS_FILTER_POLITICAL }
@@ -879,8 +879,8 @@ focus_tree = {
 		icon = GFX_goal_generic_production
 		prerequisite = { focus = TU_BOL_civ_program focus = TU_BOL_arms_program }
 		prerequisite = { focus = TU_BOL_foreign_investment }
-		x = 22
-		y = 19
+		x = 4
+		y = 12
 		cost = 10
 
 		search_filters = { FOCUS_FILTER_INDUSTRY }
@@ -899,8 +899,8 @@ focus_tree = {
 		id = TU_BOL_research_slot
 		icon = GFX_focus_research
 		prerequisite = { focus = TU_BOL_reconstruction }
-		x = 22
-		y = 20
+		x = 4
+		y = 13
 		cost = 10
 
 		search_filters = { FOCUS_FILTER_POLITICAL }
@@ -918,7 +918,7 @@ focus_tree = {
 		id = TU_BOL_signal_corps
 		icon = GFX_goal_generic_intelligence_exchange
 		prerequisite = { focus = TU_BOL_war_council }
-		x = 24
+		x = -7
 		y = 2
 		cost = 10
 
@@ -938,7 +938,7 @@ focus_tree = {
 		id = TU_BOL_jungle_scouts
 		icon = GFX_goal_generic_intelligence_exchange
 		prerequisite = { focus = TU_BOL_guerrilla_doctrine }
-		x = 22
+		x = -9
 		y = 3
 		cost = 10
 
@@ -958,7 +958,7 @@ focus_tree = {
 		id = TU_BOL_booby_traps
 		icon = GFX_goal_generic_army_doctrines
 		prerequisite = { focus = TU_BOL_jungle_forts }
-		x = 18
+		x = -13
 		y = 4
 		cost = 10
 
@@ -978,7 +978,7 @@ focus_tree = {
 		id = TU_BOL_river_patrols
 		icon = GFX_goal_generic_defence
 		prerequisite = { focus = TU_BOL_jungle_forts }
-		x = 20
+		x = -11
 		y = 4
 		cost = 10
 
@@ -998,7 +998,7 @@ focus_tree = {
 		id = TU_BOL_merc_contracts
 		icon = GFX_goal_generic_allies_build_infantry
 		prerequisite = { focus = TU_BOL_foreign_mercs }
-		x = 3
+		x = -28
 		y = 4
 		cost = 10
 
@@ -1018,7 +1018,7 @@ focus_tree = {
 		id = TU_BOL_conscription
 		icon = GFX_goal_generic_allies_build_infantry
 		prerequisite = { focus = TU_BOL_national_army }
-		x = 6
+		x = -25
 		y = 4
 		cost = 10
 
@@ -1038,7 +1038,7 @@ focus_tree = {
 		id = TU_BOL_captured_arms
 		icon = GFX_goal_generic_small_arms
 		prerequisite = { focus = TU_BOL_arms_smuggling }
-		x = 12
+		x = -19
 		y = 5
 		cost = 10
 
@@ -1058,7 +1058,7 @@ focus_tree = {
 		id = TU_BOL_mortar_teams
 		icon = GFX_goal_generic_army_artillery
 		prerequisite = { focus = TU_BOL_arms_smuggling }
-		x = 14
+		x = -17
 		y = 5
 		cost = 10
 
@@ -1078,7 +1078,7 @@ focus_tree = {
 		id = TU_BOL_cavalry_raiders
 		icon = GFX_goal_generic_army_motorized
 		prerequisite = { focus = TU_BOL_guerrilla_masters }
-		x = 10
+		x = -21
 		y = 6
 		cost = 10
 
@@ -1098,7 +1098,7 @@ focus_tree = {
 		id = TU_BOL_trucks
 		icon = GFX_goal_generic_army_motorized
 		prerequisite = { focus = TU_BOL_final_offensive }
-		x = 8
+		x = -23
 		y = 7
 		cost = 10
 
@@ -1118,7 +1118,7 @@ focus_tree = {
 		id = TU_BOL_air_support
 		icon = GFX_goal_generic_air_doctrine
 		prerequisite = { focus = TU_BOL_final_offensive }
-		x = 11
+		x = -20
 		y = 7
 		cost = 10
 
@@ -1139,7 +1139,7 @@ focus_tree = {
 		id = TU_BOL_field_hospitals
 		icon = GFX_goal_generic_consumer_goods
 		prerequisite = { focus = TU_BOL_militia_levy }
-		x = 8
+		x = -23
 		y = 3
 		cost = 10
 
@@ -1161,7 +1161,7 @@ focus_tree = {
 		icon = GFX_goal_generic_improve_relations
 		prerequisite = { focus = TU_BOL_ceasefire_talks }
 		x = 12
-		y = 11
+		y = 2
 		cost = 10
 
 		search_filters = { FOCUS_FILTER_POLITICAL }
@@ -1181,7 +1181,7 @@ focus_tree = {
 		icon = GFX_goal_generic_political_pressure
 		prerequisite = { focus = TU_BOL_reconciliation }
 		x = 9
-		y = 12
+		y = 3
 		cost = 10
 
 		search_filters = { FOCUS_FILTER_POLITICAL }
@@ -1201,7 +1201,7 @@ focus_tree = {
 		icon = GFX_goal_generic_political_pressure
 		prerequisite = { focus = TU_BOL_amnesty }
 		x = 4
-		y = 13
+		y = 4
 		cost = 10
 
 		search_filters = { FOCUS_FILTER_POLITICAL }
@@ -1221,7 +1221,7 @@ focus_tree = {
 		icon = GFX_goal_generic_army_doctrines
 		prerequisite = { focus = TU_BOL_amnesty }
 		x = 7
-		y = 13
+		y = 4
 		cost = 10
 
 		search_filters = { FOCUS_FILTER_INDUSTRY }
@@ -1242,7 +1242,7 @@ focus_tree = {
 		icon = GFX_goal_generic_production
 		prerequisite = { focus = TU_BOL_new_government }
 		x = -1
-		y = 14
+		y = 5
 		cost = 10
 
 		search_filters = { FOCUS_FILTER_POLITICAL }
@@ -1261,7 +1261,7 @@ focus_tree = {
 		icon = GFX_goal_generic_production
 		prerequisite = { focus = TU_BOL_new_government }
 		x = 1
-		y = 14
+		y = 5
 		cost = 10
 
 		search_filters = { FOCUS_FILTER_POLITICAL }
@@ -1280,7 +1280,7 @@ focus_tree = {
 		icon = GFX_goal_generic_allies_build_infantry
 		prerequisite = { focus = TU_BOL_constitution }
 		x = -4
-		y = 16
+		y = 7
 		cost = 10
 
 		search_filters = { FOCUS_FILTER_POLITICAL }
@@ -1299,8 +1299,8 @@ focus_tree = {
 		id = TU_BOL_columbian_advisors
 		icon = GFX_goal_generic_political_pressure
 		prerequisite = { focus = TU_BOL_columbian_alliance }
-		x = 17
-		y = 12
+		x = 15
+		y = 3
 		cost = 10
 
 		search_filters = { FOCUS_FILTER_POLITICAL }
@@ -1319,8 +1319,8 @@ focus_tree = {
 		id = TU_BOL_victorian_advisors
 		icon = GFX_goal_generic_political_pressure
 		prerequisite = { focus = TU_BOL_victorian_alliance }
-		x = 23
-		y = 12
+		x = 19
+		y = 3
 		cost = 10
 
 		search_filters = { FOCUS_FILTER_POLITICAL }
@@ -1339,8 +1339,8 @@ focus_tree = {
 		id = TU_BOL_columbian_loans
 		icon = GFX_goal_generic_trade
 		prerequisite = { focus = TU_BOL_columbian_alliance }
-		x = 19
-		y = 12
+		x = 17
+		y = 3
 		cost = 10
 
 		search_filters = { FOCUS_FILTER_POLITICAL }
@@ -1359,8 +1359,8 @@ focus_tree = {
 		id = TU_BOL_victorian_loans
 		icon = GFX_goal_generic_trade
 		prerequisite = { focus = TU_BOL_victorian_alliance }
-		x = 25
-		y = 12
+		x = 21
+		y = 3
 		cost = 10
 
 		search_filters = { FOCUS_FILTER_POLITICAL }
@@ -1379,8 +1379,8 @@ focus_tree = {
 		id = TU_BOL_foreign_press
 		icon = GFX_goal_generic_allies_build_infantry
 		prerequisite = { focus = TU_BOL_foreign_patrons }
-		x = 27
-		y = 11
+		x = 23
+		y = 2
 		cost = 10
 
 		search_filters = { FOCUS_FILTER_POLITICAL }
@@ -1399,8 +1399,8 @@ focus_tree = {
 		id = TU_BOL_clinics
 		icon = GFX_goal_generic_consumer_goods
 		prerequisite = { focus = TU_BOL_hospital_rebuild }
-		x = 0
-		y = 21
+		x = -8
+		y = 12
 		cost = 10
 
 		search_filters = { FOCUS_FILTER_POLITICAL }
@@ -1420,8 +1420,8 @@ focus_tree = {
 		id = TU_BOL_teachers
 		icon = GFX_goal_generic_army_doctrines
 		prerequisite = { focus = TU_BOL_education_reform }
-		x = -8
-		y = 22
+		x = -16
+		y = 13
 		cost = 10
 
 		search_filters = { FOCUS_FILTER_POLITICAL }
@@ -1440,8 +1440,8 @@ focus_tree = {
 		id = TU_BOL_new_towns
 		icon = GFX_goal_generic_consumer_goods
 		prerequisite = { focus = TU_BOL_housing_rebuild }
-		x = -2
-		y = 22
+		x = -10
+		y = 13
 		cost = 10
 
 		search_filters = { FOCUS_FILTER_INDUSTRY }
@@ -1462,8 +1462,8 @@ focus_tree = {
 		id = TU_BOL_food_aid
 		icon = GFX_goal_generic_consumer_goods
 		prerequisite = { focus = TU_BOL_grain_rationing }
-		x = 2
-		y = 21
+		x = -6
+		y = 12
 		cost = 10
 
 		search_filters = { FOCUS_FILTER_POLITICAL }
@@ -1483,8 +1483,8 @@ focus_tree = {
 		id = TU_BOL_orphan_schools
 		icon = GFX_focus_research
 		prerequisite = { focus = TU_BOL_war_orphans }
-		x = -4
-		y = 23
+		x = -12
+		y = 14
 		cost = 10
 
 		search_filters = { FOCUS_FILTER_POLITICAL }
@@ -1502,8 +1502,8 @@ focus_tree = {
 		id = TU_BOL_banana_plantations
 		icon = GFX_goal_generic_production
 		prerequisite = { focus = TU_BOL_coffee_farms }
-		x = 31
-		y = 17
+		x = 13
+		y = 10
 		cost = 10
 
 		search_filters = { FOCUS_FILTER_INDUSTRY }
@@ -1522,8 +1522,8 @@ focus_tree = {
 		id = TU_BOL_rail_network
 		icon = GFX_goal_generic_construct_infrastructure
 		prerequisite = { focus = TU_BOL_road_network }
-		x = 19
-		y = 18
+		x = 1
+		y = 11
 		cost = 10
 
 		search_filters = { FOCUS_FILTER_INDUSTRY }
@@ -1541,8 +1541,8 @@ focus_tree = {
 		id = TU_BOL_oil_wells
 		icon = GFX_goal_generic_production
 		prerequisite = { focus = TU_BOL_industrial_district }
-		x = 26
-		y = 18
+		x = 8
+		y = 11
 		cost = 10
 
 		search_filters = { FOCUS_FILTER_INDUSTRY }
@@ -1561,8 +1561,8 @@ focus_tree = {
 		id = TU_BOL_rubber
 		icon = GFX_goal_generic_production
 		prerequisite = { focus = TU_BOL_banana_plantations }
-		x = 30
-		y = 18
+		x = 12
+		y = 11
 		cost = 10
 
 		search_filters = { FOCUS_FILTER_INDUSTRY }
@@ -1581,8 +1581,8 @@ focus_tree = {
 		id = TU_BOL_steel_works
 		icon = GFX_goal_generic_small_arms
 		prerequisite = { focus = TU_BOL_oil_wells }
-		x = 24
-		y = 19
+		x = 6
+		y = 12
 		cost = 10
 
 		search_filters = { FOCUS_FILTER_INDUSTRY }
@@ -1602,8 +1602,8 @@ focus_tree = {
 		id = TU_BOL_river_ports
 		icon = GFX_goal_generic_trade
 		prerequisite = { focus = TU_BOL_rail_network }
-		x = 18
-		y = 19
+		x = 0
+		y = 12
 		cost = 10
 
 		search_filters = { FOCUS_FILTER_INDUSTRY }
@@ -1623,8 +1623,8 @@ focus_tree = {
 		id = TU_BOL_power_plants
 		icon = GFX_goal_generic_production
 		prerequisite = { focus = TU_BOL_rail_network }
-		x = 20
-		y = 19
+		x = 2
+		y = 12
 		cost = 10
 
 		search_filters = { FOCUS_FILTER_INDUSTRY }
@@ -1643,8 +1643,8 @@ focus_tree = {
 		id = TU_BOL_sargon_ties
 		icon = GFX_goal_generic_trade
 		prerequisite = { focus = TU_BOL_foreign_patrons }
-		x = 29
-		y = 11
+		x = 25
+		y = 2
 		cost = 10
 
 		search_filters = { FOCUS_FILTER_POLITICAL }
@@ -1663,8 +1663,8 @@ focus_tree = {
 		id = TU_BOL_minos_ties
 		icon = GFX_goal_generic_improve_relations
 		prerequisite = { focus = TU_BOL_foreign_patrons }
-		x = 31
-		y = 11
+		x = 27
+		y = 2
 		cost = 10
 
 		search_filters = { FOCUS_FILTER_POLITICAL }
@@ -1683,7 +1683,7 @@ focus_tree = {
 		id = TU_BOL_kazimierz_mercs
 		icon = GFX_goal_generic_allies_build_infantry
 		prerequisite = { focus = TU_BOL_merc_contracts }
-		x = 2
+		x = -29
 		y = 5
 		cost = 10
 
@@ -1703,8 +1703,8 @@ focus_tree = {
 		id = TU_BOL_rhodes_doctors
 		icon = GFX_goal_generic_consumer_goods
 		prerequisite = { focus = TU_BOL_refugee_relief }
-		x = 4
-		y = 20
+		x = -4
+		y = 11
 		cost = 10
 
 		search_filters = { FOCUS_FILTER_POLITICAL }
@@ -1724,8 +1724,8 @@ focus_tree = {
 		id = TU_BOL_coffee_exports
 		icon = GFX_goal_generic_trade
 		prerequisite = { focus = TU_BOL_coffee_farms }
-		x = 33
-		y = 17
+		x = 15
+		y = 10
 		cost = 10
 
 		search_filters = { FOCUS_FILTER_POLITICAL }
@@ -1744,7 +1744,7 @@ focus_tree = {
 		id = TU_BOL_smuggler_routes
 		icon = GFX_goal_generic_intelligence_exchange
 		prerequisite = { focus = TU_BOL_arms_smuggling }
-		x = 16
+		x = -15
 		y = 5
 		cost = 10
 
@@ -1764,7 +1764,7 @@ focus_tree = {
 		id = TU_BOL_radio_station
 		icon = GFX_goal_generic_production
 		prerequisite = { focus = TU_BOL_signal_corps }
-		x = 24
+		x = -7
 		y = 3
 		cost = 10
 
@@ -1783,7 +1783,7 @@ focus_tree = {
 		id = TU_BOL_jungle_airstrips
 		icon = GFX_goal_generic_air_doctrine
 		prerequisite = { focus = TU_BOL_air_support }
-		x = 10
+		x = -21
 		y = 8
 		cost = 10
 
@@ -1805,7 +1805,7 @@ focus_tree = {
 		icon = GFX_focus_research
 		prerequisite = { focus = TU_BOL_disarmament }
 		x = 3
-		y = 14
+		y = 5
 		cost = 10
 
 		search_filters = { FOCUS_FILTER_POLITICAL }
@@ -1824,7 +1824,7 @@ focus_tree = {
 		icon = GFX_goal_generic_propaganda
 		prerequisite = { focus = TU_BOL_truth_commission }
 		x = 9
-		y = 13
+		y = 4
 		cost = 10
 
 		search_filters = { FOCUS_FILTER_POLITICAL }
@@ -1844,7 +1844,7 @@ focus_tree = {
 		icon = GFX_goal_generic_trade
 		prerequisite = { focus = TU_BOL_courts_rebuild }
 		x = 1
-		y = 15
+		y = 6
 		cost = 10
 
 		search_filters = { FOCUS_FILTER_POLITICAL }
@@ -1863,7 +1863,7 @@ focus_tree = {
 		id = TU_BOL_night_raids
 		icon = GFX_goal_generic_army_motorized
 		prerequisite = { focus = TU_BOL_jungle_scouts }
-		x = 22
+		x = -9
 		y = 4
 		cost = 10
 
@@ -1883,7 +1883,7 @@ focus_tree = {
 		id = TU_BOL_ambush_school
 		icon = GFX_goal_generic_army_doctrines
 		prerequisite = { focus = TU_BOL_booby_traps }
-		x = 18
+		x = -13
 		y = 5
 		cost = 10
 
@@ -1903,7 +1903,7 @@ focus_tree = {
 		id = TU_BOL_merc_officers
 		icon = GFX_goal_generic_army_doctrines
 		prerequisite = { focus = TU_BOL_merc_contracts }
-		x = 4
+		x = -27
 		y = 5
 		cost = 10
 
@@ -1923,7 +1923,7 @@ focus_tree = {
 		id = TU_BOL_draft_boards
 		icon = GFX_goal_generic_occupy_start_war
 		prerequisite = { focus = TU_BOL_conscription }
-		x = 6
+		x = -25
 		y = 5
 		cost = 10
 
@@ -1944,7 +1944,7 @@ focus_tree = {
 		id = TU_BOL_rifle_factory
 		icon = GFX_goal_generic_small_arms
 		prerequisite = { focus = TU_BOL_captured_arms }
-		x = 12
+		x = -19
 		y = 6
 		cost = 10
 
@@ -1965,7 +1965,7 @@ focus_tree = {
 		id = TU_BOL_light_artillery
 		icon = GFX_goal_generic_army_artillery
 		prerequisite = { focus = TU_BOL_mortar_teams }
-		x = 14
+		x = -17
 		y = 6
 		cost = 10
 
@@ -1985,7 +1985,7 @@ focus_tree = {
 		id = TU_BOL_armoured_trucks
 		icon = GFX_goal_generic_army_tanks
 		prerequisite = { focus = TU_BOL_trucks }
-		x = 8
+		x = -23
 		y = 8
 		cost = 10
 
@@ -2005,7 +2005,7 @@ focus_tree = {
 		id = TU_BOL_bomber_wing
 		icon = GFX_goal_generic_air_doctrine
 		prerequisite = { focus = TU_BOL_air_support }
-		x = 12
+		x = -19
 		y = 8
 		cost = 10
 
@@ -2026,7 +2026,7 @@ focus_tree = {
 		id = TU_BOL_victory_parade
 		icon = GFX_goal_generic_occupy_start_war
 		prerequisite = { focus = TU_BOL_veteran_army }
-		x = 6
+		x = -25
 		y = 8
 		cost = 10
 
@@ -2048,7 +2048,7 @@ focus_tree = {
 		icon = GFX_goal_generic_improve_relations
 		prerequisite = { focus = TU_BOL_peace_envoys }
 		x = 11
-		y = 12
+		y = 3
 		cost = 10
 
 		search_filters = { FOCUS_FILTER_POLITICAL }
@@ -2068,7 +2068,7 @@ focus_tree = {
 		icon = GFX_goal_generic_production
 		prerequisite = { focus = TU_BOL_veterans_land }
 		x = 7
-		y = 14
+		y = 5
 		cost = 10
 
 		search_filters = { FOCUS_FILTER_INDUSTRY }
@@ -2088,7 +2088,7 @@ focus_tree = {
 		icon = GFX_goal_generic_allies_build_infantry
 		prerequisite = { focus = TU_BOL_disarmament }
 		x = 5
-		y = 14
+		y = 5
 		cost = 10
 
 		search_filters = { FOCUS_FILTER_POLITICAL }
@@ -2108,7 +2108,7 @@ focus_tree = {
 		icon = GFX_goal_generic_production
 		prerequisite = { focus = TU_BOL_national_guard }
 		x = -4
-		y = 17
+		y = 8
 		cost = 10
 
 		search_filters = { FOCUS_FILTER_INDUSTRY }
@@ -2127,8 +2127,8 @@ focus_tree = {
 		id = TU_BOL_columbian_schools
 		icon = GFX_focus_research
 		prerequisite = { focus = TU_BOL_columbian_factories }
-		x = 15
-		y = 14
+		x = 14
+		y = 7
 		cost = 10
 
 		search_filters = { FOCUS_FILTER_POLITICAL }
@@ -2146,8 +2146,8 @@ focus_tree = {
 		id = TU_BOL_victorian_railways
 		icon = GFX_goal_generic_construct_infrastructure
 		prerequisite = { focus = TU_BOL_victorian_garrisons }
-		x = 21
-		y = 14
+		x = 18
+		y = 7
 		cost = 10
 
 		search_filters = { FOCUS_FILTER_INDUSTRY }
@@ -2165,8 +2165,8 @@ focus_tree = {
 		id = TU_BOL_aid_warehouses
 		icon = GFX_goal_generic_production
 		prerequisite = { focus = TU_BOL_foreign_press }
-		x = 27
-		y = 12
+		x = 23
+		y = 3
 		cost = 10
 
 		search_filters = { FOCUS_FILTER_POLITICAL }
@@ -2184,8 +2184,8 @@ focus_tree = {
 		id = TU_BOL_vaccination
 		icon = GFX_goal_generic_occupy_start_war
 		prerequisite = { focus = TU_BOL_clinics }
-		x = 0
-		y = 22
+		x = -8
+		y = 13
 		cost = 10
 
 		search_filters = { FOCUS_FILTER_POLITICAL }
@@ -2205,8 +2205,8 @@ focus_tree = {
 		id = TU_BOL_literacy
 		icon = GFX_goal_generic_occupy_start_war
 		prerequisite = { focus = TU_BOL_teachers }
-		x = -8
-		y = 23
+		x = -16
+		y = 14
 		cost = 10
 
 		search_filters = { FOCUS_FILTER_POLITICAL }
@@ -2226,8 +2226,8 @@ focus_tree = {
 		id = TU_BOL_market_towns
 		icon = GFX_goal_generic_trade
 		prerequisite = { focus = TU_BOL_new_towns }
-		x = -2
-		y = 23
+		x = -10
+		y = 14
 		cost = 10
 
 		search_filters = { FOCUS_FILTER_POLITICAL }
@@ -2246,8 +2246,8 @@ focus_tree = {
 		id = TU_BOL_school_meals
 		icon = GFX_goal_generic_consumer_goods
 		prerequisite = { focus = TU_BOL_food_aid }
-		x = 2
-		y = 22
+		x = -6
+		y = 13
 		cost = 10
 
 		search_filters = { FOCUS_FILTER_POLITICAL }
@@ -2267,8 +2267,8 @@ focus_tree = {
 		id = TU_BOL_cocoa_trade
 		icon = GFX_goal_generic_trade
 		prerequisite = { focus = TU_BOL_banana_plantations }
-		x = 32
-		y = 18
+		x = 14
+		y = 11
 		cost = 10
 
 		search_filters = { FOCUS_FILTER_POLITICAL }
@@ -2287,8 +2287,8 @@ focus_tree = {
 		id = TU_BOL_refinery
 		icon = GFX_goal_generic_production
 		prerequisite = { focus = TU_BOL_oil_wells }
-		x = 26
-		y = 19
+		x = 8
+		y = 12
 		cost = 10
 
 		search_filters = { FOCUS_FILTER_INDUSTRY }
@@ -2307,8 +2307,8 @@ focus_tree = {
 		id = TU_BOL_cement_plant
 		icon = GFX_goal_generic_production
 		prerequisite = { focus = TU_BOL_steel_works }
-		x = 24
-		y = 20
+		x = 6
+		y = 13
 		cost = 10
 
 		search_filters = { FOCUS_FILTER_INDUSTRY }
@@ -2327,8 +2327,8 @@ focus_tree = {
 		id = TU_BOL_hydro_dam
 		icon = GFX_goal_generic_political_pressure
 		prerequisite = { focus = TU_BOL_power_plants }
-		x = 20
-		y = 20
+		x = 2
+		y = 13
 		cost = 10
 
 		search_filters = { FOCUS_FILTER_INDUSTRY }
@@ -2348,8 +2348,8 @@ focus_tree = {
 		id = TU_BOL_textiles
 		icon = GFX_goal_generic_production
 		prerequisite = { focus = TU_BOL_rubber }
-		x = 30
-		y = 19
+		x = 12
+		y = 12
 		cost = 10
 
 		search_filters = { FOCUS_FILTER_INDUSTRY }
@@ -2368,8 +2368,8 @@ focus_tree = {
 		id = TU_BOL_mining_towns
 		icon = GFX_goal_generic_production
 		prerequisite = { focus = TU_BOL_oil_wells }
-		x = 28
-		y = 19
+		x = 10
+		y = 12
 		cost = 10
 
 		search_filters = { FOCUS_FILTER_INDUSTRY }
@@ -2388,8 +2388,8 @@ focus_tree = {
 		id = TU_BOL_rhodes_clinics
 		icon = GFX_goal_generic_consumer_goods
 		prerequisite = { focus = TU_BOL_rhodes_doctors }
-		x = 4
-		y = 21
+		x = -4
+		y = 12
 		cost = 10
 
 		search_filters = { FOCUS_FILTER_POLITICAL }
@@ -2409,8 +2409,8 @@ focus_tree = {
 		id = TU_BOL_iberia_ties
 		icon = GFX_goal_generic_improve_relations
 		prerequisite = { focus = TU_BOL_minos_ties }
-		x = 31
-		y = 12
+		x = 27
+		y = 3
 		cost = 10
 
 		search_filters = { FOCUS_FILTER_POLITICAL }
@@ -2430,7 +2430,7 @@ focus_tree = {
 		icon = GFX_goal_generic_improve_relations
 		prerequisite = { focus = TU_BOL_peace_envoys }
 		x = 13
-		y = 12
+		y = 3
 		cost = 10
 
 		search_filters = { FOCUS_FILTER_POLITICAL }
@@ -2450,7 +2450,7 @@ focus_tree = {
 		icon = GFX_goal_generic_propaganda
 		prerequisite = { focus = TU_BOL_national_elections }
 		x = -2
-		y = 16
+		y = 7
 		cost = 10
 
 		search_filters = { FOCUS_FILTER_POLITICAL }
@@ -2470,7 +2470,7 @@ focus_tree = {
 		icon = GFX_goal_generic_trade
 		prerequisite = { focus = TU_BOL_tax_reform }
 		x = 1
-		y = 16
+		y = 7
 		cost = 10
 
 		search_filters = { FOCUS_FILTER_POLITICAL }

@@ -41,7 +41,7 @@ focus_tree = {
 		id = TU_COL_rhine_pact
 		icon = GFX_focus_research
 		prerequisite = { focus = TU_COL_root }
-		x = -8
+		x = -24
 		y = 1
 		cost = 10
 
@@ -62,7 +62,7 @@ focus_tree = {
 		id = TU_COL_research_grants
 		icon = GFX_focus_research
 		prerequisite = { focus = TU_COL_rhine_pact }
-		x = -8
+		x = -24
 		y = 2
 		cost = 10
 
@@ -82,7 +82,7 @@ focus_tree = {
 		id = TU_COL_scientist_visas
 		icon = GFX_focus_research
 		prerequisite = { focus = TU_COL_research_grants }
-		x = -11
+		x = -27
 		y = 3
 		cost = 10
 
@@ -102,7 +102,7 @@ focus_tree = {
 		id = TU_COL_trimounts_campus
 		icon = GFX_focus_research
 		prerequisite = { focus = TU_COL_research_grants }
-		x = -8
+		x = -24
 		y = 3
 		cost = 10
 
@@ -124,7 +124,7 @@ focus_tree = {
 		icon = GFX_focus_research
 		prerequisite = { focus = TU_COL_trimounts_campus }
 		mutually_exclusive = { focus = TU_COL_civil_research }
-		x = -9
+		x = -25
 		y = 4
 		cost = 10
 
@@ -145,7 +145,7 @@ focus_tree = {
 		icon = GFX_focus_research
 		prerequisite = { focus = TU_COL_trimounts_campus }
 		mutually_exclusive = { focus = TU_COL_military_research }
-		x = -7
+		x = -23
 		y = 4
 		cost = 10
 
@@ -165,7 +165,7 @@ focus_tree = {
 		id = TU_COL_originium_standards
 		icon = GFX_focus_research
 		prerequisite = { focus = TU_COL_military_research focus = TU_COL_civil_research }
-		x = -8
+		x = -24
 		y = 5
 		cost = 10
 
@@ -185,7 +185,7 @@ focus_tree = {
 		id = TU_COL_engineering_division
 		icon = GFX_focus_research
 		prerequisite = { focus = TU_COL_originium_standards }
-		x = -8
+		x = -24
 		y = 6
 		cost = 10
 
@@ -204,7 +204,7 @@ focus_tree = {
 		id = TU_COL_ecology_division
 		icon = GFX_focus_research
 		prerequisite = { focus = TU_COL_originium_standards }
-		x = -4
+		x = -20
 		y = 6
 		cost = 10
 
@@ -223,7 +223,7 @@ focus_tree = {
 		id = TU_COL_structural_division
 		icon = GFX_focus_research
 		prerequisite = { focus = TU_COL_engineering_division }
-		x = -8
+		x = -24
 		y = 7
 		cost = 10
 
@@ -243,7 +243,7 @@ focus_tree = {
 		icon = GFX_focus_research
 		prerequisite = { focus = TU_COL_scientist_visas }
 		prerequisite = { focus = TU_COL_originium_standards }
-		x = -2
+		x = -18
 		y = 6
 		cost = 10
 
@@ -262,7 +262,7 @@ focus_tree = {
 		id = TU_COL_sky_project_prep
 		icon = GFX_goal_generic_air_doctrine
 		prerequisite = { focus = TU_COL_structural_division }
-		x = -8
+		x = -24
 		y = 8
 		cost = 10
 
@@ -286,7 +286,7 @@ focus_tree = {
 		id = TU_COL_rhine_independence
 		icon = GFX_focus_research
 		prerequisite = { focus = TU_COL_sky_project_prep }
-		x = -8
+		x = -24
 		y = 9
 		cost = 10
 
@@ -305,7 +305,7 @@ focus_tree = {
 		id = TU_COL_congress_session
 		icon = GFX_goal_generic_political_pressure
 		prerequisite = { focus = TU_COL_root }
-		x = 6
+		x = -10
 		y = 1
 		cost = 10
 
@@ -325,7 +325,7 @@ focus_tree = {
 		id = TU_COL_presidential_office
 		icon = GFX_goal_generic_political_pressure
 		prerequisite = { focus = TU_COL_congress_session }
-		x = 2
+		x = -14
 		y = 2
 		cost = 10
 
@@ -345,7 +345,7 @@ focus_tree = {
 		id = TU_COL_campaign_finance
 		icon = GFX_goal_generic_occupy_start_war
 		prerequisite = { focus = TU_COL_presidential_office }
-		x = 1
+		x = -15
 		y = 3
 		cost = 10
 
@@ -365,7 +365,7 @@ focus_tree = {
 		id = TU_COL_federal_budget
 		icon = GFX_goal_generic_trade
 		prerequisite = { focus = TU_COL_congress_session }
-		x = 6
+		x = -10
 		y = 2
 		cost = 10
 
@@ -386,7 +386,7 @@ focus_tree = {
 		icon = GFX_goal_generic_political_pressure
 		prerequisite = { focus = TU_COL_federal_budget }
 		mutually_exclusive = { focus = TU_COL_states_rights }
-		x = 5
+		x = -11
 		y = 3
 		cost = 10
 
@@ -407,7 +407,7 @@ focus_tree = {
 		icon = GFX_goal_generic_improve_relations
 		prerequisite = { focus = TU_COL_federal_budget }
 		mutually_exclusive = { focus = TU_COL_federal_power }
-		x = 7
+		x = -9
 		y = 3
 		cost = 10
 
@@ -427,7 +427,7 @@ focus_tree = {
 		id = TU_COL_frontier_sheriffs
 		icon = GFX_goal_generic_defence
 		prerequisite = { focus = TU_COL_federal_power focus = TU_COL_states_rights }
-		x = 6
+		x = -10
 		y = 4
 		cost = 10
 
@@ -447,7 +447,7 @@ focus_tree = {
 		id = TU_COL_anti_corruption
 		icon = GFX_goal_generic_political_pressure
 		prerequisite = { focus = TU_COL_frontier_sheriffs }
-		x = 6
+		x = -10
 		y = 5
 		cost = 10
 
@@ -467,7 +467,7 @@ focus_tree = {
 		id = TU_COL_free_press
 		icon = GFX_goal_generic_production
 		prerequisite = { focus = TU_COL_anti_corruption }
-		x = 3
+		x = -12
 		y = 6
 		cost = 10
 
@@ -489,7 +489,7 @@ focus_tree = {
 		prerequisite = { focus = TU_COL_free_press }
 		prerequisite = { focus = TU_COL_campaign_finance }
 		mutually_exclusive = { focus = TU_COL_corporate_republic focus = TU_COL_frontier_federation }
-		x = 3
+		x = -12
 		y = 7
 		cost = 15
 
@@ -512,7 +512,7 @@ focus_tree = {
 		id = TU_COL_civil_liberties
 		icon = GFX_goal_generic_political_pressure
 		prerequisite = { focus = TU_COL_republic_guard }
-		x = 3
+		x = -12
 		y = 8
 		cost = 10
 
@@ -532,7 +532,7 @@ focus_tree = {
 		id = TU_COL_public_education
 		icon = GFX_focus_research
 		prerequisite = { focus = TU_COL_civil_liberties }
-		x = 2
+		x = -13
 		y = 9
 		cost = 10
 
@@ -551,7 +551,7 @@ focus_tree = {
 		id = TU_COL_new_deal
 		icon = GFX_goal_generic_production
 		prerequisite = { focus = TU_COL_public_education }
-		x = 2
+		x = -13
 		y = 10
 		cost = 10
 
@@ -573,8 +573,8 @@ focus_tree = {
 		icon = GFX_goal_generic_political_pressure
 		prerequisite = { focus = TU_COL_anti_corruption }
 		mutually_exclusive = { focus = TU_COL_republic_guard focus = TU_COL_frontier_federation }
-		x = 8
-		y = 6
+		x = -8
+		y = 7
 		cost = 15
 
 		search_filters = { FOCUS_FILTER_POLITICAL }
@@ -606,8 +606,8 @@ focus_tree = {
 		id = TU_COL_blacksteel_contracts
 		icon = GFX_goal_generic_small_arms
 		prerequisite = { focus = TU_COL_corporate_republic }
-		x = 8
-		y = 7
+		x = -8
+		y = 8
 		cost = 10
 
 		search_filters = { FOCUS_FILTER_POLITICAL }
@@ -626,8 +626,8 @@ focus_tree = {
 		id = TU_COL_corporate_boards
 		icon = GFX_goal_generic_political_pressure
 		prerequisite = { focus = TU_COL_blacksteel_contracts }
-		x = 8
-		y = 8
+		x = -8
+		y = 9
 		cost = 10
 
 		search_filters = { FOCUS_FILTER_POLITICAL }
@@ -646,8 +646,8 @@ focus_tree = {
 		id = TU_COL_private_research
 		icon = GFX_focus_research
 		prerequisite = { focus = TU_COL_corporate_boards }
-		x = 6
-		y = 9
+		x = -10
+		y = 10
 		cost = 10
 
 		search_filters = { FOCUS_FILTER_POLITICAL }
@@ -668,8 +668,8 @@ focus_tree = {
 		icon = GFX_goal_generic_defence
 		prerequisite = { focus = TU_COL_frontier_sheriffs }
 		mutually_exclusive = { focus = TU_COL_republic_guard focus = TU_COL_corporate_republic }
-		x = 12
-		y = 5
+		x = -2
+		y = 7
 		cost = 15
 
 		search_filters = { FOCUS_FILTER_POLITICAL }
@@ -697,8 +697,8 @@ focus_tree = {
 		id = TU_COL_ranger_corps
 		icon = GFX_goal_generic_allies_build_infantry
 		prerequisite = { focus = TU_COL_frontier_federation }
-		x = 12
-		y = 6
+		x = -2
+		y = 8
 		cost = 10
 
 		search_filters = { FOCUS_FILTER_POLITICAL }
@@ -717,8 +717,8 @@ focus_tree = {
 		id = TU_COL_frontier_militia
 		icon = GFX_goal_generic_defence
 		prerequisite = { focus = TU_COL_ranger_corps }
-		x = 11
-		y = 7
+		x = -3
+		y = 9
 		cost = 10
 
 		search_filters = { FOCUS_FILTER_POLITICAL }
@@ -737,8 +737,8 @@ focus_tree = {
 		id = TU_COL_manifest_destiny
 		icon = GFX_goal_generic_occupy_start_war
 		prerequisite = { focus = TU_COL_frontier_militia }
-		x = 10
-		y = 8
+		x = -4
+		y = 10
 		cost = 10
 
 		search_filters = { FOCUS_FILTER_POLITICAL }
@@ -758,7 +758,7 @@ focus_tree = {
 		id = TU_COL_air_force
 		icon = GFX_goal_generic_air_doctrine
 		prerequisite = { focus = TU_COL_root }
-		x = 24
+		x = 9
 		y = 1
 		cost = 10
 
@@ -779,7 +779,7 @@ focus_tree = {
 		id = TU_COL_air_academy
 		icon = GFX_goal_generic_air_doctrine
 		prerequisite = { focus = TU_COL_air_force }
-		x = 19
+		x = 4
 		y = 2
 		cost = 10
 
@@ -800,7 +800,7 @@ focus_tree = {
 		id = TU_COL_fighter_programme
 		icon = GFX_goal_generic_air_doctrine
 		prerequisite = { focus = TU_COL_air_force }
-		x = 23
+		x = 8
 		y = 2
 		cost = 10
 
@@ -821,7 +821,7 @@ focus_tree = {
 		id = TU_COL_bomber_programme
 		icon = GFX_goal_generic_air_doctrine
 		prerequisite = { focus = TU_COL_air_force }
-		x = 27
+		x = 12
 		y = 2
 		cost = 10
 
@@ -842,7 +842,7 @@ focus_tree = {
 		id = TU_COL_escort_fighters
 		icon = GFX_goal_generic_air_doctrine
 		prerequisite = { focus = TU_COL_fighter_programme }
-		x = 22
+		x = 7
 		y = 3
 		cost = 10
 
@@ -864,7 +864,7 @@ focus_tree = {
 		icon = GFX_goal_generic_air_doctrine
 		prerequisite = { focus = TU_COL_bomber_programme }
 		mutually_exclusive = { focus = TU_COL_close_support }
-		x = 26
+		x = 11
 		y = 3
 		cost = 10
 
@@ -886,7 +886,7 @@ focus_tree = {
 		icon = GFX_goal_generic_air_doctrine
 		prerequisite = { focus = TU_COL_bomber_programme }
 		mutually_exclusive = { focus = TU_COL_strategic_bombing }
-		x = 28
+		x = 13
 		y = 3
 		cost = 10
 
@@ -907,7 +907,7 @@ focus_tree = {
 		id = TU_COL_airfields
 		icon = GFX_goal_generic_air_doctrine
 		prerequisite = { focus = TU_COL_air_academy }
-		x = 18
+		x = 3
 		y = 3
 		cost = 10
 
@@ -928,7 +928,7 @@ focus_tree = {
 		id = TU_COL_radar_net
 		icon = GFX_focus_research
 		prerequisite = { focus = TU_COL_airfields }
-		x = 17
+		x = 2
 		y = 4
 		cost = 10
 
@@ -947,7 +947,7 @@ focus_tree = {
 		id = TU_COL_jet_research
 		icon = GFX_focus_research
 		prerequisite = { focus = TU_COL_strategic_bombing focus = TU_COL_close_support }
-		x = 27
+		x = 12
 		y = 4
 		cost = 10
 
@@ -968,7 +968,7 @@ focus_tree = {
 		icon = GFX_goal_generic_air_doctrine
 		prerequisite = { focus = TU_COL_jet_research }
 		prerequisite = { focus = TU_COL_escort_fighters }
-		x = 27
+		x = 12
 		y = 5
 		cost = 10
 
@@ -988,7 +988,7 @@ focus_tree = {
 		id = TU_COL_army_reform
 		icon = GFX_goal_generic_allies_build_infantry
 		prerequisite = { focus = TU_COL_root }
-		x = -17
+		x = -33
 		y = 11
 		cost = 10
 
@@ -1008,7 +1008,7 @@ focus_tree = {
 		id = TU_COL_motorised_infantry
 		icon = GFX_goal_generic_army_motorized
 		prerequisite = { focus = TU_COL_army_reform }
-		x = -17
+		x = -33
 		y = 12
 		cost = 10
 
@@ -1028,7 +1028,7 @@ focus_tree = {
 		id = TU_COL_mechanised_infantry
 		icon = GFX_goal_generic_army_motorized
 		prerequisite = { focus = TU_COL_motorised_infantry }
-		x = -17
+		x = -33
 		y = 13
 		cost = 10
 
@@ -1048,7 +1048,7 @@ focus_tree = {
 		id = TU_COL_armoured_divisions
 		icon = GFX_goal_generic_army_tanks
 		prerequisite = { focus = TU_COL_mechanised_infantry }
-		x = -17
+		x = -33
 		y = 14
 		cost = 10
 
@@ -1068,7 +1068,7 @@ focus_tree = {
 		id = TU_COL_artillery_corps
 		icon = GFX_goal_generic_army_artillery
 		prerequisite = { focus = TU_COL_army_reform }
-		x = -15
+		x = -31
 		y = 12
 		cost = 10
 
@@ -1088,7 +1088,7 @@ focus_tree = {
 		id = TU_COL_rifle_standard
 		icon = GFX_goal_generic_small_arms
 		prerequisite = { focus = TU_COL_army_reform }
-		x = -12
+		x = -28
 		y = 12
 		cost = 10
 
@@ -1109,7 +1109,7 @@ focus_tree = {
 		icon = GFX_goal_generic_small_arms
 		prerequisite = { focus = TU_COL_armoured_divisions }
 		prerequisite = { focus = TU_COL_artillery_corps }
-		x = -17
+		x = -33
 		y = 15
 		cost = 10
 
@@ -1130,7 +1130,7 @@ focus_tree = {
 		icon = GFX_goal_generic_army_motorized
 		prerequisite = { focus = TU_COL_combined_arms }
 		mutually_exclusive = { focus = TU_COL_firepower }
-		x = -18
+		x = -34
 		y = 16
 		cost = 10
 
@@ -1151,7 +1151,7 @@ focus_tree = {
 		icon = GFX_goal_generic_army_doctrines
 		prerequisite = { focus = TU_COL_combined_arms }
 		mutually_exclusive = { focus = TU_COL_mobile_warfare }
-		x = -16
+		x = -32
 		y = 16
 		cost = 10
 
@@ -1171,7 +1171,7 @@ focus_tree = {
 		id = TU_COL_logistics_corps
 		icon = GFX_goal_generic_allies_build_infantry
 		prerequisite = { focus = TU_COL_mobile_warfare focus = TU_COL_firepower }
-		x = -17
+		x = -33
 		y = 17
 		cost = 10
 
@@ -1191,7 +1191,7 @@ focus_tree = {
 		id = TU_COL_mechanised_army
 		icon = GFX_goal_generic_army_motorized
 		prerequisite = { focus = TU_COL_logistics_corps }
-		x = -17
+		x = -33
 		y = 18
 		cost = 10
 
@@ -1211,7 +1211,7 @@ focus_tree = {
 		id = TU_COL_oil_industry
 		icon = GFX_goal_generic_production
 		prerequisite = { focus = TU_COL_root }
-		x = 0
+		x = -16
 		y = 12
 		cost = 10
 
@@ -1231,7 +1231,7 @@ focus_tree = {
 		id = TU_COL_continental_rail
 		icon = GFX_goal_generic_construct_infrastructure
 		prerequisite = { focus = TU_COL_oil_industry }
-		x = -3
+		x = -19
 		y = 13
 		cost = 10
 
@@ -1250,7 +1250,7 @@ focus_tree = {
 		id = TU_COL_highways
 		icon = GFX_goal_generic_production
 		prerequisite = { focus = TU_COL_continental_rail }
-		x = -4
+		x = -20
 		y = 14
 		cost = 10
 
@@ -1270,7 +1270,7 @@ focus_tree = {
 		id = TU_COL_steel_belt
 		icon = GFX_goal_generic_small_arms
 		prerequisite = { focus = TU_COL_oil_industry }
-		x = 0
+		x = -16
 		y = 13
 		cost = 10
 
@@ -1291,7 +1291,7 @@ focus_tree = {
 		id = TU_COL_factory_towns
 		icon = GFX_goal_generic_production
 		prerequisite = { focus = TU_COL_steel_belt }
-		x = 0
+		x = -16
 		y = 14
 		cost = 10
 
@@ -1312,7 +1312,7 @@ focus_tree = {
 		icon = GFX_goal_generic_trade
 		prerequisite = { focus = TU_COL_factory_towns }
 		mutually_exclusive = { focus = TU_COL_arsenal_democracy }
-		x = -1
+		x = -17
 		y = 15
 		cost = 10
 
@@ -1334,7 +1334,7 @@ focus_tree = {
 		icon = GFX_goal_generic_small_arms
 		prerequisite = { focus = TU_COL_factory_towns }
 		mutually_exclusive = { focus = TU_COL_consumer_boom }
-		x = 1
+		x = -15
 		y = 15
 		cost = 10
 
@@ -1355,7 +1355,7 @@ focus_tree = {
 		id = TU_COL_stock_exchange
 		icon = GFX_goal_generic_trade
 		prerequisite = { focus = TU_COL_consumer_boom focus = TU_COL_arsenal_democracy }
-		x = 0
+		x = -16
 		y = 16
 		cost = 10
 
@@ -1376,7 +1376,7 @@ focus_tree = {
 		id = TU_COL_power_grid
 		icon = GFX_goal_generic_production
 		prerequisite = { focus = TU_COL_highways }
-		x = -4
+		x = -20
 		y = 15
 		cost = 10
 
@@ -1396,7 +1396,7 @@ focus_tree = {
 		id = TU_COL_assembly_lines
 		icon = GFX_goal_generic_defence
 		prerequisite = { focus = TU_COL_stock_exchange }
-		x = -1
+		x = -17
 		y = 17
 		cost = 10
 
@@ -1418,7 +1418,7 @@ focus_tree = {
 		icon = GFX_goal_generic_production
 		prerequisite = { focus = TU_COL_assembly_lines }
 		prerequisite = { focus = TU_COL_power_grid }
-		x = -2
+		x = -18
 		y = 18
 		cost = 10
 
@@ -1438,8 +1438,8 @@ focus_tree = {
 		id = TU_COL_state_department
 		icon = GFX_goal_generic_political_pressure
 		prerequisite = { focus = TU_COL_root }
-		x = 16
-		y = 10
+		x = 0
+		y = 12
 		cost = 10
 
 		search_filters = { FOCUS_FILTER_POLITICAL }
@@ -1458,8 +1458,8 @@ focus_tree = {
 		id = TU_COL_victoria_memory
 		icon = GFX_goal_generic_improve_relations
 		prerequisite = { focus = TU_COL_state_department }
-		x = 13
-		y = 11
+		x = -3
+		y = 13
 		cost = 10
 
 		search_filters = { FOCUS_FILTER_POLITICAL }
@@ -1478,8 +1478,8 @@ focus_tree = {
 		id = TU_COL_bolivar_question
 		icon = GFX_goal_generic_political_pressure
 		prerequisite = { focus = TU_COL_state_department }
-		x = 15
-		y = 11
+		x = -1
+		y = 13
 		cost = 10
 
 		search_filters = { FOCUS_FILTER_POLITICAL }
@@ -1497,8 +1497,8 @@ focus_tree = {
 		id = TU_COL_sargon_trade
 		icon = GFX_goal_generic_trade
 		prerequisite = { focus = TU_COL_state_department }
-		x = 17
-		y = 11
+		x = 1
+		y = 13
 		cost = 10
 
 		search_filters = { FOCUS_FILTER_POLITICAL }
@@ -1517,8 +1517,8 @@ focus_tree = {
 		id = TU_COL_kazimierz_ties
 		icon = GFX_goal_generic_improve_relations
 		prerequisite = { focus = TU_COL_sargon_trade }
-		x = 17
-		y = 12
+		x = 1
+		y = 14
 		cost = 10
 
 		search_filters = { FOCUS_FILTER_POLITICAL }
@@ -1538,8 +1538,8 @@ focus_tree = {
 		icon = GFX_goal_generic_improve_relations
 		prerequisite = { focus = TU_COL_kazimierz_ties }
 		mutually_exclusive = { focus = TU_COL_intervention }
-		x = 16
-		y = 13
+		x = 0
+		y = 15
 		cost = 10
 
 		search_filters = { FOCUS_FILTER_POLITICAL }
@@ -1559,8 +1559,8 @@ focus_tree = {
 		icon = GFX_goal_generic_improve_relations
 		prerequisite = { focus = TU_COL_kazimierz_ties }
 		mutually_exclusive = { focus = TU_COL_isolation }
-		x = 18
-		y = 13
+		x = 2
+		y = 15
 		cost = 10
 
 		search_filters = { FOCUS_FILTER_POLITICAL }
@@ -1579,7 +1579,7 @@ focus_tree = {
 		id = TU_COL_rhine_security
 		icon = GFX_focus_research
 		prerequisite = { focus = TU_COL_rhine_pact }
-		x = -6
+		x = -22
 		y = 2
 		cost = 10
 
@@ -1598,7 +1598,7 @@ focus_tree = {
 		id = TU_COL_urban_defence_research
 		icon = GFX_goal_generic_defence
 		prerequisite = { focus = TU_COL_rhine_security }
-		x = -6
+		x = -22
 		y = 3
 		cost = 10
 
@@ -1619,7 +1619,7 @@ focus_tree = {
 		id = TU_COL_energy_research
 		icon = GFX_focus_research
 		prerequisite = { focus = TU_COL_engineering_division }
-		x = -6
+		x = -22
 		y = 7
 		cost = 10
 
@@ -1639,7 +1639,7 @@ focus_tree = {
 		id = TU_COL_lab_safety
 		icon = GFX_goal_generic_political_pressure
 		prerequisite = { focus = TU_COL_ecology_division }
-		x = -4
+		x = -20
 		y = 7
 		cost = 10
 
@@ -1659,7 +1659,7 @@ focus_tree = {
 		id = TU_COL_talent_recruitment
 		icon = GFX_focus_research
 		prerequisite = { focus = TU_COL_scientist_visas }
-		x = -11
+		x = -27
 		y = 4
 		cost = 10
 
@@ -1679,7 +1679,7 @@ focus_tree = {
 		id = TU_COL_tax_office
 		icon = GFX_goal_generic_trade
 		prerequisite = { focus = TU_COL_federal_budget }
-		x = 9
+		x = -7
 		y = 3
 		cost = 10
 
@@ -1699,7 +1699,7 @@ focus_tree = {
 		id = TU_COL_investigation_bureau
 		icon = GFX_goal_generic_political_pressure
 		prerequisite = { focus = TU_COL_anti_corruption }
-		x = 10
+		x = -7
 		y = 6
 		cost = 10
 
@@ -1719,7 +1719,7 @@ focus_tree = {
 		id = TU_COL_supreme_court
 		icon = GFX_goal_generic_political_pressure
 		prerequisite = { focus = TU_COL_presidential_office }
-		x = 3
+		x = -13
 		y = 3
 		cost = 10
 
@@ -1739,7 +1739,7 @@ focus_tree = {
 		id = TU_COL_immigration_policy
 		icon = GFX_goal_generic_allies_build_infantry
 		prerequisite = { focus = TU_COL_supreme_court }
-		x = 3
+		x = -13
 		y = 4
 		cost = 10
 
@@ -1759,7 +1759,7 @@ focus_tree = {
 		id = TU_COL_republic_broadcast
 		icon = GFX_goal_generic_production
 		prerequisite = { focus = TU_COL_free_press }
-		x = 5
+		x = -10
 		y = 7
 		cost = 10
 
@@ -1778,7 +1778,7 @@ focus_tree = {
 		id = TU_COL_constitutional_amendment
 		icon = GFX_goal_generic_political_pressure
 		prerequisite = { focus = TU_COL_civil_liberties }
-		x = 4
+		x = -11
 		y = 9
 		cost = 10
 
@@ -1798,8 +1798,8 @@ focus_tree = {
 		id = TU_COL_corporate_police
 		icon = GFX_goal_generic_intelligence_exchange
 		prerequisite = { focus = TU_COL_corporate_boards }
-		x = 8
-		y = 9
+		x = -8
+		y = 10
 		cost = 10
 
 		search_filters = { FOCUS_FILTER_POLITICAL }
@@ -1818,8 +1818,8 @@ focus_tree = {
 		id = TU_COL_private_railways
 		icon = GFX_goal_generic_construct_infrastructure
 		prerequisite = { focus = TU_COL_corporate_boards }
-		x = 10
-		y = 9
+		x = -6
+		y = 10
 		cost = 10
 
 		search_filters = { FOCUS_FILTER_INDUSTRY }
@@ -1837,8 +1837,8 @@ focus_tree = {
 		id = TU_COL_frontier_forts
 		icon = GFX_goal_generic_defence
 		prerequisite = { focus = TU_COL_ranger_corps }
-		x = 13
-		y = 7
+		x = -1
+		y = 9
 		cost = 10
 
 		search_filters = { FOCUS_FILTER_POLITICAL }
@@ -1856,8 +1856,8 @@ focus_tree = {
 		id = TU_COL_sheriff_academy
 		icon = GFX_goal_generic_army_doctrines
 		prerequisite = { focus = TU_COL_frontier_militia }
-		x = 12
-		y = 8
+		x = -2
+		y = 10
 		cost = 10
 
 		search_filters = { FOCUS_FILTER_POLITICAL }
@@ -1876,7 +1876,7 @@ focus_tree = {
 		id = TU_COL_air_transport
 		icon = GFX_goal_generic_air_doctrine
 		prerequisite = { focus = TU_COL_airfields }
-		x = 19
+		x = 4
 		y = 4
 		cost = 10
 
@@ -1897,7 +1897,7 @@ focus_tree = {
 		id = TU_COL_night_fighters
 		icon = GFX_goal_generic_air_doctrine
 		prerequisite = { focus = TU_COL_escort_fighters }
-		x = 22
+		x = 7
 		y = 4
 		cost = 10
 
@@ -1918,7 +1918,7 @@ focus_tree = {
 		id = TU_COL_air_depots
 		icon = GFX_goal_generic_air_doctrine
 		prerequisite = { focus = TU_COL_air_academy }
-		x = 20
+		x = 5
 		y = 3
 		cost = 10
 
@@ -1939,7 +1939,7 @@ focus_tree = {
 		id = TU_COL_aircraft_factories
 		icon = GFX_goal_generic_air_doctrine
 		prerequisite = { focus = TU_COL_fighter_programme }
-		x = 24
+		x = 9
 		y = 3
 		cost = 10
 
@@ -1961,7 +1961,7 @@ focus_tree = {
 		id = TU_COL_cavalry_scouts
 		icon = GFX_goal_generic_army_motorized
 		prerequisite = { focus = TU_COL_army_reform }
-		x = -10
+		x = -26
 		y = 12
 		cost = 10
 
@@ -1981,7 +1981,7 @@ focus_tree = {
 		id = TU_COL_engineer_corps
 		icon = GFX_focus_research
 		prerequisite = { focus = TU_COL_artillery_corps }
-		x = -15
+		x = -31
 		y = 13
 		cost = 10
 
@@ -2000,7 +2000,7 @@ focus_tree = {
 		id = TU_COL_army_medical
 		icon = GFX_goal_generic_consumer_goods
 		prerequisite = { focus = TU_COL_rifle_standard }
-		x = -13
+		x = -29
 		y = 13
 		cost = 10
 
@@ -2021,7 +2021,7 @@ focus_tree = {
 		id = TU_COL_national_guard
 		icon = GFX_goal_generic_allies_build_infantry
 		prerequisite = { focus = TU_COL_rifle_standard }
-		x = -11
+		x = -27
 		y = 13
 		cost = 10
 
@@ -2041,7 +2041,7 @@ focus_tree = {
 		id = TU_COL_special_forces
 		icon = GFX_goal_generic_army_doctrines
 		prerequisite = { focus = TU_COL_national_guard }
-		x = -11
+		x = -27
 		y = 14
 		cost = 10
 
@@ -2061,7 +2061,7 @@ focus_tree = {
 		id = TU_COL_armour_maintenance
 		icon = GFX_goal_generic_army_tanks
 		prerequisite = { focus = TU_COL_armoured_divisions }
-		x = -15
+		x = -31
 		y = 15
 		cost = 10
 
@@ -2081,8 +2081,8 @@ focus_tree = {
 		id = TU_COL_coastal_forts
 		icon = GFX_goal_generic_defence
 		prerequisite = { focus = TU_COL_root }
-		x = 25
-		y = 5
+		x = 6
+		y = 6
 		cost = 10
 
 		search_filters = { FOCUS_FILTER_POLITICAL }
@@ -2100,7 +2100,7 @@ focus_tree = {
 		id = TU_COL_farm_mechanisation
 		icon = GFX_goal_generic_army_motorized
 		prerequisite = { focus = TU_COL_oil_industry }
-		x = 5
+		x = -11
 		y = 13
 		cost = 10
 
@@ -2121,7 +2121,7 @@ focus_tree = {
 		id = TU_COL_originium_mines
 		icon = GFX_focus_research
 		prerequisite = { focus = TU_COL_farm_mechanisation }
-		x = 5
+		x = -11
 		y = 14
 		cost = 10
 
@@ -2141,7 +2141,7 @@ focus_tree = {
 		id = TU_COL_chemical_industry
 		icon = GFX_goal_generic_production
 		prerequisite = { focus = TU_COL_originium_mines }
-		x = 5
+		x = -11
 		y = 15
 		cost = 10
 
@@ -2161,7 +2161,7 @@ focus_tree = {
 		id = TU_COL_harbour_expansion
 		icon = GFX_goal_generic_trade
 		prerequisite = { focus = TU_COL_continental_rail }
-		x = -2
+		x = -18
 		y = 14
 		cost = 10
 
@@ -2182,7 +2182,7 @@ focus_tree = {
 		id = TU_COL_federal_bank
 		icon = GFX_goal_generic_trade
 		prerequisite = { focus = TU_COL_stock_exchange }
-		x = 1
+		x = -15
 		y = 17
 		cost = 10
 
@@ -2202,7 +2202,7 @@ focus_tree = {
 		id = TU_COL_labour_unions
 		icon = GFX_goal_generic_production
 		prerequisite = { focus = TU_COL_factory_towns }
-		x = 3
+		x = -13
 		y = 15
 		cost = 10
 
@@ -2221,7 +2221,7 @@ focus_tree = {
 		id = TU_COL_automobile_industry
 		icon = GFX_goal_generic_army_motorized
 		prerequisite = { focus = TU_COL_assembly_lines }
-		x = 0
+		x = -16
 		y = 18
 		cost = 10
 
@@ -2243,8 +2243,8 @@ focus_tree = {
 		icon = GFX_goal_generic_improve_relations
 		prerequisite = { focus = TU_COL_victoria_memory }
 		mutually_exclusive = { focus = TU_COL_contain_victoria }
-		x = 12
-		y = 12
+		x = -4
+		y = 14
 		cost = 10
 
 		search_filters = { FOCUS_FILTER_POLITICAL }
@@ -2264,8 +2264,8 @@ focus_tree = {
 		icon = GFX_goal_generic_occupy_start_war
 		prerequisite = { focus = TU_COL_victoria_memory }
 		mutually_exclusive = { focus = TU_COL_victoria_reconcile }
-		x = 14
-		y = 12
+		x = -2
+		y = 14
 		cost = 10
 
 		search_filters = { FOCUS_FILTER_POLITICAL }
@@ -2285,8 +2285,8 @@ focus_tree = {
 		id = TU_COL_laterano_embassy
 		icon = GFX_goal_generic_improve_relations
 		prerequisite = { focus = TU_COL_state_department }
-		x = 19
-		y = 11
+		x = 3
+		y = 13
 		cost = 10
 
 		search_filters = { FOCUS_FILTER_POLITICAL }
@@ -2305,7 +2305,7 @@ focus_tree = {
 		id = TU_COL_landship_board
 		icon = GFX_goal_generic_construct_infrastructure
 		prerequisite = { focus = TU_COL_root }
-		x = 29
+		x = 10
 		y = 7
 		cost = 10
 
@@ -2325,7 +2325,7 @@ focus_tree = {
 		id = TU_COL_rhine_engines
 		icon = GFX_goal_generic_construct_infrastructure
 		prerequisite = { focus = TU_COL_landship_board }
-		x = 29
+		x = 10
 		y = 8
 		cost = 10
 
@@ -2345,7 +2345,7 @@ focus_tree = {
 		id = TU_COL_armoured_landships
 		icon = GFX_goal_generic_army_tanks
 		prerequisite = { focus = TU_COL_rhine_engines }
-		x = 28
+		x = 9
 		y = 9
 		cost = 10
 
@@ -2365,7 +2365,7 @@ focus_tree = {
 		id = TU_COL_landship_artillery
 		icon = GFX_goal_generic_army_artillery
 		prerequisite = { focus = TU_COL_rhine_engines }
-		x = 30
+		x = 11
 		y = 9
 		cost = 10
 
@@ -2385,7 +2385,7 @@ focus_tree = {
 		id = TU_COL_landship_rapid
 		icon = GFX_goal_generic_army_motorized
 		prerequisite = { focus = TU_COL_armoured_landships }
-		x = 28
+		x = 9
 		y = 10
 		cost = 10
 
@@ -2405,7 +2405,7 @@ focus_tree = {
 		id = TU_COL_trimounts_city
 		icon = GFX_goal_generic_construct_infrastructure
 		prerequisite = { focus = TU_COL_landship_artillery }
-		x = 30
+		x = 11
 		y = 10
 		cost = 15
 
@@ -2426,7 +2426,7 @@ focus_tree = {
 		icon = GFX_goal_generic_army_doctrines
 		prerequisite = { focus = TU_COL_landship_rapid }
 		prerequisite = { focus = TU_COL_trimounts_city }
-		x = 28
+		x = 9
 		y = 11
 		cost = 15
 
@@ -2446,7 +2446,7 @@ focus_tree = {
 		id = TU_COL_drone_swarms
 		icon = GFX_goal_generic_air_doctrine
 		prerequisite = { focus = TU_COL_air_force }
-		x = 30
+		x = 15
 		y = 2
 		cost = 10
 
@@ -2467,7 +2467,7 @@ focus_tree = {
 		id = TU_COL_airship_command
 		icon = GFX_goal_generic_air_doctrine
 		prerequisite = { focus = TU_COL_drone_swarms }
-		x = 30
+		x = 15
 		y = 3
 		cost = 10
 
@@ -2488,7 +2488,7 @@ focus_tree = {
 		id = TU_COL_weather_arts
 		icon = GFX_focus_research
 		prerequisite = { focus = TU_COL_airship_command }
-		x = 30
+		x = 15
 		y = 4
 		cost = 10
 
@@ -2508,7 +2508,7 @@ focus_tree = {
 		id = TU_COL_ranger_patrols
 		icon = GFX_goal_generic_defence
 		prerequisite = { focus = TU_COL_army_reform }
-		x = -8
+		x = -24
 		y = 12
 		cost = 10
 
@@ -2528,7 +2528,7 @@ focus_tree = {
 		id = TU_COL_sheriff_militia
 		icon = GFX_goal_generic_allies_build_infantry
 		prerequisite = { focus = TU_COL_ranger_patrols }
-		x = -9
+		x = -25
 		y = 13
 		cost = 10
 
@@ -2548,7 +2548,7 @@ focus_tree = {
 		id = TU_COL_western_rail
 		icon = GFX_goal_generic_construct_infrastructure
 		prerequisite = { focus = TU_COL_ranger_patrols }
-		x = -7
+		x = -23
 		y = 13
 		cost = 10
 
@@ -2567,7 +2567,7 @@ focus_tree = {
 		id = TU_COL_bounty_contracts
 		icon = GFX_goal_generic_trade
 		prerequisite = { focus = TU_COL_sheriff_militia }
-		x = -9
+		x = -25
 		y = 14
 		cost = 10
 
@@ -2587,7 +2587,7 @@ focus_tree = {
 		id = TU_COL_originium_lab
 		icon = GFX_focus_research
 		prerequisite = { focus = TU_COL_rhine_pact }
-		x = -4
+		x = -20
 		y = 2
 		cost = 10
 
@@ -2607,7 +2607,7 @@ focus_tree = {
 		id = TU_COL_patent_office
 		icon = GFX_focus_research
 		prerequisite = { focus = TU_COL_originium_lab }
-		x = -4
+		x = -20
 		y = 3
 		cost = 10
 
@@ -2627,7 +2627,7 @@ focus_tree = {
 		id = TU_COL_refinery_belt
 		icon = GFX_goal_generic_production
 		prerequisite = { focus = TU_COL_oil_industry }
-		x = 8
+		x = -8
 		y = 13
 		cost = 10
 
@@ -2647,7 +2647,7 @@ focus_tree = {
 		id = TU_COL_continental_highway
 		icon = GFX_goal_generic_production
 		prerequisite = { focus = TU_COL_refinery_belt }
-		x = 7
+		x = -9
 		y = 14
 		cost = 10
 
@@ -2666,7 +2666,7 @@ focus_tree = {
 		id = TU_COL_assembly_plants
 		icon = GFX_goal_generic_production
 		prerequisite = { focus = TU_COL_refinery_belt }
-		x = 9
+		x = -7
 		y = 14
 		cost = 10
 
@@ -2688,7 +2688,7 @@ focus_tree = {
 		id = TU_COL_rhine_directive
 		prerequisite = { focus = TU_COL_root }
 		icon = GFX_goal_generic_secret_weapon
-		x = 14
+		x = -3
 		y = 1
 		cost = 5
 
@@ -2715,7 +2715,7 @@ focus_tree = {
 		id = TU_COL_rhine_departments
 		prerequisite = { focus = TU_COL_rhine_directive }
 		icon = GFX_goal_generic_secret_weapon
-		x = 12
+		x = -5
 		y = 2
 		cost = 10
 
@@ -2738,7 +2738,7 @@ focus_tree = {
 		id = TU_COL_rhine_defense_dept
 		prerequisite = { focus = TU_COL_rhine_directive }
 		icon = GFX_goal_generic_secret_weapon
-		x = 14
+		x = -3
 		y = 2
 		cost = 10
 
@@ -2761,7 +2761,7 @@ focus_tree = {
 		id = TU_COL_rhine_ecology
 		prerequisite = { focus = TU_COL_rhine_departments }
 		icon = GFX_goal_generic_secret_weapon
-		x = 12
+		x = -5
 		y = 3
 		cost = 10
 
@@ -2784,7 +2784,7 @@ focus_tree = {
 		id = TU_COL_rhine_engineering
 		prerequisite = { focus = TU_COL_rhine_defense_dept }
 		icon = GFX_goal_generic_secret_weapon
-		x = 14
+		x = -3
 		y = 3
 		cost = 10
 
@@ -2808,7 +2808,7 @@ focus_tree = {
 		id = TU_COL_rhine_ferns
 		prerequisite = { focus = TU_COL_rhine_engineering }
 		icon = GFX_goal_generic_secret_weapon
-		x = 14
+		x = -3
 		y = 4
 		cost = 10
 
@@ -2832,7 +2832,7 @@ focus_tree = {
 		prerequisite = { focus = TU_COL_rhine_ecology }
 		prerequisite = { focus = TU_COL_rhine_ferns }
 		icon = GFX_goal_generic_secret_weapon
-		x = 14
+		x = -3
 		y = 5
 		cost = 15
 
@@ -2856,7 +2856,7 @@ focus_tree = {
 		mutually_exclusive = { focus = TU_COL_republic_guard focus = TU_COL_corporate_republic focus = TU_COL_frontier_federation }
 		prerequisite = { focus = TU_COL_rhine_total_research }
 		icon = GFX_goal_generic_secret_weapon
-		x = 14
+		x = -3
 		y = 6
 		cost = 20
 

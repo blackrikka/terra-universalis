@@ -165,7 +165,7 @@ focus_tree = {
 		prerequisite = { focus = TU_HIG_domain_control }
 		mutually_exclusive = { focus = TU_HIG_open_far_east focus = TU_HIG_imperial_restoration }
 		x = -18
-		y = 5
+		y = 6
 		cost = 15
 
 		search_filters = { FOCUS_FILTER_POLITICAL }
@@ -198,7 +198,7 @@ focus_tree = {
 		icon = GFX_goal_generic_production
 		prerequisite = { focus = TU_HIG_shogunate }
 		x = -19
-		y = 6
+		y = 7
 		cost = 10
 
 		search_filters = { FOCUS_FILTER_INDUSTRY }
@@ -218,7 +218,7 @@ focus_tree = {
 		icon = GFX_goal_generic_allies_build_infantry
 		prerequisite = { focus = TU_HIG_shogunate }
 		x = -17
-		y = 6
+		y = 7
 		cost = 10
 
 		search_filters = { FOCUS_FILTER_POLITICAL }
@@ -239,7 +239,7 @@ focus_tree = {
 		prerequisite = { focus = TU_HIG_castle_towns }
 		prerequisite = { focus = TU_HIG_hatamoto }
 		x = -15
-		y = 7
+		y = 8
 		cost = 10
 
 		search_filters = { FOCUS_FILTER_POLITICAL }
@@ -1159,7 +1159,7 @@ focus_tree = {
 		id = TU_HIG_sword_hunt
 		icon = GFX_goal_generic_small_arms
 		prerequisite = { focus = TU_HIG_domain_control }
-		x = -16
+		x = -17
 		y = 5
 		cost = 10
 
@@ -1781,7 +1781,7 @@ focus_tree = {
 		icon = GFX_goal_generic_allies_build_infantry
 		prerequisite = { focus = TU_HIG_hatamoto }
 		x = -17
-		y = 7
+		y = 8
 		cost = 10
 
 		search_filters = { FOCUS_FILTER_POLITICAL }
@@ -1801,7 +1801,7 @@ focus_tree = {
 		icon = GFX_goal_generic_trade
 		prerequisite = { focus = TU_HIG_castle_towns }
 		x = -19
-		y = 7
+		y = 8
 		cost = 10
 
 		search_filters = { FOCUS_FILTER_POLITICAL }
