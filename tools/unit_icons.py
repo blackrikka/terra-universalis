@@ -34,10 +34,12 @@ sys.path.insert(0, str(REPO / "tools"))
 sys.path.insert(0, str(REPO / "tools" / "portraits"))
 import unit_names  # noqa: E402
 
-# 견본: (종류, 파일 이름 줄기, 프레임 수)
-KINDS = [("medium", "unit_infantry_icon", 2), ("white", "onmap_unit_infantry_icon", 2), ("small", "unit_infantry_icon_small", 1)]
+# 견본: (종류, 파일 이름 줄기). 세 그림 모두 2프레임이다: 왼쪽 = 그림 아이콘 (바닐라는 철모), 오른쪽 = NATO 기호 (밝은 네모에 X).
+# 플레이어가 설정에서 고른 쪽이 보인다. 우리 것: 왼쪽 = 흰 세부 분류 아이콘 (어두운 테두리), 오른쪽 = 같은 네모 안에 검은 아이콘.
+KINDS = [("medium", "unit_infantry_icon"), ("white", "onmap_unit_infantry_icon"), ("small", "unit_infantry_icon_small")]
+FRAMES = 2
 SPRITE = {"medium": "GFX_unit_%s_icon_medium", "white": "GFX_unit_%s_icon_medium_white", "small": "GFX_unit_%s_icon_small"}
-MARGIN = 0.06       # 프레임 안쪽 여백 (프레임 짧은 변 대비)
+GROW = 1.3          # 그림 아이콘은 바닐라 철모가 차지한 칸보다 이만큼 크게 (가는 선 아이콘이라 작으면 안 보인다)
 
 
 def slug(s):
@@ -60,35 +62,65 @@ def find_sample(folder, stem):
     return None
 
 
-def frame_tints(sample, frames):
-    """견본의 프레임마다: 불투명한 부분의 평균 색 (우리 아이콘을 이 색으로 칠한다)."""
+def bbox_alpha(im, level):
+    return im.split()[3].point(lambda v: 255 if v > level else 0).getbbox()
+
+
+def read_sample(sample):
+    """견본에서: 프레임 크기, 그림 아이콘이 놓일 칸, X 를 지운 NATO 네모와 그 안쪽 칸."""
     im = Image.open(sample).convert("RGBA")
-    fw = im.width // frames
-    out = []
-    for i in range(frames):
-        raw = im.crop((i * fw, 0, (i + 1) * fw, im.height)).tobytes()
-        px = [raw[k:k + 3] for k in range(0, len(raw), 4) if raw[k + 3] > 96]
-        if not px:
-            out.append((255, 255, 255))
-        else:
-            out.append(tuple(sum(p[c] for p in px) // len(px) for c in range(3)))
-    return (fw, im.height), out
+    fw, fh = im.width // FRAMES, im.height
+    f1 = im.crop((0, 0, fw, fh))
+    f2 = im.crop((fw, 0, 2 * fw, fh))
+    x0, y0, x1, y1 = bbox_alpha(f1, 40)                 # 철모 (그림자 포함)
+    cx, cy = (x0 + x1) / 2, (y0 + y1) / 2
+    w, h = min((x1 - x0) * GROW * 1.1, fw - 2), min((y1 - y0) * GROW, fh)
+    pic = (cx - w / 2, max(0, min(cy - h / 2, fh - h)), w, h)
+    bx0, by0, bx1, by1 = bbox_alpha(f2, 200)            # NATO 네모 (검은 테두리 포함, 오른쪽·아래는 닫힌 좌표)
+    box = f2.copy()
+    px = box.load()
+    inner = (bx0 + 1, by0 + 1, bx1 - 1, by1 - 1)        # 테두리 안쪽
+    for y in range(inner[1], inner[3]):
+        row = [px[x, y] for x in range(inner[0], inner[2])]
+        light = max(row, key=lambda c: c[0] + c[1] + c[2])      # 그 줄에서 가장 밝은 점 = X 선이 없는 바탕
+        for x in range(inner[0], inner[2]):
+            px[x, y] = light
+    return dict(size=(fw, fh), pic=pic, box=box, inner=inner)
 
 
-def render(icon_path, size, tints):
-    fw, fh = size
+def fit(src, w, h):
+    scale = min(w / src.width, h / src.height)
+    return src.resize((max(1, round(src.width * scale)), max(1, round(src.height * scale))), Image.Resampling.LANCZOS)
+
+
+def render(icon_path, spec):
+    from PIL import ImageFilter
+    fw, fh = spec["size"]
     src = Image.open(icon_path).convert("RGBA")
     src = src.crop(src.getbbox())
-    pad = max(1, int(round(min(fw, fh) * MARGIN)))
-    box = (fw - 2 * pad, fh - 2 * pad)
-    scale = min(box[0] / src.width, box[1] / src.height)
-    ic = src.resize((max(1, round(src.width * scale)), max(1, round(src.height * scale))), Image.Resampling.LANCZOS)
-    alpha = ic.split()[3]
-    sheet = Image.new("RGBA", (fw * len(tints), fh), (0, 0, 0, 0))
-    for i, t in enumerate(tints):
-        layer = Image.new("RGBA", ic.size, t + (0,))
-        layer.putalpha(alpha)
-        sheet.alpha_composite(layer, (i * fw + (fw - ic.width) // 2, (fh - ic.height) // 2))
+    sheet = Image.new("RGBA", (fw * FRAMES, fh), (0, 0, 0, 0))
+    small = fh < 20
+    boost = 1.7 if small else 1.25                      # 줄이면 가는 선이 흐려지므로 진하게
+    # 왼쪽: 흰 아이콘 + 어두운 테두리
+    px, py, pw, ph = spec["pic"]
+    ic = fit(src, pw, ph)
+    alpha = ic.split()[3].point(lambda v: min(255, int(v * boost)))
+    canvas = Image.new("L", (fw, fh), 0)
+    canvas.paste(alpha, (int(round(px + (pw - ic.width) / 2)), int(round(py + (ph - ic.height) / 2))))
+    edge = canvas.filter(ImageFilter.MaxFilter(3)).point(lambda v: int(v * (0.55 if small else 0.75)))
+    left = Image.new("RGBA", (fw, fh), (0, 0, 0, 0))
+    left.paste(Image.new("RGBA", (fw, fh), (15, 15, 15, 255)), (0, 0), edge)
+    left.paste(Image.new("RGBA", (fw, fh), (255, 255, 255, 255)), (0, 0), canvas)
+    sheet.alpha_composite(left, (0, 0))
+    # 오른쪽: NATO 네모 안에 검은 아이콘
+    right = spec["box"].copy()
+    ix0, iy0, ix1, iy1 = spec["inner"]
+    pad = 0 if small else 2
+    ic2 = fit(src, ix1 - ix0 - 2 * pad, iy1 - iy0 - 2 * pad)
+    a2 = ic2.split()[3].point(lambda v: min(255, int(v * boost)))
+    ink = Image.new("RGBA", ic2.size, (10, 10, 10, 255))
+    right.paste(ink, (ix0 + (ix1 - ix0 - ic2.width) // 2, iy0 + (iy1 - iy0 - ic2.height) // 2), a2)
+    sheet.alpha_composite(right, (fw, 0))
     return sheet
 
 
@@ -110,42 +142,45 @@ def main(argv=None):
     units = sorted(unit_names.UNITS)
     for u in units:
         icon_of(u)                                    # 원본이 다 있는지 먼저 확인
-    found = {k: find_sample(a.samples, stem) for k, stem, _ in KINDS}
-    missing = [stem for (k, stem, _) in KINDS if not found[k]]
-    if missing:
+    found = {k: find_sample(a.samples, stem) for k, stem in KINDS}
+    if not all(found.values()):
         print("UNIT_ICONS 견본 없음 (아무것도 쓰지 않음). %s 에 넣을 것:" % Path(a.samples))
-        for k, stem, _ in KINDS:
+        for k, stem in KINDS:
             print("  %s.dds  %s" % (stem, "있음" if found[k] else "없음"))
         return 2
-    spec = {k: frame_tints(found[k], n) for k, _, n in KINDS}
+    spec = {k: read_sample(found[k]) for k, _ in KINDS}
     lines = ["# generated by tools/unit_icons.py (spec 74): Arknights branch icons as sub-unit icons", "spriteTypes = {"]
     done = {}
     for u in units:
         src = icon_of(u)
         key = src.stem
         if key not in done:
-            for k, _, n in KINDS:
-                write_tga(OUT / ("%s_%s.tga" % (key, k)), render(src, *spec[k]))
+            for k, _ in KINDS:
+                write_tga(OUT / ("%s_%s.tga" % (key, k)), render(src, spec[k]))
             done[key] = src
-        for k, _, n in KINDS:
-            lines.append('\tspriteType = { name = "%s" textureFile = "gfx/interface/tu_units/%s_%s.tga"%s }' % (
-                SPRITE[k] % u, key, k, " noOfFrames = %d" % n if n > 1 else ""))
+        for k, _ in KINDS:
+            lines.append('\tspriteType = { name = "%s" textureFile = "gfx/interface/tu_units/%s_%s.tga" noOfFrames = %d }' % (
+                SPRITE[k] % u, key, k, FRAMES))
     lines.append("}")
     GFX.write_text("\n".join(lines) + "\n", encoding="ascii")
     old = MOD / "interface" / "tu_units.gfx"          # unit_roles.py 가 아츠 캐스터에 빌려 주던 대전차 아이콘
     if old.is_file():
         old.unlink()
     if a.sheet:
-        cell = max(spec["medium"][0][0] * 2, 60) + 20
-        sh = Image.new("RGBA", (cell * 6, ((len(done) + 5) // 6) * (spec["medium"][0][1] + spec["white"][0][1] + spec["small"][0][1] + 30)), (60, 80, 60, 255))
-        for i, key in enumerate(sorted(done)):
-            x, y = (i % 6) * cell + 10, (i // 6) * (sh.height // ((len(done) + 5) // 6)) + 8
-            for k, _, _ in KINDS:
+        zoom, cols = 4, 4
+        keys = sorted(done)
+        cw = (spec["medium"]["size"][0] * 2 + spec["white"]["size"][0] * 2 + spec["small"]["size"][0] * 2 + 30) * zoom
+        chh = (spec["medium"]["size"][1] + 8) * zoom
+        sh = Image.new("RGBA", (cw * cols, chh * ((len(keys) + cols - 1) // cols)), (58, 66, 58, 255))
+        for i, key in enumerate(keys):
+            x, y = (i % cols) * cw + 8, (i // cols) * chh + 8
+            for k, _ in KINDS:
                 im = Image.open(OUT / ("%s_%s.tga" % (key, k))).convert("RGBA")
+                im = im.resize((im.width * zoom, im.height * zoom), Image.Resampling.NEAREST)
                 sh.alpha_composite(im, (x, y))
-                y += im.height + 6
+                x += im.width + 8 * zoom
         sh.convert("RGB").save(a.sheet)
-    print("UNIT_ICONS units=%d textures=%d sizes=%s" % (len(units), len(done) * 3, {k: spec[k][0] for k in spec}))
+    print("UNIT_ICONS units=%d textures=%d sizes=%s" % (len(units), len(done) * 3, {k: spec[k]["size"] for k in spec}))
     return 0
 
 
