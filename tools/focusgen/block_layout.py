@@ -6,7 +6,7 @@ autolayout 은 모든 갈래를 옆으로 늘어놓는다. 그런데 allow_branc
     - 덩어리 = 머리 중점과 그 아래 모든 중점 (autolayout 이 정한 덩어리 안의 모양은 그대로)
     - ORDER 의 순서대로 왼쪽부터 덩어리를 놓는다. 덩어리 사이 간격 GAP.
     - 한 칸에 머리 여럿을 주면 (리스트) 그 덩어리들을 같은 x 에 겹쳐 놓는다 (한 번에 하나만 보이는 갈래).
-    - 뿌리 중점은 겹친 칸 가운데 위에 둔다.
+    - 뿌리 중점은 겹친 칸 가운데 위에 둔다. 모든 덩어리의 머리는 뿌리 바로 아랫줄에 둔다.
 
 사용법:  python -I tools/focusgen/block_layout.py --tag SIR      (merge_focus.py --tag SIR 이 자동으로 부른다)
 """
@@ -62,7 +62,7 @@ def apply(tag):
     text = path.read_text(encoding="utf-8-sig")
     fs = parse(text)
     root = cfg["root"]
-    newx, cursor, placed = {}, 0, set()
+    newx, newy, cursor, placed = {}, {root: fs[root]["y"]}, 0, set()
     centers = []
     for slot in cfg["slots"]:
         width = 0
@@ -78,8 +78,10 @@ def apply(tag):
             lo = min(fs[m]["x"] for m in mem)
             hi = max(fs[m]["x"] for m in mem)
             off = cursor + (width - (hi - lo)) // 2 - lo       # 좁은 덩어리는 칸 가운데
+            dy = fs[root]["y"] + 1 - fs[head]["y"]             # 모든 덩어리의 머리는 뿌리 바로 아랫줄 (autolayout 이 아래로 내린 덩어리를 올린다)
             for m in mem:
                 newx[m] = fs[m]["x"] + off
+                newy[m] = fs[m]["y"] + dy
         centers.append(cursor + width // 2)
         cursor += width + GAP
     left = set(fs) - placed - {root}
@@ -91,6 +93,7 @@ def apply(tag):
     def sub(m):
         fid = m.group(2)
         body = re.sub(r"(\n\t\tx = )-?\d+", lambda q: q.group(1) + str(newx[fid]), "\n" + m.group(3), count=1)[1:]
+        body = re.sub(r"(\n\t\ty = )-?\d+", lambda q: q.group(1) + str(newy[fid]), "\n" + body, count=1)[1:]
         return m.group(1) + body + m.group(4)
 
     new = FOCUS_RE.sub(sub, text)
@@ -102,7 +105,7 @@ def apply(tag):
                 slot_of[m] = (i, j)
     rows = {}
     for fid, f in fs.items():
-        rows.setdefault(f["y"], []).append(fid)
+        rows.setdefault(newy[fid], []).append(fid)
     for y, ids in rows.items():
         for a in ids:
             for b in ids:

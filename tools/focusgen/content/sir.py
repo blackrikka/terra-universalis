@@ -1,13 +1,14 @@
 #!/usr/bin/env python3
 """시라쿠사(SIR) 중점·디시전·이벤트 (사양서 17, 다시 설계: 사양서 63).
 
-구조 (중점 약 80개)
+구조 (중점 126개, 한 판에 보이는 것은 66개: 사양서 71)
   뿌리 '늑대의 땅' -> 이벤트 tu_sir_ev.1 '시라쿠사의 갈림길'에서 정치 루트 다섯 중 하나를 고른다.
     벨로네(건설·산업, 지도자 벨로네) / 감비노(군사, 감비노 대부) / 살루초(돈·외교, 살루초 대부) /
     법(안정·연구, 페넌스) / 늑대(공격·정복, 라플란드 더 데카덴차)
-    고르면 지도자가 바로 바뀌고 그 루트 갈래(9개)만 보인다 (allow_branch = TU_SIR_route_<key>). 다섯 갈래는 같은 자리에 겹친다
+    고르면 지도자가 바로 바뀌고 그 루트 갈래(15개)만 보인다 (allow_branch = TU_SIR_route_<key>). 다섯 갈래는 같은 자리에 겹친다
     (tools/focusgen/block_layout.py). 결말 중점에서 국호가 바뀐다 (tools/chargen/data.py 의 hooks).
-  공통 갈래: 산업(14), 군사(13), 외교(5). 모든 효과는 중점에 직접 적혀 있다 (이름 테마 자동 보상 없음).
+    루트 하나 = 머리 + 본 갈래 둘(3개씩) + 옆 갈래(3개, 선택) + 합류 + 결말 + 결말 뒤 2개 + 통일.
+  공통 갈래: 산업(20), 군사(20), 외교(10). 모든 효과는 중점에 직접 적혀 있다 (이름 테마 자동 보상 없음).
 장치
   세 패밀리의 영향력 TU_SIR_bellone / gambino / saluzzo (0~100, 매달 +1), 법의 권위 TU_SIR_law.
   '패밀리' 디시전으로 거래·단속. 두 패밀리가 60 이상이면 패밀리 전쟁 이벤트.
@@ -215,6 +216,18 @@ R("bellone", "bellone_end", "벨로네의 시라쿠사", "Bellone's Siracusa", [
    "TU_build_civ_factory = yes", EV(28)], cost=15,
   desc=("결말. 국호가 '벨로네의 시라쿠사'가 된다.", "Ending. The country becomes Bellone's Siracusa."))
 
+# 벨로네 옆 갈래 (시정) + 결말 뒤 (사양서 71)
+R("bellone", "bellone_cityhall", "시청 접수", "Take City Hall", ["bellone_head"], ["add_political_power = 60", "add_stability = 0.03"])
+R("bellone", "bellone_union", "건설 노동자 조합", "Builders' Union", ["bellone_cityhall"], ["add_manpower = 10000", "add_stability = 0.03"])
+R("bellone", "bellone_school", "벨로네 기술 학교", "Bellone Technical School", ["bellone_union"],
+  ["add_tech_bonus = { name = TU_SIR_bellone_school bonus = 1.0 uses = 2 category = construction_tech category = industry }"])
+R("bellone", "bellone_newcity", "누오바 볼시니 선언", "Declaration of Nuova Volsinii", ["bellone_end"],
+  ["capital_scope = { add_extra_state_shared_building_slots = 2 }", "TU_build_civ_factory = yes", "TU_build_civ_factory = yes"],
+  desc=("패밀리의 손이 닿지 않는 새 도시를 선포한다. 민간 공장 2개, 수도 건물 칸 +2.",
+        "Proclaim a new city beyond the families' reach. Two civilian factories, +2 capital building slots."))
+R("bellone", "bellone_fund", "재건 기금", "Reconstruction Fund", ["bellone_end"],
+  ["TU_build_infrastructure = yes", "TU_build_infrastructure = yes", "add_political_power = 100"])
+
 # ---- 감비노: 군사·동원
 R("gambino", "gambino_head", "감비노의 시대", "The Gambino Era", ["root"], ["add_manpower = 10000"], cost=5,
   desc=("§Y감비노 루트§! (지도자: 감비노 대부)\\n군사와 동원. 공격력과 병력이 강하다.\\n결말 '감비노의 철권': 공격 +12%, 조직력 +8%, 징집 +15%, 훈련 시간 -15%.",
@@ -236,6 +249,16 @@ R("gambino", "gambino_end", "감비노의 철권", "Gambino's Iron Fist", ["gamb
    "TU_build_mil_factory = yes", EV(28)], cost=15,
   desc=("결말. 국호가 '감비노의 시라쿠사'가 된다.", "Ending. The country becomes Gambino's Siracusa."))
 
+# 감비노 옆 갈래 (암흑가) + 결말 뒤 (사양서 71)
+R("gambino", "gambino_police", "경찰 매수", "Buy the Police", ["gambino_head"], ["add_stability = 0.05", LAW(-10)])
+R("gambino", "gambino_smuggle", "무기 밀수", "Arms Smuggling", ["gambino_police"],
+  ["add_equipment_to_stockpile = { type = infantry_equipment amount = 1500 producer = SIR }"],
+  desc=("보병 장비 1500.", "1,500 infantry equipment."))
+R("gambino", "gambino_network", "암흑가 정보망", "Underworld Network", ["gambino_smuggle"], ["army_experience = 30", "add_political_power = 50"])
+R("gambino", "gambino_mobilize", "총동원령", "General Mobilisation", ["gambino_end"], ["add_manpower = 40000", "add_war_support = 0.05"])
+R("gambino", "gambino_campaign", "남부 원정 계획", "Southern Campaign Plan", ["gambino_end"],
+  ["army_experience = 60", "add_command_power = 30", "TU_build_mil_factory = yes"])
+
 # ---- 살루초: 돈·외교
 R("saluzzo", "saluzzo_head", "살루초의 시대", "The Saluzzo Era", ["root"], ["add_political_power = 100"], cost=5,
   desc=("§Y살루초 루트§! (지도자: 살루초 대부)\\n돈과 외교. 정치력과 연구가 빠르다.\\n결말 '살루초의 금고': 정치력 +25%, 연구 +8%, 소비재 -5%.",
@@ -255,6 +278,16 @@ R("saluzzo", "saluzzo_keys", "금고의 열쇠", "Keys to the Vault", ["saluzzo_
 R("saluzzo", "saluzzo_end", "살루초의 금고", "The Saluzzo Vault", ["saluzzo_keys"],
   ["swap_ideas = { remove_idea = TU_SIR_saluzzo_start add_idea = TU_SIR_saluzzo_end }", "remove_ideas = TU_SIR_family_cities", EV(28)],
   cost=15, desc=("결말. 국호가 '살루초의 시라쿠사'가 된다.", "Ending. The country becomes Saluzzo's Siracusa."))
+
+# 살루초 옆 갈래 (정계) + 결말 뒤 (사양서 71)
+R("saluzzo", "saluzzo_deputies", "의원 매수", "Buy the Deputies", ["saluzzo_head"], ["add_political_power = 120"])
+R("saluzzo", "saluzzo_press", "언론 장악", "Own the Press", ["saluzzo_deputies"], ["add_stability = 0.05", "add_war_support = 0.03"])
+R("saluzzo", "saluzzo_foundation", "살루초 재단", "The Saluzzo Foundation", ["saluzzo_press"],
+  ["add_tech_bonus = { name = TU_SIR_saluzzo_foundation bonus = 1.0 uses = 2 category = industry category = electronics category = tu_originium_tech }"])
+R("saluzzo", "saluzzo_finance", "테라의 금고", "Vault of Terra", ["saluzzo_end"],
+  ["add_offsite_building = { type = industrial_complex level = 2 }"], desc=("영토 밖 민간 공장 +2.", "Two off-map civilian factories."))
+R("saluzzo", "saluzzo_mercs", "용병 계약금", "Mercenary Retainers", ["saluzzo_end"],
+  ["add_manpower = 20000", "army_experience = 40", "TU_build_mil_factory = yes"])
 
 # ---- 법: 안정·연구
 R("law", "law_head", "법정의 시대", "The Age of the Courts", ["root"], [FLAG("courts"), LAW(10)], cost=5,
@@ -276,6 +309,17 @@ R("law", "law_constitution", "시라쿠사 헌법", "Siracusan Constitution", ["
 R("law", "law_end", "법의 시라쿠사", "Siracusa of Law", ["law_constitution"],
   ["swap_ideas = { remove_idea = TU_SIR_law_start add_idea = TU_SIR_law_end }", "remove_ideas = TU_SIR_family_cities", EV(29)],
   cost=15, desc=("결말. 국호가 '법의 시라쿠사'가 된다.", "Ending. The country becomes the Siracusa of Law."))
+
+# 법 옆 갈래 (시민) + 결말 뒤 (사양서 71)
+R("law", "law_press", "자유 언론", "Free Press", ["law_head"], ["add_stability = 0.05"])
+R("law", "law_jury", "배심원 제도", "Jury System", ["law_press"], [LAW(10), "add_political_power = 50"])
+R("law", "law_militia", "시민 방위대", "Citizens' Guard", ["law_jury"], ["add_manpower = 15000", "army_experience = 25"])
+R("law", "law_charter", "누오바 볼시니 헌장", "Charter of Nuova Volsinii", ["law_end"],
+  ["TU_build_civ_factory = yes", "TU_build_civ_factory = yes", "add_stability = 0.05"],
+  desc=("법으로 세운 새 도시의 헌장. 민간 공장 2개, 안정도 +5%.", "The charter of a new city founded on law. Two civilian factories, stability +5%."))
+R("law", "law_cooperation", "반패밀리 국제 공조", "International Anti-Family Pact", ["law_end"],
+  ["LAT = { add_opinion_modifier = { target = ROOT modifier = TU_dip_aid } }", "RIM = { add_opinion_modifier = { target = ROOT modifier = TU_dip_aid } }",
+   "add_political_power = 100"], desc=("라테라노·림 빌리튼과 관계 개선, 정치력 +100.", "Better relations with Laterano and Rim Billiton, political power +100."))
 
 # ---- 늑대: 공격·정복
 R("wolf", "wolf_head", "늑대 군주의 유산", "Legacy of the Wolf Lord", ["root"], ["add_war_support = 0.05", EV(20)], cost=5,
@@ -299,6 +343,18 @@ R("wolf", "wolf_end", "늑대 군주의 귀환", "Return of the Wolf Lord", ["wo
    EV(30)], cost=15, desc=("결말. 국호가 '늑대 군주의 시라쿠사'가 되고 이웃 나라 모두에 병합 명분을 얻는다.",
                           "Ending. The country becomes the Wolf Lord's Siracusa and gains war goals on all neighbours."))
 
+# 늑대 옆 갈래 (송곳니) + 결말 뒤 (사양서 71)
+C.idea("night_hunters", "밤의 사냥꾼", "Hunters of the Night", {"land_night_attack": 0.20, "army_speed_factor": 0.05},
+       "generic_war_preparation", ("늑대는 밤에 사냥한다.", "Wolves hunt at night."))
+R("wolf", "wolf_fangs", "송곳니 선발", "Choosing the Fangs", ["wolf_head"], ["army_experience = 40"])
+R("wolf", "wolf_grounds", "사냥터 개척", "Opening the Hunting Grounds", ["wolf_fangs"], ["add_manpower = 15000", "TU_build_mil_factory = yes"])
+R("wolf", "wolf_oath", "달의 서약", "Oath of the Moon", ["wolf_grounds"], ["add_war_support = 0.10", "add_stability = 0.03"])
+R("wolf", "wolf_night", "밤의 군주", "Lords of the Night", ["wolf_end"], ["add_ideas = TU_SIR_night_hunters"],
+  desc=("국민정신 '밤의 사냥꾼': 야간 공격 +20%, 이동 속도 +5%.", "Spirit Hunters of the Night: night attack +20%, speed +5%."))
+R("wolf", "wolf_hunt", "대사냥", "The Great Hunt", ["wolf_end"], ["add_manpower = 30000", "army_experience = 50", "add_command_power = 30"])
+
+POSTS = {"bellone": ["bellone_newcity", "bellone_fund"], "gambino": ["gambino_mobilize", "gambino_campaign"],
+         "saluzzo": ["saluzzo_finance", "saluzzo_mercs"], "law": ["law_charter", "law_cooperation"], "wolf": ["wolf_night", "wolf_hunt"]}
 # ---- 통일 (사양서 69): 결말 뒤, 경쟁 패밀리를 모두 굴복시키면 ('패밀리' 디시전) 찍을 수 있다
 RIVALS = {"bellone": ["gambino", "saluzzo"], "gambino": ["bellone", "saluzzo"], "saluzzo": ["bellone", "gambino"],
           "law": ["bellone", "gambino", "saluzzo"], "wolf": ["bellone", "gambino", "saluzzo"]}
@@ -314,7 +370,7 @@ C.idea("one_siracusa", "하나의 시라쿠사", "One Siracusa",
 for key in RIVALS:
     rk = "·".join(FAM_KO[x] for x in RIVALS[key])
     re_ = ", ".join(FAM_EN[x] for x in RIVALS[key])
-    R(key, "%s_unity" % key, UNITY[key][0], UNITY[key][1], ["%s_end" % key],
+    R(key, "%s_unity" % key, UNITY[key][0], UNITY[key][1], POSTS[key],
       ["add_ideas = TU_SIR_one_siracusa", "if = { limit = { has_idea = TU_SIR_omerta } remove_ideas = TU_SIR_omerta }",
        "add_political_power = 100"], cost=10, available=[HAS("absorbed_%s" % x) for x in RIVALS[key]],
       desc=("§Y%s§! 패밀리를 모두 굴복시켜야 한다 ('패밀리' 디시전: 영향력 20 이하일 때 '굴복시키기').\\n"
@@ -354,6 +410,26 @@ I("industrialisation", "시라쿠사 산업화", "Siracusan Industrialisation", 
   ["TU_build_civ_factory = yes", "TU_build_civ_factory = yes", "TU_build_mil_factory = yes"], cost=15)
 
 
+# 산업 보강 (사양서 71)
+C.idea("miracle", "시라쿠사의 기적", "The Siracusan Miracle", {"industrial_capacity_factory": 0.05, "production_speed_buildings_factor": 0.10},
+       "generic_production_bonus", ("패밀리의 도시가 공장의 도시가 되었다.", "The cities of the families have become cities of factories."))
+I("farm_coop", "농업 협동조합", "Farm Cooperatives", ["wine_olive"], ["add_manpower = 10000", "add_stability = 0.03"])
+I("cargo_contract", "화물 비행선 계약", "Cargo Airship Contract", ["wine_exports"],
+  ["add_equipment_to_stockpile = { type = convoy_1 amount = 15 producer = SIR }"],
+  desc=("화물 비행선 15대. 바다 건너 무역에 쓴다.", "Fifteen cargo airships for overseas trade."))
+I("power_grid", "전력망", "Power Grid", ["power_plants"],
+  ["TU_build_infrastructure = yes", "add_tech_bonus = { name = TU_SIR_grid bonus = 1.0 uses = 1 category = electronics }"])
+I("refinery", "오리지늄 정제소", "Originium Refinery", ["chemical_plants"],
+  ["random_owned_controlled_state = { limit = { is_controlled_by = ROOT infrastructure > 0 } add_extra_state_shared_building_slots = 1 "
+   "add_building_construction = { type = originium_refinery level = 1 instant_build = yes } }",
+   "add_tech_bonus = { name = TU_SIR_refinery bonus = 1.0 uses = 1 category = tu_originium_tech }"],
+  desc=("오리지늄 정제소 1단계와 오리지늄 공학 연구 보너스.", "One Originium refinery level and an Originium engineering research bonus."))
+I("oripathy_lab", "광석병 연구소", "Oripathy Laboratory", ["academy"],
+  ["add_tech_bonus = { name = TU_SIR_oripathy bonus = 1.0 uses = 2 category = tu_oripathy_tech }", "add_stability = 0.03"])
+I("miracle", "시라쿠사의 기적", "The Siracusan Miracle", ["industrialisation"], ["add_ideas = TU_SIR_miracle"], cost=15,
+  desc=("국민정신 '시라쿠사의 기적': 공장 출력 +5%, 건설 속도 +10%.", "Spirit The Siracusan Miracle: factory output +5%, construction +10%."))
+
+
 # ------------------------------------------------------------------ 중점: 군사 (모든 루트 공통)
 def M(sid, ko, en, pre, reward, me=(), cost=10, desc=("", "")):
     return f(sid, ko, en, pre=pre, me=me, cost=cost, theme=False, reward=reward, desc=desc, filt="FOCUS_FILTER_RESEARCH",
@@ -386,6 +462,25 @@ M("air_squadron", "시라쿠사 비행대", "Siracusan Air Squadron", ["officer_
   ["air_experience = 25", "add_tech_bonus = { name = TU_SIR_air bonus = 1.0 uses = 1 category = light_fighter }"])
 
 
+# 군사 보강 (사양서 71)
+C.idea("general_staff", "시라쿠사 총참모부", "Siracusan General Staff", {"army_org_factor": 0.05, "planning_speed": 0.15},
+       "generic_army_war_college", ("패밀리의 행동대가 아니라 나라의 군대다.", "No longer family enforcers, but a national army."))
+M("motor_strike", "차량화 타격대", "Motorised Strike Force", ["rapid_squads"],
+  ["add_tech_bonus = { name = TU_SIR_motor_strike bonus = 1.0 uses = 1 category = motorized_equipment }", "army_experience = 20"])
+M("border_line", "국경 방어선", "Border Defence Line", ["fortress_cities"], ["TU_build_forts_2 = yes"],
+  desc=("국경 요새를 한 단계 더 올린다.", "Raises the border forts another level."))
+M("engineers", "공병대", "Combat Engineers", ["arms_workshops"],
+  ["add_tech_bonus = { name = TU_SIR_engineers bonus = 1.0 uses = 1 category = engineers_tech category = cat_fortification }"])
+M("anti_air", "대공 포대", "Anti-Air Batteries", ["artillery"],
+  ["add_tech_bonus = { name = TU_SIR_aa bonus = 1.0 uses = 1 category = cat_anti_air }"])
+M("field_hospital", "야전 병원", "Field Hospitals", ["reserves"],
+  ["add_tech_bonus = { name = TU_SIR_hospital bonus = 1.0 uses = 1 category = hospital_tech }", "add_manpower = 5000"])
+M("arts_corps", "아츠 술사 부대", "Arts Caster Corps", ["officer_academy"],
+  ["add_tech_bonus = { name = TU_SIR_arts bonus = 1.0 uses = 2 category = tu_originium_tech }", "army_experience = 20"])
+M("general_staff", "시라쿠사 총참모부", "Siracusan General Staff", ["armoured_cars", "air_squadron"], ["add_ideas = TU_SIR_general_staff"],
+  cost=15, desc=("국민정신 '시라쿠사 총참모부': 조직력 +5%, 계획 속도 +15%.", "Spirit Siracusan General Staff: org +5%, planning speed +15%."))
+
+
 # ------------------------------------------------------------------ 중점: 외교 (모든 루트 공통)
 def D(sid, ko, en, pre, reward, me=(), desc=("", "")):
     return f(sid, ko, en, pre=pre, me=me, cost=10, theme=False, reward=reward, desc=desc, icon="GFX_goal_generic_diplomatic_treaty")
@@ -402,6 +497,26 @@ D("neutral_siracusa", "중립 시라쿠사", "Neutral Siracusa", ["laterano_acco
 D("southern_league", "남부 연맹", "Southern League", ["laterano_accord", "rhodes_office"], [FLAG("league"), "add_war_support = 0.05"],
   me=["neutral_siracusa"], desc=("'남부 연맹' 디시전이 열린다: 라테라노·림 빌리튼·이베리아·라이타니엔을 초청한다. (중립 시라쿠사와 택일)",
                                  "Unlocks the Southern League decisions. (Exclusive with Neutral Siracusa)"))
+
+# 외교 보강 (사양서 71)
+C.idea("armed_neutrality", "무장 중립", "Armed Neutrality", {"army_core_defence_factor": 0.15, "stability_factor": 0.05},
+       "generic_fortify_the_borders", ("누구의 편도 들지 않는다. 대신 누구도 들어오지 못한다.", "We take no side, and no one gets in."))
+D("leithanien_pact", "라이타니엔 불가침 조약", "Leithanien Non-Aggression Pact", ["foreign_ministry"],
+  ["diplomatic_relation = { country = LEI relation = non_aggression_pact active = yes }", "add_political_power = 25"],
+  desc=("라이타니엔과 불가침 조약을 맺는다.", "Sign a non-aggression pact with Leithanien."))
+D("penguin_logistics", "펭귄 로지스틱스 계약", "Penguin Logistics Contract", ["foreign_ministry"],
+  ["add_equipment_to_stockpile = { type = convoy_1 amount = 15 producer = SIR }",
+   "LGM = { add_opinion_modifier = { target = ROOT modifier = TU_dip_trade } }"],
+  desc=("용문의 운송 회사와 계약한다. 화물 비행선 15대, 용문과 관계 개선.", "Contract Lungmen's courier company. Fifteen cargo airships, better relations with Lungmen."))
+D("rim_minerals", "림 빌리튼 광물 협정", "Rim Billiton Minerals Accord", ["laterano_accord"],
+  ["random_owned_controlled_state = { add_resource = { type = tungsten amount = 6 } }",
+   "RIM = { add_opinion_modifier = { target = ROOT modifier = TU_dip_trade } }"],
+  desc=("망간 +6, 림 빌리튼과 관계 개선.", "Manganese +6, better relations with Rim Billiton."))
+D("armed_neutrality", "무장 중립", "Armed Neutrality", ["neutral_siracusa"], ["add_ideas = TU_SIR_armed_neutrality"],
+  desc=("국민정신 '무장 중립': 본토 방어 +15%, 안정도 +5%.", "Spirit Armed Neutrality: core defence +15%, stability +5%."))
+D("league_defence", "남부 방위 조약", "Southern Defence Treaty", ["southern_league"],
+  ["add_war_support = 0.05", "army_experience = 30",
+   "add_tech_bonus = { name = TU_SIR_league bonus = 1.0 uses = 1 category = support_tech category = infantry_tech }"])
 
 # ------------------------------------------------------------------ 디시전
 cat_fam = C.category("families", "패밀리", "The Families",

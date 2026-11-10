@@ -194,6 +194,19 @@ ideas = {
 			}
 		}
 
+		TU_SIR_night_hunters = {
+			picture = generic_war_preparation
+
+			allowed = {
+				original_tag = SIR
+			}
+
+			modifier = {
+				land_night_attack = 0.2
+				army_speed_factor = 0.05
+			}
+		}
+
 		TU_SIR_one_siracusa = {
 			picture = generic_central_management
 
@@ -206,6 +219,45 @@ ideas = {
 				political_power_gain = 0.1
 				army_org_factor = 0.05
 				war_support_factor = 0.05
+			}
+		}
+
+		TU_SIR_miracle = {
+			picture = generic_production_bonus
+
+			allowed = {
+				original_tag = SIR
+			}
+
+			modifier = {
+				industrial_capacity_factory = 0.05
+				production_speed_buildings_factor = 0.1
+			}
+		}
+
+		TU_SIR_general_staff = {
+			picture = generic_army_war_college
+
+			allowed = {
+				original_tag = SIR
+			}
+
+			modifier = {
+				army_org_factor = 0.05
+				planning_speed = 0.15
+			}
+		}
+
+		TU_SIR_armed_neutrality = {
+			picture = generic_fortify_the_borders
+
+			allowed = {
+				original_tag = SIR
+			}
+
+			modifier = {
+				army_core_defence_factor = 0.15
+				stability_factor = 0.05
 			}
 		}
 

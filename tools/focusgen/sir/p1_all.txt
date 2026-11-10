@@ -208,6 +208,107 @@
 	}
 
 	focus = {
+		id = TU_SIR_bellone_cityhall
+		icon = GFX_goal_generic_political_pressure
+		prerequisite = { focus = TU_SIR_bellone_head }
+		x = 0
+		y = 0
+		cost = 10
+
+		search_filters = { FOCUS_FILTER_POLITICAL }
+
+		ai_will_do = {
+			base = 1
+		}
+
+		completion_reward = {
+			add_political_power = 60
+			add_stability = 0.03
+		}
+	}
+
+	focus = {
+		id = TU_SIR_bellone_union
+		icon = GFX_goal_generic_production
+		prerequisite = { focus = TU_SIR_bellone_cityhall }
+		x = 0
+		y = 0
+		cost = 10
+
+		search_filters = { FOCUS_FILTER_POLITICAL }
+
+		ai_will_do = {
+			base = 1
+		}
+
+		completion_reward = {
+			add_manpower = 10000
+			add_stability = 0.03
+		}
+	}
+
+	focus = {
+		id = TU_SIR_bellone_school
+		icon = GFX_focus_research
+		prerequisite = { focus = TU_SIR_bellone_union }
+		x = 0
+		y = 0
+		cost = 10
+
+		search_filters = { FOCUS_FILTER_POLITICAL }
+
+		ai_will_do = {
+			base = 1
+		}
+
+		completion_reward = {
+			add_tech_bonus = { name = TU_SIR_bellone_school bonus = 1.0 uses = 2 category = construction_tech category = industry }
+		}
+	}
+
+	focus = {
+		id = TU_SIR_bellone_newcity
+		icon = GFX_goal_generic_political_pressure
+		prerequisite = { focus = TU_SIR_bellone_end }
+		x = 0
+		y = 0
+		cost = 10
+
+		search_filters = { FOCUS_FILTER_POLITICAL }
+
+		ai_will_do = {
+			base = 1
+		}
+
+		completion_reward = {
+			capital_scope = { add_extra_state_shared_building_slots = 2 }
+			TU_build_civ_factory = yes
+			TU_build_civ_factory = yes
+		}
+	}
+
+	focus = {
+		id = TU_SIR_bellone_fund
+		icon = GFX_goal_generic_production
+		prerequisite = { focus = TU_SIR_bellone_end }
+		x = 0
+		y = 0
+		cost = 10
+
+		search_filters = { FOCUS_FILTER_POLITICAL }
+
+		ai_will_do = {
+			base = 1
+		}
+
+		completion_reward = {
+			TU_build_infrastructure = yes
+			TU_build_infrastructure = yes
+			add_political_power = 100
+		}
+	}
+
+	focus = {
 		id = TU_SIR_gambino_head
 		icon = GFX_goal_generic_political_pressure
 		prerequisite = { focus = TU_SIR_root }
@@ -397,6 +498,106 @@
 	}
 
 	focus = {
+		id = TU_SIR_gambino_police
+		icon = GFX_goal_generic_intelligence_exchange
+		prerequisite = { focus = TU_SIR_gambino_head }
+		x = 0
+		y = 0
+		cost = 10
+
+		search_filters = { FOCUS_FILTER_POLITICAL }
+
+		ai_will_do = {
+			base = 1
+		}
+
+		completion_reward = {
+			add_stability = 0.05
+			TU_SIR_law_m10 = yes
+		}
+	}
+
+	focus = {
+		id = TU_SIR_gambino_smuggle
+		icon = GFX_goal_generic_small_arms
+		prerequisite = { focus = TU_SIR_gambino_police }
+		x = 0
+		y = 0
+		cost = 10
+
+		search_filters = { FOCUS_FILTER_POLITICAL }
+
+		ai_will_do = {
+			base = 1
+		}
+
+		completion_reward = {
+			add_equipment_to_stockpile = { type = infantry_equipment amount = 1500 producer = SIR }
+		}
+	}
+
+	focus = {
+		id = TU_SIR_gambino_network
+		icon = GFX_goal_generic_production
+		prerequisite = { focus = TU_SIR_gambino_smuggle }
+		x = 0
+		y = 0
+		cost = 10
+
+		search_filters = { FOCUS_FILTER_POLITICAL }
+
+		ai_will_do = {
+			base = 1
+		}
+
+		completion_reward = {
+			army_experience = 30
+			add_political_power = 50
+		}
+	}
+
+	focus = {
+		id = TU_SIR_gambino_mobilize
+		icon = GFX_goal_generic_army_doctrines
+		prerequisite = { focus = TU_SIR_gambino_end }
+		x = 0
+		y = 0
+		cost = 10
+
+		search_filters = { FOCUS_FILTER_POLITICAL }
+
+		ai_will_do = {
+			base = 1
+		}
+
+		completion_reward = {
+			add_manpower = 40000
+			add_war_support = 0.05
+		}
+	}
+
+	focus = {
+		id = TU_SIR_gambino_campaign
+		icon = GFX_goal_generic_occupy_start_war
+		prerequisite = { focus = TU_SIR_gambino_end }
+		x = 0
+		y = 0
+		cost = 10
+
+		search_filters = { FOCUS_FILTER_POLITICAL }
+
+		ai_will_do = {
+			base = 1
+		}
+
+		completion_reward = {
+			army_experience = 60
+			add_command_power = 30
+			TU_build_mil_factory = yes
+		}
+	}
+
+	focus = {
 		id = TU_SIR_saluzzo_head
 		icon = GFX_goal_generic_political_pressure
 		prerequisite = { focus = TU_SIR_root }
@@ -580,6 +781,104 @@
 			swap_ideas = { remove_idea = TU_SIR_saluzzo_start add_idea = TU_SIR_saluzzo_end }
 			remove_ideas = TU_SIR_family_cities
 			country_event = { id = tu_sir_ev.28 }
+		}
+	}
+
+	focus = {
+		id = TU_SIR_saluzzo_deputies
+		icon = GFX_goal_generic_political_pressure
+		prerequisite = { focus = TU_SIR_saluzzo_head }
+		x = 0
+		y = 0
+		cost = 10
+
+		search_filters = { FOCUS_FILTER_POLITICAL }
+
+		ai_will_do = {
+			base = 1
+		}
+
+		completion_reward = {
+			add_political_power = 120
+		}
+	}
+
+	focus = {
+		id = TU_SIR_saluzzo_press
+		icon = GFX_goal_generic_political_pressure
+		prerequisite = { focus = TU_SIR_saluzzo_deputies }
+		x = 0
+		y = 0
+		cost = 10
+
+		search_filters = { FOCUS_FILTER_POLITICAL }
+
+		ai_will_do = {
+			base = 1
+		}
+
+		completion_reward = {
+			add_stability = 0.05
+			add_war_support = 0.03
+		}
+	}
+
+	focus = {
+		id = TU_SIR_saluzzo_foundation
+		icon = GFX_goal_generic_political_pressure
+		prerequisite = { focus = TU_SIR_saluzzo_press }
+		x = 0
+		y = 0
+		cost = 10
+
+		search_filters = { FOCUS_FILTER_POLITICAL }
+
+		ai_will_do = {
+			base = 1
+		}
+
+		completion_reward = {
+			add_tech_bonus = { name = TU_SIR_saluzzo_foundation bonus = 1.0 uses = 2 category = industry category = electronics category = tu_originium_tech }
+		}
+	}
+
+	focus = {
+		id = TU_SIR_saluzzo_finance
+		icon = GFX_goal_generic_trade
+		prerequisite = { focus = TU_SIR_saluzzo_end }
+		x = 0
+		y = 0
+		cost = 10
+
+		search_filters = { FOCUS_FILTER_POLITICAL }
+
+		ai_will_do = {
+			base = 1
+		}
+
+		completion_reward = {
+			add_offsite_building = { type = industrial_complex level = 2 }
+		}
+	}
+
+	focus = {
+		id = TU_SIR_saluzzo_mercs
+		icon = GFX_goal_generic_allies_build_infantry
+		prerequisite = { focus = TU_SIR_saluzzo_end }
+		x = 0
+		y = 0
+		cost = 10
+
+		search_filters = { FOCUS_FILTER_POLITICAL }
+
+		ai_will_do = {
+			base = 1
+		}
+
+		completion_reward = {
+			add_manpower = 20000
+			army_experience = 40
+			TU_build_mil_factory = yes
 		}
 	}
 
@@ -773,6 +1072,107 @@
 	}
 
 	focus = {
+		id = TU_SIR_law_press
+		icon = GFX_goal_generic_political_pressure
+		prerequisite = { focus = TU_SIR_law_head }
+		x = 0
+		y = 0
+		cost = 10
+
+		search_filters = { FOCUS_FILTER_POLITICAL }
+
+		ai_will_do = {
+			base = 1
+		}
+
+		completion_reward = {
+			add_stability = 0.05
+		}
+	}
+
+	focus = {
+		id = TU_SIR_law_jury
+		icon = GFX_goal_generic_political_pressure
+		prerequisite = { focus = TU_SIR_law_press }
+		x = 0
+		y = 0
+		cost = 10
+
+		search_filters = { FOCUS_FILTER_POLITICAL }
+
+		ai_will_do = {
+			base = 1
+		}
+
+		completion_reward = {
+			TU_SIR_law_10 = yes
+			add_political_power = 50
+		}
+	}
+
+	focus = {
+		id = TU_SIR_law_militia
+		icon = GFX_goal_generic_consumer_goods
+		prerequisite = { focus = TU_SIR_law_jury }
+		x = 0
+		y = 0
+		cost = 10
+
+		search_filters = { FOCUS_FILTER_POLITICAL }
+
+		ai_will_do = {
+			base = 1
+		}
+
+		completion_reward = {
+			add_manpower = 15000
+			army_experience = 25
+		}
+	}
+
+	focus = {
+		id = TU_SIR_law_charter
+		icon = GFX_goal_generic_political_pressure
+		prerequisite = { focus = TU_SIR_law_end }
+		x = 0
+		y = 0
+		cost = 10
+
+		search_filters = { FOCUS_FILTER_POLITICAL }
+
+		ai_will_do = {
+			base = 1
+		}
+
+		completion_reward = {
+			TU_build_civ_factory = yes
+			TU_build_civ_factory = yes
+			add_stability = 0.05
+		}
+	}
+
+	focus = {
+		id = TU_SIR_law_cooperation
+		icon = GFX_goal_generic_trade
+		prerequisite = { focus = TU_SIR_law_end }
+		x = 0
+		y = 0
+		cost = 10
+
+		search_filters = { FOCUS_FILTER_POLITICAL }
+
+		ai_will_do = {
+			base = 1
+		}
+
+		completion_reward = {
+			LAT = { add_opinion_modifier = { target = ROOT modifier = TU_dip_aid } }
+			RIM = { add_opinion_modifier = { target = ROOT modifier = TU_dip_aid } }
+			add_political_power = 100
+		}
+	}
+
+	focus = {
 		id = TU_SIR_wolf_head
 		icon = GFX_goal_generic_political_pressure
 		prerequisite = { focus = TU_SIR_root }
@@ -962,9 +1362,109 @@
 	}
 
 	focus = {
+		id = TU_SIR_wolf_fangs
+		icon = GFX_goal_generic_political_pressure
+		prerequisite = { focus = TU_SIR_wolf_head }
+		x = 0
+		y = 0
+		cost = 10
+
+		search_filters = { FOCUS_FILTER_POLITICAL }
+
+		ai_will_do = {
+			base = 1
+		}
+
+		completion_reward = {
+			army_experience = 40
+		}
+	}
+
+	focus = {
+		id = TU_SIR_wolf_grounds
+		icon = GFX_goal_generic_allies_build_infantry
+		prerequisite = { focus = TU_SIR_wolf_fangs }
+		x = 0
+		y = 0
+		cost = 10
+
+		search_filters = { FOCUS_FILTER_POLITICAL }
+
+		ai_will_do = {
+			base = 1
+		}
+
+		completion_reward = {
+			add_manpower = 15000
+			TU_build_mil_factory = yes
+		}
+	}
+
+	focus = {
+		id = TU_SIR_wolf_oath
+		icon = GFX_goal_generic_propaganda
+		prerequisite = { focus = TU_SIR_wolf_grounds }
+		x = 0
+		y = 0
+		cost = 10
+
+		search_filters = { FOCUS_FILTER_POLITICAL }
+
+		ai_will_do = {
+			base = 1
+		}
+
+		completion_reward = {
+			add_war_support = 0.10
+			add_stability = 0.03
+		}
+	}
+
+	focus = {
+		id = TU_SIR_wolf_night
+		icon = GFX_goal_generic_political_pressure
+		prerequisite = { focus = TU_SIR_wolf_end }
+		x = 0
+		y = 0
+		cost = 10
+
+		search_filters = { FOCUS_FILTER_POLITICAL }
+
+		ai_will_do = {
+			base = 1
+		}
+
+		completion_reward = {
+			add_ideas = TU_SIR_night_hunters
+		}
+	}
+
+	focus = {
+		id = TU_SIR_wolf_hunt
+		icon = GFX_goal_generic_allies_build_infantry
+		prerequisite = { focus = TU_SIR_wolf_end }
+		x = 0
+		y = 0
+		cost = 10
+
+		search_filters = { FOCUS_FILTER_POLITICAL }
+
+		ai_will_do = {
+			base = 1
+		}
+
+		completion_reward = {
+			add_manpower = 30000
+			army_experience = 50
+			add_command_power = 30
+		}
+	}
+
+	focus = {
 		id = TU_SIR_bellone_unity
 		icon = GFX_goal_generic_political_pressure
-		prerequisite = { focus = TU_SIR_bellone_end }
+		prerequisite = { focus = TU_SIR_bellone_newcity }
+		prerequisite = { focus = TU_SIR_bellone_fund }
 		x = 0
 		y = 0
 		cost = 10
@@ -990,7 +1490,8 @@
 	focus = {
 		id = TU_SIR_gambino_unity
 		icon = GFX_goal_generic_political_pressure
-		prerequisite = { focus = TU_SIR_gambino_end }
+		prerequisite = { focus = TU_SIR_gambino_mobilize }
+		prerequisite = { focus = TU_SIR_gambino_campaign }
 		x = 0
 		y = 0
 		cost = 10
@@ -1016,7 +1517,8 @@
 	focus = {
 		id = TU_SIR_saluzzo_unity
 		icon = GFX_goal_generic_political_pressure
-		prerequisite = { focus = TU_SIR_saluzzo_end }
+		prerequisite = { focus = TU_SIR_saluzzo_finance }
+		prerequisite = { focus = TU_SIR_saluzzo_mercs }
 		x = 0
 		y = 0
 		cost = 10
@@ -1042,7 +1544,8 @@
 	focus = {
 		id = TU_SIR_law_unity
 		icon = GFX_goal_generic_trade
-		prerequisite = { focus = TU_SIR_law_end }
+		prerequisite = { focus = TU_SIR_law_charter }
+		prerequisite = { focus = TU_SIR_law_cooperation }
 		x = 0
 		y = 0
 		cost = 10
@@ -1069,7 +1572,8 @@
 	focus = {
 		id = TU_SIR_wolf_unity
 		icon = GFX_goal_generic_political_pressure
-		prerequisite = { focus = TU_SIR_wolf_end }
+		prerequisite = { focus = TU_SIR_wolf_night }
+		prerequisite = { focus = TU_SIR_wolf_hunt }
 		x = 0
 		y = 0
 		cost = 10
@@ -1371,6 +1875,124 @@
 	}
 
 	focus = {
+		id = TU_SIR_farm_coop
+		icon = GFX_goal_generic_construct_civ_factory
+		prerequisite = { focus = TU_SIR_wine_olive }
+		x = 0
+		y = 0
+		cost = 10
+
+		search_filters = { FOCUS_FILTER_INDUSTRY }
+
+		ai_will_do = {
+			base = 1
+		}
+
+		completion_reward = {
+			add_manpower = 10000
+			add_stability = 0.03
+		}
+	}
+
+	focus = {
+		id = TU_SIR_cargo_contract
+		icon = GFX_goal_generic_construct_civ_factory
+		prerequisite = { focus = TU_SIR_wine_exports }
+		x = 0
+		y = 0
+		cost = 10
+
+		search_filters = { FOCUS_FILTER_INDUSTRY }
+
+		ai_will_do = {
+			base = 1
+		}
+
+		completion_reward = {
+			add_equipment_to_stockpile = { type = convoy_1 amount = 15 producer = SIR }
+		}
+	}
+
+	focus = {
+		id = TU_SIR_power_grid
+		icon = GFX_goal_generic_construct_civ_factory
+		prerequisite = { focus = TU_SIR_power_plants }
+		x = 0
+		y = 0
+		cost = 10
+
+		search_filters = { FOCUS_FILTER_INDUSTRY }
+
+		ai_will_do = {
+			base = 1
+		}
+
+		completion_reward = {
+			TU_build_infrastructure = yes
+			add_tech_bonus = { name = TU_SIR_grid bonus = 1.0 uses = 1 category = electronics }
+		}
+	}
+
+	focus = {
+		id = TU_SIR_refinery
+		icon = GFX_goal_generic_construct_civ_factory
+		prerequisite = { focus = TU_SIR_chemical_plants }
+		x = 0
+		y = 0
+		cost = 10
+
+		search_filters = { FOCUS_FILTER_INDUSTRY }
+
+		ai_will_do = {
+			base = 1
+		}
+
+		completion_reward = {
+			random_owned_controlled_state = { limit = { is_controlled_by = ROOT infrastructure > 0 } add_extra_state_shared_building_slots = 1 add_building_construction = { type = originium_refinery level = 1 instant_build = yes } }
+			add_tech_bonus = { name = TU_SIR_refinery bonus = 1.0 uses = 1 category = tu_originium_tech }
+		}
+	}
+
+	focus = {
+		id = TU_SIR_oripathy_lab
+		icon = GFX_goal_generic_construct_civ_factory
+		prerequisite = { focus = TU_SIR_academy }
+		x = 0
+		y = 0
+		cost = 10
+
+		search_filters = { FOCUS_FILTER_INDUSTRY }
+
+		ai_will_do = {
+			base = 1
+		}
+
+		completion_reward = {
+			add_tech_bonus = { name = TU_SIR_oripathy bonus = 1.0 uses = 2 category = tu_oripathy_tech }
+			add_stability = 0.03
+		}
+	}
+
+	focus = {
+		id = TU_SIR_miracle
+		icon = GFX_goal_generic_construct_civ_factory
+		prerequisite = { focus = TU_SIR_industrialisation }
+		x = 0
+		y = 0
+		cost = 15
+
+		search_filters = { FOCUS_FILTER_INDUSTRY }
+
+		ai_will_do = {
+			base = 1
+		}
+
+		completion_reward = {
+			add_ideas = TU_SIR_miracle
+		}
+	}
+
+	focus = {
 		id = TU_SIR_bodyguards
 		icon = GFX_goal_generic_small_arms
 		prerequisite = { focus = TU_SIR_root }
@@ -1629,6 +2251,143 @@
 	}
 
 	focus = {
+		id = TU_SIR_motor_strike
+		icon = GFX_goal_generic_small_arms
+		prerequisite = { focus = TU_SIR_rapid_squads }
+		x = 0
+		y = 0
+		cost = 10
+
+		search_filters = { FOCUS_FILTER_RESEARCH }
+
+		ai_will_do = {
+			base = 1
+		}
+
+		completion_reward = {
+			add_tech_bonus = { name = TU_SIR_motor_strike bonus = 1.0 uses = 1 category = motorized_equipment }
+			army_experience = 20
+		}
+	}
+
+	focus = {
+		id = TU_SIR_border_line
+		icon = GFX_goal_generic_small_arms
+		prerequisite = { focus = TU_SIR_fortress_cities }
+		x = 0
+		y = 0
+		cost = 10
+
+		search_filters = { FOCUS_FILTER_RESEARCH }
+
+		ai_will_do = {
+			base = 1
+		}
+
+		completion_reward = {
+			TU_build_forts_2 = yes
+		}
+	}
+
+	focus = {
+		id = TU_SIR_engineers
+		icon = GFX_goal_generic_small_arms
+		prerequisite = { focus = TU_SIR_arms_workshops }
+		x = 0
+		y = 0
+		cost = 10
+
+		search_filters = { FOCUS_FILTER_RESEARCH }
+
+		ai_will_do = {
+			base = 1
+		}
+
+		completion_reward = {
+			add_tech_bonus = { name = TU_SIR_engineers bonus = 1.0 uses = 1 category = engineers_tech category = cat_fortification }
+		}
+	}
+
+	focus = {
+		id = TU_SIR_anti_air
+		icon = GFX_goal_generic_small_arms
+		prerequisite = { focus = TU_SIR_artillery }
+		x = 0
+		y = 0
+		cost = 10
+
+		search_filters = { FOCUS_FILTER_RESEARCH }
+
+		ai_will_do = {
+			base = 1
+		}
+
+		completion_reward = {
+			add_tech_bonus = { name = TU_SIR_aa bonus = 1.0 uses = 1 category = cat_anti_air }
+		}
+	}
+
+	focus = {
+		id = TU_SIR_field_hospital
+		icon = GFX_goal_generic_small_arms
+		prerequisite = { focus = TU_SIR_reserves }
+		x = 0
+		y = 0
+		cost = 10
+
+		search_filters = { FOCUS_FILTER_RESEARCH }
+
+		ai_will_do = {
+			base = 1
+		}
+
+		completion_reward = {
+			add_tech_bonus = { name = TU_SIR_hospital bonus = 1.0 uses = 1 category = hospital_tech }
+			add_manpower = 5000
+		}
+	}
+
+	focus = {
+		id = TU_SIR_arts_corps
+		icon = GFX_goal_generic_small_arms
+		prerequisite = { focus = TU_SIR_officer_academy }
+		x = 0
+		y = 0
+		cost = 10
+
+		search_filters = { FOCUS_FILTER_RESEARCH }
+
+		ai_will_do = {
+			base = 1
+		}
+
+		completion_reward = {
+			add_tech_bonus = { name = TU_SIR_arts bonus = 1.0 uses = 2 category = tu_originium_tech }
+			army_experience = 20
+		}
+	}
+
+	focus = {
+		id = TU_SIR_general_staff
+		icon = GFX_goal_generic_small_arms
+		prerequisite = { focus = TU_SIR_armoured_cars }
+		prerequisite = { focus = TU_SIR_air_squadron }
+		x = 0
+		y = 0
+		cost = 15
+
+		search_filters = { FOCUS_FILTER_RESEARCH }
+
+		ai_will_do = {
+			base = 1
+		}
+
+		completion_reward = {
+			add_ideas = TU_SIR_general_staff
+		}
+	}
+
+	focus = {
 		id = TU_SIR_foreign_ministry
 		icon = GFX_goal_generic_diplomatic_treaty
 		prerequisite = { focus = TU_SIR_root }
@@ -1727,5 +2486,105 @@
 		completion_reward = {
 			set_country_flag = TU_SIR_league
 			add_war_support = 0.05
+		}
+	}
+
+	focus = {
+		id = TU_SIR_leithanien_pact
+		icon = GFX_goal_generic_diplomatic_treaty
+		prerequisite = { focus = TU_SIR_foreign_ministry }
+		x = 0
+		y = 0
+		cost = 10
+
+		search_filters = { FOCUS_FILTER_POLITICAL }
+
+		ai_will_do = {
+			base = 1
+		}
+
+		completion_reward = {
+			diplomatic_relation = { country = LEI relation = non_aggression_pact active = yes }
+			add_political_power = 25
+		}
+	}
+
+	focus = {
+		id = TU_SIR_penguin_logistics
+		icon = GFX_goal_generic_diplomatic_treaty
+		prerequisite = { focus = TU_SIR_foreign_ministry }
+		x = 0
+		y = 0
+		cost = 10
+
+		search_filters = { FOCUS_FILTER_POLITICAL }
+
+		ai_will_do = {
+			base = 1
+		}
+
+		completion_reward = {
+			add_equipment_to_stockpile = { type = convoy_1 amount = 15 producer = SIR }
+			LGM = { add_opinion_modifier = { target = ROOT modifier = TU_dip_trade } }
+		}
+	}
+
+	focus = {
+		id = TU_SIR_rim_minerals
+		icon = GFX_goal_generic_diplomatic_treaty
+		prerequisite = { focus = TU_SIR_laterano_accord }
+		x = 0
+		y = 0
+		cost = 10
+
+		search_filters = { FOCUS_FILTER_POLITICAL }
+
+		ai_will_do = {
+			base = 1
+		}
+
+		completion_reward = {
+			random_owned_controlled_state = { add_resource = { type = tungsten amount = 6 } }
+			RIM = { add_opinion_modifier = { target = ROOT modifier = TU_dip_trade } }
+		}
+	}
+
+	focus = {
+		id = TU_SIR_armed_neutrality
+		icon = GFX_goal_generic_diplomatic_treaty
+		prerequisite = { focus = TU_SIR_neutral_siracusa }
+		x = 0
+		y = 0
+		cost = 10
+
+		search_filters = { FOCUS_FILTER_POLITICAL }
+
+		ai_will_do = {
+			base = 1
+		}
+
+		completion_reward = {
+			add_ideas = TU_SIR_armed_neutrality
+		}
+	}
+
+	focus = {
+		id = TU_SIR_league_defence
+		icon = GFX_goal_generic_diplomatic_treaty
+		prerequisite = { focus = TU_SIR_southern_league }
+		x = 0
+		y = 0
+		cost = 10
+
+		search_filters = { FOCUS_FILTER_POLITICAL }
+
+		ai_will_do = {
+			base = 1
+		}
+
+		completion_reward = {
+			add_war_support = 0.05
+			army_experience = 30
+			add_tech_bonus = { name = TU_SIR_league bonus = 1.0 uses = 1 category = support_tech category = infantry_tech }
 		}
 	}

@@ -40,6 +40,14 @@ TU_SIR_monthly = {
 	TU_SIR_unrest_tick = yes
 }
 
+TU_SIR_law_m10 = {
+	custom_effect_tooltip = TU_SIR_law_m10_tt
+	hidden_effect = {
+		add_to_variable = { TU_SIR_law = -10 }
+		clamp_variable = { var = TU_SIR_law min = 0 max = 100 }
+	}
+}
+
 TU_SIR_law_10 = {
 	custom_effect_tooltip = TU_SIR_law_10_tt
 	hidden_effect = {
