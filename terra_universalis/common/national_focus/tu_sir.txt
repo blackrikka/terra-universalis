@@ -58,7 +58,6 @@ focus_tree = {
 
 		completion_reward = {
 			add_political_power = 75
-			TU_SIR_bellone_10 = yes
 		}
 	}
 
@@ -78,6 +77,7 @@ focus_tree = {
 
 		completion_reward = {
 			TU_build_civ_factory = yes
+			country_event = { id = tu_sir_ev.40 days = 5 }
 		}
 	}
 
@@ -177,6 +177,7 @@ focus_tree = {
 		completion_reward = {
 			TU_build_civ_factory = yes
 			TU_build_civ_factory = yes
+			country_event = { id = tu_sir_ev.41 days = 5 }
 		}
 	}
 
@@ -246,7 +247,6 @@ focus_tree = {
 
 		completion_reward = {
 			add_manpower = 10000
-			TU_SIR_gambino_10 = yes
 		}
 	}
 
@@ -267,6 +267,7 @@ focus_tree = {
 		completion_reward = {
 			army_experience = 25
 			add_manpower = 10000
+			country_event = { id = tu_sir_ev.42 days = 5 }
 		}
 	}
 
@@ -367,6 +368,7 @@ focus_tree = {
 		completion_reward = {
 			add_manpower = 25000
 			TU_build_mil_factory = yes
+			country_event = { id = tu_sir_ev.43 days = 5 }
 		}
 	}
 
@@ -436,7 +438,6 @@ focus_tree = {
 
 		completion_reward = {
 			add_political_power = 100
-			TU_SIR_saluzzo_10 = yes
 		}
 	}
 
@@ -457,6 +458,7 @@ focus_tree = {
 		completion_reward = {
 			add_political_power = 75
 			TU_build_civ_factory = yes
+			country_event = { id = tu_sir_ev.44 days = 5 }
 		}
 	}
 
@@ -536,6 +538,7 @@ focus_tree = {
 		completion_reward = {
 			set_country_flag = TU_SIR_casinos
 			TU_build_civ_factory = yes
+			country_event = { id = tu_sir_ev.45 days = 5 }
 		}
 	}
 
@@ -645,6 +648,7 @@ focus_tree = {
 		completion_reward = {
 			TU_SIR_law_10 = yes
 			add_stability = 0.05
+			country_event = { id = tu_sir_ev.46 days = 5 }
 		}
 	}
 
@@ -725,6 +729,7 @@ focus_tree = {
 		completion_reward = {
 			TU_SIR_law_10 = yes
 			set_country_flag = TU_SIR_witness
+			country_event = { id = tu_sir_ev.47 days = 5 }
 		}
 	}
 
@@ -854,6 +859,7 @@ focus_tree = {
 		completion_reward = {
 			army_experience = 40
 			add_war_support = 0.05
+			country_event = { id = tu_sir_ev.48 days = 5 }
 		}
 	}
 
@@ -914,6 +920,7 @@ focus_tree = {
 		completion_reward = {
 			add_manpower = 15000
 			add_tech_bonus = { name = TU_SIR_wolf_pack bonus = 1.0 uses = 1 category = infantry_tech }
+			country_event = { id = tu_sir_ev.49 days = 5 }
 		}
 	}
 
@@ -979,6 +986,138 @@ focus_tree = {
 			country_event = { id = tu_sir_ev.30 }
 			# spec 23 hooks
 			set_cosmetic_tag = TU_SIR_WOLF
+		}
+	}
+
+	focus = {
+		id = TU_SIR_bellone_unity
+		icon = GFX_goal_generic_political_pressure
+		prerequisite = { focus = TU_SIR_bellone_end }
+		x = -1
+		y = 7
+		cost = 10
+
+		search_filters = { FOCUS_FILTER_POLITICAL }
+
+		available = {
+			has_country_flag = TU_SIR_absorbed_gambino
+			has_country_flag = TU_SIR_absorbed_saluzzo
+		}
+
+		ai_will_do = {
+			base = 1
+		}
+
+		completion_reward = {
+			add_ideas = TU_SIR_one_siracusa
+			if = { limit = { has_idea = TU_SIR_omerta } remove_ideas = TU_SIR_omerta }
+			add_political_power = 100
+		}
+	}
+
+	focus = {
+		id = TU_SIR_gambino_unity
+		icon = GFX_goal_generic_political_pressure
+		prerequisite = { focus = TU_SIR_gambino_end }
+		x = -1
+		y = 7
+		cost = 10
+
+		search_filters = { FOCUS_FILTER_POLITICAL }
+
+		available = {
+			has_country_flag = TU_SIR_absorbed_bellone
+			has_country_flag = TU_SIR_absorbed_saluzzo
+		}
+
+		ai_will_do = {
+			base = 1
+		}
+
+		completion_reward = {
+			add_ideas = TU_SIR_one_siracusa
+			if = { limit = { has_idea = TU_SIR_omerta } remove_ideas = TU_SIR_omerta }
+			add_political_power = 100
+		}
+	}
+
+	focus = {
+		id = TU_SIR_saluzzo_unity
+		icon = GFX_goal_generic_political_pressure
+		prerequisite = { focus = TU_SIR_saluzzo_end }
+		x = -1
+		y = 7
+		cost = 10
+
+		search_filters = { FOCUS_FILTER_POLITICAL }
+
+		available = {
+			has_country_flag = TU_SIR_absorbed_bellone
+			has_country_flag = TU_SIR_absorbed_gambino
+		}
+
+		ai_will_do = {
+			base = 1
+		}
+
+		completion_reward = {
+			add_ideas = TU_SIR_one_siracusa
+			if = { limit = { has_idea = TU_SIR_omerta } remove_ideas = TU_SIR_omerta }
+			add_political_power = 100
+		}
+	}
+
+	focus = {
+		id = TU_SIR_law_unity
+		icon = GFX_goal_generic_trade
+		prerequisite = { focus = TU_SIR_law_end }
+		x = -1
+		y = 7
+		cost = 10
+
+		search_filters = { FOCUS_FILTER_POLITICAL }
+
+		available = {
+			has_country_flag = TU_SIR_absorbed_bellone
+			has_country_flag = TU_SIR_absorbed_gambino
+			has_country_flag = TU_SIR_absorbed_saluzzo
+		}
+
+		ai_will_do = {
+			base = 1
+		}
+
+		completion_reward = {
+			add_ideas = TU_SIR_one_siracusa
+			if = { limit = { has_idea = TU_SIR_omerta } remove_ideas = TU_SIR_omerta }
+			add_political_power = 100
+		}
+	}
+
+	focus = {
+		id = TU_SIR_wolf_unity
+		icon = GFX_goal_generic_political_pressure
+		prerequisite = { focus = TU_SIR_wolf_end }
+		x = -1
+		y = 7
+		cost = 10
+
+		search_filters = { FOCUS_FILTER_POLITICAL }
+
+		available = {
+			has_country_flag = TU_SIR_absorbed_bellone
+			has_country_flag = TU_SIR_absorbed_gambino
+			has_country_flag = TU_SIR_absorbed_saluzzo
+		}
+
+		ai_will_do = {
+			base = 1
+		}
+
+		completion_reward = {
+			add_ideas = TU_SIR_one_siracusa
+			if = { limit = { has_idea = TU_SIR_omerta } remove_ideas = TU_SIR_omerta }
+			add_political_power = 100
 		}
 	}
 
@@ -1416,6 +1555,7 @@ focus_tree = {
 		completion_reward = {
 			army_experience = 50
 			add_tech_bonus = { name = TU_SIR_command bonus = 1.0 uses = 1 category = support_tech }
+			country_event = { id = tu_sir_ev.50 days = 10 }
 		}
 	}
 

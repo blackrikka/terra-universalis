@@ -124,11 +124,18 @@ COUNTRIES = {
         ("saluzzo_don", "살루초 대부", "Don Saluzzo", [("L", "oligarchism")], None),
         ("penance", "페넌스", "Penance", [("L", "conservatism"), ("A", "political_advisor", "tu_inquisitor")], None),
         ("lappland_decadenza", "라플란드 더 데카덴차", "Lappland the Decadenza", [("L", "despotism")], None),
-        ("texas", "텍사스", "Texas", [("A", "high_command", "tu_chief_logistics"), ("G", 4, 3, 3, 4)], None),
+        # 텍사스는 이벤트 tu_sir_ev.27 '텍사스의 귀향'으로 합류한다 (사양서 69). 초상화는 텍사스 디 오메르토사
+        ("texas", "텍사스", "Texas", [("A", "high_command", "tu_chief_logistics"), ("G", 5, 4, 3, 4)], None),
+        # 라플란드는 늑대 루트를 고르면 지도자(라플란드 더 데카덴차)가 되므로 장군에서 물러난다
         ("lappland", "라플란드", "Lappland", [("G", 6, 2, 2, 2)], None),
         ("consigliere", "패밀리 고문", "Family Consigliere", [("A", "political_advisor", "tu_spymaster")], None),
+        ("vigil", "비질", "Vigil", [("A", "political_advisor", "tu_diplomat")], None),
+        # 키아베 일당: 이벤트 tu_sir_ev.50 (군 사령부 중점 뒤)
+        ("chiave", "키아베", "Chiave", [("A", "political_advisor", "tu_originium_magnate")], None),
+        ("aosta", "아오스타", "Aosta", [("G", 4, 4, 2, 3)], None),
+        ("broca", "브로카", "Broca", [("G", 3, 5, 2, 3)], None),
         ("valencina", "발렌치나", "Valencina", [("G", 6, 3, 3, 4)], None),     # 이스터에그 (sir.py tu_sir_ev.37)
-    ], start=["elder_don", "penance", "consigliere", "texas", "lappland"], hooks={
+    ], start=["elder_don", "penance", "consigliere", "vigil", "lappland"], hooks={
         "bellone_end": [("name", "BELLONE", "벨로네의 시라쿠사", "Bellone's Siracusa", "시라쿠사의", "Siracusan")],
         "gambino_end": [("name", "GAMBINO", "감비노의 시라쿠사", "Gambino's Siracusa", "시라쿠사의", "Siracusan")],
         "saluzzo_end": [("name", "SALUZZO", "살루초의 시라쿠사", "Saluzzo's Siracusa", "시라쿠사의", "Siracusan")],

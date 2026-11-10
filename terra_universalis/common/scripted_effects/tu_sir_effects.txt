@@ -1,36 +1,42 @@
 TU_SIR_monthly = {
-	add_to_variable = { TU_SIR_bellone = 1 }
-	add_to_variable = { TU_SIR_gambino = 1 }
-	add_to_variable = { TU_SIR_saluzzo = 1 }
-	if = { limit = { has_country_flag = TU_SIR_courts } add_to_variable = { TU_SIR_law = 1 } }
-	clamp_variable = { var = TU_SIR_bellone min = 0 max = 100 }
-	clamp_variable = { var = TU_SIR_gambino min = 0 max = 100 }
-	clamp_variable = { var = TU_SIR_saluzzo min = 0 max = 100 }
-	clamp_variable = { var = TU_SIR_law min = 0 max = 100 }
-}
-
-TU_SIR_bellone_10 = {
-	custom_effect_tooltip = TU_SIR_bellone_10_tt
-	hidden_effect = {
-		add_to_variable = { TU_SIR_bellone = 10 }
+	if = {
+		limit = { has_country_flag = TU_SIR_route_bellone }
+		set_variable = { TU_SIR_bellone = 100 }
+	}
+	else_if = {
+		limit = { has_country_flag = TU_SIR_absorbed_bellone }
+		set_variable = { TU_SIR_bellone = 0 }
+	}
+	else = {
+		add_to_variable = { TU_SIR_bellone = 1 }
 		clamp_variable = { var = TU_SIR_bellone min = 0 max = 100 }
 	}
-}
-
-TU_SIR_gambino_10 = {
-	custom_effect_tooltip = TU_SIR_gambino_10_tt
-	hidden_effect = {
-		add_to_variable = { TU_SIR_gambino = 10 }
+	if = {
+		limit = { has_country_flag = TU_SIR_route_gambino }
+		set_variable = { TU_SIR_gambino = 100 }
+	}
+	else_if = {
+		limit = { has_country_flag = TU_SIR_absorbed_gambino }
+		set_variable = { TU_SIR_gambino = 0 }
+	}
+	else = {
+		add_to_variable = { TU_SIR_gambino = 1 }
 		clamp_variable = { var = TU_SIR_gambino min = 0 max = 100 }
 	}
-}
-
-TU_SIR_saluzzo_10 = {
-	custom_effect_tooltip = TU_SIR_saluzzo_10_tt
-	hidden_effect = {
-		add_to_variable = { TU_SIR_saluzzo = 10 }
+	if = {
+		limit = { has_country_flag = TU_SIR_route_saluzzo }
+		set_variable = { TU_SIR_saluzzo = 100 }
+	}
+	else_if = {
+		limit = { has_country_flag = TU_SIR_absorbed_saluzzo }
+		set_variable = { TU_SIR_saluzzo = 0 }
+	}
+	else = {
+		add_to_variable = { TU_SIR_saluzzo = 1 }
 		clamp_variable = { var = TU_SIR_saluzzo min = 0 max = 100 }
 	}
+	if = { limit = { has_country_flag = TU_SIR_courts } add_to_variable = { TU_SIR_law = 1 } }
+	clamp_variable = { var = TU_SIR_law min = 0 max = 100 }
 }
 
 TU_SIR_law_10 = {
@@ -46,6 +52,14 @@ TU_SIR_law_5 = {
 	hidden_effect = {
 		add_to_variable = { TU_SIR_law = 5 }
 		clamp_variable = { var = TU_SIR_law min = 0 max = 100 }
+	}
+}
+
+TU_SIR_bellone_10 = {
+	custom_effect_tooltip = TU_SIR_bellone_10_tt
+	hidden_effect = {
+		add_to_variable = { TU_SIR_bellone = 10 }
+		clamp_variable = { var = TU_SIR_bellone min = 0 max = 100 }
 	}
 }
 
@@ -73,6 +87,14 @@ TU_SIR_bellone_m10 = {
 	}
 }
 
+TU_SIR_gambino_10 = {
+	custom_effect_tooltip = TU_SIR_gambino_10_tt
+	hidden_effect = {
+		add_to_variable = { TU_SIR_gambino = 10 }
+		clamp_variable = { var = TU_SIR_gambino min = 0 max = 100 }
+	}
+}
+
 TU_SIR_gambino_m15 = {
 	custom_effect_tooltip = TU_SIR_gambino_m15_tt
 	hidden_effect = {
@@ -86,6 +108,14 @@ TU_SIR_gambino_m10 = {
 	hidden_effect = {
 		add_to_variable = { TU_SIR_gambino = -10 }
 		clamp_variable = { var = TU_SIR_gambino min = 0 max = 100 }
+	}
+}
+
+TU_SIR_saluzzo_10 = {
+	custom_effect_tooltip = TU_SIR_saluzzo_10_tt
+	hidden_effect = {
+		add_to_variable = { TU_SIR_saluzzo = 10 }
+		clamp_variable = { var = TU_SIR_saluzzo min = 0 max = 100 }
 	}
 }
 
@@ -174,5 +204,95 @@ TU_SIR_saluzzo_5 = {
 	hidden_effect = {
 		add_to_variable = { TU_SIR_saluzzo = 5 }
 		clamp_variable = { var = TU_SIR_saluzzo min = 0 max = 100 }
+	}
+}
+
+TU_SIR_enforcers_template = {
+	if = {
+		limit = { NOT = { has_country_flag = TU_SIR_enforcers_template_done } }
+		set_country_flag = TU_SIR_enforcers_template_done
+		division_template = {
+			name = "TU_SIR_enforcers"
+			is_locked = no
+			priority = 2
+			regiments = {
+				infantry = { x = 0 y = 0 }
+				infantry = { x = 0 y = 1 }
+				infantry = { x = 0 y = 2 }
+				infantry = { x = 0 y = 3 }
+				infantry = { x = 0 y = 4 }
+				infantry = { x = 1 y = 0 }
+				artillery_brigade = { x = 2 y = 0 }
+			}
+		}
+	}
+}
+
+TU_SIR_wolf_pack_template = {
+	if = {
+		limit = { NOT = { has_country_flag = TU_SIR_wolf_pack_template_done } }
+		set_country_flag = TU_SIR_wolf_pack_template_done
+		division_template = {
+			name = "TU_SIR_wolf_pack"
+			is_locked = no
+			priority = 2
+			regiments = {
+				cavalry = { x = 0 y = 0 }
+				cavalry = { x = 0 y = 1 }
+				cavalry = { x = 0 y = 2 }
+				cavalry = { x = 0 y = 3 }
+				infantry = { x = 1 y = 0 }
+				infantry = { x = 1 y = 1 }
+				artillery_brigade = { x = 2 y = 0 }
+			}
+		}
+	}
+}
+
+TU_SIR_bellone_m5 = {
+	custom_effect_tooltip = TU_SIR_bellone_m5_tt
+	hidden_effect = {
+		add_to_variable = { TU_SIR_bellone = -5 }
+		clamp_variable = { var = TU_SIR_bellone min = 0 max = 100 }
+	}
+}
+
+TU_SIR_gambino_m5 = {
+	custom_effect_tooltip = TU_SIR_gambino_m5_tt
+	hidden_effect = {
+		add_to_variable = { TU_SIR_gambino = -5 }
+		clamp_variable = { var = TU_SIR_gambino min = 0 max = 100 }
+	}
+}
+
+TU_SIR_saluzzo_m5 = {
+	custom_effect_tooltip = TU_SIR_saluzzo_m5_tt
+	hidden_effect = {
+		add_to_variable = { TU_SIR_saluzzo = -5 }
+		clamp_variable = { var = TU_SIR_saluzzo min = 0 max = 100 }
+	}
+}
+
+TU_SIR_bellone_5 = {
+	custom_effect_tooltip = TU_SIR_bellone_5_tt
+	hidden_effect = {
+		add_to_variable = { TU_SIR_bellone = 5 }
+		clamp_variable = { var = TU_SIR_bellone min = 0 max = 100 }
+	}
+}
+
+TU_SIR_bellone_m8 = {
+	custom_effect_tooltip = TU_SIR_bellone_m8_tt
+	hidden_effect = {
+		add_to_variable = { TU_SIR_bellone = -8 }
+		clamp_variable = { var = TU_SIR_bellone min = 0 max = 100 }
+	}
+}
+
+TU_SIR_gambino_m8 = {
+	custom_effect_tooltip = TU_SIR_gambino_m8_tt
+	hidden_effect = {
+		add_to_variable = { TU_SIR_gambino = -8 }
+		clamp_variable = { var = TU_SIR_gambino min = 0 max = 100 }
 	}
 }

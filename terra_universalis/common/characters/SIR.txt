@@ -82,8 +82,8 @@ characters = {
 	TU_SIR_texas = {
 		name = TU_SIR_texas
 		portraits = {
-			civilian = { large = "GFX_TU_ak_87f843c2ac" small = "GFX_TU_ak_87f843c2ac_small" }
-			army = { large = "GFX_TU_ak_87f843c2ac" small = "GFX_TU_ak_87f843c2ac_small" }
+			civilian = { large = "GFX_TU_ak_9e5969288e" small = "GFX_TU_ak_9e5969288e_small" }
+			army = { large = "GFX_TU_ak_9e5969288e" small = "GFX_TU_ak_9e5969288e_small" }
 		}
 		advisor = {
 			slot = high_command
@@ -101,8 +101,8 @@ characters = {
 		corps_commander = {
 			traits = { }
 			skill = 4
-			attack_skill = 4
-			defense_skill = 3
+			attack_skill = 5
+			defense_skill = 4
 			planning_skill = 3
 			logistics_skill = 4
 			legacy_id = -1
@@ -139,6 +139,80 @@ characters = {
 			ai_will_do = {
 				factor = 1
 			}
+		}
+	}
+
+	TU_SIR_vigil = {
+		name = TU_SIR_vigil
+		portraits = {
+			civilian = { large = "GFX_TU_ak_a9c7fb4fde" small = "GFX_TU_ak_a9c7fb4fde_small" }
+			army = { large = "GFX_TU_ak_a9c7fb4fde" small = "GFX_TU_ak_a9c7fb4fde_small" }
+		}
+		advisor = {
+			slot = political_advisor
+			idea_token = TU_SIR_vigil_adv
+			allowed = {
+				original_tag = SIR
+			}
+			traits = { tu_diplomat }
+			cost = 150
+			ai_will_do = {
+				factor = 1
+			}
+		}
+	}
+
+	TU_SIR_chiave = {
+		name = TU_SIR_chiave
+		portraits = {
+			civilian = { large = "GFX_TU_ak_6ab02f1bf6" small = "GFX_TU_ak_6ab02f1bf6_small" }
+			army = { large = "GFX_TU_ak_6ab02f1bf6" small = "GFX_TU_ak_6ab02f1bf6_small" }
+		}
+		advisor = {
+			slot = political_advisor
+			idea_token = TU_SIR_chiave_adv
+			allowed = {
+				original_tag = SIR
+			}
+			traits = { tu_originium_magnate }
+			cost = 150
+			ai_will_do = {
+				factor = 1
+			}
+		}
+	}
+
+	TU_SIR_aosta = {
+		name = TU_SIR_aosta
+		portraits = {
+			civilian = { large = "GFX_TU_ak_4cad05f21b" small = "GFX_TU_ak_4cad05f21b_small" }
+			army = { large = "GFX_TU_ak_4cad05f21b" small = "GFX_TU_ak_4cad05f21b_small" }
+		}
+		corps_commander = {
+			traits = { }
+			skill = 3
+			attack_skill = 4
+			defense_skill = 4
+			planning_skill = 2
+			logistics_skill = 3
+			legacy_id = -1
+		}
+	}
+
+	TU_SIR_broca = {
+		name = TU_SIR_broca
+		portraits = {
+			civilian = { large = "GFX_TU_ak_60a4ea0ddd" small = "GFX_TU_ak_60a4ea0ddd_small" }
+			army = { large = "GFX_TU_ak_60a4ea0ddd" small = "GFX_TU_ak_60a4ea0ddd_small" }
+		}
+		corps_commander = {
+			traits = { }
+			skill = 3
+			attack_skill = 3
+			defense_skill = 5
+			planning_skill = 2
+			logistics_skill = 3
+			legacy_id = -1
 		}
 	}
 

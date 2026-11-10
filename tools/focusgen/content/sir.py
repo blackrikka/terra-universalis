@@ -72,14 +72,20 @@ def EV(n, days=0):
 C.history += ["set_variable = { TU_SIR_bellone = 40 }", "set_variable = { TU_SIR_gambino = 35 }",
               "set_variable = { TU_SIR_saluzzo = 30 }", "set_variable = { TU_SIR_law = 20 }",
               "add_ideas = { TU_SIR_omerta TU_SIR_family_cities }"]
-C.effects.append("""TU_SIR_monthly = {
-	add_to_variable = { TU_SIR_bellone = 1 }
-	add_to_variable = { TU_SIR_gambino = 1 }
-	add_to_variable = { TU_SIR_saluzzo = 1 }
-	if = { limit = { has_country_flag = TU_SIR_courts } add_to_variable = { TU_SIR_law = 1 } }
-	clamp_variable = { var = TU_SIR_bellone min = 0 max = 100 }
-	clamp_variable = { var = TU_SIR_gambino min = 0 max = 100 }
-	clamp_variable = { var = TU_SIR_saluzzo min = 0 max = 100 }
+C.effects.append("TU_SIR_monthly = {\n" + "".join(
+    """	if = {
+		limit = { has_country_flag = TU_SIR_route_%(k)s }
+		set_variable = { TU_SIR_%(k)s = 100 }
+	}
+	else_if = {
+		limit = { has_country_flag = TU_SIR_absorbed_%(k)s }
+		set_variable = { TU_SIR_%(k)s = 0 }
+	}
+	else = {
+		add_to_variable = { TU_SIR_%(k)s = 1 }
+		clamp_variable = { var = TU_SIR_%(k)s min = 0 max = 100 }
+	}
+""" % dict(k=k) for k in ("bellone", "gambino", "saluzzo")) + """	if = { limit = { has_country_flag = TU_SIR_courts } add_to_variable = { TU_SIR_law = 1 } }
 	clamp_variable = { var = TU_SIR_law min = 0 max = 100 }
 }""")
 C.on_actions.append("""on_monthly = {
@@ -126,7 +132,9 @@ def choose(key, leader, ideology):
             "recruit_character = TU_SIR_%s" % leader,
             "set_politics = { ruling_party = %s elections_allowed = %s }" % (g, "yes" if g == "democratic" else "no"),
             "promote_character = {\n\tcharacter = TU_SIR_%s\n\tideology = %s\n}" % (leader, ideology),
-            "add_ideas = TU_SIR_%s_start" % key, "mark_focus_tree_layout_dirty = yes"]
+            "add_ideas = TU_SIR_%s_start" % key, "mark_focus_tree_layout_dirty = yes"] + (
+        ["set_variable = { TU_SIR_%s = 100 }" % key] if key in ("bellone", "gambino", "saluzzo") else []) + (
+        ["retire_character = TU_SIR_lappland"] if key == "wolf" else [])
 
 
 def R(key, sid, ko, en, pre, reward, cost=10, me=(), desc=("", ""), available=()):
@@ -187,7 +195,7 @@ f("root", "늑대의 땅", "Land of Wolves", cost=5, theme=False, reward=["add_p
         "in the §YCrossroads of Siracusa§! event.\\n\\n" + ROUTE_GUIDE_EN))
 
 # ---- 벨로네: 건설·산업
-R("bellone", "bellone_head", "벨로네의 시대", "The Bellone Era", ["root"], ["add_political_power = 75", FAMV("bellone", 10)], cost=5,
+R("bellone", "bellone_head", "벨로네의 시대", "The Bellone Era", ["root"], ["add_political_power = 75"], cost=5,
   desc=("§Y벨로네 루트§! (지도자: 벨로네)\\n건설과 산업. 공장을 가장 많이 얻는다.\\n결말 '벨로네의 시라쿠사': 건설 속도 +20%, 공장 출력 +10%.",
         "§YBellone route§! (Leader: Bellone)\\nConstruction and industry.\\nEnding: construction +20%, factory output +10%."))
 R("bellone", "bellone_company", "벨로네 건설 회사", "Bellone Construction Company", ["bellone_head"], ["TU_build_civ_factory = yes"])
@@ -207,7 +215,7 @@ R("bellone", "bellone_end", "벨로네의 시라쿠사", "Bellone's Siracusa", [
   desc=("결말. 국호가 '벨로네의 시라쿠사'가 된다.", "Ending. The country becomes Bellone's Siracusa."))
 
 # ---- 감비노: 군사·동원
-R("gambino", "gambino_head", "감비노의 시대", "The Gambino Era", ["root"], ["add_manpower = 10000", FAMV("gambino", 10)], cost=5,
+R("gambino", "gambino_head", "감비노의 시대", "The Gambino Era", ["root"], ["add_manpower = 10000"], cost=5,
   desc=("§Y감비노 루트§! (지도자: 감비노 대부)\\n군사와 동원. 공격력과 병력이 강하다.\\n결말 '감비노의 철권': 공격 +12%, 조직력 +8%, 징집 +15%, 훈련 시간 -15%.",
         "§YGambino route§! (Leader: Don Gambino)\\nArmy and mobilisation.\\nEnding: attack +12%, org +8%, conscription +15%, training time -15%."))
 R("gambino", "gambino_soldiers", "감비노 행동대", "Gambino Soldiers", ["gambino_head"], ["army_experience = 25", "add_manpower = 10000"])
@@ -228,7 +236,7 @@ R("gambino", "gambino_end", "감비노의 철권", "Gambino's Iron Fist", ["gamb
   desc=("결말. 국호가 '감비노의 시라쿠사'가 된다.", "Ending. The country becomes Gambino's Siracusa."))
 
 # ---- 살루초: 돈·외교
-R("saluzzo", "saluzzo_head", "살루초의 시대", "The Saluzzo Era", ["root"], ["add_political_power = 100", FAMV("saluzzo", 10)], cost=5,
+R("saluzzo", "saluzzo_head", "살루초의 시대", "The Saluzzo Era", ["root"], ["add_political_power = 100"], cost=5,
   desc=("§Y살루초 루트§! (지도자: 살루초 대부)\\n돈과 외교. 정치력과 연구가 빠르다.\\n결말 '살루초의 금고': 정치력 +25%, 연구 +8%, 소비재 -5%.",
         "§YSaluzzo route§! (Leader: Don Saluzzo)\\nMoney and diplomacy.\\nEnding: political power +25%, research +8%, consumer goods -5%."))
 R("saluzzo", "saluzzo_bank", "살루초 은행", "Saluzzo Bank", ["saluzzo_head"], ["add_political_power = 75", "TU_build_civ_factory = yes"])
@@ -289,6 +297,29 @@ R("wolf", "wolf_end", "늑대 군주의 귀환", "Return of the Wolf Lord", ["wo
    "every_neighbor_country = { limit = { NOT = { is_in_faction_with = ROOT } } ROOT = { create_wargoal = { type = annex_everything target = PREV } } }",
    EV(30)], cost=15, desc=("결말. 국호가 '늑대 군주의 시라쿠사'가 되고 이웃 나라 모두에 병합 명분을 얻는다.",
                           "Ending. The country becomes the Wolf Lord's Siracusa and gains war goals on all neighbours."))
+
+# ---- 통일 (사양서 69): 결말 뒤, 경쟁 패밀리를 모두 굴복시키면 ('패밀리' 디시전) 찍을 수 있다
+RIVALS = {"bellone": ["gambino", "saluzzo"], "gambino": ["bellone", "saluzzo"], "saluzzo": ["bellone", "gambino"],
+          "law": ["bellone", "gambino", "saluzzo"], "wolf": ["bellone", "gambino", "saluzzo"]}
+FAM_KO = {k: ko for k, ko, _ in FAM}
+FAM_EN = {k: en for k, _, en in FAM}
+UNITY = {"bellone": ("벨로네 아래 하나로", "One Under Bellone"), "gambino": ("감비노 아래 하나로", "One Under Gambino"),
+         "saluzzo": ("살루초 아래 하나로", "One Under Saluzzo"), "law": ("패밀리 없는 시라쿠사", "A Siracusa Without Families"),
+         "wolf": ("모든 늑대는 한 무리", "All Wolves, One Pack")}
+C.idea("one_siracusa", "하나의 시라쿠사", "One Siracusa",
+       {"stability_factor": 0.10, "political_power_gain": 0.10, "army_org_factor": 0.05, "war_support_factor": 0.05},
+       "generic_central_management", ("경쟁하던 패밀리가 모두 무릎을 꿇었다. 시라쿠사는 처음으로 하나다.",
+                                       "Every rival family has knelt. For the first time, Siracusa is one."))
+for key in RIVALS:
+    rk = "·".join(FAM_KO[x] for x in RIVALS[key])
+    re_ = ", ".join(FAM_EN[x] for x in RIVALS[key])
+    R(key, "%s_unity" % key, UNITY[key][0], UNITY[key][1], ["%s_end" % key],
+      ["add_ideas = TU_SIR_one_siracusa", "if = { limit = { has_idea = TU_SIR_omerta } remove_ideas = TU_SIR_omerta }",
+       "add_political_power = 100"], cost=10, available=[HAS("absorbed_%s" % x) for x in RIVALS[key]],
+      desc=("§Y%s§! 패밀리를 모두 굴복시켜야 한다 ('패밀리' 디시전: 영향력 20 이하일 때 '굴복시키기').\\n"
+            "국민정신 '하나의 시라쿠사': 안정도 +10%%, 정치력 +10%%, 조직력 +5%%, 전쟁 지지 +5%%. 오메르타가 사라진다." % rk,
+            "Requires the §Y%s§! families subdued (Families decisions: Subdue at influence 20 or less).\\n"
+            "Spirit One Siracusa: stability +10%%, political power +10%%, org +5%%, war support +5%%. Removes Omerta." % re_))
 
 # ------------------------------------------------------------------ 중점: 산업 (모든 루트 공통)
 def I(sid, ko, en, pre, reward, me=(), cost=10, desc=("", "")):
@@ -377,12 +408,34 @@ cat_fam = C.category("families", "패밀리", "The Families",
                       "The three families grow every month. Dealing with one strengthens it and weakens the law; cracking down does the opposite."),
                      visible=[HAS("families")])
 bonus = {"bellone": ["TU_build_civ_factory = yes"], "gambino": ["add_manpower = 10000"], "saluzzo": ["add_political_power = 75"]}
+# 굴복시키기 (사양서 69): 경쟁 패밀리의 영향력이 20 이하면 완전히 굴복시킨다. 그 뒤로 그 패밀리는 자라지 않는다
+SUBDUE = {"bellone": (["TU_build_civ_factory = yes", "TU_build_civ_factory = yes"], "민간 공장 2개", "two civilian factories"),
+          "gambino": (["add_manpower = 20000", "army_experience = 30"], "인력 2만, 육군 경험치 30", "20,000 manpower, 30 army experience"),
+          "saluzzo": (["add_political_power = 150",
+                       "add_tech_bonus = { name = TU_SIR_subdue_saluzzo bonus = 1.0 uses = 1 category = industry category = electronics }"],
+                      "정치력 150, 연구 보너스", "150 political power, a research bonus")}
+
+
+def RIVAL(k):
+    """집권 패밀리도 아니고 굴복하지도 않은 패밀리만 디시전 대상이다."""
+    return ["NOT = { %s }" % HAS("route_%s" % k), "NOT = { %s }" % HAS("absorbed_%s" % k)]
+
+
 for k, ko, en in FAM:
+    C.d(cat_fam, "subdue_%s" % k, "%s 굴복시키기" % ko, "Subdue the %s" % en,
+        [FLAG("absorbed_%s" % k), "set_variable = { TU_SIR_%s = 0 }" % k] + SUBDUE[k][0], cost=75, once=True,
+        visible=RIVAL(k) + [HAS("route_chosen")], available=[BELOW(k, 21)],
+        desc=("%s 패밀리를 완전히 굴복시킨다. (영향력 20 이하) 다시는 세력이 자라지 않는다. 보상: %s.\\n"
+              "경쟁 패밀리를 모두 굴복시키면 루트 마지막 '통일' 중점을 찍을 수 있다." % (ko, SUBDUE[k][1]),
+              "Subdue the %s family for good. (Influence 20 or less) It never grows again. Reward: %s.\\n"
+              "Subdue every rival family to unlock the route's final Unity focus." % (en, SUBDUE[k][2])),
+        icon="GFX_decision_generic_break_treaty")
     C.d(cat_fam, "deal_%s" % k, "%s와 거래" % ko, "Deal with the %s" % en, bonus[k] + [FAMV(k, 10), LAW(-5)], cost=25, once=False,
-        days_re_enable=120, desc=("%s 패밀리 영향력 +10, 법 -5" % ko, "%s influence +10, law -5" % en), icon="GFX_decision_generic_fundraising")
+        days_re_enable=120, desc=("%s 패밀리 영향력 +10, 법 -5" % ko, "%s influence +10, law -5" % en), icon="GFX_decision_generic_fundraising",
+        visible=RIVAL(k))
     C.d(cat_fam, "crack_%s" % k, "%s 단속" % ko, "Crack Down on the %s" % en,
         [FAMV(k, -15), LAW(5), "add_stability = -0.02",
-         "if = { limit = { %s } %s }" % (HAS("witness"), FAMV(k, -10))], cost=50, once=False, days_re_enable=120,
+         "if = { limit = { %s } %s }" % (HAS("witness"), FAMV(k, -10))], cost=50, once=False, days_re_enable=120, visible=RIVAL(k),
         desc=("%s 패밀리 영향력 -15 (반패밀리 수사단 뒤 -25), 법 +5" % ko, "%s influence -15 (-25 after the Anti-Family Bureau), law +5" % en),
         icon="GFX_decision_generic_protection")
 C.d(cat_fam, "arbitrate", "패밀리 중재", "Arbitrate Between Families", ["add_stability = 0.05", "add_political_power = 25"], cost=50,
@@ -405,8 +458,6 @@ C.d(cat_eco, "smuggling_tax", "밀수 과세", "Tax the Smugglers", ["add_politi
     days_re_enable=120, visible=[HAS("smuggling")])
 C.d(cat_eco, "casino_license", "카지노 허가", "Casino Licences", ["add_political_power = 75", LAW(-5)], cost=0, once=False,
     days_re_enable=180, visible=[HAS("casinos")])
-C.d(cat_eco, "wolf_rite", "늑대의 의례 거행", "Hold the Wolf Rite", ["add_war_support = 0.05", "army_experience = 15"], cost=50,
-    once=False, days_re_enable=240, visible=[HAS("rites")])
 C.d(cat_eco, "olive_harvest", "올리브 수확 축제", "Olive Harvest Festival", ["add_stability = 0.03", "add_political_power = 25"], cost=25,
     once=False, days_re_enable=365, visible=["has_idea = TU_SIR_wine_and_olive"])
 C.d(cat_eco, "found_league", "남부 연맹 결성", "Found the Southern League", ["create_faction = TU_SIR_league"], cost=50,
@@ -415,6 +466,102 @@ C.loc("TU_SIR_league", "남부 연맹", "Southern League")
 C.d(cat_eco, "invite_league", "연맹 초청", "Invite to the League", ["add_to_faction = FROM"], cost=50, once=False, days_re_enable=90,
     visible=[HAS("league"), "is_faction_leader = yes"],
     target=["NOT = { tag = ROOT }", "is_in_faction = no", "NOT = { has_war_with = ROOT }", "OR = { tag = LAT tag = RIM tag = IBE tag = LEI }"])
+
+# ------------------------------------------------------------------ 집권 사업: 루트별 디시전 3개 (사양서 69)
+cat_route = C.category("agenda", "집권 사업", "Ruling Agenda",
+                       ("고른 루트만의 사업이다.", "Projects unique to the chosen route."),
+                       "GFX_decision_category_generic_economy", visible=[HAS("route_chosen")])
+for name, regs in (("TU_SIR_enforcers", ["infantry"] * 6 + ["artillery_brigade"]),
+                   ("TU_SIR_wolf_pack", ["cavalry"] * 4 + ["infantry"] * 2 + ["artillery_brigade"])):
+    C.effects.append("""%s_template = {
+	if = {
+		limit = { NOT = { has_country_flag = %s_template_done } }
+		set_country_flag = %s_template_done
+		division_template = {
+			name = "%s"
+			is_locked = no
+			priority = 2
+			regiments = {
+%s
+			}
+		}
+	}
+}""" % (name, name, name, name, "\n".join("\t\t\t\t%s = { x = %d y = %d }" % (r, i // 5, i % 5) for i, r in enumerate(regs))))
+
+
+def SPAWN(tmpl, exp):
+    return ["%s_template = yes" % tmpl,
+            "capital_scope = { create_unit = { division = \"division_template = \\\"%s\\\" start_experience_factor = %s "
+            "start_equipment_factor = 1\" owner = SIR count = 1 } }" % (tmpl, exp)]
+
+
+# 벨로네: 건설
+C.d(cat_route, "bel_contracts", "건설 수주", "Construction Contracts", ["TU_build_infrastructure = yes"], cost=50, once=False,
+    days_remove=120, days_re_enable=120, modifier={"production_speed_buildings_factor": 0.15}, visible=[HAS("route_bellone")],
+    desc=("인프라 1단계. 120일 동안 건설 속도 +15%.", "One infrastructure level. Construction speed +15% for 120 days."),
+    icon="GFX_decision_generic_construction")
+C.d(cat_route, "bel_new_city", "신도시 누오바 볼시니", "The New City of Nuova Volsinii", [], cost=100, once=True,
+    days_remove=180, modifier={"civilian_factory_use": 2}, visible=[HAS("route_bellone")],
+    remove_effect=["capital_scope = { add_extra_state_shared_building_slots = 3 }", "TU_build_civ_factory = yes",
+                   "TU_build_civ_factory = yes", "TU_build_civ_factory = yes", "add_stability = 0.05"],
+    desc=("180일 동안 민간 공장 2개를 쓴다. 완성되면 민간 공장 3개, 수도 건물 칸 +3, 안정도 +5%.",
+          "Uses two civilian factories for 180 days. On completion: three civilian factories, +3 capital building slots, stability +5%."),
+    icon="GFX_decision_generic_construction")
+C.d(cat_route, "bel_bonds", "벨로네 채권", "Bellone Bonds", ["add_political_power = 100"], cost=0, once=False,
+    days_remove=180, days_re_enable=185, modifier={"consumer_goods_factor": 0.03}, visible=[HAS("route_bellone")],
+    desc=("정치력 +100. 180일 동안 소비재 +3%.", "Political power +100. Consumer goods +3% for 180 days."),
+    icon="GFX_decision_generic_fundraising")
+# 감비노: 군사
+C.d(cat_route, "gam_enforcers", "행동대 소집", "Muster the Enforcers", SPAWN("TU_SIR_enforcers", "0.5"), cost=50, once=False,
+    days_re_enable=240, visible=[HAS("route_gambino")],
+    desc=("수도에 정예 행동대 사단 1개 (보병 6 + 포병 1, 장비 100%).", "One elite enforcer division at the capital (6 infantry + 1 artillery, full equipment)."),
+    icon="GFX_decision_generic_military")
+C.d(cat_route, "gam_protection", "보호비 징수", "Collect Protection Money", ["add_political_power = 80", "add_stability = -0.03"], cost=0,
+    once=False, days_re_enable=180, visible=[HAS("route_gambino")], icon="GFX_decision_generic_fundraising",
+    desc=("정치력 +80, 안정도 -3%.", "Political power +80, stability -3%."))
+C.d(cat_route, "gam_turf", "구역 확장", "Expand the Turf", ["create_wargoal = { type = annex_everything target = FROM }"], cost=100,
+    once=True, visible=[HAS("route_gambino"), "has_completed_focus = TU_SIR_gambino_end"],
+    target=["is_neighbor_of = ROOT", "NOT = { has_war_with = ROOT }", "NOT = { is_in_faction_with = ROOT }"],
+    desc=("이웃 나라에 병합 명분을 만든다. ('감비노의 철권' 뒤)", "Create an annexation war goal on a neighbour. (After Gambino's Iron Fist)"),
+    icon="GFX_decision_generic_operation")
+# 살루초: 돈
+C.history.append("set_variable = { TU_SIR_branches = 0 }")
+C.d(cat_route, "sal_branch", "살루초 은행 지점", "Saluzzo Bank Branch",
+    ["FROM = { set_country_flag = TU_SIR_saluzzo_branch }", "add_offsite_building = { type = industrial_complex level = 1 }",
+     "add_to_variable = { TU_SIR_branches = 1 }"], cost=75, once=True, visible=[HAS("route_saluzzo")],
+    available=["check_variable = { TU_SIR_branches < 4 }", "NOT = { has_war_with = FROM }"],
+    target=["NOT = { tag = ROOT }", "NOT = { has_country_flag = TU_SIR_saluzzo_branch }",
+            "OR = { tag = LAT tag = LEI tag = RIM tag = VIC tag = COL tag = KAZ tag = YAN tag = LGM }"],
+    desc=("그 나라에 지점을 연다. 영토 밖 민간 공장 +1. (지점은 4곳까지)", "Open a branch there. One off-map civilian factory. (Up to four branches)"),
+    icon="GFX_decision_generic_fundraising")
+C.d(cat_route, "sal_reinvest", "카지노 수익 재투자", "Reinvest Casino Profits", ["TU_build_civ_factory = yes"], cost=50, once=False,
+    days_re_enable=365, visible=[HAS("route_saluzzo"), HAS("casinos")], icon="GFX_decision_generic_industry",
+    desc=("민간 공장 1개. ('카지노 교역' 뒤)", "One civilian factory. (After Casino Trade)"))
+C.d(cat_route, "sal_patron", "연구 후원", "Fund Research",
+    ["add_tech_bonus = { name = TU_SIR_sal_patron bonus = 1.0 uses = 1 category = industry category = electronics }"], cost=75,
+    once=False, days_re_enable=365, visible=[HAS("route_saluzzo")], icon="GFX_decision_generic_research",
+    desc=("산업·전자 연구 보너스 100% 1회.", "A 100% research bonus for industry or electronics."))
+# 법
+C.d(cat_route, "law_trial", "공개 재판", "Public Trial", [LAW(10), "add_stability = 0.02"], cost=40, once=False, days_re_enable=120,
+    visible=[HAS("route_law")], icon="GFX_decision_generic_police_action", desc=("법 +10, 안정도 +2%.", "Law +10, stability +2%."))
+C.d(cat_route, "law_seize", "패밀리 자산 몰수", "Seize Family Assets",
+    ["TU_build_civ_factory = yes", FAMV("bellone", -5), FAMV("gambino", -5), FAMV("saluzzo", -5)], cost=75, once=False,
+    days_re_enable=365, visible=[HAS("route_law")], available=[AT_LEAST("law", 60)], icon="GFX_decision_generic_confiscation",
+    desc=("민간 공장 1개, 세 패밀리 영향력 -5. (법 60 이상)", "One civilian factory, all three families -5. (Law 60+)"))
+C.d(cat_route, "law_officers", "법 집행관 양성", "Train Law Officers", ["add_manpower = 10000", "army_experience = 20", "add_stability = 0.02"],
+    cost=50, once=False, days_re_enable=240, visible=[HAS("route_law")], icon="GFX_decision_generic_military",
+    desc=("인력 1만, 육군 경험치 20, 안정도 +2%.", "10,000 manpower, 20 army experience, stability +2%."))
+# 늑대
+C.d(cat_route, "wolf_rite", "사냥의 밤", "Night of the Hunt", ["add_war_support = 0.05", "army_experience = 20"], cost=50,
+    once=False, days_re_enable=180, visible=[HAS("route_wolf"), HAS("rites")], icon="GFX_decision_generic_nationalism",
+    desc=("전쟁 지지 +5%, 육군 경험치 20. ('늑대의 의례' 뒤)", "War support +5%, 20 army experience. (After Rites of the Wolves)"))
+C.d(cat_route, "wolf_pack_call", "늑대 무리 소집", "Call the Pack", SPAWN("TU_SIR_wolf_pack", "0.6"), cost=50, once=False,
+    days_re_enable=240, visible=[HAS("route_wolf")], icon="GFX_decision_generic_cavalry",
+    desc=("수도에 늑대 무리 사단 1개 (기병 4 + 보병 2 + 포병 1, 장비 100%).",
+          "One wolf pack division at the capital (4 cavalry + 2 infantry + 1 artillery, full equipment)."))
+C.d(cat_route, "wolf_blessing", "늑대 군주의 가호", "Blessing of the Wolf Lord", [], cost=75, once=False, days_remove=90,
+    days_re_enable=275, modifier={"army_attack_factor": 0.10, "army_speed_factor": 0.05}, visible=[HAS("route_wolf")],
+    icon="GFX_decision_generic_nationalism", desc=("90일 동안 공격 +10%, 이동 속도 +5%.", "Attack +10% and speed +5% for 90 days."))
 
 # ------------------------------------------------------------------ 이벤트
 C.ev(1, ("시라쿠사의 갈림길", "Crossroads of Siracusa"),
@@ -461,11 +608,11 @@ C.ev(26, ("패밀리 전쟁", "Family War"),
       "\tAND = { %s %s }" % (AT_LEAST("gambino", 60), AT_LEAST("saluzzo", 60)), "}"],
      mtth=120, fire_once=False)
 C.ev(27, ("텍사스의 귀향", "Texas Comes Home"),
-     ("한때 패밀리의 후계자였던 텍사스가 고향을 찾았다. 그녀를 알아본 이들이 수군댄다.",
-      "Texas, once heir to a family, has returned home. Those who recognise her whisper."),
-     [("조용히 지나가게 한다.", "Let her pass quietly.", ["add_stability = 0.02"], 50),
-      ("패밀리들이 그녀를 원한다.", "The families want her.", [FAMV("saluzzo", 5), "add_political_power = 25"], 50)],
-     trigger=["original_tag = SIR", "has_completed_focus = TU_SIR_root"], mtth=400)
+     ("한때 패밀리의 후계자였던 텍사스가 고향에 돌아왔다. 그녀를 알아본 이들이 수군댄다. 그녀는 아무 말 없이 검을 내려놓지 않았다.",
+      "Texas, once heir to a family, has come home. Those who recognise her whisper. She says nothing, and does not put down her swords."),
+     [("그녀를 맞이한다.", "Welcome her.", ["recruit_character = TU_SIR_texas", "army_experience = 20"], 70),
+      ("조용히 지나가게 한다.", "Let her pass quietly.", ["add_stability = 0.03"], 30)],
+     trigger=["original_tag = SIR", HAS("route_chosen")], mtth=150)
 C.ev(28, ("패밀리의 시라쿠사", "Siracusa of the Family"), ("한 패밀리가 시라쿠사의 꼭대기에 섰다. 다른 패밀리들은 고개를 숙였다.",
                                                       "One family stands at the top of Siracusa. The others bow their heads."),
      [("가족이 먼저다.", "Family comes first.", ["add_political_power = 50"], 1)])
@@ -484,6 +631,72 @@ C.ev(33, ("관광객의 물결", "A Wave of Tourists"), ("카지노와 해변을
 C.ev(34, ("달밤의 울음", "Howling at Night"), ("달밤마다 성채 쪽에서 늑대 울음이 들린다는 신고가 늘었다.", "Reports of wolf howls from the citadel on moonlit nights are increasing."),
      [("조사단을 보낸다.", "Send investigators.", ["add_political_power = -15", "add_war_support = 0.02"], 1)],
      trigger=["original_tag = SIR", HAS("rites")], mtth=240)
+
+# ------------------------------------------------------------------ 루트별 이벤트 (사양서 69): 중점이 부른다
+ROUTE_EVENTS = [
+    # 번호, 부르는 중점, 며칠 뒤, 제목, 본문, 선택지 [(한, 영, 효과)]
+    (40, "bellone_company", 5, ("새 도시의 설계도", "Blueprints of a New City"),
+     ("벨로네 건설 회사가 새 도시의 설계도를 내놓았다. 패밀리의 손이 닿지 않는 도시를 짓겠다는 꿈이다.",
+      "The Bellone Construction Company presents blueprints for a new city: a dream of a city beyond any family's reach."),
+     [("빨리 짓는다.", "Build fast.", ["add_political_power = 50", "add_stability = -0.02"]),
+      ("튼튼하게 짓는다.", "Build to last.", ["add_stability = 0.03", "add_political_power = -25"])]),
+    (41, "bellone_district", 5, ("건설부 장관의 죽음", "Death of the Construction Minister"),
+     ("공업 지구 입찰을 앞두고 건설부 장관이 총에 맞았다. 누가 쏘았는지 모두 짐작하지만 아무도 말하지 않는다.",
+      "Before the industrial district tender, the construction minister was shot. Everyone can guess who did it; no one says."),
+     [("범인을 찾는다.", "Find the killer.", [LAW(5), "add_political_power = -30"]),
+      ("조용히 덮는다.", "Bury it quietly.", ["add_political_power = 60", LAW(-5)])]),
+    (42, "gambino_soldiers", 5, ("구역 다툼", "Turf Dispute"),
+     ("행동대가 늘자 옆 구역과 시비가 붙었다. 거리 하나를 두고 양쪽이 칼을 뽑았다.",
+      "As the enforcers grow, a quarrel breaks out with the next turf. Both sides draw blades over a single street."),
+     [("힘으로 정리한다.", "Settle it by force.", ["army_experience = 15", "add_stability = -0.02"]),
+      ("협상으로 끝낸다.", "Negotiate.", ["add_political_power = 40"])]),
+    (43, "gambino_militia", 5, ("행동대장의 야심", "A Captain's Ambition"),
+     ("민병대를 맡은 행동대장이 자기 깃발을 걸기 시작했다. 대부의 이름보다 그의 이름이 더 자주 들린다.",
+      "The captain in charge of the militia has begun flying his own colours. His name is heard more often than the Don's."),
+     [("숙청한다.", "Purge him.", ["add_stability = 0.03", "add_manpower = -3000"]),
+      ("자리를 주고 달랜다.", "Give him a seat.", ["add_manpower = 8000", "add_stability = -0.02"])]),
+    (44, "saluzzo_bank", 5, ("살루초의 만찬", "The Saluzzo Banquet"),
+     ("살루초 대부가 다른 패밀리의 대부들을 만찬에 불렀다. 잔마다 빚 문서가 한 장씩 놓여 있다.",
+      "Don Saluzzo invites the other dons to a banquet. Beside every glass lies a note of debt."),
+     [("빚을 받아낸다.", "Call in the debts.", ["add_political_power = 80", FAMV("bellone", 5), FAMV("gambino", 5)]),
+      ("빚을 탕감해 은혜를 판다.", "Forgive the debts and sell the favour.", [FAMV("bellone", -8), FAMV("gambino", -8)])]),
+    (45, "saluzzo_casinos", 5, ("장부의 구멍", "A Hole in the Ledger"),
+     ("카지노 장부에서 큰돈이 사라졌다. 회계사는 숫자가 틀렸을 뿐이라고 한다.",
+      "A large sum has vanished from the casino ledgers. The accountant says the numbers were merely wrong."),
+     [("회계사를 바꾼다.", "Replace the accountant.", ["add_political_power = -30", "add_stability = 0.03"]),
+      ("눈감아 준다.", "Look the other way.", ["add_political_power = 50", LAW(-5)])]),
+    (46, "law_judges", 5, ("라비니아의 판결", "Lavinia's Verdict"),
+     ("패밀리 조직원 열두 명이 한꺼번에 법정에 섰다. 라비니아 판사의 판결을 온 도시가 기다린다.",
+      "Twelve family men stand in the dock at once. The whole city waits for Judge Lavinia's verdict."),
+     [("법대로 엄벌한다.", "The full weight of the law.", [LAW(5), "add_stability = -0.02"]),
+      ("죄를 뉘우친 자는 풀어 준다.", "Mercy for the repentant.", ["add_stability = 0.03"])]),
+    (47, "law_bureau", 5, ("증인의 죽음", "Death of a Witness"),
+     ("수사단이 지키던 증인이 숙소에서 죽은 채 발견되었다. 문은 안에서 잠겨 있었다.",
+      "A witness guarded by the bureau is found dead in the safe house. The door was locked from the inside."),
+     [("수사를 넓힌다.", "Widen the investigation.", [LAW(5), "add_political_power = -30"]),
+      ("남은 증인을 더 깊이 숨긴다.", "Hide the remaining witnesses deeper.", ["add_stability = 0.02", "add_political_power = -15"])]),
+    (48, "wolf_relics", 5, ("늑대의 주인의 속삭임", "Whisper of the Wolf Lord"),
+     ("유물을 꺼낸 밤, 라플란드는 짐승의 목소리를 들었다. 힘을 주겠다고, 대신 송곳니가 되라고.",
+      "On the night the relics are unearthed, Lappland hears a beast's voice: power, in exchange for becoming its fang."),
+     [("힘을 받아들인다.", "Take the power.", ["add_war_support = 0.05", "add_stability = -0.03", "army_experience = 20"]),
+      ("늑대는 누구의 송곳니도 아니다.", "A wolf is no one's fang.", ["add_stability = 0.04"])]),
+    (49, "wolf_pack", 5, ("무리의 서열", "Order of the Pack"),
+     ("늑대 무리 군단이 모이자 누가 앞에 설지를 두고 으르렁거리기 시작했다.",
+      "As the pack legion gathers, they begin to snarl over who shall run at the front."),
+     [("가장 강한 자가 앞에 선다.", "The strongest leads.", ["army_experience = 30"]),
+      ("모두가 함께 달린다.", "All run together.", ["add_manpower = 10000"])]),
+]
+for n, sid, days, title, desc, opts in ROUTE_EVENTS:
+    C.ev(n, title, desc, [(ko, en, eff, 50) for ko, en, eff in opts])
+    next(x for x in C.focuses if x["id"] == "TU_SIR_" + sid)["reward"].append(EV(n, days))
+# 키아베 일당: 군 사령부가 서면 용문으로 떠났던 세 사람이 돌아온다 (참모 키아베, 장군 아오스타·브로카)
+C.ev(50, ("키아베 일당의 귀향", "Chiave's Gang Comes Home"),
+     ("용문으로 떠났던 키아베와 아오스타, 브로카가 시라쿠사로 돌아왔다. 군 사령부가 사람을 구한다는 소문을 들었다고 한다.",
+      "Chiave, Aosta and Broca, who had left for Lungmen, are back in Siracusa. They heard the army command is hiring."),
+     [("세 사람을 받아들인다.", "Take all three.",
+       ["recruit_character = TU_SIR_chiave", "recruit_character = TU_SIR_aosta", "recruit_character = TU_SIR_broca"], 80),
+      ("돌려보낸다.", "Send them away.", ["add_political_power = 30"], 20)])
+next(x for x in C.focuses if x["id"] == "TU_SIR_army_command")["reward"].append(EV(50, 10))
 
 # ------------------------------------------------------------------ 이스터에그: 엄지 패밀리와 발렌치나 (사양서 32)
 # 세 패밀리 루트의 마지막 앞 중점(재건의 시라쿠사 / 감비노 군단 / 금고의 열쇠) 10일 뒤 -> 처음 듣는 패밀리 -> 7일 뒤 엄지

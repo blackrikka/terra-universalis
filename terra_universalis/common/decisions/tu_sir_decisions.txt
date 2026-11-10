@@ -1,4 +1,37 @@
 TU_SIR_families_category = {
+	TU_SIR_subdue_bellone = {
+		icon = GFX_decision_generic_break_treaty
+
+		allowed = {
+			original_tag = SIR
+		}
+
+		visible = {
+			has_country_flag = TU_SIR_families
+			NOT = { has_country_flag = TU_SIR_route_bellone }
+			NOT = { has_country_flag = TU_SIR_absorbed_bellone }
+			has_country_flag = TU_SIR_route_chosen
+		}
+
+		available = {
+			check_variable = { TU_SIR_bellone < 21 }
+		}
+
+		cost = 75
+		fire_only_once = yes
+
+		complete_effect = {
+			set_country_flag = TU_SIR_absorbed_bellone
+			set_variable = { TU_SIR_bellone = 0 }
+			TU_build_civ_factory = yes
+			TU_build_civ_factory = yes
+		}
+
+		ai_will_do = {
+			base = 1
+		}
+	}
+
 	TU_SIR_deal_bellone = {
 		icon = GFX_decision_generic_fundraising
 
@@ -8,6 +41,8 @@ TU_SIR_families_category = {
 
 		visible = {
 			has_country_flag = TU_SIR_families
+			NOT = { has_country_flag = TU_SIR_route_bellone }
+			NOT = { has_country_flag = TU_SIR_absorbed_bellone }
 		}
 
 		cost = 25
@@ -33,6 +68,8 @@ TU_SIR_families_category = {
 
 		visible = {
 			has_country_flag = TU_SIR_families
+			NOT = { has_country_flag = TU_SIR_route_bellone }
+			NOT = { has_country_flag = TU_SIR_absorbed_bellone }
 		}
 
 		cost = 50
@@ -50,6 +87,39 @@ TU_SIR_families_category = {
 		}
 	}
 
+	TU_SIR_subdue_gambino = {
+		icon = GFX_decision_generic_break_treaty
+
+		allowed = {
+			original_tag = SIR
+		}
+
+		visible = {
+			has_country_flag = TU_SIR_families
+			NOT = { has_country_flag = TU_SIR_route_gambino }
+			NOT = { has_country_flag = TU_SIR_absorbed_gambino }
+			has_country_flag = TU_SIR_route_chosen
+		}
+
+		available = {
+			check_variable = { TU_SIR_gambino < 21 }
+		}
+
+		cost = 75
+		fire_only_once = yes
+
+		complete_effect = {
+			set_country_flag = TU_SIR_absorbed_gambino
+			set_variable = { TU_SIR_gambino = 0 }
+			add_manpower = 20000
+			army_experience = 30
+		}
+
+		ai_will_do = {
+			base = 1
+		}
+	}
+
 	TU_SIR_deal_gambino = {
 		icon = GFX_decision_generic_fundraising
 
@@ -59,6 +129,8 @@ TU_SIR_families_category = {
 
 		visible = {
 			has_country_flag = TU_SIR_families
+			NOT = { has_country_flag = TU_SIR_route_gambino }
+			NOT = { has_country_flag = TU_SIR_absorbed_gambino }
 		}
 
 		cost = 25
@@ -84,6 +156,8 @@ TU_SIR_families_category = {
 
 		visible = {
 			has_country_flag = TU_SIR_families
+			NOT = { has_country_flag = TU_SIR_route_gambino }
+			NOT = { has_country_flag = TU_SIR_absorbed_gambino }
 		}
 
 		cost = 50
@@ -101,6 +175,39 @@ TU_SIR_families_category = {
 		}
 	}
 
+	TU_SIR_subdue_saluzzo = {
+		icon = GFX_decision_generic_break_treaty
+
+		allowed = {
+			original_tag = SIR
+		}
+
+		visible = {
+			has_country_flag = TU_SIR_families
+			NOT = { has_country_flag = TU_SIR_route_saluzzo }
+			NOT = { has_country_flag = TU_SIR_absorbed_saluzzo }
+			has_country_flag = TU_SIR_route_chosen
+		}
+
+		available = {
+			check_variable = { TU_SIR_saluzzo < 21 }
+		}
+
+		cost = 75
+		fire_only_once = yes
+
+		complete_effect = {
+			set_country_flag = TU_SIR_absorbed_saluzzo
+			set_variable = { TU_SIR_saluzzo = 0 }
+			add_political_power = 150
+			add_tech_bonus = { name = TU_SIR_subdue_saluzzo bonus = 1.0 uses = 1 category = industry category = electronics }
+		}
+
+		ai_will_do = {
+			base = 1
+		}
+	}
+
 	TU_SIR_deal_saluzzo = {
 		icon = GFX_decision_generic_fundraising
 
@@ -110,6 +217,8 @@ TU_SIR_families_category = {
 
 		visible = {
 			has_country_flag = TU_SIR_families
+			NOT = { has_country_flag = TU_SIR_route_saluzzo }
+			NOT = { has_country_flag = TU_SIR_absorbed_saluzzo }
 		}
 
 		cost = 25
@@ -135,6 +244,8 @@ TU_SIR_families_category = {
 
 		visible = {
 			has_country_flag = TU_SIR_families
+			NOT = { has_country_flag = TU_SIR_route_saluzzo }
+			NOT = { has_country_flag = TU_SIR_absorbed_saluzzo }
 		}
 
 		cost = 50
@@ -312,30 +423,6 @@ TU_SIR_street_category = {
 		}
 	}
 
-	TU_SIR_wolf_rite = {
-		icon = GFX_decision_generic_political_discourse
-
-		allowed = {
-			original_tag = SIR
-		}
-
-		visible = {
-			has_country_flag = TU_SIR_rites
-		}
-
-		cost = 50
-		days_re_enable = 240
-
-		complete_effect = {
-			add_war_support = 0.05
-			army_experience = 15
-		}
-
-		ai_will_do = {
-			base = 1
-		}
-	}
-
 	TU_SIR_olive_harvest = {
 		icon = GFX_decision_generic_political_discourse
 
@@ -413,6 +500,415 @@ TU_SIR_street_category = {
 
 		complete_effect = {
 			add_to_faction = FROM
+		}
+
+		ai_will_do = {
+			base = 1
+		}
+	}
+
+}
+
+TU_SIR_agenda_category = {
+	TU_SIR_bel_contracts = {
+		icon = GFX_decision_generic_construction
+
+		allowed = {
+			original_tag = SIR
+		}
+
+		visible = {
+			has_country_flag = TU_SIR_route_bellone
+		}
+
+		cost = 50
+		days_re_enable = 120
+		days_remove = 120
+
+		modifier = {
+			production_speed_buildings_factor = 0.15
+		}
+
+		complete_effect = {
+			TU_build_infrastructure = yes
+		}
+
+		ai_will_do = {
+			base = 1
+		}
+	}
+
+	TU_SIR_bel_new_city = {
+		icon = GFX_decision_generic_construction
+
+		allowed = {
+			original_tag = SIR
+		}
+
+		visible = {
+			has_country_flag = TU_SIR_route_bellone
+		}
+
+		cost = 100
+		fire_only_once = yes
+		days_remove = 180
+
+		modifier = {
+			civilian_factory_use = 2
+		}
+
+		remove_effect = {
+			capital_scope = { add_extra_state_shared_building_slots = 3 }
+			TU_build_civ_factory = yes
+			TU_build_civ_factory = yes
+			TU_build_civ_factory = yes
+			add_stability = 0.05
+		}
+
+		ai_will_do = {
+			base = 1
+		}
+	}
+
+	TU_SIR_bel_bonds = {
+		icon = GFX_decision_generic_fundraising
+
+		allowed = {
+			original_tag = SIR
+		}
+
+		visible = {
+			has_country_flag = TU_SIR_route_bellone
+		}
+
+		cost = 0
+		days_re_enable = 185
+		days_remove = 180
+
+		modifier = {
+			consumer_goods_factor = 0.03
+		}
+
+		complete_effect = {
+			add_political_power = 100
+		}
+
+		ai_will_do = {
+			base = 1
+		}
+	}
+
+	TU_SIR_gam_enforcers = {
+		icon = GFX_decision_generic_military
+
+		allowed = {
+			original_tag = SIR
+		}
+
+		visible = {
+			has_country_flag = TU_SIR_route_gambino
+		}
+
+		cost = 50
+		days_re_enable = 240
+
+		complete_effect = {
+			TU_SIR_enforcers_template = yes
+			capital_scope = { create_unit = { division = "division_template = \"TU_SIR_enforcers\" start_experience_factor = 0.5 start_equipment_factor = 1" owner = SIR count = 1 } }
+		}
+
+		ai_will_do = {
+			base = 1
+		}
+	}
+
+	TU_SIR_gam_protection = {
+		icon = GFX_decision_generic_fundraising
+
+		allowed = {
+			original_tag = SIR
+		}
+
+		visible = {
+			has_country_flag = TU_SIR_route_gambino
+		}
+
+		cost = 0
+		days_re_enable = 180
+
+		complete_effect = {
+			add_political_power = 80
+			add_stability = -0.03
+		}
+
+		ai_will_do = {
+			base = 1
+		}
+	}
+
+	TU_SIR_gam_turf = {
+		icon = GFX_decision_generic_operation
+
+		allowed = {
+			original_tag = SIR
+		}
+
+		target_trigger = {
+			FROM = {
+				is_neighbor_of = ROOT
+				NOT = { has_war_with = ROOT }
+				NOT = { is_in_faction_with = ROOT }
+			}
+		}
+
+		visible = {
+			has_country_flag = TU_SIR_route_gambino
+			has_completed_focus = TU_SIR_gambino_end
+		}
+
+		cost = 100
+		fire_only_once = yes
+
+		complete_effect = {
+			create_wargoal = { type = annex_everything target = FROM }
+		}
+
+		ai_will_do = {
+			base = 1
+		}
+	}
+
+	TU_SIR_sal_branch = {
+		icon = GFX_decision_generic_fundraising
+
+		allowed = {
+			original_tag = SIR
+		}
+
+		target_trigger = {
+			FROM = {
+				NOT = { tag = ROOT }
+				NOT = { has_country_flag = TU_SIR_saluzzo_branch }
+				OR = { tag = LAT tag = LEI tag = RIM tag = VIC tag = COL tag = KAZ tag = YAN tag = LGM }
+			}
+		}
+
+		visible = {
+			has_country_flag = TU_SIR_route_saluzzo
+		}
+
+		available = {
+			check_variable = { TU_SIR_branches < 4 }
+			NOT = { has_war_with = FROM }
+		}
+
+		cost = 75
+		fire_only_once = yes
+
+		complete_effect = {
+			FROM = { set_country_flag = TU_SIR_saluzzo_branch }
+			add_offsite_building = { type = industrial_complex level = 1 }
+			add_to_variable = { TU_SIR_branches = 1 }
+		}
+
+		ai_will_do = {
+			base = 1
+		}
+	}
+
+	TU_SIR_sal_reinvest = {
+		icon = GFX_decision_generic_industry
+
+		allowed = {
+			original_tag = SIR
+		}
+
+		visible = {
+			has_country_flag = TU_SIR_route_saluzzo
+			has_country_flag = TU_SIR_casinos
+		}
+
+		cost = 50
+		days_re_enable = 365
+
+		complete_effect = {
+			TU_build_civ_factory = yes
+		}
+
+		ai_will_do = {
+			base = 1
+		}
+	}
+
+	TU_SIR_sal_patron = {
+		icon = GFX_decision_generic_research
+
+		allowed = {
+			original_tag = SIR
+		}
+
+		visible = {
+			has_country_flag = TU_SIR_route_saluzzo
+		}
+
+		cost = 75
+		days_re_enable = 365
+
+		complete_effect = {
+			add_tech_bonus = { name = TU_SIR_sal_patron bonus = 1.0 uses = 1 category = industry category = electronics }
+		}
+
+		ai_will_do = {
+			base = 1
+		}
+	}
+
+	TU_SIR_law_trial = {
+		icon = GFX_decision_generic_police_action
+
+		allowed = {
+			original_tag = SIR
+		}
+
+		visible = {
+			has_country_flag = TU_SIR_route_law
+		}
+
+		cost = 40
+		days_re_enable = 120
+
+		complete_effect = {
+			TU_SIR_law_10 = yes
+			add_stability = 0.02
+		}
+
+		ai_will_do = {
+			base = 1
+		}
+	}
+
+	TU_SIR_law_seize = {
+		icon = GFX_decision_generic_confiscation
+
+		allowed = {
+			original_tag = SIR
+		}
+
+		visible = {
+			has_country_flag = TU_SIR_route_law
+		}
+
+		available = {
+			check_variable = { TU_SIR_law > 59 }
+		}
+
+		cost = 75
+		days_re_enable = 365
+
+		complete_effect = {
+			TU_build_civ_factory = yes
+			TU_SIR_bellone_m5 = yes
+			TU_SIR_gambino_m5 = yes
+			TU_SIR_saluzzo_m5 = yes
+		}
+
+		ai_will_do = {
+			base = 1
+		}
+	}
+
+	TU_SIR_law_officers = {
+		icon = GFX_decision_generic_military
+
+		allowed = {
+			original_tag = SIR
+		}
+
+		visible = {
+			has_country_flag = TU_SIR_route_law
+		}
+
+		cost = 50
+		days_re_enable = 240
+
+		complete_effect = {
+			add_manpower = 10000
+			army_experience = 20
+			add_stability = 0.02
+		}
+
+		ai_will_do = {
+			base = 1
+		}
+	}
+
+	TU_SIR_wolf_rite = {
+		icon = GFX_decision_generic_nationalism
+
+		allowed = {
+			original_tag = SIR
+		}
+
+		visible = {
+			has_country_flag = TU_SIR_route_wolf
+			has_country_flag = TU_SIR_rites
+		}
+
+		cost = 50
+		days_re_enable = 180
+
+		complete_effect = {
+			add_war_support = 0.05
+			army_experience = 20
+		}
+
+		ai_will_do = {
+			base = 1
+		}
+	}
+
+	TU_SIR_wolf_pack_call = {
+		icon = GFX_decision_generic_cavalry
+
+		allowed = {
+			original_tag = SIR
+		}
+
+		visible = {
+			has_country_flag = TU_SIR_route_wolf
+		}
+
+		cost = 50
+		days_re_enable = 240
+
+		complete_effect = {
+			TU_SIR_wolf_pack_template = yes
+			capital_scope = { create_unit = { division = "division_template = \"TU_SIR_wolf_pack\" start_experience_factor = 0.6 start_equipment_factor = 1" owner = SIR count = 1 } }
+		}
+
+		ai_will_do = {
+			base = 1
+		}
+	}
+
+	TU_SIR_wolf_blessing = {
+		icon = GFX_decision_generic_nationalism
+
+		allowed = {
+			original_tag = SIR
+		}
+
+		visible = {
+			has_country_flag = TU_SIR_route_wolf
+		}
+
+		cost = 75
+		days_re_enable = 275
+		days_remove = 90
+
+		modifier = {
+			army_attack_factor = 0.1
+			army_speed_factor = 0.05
 		}
 
 		ai_will_do = {

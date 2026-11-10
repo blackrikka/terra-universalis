@@ -22,6 +22,7 @@ country_event = {
 		}
 		add_ideas = TU_SIR_bellone_start
 		mark_focus_tree_layout_dirty = yes
+		set_variable = { TU_SIR_bellone = 100 }
 	}
 
 	option = {
@@ -39,6 +40,7 @@ country_event = {
 		}
 		add_ideas = TU_SIR_gambino_start
 		mark_focus_tree_layout_dirty = yes
+		set_variable = { TU_SIR_gambino = 100 }
 	}
 
 	option = {
@@ -56,6 +58,7 @@ country_event = {
 		}
 		add_ideas = TU_SIR_saluzzo_start
 		mark_focus_tree_layout_dirty = yes
+		set_variable = { TU_SIR_saluzzo = 100 }
 	}
 
 	option = {
@@ -90,6 +93,7 @@ country_event = {
 		}
 		add_ideas = TU_SIR_wolf_start
 		mark_focus_tree_layout_dirty = yes
+		retire_character = TU_SIR_lappland
 	}
 }
 
@@ -247,29 +251,29 @@ country_event = {
 
 	trigger = {
 		original_tag = SIR
-		has_completed_focus = TU_SIR_root
+		has_country_flag = TU_SIR_route_chosen
 	}
 	fire_only_once = yes
 
 	mean_time_to_happen = {
-		days = 400
+		days = 150
 	}
 
 	option = {
 		name = tu_sir_ev.27.a
 		ai_chance = {
-			factor = 50
+			factor = 70
 		}
-		add_stability = 0.02
+		recruit_character = TU_SIR_texas
+		army_experience = 20
 	}
 
 	option = {
 		name = tu_sir_ev.27.b
 		ai_chance = {
-			factor = 50
+			factor = 30
 		}
-		TU_SIR_saluzzo_5 = yes
-		add_political_power = 25
+		add_stability = 0.03
 	}
 }
 
@@ -403,6 +407,289 @@ country_event = {
 		}
 		add_political_power = -15
 		add_war_support = 0.02
+	}
+}
+
+country_event = {
+	id = tu_sir_ev.40
+	title = tu_sir_ev.40.t
+	desc = tu_sir_ev.40.d
+	picture = GFX_report_event_generic_read_write
+	is_triggered_only = yes
+
+	option = {
+		name = tu_sir_ev.40.a
+		ai_chance = {
+			factor = 50
+		}
+		add_political_power = 50
+		add_stability = -0.02
+	}
+
+	option = {
+		name = tu_sir_ev.40.b
+		ai_chance = {
+			factor = 50
+		}
+		add_stability = 0.03
+		add_political_power = -25
+	}
+}
+
+country_event = {
+	id = tu_sir_ev.41
+	title = tu_sir_ev.41.t
+	desc = tu_sir_ev.41.d
+	picture = GFX_report_event_generic_read_write
+	is_triggered_only = yes
+
+	option = {
+		name = tu_sir_ev.41.a
+		ai_chance = {
+			factor = 50
+		}
+		TU_SIR_law_5 = yes
+		add_political_power = -30
+	}
+
+	option = {
+		name = tu_sir_ev.41.b
+		ai_chance = {
+			factor = 50
+		}
+		add_political_power = 60
+		TU_SIR_law_m5 = yes
+	}
+}
+
+country_event = {
+	id = tu_sir_ev.42
+	title = tu_sir_ev.42.t
+	desc = tu_sir_ev.42.d
+	picture = GFX_report_event_generic_read_write
+	is_triggered_only = yes
+
+	option = {
+		name = tu_sir_ev.42.a
+		ai_chance = {
+			factor = 50
+		}
+		army_experience = 15
+		add_stability = -0.02
+	}
+
+	option = {
+		name = tu_sir_ev.42.b
+		ai_chance = {
+			factor = 50
+		}
+		add_political_power = 40
+	}
+}
+
+country_event = {
+	id = tu_sir_ev.43
+	title = tu_sir_ev.43.t
+	desc = tu_sir_ev.43.d
+	picture = GFX_report_event_generic_read_write
+	is_triggered_only = yes
+
+	option = {
+		name = tu_sir_ev.43.a
+		ai_chance = {
+			factor = 50
+		}
+		add_stability = 0.03
+		add_manpower = -3000
+	}
+
+	option = {
+		name = tu_sir_ev.43.b
+		ai_chance = {
+			factor = 50
+		}
+		add_manpower = 8000
+		add_stability = -0.02
+	}
+}
+
+country_event = {
+	id = tu_sir_ev.44
+	title = tu_sir_ev.44.t
+	desc = tu_sir_ev.44.d
+	picture = GFX_report_event_generic_read_write
+	is_triggered_only = yes
+
+	option = {
+		name = tu_sir_ev.44.a
+		ai_chance = {
+			factor = 50
+		}
+		add_political_power = 80
+		TU_SIR_bellone_5 = yes
+		TU_SIR_gambino_5 = yes
+	}
+
+	option = {
+		name = tu_sir_ev.44.b
+		ai_chance = {
+			factor = 50
+		}
+		TU_SIR_bellone_m8 = yes
+		TU_SIR_gambino_m8 = yes
+	}
+}
+
+country_event = {
+	id = tu_sir_ev.45
+	title = tu_sir_ev.45.t
+	desc = tu_sir_ev.45.d
+	picture = GFX_report_event_generic_read_write
+	is_triggered_only = yes
+
+	option = {
+		name = tu_sir_ev.45.a
+		ai_chance = {
+			factor = 50
+		}
+		add_political_power = -30
+		add_stability = 0.03
+	}
+
+	option = {
+		name = tu_sir_ev.45.b
+		ai_chance = {
+			factor = 50
+		}
+		add_political_power = 50
+		TU_SIR_law_m5 = yes
+	}
+}
+
+country_event = {
+	id = tu_sir_ev.46
+	title = tu_sir_ev.46.t
+	desc = tu_sir_ev.46.d
+	picture = GFX_report_event_generic_read_write
+	is_triggered_only = yes
+
+	option = {
+		name = tu_sir_ev.46.a
+		ai_chance = {
+			factor = 50
+		}
+		TU_SIR_law_5 = yes
+		add_stability = -0.02
+	}
+
+	option = {
+		name = tu_sir_ev.46.b
+		ai_chance = {
+			factor = 50
+		}
+		add_stability = 0.03
+	}
+}
+
+country_event = {
+	id = tu_sir_ev.47
+	title = tu_sir_ev.47.t
+	desc = tu_sir_ev.47.d
+	picture = GFX_report_event_generic_read_write
+	is_triggered_only = yes
+
+	option = {
+		name = tu_sir_ev.47.a
+		ai_chance = {
+			factor = 50
+		}
+		TU_SIR_law_5 = yes
+		add_political_power = -30
+	}
+
+	option = {
+		name = tu_sir_ev.47.b
+		ai_chance = {
+			factor = 50
+		}
+		add_stability = 0.02
+		add_political_power = -15
+	}
+}
+
+country_event = {
+	id = tu_sir_ev.48
+	title = tu_sir_ev.48.t
+	desc = tu_sir_ev.48.d
+	picture = GFX_report_event_generic_read_write
+	is_triggered_only = yes
+
+	option = {
+		name = tu_sir_ev.48.a
+		ai_chance = {
+			factor = 50
+		}
+		add_war_support = 0.05
+		add_stability = -0.03
+		army_experience = 20
+	}
+
+	option = {
+		name = tu_sir_ev.48.b
+		ai_chance = {
+			factor = 50
+		}
+		add_stability = 0.04
+	}
+}
+
+country_event = {
+	id = tu_sir_ev.49
+	title = tu_sir_ev.49.t
+	desc = tu_sir_ev.49.d
+	picture = GFX_report_event_generic_read_write
+	is_triggered_only = yes
+
+	option = {
+		name = tu_sir_ev.49.a
+		ai_chance = {
+			factor = 50
+		}
+		army_experience = 30
+	}
+
+	option = {
+		name = tu_sir_ev.49.b
+		ai_chance = {
+			factor = 50
+		}
+		add_manpower = 10000
+	}
+}
+
+country_event = {
+	id = tu_sir_ev.50
+	title = tu_sir_ev.50.t
+	desc = tu_sir_ev.50.d
+	picture = GFX_report_event_generic_read_write
+	is_triggered_only = yes
+
+	option = {
+		name = tu_sir_ev.50.a
+		ai_chance = {
+			factor = 80
+		}
+		recruit_character = TU_SIR_chiave
+		recruit_character = TU_SIR_aosta
+		recruit_character = TU_SIR_broca
+	}
+
+	option = {
+		name = tu_sir_ev.50.b
+		ai_chance = {
+			factor = 20
+		}
+		add_political_power = 30
 	}
 }
 

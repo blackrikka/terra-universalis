@@ -29,3 +29,17 @@ TU_SIR_street_category = {
 
 	priority = 100
 }
+
+TU_SIR_agenda_category = {
+	icon = GFX_decision_category_generic_economy
+
+	allowed = {
+		original_tag = SIR
+	}
+
+	visible = {
+		has_country_flag = TU_SIR_route_chosen
+	}
+
+	priority = 100
+}

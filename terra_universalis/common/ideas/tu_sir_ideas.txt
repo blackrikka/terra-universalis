@@ -193,5 +193,20 @@ ideas = {
 				stability_factor = 0.03
 			}
 		}
+
+		TU_SIR_one_siracusa = {
+			picture = generic_central_management
+
+			allowed = {
+				original_tag = SIR
+			}
+
+			modifier = {
+				stability_factor = 0.1
+				political_power_gain = 0.1
+				army_org_factor = 0.05
+				war_support_factor = 0.05
+			}
+		}
 	}
 }
