@@ -290,6 +290,8 @@ def main():
     resources.main()
     import border_forts                    # 사양서 68: 국경 칸 시작 요새
     border_forts.main()
+    import supply_net                      # 사양서 78: 보급 거점·철도·인프라
+    supply_net.main()
     calls = [t for t in TIERS]
     print("tiers: factories added %d, divisions %d" % (n_fac, n_units))
     print("tiers:", len(calls), "countries")

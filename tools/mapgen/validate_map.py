@@ -555,8 +555,9 @@ def main(argv=None):
             infra = None
         if infra is None:
             chk.err("9", "주 파일 %s: state_category %s 알 수 없음" % (info["file"], info["category"]))
-        elif vals.get("infrastructure") != infra:
-            chk.err("9", "주 파일 %s: infrastructure %s (기대 %s)" % (
+        elif not (str(vals.get("infrastructure")).isdigit() and str(infra).isdigit()
+                  and int(vals["infrastructure"]) >= int(infra)):      # 사양서 78: 보급 거점 주는 supply_net.py 가 올린다 (기대값 이상이면 된다)
+            chk.err("9", "주 파일 %s: infrastructure %s (기대 %s 이상)" % (
                 info["file"], vals.get("infrastructure"), infra))
         if sid in capital_by_state:
             # 사양서 56: 체급 공장(tiers.py)이 주 히스토리에 들어가므로 수도는 기본값 이상이면 된다
