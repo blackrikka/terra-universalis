@@ -1,11 +1,14 @@
+
 	focus = {
 		id = TU_VIC_duk_route
+		prerequisite = { focus = TU_VIC_dukes_summit }
 		icon = GFX_goal_generic_neutrality_focus
-		prerequisite = { focus = TU_VIC_status_quo }
-		mutually_exclusive = { focus = TU_VIC_asl_route focus = TU_VIC_drc_route focus = TU_VIC_par_route }
 		x = 0
 		y = 0
 		cost = 5
+		allow_branch = {
+			has_country_flag = TU_VIC_route_duk
+		}
 
 		search_filters = { FOCUS_FILTER_POLITICAL }
 
@@ -27,6 +30,9 @@
 		x = 0
 		y = 0
 		cost = 10
+		allow_branch = {
+			has_country_flag = TU_VIC_route_duk
+		}
 
 		search_filters = { FOCUS_FILTER_INDUSTRY }
 
@@ -48,6 +54,9 @@
 		x = 0
 		y = 0
 		cost = 18
+		allow_branch = {
+			has_country_flag = TU_VIC_route_duk
+		}
 
 		search_filters = { FOCUS_FILTER_INDUSTRY }
 
@@ -73,6 +82,9 @@
 		x = 0
 		y = 0
 		cost = 10
+		allow_branch = {
+			has_country_flag = TU_VIC_route_duk
+		}
 
 		search_filters = { FOCUS_FILTER_INDUSTRY }
 
@@ -94,6 +106,9 @@
 		x = 0
 		y = 0
 		cost = 20
+		allow_branch = {
+			has_country_flag = TU_VIC_route_duk
+		}
 
 		search_filters = { FOCUS_FILTER_INDUSTRY }
 
@@ -120,6 +135,9 @@
 		x = 0
 		y = 0
 		cost = 18
+		allow_branch = {
+			has_country_flag = TU_VIC_route_duk
+		}
 
 		search_filters = { FOCUS_FILTER_POLITICAL }
 
@@ -143,6 +161,9 @@
 		x = 0
 		y = 0
 		cost = 15
+		allow_branch = {
+			has_country_flag = TU_VIC_route_duk
+		}
 
 		search_filters = { FOCUS_FILTER_POLITICAL }
 
@@ -163,6 +184,9 @@
 		x = 0
 		y = 0
 		cost = 10
+		allow_branch = {
+			has_country_flag = TU_VIC_route_duk
+		}
 
 		search_filters = { FOCUS_FILTER_POLITICAL }
 
@@ -184,6 +208,9 @@
 		x = 0
 		y = 0
 		cost = 10
+		allow_branch = {
+			has_country_flag = TU_VIC_route_duk
+		}
 
 		search_filters = { FOCUS_FILTER_POLITICAL }
 
@@ -205,6 +232,9 @@
 		x = 0
 		y = 0
 		cost = 10
+		allow_branch = {
+			has_country_flag = TU_VIC_route_duk
+		}
 
 		search_filters = { FOCUS_FILTER_POLITICAL }
 
@@ -221,11 +251,13 @@
 	focus = {
 		id = TU_VIC_duk_tenancy
 		prerequisite = { focus = TU_VIC_duk_estate_charters }
-		mutually_exclusive = { focus = TU_VIC_duk_free_labour }
 		icon = GFX_goal_generic_consumer_goods
 		x = 0
 		y = 0
 		cost = 10
+		allow_branch = {
+			has_country_flag = TU_VIC_route_duk
+		}
 
 		search_filters = { FOCUS_FILTER_STABILITY }
 
@@ -236,38 +268,20 @@
 		completion_reward = {
 			add_political_power = 60
 			add_stability = 0.03
-		}
-	}
-
-	focus = {
-		id = TU_VIC_duk_free_labour
-		prerequisite = { focus = TU_VIC_duk_estate_charters }
-		mutually_exclusive = { focus = TU_VIC_duk_tenancy }
-		icon = GFX_goal_generic_production
-		x = 0
-		y = 0
-		cost = 10
-
-		search_filters = { FOCUS_FILTER_INDUSTRY }
-
-		ai_will_do = {
-			base = 1
-		}
-
-		completion_reward = {
 			TU_build_civ_factory = yes
-			add_tech_bonus = { name = TU_VIC_duk_free_labour bonus = 0.75 uses = 1 category = industry category = construction_tech }
 		}
 	}
 
 	focus = {
 		id = TU_VIC_duk_guild_pact
 		prerequisite = { focus = TU_VIC_duk_council_vote focus = TU_VIC_duk_open_council }
-		mutually_exclusive = { focus = TU_VIC_duk_guild_break }
 		icon = GFX_goal_generic_trade
 		x = 0
 		y = 0
 		cost = 10
+		allow_branch = {
+			has_country_flag = TU_VIC_route_duk
+		}
 
 		search_filters = { FOCUS_FILTER_STABILITY }
 
@@ -278,39 +292,20 @@
 		completion_reward = {
 			add_political_power = 60
 			add_tech_bonus = { name = TU_VIC_duk_guild_pact bonus = 0.75 uses = 1 category = industry }
-		}
-	}
-
-	focus = {
-		id = TU_VIC_duk_guild_break
-		prerequisite = { focus = TU_VIC_duk_council_vote focus = TU_VIC_duk_open_council }
-		mutually_exclusive = { focus = TU_VIC_duk_guild_pact }
-		icon = GFX_goal_generic_dangerous_deal
-		x = 0
-		y = 0
-		cost = 10
-
-		search_filters = { FOCUS_FILTER_INDUSTRY }
-
-		ai_will_do = {
-			base = 1
-		}
-
-		completion_reward = {
 			TU_build_civ_factory = yes
-			add_political_power = 60
-			add_tech_bonus = { name = TU_VIC_duk_guild_break bonus = 0.75 uses = 1 category = industry }
 		}
 	}
 
 	focus = {
 		id = TU_VIC_duk_treasury_loans
 		prerequisite = { focus = TU_VIC_duk_guild_pact }
-		mutually_exclusive = { focus = TU_VIC_duk_banking_house }
 		icon = GFX_goal_generic_positive_trade_relations
 		x = 0
 		y = 0
 		cost = 15
+		allow_branch = {
+			has_country_flag = TU_VIC_route_duk
+		}
 
 		search_filters = { FOCUS_FILTER_INTERNATIONAL_TRADE }
 
@@ -327,183 +322,15 @@
 	}
 
 	focus = {
-		id = TU_VIC_duk_banking_house
-		prerequisite = { focus = TU_VIC_duk_guild_break }
-		mutually_exclusive = { focus = TU_VIC_duk_treasury_loans }
-		icon = GFX_goal_generic_production2
-		x = 0
-		y = 0
-		cost = 10
-
-		search_filters = { FOCUS_FILTER_INTERNATIONAL_TRADE }
-
-		ai_will_do = {
-			base = 1
-		}
-
-		completion_reward = {
-			add_political_power = 60
-			add_tech_bonus = { name = TU_VIC_duk_banking_house bonus = 0.75 uses = 1 category = industry }
-		}
-	}
-
-	focus = {
-		id = TU_VIC_duk_private_guard
-		prerequisite = { focus = TU_VIC_duk_tenancy focus = TU_VIC_duk_free_labour }
-		icon = GFX_goal_generic_small_arms
-		x = 0
-		y = 0
-		cost = 15
-
-		search_filters = { FOCUS_FILTER_ARMY_XP }
-
-		ai_will_do = {
-			base = 1
-		}
-
-		completion_reward = {
-			add_ideas = TU_VIC_private_guard
-			add_manpower = 10000
-			army_experience = 25
-			add_doctrine_cost_reduction = { name = TU_VIC_duk_private_guard cost_reduction = 0.4 uses = 1 category = land_doctrine }
-			army_experience = 25
-		}
-	}
-
-	focus = {
-		id = TU_VIC_duk_council_law
-		prerequisite = { focus = TU_VIC_duk_council_vote }
-		mutually_exclusive = { focus = TU_VIC_duk_council_law_alt }
-		icon = GFX_goal_generic_forceful_treaty
-		x = 0
-		y = 0
-		cost = 10
-
-		search_filters = { FOCUS_FILTER_POLITICAL }
-
-		ai_will_do = {
-			base = 1
-		}
-
-		completion_reward = {
-			add_political_power = 60
-			add_stability = 0.03
-		}
-	}
-
-	focus = {
-		id = TU_VIC_duk_council_law_alt
-		prerequisite = { focus = TU_VIC_duk_council_vote }
-		mutually_exclusive = { focus = TU_VIC_duk_council_law }
-		icon = GFX_goal_generic_consumer_goods
-		x = 0
-		y = 0
-		cost = 10
-
-		search_filters = { FOCUS_FILTER_POLITICAL }
-
-		ai_will_do = {
-			base = 1
-		}
-
-		completion_reward = {
-			add_political_power = 60
-			add_stability = 0.03
-		}
-	}
-
-	focus = {
-		id = TU_VIC_duk_rail_concession
-		prerequisite = { focus = TU_VIC_duk_estate_industry }
-		mutually_exclusive = { focus = TU_VIC_duk_rail_concession_alt }
-		icon = GFX_goal_generic_construction
-		x = 0
-		y = 0
-		cost = 10
-
-		search_filters = { FOCUS_FILTER_INDUSTRY }
-
-		ai_will_do = {
-			base = 1
-		}
-
-		completion_reward = {
-			TU_build_railway = yes
-		}
-	}
-
-	focus = {
-		id = TU_VIC_duk_rail_concession_alt
-		prerequisite = { focus = TU_VIC_duk_estate_industry }
-		mutually_exclusive = { focus = TU_VIC_duk_rail_concession }
-		icon = GFX_goal_generic_construction
-		x = 0
-		y = 0
-		cost = 10
-
-		search_filters = { FOCUS_FILTER_INDUSTRY }
-
-		ai_will_do = {
-			base = 1
-		}
-
-		completion_reward = {
-			add_ideas = TU_VIC_choice_rail_works
-			TU_build_infrastructure = yes
-			add_tech_bonus = { name = TU_VIC_duk_rail_concession_alt bonus = 0.75 uses = 1 category = industry category = construction_tech }
-		}
-	}
-
-	focus = {
-		id = TU_VIC_duk_war_cabinet
-		prerequisite = { focus = TU_VIC_duk_estate_grid }
-		mutually_exclusive = { focus = TU_VIC_duk_war_cabinet_alt }
-		icon = GFX_goal_generic_major_war
-		x = 0
-		y = 0
-		cost = 10
-
-		search_filters = { FOCUS_FILTER_POLITICAL }
-
-		ai_will_do = {
-			base = 1
-		}
-
-		completion_reward = {
-			add_political_power = 60
-			add_stability = 0.03
-		}
-	}
-
-	focus = {
-		id = TU_VIC_duk_war_cabinet_alt
-		prerequisite = { focus = TU_VIC_duk_estate_grid }
-		mutually_exclusive = { focus = TU_VIC_duk_war_cabinet }
-		icon = GFX_goal_generic_army_doctrines
-		x = 0
-		y = 0
-		cost = 10
-
-		search_filters = { FOCUS_FILTER_ARMY_XP }
-
-		ai_will_do = {
-			base = 1
-		}
-
-		completion_reward = {
-			add_doctrine_cost_reduction = { name = TU_VIC_duk_war_cabinet_alt cost_reduction = 0.4 uses = 1 category = land_doctrine }
-			army_experience = 25
-		}
-	}
-
-	focus = {
 		id = TU_VIC_duk_fortified_estates
 		prerequisite = { focus = TU_VIC_duk_tax_farming }
-		mutually_exclusive = { focus = TU_VIC_duk_fortified_estates_alt }
 		icon = GFX_goal_generic_fortify_city
 		x = 0
 		y = 0
 		cost = 10
+		allow_branch = {
+			has_country_flag = TU_VIC_route_duk
+		}
 
 		search_filters = { FOCUS_FILTER_ARMY_XP }
 
@@ -517,35 +344,15 @@
 	}
 
 	focus = {
-		id = TU_VIC_duk_fortified_estates_alt
-		prerequisite = { focus = TU_VIC_duk_tax_farming }
-		mutually_exclusive = { focus = TU_VIC_duk_fortified_estates }
-		icon = GFX_goal_generic_defence
-		x = 0
-		y = 0
-		cost = 10
-
-		search_filters = { FOCUS_FILTER_POLITICAL }
-
-		ai_will_do = {
-			base = 1
-		}
-
-		completion_reward = {
-			army_experience = 25
-			add_war_support = 0.03
-			add_doctrine_cost_reduction = { name = TU_VIC_duk_fortified_estates_alt cost_reduction = 0.4 uses = 1 category = land_doctrine }
-		}
-	}
-
-	focus = {
 		id = TU_VIC_asl_route
 		prerequisite = { focus = TU_VIC_glasgow_return }
-		mutually_exclusive = { focus = TU_VIC_duk_route focus = TU_VIC_drc_route focus = TU_VIC_par_route }
 		icon = GFX_goal_generic_propaganda
 		x = 0
 		y = 0
 		cost = 18
+		allow_branch = {
+			has_country_flag = TU_VIC_route_asl
+		}
 
 		search_filters = { FOCUS_FILTER_POLITICAL }
 
@@ -574,6 +381,9 @@
 		x = 0
 		y = 0
 		cost = 20
+		allow_branch = {
+			has_country_flag = TU_VIC_route_asl
+		}
 
 		search_filters = { FOCUS_FILTER_ARMY_XP }
 
@@ -603,6 +413,9 @@
 		x = 0
 		y = 0
 		cost = 15
+		allow_branch = {
+			has_country_flag = TU_VIC_route_asl
+		}
 
 		search_filters = { FOCUS_FILTER_ARMY_XP }
 
@@ -625,6 +438,9 @@
 		x = 0
 		y = 0
 		cost = 18
+		allow_branch = {
+			has_country_flag = TU_VIC_route_asl
+		}
 
 		search_filters = { FOCUS_FILTER_ARMY_XP }
 
@@ -649,6 +465,9 @@
 		x = 0
 		y = 0
 		cost = 20
+		allow_branch = {
+			has_country_flag = TU_VIC_route_asl
+		}
 
 		search_filters = { FOCUS_FILTER_ARMY_XP }
 
@@ -673,6 +492,9 @@
 		x = 0
 		y = 0
 		cost = 15
+		allow_branch = {
+			has_country_flag = TU_VIC_route_asl
+		}
 
 		search_filters = { FOCUS_FILTER_INTERNATIONAL_TRADE }
 
@@ -696,6 +518,9 @@
 		x = 0
 		y = 0
 		cost = 15
+		allow_branch = {
+			has_country_flag = TU_VIC_route_asl
+		}
 
 		search_filters = { FOCUS_FILTER_POLITICAL }
 
@@ -718,6 +543,9 @@
 		x = 0
 		y = 0
 		cost = 10
+		allow_branch = {
+			has_country_flag = TU_VIC_route_asl
+		}
 
 		search_filters = { FOCUS_FILTER_POLITICAL }
 
@@ -739,6 +567,9 @@
 		x = 0
 		y = 0
 		cost = 10
+		allow_branch = {
+			has_country_flag = TU_VIC_route_asl
+		}
 
 		search_filters = { FOCUS_FILTER_POLITICAL }
 
@@ -755,11 +586,13 @@
 	focus = {
 		id = TU_VIC_asl_docks_industry
 		prerequisite = { focus = TU_VIC_asl_route }
-		mutually_exclusive = { focus = TU_VIC_asl_docks_industry_alt }
 		icon = GFX_goal_generic_construct_civ_factory
 		x = 0
 		y = 0
 		cost = 10
+		allow_branch = {
+			has_country_flag = TU_VIC_route_asl
+		}
 
 		search_filters = { FOCUS_FILTER_INDUSTRY }
 
@@ -775,34 +608,15 @@
 	}
 
 	focus = {
-		id = TU_VIC_asl_docks_industry_alt
-		prerequisite = { focus = TU_VIC_asl_route }
-		mutually_exclusive = { focus = TU_VIC_asl_docks_industry }
-		icon = GFX_goal_generic_positive_trade_relations
-		x = 0
-		y = 0
-		cost = 10
-
-		search_filters = { FOCUS_FILTER_STABILITY }
-
-		ai_will_do = {
-			base = 1
-		}
-
-		completion_reward = {
-			add_political_power = 60
-			add_tech_bonus = { name = TU_VIC_asl_docks_industry_alt bonus = 0.75 uses = 1 category = industry }
-		}
-	}
-
-	focus = {
 		id = TU_VIC_asl_smuggling
 		prerequisite = { focus = TU_VIC_asl_route }
-		mutually_exclusive = { focus = TU_VIC_asl_customs }
 		icon = GFX_goal_generic_production
 		x = 0
 		y = 0
 		cost = 15
+		allow_branch = {
+			has_country_flag = TU_VIC_route_asl
+		}
 
 		search_filters = { FOCUS_FILTER_INTERNATIONAL_TRADE }
 
@@ -819,33 +633,15 @@
 	}
 
 	focus = {
-		id = TU_VIC_asl_customs
-		prerequisite = { focus = TU_VIC_asl_route }
-		mutually_exclusive = { focus = TU_VIC_asl_smuggling }
-		icon = GFX_goal_generic_military_deal
-		x = 0
-		y = 0
-		cost = 10
-
-		search_filters = { FOCUS_FILTER_POLITICAL }
-
-		ai_will_do = {
-			base = 1
-		}
-
-		completion_reward = {
-			add_political_power = 60
-			add_stability = 0.03
-		}
-	}
-
-	focus = {
 		id = TU_VIC_asl_gang_pact
 		prerequisite = { focus = TU_VIC_asl_glasgow_gangs }
 		icon = GFX_goal_generic_trade
 		x = 0
 		y = 0
 		cost = 15
+		allow_branch = {
+			has_country_flag = TU_VIC_route_asl
+		}
 
 		search_filters = { FOCUS_FILTER_STABILITY }
 
@@ -863,181 +659,15 @@
 	}
 
 	focus = {
-		id = TU_VIC_asl_city_watch
-		prerequisite = { focus = TU_VIC_asl_glasgow_gangs }
-		mutually_exclusive = { focus = TU_VIC_asl_city_watch_alt }
-		icon = GFX_goal_generic_defence
-		x = 0
-		y = 0
-		cost = 10
-
-		search_filters = { FOCUS_FILTER_ARMY_XP }
-
-		ai_will_do = {
-			base = 1
-		}
-
-		completion_reward = {
-			add_political_power = 60
-			add_stability = 0.03
-		}
-	}
-
-	focus = {
-		id = TU_VIC_asl_city_watch_alt
-		prerequisite = { focus = TU_VIC_asl_glasgow_gangs }
-		mutually_exclusive = { focus = TU_VIC_asl_city_watch }
-		icon = GFX_goal_generic_intelligence_exchange
-		x = 0
-		y = 0
-		cost = 10
-
-		search_filters = { FOCUS_FILTER_STABILITY }
-
-		ai_will_do = {
-			base = 1
-		}
-
-		completion_reward = {
-			add_political_power = 60
-			add_stability = 0.03
-		}
-	}
-
-	focus = {
-		id = TU_VIC_asl_street_law
-		prerequisite = { focus = TU_VIC_asl_glasgow_gangs }
-		mutually_exclusive = { focus = TU_VIC_asl_gang_courts }
-		icon = GFX_goal_generic_political_pressure
-		x = 0
-		y = 0
-		cost = 10
-
-		search_filters = { FOCUS_FILTER_POLITICAL }
-
-		ai_will_do = {
-			base = 1
-		}
-
-		completion_reward = {
-			add_political_power = 60
-			add_stability = 0.03
-		}
-	}
-
-	focus = {
-		id = TU_VIC_asl_gang_courts
-		prerequisite = { focus = TU_VIC_asl_glasgow_gangs }
-		mutually_exclusive = { focus = TU_VIC_asl_street_law }
-		icon = GFX_goal_generic_national_unity
-		x = 0
-		y = 0
-		cost = 10
-
-		search_filters = { FOCUS_FILTER_POLITICAL }
-
-		ai_will_do = {
-			base = 1
-		}
-
-		completion_reward = {
-			add_political_power = 60
-			add_stability = 0.03
-		}
-	}
-
-	focus = {
-		id = TU_VIC_asl_loyal_regiment
-		prerequisite = { focus = TU_VIC_asl_royal_army }
-		mutually_exclusive = { focus = TU_VIC_asl_loyal_regiment_alt }
-		icon = GFX_goal_generic_army_artillery
-		x = 0
-		y = 0
-		cost = 10
-
-		search_filters = { FOCUS_FILTER_ARMY_XP }
-
-		ai_will_do = {
-			base = 1
-		}
-
-		completion_reward = {
-			add_manpower = 10000
-			army_experience = 25
-		}
-	}
-
-	focus = {
-		id = TU_VIC_asl_loyal_regiment_alt
-		prerequisite = { focus = TU_VIC_asl_royal_army }
-		mutually_exclusive = { focus = TU_VIC_asl_loyal_regiment }
-		icon = GFX_goal_generic_army_tanks
-		x = 0
-		y = 0
-		cost = 10
-
-		search_filters = { FOCUS_FILTER_POLITICAL }
-
-		ai_will_do = {
-			base = 1
-		}
-
-		completion_reward = {
-			add_manpower = 10000
-			army_experience = 25
-		}
-	}
-
-	focus = {
-		id = TU_VIC_asl_glasgow_pilgrimage
-		prerequisite = { focus = TU_VIC_asl_royal_levy }
-		mutually_exclusive = { focus = TU_VIC_asl_glasgow_pilgrimage_alt }
-		icon = GFX_goal_generic_improve_relations
-		x = 0
-		y = 0
-		cost = 10
-
-		search_filters = { FOCUS_FILTER_POLITICAL }
-
-		ai_will_do = {
-			base = 1
-		}
-
-		completion_reward = {
-			add_war_support = 0.03
-			add_stability = 0.03
-		}
-	}
-
-	focus = {
-		id = TU_VIC_asl_glasgow_pilgrimage_alt
-		prerequisite = { focus = TU_VIC_asl_royal_levy }
-		mutually_exclusive = { focus = TU_VIC_asl_glasgow_pilgrimage }
-		icon = GFX_goal_generic_neutrality_focus
-		x = 0
-		y = 0
-		cost = 10
-
-		search_filters = { FOCUS_FILTER_POLITICAL }
-
-		ai_will_do = {
-			base = 1
-		}
-
-		completion_reward = {
-			add_political_power = 60
-			add_stability = 0.03
-		}
-	}
-
-	focus = {
 		id = TU_VIC_drc_route
 		prerequisite = { focus = TU_VIC_dublinn_uprising }
-		mutually_exclusive = { focus = TU_VIC_duk_route focus = TU_VIC_asl_route focus = TU_VIC_par_route focus = TU_VIC_dublinn_talks }
 		icon = GFX_goal_generic_secret_weapon
 		x = 0
 		y = 0
 		cost = 15
+		allow_branch = {
+			has_country_flag = TU_VIC_route_drc
+		}
 
 		search_filters = { FOCUS_FILTER_POLITICAL }
 
@@ -1064,6 +694,9 @@
 		x = 0
 		y = 0
 		cost = 20
+		allow_branch = {
+			has_country_flag = TU_VIC_route_drc
+		}
 
 		search_filters = { FOCUS_FILTER_RESEARCH }
 
@@ -1092,6 +725,9 @@
 		x = 0
 		y = 0
 		cost = 20
+		allow_branch = {
+			has_country_flag = TU_VIC_route_drc
+		}
 
 		search_filters = { FOCUS_FILTER_POLITICAL }
 
@@ -1115,6 +751,9 @@
 		x = 0
 		y = 0
 		cost = 10
+		allow_branch = {
+			has_country_flag = TU_VIC_route_drc
+		}
 
 		search_filters = { FOCUS_FILTER_ARMY_XP }
 
@@ -1135,6 +774,9 @@
 		x = 0
 		y = 0
 		cost = 20
+		allow_branch = {
+			has_country_flag = TU_VIC_route_drc
+		}
 
 		search_filters = { FOCUS_FILTER_POLITICAL }
 
@@ -1164,6 +806,9 @@
 		x = 0
 		y = 0
 		cost = 20
+		allow_branch = {
+			has_country_flag = TU_VIC_route_drc
+		}
 
 		search_filters = { FOCUS_FILTER_POLITICAL }
 
@@ -1189,6 +834,9 @@
 		x = 0
 		y = 0
 		cost = 15
+		allow_branch = {
+			has_country_flag = TU_VIC_route_drc
+		}
 
 		search_filters = { FOCUS_FILTER_POLITICAL }
 
@@ -1213,34 +861,15 @@
 	}
 
 	focus = {
-		id = TU_VIC_drc_tara_truce
-		prerequisite = { focus = TU_VIC_drc_route }
-		mutually_exclusive = { focus = TU_VIC_drc_tara_crackdown }
-		icon = GFX_goal_generic_improve_relations
-		x = 0
-		y = 0
-		cost = 10
-
-		search_filters = { FOCUS_FILTER_POLITICAL }
-
-		ai_will_do = {
-			base = 1
-		}
-
-		completion_reward = {
-			add_political_power = 60
-			add_stability = 0.03
-		}
-	}
-
-	focus = {
 		id = TU_VIC_drc_tara_crackdown
 		prerequisite = { focus = TU_VIC_drc_route }
-		mutually_exclusive = { focus = TU_VIC_drc_tara_truce }
 		icon = GFX_goal_generic_dangerous_deal
 		x = 0
 		y = 0
 		cost = 10
+		allow_branch = {
+			has_country_flag = TU_VIC_route_drc
+		}
 
 		search_filters = { FOCUS_FILTER_POLITICAL }
 
@@ -1257,11 +886,13 @@
 	focus = {
 		id = TU_VIC_drc_flame_academies
 		prerequisite = { focus = TU_VIC_drc_flame_arts }
-		mutually_exclusive = { focus = TU_VIC_drc_flame_academies_alt }
 		icon = GFX_goal_generic_radar
 		x = 0
 		y = 0
 		cost = 10
+		allow_branch = {
+			has_country_flag = TU_VIC_route_drc
+		}
 
 		search_filters = { FOCUS_FILTER_RESEARCH }
 
@@ -1272,38 +903,20 @@
 		completion_reward = {
 			add_political_power = 60
 			add_stability = 0.03
-		}
-	}
-
-	focus = {
-		id = TU_VIC_drc_flame_academies_alt
-		prerequisite = { focus = TU_VIC_drc_flame_arts }
-		mutually_exclusive = { focus = TU_VIC_drc_flame_academies }
-		icon = GFX_goal_generic_production2
-		x = 0
-		y = 0
-		cost = 10
-
-		search_filters = { FOCUS_FILTER_RESEARCH }
-
-		ai_will_do = {
-			base = 1
-		}
-
-		completion_reward = {
 			add_ideas = TU_VIC_choice_research_drive
-			add_tech_bonus = { name = TU_VIC_drc_flame_academies_alt bonus = 0.75 uses = 1 category = electronics category = tu_originium_tech }
 		}
 	}
 
 	focus = {
 		id = TU_VIC_drc_flame_drill
 		prerequisite = { focus = TU_VIC_drc_flame_arts }
-		mutually_exclusive = { focus = TU_VIC_drc_flame_bastion }
 		icon = GFX_goal_generic_amphibious_assault
 		x = 0
 		y = 0
 		cost = 10
+		allow_branch = {
+			has_country_flag = TU_VIC_route_drc
+		}
 
 		search_filters = { FOCUS_FILTER_ARMY_XP }
 
@@ -1314,25 +927,6 @@
 		completion_reward = {
 			add_doctrine_cost_reduction = { name = TU_VIC_drc_flame_drill cost_reduction = 0.4 uses = 1 category = land_doctrine }
 			army_experience = 25
-		}
-	}
-
-	focus = {
-		id = TU_VIC_drc_flame_bastion
-		prerequisite = { focus = TU_VIC_drc_flame_arts }
-		mutually_exclusive = { focus = TU_VIC_drc_flame_drill }
-		icon = GFX_goal_generic_fortify_city
-		x = 0
-		y = 0
-		cost = 10
-
-		search_filters = { FOCUS_FILTER_INDUSTRY }
-
-		ai_will_do = {
-			base = 1
-		}
-
-		completion_reward = {
 			TU_build_infrastructure = yes
 			TU_build_forts_2 = yes
 		}
@@ -1341,11 +935,13 @@
 	focus = {
 		id = TU_VIC_drc_ash_laborers
 		prerequisite = { focus = TU_VIC_drc_flame_arts }
-		mutually_exclusive = { focus = TU_VIC_drc_ash_laborers_alt }
 		icon = GFX_goal_generic_construction
 		x = 0
 		y = 0
 		cost = 10
+		allow_branch = {
+			has_country_flag = TU_VIC_route_drc
+		}
 
 		search_filters = { FOCUS_FILTER_INDUSTRY }
 
@@ -1357,80 +953,20 @@
 			TU_build_infrastructure = yes
 			add_manpower = 10000
 			army_experience = 25
-		}
-	}
-
-	focus = {
-		id = TU_VIC_drc_ash_laborers_alt
-		prerequisite = { focus = TU_VIC_drc_flame_arts }
-		mutually_exclusive = { focus = TU_VIC_drc_ash_laborers }
-		icon = GFX_goal_generic_construct_civ_factory
-		x = 0
-		y = 0
-		cost = 10
-
-		search_filters = { FOCUS_FILTER_INDUSTRY }
-
-		ai_will_do = {
-			base = 1
-		}
-
-		completion_reward = {
 			TU_build_civ_factory = yes
-			add_manpower = 10000
-			army_experience = 25
-		}
-	}
-
-	focus = {
-		id = TU_VIC_drc_secret_radio
-		prerequisite = { focus = TU_VIC_drc_secret_police }
-		mutually_exclusive = { focus = TU_VIC_drc_secret_radio_alt }
-		icon = GFX_goal_generic_intelligence_exchange
-		x = 0
-		y = 0
-		cost = 10
-
-		search_filters = { FOCUS_FILTER_POLITICAL }
-
-		ai_will_do = {
-			base = 1
-		}
-
-		completion_reward = {
-			add_tech_bonus = { name = TU_VIC_drc_secret_radio bonus = 0.75 uses = 1 category = radar_tech category = electronics }
-			add_stability = 0.03
-		}
-	}
-
-	focus = {
-		id = TU_VIC_drc_secret_radio_alt
-		prerequisite = { focus = TU_VIC_drc_secret_police }
-		mutually_exclusive = { focus = TU_VIC_drc_secret_radio }
-		icon = GFX_goal_generic_improve_relations
-		x = 0
-		y = 0
-		cost = 10
-
-		search_filters = { FOCUS_FILTER_POLITICAL }
-
-		ai_will_do = {
-			base = 1
-		}
-
-		completion_reward = {
-			add_tech_bonus = { name = TU_VIC_drc_secret_radio_alt bonus = 0.75 uses = 1 category = industry category = construction_tech }
 		}
 	}
 
 	focus = {
 		id = TU_VIC_drc_loyal_dublinn
 		prerequisite = { focus = TU_VIC_drc_flame_arts }
-		mutually_exclusive = { focus = TU_VIC_drc_hostage_law }
 		icon = GFX_goal_generic_military_sphere
 		x = 0
 		y = 0
 		cost = 10
+		allow_branch = {
+			has_country_flag = TU_VIC_route_drc
+		}
 
 		search_filters = { FOCUS_FILTER_POLITICAL }
 
@@ -1445,34 +981,15 @@
 	}
 
 	focus = {
-		id = TU_VIC_drc_hostage_law
-		prerequisite = { focus = TU_VIC_drc_flame_arts }
-		mutually_exclusive = { focus = TU_VIC_drc_loyal_dublinn }
-		icon = GFX_goal_generic_forceful_treaty
-		x = 0
-		y = 0
-		cost = 10
-
-		search_filters = { FOCUS_FILTER_POLITICAL }
-
-		ai_will_do = {
-			base = 1
-		}
-
-		completion_reward = {
-			add_political_power = 60
-			add_stability = 0.03
-		}
-	}
-
-	focus = {
 		id = TU_VIC_drc_war_fund
 		prerequisite = { focus = TU_VIC_drc_purge_dublinn }
-		mutually_exclusive = { focus = TU_VIC_drc_war_fund_alt }
 		icon = GFX_goal_generic_military_deal
 		x = 0
 		y = 0
 		cost = 10
+		allow_branch = {
+			has_country_flag = TU_VIC_route_drc
+		}
 
 		search_filters = { FOCUS_FILTER_INTERNATIONAL_TRADE }
 
@@ -1487,163 +1004,15 @@
 	}
 
 	focus = {
-		id = TU_VIC_drc_war_fund_alt
-		prerequisite = { focus = TU_VIC_drc_purge_dublinn }
-		mutually_exclusive = { focus = TU_VIC_drc_war_fund }
-		icon = GFX_goal_generic_military_deal
-		x = 0
-		y = 0
-		cost = 10
-
-		search_filters = { FOCUS_FILTER_ARMY_XP }
-
-		ai_will_do = {
-			base = 1
-		}
-
-		completion_reward = {
-			add_political_power = 60
-			add_stability = 0.03
-		}
-	}
-
-	focus = {
-		id = TU_VIC_drc_sky_flames
-		prerequisite = { focus = TU_VIC_drc_tara_arsenal }
-		mutually_exclusive = { focus = TU_VIC_drc_sky_flames_alt }
-		icon = GFX_goal_generic_air_fighter
-		x = 0
-		y = 0
-		cost = 10
-
-		search_filters = { FOCUS_FILTER_INDUSTRY }
-
-		ai_will_do = {
-			base = 1
-		}
-
-		completion_reward = {
-			TU_build_civ_factory = yes
-			add_tech_bonus = { name = TU_VIC_drc_sky_flames bonus = 0.75 uses = 1 category = light_fighter category = tactical_bomber }
-			add_doctrine_cost_reduction = { name = TU_VIC_drc_sky_flames cost_reduction = 0.4 uses = 1 category = air_doctrine }
-			air_experience = 25
-		}
-	}
-
-	focus = {
-		id = TU_VIC_drc_sky_flames_alt
-		prerequisite = { focus = TU_VIC_drc_tara_arsenal }
-		mutually_exclusive = { focus = TU_VIC_drc_sky_flames }
-		icon = GFX_goal_generic_air_production
-		x = 0
-		y = 0
-		cost = 10
-
-		search_filters = { FOCUS_FILTER_INDUSTRY }
-
-		ai_will_do = {
-			base = 1
-		}
-
-		completion_reward = {
-			TU_build_mil_factory = yes
-			add_tech_bonus = { name = TU_VIC_drc_sky_flames_alt bonus = 0.75 uses = 1 category = light_fighter category = tactical_bomber }
-			add_doctrine_cost_reduction = { name = TU_VIC_drc_sky_flames_alt cost_reduction = 0.4 uses = 1 category = air_doctrine }
-			air_experience = 25
-		}
-	}
-
-	focus = {
-		id = TU_VIC_drc_martial_courts
-		prerequisite = { focus = TU_VIC_drc_purge_dublinn }
-		mutually_exclusive = { focus = TU_VIC_drc_martial_courts_alt }
-		icon = GFX_goal_generic_national_unity
-		x = 0
-		y = 0
-		cost = 10
-
-		search_filters = { FOCUS_FILTER_POLITICAL }
-
-		ai_will_do = {
-			base = 1
-		}
-
-		completion_reward = {
-			add_doctrine_cost_reduction = { name = TU_VIC_drc_martial_courts cost_reduction = 0.4 uses = 1 category = land_doctrine }
-			army_experience = 25
-		}
-	}
-
-	focus = {
-		id = TU_VIC_drc_martial_courts_alt
-		prerequisite = { focus = TU_VIC_drc_purge_dublinn }
-		mutually_exclusive = { focus = TU_VIC_drc_martial_courts }
-		icon = GFX_goal_generic_dangerous_deal
-		x = 0
-		y = 0
-		cost = 10
-
-		search_filters = { FOCUS_FILTER_POLITICAL }
-
-		ai_will_do = {
-			base = 1
-		}
-
-		completion_reward = {
-			add_tech_bonus = { name = TU_VIC_drc_martial_courts_alt bonus = 0.75 uses = 1 category = industry category = construction_tech }
-		}
-	}
-
-	focus = {
-		id = TU_VIC_drc_veteran_cadre
-		prerequisite = { focus = TU_VIC_drc_fascist_state }
-		mutually_exclusive = { focus = TU_VIC_drc_veteran_cadre_alt }
-		icon = GFX_goal_generic_army_tanks
-		x = 0
-		y = 0
-		cost = 10
-
-		search_filters = { FOCUS_FILTER_ARMY_XP }
-
-		ai_will_do = {
-			base = 1
-		}
-
-		completion_reward = {
-			add_doctrine_cost_reduction = { name = TU_VIC_drc_veteran_cadre cost_reduction = 0.4 uses = 1 category = land_doctrine }
-			army_experience = 25
-		}
-	}
-
-	focus = {
-		id = TU_VIC_drc_veteran_cadre_alt
-		prerequisite = { focus = TU_VIC_drc_fascist_state }
-		mutually_exclusive = { focus = TU_VIC_drc_veteran_cadre }
-		icon = GFX_goal_generic_army_artillery
-		x = 0
-		y = 0
-		cost = 10
-
-		search_filters = { FOCUS_FILTER_ARMY_XP }
-
-		ai_will_do = {
-			base = 1
-		}
-
-		completion_reward = {
-			add_manpower = 10000
-			army_experience = 25
-		}
-	}
-
-	focus = {
 		id = TU_VIC_par_route
 		prerequisite = { focus = TU_VIC_dukes_summit }
-		mutually_exclusive = { focus = TU_VIC_duk_route focus = TU_VIC_asl_route focus = TU_VIC_drc_route }
 		icon = GFX_goal_generic_improve_relations
 		x = 0
 		y = 0
 		cost = 10
+		allow_branch = {
+			has_country_flag = TU_VIC_route_par
+		}
 
 		search_filters = { FOCUS_FILTER_POLITICAL }
 
@@ -1668,6 +1037,9 @@
 		x = 0
 		y = 0
 		cost = 15
+		allow_branch = {
+			has_country_flag = TU_VIC_route_par
+		}
 
 		search_filters = { FOCUS_FILTER_POLITICAL }
 
@@ -1692,6 +1064,9 @@
 		x = 0
 		y = 0
 		cost = 18
+		allow_branch = {
+			has_country_flag = TU_VIC_route_par
+		}
 
 		search_filters = { FOCUS_FILTER_INDUSTRY }
 
@@ -1716,6 +1091,9 @@
 		x = 0
 		y = 0
 		cost = 15
+		allow_branch = {
+			has_country_flag = TU_VIC_route_par
+		}
 
 		search_filters = { FOCUS_FILTER_POLITICAL }
 
@@ -1742,6 +1120,9 @@
 		x = 0
 		y = 0
 		cost = 18
+		allow_branch = {
+			has_country_flag = TU_VIC_route_par
+		}
 
 		search_filters = { FOCUS_FILTER_INTERNATIONAL_TRADE }
 
@@ -1767,6 +1148,9 @@
 		x = 0
 		y = 0
 		cost = 15
+		allow_branch = {
+			has_country_flag = TU_VIC_route_par
+		}
 
 		search_filters = { FOCUS_FILTER_POLITICAL }
 
@@ -1791,6 +1175,9 @@
 		x = 0
 		y = 0
 		cost = 18
+		allow_branch = {
+			has_country_flag = TU_VIC_route_par
+		}
 
 		search_filters = { FOCUS_FILTER_POLITICAL }
 
@@ -1815,6 +1202,9 @@
 		x = 0
 		y = 0
 		cost = 15
+		allow_branch = {
+			has_country_flag = TU_VIC_route_par
+		}
 
 		search_filters = { FOCUS_FILTER_POLITICAL }
 
@@ -1835,76 +1225,15 @@
 	}
 
 	focus = {
-		id = TU_VIC_par_pamphlets
-		prerequisite = { focus = TU_VIC_par_route }
-		mutually_exclusive = { focus = TU_VIC_par_pamphlets_alt }
-		icon = GFX_goal_generic_propaganda
-		x = 0
-		y = 0
-		cost = 10
-
-		search_filters = { FOCUS_FILTER_POLITICAL }
-
-		ai_will_do = {
-			base = 1
-		}
-
-		completion_reward = {
-			add_political_power = 60
-			add_stability = 0.03
-		}
-	}
-
-	focus = {
-		id = TU_VIC_par_pamphlets_alt
-		prerequisite = { focus = TU_VIC_par_route }
-		mutually_exclusive = { focus = TU_VIC_par_pamphlets }
-		icon = GFX_goal_generic_political_pressure
-		x = 0
-		y = 0
-		cost = 10
-
-		search_filters = { FOCUS_FILTER_POLITICAL }
-
-		ai_will_do = {
-			base = 1
-		}
-
-		completion_reward = {
-			add_political_power = 60
-			add_stability = 0.03
-		}
-	}
-
-	focus = {
-		id = TU_VIC_par_union_law
-		prerequisite = { focus = TU_VIC_par_free_press }
-		mutually_exclusive = { focus = TU_VIC_par_guild_charter }
-		icon = GFX_goal_generic_trade
-		x = 0
-		y = 0
-		cost = 10
-
-		search_filters = { FOCUS_FILTER_STABILITY }
-
-		ai_will_do = {
-			base = 1
-		}
-
-		completion_reward = {
-			add_political_power = 60
-			add_stability = 0.03
-		}
-	}
-
-	focus = {
 		id = TU_VIC_par_guild_charter
 		prerequisite = { focus = TU_VIC_par_free_press }
-		mutually_exclusive = { focus = TU_VIC_par_union_law }
 		icon = GFX_goal_generic_production
 		x = 0
 		y = 0
 		cost = 10
+		allow_branch = {
+			has_country_flag = TU_VIC_route_par
+		}
 
 		search_filters = { FOCUS_FILTER_INDUSTRY }
 
@@ -1920,33 +1249,15 @@
 	}
 
 	focus = {
-		id = TU_VIC_par_tech_schools
-		prerequisite = { focus = TU_VIC_par_public_works }
-		mutually_exclusive = { focus = TU_VIC_par_public_schools }
-		icon = GFX_goal_generic_scientific_exchange
-		x = 0
-		y = 0
-		cost = 10
-
-		search_filters = { FOCUS_FILTER_RESEARCH }
-
-		ai_will_do = {
-			base = 1
-		}
-
-		completion_reward = {
-			add_tech_bonus = { name = TU_VIC_par_tech_schools bonus = 0.75 uses = 1 category = electronics category = tu_originium_tech }
-		}
-	}
-
-	focus = {
 		id = TU_VIC_par_public_schools
 		prerequisite = { focus = TU_VIC_par_public_works }
-		mutually_exclusive = { focus = TU_VIC_par_tech_schools }
 		icon = GFX_goal_generic_political_pressure
 		x = 0
 		y = 0
 		cost = 10
+		allow_branch = {
+			has_country_flag = TU_VIC_route_par
+		}
 
 		search_filters = { FOCUS_FILTER_STABILITY }
 
@@ -1967,6 +1278,9 @@
 		x = 0
 		y = 0
 		cost = 10
+		allow_branch = {
+			has_country_flag = TU_VIC_route_par
+		}
 
 		search_filters = { FOCUS_FILTER_INTERNATIONAL_TRADE }
 
@@ -1988,6 +1302,9 @@
 		x = 0
 		y = 0
 		cost = 10
+		allow_branch = {
+			has_country_flag = TU_VIC_route_par
+		}
 
 		search_filters = { FOCUS_FILTER_INTERNATIONAL_TRADE }
 
@@ -2004,11 +1321,13 @@
 	focus = {
 		id = TU_VIC_par_steel_rail
 		prerequisite = { focus = TU_VIC_par_public_works }
-		mutually_exclusive = { focus = TU_VIC_par_steel_rail_alt }
 		icon = GFX_goal_generic_construct_civ_factory
 		x = 0
 		y = 0
 		cost = 10
+		allow_branch = {
+			has_country_flag = TU_VIC_route_par
+		}
 
 		search_filters = { FOCUS_FILTER_INDUSTRY }
 
@@ -2019,105 +1338,22 @@
 		completion_reward = {
 			TU_build_civ_factory = yes
 			TU_build_railway = yes
-		}
-	}
-
-	focus = {
-		id = TU_VIC_par_steel_rail_alt
-		prerequisite = { focus = TU_VIC_par_public_works }
-		mutually_exclusive = { focus = TU_VIC_par_steel_rail }
-		icon = GFX_goal_generic_construct_infrastructure
-		x = 0
-		y = 0
-		cost = 10
-
-		search_filters = { FOCUS_FILTER_INDUSTRY }
-
-		ai_will_do = {
-			base = 1
-		}
-
-		completion_reward = {
 			TU_build_infrastructure = yes
-			add_stability = 0.03
-			add_manpower = 10000
-			add_tech_bonus = { name = TU_VIC_par_steel_rail_alt bonus = 0.75 uses = 1 category = tu_oripathy_tech }
-		}
-	}
-
-	focus = {
-		id = TU_VIC_par_police_reform
-		prerequisite = { focus = TU_VIC_par_free_press }
-		mutually_exclusive = { focus = TU_VIC_par_police_reform_alt }
-		icon = GFX_goal_generic_defence
-		x = 0
-		y = 0
-		cost = 10
-
-		search_filters = { FOCUS_FILTER_STABILITY }
-
-		ai_will_do = {
-			base = 1
-		}
-
-		completion_reward = {
-			add_tech_bonus = { name = TU_VIC_par_police_reform bonus = 0.75 uses = 1 category = radar_tech category = electronics }
-			add_stability = 0.03
-		}
-	}
-
-	focus = {
-		id = TU_VIC_par_police_reform_alt
-		prerequisite = { focus = TU_VIC_par_free_press }
-		mutually_exclusive = { focus = TU_VIC_par_police_reform }
-		icon = GFX_goal_generic_army_doctrines
-		x = 0
-		y = 0
-		cost = 10
-
-		search_filters = { FOCUS_FILTER_ARMY_XP }
-
-		ai_will_do = {
-			base = 1
-		}
-
-		completion_reward = {
-			add_doctrine_cost_reduction = { name = TU_VIC_par_police_reform_alt cost_reduction = 0.4 uses = 1 category = land_doctrine }
-			army_experience = 25
 		}
 	}
 
 	focus = {
 		id = TU_VIC_par_free_elections
 		prerequisite = { focus = TU_VIC_par_elections }
-		mutually_exclusive = { focus = TU_VIC_par_free_elections_alt }
 		icon = GFX_goal_generic_political_pressure
 		x = 0
 		y = 0
 		cost = 10
+		allow_branch = {
+			has_country_flag = TU_VIC_route_par
+		}
 
 		search_filters = { FOCUS_FILTER_POLITICAL }
-
-		ai_will_do = {
-			base = 1
-		}
-
-		completion_reward = {
-			add_political_power = 60
-			add_stability = 0.03
-		}
-	}
-
-	focus = {
-		id = TU_VIC_par_free_elections_alt
-		prerequisite = { focus = TU_VIC_par_elections }
-		mutually_exclusive = { focus = TU_VIC_par_free_elections }
-		icon = GFX_goal_generic_national_unity
-		x = 0
-		y = 0
-		cost = 10
-
-		search_filters = { FOCUS_FILTER_STABILITY }
 
 		ai_will_do = {
 			base = 1
@@ -2132,11 +1368,13 @@
 	focus = {
 		id = TU_VIC_par_veterans_bill
 		prerequisite = { focus = TU_VIC_par_london_exchange }
-		mutually_exclusive = { focus = TU_VIC_par_veterans_bill_alt }
 		icon = GFX_goal_generic_small_arms
 		x = 0
 		y = 0
 		cost = 10
+		allow_branch = {
+			has_country_flag = TU_VIC_route_par
+		}
 
 		search_filters = { FOCUS_FILTER_ARMY_XP }
 
@@ -2147,144 +1385,20 @@
 		completion_reward = {
 			add_doctrine_cost_reduction = { name = TU_VIC_par_veterans_bill cost_reduction = 0.4 uses = 1 category = land_doctrine }
 			army_experience = 25
-		}
-	}
-
-	focus = {
-		id = TU_VIC_par_veterans_bill_alt
-		prerequisite = { focus = TU_VIC_par_london_exchange }
-		mutually_exclusive = { focus = TU_VIC_par_veterans_bill }
-		icon = GFX_goal_generic_army_tanks
-		x = 0
-		y = 0
-		cost = 10
-
-		search_filters = { FOCUS_FILTER_POLITICAL }
-
-		ai_will_do = {
-			base = 1
-		}
-
-		completion_reward = {
 			add_ideas = TU_VIC_choice_conscript_law
-			add_manpower = 10000
-			army_experience = 25
 		}
 	}
 
 	focus = {
 		id = TU_VIC_par_civil_rights
 		prerequisite = { focus = TU_VIC_par_rule_of_law }
-		mutually_exclusive = { focus = TU_VIC_par_civil_rights_alt }
 		icon = GFX_goal_generic_national_unity
 		x = 0
 		y = 0
 		cost = 10
-
-		search_filters = { FOCUS_FILTER_STABILITY }
-
-		ai_will_do = {
-			base = 1
+		allow_branch = {
+			has_country_flag = TU_VIC_route_par
 		}
-
-		completion_reward = {
-			add_political_power = 60
-			add_stability = 0.03
-		}
-	}
-
-	focus = {
-		id = TU_VIC_par_civil_rights_alt
-		prerequisite = { focus = TU_VIC_par_rule_of_law }
-		mutually_exclusive = { focus = TU_VIC_par_civil_rights }
-		icon = GFX_goal_generic_positive_trade_relations
-		x = 0
-		y = 0
-		cost = 10
-
-		search_filters = { FOCUS_FILTER_STABILITY }
-
-		ai_will_do = {
-			base = 1
-		}
-
-		completion_reward = {
-			add_political_power = 60
-			add_stability = 0.03
-		}
-	}
-
-	focus = {
-		id = TU_VIC_par_monarch_pension
-		prerequisite = { focus = TU_VIC_par_london_exchange }
-		mutually_exclusive = { focus = TU_VIC_par_monarch_pension_alt }
-		icon = GFX_goal_generic_improve_relations
-		x = 0
-		y = 0
-		cost = 10
-
-		search_filters = { FOCUS_FILTER_POLITICAL }
-
-		ai_will_do = {
-			base = 1
-		}
-
-		completion_reward = {
-			add_political_power = 60
-			add_stability = 0.03
-		}
-	}
-
-	focus = {
-		id = TU_VIC_par_monarch_pension_alt
-		prerequisite = { focus = TU_VIC_par_london_exchange }
-		mutually_exclusive = { focus = TU_VIC_par_monarch_pension }
-		icon = GFX_goal_generic_major_war
-		x = 0
-		y = 0
-		cost = 10
-
-		search_filters = { FOCUS_FILTER_ARMY_XP }
-
-		ai_will_do = {
-			base = 1
-		}
-
-		completion_reward = {
-			add_doctrine_cost_reduction = { name = TU_VIC_par_monarch_pension_alt cost_reduction = 0.4 uses = 1 category = land_doctrine }
-			army_experience = 25
-		}
-	}
-
-	focus = {
-		id = TU_VIC_par_colonial_office
-		prerequisite = { focus = TU_VIC_par_london_exchange }
-		mutually_exclusive = { focus = TU_VIC_par_colonial_office_alt }
-		icon = GFX_goal_generic_positive_trade_relations
-		x = 0
-		y = 0
-		cost = 10
-
-		search_filters = { FOCUS_FILTER_INTERNATIONAL_TRADE }
-
-		ai_will_do = {
-			base = 1
-		}
-
-		completion_reward = {
-			add_political_power = 60
-			add_stability = 0.03
-		}
-	}
-
-	focus = {
-		id = TU_VIC_par_colonial_office_alt
-		prerequisite = { focus = TU_VIC_par_london_exchange }
-		mutually_exclusive = { focus = TU_VIC_par_colonial_office }
-		icon = GFX_goal_generic_consumer_goods
-		x = 0
-		y = 0
-		cost = 10
 
 		search_filters = { FOCUS_FILTER_STABILITY }
 

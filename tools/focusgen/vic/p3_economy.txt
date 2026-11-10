@@ -129,27 +129,6 @@
 	}
 
 	focus = {
-		id = TU_VIC_eco_arms_contracts
-		prerequisite = { focus = TU_VIC_eco_london_foundries }
-		icon = GFX_goal_generic_construct_mil_factory
-		x = 0
-		y = 0
-		cost = 10
-
-		search_filters = { FOCUS_FILTER_INDUSTRY }
-
-		ai_will_do = {
-			base = 1
-		}
-
-		completion_reward = {
-			TU_build_mil_factory = yes
-			add_tech_bonus = { name = TU_VIC_eco_arms_contracts bonus = 0.75 uses = 1 category = infantry_weapons }
-			army_experience = 25
-		}
-	}
-
-	focus = {
 		id = TU_VIC_eco_industrial_summit
 		prerequisite = { focus = TU_VIC_eco_rail_network }
 		icon = GFX_goal_generic_construction2
@@ -290,75 +269,6 @@
 	}
 
 	focus = {
-		id = TU_VIC_eco_workers_guild
-		prerequisite = { focus = TU_VIC_eco_consumer_markets }
-		icon = GFX_goal_generic_improve_relations
-		x = 0
-		y = 0
-		cost = 15
-
-		search_filters = { FOCUS_FILTER_INDUSTRY }
-
-		ai_will_do = {
-			base = 1
-		}
-
-		completion_reward = {
-			TU_build_civ_factory = yes
-			add_political_power = 60
-			add_tech_bonus = { name = TU_VIC_eco_workers_guild bonus = 0.75 uses = 1 category = industry }
-			TU_build_civ_factory = yes
-			add_tech_bonus = { name = TU_VIC_eco_workers_guild bonus = 0.75 uses = 1 category = industry category = construction_tech }
-		}
-	}
-
-	focus = {
-		id = TU_VIC_eco_urban_housing
-		prerequisite = { focus = TU_VIC_eco_consumer_markets }
-		icon = GFX_goal_generic_construct_civilian
-		x = 0
-		y = 0
-		cost = 15
-
-		search_filters = { FOCUS_FILTER_INDUSTRY }
-
-		ai_will_do = {
-			base = 1
-		}
-
-		completion_reward = {
-			TU_build_civ_factory = yes
-			army_experience = 25
-			add_war_support = 0.03
-			add_doctrine_cost_reduction = { name = TU_VIC_eco_urban_housing cost_reduction = 0.4 uses = 1 category = land_doctrine }
-			TU_build_civ_factory = yes
-			add_tech_bonus = { name = TU_VIC_eco_urban_housing bonus = 0.75 uses = 1 category = industry category = construction_tech }
-		}
-	}
-
-	focus = {
-		id = TU_VIC_eco_grand_bridge
-		prerequisite = { focus = TU_VIC_eco_steel_export }
-		icon = GFX_goal_generic_construct_infrastructure
-		x = 0
-		y = 0
-		cost = 18
-
-		search_filters = { FOCUS_FILTER_INDUSTRY }
-
-		ai_will_do = {
-			base = 1
-		}
-
-		completion_reward = {
-			TU_build_infrastructure = yes
-			add_tech_bonus = { name = TU_VIC_eco_grand_bridge bonus = 0.75 uses = 1 category = industry category = construction_tech }
-			TU_build_infrastructure = yes
-			add_tech_bonus = { name = TU_VIC_eco_grand_bridge bonus = 1.0 uses = 1 category = industry category = construction_tech }
-		}
-	}
-
-	focus = {
 		id = TU_VIC_eco_war_factories
 		prerequisite = { focus = TU_VIC_eco_industrial_summit }
 		mutually_exclusive = { focus = TU_VIC_eco_consumer_markets }
@@ -457,32 +367,6 @@
 	}
 
 	focus = {
-		id = TU_VIC_eco_steam_cavalry
-		prerequisite = { focus = TU_VIC_eco_knight_recruit }
-		icon = GFX_goal_generic_army_motorized
-		x = 0
-		y = 0
-		cost = 20
-
-		search_filters = { FOCUS_FILTER_ARMY_XP }
-
-		ai_will_do = {
-			base = 1
-		}
-
-		completion_reward = {
-			add_tech_bonus = { name = TU_VIC_eco_steam_cavalry bonus = 0.75 uses = 1 category = motorized_equipment }
-			add_doctrine_cost_reduction = { name = TU_VIC_eco_steam_cavalry cost_reduction = 0.4 uses = 1 category = land_doctrine }
-			add_tech_bonus = { name = TU_VIC_eco_steam_cavalry bonus = 0.75 uses = 1 category = artillery }
-			army_experience = 25
-			add_political_power = 60
-			add_stability = 0.03
-			add_tech_bonus = { name = TU_VIC_eco_steam_cavalry bonus = 0.75 uses = 1 category = motorized_equipment }
-			add_doctrine_cost_reduction = { name = TU_VIC_eco_steam_cavalry cost_reduction = 0.4 uses = 1 category = land_doctrine }
-		}
-	}
-
-	focus = {
 		id = TU_VIC_eco_division_order
 		prerequisite = { focus = TU_VIC_eco_armour_doctrine }
 		icon = GFX_goal_generic_army_doctrines
@@ -528,31 +412,6 @@
 			add_tech_bonus = { name = TU_VIC_eco_steam_heart bonus = 0.75 uses = 1 category = infantry_weapons }
 			army_experience = 25
 			add_doctrine_cost_reduction = { name = TU_VIC_eco_steam_heart cost_reduction = 0.4 uses = 1 category = land_doctrine }
-			army_experience = 25
-		}
-	}
-
-	focus = {
-		id = TU_VIC_eco_vanguard
-		prerequisite = { focus = TU_VIC_eco_steam_heart }
-		icon = GFX_goal_generic_army_tanks
-		x = 0
-		y = 0
-		cost = 18
-
-		search_filters = { FOCUS_FILTER_ARMY_XP }
-
-		ai_will_do = {
-			base = 1
-		}
-
-		completion_reward = {
-			army_experience = 25
-			add_war_support = 0.03
-			add_doctrine_cost_reduction = { name = TU_VIC_eco_vanguard cost_reduction = 0.4 uses = 1 category = land_doctrine }
-			add_tech_bonus = { name = TU_VIC_eco_vanguard bonus = 0.75 uses = 1 category = artillery }
-			army_experience = 25
-			add_doctrine_cost_reduction = { name = TU_VIC_eco_vanguard cost_reduction = 0.4 uses = 1 category = land_doctrine }
 			army_experience = 25
 		}
 	}
@@ -619,27 +478,6 @@
 		completion_reward = {
 			TU_build_infrastructure = yes
 			add_tech_bonus = { name = TU_VIC_eco_steam_supply bonus = 0.75 uses = 1 category = industry category = construction_tech }
-		}
-	}
-
-	focus = {
-		id = TU_VIC_eco_harbour_grid
-		prerequisite = { focus = TU_VIC_crown_focus }
-		icon = GFX_goal_generic_construction
-		x = 0
-		y = 0
-		cost = 10
-
-		search_filters = { FOCUS_FILTER_INDUSTRY }
-
-		ai_will_do = {
-			base = 1
-		}
-
-		completion_reward = {
-			TU_build_infrastructure = yes
-			add_political_power = 60
-			add_tech_bonus = { name = TU_VIC_eco_harbour_grid bonus = 0.75 uses = 1 category = industry }
 		}
 	}
 
@@ -759,7 +597,6 @@
 	focus = {
 		id = TU_VIC_eco_airship_fleet
 		prerequisite = { focus = TU_VIC_eco_airfield_survey }
-		mutually_exclusive = { focus = TU_VIC_eco_airship_fleet_alt }
 		icon = GFX_goal_generic_air_production
 		x = 0
 		y = 0
@@ -776,53 +613,7 @@
 			add_tech_bonus = { name = TU_VIC_eco_airship_fleet bonus = 0.75 uses = 1 category = light_fighter category = tactical_bomber }
 			add_doctrine_cost_reduction = { name = TU_VIC_eco_airship_fleet cost_reduction = 0.4 uses = 1 category = air_doctrine }
 			air_experience = 25
-		}
-	}
-
-	focus = {
-		id = TU_VIC_eco_airship_fleet_alt
-		prerequisite = { focus = TU_VIC_eco_airfield_survey }
-		mutually_exclusive = { focus = TU_VIC_eco_airship_fleet }
-		icon = GFX_goal_generic_air_fighter
-		x = 0
-		y = 0
-		cost = 10
-
-		search_filters = { FOCUS_FILTER_INDUSTRY }
-
-		ai_will_do = {
-			base = 1
-		}
-
-		completion_reward = {
 			TU_build_civ_factory = yes
-			add_tech_bonus = { name = TU_VIC_eco_airship_fleet_alt bonus = 0.75 uses = 1 category = light_fighter category = tactical_bomber }
-			add_doctrine_cost_reduction = { name = TU_VIC_eco_airship_fleet_alt cost_reduction = 0.4 uses = 1 category = air_doctrine }
-			air_experience = 25
-		}
-	}
-
-	focus = {
-		id = TU_VIC_eco_fighter_tactics
-		prerequisite = { focus = TU_VIC_eco_fighter_squadron }
-		icon = GFX_goal_generic_air_doctrine
-		x = 0
-		y = 0
-		cost = 15
-
-		search_filters = { FOCUS_FILTER_AIR_XP }
-
-		ai_will_do = {
-			base = 1
-		}
-
-		completion_reward = {
-			add_tech_bonus = { name = TU_VIC_eco_fighter_tactics bonus = 0.75 uses = 1 category = light_fighter category = tactical_bomber }
-			add_doctrine_cost_reduction = { name = TU_VIC_eco_fighter_tactics cost_reduction = 0.4 uses = 1 category = air_doctrine }
-			air_experience = 25
-			add_tech_bonus = { name = TU_VIC_eco_fighter_tactics bonus = 0.75 uses = 1 category = light_fighter category = tactical_bomber }
-			add_doctrine_cost_reduction = { name = TU_VIC_eco_fighter_tactics cost_reduction = 0.4 uses = 1 category = air_doctrine }
-			air_experience = 25
 		}
 	}
 
@@ -913,28 +704,6 @@
 			add_tech_bonus = { name = TU_VIC_eco_jet_program bonus = 1.0 uses = 1 category = light_fighter category = tactical_bomber }
 			add_doctrine_cost_reduction = { name = TU_VIC_eco_jet_program cost_reduction = 0.5 uses = 1 category = air_doctrine }
 			air_experience = 40
-		}
-	}
-
-	focus = {
-		id = TU_VIC_eco_anti_air_belt
-		prerequisite = { focus = TU_VIC_eco_air_base_network }
-		icon = GFX_goal_generic_fortify_city
-		x = 0
-		y = 0
-		cost = 10
-
-		search_filters = { FOCUS_FILTER_INDUSTRY }
-
-		ai_will_do = {
-			base = 1
-		}
-
-		completion_reward = {
-			TU_build_infrastructure = yes
-			add_tech_bonus = { name = TU_VIC_eco_anti_air_belt bonus = 0.75 uses = 1 category = light_fighter category = tactical_bomber }
-			add_doctrine_cost_reduction = { name = TU_VIC_eco_anti_air_belt cost_reduction = 0.4 uses = 1 category = air_doctrine }
-			air_experience = 25
 		}
 	}
 

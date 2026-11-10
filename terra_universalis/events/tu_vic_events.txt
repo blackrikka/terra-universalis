@@ -731,3 +731,40 @@ country_event = {
 		add_political_power = 10
 	}
 }
+
+# 40. Focus TU_VIC_dukes_summit: who will rule Victoria? Choosing a route shows only that route in the focus tree (spec 79).
+country_event = {
+	id = tu_vic_ev.40
+	title = tu_vic_ev.40.t
+	desc = tu_vic_ev.40.d
+	picture = GFX_report_event_generic_conference
+	is_triggered_only = yes
+
+	option = {
+		name = tu_vic_ev.40.a
+		ai_chance = { factor = 25 }
+		set_country_flag = TU_VIC_route_duk
+		mark_focus_tree_layout_dirty = yes
+	}
+
+	option = {
+		name = tu_vic_ev.40.b
+		ai_chance = { factor = 25 }
+		set_country_flag = TU_VIC_route_asl
+		mark_focus_tree_layout_dirty = yes
+	}
+
+	option = {
+		name = tu_vic_ev.40.c
+		ai_chance = { factor = 15 }
+		set_country_flag = TU_VIC_route_drc
+		mark_focus_tree_layout_dirty = yes
+	}
+
+	option = {
+		name = tu_vic_ev.40.e
+		ai_chance = { factor = 35 }
+		set_country_flag = TU_VIC_route_par
+		mark_focus_tree_layout_dirty = yes
+	}
+}

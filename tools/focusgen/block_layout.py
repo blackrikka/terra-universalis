@@ -20,7 +20,17 @@ HERE = Path(__file__).resolve().parent
 NF = HERE.parents[1] / "terra_universalis" / "common" / "national_focus"
 GAP = 4
 
+# chain: 뿌리와 겹친 칸 사이에 끼는 중점 (예: 빅토리아의 '대공 회의 소집'). under_chain: 머리가 chain 끝 아래에 붙는 칸의 번호.
 ORDER = {
+    "VIC": dict(root="TU_VIC_crown_focus", center=0, chain=["TU_VIC_dukes_summit"], under_chain=[0], slots=[
+        ["TU_VIC_duk_route", "TU_VIC_glasgow_return", "TU_VIC_dublinn_uprising", "TU_VIC_par_route"],
+        ["TU_VIC_exp_mandate"],
+        ["TU_VIC_eco_industry_charter"],
+        ["TU_VIC_eco_knight_recruit"],
+        ["TU_VIC_eco_convoy_lanes"],
+        ["TU_VIC_eco_air_ministry"],
+        ["TU_VIC_eco_royal_academy"],
+    ]),
     "SIR": dict(root="TU_SIR_root", center=1, slots=[
         ["TU_SIR_wine_olive"],
         ["TU_SIR_bellone_head", "TU_SIR_gambino_head", "TU_SIR_saluzzo_head", "TU_SIR_law_head", "TU_SIR_wolf_head"],
@@ -62,9 +72,10 @@ def apply(tag):
     text = path.read_text(encoding="utf-8-sig")
     fs = parse(text)
     root = cfg["root"]
-    newx, newy, cursor, placed = {}, {root: fs[root]["y"]}, 0, set()
+    chain = cfg.get("chain", [])
+    newx, newy, cursor, placed = {}, {root: fs[root]["y"]}, 0, set(chain)
     centers = []
-    for slot in cfg["slots"]:
+    for si, slot in enumerate(cfg["slots"]):
         width = 0
         for head in slot:
             mem = block_of(head, fs, root)
@@ -78,7 +89,8 @@ def apply(tag):
             lo = min(fs[m]["x"] for m in mem)
             hi = max(fs[m]["x"] for m in mem)
             off = cursor + (width - (hi - lo)) // 2 - lo       # 좁은 덩어리는 칸 가운데
-            dy = fs[root]["y"] + 1 - fs[head]["y"]             # 모든 덩어리의 머리는 뿌리 바로 아랫줄 (autolayout 이 아래로 내린 덩어리를 올린다)
+            top = fs[root]["y"] + 1 + (len(chain) if si in cfg.get("under_chain", []) else 0)
+            dy = top - fs[head]["y"]                           # 덩어리의 머리는 뿌리(또는 chain 끝) 바로 아랫줄 (autolayout 이 아래로 내린 덩어리를 올린다)
             for m in mem:
                 newx[m] = fs[m]["x"] + off
                 newy[m] = fs[m]["y"] + dy
@@ -87,6 +99,9 @@ def apply(tag):
     left = set(fs) - placed - {root}
     assert not left, "ORDER 에 없는 중점: %s" % sorted(left)
     newx[root] = centers[cfg["center"]]
+    for i, c in enumerate(chain):
+        newx[c] = centers[cfg["center"]]
+        newy[c] = fs[root]["y"] + 1 + i
     shift = newx[root]                                         # 뿌리를 x = 0 에 (initial_show_position)
     newx = {k: v - shift for k, v in newx.items()}
 

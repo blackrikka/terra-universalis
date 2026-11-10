@@ -1,3 +1,4 @@
+
 	focus = {
 		id = TU_VIC_crown_focus
 		icon = GFX_goal_generic_national_unity
@@ -26,35 +27,22 @@
 		completion_reward = {
 			add_political_power = 35
 			add_stability = 0.02
+			country_event = { id = tu_vic_ev.40 }
 		}
 	}
 
 	#### FORK A: DUKES' COUNCIL (BoP RIGHT) ####
 
 	focus = {
-		id = TU_VIC_status_quo
-		prerequisite = { focus = TU_VIC_dukes_summit }
-		icon = GFX_goal_generic_national_unity
-		x = 0
-		y = 2
-		cost = 10
-
-		search_filters = { FOCUS_FILTER_POLITICAL }
-
-		completion_reward = {
-			add_political_power = 60
-			add_stability = 0.03
-		}
-	}
-
-	focus = {
 		id = TU_VIC_ducal_arsenal
-		prerequisite = { focus = TU_VIC_status_quo }
-		mutually_exclusive = { focus = TU_VIC_ducal_arsenal_alt }
+		prerequisite = { focus = TU_VIC_duk_route }
 		icon = GFX_goal_generic_army_artillery
 		x = 1
 		y = 3
 		cost = 10
+		allow_branch = {
+			has_country_flag = TU_VIC_route_duk
+		}
 
 		search_filters = { FOCUS_FILTER_ARMY_XP }
 
@@ -65,33 +53,15 @@
 	}
 
 	focus = {
-		id = TU_VIC_ducal_arsenal_alt
-		prerequisite = { focus = TU_VIC_status_quo }
-		mutually_exclusive = { focus = TU_VIC_ducal_arsenal }
-		icon = GFX_goal_generic_national_unity
-		x = 0
-		y = 0
-		cost = 10
-
-		search_filters = { FOCUS_FILTER_STABILITY }
-
-		ai_will_do = {
-			base = 1
-		}
-
-		completion_reward = {
-			add_political_power = 60
-			add_stability = 0.03
-		}
-	}
-
-	focus = {
 		id = TU_VIC_london_fortress
-		prerequisite = { focus = TU_VIC_status_quo }
+		prerequisite = { focus = TU_VIC_duk_route }
 		icon = GFX_goal_generic_fortify_city
 		x = -1
 		y = 3
 		cost = 10
+		allow_branch = {
+			has_country_flag = TU_VIC_route_duk
+		}
 
 		search_filters = { FOCUS_FILTER_INDUSTRY }
 
@@ -108,11 +78,13 @@
 	focus = {
 		id = TU_VIC_dukes_order
 		prerequisite = { focus = TU_VIC_london_fortress }
-		mutually_exclusive = { focus = TU_VIC_aslan_legitimacy }
 		icon = GFX_goal_generic_neutrality_focus
 		x = -1
 		y = 4
 		cost = 10
+		allow_branch = {
+			has_country_flag = TU_VIC_route_duk
+		}
 
 		search_filters = { FOCUS_FILTER_POLITICAL }
 
@@ -131,6 +103,9 @@
 		x = -4
 		y = 2
 		cost = 15
+		allow_branch = {
+			has_country_flag = TU_VIC_route_asl
+		}
 
 		search_filters = { FOCUS_FILTER_POLITICAL }
 
@@ -146,11 +121,13 @@
 	focus = {
 		id = TU_VIC_glasgow_volunteers
 		prerequisite = { focus = TU_VIC_glasgow_return }
-		mutually_exclusive = { focus = TU_VIC_glasgow_volunteers_alt }
 		icon = GFX_goal_generic_allies_build_infantry
 		x = -5
 		y = 3
 		cost = 10
+		allow_branch = {
+			has_country_flag = TU_VIC_route_asl
+		}
 
 		search_filters = { FOCUS_FILTER_ARMY_XP }
 
@@ -161,33 +138,15 @@
 	}
 
 	focus = {
-		id = TU_VIC_glasgow_volunteers_alt
-		prerequisite = { focus = TU_VIC_glasgow_return }
-		mutually_exclusive = { focus = TU_VIC_glasgow_volunteers }
-		icon = GFX_goal_generic_propaganda
-		x = 0
-		y = 0
-		cost = 10
-
-		search_filters = { FOCUS_FILTER_POLITICAL }
-
-		ai_will_do = {
-			base = 1
-		}
-
-		completion_reward = {
-			add_political_power = 60
-			add_stability = 0.03
-		}
-	}
-
-	focus = {
 		id = TU_VIC_siege_crowned
 		prerequisite = { focus = TU_VIC_glasgow_return }
 		icon = GFX_goal_generic_major_alliance
 		x = -3
 		y = 4
 		cost = 10
+		allow_branch = {
+			has_country_flag = TU_VIC_route_asl
+		}
 
 		search_filters = { FOCUS_FILTER_POLITICAL }
 
@@ -207,11 +166,13 @@
 	focus = {
 		id = TU_VIC_aslan_legitimacy
 		prerequisite = { focus = TU_VIC_siege_crowned }
-		mutually_exclusive = { focus = TU_VIC_dukes_order }
 		icon = GFX_goal_generic_propaganda
 		x = -3
 		y = 5
 		cost = 10
+		allow_branch = {
+			has_country_flag = TU_VIC_route_asl
+		}
 
 		search_filters = { FOCUS_FILTER_POLITICAL }
 
@@ -230,6 +191,9 @@
 		x = 4
 		y = 2
 		cost = 5
+		allow_branch = {
+			has_country_flag = TU_VIC_route_drc
+		}
 
 		search_filters = { FOCUS_FILTER_POLITICAL }
 
@@ -248,6 +212,9 @@
 		x = 3
 		y = 3
 		cost = 18
+		allow_branch = {
+			has_country_flag = TU_VIC_route_drc
+		}
 
 		search_filters = { FOCUS_FILTER_POLITICAL }
 
@@ -264,11 +231,13 @@
 	focus = {
 		id = TU_VIC_dublinn_talks
 		prerequisite = { focus = TU_VIC_dublinn_uprising }
-		mutually_exclusive = { focus = TU_VIC_dublinn_suppression }
 		icon = GFX_goal_generic_trade
 		x = 5
 		y = 3
 		cost = 15
+		allow_branch = {
+			has_country_flag = TU_VIC_route_drc
+		}
 
 		search_filters = { FOCUS_FILTER_POLITICAL }
 
@@ -288,6 +257,9 @@
 		x = 5
 		y = 5
 		cost = 15
+		allow_branch = {
+			has_country_flag = TU_VIC_route_drc
+		}
 
 		search_filters = { FOCUS_FILTER_ARMY_XP }
 
