@@ -313,7 +313,7 @@ def focus(fid, en, prereq, me=None, cost=10, extra=(), industry=False, econ=Fals
     rw = list(extra)
     if econ:
         rw.append("%s = yes" % build_kind(theme, en))
-    rw += reward_lines(theme, fid, cost)
+    rw += reward_lines(theme, fid, cost, en)
     pre = "".join("\t\tprerequisite = { %s }\n" % " ".join("focus = %s" % x for x in g) for g in prereq)
     mex = "\t\tmutually_exclusive = { focus = %s }\n" % me if me else ""
     flt = "FOCUS_FILTER_INDUSTRY" if (industry or econ) else "FOCUS_FILTER_POLITICAL"

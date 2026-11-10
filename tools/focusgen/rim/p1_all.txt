@@ -1666,7 +1666,7 @@
 
 		completion_reward = {
 			add_political_power = 60
-			add_tech_bonus = { name = TU_RIM_columbia_investors bonus = 0.75 uses = 1 category = industry }
+			add_offsite_building = { type = industrial_complex level = 1 }
 		}
 	}
 
@@ -1706,6 +1706,7 @@
 		completion_reward = {
 			add_political_power = 60
 			add_tech_bonus = { name = TU_RIM_yan_trade bonus = 0.75 uses = 1 category = industry }
+			if = { limit = { country_exists = YAN } YAN = { add_opinion_modifier = { target = ROOT modifier = TU_dip_trade } } add_opinion_modifier = { target = YAN modifier = TU_dip_trade } }
 		}
 	}
 
@@ -2391,6 +2392,7 @@
 		completion_reward = {
 			add_political_power = 60
 			add_tech_bonus = { name = TU_RIM_lungmen_trade bonus = 0.75 uses = 1 category = industry }
+			if = { limit = { country_exists = LGM } LGM = { add_opinion_modifier = { target = ROOT modifier = TU_dip_trade } } add_opinion_modifier = { target = LGM modifier = TU_dip_trade } }
 		}
 	}
 

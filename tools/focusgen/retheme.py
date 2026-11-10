@@ -109,7 +109,7 @@ def rewrite_block(block, loc, stats):
     keep = [t for key, t in stmts if key not in GENERIC and not key.startswith(THEME_BUILD)
             and not (theme == "rail" and key == "TU_build_infrastructure")]
     stats[theme] += 1
-    new = keep + reward_lines(theme, fid, cost)
+    new = keep + reward_lines(theme, fid, cost, loc.get(fid, ""))
     # 여러 줄 문장은 원래 들여쓰기를 그대로 가지고 있다 (첫 줄만 앞 공백이 빠짐)
     new_body = "\n" + "".join("\t\t\t%s\n" % x.rstrip() for x in new) + "\t\t"
     return block[:j + 1] + new_body + block[k:]

@@ -83,7 +83,7 @@ class Country:
         fid = "TU_%s_%s" % (self.tag, sid)
         rw = list(reward or [])
         if theme or reward is None:
-            rw += reward_lines(theme_of(en), fid, cost)
+            rw += reward_lines(theme_of(en), fid, cost, en)
         if econ and not (theme_of(en) == "rail" and "TU_build_infrastructure" in str(econ)):
             rw.append(econ if isinstance(econ, str) else "TU_build_civ_factory = yes")
         pre = [[("TU_%s_%s" % (self.tag, x)) if not x.startswith("TU_") else x for x in

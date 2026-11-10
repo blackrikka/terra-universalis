@@ -2005,6 +2005,7 @@ focus_tree = {
 		completion_reward = {
 			add_political_power = 60
 			add_tech_bonus = { name = TU_LAT_incense_trade bonus = 0.75 uses = 1 category = industry }
+			random_owned_controlled_state = { add_resource = { type = chromium amount = 4 } }
 		}
 	}
 

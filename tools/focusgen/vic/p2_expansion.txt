@@ -486,6 +486,7 @@
 		completion_reward = {
 			add_political_power = 60
 			add_tech_bonus = { name = TU_VIC_col_trade_talks bonus = 0.75 uses = 1 category = industry }
+			if = { limit = { country_exists = COL } COL = { add_opinion_modifier = { target = ROOT modifier = TU_dip_trade } } add_opinion_modifier = { target = COL modifier = TU_dip_trade } }
 		}
 	}
 
@@ -703,6 +704,7 @@
 			add_stability = 0.03
 			add_political_power = 60
 			add_stability = 0.03
+			TU_build_civ_factory = yes
 		}
 	}
 

@@ -169,6 +169,7 @@ focus_tree = {
 			country_event = { id = tu_yan_ev.11 }
 			add_political_power = 60
 			add_tech_bonus = { name = TU_YAN_lungmen_trade_pact bonus = 0.75 uses = 1 category = industry }
+			if = { limit = { country_exists = LGM } LGM = { add_opinion_modifier = { target = ROOT modifier = TU_dip_trade } } add_opinion_modifier = { target = LGM modifier = TU_dip_trade } }
 		}
 	}
 
@@ -3969,6 +3970,7 @@ focus_tree = {
 			TU_build_civ_factory = yes
 			add_political_power = 60
 			add_tech_bonus = { name = TU_YAN_sar_trade_pact bonus = 0.75 uses = 1 category = industry }
+			if = { limit = { country_exists = SAR } SAR = { add_opinion_modifier = { target = ROOT modifier = TU_dip_trade } } add_opinion_modifier = { target = SAR modifier = TU_dip_trade } }
 		}
 	}
 
@@ -4183,6 +4185,7 @@ focus_tree = {
 		completion_reward = {
 			add_political_power = 60
 			add_tech_bonus = { name = TU_YAN_sar_envoy_gifts_alt bonus = 0.75 uses = 1 category = industry }
+			if = { limit = { country_exists = SAR } SAR = { add_opinion_modifier = { target = ROOT modifier = TU_dip_trade } } add_opinion_modifier = { target = SAR modifier = TU_dip_trade } }
 		}
 	}
 

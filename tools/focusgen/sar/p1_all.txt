@@ -1439,6 +1439,7 @@
 		completion_reward = {
 			add_political_power = 60
 			add_tech_bonus = { name = TU_SAR_columbia_trade bonus = 0.75 uses = 1 category = industry }
+			if = { limit = { country_exists = COL } COL = { add_opinion_modifier = { target = ROOT modifier = TU_dip_trade } } add_opinion_modifier = { target = COL modifier = TU_dip_trade } }
 		}
 	}
 
@@ -1743,6 +1744,7 @@
 			TU_SAR_gold_5 = yes
 			add_political_power = 60
 			add_tech_bonus = { name = TU_SAR_salt_trade bonus = 0.75 uses = 1 category = industry }
+			random_owned_controlled_state = { add_resource = { type = rubber amount = 4 } }
 		}
 	}
 
@@ -1764,6 +1766,7 @@
 			TU_SAR_gold_5 = yes
 			add_political_power = 60
 			add_tech_bonus = { name = TU_SAR_incense_routes bonus = 0.75 uses = 1 category = industry }
+			random_owned_controlled_state = { add_resource = { type = rubber amount = 4 } }
 		}
 	}
 

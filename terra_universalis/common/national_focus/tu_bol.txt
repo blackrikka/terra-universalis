@@ -870,7 +870,7 @@ focus_tree = {
 
 		completion_reward = {
 			add_political_power = 60
-			add_tech_bonus = { name = TU_BOL_foreign_investment bonus = 0.75 uses = 1 category = industry }
+			add_offsite_building = { type = industrial_complex level = 1 }
 		}
 	}
 
@@ -1351,7 +1351,7 @@ focus_tree = {
 
 		completion_reward = {
 			add_political_power = 60
-			add_tech_bonus = { name = TU_BOL_columbian_loans bonus = 0.75 uses = 1 category = industry }
+			add_offsite_building = { type = industrial_complex level = 1 }
 		}
 	}
 
@@ -1371,7 +1371,7 @@ focus_tree = {
 
 		completion_reward = {
 			add_political_power = 60
-			add_tech_bonus = { name = TU_BOL_victorian_loans bonus = 0.75 uses = 1 category = industry }
+			add_offsite_building = { type = industrial_complex level = 1 }
 		}
 	}
 
@@ -1656,6 +1656,7 @@ focus_tree = {
 		completion_reward = {
 			add_political_power = 60
 			add_tech_bonus = { name = TU_BOL_sargon_ties bonus = 0.75 uses = 1 category = industry }
+			if = { limit = { country_exists = SAR } SAR = { add_opinion_modifier = { target = ROOT modifier = TU_dip_trade } } add_opinion_modifier = { target = SAR modifier = TU_dip_trade } }
 		}
 	}
 
@@ -1737,6 +1738,7 @@ focus_tree = {
 		completion_reward = {
 			add_political_power = 60
 			add_tech_bonus = { name = TU_BOL_coffee_exports bonus = 0.75 uses = 1 category = industry }
+			random_owned_controlled_state = { add_resource = { type = rubber amount = 4 } }
 		}
 	}
 
@@ -2280,6 +2282,7 @@ focus_tree = {
 		completion_reward = {
 			add_political_power = 60
 			add_tech_bonus = { name = TU_BOL_cocoa_trade bonus = 0.75 uses = 1 category = industry }
+			random_owned_controlled_state = { add_resource = { type = rubber amount = 4 } }
 		}
 	}
 

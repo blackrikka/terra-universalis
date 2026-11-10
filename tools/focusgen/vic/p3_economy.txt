@@ -240,6 +240,7 @@
 			TU_build_civ_factory = yes
 			add_political_power = 60
 			add_tech_bonus = { name = TU_VIC_eco_steel_export bonus = 0.75 uses = 1 category = industry }
+			random_owned_controlled_state = { add_resource = { type = steel amount = 4 } }
 		}
 	}
 

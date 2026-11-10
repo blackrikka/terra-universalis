@@ -1134,6 +1134,7 @@
 		completion_reward = {
 			add_political_power = 60
 			add_tech_bonus = { name = TU_IBE_wine_trade bonus = 0.75 uses = 1 category = industry }
+			random_owned_controlled_state = { add_resource = { type = steel amount = 4 } }
 		}
 	}
 
@@ -1254,6 +1255,7 @@
 		completion_reward = {
 			add_political_power = 60
 			add_tech_bonus = { name = TU_IBE_victoria_trade bonus = 0.75 uses = 1 category = industry }
+			if = { limit = { country_exists = VIC } VIC = { add_opinion_modifier = { target = ROOT modifier = TU_dip_trade } } add_opinion_modifier = { target = VIC modifier = TU_dip_trade } }
 		}
 	}
 
@@ -2188,7 +2190,7 @@
 
 		completion_reward = {
 			add_political_power = 60
-			add_tech_bonus = { name = TU_IBE_columbia_investment bonus = 0.75 uses = 1 category = industry }
+			add_offsite_building = { type = industrial_complex level = 1 }
 		}
 	}
 
@@ -2209,6 +2211,7 @@
 		completion_reward = {
 			add_political_power = 60
 			add_tech_bonus = { name = TU_IBE_sargon_caravans bonus = 0.75 uses = 1 category = industry }
+			if = { limit = { country_exists = SAR } SAR = { add_opinion_modifier = { target = ROOT modifier = TU_dip_trade } } add_opinion_modifier = { target = SAR modifier = TU_dip_trade } }
 		}
 	}
 

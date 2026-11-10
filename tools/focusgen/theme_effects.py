@@ -2,7 +2,7 @@
 """중점 이름(영어)에 맞는 보상 만들기 — 모든 국가 트리가 함께 쓴다 (사양서 16).
 
 theme_of(name_en)          -> 테마 이름 (아래 THEMES 순서대로 처음 맞는 것, 없으면 politics)
-reward_lines(theme, fid, cost) -> completion_reward에 넣을 줄 목록 (탭 없음)
+reward_lines(theme, fid, cost, name_en) -> completion_reward에 넣을 줄 목록 (탭 없음). 무역 중점은 이름으로 더 나눈다 (사양서 75)
 idea_modifiers(theme)      -> 갈래 끝 국민정신용 모디파이어 dict
 
 보상 크기는 중점 cost로 정한다: 5 이하 = 작음, 10 = 보통, 15 이상 = 큼.
@@ -104,7 +104,55 @@ def _doc(fid, cat, s):
     return "add_doctrine_cost_reduction = { name = %s cost_reduction = %s uses = 1 category = %s }" % (fid, red, cat)
 
 
-def reward_lines(theme, fid, cost):
+# ---- 무역 중점 (사양서 75) ----------------------------------------------------------------------
+# 테마가 trade 인 중점 가운데:
+#   교역·수출·시장 중점 (COMMERCE): 기본 보상(정치력 + 산업 연구 보너스)에 더해
+#       이름에 다른 나라가 들어 있으면 그 나라와 서로 관계 +20 (TU_dip_trade)
+#       수출·특산물 중점이면 그 나라 특산 자원 +4 (SPECIALTY, 없으면 오리론)
+#       큰 중점(cost 15 이상)이면 민간 공장 +1
+#   투자·차관 중점 (INVEST): 정치력 + 영토 밖 민간 공장 +1 (산업 연구 보너스 대신)
+#   그 밖의 재정 중점(은행·세금 …)은 그대로.
+COMMERCE_RE = re.compile(r"trade|market|merchant|caravan|commerce|export|import|free port|customs|bazaar|exposition|\bfair\b", re.I)
+EXPORT_RE = re.compile(r"export|\b(wine|coffee|cacao|cocoa|tea|fur|spice|incense|silk|olive|sugar|tobacco|pearl|amber|salt|grain|"
+                       r"timber|wool|cotton)\b", re.I)
+INVEST_RE = re.compile(r"investment|investor|\binvest\b|\bloans?\b|foreign capital|foreign fund|credit line", re.I)
+COUNTRY_RE = [("URS", r"Ursus|Ursine"), ("VIC", r"Victoria"), ("YAN", r"\bYan\b|Yanese"), ("COL", r"Columbia"),
+              ("SAR", r"Sargon"), ("KAZ", r"Kazimierz"), ("LEI", r"Leithanien"), ("KZD", r"Kazdel"), ("LAT", r"Laterano|Lateran\b"),
+              ("IBE", r"Iberia"), ("LGM", r"Lungmen"), ("HIG", r"Higashi|Far East"), ("SIR", r"Siracusa"), ("BOL", r"Bol[ií]var"),
+              ("RIM", r"Rim Billiton"), ("MIN", r"\bMinos|Minoan"), ("KJE", r"Kjerag"), ("SAM", r"\bSami\b"), ("RHO", r"Rhodes")]
+COUNTRY_RE = [(t, re.compile(p, re.I)) for t, p in COUNTRY_RE]
+SPECIALTY = {"KZD": "oil", "URS": "oil", "RIM": "oil", "VIC": "steel", "YAN": "steel", "SAR": "rubber", "BOL": "rubber",
+             "COL": "aluminium", "SAM": "aluminium", "KAZ": "tungsten", "LAT": "chromium"}
+
+
+def trade_kind(name_en):
+    """trade 테마 중점의 종류: invest / commerce / finance."""
+    if INVEST_RE.search(name_en or ""):
+        return "invest"
+    if COMMERCE_RE.search(name_en or ""):
+        return "commerce"
+    return "finance"
+
+
+def trade_extras(name_en, fid, cost):
+    """교역 중점에 더하는 줄 (한 줄에 문장 하나)."""
+    tag = fid[3:6]
+    out = []
+    for t, rx in COUNTRY_RE:
+        if t != tag and rx.search(name_en):
+            out.append("if = { limit = { country_exists = %s } %s = { add_opinion_modifier = { target = ROOT modifier = TU_dip_trade } } "
+                       "add_opinion_modifier = { target = %s modifier = TU_dip_trade } }" % (t, t, t))
+    if EXPORT_RE.search(name_en) and not re.search(r"\bban\b|embargo|prohibit", name_en, re.I):   # 수출 금지령 같은 것은 뺀다
+        out.append("random_owned_controlled_state = { add_resource = { type = %s amount = 4 } }" % SPECIALTY.get(tag, "steel"))
+    if _scale(cost) == 2:
+        out.append("TU_build_civ_factory = yes")
+    return out
+
+
+OFFSITE = "add_offsite_building = { type = industrial_complex level = 1 }"
+
+
+def reward_lines(theme, fid, cost, name_en=""):
     s = _scale(cost)
     xp = (15, 25, 40)[s]
     pp = (35, 60, 100)[s]
@@ -148,7 +196,11 @@ def reward_lines(theme, fid, cost):
     if theme == "industry":
         return [_tech(fid, ["industry", "construction_tech"], s)]
     if theme == "trade":
-        return ["add_political_power = %d" % pp, _tech(fid, ["industry"], s)]
+        kind = trade_kind(name_en)
+        if kind == "invest":
+            return ["add_political_power = %d" % pp, OFFSITE]
+        base = ["add_political_power = %d" % pp, _tech(fid, ["industry"], s)]
+        return base + (trade_extras(name_en, fid, cost) if kind == "commerce" else [])
     if theme == "diplomacy":
         return ["add_political_power = %d" % pp, "add_stability = %s" % st]
     if theme == "propaganda":

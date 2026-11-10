@@ -1681,6 +1681,7 @@
 			set_country_flag = TU_RHO_ops_dip_yan
 			add_political_power = 60
 			add_tech_bonus = { name = TU_RHO_ops_dip_yan bonus = 0.75 uses = 1 category = industry }
+			if = { limit = { country_exists = YAN } YAN = { add_opinion_modifier = { target = ROOT modifier = TU_dip_trade } } add_opinion_modifier = { target = YAN modifier = TU_dip_trade } }
 		}
 	}
 
