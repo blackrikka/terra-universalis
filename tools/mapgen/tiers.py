@@ -173,6 +173,7 @@ def set_state_factories(f, civ, mil, extra):
 # 사양서 65: 명일방주 설정 비중으로 정한 나라 인구 (만 명). TIERS 의 다섯째 값이 이것이다.
 # 프로빈스(=주)마다 지형과 수도에서의 거리로 나눈다: 수도는 대도시, 수도 둘레는 도시권, 사막·산은 드문드문.
 TERRAIN_WEIGHT = {"plains": 1.0, "forest": 0.6, "jungle": 0.4, "desert": 0.25, "mountain": 0.2}
+POP_SCALE = 1.4                # 사양서 77: TIERS 의 인구(만 명)에 곱한다. 징집과 보충이 모자라다는 보고로 사양서 65 의 값을 40% 올렸다
 CAPITAL_POP_WEIGHT = 8.0       # 수도 프로빈스
 NEAR_CAPITAL = [(80, 2.0), (160, 1.4)]   # 수도 중심에서 이 거리(픽셀, 육각형 한 칸 약 37) 안이면 곱한다
 
@@ -217,7 +218,7 @@ def set_population(st, caps):
     HOI4 는 인구의 약 2.5% 만 징집할 수 있어, 인구가 너무 적으면 시작 사단을 보충할 수 없다."""
     geo = province_geo()
     for tag, t in TIERS.items():
-        pop = t[4] * 10000
+        pop = int(t[4] * POP_SCALE * 10000)
         own = [s for s, d in st.items() if d["owner"] == tag and not d["impassable"]]
         if not own:
             continue
