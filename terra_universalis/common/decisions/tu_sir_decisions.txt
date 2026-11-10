@@ -372,6 +372,512 @@ TU_SIR_families_category = {
 		}
 	}
 
+	TU_SIR_unrest_142 = {
+		icon = GFX_decision_generic_police_action
+
+		allowed = {
+			original_tag = SIR
+		}
+
+		highlight_states = {
+			highlight_state_targets = { state = 142 }
+		}
+
+		activation = {
+			always = no
+		}
+
+		visible = {
+			has_country_flag = TU_SIR_families
+		}
+
+		available = {
+			if = {
+				limit = { has_country_flag = TU_SIR_unrest_big }
+				divisions_in_state = { state = 142 size > 2 }
+			}
+			else = {
+				divisions_in_state = { state = 142 size > 1 }
+			}
+		}
+
+		days_mission_timeout = 30
+		is_good = no
+		fire_only_once = no
+
+		timeout_effect = {
+			TU_SIR_unrest_lost = yes
+		}
+
+		complete_effect = {
+			TU_SIR_unrest_won = yes
+		}
+
+		ai_will_do = {
+			base = 1
+		}
+	}
+
+	TU_SIR_unrest_143 = {
+		icon = GFX_decision_generic_police_action
+
+		allowed = {
+			original_tag = SIR
+		}
+
+		highlight_states = {
+			highlight_state_targets = { state = 143 }
+		}
+
+		activation = {
+			always = no
+		}
+
+		visible = {
+			has_country_flag = TU_SIR_families
+		}
+
+		available = {
+			if = {
+				limit = { has_country_flag = TU_SIR_unrest_big }
+				divisions_in_state = { state = 143 size > 2 }
+			}
+			else = {
+				divisions_in_state = { state = 143 size > 1 }
+			}
+		}
+
+		days_mission_timeout = 30
+		is_good = no
+		fire_only_once = no
+
+		timeout_effect = {
+			TU_SIR_unrest_lost = yes
+		}
+
+		complete_effect = {
+			TU_SIR_unrest_won = yes
+		}
+
+		ai_will_do = {
+			base = 1
+		}
+	}
+
+	TU_SIR_unrest_144 = {
+		icon = GFX_decision_generic_police_action
+
+		allowed = {
+			original_tag = SIR
+		}
+
+		highlight_states = {
+			highlight_state_targets = { state = 144 }
+		}
+
+		activation = {
+			always = no
+		}
+
+		visible = {
+			has_country_flag = TU_SIR_families
+		}
+
+		available = {
+			if = {
+				limit = { has_country_flag = TU_SIR_unrest_big }
+				divisions_in_state = { state = 144 size > 2 }
+			}
+			else = {
+				divisions_in_state = { state = 144 size > 1 }
+			}
+		}
+
+		days_mission_timeout = 30
+		is_good = no
+		fire_only_once = no
+
+		timeout_effect = {
+			TU_SIR_unrest_lost = yes
+		}
+
+		complete_effect = {
+			TU_SIR_unrest_won = yes
+		}
+
+		ai_will_do = {
+			base = 1
+		}
+	}
+
+	TU_SIR_unrest_1001 = {
+		icon = GFX_decision_generic_police_action
+
+		allowed = {
+			original_tag = SIR
+		}
+
+		highlight_states = {
+			highlight_state_targets = { state = 1001 }
+		}
+
+		activation = {
+			always = no
+		}
+
+		visible = {
+			has_country_flag = TU_SIR_families
+		}
+
+		available = {
+			if = {
+				limit = { has_country_flag = TU_SIR_unrest_big }
+				divisions_in_state = { state = 1001 size > 2 }
+			}
+			else = {
+				divisions_in_state = { state = 1001 size > 1 }
+			}
+		}
+
+		days_mission_timeout = 30
+		is_good = no
+		fire_only_once = no
+
+		timeout_effect = {
+			TU_SIR_unrest_lost = yes
+		}
+
+		complete_effect = {
+			TU_SIR_unrest_won = yes
+		}
+
+		ai_will_do = {
+			base = 1
+		}
+	}
+
+	TU_SIR_unrest_1002 = {
+		icon = GFX_decision_generic_police_action
+
+		allowed = {
+			original_tag = SIR
+		}
+
+		highlight_states = {
+			highlight_state_targets = { state = 1002 }
+		}
+
+		activation = {
+			always = no
+		}
+
+		visible = {
+			has_country_flag = TU_SIR_families
+		}
+
+		available = {
+			if = {
+				limit = { has_country_flag = TU_SIR_unrest_big }
+				divisions_in_state = { state = 1002 size > 2 }
+			}
+			else = {
+				divisions_in_state = { state = 1002 size > 1 }
+			}
+		}
+
+		days_mission_timeout = 30
+		is_good = no
+		fire_only_once = no
+
+		timeout_effect = {
+			TU_SIR_unrest_lost = yes
+		}
+
+		complete_effect = {
+			TU_SIR_unrest_won = yes
+		}
+
+		ai_will_do = {
+			base = 1
+		}
+	}
+
+	TU_SIR_unrest_1003 = {
+		icon = GFX_decision_generic_police_action
+
+		allowed = {
+			original_tag = SIR
+		}
+
+		highlight_states = {
+			highlight_state_targets = { state = 1003 }
+		}
+
+		activation = {
+			always = no
+		}
+
+		visible = {
+			has_country_flag = TU_SIR_families
+		}
+
+		available = {
+			if = {
+				limit = { has_country_flag = TU_SIR_unrest_big }
+				divisions_in_state = { state = 1003 size > 2 }
+			}
+			else = {
+				divisions_in_state = { state = 1003 size > 1 }
+			}
+		}
+
+		days_mission_timeout = 30
+		is_good = no
+		fire_only_once = no
+
+		timeout_effect = {
+			TU_SIR_unrest_lost = yes
+		}
+
+		complete_effect = {
+			TU_SIR_unrest_won = yes
+		}
+
+		ai_will_do = {
+			base = 1
+		}
+	}
+
+	TU_SIR_unrest_1004 = {
+		icon = GFX_decision_generic_police_action
+
+		allowed = {
+			original_tag = SIR
+		}
+
+		highlight_states = {
+			highlight_state_targets = { state = 1004 }
+		}
+
+		activation = {
+			always = no
+		}
+
+		visible = {
+			has_country_flag = TU_SIR_families
+		}
+
+		available = {
+			if = {
+				limit = { has_country_flag = TU_SIR_unrest_big }
+				divisions_in_state = { state = 1004 size > 2 }
+			}
+			else = {
+				divisions_in_state = { state = 1004 size > 1 }
+			}
+		}
+
+		days_mission_timeout = 30
+		is_good = no
+		fire_only_once = no
+
+		timeout_effect = {
+			TU_SIR_unrest_lost = yes
+		}
+
+		complete_effect = {
+			TU_SIR_unrest_won = yes
+		}
+
+		ai_will_do = {
+			base = 1
+		}
+	}
+
+	TU_SIR_unrest_1005 = {
+		icon = GFX_decision_generic_police_action
+
+		allowed = {
+			original_tag = SIR
+		}
+
+		highlight_states = {
+			highlight_state_targets = { state = 1005 }
+		}
+
+		activation = {
+			always = no
+		}
+
+		visible = {
+			has_country_flag = TU_SIR_families
+		}
+
+		available = {
+			if = {
+				limit = { has_country_flag = TU_SIR_unrest_big }
+				divisions_in_state = { state = 1005 size > 2 }
+			}
+			else = {
+				divisions_in_state = { state = 1005 size > 1 }
+			}
+		}
+
+		days_mission_timeout = 30
+		is_good = no
+		fire_only_once = no
+
+		timeout_effect = {
+			TU_SIR_unrest_lost = yes
+		}
+
+		complete_effect = {
+			TU_SIR_unrest_won = yes
+		}
+
+		ai_will_do = {
+			base = 1
+		}
+	}
+
+	TU_SIR_unrest_1006 = {
+		icon = GFX_decision_generic_police_action
+
+		allowed = {
+			original_tag = SIR
+		}
+
+		highlight_states = {
+			highlight_state_targets = { state = 1006 }
+		}
+
+		activation = {
+			always = no
+		}
+
+		visible = {
+			has_country_flag = TU_SIR_families
+		}
+
+		available = {
+			if = {
+				limit = { has_country_flag = TU_SIR_unrest_big }
+				divisions_in_state = { state = 1006 size > 2 }
+			}
+			else = {
+				divisions_in_state = { state = 1006 size > 1 }
+			}
+		}
+
+		days_mission_timeout = 30
+		is_good = no
+		fire_only_once = no
+
+		timeout_effect = {
+			TU_SIR_unrest_lost = yes
+		}
+
+		complete_effect = {
+			TU_SIR_unrest_won = yes
+		}
+
+		ai_will_do = {
+			base = 1
+		}
+	}
+
+	TU_SIR_unrest_1007 = {
+		icon = GFX_decision_generic_police_action
+
+		allowed = {
+			original_tag = SIR
+		}
+
+		highlight_states = {
+			highlight_state_targets = { state = 1007 }
+		}
+
+		activation = {
+			always = no
+		}
+
+		visible = {
+			has_country_flag = TU_SIR_families
+		}
+
+		available = {
+			if = {
+				limit = { has_country_flag = TU_SIR_unrest_big }
+				divisions_in_state = { state = 1007 size > 2 }
+			}
+			else = {
+				divisions_in_state = { state = 1007 size > 1 }
+			}
+		}
+
+		days_mission_timeout = 30
+		is_good = no
+		fire_only_once = no
+
+		timeout_effect = {
+			TU_SIR_unrest_lost = yes
+		}
+
+		complete_effect = {
+			TU_SIR_unrest_won = yes
+		}
+
+		ai_will_do = {
+			base = 1
+		}
+	}
+
+	TU_SIR_unrest_1008 = {
+		icon = GFX_decision_generic_police_action
+
+		allowed = {
+			original_tag = SIR
+		}
+
+		highlight_states = {
+			highlight_state_targets = { state = 1008 }
+		}
+
+		activation = {
+			always = no
+		}
+
+		visible = {
+			has_country_flag = TU_SIR_families
+		}
+
+		available = {
+			if = {
+				limit = { has_country_flag = TU_SIR_unrest_big }
+				divisions_in_state = { state = 1008 size > 2 }
+			}
+			else = {
+				divisions_in_state = { state = 1008 size > 1 }
+			}
+		}
+
+		days_mission_timeout = 30
+		is_good = no
+		fire_only_once = no
+
+		timeout_effect = {
+			TU_SIR_unrest_lost = yes
+		}
+
+		complete_effect = {
+			TU_SIR_unrest_won = yes
+		}
+
+		ai_will_do = {
+			base = 1
+		}
+	}
+
 }
 
 TU_SIR_street_category = {

@@ -122,19 +122,20 @@ class Country:
     def d(self, cat, sid, ko, en, effect, cost=25, visible=(), available=(), desc=("", ""),
           icon="GFX_decision_generic_political_discourse", once=True, days_re_enable=None, ai=1,
           days_remove=None, remove_effect=None, target=None, state_target=False, modifier=None, mission=None,
-          map_only=False):
+          map_only=False, highlight=None):
         """target = FROM(대상) 조건. state_target=True 면 주 대상 디시전: 조건에 맞는 주마다 하나씩 생기고,
         디시전 탭을 열면 지도에서 그 주 위에 버튼이 뜬다 (효과 안에서 FROM = 그 주).
         map_only=True 면 탭 목록에는 안 나오고 지도 버튼으로만 뜬다.
         modifier = days_remove 동안 걸리는 모디파이어 {키: 값} (예: civilian_factory_use).
         mission = 시간제한 미션 {"days": 일수, "timeout": [효과], "cancel": [조건], "good": False}.
-          activation 은 막아 두므로 효과에서 activate_mission / activate_targeted_decision 으로 켠다. cost=None 이면 비용 줄을 쓰지 않는다."""
+          activation 은 막아 두므로 효과에서 activate_mission / activate_targeted_decision 으로 켠다. cost=None 이면 비용 줄을 쓰지 않는다.
+        highlight = 이 디시전에 마우스를 올리면 지도에서 강조할 주 번호 목록 (사양서 70)."""
         did = "TU_%s_%s" % (self.tag, sid)
         self.decisions[cat].append(dict(id=did, icon=icon, effect=list(effect), cost=cost, visible=list(visible),
                                         available=list(available), once=once, days_re_enable=days_re_enable,
                                         ai=ai, days_remove=days_remove, remove_effect=remove_effect,
                                         target=target, state_target=state_target, modifier=modifier, mission=mission,
-                                        map_only=map_only))
+                                        map_only=map_only, highlight=list(highlight or [])))
         self.loc(did, ko, en)
         self.loc(did + "_desc", desc[0], desc[1])
         return did
@@ -255,6 +256,9 @@ class Country:
                     s = "\t%s = {\n\t\ticon = %s\n\n\t\tallowed = {\n\t\t\toriginal_tag = %s\n\t\t}\n" % (d["id"], d["icon"], t)
                     if d["state_target"]:
                         s += "\n\t\tstate_target = yes\n\t\ton_map_mode = %s\n" % ("map_only" if d["map_only"] else "map_and_decisions_view")
+                    if d["highlight"]:
+                        s += "\n\t\thighlight_states = {\n\t\t\thighlight_state_targets = { %s }\n\t\t}\n" % " ".join(
+                            "state = %d" % x for x in d["highlight"])
                     if d["target"]:
                         s += "\n\t\ttarget_trigger = {\n\t\t\tFROM = {\n%s\n\t\t\t}\n\t\t}\n" % ind(d["target"], 4)
                     m = d["mission"]

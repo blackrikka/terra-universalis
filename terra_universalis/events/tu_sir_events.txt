@@ -1,6 +1,72 @@
 add_namespace = tu_sir_ev
 
 country_event = {
+	id = tu_sir_ev.60
+	title = tu_sir_ev.60.t
+	desc = tu_sir_ev.60.d
+	picture = GFX_report_event_generic_riot
+	is_triggered_only = yes
+
+	immediate = {
+		set_country_flag = TU_SIR_unrest_active
+		set_country_flag = TU_SIR_unrest_by_bellone
+		if = { limit = { check_variable = { TU_SIR_bellone > 49 } } set_country_flag = TU_SIR_unrest_big }
+		TU_SIR_unrest_pick_state = yes
+	}
+
+	option = {
+		name = tu_sir_ev.60.a
+		ai_chance = {
+			factor = 1
+		}
+	}
+}
+
+country_event = {
+	id = tu_sir_ev.61
+	title = tu_sir_ev.61.t
+	desc = tu_sir_ev.61.d
+	picture = GFX_report_event_generic_riot
+	is_triggered_only = yes
+
+	immediate = {
+		set_country_flag = TU_SIR_unrest_active
+		set_country_flag = TU_SIR_unrest_by_gambino
+		if = { limit = { check_variable = { TU_SIR_gambino > 49 } } set_country_flag = TU_SIR_unrest_big }
+		TU_SIR_unrest_pick_state = yes
+	}
+
+	option = {
+		name = tu_sir_ev.61.a
+		ai_chance = {
+			factor = 1
+		}
+	}
+}
+
+country_event = {
+	id = tu_sir_ev.62
+	title = tu_sir_ev.62.t
+	desc = tu_sir_ev.62.d
+	picture = GFX_report_event_generic_riot
+	is_triggered_only = yes
+
+	immediate = {
+		set_country_flag = TU_SIR_unrest_active
+		set_country_flag = TU_SIR_unrest_by_saluzzo
+		if = { limit = { check_variable = { TU_SIR_saluzzo > 49 } } set_country_flag = TU_SIR_unrest_big }
+		TU_SIR_unrest_pick_state = yes
+	}
+
+	option = {
+		name = tu_sir_ev.62.a
+		ai_chance = {
+			factor = 1
+		}
+	}
+}
+
+country_event = {
 	id = tu_sir_ev.1
 	title = tu_sir_ev.1.t
 	desc = tu_sir_ev.1.d

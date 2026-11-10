@@ -106,7 +106,7 @@ def main(argv=None):
             eff = words(d["effect"] + (d["remove_effect"] or []), loc)
             if d["modifier"]:
                 eff = (eff + ", " if eff else "") + "%d일 동안 %s" % (d["days_remove"], ", ".join("%s %s" % kv for kv in d["modifier"].items()))
-            L.append("| %s | %s | %s | %s |" % (clean(loc[d["id"]]), d["cost"], eff or "-", clean(loc.get(d["id"] + "_desc", "")) or "-"))
+            L.append("| %s | %s | %s | %s |" % (clean(loc[d["id"]]), "미션 %d일" % d["mission"]["days"] if d["mission"] else d["cost"], eff or "-", clean(loc.get(d["id"] + "_desc", "")) or "-"))
         L.append("")
 
     L += ["## 이벤트", "", "| 이벤트 | 선택지 → 효과 |", "|---|---|"]

@@ -37,6 +37,7 @@ TU_SIR_monthly = {
 	}
 	if = { limit = { has_country_flag = TU_SIR_courts } add_to_variable = { TU_SIR_law = 1 } }
 	clamp_variable = { var = TU_SIR_law min = 0 max = 100 }
+	TU_SIR_unrest_tick = yes
 }
 
 TU_SIR_law_10 = {
@@ -205,6 +206,121 @@ TU_SIR_saluzzo_5 = {
 		add_to_variable = { TU_SIR_saluzzo = 5 }
 		clamp_variable = { var = TU_SIR_saluzzo min = 0 max = 100 }
 	}
+}
+
+TU_SIR_unrest_tick = {
+	if = {
+		limit = {
+			is_ai = no
+			has_country_flag = TU_SIR_families
+			NOT = { has_country_flag = TU_SIR_unrest_active }
+			OR = {
+				AND = { NOT = { has_country_flag = TU_SIR_route_bellone } NOT = { has_country_flag = TU_SIR_absorbed_bellone } }
+				AND = { NOT = { has_country_flag = TU_SIR_route_gambino } NOT = { has_country_flag = TU_SIR_absorbed_gambino } }
+				AND = { NOT = { has_country_flag = TU_SIR_route_saluzzo } NOT = { has_country_flag = TU_SIR_absorbed_saluzzo } }
+			}
+		}
+		add_to_variable = { TU_SIR_unrest_timer = 1 }
+		if = {
+			limit = { check_variable = { TU_SIR_unrest_timer > 3 } }
+			set_variable = { TU_SIR_unrest_timer = 0 }
+			random_list = {
+				10 = {
+					modifier = { factor = 0 OR = { has_country_flag = TU_SIR_route_bellone has_country_flag = TU_SIR_absorbed_bellone } }
+					modifier = { factor = 2 check_variable = { TU_SIR_bellone > 49 } }
+					country_event = { id = tu_sir_ev.60 }
+				}
+				10 = {
+					modifier = { factor = 0 OR = { has_country_flag = TU_SIR_route_gambino has_country_flag = TU_SIR_absorbed_gambino } }
+					modifier = { factor = 2 check_variable = { TU_SIR_gambino > 49 } }
+					country_event = { id = tu_sir_ev.61 }
+				}
+				10 = {
+					modifier = { factor = 0 OR = { has_country_flag = TU_SIR_route_saluzzo has_country_flag = TU_SIR_absorbed_saluzzo } }
+					modifier = { factor = 2 check_variable = { TU_SIR_saluzzo > 49 } }
+					country_event = { id = tu_sir_ev.62 }
+				}
+			}
+		}
+	}
+}
+
+TU_SIR_unrest_pick_state = {
+	random_list = {
+		10 = {
+			modifier = { factor = 0 NOT = { owns_state = 142 } }
+			activate_mission = TU_SIR_unrest_142
+		}
+		10 = {
+			modifier = { factor = 0 NOT = { owns_state = 143 } }
+			activate_mission = TU_SIR_unrest_143
+		}
+		10 = {
+			modifier = { factor = 0 NOT = { owns_state = 144 } }
+			activate_mission = TU_SIR_unrest_144
+		}
+		10 = {
+			modifier = { factor = 0 NOT = { owns_state = 1001 } }
+			activate_mission = TU_SIR_unrest_1001
+		}
+		10 = {
+			modifier = { factor = 0 NOT = { owns_state = 1002 } }
+			activate_mission = TU_SIR_unrest_1002
+		}
+		10 = {
+			modifier = { factor = 0 NOT = { owns_state = 1003 } }
+			activate_mission = TU_SIR_unrest_1003
+		}
+		10 = {
+			modifier = { factor = 0 NOT = { owns_state = 1004 } }
+			activate_mission = TU_SIR_unrest_1004
+		}
+		10 = {
+			modifier = { factor = 0 NOT = { owns_state = 1005 } }
+			activate_mission = TU_SIR_unrest_1005
+		}
+		10 = {
+			modifier = { factor = 0 NOT = { owns_state = 1006 } }
+			activate_mission = TU_SIR_unrest_1006
+		}
+		10 = {
+			modifier = { factor = 0 NOT = { owns_state = 1007 } }
+			activate_mission = TU_SIR_unrest_1007
+		}
+		10 = {
+			modifier = { factor = 0 NOT = { owns_state = 1008 } }
+			activate_mission = TU_SIR_unrest_1008
+		}
+		1 = { TU_SIR_unrest_clear = yes }
+	}
+}
+
+TU_SIR_unrest_clear = {
+	hidden_effect = {
+		clr_country_flag = TU_SIR_unrest_active
+		clr_country_flag = TU_SIR_unrest_big
+		clr_country_flag = TU_SIR_unrest_by_bellone
+		clr_country_flag = TU_SIR_unrest_by_gambino
+		clr_country_flag = TU_SIR_unrest_by_saluzzo
+	}
+}
+
+TU_SIR_unrest_won = {
+	if = { limit = { has_country_flag = TU_SIR_unrest_by_bellone } TU_SIR_bellone_m10 = yes }
+	if = { limit = { has_country_flag = TU_SIR_unrest_by_gambino } TU_SIR_gambino_m10 = yes }
+	if = { limit = { has_country_flag = TU_SIR_unrest_by_saluzzo } TU_SIR_saluzzo_m10 = yes }
+	army_experience = 10
+	add_stability = 0.01
+	TU_SIR_unrest_clear = yes
+}
+
+TU_SIR_unrest_lost = {
+	if = { limit = { has_country_flag = TU_SIR_unrest_by_bellone } TU_SIR_bellone_10 = yes }
+	if = { limit = { has_country_flag = TU_SIR_unrest_by_gambino } TU_SIR_gambino_10 = yes }
+	if = { limit = { has_country_flag = TU_SIR_unrest_by_saluzzo } TU_SIR_saluzzo_10 = yes }
+	add_stability = -0.03
+	add_timed_idea = { idea = TU_SIR_turf_lost days = 120 }
+	TU_SIR_unrest_clear = yes
 }
 
 TU_SIR_enforcers_template = {

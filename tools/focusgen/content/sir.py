@@ -87,6 +87,7 @@ C.effects.append("TU_SIR_monthly = {\n" + "".join(
 	}
 """ % dict(k=k) for k in ("bellone", "gambino", "saluzzo")) + """	if = { limit = { has_country_flag = TU_SIR_courts } add_to_variable = { TU_SIR_law = 1 } }
 	clamp_variable = { var = TU_SIR_law min = 0 max = 100 }
+	TU_SIR_unrest_tick = yes
 }""")
 C.on_actions.append("""on_monthly = {
 	effect = {
@@ -466,6 +467,113 @@ C.loc("TU_SIR_league", "남부 연맹", "Southern League")
 C.d(cat_eco, "invite_league", "연맹 초청", "Invite to the League", ["add_to_faction = FROM"], cost=50, once=False, days_re_enable=90,
     visible=[HAS("league"), "is_faction_leader = yes"],
     target=["NOT = { tag = ROOT }", "is_in_faction = no", "NOT = { has_war_with = ROOT }", "OR = { tag = LAT tag = RIM tag = IBE tag = LEI }"])
+
+# ------------------------------------------------------------------ 패밀리 소요 (사양서 70)
+# 스페인 내전 전의 주둔 방식처럼: 굴복하지 않은 경쟁 패밀리가 있는 동안 UNREST_EVERY 달마다 시라쿠사의 한 주에서 소요가 난다.
+# '패밀리' 탭에 미션이 뜨고, UNREST_DAYS 일 안에 그 주에 사단을 주둔시키면 진압된다 (이미 주둔해 있으면 바로 진압).
+# 주 번호는 생성할 때 history/states 에서 읽는다 (지도를 다시 만들면 이 생성기도 다시 돌린다). 사람이 하는 시라쿠사에만 일어난다.
+UNREST_EVERY, UNREST_DAYS, UNREST_DIVS, UNREST_DIVS_BIG = 4, 30, 2, 3
+_MOD = Path(__file__).resolve().parents[3] / "terra_universalis"
+
+
+def sir_states():
+    import re as _re
+    out = []
+    for path in (_MOD / "history" / "states").glob("*.txt"):
+        t = path.read_text(encoding="utf-8-sig")
+        if _re.search(r"\bowner\s*=\s*SIR\b", t):
+            out.append(int(_re.search(r"\bid\s*=\s*(\d+)", t).group(1)))
+    return sorted(out)
+
+
+SIR_STATES = sir_states()
+C.history.append("set_variable = { TU_SIR_unrest_timer = 0 }")
+C.idea("turf_lost", "패밀리가 장악한 거리", "Streets Held by the Families",
+       {"production_speed_buildings_factor": -0.05, "stability_factor": -0.03, "political_power_gain": -0.05},
+       "generic_secret_police", ("소요를 진압하지 못했다. 그 거리는 이제 패밀리의 것이다.",
+                                 "The unrest was not put down. Those streets now belong to the family."))
+_RIVAL_T = "AND = { NOT = { has_country_flag = TU_SIR_route_%(k)s } NOT = { has_country_flag = TU_SIR_absorbed_%(k)s } }"
+_NOT_RIVAL_T = "OR = { has_country_flag = TU_SIR_route_%(k)s has_country_flag = TU_SIR_absorbed_%(k)s }"
+C.effects.append("""TU_SIR_unrest_tick = {
+	if = {
+		limit = {
+			is_ai = no
+			has_country_flag = TU_SIR_families
+			NOT = { has_country_flag = TU_SIR_unrest_active }
+			OR = {
+%s
+			}
+		}
+		add_to_variable = { TU_SIR_unrest_timer = 1 }
+		if = {
+			limit = { check_variable = { TU_SIR_unrest_timer > %d } }
+			set_variable = { TU_SIR_unrest_timer = 0 }
+			random_list = {
+%s
+			}
+		}
+	}
+}""" % ("\n".join("\t\t\t\t" + _RIVAL_T % dict(k=k) for k, _, _ in FAM), UNREST_EVERY - 1,
+        "\n".join("""				10 = {
+					modifier = { factor = 0 %s }
+					modifier = { factor = 2 check_variable = { TU_SIR_%s > 49 } }
+					country_event = { id = tu_sir_ev.%d }
+				}""" % (_NOT_RIVAL_T % dict(k=k), k, 60 + i) for i, (k, _, _) in enumerate(FAM))))
+C.effects.append("""TU_SIR_unrest_pick_state = {
+	random_list = {
+%s
+		1 = { TU_SIR_unrest_clear = yes }
+	}
+}""" % "\n".join("""		10 = {
+			modifier = { factor = 0 NOT = { owns_state = %d } }
+			activate_mission = TU_SIR_unrest_%d
+		}""" % (x, x) for x in SIR_STATES))
+C.effects.append("""TU_SIR_unrest_clear = {
+	hidden_effect = {
+		clr_country_flag = TU_SIR_unrest_active
+		clr_country_flag = TU_SIR_unrest_big
+%s
+	}
+}""" % "\n".join("\t\tclr_country_flag = TU_SIR_unrest_by_%s" % k for k, _, _ in FAM))
+C.effects.append("""TU_SIR_unrest_won = {
+%s
+	army_experience = 10
+	add_stability = 0.01
+	TU_SIR_unrest_clear = yes
+}""" % "\n".join("\tif = { limit = { has_country_flag = TU_SIR_unrest_by_%s } %s }" % (k, FAMV(k, -10)) for k, _, _ in FAM))
+C.effects.append("""TU_SIR_unrest_lost = {
+%s
+	add_stability = -0.03
+	add_timed_idea = { idea = TU_SIR_turf_lost days = 120 }
+	TU_SIR_unrest_clear = yes
+}""" % "\n".join("\tif = { limit = { has_country_flag = TU_SIR_unrest_by_%s } %s }" % (k, FAMV(k, 10)) for k, _, _ in FAM))
+for x in SIR_STATES:
+    C.d(cat_fam, "unrest_%d" % x, "소요 진압: 주 %d" % x, "Put Down the Unrest: State %d" % x, ["TU_SIR_unrest_won = yes"],
+        cost=None, once=False, highlight=[x], icon="GFX_decision_generic_police_action",
+        available=["if = {", "\tlimit = { has_country_flag = TU_SIR_unrest_big }",
+                   "\tdivisions_in_state = { state = %d size > %d }" % (x, UNREST_DIVS_BIG - 1), "}",
+                   "else = {", "\tdivisions_in_state = { state = %d size > %d }" % (x, UNREST_DIVS - 1), "}"],
+        mission={"days": UNREST_DAYS, "timeout": ["TU_SIR_unrest_lost = yes"], "good": False},
+        desc=("패밀리 조직원들이 이 주의 거리를 막았다. %d일 안에 이 주에 사단 §Y%d§!개 (큰 소요는 §Y%d§!개)를 주둔시키면 진압된다.\\n"
+              "진압: 그 패밀리 영향력 -10, 육군 경험치 +10.\\n실패: 그 패밀리 영향력 +10, 안정도 -3%%, 120일 동안 '패밀리가 장악한 거리'."
+              % (UNREST_DAYS, UNREST_DIVS, UNREST_DIVS_BIG),
+              "Family men have blocked the streets of this state. Station §Y%d§! divisions here (§Y%d§! for major unrest) within %d days.\\n"
+              "Success: that family -10 influence, +10 army experience.\\nFailure: that family +10 influence, stability -3%%, "
+              "Streets Held by the Families for 120 days." % (UNREST_DIVS, UNREST_DIVS_BIG, UNREST_DAYS)))
+for i, (k, ko, en) in enumerate(FAM):
+    C.ev(60 + i, ("%s 패밀리의 소요" % ko, "%s Family Unrest" % en),
+         ("%s 패밀리의 조직원들이 거리를 막고 관청을 에워쌌다. 그대로 두면 그 거리는 패밀리의 것이 된다.\\n\\n"
+          "'패밀리' 디시전 탭에 진압 미션이 생겼다. %d일 안에 그 주에 사단 %d개 (그 패밀리 영향력이 50 이상이면 %d개)를 주둔시켜야 한다. "
+          "미션에 마우스를 올리면 지도에서 그 주가 표시된다. 이미 군대가 주둔해 있으면 바로 진압된다."
+          % (ko, UNREST_DAYS, UNREST_DIVS, UNREST_DIVS_BIG),
+          "Men of the %s family have blocked the streets and surrounded the offices. Left alone, those streets become theirs.\\n\\n"
+          "A mission has appeared in the Families tab: station %d divisions (%d if that family's influence is 50 or more) in that state "
+          "within %d days. Hover the mission to see the state on the map. Troops already stationed there put it down at once."
+          % (en, UNREST_DIVS, UNREST_DIVS_BIG, UNREST_DAYS)),
+         [("군을 보낸다.", "Send in the troops.", [], 1)],
+         immediate=[FLAG("unrest_active"), FLAG("unrest_by_%s" % k),
+                    "if = { limit = { %s } %s }" % (AT_LEAST(k, 50), FLAG("unrest_big")), "TU_SIR_unrest_pick_state = yes"],
+         picture="GFX_report_event_generic_riot")
 
 # ------------------------------------------------------------------ 집권 사업: 루트별 디시전 3개 (사양서 69)
 cat_route = C.category("agenda", "집권 사업", "Ruling Agenda",
