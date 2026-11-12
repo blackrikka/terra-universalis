@@ -8,6 +8,7 @@ ideas = {
 			allowed = {
 				original_tag = IBE
 			}
+			name = TU_IBE_great_silence
 
 			modifier = {
 				production_speed_buildings_factor = -0.25
@@ -17,6 +18,154 @@ ideas = {
 				conscription_factor = -0.5
 				local_resources_factor = -0.2
 				political_power_cost = 0.5
+			}
+		}
+
+		TU_IBE_great_silence_1 = {
+			picture = generic_army_problems
+
+			allowed = {
+				original_tag = IBE
+			}
+			name = TU_IBE_great_silence
+
+			modifier = {
+				production_speed_buildings_factor = -0.2
+				industrial_capacity_factory = -0.15
+				monthly_population = -0.1
+				consumer_goods_factor = 0.55
+				conscription_factor = -0.45
+				local_resources_factor = -0.2
+				political_power_cost = 0.45
+			}
+		}
+
+		TU_IBE_great_silence_2 = {
+			picture = generic_army_problems
+
+			allowed = {
+				original_tag = IBE
+			}
+			name = TU_IBE_great_silence
+
+			modifier = {
+				production_speed_buildings_factor = -0.2
+				industrial_capacity_factory = -0.1
+				monthly_population = -0.1
+				consumer_goods_factor = 0.45
+				conscription_factor = -0.4
+				local_resources_factor = -0.15
+				political_power_cost = 0.4
+			}
+		}
+
+		TU_IBE_great_silence_3 = {
+			picture = generic_army_problems
+
+			allowed = {
+				original_tag = IBE
+			}
+			name = TU_IBE_great_silence
+
+			modifier = {
+				production_speed_buildings_factor = -0.15
+				industrial_capacity_factory = -0.1
+				monthly_population = -0.05
+				consumer_goods_factor = 0.4
+				conscription_factor = -0.35
+				local_resources_factor = -0.15
+				political_power_cost = 0.35
+			}
+		}
+
+		TU_IBE_great_silence_4 = {
+			picture = generic_army_problems
+
+			allowed = {
+				original_tag = IBE
+			}
+			name = TU_IBE_great_silence
+
+			modifier = {
+				production_speed_buildings_factor = -0.15
+				industrial_capacity_factory = -0.1
+				monthly_population = -0.05
+				consumer_goods_factor = 0.35
+				conscription_factor = -0.3
+				local_resources_factor = -0.1
+				political_power_cost = 0.3
+			}
+		}
+
+		TU_IBE_great_silence_5 = {
+			picture = generic_army_problems
+
+			allowed = {
+				original_tag = IBE
+			}
+			name = TU_IBE_great_silence
+
+			modifier = {
+				production_speed_buildings_factor = -0.1
+				industrial_capacity_factory = -0.05
+				monthly_population = -0.05
+				consumer_goods_factor = 0.25
+				conscription_factor = -0.2
+				local_resources_factor = -0.1
+				political_power_cost = 0.2
+			}
+		}
+
+		TU_IBE_great_silence_6 = {
+			picture = generic_army_problems
+
+			allowed = {
+				original_tag = IBE
+			}
+			name = TU_IBE_great_silence
+
+			modifier = {
+				production_speed_buildings_factor = -0.1
+				industrial_capacity_factory = -0.05
+				monthly_population = -0.05
+				consumer_goods_factor = 0.2
+				conscription_factor = -0.15
+				local_resources_factor = -0.05
+				political_power_cost = 0.15
+			}
+		}
+
+		TU_IBE_great_silence_7 = {
+			picture = generic_army_problems
+
+			allowed = {
+				original_tag = IBE
+			}
+			name = TU_IBE_great_silence
+
+			modifier = {
+				production_speed_buildings_factor = -0.05
+				industrial_capacity_factory = -0.05
+				consumer_goods_factor = 0.15
+				conscription_factor = -0.1
+				local_resources_factor = -0.05
+				political_power_cost = 0.1
+			}
+		}
+
+		TU_IBE_great_silence_8 = {
+			picture = generic_army_problems
+
+			allowed = {
+				original_tag = IBE
+			}
+			name = TU_IBE_great_silence
+
+			modifier = {
+				production_speed_buildings_factor = -0.05
+				consumer_goods_factor = 0.05
+				conscription_factor = -0.05
+				political_power_cost = 0.05
 			}
 		}
 
@@ -30,24 +179,6 @@ ideas = {
 			modifier = {
 				political_power_gain = -0.1
 				stability_factor = -0.4
-			}
-		}
-
-		TU_IBE_great_silence_eased = {
-			picture = generic_army_problems
-
-			allowed = {
-				original_tag = IBE
-			}
-
-			modifier = {
-				production_speed_buildings_factor = -0.1
-				industrial_capacity_factory = -0.05
-				monthly_population = -0.05
-				consumer_goods_factor = 0.25
-				conscription_factor = -0.2
-				local_resources_factor = -0.1
-				political_power_cost = 0.15
 			}
 		}
 

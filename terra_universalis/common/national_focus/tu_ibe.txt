@@ -113,6 +113,7 @@ focus_tree = {
 		completion_reward = {
 			add_tech_bonus = { name = TU_IBE_inquisitor_guard bonus = 0.75 uses = 1 category = radar_tech category = electronics }
 			add_stability = 0.03
+			unlock_decision_tooltip = TU_IBE_inquisitor_recruits
 		}
 	}
 
@@ -200,6 +201,7 @@ focus_tree = {
 			add_ideas = TU_IBE_inquisitor_state
 			TU_IBE_cult_m15 = yes
 			country_event = { id = tu_ibe_ev.28 }
+			unlock_decision_tooltip = TU_IBE_cult_hunt
 			# spec 23 hooks
 			set_cosmetic_tag = TU_IBE_INQUISITION
 		}
@@ -243,6 +245,7 @@ focus_tree = {
 		completion_reward = {
 			TU_IBE_threat_m10 = yes
 			add_war_support = 0.1
+			unlock_decision_tooltip = TU_IBE_cult_tribunal
 		}
 	}
 
@@ -322,7 +325,43 @@ focus_tree = {
 		completion_reward = {
 			if = {
 				limit = { has_idea = TU_IBE_great_silence }
-				swap_ideas = { remove_idea = TU_IBE_great_silence add_idea = TU_IBE_great_silence_eased }
+				swap_ideas = { remove_idea = TU_IBE_great_silence add_idea = TU_IBE_great_silence_4 }
+			}
+			else_if = {
+				limit = { has_idea = TU_IBE_great_silence_1 }
+				swap_ideas = { remove_idea = TU_IBE_great_silence_1 add_idea = TU_IBE_great_silence_5 }
+			}
+			else_if = {
+				limit = { has_idea = TU_IBE_great_silence_2 }
+				swap_ideas = { remove_idea = TU_IBE_great_silence_2 add_idea = TU_IBE_great_silence_6 }
+			}
+			else_if = {
+				limit = { has_idea = TU_IBE_great_silence_3 }
+				swap_ideas = { remove_idea = TU_IBE_great_silence_3 add_idea = TU_IBE_great_silence_7 }
+			}
+			else_if = {
+				limit = { has_idea = TU_IBE_great_silence_4 }
+				swap_ideas = { remove_idea = TU_IBE_great_silence_4 add_idea = TU_IBE_great_silence_8 }
+			}
+			else_if = {
+				limit = { has_idea = TU_IBE_great_silence_5 }
+				remove_ideas = TU_IBE_great_silence_5
+				country_event = { id = tu_ibe_ev.57 }
+			}
+			else_if = {
+				limit = { has_idea = TU_IBE_great_silence_6 }
+				remove_ideas = TU_IBE_great_silence_6
+				country_event = { id = tu_ibe_ev.57 }
+			}
+			else_if = {
+				limit = { has_idea = TU_IBE_great_silence_7 }
+				remove_ideas = TU_IBE_great_silence_7
+				country_event = { id = tu_ibe_ev.57 }
+			}
+			else_if = {
+				limit = { has_idea = TU_IBE_great_silence_8 }
+				remove_ideas = TU_IBE_great_silence_8
+				country_event = { id = tu_ibe_ev.57 }
 			}
 			add_political_power = 60
 			add_tech_bonus = { name = TU_IBE_royal_treasury bonus = 0.75 uses = 1 category = industry }
@@ -470,6 +509,14 @@ focus_tree = {
 		completion_reward = {
 			set_country_flag = TU_IBE_coast
 			TU_IBE_threat_m3 = yes
+			unlock_decision_tooltip = TU_IBE_restore_lighthouse
+			unlock_decision_tooltip = TU_IBE_lh_fort
+			unlock_decision_tooltip = TU_IBE_lh_repair
+			unlock_decision_tooltip = TU_IBE_lh_purge
+			unlock_decision_tooltip = TU_IBE_coastal_patrol
+			unlock_decision_tooltip = TU_IBE_purification
+			unlock_decision_tooltip = TU_IBE_evacuate_town
+			unlock_decision_tooltip = TU_IBE_cult_inquiry
 		}
 	}
 
@@ -491,6 +538,7 @@ focus_tree = {
 			TU_IBE_threat_m3 = yes
 			add_political_power = 60
 			add_tech_bonus = { name = TU_IBE_sea_studies bonus = 0.75 uses = 1 category = industry }
+			unlock_decision_tooltip = TU_IBE_sea_research
 		}
 	}
 
@@ -530,6 +578,7 @@ focus_tree = {
 
 		completion_reward = {
 			country_event = { id = tu_ibe_ev.23 days = 15 }
+			unlock_decision_tooltip = TU_IBE_hunters_contact
 		}
 	}
 
@@ -604,6 +653,7 @@ focus_tree = {
 			TU_IBE_threat_m3 = yes
 			add_political_power = 60
 			add_tech_bonus = { name = TU_IBE_deep_sea_plan bonus = 0.75 uses = 1 category = industry }
+			unlock_decision_tooltip = TU_IBE_deep_purge
 		}
 	}
 
@@ -635,9 +685,37 @@ focus_tree = {
 				limit = { has_idea = TU_IBE_great_silence }
 				remove_ideas = TU_IBE_great_silence
 			}
-			if = {
-				limit = { has_idea = TU_IBE_great_silence_eased }
-				remove_ideas = TU_IBE_great_silence_eased
+			else_if = {
+				limit = { has_idea = TU_IBE_great_silence_1 }
+				remove_ideas = TU_IBE_great_silence_1
+			}
+			else_if = {
+				limit = { has_idea = TU_IBE_great_silence_2 }
+				remove_ideas = TU_IBE_great_silence_2
+			}
+			else_if = {
+				limit = { has_idea = TU_IBE_great_silence_3 }
+				remove_ideas = TU_IBE_great_silence_3
+			}
+			else_if = {
+				limit = { has_idea = TU_IBE_great_silence_4 }
+				remove_ideas = TU_IBE_great_silence_4
+			}
+			else_if = {
+				limit = { has_idea = TU_IBE_great_silence_5 }
+				remove_ideas = TU_IBE_great_silence_5
+			}
+			else_if = {
+				limit = { has_idea = TU_IBE_great_silence_6 }
+				remove_ideas = TU_IBE_great_silence_6
+			}
+			else_if = {
+				limit = { has_idea = TU_IBE_great_silence_7 }
+				remove_ideas = TU_IBE_great_silence_7
+			}
+			else_if = {
+				limit = { has_idea = TU_IBE_great_silence_8 }
+				remove_ideas = TU_IBE_great_silence_8
 			}
 			country_event = { id = tu_ibe_ev.30 }
 			# spec 23 hooks
@@ -810,6 +888,7 @@ focus_tree = {
 		completion_reward = {
 			add_ideas = TU_IBE_inquisitor_corps
 			army_experience = 40
+			unlock_decision_tooltip = TU_IBE_cult_raid
 		}
 	}
 
@@ -871,6 +950,7 @@ focus_tree = {
 			TU_IBE_threat_m3 = yes
 			add_doctrine_cost_reduction = { name = TU_IBE_anti_creature cost_reduction = 0.4 uses = 1 category = land_doctrine }
 			army_experience = 25
+			unlock_decision_tooltip = TU_IBE_coast_sweep
 		}
 	}
 
@@ -973,6 +1053,43 @@ focus_tree = {
 			add_political_power = 60
 			add_tech_bonus = { name = TU_IBE_harbour_rebuild bonus = 0.75 uses = 1 category = industry }
 			TU_build_civ_factory = yes
+			if = {
+				limit = { has_idea = TU_IBE_great_silence }
+				swap_ideas = { remove_idea = TU_IBE_great_silence add_idea = TU_IBE_great_silence_1 }
+			}
+			else_if = {
+				limit = { has_idea = TU_IBE_great_silence_1 }
+				swap_ideas = { remove_idea = TU_IBE_great_silence_1 add_idea = TU_IBE_great_silence_2 }
+			}
+			else_if = {
+				limit = { has_idea = TU_IBE_great_silence_2 }
+				swap_ideas = { remove_idea = TU_IBE_great_silence_2 add_idea = TU_IBE_great_silence_3 }
+			}
+			else_if = {
+				limit = { has_idea = TU_IBE_great_silence_3 }
+				swap_ideas = { remove_idea = TU_IBE_great_silence_3 add_idea = TU_IBE_great_silence_4 }
+			}
+			else_if = {
+				limit = { has_idea = TU_IBE_great_silence_4 }
+				swap_ideas = { remove_idea = TU_IBE_great_silence_4 add_idea = TU_IBE_great_silence_5 }
+			}
+			else_if = {
+				limit = { has_idea = TU_IBE_great_silence_5 }
+				swap_ideas = { remove_idea = TU_IBE_great_silence_5 add_idea = TU_IBE_great_silence_6 }
+			}
+			else_if = {
+				limit = { has_idea = TU_IBE_great_silence_6 }
+				swap_ideas = { remove_idea = TU_IBE_great_silence_6 add_idea = TU_IBE_great_silence_7 }
+			}
+			else_if = {
+				limit = { has_idea = TU_IBE_great_silence_7 }
+				swap_ideas = { remove_idea = TU_IBE_great_silence_7 add_idea = TU_IBE_great_silence_8 }
+			}
+			else_if = {
+				limit = { has_idea = TU_IBE_great_silence_8 }
+				remove_ideas = TU_IBE_great_silence_8
+				country_event = { id = tu_ibe_ev.57 }
+			}
 		}
 	}
 
@@ -993,6 +1110,43 @@ focus_tree = {
 		completion_reward = {
 			add_tech_bonus = { name = TU_IBE_road_network bonus = 0.75 uses = 1 category = industry category = construction_tech }
 			TU_build_infrastructure = yes
+			if = {
+				limit = { has_idea = TU_IBE_great_silence }
+				swap_ideas = { remove_idea = TU_IBE_great_silence add_idea = TU_IBE_great_silence_1 }
+			}
+			else_if = {
+				limit = { has_idea = TU_IBE_great_silence_1 }
+				swap_ideas = { remove_idea = TU_IBE_great_silence_1 add_idea = TU_IBE_great_silence_2 }
+			}
+			else_if = {
+				limit = { has_idea = TU_IBE_great_silence_2 }
+				swap_ideas = { remove_idea = TU_IBE_great_silence_2 add_idea = TU_IBE_great_silence_3 }
+			}
+			else_if = {
+				limit = { has_idea = TU_IBE_great_silence_3 }
+				swap_ideas = { remove_idea = TU_IBE_great_silence_3 add_idea = TU_IBE_great_silence_4 }
+			}
+			else_if = {
+				limit = { has_idea = TU_IBE_great_silence_4 }
+				swap_ideas = { remove_idea = TU_IBE_great_silence_4 add_idea = TU_IBE_great_silence_5 }
+			}
+			else_if = {
+				limit = { has_idea = TU_IBE_great_silence_5 }
+				swap_ideas = { remove_idea = TU_IBE_great_silence_5 add_idea = TU_IBE_great_silence_6 }
+			}
+			else_if = {
+				limit = { has_idea = TU_IBE_great_silence_6 }
+				swap_ideas = { remove_idea = TU_IBE_great_silence_6 add_idea = TU_IBE_great_silence_7 }
+			}
+			else_if = {
+				limit = { has_idea = TU_IBE_great_silence_7 }
+				swap_ideas = { remove_idea = TU_IBE_great_silence_7 add_idea = TU_IBE_great_silence_8 }
+			}
+			else_if = {
+				limit = { has_idea = TU_IBE_great_silence_8 }
+				remove_ideas = TU_IBE_great_silence_8
+				country_event = { id = tu_ibe_ev.57 }
+			}
 		}
 	}
 
@@ -1013,6 +1167,43 @@ focus_tree = {
 		completion_reward = {
 			add_tech_bonus = { name = TU_IBE_industrial_district bonus = 0.75 uses = 1 category = industry category = construction_tech }
 			TU_build_civ_factory = yes
+			if = {
+				limit = { has_idea = TU_IBE_great_silence }
+				swap_ideas = { remove_idea = TU_IBE_great_silence add_idea = TU_IBE_great_silence_1 }
+			}
+			else_if = {
+				limit = { has_idea = TU_IBE_great_silence_1 }
+				swap_ideas = { remove_idea = TU_IBE_great_silence_1 add_idea = TU_IBE_great_silence_2 }
+			}
+			else_if = {
+				limit = { has_idea = TU_IBE_great_silence_2 }
+				swap_ideas = { remove_idea = TU_IBE_great_silence_2 add_idea = TU_IBE_great_silence_3 }
+			}
+			else_if = {
+				limit = { has_idea = TU_IBE_great_silence_3 }
+				swap_ideas = { remove_idea = TU_IBE_great_silence_3 add_idea = TU_IBE_great_silence_4 }
+			}
+			else_if = {
+				limit = { has_idea = TU_IBE_great_silence_4 }
+				swap_ideas = { remove_idea = TU_IBE_great_silence_4 add_idea = TU_IBE_great_silence_5 }
+			}
+			else_if = {
+				limit = { has_idea = TU_IBE_great_silence_5 }
+				swap_ideas = { remove_idea = TU_IBE_great_silence_5 add_idea = TU_IBE_great_silence_6 }
+			}
+			else_if = {
+				limit = { has_idea = TU_IBE_great_silence_6 }
+				swap_ideas = { remove_idea = TU_IBE_great_silence_6 add_idea = TU_IBE_great_silence_7 }
+			}
+			else_if = {
+				limit = { has_idea = TU_IBE_great_silence_7 }
+				swap_ideas = { remove_idea = TU_IBE_great_silence_7 add_idea = TU_IBE_great_silence_8 }
+			}
+			else_if = {
+				limit = { has_idea = TU_IBE_great_silence_8 }
+				remove_ideas = TU_IBE_great_silence_8
+				country_event = { id = tu_ibe_ev.57 }
+			}
 		}
 	}
 
@@ -1034,6 +1225,43 @@ focus_tree = {
 		completion_reward = {
 			add_tech_bonus = { name = TU_IBE_civ_program bonus = 0.75 uses = 1 category = industry category = construction_tech }
 			TU_build_civ_factory = yes
+			if = {
+				limit = { has_idea = TU_IBE_great_silence }
+				swap_ideas = { remove_idea = TU_IBE_great_silence add_idea = TU_IBE_great_silence_1 }
+			}
+			else_if = {
+				limit = { has_idea = TU_IBE_great_silence_1 }
+				swap_ideas = { remove_idea = TU_IBE_great_silence_1 add_idea = TU_IBE_great_silence_2 }
+			}
+			else_if = {
+				limit = { has_idea = TU_IBE_great_silence_2 }
+				swap_ideas = { remove_idea = TU_IBE_great_silence_2 add_idea = TU_IBE_great_silence_3 }
+			}
+			else_if = {
+				limit = { has_idea = TU_IBE_great_silence_3 }
+				swap_ideas = { remove_idea = TU_IBE_great_silence_3 add_idea = TU_IBE_great_silence_4 }
+			}
+			else_if = {
+				limit = { has_idea = TU_IBE_great_silence_4 }
+				swap_ideas = { remove_idea = TU_IBE_great_silence_4 add_idea = TU_IBE_great_silence_5 }
+			}
+			else_if = {
+				limit = { has_idea = TU_IBE_great_silence_5 }
+				swap_ideas = { remove_idea = TU_IBE_great_silence_5 add_idea = TU_IBE_great_silence_6 }
+			}
+			else_if = {
+				limit = { has_idea = TU_IBE_great_silence_6 }
+				swap_ideas = { remove_idea = TU_IBE_great_silence_6 add_idea = TU_IBE_great_silence_7 }
+			}
+			else_if = {
+				limit = { has_idea = TU_IBE_great_silence_7 }
+				swap_ideas = { remove_idea = TU_IBE_great_silence_7 add_idea = TU_IBE_great_silence_8 }
+			}
+			else_if = {
+				limit = { has_idea = TU_IBE_great_silence_8 }
+				remove_ideas = TU_IBE_great_silence_8
+				country_event = { id = tu_ibe_ev.57 }
+			}
 		}
 	}
 
@@ -1056,6 +1284,43 @@ focus_tree = {
 			add_tech_bonus = { name = TU_IBE_arms_program bonus = 0.75 uses = 1 category = infantry_weapons }
 			army_experience = 25
 			TU_build_mil_factory = yes
+			if = {
+				limit = { has_idea = TU_IBE_great_silence }
+				swap_ideas = { remove_idea = TU_IBE_great_silence add_idea = TU_IBE_great_silence_1 }
+			}
+			else_if = {
+				limit = { has_idea = TU_IBE_great_silence_1 }
+				swap_ideas = { remove_idea = TU_IBE_great_silence_1 add_idea = TU_IBE_great_silence_2 }
+			}
+			else_if = {
+				limit = { has_idea = TU_IBE_great_silence_2 }
+				swap_ideas = { remove_idea = TU_IBE_great_silence_2 add_idea = TU_IBE_great_silence_3 }
+			}
+			else_if = {
+				limit = { has_idea = TU_IBE_great_silence_3 }
+				swap_ideas = { remove_idea = TU_IBE_great_silence_3 add_idea = TU_IBE_great_silence_4 }
+			}
+			else_if = {
+				limit = { has_idea = TU_IBE_great_silence_4 }
+				swap_ideas = { remove_idea = TU_IBE_great_silence_4 add_idea = TU_IBE_great_silence_5 }
+			}
+			else_if = {
+				limit = { has_idea = TU_IBE_great_silence_5 }
+				swap_ideas = { remove_idea = TU_IBE_great_silence_5 add_idea = TU_IBE_great_silence_6 }
+			}
+			else_if = {
+				limit = { has_idea = TU_IBE_great_silence_6 }
+				swap_ideas = { remove_idea = TU_IBE_great_silence_6 add_idea = TU_IBE_great_silence_7 }
+			}
+			else_if = {
+				limit = { has_idea = TU_IBE_great_silence_7 }
+				swap_ideas = { remove_idea = TU_IBE_great_silence_7 add_idea = TU_IBE_great_silence_8 }
+			}
+			else_if = {
+				limit = { has_idea = TU_IBE_great_silence_8 }
+				remove_ideas = TU_IBE_great_silence_8
+				country_event = { id = tu_ibe_ev.57 }
+			}
 		}
 	}
 
@@ -1075,6 +1340,43 @@ focus_tree = {
 
 		completion_reward = {
 			TU_build_railway = yes
+			if = {
+				limit = { has_idea = TU_IBE_great_silence }
+				swap_ideas = { remove_idea = TU_IBE_great_silence add_idea = TU_IBE_great_silence_1 }
+			}
+			else_if = {
+				limit = { has_idea = TU_IBE_great_silence_1 }
+				swap_ideas = { remove_idea = TU_IBE_great_silence_1 add_idea = TU_IBE_great_silence_2 }
+			}
+			else_if = {
+				limit = { has_idea = TU_IBE_great_silence_2 }
+				swap_ideas = { remove_idea = TU_IBE_great_silence_2 add_idea = TU_IBE_great_silence_3 }
+			}
+			else_if = {
+				limit = { has_idea = TU_IBE_great_silence_3 }
+				swap_ideas = { remove_idea = TU_IBE_great_silence_3 add_idea = TU_IBE_great_silence_4 }
+			}
+			else_if = {
+				limit = { has_idea = TU_IBE_great_silence_4 }
+				swap_ideas = { remove_idea = TU_IBE_great_silence_4 add_idea = TU_IBE_great_silence_5 }
+			}
+			else_if = {
+				limit = { has_idea = TU_IBE_great_silence_5 }
+				swap_ideas = { remove_idea = TU_IBE_great_silence_5 add_idea = TU_IBE_great_silence_6 }
+			}
+			else_if = {
+				limit = { has_idea = TU_IBE_great_silence_6 }
+				swap_ideas = { remove_idea = TU_IBE_great_silence_6 add_idea = TU_IBE_great_silence_7 }
+			}
+			else_if = {
+				limit = { has_idea = TU_IBE_great_silence_7 }
+				swap_ideas = { remove_idea = TU_IBE_great_silence_7 add_idea = TU_IBE_great_silence_8 }
+			}
+			else_if = {
+				limit = { has_idea = TU_IBE_great_silence_8 }
+				remove_ideas = TU_IBE_great_silence_8
+				country_event = { id = tu_ibe_ev.57 }
+			}
 		}
 	}
 
@@ -1126,9 +1428,37 @@ focus_tree = {
 				limit = { has_idea = TU_IBE_great_silence }
 				remove_ideas = TU_IBE_great_silence
 			}
-			if = {
-				limit = { has_idea = TU_IBE_great_silence_eased }
-				remove_ideas = TU_IBE_great_silence_eased
+			else_if = {
+				limit = { has_idea = TU_IBE_great_silence_1 }
+				remove_ideas = TU_IBE_great_silence_1
+			}
+			else_if = {
+				limit = { has_idea = TU_IBE_great_silence_2 }
+				remove_ideas = TU_IBE_great_silence_2
+			}
+			else_if = {
+				limit = { has_idea = TU_IBE_great_silence_3 }
+				remove_ideas = TU_IBE_great_silence_3
+			}
+			else_if = {
+				limit = { has_idea = TU_IBE_great_silence_4 }
+				remove_ideas = TU_IBE_great_silence_4
+			}
+			else_if = {
+				limit = { has_idea = TU_IBE_great_silence_5 }
+				remove_ideas = TU_IBE_great_silence_5
+			}
+			else_if = {
+				limit = { has_idea = TU_IBE_great_silence_6 }
+				remove_ideas = TU_IBE_great_silence_6
+			}
+			else_if = {
+				limit = { has_idea = TU_IBE_great_silence_7 }
+				remove_ideas = TU_IBE_great_silence_7
+			}
+			else_if = {
+				limit = { has_idea = TU_IBE_great_silence_8 }
+				remove_ideas = TU_IBE_great_silence_8
 			}
 		}
 	}
@@ -1192,6 +1522,43 @@ focus_tree = {
 		completion_reward = {
 			add_tech_bonus = { name = TU_IBE_industrial_revival bonus = 0.75 uses = 1 category = industry category = construction_tech }
 			TU_build_civ_factory = yes
+			if = {
+				limit = { has_idea = TU_IBE_great_silence }
+				swap_ideas = { remove_idea = TU_IBE_great_silence add_idea = TU_IBE_great_silence_1 }
+			}
+			else_if = {
+				limit = { has_idea = TU_IBE_great_silence_1 }
+				swap_ideas = { remove_idea = TU_IBE_great_silence_1 add_idea = TU_IBE_great_silence_2 }
+			}
+			else_if = {
+				limit = { has_idea = TU_IBE_great_silence_2 }
+				swap_ideas = { remove_idea = TU_IBE_great_silence_2 add_idea = TU_IBE_great_silence_3 }
+			}
+			else_if = {
+				limit = { has_idea = TU_IBE_great_silence_3 }
+				swap_ideas = { remove_idea = TU_IBE_great_silence_3 add_idea = TU_IBE_great_silence_4 }
+			}
+			else_if = {
+				limit = { has_idea = TU_IBE_great_silence_4 }
+				swap_ideas = { remove_idea = TU_IBE_great_silence_4 add_idea = TU_IBE_great_silence_5 }
+			}
+			else_if = {
+				limit = { has_idea = TU_IBE_great_silence_5 }
+				swap_ideas = { remove_idea = TU_IBE_great_silence_5 add_idea = TU_IBE_great_silence_6 }
+			}
+			else_if = {
+				limit = { has_idea = TU_IBE_great_silence_6 }
+				swap_ideas = { remove_idea = TU_IBE_great_silence_6 add_idea = TU_IBE_great_silence_7 }
+			}
+			else_if = {
+				limit = { has_idea = TU_IBE_great_silence_7 }
+				swap_ideas = { remove_idea = TU_IBE_great_silence_7 add_idea = TU_IBE_great_silence_8 }
+			}
+			else_if = {
+				limit = { has_idea = TU_IBE_great_silence_8 }
+				remove_ideas = TU_IBE_great_silence_8
+				country_event = { id = tu_ibe_ev.57 }
+			}
 		}
 	}
 
@@ -1670,6 +2037,43 @@ focus_tree = {
 		completion_reward = {
 			add_tech_bonus = { name = TU_IBE_copper_mines bonus = 0.75 uses = 1 category = industry category = construction_tech }
 			TU_build_civ_factory = yes
+			if = {
+				limit = { has_idea = TU_IBE_great_silence }
+				swap_ideas = { remove_idea = TU_IBE_great_silence add_idea = TU_IBE_great_silence_1 }
+			}
+			else_if = {
+				limit = { has_idea = TU_IBE_great_silence_1 }
+				swap_ideas = { remove_idea = TU_IBE_great_silence_1 add_idea = TU_IBE_great_silence_2 }
+			}
+			else_if = {
+				limit = { has_idea = TU_IBE_great_silence_2 }
+				swap_ideas = { remove_idea = TU_IBE_great_silence_2 add_idea = TU_IBE_great_silence_3 }
+			}
+			else_if = {
+				limit = { has_idea = TU_IBE_great_silence_3 }
+				swap_ideas = { remove_idea = TU_IBE_great_silence_3 add_idea = TU_IBE_great_silence_4 }
+			}
+			else_if = {
+				limit = { has_idea = TU_IBE_great_silence_4 }
+				swap_ideas = { remove_idea = TU_IBE_great_silence_4 add_idea = TU_IBE_great_silence_5 }
+			}
+			else_if = {
+				limit = { has_idea = TU_IBE_great_silence_5 }
+				swap_ideas = { remove_idea = TU_IBE_great_silence_5 add_idea = TU_IBE_great_silence_6 }
+			}
+			else_if = {
+				limit = { has_idea = TU_IBE_great_silence_6 }
+				swap_ideas = { remove_idea = TU_IBE_great_silence_6 add_idea = TU_IBE_great_silence_7 }
+			}
+			else_if = {
+				limit = { has_idea = TU_IBE_great_silence_7 }
+				swap_ideas = { remove_idea = TU_IBE_great_silence_7 add_idea = TU_IBE_great_silence_8 }
+			}
+			else_if = {
+				limit = { has_idea = TU_IBE_great_silence_8 }
+				remove_ideas = TU_IBE_great_silence_8
+				country_event = { id = tu_ibe_ev.57 }
+			}
 		}
 	}
 
@@ -1690,6 +2094,43 @@ focus_tree = {
 		completion_reward = {
 			add_tech_bonus = { name = TU_IBE_power_plants bonus = 0.75 uses = 1 category = industry category = construction_tech }
 			TU_build_civ_factory = yes
+			if = {
+				limit = { has_idea = TU_IBE_great_silence }
+				swap_ideas = { remove_idea = TU_IBE_great_silence add_idea = TU_IBE_great_silence_1 }
+			}
+			else_if = {
+				limit = { has_idea = TU_IBE_great_silence_1 }
+				swap_ideas = { remove_idea = TU_IBE_great_silence_1 add_idea = TU_IBE_great_silence_2 }
+			}
+			else_if = {
+				limit = { has_idea = TU_IBE_great_silence_2 }
+				swap_ideas = { remove_idea = TU_IBE_great_silence_2 add_idea = TU_IBE_great_silence_3 }
+			}
+			else_if = {
+				limit = { has_idea = TU_IBE_great_silence_3 }
+				swap_ideas = { remove_idea = TU_IBE_great_silence_3 add_idea = TU_IBE_great_silence_4 }
+			}
+			else_if = {
+				limit = { has_idea = TU_IBE_great_silence_4 }
+				swap_ideas = { remove_idea = TU_IBE_great_silence_4 add_idea = TU_IBE_great_silence_5 }
+			}
+			else_if = {
+				limit = { has_idea = TU_IBE_great_silence_5 }
+				swap_ideas = { remove_idea = TU_IBE_great_silence_5 add_idea = TU_IBE_great_silence_6 }
+			}
+			else_if = {
+				limit = { has_idea = TU_IBE_great_silence_6 }
+				swap_ideas = { remove_idea = TU_IBE_great_silence_6 add_idea = TU_IBE_great_silence_7 }
+			}
+			else_if = {
+				limit = { has_idea = TU_IBE_great_silence_7 }
+				swap_ideas = { remove_idea = TU_IBE_great_silence_7 add_idea = TU_IBE_great_silence_8 }
+			}
+			else_if = {
+				limit = { has_idea = TU_IBE_great_silence_8 }
+				remove_ideas = TU_IBE_great_silence_8
+				country_event = { id = tu_ibe_ev.57 }
+			}
 		}
 	}
 
@@ -2127,6 +2568,43 @@ focus_tree = {
 			add_tech_bonus = { name = TU_IBE_steel_mills bonus = 0.75 uses = 1 category = infantry_weapons }
 			army_experience = 25
 			TU_build_civ_factory = yes
+			if = {
+				limit = { has_idea = TU_IBE_great_silence }
+				swap_ideas = { remove_idea = TU_IBE_great_silence add_idea = TU_IBE_great_silence_1 }
+			}
+			else_if = {
+				limit = { has_idea = TU_IBE_great_silence_1 }
+				swap_ideas = { remove_idea = TU_IBE_great_silence_1 add_idea = TU_IBE_great_silence_2 }
+			}
+			else_if = {
+				limit = { has_idea = TU_IBE_great_silence_2 }
+				swap_ideas = { remove_idea = TU_IBE_great_silence_2 add_idea = TU_IBE_great_silence_3 }
+			}
+			else_if = {
+				limit = { has_idea = TU_IBE_great_silence_3 }
+				swap_ideas = { remove_idea = TU_IBE_great_silence_3 add_idea = TU_IBE_great_silence_4 }
+			}
+			else_if = {
+				limit = { has_idea = TU_IBE_great_silence_4 }
+				swap_ideas = { remove_idea = TU_IBE_great_silence_4 add_idea = TU_IBE_great_silence_5 }
+			}
+			else_if = {
+				limit = { has_idea = TU_IBE_great_silence_5 }
+				swap_ideas = { remove_idea = TU_IBE_great_silence_5 add_idea = TU_IBE_great_silence_6 }
+			}
+			else_if = {
+				limit = { has_idea = TU_IBE_great_silence_6 }
+				swap_ideas = { remove_idea = TU_IBE_great_silence_6 add_idea = TU_IBE_great_silence_7 }
+			}
+			else_if = {
+				limit = { has_idea = TU_IBE_great_silence_7 }
+				swap_ideas = { remove_idea = TU_IBE_great_silence_7 add_idea = TU_IBE_great_silence_8 }
+			}
+			else_if = {
+				limit = { has_idea = TU_IBE_great_silence_8 }
+				remove_ideas = TU_IBE_great_silence_8
+				country_event = { id = tu_ibe_ev.57 }
+			}
 		}
 	}
 
@@ -2386,6 +2864,43 @@ focus_tree = {
 		completion_reward = {
 			add_tech_bonus = { name = TU_IBE_salt_works bonus = 0.75 uses = 1 category = industry category = construction_tech }
 			TU_build_civ_factory = yes
+			if = {
+				limit = { has_idea = TU_IBE_great_silence }
+				swap_ideas = { remove_idea = TU_IBE_great_silence add_idea = TU_IBE_great_silence_1 }
+			}
+			else_if = {
+				limit = { has_idea = TU_IBE_great_silence_1 }
+				swap_ideas = { remove_idea = TU_IBE_great_silence_1 add_idea = TU_IBE_great_silence_2 }
+			}
+			else_if = {
+				limit = { has_idea = TU_IBE_great_silence_2 }
+				swap_ideas = { remove_idea = TU_IBE_great_silence_2 add_idea = TU_IBE_great_silence_3 }
+			}
+			else_if = {
+				limit = { has_idea = TU_IBE_great_silence_3 }
+				swap_ideas = { remove_idea = TU_IBE_great_silence_3 add_idea = TU_IBE_great_silence_4 }
+			}
+			else_if = {
+				limit = { has_idea = TU_IBE_great_silence_4 }
+				swap_ideas = { remove_idea = TU_IBE_great_silence_4 add_idea = TU_IBE_great_silence_5 }
+			}
+			else_if = {
+				limit = { has_idea = TU_IBE_great_silence_5 }
+				swap_ideas = { remove_idea = TU_IBE_great_silence_5 add_idea = TU_IBE_great_silence_6 }
+			}
+			else_if = {
+				limit = { has_idea = TU_IBE_great_silence_6 }
+				swap_ideas = { remove_idea = TU_IBE_great_silence_6 add_idea = TU_IBE_great_silence_7 }
+			}
+			else_if = {
+				limit = { has_idea = TU_IBE_great_silence_7 }
+				swap_ideas = { remove_idea = TU_IBE_great_silence_7 add_idea = TU_IBE_great_silence_8 }
+			}
+			else_if = {
+				limit = { has_idea = TU_IBE_great_silence_8 }
+				remove_ideas = TU_IBE_great_silence_8
+				country_event = { id = tu_ibe_ev.57 }
+			}
 		}
 	}
 

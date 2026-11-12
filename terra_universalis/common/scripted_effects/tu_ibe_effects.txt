@@ -1,62 +1,3 @@
-TU_IBE_scars_check = {
-	if = {
-		limit = { OR = { has_idea = TU_IBE_great_silence has_idea = TU_IBE_great_silence_eased } }
-		set_temp_variable = { tu_ibe_ind = 0 }
-		if = {
-			limit = { has_completed_focus = TU_IBE_harbour_rebuild }
-			add_to_temp_variable = { tu_ibe_ind = 1 }
-		}
-		if = {
-			limit = { has_completed_focus = TU_IBE_industrial_district }
-			add_to_temp_variable = { tu_ibe_ind = 1 }
-		}
-		if = {
-			limit = { has_completed_focus = TU_IBE_road_network }
-			add_to_temp_variable = { tu_ibe_ind = 1 }
-		}
-		if = {
-			limit = { has_completed_focus = TU_IBE_arms_program }
-			add_to_temp_variable = { tu_ibe_ind = 1 }
-		}
-		if = {
-			limit = { has_completed_focus = TU_IBE_civ_program }
-			add_to_temp_variable = { tu_ibe_ind = 1 }
-		}
-		if = {
-			limit = { has_completed_focus = TU_IBE_copper_mines }
-			add_to_temp_variable = { tu_ibe_ind = 1 }
-		}
-		if = {
-			limit = { has_completed_focus = TU_IBE_rail_network }
-			add_to_temp_variable = { tu_ibe_ind = 1 }
-		}
-		if = {
-			limit = { has_completed_focus = TU_IBE_power_plants }
-			add_to_temp_variable = { tu_ibe_ind = 1 }
-		}
-		if = {
-			limit = { has_completed_focus = TU_IBE_steel_mills }
-			add_to_temp_variable = { tu_ibe_ind = 1 }
-		}
-		if = {
-			limit = { has_completed_focus = TU_IBE_industrial_revival }
-			add_to_temp_variable = { tu_ibe_ind = 1 }
-		}
-		if = {
-			limit = { check_variable = { tu_ibe_ind > 8 } }
-			if = {
-				limit = { has_idea = TU_IBE_great_silence }
-				remove_ideas = TU_IBE_great_silence
-			}
-			if = {
-				limit = { has_idea = TU_IBE_great_silence_eased }
-				remove_ideas = TU_IBE_great_silence_eased
-			}
-			country_event = { id = tu_ibe_ev.57 }
-		}
-	}
-}
-
 TU_IBE_fear_check = {
 	if = {
 		limit = { OR = { has_idea = TU_IBE_fear_of_the_sea has_idea = TU_IBE_fear_of_the_sea_eased has_idea = TU_IBE_fear_of_the_sea_calmed } }
@@ -88,7 +29,6 @@ TU_IBE_fear_check = {
 
 TU_IBE_monthly = {
 	TU_IBE_lighthouse_monthly = yes
-	TU_IBE_scars_check = yes
 	TU_IBE_fear_check = yes
 	add_to_variable = { TU_IBE_threat = 4 }
 	set_temp_variable = { tu_ibe_lh = TU_IBE_lighthouses }

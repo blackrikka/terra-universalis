@@ -78,65 +78,41 @@ def EV(n, days=0):
 
 C.history += ["set_variable = { TU_IBE_threat = 30 }", "set_variable = { TU_IBE_cult = 45 }", "set_variable = { TU_IBE_calm_months = 0 }", "set_variable = { TU_IBE_lighthouses = 0 }",
               "add_ideas = { TU_IBE_great_silence TU_IBE_fear_of_the_sea }"]
-# 상흔은 산업 중점 10개 중 9개를 찍으면, 공포는 바다의 위협이 25 아래로 12개월 이어지면 걷힌다 (사양서 62 6절)
-C.effects.append("""TU_IBE_scars_check = {
-	if = {
-		limit = { OR = { has_idea = TU_IBE_great_silence has_idea = TU_IBE_great_silence_eased } }
-		set_temp_variable = { tu_ibe_ind = 0 }
-		if = {
-			limit = { has_completed_focus = TU_IBE_harbour_rebuild }
-			add_to_temp_variable = { tu_ibe_ind = 1 }
-		}
-		if = {
-			limit = { has_completed_focus = TU_IBE_industrial_district }
-			add_to_temp_variable = { tu_ibe_ind = 1 }
-		}
-		if = {
-			limit = { has_completed_focus = TU_IBE_road_network }
-			add_to_temp_variable = { tu_ibe_ind = 1 }
-		}
-		if = {
-			limit = { has_completed_focus = TU_IBE_arms_program }
-			add_to_temp_variable = { tu_ibe_ind = 1 }
-		}
-		if = {
-			limit = { has_completed_focus = TU_IBE_civ_program }
-			add_to_temp_variable = { tu_ibe_ind = 1 }
-		}
-		if = {
-			limit = { has_completed_focus = TU_IBE_copper_mines }
-			add_to_temp_variable = { tu_ibe_ind = 1 }
-		}
-		if = {
-			limit = { has_completed_focus = TU_IBE_rail_network }
-			add_to_temp_variable = { tu_ibe_ind = 1 }
-		}
-		if = {
-			limit = { has_completed_focus = TU_IBE_power_plants }
-			add_to_temp_variable = { tu_ibe_ind = 1 }
-		}
-		if = {
-			limit = { has_completed_focus = TU_IBE_steel_mills }
-			add_to_temp_variable = { tu_ibe_ind = 1 }
-		}
-		if = {
-			limit = { has_completed_focus = TU_IBE_industrial_revival }
-			add_to_temp_variable = { tu_ibe_ind = 1 }
-		}
-		if = {
-			limit = { check_variable = { tu_ibe_ind > 8 } }
-			if = {
-				limit = { has_idea = TU_IBE_great_silence }
-				remove_ideas = TU_IBE_great_silence
-			}
-			if = {
-				limit = { has_idea = TU_IBE_great_silence_eased }
-				remove_ideas = TU_IBE_great_silence_eased
-			}
-			country_event = { id = tu_ibe_ev.57 }
-		}
-	}
-}""")
+# 대침묵의 상흔 (사양서 62 6절): 산업 중점을 찍을 때마다 한 단계, 왕실 재정은 여러 단계 완화된다.
+# 카이저라이히(BUL_industrial_transformation_1~3)처럼 단계마다 국민정신을 따로 두되 name 을 같게 한다.
+# 같은 이름끼리 swap_ideas 하면 엔진이 중점 툴팁에 "대침묵의 상흔 변동치:" 와 바뀌는 수치만 보여 주므로 따로 문구를 쓰지 않는다.
+SCAR_BASE = {"production_speed_buildings_factor": -0.25, "industrial_capacity_factory": -0.15, "monthly_population": -0.1,
+             "consumer_goods_factor": 0.60, "conscription_factor": -0.5, "local_resources_factor": -0.2, "political_power_cost": 0.5}
+SCAR_LEVELS = 9          # 9단계가 되면 상흔이 사라진다
+SCAR_TREASURY = 4        # 왕실 재정 = 4단계
+# 서로 배타인 군수·민간 공장 계획은 둘 다 적었다 (하나만 찍을 수 있으니 닿을 수 있는 중점은 10개, 9개면 끝난다)
+SCAR_INDUSTRY = ["harbour_rebuild", "industrial_district", "road_network", "salt_works", "civ_program", "arms_program",
+                 "copper_mines", "rail_network", "power_plants", "steel_mills", "industrial_revival"]
+
+
+def scar5(x):
+    """페널티를 5% 단위로 끊는다 (단계마다 줄어드는 폭이 같지는 않다). 0이 되면 None."""
+    q = int(abs(x) / 0.05 + 0.5) * 0.05
+    return round(q if x > 0 else -q, 2) if q else None
+
+
+def scar_id(lv):
+    return "TU_IBE_great_silence" + ("_%d" % lv if lv else "")
+
+
+def scar_steps(n, event=True):
+    """지금 걸려 있는 단계에서 n단계 아문 국민정신으로 바꾼다. 마지막 단계를 넘으면 지운다 (event 면 알림 사건)."""
+    out = []
+    for lv in range(SCAR_LEVELS):
+        to = lv + n
+        if to >= SCAR_LEVELS:
+            act = "remove_ideas = %s" % scar_id(lv) + ("\n\tcountry_event = { id = tu_ibe_ev.57 }" if event else "")
+        else:
+            act = "swap_ideas = { remove_idea = %s add_idea = %s }" % (scar_id(lv), scar_id(to))
+        out.append("%s = {\n\tlimit = { has_idea = %s }\n\t%s\n}" % ("if" if lv == 0 else "else_if", scar_id(lv), act))
+    return "\n".join(out)
+
+
 C.effects.append("""TU_IBE_fear_check = {
 	if = {
 		limit = { OR = { has_idea = TU_IBE_fear_of_the_sea has_idea = TU_IBE_fear_of_the_sea_eased has_idea = TU_IBE_fear_of_the_sea_calmed } }
@@ -167,7 +143,6 @@ C.effects.append("""TU_IBE_fear_check = {
 }""")
 C.effects.append("""TU_IBE_monthly = {
 	TU_IBE_lighthouse_monthly = yes
-	TU_IBE_scars_check = yes
 	TU_IBE_fear_check = yes
 	add_to_variable = { TU_IBE_threat = 4 }
 	set_temp_variable = { tu_ibe_lh = TU_IBE_lighthouses }
@@ -280,20 +255,18 @@ C.on_actions.append("""on_monthly = {
 }""")
 
 # ------------------------------------------------------------------ 국민정신
-# 대침묵의 상흔: 바닐라 미국 대공황(great_depression)을 본뜬 페널티. 왕관 헌장을 찍으면 아물어 간다 (great_silence_eased)
-C.idea("great_silence", "대침묵의 상흔", "Scars of the Great Silence",
-       {"production_speed_buildings_factor": -0.25, "industrial_capacity_factory": -0.15, "monthly_population": -0.1,
-        "consumer_goods_factor": 0.60, "conscription_factor": -0.5, "local_resources_factor": -0.2, "political_power_cost": 0.5},
-       "generic_army_problems", ("바다에서 무언가가 올라왔고, 이베리아의 해안은 침묵했다.\\n산업 중점을 거의 다 찍으면 상흔이 아문다. 왕실 재정을 찍으면 일부 누그러진다.",
-                                "Something rose from the sea, and Iberia's coast fell silent.\\nThe scars heal once nearly all industry focuses are done. The Royal Treasury eases them in part."))
+# 대침묵의 상흔: 바닐라 미국 대공황(great_depression)을 본뜬 페널티. 산업 중점과 왕실 재정이 단계별로 줄인다 (SCAR_BASE)
+for _lv in range(SCAR_LEVELS):
+    _left = (SCAR_LEVELS - _lv) / SCAR_LEVELS
+    C.idea(scar_id(_lv)[len("TU_IBE_"):], "대침묵의 상흔", "Scars of the Great Silence",
+           {k: scar5(v * _left) for k, v in SCAR_BASE.items() if scar5(v * _left)}, "generic_army_problems",
+           ("바다에서 무언가가 올라왔고, 이베리아의 해안은 침묵했다.\\n산업이 되살아날수록 상흔이 아문다.",
+            "Something rose from the sea, and Iberia's coast fell silent.\\nThe scars heal as industry revives."),
+           extra="\t\t\tname = TU_IBE_great_silence\n")
 # 바다의 공포: 안정도 페널티를 크게 올렸다. 왕실 회의를 열면 누그러진다 (fear_of_the_sea_eased)
 C.idea("fear_of_the_sea", "바다의 공포", "Fear of the Sea", {"political_power_gain": -0.1, "stability_factor": -0.40}, "generic_economic_increase",
        ("어부들은 더 이상 먼바다로 나가지 않는다.\\n바다의 위협이 25 아래로 12개월 이어지면 공포가 걷힌다. 왕립군과 왕관 헌장이 단계적으로 누그러뜨린다.",
         "Fishermen no longer sail into deep waters.\\nThe fear lifts when the sea threat stays below 25 for 12 months. The Royal Army and the Crown Charter ease it in stages."))
-C.idea("great_silence_eased", "아물어 가는 대침묵의 상흔", "Healing Scars of the Great Silence",
-       {"production_speed_buildings_factor": -0.10, "industrial_capacity_factory": -0.05, "monthly_population": -0.05,
-        "consumer_goods_factor": 0.25, "conscription_factor": -0.2, "local_resources_factor": -0.1, "political_power_cost": 0.15}, "generic_army_problems",
-       ("왕관의 이름으로 공장 문이 다시 열리기 시작했다. 상처는 아직 남아 있다.", "In the Crown's name the factory doors are opening again. The scars remain."))
 C.idea("fear_of_the_sea_eased", "누그러진 바다의 공포", "Eased Fear of the Sea", {"political_power_gain": -0.08, "stability_factor": -0.28}, "generic_economic_increase",
        ("왕립군이 해안을 지키자 어부들의 두려움이 조금 덜어졌다.", "With the Royal Army on the coast, the fishermen's fear has eased a little."))
 C.idea("fear_of_the_sea_calmed", "잦아든 바다의 공포", "Calmed Fear of the Sea", {"political_power_gain": -0.05, "stability_factor": -0.15}, "generic_economic_increase",
@@ -337,7 +310,7 @@ f("royal_heir", "왕실의 후계자", "The Royal Heir", pre=["crown_council"], 
 f("nobles_return", "귀족의 귀환", "Return of the Nobles", pre=["crown_council"], reward=[CROWN("0.05")])
 # 왕실 완화는 깊이에 따라 나뉜다 (사양서 62 6절): 재정은 산업의 상흔을, 왕립군은 공포를 한 단계, 헌장은 한 단계 더 덜어 준다
 f("royal_treasury", "왕실 재정", "Royal Treasury", pre=["nobles_return"],
-  reward=["if = {\n\tlimit = { has_idea = TU_IBE_great_silence }\n\tswap_ideas = { remove_idea = TU_IBE_great_silence add_idea = TU_IBE_great_silence_eased }\n}"])
+  reward=[scar_steps(SCAR_TREASURY)])
 f("royal_army", "왕립군", "Royal Army Regiments", pre=["royal_heir"],
   reward=["if = {\n\tlimit = { has_idea = TU_IBE_fear_of_the_sea }\n\tswap_ideas = { remove_idea = TU_IBE_fear_of_the_sea add_idea = TU_IBE_fear_of_the_sea_eased }\n}"])
 f("crown_charter", "왕관 헌장", "Crown Charter", pre=["royal_treasury", "royal_army"],
@@ -354,7 +327,8 @@ f("golden_age", "새로운 황금기", "A New Golden Age", pre=["royal_reconstru
 
 # C. 바다의 위협
 f("coastal_watch", "해안 감시", "Coastal Watch", pre=["root"], theme=False, reward=[FLAG("coast"), THR(-3)],
-  desc=("'해안' 디시전이 열린다 (등대 복원, 해안 순찰, 정화 작전).", "Unlocks the Coast decisions (lighthouses, patrols, purification)."))
+  desc=("해안을 지켜보는 눈이 늘어난다. 등대를 되살리고, 순찰을 돌고, 숭배자를 단속할 수 있게 된다.",
+        "More eyes watch the coast. Lighthouses can be restored, patrols sent out and worshippers hunted."))
 f("sea_studies", "바다의 위협 연구", "Study of the Sea Threat", pre=["coastal_watch"], reward=[THR(-3)])
 f("tide_charts", "조류 기록", "Tide Charts Records", pre=["coastal_watch"])
 f("abyssal_rumours", "어비셜 헌터스의 소문", "Rumours of the Abyssal Hunters", pre=["sea_studies"], theme=False, reward=[EV(23, 15)])
@@ -368,7 +342,7 @@ f("watchful_coast", "깨어 있는 해안", "The Watchful Coast", pre=[["coastal
 f("deep_sea_plan", "심해 대비 계획", "Deep Sea Defence Plan", pre=["watchful_coast"], reward=[THR(-3)])
 f("sea_reconciliation", "바다와의 화해", "Reconciliation with the Sea", pre=["abyssal_rumours", "deep_sea_plan"],
   me=["inquisitor_state", "crown_restored"], cost=15, theme=False, available=[AT_MOST("threat", 20), HAS("hunters_met")],
-  reward=[FLAG("path_sea"), "add_ideas = TU_IBE_sea_reconciliation", "if = {\n\tlimit = { has_idea = TU_IBE_great_silence }\n\tremove_ideas = TU_IBE_great_silence\n}\nif = {\n\tlimit = { has_idea = TU_IBE_great_silence_eased }\n\tremove_ideas = TU_IBE_great_silence_eased\n}", EV(30)],
+  reward=[FLAG("path_sea"), "add_ideas = TU_IBE_sea_reconciliation", scar_steps(SCAR_LEVELS, False), EV(30)],
   desc=("바다의 것들과 공존할 길을 찾는다. (위협 20 이하, 어비셜 헌터스와 만나야 함)",
         "Find a way to live alongside what lies in the sea. (Threat 20 or less, must have met the Abyssal Hunters)"))
 f("aegir_contact", "에기르와의 접촉", "Contact with Aegir Envoys", pre=["sea_reconciliation"])
@@ -407,7 +381,7 @@ f("rail_network", "철도 연결", "Rail Network Expansion", pre=["road_network"
 f("resettle_coast", "해안 재정착", "Resettle the Coast Housing", pre=["rail_network"], theme=False, available=[AT_MOST("threat", 50)],
   reward=["TU_build_civ_factory = yes", "add_manpower = 10000"], desc=("바다의 위협 50 이하.", "Sea threat 50 or less."), filt="FOCUS_FILTER_INDUSTRY")
 f("purified_coast", "정화된 해안", "The Purified Coast", pre=["resettle_coast"], theme=False, available=[AT_MOST("threat", 30)],
-  reward=["add_ideas = TU_IBE_purified_coast", "if = {\n\tlimit = { has_idea = TU_IBE_great_silence }\n\tremove_ideas = TU_IBE_great_silence\n}\nif = {\n\tlimit = { has_idea = TU_IBE_great_silence_eased }\n\tremove_ideas = TU_IBE_great_silence_eased\n}"], desc=("바다의 위협 30 이하. 대침묵의 상흔을 없앤다.", "Sea threat 30 or less. Removes Scars of the Great Silence."))
+  reward=["add_ideas = TU_IBE_purified_coast", scar_steps(SCAR_LEVELS, False)], desc=("바다의 위협 30 이하. 대침묵의 상흔을 없앤다.", "Sea threat 30 or less. Removes Scars of the Great Silence."))
 f("fishing_guild", "어업 조합", "Fishing Guild Trade", pre=["harbour_rebuild"])
 f("wine_trade", "포도주 교역", "Wine Trade", pre=["fishing_guild"])
 f("industrial_revival", "이베리아 산업 부흥", "Iberian Industrialisation", pre=[["civ_program", "arms_program"], "rail_network"], econ=True)
@@ -1153,6 +1127,20 @@ f("ishar_finale", "심해", "The Deep", pre=["ishar_great_tide", "ishar_song_of_
 for _f in C.focuses:     # 다른 결말과 서로 배타
     if _f["id"] in ("TU_IBE_inquisitor_state", "TU_IBE_crown_restored", "TU_IBE_sea_reconciliation"):
         _f["me"] += ["TU_IBE_ishar_finale", "TU_IBE_hunter_skadi"]
+
+# 상흔 완화(산업 중점마다 한 단계), 열리는 디시전은 바닐라 표시(unlock_decision_tooltip)로 보여 준다 (사양서 62 6절)
+UNLOCKS = {
+    "coastal_watch": ["restore_lighthouse", "lh_fort", "lh_repair", "lh_purge", "coastal_patrol", "purification", "evacuate_town", "cult_inquiry"],
+    "sea_studies": ["sea_research"], "abyssal_rumours": ["hunters_contact"], "inquisitor_guard": ["inquisitor_recruits"],
+    "elite_inquisitors": ["cult_raid"], "judgement_day": ["cult_tribunal"], "anti_creature": ["coast_sweep"],
+    "deep_sea_plan": ["deep_purge"], "inquisitor_state": ["cult_hunt"],
+}
+for _d in C.focuses:
+    _name = _d["id"][len("TU_IBE_"):]
+    if _name in SCAR_INDUSTRY:
+        _d["reward"].append(scar_steps(1))
+    for _u in UNLOCKS.get(_name, []):
+        _d["reward"].append("unlock_decision_tooltip = TU_IBE_%s" % _u)
 
 if __name__ == "__main__":
     C.write()
