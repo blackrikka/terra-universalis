@@ -93,21 +93,45 @@ characters = {
 		}
 	}
 
-	TU_VIC_faust_commander = {
-		name = TU_VIC_faust_commander
+	TU_VIC_faust_leader = {
+		name = TU_VIC_faust_leader
 		portraits = {
 			civilian = {
 				large = "GFX_Portrait_Europe_Generic_1"
 			}
 		}
-		corps_commander = {
-			traits = { guerilla_fighter }
-			skill = 4
-			attack_skill = 4
-			defense_skill = 3
-			planning_skill = 3
-			logistics_skill = 3
-			legacy_id = 0
+		country_leader = { traits = { tu_lt_parliament }
+			ideology = liberalism
+			expire = "1200.1.1.1"
+			id = -1
+		}
+	}
+
+	TU_VIC_wellington_leader = {
+		name = TU_VIC_wellington_leader
+		portraits = {
+			civilian = {
+				large = "GFX_Portrait_Europe_Generic_3"
+			}
+		}
+		country_leader = { traits = { tu_lt_draco_flame }
+			ideology = fascism_ideology
+			expire = "1200.1.1.1"
+			id = -1
+		}
+	}
+
+	TU_VIC_theresis_leader = {
+		name = TU_VIC_theresis_leader
+		portraits = {
+			civilian = {
+				large = "GFX_Portrait_Europe_Generic_3"
+			}
+		}
+		country_leader = { traits = { tu_lt_draco_flame }
+			ideology = fascism_ideology
+			expire = "1200.1.1.1"
+			id = -1
 		}
 	}
 }

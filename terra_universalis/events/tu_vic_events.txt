@@ -839,3 +839,76 @@ country_event = {
 		mark_focus_tree_layout_dirty = yes
 	}
 }
+
+# 42. leader candidates of an Act 2 route (spec 80).
+country_event = {
+	id = tu_vic_ev.42
+	title = tu_vic_ev.42.t
+	desc = tu_vic_ev.42.d
+	picture = GFX_report_event_generic_conference
+	is_triggered_only = yes
+
+	option = {
+		name = tu_vic_ev.42.a
+		ai_chance = { factor = 10 }
+		recruit_character = TU_VIC_draco_leader
+		promote_character = { character = TU_VIC_draco_leader ideology = fascism_ideology }
+	}
+	option = {
+		name = tu_vic_ev.42.b
+		ai_chance = { factor = 10 }
+		recruit_character = TU_VIC_wellington_leader
+		promote_character = { character = TU_VIC_wellington_leader ideology = fascism_ideology }
+	}
+	option = {
+		name = tu_vic_ev.42.c
+		trigger = { check_variable = { TU_VIC_loyalty_wellington > 79 } }
+		ai_chance = { factor = 10 }
+		recruit_character = TU_VIC_reed_leader
+		promote_character = { character = TU_VIC_reed_leader ideology = fascism_ideology }
+	}
+}
+
+# 43. leader candidates of an Act 2 route (spec 80).
+country_event = {
+	id = tu_vic_ev.43
+	title = tu_vic_ev.43.t
+	desc = tu_vic_ev.43.d
+	picture = GFX_report_event_generic_conference
+	is_triggered_only = yes
+
+	option = {
+		name = tu_vic_ev.43.a
+		ai_chance = { factor = 10 }
+		recruit_character = TU_VIC_parliament_leader
+		promote_character = { character = TU_VIC_parliament_leader ideology = liberalism }
+	}
+	option = {
+		name = tu_vic_ev.43.b
+		ai_chance = { factor = 10 }
+		recruit_character = TU_VIC_faust_leader
+		promote_character = { character = TU_VIC_faust_leader ideology = liberalism }
+	}
+}
+
+# 44. leader candidates of an Act 2 route (spec 80).
+country_event = {
+	id = tu_vic_ev.44
+	title = tu_vic_ev.44.t
+	desc = tu_vic_ev.44.d
+	picture = GFX_report_event_generic_conference
+	is_triggered_only = yes
+
+	option = {
+		name = tu_vic_ev.44.a
+		ai_chance = { factor = 10 }
+		recruit_character = TU_VIC_theresis_leader
+		promote_character = { character = TU_VIC_theresis_leader ideology = fascism_ideology }
+	}
+	option = {
+		name = tu_vic_ev.44.b
+		ai_chance = { factor = 10 }
+		recruit_character = TU_VIC_confessor_leader
+		promote_character = { character = TU_VIC_confessor_leader ideology = fascism_ideology }
+	}
+}

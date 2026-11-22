@@ -21,10 +21,10 @@ MOD = REPO / "terra_universalis"
 P = "TU_VIC_"
 ROUTE_KO = {"TU_VIC_duk_route": "철혈의 대공 의회", "TU_VIC_asl_route": "아슬란의 새벽", "TU_VIC_drc_route": "자줏빛 불꽃", "TU_VIC_par_route": "자구군 혁명",
             "TU_VIC_siege_leader": "비나 빅토리아 (시즈)", "TU_VIC_dukes_council": "캐스터 공작", "TU_VIC_draco_leader": "에블라나",
-            "TU_VIC_dublinn_leader": "웰링턴", "TU_VIC_parliament_leader": "클로비시아"}
+            "TU_VIC_dublinn_leader": "더블린 협상가", "TU_VIC_parliament_leader": "클로비시아"}
 ROUTE_EN = {"TU_VIC_duk_route": "The Iron-Blood Ducal Council", "TU_VIC_asl_route": "The Dawn of Aslan", "TU_VIC_drc_route": "The Purple Flame",
             "TU_VIC_par_route": "Revolution of the Self-Salvation Corps", "TU_VIC_siege_leader": "Vina Victoria (Siege)", "TU_VIC_dukes_council": "Duke Caster",
-            "TU_VIC_draco_leader": "Eblana", "TU_VIC_dublinn_leader": "Wellington", "TU_VIC_parliament_leader": "Clovisia"}
+            "TU_VIC_draco_leader": "Eblana", "TU_VIC_dublinn_leader": "Dublinn Negotiator", "TU_VIC_parliament_leader": "Clovisia"}
 
 
 def INF(d, n):
@@ -98,7 +98,7 @@ KZ = [
     ("kz_head", "살카즈의 용광로", "The Sarkaz Crucible", "파편이 깨어난 빅토리아는 살카즈의 용광로가 된다. 테레시스가 '보호'를 대가로 공업을 요구하고, 고해신부가 빅토리아의 얼굴이 된다. 서명하면 카즈델의 보호국이 된다.",
      "With the Shard awake, Victoria becomes a Sarkaz crucible. Theresis demands industry in return for 'protection' and the Confessor becomes the face of Victoria. Signing makes Victoria a Kazdel protectorate.", 5, ["a1_end"],
      ["KZD = { puppet = VIC }", "add_ideas = TU_VIC_kz_extortion", "set_country_flag = TU_VIC_kz_signed",
-      "recruit_character = TU_VIC_confessor_leader", "promote_character = { character = TU_VIC_confessor_leader ideology = fascism_ideology }"]),
+      "country_event = { id = tu_vic_ev.44 }"]),
     ("kz_levy", "공업 징발", "Industrial Levy", "카즈델이 공장 가동분을 징발해 간다. 대신 정치력을 얻는다.", "Kazdel seizes part of the factory output. In return, political power.", 10, ["kz_head"], ["add_political_power = 100"]),
     ("kz_governor", "총독부 협력", "Cooperate with the Governorate", "총독부에 협력해 숨 돌릴 틈을 번다. 안정도가 오르지만 저항이 식는다.", "Cooperate with the governorate to buy breathing space. Stability rises, resistance cools.", 10, ["kz_levy"],
      ["add_stability = 0.05", "add_political_power = 75"]),
@@ -156,7 +156,7 @@ def loc():
     for i, k, e, dk, de, *_ in KZ:
         ko += [' %s%s:0 "%s"' % (P, i, k), ' %s%s_desc:0 "%s"' % (P, i, dk)]
         en += [' %s%s:0 "%s"' % (P, i, e), ' %s%s_desc:0 "%s"' % (P, i, de)]
-    ko += [' TU_VIC_confessor_leader:0 "고해신부"', ' TU_VIC_reed_leader:0 "리드"', ' TU_VIC_faust_commander:0 "파이스트"',
+    ko += [' TU_VIC_confessor_leader:0 "고해신부"', ' TU_VIC_reed_leader:0 "리드"', ' TU_VIC_faust_leader:0 "파이스트"', ' TU_VIC_wellington_leader:0 "웰링턴"', ' TU_VIC_theresis_leader:0 "테레시스"',
            ' TU_VIC_asl_exemplars:0 "모범군 개편"', ' TU_VIC_asl_exemplars_desc:0 "아슬란 복위군의 정예를 \'모범군\'으로 개편한다. \'특수 프로젝트\'에서 모범군 사단을 세울 수 있다."',
            ' TU_VIC_red_fog:0 "붉은 안개"', ' TU_VIC_red_fog_desc:0 "론디니움 하늘의 붉은 안개 아래 왕좌는 비어 있고, 사람들은 불안해한다. 안정도 -5%, 정치력 -10%, 전쟁 지지 -5%. 사변이 끝나면 걷힌다."',
            ' TU_VIC_kz_extortion:0 "카즈델의 강탈"', ' TU_VIC_kz_extortion_desc:0 "카즈델이 보호를 대가로 공업을 징발한다. 공장 출력 -25%, 안정도 -10%."',
@@ -164,7 +164,7 @@ def loc():
            ' tu_vic_ev.41.a:0 "철혈의 대공 의회. (캐스터 공작)"', ' tu_vic_ev.41.b:0 "아슬란의 새벽. (비나 빅토리아)"',
            ' tu_vic_ev.41.c:0 "자줏빛 불꽃. (에블라나 / 웰링턴)"', ' tu_vic_ev.41.e:0 "자구군 혁명. (클로비시아 / 파이스트)"',
            ' tu_vic_ev.41.f:0 "가장 큰 세력을 따른다."', ' tu_vic_ev.41.g:0 "살카즈의 용광로. (테레시스 / 고해신부)"']
-    en += [' TU_VIC_confessor_leader:0 "The Confessor"', ' TU_VIC_reed_leader:0 "Reed"', ' TU_VIC_faust_commander:0 "Faust"',
+    en += [' TU_VIC_confessor_leader:0 "The Confessor"', ' TU_VIC_reed_leader:0 "Reed"', ' TU_VIC_faust_leader:0 "Faust"', ' TU_VIC_wellington_leader:0 "Wellington"', ' TU_VIC_theresis_leader:0 "Theresis"',
            ' TU_VIC_asl_exemplars:0 "Reform into the Exemplars"', ' TU_VIC_asl_exemplars_desc:0 "Reorganise the elite of the Aslan restoration army as the Exemplars. Exemplar divisions can be raised from Special Projects."',
            ' TU_VIC_red_fog:0 "The Red Fog"', ' TU_VIC_red_fog_desc:0 "Under the red fog over Londinium the throne is empty and people are uneasy. Stability -5%, political power -10%, war support -5%. It lifts when the Incident ends."',
            ' TU_VIC_kz_extortion:0 "Kazdel\'s Extortion"', ' TU_VIC_kz_extortion_desc:0 "Kazdel levies industry in return for protection. Factory output -25%, stability -10%."',
@@ -172,6 +172,9 @@ def loc():
            ' tu_vic_ev.41.a:0 "The Iron-Blood Ducal Council. (Duke Caster)"', ' tu_vic_ev.41.b:0 "The Dawn of Aslan. (Vina Victoria)"',
            ' tu_vic_ev.41.c:0 "The Purple Flame. (Eblana / Wellington)"', ' tu_vic_ev.41.e:0 "Revolution of the Self-Salvation Corps. (Clovisia / Faust)"',
            ' tu_vic_ev.41.f:0 "Follow the strongest faction."', ' tu_vic_ev.41.g:0 "The Sarkaz Crucible. (Theresis / the Confessor)"']
+    lk, le = leader_loc()
+    ko += lk
+    en += le
     # 이벤트 본문의 수치는 변수 표기로
     ko = [l.replace("귀족 %s · 왕당 %s · 타라 %s · 개혁 %s", "귀족 [?TU_VIC_f_noble|0] · 왕당 [?TU_VIC_f_royal|0] · 타라 [?TU_VIC_f_tara|0] · 개혁 [?TU_VIC_f_reform|0]") for l in ko]
     en = [l.replace("Nobles %s · Royalists %s · Tara %s · Reformists %s", "Nobles [?TU_VIC_f_noble|0] · Royalists [?TU_VIC_f_royal|0] · Tara [?TU_VIC_f_tara|0] · Reformists [?TU_VIC_f_reform|0]") for l in en]
@@ -293,7 +296,60 @@ country_event = {
 	immediate = { TU_VIC_calc_factions = yes }
 
 """ + "\n".join(opts) + "}\n"
+    t += leader_events()
     ev.write_text(t, encoding="utf-8")
+
+
+# 지도자 후보 이벤트 (42 타라, 43 자구군, 44 살카즈): (옵션, 캐릭터, 이념, 한국어, 영어, 조건)
+LEADER_EV = {
+    42: ("tu_vic_drc_draco_leader", "자줏빛 불꽃의 지도자", "Leader of the Purple Flame", "누가 자줏빛 불꽃을 이끌 것인가.", "Who will lead the Purple Flame?", [
+        ("a", "TU_VIC_draco_leader", "fascism_ideology", "에블라나", "Eblana", ""),
+        ("b", "TU_VIC_wellington_leader", "fascism_ideology", "웰링턴", "Wellington", ""),
+        ("c", "TU_VIC_reed_leader", "fascism_ideology", "리드", "Reed", "check_variable = { TU_VIC_loyalty_wellington > 79 }")]),
+    43: ("tu_vic_par_pm_election", "자구군 혁명의 지도자", "Leader of the Self-Salvation Revolution", "누가 새 공화정을 이끌 것인가.", "Who will lead the new republic?", [
+        ("a", "TU_VIC_parliament_leader", "liberalism", "클로비시아", "Clovisia", ""),
+        ("b", "TU_VIC_faust_leader", "liberalism", "파이스트", "Faust", "")]),
+    44: ("tu_vic_kz_head", "살카즈의 용광로의 얼굴", "The Face of the Sarkaz Crucible", "빅토리아를 누구의 이름으로 다스릴 것인가.", "In whose name will Victoria be ruled?", [
+        ("a", "TU_VIC_theresis_leader", "fascism_ideology", "테레시스", "Theresis", ""),
+        ("b", "TU_VIC_confessor_leader", "fascism_ideology", "고해신부", "The Confessor", "")]),
+}
+
+
+def leader_events():
+    out = ""
+    for n, (_, _, _, _, _, opts) in LEADER_EV.items():
+        body = ""
+        for key, ch, ideo, k, e, trig in opts:
+            body += """	option = {
+		name = tu_vic_ev.%d.%s
+%s		ai_chance = { factor = 10 }
+		recruit_character = %s
+		promote_character = { character = %s ideology = %s }
+	}
+""" % (n, key, ("\t\ttrigger = { %s }\n" % trig) if trig else "", ch, ch, ideo)
+        out += """
+# %d. leader candidates of an Act 2 route (spec 80).
+country_event = {
+	id = tu_vic_ev.%d
+	title = tu_vic_ev.%d.t
+	desc = tu_vic_ev.%d.d
+	picture = GFX_report_event_generic_conference
+	is_triggered_only = yes
+
+%s}
+""" % (n, n, n, n, body)
+    return out
+
+
+def leader_loc():
+    ko, en = [], []
+    for n, (_, tk, te, dk, de, opts) in LEADER_EV.items():
+        ko += [' tu_vic_ev.%d.t:0 "%s"' % (n, tk), ' tu_vic_ev.%d.d:0 "%s"' % (n, dk)]
+        en += [' tu_vic_ev.%d.t:0 "%s"' % (n, te), ' tu_vic_ev.%d.d:0 "%s"' % (n, de)]
+        for key, ch, ideo, k, e, trig in opts:
+            ko.append(' tu_vic_ev.%d.%s:0 "%s"' % (n, key, k))
+            en.append(' tu_vic_ev.%d.%s:0 "%s"' % (n, key, e))
+    return ko, en
 
 
 def patch_existing():
