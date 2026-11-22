@@ -21,9 +21,17 @@ NF = HERE.parents[1] / "terra_universalis" / "common" / "national_focus"
 GAP = 4
 
 # chain: 뿌리와 겹친 칸 사이에 끼는 중점 (예: 빅토리아의 '대공 회의 소집'). under_chain: 머리가 chain 끝 아래에 붙는 칸의 번호.
+# fixed: 1막처럼 모양이 정해진 중점 {id: (dx, dy)} — dx 는 칸 가운데 기준, dy 는 뿌리 기준. under_chain 칸의 머리는 fixed 의 가장 깊은 줄 아래에 붙는다.
 ORDER = {
-    "VIC": dict(root="TU_VIC_crown_focus", center=0, chain=["TU_VIC_dukes_summit"], under_chain=[0], slots=[
-        ["TU_VIC_duk_route", "TU_VIC_glasgow_return", "TU_VIC_dublinn_uprising", "TU_VIC_par_route"],
+    "VIC": dict(root="TU_VIC_crown_focus", center=0, chain=["TU_VIC_dukes_summit"], under_chain=[0], fixed={
+        "TU_VIC_a1_glasgow": (-14, 2), "TU_VIC_a1_royal_guard": (-14, 3),
+        "TU_VIC_a1_mobilize": (-8, 2), "TU_VIC_a1_selfsalv": (0, 2), "TU_VIC_a1_wellington": (8, 2),
+        "TU_VIC_a1_noble_levy": (-10, 3), "TU_VIC_a1_noble_council": (-8, 3), "TU_VIC_a1_noble_army": (-6, 3),
+        "TU_VIC_a1_reform_press": (-2, 3), "TU_VIC_a1_reform_rhodes": (0, 3), "TU_VIC_a1_reform_militia": (2, 3),
+        "TU_VIC_a1_tara_envoy": (6, 3), "TU_VIC_a1_tara_ls": (8, 3), "TU_VIC_a1_tara_junta": (10, 3),
+        "TU_VIC_a1_siege": (0, 4), "TU_VIC_a1_shard_stop": (0, 5), "TU_VIC_a1_end": (0, 6),
+    }, slots=[
+        ["TU_VIC_duk_route", "TU_VIC_glasgow_return", "TU_VIC_dublinn_uprising", "TU_VIC_par_route", "TU_VIC_kz_head"],
         ["TU_VIC_exp_mandate"],
         ["TU_VIC_eco_industry_charter"],
         ["TU_VIC_eco_knight_recruit"],
@@ -73,10 +81,14 @@ def apply(tag):
     fs = parse(text)
     root = cfg["root"]
     chain = cfg.get("chain", [])
-    newx, newy, cursor, placed = {}, {root: fs[root]["y"]}, 0, set(chain)
+    fixed = cfg.get("fixed", {})
+    depth = max([len(chain)] + [dy for _, dy in fixed.values()])
+    newx, newy, cursor, placed = {}, {root: fs[root]["y"]}, 0, set(chain) | set(fixed)
     centers = []
     for si, slot in enumerate(cfg["slots"]):
         width = 0
+        if si in cfg.get("under_chain", []) and fixed:
+            width = 2 * max(abs(dx) for dx, _ in fixed.values())
         for head in slot:
             mem = block_of(head, fs, root)
             assert not (mem & placed), (head, sorted(mem & placed))
@@ -89,7 +101,7 @@ def apply(tag):
             lo = min(fs[m]["x"] for m in mem)
             hi = max(fs[m]["x"] for m in mem)
             off = cursor + (width - (hi - lo)) // 2 - lo       # 좁은 덩어리는 칸 가운데
-            top = fs[root]["y"] + 1 + (len(chain) if si in cfg.get("under_chain", []) else 0)
+            top = fs[root]["y"] + 1 + (depth if si in cfg.get("under_chain", []) else 0)
             dy = top - fs[head]["y"]                           # 덩어리의 머리는 뿌리(또는 chain 끝) 바로 아랫줄 (autolayout 이 아래로 내린 덩어리를 올린다)
             for m in mem:
                 newx[m] = fs[m]["x"] + off
@@ -102,6 +114,9 @@ def apply(tag):
     for i, c in enumerate(chain):
         newx[c] = centers[cfg["center"]]
         newy[c] = fs[root]["y"] + 1 + i
+    for c, (dx, dy) in fixed.items():
+        newx[c] = centers[cfg["under_chain"][0]] + dx
+        newy[c] = fs[root]["y"] + dy
     shift = newx[root]                                         # 뿌리를 x = 0 에 (initial_show_position)
     newx = {k: v - shift for k, v in newx.items()}
 

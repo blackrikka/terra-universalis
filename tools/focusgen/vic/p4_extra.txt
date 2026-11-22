@@ -1,0 +1,253 @@
+	focus = {
+		id = TU_VIC_kz_head
+		icon = GFX_goal_generic_neutrality_focus
+		prerequisite = { focus = TU_VIC_a1_end }
+		x = 0
+		y = 0
+		cost = 5
+		allow_branch = {
+			has_country_flag = TU_VIC_route_kzd
+		}
+
+		search_filters = { FOCUS_FILTER_POLITICAL }
+
+		ai_will_do = {
+			base = 1
+		}
+
+		completion_reward = {
+			KZD = { puppet = VIC }
+			add_ideas = TU_VIC_kz_extortion
+			set_country_flag = TU_VIC_kz_signed
+		}
+	}
+	focus = {
+		id = TU_VIC_kz_levy
+		icon = GFX_goal_generic_secret_weapon
+		prerequisite = { focus = TU_VIC_kz_head }
+		x = 0
+		y = 0
+		cost = 10
+		allow_branch = {
+			has_country_flag = TU_VIC_route_kzd
+		}
+
+		search_filters = { FOCUS_FILTER_POLITICAL }
+
+		ai_will_do = {
+			base = 1
+		}
+
+		completion_reward = {
+			add_political_power = 100
+		}
+	}
+	focus = {
+		id = TU_VIC_kz_governor
+		icon = GFX_goal_generic_secret_weapon
+		prerequisite = { focus = TU_VIC_kz_levy }
+		x = 0
+		y = 0
+		cost = 10
+		allow_branch = {
+			has_country_flag = TU_VIC_route_kzd
+		}
+
+		search_filters = { FOCUS_FILTER_POLITICAL }
+
+		ai_will_do = {
+			base = 1
+		}
+
+		completion_reward = {
+			add_stability = 0.05
+			add_political_power = 75
+		}
+	}
+	focus = {
+		id = TU_VIC_kz_dukes
+		icon = GFX_goal_generic_secret_weapon
+		prerequisite = { focus = TU_VIC_kz_governor }
+		x = 0
+		y = 0
+		cost = 10
+		allow_branch = {
+			has_country_flag = TU_VIC_route_kzd
+		}
+
+		search_filters = { FOCUS_FILTER_POLITICAL }
+
+		ai_will_do = {
+			base = 1
+		}
+
+		completion_reward = {
+			add_to_variable = { TU_VIC_loyalty_caster = 8 }
+			add_to_variable = { TU_VIC_loyalty_wellington = 8 }
+			add_to_variable = { TU_VIC_loyalty_windermere = 8 }
+			add_to_variable = { TU_VIC_loyalty_godolphin = 8 }
+			add_to_variable = { TU_VIC_loyalty_normandy = 8 }
+			add_to_variable = { TU_VIC_loyalty_abercorn = 8 }
+			add_to_variable = { TU_VIC_loyalty_stafford = 8 }
+			add_to_variable = { TU_VIC_loyalty_fife = 8 }
+		}
+	}
+	focus = {
+		id = TU_VIC_kz_resist
+		icon = GFX_goal_generic_secret_weapon
+		prerequisite = { focus = TU_VIC_kz_levy }
+		x = 0
+		y = 0
+		cost = 10
+		allow_branch = {
+			has_country_flag = TU_VIC_route_kzd
+		}
+
+		search_filters = { FOCUS_FILTER_POLITICAL }
+
+		ai_will_do = {
+			base = 1
+		}
+
+		completion_reward = {
+			add_manpower = 30000
+			army_experience = 40
+		}
+	}
+	focus = {
+		id = TU_VIC_kz_arms
+		icon = GFX_goal_generic_secret_weapon
+		prerequisite = { focus = TU_VIC_kz_resist }
+		x = 0
+		y = 0
+		cost = 10
+		allow_branch = {
+			has_country_flag = TU_VIC_route_kzd
+		}
+
+		search_filters = { FOCUS_FILTER_POLITICAL }
+
+		ai_will_do = {
+			base = 1
+		}
+
+		completion_reward = {
+			add_equipment_to_stockpile = { type = infantry_equipment amount = 3000 producer = VIC }
+			TU_build_mil_factory = yes
+		}
+	}
+	focus = {
+		id = TU_VIC_kz_strikes
+		icon = GFX_goal_generic_secret_weapon
+		prerequisite = { focus = TU_VIC_kz_resist }
+		x = 0
+		y = 0
+		cost = 10
+		allow_branch = {
+			has_country_flag = TU_VIC_route_kzd
+		}
+
+		search_filters = { FOCUS_FILTER_POLITICAL }
+
+		ai_will_do = {
+			base = 1
+		}
+
+		completion_reward = {
+			add_political_power = 50
+			TU_build_civ_factory = yes
+		}
+	}
+	focus = {
+		id = TU_VIC_kz_shard
+		icon = GFX_goal_generic_secret_weapon
+		prerequisite = { focus = TU_VIC_kz_arms }
+		prerequisite = { focus = TU_VIC_kz_strikes }
+		x = 0
+		y = 0
+		cost = 15
+		allow_branch = {
+			has_country_flag = TU_VIC_route_kzd
+		}
+
+		search_filters = { FOCUS_FILTER_POLITICAL }
+
+		ai_will_do = {
+			base = 1
+		}
+
+		completion_reward = {
+			remove_ideas = TU_VIC_shard_aftermath
+			add_stability = 0.05
+		}
+	}
+	focus = {
+		id = TU_VIC_kz_uprising
+		icon = GFX_goal_generic_secret_weapon
+		prerequisite = { focus = TU_VIC_kz_shard }
+		x = 0
+		y = 0
+		cost = 15
+		allow_branch = {
+			has_country_flag = TU_VIC_route_kzd
+		}
+
+		search_filters = { FOCUS_FILTER_POLITICAL }
+
+		ai_will_do = {
+			base = 1
+		}
+
+		completion_reward = {
+			if = { limit = { country_exists = KZD } KZD = { end_puppet = VIC } }
+			army_experience = 50
+			add_war_support = 0.10
+		}
+	}
+	focus = {
+		id = TU_VIC_kz_free
+		icon = GFX_goal_generic_secret_weapon
+		prerequisite = { focus = TU_VIC_kz_uprising }
+		x = 0
+		y = 0
+		cost = 15
+		allow_branch = {
+			has_country_flag = TU_VIC_route_kzd
+		}
+
+		search_filters = { FOCUS_FILTER_POLITICAL }
+
+		ai_will_do = {
+			base = 1
+		}
+
+		completion_reward = {
+			remove_ideas = TU_VIC_kz_extortion
+			TU_build_civ_factory = yes
+			TU_build_civ_factory = yes
+			add_stability = 0.10
+		}
+	}
+	focus = {
+		id = TU_VIC_asl_exemplars
+		icon = GFX_goal_generic_army_tanks
+		prerequisite = { focus = TU_VIC_asl_royal_army }
+		x = 0
+		y = 0
+		cost = 15
+		allow_branch = {
+			has_country_flag = TU_VIC_route_asl
+		}
+
+		search_filters = { FOCUS_FILTER_POLITICAL }
+
+		ai_will_do = {
+			base = 1
+		}
+
+		completion_reward = {
+			set_country_flag = TU_VIC_exemplars_unlocked
+			army_experience = 30
+			add_stability = 0.03
+		}
+	}

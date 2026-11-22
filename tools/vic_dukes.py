@@ -120,6 +120,11 @@ def effects(est):
               "\t\tif = { limit = { NOT = { has_country_flag = TU_VIC_warned_%s } } set_country_flag = TU_VIC_warned_%s country_event = { id = tu_vic_dukes.%d } }" % (
                   d, d, [x[0] for x in DUKES].index(d) + 1),
               "\t}", "\tif = { limit = { check_variable = { TU_VIC_loyalty_%s > 54 } } clr_country_flag = TU_VIC_warned_%s }" % (d, d)]
+    for d, tpl in (("wellington", "TU_VIC_wellington_ls"), ("windermere", "TU_VIC_windermere_bc")):
+        m += ["\t# 충성도 %d 미만이면 %s 편제를 잠근다 (편집·배치 불가)" % (LOYAL_MIN, d),
+              "\tif = {", "\t\tlimit = { check_variable = { TU_VIC_loyalty_%s < %d } }" % (d, LOYAL_MIN),
+              "\t\tset_division_template_lock = { division_template = \"%s\" is_locked = yes }" % tpl, "\t}",
+              "\telse = {", "\t\tset_division_template_lock = { division_template = \"%s\" is_locked = no }" % tpl, "\t}"]
     m += ["\t# 파편 (론디니움을 되찾으면 멈춘다)",
           "\tif = {", "\t\tlimit = { NOT = { controls_state = %d } NOT = { has_country_flag = TU_VIC_shard_fired } }" % LONDINIUM,
           "\t\tadd_to_variable = { TU_VIC_shard = %d }" % SHARD_MONTHLY,

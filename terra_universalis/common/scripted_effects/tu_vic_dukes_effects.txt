@@ -186,6 +186,22 @@ TU_VIC_dukes_monthly = {
 		if = { limit = { NOT = { has_country_flag = TU_VIC_warned_fife } } set_country_flag = TU_VIC_warned_fife country_event = { id = tu_vic_dukes.8 } }
 	}
 	if = { limit = { check_variable = { TU_VIC_loyalty_fife > 54 } } clr_country_flag = TU_VIC_warned_fife }
+	# 충성도 40 미만이면 wellington 편제를 잠근다 (편집·배치 불가)
+	if = {
+		limit = { check_variable = { TU_VIC_loyalty_wellington < 40 } }
+		set_division_template_lock = { division_template = "TU_VIC_wellington_ls" is_locked = yes }
+	}
+	else = {
+		set_division_template_lock = { division_template = "TU_VIC_wellington_ls" is_locked = no }
+	}
+	# 충성도 40 미만이면 windermere 편제를 잠근다 (편집·배치 불가)
+	if = {
+		limit = { check_variable = { TU_VIC_loyalty_windermere < 40 } }
+		set_division_template_lock = { division_template = "TU_VIC_windermere_bc" is_locked = yes }
+	}
+	else = {
+		set_division_template_lock = { division_template = "TU_VIC_windermere_bc" is_locked = no }
+	}
 	# 파편 (론디니움을 되찾으면 멈춘다)
 	if = {
 		limit = { NOT = { controls_state = 117 } NOT = { has_country_flag = TU_VIC_shard_fired } }

@@ -25,9 +25,11 @@
 		search_filters = { FOCUS_FILTER_POLITICAL }
 
 		completion_reward = {
+			add_ideas = TU_VIC_red_fog
+			set_country_flag = TU_VIC_act1_started
 			add_political_power = 35
 			add_stability = 0.02
-			country_event = { id = tu_vic_ev.40 }
+			
 		}
 	}
 
@@ -98,7 +100,7 @@
 
 	focus = {
 		id = TU_VIC_glasgow_return
-		prerequisite = { focus = TU_VIC_dukes_summit }
+		prerequisite = { focus = TU_VIC_a1_end }
 		icon = GFX_goal_generic_demand_territory
 		x = -4
 		y = 2
@@ -186,7 +188,7 @@
 
 	focus = {
 		id = TU_VIC_dublinn_uprising
-		prerequisite = { focus = TU_VIC_dukes_summit }
+		prerequisite = { focus = TU_VIC_a1_end }
 		icon = GFX_goal_generic_defence
 		x = 4
 		y = 2

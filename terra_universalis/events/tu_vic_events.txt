@@ -768,3 +768,74 @@ country_event = {
 		mark_focus_tree_layout_dirty = yes
 	}
 }
+
+# 41. Focus TU_VIC_a1_end: the end of the Londinium Incident decides the route of Act 2 (spec 80).
+country_event = {
+	id = tu_vic_ev.41
+	title = tu_vic_ev.41.t
+	desc = tu_vic_ev.41.d
+	picture = GFX_report_event_generic_conference
+	is_triggered_only = yes
+
+	immediate = { TU_VIC_calc_factions = yes }
+
+	option = {
+		name = tu_vic_ev.41.a
+		trigger = {
+			NOT = { has_country_flag = TU_VIC_shard_fired }
+			check_variable = { TU_VIC_f_noble > 79 }
+		}
+		ai_chance = { factor = 25 }
+		set_country_flag = TU_VIC_route_duk
+		mark_focus_tree_layout_dirty = yes
+	}
+
+	option = {
+		name = tu_vic_ev.41.b
+		trigger = {
+			NOT = { has_country_flag = TU_VIC_shard_fired }
+			check_variable = { TU_VIC_f_royal > 79 }
+		}
+		ai_chance = { factor = 25 }
+		set_country_flag = TU_VIC_route_asl
+		mark_focus_tree_layout_dirty = yes
+	}
+
+	option = {
+		name = tu_vic_ev.41.c
+		trigger = {
+			NOT = { has_country_flag = TU_VIC_shard_fired }
+			check_variable = { TU_VIC_f_tara > 79 }
+		}
+		ai_chance = { factor = 20 }
+		set_country_flag = TU_VIC_route_drc
+		mark_focus_tree_layout_dirty = yes
+	}
+
+	option = {
+		name = tu_vic_ev.41.e
+		trigger = {
+			NOT = { has_country_flag = TU_VIC_shard_fired }
+			check_variable = { TU_VIC_f_reform > 79 }
+		}
+		ai_chance = { factor = 30 }
+		set_country_flag = TU_VIC_route_par
+		mark_focus_tree_layout_dirty = yes
+	}
+
+	option = {
+		name = tu_vic_ev.41.f
+		trigger = { NOT = { has_country_flag = TU_VIC_shard_fired } }
+		ai_chance = { factor = 10 }
+		TU_VIC_pick_strongest = yes
+		mark_focus_tree_layout_dirty = yes
+	}
+
+	option = {
+		name = tu_vic_ev.41.g
+		trigger = { has_country_flag = TU_VIC_shard_fired }
+		ai_chance = { factor = 100 }
+		set_country_flag = TU_VIC_route_kzd
+		mark_focus_tree_layout_dirty = yes
+	}
+}
