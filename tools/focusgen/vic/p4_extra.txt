@@ -19,6 +19,8 @@
 			KZD = { puppet = VIC }
 			add_ideas = TU_VIC_kz_extortion
 			set_country_flag = TU_VIC_kz_signed
+			recruit_character = TU_VIC_confessor_leader
+			promote_character = { character = TU_VIC_confessor_leader ideology = fascism_ideology }
 		}
 	}
 	focus = {

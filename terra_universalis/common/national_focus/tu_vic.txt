@@ -1502,11 +1502,16 @@ focus_tree = {
 		}
 
 		completion_reward = {
-			recruit_character = TU_VIC_draco_leader
-			set_politics = { ruling_party = fascism elections_allowed = no }
-			promote_character = {
-				character = TU_VIC_draco_leader
-				ideology = fascism_ideology
+			if = {
+				limit = { check_variable = { TU_VIC_loyalty_wellington > 79 } }
+				recruit_character = TU_VIC_reed_leader
+				set_politics = { ruling_party = fascism elections_allowed = no }
+				promote_character = { character = TU_VIC_reed_leader ideology = fascism_ideology }
+			}
+			else = {
+				recruit_character = TU_VIC_draco_leader
+				set_politics = { ruling_party = fascism elections_allowed = no }
+				promote_character = { character = TU_VIC_draco_leader ideology = fascism_ideology }
 			}
 			set_politics = {
 				ruling_party = fascism
@@ -1872,6 +1877,7 @@ focus_tree = {
 
 		completion_reward = {
 			recruit_character = TU_VIC_parliament_leader
+			recruit_character = TU_VIC_faust_commander
 			set_politics = { ruling_party = democratic elections_allowed = yes }
 			promote_character = {
 				character = TU_VIC_parliament_leader
@@ -3953,6 +3959,9 @@ focus_tree = {
 			KZD = { puppet = VIC }
 			add_ideas = TU_VIC_kz_extortion
 			set_country_flag = TU_VIC_kz_signed
+			recruit_character = TU_VIC_confessor_leader
+			set_politics = { ruling_party = fascism elections_allowed = no }
+			promote_character = { character = TU_VIC_confessor_leader ideology = fascism_ideology }
 		}
 	}
 	focus = {

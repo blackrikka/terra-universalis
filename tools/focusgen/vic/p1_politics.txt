@@ -845,10 +845,14 @@
 		}
 
 		completion_reward = {
-			recruit_character = TU_VIC_draco_leader
-			promote_character = {
-				character = TU_VIC_draco_leader
-				ideology = fascism_ideology
+			if = {
+				limit = { check_variable = { TU_VIC_loyalty_wellington > 79 } }
+				recruit_character = TU_VIC_reed_leader
+				promote_character = { character = TU_VIC_reed_leader ideology = fascism_ideology }
+			}
+			else = {
+				recruit_character = TU_VIC_draco_leader
+				promote_character = { character = TU_VIC_draco_leader ideology = fascism_ideology }
 			}
 			set_politics = {
 				ruling_party = fascism
@@ -1214,6 +1218,7 @@
 
 		completion_reward = {
 			recruit_character = TU_VIC_parliament_leader
+			recruit_character = TU_VIC_faust_commander
 			promote_character = {
 				character = TU_VIC_parliament_leader
 				ideology = liberalism

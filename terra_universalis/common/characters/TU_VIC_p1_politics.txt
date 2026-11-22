@@ -64,4 +64,50 @@ characters = {
 		}
 	}
 
+
+	TU_VIC_reed_leader = {
+		name = TU_VIC_reed_leader
+		portraits = {
+			civilian = {
+				large = "GFX_Portrait_Europe_Generic_2"
+			}
+		}
+		country_leader = { traits = { tu_lt_draco_flame }
+			ideology = fascism_ideology
+			expire = "1200.1.1.1"
+			id = -1
+		}
+	}
+
+	TU_VIC_confessor_leader = {
+		name = TU_VIC_confessor_leader
+		portraits = {
+			civilian = {
+				large = "GFX_Portrait_Europe_Generic_3"
+			}
+		}
+		country_leader = { traits = { tu_lt_draco_flame }
+			ideology = fascism_ideology
+			expire = "1200.1.1.1"
+			id = -1
+		}
+	}
+
+	TU_VIC_faust_commander = {
+		name = TU_VIC_faust_commander
+		portraits = {
+			civilian = {
+				large = "GFX_Portrait_Europe_Generic_1"
+			}
+		}
+		corps_commander = {
+			traits = { guerilla_fighter }
+			skill = 4
+			attack_skill = 4
+			defense_skill = 3
+			planning_skill = 3
+			logistics_skill = 3
+			legacy_id = 0
+		}
+	}
 }
