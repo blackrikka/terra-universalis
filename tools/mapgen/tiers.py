@@ -46,6 +46,7 @@ TIERS = {
     "MIN": ("B", 8, 3, 6, 250), "KJE": ("B", 6, 3, 6, 120),
     "SAM": ("C", 3, 2, 6, 40), "RHO": ("C", 4, 3, 5, 30),
 }
+OCCUPIED = {117}                   # 사양서 80: 시작 때 점거된 론디니움은 체급 분배에서 뺀다 (공장은 vic_start.py 가 정한다)
 BASE_CIV, BASE_MIL = 2, 1          # mapgen 이 모든 수도에 넣은 공장
 # 손으로 만든 OOB 가 있는 나라: 주력 사단 틀 (예전 시작 효과 TU_<TAG>_startup 이 만들던 사단도 이제 OOB 에 넣는다)
 EXISTING = {"URS": "TU_URS_infantry", "VIC": "TU_VIC_line_infantry", "KZD": "TU_KZD_infantry",
@@ -156,6 +157,10 @@ def set_units(oob, units):
     oob.write_text(s, encoding="utf-8")
 
 
+SLOTS = {"city": 6, "large_city": 8, "large_town": 5, "town": 4, "rural": 2, "pastoral": 1, "small_island": 1, "tu_hex": 1,
+         "large_island": 3, "tiny_island": 0, "wasteland": 0, "enclave": 0}      # 바닐라 state_category 칸 (validate_map.py 와 같다)
+
+
 def set_state_factories(f, civ, mil, extra):
     """주 히스토리: buildings 의 industrial_complex / arms_factory 를 바꾸고, 공유 건설 슬롯을 extra 만큼 늘린다 (다시 돌려도 같다)."""
     s = f.read_text(encoding="utf-8-sig")
@@ -165,6 +170,11 @@ def set_state_factories(f, civ, mil, extra):
     ind = m.group(2) + "\t"
     add = "".join("\n%s%s = %d" % (ind, k, v) for k, v in (("industrial_complex", civ), ("arms_factory", mil)) if v)
     s = s[:m.end()] + add + s[m.end():]
+    # 필요한 칸: 공장 + 공군 기지 (수도). 분류가 주는 칸을 빼고 모자란 만큼, 그러나 예전처럼 체급 몫(extra)보다 적게는 두지 않는다
+    cat = re.search(r"state_category\s*=\s*(\w+)", s)
+    slots = SLOTS.get(cat.group(1) if cat else "", 1)
+    need = civ + mil + (1 if re.search(r"\bair_base\s*=\s*[1-9]", s) else 0)
+    extra = max(extra, need - slots)
     if extra:
         s = s[:m.start()] + "\n%sadd_extra_state_shared_building_slots = %d" % (m.group(2), extra) + s[m.start():]
     f.write_text(s, encoding="utf-8")
@@ -219,7 +229,7 @@ def set_population(st, caps):
     geo = province_geo()
     for tag, t in TIERS.items():
         pop = int(t[4] * POP_SCALE * 10000)
-        own = [s for s, d in st.items() if d["owner"] == tag and not d["impassable"]]
+        own = [s for s, d in st.items() if d["owner"] == tag and not d["impassable"] and s not in OCCUPIED]
         if not own:
             continue
         w = {s: pop_weight(st, s, caps.get(tag), geo) for s in own}
@@ -245,7 +255,7 @@ def main():
         if cap is None:
             print("skip (no capital):", tag)
             continue
-        own = sorted((s for s, d in st.items() if d["owner"] == tag and s != cap and not d["impassable"]),
+        own = sorted((s for s, d in st.items() if d["owner"] == tag and s != cap and not d["impassable"] and s not in OCCUPIED),
                      key=lambda s: (-st[s]["mp"], s))
         places = [cap] + own[:3]
         civ_add = split(max(civ - BASE_CIV, 0), len(places))

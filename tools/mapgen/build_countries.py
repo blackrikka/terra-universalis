@@ -442,6 +442,9 @@ def main(argv=None):
         if capital_state[tag] not in state_ids:
             raise BuildError("국가 %s: 수도 주 %s가 주 목록에 없음" % (tag, capital_state[tag]))
         capital_of[tag] = capital_state[tag]
+        ov = OUT_DIR.parent / "terra" / "capital_overrides.json"       # 사양서 80: 시작 때 수도가 점거된 나라 (빅토리아)
+        if ov.is_file():
+            capital_of[tag] = json.loads(ov.read_text()).get(tag, capital_of[tag])
     unknown = sorted(state_owners - {c["tag"] for c in countries})
     if unknown:
         raise BuildError("주 소유국이 countries.json에 없음: %s" % ", ".join(unknown))
