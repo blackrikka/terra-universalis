@@ -39,6 +39,9 @@ TEMPLATES = {
     "TU_KAZ_knights": ([("cavalry", 6), ("artillery_brigade", 1)], []),
     "TU_LAT_guard": ([("infantry", 6), ("artillery_brigade", 1)], []),
     "TU_SAR_mercs": ([("infantry", 4), ("cavalry", 2), ("artillery_brigade", 1)], []),
+    # 빅토리아 공작의 정예 사단 (사양서 80): 육상전함 30폭, 전선 돌파군 20폭
+    "TU_VIC_wellington_ls": ([("infantry", 6), ("artillery_brigade", 6)], ["engineer", "recon"]),
+    "TU_VIC_windermere_bc": ([("light_armor", 4), ("infantry", 4)], ["recon"]),
     "TU_SIR_enforcers": ([("infantry", 6), ("artillery_brigade", 1)], []),                      # 사양서 69: 감비노 행동대
     "TU_SIR_wolf_pack": ([("cavalry", 4), ("infantry", 2), ("artillery_brigade", 1)], []),      # 사양서 69: 늑대 무리
     "TU_YAN_faction_guard": ([("infantry", 6), ("artillery_brigade", 1)], []),

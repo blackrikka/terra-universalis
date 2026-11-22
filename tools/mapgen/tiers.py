@@ -52,7 +52,9 @@ BASE_CIV, BASE_MIL = 2, 1          # mapgen 이 모든 수도에 넣은 공장
 EXISTING = {"URS": "TU_URS_infantry", "VIC": "TU_VIC_line_infantry", "KZD": "TU_KZD_infantry",
             "YAN": "TU_YAN_infantry", "LGM": "TU_LGM_guard", "RHO": "TU_RHO_escort"}
 # 이름 붙은 특별 사단 (수도에 둔다): (이름, 틀)
-SPECIAL_UNITS = {"RHO": [("Rhodes Island Escort 1", "TU_RHO_escort"), ("Rhodes Island Escort 2", "TU_RHO_escort"),
+SPECIAL_UNITS = {"VIC": [("Wellington Land Battleship Division", "TU_VIC_wellington_ls"),
+                         ("Windermere Breakthrough Corps", "TU_VIC_windermere_bc")],
+                 "RHO": [("Rhodes Island Escort 1", "TU_RHO_escort"), ("Rhodes Island Escort 2", "TU_RHO_escort"),
                          ("Rhodes Island Operator Squad", "TU_RHO_operator_squad")]}
 RESEARCH_SLOTS = {"S": 4, "A": 3, "B": 3, "C": 2}
 BASIC = ["infantry_weapons", "tech_support", "gw_artillery", "basic_train", "tu_oripathy_research",

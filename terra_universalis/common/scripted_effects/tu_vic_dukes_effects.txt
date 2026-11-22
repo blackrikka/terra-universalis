@@ -1,0 +1,289 @@
+TU_VIC_dukes_init = {
+	# 영지 주에 공작 표시 (state flag). 이 효과는 on_startup 에서 VIC = { ... } 로 부른다 (ROOT 를 쓰지 않는다)
+	113 = { set_state_flag = TU_VIC_duke_caster }
+	944 = { set_state_flag = TU_VIC_duke_caster }
+	945 = { set_state_flag = TU_VIC_duke_caster }
+	946 = { set_state_flag = TU_VIC_duke_caster }
+	948 = { set_state_flag = TU_VIC_duke_caster }
+	955 = { set_state_flag = TU_VIC_duke_caster }
+	956 = { set_state_flag = TU_VIC_duke_caster }
+	957 = { set_state_flag = TU_VIC_duke_caster }
+	set_variable = { TU_VIC_loyalty_caster = 62 }
+	set_variable = { TU_VIC_influence_caster = 50 }
+	set_variable = { TU_VIC_share_caster = 0.2851 }
+	118 = { set_state_flag = TU_VIC_duke_wellington }
+	119 = { set_state_flag = TU_VIC_duke_wellington }
+	961 = { set_state_flag = TU_VIC_duke_wellington }
+	962 = { set_state_flag = TU_VIC_duke_wellington }
+	963 = { set_state_flag = TU_VIC_duke_wellington }
+	966 = { set_state_flag = TU_VIC_duke_wellington }
+	967 = { set_state_flag = TU_VIC_duke_wellington }
+	968 = { set_state_flag = TU_VIC_duke_wellington }
+	set_variable = { TU_VIC_loyalty_wellington = 48 }
+	set_variable = { TU_VIC_influence_wellington = 35 }
+	set_variable = { TU_VIC_share_wellington = 0.1140 }
+	111 = { set_state_flag = TU_VIC_duke_windermere }
+	112 = { set_state_flag = TU_VIC_duke_windermere }
+	126 = { set_state_flag = TU_VIC_duke_windermere }
+	941 = { set_state_flag = TU_VIC_duke_windermere }
+	942 = { set_state_flag = TU_VIC_duke_windermere }
+	943 = { set_state_flag = TU_VIC_duke_windermere }
+	975 = { set_state_flag = TU_VIC_duke_windermere }
+	976 = { set_state_flag = TU_VIC_duke_windermere }
+	set_variable = { TU_VIC_loyalty_windermere = 52 }
+	set_variable = { TU_VIC_influence_windermere = 30 }
+	set_variable = { TU_VIC_share_windermere = 0.1182 }
+	114 = { set_state_flag = TU_VIC_duke_godolphin }
+	120 = { set_state_flag = TU_VIC_duke_godolphin }
+	124 = { set_state_flag = TU_VIC_duke_godolphin }
+	131 = { set_state_flag = TU_VIC_duke_godolphin }
+	133 = { set_state_flag = TU_VIC_duke_godolphin }
+	960 = { set_state_flag = TU_VIC_duke_godolphin }
+	973 = { set_state_flag = TU_VIC_duke_godolphin }
+	974 = { set_state_flag = TU_VIC_duke_godolphin }
+	set_variable = { TU_VIC_loyalty_godolphin = 45 }
+	set_variable = { TU_VIC_influence_godolphin = 25 }
+	set_variable = { TU_VIC_share_godolphin = 0.1063 }
+	121 = { set_state_flag = TU_VIC_duke_normandy }
+	125 = { set_state_flag = TU_VIC_duke_normandy }
+	132 = { set_state_flag = TU_VIC_duke_normandy }
+	134 = { set_state_flag = TU_VIC_duke_normandy }
+	964 = { set_state_flag = TU_VIC_duke_normandy }
+	965 = { set_state_flag = TU_VIC_duke_normandy }
+	969 = { set_state_flag = TU_VIC_duke_normandy }
+	970 = { set_state_flag = TU_VIC_duke_normandy }
+	set_variable = { TU_VIC_loyalty_normandy = 55 }
+	set_variable = { TU_VIC_influence_normandy = 25 }
+	set_variable = { TU_VIC_share_normandy = 0.0881 }
+	115 = { set_state_flag = TU_VIC_duke_abercorn }
+	127 = { set_state_flag = TU_VIC_duke_abercorn }
+	128 = { set_state_flag = TU_VIC_duke_abercorn }
+	135 = { set_state_flag = TU_VIC_duke_abercorn }
+	950 = { set_state_flag = TU_VIC_duke_abercorn }
+	958 = { set_state_flag = TU_VIC_duke_abercorn }
+	959 = { set_state_flag = TU_VIC_duke_abercorn }
+	977 = { set_state_flag = TU_VIC_duke_abercorn }
+	set_variable = { TU_VIC_loyalty_abercorn = 50 }
+	set_variable = { TU_VIC_influence_abercorn = 20 }
+	set_variable = { TU_VIC_share_abercorn = 0.0912 }
+	122 = { set_state_flag = TU_VIC_duke_stafford }
+	123 = { set_state_flag = TU_VIC_duke_stafford }
+	130 = { set_state_flag = TU_VIC_duke_stafford }
+	971 = { set_state_flag = TU_VIC_duke_stafford }
+	972 = { set_state_flag = TU_VIC_duke_stafford }
+	978 = { set_state_flag = TU_VIC_duke_stafford }
+	979 = { set_state_flag = TU_VIC_duke_stafford }
+	980 = { set_state_flag = TU_VIC_duke_stafford }
+	set_variable = { TU_VIC_loyalty_stafford = 42 }
+	set_variable = { TU_VIC_influence_stafford = 20 }
+	set_variable = { TU_VIC_share_stafford = 0.0726 }
+	116 = { set_state_flag = TU_VIC_duke_fife }
+	129 = { set_state_flag = TU_VIC_duke_fife }
+	947 = { set_state_flag = TU_VIC_duke_fife }
+	949 = { set_state_flag = TU_VIC_duke_fife }
+	951 = { set_state_flag = TU_VIC_duke_fife }
+	952 = { set_state_flag = TU_VIC_duke_fife }
+	953 = { set_state_flag = TU_VIC_duke_fife }
+	954 = { set_state_flag = TU_VIC_duke_fife }
+	set_variable = { TU_VIC_loyalty_fife = 40 }
+	set_variable = { TU_VIC_influence_fife = 15 }
+	set_variable = { TU_VIC_share_fife = 0.1244 }
+	set_variable = { TU_VIC_shard = 0 }
+	set_variable = { TU_VIC_duke_ind = 0 }
+	set_variable = { TU_VIC_duke_stab = 0 }
+	add_dynamic_modifier = { modifier = TU_VIC_dukes_unrest }
+	activate_mission = TU_VIC_shard_mission
+}
+
+TU_VIC_dukes_monthly = {
+	set_variable = { TU_VIC_duke_ind = 0 }
+	set_variable = { TU_VIC_duke_stab = 0 }
+	clamp_variable = { var = TU_VIC_loyalty_caster min = 0 max = 100 }
+	clamp_variable = { var = TU_VIC_influence_caster min = 0 max = 100 }
+	# 파편이 절반을 넘으면 공작들은 흔들린다
+	if = { limit = { check_variable = { TU_VIC_shard > 49 } } add_to_variable = { TU_VIC_loyalty_caster = -1 } }
+	if = {
+		limit = { check_variable = { TU_VIC_loyalty_caster < 40 } }
+		add_to_variable = { TU_VIC_duke_ind = -0.1426 }
+		add_to_variable = { TU_VIC_duke_stab = -0.02 }
+		if = { limit = { NOT = { has_country_flag = TU_VIC_warned_caster } } set_country_flag = TU_VIC_warned_caster country_event = { id = tu_vic_dukes.1 } }
+	}
+	if = { limit = { check_variable = { TU_VIC_loyalty_caster > 54 } } clr_country_flag = TU_VIC_warned_caster }
+	clamp_variable = { var = TU_VIC_loyalty_wellington min = 0 max = 100 }
+	clamp_variable = { var = TU_VIC_influence_wellington min = 0 max = 100 }
+	# 파편이 절반을 넘으면 공작들은 흔들린다
+	if = { limit = { check_variable = { TU_VIC_shard > 49 } } add_to_variable = { TU_VIC_loyalty_wellington = -1 } }
+	if = {
+		limit = { check_variable = { TU_VIC_loyalty_wellington < 40 } }
+		add_to_variable = { TU_VIC_duke_ind = -0.0570 }
+		add_to_variable = { TU_VIC_duke_stab = -0.02 }
+		if = { limit = { NOT = { has_country_flag = TU_VIC_warned_wellington } } set_country_flag = TU_VIC_warned_wellington country_event = { id = tu_vic_dukes.2 } }
+	}
+	if = { limit = { check_variable = { TU_VIC_loyalty_wellington > 54 } } clr_country_flag = TU_VIC_warned_wellington }
+	clamp_variable = { var = TU_VIC_loyalty_windermere min = 0 max = 100 }
+	clamp_variable = { var = TU_VIC_influence_windermere min = 0 max = 100 }
+	# 파편이 절반을 넘으면 공작들은 흔들린다
+	if = { limit = { check_variable = { TU_VIC_shard > 49 } } add_to_variable = { TU_VIC_loyalty_windermere = -1 } }
+	if = {
+		limit = { check_variable = { TU_VIC_loyalty_windermere < 40 } }
+		add_to_variable = { TU_VIC_duke_ind = -0.0591 }
+		add_to_variable = { TU_VIC_duke_stab = -0.02 }
+		if = { limit = { NOT = { has_country_flag = TU_VIC_warned_windermere } } set_country_flag = TU_VIC_warned_windermere country_event = { id = tu_vic_dukes.3 } }
+	}
+	if = { limit = { check_variable = { TU_VIC_loyalty_windermere > 54 } } clr_country_flag = TU_VIC_warned_windermere }
+	clamp_variable = { var = TU_VIC_loyalty_godolphin min = 0 max = 100 }
+	clamp_variable = { var = TU_VIC_influence_godolphin min = 0 max = 100 }
+	# 파편이 절반을 넘으면 공작들은 흔들린다
+	if = { limit = { check_variable = { TU_VIC_shard > 49 } } add_to_variable = { TU_VIC_loyalty_godolphin = -1 } }
+	if = {
+		limit = { check_variable = { TU_VIC_loyalty_godolphin < 40 } }
+		add_to_variable = { TU_VIC_duke_ind = -0.0531 }
+		add_to_variable = { TU_VIC_duke_stab = -0.02 }
+		if = { limit = { NOT = { has_country_flag = TU_VIC_warned_godolphin } } set_country_flag = TU_VIC_warned_godolphin country_event = { id = tu_vic_dukes.4 } }
+	}
+	if = { limit = { check_variable = { TU_VIC_loyalty_godolphin > 54 } } clr_country_flag = TU_VIC_warned_godolphin }
+	clamp_variable = { var = TU_VIC_loyalty_normandy min = 0 max = 100 }
+	clamp_variable = { var = TU_VIC_influence_normandy min = 0 max = 100 }
+	# 파편이 절반을 넘으면 공작들은 흔들린다
+	if = { limit = { check_variable = { TU_VIC_shard > 49 } } add_to_variable = { TU_VIC_loyalty_normandy = -1 } }
+	if = {
+		limit = { check_variable = { TU_VIC_loyalty_normandy < 40 } }
+		add_to_variable = { TU_VIC_duke_ind = -0.0441 }
+		add_to_variable = { TU_VIC_duke_stab = -0.02 }
+		if = { limit = { NOT = { has_country_flag = TU_VIC_warned_normandy } } set_country_flag = TU_VIC_warned_normandy country_event = { id = tu_vic_dukes.5 } }
+	}
+	if = { limit = { check_variable = { TU_VIC_loyalty_normandy > 54 } } clr_country_flag = TU_VIC_warned_normandy }
+	clamp_variable = { var = TU_VIC_loyalty_abercorn min = 0 max = 100 }
+	clamp_variable = { var = TU_VIC_influence_abercorn min = 0 max = 100 }
+	# 파편이 절반을 넘으면 공작들은 흔들린다
+	if = { limit = { check_variable = { TU_VIC_shard > 49 } } add_to_variable = { TU_VIC_loyalty_abercorn = -1 } }
+	if = {
+		limit = { check_variable = { TU_VIC_loyalty_abercorn < 40 } }
+		add_to_variable = { TU_VIC_duke_ind = -0.0456 }
+		add_to_variable = { TU_VIC_duke_stab = -0.02 }
+		if = { limit = { NOT = { has_country_flag = TU_VIC_warned_abercorn } } set_country_flag = TU_VIC_warned_abercorn country_event = { id = tu_vic_dukes.6 } }
+	}
+	if = { limit = { check_variable = { TU_VIC_loyalty_abercorn > 54 } } clr_country_flag = TU_VIC_warned_abercorn }
+	clamp_variable = { var = TU_VIC_loyalty_stafford min = 0 max = 100 }
+	clamp_variable = { var = TU_VIC_influence_stafford min = 0 max = 100 }
+	# 파편이 절반을 넘으면 공작들은 흔들린다
+	if = { limit = { check_variable = { TU_VIC_shard > 49 } } add_to_variable = { TU_VIC_loyalty_stafford = -1 } }
+	if = {
+		limit = { check_variable = { TU_VIC_loyalty_stafford < 40 } }
+		add_to_variable = { TU_VIC_duke_ind = -0.0363 }
+		add_to_variable = { TU_VIC_duke_stab = -0.02 }
+		if = { limit = { NOT = { has_country_flag = TU_VIC_warned_stafford } } set_country_flag = TU_VIC_warned_stafford country_event = { id = tu_vic_dukes.7 } }
+	}
+	if = { limit = { check_variable = { TU_VIC_loyalty_stafford > 54 } } clr_country_flag = TU_VIC_warned_stafford }
+	clamp_variable = { var = TU_VIC_loyalty_fife min = 0 max = 100 }
+	clamp_variable = { var = TU_VIC_influence_fife min = 0 max = 100 }
+	# 파편이 절반을 넘으면 공작들은 흔들린다
+	if = { limit = { check_variable = { TU_VIC_shard > 49 } } add_to_variable = { TU_VIC_loyalty_fife = -1 } }
+	if = {
+		limit = { check_variable = { TU_VIC_loyalty_fife < 40 } }
+		add_to_variable = { TU_VIC_duke_ind = -0.0622 }
+		add_to_variable = { TU_VIC_duke_stab = -0.02 }
+		if = { limit = { NOT = { has_country_flag = TU_VIC_warned_fife } } set_country_flag = TU_VIC_warned_fife country_event = { id = tu_vic_dukes.8 } }
+	}
+	if = { limit = { check_variable = { TU_VIC_loyalty_fife > 54 } } clr_country_flag = TU_VIC_warned_fife }
+	# 파편 (론디니움을 되찾으면 멈춘다)
+	if = {
+		limit = { NOT = { controls_state = 117 } NOT = { has_country_flag = TU_VIC_shard_fired } }
+		add_to_variable = { TU_VIC_shard = 5 }
+		clamp_variable = { var = TU_VIC_shard min = 0 max = 100 }
+	}
+}
+
+TU_VIC_support_caster = {
+	add_to_variable = { TU_VIC_loyalty_caster = 12 }
+	add_to_variable = { TU_VIC_influence_caster = 8 }
+	add_to_variable = { TU_VIC_loyalty_wellington = -8 }
+	add_to_variable = { TU_VIC_influence_wellington = -5 }
+}
+TU_VIC_appease_caster = {
+	add_to_variable = { TU_VIC_loyalty_caster = 6 }
+}
+
+TU_VIC_support_wellington = {
+	add_to_variable = { TU_VIC_loyalty_wellington = 12 }
+	add_to_variable = { TU_VIC_influence_wellington = 8 }
+	add_to_variable = { TU_VIC_loyalty_caster = -8 }
+	add_to_variable = { TU_VIC_influence_caster = -5 }
+}
+TU_VIC_appease_wellington = {
+	add_to_variable = { TU_VIC_loyalty_wellington = 6 }
+}
+
+TU_VIC_support_windermere = {
+	add_to_variable = { TU_VIC_loyalty_windermere = 12 }
+	add_to_variable = { TU_VIC_influence_windermere = 8 }
+	add_to_variable = { TU_VIC_loyalty_godolphin = -8 }
+	add_to_variable = { TU_VIC_influence_godolphin = -5 }
+}
+TU_VIC_appease_windermere = {
+	add_to_variable = { TU_VIC_loyalty_windermere = 6 }
+}
+
+TU_VIC_support_godolphin = {
+	add_to_variable = { TU_VIC_loyalty_godolphin = 12 }
+	add_to_variable = { TU_VIC_influence_godolphin = 8 }
+	add_to_variable = { TU_VIC_loyalty_windermere = -8 }
+	add_to_variable = { TU_VIC_influence_windermere = -5 }
+}
+TU_VIC_appease_godolphin = {
+	add_to_variable = { TU_VIC_loyalty_godolphin = 6 }
+}
+
+TU_VIC_support_normandy = {
+	add_to_variable = { TU_VIC_loyalty_normandy = 12 }
+	add_to_variable = { TU_VIC_influence_normandy = 8 }
+	add_to_variable = { TU_VIC_loyalty_abercorn = -8 }
+	add_to_variable = { TU_VIC_influence_abercorn = -5 }
+}
+TU_VIC_appease_normandy = {
+	add_to_variable = { TU_VIC_loyalty_normandy = 6 }
+}
+
+TU_VIC_support_abercorn = {
+	add_to_variable = { TU_VIC_loyalty_abercorn = 12 }
+	add_to_variable = { TU_VIC_influence_abercorn = 8 }
+	add_to_variable = { TU_VIC_loyalty_normandy = -8 }
+	add_to_variable = { TU_VIC_influence_normandy = -5 }
+}
+TU_VIC_appease_abercorn = {
+	add_to_variable = { TU_VIC_loyalty_abercorn = 6 }
+}
+
+TU_VIC_support_stafford = {
+	add_to_variable = { TU_VIC_loyalty_stafford = 12 }
+	add_to_variable = { TU_VIC_influence_stafford = 8 }
+	add_to_variable = { TU_VIC_loyalty_fife = -8 }
+	add_to_variable = { TU_VIC_influence_fife = -5 }
+}
+TU_VIC_appease_stafford = {
+	add_to_variable = { TU_VIC_loyalty_stafford = 6 }
+}
+
+TU_VIC_support_fife = {
+	add_to_variable = { TU_VIC_loyalty_fife = 12 }
+	add_to_variable = { TU_VIC_influence_fife = 8 }
+	add_to_variable = { TU_VIC_loyalty_stafford = -8 }
+	add_to_variable = { TU_VIC_influence_stafford = -5 }
+}
+TU_VIC_appease_fife = {
+	add_to_variable = { TU_VIC_loyalty_fife = 6 }
+}
+
+TU_VIC_shard_slow = {
+	# 파편 활성도를 N% 늦추고 미션 시간을 6일 x N 만큼 늘린다 (600일 = 100%)
+	add_to_variable = { TU_VIC_shard = -8 }
+	clamp_variable = { var = TU_VIC_shard min = 0 max = 100 }
+	add_days_mission_timeout = { decision = TU_VIC_shard_mission days = 48 }
+}
+
+TU_VIC_shard_fire = {
+	set_country_flag = TU_VIC_shard_fired
+	set_variable = { TU_VIC_shard = 100 }
+	add_ideas = TU_VIC_shard_aftermath
+	country_event = { id = tu_vic_shard.1 }
+}

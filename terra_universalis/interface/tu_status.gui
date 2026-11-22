@@ -8050,6 +8050,11 @@ guiTypes = {
 			spriteType = "GFX_tu_status_tick"
 			position = { x = 244 y = 20 }
 		}
+		iconType = {
+			name = "tu_st_sir_families_tu_sir_law_t60"
+			spriteType = "GFX_tu_status_tick"
+			position = { x = 288 y = 20 }
+		}
 		instantTextBoxType = {
 			name = "tu_st_sir_families_tu_sir_law_tip"
 			position = { x = 18 y = 0 }
@@ -8323,6 +8328,16 @@ guiTypes = {
 			spriteType = "GFX_tu_status_seg_20"
 			frame = 4
 			position = { x = 444 y = 65 }
+		}
+		iconType = {
+			name = "tu_st_sir_families_tu_sir_bellone_t20"
+			spriteType = "GFX_tu_status_tick"
+			position = { x = 113 y = 62 }
+		}
+		iconType = {
+			name = "tu_st_sir_families_tu_sir_bellone_t50"
+			spriteType = "GFX_tu_status_tick"
+			position = { x = 244 y = 62 }
 		}
 		iconType = {
 			name = "tu_st_sir_families_tu_sir_bellone_t60"
@@ -8604,6 +8619,16 @@ guiTypes = {
 			position = { x = 444 y = 107 }
 		}
 		iconType = {
+			name = "tu_st_sir_families_tu_sir_gambino_t20"
+			spriteType = "GFX_tu_status_tick"
+			position = { x = 113 y = 104 }
+		}
+		iconType = {
+			name = "tu_st_sir_families_tu_sir_gambino_t50"
+			spriteType = "GFX_tu_status_tick"
+			position = { x = 244 y = 104 }
+		}
+		iconType = {
 			name = "tu_st_sir_families_tu_sir_gambino_t60"
 			spriteType = "GFX_tu_status_tick"
 			position = { x = 288 y = 104 }
@@ -8883,6 +8908,16 @@ guiTypes = {
 			position = { x = 444 y = 149 }
 		}
 		iconType = {
+			name = "tu_st_sir_families_tu_sir_saluzzo_t20"
+			spriteType = "GFX_tu_status_tick"
+			position = { x = 113 y = 146 }
+		}
+		iconType = {
+			name = "tu_st_sir_families_tu_sir_saluzzo_t50"
+			spriteType = "GFX_tu_status_tick"
+			position = { x = 244 y = 146 }
+		}
+		iconType = {
 			name = "tu_st_sir_families_tu_sir_saluzzo_t60"
 			spriteType = "GFX_tu_status_tick"
 			position = { x = 288 y = 146 }
@@ -8894,6 +8929,4766 @@ guiTypes = {
 			maxHeight = 38
 			text = ""
 			pdx_tooltip = TU_STATUS_TU_SIR_saluzzo_tt
+		}
+
+	}
+	containerWindowType = {
+		name = "TU_VIC_dukes_status_window"
+		position = { x = 0 y = 0 }
+		size = { width = 100% height = 676 }
+
+		iconType = {
+			name = "tu_st_vic_dukes_tu_vic_loyalty_caster_bg"
+			spriteType = "GFX_tu_status_row_full"
+			position = { x = 18 y = 0 }
+		}
+		instantTextBoxType = {
+			name = "tu_st_vic_dukes_tu_vic_loyalty_caster_label"
+			position = { x = 26 y = 4 }
+			font = "hoi_16mbs"
+			maxWidth = 350
+			maxHeight = 18
+			text = "TU_STATUS_TU_VIC_loyalty_caster_label"
+			format = left
+			fixedsize = yes
+		}
+		instantTextBoxType = {
+			name = "tu_st_vic_dukes_tu_vic_loyalty_caster_value"
+			position = { x = 380 y = 4 }
+			font = "hoi_16mbs"
+			maxWidth = 100
+			maxHeight = 18
+			text = "TU_STATUS_TU_VIC_loyalty_caster_value"
+			format = right
+			fixedsize = yes
+		}
+		iconType = {
+			name = "tu_st_vic_dukes_tu_vic_loyalty_caster_e01"
+			spriteType = "GFX_tu_status_seg_20"
+			frame = 1
+			position = { x = 26 y = 23 }
+		}
+		iconType = {
+			name = "tu_st_vic_dukes_tu_vic_loyalty_caster_f01"
+			spriteType = "GFX_tu_status_seg_20"
+			frame = 3
+			position = { x = 26 y = 23 }
+		}
+		iconType = {
+			name = "tu_st_vic_dukes_tu_vic_loyalty_caster_e02"
+			spriteType = "GFX_tu_status_seg_20"
+			frame = 1
+			position = { x = 48 y = 23 }
+		}
+		iconType = {
+			name = "tu_st_vic_dukes_tu_vic_loyalty_caster_f02"
+			spriteType = "GFX_tu_status_seg_20"
+			frame = 3
+			position = { x = 48 y = 23 }
+		}
+		iconType = {
+			name = "tu_st_vic_dukes_tu_vic_loyalty_caster_e03"
+			spriteType = "GFX_tu_status_seg_20"
+			frame = 1
+			position = { x = 70 y = 23 }
+		}
+		iconType = {
+			name = "tu_st_vic_dukes_tu_vic_loyalty_caster_f03"
+			spriteType = "GFX_tu_status_seg_20"
+			frame = 3
+			position = { x = 70 y = 23 }
+		}
+		iconType = {
+			name = "tu_st_vic_dukes_tu_vic_loyalty_caster_e04"
+			spriteType = "GFX_tu_status_seg_20"
+			frame = 1
+			position = { x = 92 y = 23 }
+		}
+		iconType = {
+			name = "tu_st_vic_dukes_tu_vic_loyalty_caster_f04"
+			spriteType = "GFX_tu_status_seg_20"
+			frame = 3
+			position = { x = 92 y = 23 }
+		}
+		iconType = {
+			name = "tu_st_vic_dukes_tu_vic_loyalty_caster_e05"
+			spriteType = "GFX_tu_status_seg_20"
+			frame = 1
+			position = { x = 114 y = 23 }
+		}
+		iconType = {
+			name = "tu_st_vic_dukes_tu_vic_loyalty_caster_f05"
+			spriteType = "GFX_tu_status_seg_20"
+			frame = 3
+			position = { x = 114 y = 23 }
+		}
+		iconType = {
+			name = "tu_st_vic_dukes_tu_vic_loyalty_caster_e06"
+			spriteType = "GFX_tu_status_seg_20"
+			frame = 1
+			position = { x = 136 y = 23 }
+		}
+		iconType = {
+			name = "tu_st_vic_dukes_tu_vic_loyalty_caster_f06"
+			spriteType = "GFX_tu_status_seg_20"
+			frame = 3
+			position = { x = 136 y = 23 }
+		}
+		iconType = {
+			name = "tu_st_vic_dukes_tu_vic_loyalty_caster_e07"
+			spriteType = "GFX_tu_status_seg_20"
+			frame = 1
+			position = { x = 158 y = 23 }
+		}
+		iconType = {
+			name = "tu_st_vic_dukes_tu_vic_loyalty_caster_f07"
+			spriteType = "GFX_tu_status_seg_20"
+			frame = 3
+			position = { x = 158 y = 23 }
+		}
+		iconType = {
+			name = "tu_st_vic_dukes_tu_vic_loyalty_caster_e08"
+			spriteType = "GFX_tu_status_seg_20"
+			frame = 1
+			position = { x = 180 y = 23 }
+		}
+		iconType = {
+			name = "tu_st_vic_dukes_tu_vic_loyalty_caster_f08"
+			spriteType = "GFX_tu_status_seg_20"
+			frame = 3
+			position = { x = 180 y = 23 }
+		}
+		iconType = {
+			name = "tu_st_vic_dukes_tu_vic_loyalty_caster_e09"
+			spriteType = "GFX_tu_status_seg_20"
+			frame = 1
+			position = { x = 202 y = 23 }
+		}
+		iconType = {
+			name = "tu_st_vic_dukes_tu_vic_loyalty_caster_f09"
+			spriteType = "GFX_tu_status_seg_20"
+			frame = 3
+			position = { x = 202 y = 23 }
+		}
+		iconType = {
+			name = "tu_st_vic_dukes_tu_vic_loyalty_caster_e10"
+			spriteType = "GFX_tu_status_seg_20"
+			frame = 1
+			position = { x = 224 y = 23 }
+		}
+		iconType = {
+			name = "tu_st_vic_dukes_tu_vic_loyalty_caster_f10"
+			spriteType = "GFX_tu_status_seg_20"
+			frame = 3
+			position = { x = 224 y = 23 }
+		}
+		iconType = {
+			name = "tu_st_vic_dukes_tu_vic_loyalty_caster_e11"
+			spriteType = "GFX_tu_status_seg_20"
+			frame = 1
+			position = { x = 246 y = 23 }
+		}
+		iconType = {
+			name = "tu_st_vic_dukes_tu_vic_loyalty_caster_f11"
+			spriteType = "GFX_tu_status_seg_20"
+			frame = 3
+			position = { x = 246 y = 23 }
+		}
+		iconType = {
+			name = "tu_st_vic_dukes_tu_vic_loyalty_caster_e12"
+			spriteType = "GFX_tu_status_seg_20"
+			frame = 1
+			position = { x = 268 y = 23 }
+		}
+		iconType = {
+			name = "tu_st_vic_dukes_tu_vic_loyalty_caster_f12"
+			spriteType = "GFX_tu_status_seg_20"
+			frame = 3
+			position = { x = 268 y = 23 }
+		}
+		iconType = {
+			name = "tu_st_vic_dukes_tu_vic_loyalty_caster_e13"
+			spriteType = "GFX_tu_status_seg_20"
+			frame = 1
+			position = { x = 290 y = 23 }
+		}
+		iconType = {
+			name = "tu_st_vic_dukes_tu_vic_loyalty_caster_f13"
+			spriteType = "GFX_tu_status_seg_20"
+			frame = 3
+			position = { x = 290 y = 23 }
+		}
+		iconType = {
+			name = "tu_st_vic_dukes_tu_vic_loyalty_caster_e14"
+			spriteType = "GFX_tu_status_seg_20"
+			frame = 1
+			position = { x = 312 y = 23 }
+		}
+		iconType = {
+			name = "tu_st_vic_dukes_tu_vic_loyalty_caster_f14"
+			spriteType = "GFX_tu_status_seg_20"
+			frame = 3
+			position = { x = 312 y = 23 }
+		}
+		iconType = {
+			name = "tu_st_vic_dukes_tu_vic_loyalty_caster_e15"
+			spriteType = "GFX_tu_status_seg_20"
+			frame = 1
+			position = { x = 334 y = 23 }
+		}
+		iconType = {
+			name = "tu_st_vic_dukes_tu_vic_loyalty_caster_f15"
+			spriteType = "GFX_tu_status_seg_20"
+			frame = 3
+			position = { x = 334 y = 23 }
+		}
+		iconType = {
+			name = "tu_st_vic_dukes_tu_vic_loyalty_caster_e16"
+			spriteType = "GFX_tu_status_seg_20"
+			frame = 1
+			position = { x = 356 y = 23 }
+		}
+		iconType = {
+			name = "tu_st_vic_dukes_tu_vic_loyalty_caster_f16"
+			spriteType = "GFX_tu_status_seg_20"
+			frame = 3
+			position = { x = 356 y = 23 }
+		}
+		iconType = {
+			name = "tu_st_vic_dukes_tu_vic_loyalty_caster_e17"
+			spriteType = "GFX_tu_status_seg_20"
+			frame = 1
+			position = { x = 378 y = 23 }
+		}
+		iconType = {
+			name = "tu_st_vic_dukes_tu_vic_loyalty_caster_f17"
+			spriteType = "GFX_tu_status_seg_20"
+			frame = 3
+			position = { x = 378 y = 23 }
+		}
+		iconType = {
+			name = "tu_st_vic_dukes_tu_vic_loyalty_caster_e18"
+			spriteType = "GFX_tu_status_seg_20"
+			frame = 1
+			position = { x = 400 y = 23 }
+		}
+		iconType = {
+			name = "tu_st_vic_dukes_tu_vic_loyalty_caster_f18"
+			spriteType = "GFX_tu_status_seg_20"
+			frame = 3
+			position = { x = 400 y = 23 }
+		}
+		iconType = {
+			name = "tu_st_vic_dukes_tu_vic_loyalty_caster_e19"
+			spriteType = "GFX_tu_status_seg_20"
+			frame = 1
+			position = { x = 422 y = 23 }
+		}
+		iconType = {
+			name = "tu_st_vic_dukes_tu_vic_loyalty_caster_f19"
+			spriteType = "GFX_tu_status_seg_20"
+			frame = 3
+			position = { x = 422 y = 23 }
+		}
+		iconType = {
+			name = "tu_st_vic_dukes_tu_vic_loyalty_caster_e20"
+			spriteType = "GFX_tu_status_seg_20"
+			frame = 1
+			position = { x = 444 y = 23 }
+		}
+		iconType = {
+			name = "tu_st_vic_dukes_tu_vic_loyalty_caster_f20"
+			spriteType = "GFX_tu_status_seg_20"
+			frame = 3
+			position = { x = 444 y = 23 }
+		}
+		iconType = {
+			name = "tu_st_vic_dukes_tu_vic_loyalty_caster_t40"
+			spriteType = "GFX_tu_status_tick"
+			position = { x = 200 y = 20 }
+		}
+		iconType = {
+			name = "tu_st_vic_dukes_tu_vic_loyalty_caster_t55"
+			spriteType = "GFX_tu_status_tick"
+			position = { x = 266 y = 20 }
+		}
+		instantTextBoxType = {
+			name = "tu_st_vic_dukes_tu_vic_loyalty_caster_tip"
+			position = { x = 18 y = 0 }
+			maxWidth = 470
+			maxHeight = 38
+			text = ""
+			pdx_tooltip = TU_STATUS_TU_VIC_loyalty_caster_tt
+		}
+
+		iconType = {
+			name = "tu_st_vic_dukes_tu_vic_loyalty_wellington_bg"
+			spriteType = "GFX_tu_status_row_full"
+			position = { x = 18 y = 42 }
+		}
+		instantTextBoxType = {
+			name = "tu_st_vic_dukes_tu_vic_loyalty_wellington_label"
+			position = { x = 26 y = 46 }
+			font = "hoi_16mbs"
+			maxWidth = 350
+			maxHeight = 18
+			text = "TU_STATUS_TU_VIC_loyalty_wellington_label"
+			format = left
+			fixedsize = yes
+		}
+		instantTextBoxType = {
+			name = "tu_st_vic_dukes_tu_vic_loyalty_wellington_value"
+			position = { x = 380 y = 46 }
+			font = "hoi_16mbs"
+			maxWidth = 100
+			maxHeight = 18
+			text = "TU_STATUS_TU_VIC_loyalty_wellington_value"
+			format = right
+			fixedsize = yes
+		}
+		iconType = {
+			name = "tu_st_vic_dukes_tu_vic_loyalty_wellington_e01"
+			spriteType = "GFX_tu_status_seg_20"
+			frame = 1
+			position = { x = 26 y = 65 }
+		}
+		iconType = {
+			name = "tu_st_vic_dukes_tu_vic_loyalty_wellington_f01"
+			spriteType = "GFX_tu_status_seg_20"
+			frame = 3
+			position = { x = 26 y = 65 }
+		}
+		iconType = {
+			name = "tu_st_vic_dukes_tu_vic_loyalty_wellington_e02"
+			spriteType = "GFX_tu_status_seg_20"
+			frame = 1
+			position = { x = 48 y = 65 }
+		}
+		iconType = {
+			name = "tu_st_vic_dukes_tu_vic_loyalty_wellington_f02"
+			spriteType = "GFX_tu_status_seg_20"
+			frame = 3
+			position = { x = 48 y = 65 }
+		}
+		iconType = {
+			name = "tu_st_vic_dukes_tu_vic_loyalty_wellington_e03"
+			spriteType = "GFX_tu_status_seg_20"
+			frame = 1
+			position = { x = 70 y = 65 }
+		}
+		iconType = {
+			name = "tu_st_vic_dukes_tu_vic_loyalty_wellington_f03"
+			spriteType = "GFX_tu_status_seg_20"
+			frame = 3
+			position = { x = 70 y = 65 }
+		}
+		iconType = {
+			name = "tu_st_vic_dukes_tu_vic_loyalty_wellington_e04"
+			spriteType = "GFX_tu_status_seg_20"
+			frame = 1
+			position = { x = 92 y = 65 }
+		}
+		iconType = {
+			name = "tu_st_vic_dukes_tu_vic_loyalty_wellington_f04"
+			spriteType = "GFX_tu_status_seg_20"
+			frame = 3
+			position = { x = 92 y = 65 }
+		}
+		iconType = {
+			name = "tu_st_vic_dukes_tu_vic_loyalty_wellington_e05"
+			spriteType = "GFX_tu_status_seg_20"
+			frame = 1
+			position = { x = 114 y = 65 }
+		}
+		iconType = {
+			name = "tu_st_vic_dukes_tu_vic_loyalty_wellington_f05"
+			spriteType = "GFX_tu_status_seg_20"
+			frame = 3
+			position = { x = 114 y = 65 }
+		}
+		iconType = {
+			name = "tu_st_vic_dukes_tu_vic_loyalty_wellington_e06"
+			spriteType = "GFX_tu_status_seg_20"
+			frame = 1
+			position = { x = 136 y = 65 }
+		}
+		iconType = {
+			name = "tu_st_vic_dukes_tu_vic_loyalty_wellington_f06"
+			spriteType = "GFX_tu_status_seg_20"
+			frame = 3
+			position = { x = 136 y = 65 }
+		}
+		iconType = {
+			name = "tu_st_vic_dukes_tu_vic_loyalty_wellington_e07"
+			spriteType = "GFX_tu_status_seg_20"
+			frame = 1
+			position = { x = 158 y = 65 }
+		}
+		iconType = {
+			name = "tu_st_vic_dukes_tu_vic_loyalty_wellington_f07"
+			spriteType = "GFX_tu_status_seg_20"
+			frame = 3
+			position = { x = 158 y = 65 }
+		}
+		iconType = {
+			name = "tu_st_vic_dukes_tu_vic_loyalty_wellington_e08"
+			spriteType = "GFX_tu_status_seg_20"
+			frame = 1
+			position = { x = 180 y = 65 }
+		}
+		iconType = {
+			name = "tu_st_vic_dukes_tu_vic_loyalty_wellington_f08"
+			spriteType = "GFX_tu_status_seg_20"
+			frame = 3
+			position = { x = 180 y = 65 }
+		}
+		iconType = {
+			name = "tu_st_vic_dukes_tu_vic_loyalty_wellington_e09"
+			spriteType = "GFX_tu_status_seg_20"
+			frame = 1
+			position = { x = 202 y = 65 }
+		}
+		iconType = {
+			name = "tu_st_vic_dukes_tu_vic_loyalty_wellington_f09"
+			spriteType = "GFX_tu_status_seg_20"
+			frame = 3
+			position = { x = 202 y = 65 }
+		}
+		iconType = {
+			name = "tu_st_vic_dukes_tu_vic_loyalty_wellington_e10"
+			spriteType = "GFX_tu_status_seg_20"
+			frame = 1
+			position = { x = 224 y = 65 }
+		}
+		iconType = {
+			name = "tu_st_vic_dukes_tu_vic_loyalty_wellington_f10"
+			spriteType = "GFX_tu_status_seg_20"
+			frame = 3
+			position = { x = 224 y = 65 }
+		}
+		iconType = {
+			name = "tu_st_vic_dukes_tu_vic_loyalty_wellington_e11"
+			spriteType = "GFX_tu_status_seg_20"
+			frame = 1
+			position = { x = 246 y = 65 }
+		}
+		iconType = {
+			name = "tu_st_vic_dukes_tu_vic_loyalty_wellington_f11"
+			spriteType = "GFX_tu_status_seg_20"
+			frame = 3
+			position = { x = 246 y = 65 }
+		}
+		iconType = {
+			name = "tu_st_vic_dukes_tu_vic_loyalty_wellington_e12"
+			spriteType = "GFX_tu_status_seg_20"
+			frame = 1
+			position = { x = 268 y = 65 }
+		}
+		iconType = {
+			name = "tu_st_vic_dukes_tu_vic_loyalty_wellington_f12"
+			spriteType = "GFX_tu_status_seg_20"
+			frame = 3
+			position = { x = 268 y = 65 }
+		}
+		iconType = {
+			name = "tu_st_vic_dukes_tu_vic_loyalty_wellington_e13"
+			spriteType = "GFX_tu_status_seg_20"
+			frame = 1
+			position = { x = 290 y = 65 }
+		}
+		iconType = {
+			name = "tu_st_vic_dukes_tu_vic_loyalty_wellington_f13"
+			spriteType = "GFX_tu_status_seg_20"
+			frame = 3
+			position = { x = 290 y = 65 }
+		}
+		iconType = {
+			name = "tu_st_vic_dukes_tu_vic_loyalty_wellington_e14"
+			spriteType = "GFX_tu_status_seg_20"
+			frame = 1
+			position = { x = 312 y = 65 }
+		}
+		iconType = {
+			name = "tu_st_vic_dukes_tu_vic_loyalty_wellington_f14"
+			spriteType = "GFX_tu_status_seg_20"
+			frame = 3
+			position = { x = 312 y = 65 }
+		}
+		iconType = {
+			name = "tu_st_vic_dukes_tu_vic_loyalty_wellington_e15"
+			spriteType = "GFX_tu_status_seg_20"
+			frame = 1
+			position = { x = 334 y = 65 }
+		}
+		iconType = {
+			name = "tu_st_vic_dukes_tu_vic_loyalty_wellington_f15"
+			spriteType = "GFX_tu_status_seg_20"
+			frame = 3
+			position = { x = 334 y = 65 }
+		}
+		iconType = {
+			name = "tu_st_vic_dukes_tu_vic_loyalty_wellington_e16"
+			spriteType = "GFX_tu_status_seg_20"
+			frame = 1
+			position = { x = 356 y = 65 }
+		}
+		iconType = {
+			name = "tu_st_vic_dukes_tu_vic_loyalty_wellington_f16"
+			spriteType = "GFX_tu_status_seg_20"
+			frame = 3
+			position = { x = 356 y = 65 }
+		}
+		iconType = {
+			name = "tu_st_vic_dukes_tu_vic_loyalty_wellington_e17"
+			spriteType = "GFX_tu_status_seg_20"
+			frame = 1
+			position = { x = 378 y = 65 }
+		}
+		iconType = {
+			name = "tu_st_vic_dukes_tu_vic_loyalty_wellington_f17"
+			spriteType = "GFX_tu_status_seg_20"
+			frame = 3
+			position = { x = 378 y = 65 }
+		}
+		iconType = {
+			name = "tu_st_vic_dukes_tu_vic_loyalty_wellington_e18"
+			spriteType = "GFX_tu_status_seg_20"
+			frame = 1
+			position = { x = 400 y = 65 }
+		}
+		iconType = {
+			name = "tu_st_vic_dukes_tu_vic_loyalty_wellington_f18"
+			spriteType = "GFX_tu_status_seg_20"
+			frame = 3
+			position = { x = 400 y = 65 }
+		}
+		iconType = {
+			name = "tu_st_vic_dukes_tu_vic_loyalty_wellington_e19"
+			spriteType = "GFX_tu_status_seg_20"
+			frame = 1
+			position = { x = 422 y = 65 }
+		}
+		iconType = {
+			name = "tu_st_vic_dukes_tu_vic_loyalty_wellington_f19"
+			spriteType = "GFX_tu_status_seg_20"
+			frame = 3
+			position = { x = 422 y = 65 }
+		}
+		iconType = {
+			name = "tu_st_vic_dukes_tu_vic_loyalty_wellington_e20"
+			spriteType = "GFX_tu_status_seg_20"
+			frame = 1
+			position = { x = 444 y = 65 }
+		}
+		iconType = {
+			name = "tu_st_vic_dukes_tu_vic_loyalty_wellington_f20"
+			spriteType = "GFX_tu_status_seg_20"
+			frame = 3
+			position = { x = 444 y = 65 }
+		}
+		iconType = {
+			name = "tu_st_vic_dukes_tu_vic_loyalty_wellington_t40"
+			spriteType = "GFX_tu_status_tick"
+			position = { x = 200 y = 62 }
+		}
+		iconType = {
+			name = "tu_st_vic_dukes_tu_vic_loyalty_wellington_t55"
+			spriteType = "GFX_tu_status_tick"
+			position = { x = 266 y = 62 }
+		}
+		instantTextBoxType = {
+			name = "tu_st_vic_dukes_tu_vic_loyalty_wellington_tip"
+			position = { x = 18 y = 42 }
+			maxWidth = 470
+			maxHeight = 38
+			text = ""
+			pdx_tooltip = TU_STATUS_TU_VIC_loyalty_wellington_tt
+		}
+
+		iconType = {
+			name = "tu_st_vic_dukes_tu_vic_loyalty_windermere_bg"
+			spriteType = "GFX_tu_status_row_full"
+			position = { x = 18 y = 84 }
+		}
+		instantTextBoxType = {
+			name = "tu_st_vic_dukes_tu_vic_loyalty_windermere_label"
+			position = { x = 26 y = 88 }
+			font = "hoi_16mbs"
+			maxWidth = 350
+			maxHeight = 18
+			text = "TU_STATUS_TU_VIC_loyalty_windermere_label"
+			format = left
+			fixedsize = yes
+		}
+		instantTextBoxType = {
+			name = "tu_st_vic_dukes_tu_vic_loyalty_windermere_value"
+			position = { x = 380 y = 88 }
+			font = "hoi_16mbs"
+			maxWidth = 100
+			maxHeight = 18
+			text = "TU_STATUS_TU_VIC_loyalty_windermere_value"
+			format = right
+			fixedsize = yes
+		}
+		iconType = {
+			name = "tu_st_vic_dukes_tu_vic_loyalty_windermere_e01"
+			spriteType = "GFX_tu_status_seg_20"
+			frame = 1
+			position = { x = 26 y = 107 }
+		}
+		iconType = {
+			name = "tu_st_vic_dukes_tu_vic_loyalty_windermere_f01"
+			spriteType = "GFX_tu_status_seg_20"
+			frame = 3
+			position = { x = 26 y = 107 }
+		}
+		iconType = {
+			name = "tu_st_vic_dukes_tu_vic_loyalty_windermere_e02"
+			spriteType = "GFX_tu_status_seg_20"
+			frame = 1
+			position = { x = 48 y = 107 }
+		}
+		iconType = {
+			name = "tu_st_vic_dukes_tu_vic_loyalty_windermere_f02"
+			spriteType = "GFX_tu_status_seg_20"
+			frame = 3
+			position = { x = 48 y = 107 }
+		}
+		iconType = {
+			name = "tu_st_vic_dukes_tu_vic_loyalty_windermere_e03"
+			spriteType = "GFX_tu_status_seg_20"
+			frame = 1
+			position = { x = 70 y = 107 }
+		}
+		iconType = {
+			name = "tu_st_vic_dukes_tu_vic_loyalty_windermere_f03"
+			spriteType = "GFX_tu_status_seg_20"
+			frame = 3
+			position = { x = 70 y = 107 }
+		}
+		iconType = {
+			name = "tu_st_vic_dukes_tu_vic_loyalty_windermere_e04"
+			spriteType = "GFX_tu_status_seg_20"
+			frame = 1
+			position = { x = 92 y = 107 }
+		}
+		iconType = {
+			name = "tu_st_vic_dukes_tu_vic_loyalty_windermere_f04"
+			spriteType = "GFX_tu_status_seg_20"
+			frame = 3
+			position = { x = 92 y = 107 }
+		}
+		iconType = {
+			name = "tu_st_vic_dukes_tu_vic_loyalty_windermere_e05"
+			spriteType = "GFX_tu_status_seg_20"
+			frame = 1
+			position = { x = 114 y = 107 }
+		}
+		iconType = {
+			name = "tu_st_vic_dukes_tu_vic_loyalty_windermere_f05"
+			spriteType = "GFX_tu_status_seg_20"
+			frame = 3
+			position = { x = 114 y = 107 }
+		}
+		iconType = {
+			name = "tu_st_vic_dukes_tu_vic_loyalty_windermere_e06"
+			spriteType = "GFX_tu_status_seg_20"
+			frame = 1
+			position = { x = 136 y = 107 }
+		}
+		iconType = {
+			name = "tu_st_vic_dukes_tu_vic_loyalty_windermere_f06"
+			spriteType = "GFX_tu_status_seg_20"
+			frame = 3
+			position = { x = 136 y = 107 }
+		}
+		iconType = {
+			name = "tu_st_vic_dukes_tu_vic_loyalty_windermere_e07"
+			spriteType = "GFX_tu_status_seg_20"
+			frame = 1
+			position = { x = 158 y = 107 }
+		}
+		iconType = {
+			name = "tu_st_vic_dukes_tu_vic_loyalty_windermere_f07"
+			spriteType = "GFX_tu_status_seg_20"
+			frame = 3
+			position = { x = 158 y = 107 }
+		}
+		iconType = {
+			name = "tu_st_vic_dukes_tu_vic_loyalty_windermere_e08"
+			spriteType = "GFX_tu_status_seg_20"
+			frame = 1
+			position = { x = 180 y = 107 }
+		}
+		iconType = {
+			name = "tu_st_vic_dukes_tu_vic_loyalty_windermere_f08"
+			spriteType = "GFX_tu_status_seg_20"
+			frame = 3
+			position = { x = 180 y = 107 }
+		}
+		iconType = {
+			name = "tu_st_vic_dukes_tu_vic_loyalty_windermere_e09"
+			spriteType = "GFX_tu_status_seg_20"
+			frame = 1
+			position = { x = 202 y = 107 }
+		}
+		iconType = {
+			name = "tu_st_vic_dukes_tu_vic_loyalty_windermere_f09"
+			spriteType = "GFX_tu_status_seg_20"
+			frame = 3
+			position = { x = 202 y = 107 }
+		}
+		iconType = {
+			name = "tu_st_vic_dukes_tu_vic_loyalty_windermere_e10"
+			spriteType = "GFX_tu_status_seg_20"
+			frame = 1
+			position = { x = 224 y = 107 }
+		}
+		iconType = {
+			name = "tu_st_vic_dukes_tu_vic_loyalty_windermere_f10"
+			spriteType = "GFX_tu_status_seg_20"
+			frame = 3
+			position = { x = 224 y = 107 }
+		}
+		iconType = {
+			name = "tu_st_vic_dukes_tu_vic_loyalty_windermere_e11"
+			spriteType = "GFX_tu_status_seg_20"
+			frame = 1
+			position = { x = 246 y = 107 }
+		}
+		iconType = {
+			name = "tu_st_vic_dukes_tu_vic_loyalty_windermere_f11"
+			spriteType = "GFX_tu_status_seg_20"
+			frame = 3
+			position = { x = 246 y = 107 }
+		}
+		iconType = {
+			name = "tu_st_vic_dukes_tu_vic_loyalty_windermere_e12"
+			spriteType = "GFX_tu_status_seg_20"
+			frame = 1
+			position = { x = 268 y = 107 }
+		}
+		iconType = {
+			name = "tu_st_vic_dukes_tu_vic_loyalty_windermere_f12"
+			spriteType = "GFX_tu_status_seg_20"
+			frame = 3
+			position = { x = 268 y = 107 }
+		}
+		iconType = {
+			name = "tu_st_vic_dukes_tu_vic_loyalty_windermere_e13"
+			spriteType = "GFX_tu_status_seg_20"
+			frame = 1
+			position = { x = 290 y = 107 }
+		}
+		iconType = {
+			name = "tu_st_vic_dukes_tu_vic_loyalty_windermere_f13"
+			spriteType = "GFX_tu_status_seg_20"
+			frame = 3
+			position = { x = 290 y = 107 }
+		}
+		iconType = {
+			name = "tu_st_vic_dukes_tu_vic_loyalty_windermere_e14"
+			spriteType = "GFX_tu_status_seg_20"
+			frame = 1
+			position = { x = 312 y = 107 }
+		}
+		iconType = {
+			name = "tu_st_vic_dukes_tu_vic_loyalty_windermere_f14"
+			spriteType = "GFX_tu_status_seg_20"
+			frame = 3
+			position = { x = 312 y = 107 }
+		}
+		iconType = {
+			name = "tu_st_vic_dukes_tu_vic_loyalty_windermere_e15"
+			spriteType = "GFX_tu_status_seg_20"
+			frame = 1
+			position = { x = 334 y = 107 }
+		}
+		iconType = {
+			name = "tu_st_vic_dukes_tu_vic_loyalty_windermere_f15"
+			spriteType = "GFX_tu_status_seg_20"
+			frame = 3
+			position = { x = 334 y = 107 }
+		}
+		iconType = {
+			name = "tu_st_vic_dukes_tu_vic_loyalty_windermere_e16"
+			spriteType = "GFX_tu_status_seg_20"
+			frame = 1
+			position = { x = 356 y = 107 }
+		}
+		iconType = {
+			name = "tu_st_vic_dukes_tu_vic_loyalty_windermere_f16"
+			spriteType = "GFX_tu_status_seg_20"
+			frame = 3
+			position = { x = 356 y = 107 }
+		}
+		iconType = {
+			name = "tu_st_vic_dukes_tu_vic_loyalty_windermere_e17"
+			spriteType = "GFX_tu_status_seg_20"
+			frame = 1
+			position = { x = 378 y = 107 }
+		}
+		iconType = {
+			name = "tu_st_vic_dukes_tu_vic_loyalty_windermere_f17"
+			spriteType = "GFX_tu_status_seg_20"
+			frame = 3
+			position = { x = 378 y = 107 }
+		}
+		iconType = {
+			name = "tu_st_vic_dukes_tu_vic_loyalty_windermere_e18"
+			spriteType = "GFX_tu_status_seg_20"
+			frame = 1
+			position = { x = 400 y = 107 }
+		}
+		iconType = {
+			name = "tu_st_vic_dukes_tu_vic_loyalty_windermere_f18"
+			spriteType = "GFX_tu_status_seg_20"
+			frame = 3
+			position = { x = 400 y = 107 }
+		}
+		iconType = {
+			name = "tu_st_vic_dukes_tu_vic_loyalty_windermere_e19"
+			spriteType = "GFX_tu_status_seg_20"
+			frame = 1
+			position = { x = 422 y = 107 }
+		}
+		iconType = {
+			name = "tu_st_vic_dukes_tu_vic_loyalty_windermere_f19"
+			spriteType = "GFX_tu_status_seg_20"
+			frame = 3
+			position = { x = 422 y = 107 }
+		}
+		iconType = {
+			name = "tu_st_vic_dukes_tu_vic_loyalty_windermere_e20"
+			spriteType = "GFX_tu_status_seg_20"
+			frame = 1
+			position = { x = 444 y = 107 }
+		}
+		iconType = {
+			name = "tu_st_vic_dukes_tu_vic_loyalty_windermere_f20"
+			spriteType = "GFX_tu_status_seg_20"
+			frame = 3
+			position = { x = 444 y = 107 }
+		}
+		iconType = {
+			name = "tu_st_vic_dukes_tu_vic_loyalty_windermere_t40"
+			spriteType = "GFX_tu_status_tick"
+			position = { x = 200 y = 104 }
+		}
+		iconType = {
+			name = "tu_st_vic_dukes_tu_vic_loyalty_windermere_t55"
+			spriteType = "GFX_tu_status_tick"
+			position = { x = 266 y = 104 }
+		}
+		instantTextBoxType = {
+			name = "tu_st_vic_dukes_tu_vic_loyalty_windermere_tip"
+			position = { x = 18 y = 84 }
+			maxWidth = 470
+			maxHeight = 38
+			text = ""
+			pdx_tooltip = TU_STATUS_TU_VIC_loyalty_windermere_tt
+		}
+
+		iconType = {
+			name = "tu_st_vic_dukes_tu_vic_loyalty_godolphin_bg"
+			spriteType = "GFX_tu_status_row_full"
+			position = { x = 18 y = 126 }
+		}
+		instantTextBoxType = {
+			name = "tu_st_vic_dukes_tu_vic_loyalty_godolphin_label"
+			position = { x = 26 y = 130 }
+			font = "hoi_16mbs"
+			maxWidth = 350
+			maxHeight = 18
+			text = "TU_STATUS_TU_VIC_loyalty_godolphin_label"
+			format = left
+			fixedsize = yes
+		}
+		instantTextBoxType = {
+			name = "tu_st_vic_dukes_tu_vic_loyalty_godolphin_value"
+			position = { x = 380 y = 130 }
+			font = "hoi_16mbs"
+			maxWidth = 100
+			maxHeight = 18
+			text = "TU_STATUS_TU_VIC_loyalty_godolphin_value"
+			format = right
+			fixedsize = yes
+		}
+		iconType = {
+			name = "tu_st_vic_dukes_tu_vic_loyalty_godolphin_e01"
+			spriteType = "GFX_tu_status_seg_20"
+			frame = 1
+			position = { x = 26 y = 149 }
+		}
+		iconType = {
+			name = "tu_st_vic_dukes_tu_vic_loyalty_godolphin_f01"
+			spriteType = "GFX_tu_status_seg_20"
+			frame = 3
+			position = { x = 26 y = 149 }
+		}
+		iconType = {
+			name = "tu_st_vic_dukes_tu_vic_loyalty_godolphin_e02"
+			spriteType = "GFX_tu_status_seg_20"
+			frame = 1
+			position = { x = 48 y = 149 }
+		}
+		iconType = {
+			name = "tu_st_vic_dukes_tu_vic_loyalty_godolphin_f02"
+			spriteType = "GFX_tu_status_seg_20"
+			frame = 3
+			position = { x = 48 y = 149 }
+		}
+		iconType = {
+			name = "tu_st_vic_dukes_tu_vic_loyalty_godolphin_e03"
+			spriteType = "GFX_tu_status_seg_20"
+			frame = 1
+			position = { x = 70 y = 149 }
+		}
+		iconType = {
+			name = "tu_st_vic_dukes_tu_vic_loyalty_godolphin_f03"
+			spriteType = "GFX_tu_status_seg_20"
+			frame = 3
+			position = { x = 70 y = 149 }
+		}
+		iconType = {
+			name = "tu_st_vic_dukes_tu_vic_loyalty_godolphin_e04"
+			spriteType = "GFX_tu_status_seg_20"
+			frame = 1
+			position = { x = 92 y = 149 }
+		}
+		iconType = {
+			name = "tu_st_vic_dukes_tu_vic_loyalty_godolphin_f04"
+			spriteType = "GFX_tu_status_seg_20"
+			frame = 3
+			position = { x = 92 y = 149 }
+		}
+		iconType = {
+			name = "tu_st_vic_dukes_tu_vic_loyalty_godolphin_e05"
+			spriteType = "GFX_tu_status_seg_20"
+			frame = 1
+			position = { x = 114 y = 149 }
+		}
+		iconType = {
+			name = "tu_st_vic_dukes_tu_vic_loyalty_godolphin_f05"
+			spriteType = "GFX_tu_status_seg_20"
+			frame = 3
+			position = { x = 114 y = 149 }
+		}
+		iconType = {
+			name = "tu_st_vic_dukes_tu_vic_loyalty_godolphin_e06"
+			spriteType = "GFX_tu_status_seg_20"
+			frame = 1
+			position = { x = 136 y = 149 }
+		}
+		iconType = {
+			name = "tu_st_vic_dukes_tu_vic_loyalty_godolphin_f06"
+			spriteType = "GFX_tu_status_seg_20"
+			frame = 3
+			position = { x = 136 y = 149 }
+		}
+		iconType = {
+			name = "tu_st_vic_dukes_tu_vic_loyalty_godolphin_e07"
+			spriteType = "GFX_tu_status_seg_20"
+			frame = 1
+			position = { x = 158 y = 149 }
+		}
+		iconType = {
+			name = "tu_st_vic_dukes_tu_vic_loyalty_godolphin_f07"
+			spriteType = "GFX_tu_status_seg_20"
+			frame = 3
+			position = { x = 158 y = 149 }
+		}
+		iconType = {
+			name = "tu_st_vic_dukes_tu_vic_loyalty_godolphin_e08"
+			spriteType = "GFX_tu_status_seg_20"
+			frame = 1
+			position = { x = 180 y = 149 }
+		}
+		iconType = {
+			name = "tu_st_vic_dukes_tu_vic_loyalty_godolphin_f08"
+			spriteType = "GFX_tu_status_seg_20"
+			frame = 3
+			position = { x = 180 y = 149 }
+		}
+		iconType = {
+			name = "tu_st_vic_dukes_tu_vic_loyalty_godolphin_e09"
+			spriteType = "GFX_tu_status_seg_20"
+			frame = 1
+			position = { x = 202 y = 149 }
+		}
+		iconType = {
+			name = "tu_st_vic_dukes_tu_vic_loyalty_godolphin_f09"
+			spriteType = "GFX_tu_status_seg_20"
+			frame = 3
+			position = { x = 202 y = 149 }
+		}
+		iconType = {
+			name = "tu_st_vic_dukes_tu_vic_loyalty_godolphin_e10"
+			spriteType = "GFX_tu_status_seg_20"
+			frame = 1
+			position = { x = 224 y = 149 }
+		}
+		iconType = {
+			name = "tu_st_vic_dukes_tu_vic_loyalty_godolphin_f10"
+			spriteType = "GFX_tu_status_seg_20"
+			frame = 3
+			position = { x = 224 y = 149 }
+		}
+		iconType = {
+			name = "tu_st_vic_dukes_tu_vic_loyalty_godolphin_e11"
+			spriteType = "GFX_tu_status_seg_20"
+			frame = 1
+			position = { x = 246 y = 149 }
+		}
+		iconType = {
+			name = "tu_st_vic_dukes_tu_vic_loyalty_godolphin_f11"
+			spriteType = "GFX_tu_status_seg_20"
+			frame = 3
+			position = { x = 246 y = 149 }
+		}
+		iconType = {
+			name = "tu_st_vic_dukes_tu_vic_loyalty_godolphin_e12"
+			spriteType = "GFX_tu_status_seg_20"
+			frame = 1
+			position = { x = 268 y = 149 }
+		}
+		iconType = {
+			name = "tu_st_vic_dukes_tu_vic_loyalty_godolphin_f12"
+			spriteType = "GFX_tu_status_seg_20"
+			frame = 3
+			position = { x = 268 y = 149 }
+		}
+		iconType = {
+			name = "tu_st_vic_dukes_tu_vic_loyalty_godolphin_e13"
+			spriteType = "GFX_tu_status_seg_20"
+			frame = 1
+			position = { x = 290 y = 149 }
+		}
+		iconType = {
+			name = "tu_st_vic_dukes_tu_vic_loyalty_godolphin_f13"
+			spriteType = "GFX_tu_status_seg_20"
+			frame = 3
+			position = { x = 290 y = 149 }
+		}
+		iconType = {
+			name = "tu_st_vic_dukes_tu_vic_loyalty_godolphin_e14"
+			spriteType = "GFX_tu_status_seg_20"
+			frame = 1
+			position = { x = 312 y = 149 }
+		}
+		iconType = {
+			name = "tu_st_vic_dukes_tu_vic_loyalty_godolphin_f14"
+			spriteType = "GFX_tu_status_seg_20"
+			frame = 3
+			position = { x = 312 y = 149 }
+		}
+		iconType = {
+			name = "tu_st_vic_dukes_tu_vic_loyalty_godolphin_e15"
+			spriteType = "GFX_tu_status_seg_20"
+			frame = 1
+			position = { x = 334 y = 149 }
+		}
+		iconType = {
+			name = "tu_st_vic_dukes_tu_vic_loyalty_godolphin_f15"
+			spriteType = "GFX_tu_status_seg_20"
+			frame = 3
+			position = { x = 334 y = 149 }
+		}
+		iconType = {
+			name = "tu_st_vic_dukes_tu_vic_loyalty_godolphin_e16"
+			spriteType = "GFX_tu_status_seg_20"
+			frame = 1
+			position = { x = 356 y = 149 }
+		}
+		iconType = {
+			name = "tu_st_vic_dukes_tu_vic_loyalty_godolphin_f16"
+			spriteType = "GFX_tu_status_seg_20"
+			frame = 3
+			position = { x = 356 y = 149 }
+		}
+		iconType = {
+			name = "tu_st_vic_dukes_tu_vic_loyalty_godolphin_e17"
+			spriteType = "GFX_tu_status_seg_20"
+			frame = 1
+			position = { x = 378 y = 149 }
+		}
+		iconType = {
+			name = "tu_st_vic_dukes_tu_vic_loyalty_godolphin_f17"
+			spriteType = "GFX_tu_status_seg_20"
+			frame = 3
+			position = { x = 378 y = 149 }
+		}
+		iconType = {
+			name = "tu_st_vic_dukes_tu_vic_loyalty_godolphin_e18"
+			spriteType = "GFX_tu_status_seg_20"
+			frame = 1
+			position = { x = 400 y = 149 }
+		}
+		iconType = {
+			name = "tu_st_vic_dukes_tu_vic_loyalty_godolphin_f18"
+			spriteType = "GFX_tu_status_seg_20"
+			frame = 3
+			position = { x = 400 y = 149 }
+		}
+		iconType = {
+			name = "tu_st_vic_dukes_tu_vic_loyalty_godolphin_e19"
+			spriteType = "GFX_tu_status_seg_20"
+			frame = 1
+			position = { x = 422 y = 149 }
+		}
+		iconType = {
+			name = "tu_st_vic_dukes_tu_vic_loyalty_godolphin_f19"
+			spriteType = "GFX_tu_status_seg_20"
+			frame = 3
+			position = { x = 422 y = 149 }
+		}
+		iconType = {
+			name = "tu_st_vic_dukes_tu_vic_loyalty_godolphin_e20"
+			spriteType = "GFX_tu_status_seg_20"
+			frame = 1
+			position = { x = 444 y = 149 }
+		}
+		iconType = {
+			name = "tu_st_vic_dukes_tu_vic_loyalty_godolphin_f20"
+			spriteType = "GFX_tu_status_seg_20"
+			frame = 3
+			position = { x = 444 y = 149 }
+		}
+		iconType = {
+			name = "tu_st_vic_dukes_tu_vic_loyalty_godolphin_t40"
+			spriteType = "GFX_tu_status_tick"
+			position = { x = 200 y = 146 }
+		}
+		iconType = {
+			name = "tu_st_vic_dukes_tu_vic_loyalty_godolphin_t55"
+			spriteType = "GFX_tu_status_tick"
+			position = { x = 266 y = 146 }
+		}
+		instantTextBoxType = {
+			name = "tu_st_vic_dukes_tu_vic_loyalty_godolphin_tip"
+			position = { x = 18 y = 126 }
+			maxWidth = 470
+			maxHeight = 38
+			text = ""
+			pdx_tooltip = TU_STATUS_TU_VIC_loyalty_godolphin_tt
+		}
+
+		iconType = {
+			name = "tu_st_vic_dukes_tu_vic_loyalty_normandy_bg"
+			spriteType = "GFX_tu_status_row_full"
+			position = { x = 18 y = 168 }
+		}
+		instantTextBoxType = {
+			name = "tu_st_vic_dukes_tu_vic_loyalty_normandy_label"
+			position = { x = 26 y = 172 }
+			font = "hoi_16mbs"
+			maxWidth = 350
+			maxHeight = 18
+			text = "TU_STATUS_TU_VIC_loyalty_normandy_label"
+			format = left
+			fixedsize = yes
+		}
+		instantTextBoxType = {
+			name = "tu_st_vic_dukes_tu_vic_loyalty_normandy_value"
+			position = { x = 380 y = 172 }
+			font = "hoi_16mbs"
+			maxWidth = 100
+			maxHeight = 18
+			text = "TU_STATUS_TU_VIC_loyalty_normandy_value"
+			format = right
+			fixedsize = yes
+		}
+		iconType = {
+			name = "tu_st_vic_dukes_tu_vic_loyalty_normandy_e01"
+			spriteType = "GFX_tu_status_seg_20"
+			frame = 1
+			position = { x = 26 y = 191 }
+		}
+		iconType = {
+			name = "tu_st_vic_dukes_tu_vic_loyalty_normandy_f01"
+			spriteType = "GFX_tu_status_seg_20"
+			frame = 3
+			position = { x = 26 y = 191 }
+		}
+		iconType = {
+			name = "tu_st_vic_dukes_tu_vic_loyalty_normandy_e02"
+			spriteType = "GFX_tu_status_seg_20"
+			frame = 1
+			position = { x = 48 y = 191 }
+		}
+		iconType = {
+			name = "tu_st_vic_dukes_tu_vic_loyalty_normandy_f02"
+			spriteType = "GFX_tu_status_seg_20"
+			frame = 3
+			position = { x = 48 y = 191 }
+		}
+		iconType = {
+			name = "tu_st_vic_dukes_tu_vic_loyalty_normandy_e03"
+			spriteType = "GFX_tu_status_seg_20"
+			frame = 1
+			position = { x = 70 y = 191 }
+		}
+		iconType = {
+			name = "tu_st_vic_dukes_tu_vic_loyalty_normandy_f03"
+			spriteType = "GFX_tu_status_seg_20"
+			frame = 3
+			position = { x = 70 y = 191 }
+		}
+		iconType = {
+			name = "tu_st_vic_dukes_tu_vic_loyalty_normandy_e04"
+			spriteType = "GFX_tu_status_seg_20"
+			frame = 1
+			position = { x = 92 y = 191 }
+		}
+		iconType = {
+			name = "tu_st_vic_dukes_tu_vic_loyalty_normandy_f04"
+			spriteType = "GFX_tu_status_seg_20"
+			frame = 3
+			position = { x = 92 y = 191 }
+		}
+		iconType = {
+			name = "tu_st_vic_dukes_tu_vic_loyalty_normandy_e05"
+			spriteType = "GFX_tu_status_seg_20"
+			frame = 1
+			position = { x = 114 y = 191 }
+		}
+		iconType = {
+			name = "tu_st_vic_dukes_tu_vic_loyalty_normandy_f05"
+			spriteType = "GFX_tu_status_seg_20"
+			frame = 3
+			position = { x = 114 y = 191 }
+		}
+		iconType = {
+			name = "tu_st_vic_dukes_tu_vic_loyalty_normandy_e06"
+			spriteType = "GFX_tu_status_seg_20"
+			frame = 1
+			position = { x = 136 y = 191 }
+		}
+		iconType = {
+			name = "tu_st_vic_dukes_tu_vic_loyalty_normandy_f06"
+			spriteType = "GFX_tu_status_seg_20"
+			frame = 3
+			position = { x = 136 y = 191 }
+		}
+		iconType = {
+			name = "tu_st_vic_dukes_tu_vic_loyalty_normandy_e07"
+			spriteType = "GFX_tu_status_seg_20"
+			frame = 1
+			position = { x = 158 y = 191 }
+		}
+		iconType = {
+			name = "tu_st_vic_dukes_tu_vic_loyalty_normandy_f07"
+			spriteType = "GFX_tu_status_seg_20"
+			frame = 3
+			position = { x = 158 y = 191 }
+		}
+		iconType = {
+			name = "tu_st_vic_dukes_tu_vic_loyalty_normandy_e08"
+			spriteType = "GFX_tu_status_seg_20"
+			frame = 1
+			position = { x = 180 y = 191 }
+		}
+		iconType = {
+			name = "tu_st_vic_dukes_tu_vic_loyalty_normandy_f08"
+			spriteType = "GFX_tu_status_seg_20"
+			frame = 3
+			position = { x = 180 y = 191 }
+		}
+		iconType = {
+			name = "tu_st_vic_dukes_tu_vic_loyalty_normandy_e09"
+			spriteType = "GFX_tu_status_seg_20"
+			frame = 1
+			position = { x = 202 y = 191 }
+		}
+		iconType = {
+			name = "tu_st_vic_dukes_tu_vic_loyalty_normandy_f09"
+			spriteType = "GFX_tu_status_seg_20"
+			frame = 3
+			position = { x = 202 y = 191 }
+		}
+		iconType = {
+			name = "tu_st_vic_dukes_tu_vic_loyalty_normandy_e10"
+			spriteType = "GFX_tu_status_seg_20"
+			frame = 1
+			position = { x = 224 y = 191 }
+		}
+		iconType = {
+			name = "tu_st_vic_dukes_tu_vic_loyalty_normandy_f10"
+			spriteType = "GFX_tu_status_seg_20"
+			frame = 3
+			position = { x = 224 y = 191 }
+		}
+		iconType = {
+			name = "tu_st_vic_dukes_tu_vic_loyalty_normandy_e11"
+			spriteType = "GFX_tu_status_seg_20"
+			frame = 1
+			position = { x = 246 y = 191 }
+		}
+		iconType = {
+			name = "tu_st_vic_dukes_tu_vic_loyalty_normandy_f11"
+			spriteType = "GFX_tu_status_seg_20"
+			frame = 3
+			position = { x = 246 y = 191 }
+		}
+		iconType = {
+			name = "tu_st_vic_dukes_tu_vic_loyalty_normandy_e12"
+			spriteType = "GFX_tu_status_seg_20"
+			frame = 1
+			position = { x = 268 y = 191 }
+		}
+		iconType = {
+			name = "tu_st_vic_dukes_tu_vic_loyalty_normandy_f12"
+			spriteType = "GFX_tu_status_seg_20"
+			frame = 3
+			position = { x = 268 y = 191 }
+		}
+		iconType = {
+			name = "tu_st_vic_dukes_tu_vic_loyalty_normandy_e13"
+			spriteType = "GFX_tu_status_seg_20"
+			frame = 1
+			position = { x = 290 y = 191 }
+		}
+		iconType = {
+			name = "tu_st_vic_dukes_tu_vic_loyalty_normandy_f13"
+			spriteType = "GFX_tu_status_seg_20"
+			frame = 3
+			position = { x = 290 y = 191 }
+		}
+		iconType = {
+			name = "tu_st_vic_dukes_tu_vic_loyalty_normandy_e14"
+			spriteType = "GFX_tu_status_seg_20"
+			frame = 1
+			position = { x = 312 y = 191 }
+		}
+		iconType = {
+			name = "tu_st_vic_dukes_tu_vic_loyalty_normandy_f14"
+			spriteType = "GFX_tu_status_seg_20"
+			frame = 3
+			position = { x = 312 y = 191 }
+		}
+		iconType = {
+			name = "tu_st_vic_dukes_tu_vic_loyalty_normandy_e15"
+			spriteType = "GFX_tu_status_seg_20"
+			frame = 1
+			position = { x = 334 y = 191 }
+		}
+		iconType = {
+			name = "tu_st_vic_dukes_tu_vic_loyalty_normandy_f15"
+			spriteType = "GFX_tu_status_seg_20"
+			frame = 3
+			position = { x = 334 y = 191 }
+		}
+		iconType = {
+			name = "tu_st_vic_dukes_tu_vic_loyalty_normandy_e16"
+			spriteType = "GFX_tu_status_seg_20"
+			frame = 1
+			position = { x = 356 y = 191 }
+		}
+		iconType = {
+			name = "tu_st_vic_dukes_tu_vic_loyalty_normandy_f16"
+			spriteType = "GFX_tu_status_seg_20"
+			frame = 3
+			position = { x = 356 y = 191 }
+		}
+		iconType = {
+			name = "tu_st_vic_dukes_tu_vic_loyalty_normandy_e17"
+			spriteType = "GFX_tu_status_seg_20"
+			frame = 1
+			position = { x = 378 y = 191 }
+		}
+		iconType = {
+			name = "tu_st_vic_dukes_tu_vic_loyalty_normandy_f17"
+			spriteType = "GFX_tu_status_seg_20"
+			frame = 3
+			position = { x = 378 y = 191 }
+		}
+		iconType = {
+			name = "tu_st_vic_dukes_tu_vic_loyalty_normandy_e18"
+			spriteType = "GFX_tu_status_seg_20"
+			frame = 1
+			position = { x = 400 y = 191 }
+		}
+		iconType = {
+			name = "tu_st_vic_dukes_tu_vic_loyalty_normandy_f18"
+			spriteType = "GFX_tu_status_seg_20"
+			frame = 3
+			position = { x = 400 y = 191 }
+		}
+		iconType = {
+			name = "tu_st_vic_dukes_tu_vic_loyalty_normandy_e19"
+			spriteType = "GFX_tu_status_seg_20"
+			frame = 1
+			position = { x = 422 y = 191 }
+		}
+		iconType = {
+			name = "tu_st_vic_dukes_tu_vic_loyalty_normandy_f19"
+			spriteType = "GFX_tu_status_seg_20"
+			frame = 3
+			position = { x = 422 y = 191 }
+		}
+		iconType = {
+			name = "tu_st_vic_dukes_tu_vic_loyalty_normandy_e20"
+			spriteType = "GFX_tu_status_seg_20"
+			frame = 1
+			position = { x = 444 y = 191 }
+		}
+		iconType = {
+			name = "tu_st_vic_dukes_tu_vic_loyalty_normandy_f20"
+			spriteType = "GFX_tu_status_seg_20"
+			frame = 3
+			position = { x = 444 y = 191 }
+		}
+		iconType = {
+			name = "tu_st_vic_dukes_tu_vic_loyalty_normandy_t40"
+			spriteType = "GFX_tu_status_tick"
+			position = { x = 200 y = 188 }
+		}
+		iconType = {
+			name = "tu_st_vic_dukes_tu_vic_loyalty_normandy_t55"
+			spriteType = "GFX_tu_status_tick"
+			position = { x = 266 y = 188 }
+		}
+		instantTextBoxType = {
+			name = "tu_st_vic_dukes_tu_vic_loyalty_normandy_tip"
+			position = { x = 18 y = 168 }
+			maxWidth = 470
+			maxHeight = 38
+			text = ""
+			pdx_tooltip = TU_STATUS_TU_VIC_loyalty_normandy_tt
+		}
+
+		iconType = {
+			name = "tu_st_vic_dukes_tu_vic_loyalty_abercorn_bg"
+			spriteType = "GFX_tu_status_row_full"
+			position = { x = 18 y = 210 }
+		}
+		instantTextBoxType = {
+			name = "tu_st_vic_dukes_tu_vic_loyalty_abercorn_label"
+			position = { x = 26 y = 214 }
+			font = "hoi_16mbs"
+			maxWidth = 350
+			maxHeight = 18
+			text = "TU_STATUS_TU_VIC_loyalty_abercorn_label"
+			format = left
+			fixedsize = yes
+		}
+		instantTextBoxType = {
+			name = "tu_st_vic_dukes_tu_vic_loyalty_abercorn_value"
+			position = { x = 380 y = 214 }
+			font = "hoi_16mbs"
+			maxWidth = 100
+			maxHeight = 18
+			text = "TU_STATUS_TU_VIC_loyalty_abercorn_value"
+			format = right
+			fixedsize = yes
+		}
+		iconType = {
+			name = "tu_st_vic_dukes_tu_vic_loyalty_abercorn_e01"
+			spriteType = "GFX_tu_status_seg_20"
+			frame = 1
+			position = { x = 26 y = 233 }
+		}
+		iconType = {
+			name = "tu_st_vic_dukes_tu_vic_loyalty_abercorn_f01"
+			spriteType = "GFX_tu_status_seg_20"
+			frame = 3
+			position = { x = 26 y = 233 }
+		}
+		iconType = {
+			name = "tu_st_vic_dukes_tu_vic_loyalty_abercorn_e02"
+			spriteType = "GFX_tu_status_seg_20"
+			frame = 1
+			position = { x = 48 y = 233 }
+		}
+		iconType = {
+			name = "tu_st_vic_dukes_tu_vic_loyalty_abercorn_f02"
+			spriteType = "GFX_tu_status_seg_20"
+			frame = 3
+			position = { x = 48 y = 233 }
+		}
+		iconType = {
+			name = "tu_st_vic_dukes_tu_vic_loyalty_abercorn_e03"
+			spriteType = "GFX_tu_status_seg_20"
+			frame = 1
+			position = { x = 70 y = 233 }
+		}
+		iconType = {
+			name = "tu_st_vic_dukes_tu_vic_loyalty_abercorn_f03"
+			spriteType = "GFX_tu_status_seg_20"
+			frame = 3
+			position = { x = 70 y = 233 }
+		}
+		iconType = {
+			name = "tu_st_vic_dukes_tu_vic_loyalty_abercorn_e04"
+			spriteType = "GFX_tu_status_seg_20"
+			frame = 1
+			position = { x = 92 y = 233 }
+		}
+		iconType = {
+			name = "tu_st_vic_dukes_tu_vic_loyalty_abercorn_f04"
+			spriteType = "GFX_tu_status_seg_20"
+			frame = 3
+			position = { x = 92 y = 233 }
+		}
+		iconType = {
+			name = "tu_st_vic_dukes_tu_vic_loyalty_abercorn_e05"
+			spriteType = "GFX_tu_status_seg_20"
+			frame = 1
+			position = { x = 114 y = 233 }
+		}
+		iconType = {
+			name = "tu_st_vic_dukes_tu_vic_loyalty_abercorn_f05"
+			spriteType = "GFX_tu_status_seg_20"
+			frame = 3
+			position = { x = 114 y = 233 }
+		}
+		iconType = {
+			name = "tu_st_vic_dukes_tu_vic_loyalty_abercorn_e06"
+			spriteType = "GFX_tu_status_seg_20"
+			frame = 1
+			position = { x = 136 y = 233 }
+		}
+		iconType = {
+			name = "tu_st_vic_dukes_tu_vic_loyalty_abercorn_f06"
+			spriteType = "GFX_tu_status_seg_20"
+			frame = 3
+			position = { x = 136 y = 233 }
+		}
+		iconType = {
+			name = "tu_st_vic_dukes_tu_vic_loyalty_abercorn_e07"
+			spriteType = "GFX_tu_status_seg_20"
+			frame = 1
+			position = { x = 158 y = 233 }
+		}
+		iconType = {
+			name = "tu_st_vic_dukes_tu_vic_loyalty_abercorn_f07"
+			spriteType = "GFX_tu_status_seg_20"
+			frame = 3
+			position = { x = 158 y = 233 }
+		}
+		iconType = {
+			name = "tu_st_vic_dukes_tu_vic_loyalty_abercorn_e08"
+			spriteType = "GFX_tu_status_seg_20"
+			frame = 1
+			position = { x = 180 y = 233 }
+		}
+		iconType = {
+			name = "tu_st_vic_dukes_tu_vic_loyalty_abercorn_f08"
+			spriteType = "GFX_tu_status_seg_20"
+			frame = 3
+			position = { x = 180 y = 233 }
+		}
+		iconType = {
+			name = "tu_st_vic_dukes_tu_vic_loyalty_abercorn_e09"
+			spriteType = "GFX_tu_status_seg_20"
+			frame = 1
+			position = { x = 202 y = 233 }
+		}
+		iconType = {
+			name = "tu_st_vic_dukes_tu_vic_loyalty_abercorn_f09"
+			spriteType = "GFX_tu_status_seg_20"
+			frame = 3
+			position = { x = 202 y = 233 }
+		}
+		iconType = {
+			name = "tu_st_vic_dukes_tu_vic_loyalty_abercorn_e10"
+			spriteType = "GFX_tu_status_seg_20"
+			frame = 1
+			position = { x = 224 y = 233 }
+		}
+		iconType = {
+			name = "tu_st_vic_dukes_tu_vic_loyalty_abercorn_f10"
+			spriteType = "GFX_tu_status_seg_20"
+			frame = 3
+			position = { x = 224 y = 233 }
+		}
+		iconType = {
+			name = "tu_st_vic_dukes_tu_vic_loyalty_abercorn_e11"
+			spriteType = "GFX_tu_status_seg_20"
+			frame = 1
+			position = { x = 246 y = 233 }
+		}
+		iconType = {
+			name = "tu_st_vic_dukes_tu_vic_loyalty_abercorn_f11"
+			spriteType = "GFX_tu_status_seg_20"
+			frame = 3
+			position = { x = 246 y = 233 }
+		}
+		iconType = {
+			name = "tu_st_vic_dukes_tu_vic_loyalty_abercorn_e12"
+			spriteType = "GFX_tu_status_seg_20"
+			frame = 1
+			position = { x = 268 y = 233 }
+		}
+		iconType = {
+			name = "tu_st_vic_dukes_tu_vic_loyalty_abercorn_f12"
+			spriteType = "GFX_tu_status_seg_20"
+			frame = 3
+			position = { x = 268 y = 233 }
+		}
+		iconType = {
+			name = "tu_st_vic_dukes_tu_vic_loyalty_abercorn_e13"
+			spriteType = "GFX_tu_status_seg_20"
+			frame = 1
+			position = { x = 290 y = 233 }
+		}
+		iconType = {
+			name = "tu_st_vic_dukes_tu_vic_loyalty_abercorn_f13"
+			spriteType = "GFX_tu_status_seg_20"
+			frame = 3
+			position = { x = 290 y = 233 }
+		}
+		iconType = {
+			name = "tu_st_vic_dukes_tu_vic_loyalty_abercorn_e14"
+			spriteType = "GFX_tu_status_seg_20"
+			frame = 1
+			position = { x = 312 y = 233 }
+		}
+		iconType = {
+			name = "tu_st_vic_dukes_tu_vic_loyalty_abercorn_f14"
+			spriteType = "GFX_tu_status_seg_20"
+			frame = 3
+			position = { x = 312 y = 233 }
+		}
+		iconType = {
+			name = "tu_st_vic_dukes_tu_vic_loyalty_abercorn_e15"
+			spriteType = "GFX_tu_status_seg_20"
+			frame = 1
+			position = { x = 334 y = 233 }
+		}
+		iconType = {
+			name = "tu_st_vic_dukes_tu_vic_loyalty_abercorn_f15"
+			spriteType = "GFX_tu_status_seg_20"
+			frame = 3
+			position = { x = 334 y = 233 }
+		}
+		iconType = {
+			name = "tu_st_vic_dukes_tu_vic_loyalty_abercorn_e16"
+			spriteType = "GFX_tu_status_seg_20"
+			frame = 1
+			position = { x = 356 y = 233 }
+		}
+		iconType = {
+			name = "tu_st_vic_dukes_tu_vic_loyalty_abercorn_f16"
+			spriteType = "GFX_tu_status_seg_20"
+			frame = 3
+			position = { x = 356 y = 233 }
+		}
+		iconType = {
+			name = "tu_st_vic_dukes_tu_vic_loyalty_abercorn_e17"
+			spriteType = "GFX_tu_status_seg_20"
+			frame = 1
+			position = { x = 378 y = 233 }
+		}
+		iconType = {
+			name = "tu_st_vic_dukes_tu_vic_loyalty_abercorn_f17"
+			spriteType = "GFX_tu_status_seg_20"
+			frame = 3
+			position = { x = 378 y = 233 }
+		}
+		iconType = {
+			name = "tu_st_vic_dukes_tu_vic_loyalty_abercorn_e18"
+			spriteType = "GFX_tu_status_seg_20"
+			frame = 1
+			position = { x = 400 y = 233 }
+		}
+		iconType = {
+			name = "tu_st_vic_dukes_tu_vic_loyalty_abercorn_f18"
+			spriteType = "GFX_tu_status_seg_20"
+			frame = 3
+			position = { x = 400 y = 233 }
+		}
+		iconType = {
+			name = "tu_st_vic_dukes_tu_vic_loyalty_abercorn_e19"
+			spriteType = "GFX_tu_status_seg_20"
+			frame = 1
+			position = { x = 422 y = 233 }
+		}
+		iconType = {
+			name = "tu_st_vic_dukes_tu_vic_loyalty_abercorn_f19"
+			spriteType = "GFX_tu_status_seg_20"
+			frame = 3
+			position = { x = 422 y = 233 }
+		}
+		iconType = {
+			name = "tu_st_vic_dukes_tu_vic_loyalty_abercorn_e20"
+			spriteType = "GFX_tu_status_seg_20"
+			frame = 1
+			position = { x = 444 y = 233 }
+		}
+		iconType = {
+			name = "tu_st_vic_dukes_tu_vic_loyalty_abercorn_f20"
+			spriteType = "GFX_tu_status_seg_20"
+			frame = 3
+			position = { x = 444 y = 233 }
+		}
+		iconType = {
+			name = "tu_st_vic_dukes_tu_vic_loyalty_abercorn_t40"
+			spriteType = "GFX_tu_status_tick"
+			position = { x = 200 y = 230 }
+		}
+		iconType = {
+			name = "tu_st_vic_dukes_tu_vic_loyalty_abercorn_t55"
+			spriteType = "GFX_tu_status_tick"
+			position = { x = 266 y = 230 }
+		}
+		instantTextBoxType = {
+			name = "tu_st_vic_dukes_tu_vic_loyalty_abercorn_tip"
+			position = { x = 18 y = 210 }
+			maxWidth = 470
+			maxHeight = 38
+			text = ""
+			pdx_tooltip = TU_STATUS_TU_VIC_loyalty_abercorn_tt
+		}
+
+		iconType = {
+			name = "tu_st_vic_dukes_tu_vic_loyalty_stafford_bg"
+			spriteType = "GFX_tu_status_row_full"
+			position = { x = 18 y = 252 }
+		}
+		instantTextBoxType = {
+			name = "tu_st_vic_dukes_tu_vic_loyalty_stafford_label"
+			position = { x = 26 y = 256 }
+			font = "hoi_16mbs"
+			maxWidth = 350
+			maxHeight = 18
+			text = "TU_STATUS_TU_VIC_loyalty_stafford_label"
+			format = left
+			fixedsize = yes
+		}
+		instantTextBoxType = {
+			name = "tu_st_vic_dukes_tu_vic_loyalty_stafford_value"
+			position = { x = 380 y = 256 }
+			font = "hoi_16mbs"
+			maxWidth = 100
+			maxHeight = 18
+			text = "TU_STATUS_TU_VIC_loyalty_stafford_value"
+			format = right
+			fixedsize = yes
+		}
+		iconType = {
+			name = "tu_st_vic_dukes_tu_vic_loyalty_stafford_e01"
+			spriteType = "GFX_tu_status_seg_20"
+			frame = 1
+			position = { x = 26 y = 275 }
+		}
+		iconType = {
+			name = "tu_st_vic_dukes_tu_vic_loyalty_stafford_f01"
+			spriteType = "GFX_tu_status_seg_20"
+			frame = 3
+			position = { x = 26 y = 275 }
+		}
+		iconType = {
+			name = "tu_st_vic_dukes_tu_vic_loyalty_stafford_e02"
+			spriteType = "GFX_tu_status_seg_20"
+			frame = 1
+			position = { x = 48 y = 275 }
+		}
+		iconType = {
+			name = "tu_st_vic_dukes_tu_vic_loyalty_stafford_f02"
+			spriteType = "GFX_tu_status_seg_20"
+			frame = 3
+			position = { x = 48 y = 275 }
+		}
+		iconType = {
+			name = "tu_st_vic_dukes_tu_vic_loyalty_stafford_e03"
+			spriteType = "GFX_tu_status_seg_20"
+			frame = 1
+			position = { x = 70 y = 275 }
+		}
+		iconType = {
+			name = "tu_st_vic_dukes_tu_vic_loyalty_stafford_f03"
+			spriteType = "GFX_tu_status_seg_20"
+			frame = 3
+			position = { x = 70 y = 275 }
+		}
+		iconType = {
+			name = "tu_st_vic_dukes_tu_vic_loyalty_stafford_e04"
+			spriteType = "GFX_tu_status_seg_20"
+			frame = 1
+			position = { x = 92 y = 275 }
+		}
+		iconType = {
+			name = "tu_st_vic_dukes_tu_vic_loyalty_stafford_f04"
+			spriteType = "GFX_tu_status_seg_20"
+			frame = 3
+			position = { x = 92 y = 275 }
+		}
+		iconType = {
+			name = "tu_st_vic_dukes_tu_vic_loyalty_stafford_e05"
+			spriteType = "GFX_tu_status_seg_20"
+			frame = 1
+			position = { x = 114 y = 275 }
+		}
+		iconType = {
+			name = "tu_st_vic_dukes_tu_vic_loyalty_stafford_f05"
+			spriteType = "GFX_tu_status_seg_20"
+			frame = 3
+			position = { x = 114 y = 275 }
+		}
+		iconType = {
+			name = "tu_st_vic_dukes_tu_vic_loyalty_stafford_e06"
+			spriteType = "GFX_tu_status_seg_20"
+			frame = 1
+			position = { x = 136 y = 275 }
+		}
+		iconType = {
+			name = "tu_st_vic_dukes_tu_vic_loyalty_stafford_f06"
+			spriteType = "GFX_tu_status_seg_20"
+			frame = 3
+			position = { x = 136 y = 275 }
+		}
+		iconType = {
+			name = "tu_st_vic_dukes_tu_vic_loyalty_stafford_e07"
+			spriteType = "GFX_tu_status_seg_20"
+			frame = 1
+			position = { x = 158 y = 275 }
+		}
+		iconType = {
+			name = "tu_st_vic_dukes_tu_vic_loyalty_stafford_f07"
+			spriteType = "GFX_tu_status_seg_20"
+			frame = 3
+			position = { x = 158 y = 275 }
+		}
+		iconType = {
+			name = "tu_st_vic_dukes_tu_vic_loyalty_stafford_e08"
+			spriteType = "GFX_tu_status_seg_20"
+			frame = 1
+			position = { x = 180 y = 275 }
+		}
+		iconType = {
+			name = "tu_st_vic_dukes_tu_vic_loyalty_stafford_f08"
+			spriteType = "GFX_tu_status_seg_20"
+			frame = 3
+			position = { x = 180 y = 275 }
+		}
+		iconType = {
+			name = "tu_st_vic_dukes_tu_vic_loyalty_stafford_e09"
+			spriteType = "GFX_tu_status_seg_20"
+			frame = 1
+			position = { x = 202 y = 275 }
+		}
+		iconType = {
+			name = "tu_st_vic_dukes_tu_vic_loyalty_stafford_f09"
+			spriteType = "GFX_tu_status_seg_20"
+			frame = 3
+			position = { x = 202 y = 275 }
+		}
+		iconType = {
+			name = "tu_st_vic_dukes_tu_vic_loyalty_stafford_e10"
+			spriteType = "GFX_tu_status_seg_20"
+			frame = 1
+			position = { x = 224 y = 275 }
+		}
+		iconType = {
+			name = "tu_st_vic_dukes_tu_vic_loyalty_stafford_f10"
+			spriteType = "GFX_tu_status_seg_20"
+			frame = 3
+			position = { x = 224 y = 275 }
+		}
+		iconType = {
+			name = "tu_st_vic_dukes_tu_vic_loyalty_stafford_e11"
+			spriteType = "GFX_tu_status_seg_20"
+			frame = 1
+			position = { x = 246 y = 275 }
+		}
+		iconType = {
+			name = "tu_st_vic_dukes_tu_vic_loyalty_stafford_f11"
+			spriteType = "GFX_tu_status_seg_20"
+			frame = 3
+			position = { x = 246 y = 275 }
+		}
+		iconType = {
+			name = "tu_st_vic_dukes_tu_vic_loyalty_stafford_e12"
+			spriteType = "GFX_tu_status_seg_20"
+			frame = 1
+			position = { x = 268 y = 275 }
+		}
+		iconType = {
+			name = "tu_st_vic_dukes_tu_vic_loyalty_stafford_f12"
+			spriteType = "GFX_tu_status_seg_20"
+			frame = 3
+			position = { x = 268 y = 275 }
+		}
+		iconType = {
+			name = "tu_st_vic_dukes_tu_vic_loyalty_stafford_e13"
+			spriteType = "GFX_tu_status_seg_20"
+			frame = 1
+			position = { x = 290 y = 275 }
+		}
+		iconType = {
+			name = "tu_st_vic_dukes_tu_vic_loyalty_stafford_f13"
+			spriteType = "GFX_tu_status_seg_20"
+			frame = 3
+			position = { x = 290 y = 275 }
+		}
+		iconType = {
+			name = "tu_st_vic_dukes_tu_vic_loyalty_stafford_e14"
+			spriteType = "GFX_tu_status_seg_20"
+			frame = 1
+			position = { x = 312 y = 275 }
+		}
+		iconType = {
+			name = "tu_st_vic_dukes_tu_vic_loyalty_stafford_f14"
+			spriteType = "GFX_tu_status_seg_20"
+			frame = 3
+			position = { x = 312 y = 275 }
+		}
+		iconType = {
+			name = "tu_st_vic_dukes_tu_vic_loyalty_stafford_e15"
+			spriteType = "GFX_tu_status_seg_20"
+			frame = 1
+			position = { x = 334 y = 275 }
+		}
+		iconType = {
+			name = "tu_st_vic_dukes_tu_vic_loyalty_stafford_f15"
+			spriteType = "GFX_tu_status_seg_20"
+			frame = 3
+			position = { x = 334 y = 275 }
+		}
+		iconType = {
+			name = "tu_st_vic_dukes_tu_vic_loyalty_stafford_e16"
+			spriteType = "GFX_tu_status_seg_20"
+			frame = 1
+			position = { x = 356 y = 275 }
+		}
+		iconType = {
+			name = "tu_st_vic_dukes_tu_vic_loyalty_stafford_f16"
+			spriteType = "GFX_tu_status_seg_20"
+			frame = 3
+			position = { x = 356 y = 275 }
+		}
+		iconType = {
+			name = "tu_st_vic_dukes_tu_vic_loyalty_stafford_e17"
+			spriteType = "GFX_tu_status_seg_20"
+			frame = 1
+			position = { x = 378 y = 275 }
+		}
+		iconType = {
+			name = "tu_st_vic_dukes_tu_vic_loyalty_stafford_f17"
+			spriteType = "GFX_tu_status_seg_20"
+			frame = 3
+			position = { x = 378 y = 275 }
+		}
+		iconType = {
+			name = "tu_st_vic_dukes_tu_vic_loyalty_stafford_e18"
+			spriteType = "GFX_tu_status_seg_20"
+			frame = 1
+			position = { x = 400 y = 275 }
+		}
+		iconType = {
+			name = "tu_st_vic_dukes_tu_vic_loyalty_stafford_f18"
+			spriteType = "GFX_tu_status_seg_20"
+			frame = 3
+			position = { x = 400 y = 275 }
+		}
+		iconType = {
+			name = "tu_st_vic_dukes_tu_vic_loyalty_stafford_e19"
+			spriteType = "GFX_tu_status_seg_20"
+			frame = 1
+			position = { x = 422 y = 275 }
+		}
+		iconType = {
+			name = "tu_st_vic_dukes_tu_vic_loyalty_stafford_f19"
+			spriteType = "GFX_tu_status_seg_20"
+			frame = 3
+			position = { x = 422 y = 275 }
+		}
+		iconType = {
+			name = "tu_st_vic_dukes_tu_vic_loyalty_stafford_e20"
+			spriteType = "GFX_tu_status_seg_20"
+			frame = 1
+			position = { x = 444 y = 275 }
+		}
+		iconType = {
+			name = "tu_st_vic_dukes_tu_vic_loyalty_stafford_f20"
+			spriteType = "GFX_tu_status_seg_20"
+			frame = 3
+			position = { x = 444 y = 275 }
+		}
+		iconType = {
+			name = "tu_st_vic_dukes_tu_vic_loyalty_stafford_t40"
+			spriteType = "GFX_tu_status_tick"
+			position = { x = 200 y = 272 }
+		}
+		iconType = {
+			name = "tu_st_vic_dukes_tu_vic_loyalty_stafford_t55"
+			spriteType = "GFX_tu_status_tick"
+			position = { x = 266 y = 272 }
+		}
+		instantTextBoxType = {
+			name = "tu_st_vic_dukes_tu_vic_loyalty_stafford_tip"
+			position = { x = 18 y = 252 }
+			maxWidth = 470
+			maxHeight = 38
+			text = ""
+			pdx_tooltip = TU_STATUS_TU_VIC_loyalty_stafford_tt
+		}
+
+		iconType = {
+			name = "tu_st_vic_dukes_tu_vic_loyalty_fife_bg"
+			spriteType = "GFX_tu_status_row_full"
+			position = { x = 18 y = 294 }
+		}
+		instantTextBoxType = {
+			name = "tu_st_vic_dukes_tu_vic_loyalty_fife_label"
+			position = { x = 26 y = 298 }
+			font = "hoi_16mbs"
+			maxWidth = 350
+			maxHeight = 18
+			text = "TU_STATUS_TU_VIC_loyalty_fife_label"
+			format = left
+			fixedsize = yes
+		}
+		instantTextBoxType = {
+			name = "tu_st_vic_dukes_tu_vic_loyalty_fife_value"
+			position = { x = 380 y = 298 }
+			font = "hoi_16mbs"
+			maxWidth = 100
+			maxHeight = 18
+			text = "TU_STATUS_TU_VIC_loyalty_fife_value"
+			format = right
+			fixedsize = yes
+		}
+		iconType = {
+			name = "tu_st_vic_dukes_tu_vic_loyalty_fife_e01"
+			spriteType = "GFX_tu_status_seg_20"
+			frame = 1
+			position = { x = 26 y = 317 }
+		}
+		iconType = {
+			name = "tu_st_vic_dukes_tu_vic_loyalty_fife_f01"
+			spriteType = "GFX_tu_status_seg_20"
+			frame = 3
+			position = { x = 26 y = 317 }
+		}
+		iconType = {
+			name = "tu_st_vic_dukes_tu_vic_loyalty_fife_e02"
+			spriteType = "GFX_tu_status_seg_20"
+			frame = 1
+			position = { x = 48 y = 317 }
+		}
+		iconType = {
+			name = "tu_st_vic_dukes_tu_vic_loyalty_fife_f02"
+			spriteType = "GFX_tu_status_seg_20"
+			frame = 3
+			position = { x = 48 y = 317 }
+		}
+		iconType = {
+			name = "tu_st_vic_dukes_tu_vic_loyalty_fife_e03"
+			spriteType = "GFX_tu_status_seg_20"
+			frame = 1
+			position = { x = 70 y = 317 }
+		}
+		iconType = {
+			name = "tu_st_vic_dukes_tu_vic_loyalty_fife_f03"
+			spriteType = "GFX_tu_status_seg_20"
+			frame = 3
+			position = { x = 70 y = 317 }
+		}
+		iconType = {
+			name = "tu_st_vic_dukes_tu_vic_loyalty_fife_e04"
+			spriteType = "GFX_tu_status_seg_20"
+			frame = 1
+			position = { x = 92 y = 317 }
+		}
+		iconType = {
+			name = "tu_st_vic_dukes_tu_vic_loyalty_fife_f04"
+			spriteType = "GFX_tu_status_seg_20"
+			frame = 3
+			position = { x = 92 y = 317 }
+		}
+		iconType = {
+			name = "tu_st_vic_dukes_tu_vic_loyalty_fife_e05"
+			spriteType = "GFX_tu_status_seg_20"
+			frame = 1
+			position = { x = 114 y = 317 }
+		}
+		iconType = {
+			name = "tu_st_vic_dukes_tu_vic_loyalty_fife_f05"
+			spriteType = "GFX_tu_status_seg_20"
+			frame = 3
+			position = { x = 114 y = 317 }
+		}
+		iconType = {
+			name = "tu_st_vic_dukes_tu_vic_loyalty_fife_e06"
+			spriteType = "GFX_tu_status_seg_20"
+			frame = 1
+			position = { x = 136 y = 317 }
+		}
+		iconType = {
+			name = "tu_st_vic_dukes_tu_vic_loyalty_fife_f06"
+			spriteType = "GFX_tu_status_seg_20"
+			frame = 3
+			position = { x = 136 y = 317 }
+		}
+		iconType = {
+			name = "tu_st_vic_dukes_tu_vic_loyalty_fife_e07"
+			spriteType = "GFX_tu_status_seg_20"
+			frame = 1
+			position = { x = 158 y = 317 }
+		}
+		iconType = {
+			name = "tu_st_vic_dukes_tu_vic_loyalty_fife_f07"
+			spriteType = "GFX_tu_status_seg_20"
+			frame = 3
+			position = { x = 158 y = 317 }
+		}
+		iconType = {
+			name = "tu_st_vic_dukes_tu_vic_loyalty_fife_e08"
+			spriteType = "GFX_tu_status_seg_20"
+			frame = 1
+			position = { x = 180 y = 317 }
+		}
+		iconType = {
+			name = "tu_st_vic_dukes_tu_vic_loyalty_fife_f08"
+			spriteType = "GFX_tu_status_seg_20"
+			frame = 3
+			position = { x = 180 y = 317 }
+		}
+		iconType = {
+			name = "tu_st_vic_dukes_tu_vic_loyalty_fife_e09"
+			spriteType = "GFX_tu_status_seg_20"
+			frame = 1
+			position = { x = 202 y = 317 }
+		}
+		iconType = {
+			name = "tu_st_vic_dukes_tu_vic_loyalty_fife_f09"
+			spriteType = "GFX_tu_status_seg_20"
+			frame = 3
+			position = { x = 202 y = 317 }
+		}
+		iconType = {
+			name = "tu_st_vic_dukes_tu_vic_loyalty_fife_e10"
+			spriteType = "GFX_tu_status_seg_20"
+			frame = 1
+			position = { x = 224 y = 317 }
+		}
+		iconType = {
+			name = "tu_st_vic_dukes_tu_vic_loyalty_fife_f10"
+			spriteType = "GFX_tu_status_seg_20"
+			frame = 3
+			position = { x = 224 y = 317 }
+		}
+		iconType = {
+			name = "tu_st_vic_dukes_tu_vic_loyalty_fife_e11"
+			spriteType = "GFX_tu_status_seg_20"
+			frame = 1
+			position = { x = 246 y = 317 }
+		}
+		iconType = {
+			name = "tu_st_vic_dukes_tu_vic_loyalty_fife_f11"
+			spriteType = "GFX_tu_status_seg_20"
+			frame = 3
+			position = { x = 246 y = 317 }
+		}
+		iconType = {
+			name = "tu_st_vic_dukes_tu_vic_loyalty_fife_e12"
+			spriteType = "GFX_tu_status_seg_20"
+			frame = 1
+			position = { x = 268 y = 317 }
+		}
+		iconType = {
+			name = "tu_st_vic_dukes_tu_vic_loyalty_fife_f12"
+			spriteType = "GFX_tu_status_seg_20"
+			frame = 3
+			position = { x = 268 y = 317 }
+		}
+		iconType = {
+			name = "tu_st_vic_dukes_tu_vic_loyalty_fife_e13"
+			spriteType = "GFX_tu_status_seg_20"
+			frame = 1
+			position = { x = 290 y = 317 }
+		}
+		iconType = {
+			name = "tu_st_vic_dukes_tu_vic_loyalty_fife_f13"
+			spriteType = "GFX_tu_status_seg_20"
+			frame = 3
+			position = { x = 290 y = 317 }
+		}
+		iconType = {
+			name = "tu_st_vic_dukes_tu_vic_loyalty_fife_e14"
+			spriteType = "GFX_tu_status_seg_20"
+			frame = 1
+			position = { x = 312 y = 317 }
+		}
+		iconType = {
+			name = "tu_st_vic_dukes_tu_vic_loyalty_fife_f14"
+			spriteType = "GFX_tu_status_seg_20"
+			frame = 3
+			position = { x = 312 y = 317 }
+		}
+		iconType = {
+			name = "tu_st_vic_dukes_tu_vic_loyalty_fife_e15"
+			spriteType = "GFX_tu_status_seg_20"
+			frame = 1
+			position = { x = 334 y = 317 }
+		}
+		iconType = {
+			name = "tu_st_vic_dukes_tu_vic_loyalty_fife_f15"
+			spriteType = "GFX_tu_status_seg_20"
+			frame = 3
+			position = { x = 334 y = 317 }
+		}
+		iconType = {
+			name = "tu_st_vic_dukes_tu_vic_loyalty_fife_e16"
+			spriteType = "GFX_tu_status_seg_20"
+			frame = 1
+			position = { x = 356 y = 317 }
+		}
+		iconType = {
+			name = "tu_st_vic_dukes_tu_vic_loyalty_fife_f16"
+			spriteType = "GFX_tu_status_seg_20"
+			frame = 3
+			position = { x = 356 y = 317 }
+		}
+		iconType = {
+			name = "tu_st_vic_dukes_tu_vic_loyalty_fife_e17"
+			spriteType = "GFX_tu_status_seg_20"
+			frame = 1
+			position = { x = 378 y = 317 }
+		}
+		iconType = {
+			name = "tu_st_vic_dukes_tu_vic_loyalty_fife_f17"
+			spriteType = "GFX_tu_status_seg_20"
+			frame = 3
+			position = { x = 378 y = 317 }
+		}
+		iconType = {
+			name = "tu_st_vic_dukes_tu_vic_loyalty_fife_e18"
+			spriteType = "GFX_tu_status_seg_20"
+			frame = 1
+			position = { x = 400 y = 317 }
+		}
+		iconType = {
+			name = "tu_st_vic_dukes_tu_vic_loyalty_fife_f18"
+			spriteType = "GFX_tu_status_seg_20"
+			frame = 3
+			position = { x = 400 y = 317 }
+		}
+		iconType = {
+			name = "tu_st_vic_dukes_tu_vic_loyalty_fife_e19"
+			spriteType = "GFX_tu_status_seg_20"
+			frame = 1
+			position = { x = 422 y = 317 }
+		}
+		iconType = {
+			name = "tu_st_vic_dukes_tu_vic_loyalty_fife_f19"
+			spriteType = "GFX_tu_status_seg_20"
+			frame = 3
+			position = { x = 422 y = 317 }
+		}
+		iconType = {
+			name = "tu_st_vic_dukes_tu_vic_loyalty_fife_e20"
+			spriteType = "GFX_tu_status_seg_20"
+			frame = 1
+			position = { x = 444 y = 317 }
+		}
+		iconType = {
+			name = "tu_st_vic_dukes_tu_vic_loyalty_fife_f20"
+			spriteType = "GFX_tu_status_seg_20"
+			frame = 3
+			position = { x = 444 y = 317 }
+		}
+		iconType = {
+			name = "tu_st_vic_dukes_tu_vic_loyalty_fife_t40"
+			spriteType = "GFX_tu_status_tick"
+			position = { x = 200 y = 314 }
+		}
+		iconType = {
+			name = "tu_st_vic_dukes_tu_vic_loyalty_fife_t55"
+			spriteType = "GFX_tu_status_tick"
+			position = { x = 266 y = 314 }
+		}
+		instantTextBoxType = {
+			name = "tu_st_vic_dukes_tu_vic_loyalty_fife_tip"
+			position = { x = 18 y = 294 }
+			maxWidth = 470
+			maxHeight = 38
+			text = ""
+			pdx_tooltip = TU_STATUS_TU_VIC_loyalty_fife_tt
+		}
+
+		iconType = {
+			name = "tu_st_vic_dukes_tu_vic_influence_caster_bg"
+			spriteType = "GFX_tu_status_row_full"
+			position = { x = 18 y = 336 }
+		}
+		instantTextBoxType = {
+			name = "tu_st_vic_dukes_tu_vic_influence_caster_label"
+			position = { x = 26 y = 340 }
+			font = "hoi_16mbs"
+			maxWidth = 350
+			maxHeight = 18
+			text = "TU_STATUS_TU_VIC_influence_caster_label"
+			format = left
+			fixedsize = yes
+		}
+		instantTextBoxType = {
+			name = "tu_st_vic_dukes_tu_vic_influence_caster_value"
+			position = { x = 380 y = 340 }
+			font = "hoi_16mbs"
+			maxWidth = 100
+			maxHeight = 18
+			text = "TU_STATUS_TU_VIC_influence_caster_value"
+			format = right
+			fixedsize = yes
+		}
+		iconType = {
+			name = "tu_st_vic_dukes_tu_vic_influence_caster_e01"
+			spriteType = "GFX_tu_status_seg_20"
+			frame = 1
+			position = { x = 26 y = 359 }
+		}
+		iconType = {
+			name = "tu_st_vic_dukes_tu_vic_influence_caster_f01"
+			spriteType = "GFX_tu_status_seg_20"
+			frame = 5
+			position = { x = 26 y = 359 }
+		}
+		iconType = {
+			name = "tu_st_vic_dukes_tu_vic_influence_caster_e02"
+			spriteType = "GFX_tu_status_seg_20"
+			frame = 1
+			position = { x = 48 y = 359 }
+		}
+		iconType = {
+			name = "tu_st_vic_dukes_tu_vic_influence_caster_f02"
+			spriteType = "GFX_tu_status_seg_20"
+			frame = 5
+			position = { x = 48 y = 359 }
+		}
+		iconType = {
+			name = "tu_st_vic_dukes_tu_vic_influence_caster_e03"
+			spriteType = "GFX_tu_status_seg_20"
+			frame = 1
+			position = { x = 70 y = 359 }
+		}
+		iconType = {
+			name = "tu_st_vic_dukes_tu_vic_influence_caster_f03"
+			spriteType = "GFX_tu_status_seg_20"
+			frame = 5
+			position = { x = 70 y = 359 }
+		}
+		iconType = {
+			name = "tu_st_vic_dukes_tu_vic_influence_caster_e04"
+			spriteType = "GFX_tu_status_seg_20"
+			frame = 1
+			position = { x = 92 y = 359 }
+		}
+		iconType = {
+			name = "tu_st_vic_dukes_tu_vic_influence_caster_f04"
+			spriteType = "GFX_tu_status_seg_20"
+			frame = 5
+			position = { x = 92 y = 359 }
+		}
+		iconType = {
+			name = "tu_st_vic_dukes_tu_vic_influence_caster_e05"
+			spriteType = "GFX_tu_status_seg_20"
+			frame = 1
+			position = { x = 114 y = 359 }
+		}
+		iconType = {
+			name = "tu_st_vic_dukes_tu_vic_influence_caster_f05"
+			spriteType = "GFX_tu_status_seg_20"
+			frame = 5
+			position = { x = 114 y = 359 }
+		}
+		iconType = {
+			name = "tu_st_vic_dukes_tu_vic_influence_caster_e06"
+			spriteType = "GFX_tu_status_seg_20"
+			frame = 1
+			position = { x = 136 y = 359 }
+		}
+		iconType = {
+			name = "tu_st_vic_dukes_tu_vic_influence_caster_f06"
+			spriteType = "GFX_tu_status_seg_20"
+			frame = 5
+			position = { x = 136 y = 359 }
+		}
+		iconType = {
+			name = "tu_st_vic_dukes_tu_vic_influence_caster_e07"
+			spriteType = "GFX_tu_status_seg_20"
+			frame = 1
+			position = { x = 158 y = 359 }
+		}
+		iconType = {
+			name = "tu_st_vic_dukes_tu_vic_influence_caster_f07"
+			spriteType = "GFX_tu_status_seg_20"
+			frame = 5
+			position = { x = 158 y = 359 }
+		}
+		iconType = {
+			name = "tu_st_vic_dukes_tu_vic_influence_caster_e08"
+			spriteType = "GFX_tu_status_seg_20"
+			frame = 1
+			position = { x = 180 y = 359 }
+		}
+		iconType = {
+			name = "tu_st_vic_dukes_tu_vic_influence_caster_f08"
+			spriteType = "GFX_tu_status_seg_20"
+			frame = 5
+			position = { x = 180 y = 359 }
+		}
+		iconType = {
+			name = "tu_st_vic_dukes_tu_vic_influence_caster_e09"
+			spriteType = "GFX_tu_status_seg_20"
+			frame = 1
+			position = { x = 202 y = 359 }
+		}
+		iconType = {
+			name = "tu_st_vic_dukes_tu_vic_influence_caster_f09"
+			spriteType = "GFX_tu_status_seg_20"
+			frame = 5
+			position = { x = 202 y = 359 }
+		}
+		iconType = {
+			name = "tu_st_vic_dukes_tu_vic_influence_caster_e10"
+			spriteType = "GFX_tu_status_seg_20"
+			frame = 1
+			position = { x = 224 y = 359 }
+		}
+		iconType = {
+			name = "tu_st_vic_dukes_tu_vic_influence_caster_f10"
+			spriteType = "GFX_tu_status_seg_20"
+			frame = 5
+			position = { x = 224 y = 359 }
+		}
+		iconType = {
+			name = "tu_st_vic_dukes_tu_vic_influence_caster_e11"
+			spriteType = "GFX_tu_status_seg_20"
+			frame = 1
+			position = { x = 246 y = 359 }
+		}
+		iconType = {
+			name = "tu_st_vic_dukes_tu_vic_influence_caster_f11"
+			spriteType = "GFX_tu_status_seg_20"
+			frame = 5
+			position = { x = 246 y = 359 }
+		}
+		iconType = {
+			name = "tu_st_vic_dukes_tu_vic_influence_caster_e12"
+			spriteType = "GFX_tu_status_seg_20"
+			frame = 1
+			position = { x = 268 y = 359 }
+		}
+		iconType = {
+			name = "tu_st_vic_dukes_tu_vic_influence_caster_f12"
+			spriteType = "GFX_tu_status_seg_20"
+			frame = 5
+			position = { x = 268 y = 359 }
+		}
+		iconType = {
+			name = "tu_st_vic_dukes_tu_vic_influence_caster_e13"
+			spriteType = "GFX_tu_status_seg_20"
+			frame = 1
+			position = { x = 290 y = 359 }
+		}
+		iconType = {
+			name = "tu_st_vic_dukes_tu_vic_influence_caster_f13"
+			spriteType = "GFX_tu_status_seg_20"
+			frame = 5
+			position = { x = 290 y = 359 }
+		}
+		iconType = {
+			name = "tu_st_vic_dukes_tu_vic_influence_caster_e14"
+			spriteType = "GFX_tu_status_seg_20"
+			frame = 1
+			position = { x = 312 y = 359 }
+		}
+		iconType = {
+			name = "tu_st_vic_dukes_tu_vic_influence_caster_f14"
+			spriteType = "GFX_tu_status_seg_20"
+			frame = 5
+			position = { x = 312 y = 359 }
+		}
+		iconType = {
+			name = "tu_st_vic_dukes_tu_vic_influence_caster_e15"
+			spriteType = "GFX_tu_status_seg_20"
+			frame = 1
+			position = { x = 334 y = 359 }
+		}
+		iconType = {
+			name = "tu_st_vic_dukes_tu_vic_influence_caster_f15"
+			spriteType = "GFX_tu_status_seg_20"
+			frame = 5
+			position = { x = 334 y = 359 }
+		}
+		iconType = {
+			name = "tu_st_vic_dukes_tu_vic_influence_caster_e16"
+			spriteType = "GFX_tu_status_seg_20"
+			frame = 1
+			position = { x = 356 y = 359 }
+		}
+		iconType = {
+			name = "tu_st_vic_dukes_tu_vic_influence_caster_f16"
+			spriteType = "GFX_tu_status_seg_20"
+			frame = 5
+			position = { x = 356 y = 359 }
+		}
+		iconType = {
+			name = "tu_st_vic_dukes_tu_vic_influence_caster_e17"
+			spriteType = "GFX_tu_status_seg_20"
+			frame = 1
+			position = { x = 378 y = 359 }
+		}
+		iconType = {
+			name = "tu_st_vic_dukes_tu_vic_influence_caster_f17"
+			spriteType = "GFX_tu_status_seg_20"
+			frame = 5
+			position = { x = 378 y = 359 }
+		}
+		iconType = {
+			name = "tu_st_vic_dukes_tu_vic_influence_caster_e18"
+			spriteType = "GFX_tu_status_seg_20"
+			frame = 1
+			position = { x = 400 y = 359 }
+		}
+		iconType = {
+			name = "tu_st_vic_dukes_tu_vic_influence_caster_f18"
+			spriteType = "GFX_tu_status_seg_20"
+			frame = 5
+			position = { x = 400 y = 359 }
+		}
+		iconType = {
+			name = "tu_st_vic_dukes_tu_vic_influence_caster_e19"
+			spriteType = "GFX_tu_status_seg_20"
+			frame = 1
+			position = { x = 422 y = 359 }
+		}
+		iconType = {
+			name = "tu_st_vic_dukes_tu_vic_influence_caster_f19"
+			spriteType = "GFX_tu_status_seg_20"
+			frame = 5
+			position = { x = 422 y = 359 }
+		}
+		iconType = {
+			name = "tu_st_vic_dukes_tu_vic_influence_caster_e20"
+			spriteType = "GFX_tu_status_seg_20"
+			frame = 1
+			position = { x = 444 y = 359 }
+		}
+		iconType = {
+			name = "tu_st_vic_dukes_tu_vic_influence_caster_f20"
+			spriteType = "GFX_tu_status_seg_20"
+			frame = 5
+			position = { x = 444 y = 359 }
+		}
+		instantTextBoxType = {
+			name = "tu_st_vic_dukes_tu_vic_influence_caster_tip"
+			position = { x = 18 y = 336 }
+			maxWidth = 470
+			maxHeight = 38
+			text = ""
+			pdx_tooltip = TU_STATUS_TU_VIC_influence_caster_tt
+		}
+
+		iconType = {
+			name = "tu_st_vic_dukes_tu_vic_influence_wellington_bg"
+			spriteType = "GFX_tu_status_row_full"
+			position = { x = 18 y = 378 }
+		}
+		instantTextBoxType = {
+			name = "tu_st_vic_dukes_tu_vic_influence_wellington_label"
+			position = { x = 26 y = 382 }
+			font = "hoi_16mbs"
+			maxWidth = 350
+			maxHeight = 18
+			text = "TU_STATUS_TU_VIC_influence_wellington_label"
+			format = left
+			fixedsize = yes
+		}
+		instantTextBoxType = {
+			name = "tu_st_vic_dukes_tu_vic_influence_wellington_value"
+			position = { x = 380 y = 382 }
+			font = "hoi_16mbs"
+			maxWidth = 100
+			maxHeight = 18
+			text = "TU_STATUS_TU_VIC_influence_wellington_value"
+			format = right
+			fixedsize = yes
+		}
+		iconType = {
+			name = "tu_st_vic_dukes_tu_vic_influence_wellington_e01"
+			spriteType = "GFX_tu_status_seg_20"
+			frame = 1
+			position = { x = 26 y = 401 }
+		}
+		iconType = {
+			name = "tu_st_vic_dukes_tu_vic_influence_wellington_f01"
+			spriteType = "GFX_tu_status_seg_20"
+			frame = 5
+			position = { x = 26 y = 401 }
+		}
+		iconType = {
+			name = "tu_st_vic_dukes_tu_vic_influence_wellington_e02"
+			spriteType = "GFX_tu_status_seg_20"
+			frame = 1
+			position = { x = 48 y = 401 }
+		}
+		iconType = {
+			name = "tu_st_vic_dukes_tu_vic_influence_wellington_f02"
+			spriteType = "GFX_tu_status_seg_20"
+			frame = 5
+			position = { x = 48 y = 401 }
+		}
+		iconType = {
+			name = "tu_st_vic_dukes_tu_vic_influence_wellington_e03"
+			spriteType = "GFX_tu_status_seg_20"
+			frame = 1
+			position = { x = 70 y = 401 }
+		}
+		iconType = {
+			name = "tu_st_vic_dukes_tu_vic_influence_wellington_f03"
+			spriteType = "GFX_tu_status_seg_20"
+			frame = 5
+			position = { x = 70 y = 401 }
+		}
+		iconType = {
+			name = "tu_st_vic_dukes_tu_vic_influence_wellington_e04"
+			spriteType = "GFX_tu_status_seg_20"
+			frame = 1
+			position = { x = 92 y = 401 }
+		}
+		iconType = {
+			name = "tu_st_vic_dukes_tu_vic_influence_wellington_f04"
+			spriteType = "GFX_tu_status_seg_20"
+			frame = 5
+			position = { x = 92 y = 401 }
+		}
+		iconType = {
+			name = "tu_st_vic_dukes_tu_vic_influence_wellington_e05"
+			spriteType = "GFX_tu_status_seg_20"
+			frame = 1
+			position = { x = 114 y = 401 }
+		}
+		iconType = {
+			name = "tu_st_vic_dukes_tu_vic_influence_wellington_f05"
+			spriteType = "GFX_tu_status_seg_20"
+			frame = 5
+			position = { x = 114 y = 401 }
+		}
+		iconType = {
+			name = "tu_st_vic_dukes_tu_vic_influence_wellington_e06"
+			spriteType = "GFX_tu_status_seg_20"
+			frame = 1
+			position = { x = 136 y = 401 }
+		}
+		iconType = {
+			name = "tu_st_vic_dukes_tu_vic_influence_wellington_f06"
+			spriteType = "GFX_tu_status_seg_20"
+			frame = 5
+			position = { x = 136 y = 401 }
+		}
+		iconType = {
+			name = "tu_st_vic_dukes_tu_vic_influence_wellington_e07"
+			spriteType = "GFX_tu_status_seg_20"
+			frame = 1
+			position = { x = 158 y = 401 }
+		}
+		iconType = {
+			name = "tu_st_vic_dukes_tu_vic_influence_wellington_f07"
+			spriteType = "GFX_tu_status_seg_20"
+			frame = 5
+			position = { x = 158 y = 401 }
+		}
+		iconType = {
+			name = "tu_st_vic_dukes_tu_vic_influence_wellington_e08"
+			spriteType = "GFX_tu_status_seg_20"
+			frame = 1
+			position = { x = 180 y = 401 }
+		}
+		iconType = {
+			name = "tu_st_vic_dukes_tu_vic_influence_wellington_f08"
+			spriteType = "GFX_tu_status_seg_20"
+			frame = 5
+			position = { x = 180 y = 401 }
+		}
+		iconType = {
+			name = "tu_st_vic_dukes_tu_vic_influence_wellington_e09"
+			spriteType = "GFX_tu_status_seg_20"
+			frame = 1
+			position = { x = 202 y = 401 }
+		}
+		iconType = {
+			name = "tu_st_vic_dukes_tu_vic_influence_wellington_f09"
+			spriteType = "GFX_tu_status_seg_20"
+			frame = 5
+			position = { x = 202 y = 401 }
+		}
+		iconType = {
+			name = "tu_st_vic_dukes_tu_vic_influence_wellington_e10"
+			spriteType = "GFX_tu_status_seg_20"
+			frame = 1
+			position = { x = 224 y = 401 }
+		}
+		iconType = {
+			name = "tu_st_vic_dukes_tu_vic_influence_wellington_f10"
+			spriteType = "GFX_tu_status_seg_20"
+			frame = 5
+			position = { x = 224 y = 401 }
+		}
+		iconType = {
+			name = "tu_st_vic_dukes_tu_vic_influence_wellington_e11"
+			spriteType = "GFX_tu_status_seg_20"
+			frame = 1
+			position = { x = 246 y = 401 }
+		}
+		iconType = {
+			name = "tu_st_vic_dukes_tu_vic_influence_wellington_f11"
+			spriteType = "GFX_tu_status_seg_20"
+			frame = 5
+			position = { x = 246 y = 401 }
+		}
+		iconType = {
+			name = "tu_st_vic_dukes_tu_vic_influence_wellington_e12"
+			spriteType = "GFX_tu_status_seg_20"
+			frame = 1
+			position = { x = 268 y = 401 }
+		}
+		iconType = {
+			name = "tu_st_vic_dukes_tu_vic_influence_wellington_f12"
+			spriteType = "GFX_tu_status_seg_20"
+			frame = 5
+			position = { x = 268 y = 401 }
+		}
+		iconType = {
+			name = "tu_st_vic_dukes_tu_vic_influence_wellington_e13"
+			spriteType = "GFX_tu_status_seg_20"
+			frame = 1
+			position = { x = 290 y = 401 }
+		}
+		iconType = {
+			name = "tu_st_vic_dukes_tu_vic_influence_wellington_f13"
+			spriteType = "GFX_tu_status_seg_20"
+			frame = 5
+			position = { x = 290 y = 401 }
+		}
+		iconType = {
+			name = "tu_st_vic_dukes_tu_vic_influence_wellington_e14"
+			spriteType = "GFX_tu_status_seg_20"
+			frame = 1
+			position = { x = 312 y = 401 }
+		}
+		iconType = {
+			name = "tu_st_vic_dukes_tu_vic_influence_wellington_f14"
+			spriteType = "GFX_tu_status_seg_20"
+			frame = 5
+			position = { x = 312 y = 401 }
+		}
+		iconType = {
+			name = "tu_st_vic_dukes_tu_vic_influence_wellington_e15"
+			spriteType = "GFX_tu_status_seg_20"
+			frame = 1
+			position = { x = 334 y = 401 }
+		}
+		iconType = {
+			name = "tu_st_vic_dukes_tu_vic_influence_wellington_f15"
+			spriteType = "GFX_tu_status_seg_20"
+			frame = 5
+			position = { x = 334 y = 401 }
+		}
+		iconType = {
+			name = "tu_st_vic_dukes_tu_vic_influence_wellington_e16"
+			spriteType = "GFX_tu_status_seg_20"
+			frame = 1
+			position = { x = 356 y = 401 }
+		}
+		iconType = {
+			name = "tu_st_vic_dukes_tu_vic_influence_wellington_f16"
+			spriteType = "GFX_tu_status_seg_20"
+			frame = 5
+			position = { x = 356 y = 401 }
+		}
+		iconType = {
+			name = "tu_st_vic_dukes_tu_vic_influence_wellington_e17"
+			spriteType = "GFX_tu_status_seg_20"
+			frame = 1
+			position = { x = 378 y = 401 }
+		}
+		iconType = {
+			name = "tu_st_vic_dukes_tu_vic_influence_wellington_f17"
+			spriteType = "GFX_tu_status_seg_20"
+			frame = 5
+			position = { x = 378 y = 401 }
+		}
+		iconType = {
+			name = "tu_st_vic_dukes_tu_vic_influence_wellington_e18"
+			spriteType = "GFX_tu_status_seg_20"
+			frame = 1
+			position = { x = 400 y = 401 }
+		}
+		iconType = {
+			name = "tu_st_vic_dukes_tu_vic_influence_wellington_f18"
+			spriteType = "GFX_tu_status_seg_20"
+			frame = 5
+			position = { x = 400 y = 401 }
+		}
+		iconType = {
+			name = "tu_st_vic_dukes_tu_vic_influence_wellington_e19"
+			spriteType = "GFX_tu_status_seg_20"
+			frame = 1
+			position = { x = 422 y = 401 }
+		}
+		iconType = {
+			name = "tu_st_vic_dukes_tu_vic_influence_wellington_f19"
+			spriteType = "GFX_tu_status_seg_20"
+			frame = 5
+			position = { x = 422 y = 401 }
+		}
+		iconType = {
+			name = "tu_st_vic_dukes_tu_vic_influence_wellington_e20"
+			spriteType = "GFX_tu_status_seg_20"
+			frame = 1
+			position = { x = 444 y = 401 }
+		}
+		iconType = {
+			name = "tu_st_vic_dukes_tu_vic_influence_wellington_f20"
+			spriteType = "GFX_tu_status_seg_20"
+			frame = 5
+			position = { x = 444 y = 401 }
+		}
+		instantTextBoxType = {
+			name = "tu_st_vic_dukes_tu_vic_influence_wellington_tip"
+			position = { x = 18 y = 378 }
+			maxWidth = 470
+			maxHeight = 38
+			text = ""
+			pdx_tooltip = TU_STATUS_TU_VIC_influence_wellington_tt
+		}
+
+		iconType = {
+			name = "tu_st_vic_dukes_tu_vic_influence_windermere_bg"
+			spriteType = "GFX_tu_status_row_full"
+			position = { x = 18 y = 420 }
+		}
+		instantTextBoxType = {
+			name = "tu_st_vic_dukes_tu_vic_influence_windermere_label"
+			position = { x = 26 y = 424 }
+			font = "hoi_16mbs"
+			maxWidth = 350
+			maxHeight = 18
+			text = "TU_STATUS_TU_VIC_influence_windermere_label"
+			format = left
+			fixedsize = yes
+		}
+		instantTextBoxType = {
+			name = "tu_st_vic_dukes_tu_vic_influence_windermere_value"
+			position = { x = 380 y = 424 }
+			font = "hoi_16mbs"
+			maxWidth = 100
+			maxHeight = 18
+			text = "TU_STATUS_TU_VIC_influence_windermere_value"
+			format = right
+			fixedsize = yes
+		}
+		iconType = {
+			name = "tu_st_vic_dukes_tu_vic_influence_windermere_e01"
+			spriteType = "GFX_tu_status_seg_20"
+			frame = 1
+			position = { x = 26 y = 443 }
+		}
+		iconType = {
+			name = "tu_st_vic_dukes_tu_vic_influence_windermere_f01"
+			spriteType = "GFX_tu_status_seg_20"
+			frame = 5
+			position = { x = 26 y = 443 }
+		}
+		iconType = {
+			name = "tu_st_vic_dukes_tu_vic_influence_windermere_e02"
+			spriteType = "GFX_tu_status_seg_20"
+			frame = 1
+			position = { x = 48 y = 443 }
+		}
+		iconType = {
+			name = "tu_st_vic_dukes_tu_vic_influence_windermere_f02"
+			spriteType = "GFX_tu_status_seg_20"
+			frame = 5
+			position = { x = 48 y = 443 }
+		}
+		iconType = {
+			name = "tu_st_vic_dukes_tu_vic_influence_windermere_e03"
+			spriteType = "GFX_tu_status_seg_20"
+			frame = 1
+			position = { x = 70 y = 443 }
+		}
+		iconType = {
+			name = "tu_st_vic_dukes_tu_vic_influence_windermere_f03"
+			spriteType = "GFX_tu_status_seg_20"
+			frame = 5
+			position = { x = 70 y = 443 }
+		}
+		iconType = {
+			name = "tu_st_vic_dukes_tu_vic_influence_windermere_e04"
+			spriteType = "GFX_tu_status_seg_20"
+			frame = 1
+			position = { x = 92 y = 443 }
+		}
+		iconType = {
+			name = "tu_st_vic_dukes_tu_vic_influence_windermere_f04"
+			spriteType = "GFX_tu_status_seg_20"
+			frame = 5
+			position = { x = 92 y = 443 }
+		}
+		iconType = {
+			name = "tu_st_vic_dukes_tu_vic_influence_windermere_e05"
+			spriteType = "GFX_tu_status_seg_20"
+			frame = 1
+			position = { x = 114 y = 443 }
+		}
+		iconType = {
+			name = "tu_st_vic_dukes_tu_vic_influence_windermere_f05"
+			spriteType = "GFX_tu_status_seg_20"
+			frame = 5
+			position = { x = 114 y = 443 }
+		}
+		iconType = {
+			name = "tu_st_vic_dukes_tu_vic_influence_windermere_e06"
+			spriteType = "GFX_tu_status_seg_20"
+			frame = 1
+			position = { x = 136 y = 443 }
+		}
+		iconType = {
+			name = "tu_st_vic_dukes_tu_vic_influence_windermere_f06"
+			spriteType = "GFX_tu_status_seg_20"
+			frame = 5
+			position = { x = 136 y = 443 }
+		}
+		iconType = {
+			name = "tu_st_vic_dukes_tu_vic_influence_windermere_e07"
+			spriteType = "GFX_tu_status_seg_20"
+			frame = 1
+			position = { x = 158 y = 443 }
+		}
+		iconType = {
+			name = "tu_st_vic_dukes_tu_vic_influence_windermere_f07"
+			spriteType = "GFX_tu_status_seg_20"
+			frame = 5
+			position = { x = 158 y = 443 }
+		}
+		iconType = {
+			name = "tu_st_vic_dukes_tu_vic_influence_windermere_e08"
+			spriteType = "GFX_tu_status_seg_20"
+			frame = 1
+			position = { x = 180 y = 443 }
+		}
+		iconType = {
+			name = "tu_st_vic_dukes_tu_vic_influence_windermere_f08"
+			spriteType = "GFX_tu_status_seg_20"
+			frame = 5
+			position = { x = 180 y = 443 }
+		}
+		iconType = {
+			name = "tu_st_vic_dukes_tu_vic_influence_windermere_e09"
+			spriteType = "GFX_tu_status_seg_20"
+			frame = 1
+			position = { x = 202 y = 443 }
+		}
+		iconType = {
+			name = "tu_st_vic_dukes_tu_vic_influence_windermere_f09"
+			spriteType = "GFX_tu_status_seg_20"
+			frame = 5
+			position = { x = 202 y = 443 }
+		}
+		iconType = {
+			name = "tu_st_vic_dukes_tu_vic_influence_windermere_e10"
+			spriteType = "GFX_tu_status_seg_20"
+			frame = 1
+			position = { x = 224 y = 443 }
+		}
+		iconType = {
+			name = "tu_st_vic_dukes_tu_vic_influence_windermere_f10"
+			spriteType = "GFX_tu_status_seg_20"
+			frame = 5
+			position = { x = 224 y = 443 }
+		}
+		iconType = {
+			name = "tu_st_vic_dukes_tu_vic_influence_windermere_e11"
+			spriteType = "GFX_tu_status_seg_20"
+			frame = 1
+			position = { x = 246 y = 443 }
+		}
+		iconType = {
+			name = "tu_st_vic_dukes_tu_vic_influence_windermere_f11"
+			spriteType = "GFX_tu_status_seg_20"
+			frame = 5
+			position = { x = 246 y = 443 }
+		}
+		iconType = {
+			name = "tu_st_vic_dukes_tu_vic_influence_windermere_e12"
+			spriteType = "GFX_tu_status_seg_20"
+			frame = 1
+			position = { x = 268 y = 443 }
+		}
+		iconType = {
+			name = "tu_st_vic_dukes_tu_vic_influence_windermere_f12"
+			spriteType = "GFX_tu_status_seg_20"
+			frame = 5
+			position = { x = 268 y = 443 }
+		}
+		iconType = {
+			name = "tu_st_vic_dukes_tu_vic_influence_windermere_e13"
+			spriteType = "GFX_tu_status_seg_20"
+			frame = 1
+			position = { x = 290 y = 443 }
+		}
+		iconType = {
+			name = "tu_st_vic_dukes_tu_vic_influence_windermere_f13"
+			spriteType = "GFX_tu_status_seg_20"
+			frame = 5
+			position = { x = 290 y = 443 }
+		}
+		iconType = {
+			name = "tu_st_vic_dukes_tu_vic_influence_windermere_e14"
+			spriteType = "GFX_tu_status_seg_20"
+			frame = 1
+			position = { x = 312 y = 443 }
+		}
+		iconType = {
+			name = "tu_st_vic_dukes_tu_vic_influence_windermere_f14"
+			spriteType = "GFX_tu_status_seg_20"
+			frame = 5
+			position = { x = 312 y = 443 }
+		}
+		iconType = {
+			name = "tu_st_vic_dukes_tu_vic_influence_windermere_e15"
+			spriteType = "GFX_tu_status_seg_20"
+			frame = 1
+			position = { x = 334 y = 443 }
+		}
+		iconType = {
+			name = "tu_st_vic_dukes_tu_vic_influence_windermere_f15"
+			spriteType = "GFX_tu_status_seg_20"
+			frame = 5
+			position = { x = 334 y = 443 }
+		}
+		iconType = {
+			name = "tu_st_vic_dukes_tu_vic_influence_windermere_e16"
+			spriteType = "GFX_tu_status_seg_20"
+			frame = 1
+			position = { x = 356 y = 443 }
+		}
+		iconType = {
+			name = "tu_st_vic_dukes_tu_vic_influence_windermere_f16"
+			spriteType = "GFX_tu_status_seg_20"
+			frame = 5
+			position = { x = 356 y = 443 }
+		}
+		iconType = {
+			name = "tu_st_vic_dukes_tu_vic_influence_windermere_e17"
+			spriteType = "GFX_tu_status_seg_20"
+			frame = 1
+			position = { x = 378 y = 443 }
+		}
+		iconType = {
+			name = "tu_st_vic_dukes_tu_vic_influence_windermere_f17"
+			spriteType = "GFX_tu_status_seg_20"
+			frame = 5
+			position = { x = 378 y = 443 }
+		}
+		iconType = {
+			name = "tu_st_vic_dukes_tu_vic_influence_windermere_e18"
+			spriteType = "GFX_tu_status_seg_20"
+			frame = 1
+			position = { x = 400 y = 443 }
+		}
+		iconType = {
+			name = "tu_st_vic_dukes_tu_vic_influence_windermere_f18"
+			spriteType = "GFX_tu_status_seg_20"
+			frame = 5
+			position = { x = 400 y = 443 }
+		}
+		iconType = {
+			name = "tu_st_vic_dukes_tu_vic_influence_windermere_e19"
+			spriteType = "GFX_tu_status_seg_20"
+			frame = 1
+			position = { x = 422 y = 443 }
+		}
+		iconType = {
+			name = "tu_st_vic_dukes_tu_vic_influence_windermere_f19"
+			spriteType = "GFX_tu_status_seg_20"
+			frame = 5
+			position = { x = 422 y = 443 }
+		}
+		iconType = {
+			name = "tu_st_vic_dukes_tu_vic_influence_windermere_e20"
+			spriteType = "GFX_tu_status_seg_20"
+			frame = 1
+			position = { x = 444 y = 443 }
+		}
+		iconType = {
+			name = "tu_st_vic_dukes_tu_vic_influence_windermere_f20"
+			spriteType = "GFX_tu_status_seg_20"
+			frame = 5
+			position = { x = 444 y = 443 }
+		}
+		instantTextBoxType = {
+			name = "tu_st_vic_dukes_tu_vic_influence_windermere_tip"
+			position = { x = 18 y = 420 }
+			maxWidth = 470
+			maxHeight = 38
+			text = ""
+			pdx_tooltip = TU_STATUS_TU_VIC_influence_windermere_tt
+		}
+
+		iconType = {
+			name = "tu_st_vic_dukes_tu_vic_influence_godolphin_bg"
+			spriteType = "GFX_tu_status_row_full"
+			position = { x = 18 y = 462 }
+		}
+		instantTextBoxType = {
+			name = "tu_st_vic_dukes_tu_vic_influence_godolphin_label"
+			position = { x = 26 y = 466 }
+			font = "hoi_16mbs"
+			maxWidth = 350
+			maxHeight = 18
+			text = "TU_STATUS_TU_VIC_influence_godolphin_label"
+			format = left
+			fixedsize = yes
+		}
+		instantTextBoxType = {
+			name = "tu_st_vic_dukes_tu_vic_influence_godolphin_value"
+			position = { x = 380 y = 466 }
+			font = "hoi_16mbs"
+			maxWidth = 100
+			maxHeight = 18
+			text = "TU_STATUS_TU_VIC_influence_godolphin_value"
+			format = right
+			fixedsize = yes
+		}
+		iconType = {
+			name = "tu_st_vic_dukes_tu_vic_influence_godolphin_e01"
+			spriteType = "GFX_tu_status_seg_20"
+			frame = 1
+			position = { x = 26 y = 485 }
+		}
+		iconType = {
+			name = "tu_st_vic_dukes_tu_vic_influence_godolphin_f01"
+			spriteType = "GFX_tu_status_seg_20"
+			frame = 5
+			position = { x = 26 y = 485 }
+		}
+		iconType = {
+			name = "tu_st_vic_dukes_tu_vic_influence_godolphin_e02"
+			spriteType = "GFX_tu_status_seg_20"
+			frame = 1
+			position = { x = 48 y = 485 }
+		}
+		iconType = {
+			name = "tu_st_vic_dukes_tu_vic_influence_godolphin_f02"
+			spriteType = "GFX_tu_status_seg_20"
+			frame = 5
+			position = { x = 48 y = 485 }
+		}
+		iconType = {
+			name = "tu_st_vic_dukes_tu_vic_influence_godolphin_e03"
+			spriteType = "GFX_tu_status_seg_20"
+			frame = 1
+			position = { x = 70 y = 485 }
+		}
+		iconType = {
+			name = "tu_st_vic_dukes_tu_vic_influence_godolphin_f03"
+			spriteType = "GFX_tu_status_seg_20"
+			frame = 5
+			position = { x = 70 y = 485 }
+		}
+		iconType = {
+			name = "tu_st_vic_dukes_tu_vic_influence_godolphin_e04"
+			spriteType = "GFX_tu_status_seg_20"
+			frame = 1
+			position = { x = 92 y = 485 }
+		}
+		iconType = {
+			name = "tu_st_vic_dukes_tu_vic_influence_godolphin_f04"
+			spriteType = "GFX_tu_status_seg_20"
+			frame = 5
+			position = { x = 92 y = 485 }
+		}
+		iconType = {
+			name = "tu_st_vic_dukes_tu_vic_influence_godolphin_e05"
+			spriteType = "GFX_tu_status_seg_20"
+			frame = 1
+			position = { x = 114 y = 485 }
+		}
+		iconType = {
+			name = "tu_st_vic_dukes_tu_vic_influence_godolphin_f05"
+			spriteType = "GFX_tu_status_seg_20"
+			frame = 5
+			position = { x = 114 y = 485 }
+		}
+		iconType = {
+			name = "tu_st_vic_dukes_tu_vic_influence_godolphin_e06"
+			spriteType = "GFX_tu_status_seg_20"
+			frame = 1
+			position = { x = 136 y = 485 }
+		}
+		iconType = {
+			name = "tu_st_vic_dukes_tu_vic_influence_godolphin_f06"
+			spriteType = "GFX_tu_status_seg_20"
+			frame = 5
+			position = { x = 136 y = 485 }
+		}
+		iconType = {
+			name = "tu_st_vic_dukes_tu_vic_influence_godolphin_e07"
+			spriteType = "GFX_tu_status_seg_20"
+			frame = 1
+			position = { x = 158 y = 485 }
+		}
+		iconType = {
+			name = "tu_st_vic_dukes_tu_vic_influence_godolphin_f07"
+			spriteType = "GFX_tu_status_seg_20"
+			frame = 5
+			position = { x = 158 y = 485 }
+		}
+		iconType = {
+			name = "tu_st_vic_dukes_tu_vic_influence_godolphin_e08"
+			spriteType = "GFX_tu_status_seg_20"
+			frame = 1
+			position = { x = 180 y = 485 }
+		}
+		iconType = {
+			name = "tu_st_vic_dukes_tu_vic_influence_godolphin_f08"
+			spriteType = "GFX_tu_status_seg_20"
+			frame = 5
+			position = { x = 180 y = 485 }
+		}
+		iconType = {
+			name = "tu_st_vic_dukes_tu_vic_influence_godolphin_e09"
+			spriteType = "GFX_tu_status_seg_20"
+			frame = 1
+			position = { x = 202 y = 485 }
+		}
+		iconType = {
+			name = "tu_st_vic_dukes_tu_vic_influence_godolphin_f09"
+			spriteType = "GFX_tu_status_seg_20"
+			frame = 5
+			position = { x = 202 y = 485 }
+		}
+		iconType = {
+			name = "tu_st_vic_dukes_tu_vic_influence_godolphin_e10"
+			spriteType = "GFX_tu_status_seg_20"
+			frame = 1
+			position = { x = 224 y = 485 }
+		}
+		iconType = {
+			name = "tu_st_vic_dukes_tu_vic_influence_godolphin_f10"
+			spriteType = "GFX_tu_status_seg_20"
+			frame = 5
+			position = { x = 224 y = 485 }
+		}
+		iconType = {
+			name = "tu_st_vic_dukes_tu_vic_influence_godolphin_e11"
+			spriteType = "GFX_tu_status_seg_20"
+			frame = 1
+			position = { x = 246 y = 485 }
+		}
+		iconType = {
+			name = "tu_st_vic_dukes_tu_vic_influence_godolphin_f11"
+			spriteType = "GFX_tu_status_seg_20"
+			frame = 5
+			position = { x = 246 y = 485 }
+		}
+		iconType = {
+			name = "tu_st_vic_dukes_tu_vic_influence_godolphin_e12"
+			spriteType = "GFX_tu_status_seg_20"
+			frame = 1
+			position = { x = 268 y = 485 }
+		}
+		iconType = {
+			name = "tu_st_vic_dukes_tu_vic_influence_godolphin_f12"
+			spriteType = "GFX_tu_status_seg_20"
+			frame = 5
+			position = { x = 268 y = 485 }
+		}
+		iconType = {
+			name = "tu_st_vic_dukes_tu_vic_influence_godolphin_e13"
+			spriteType = "GFX_tu_status_seg_20"
+			frame = 1
+			position = { x = 290 y = 485 }
+		}
+		iconType = {
+			name = "tu_st_vic_dukes_tu_vic_influence_godolphin_f13"
+			spriteType = "GFX_tu_status_seg_20"
+			frame = 5
+			position = { x = 290 y = 485 }
+		}
+		iconType = {
+			name = "tu_st_vic_dukes_tu_vic_influence_godolphin_e14"
+			spriteType = "GFX_tu_status_seg_20"
+			frame = 1
+			position = { x = 312 y = 485 }
+		}
+		iconType = {
+			name = "tu_st_vic_dukes_tu_vic_influence_godolphin_f14"
+			spriteType = "GFX_tu_status_seg_20"
+			frame = 5
+			position = { x = 312 y = 485 }
+		}
+		iconType = {
+			name = "tu_st_vic_dukes_tu_vic_influence_godolphin_e15"
+			spriteType = "GFX_tu_status_seg_20"
+			frame = 1
+			position = { x = 334 y = 485 }
+		}
+		iconType = {
+			name = "tu_st_vic_dukes_tu_vic_influence_godolphin_f15"
+			spriteType = "GFX_tu_status_seg_20"
+			frame = 5
+			position = { x = 334 y = 485 }
+		}
+		iconType = {
+			name = "tu_st_vic_dukes_tu_vic_influence_godolphin_e16"
+			spriteType = "GFX_tu_status_seg_20"
+			frame = 1
+			position = { x = 356 y = 485 }
+		}
+		iconType = {
+			name = "tu_st_vic_dukes_tu_vic_influence_godolphin_f16"
+			spriteType = "GFX_tu_status_seg_20"
+			frame = 5
+			position = { x = 356 y = 485 }
+		}
+		iconType = {
+			name = "tu_st_vic_dukes_tu_vic_influence_godolphin_e17"
+			spriteType = "GFX_tu_status_seg_20"
+			frame = 1
+			position = { x = 378 y = 485 }
+		}
+		iconType = {
+			name = "tu_st_vic_dukes_tu_vic_influence_godolphin_f17"
+			spriteType = "GFX_tu_status_seg_20"
+			frame = 5
+			position = { x = 378 y = 485 }
+		}
+		iconType = {
+			name = "tu_st_vic_dukes_tu_vic_influence_godolphin_e18"
+			spriteType = "GFX_tu_status_seg_20"
+			frame = 1
+			position = { x = 400 y = 485 }
+		}
+		iconType = {
+			name = "tu_st_vic_dukes_tu_vic_influence_godolphin_f18"
+			spriteType = "GFX_tu_status_seg_20"
+			frame = 5
+			position = { x = 400 y = 485 }
+		}
+		iconType = {
+			name = "tu_st_vic_dukes_tu_vic_influence_godolphin_e19"
+			spriteType = "GFX_tu_status_seg_20"
+			frame = 1
+			position = { x = 422 y = 485 }
+		}
+		iconType = {
+			name = "tu_st_vic_dukes_tu_vic_influence_godolphin_f19"
+			spriteType = "GFX_tu_status_seg_20"
+			frame = 5
+			position = { x = 422 y = 485 }
+		}
+		iconType = {
+			name = "tu_st_vic_dukes_tu_vic_influence_godolphin_e20"
+			spriteType = "GFX_tu_status_seg_20"
+			frame = 1
+			position = { x = 444 y = 485 }
+		}
+		iconType = {
+			name = "tu_st_vic_dukes_tu_vic_influence_godolphin_f20"
+			spriteType = "GFX_tu_status_seg_20"
+			frame = 5
+			position = { x = 444 y = 485 }
+		}
+		instantTextBoxType = {
+			name = "tu_st_vic_dukes_tu_vic_influence_godolphin_tip"
+			position = { x = 18 y = 462 }
+			maxWidth = 470
+			maxHeight = 38
+			text = ""
+			pdx_tooltip = TU_STATUS_TU_VIC_influence_godolphin_tt
+		}
+
+		iconType = {
+			name = "tu_st_vic_dukes_tu_vic_influence_normandy_bg"
+			spriteType = "GFX_tu_status_row_full"
+			position = { x = 18 y = 504 }
+		}
+		instantTextBoxType = {
+			name = "tu_st_vic_dukes_tu_vic_influence_normandy_label"
+			position = { x = 26 y = 508 }
+			font = "hoi_16mbs"
+			maxWidth = 350
+			maxHeight = 18
+			text = "TU_STATUS_TU_VIC_influence_normandy_label"
+			format = left
+			fixedsize = yes
+		}
+		instantTextBoxType = {
+			name = "tu_st_vic_dukes_tu_vic_influence_normandy_value"
+			position = { x = 380 y = 508 }
+			font = "hoi_16mbs"
+			maxWidth = 100
+			maxHeight = 18
+			text = "TU_STATUS_TU_VIC_influence_normandy_value"
+			format = right
+			fixedsize = yes
+		}
+		iconType = {
+			name = "tu_st_vic_dukes_tu_vic_influence_normandy_e01"
+			spriteType = "GFX_tu_status_seg_20"
+			frame = 1
+			position = { x = 26 y = 527 }
+		}
+		iconType = {
+			name = "tu_st_vic_dukes_tu_vic_influence_normandy_f01"
+			spriteType = "GFX_tu_status_seg_20"
+			frame = 5
+			position = { x = 26 y = 527 }
+		}
+		iconType = {
+			name = "tu_st_vic_dukes_tu_vic_influence_normandy_e02"
+			spriteType = "GFX_tu_status_seg_20"
+			frame = 1
+			position = { x = 48 y = 527 }
+		}
+		iconType = {
+			name = "tu_st_vic_dukes_tu_vic_influence_normandy_f02"
+			spriteType = "GFX_tu_status_seg_20"
+			frame = 5
+			position = { x = 48 y = 527 }
+		}
+		iconType = {
+			name = "tu_st_vic_dukes_tu_vic_influence_normandy_e03"
+			spriteType = "GFX_tu_status_seg_20"
+			frame = 1
+			position = { x = 70 y = 527 }
+		}
+		iconType = {
+			name = "tu_st_vic_dukes_tu_vic_influence_normandy_f03"
+			spriteType = "GFX_tu_status_seg_20"
+			frame = 5
+			position = { x = 70 y = 527 }
+		}
+		iconType = {
+			name = "tu_st_vic_dukes_tu_vic_influence_normandy_e04"
+			spriteType = "GFX_tu_status_seg_20"
+			frame = 1
+			position = { x = 92 y = 527 }
+		}
+		iconType = {
+			name = "tu_st_vic_dukes_tu_vic_influence_normandy_f04"
+			spriteType = "GFX_tu_status_seg_20"
+			frame = 5
+			position = { x = 92 y = 527 }
+		}
+		iconType = {
+			name = "tu_st_vic_dukes_tu_vic_influence_normandy_e05"
+			spriteType = "GFX_tu_status_seg_20"
+			frame = 1
+			position = { x = 114 y = 527 }
+		}
+		iconType = {
+			name = "tu_st_vic_dukes_tu_vic_influence_normandy_f05"
+			spriteType = "GFX_tu_status_seg_20"
+			frame = 5
+			position = { x = 114 y = 527 }
+		}
+		iconType = {
+			name = "tu_st_vic_dukes_tu_vic_influence_normandy_e06"
+			spriteType = "GFX_tu_status_seg_20"
+			frame = 1
+			position = { x = 136 y = 527 }
+		}
+		iconType = {
+			name = "tu_st_vic_dukes_tu_vic_influence_normandy_f06"
+			spriteType = "GFX_tu_status_seg_20"
+			frame = 5
+			position = { x = 136 y = 527 }
+		}
+		iconType = {
+			name = "tu_st_vic_dukes_tu_vic_influence_normandy_e07"
+			spriteType = "GFX_tu_status_seg_20"
+			frame = 1
+			position = { x = 158 y = 527 }
+		}
+		iconType = {
+			name = "tu_st_vic_dukes_tu_vic_influence_normandy_f07"
+			spriteType = "GFX_tu_status_seg_20"
+			frame = 5
+			position = { x = 158 y = 527 }
+		}
+		iconType = {
+			name = "tu_st_vic_dukes_tu_vic_influence_normandy_e08"
+			spriteType = "GFX_tu_status_seg_20"
+			frame = 1
+			position = { x = 180 y = 527 }
+		}
+		iconType = {
+			name = "tu_st_vic_dukes_tu_vic_influence_normandy_f08"
+			spriteType = "GFX_tu_status_seg_20"
+			frame = 5
+			position = { x = 180 y = 527 }
+		}
+		iconType = {
+			name = "tu_st_vic_dukes_tu_vic_influence_normandy_e09"
+			spriteType = "GFX_tu_status_seg_20"
+			frame = 1
+			position = { x = 202 y = 527 }
+		}
+		iconType = {
+			name = "tu_st_vic_dukes_tu_vic_influence_normandy_f09"
+			spriteType = "GFX_tu_status_seg_20"
+			frame = 5
+			position = { x = 202 y = 527 }
+		}
+		iconType = {
+			name = "tu_st_vic_dukes_tu_vic_influence_normandy_e10"
+			spriteType = "GFX_tu_status_seg_20"
+			frame = 1
+			position = { x = 224 y = 527 }
+		}
+		iconType = {
+			name = "tu_st_vic_dukes_tu_vic_influence_normandy_f10"
+			spriteType = "GFX_tu_status_seg_20"
+			frame = 5
+			position = { x = 224 y = 527 }
+		}
+		iconType = {
+			name = "tu_st_vic_dukes_tu_vic_influence_normandy_e11"
+			spriteType = "GFX_tu_status_seg_20"
+			frame = 1
+			position = { x = 246 y = 527 }
+		}
+		iconType = {
+			name = "tu_st_vic_dukes_tu_vic_influence_normandy_f11"
+			spriteType = "GFX_tu_status_seg_20"
+			frame = 5
+			position = { x = 246 y = 527 }
+		}
+		iconType = {
+			name = "tu_st_vic_dukes_tu_vic_influence_normandy_e12"
+			spriteType = "GFX_tu_status_seg_20"
+			frame = 1
+			position = { x = 268 y = 527 }
+		}
+		iconType = {
+			name = "tu_st_vic_dukes_tu_vic_influence_normandy_f12"
+			spriteType = "GFX_tu_status_seg_20"
+			frame = 5
+			position = { x = 268 y = 527 }
+		}
+		iconType = {
+			name = "tu_st_vic_dukes_tu_vic_influence_normandy_e13"
+			spriteType = "GFX_tu_status_seg_20"
+			frame = 1
+			position = { x = 290 y = 527 }
+		}
+		iconType = {
+			name = "tu_st_vic_dukes_tu_vic_influence_normandy_f13"
+			spriteType = "GFX_tu_status_seg_20"
+			frame = 5
+			position = { x = 290 y = 527 }
+		}
+		iconType = {
+			name = "tu_st_vic_dukes_tu_vic_influence_normandy_e14"
+			spriteType = "GFX_tu_status_seg_20"
+			frame = 1
+			position = { x = 312 y = 527 }
+		}
+		iconType = {
+			name = "tu_st_vic_dukes_tu_vic_influence_normandy_f14"
+			spriteType = "GFX_tu_status_seg_20"
+			frame = 5
+			position = { x = 312 y = 527 }
+		}
+		iconType = {
+			name = "tu_st_vic_dukes_tu_vic_influence_normandy_e15"
+			spriteType = "GFX_tu_status_seg_20"
+			frame = 1
+			position = { x = 334 y = 527 }
+		}
+		iconType = {
+			name = "tu_st_vic_dukes_tu_vic_influence_normandy_f15"
+			spriteType = "GFX_tu_status_seg_20"
+			frame = 5
+			position = { x = 334 y = 527 }
+		}
+		iconType = {
+			name = "tu_st_vic_dukes_tu_vic_influence_normandy_e16"
+			spriteType = "GFX_tu_status_seg_20"
+			frame = 1
+			position = { x = 356 y = 527 }
+		}
+		iconType = {
+			name = "tu_st_vic_dukes_tu_vic_influence_normandy_f16"
+			spriteType = "GFX_tu_status_seg_20"
+			frame = 5
+			position = { x = 356 y = 527 }
+		}
+		iconType = {
+			name = "tu_st_vic_dukes_tu_vic_influence_normandy_e17"
+			spriteType = "GFX_tu_status_seg_20"
+			frame = 1
+			position = { x = 378 y = 527 }
+		}
+		iconType = {
+			name = "tu_st_vic_dukes_tu_vic_influence_normandy_f17"
+			spriteType = "GFX_tu_status_seg_20"
+			frame = 5
+			position = { x = 378 y = 527 }
+		}
+		iconType = {
+			name = "tu_st_vic_dukes_tu_vic_influence_normandy_e18"
+			spriteType = "GFX_tu_status_seg_20"
+			frame = 1
+			position = { x = 400 y = 527 }
+		}
+		iconType = {
+			name = "tu_st_vic_dukes_tu_vic_influence_normandy_f18"
+			spriteType = "GFX_tu_status_seg_20"
+			frame = 5
+			position = { x = 400 y = 527 }
+		}
+		iconType = {
+			name = "tu_st_vic_dukes_tu_vic_influence_normandy_e19"
+			spriteType = "GFX_tu_status_seg_20"
+			frame = 1
+			position = { x = 422 y = 527 }
+		}
+		iconType = {
+			name = "tu_st_vic_dukes_tu_vic_influence_normandy_f19"
+			spriteType = "GFX_tu_status_seg_20"
+			frame = 5
+			position = { x = 422 y = 527 }
+		}
+		iconType = {
+			name = "tu_st_vic_dukes_tu_vic_influence_normandy_e20"
+			spriteType = "GFX_tu_status_seg_20"
+			frame = 1
+			position = { x = 444 y = 527 }
+		}
+		iconType = {
+			name = "tu_st_vic_dukes_tu_vic_influence_normandy_f20"
+			spriteType = "GFX_tu_status_seg_20"
+			frame = 5
+			position = { x = 444 y = 527 }
+		}
+		instantTextBoxType = {
+			name = "tu_st_vic_dukes_tu_vic_influence_normandy_tip"
+			position = { x = 18 y = 504 }
+			maxWidth = 470
+			maxHeight = 38
+			text = ""
+			pdx_tooltip = TU_STATUS_TU_VIC_influence_normandy_tt
+		}
+
+		iconType = {
+			name = "tu_st_vic_dukes_tu_vic_influence_abercorn_bg"
+			spriteType = "GFX_tu_status_row_full"
+			position = { x = 18 y = 546 }
+		}
+		instantTextBoxType = {
+			name = "tu_st_vic_dukes_tu_vic_influence_abercorn_label"
+			position = { x = 26 y = 550 }
+			font = "hoi_16mbs"
+			maxWidth = 350
+			maxHeight = 18
+			text = "TU_STATUS_TU_VIC_influence_abercorn_label"
+			format = left
+			fixedsize = yes
+		}
+		instantTextBoxType = {
+			name = "tu_st_vic_dukes_tu_vic_influence_abercorn_value"
+			position = { x = 380 y = 550 }
+			font = "hoi_16mbs"
+			maxWidth = 100
+			maxHeight = 18
+			text = "TU_STATUS_TU_VIC_influence_abercorn_value"
+			format = right
+			fixedsize = yes
+		}
+		iconType = {
+			name = "tu_st_vic_dukes_tu_vic_influence_abercorn_e01"
+			spriteType = "GFX_tu_status_seg_20"
+			frame = 1
+			position = { x = 26 y = 569 }
+		}
+		iconType = {
+			name = "tu_st_vic_dukes_tu_vic_influence_abercorn_f01"
+			spriteType = "GFX_tu_status_seg_20"
+			frame = 5
+			position = { x = 26 y = 569 }
+		}
+		iconType = {
+			name = "tu_st_vic_dukes_tu_vic_influence_abercorn_e02"
+			spriteType = "GFX_tu_status_seg_20"
+			frame = 1
+			position = { x = 48 y = 569 }
+		}
+		iconType = {
+			name = "tu_st_vic_dukes_tu_vic_influence_abercorn_f02"
+			spriteType = "GFX_tu_status_seg_20"
+			frame = 5
+			position = { x = 48 y = 569 }
+		}
+		iconType = {
+			name = "tu_st_vic_dukes_tu_vic_influence_abercorn_e03"
+			spriteType = "GFX_tu_status_seg_20"
+			frame = 1
+			position = { x = 70 y = 569 }
+		}
+		iconType = {
+			name = "tu_st_vic_dukes_tu_vic_influence_abercorn_f03"
+			spriteType = "GFX_tu_status_seg_20"
+			frame = 5
+			position = { x = 70 y = 569 }
+		}
+		iconType = {
+			name = "tu_st_vic_dukes_tu_vic_influence_abercorn_e04"
+			spriteType = "GFX_tu_status_seg_20"
+			frame = 1
+			position = { x = 92 y = 569 }
+		}
+		iconType = {
+			name = "tu_st_vic_dukes_tu_vic_influence_abercorn_f04"
+			spriteType = "GFX_tu_status_seg_20"
+			frame = 5
+			position = { x = 92 y = 569 }
+		}
+		iconType = {
+			name = "tu_st_vic_dukes_tu_vic_influence_abercorn_e05"
+			spriteType = "GFX_tu_status_seg_20"
+			frame = 1
+			position = { x = 114 y = 569 }
+		}
+		iconType = {
+			name = "tu_st_vic_dukes_tu_vic_influence_abercorn_f05"
+			spriteType = "GFX_tu_status_seg_20"
+			frame = 5
+			position = { x = 114 y = 569 }
+		}
+		iconType = {
+			name = "tu_st_vic_dukes_tu_vic_influence_abercorn_e06"
+			spriteType = "GFX_tu_status_seg_20"
+			frame = 1
+			position = { x = 136 y = 569 }
+		}
+		iconType = {
+			name = "tu_st_vic_dukes_tu_vic_influence_abercorn_f06"
+			spriteType = "GFX_tu_status_seg_20"
+			frame = 5
+			position = { x = 136 y = 569 }
+		}
+		iconType = {
+			name = "tu_st_vic_dukes_tu_vic_influence_abercorn_e07"
+			spriteType = "GFX_tu_status_seg_20"
+			frame = 1
+			position = { x = 158 y = 569 }
+		}
+		iconType = {
+			name = "tu_st_vic_dukes_tu_vic_influence_abercorn_f07"
+			spriteType = "GFX_tu_status_seg_20"
+			frame = 5
+			position = { x = 158 y = 569 }
+		}
+		iconType = {
+			name = "tu_st_vic_dukes_tu_vic_influence_abercorn_e08"
+			spriteType = "GFX_tu_status_seg_20"
+			frame = 1
+			position = { x = 180 y = 569 }
+		}
+		iconType = {
+			name = "tu_st_vic_dukes_tu_vic_influence_abercorn_f08"
+			spriteType = "GFX_tu_status_seg_20"
+			frame = 5
+			position = { x = 180 y = 569 }
+		}
+		iconType = {
+			name = "tu_st_vic_dukes_tu_vic_influence_abercorn_e09"
+			spriteType = "GFX_tu_status_seg_20"
+			frame = 1
+			position = { x = 202 y = 569 }
+		}
+		iconType = {
+			name = "tu_st_vic_dukes_tu_vic_influence_abercorn_f09"
+			spriteType = "GFX_tu_status_seg_20"
+			frame = 5
+			position = { x = 202 y = 569 }
+		}
+		iconType = {
+			name = "tu_st_vic_dukes_tu_vic_influence_abercorn_e10"
+			spriteType = "GFX_tu_status_seg_20"
+			frame = 1
+			position = { x = 224 y = 569 }
+		}
+		iconType = {
+			name = "tu_st_vic_dukes_tu_vic_influence_abercorn_f10"
+			spriteType = "GFX_tu_status_seg_20"
+			frame = 5
+			position = { x = 224 y = 569 }
+		}
+		iconType = {
+			name = "tu_st_vic_dukes_tu_vic_influence_abercorn_e11"
+			spriteType = "GFX_tu_status_seg_20"
+			frame = 1
+			position = { x = 246 y = 569 }
+		}
+		iconType = {
+			name = "tu_st_vic_dukes_tu_vic_influence_abercorn_f11"
+			spriteType = "GFX_tu_status_seg_20"
+			frame = 5
+			position = { x = 246 y = 569 }
+		}
+		iconType = {
+			name = "tu_st_vic_dukes_tu_vic_influence_abercorn_e12"
+			spriteType = "GFX_tu_status_seg_20"
+			frame = 1
+			position = { x = 268 y = 569 }
+		}
+		iconType = {
+			name = "tu_st_vic_dukes_tu_vic_influence_abercorn_f12"
+			spriteType = "GFX_tu_status_seg_20"
+			frame = 5
+			position = { x = 268 y = 569 }
+		}
+		iconType = {
+			name = "tu_st_vic_dukes_tu_vic_influence_abercorn_e13"
+			spriteType = "GFX_tu_status_seg_20"
+			frame = 1
+			position = { x = 290 y = 569 }
+		}
+		iconType = {
+			name = "tu_st_vic_dukes_tu_vic_influence_abercorn_f13"
+			spriteType = "GFX_tu_status_seg_20"
+			frame = 5
+			position = { x = 290 y = 569 }
+		}
+		iconType = {
+			name = "tu_st_vic_dukes_tu_vic_influence_abercorn_e14"
+			spriteType = "GFX_tu_status_seg_20"
+			frame = 1
+			position = { x = 312 y = 569 }
+		}
+		iconType = {
+			name = "tu_st_vic_dukes_tu_vic_influence_abercorn_f14"
+			spriteType = "GFX_tu_status_seg_20"
+			frame = 5
+			position = { x = 312 y = 569 }
+		}
+		iconType = {
+			name = "tu_st_vic_dukes_tu_vic_influence_abercorn_e15"
+			spriteType = "GFX_tu_status_seg_20"
+			frame = 1
+			position = { x = 334 y = 569 }
+		}
+		iconType = {
+			name = "tu_st_vic_dukes_tu_vic_influence_abercorn_f15"
+			spriteType = "GFX_tu_status_seg_20"
+			frame = 5
+			position = { x = 334 y = 569 }
+		}
+		iconType = {
+			name = "tu_st_vic_dukes_tu_vic_influence_abercorn_e16"
+			spriteType = "GFX_tu_status_seg_20"
+			frame = 1
+			position = { x = 356 y = 569 }
+		}
+		iconType = {
+			name = "tu_st_vic_dukes_tu_vic_influence_abercorn_f16"
+			spriteType = "GFX_tu_status_seg_20"
+			frame = 5
+			position = { x = 356 y = 569 }
+		}
+		iconType = {
+			name = "tu_st_vic_dukes_tu_vic_influence_abercorn_e17"
+			spriteType = "GFX_tu_status_seg_20"
+			frame = 1
+			position = { x = 378 y = 569 }
+		}
+		iconType = {
+			name = "tu_st_vic_dukes_tu_vic_influence_abercorn_f17"
+			spriteType = "GFX_tu_status_seg_20"
+			frame = 5
+			position = { x = 378 y = 569 }
+		}
+		iconType = {
+			name = "tu_st_vic_dukes_tu_vic_influence_abercorn_e18"
+			spriteType = "GFX_tu_status_seg_20"
+			frame = 1
+			position = { x = 400 y = 569 }
+		}
+		iconType = {
+			name = "tu_st_vic_dukes_tu_vic_influence_abercorn_f18"
+			spriteType = "GFX_tu_status_seg_20"
+			frame = 5
+			position = { x = 400 y = 569 }
+		}
+		iconType = {
+			name = "tu_st_vic_dukes_tu_vic_influence_abercorn_e19"
+			spriteType = "GFX_tu_status_seg_20"
+			frame = 1
+			position = { x = 422 y = 569 }
+		}
+		iconType = {
+			name = "tu_st_vic_dukes_tu_vic_influence_abercorn_f19"
+			spriteType = "GFX_tu_status_seg_20"
+			frame = 5
+			position = { x = 422 y = 569 }
+		}
+		iconType = {
+			name = "tu_st_vic_dukes_tu_vic_influence_abercorn_e20"
+			spriteType = "GFX_tu_status_seg_20"
+			frame = 1
+			position = { x = 444 y = 569 }
+		}
+		iconType = {
+			name = "tu_st_vic_dukes_tu_vic_influence_abercorn_f20"
+			spriteType = "GFX_tu_status_seg_20"
+			frame = 5
+			position = { x = 444 y = 569 }
+		}
+		instantTextBoxType = {
+			name = "tu_st_vic_dukes_tu_vic_influence_abercorn_tip"
+			position = { x = 18 y = 546 }
+			maxWidth = 470
+			maxHeight = 38
+			text = ""
+			pdx_tooltip = TU_STATUS_TU_VIC_influence_abercorn_tt
+		}
+
+		iconType = {
+			name = "tu_st_vic_dukes_tu_vic_influence_stafford_bg"
+			spriteType = "GFX_tu_status_row_full"
+			position = { x = 18 y = 588 }
+		}
+		instantTextBoxType = {
+			name = "tu_st_vic_dukes_tu_vic_influence_stafford_label"
+			position = { x = 26 y = 592 }
+			font = "hoi_16mbs"
+			maxWidth = 350
+			maxHeight = 18
+			text = "TU_STATUS_TU_VIC_influence_stafford_label"
+			format = left
+			fixedsize = yes
+		}
+		instantTextBoxType = {
+			name = "tu_st_vic_dukes_tu_vic_influence_stafford_value"
+			position = { x = 380 y = 592 }
+			font = "hoi_16mbs"
+			maxWidth = 100
+			maxHeight = 18
+			text = "TU_STATUS_TU_VIC_influence_stafford_value"
+			format = right
+			fixedsize = yes
+		}
+		iconType = {
+			name = "tu_st_vic_dukes_tu_vic_influence_stafford_e01"
+			spriteType = "GFX_tu_status_seg_20"
+			frame = 1
+			position = { x = 26 y = 611 }
+		}
+		iconType = {
+			name = "tu_st_vic_dukes_tu_vic_influence_stafford_f01"
+			spriteType = "GFX_tu_status_seg_20"
+			frame = 5
+			position = { x = 26 y = 611 }
+		}
+		iconType = {
+			name = "tu_st_vic_dukes_tu_vic_influence_stafford_e02"
+			spriteType = "GFX_tu_status_seg_20"
+			frame = 1
+			position = { x = 48 y = 611 }
+		}
+		iconType = {
+			name = "tu_st_vic_dukes_tu_vic_influence_stafford_f02"
+			spriteType = "GFX_tu_status_seg_20"
+			frame = 5
+			position = { x = 48 y = 611 }
+		}
+		iconType = {
+			name = "tu_st_vic_dukes_tu_vic_influence_stafford_e03"
+			spriteType = "GFX_tu_status_seg_20"
+			frame = 1
+			position = { x = 70 y = 611 }
+		}
+		iconType = {
+			name = "tu_st_vic_dukes_tu_vic_influence_stafford_f03"
+			spriteType = "GFX_tu_status_seg_20"
+			frame = 5
+			position = { x = 70 y = 611 }
+		}
+		iconType = {
+			name = "tu_st_vic_dukes_tu_vic_influence_stafford_e04"
+			spriteType = "GFX_tu_status_seg_20"
+			frame = 1
+			position = { x = 92 y = 611 }
+		}
+		iconType = {
+			name = "tu_st_vic_dukes_tu_vic_influence_stafford_f04"
+			spriteType = "GFX_tu_status_seg_20"
+			frame = 5
+			position = { x = 92 y = 611 }
+		}
+		iconType = {
+			name = "tu_st_vic_dukes_tu_vic_influence_stafford_e05"
+			spriteType = "GFX_tu_status_seg_20"
+			frame = 1
+			position = { x = 114 y = 611 }
+		}
+		iconType = {
+			name = "tu_st_vic_dukes_tu_vic_influence_stafford_f05"
+			spriteType = "GFX_tu_status_seg_20"
+			frame = 5
+			position = { x = 114 y = 611 }
+		}
+		iconType = {
+			name = "tu_st_vic_dukes_tu_vic_influence_stafford_e06"
+			spriteType = "GFX_tu_status_seg_20"
+			frame = 1
+			position = { x = 136 y = 611 }
+		}
+		iconType = {
+			name = "tu_st_vic_dukes_tu_vic_influence_stafford_f06"
+			spriteType = "GFX_tu_status_seg_20"
+			frame = 5
+			position = { x = 136 y = 611 }
+		}
+		iconType = {
+			name = "tu_st_vic_dukes_tu_vic_influence_stafford_e07"
+			spriteType = "GFX_tu_status_seg_20"
+			frame = 1
+			position = { x = 158 y = 611 }
+		}
+		iconType = {
+			name = "tu_st_vic_dukes_tu_vic_influence_stafford_f07"
+			spriteType = "GFX_tu_status_seg_20"
+			frame = 5
+			position = { x = 158 y = 611 }
+		}
+		iconType = {
+			name = "tu_st_vic_dukes_tu_vic_influence_stafford_e08"
+			spriteType = "GFX_tu_status_seg_20"
+			frame = 1
+			position = { x = 180 y = 611 }
+		}
+		iconType = {
+			name = "tu_st_vic_dukes_tu_vic_influence_stafford_f08"
+			spriteType = "GFX_tu_status_seg_20"
+			frame = 5
+			position = { x = 180 y = 611 }
+		}
+		iconType = {
+			name = "tu_st_vic_dukes_tu_vic_influence_stafford_e09"
+			spriteType = "GFX_tu_status_seg_20"
+			frame = 1
+			position = { x = 202 y = 611 }
+		}
+		iconType = {
+			name = "tu_st_vic_dukes_tu_vic_influence_stafford_f09"
+			spriteType = "GFX_tu_status_seg_20"
+			frame = 5
+			position = { x = 202 y = 611 }
+		}
+		iconType = {
+			name = "tu_st_vic_dukes_tu_vic_influence_stafford_e10"
+			spriteType = "GFX_tu_status_seg_20"
+			frame = 1
+			position = { x = 224 y = 611 }
+		}
+		iconType = {
+			name = "tu_st_vic_dukes_tu_vic_influence_stafford_f10"
+			spriteType = "GFX_tu_status_seg_20"
+			frame = 5
+			position = { x = 224 y = 611 }
+		}
+		iconType = {
+			name = "tu_st_vic_dukes_tu_vic_influence_stafford_e11"
+			spriteType = "GFX_tu_status_seg_20"
+			frame = 1
+			position = { x = 246 y = 611 }
+		}
+		iconType = {
+			name = "tu_st_vic_dukes_tu_vic_influence_stafford_f11"
+			spriteType = "GFX_tu_status_seg_20"
+			frame = 5
+			position = { x = 246 y = 611 }
+		}
+		iconType = {
+			name = "tu_st_vic_dukes_tu_vic_influence_stafford_e12"
+			spriteType = "GFX_tu_status_seg_20"
+			frame = 1
+			position = { x = 268 y = 611 }
+		}
+		iconType = {
+			name = "tu_st_vic_dukes_tu_vic_influence_stafford_f12"
+			spriteType = "GFX_tu_status_seg_20"
+			frame = 5
+			position = { x = 268 y = 611 }
+		}
+		iconType = {
+			name = "tu_st_vic_dukes_tu_vic_influence_stafford_e13"
+			spriteType = "GFX_tu_status_seg_20"
+			frame = 1
+			position = { x = 290 y = 611 }
+		}
+		iconType = {
+			name = "tu_st_vic_dukes_tu_vic_influence_stafford_f13"
+			spriteType = "GFX_tu_status_seg_20"
+			frame = 5
+			position = { x = 290 y = 611 }
+		}
+		iconType = {
+			name = "tu_st_vic_dukes_tu_vic_influence_stafford_e14"
+			spriteType = "GFX_tu_status_seg_20"
+			frame = 1
+			position = { x = 312 y = 611 }
+		}
+		iconType = {
+			name = "tu_st_vic_dukes_tu_vic_influence_stafford_f14"
+			spriteType = "GFX_tu_status_seg_20"
+			frame = 5
+			position = { x = 312 y = 611 }
+		}
+		iconType = {
+			name = "tu_st_vic_dukes_tu_vic_influence_stafford_e15"
+			spriteType = "GFX_tu_status_seg_20"
+			frame = 1
+			position = { x = 334 y = 611 }
+		}
+		iconType = {
+			name = "tu_st_vic_dukes_tu_vic_influence_stafford_f15"
+			spriteType = "GFX_tu_status_seg_20"
+			frame = 5
+			position = { x = 334 y = 611 }
+		}
+		iconType = {
+			name = "tu_st_vic_dukes_tu_vic_influence_stafford_e16"
+			spriteType = "GFX_tu_status_seg_20"
+			frame = 1
+			position = { x = 356 y = 611 }
+		}
+		iconType = {
+			name = "tu_st_vic_dukes_tu_vic_influence_stafford_f16"
+			spriteType = "GFX_tu_status_seg_20"
+			frame = 5
+			position = { x = 356 y = 611 }
+		}
+		iconType = {
+			name = "tu_st_vic_dukes_tu_vic_influence_stafford_e17"
+			spriteType = "GFX_tu_status_seg_20"
+			frame = 1
+			position = { x = 378 y = 611 }
+		}
+		iconType = {
+			name = "tu_st_vic_dukes_tu_vic_influence_stafford_f17"
+			spriteType = "GFX_tu_status_seg_20"
+			frame = 5
+			position = { x = 378 y = 611 }
+		}
+		iconType = {
+			name = "tu_st_vic_dukes_tu_vic_influence_stafford_e18"
+			spriteType = "GFX_tu_status_seg_20"
+			frame = 1
+			position = { x = 400 y = 611 }
+		}
+		iconType = {
+			name = "tu_st_vic_dukes_tu_vic_influence_stafford_f18"
+			spriteType = "GFX_tu_status_seg_20"
+			frame = 5
+			position = { x = 400 y = 611 }
+		}
+		iconType = {
+			name = "tu_st_vic_dukes_tu_vic_influence_stafford_e19"
+			spriteType = "GFX_tu_status_seg_20"
+			frame = 1
+			position = { x = 422 y = 611 }
+		}
+		iconType = {
+			name = "tu_st_vic_dukes_tu_vic_influence_stafford_f19"
+			spriteType = "GFX_tu_status_seg_20"
+			frame = 5
+			position = { x = 422 y = 611 }
+		}
+		iconType = {
+			name = "tu_st_vic_dukes_tu_vic_influence_stafford_e20"
+			spriteType = "GFX_tu_status_seg_20"
+			frame = 1
+			position = { x = 444 y = 611 }
+		}
+		iconType = {
+			name = "tu_st_vic_dukes_tu_vic_influence_stafford_f20"
+			spriteType = "GFX_tu_status_seg_20"
+			frame = 5
+			position = { x = 444 y = 611 }
+		}
+		instantTextBoxType = {
+			name = "tu_st_vic_dukes_tu_vic_influence_stafford_tip"
+			position = { x = 18 y = 588 }
+			maxWidth = 470
+			maxHeight = 38
+			text = ""
+			pdx_tooltip = TU_STATUS_TU_VIC_influence_stafford_tt
+		}
+
+		iconType = {
+			name = "tu_st_vic_dukes_tu_vic_influence_fife_bg"
+			spriteType = "GFX_tu_status_row_full"
+			position = { x = 18 y = 630 }
+		}
+		instantTextBoxType = {
+			name = "tu_st_vic_dukes_tu_vic_influence_fife_label"
+			position = { x = 26 y = 634 }
+			font = "hoi_16mbs"
+			maxWidth = 350
+			maxHeight = 18
+			text = "TU_STATUS_TU_VIC_influence_fife_label"
+			format = left
+			fixedsize = yes
+		}
+		instantTextBoxType = {
+			name = "tu_st_vic_dukes_tu_vic_influence_fife_value"
+			position = { x = 380 y = 634 }
+			font = "hoi_16mbs"
+			maxWidth = 100
+			maxHeight = 18
+			text = "TU_STATUS_TU_VIC_influence_fife_value"
+			format = right
+			fixedsize = yes
+		}
+		iconType = {
+			name = "tu_st_vic_dukes_tu_vic_influence_fife_e01"
+			spriteType = "GFX_tu_status_seg_20"
+			frame = 1
+			position = { x = 26 y = 653 }
+		}
+		iconType = {
+			name = "tu_st_vic_dukes_tu_vic_influence_fife_f01"
+			spriteType = "GFX_tu_status_seg_20"
+			frame = 5
+			position = { x = 26 y = 653 }
+		}
+		iconType = {
+			name = "tu_st_vic_dukes_tu_vic_influence_fife_e02"
+			spriteType = "GFX_tu_status_seg_20"
+			frame = 1
+			position = { x = 48 y = 653 }
+		}
+		iconType = {
+			name = "tu_st_vic_dukes_tu_vic_influence_fife_f02"
+			spriteType = "GFX_tu_status_seg_20"
+			frame = 5
+			position = { x = 48 y = 653 }
+		}
+		iconType = {
+			name = "tu_st_vic_dukes_tu_vic_influence_fife_e03"
+			spriteType = "GFX_tu_status_seg_20"
+			frame = 1
+			position = { x = 70 y = 653 }
+		}
+		iconType = {
+			name = "tu_st_vic_dukes_tu_vic_influence_fife_f03"
+			spriteType = "GFX_tu_status_seg_20"
+			frame = 5
+			position = { x = 70 y = 653 }
+		}
+		iconType = {
+			name = "tu_st_vic_dukes_tu_vic_influence_fife_e04"
+			spriteType = "GFX_tu_status_seg_20"
+			frame = 1
+			position = { x = 92 y = 653 }
+		}
+		iconType = {
+			name = "tu_st_vic_dukes_tu_vic_influence_fife_f04"
+			spriteType = "GFX_tu_status_seg_20"
+			frame = 5
+			position = { x = 92 y = 653 }
+		}
+		iconType = {
+			name = "tu_st_vic_dukes_tu_vic_influence_fife_e05"
+			spriteType = "GFX_tu_status_seg_20"
+			frame = 1
+			position = { x = 114 y = 653 }
+		}
+		iconType = {
+			name = "tu_st_vic_dukes_tu_vic_influence_fife_f05"
+			spriteType = "GFX_tu_status_seg_20"
+			frame = 5
+			position = { x = 114 y = 653 }
+		}
+		iconType = {
+			name = "tu_st_vic_dukes_tu_vic_influence_fife_e06"
+			spriteType = "GFX_tu_status_seg_20"
+			frame = 1
+			position = { x = 136 y = 653 }
+		}
+		iconType = {
+			name = "tu_st_vic_dukes_tu_vic_influence_fife_f06"
+			spriteType = "GFX_tu_status_seg_20"
+			frame = 5
+			position = { x = 136 y = 653 }
+		}
+		iconType = {
+			name = "tu_st_vic_dukes_tu_vic_influence_fife_e07"
+			spriteType = "GFX_tu_status_seg_20"
+			frame = 1
+			position = { x = 158 y = 653 }
+		}
+		iconType = {
+			name = "tu_st_vic_dukes_tu_vic_influence_fife_f07"
+			spriteType = "GFX_tu_status_seg_20"
+			frame = 5
+			position = { x = 158 y = 653 }
+		}
+		iconType = {
+			name = "tu_st_vic_dukes_tu_vic_influence_fife_e08"
+			spriteType = "GFX_tu_status_seg_20"
+			frame = 1
+			position = { x = 180 y = 653 }
+		}
+		iconType = {
+			name = "tu_st_vic_dukes_tu_vic_influence_fife_f08"
+			spriteType = "GFX_tu_status_seg_20"
+			frame = 5
+			position = { x = 180 y = 653 }
+		}
+		iconType = {
+			name = "tu_st_vic_dukes_tu_vic_influence_fife_e09"
+			spriteType = "GFX_tu_status_seg_20"
+			frame = 1
+			position = { x = 202 y = 653 }
+		}
+		iconType = {
+			name = "tu_st_vic_dukes_tu_vic_influence_fife_f09"
+			spriteType = "GFX_tu_status_seg_20"
+			frame = 5
+			position = { x = 202 y = 653 }
+		}
+		iconType = {
+			name = "tu_st_vic_dukes_tu_vic_influence_fife_e10"
+			spriteType = "GFX_tu_status_seg_20"
+			frame = 1
+			position = { x = 224 y = 653 }
+		}
+		iconType = {
+			name = "tu_st_vic_dukes_tu_vic_influence_fife_f10"
+			spriteType = "GFX_tu_status_seg_20"
+			frame = 5
+			position = { x = 224 y = 653 }
+		}
+		iconType = {
+			name = "tu_st_vic_dukes_tu_vic_influence_fife_e11"
+			spriteType = "GFX_tu_status_seg_20"
+			frame = 1
+			position = { x = 246 y = 653 }
+		}
+		iconType = {
+			name = "tu_st_vic_dukes_tu_vic_influence_fife_f11"
+			spriteType = "GFX_tu_status_seg_20"
+			frame = 5
+			position = { x = 246 y = 653 }
+		}
+		iconType = {
+			name = "tu_st_vic_dukes_tu_vic_influence_fife_e12"
+			spriteType = "GFX_tu_status_seg_20"
+			frame = 1
+			position = { x = 268 y = 653 }
+		}
+		iconType = {
+			name = "tu_st_vic_dukes_tu_vic_influence_fife_f12"
+			spriteType = "GFX_tu_status_seg_20"
+			frame = 5
+			position = { x = 268 y = 653 }
+		}
+		iconType = {
+			name = "tu_st_vic_dukes_tu_vic_influence_fife_e13"
+			spriteType = "GFX_tu_status_seg_20"
+			frame = 1
+			position = { x = 290 y = 653 }
+		}
+		iconType = {
+			name = "tu_st_vic_dukes_tu_vic_influence_fife_f13"
+			spriteType = "GFX_tu_status_seg_20"
+			frame = 5
+			position = { x = 290 y = 653 }
+		}
+		iconType = {
+			name = "tu_st_vic_dukes_tu_vic_influence_fife_e14"
+			spriteType = "GFX_tu_status_seg_20"
+			frame = 1
+			position = { x = 312 y = 653 }
+		}
+		iconType = {
+			name = "tu_st_vic_dukes_tu_vic_influence_fife_f14"
+			spriteType = "GFX_tu_status_seg_20"
+			frame = 5
+			position = { x = 312 y = 653 }
+		}
+		iconType = {
+			name = "tu_st_vic_dukes_tu_vic_influence_fife_e15"
+			spriteType = "GFX_tu_status_seg_20"
+			frame = 1
+			position = { x = 334 y = 653 }
+		}
+		iconType = {
+			name = "tu_st_vic_dukes_tu_vic_influence_fife_f15"
+			spriteType = "GFX_tu_status_seg_20"
+			frame = 5
+			position = { x = 334 y = 653 }
+		}
+		iconType = {
+			name = "tu_st_vic_dukes_tu_vic_influence_fife_e16"
+			spriteType = "GFX_tu_status_seg_20"
+			frame = 1
+			position = { x = 356 y = 653 }
+		}
+		iconType = {
+			name = "tu_st_vic_dukes_tu_vic_influence_fife_f16"
+			spriteType = "GFX_tu_status_seg_20"
+			frame = 5
+			position = { x = 356 y = 653 }
+		}
+		iconType = {
+			name = "tu_st_vic_dukes_tu_vic_influence_fife_e17"
+			spriteType = "GFX_tu_status_seg_20"
+			frame = 1
+			position = { x = 378 y = 653 }
+		}
+		iconType = {
+			name = "tu_st_vic_dukes_tu_vic_influence_fife_f17"
+			spriteType = "GFX_tu_status_seg_20"
+			frame = 5
+			position = { x = 378 y = 653 }
+		}
+		iconType = {
+			name = "tu_st_vic_dukes_tu_vic_influence_fife_e18"
+			spriteType = "GFX_tu_status_seg_20"
+			frame = 1
+			position = { x = 400 y = 653 }
+		}
+		iconType = {
+			name = "tu_st_vic_dukes_tu_vic_influence_fife_f18"
+			spriteType = "GFX_tu_status_seg_20"
+			frame = 5
+			position = { x = 400 y = 653 }
+		}
+		iconType = {
+			name = "tu_st_vic_dukes_tu_vic_influence_fife_e19"
+			spriteType = "GFX_tu_status_seg_20"
+			frame = 1
+			position = { x = 422 y = 653 }
+		}
+		iconType = {
+			name = "tu_st_vic_dukes_tu_vic_influence_fife_f19"
+			spriteType = "GFX_tu_status_seg_20"
+			frame = 5
+			position = { x = 422 y = 653 }
+		}
+		iconType = {
+			name = "tu_st_vic_dukes_tu_vic_influence_fife_e20"
+			spriteType = "GFX_tu_status_seg_20"
+			frame = 1
+			position = { x = 444 y = 653 }
+		}
+		iconType = {
+			name = "tu_st_vic_dukes_tu_vic_influence_fife_f20"
+			spriteType = "GFX_tu_status_seg_20"
+			frame = 5
+			position = { x = 444 y = 653 }
+		}
+		instantTextBoxType = {
+			name = "tu_st_vic_dukes_tu_vic_influence_fife_tip"
+			position = { x = 18 y = 630 }
+			maxWidth = 470
+			maxHeight = 38
+			text = ""
+			pdx_tooltip = TU_STATUS_TU_VIC_influence_fife_tt
+		}
+
+	}
+	containerWindowType = {
+		name = "TU_VIC_shard_status_window"
+		position = { x = 0 y = 0 }
+		size = { width = 100% height = 46 }
+
+		iconType = {
+			name = "tu_st_vic_shard_tu_vic_shard_bg"
+			spriteType = "GFX_tu_status_row_full"
+			position = { x = 18 y = 0 }
+		}
+		instantTextBoxType = {
+			name = "tu_st_vic_shard_tu_vic_shard_label"
+			position = { x = 26 y = 4 }
+			font = "hoi_16mbs"
+			maxWidth = 350
+			maxHeight = 18
+			text = "TU_STATUS_TU_VIC_shard_label"
+			format = left
+			fixedsize = yes
+		}
+		instantTextBoxType = {
+			name = "tu_st_vic_shard_tu_vic_shard_value"
+			position = { x = 380 y = 4 }
+			font = "hoi_16mbs"
+			maxWidth = 100
+			maxHeight = 18
+			text = "TU_STATUS_TU_VIC_shard_value"
+			format = right
+			fixedsize = yes
+		}
+		iconType = {
+			name = "tu_st_vic_shard_tu_vic_shard_e01"
+			spriteType = "GFX_tu_status_seg_20"
+			frame = 1
+			position = { x = 26 y = 23 }
+		}
+		iconType = {
+			name = "tu_st_vic_shard_tu_vic_shard_f01"
+			spriteType = "GFX_tu_status_seg_20"
+			frame = 4
+			position = { x = 26 y = 23 }
+		}
+		iconType = {
+			name = "tu_st_vic_shard_tu_vic_shard_e02"
+			spriteType = "GFX_tu_status_seg_20"
+			frame = 1
+			position = { x = 48 y = 23 }
+		}
+		iconType = {
+			name = "tu_st_vic_shard_tu_vic_shard_f02"
+			spriteType = "GFX_tu_status_seg_20"
+			frame = 4
+			position = { x = 48 y = 23 }
+		}
+		iconType = {
+			name = "tu_st_vic_shard_tu_vic_shard_e03"
+			spriteType = "GFX_tu_status_seg_20"
+			frame = 1
+			position = { x = 70 y = 23 }
+		}
+		iconType = {
+			name = "tu_st_vic_shard_tu_vic_shard_f03"
+			spriteType = "GFX_tu_status_seg_20"
+			frame = 4
+			position = { x = 70 y = 23 }
+		}
+		iconType = {
+			name = "tu_st_vic_shard_tu_vic_shard_e04"
+			spriteType = "GFX_tu_status_seg_20"
+			frame = 1
+			position = { x = 92 y = 23 }
+		}
+		iconType = {
+			name = "tu_st_vic_shard_tu_vic_shard_f04"
+			spriteType = "GFX_tu_status_seg_20"
+			frame = 4
+			position = { x = 92 y = 23 }
+		}
+		iconType = {
+			name = "tu_st_vic_shard_tu_vic_shard_e05"
+			spriteType = "GFX_tu_status_seg_20"
+			frame = 1
+			position = { x = 114 y = 23 }
+		}
+		iconType = {
+			name = "tu_st_vic_shard_tu_vic_shard_f05"
+			spriteType = "GFX_tu_status_seg_20"
+			frame = 4
+			position = { x = 114 y = 23 }
+		}
+		iconType = {
+			name = "tu_st_vic_shard_tu_vic_shard_e06"
+			spriteType = "GFX_tu_status_seg_20"
+			frame = 1
+			position = { x = 136 y = 23 }
+		}
+		iconType = {
+			name = "tu_st_vic_shard_tu_vic_shard_f06"
+			spriteType = "GFX_tu_status_seg_20"
+			frame = 4
+			position = { x = 136 y = 23 }
+		}
+		iconType = {
+			name = "tu_st_vic_shard_tu_vic_shard_e07"
+			spriteType = "GFX_tu_status_seg_20"
+			frame = 1
+			position = { x = 158 y = 23 }
+		}
+		iconType = {
+			name = "tu_st_vic_shard_tu_vic_shard_f07"
+			spriteType = "GFX_tu_status_seg_20"
+			frame = 4
+			position = { x = 158 y = 23 }
+		}
+		iconType = {
+			name = "tu_st_vic_shard_tu_vic_shard_e08"
+			spriteType = "GFX_tu_status_seg_20"
+			frame = 1
+			position = { x = 180 y = 23 }
+		}
+		iconType = {
+			name = "tu_st_vic_shard_tu_vic_shard_f08"
+			spriteType = "GFX_tu_status_seg_20"
+			frame = 4
+			position = { x = 180 y = 23 }
+		}
+		iconType = {
+			name = "tu_st_vic_shard_tu_vic_shard_e09"
+			spriteType = "GFX_tu_status_seg_20"
+			frame = 1
+			position = { x = 202 y = 23 }
+		}
+		iconType = {
+			name = "tu_st_vic_shard_tu_vic_shard_f09"
+			spriteType = "GFX_tu_status_seg_20"
+			frame = 4
+			position = { x = 202 y = 23 }
+		}
+		iconType = {
+			name = "tu_st_vic_shard_tu_vic_shard_e10"
+			spriteType = "GFX_tu_status_seg_20"
+			frame = 1
+			position = { x = 224 y = 23 }
+		}
+		iconType = {
+			name = "tu_st_vic_shard_tu_vic_shard_f10"
+			spriteType = "GFX_tu_status_seg_20"
+			frame = 4
+			position = { x = 224 y = 23 }
+		}
+		iconType = {
+			name = "tu_st_vic_shard_tu_vic_shard_e11"
+			spriteType = "GFX_tu_status_seg_20"
+			frame = 1
+			position = { x = 246 y = 23 }
+		}
+		iconType = {
+			name = "tu_st_vic_shard_tu_vic_shard_f11"
+			spriteType = "GFX_tu_status_seg_20"
+			frame = 4
+			position = { x = 246 y = 23 }
+		}
+		iconType = {
+			name = "tu_st_vic_shard_tu_vic_shard_e12"
+			spriteType = "GFX_tu_status_seg_20"
+			frame = 1
+			position = { x = 268 y = 23 }
+		}
+		iconType = {
+			name = "tu_st_vic_shard_tu_vic_shard_f12"
+			spriteType = "GFX_tu_status_seg_20"
+			frame = 4
+			position = { x = 268 y = 23 }
+		}
+		iconType = {
+			name = "tu_st_vic_shard_tu_vic_shard_e13"
+			spriteType = "GFX_tu_status_seg_20"
+			frame = 1
+			position = { x = 290 y = 23 }
+		}
+		iconType = {
+			name = "tu_st_vic_shard_tu_vic_shard_f13"
+			spriteType = "GFX_tu_status_seg_20"
+			frame = 4
+			position = { x = 290 y = 23 }
+		}
+		iconType = {
+			name = "tu_st_vic_shard_tu_vic_shard_e14"
+			spriteType = "GFX_tu_status_seg_20"
+			frame = 1
+			position = { x = 312 y = 23 }
+		}
+		iconType = {
+			name = "tu_st_vic_shard_tu_vic_shard_f14"
+			spriteType = "GFX_tu_status_seg_20"
+			frame = 4
+			position = { x = 312 y = 23 }
+		}
+		iconType = {
+			name = "tu_st_vic_shard_tu_vic_shard_e15"
+			spriteType = "GFX_tu_status_seg_20"
+			frame = 1
+			position = { x = 334 y = 23 }
+		}
+		iconType = {
+			name = "tu_st_vic_shard_tu_vic_shard_f15"
+			spriteType = "GFX_tu_status_seg_20"
+			frame = 4
+			position = { x = 334 y = 23 }
+		}
+		iconType = {
+			name = "tu_st_vic_shard_tu_vic_shard_e16"
+			spriteType = "GFX_tu_status_seg_20"
+			frame = 1
+			position = { x = 356 y = 23 }
+		}
+		iconType = {
+			name = "tu_st_vic_shard_tu_vic_shard_f16"
+			spriteType = "GFX_tu_status_seg_20"
+			frame = 4
+			position = { x = 356 y = 23 }
+		}
+		iconType = {
+			name = "tu_st_vic_shard_tu_vic_shard_e17"
+			spriteType = "GFX_tu_status_seg_20"
+			frame = 1
+			position = { x = 378 y = 23 }
+		}
+		iconType = {
+			name = "tu_st_vic_shard_tu_vic_shard_f17"
+			spriteType = "GFX_tu_status_seg_20"
+			frame = 4
+			position = { x = 378 y = 23 }
+		}
+		iconType = {
+			name = "tu_st_vic_shard_tu_vic_shard_e18"
+			spriteType = "GFX_tu_status_seg_20"
+			frame = 1
+			position = { x = 400 y = 23 }
+		}
+		iconType = {
+			name = "tu_st_vic_shard_tu_vic_shard_f18"
+			spriteType = "GFX_tu_status_seg_20"
+			frame = 4
+			position = { x = 400 y = 23 }
+		}
+		iconType = {
+			name = "tu_st_vic_shard_tu_vic_shard_e19"
+			spriteType = "GFX_tu_status_seg_20"
+			frame = 1
+			position = { x = 422 y = 23 }
+		}
+		iconType = {
+			name = "tu_st_vic_shard_tu_vic_shard_f19"
+			spriteType = "GFX_tu_status_seg_20"
+			frame = 4
+			position = { x = 422 y = 23 }
+		}
+		iconType = {
+			name = "tu_st_vic_shard_tu_vic_shard_e20"
+			spriteType = "GFX_tu_status_seg_20"
+			frame = 1
+			position = { x = 444 y = 23 }
+		}
+		iconType = {
+			name = "tu_st_vic_shard_tu_vic_shard_f20"
+			spriteType = "GFX_tu_status_seg_20"
+			frame = 4
+			position = { x = 444 y = 23 }
+		}
+		iconType = {
+			name = "tu_st_vic_shard_tu_vic_shard_t40"
+			spriteType = "GFX_tu_status_tick"
+			position = { x = 200 y = 20 }
+		}
+		iconType = {
+			name = "tu_st_vic_shard_tu_vic_shard_t50"
+			spriteType = "GFX_tu_status_tick"
+			position = { x = 244 y = 20 }
+		}
+		instantTextBoxType = {
+			name = "tu_st_vic_shard_tu_vic_shard_tip"
+			position = { x = 18 y = 0 }
+			maxWidth = 470
+			maxHeight = 38
+			text = ""
+			pdx_tooltip = TU_STATUS_TU_VIC_shard_tt
 		}
 
 	}
